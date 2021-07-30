@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Hollow Eve Festival 421 (2016)" id="0">
+  <node id="1" name="Paasvadh Forest, Clearing" note="Paasvadh Forest|Clearing">
+    <description>The wide clearing has random patches of lush grass intermingled with large bare spots. Workers rush to and fro, deftly cutting festival goers from the sticky bonds that confine them to the treetops enclosing the area. Children and adults alike are abuzz with excited chatter as they cross the brightly festooned bridge into the festival grounds.</description>
+    <position x="220" y="0" z="0" />
+    <arc exit="go" move="go festooned bridge" destination="2" />
+  </node>
+  <node id="2" name="The Massive Arachnid, Below the Spinneret">
+    <description>Tomiek chains with links as large as a Gor'Tog descend from the spinneret to connect to the thick, chitin-like ramp below your feet.  People are milling about the entrance hawking their wares while small children run to and fro playing games and singing.  An air of frivolity and joy surrounds everyone present at the occasion.</description>
+    <position x="220" y="20" z="0" />
+    <arc exit="go" move="go bronze ramp" destination="3" />
+    <arc exit="go" move="go festooned bridge" destination="1" />
+  </node>
+  <node id="3" name="The Massive Arachnid, Entrance" note="Entrance">
+    <description>Tomiek chains with links as large as a Gor'Tog descend from the spinneret to connect to the thick, chitin-like ramp below.  People of all ages and races mill about, some gaping skyward at the massive abdomen of the fantastic beast while others talk excitedly about the wares they might find for sale.</description>
+    <position x="220" y="80" z="0" />
+    <arc exit="southeast" move="southeast" destination="4" />
+    <arc exit="south" move="south" destination="13" />
+    <arc exit="southwest" move="southwest" destination="12" />
+    <arc exit="go" move="go bronze ramp" destination="2" />
+  </node>
+  <node id="4" name="The Abdomen, Corridor">
+    <description>Thick chitinous walls bear what looks like bristly fur in some spots of this spacious hallway.  Against the wall, a series of vein-like tubes runs from floor to ceiling in a twisted jumble of flesh fused with dark metal.  Some of the tubes are translucent, allowing you to see a greenish substance being pumped through them with rhythmic pulses.</description>
+    <position x="280" y="140" z="0" />
+    <arc exit="south" move="south" destination="5" />
+    <arc exit="northwest" move="northwest" destination="3" />
+  </node>
+  <node id="5" name="The Abdomen, Corridor">
+    <description>Thick chitinous walls bear what looks like bristly fur in some spots of this spacious hallway.  Against the wall, a series of vein-like tubes runs from floor to ceiling in a twisted jumble of flesh fused with dark metal.  Painted in bold red across the wall is a large lit cigar with an even larger 'X' covering it.</description>
+    <position x="280" y="200" z="0" />
+    <arc exit="north" move="north" destination="4" />
+    <arc exit="south" move="south" destination="6" />
+  </node>
+  <node id="6" name="The Abdomen, Corridor" color="#FF00FF">
+    <description>Thick chitinous walls bear what looks like bristly fur in some spots of this spacious hallway.  Circling the corridor is a large spiraling tomiek ramp that leads to the upper level of the abdomen, the dark metal fusing seamlessly to the surrounding living matter.</description>
+    <position x="280" y="260" z="0" />
+    <arc exit="north" move="north" destination="5" />
+    <arc exit="south" move="south" destination="7" />
+    <arc exit="go" move="go tomiek ramp" destination="26" />
+  </node>
+  <node id="7" name="The Abdomen, Corridor">
+    <description>Thick chitinous walls bear what looks like bristly fur in some spots of this spacious hallway.  Against the wall, a series of vein-like tubes runs from floor to ceiling in a twisted jumble of flesh fused with dark metal.  A pair of young Dwarven children stand off to one side, pointing and giggling at the passing shoppers while simultaneously daring each other to touch the strange, fleshy parts of the surroundings.</description>
+    <position x="280" y="320" z="0" />
+    <arc exit="north" move="north" destination="6" />
+    <arc exit="southwest" move="southwest" destination="8" />
+  </node>
+  <node id="8" name="The Abdomen, Corridor" note="Abdomen">
+    <description>Thick chitinous walls bear what looks like bristly fur in some spots of this spacious hallway.  Against the wall, a series of vein-like tubes runs from floor to ceiling in a twisted jumble of flesh fused with dark metal.  A heavy bronze hatch provides passage into the thorax beyond.</description>
+    <position x="220" y="380" z="0" />
+    <arc exit="north" move="north" destination="16" />
+    <arc exit="northeast" move="northeast" destination="7" />
+    <arc exit="northwest" move="northwest" destination="9" />
+    <arc exit="go" move="go bronze hatch" destination="17" />
+  </node>
+  <node id="9" name="The Abdomen, Corridor">
+    <description>Thick chitinous walls bear what looks like bristly fur in some spots of this spacious hallway.  Against the wall, a series of vein-like tubes has been cauterized, leaving a lumpy, blackened scar at the end.  Small droplets of green fluid occasionally form upon the scar tissue, adding a slickness to its surface.</description>
+    <position x="160" y="320" z="0" />
+    <arc exit="north" move="north" destination="10" />
+    <arc exit="southeast" move="southeast" destination="8" />
+  </node>
+  <node id="10" name="The Abdomen, Corridor">
+    <description>Thick chitinous walls bear what looks like bristly fur in some spots of this spacious hallway.  Against the wall, a series of vein-like tubes runs from floor to ceiling in a twisted jumble of flesh fused with dark metal.  Some of the tubes are translucent, allowing you to see a greenish substance being pumped through them with rhythmic pulses.</description>
+    <position x="160" y="260" z="0" />
+    <arc exit="north" move="north" destination="11" />
+    <arc exit="south" move="south" destination="9" />
+  </node>
+  <node id="11" name="The Abdomen, Corridor">
+    <description>Thick chitinous walls bear what looks like bristly fur in some spots of this spacious hallway.  A few shoppers take a moment to rest upon a bench-like protrusion jutting up from the floor.  Against the wall, a series of vein-like tubes runs from floor to ceiling in a twisted jumble of flesh fused with dark metal.</description>
+    <position x="160" y="200" z="0" />
+    <arc exit="north" move="north" destination="12" />
+    <arc exit="south" move="south" destination="10" />
+  </node>
+  <node id="12" name="The Abdomen, Corridor">
+    <description>Thick chitinous walls bear what looks like bristly fur in some spots of this spacious hallway.  Against the wall, a series of vein-like tubes runs from floor to ceiling in a twisted jumble of flesh fused with dark metal.  A large metal blade spider has been suspended from the ceiling by a thick steel cable that seems to grow directly out of the flesh itself.</description>
+    <position x="160" y="140" z="0" />
+    <arc exit="northeast" move="northeast" destination="3" />
+    <arc exit="south" move="south" destination="11" />
+  </node>
+  <node id="13" name="The Abdomen, Corridor">
+    <description>Thick chitinous walls bear what looks like bristly fur in some spots of this spacious hallway.  This section seems to house some of the more permanent shops residing within this unusual creature, as indicated by the melding of the flesh of the walls to the door frames themselves.  An oddly placed potted plum tree stands out starkly against its surroundings.</description>
+    <position x="220" y="140" z="0" />
+    <arc exit="north" move="north" destination="3" />
+    <arc exit="south" move="south" destination="14" />
+  </node>
+  <node id="14" name="The Abdomen, Corridor">
+    <description>Thick chitinous walls bear what looks like bristly fur in some spots of this spacious hallway.  This area seems to house some of the more permanent shops residing within this unusual creature, as indicated by the melding of the flesh of the walls to the doorframes themselves.  A thin, membranous section in the wall reveals a series of pipes and gears intermeshed with living tissues.</description>
+    <position x="220" y="200" z="0" />
+    <arc exit="north" move="north" destination="13" />
+    <arc exit="south" move="south" destination="15" />
+  </node>
+  <node id="15" name="The Abdomen, Corridor">
+    <description>Thick chitinous walls bear what looks like bristly fur in some spots of this spacious hallway.  This section seems to house some of the more permanent shops residing within this unusual creature, as indicated by the melding of the flesh of the walls to the doorframes themselves.  A pulsating mass is clearly visible through the grated floor below.</description>
+    <position x="220" y="260" z="0" />
+    <arc exit="north" move="north" destination="14" />
+    <arc exit="south" move="south" destination="16" />
+  </node>
+  <node id="16" name="The Abdomen, Corridor">
+    <description>Thick chitinous walls bear what looks like bristly fur in some spots of this spacious hallway.  This section seems to house some of the more permanent shops residing within this unusual creature, as indicated by the melding of the flesh of the walls to the doorframes themselves.  Standing against one wall is a polished steel bench.</description>
+    <position x="220" y="320" z="0" />
+    <arc exit="north" move="north" destination="15" />
+    <arc exit="south" move="south" destination="8" />
+  </node>
+  <node id="17" name="The Thorax, Corridor">
+    <description>Dim light filters up through the somewhat translucent floor, providing just enough illumination to navigate this tunnel-like hallway.  Preternatural oozes steadily stream beneath the surfaces of the membranous walls, letting off some sort of gasses as they pass by.  The dank air and overpowering stench make loitering in this bizarre passageway an unappetizing prospect.</description>
+    <position x="220" y="440" z="0" />
+    <arc exit="southeast" move="southeast" destination="18" />
+    <arc exit="southwest" move="southwest" destination="24" />
+    <arc exit="go" move="go bronze hatch" destination="8" />
+  </node>
+  <node id="18" name="The Thorax, Leg Junction">
+    <description>The low ceiling curves directly into the walls, making it difficult to discern where one ends and the other begins.  A deeply pitted and tarnished bronze slot machine is fused into the outer wall.</description>
+    <position x="280" y="500" z="0" />
+    <arc exit="southeast" move="southeast" destination="19" />
+    <arc exit="southwest" move="southwest" destination="25" />
+    <arc exit="northwest" move="northwest" destination="17" />
+  </node>
+  <node id="19" name="The Thorax, Leg Junction">
+    <description>Strange gases hiss from fleshy valves that dapple the arched ceiling, adding unwelcome heat to the already noxious air.  A dilapidated slot machine slumps against one wall, its precious silver trim now tarnished nearly black.</description>
+    <position x="340" y="560" z="0" />
+    <arc exit="southwest" move="southwest" destination="20" />
+    <arc exit="northwest" move="northwest" destination="18" />
+  </node>
+  <node id="20" name="The Thorax, Leg Junction" note="grave earth pile" color="#00FF00">
+    <description>Erratically shaped holes pockmark the chitinous floor, making navigation of this passageway difficult.  An acidic tang seems to belie the source of the damage.</description>
+    <position x="280" y="620" z="0" />
+    <arc exit="northeast" move="northeast" destination="19" />
+    <arc exit="southwest" move="southwest" destination="21" />
+    <arc exit="northwest" move="northwest" destination="25" />
+  </node>
+  <node id="21" name="The Thorax, Corridor">
+    <description>The walls here have been dangerously eroded by putrid gases that rises into the air from valves near the floor.  A decrepit silver-trimmed slot machine sits within a naturally occurring niche along the interior wall.</description>
+    <position x="220" y="680" z="0" />
+    <arc exit="northeast" move="northeast" destination="20" />
+    <arc exit="northwest" move="northwest" destination="22" />
+    <arc exit="go" move="go open valve;stand" destination="48" />
+  </node>
+  <node id="22" name="The Thorax, Leg Junction">
+    <description>The curved walls here are entirely smooth, transitioning from chitin to metal and back again with seemingly organic flow.  A platinum-trimmed slot machine has been neatly set flush against the interior wall.</description>
+    <position x="160" y="620" z="0" />
+    <arc exit="northeast" move="northeast" destination="25" />
+    <arc exit="southeast" move="southeast" destination="21" />
+    <arc exit="northwest" move="northwest" destination="23" />
+  </node>
+  <node id="23" name="The Thorax, Leg Junction">
+    <description>Dark and gleaming, the smooth flesh of the walls looks nearly as tough as the tomiek floor itself.  A battered, silver-trimmed slot machine leans against one wall, its metal partially fused to the living matter behind it.</description>
+    <position x="100" y="560" z="0" />
+    <arc exit="northeast" move="northeast" destination="24" />
+    <arc exit="southeast" move="southeast" destination="22" />
+  </node>
+  <node id="24" name="The Thorax, Leg Junction" note="gold slot machine" color="#00FF00">
+    <description>A luminous green fluid seeps from a crack near the ceiling, sliding down the wall in a sickly rivulet before disappearing into the darkness that lies beyond the grated floor.</description>
+    <position x="160" y="500" z="0" />
+    <arc exit="northeast" move="northeast" destination="17" />
+    <arc exit="southeast" move="southeast" destination="25" />
+    <arc exit="southwest" move="southwest" destination="23" />
+  </node>
+  <node id="25" name="The Thorax, Central Chamber" note="Thorax|Central Chamber|gold slot machine" color="#FF00FF">
+    <description>Sweltering heat permeates this room. Membranous bulges and conduits snake along the arcing walls, entering and exiting the room seemingly at random.  Visible within them is a faint bluish fluid that seems to surge by at a very high speed.  An overturned oil drum occupies the center of the floor surrounded by an assortment of rotting wooden crates in various stages of decay.</description>
+    <position x="220" y="560" z="0" />
+    <arc exit="northeast" move="northeast" destination="18" />
+    <arc exit="southeast" move="southeast" destination="20" />
+    <arc exit="southwest" move="southwest" destination="22" />
+    <arc exit="northwest" move="northwest" destination="24" />
+    <arc exit="climb" move="climb access ladder" destination="39" />
+  </node>
+  <node id="26" name="The Abdomen, Corridor" color="#FF00FF">
+    <description>Thick chitinous walls bear what looks like bristly fur in some spots of this spacious hallway.  Circling the corridor is a large spiraling tomiek ramp that leads to the lower level of the abdomen, the dark metal fusing seamlessly to the surrounding living matter.  A large sign has been placed at the entrance of the ramp.</description>
+    <position x="300" y="260" z="1" />
+    <arc exit="north" move="north" destination="27" />
+    <arc exit="south" move="south" destination="33" />
+    <arc exit="west" move="west" destination="34" />
+    <arc exit="go" move="go tomiek ramp" destination="6" />
+  </node>
+  <node id="27" name="The Abdomen, Corridor">
+    <description>Thick chitinous walls bear what looks like bristly fur in some spots of this spacious hallway.  Against the wall, a series of vein-like tubes runs from floor to ceiling in a twisted jumble of flesh fused with dark metal.  A trio of thin jets of steam spews forth from one of the tubes, as if venting internal gases no longer needed.</description>
+    <position x="300" y="200" z="1" />
+    <arc exit="south" move="south" destination="26" />
+    <arc exit="southwest" move="southwest" destination="34" />
+    <arc exit="northwest" move="northwest" destination="28" />
+  </node>
+  <node id="28" name="The Abdomen, Corridor">
+    <description>The crowds bottleneck at a thick steel door that is fused into the now spiked and ridged chitin of the walls.  A pair of surly Gor'Tog guards flank the entrance of the First Arachnid Bank, eyeing everyone that passes with a suspicious leer.</description>
+    <position x="240" y="140" z="1" />
+    <arc exit="southeast" move="southeast" destination="27" />
+    <arc exit="south" move="south" destination="34" />
+    <arc exit="southwest" move="southwest" destination="29" />
+    <arc exit="go" move="go steel door" destination="40" />
+  </node>
+  <node id="29" name="The Upper Abdomen, Corridor">
+    <description>Thick chitinous walls bear what looks like bristly fur in some spots of this spacious hallway.  Against the wall, a series of vein-like tubes runs from floor to ceiling in a twisted jumble of flesh fused with dark metal.  Several shoppers gather excitedly at the archway nearby, hoping to catch the next merchant in time for some custom work.</description>
+    <position x="180" y="200" z="1" />
+    <arc exit="northeast" move="northeast" destination="28" />
+    <arc exit="southeast" move="southeast" destination="34" />
+    <arc exit="south" move="south" destination="30" />
+    <arc exit="go" move="go steel archway" destination="43" />
+  </node>
+  <node id="30" name="The Upper Abdomen, Corridor">
+    <description>Thick chitinous walls bear what looks like bristly fur in some spots of this spacious hallway.  Against the wall, a series of vein-like tubes runs from floor to ceiling in a twisted jumble of flesh fused with dark metal.  The churning noises from the tubes overhead cause cautious shoppers to glance warily upwards as they pass.</description>
+    <position x="180" y="260" z="1" />
+    <arc exit="north" move="north" destination="29" />
+    <arc exit="east" move="east" destination="34" />
+    <arc exit="south" move="south" destination="31" />
+  </node>
+  <node id="31" name="The Upper Abdomen, Corridor">
+    <description>Thick chitinous walls bear what looks like bristly fur in some spots of this spacious hallway.  Melded perfectly into the surrounding living matter, a steel-banded bronze door is flanked by a pair of potted grapevines.  Hanging next to the door is a polished brass plaque.</description>
+    <position x="180" y="320" z="1" />
+    <arc exit="north" move="north" destination="30" />
+    <arc exit="northeast" move="northeast" destination="34" />
+    <arc exit="southeast" move="southeast" destination="32" />
+    <arc exit="go" move="go bronze door" destination="144" />
+  </node>
+  <node id="32" name="The Upper Abdomen, Hatch">
+    <description>Thick chitinous walls bear what looks like bristly fur in some spots of this spacious hallway.  A scraggly potted plum tree stands next to a polished metal bench and directly across from a heavy iron hatch that allows passage from the abdomen to the thorax.</description>
+    <position x="240" y="380" z="1" />
+    <arc exit="north" move="north" destination="34" />
+    <arc exit="northeast" move="northeast" destination="33" />
+    <arc exit="northwest" move="northwest" destination="31" />
+    <arc exit="go" move="go iron hatch" destination="35" />
+  </node>
+  <node id="33" name="The Abdomen, Corridor">
+    <description>Thick chitinous walls bear what looks like bristly fur in some spots of this spacious hallway.  Several groups of guests gather around the entrance of the raffle center, each eagerly waiting for the next event to begin.  A bronze plaque is fused into the wall near the large iron arch.</description>
+    <position x="300" y="320" z="1" />
+    <arc exit="north" move="north" destination="26" />
+    <arc exit="southwest" move="southwest" destination="32" />
+    <arc exit="northwest" move="northwest" destination="34" />
+    <arc exit="go" move="go iron arch" destination="42" />
+  </node>
+  <node id="34" name="The Upper Abdomen, Lounge" note="Upper Abdomen|clockwork shark" color="#00FF00">
+    <description>Dominating the center of this round room is a large circular pillar of flesh that runs from floor to ceiling.  Sunk into the pillar on opposite sides are a pair of food and beverage stands.  Disgruntled-looking Dwarves stomp back and forth behind the counters, serving their wares to the guests in line.  Surrounding the eatery are several steel tables with matching chairs, each a vibrant shade of tangerine.</description>
+    <position x="240" y="260" z="1" />
+    <arc exit="north" move="north" destination="28" />
+    <arc exit="northeast" move="northeast" destination="27" />
+    <arc exit="east" move="east" destination="26" />
+    <arc exit="southeast" move="southeast" destination="33" />
+    <arc exit="south" move="south" destination="32" />
+    <arc exit="southwest" move="southwest" destination="31" />
+    <arc exit="west" move="west" destination="30" />
+    <arc exit="northwest" move="northwest" destination="29" />
+  </node>
+  <node id="35" name="The Upper Thorax, Corridor">
+    <description>Overwhelming the tight corridor is a convoluted network of membranous bulges and conduits that converges in a nexus along the northern wall.  Every so often, a spasm of muscular movement ripples through them, causing the walls to vibrate.</description>
+    <position x="240" y="440" z="1" />
+    <arc exit="southeast" move="southeast" destination="36" />
+    <arc exit="south" move="south" destination="39" />
+    <arc exit="southwest" move="southwest" destination="38" />
+    <arc exit="go" move="go iron hatch" destination="32" />
+  </node>
+  <node id="36" name="The Upper Thorax, Corridor">
+    <description>The air in this passageway is oppressively damp and muggy with no refuge from the heat to be found.  Most of the surfaces of the area are coated in a thin layer of bristly hairs.  Atop a raised platform sits a sandbox, which reeks of wet cat.</description>
+    <position x="300" y="500" z="1" />
+    <arc exit="southwest" move="southwest" destination="37" />
+    <arc exit="west" move="west" destination="39" />
+    <arc exit="northwest" move="northwest" destination="35" />
+  </node>
+  <node id="37" name="The Upper Thorax, Corridor">
+    <description>Softer, near-translucent flesh throbs overhead, the muscles contracting to transport some sort of fluid to other areas of this logic-defying beast.  The ceiling here is ominously low and disproportionate to the width of the chamber.  A crowd of spectators, several of them hunched over, surround something off in the corner.</description>
+    <position x="240" y="560" z="1" />
+    <arc exit="north" move="north" destination="39" />
+    <arc exit="northeast" move="northeast" destination="36" />
+    <arc exit="northwest" move="northwest" destination="38" />
+    <arc exit="go" move="go access hatch" destination="44" />
+  </node>
+  <node id="38" name="The Upper Thorax, Corridor">
+    <description>Softer, near-translucent flesh throbs overhead, the muscles contracting to transport some sort of fluid to other areas of this logic-defying beast.  On one glistening, dark wall, a patch of bronze is visibly melded into the surrounding living matter, its presence a clear reminder of the creature's strange nature.</description>
+    <position x="180" y="500" z="1" />
+    <arc exit="northeast" move="northeast" destination="35" />
+    <arc exit="east" move="east" destination="39" />
+    <arc exit="southeast" move="southeast" destination="37" />
+  </node>
+  <node id="39" name="The Upper Thorax, Corridor" note="Upper Thorax" color="#FF00FF">
+    <description>An oppressive heat saturates the area, billowing upwards through an opening in which sits an access ladder.  Underfoot, the translucent nature of the floor gives visibility to all manner of pulsating organs awash in bluish fluid.  A rickety tin shack and several booths have been erected in one of the corners in a feeble attempt to seek shelter from the humid air.</description>
+    <position x="240" y="500" z="1" />
+    <arc exit="north" move="north" destination="35" />
+    <arc exit="east" move="east" destination="36" />
+    <arc exit="south" move="south" destination="37" />
+    <arc exit="west" move="west" destination="38" />
+    <arc exit="climb" move="climb access ladder" destination="25" />
+  </node>
+  <node id="40" name="First Arachnid Bank, Lobby" note="Bank|teller" color="#00FF00">
+    <description>Clerks bustle about the tiny room, carrying bags of coins to and from the vault under the eye of a guard.  A teller stands behind a counter at one side of the room.  At the other end, the exchange room stands open for those with other transactions.</description>
+    <position x="240" y="120" z="1" />
+    <arc exit="west" move="west" destination="41" />
+    <arc exit="go" move="go steel door" destination="28" />
+  </node>
+  <node id="41" name="First Arachnid Bank, Currency Exchange" note="Currency Exchange|Exchange" color="#00FF00">
+    <description>This small room holds the official money-changing office for the Miracle of Harawep.  The clerk works behind a thickly barred window and operates a small drawer that is used to pass money back and forth.  A strange, chitin-covered mass rises up from the floor near one wall, its slightly indented form providing seating for those waiting on the busy clerks.</description>
+    <position x="220" y="120" z="1" />
+    <arc exit="east" move="east" destination="40" />
+    <arc exit="go" move="go rust-streaked arch" destination="143" />
+  </node>
+  <node id="42" name="The Massive Arachnid, Raffle Center" note="Raffle Center" color="#00FF00">
+    <description>The gleaming chitinous walls of the room easily reflect the light of the hanging lanterns.  A wide granite counter sits on this side of a canvas curtain dividing the interior space into two rooms, preventing the casual peruser from seeing the cache of prizes beyond.</description>
+    <position x="320" y="340" z="1" />
+    <arc exit="go" move="go iron arch" destination="33" />
+  </node>
+  <node id="43" name="Merchant Lounge, Lobby" note="Merchant Lounge|alterations" color="#00FF00">
+    <description>Brightly dyed lengths of silk hang haphazardly on the walls, allowing sections of gleaming chitin to peek through in places.  Spanning the far wall of this makeshift lobby are four metal doors painted bright red, yellow, blue and green. Chintz cushions placed around the area facilitate a more comfortable wait for patrons.</description>
+    <position x="160" y="200" z="1" />
+    <arc exit="go" move="go steel archway" destination="29" />
+  </node>
+  <node id="44" name="The Head, Access Hatch" note="kaleidoscopes" color="#FF0000">
+    <description>The curved walls here are entirely smooth, transitioning from chitin to metal and back again with seemingly organic flow.  The steel access hatch stands open to allow easy passage to and fro, its squashed ovoid shape reminiscent of a chicken's egg.  A pair of short hallways lead to the left and the right, their translucent floors giving glimpses into the creature's inner workings.</description>
+    <position x="240" y="620" z="1" />
+    <arc exit="southeast" move="southeast" destination="45" />
+    <arc exit="southwest" move="southwest" destination="47" />
+    <arc exit="go" move="go access hatch" destination="37" />
+    <arc exit="go" move="go metallic archway" destination="83" />
+  </node>
+  <node id="45" name="The Head, Left Chamber" note="Left Chamber">
+    <description>Tomiek cages holding various species of large arachnids line this fleshy, organ-filled compartment.  In the center of the membranous floor is a wide circular opening, an empty and floorless cage sitting atop it.  A large segmented protrusion, somewhat resembling a nightmarish marriage of a crane and a spider's leg, rests between two giant fangs.</description>
+    <position x="300" y="680" z="1" />
+    <arc exit="west" move="west" destination="46" />
+    <arc exit="northwest" move="northwest" destination="44" />
+  </node>
+  <node id="46" name="The Arachnid's Head, Harawep's Messengers" note="Arachnid's Head|Head|Harawep's Messengers">
+    <description>The curved walls here are entirely smooth, transitioning from chitin to metal and back again with seemingly organic flow.  The composite materials gleam all around you, their brilliant shine offsetting a centralized control panel.  In front of the brushed steel controls is a pair of large bowl-shaped seats.</description>
+    <position x="240" y="680" z="1" />
+    <arc exit="east" move="east" destination="45" />
+    <arc exit="west" move="west" destination="47" />
+  </node>
+  <node id="47" name="The Head, Right Chamber" note="Right Chamber">
+    <description>The curved walls here are entirely smooth, transitioning from chitin to metal and back again with seemingly organic flow.  Underfoot, the translucent nature of the floor gives visibility to all manner of pulsating organs awash in bluish fluid.</description>
+    <position x="180" y="680" z="1" />
+    <arc exit="northeast" move="northeast" destination="44" />
+    <arc exit="east" move="east" destination="46" />
+  </node>
+  <node id="48" name="The Massive Arachnid, A Strange Passage">
+    <description>This narrow tunnel is formed by the gaps between a complex jumble of almost vein-like tubes and what appears to be organ sacks.  A dark, oily gas pours into the area from some unknown source, the noxious fumes more than enough encouragement to keep moving.</description>
+    <position x="200" y="700" z="0" />
+    <arc exit="southwest" move="southwest" destination="49" />
+    <arc exit="go" move="go open valve;stand" destination="21" />
+    <arc exit="go" move="go open valve" destination="21" />
+  </node>
+  <node id="49" name="The Massive Arachnid, A Strange Passage" color="#FF00FF">
+    <description>This narrow tunnel is formed by the gaps between a complex jumble of almost vein-like tubes and what appears to be organ sacks.  A dark, oily gas pours into the area from some unknown source, the noxious fumes more than enough encouragement to keep moving.</description>
+    <position x="180" y="720" z="0" />
+    <arc exit="northeast" move="northeast" destination="48" />
+    <arc exit="go" move="go open valve;stand" destination="50" />
+  </node>
+  <node id="50" name="Lowest Depths, Corridor" color="#FF00FF">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="520" y="740" z="-1" />
+    <arc exit="north" move="north" destination="53" />
+    <arc exit="southeast" move="southeast" destination="51" />
+    <arc exit="southwest" move="southwest" destination="52" />
+    <arc exit="go" move="go open valve;stand" destination="49" />
+  </node>
+  <node id="51" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="580" y="800" z="-1" />
+    <arc exit="northwest" move="northwest" destination="50" />
+  </node>
+  <node id="52" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="460" y="800" z="-1" />
+    <arc exit="northeast" move="northeast" destination="50" />
+  </node>
+  <node id="53" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="520" y="680" z="-1" />
+    <arc exit="north" move="north" destination="54" />
+    <arc exit="south" move="south" destination="50" />
+  </node>
+  <node id="54" name="Lowest Depths, Central Intestinal Chamber" note="Lowest Depths|Central Intestinal Chamber|Intestinal Chamber|Harawep shrine" color="#FF0000">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Corridors lead off in every direction from this circular area.  At its center stands a massive boiler tub, the nearby bin overflowing with charcoal for the fire.</description>
+    <position x="520" y="620" z="-1" />
+    <arc exit="north" move="north" destination="55" />
+    <arc exit="northeast" move="northeast" destination="59" />
+    <arc exit="east" move="east" destination="63" />
+    <arc exit="southeast" move="southeast" destination="67" />
+    <arc exit="south" move="south" destination="53" />
+    <arc exit="southwest" move="southwest" destination="71" />
+    <arc exit="west" move="west" destination="75" />
+    <arc exit="northwest" move="northwest" destination="79" />
+  </node>
+  <node id="55" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="520" y="560" z="-1" />
+    <arc exit="north" move="north" destination="56" />
+    <arc exit="south" move="south" destination="54" />
+  </node>
+  <node id="56" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="520" y="500" z="-1" />
+    <arc exit="northeast" move="northeast" destination="57" />
+    <arc exit="south" move="south" destination="55" />
+    <arc exit="northwest" move="northwest" destination="58" />
+    <arc exit="go" move="go darkness-filled opening" destination="137" />
+  </node>
+  <node id="57" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="580" y="440" z="-1" />
+    <arc exit="southwest" move="southwest" destination="56" />
+  </node>
+  <node id="58" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="460" y="440" z="-1" />
+    <arc exit="southeast" move="southeast" destination="56" />
+  </node>
+  <node id="59" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="580" y="560" z="-1" />
+    <arc exit="northeast" move="northeast" destination="60" />
+    <arc exit="southwest" move="southwest" destination="54" />
+  </node>
+  <node id="60" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="640" y="500" z="-1" />
+    <arc exit="northeast" move="northeast" destination="61" />
+    <arc exit="east" move="east" destination="62" />
+    <arc exit="southwest" move="southwest" destination="59" />
+  </node>
+  <node id="61" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="700" y="440" z="-1" />
+    <arc exit="southwest" move="southwest" destination="60" />
+  </node>
+  <node id="62" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="700" y="500" z="-1" />
+    <arc exit="west" move="west" destination="60" />
+  </node>
+  <node id="63" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="580" y="620" z="-1" />
+    <arc exit="east" move="east" destination="64" />
+    <arc exit="west" move="west" destination="54" />
+  </node>
+  <node id="64" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="640" y="620" z="-1" />
+    <arc exit="northeast" move="northeast" destination="65" />
+    <arc exit="southeast" move="southeast" destination="66" />
+    <arc exit="west" move="west" destination="63" />
+  </node>
+  <node id="65" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="700" y="560" z="-1" />
+    <arc exit="southwest" move="southwest" destination="64" />
+  </node>
+  <node id="66" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="700" y="680" z="-1" />
+    <arc exit="northwest" move="northwest" destination="64" />
+  </node>
+  <node id="67" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="580" y="680" z="-1" />
+    <arc exit="southeast" move="southeast" destination="68" />
+    <arc exit="northwest" move="northwest" destination="54" />
+  </node>
+  <node id="68" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="640" y="740" z="-1" />
+    <arc exit="east" move="east" destination="69" />
+    <arc exit="southeast" move="southeast" destination="70" />
+    <arc exit="northwest" move="northwest" destination="67" />
+  </node>
+  <node id="69" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="700" y="740" z="-1" />
+    <arc exit="west" move="west" destination="68" />
+  </node>
+  <node id="70" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="700" y="800" z="-1" />
+    <arc exit="northwest" move="northwest" destination="68" />
+  </node>
+  <node id="71" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="460" y="680" z="-1" />
+    <arc exit="northeast" move="northeast" destination="54" />
+    <arc exit="southwest" move="southwest" destination="72" />
+  </node>
+  <node id="72" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="400" y="740" z="-1" />
+    <arc exit="northeast" move="northeast" destination="71" />
+    <arc exit="southwest" move="southwest" destination="74" />
+    <arc exit="west" move="west" destination="73" />
+  </node>
+  <node id="73" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="340" y="740" z="-1" />
+    <arc exit="east" move="east" destination="72" />
+  </node>
+  <node id="74" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="340" y="800" z="-1" />
+    <arc exit="northeast" move="northeast" destination="72" />
+  </node>
+  <node id="75" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="460" y="620" z="-1" />
+    <arc exit="east" move="east" destination="54" />
+    <arc exit="west" move="west" destination="76" />
+  </node>
+  <node id="76" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="400" y="620" z="-1" />
+    <arc exit="east" move="east" destination="75" />
+    <arc exit="southwest" move="southwest" destination="77" />
+    <arc exit="northwest" move="northwest" destination="78" />
+  </node>
+  <node id="77" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="340" y="680" z="-1" />
+    <arc exit="northeast" move="northeast" destination="76" />
+  </node>
+  <node id="78" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="340" y="560" z="-1" />
+    <arc exit="southeast" move="southeast" destination="76" />
+  </node>
+  <node id="79" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="460" y="560" z="-1" />
+    <arc exit="southeast" move="southeast" destination="54" />
+    <arc exit="northwest" move="northwest" destination="80" />
+  </node>
+  <node id="80" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="400" y="500" z="-1" />
+    <arc exit="southeast" move="southeast" destination="79" />
+    <arc exit="west" move="west" destination="81" />
+    <arc exit="northwest" move="northwest" destination="82" />
+  </node>
+  <node id="81" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="340" y="500" z="-1" />
+    <arc exit="east" move="east" destination="80" />
+  </node>
+  <node id="82" name="Lowest Depths, Corridor">
+    <description>Masses of membranous bulges and conduits run in a seemingly endless array across the walls and ceiling, pulsating and constricting in uneven intervals.  Each section of corridor looks like the last, the different doors your only confirmation of progress.</description>
+    <position x="340" y="440" z="-1" />
+    <arc exit="southeast" move="southeast" destination="80" />
+  </node>
+  <node id="83" name="The Spidersilk Bridge">
+    <description>Spanning the width between the massive arachnid and the smaller metallic arachnid to the east, the bridge is mostly a tube of spidersilk with thin wooden slats reinforcing its floor, and it reaches a dizzying height in the air.  Far below, the green foliage is dwarfed by the enormous size of the two creations.</description>
+    <position x="280" y="620" z="1" />
+    <arc exit="east" move="east" destination="84" />
+    <arc exit="go" move="go metallic archway" destination="44" />
+  </node>
+  <node id="84" name="The Spidersilk Bridge">
+    <description>Spanning the width between the massive arachnid and the smaller metallic arachnid to the east, the bridge is mostly a tube of spidersilk with thin wooden slats reinforcing its floor, and it reaches a dizzying height in the air.  Far below, the green foliage is dwarfed by the enormous size of the two creations.</description>
+    <position x="300" y="620" z="1" />
+    <arc exit="east" move="east" destination="85" />
+    <arc exit="west" move="west" destination="83" />
+  </node>
+  <node id="85" name="The Spidersilk Bridge" color="#FF00FF">
+    <description>Spanning the width between the massive arachnid and the smaller metallic arachnid to the east, the bridge is mostly a tube of spidersilk with thin wooden slats reinforcing its floor, and it reaches a dizzying height in the air.  Far below, the green foliage is dwarfed by the enormous size of the two creations.</description>
+    <position x="320" y="620" z="1" />
+    <arc exit="west" move="west" destination="84" />
+    <arc exit="go" move="go metallic archway" destination="86" />
+  </node>
+  <node id="86" name="The Baby Metal Arachnid, Left Abdomen" color="#FF00FF">
+    <description>Pipes cover the wall to the west, which slopes sharply to form the ceiling and follow the curve of the Arachnid's abdomen.  Lacquered cedar wood beams are bolted into the wall at even intervals, providing additional support to the metallic interior.  A makeshift radiator vents heat from the eastern wall, water dripping into a pan underneath.</description>
+    <position x="340" y="620" z="2" />
+    <arc exit="north" move="north" destination="87" />
+    <arc exit="east" move="east" destination="98" />
+    <arc exit="south" move="south" destination="97" />
+    <arc exit="go" move="go metallic archway" destination="85" />
+  </node>
+  <node id="87" name="The Baby Metal Arachnid, Left Abdomen">
+    <description>Pipes cover the wall to the west, which slopes sharply to form the ceiling and follow the curve of the Arachnid's abdomen.  Lacquered cedar wood beams are bolted into the wall at even intervals, providing additional support to the metallic interior.  Two parallel pipes hang from chains, running horizontally along the ceiling and occasionally dripping a dark-colored liquid.</description>
+    <position x="340" y="560" z="2" />
+    <arc exit="northeast" move="northeast" destination="88" />
+    <arc exit="south" move="south" destination="86" />
+  </node>
+  <node id="88" name="The Baby Metal Arachnid, Forward Abdomen">
+    <description>Numerous metal rings are partially encased in rubber, forming the bulk of the northwestern wall and giving structure to the abdomen.  Glass plates in the floor enclose interlocking gears that turn with a steady pace.  A long groove holds ball bearings inside the wall, allowing a portion of the metal plating to turn easily and support whatever mechanism lies behind it.</description>
+    <position x="400" y="500" z="2" />
+    <arc exit="east" move="east" destination="89" />
+    <arc exit="south" move="south" destination="99" />
+    <arc exit="southwest" move="southwest" destination="87" />
+  </node>
+  <node id="89" name="The Baby Metal Arachnid, Forward Abdomen">
+    <description>The maze of corridors centers on a crossroads, with a large pipe leading northward into the sternum, while the east, west, and south branches of the halls venture into the Arachnid's abdomen.  Cobwebs drape from the low ceiling and clog the corners, making use of the numerous nooks and crannies that dot the spider's metal interior.</description>
+    <position x="460" y="500" z="2" />
+    <arc exit="north" move="north" destination="108" />
+    <arc exit="east" move="east" destination="90" />
+    <arc exit="south" move="south" destination="103" />
+    <arc exit="west" move="west" destination="88" />
+  </node>
+  <node id="90" name="The Baby Metal Arachnid, Forward Abdomen">
+    <description>Numerous metal rings are partially encased in rubber, forming the bulk of the northeastern wall and giving structure to the abdomen.  Glass plates in the floor enclose interlocking gears that turn with a steady pace.  A small steam engine merrily whirrs away in the corner, making the passageway feel quite humid.</description>
+    <position x="520" y="500" z="2" />
+    <arc exit="southeast" move="southeast" destination="91" />
+    <arc exit="south" move="south" destination="107" />
+    <arc exit="west" move="west" destination="89" />
+  </node>
+  <node id="91" name="The Baby Metal Arachnid, Right Abdomen">
+    <description>Pipes cover the wall to the east, which slopes sharply to form the ceiling and follow the curve of the Arachnid's abdomen.  Lacquered cedar wood beams are bolted into the wall at even intervals, providing additional support to the metallic interior.  Triangular ceramic tiles interlock with each other to form the floor, alternating between blue and white colors.</description>
+    <position x="580" y="560" z="2" />
+    <arc exit="south" move="south" destination="92" />
+    <arc exit="northwest" move="northwest" destination="90" />
+  </node>
+  <node id="92" name="The Baby Metal Arachnid, Right Abdomen">
+    <description>Pipes cover the wall to the east, which slopes sharply to form the ceiling and follow the curve of the Arachnid's abdomen.  Lacquered cedar wood beams are bolted into the wall at even intervals, providing additional support to the metallic interior.  A steel plate on the western wall has a number of odd switches, and is protected by a clear glass case surrounding it.</description>
+    <position x="580" y="620" z="2" />
+    <arc exit="north" move="north" destination="91" />
+    <arc exit="south" move="south" destination="93" />
+    <arc exit="west" move="west" destination="106" />
+  </node>
+  <node id="93" name="The Baby Metal Arachnid, Right Abdomen">
+    <description>Pipes cover the wall to the east, which slopes sharply to form the ceiling and follow the curve of the Arachnid's abdomen.  Lacquered cedar wood beams are bolted into the wall at even intervals, providing additional support to the metallic interior.  A large framed blueprint hangs on the wall between the pillars, marked up with complicated formulas and diagrams of the machinery.</description>
+    <position x="580" y="680" z="2" />
+    <arc exit="north" move="north" destination="92" />
+    <arc exit="southwest" move="southwest" destination="94" />
+  </node>
+  <node id="94" name="The Baby Metal Arachnid, Back Abdomen" note="peddler's cart" color="#FF0000">
+    <description>The floor slopes southward in a noticeable manner, following the unsupported back of the clockwork Arachnid's abdomen.  Interlocking plates above form a thin shell of a ceiling, entirely devoid of pipes and gears.  A few throw rugs are laid out on the metal plating, making the sloping floor a bit less treacherous.</description>
+    <position x="520" y="740" z="2" />
+    <arc exit="northeast" move="northeast" destination="93" />
+    <arc exit="southwest" move="southwest" destination="95" />
+  </node>
+  <node id="95" name="The Baby Metal Arachnid, Spinneret" note="Spinneret" color="#00FF00">
+    <description>Huge sheets of metal all converge at a point at the very back of the clockwork metal Arachnid, ending at a large machine called the spinneret.  Named for both its location and its function, the spinneret constantly whirrs and turns, driving numerous belts that filter through the walls and ceiling to other parts of the spider.  A large lever sticks out vertically from the floor next to the machine, used for some unclear function.</description>
+    <position x="460" y="800" z="2" />
+    <arc exit="north" move="north" destination="104" />
+    <arc exit="northeast" move="northeast" destination="94" />
+    <arc exit="northwest" move="northwest" destination="96" />
+  </node>
+  <node id="96" name="The Baby Metal Arachnid, Back Abdomen">
+    <description>The floor slopes southward in a noticeable manner, following the unsupported back of the clockwork Arachnid's abdomen.  Interlocking plates above form a thin shell of a ceiling, entirely devoid of pipes and gears.  Creaks and groans occasionally come from the stressed metal, resonating and amplifying through the interior of the hollow metal spider.</description>
+    <position x="400" y="740" z="2" />
+    <arc exit="southeast" move="southeast" destination="95" />
+    <arc exit="northwest" move="northwest" destination="97" />
+  </node>
+  <node id="97" name="The Baby Metal Arachnid, Left Abdomen">
+    <description>Pipes cover the wall to the west, which slopes sharply to form the ceiling and follow the curve of the Arachnid's abdomen.  Lacquered cedar wood beams are bolted into the wall at even intervals, providing additional support to the metallic interior.  The blades of a fan turn lazily in the western wall, venting heat away from the corridor.</description>
+    <position x="340" y="680" z="2" />
+    <arc exit="north" move="north" destination="86" />
+    <arc exit="southeast" move="southeast" destination="96" />
+  </node>
+  <node id="98" name="The Baby Metal Arachnid, Middle Abdomen">
+    <description>Hollow metal columns rise from the platformed floor to the domed ceiling, forming a makeshift skeletal structure that holds up the roof of sliding steel sheets.  Walls rise up on either side of the hallway, stopping short of the concave dome high above.  A large metal barrel is built into the floor, capped securely with a slightly domed lid and stained black in patches.</description>
+    <position x="400" y="620" z="2" />
+    <arc exit="north" move="north" destination="99" />
+    <arc exit="south" move="south" destination="100" />
+    <arc exit="west" move="west" destination="86" />
+  </node>
+  <node id="99" name="The Baby Metal Arachnid, Middle Abdomen">
+    <description>Hollow metal columns rise from the platformed floor to the domed ceiling, forming a makeshift skeletal structure that holds up the roof of sliding steel sheets.  Walls rise up on either side of the hallway, stopping very short of the concave dome high above.  Zig-zagging pipes run the length of the hallway, with corresponding dials and pressure gauges dotting them at even intervals.</description>
+    <position x="400" y="560" z="2" />
+    <arc exit="north" move="north" destination="88" />
+    <arc exit="south" move="south" destination="98" />
+  </node>
+  <node id="100" name="The Baby Metal Arachnid, Middle Abdomen">
+    <description>Hollow metal columns rise from the platformed floor to the domed ceiling, forming a makeshift skeletal structure that holds up the roof of sliding steel sheets.  Walls rise up on either side of the hallway, stopping short of the concave dome high above.  One of the metal sheets high above looks quite a lot newer than the others, its shiny surface standing out among the duller plates surrounding it.</description>
+    <position x="400" y="680" z="2" />
+    <arc exit="north" move="north" destination="98" />
+    <arc exit="east" move="east" destination="101" />
+  </node>
+  <node id="101" name="The Baby Metal Arachnid, Middle Abdomen">
+    <description>Hollow metal columns rise from the platformed floor to the domed ceiling, forming a makeshift skeletal structure that holds up the roof of sliding steel sheets.  Walls rise up on either side of the hallway, stopping short of the concave dome high above.  The hallways form a crossroads, and each corner is covered with rubber tubing.</description>
+    <position x="460" y="680" z="2" />
+    <arc exit="north" move="north" destination="102" />
+    <arc exit="east" move="east" destination="105" />
+    <arc exit="south" move="south" destination="104" />
+    <arc exit="west" move="west" destination="100" />
+  </node>
+  <node id="102" name="The Baby Metal Arachnid, Middle Abdomen">
+    <description>Hollow metal columns rise from the platformed floor to the domed ceiling, forming a makeshift skeletal structure that holds up the roof of sliding steel sheets.  Walls rise up on either side of the hallway, stopping very short of the concave dome high above.  A small but noticeable hole is corroded into the floor, corresponding to a leaky pipe overhead.</description>
+    <position x="460" y="620" z="2" />
+    <arc exit="north" move="north" destination="103" />
+    <arc exit="south" move="south" destination="101" />
+  </node>
+  <node id="103" name="The Baby Metal Arachnid, Middle Abdomen">
+    <description>Hollow metal columns rise from the platformed floor to the domed ceiling, forming a makeshift skeletal structure that holds up the roof of sliding steel sheets.  Walls rise up on either side of the hallway, stopping very short of the concave dome high above.  Small puffs of steam filter through the floor on the eastern side of the room, creating rust streaks that mar the corrugated metal.</description>
+    <position x="460" y="560" z="2" />
+    <arc exit="north" move="north" destination="89" />
+    <arc exit="south" move="south" destination="102" />
+  </node>
+  <node id="104" name="The Baby Metal Arachnid, Back Abdomen">
+    <description>The floor slopes southward in a noticeable manner, following the unsupported back of the clockwork Arachnid's abdomen.  Interlocking plates above form a thin shell of a ceiling, entirely devoid of pipes and gears.  A small round skylight is open in one of the steel plates above, letting in a small shaft of light.</description>
+    <position x="460" y="740" z="2" />
+    <arc exit="north" move="north" destination="101" />
+    <arc exit="south" move="south" destination="95" />
+  </node>
+  <node id="105" name="The Baby Metal Arachnid, Middle Abdomen">
+    <description>Hollow metal columns rise from the platformed floor to the ceiling, forming a makeshift skeletal structure that holds up the roof of sliding steel sheets.  Walls rise up on either side of the hallway, stopping short of the concave dome high above.  A large spherical window juts out from the southern wall, enclosing a piece of machinery that occasionally fogs up the glass interior with steam.</description>
+    <position x="520" y="680" z="2" />
+    <arc exit="north" move="north" destination="106" />
+    <arc exit="west" move="west" destination="101" />
+  </node>
+  <node id="106" name="The Baby Metal Arachnid, Middle Abdomen">
+    <description>Hollow metal columns rise from the platformed floor to the domed ceiling, forming a makeshift skeletal structure that holds up the roof of sliding steel sheets.  Walls rise up on either side of the hallway, stopping short of the concave dome high above.  Three sturdy bars cover a heavily reinforced porthole of glass in one wall, and little can be seen past it except the occasional splash of water hitting its interior.</description>
+    <position x="520" y="620" z="2" />
+    <arc exit="north" move="north" destination="107" />
+    <arc exit="east" move="east" destination="92" />
+    <arc exit="south" move="south" destination="105" />
+  </node>
+  <node id="107" name="The Baby Metal Arachnid, Middle Abdomen">
+    <description>Hollow metal columns rise from the platformed floor to the domed ceiling, forming a makeshift skeletal structure that holds up the roof of sliding steel sheets.  Walls rise up on either side of the hallway, stopping short of the concave dome high above.  Taut metal wires add some support to the enormous columns, creating a spiderweb of silvery strands high above.</description>
+    <position x="520" y="560" z="2" />
+    <arc exit="north" move="north" destination="90" />
+    <arc exit="south" move="south" destination="106" />
+    <arc exit="go" move="go metal arch" destination="149" />
+  </node>
+  <node id="108" name="The Baby Metal Arachnid, Sternum" note="Baby Metal Arachnid|baby spider|Sternum|kitten" color="#00FF00">
+    <description>The ceiling is quite low and flat in this area of the spider, and slightly convex to shield whatever machinery drives the internal trappings of the massive construct.  Large metal columns rise here and there in the open area, riveted together with bolts at even intervals.  The corridor narrows to the south, leading into the arachnid's abdomen.</description>
+    <position x="460" y="440" z="2" />
+    <arc exit="northeast" move="northeast" destination="109" />
+    <arc exit="south" move="south" destination="89" />
+    <arc exit="northwest" move="northwest" destination="114" />
+  </node>
+  <node id="109" name="The Baby Metal Arachnid, Sternum" note="Huldah shrine" color="#00FF00">
+    <description>The ceiling is quite low and flat in this area of the spider, and slightly convex to shield whatever machinery drives the internal trappings of the massive construct.  Large metal columns rise here and there in the open area, riveted together with bolts at even intervals.  Several loose cogs are visible underneath a glass plate in the floor, apparently dropped and just left scattered haphazardly underneath the tile.</description>
+    <position x="520" y="380" z="2" />
+    <arc exit="northeast" move="northeast" destination="110" />
+    <arc exit="east" move="east" destination="117" />
+    <arc exit="southwest" move="southwest" destination="108" />
+    <arc exit="west" move="west" destination="114" />
+  </node>
+  <node id="110" name="The Baby Metal Arachnid, Cephalothorax">
+    <description>Thin steel plates are bolted together to form the floor and ceiling, arcing in a tangle of wires and gears high overhead.  Steaming pipes run along the walls, fitted with cogs and whirring clockwork parts that drive the machinery.  Several electrical burn marks mar a set of steel plates, warped slightly by whatever accident caused them.</description>
+    <position x="580" y="320" z="2" />
+    <arc exit="north" move="north" destination="111" />
+    <arc exit="northeast" move="northeast" destination="121" />
+    <arc exit="east" move="east" destination="119" />
+    <arc exit="southwest" move="southwest" destination="109" />
+    <arc exit="west" move="west" destination="123" />
+  </node>
+  <node id="111" name="The Baby Metal Arachnid, Cephalothorax">
+    <description>Thin steel plates are bolted together to form the floor and ceiling, arcing in a tangle of wires and gears high overhead.  Steaming pipes run along the walls, fitted with cogs and whirring clockwork parts that drive the machinery.  Small dials on one wall monitor the unknown functions of some strange container, reading at half full.</description>
+    <position x="580" y="260" z="2" />
+    <arc exit="northeast" move="northeast" destination="125" />
+    <arc exit="south" move="south" destination="110" />
+    <arc exit="west" move="west" destination="127" />
+    <arc exit="northwest" move="northwest" destination="112" />
+  </node>
+  <node id="112" name="The Baby Metal Arachnid, Cephalothorax">
+    <description>Thin steel plates are bolted together to form the floor and ceiling, arcing in a tangle of wires and gears high overhead.  Steaming pipes run along the walls, fitted with cogs and whirring clockwork parts that drive the machinery.  A fine mesh grate offers a dizzying view of the ground far below.</description>
+    <position x="520" y="200" z="2" />
+    <arc exit="southeast" move="southeast" destination="111" />
+    <arc exit="west" move="west" destination="113" />
+  </node>
+  <node id="113" name="The Baby Metal Arachnid, Cephalothorax">
+    <description>Thin steel plates are bolted together to form the floor and ceiling, arcing in a tangle of wires and gears high overhead.  Steaming pipes run along the walls, fitted with cogs and whirring clockwork parts that drive the machinery.  The smell of oil hangs heavy in the air.</description>
+    <position x="400" y="200" z="2" />
+    <arc exit="east" move="east" destination="112" />
+    <arc exit="southwest" move="southwest" destination="116" />
+  </node>
+  <node id="114" name="The Baby Metal Arachnid, Sternum">
+    <description>The ceiling is quite low and flat in this area of the spider, and slightly convex to shield whatever machinery drives the internal trappings of the massive construct.  Large metal columns rise here and there in the open area, riveted together with bolts at even intervals.  An enormous machine on the western portion of the wall grinds away at some unknown task.</description>
+    <position x="400" y="380" z="2" />
+    <arc exit="east" move="east" destination="109" />
+    <arc exit="southeast" move="southeast" destination="108" />
+    <arc exit="west" move="west" destination="128" />
+    <arc exit="northwest" move="northwest" destination="115" />
+  </node>
+  <node id="115" name="The Baby Metal Arachnid, Cephalothorax">
+    <description>Thin steel plates are bolted together to form the floor and ceiling, arcing in a tangle of wires and gears high overhead.  Steaming pipes run along the walls, fitted with cogs and whirring clockwork parts that drive the machinery.  The wide corridor runs along the outer edge of the spider's front half.</description>
+    <position x="340" y="320" z="2" />
+    <arc exit="north" move="north" destination="116" />
+    <arc exit="east" move="east" destination="124" />
+    <arc exit="southeast" move="southeast" destination="114" />
+    <arc exit="west" move="west" destination="130" />
+    <arc exit="northwest" move="northwest" destination="132" />
+  </node>
+  <node id="116" name="The Baby Metal Arachnid, Cephalothorax">
+    <description>Thin steel plates are bolted together to form the floor and ceiling, arcing in a tangle of wires and gears high overhead.  Steaming pipes run along the walls, fitted with cogs and whirring clockwork parts that drive the machinery.  A small viewport looks in on an engine, its internal workings incomprehensible.</description>
+    <position x="340" y="260" z="2" />
+    <arc exit="northeast" move="northeast" destination="113" />
+    <arc exit="east" move="east" destination="136" />
+    <arc exit="south" move="south" destination="115" />
+    <arc exit="northwest" move="northwest" destination="134" />
+  </node>
+  <node id="117" name="The Baby Metal Arachnid, Right Hind Leg">
+    <description>Massive levers and pistons drive the workings of the baby arachnid's leg, which is hollow and full of strange mechanisms.  The curving hallway continues down the spider's femur, just wide enough to be navigable.  A single U-shaped pipe juts out dangerously from one wall, its surface covered in condensation.</description>
+    <position x="580" y="380" z="2" />
+    <arc exit="southeast" move="southeast" destination="118" />
+    <arc exit="west" move="west" destination="109" />
+  </node>
+  <node id="118" name="The Baby Metal Arachnid, Right Hind Leg">
+    <description>Beveled gears run to the huge joint in the spider's leg, the corridor dead-ending at a sealed manhole.  The walls form a nearly perfect vertical from the metal floor, which is bolted to a platform above a tangle of machinery.  A series of three glass pipes cuts through the middle of the room like a column, containing some amber-colored fluid that drops out of sight below.</description>
+    <position x="640" y="440" z="2" />
+    <arc exit="northwest" move="northwest" destination="117" />
+  </node>
+  <node id="119" name="The Baby Metal Arachnid, Right Mid-Back Leg">
+    <description>Massive levers and pistons drive the workings of the baby arachnid's leg, which is hollow and full of strange mechanisms.  The curving hallway continues down the spider's femur, just wide enough to be navigable.  One wall holds a tiny porthole, giving a view of the inaccessible parts of the massive clockwork creature's legs.</description>
+    <position x="640" y="320" z="2" />
+    <arc exit="southeast" move="southeast" destination="120" />
+    <arc exit="west" move="west" destination="110" />
+  </node>
+  <node id="120" name="The Baby Metal Arachnid, Right Mid-Back Leg">
+    <description>Beveled gears run to the huge joint in the spider's leg, the corridor dead-ending at a sealed manhole.  The walls form a nearly perfect vertical from the metal floor, which is bolted to a platform above a tangle of machinery.  Coin-sized circular holes are cut out of a plate in one wall, revealing a mass of turning gears behind it.</description>
+    <position x="700" y="380" z="2" />
+    <arc exit="northwest" move="northwest" destination="119" />
+  </node>
+  <node id="121" name="The Baby Metal Arachnid, Right Mid-Front Leg">
+    <description>Massive levers and pistons drive the workings of the baby arachnid's leg, which is hollow and full of strange mechanisms.  The curving hallway continues down the spider's femur, just wide enough to be navigable.  A large blueprint hangs on the wall, a jumble of scribbles covering it in white chalk.</description>
+    <position x="640" y="260" z="2" />
+    <arc exit="east" move="east" destination="122" />
+    <arc exit="southwest" move="southwest" destination="110" />
+  </node>
+  <node id="122" name="The Baby Metal Arachnid, Right Mid-Front Leg">
+    <description>Beveled gears run to the huge joint in the spider's leg, the corridor dead-ending at a sealed manhole.  The walls form a nearly perfect vertical from the metal floor, which is bolted to a platform above a tangle of machinery.  Ruined scraps of cloth hang from the ceiling, the remains of a washcloth defeated by an oily spill.</description>
+    <position x="700" y="260" z="2" />
+    <arc exit="west" move="west" destination="121" />
+  </node>
+  <node id="123" name="The Baby Metal Arachnid, Cephalothorax">
+    <description>Thin steel plates are bolted together to form the floor and ceiling, arcing in a tangle of wires and gears high overhead.  Steaming pipes run along the walls, fitted with cogs and whirring clockwork parts that drive the machinery.  A metal grate blocks off a huge engine that chugs away with a steady rhythm, set up with levers that run to the right legs of the spider.</description>
+    <position x="520" y="320" z="2" />
+    <arc exit="east" move="east" destination="110" />
+    <arc exit="west" move="west" destination="124" />
+  </node>
+  <node id="124" name="The Baby Metal Arachnid, Cephalothorax">
+    <description>Thin steel plates are bolted together to form the floor and ceiling, arcing in a tangle of wires and gears high overhead.  Steaming pipes run along the walls, fitted with cogs and whirring clockwork parts that drive the machinery.  A metal grate blocks off a huge engine that chugs away with a steady rhythm, set up with levers that run to the left legs of the spider.</description>
+    <position x="400" y="320" z="2" />
+    <arc exit="east" move="east" destination="123" />
+    <arc exit="west" move="west" destination="115" />
+  </node>
+  <node id="125" name="The Baby Metal Arachnid, Right Foreleg">
+    <description>Massive levers and pistons drive the workings of the baby arachnid's leg, which is hollow and full of strange mechanisms.  The curving hallway continues down the spider's femur, just wide enough to be navigable.  The hands of a clock are bolted into one wall, ticking away rhythmically with little visible purpose.</description>
+    <position x="640" y="200" z="2" />
+    <arc exit="east" move="east" destination="126" />
+    <arc exit="southwest" move="southwest" destination="111" />
+  </node>
+  <node id="126" name="The Baby Metal Arachnid, Right ForeLeg">
+    <description>Beveled gears run to the huge joint in the spider's leg, the corridor dead-ending at a sealed manhole.  The walls form a nearly perfect vertical from the metal floor, which is bolted to a platform above a tangle of machinery.  A grip-handled wheel sticks out from a pipe, kept from turning by a thick chain and padlock.</description>
+    <position x="700" y="200" z="2" />
+    <arc exit="west" move="west" destination="125" />
+  </node>
+  <node id="127" name="The Baby Metal Arachnid, Eyes">
+    <description>With a ceiling arching sharply upward in a dome, the small room's walls are covered with confusing controls.  Several wide viewports open out to show the forest outside the spider, four large round windows mimicking an arachnid's eyes.  The forests of Forfedhdar stretch out to the distance, ending at the mountains.</description>
+    <position x="520" y="260" z="2" />
+    <arc exit="east" move="east" destination="111" />
+  </node>
+  <node id="128" name="The Baby Metal Arachnid, Left Hind Leg">
+    <description>Massive levers and pistons drive the workings of the baby arachnid's leg, which is hollow and full of strange mechanisms.  The curving hallway continues down the spider's femur, just wide enough to be navigable.  Odd symmetry follows the north and southern walls, the rivets placed in a mechanical and repeating manner.</description>
+    <position x="340" y="380" z="2" />
+    <arc exit="east" move="east" destination="114" />
+    <arc exit="southwest" move="southwest" destination="129" />
+  </node>
+  <node id="129" name="The Baby Metal Arachnid, Left Hind Leg">
+    <description>Beveled gears run to the huge joint in the spider's leg, the corridor dead-ending at a sealed manhole.  The walls form a nearly perfect vertical from the metal floor, which is bolted to a platform above a tangle of machinery.  Tangled wires of thin metal zigzag across the ceiling, out of reach and rusted in spots.</description>
+    <position x="280" y="440" z="2" />
+    <arc exit="northeast" move="northeast" destination="128" />
+  </node>
+  <node id="130" name="The Baby Metal Arachnid, Left Mid-Back Leg">
+    <description>Massive levers and pistons drive the workings of the baby arachnid's leg, which is hollow and full of strange mechanisms.  The curving hallway continues down the spider's femur, just wide enough to be navigable.  One wall panel lies open, displaying the vestiges of some long-forgotten mechanism.</description>
+    <position x="280" y="320" z="2" />
+    <arc exit="east" move="east" destination="115" />
+    <arc exit="southwest" move="southwest" destination="131" />
+  </node>
+  <node id="131" name="The Baby Metal Arachnid, Left Mid-Back Leg">
+    <description>Beveled gears run to the huge joint in the spider's leg, the corridor dead-ending at a sealed manhole.  The walls form a nearly perfect vertical from the metal floor, which is bolted to a platform above a tangle of machinery.  Trapped inside a network of cogs is a lone pair of discarded goggles, scratched and torn by the relentless driving of the machinery.</description>
+    <position x="220" y="380" z="2" />
+    <arc exit="northeast" move="northeast" destination="130" />
+  </node>
+  <node id="132" name="The Baby Metal Arachnid, Left Mid-Front Leg">
+    <description>Massive levers and pistons drive the workings of the baby arachnid's leg, which is hollow and full of strange mechanisms.  The curving hallway continues down the spider's femur, just wide enough to be navigable.  Whirring noises can be heard from several gears that are bolted into the wall.</description>
+    <position x="280" y="260" z="2" />
+    <arc exit="southeast" move="southeast" destination="115" />
+    <arc exit="west" move="west" destination="133" />
+  </node>
+  <node id="133" name="The Baby Metal Arachnid, Left Mid-Front Leg">
+    <description>Beveled gears run to the huge joint in the spider's leg, the corridor dead-ending at a sealed manhole.  The walls form a nearly perfect vertical from the metal floor, which is bolted to a platform above a tangle of machinery.  A coil of honey-colored tubes runs from the floor into a bulbous mechanism, with a lever jutting from it and locked in place.</description>
+    <position x="220" y="260" z="2" />
+    <arc exit="east" move="east" destination="132" />
+  </node>
+  <node id="134" name="The Baby Metal Arachnid, Left Foreleg">
+    <description>Massive levers and pistons drive the workings of the baby arachnid's leg, which is hollow and full of strange mechanisms.  The curving hallway continues down the spider's femur, just wide enough to be navigable.  Loud clanging fills the air, accompanied by the constant scraping of metal against metal.</description>
+    <position x="280" y="200" z="2" />
+    <arc exit="southeast" move="southeast" destination="116" />
+    <arc exit="west" move="west" destination="135" />
+  </node>
+  <node id="135" name="The Baby Metal Arachnid, Left ForeLeg">
+    <description>Beveled gears run to the huge joint in the spider's leg, the corridor dead-ending at a sealed manhole.  The walls form a nearly perfect vertical from the metal floor, which is bolted to a platform above a tangle of machinery.  Thick ichor-like oil puddles in one corner, dripping from a leaky pipe in the ceiling.</description>
+    <position x="220" y="200" z="2" />
+    <arc exit="east" move="east" destination="134" />
+  </node>
+  <node id="136" name="The Baby Metal Arachnid, Eyes">
+    <description>With a ceiling arching sharply upward in a dome, the small room's walls are covered with confusing controls.  Several wide viewports open out to show the forest outside the spider, four large round windows mimicking an arachnid's eyes.  The larger figure of the massive metal aracnid looms to the west, swaying and moving slightly as if almost alive.</description>
+    <position x="400" y="260" z="2" />
+    <arc exit="west" move="west" destination="116" />
+  </node>
+  <node id="137" name="The Massive Arachnid, Haemolymphatic Prechamber" note="Haemolymphatic Prechamber" color="#0000FF">
+    <description>Constant 'drip, drip, drip' sounds echo through the cramped area, which is narrower than it is tall.  The walls are made of a tangle of membranes, chitinous conduits, and unidentifiable fleshy protrusions, all in a state of constant motion.  A foul smell fills the stagnant air, and a thin, oily slick floats on the surface of the bluish, watery fluid filling this claustrophobic corridor.</description>
+    <position x="640" y="340" z="-1" />
+    <arc exit="southeast" move="swim southeast" destination="138" />
+    <arc exit="southwest" move="swim southwest" destination="142" />
+    <arc exit="climb" move="climb narrow ladder" destination="56" />
+  </node>
+  <node id="138" name="The Massive Arachnid, Haemolymphatic Prechamber" color="#0000FF">
+    <description>Exposed muscle lines the walls of this corridor, which is little more than gaps between large, undulating bulges that bear a faint blue hue.  Bluish, watery fluid flows and pools along the floor, draining through small openings in the chitin and constantly replenished from unseen sources.</description>
+    <position x="660" y="360" z="-1" />
+    <arc exit="south" move="swim south" destination="139" />
+    <arc exit="west" move="swim west" destination="142" />
+    <arc exit="northwest" move="swim northwest" destination="137" />
+  </node>
+  <node id="139" name="The Massive Arachnid, Haemolymphatic Prechamber" color="#0000FF">
+    <description>Several strange machines of melded flesh and metal form a line, churning and chugging away at some unknown task as parts in them move in a cyclical pattern.  Knee-high bluish, watery fluid stands stagnant in narrow channels that weave between them.  Clanging noises occasionally echo through the corridor, and dim light filters in from the bizarre contraptions.</description>
+    <position x="660" y="380" z="-1" />
+    <arc exit="north" move="swim north" destination="138" />
+    <arc exit="southwest" move="swim southwest" destination="140" />
+    <arc exit="west" move="swim west" destination="141" />
+  </node>
+  <node id="140" name="The Massive Arachnid, Haemolymphatic Prechamber" color="#0000FF">
+    <description>The ceiling here is oppressively low, with the occasional bioluminescent mass sticking out of the bright red flesh providing a dim, eerie glow.  Chitin-covered tubes zigzag back and forth across it in an untraceable maze, several of them dripping and slowly leaking a thick, blue-tinged substance.  The knee-high water below catches the foul fluid, adding it to the already substantial slick on its surface.</description>
+    <position x="640" y="400" z="-1" />
+    <arc exit="northeast" move="swim northeast" destination="139" />
+    <arc exit="northwest" move="swim northwest" destination="141" />
+  </node>
+  <node id="141" name="The Massive Arachnid, Haemolymphatic Prechamber" color="#0000FF">
+    <description>The ceiling falls away, stretching upward until it disappears into the darkness occasionally punctuated by thin, valved membranes.  Several rusted tanks line the southern edge of the room, pipes and dials crisscrossing over the front of them and connecting each one to the other.  Water mingled with strange, bluish fluid pools on the floor in constantly swirling runnels, a thin oily sheen ever present on its surface.</description>
+    <position x="620" y="380" z="-1" />
+    <arc exit="north" move="swim north" destination="142" />
+    <arc exit="east" move="swim east" destination="139" />
+    <arc exit="southeast" move="swim southeast" destination="140" />
+  </node>
+  <node id="142" name="The Massive Arachnid, Haemolymphatic Prechamber" color="#0000FF">
+    <description>The western wall is almost entirely covered in chitinous gears, each one performing some individual task that seamlessly fits into the larger puzzle.  Lazily flowing water mingled with bluish fluid runs nearly up to the bottom of the maze of machinery and connected muscle, and a thicker blue-tinged substance constantly streams down over the whole biomechanical mass, coating it all in a thin, oily layer.</description>
+    <position x="620" y="360" z="-1" />
+    <arc exit="northeast" move="swim northeast" destination="137" />
+    <arc exit="east" move="swim east" destination="138" />
+    <arc exit="south" move="swim south" destination="141" />
+  </node>
+  <node id="143" name="First Arachnid Bank, Foreign Exchange" note="Foreign Exchange" color="#00FF00">
+    <description>For the convenience of guests, the First Arachnid Bank employs mages who, under the careful scrutiny of the guards, maintain moongates between the various banks, running the length and breadth of realms.  These gates allow customers to effortlessly transfer money from other banks, saving their customers time as well as protecting their purses from the hazards of the road.</description>
+    <position x="200" y="120" z="1" />
+    <arc exit="go" move="go rust-streaked arch" destination="41" />
+  </node>
+  <node id="144" name="Auction Hall, Lobby">
+    <description>Polished bronze covers the interior walls of this area, its high sheen reflecting the light from the various iron lanterns hung about the room.  A pair of glass-domed display tables flanks the hematite-beaded curtain leading into the main hall.</description>
+    <position x="180" y="340" z="1" />
+    <arc exit="go" move="go bronze door" destination="31" />
+    <arc exit="go" move="go hematite-beaded curtain" destination="145" />
+  </node>
+  <node id="145" name="Auction Hall, Bidding Floor" note="Auction Hall|Bidding Floor" color="#FF0000">
+    <description>Polished bronze covers the interior walls of this area, its high sheen reflecting the light from the various iron lanterns hung about the room.  Rows of leather-padded benches face the podium, offering a comfortable place to sit.</description>
+    <position x="180" y="350" z="1" />
+    <arc exit="southeast" move="southeast" destination="147" />
+    <arc exit="south" move="south" destination="146" />
+    <arc exit="southwest" move="southwest" destination="148" />
+    <arc exit="out" move="out" destination="144" />
+  </node>
+  <node id="146" name="Auction Hall, Bidding Floor" color="#FF0000">
+    <description>Polished bronze covers the interior walls of this area, its high sheen reflecting the light from the various iron lanterns hung about the room.  Rows of leather-padded benches face the podium, offering a comfortable place to sit.</description>
+    <position x="180" y="360" z="1" />
+    <arc exit="north" move="north" destination="145" />
+    <arc exit="east" move="east" destination="147" />
+    <arc exit="west" move="west" destination="148" />
+  </node>
+  <node id="147" name="Auction Hall, Bidding Floor" color="#FF0000">
+    <description>Polished bronze covers the interior walls of this area, its high sheen reflecting the light from the various iron lanterns hung about the room.  Rows of leather-padded benches face the podium, offering a comfortable place to sit.</description>
+    <position x="190" y="360" z="1" />
+    <arc exit="northwest" move="northwest" destination="145" />
+    <arc exit="west" move="west" destination="146" />
+  </node>
+  <node id="148" name="Auction Hall, Bidding Floor" color="#FF0000">
+    <description>Polished bronze covers the interior walls of this area, its high sheen reflecting the light from the various iron lanterns hung about the room.  Rows of leather-padded benches face the podium, offering a comfortable place to sit.</description>
+    <position x="170" y="360" z="1" />
+    <arc exit="northeast" move="northeast" destination="145" />
+    <arc exit="east" move="east" destination="146" />
+  </node>
+  <node id="149" name="The Baby Metal Arachnid, Item Registrar">
+    <description>A large metal arch domes at the end of this small hallway, and several mismatched throw rugs are thrown hastily onto the floor.  Evenly spaced rivets go up and down the walls to hold the paneling together, which is made from several different kinds of scrap metal.  Harsh white lamps light up the walls from each corner, illuminating the area well.</description>
+    <position x="540" y="560" z="2" />
+    <arc exit="go" move="go metal arch" destination="107" />
+    <arc exit="go" move="go wide curtain" destination="150" />
+  </node>
+  <node id="150" name="Item Registration" note="Item Registration" color="#00FF00">
+    <description>Filing cabinets and slanted metal shelves line the walls from end to end, stuffed full of papers and badly organized notes.   A large desk dominates the center of the room, with a clockwork contraption seated behind it.  Several papers are strewn about on the floor, most of them crushed into the metal grating that houses the machinery in the bowels of the spider.</description>
+    <position x="540" y="570" z="2" />
+    <arc exit="go" move="go wide curtain" destination="149" />
+  </node>
+  <label text="Clearing">
+    <position x="223" y="-9" z="0" />
+  </label>
+  <label text="Entrance">
+    <position x="224" y="69" z="0" />
+  </label>
+  <label text="Abdomen">
+    <position x="0" y="221" z="0" />
+  </label>
+  <label text="Thorax">
+    <position x="10" y="397" z="0" />
+  </label>
+  <label text="grave earth pile">
+    <position x="282" y="612" z="0" />
+  </label>
+  <label text="to Upper Abdomen">
+    <position x="283" y="251" z="0" />
+  </label>
+  <label text="to Upper Thorax">
+    <position x="225" y="552" z="0" />
+  </label>
+  <label text="to Lowest Depths">
+    <position x="185" y="711" z="0" />
+  </label>
+  <label text="bank">
+    <position x="204" y="101" z="1" />
+  </label>
+  <label text="auction">
+    <position x="135" y="341" z="1" />
+  </label>
+  <label text="alterations">
+    <position x="101" y="193" z="1" />
+  </label>
+  <label text="raffles">
+    <position x="324" y="332" z="1" />
+  </label>
+  <label text="Upper Abdomen">
+    <position x="10" y="252" z="1" />
+  </label>
+  <label text="Upper Thorax">
+    <position x="10" y="490" z="1" />
+  </label>
+  <label text="Head">
+    <position x="223" y="649" z="1" />
+  </label>
+  <label text="to lower Abdomen">
+    <position x="304" y="252" z="1" />
+  </label>
+  <label text="to lower">
+    <position x="197" y="482" z="1" />
+  </label>
+  <label text="Thorax">
+    <position x="196" y="501" z="1" />
+  </label>
+  <label text="to baby spider">
+    <position x="273" y="600" z="1" />
+  </label>
+  <label text="Lowest Depths">
+    <position x="141" y="611" z="-1" />
+  </label>
+  <label text="Haemolymphatic Prechamber">
+    <position x="576" y="320" z="-1" />
+  </label>
+  <label text="to Thorax">
+    <position x="495" y="763" z="-1" />
+  </label>
+  <label text="Spinneret">
+    <position x="464" y="793" z="2" />
+  </label>
+  <label text="kittens">
+    <position x="464" y="433" z="2" />
+  </label>
+  <label text="to big spider">
+    <position x="273" y="604" z="2" />
+  </label>
+  <label text="Cephalothorax">
+    <position x="424" y="142" z="2" />
+  </label>
+  <label text="Sternum">
+    <position x="437" y="397" z="2" />
+  </label>
+  <label text="Abdomen">
+    <position x="620" y="612" z="2" />
+  </label>
+</zone>

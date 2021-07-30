@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Vineyard" id="7a">
+  <node id="1" name="Northeast Vineyard, Pressing Vats">
+    <description>Wooden crushing vats clutter the ground, crusted with the remains of long evaporated grapes.  Dark stains discolor the wood, while unidentifiable lumps cling to the bottom.  Great aging barrels lie tumbled to one side, waiting for the vintner and his assistants to fill them before rolling them to the aging caves for storage.</description>
+    <position x="125" y="404" z="0" />
+    <arc exit="northeast" move="northeast" destination="2" />
+    <arc exit="south" move="south" destination="4" />
+  </node>
+  <node id="2" name="Northeast Vineyard, Cooper's Shed">
+    <description>Narrow oak planks are stacked outside a small wooden shed, the door of which stands open invitingly.  Wooden mallets, planes, copper strips, odd looking clamps and other worn tools lie on the ground within easy reach of a rough bench.  A half-finished barrel lies on the ground, its staves warped by the time and the elements, while completed barrels have been stacked neatly against the side of the shed.</description>
+    <position x="145" y="384" z="0" />
+    <arc exit="northeast" move="northeast" destination="3" />
+    <arc exit="southwest" move="southwest" destination="1" />
+    <arc exit="go" move="go small shed" destination="5" />
+  </node>
+  <node id="3" name="Northeast Vineyards" color="#FFBF00">
+    <description>Just beyond a small wooden shed lies a sturdy fence which separates the farm from the garden.  A simple affair of wood, the fence nevertheless serves to keep livestock within the farmyard, and away from the garden on the other side.  A stile crosses the fence, allowing men to pass, but frustrating any animal seeking an unoffered meal.</description>
+    <position x="165" y="364" z="0" />
+    <arc exit="southwest" move="southwest" destination="2" />
+    <arc exit="climb" move="climb stile" destination="35" />
+  </node>
+  <node id="4" name="Northeast Vineyard, Farmhouse">
+    <description>Nestled at the base of a terraced hillside, a small stone farmhouse seems caught in a struggle with the tendrils of ivy which seek to pull it down.  Though the farmhouse survives, the outcome of the battle is really not in doubt.  The ivy has already pulled over half the chimney, now a pile of rust-colored bricks lying in an untidy heap on the west side of the house.  To the north, a path leads to a small building behind the house, while a trail to the south leads back into the forest.</description>
+    <position x="125" y="424" z="0" />
+    <arc exit="north" move="north" destination="1" />
+    <arc exit="go" move="go trail" destination="15" />
+    <arc exit="climb" move="climb terraced hillside" destination="16" />
+    <arc exit="go" move="go stone farmhouse" destination="11" />
+  </node>
+  <node id="5" name="Northeast Vineyard, Wine Cellar">
+    <description>A shallow ramp leads up toward the entrance of the cave, dimly visible in the distance.  Care has been taken to widen the ramp, and a wooden railing has been attached, making it easy for barrels to be rolled into the caves from the pressing vats.  A broken barrel lies at the bottom of the ramp, its slats stove in.</description>
+    <position x="105" y="344" z="0" />
+    <arc exit="south" move="south" destination="6" />
+    <arc exit="go" move="go shallow ramp" destination="2" />
+  </node>
+  <node id="6" name="Northeast Vineyard, Wine Cellar">
+    <description>Great oaken casks line the walls of the cave, piled one atop the other.  Wine has seeped from the casks, forming dark stains on the floor.  A table along one wall contains glasses, as well as wooden mallets and devices to tap the casks.</description>
+    <position x="105" y="364" z="0" />
+    <arc exit="north" move="north" destination="5" />
+    <arc exit="south" move="south" destination="7" />
+  </node>
+  <node id="7" name="Northeast Vineyard, Wine Cellar">
+    <description>Row after row of wine racks line the natural cave that forms the cellar of the house.  The bottles have been shattered, the glass shards littering the room.  Tools used to cork the wine lie scattered about the floor.  A rickety wooden ladder leads up to a hole in the ceiling.</description>
+    <position x="105" y="384" z="0" />
+    <arc exit="north" move="north" destination="6" />
+    <arc exit="climb" move="climb wooden ladder" destination="8" />
+  </node>
+  <node id="8" name="Northeast Vineyard, Stair Cupboard">
+    <description>Shadows gather in the corner of this tiny room under the stairs.  The wood which lines the walls has warped slightly in the damp air which wafts from a small hole in the floor.  A rickety ladder leads through the hole to the darkness below.  The dim light from an oddly shaped door is the only source of illumination.</description>
+    <position x="105" y="404" z="0" />
+    <arc exit="out" move="out" destination="9" />
+    <arc exit="go" move="go oddly-shaped door" destination="9" />
+    <arc exit="climb" move="climb wooden ladder" destination="7" />
+  </node>
+  <node id="9" name="Northeast Vineyard, Farmhouse Hallway">
+    <description>The front door remains closed, the dirty glass panes allowing little light to penetrate the dim hallway.  The newel post has broken, allowing the bannister to sag away from the wooden stairs.  The stairs themselves seem sturdy enough, though covered in spiderwebs and dust.  An oddly-shaped door under the stairs leads to some kind of cupboard, while a doorway to the west leads back to the parlor.</description>
+    <position x="85" y="404" z="0" />
+    <arc exit="west" move="west" destination="10" />
+    <arc exit="up" move="up" destination="12" />
+    <arc exit="go" move="go oddly-shaped door" destination="8" />
+  </node>
+  <node id="10" name="Northeast Vineyard, Farmhouse Parlor">
+    <description>The farmwife must have taken pride in her parlor, however time and rodents have taken over, leaving the room a shambles.  Tattered fragments of faded velvet draperies shift in the draft from a broken window.  The elegant brocade which once covered the tilting sofa has been shredded by the claws of rodents who gnawed the legs.  Dust blankets the room, blurring the details in a gentle fog.  An archway to the south leads to the kitchen, while a doorway to the east leads into a hallway.</description>
+    <position x="65" y="404" z="0" />
+    <arc exit="east" move="east" destination="9" />
+    <arc exit="south" move="south" destination="11" />
+  </node>
+  <node id="11" name="Northeast Vineyard, Farmhouse Kitchen">
+    <description>The whitewashed walls of this small room are cracking, as plaster pulls away from the lathes beneath and crumbles to the floor.  Once a cozy kitchen, the hearth is now cold and dirty, the pot within it blackened and burned.  The worn wooden table is still set for diners who will never arrive, while its chairs lie broken amidst the plaster dust.  A narrow wooden door leads out to the yard, while an archway leads north to another room.</description>
+    <position x="65" y="424" z="0" />
+    <arc exit="north" move="north" destination="10" />
+    <arc exit="go" move="go wooden door" destination="4" />
+  </node>
+  <node id="12" name="Northeast Vineyard, Upstairs Hallway">
+    <description>Small tracks crisscross the dust blanketing this upstairs hallway, while pale, watery light filters through the filthy panes of a window at the top of the stairs, bathing the hall in a dim glow.  The doors which once guarded the rooms on this floor have been gnawed by rodents til they lie precariously askew.</description>
+    <position x="85" y="384" z="0" />
+    <arc exit="north" move="north" destination="14" />
+    <arc exit="west" move="west" destination="13" />
+    <arc exit="down" move="down" destination="9" />
+  </node>
+  <node id="13" name="Northeast Vineyard, Master Bedroom">
+    <description>Goose feathers are everywhere in this room, evidently liberated from the feather mattress which lies on the ancient four poster bed.  Generation after generation of mice have found it a comfortable nesting spot, from the looks of things.  A wooden hatbox perches atop a dusty cupboard which stands in one corner of the room, its paint faded and scratched.</description>
+    <position x="65" y="384" z="0" />
+    <arc exit="east" move="east" destination="12" />
+  </node>
+  <node id="14" name="Northeast Vineyard, Girl's Bedroom">
+    <description>The trappings of childhood cast off, this room evidently belonged to the young lady of the house.  A single doll lies on the narrow bed, and a carved wooden box perches upon the dresser.  A cupboard in the corner is open, revealing the remains of a white muslin gown, as well as more prosaic working dresses.</description>
+    <position x="85" y="364" z="0" />
+    <arc exit="south" move="south" destination="12" />
+  </node>
+  <node id="15" name="Northern Trade Road, Farmlands" note="NTR|Crossing|Map7_NTR.xml">
+    <description>Neatly planted rows of grain mingle with tidy plots of vegetables covering the rich earth of well-tended farms along the wide road as it wanders across the land.  A farmer waves at you as he toils along behind a yoke of sturdy oxen that pull a heavy iron plow through the fertile soil.</description>
+    <description>Empty fields lie sleeping beneath the blanket of night.  The scent of plowed earth mingles with the fragrance of fresh growing things.</description>
+    <position x="125" y="464" z="0" />
+    <arc exit="northeast" move="northeast" />
+    <arc exit="south" move="south" />
+    <arc exit="go" move="go trail" destination="4" />
+  </node>
+  <node id="16" name="Northeast Vineyards">
+    <description>Green grass and tufts of wildflowers blanket the southern exposure of the steep hill.  Terraces cut into the hillside allow the grape vines to flourish on their trellises without risking the health of the workers who tend them.  A path to the east wends its way through the lowest level of the terrace, while a steep climb downhill leads to the farmyard below.</description>
+    <position x="243" y="515" z="0" />
+    <arc exit="east" move="east" destination="17" />
+    <arc exit="climb" move="climb steep hill" destination="4" />
+  </node>
+  <node id="17" name="Northeast Vineyards">
+    <description>A warm breeze wafts along the terrace, rustling the leaves around you, and carrying with it the scent of grapes and growing things.  Footprints leave faint scuff marks on the smooth green of the grass as you pass through the lush rows of grapevines which border the terrace.</description>
+    <position x="263" y="515" z="0" />
+    <arc exit="east" move="east" destination="18" />
+    <arc exit="west" move="west" destination="16" />
+  </node>
+  <node id="18" name="Northeast Vineyards">
+    <description>The smooth green turf has been torn up here, as though a struggle has taken place.  Tracks in the soil lead in all directions, and several vines have been pulled loose from their supporting trellises to be crushed underfoot.  The sharp, tangy scent of crushed grapes fills the air.</description>
+    <position x="283" y="515" z="0" />
+    <arc exit="east" move="east" destination="19" />
+    <arc exit="west" move="west" destination="17" />
+  </node>
+  <node id="19" name="Northeast Vineyards">
+    <description>Wooden trellises line the walkway, one on each side of the terrace.  The wind or an animal has knocked down a section of the northern trellis, leaving an awkward tangle of wood and grape vines to be trampled by careless feet.  Proving the adage about an ill wind that blows no good, the break in the trellis provides a convenient place to climb up the hill to the next higher terrace.</description>
+    <position x="303" y="515" z="0" />
+    <arc exit="east" move="east" destination="20" />
+    <arc exit="west" move="west" destination="18" />
+    <arc exit="climb" move="climb steep hill" destination="21" />
+  </node>
+  <node id="20" name="Northeast Vineyards">
+    <description>A tangle of dried grapevines, evidently from the last time the vines were pruned, has been piled high at the east end of the walkway, blocking further travel in this direction.  Dried vines such as these would be burned at harvest time, their smoke seasoning the oaken barrels in which the wine will age.</description>
+    <position x="323" y="515" z="0" />
+    <arc exit="west" move="west" destination="19" />
+  </node>
+  <node id="21" name="Northeast Vineyards">
+    <description>A gap in the trellis on the outer edge of the terrace gives a view of the farmyard below.  Shadows seem to skitter about the yard, shifting like smoke before they can quite be seen.  A broken trellis on the terrace below provides a convenient place to scramble down the hill.</description>
+    <position x="303" y="435" z="0" />
+    <arc exit="east" move="east" destination="26" />
+    <arc exit="west" move="west" destination="22" />
+    <arc exit="climb" move="climb steep hill" destination="19" />
+  </node>
+  <node id="22" name="Northeast Vineyards">
+    <description>The air is filled with a low drone as bees fly to and fro.  A swarm has built their hive on a trellis here, black and yellow insects working steadfastly to gather nectar from nearby flowers and return to the hive to transform it into honey.  The sweet scent from the hive permeates the air.</description>
+    <position x="283" y="435" z="0" />
+    <arc exit="east" move="east" destination="21" />
+    <arc exit="southwest" move="southwest" destination="23" />
+  </node>
+  <node id="23" name="Northeast Vineyards">
+    <description>Wispy patches of wildflowers and herbs grow with careless abandon, carpeting the floor of the terrace.  Honeybees float lazily from flower to flower, gathering their nectar with a single-minded intensity.  The drone of the bees is relaxing, as is the delicate fragrance of crushed thyme and flowers.</description>
+    <position x="263" y="455" z="0" />
+    <arc exit="northeast" move="northeast" destination="22" />
+    <arc exit="west" move="west" destination="24" />
+  </node>
+  <node id="24" name="Northeast Vineyards">
+    <description>A rock lies half buried in the middle of the path, requiring passers-by to walk close to the edge of the terrace.  Deep green grape vines shiver with each passing footstep, the motion revealing the bleached silvery wood of the trellis to which they cling.</description>
+    <position x="243" y="455" z="0" />
+    <arc exit="east" move="east" destination="23" />
+    <arc exit="west" move="west" destination="25" />
+  </node>
+  <node id="25" name="Northeast Vineyards">
+    <description>A crude stone firepit has been constructed at this end of the middle terrace, providing workers with a convenient place to stop and eat a meal during the day.  Sun-bleached poultry bones have been snapped, and half buried beneath the outer trellis.  A steep climb up the hill leads to the topmost level of the terraces.</description>
+    <position x="223" y="455" z="0" />
+    <arc exit="east" move="east" destination="24" />
+    <arc exit="climb" move="climb steep hill" destination="30" />
+  </node>
+  <node id="26" name="Northeast Vineyards">
+    <description>Tendrils of grape vines caress the skin with every movement through this walkway.  About four feet apart, the vines which grow on the trellises to each side reach out as if to clutch at those who pass by.  A lop-eared brown rabbit peers out from under the inner trellis, its tiny pink nose twitching curiously.</description>
+    <position x="323" y="435" z="0" />
+    <arc exit="east" move="east" destination="27" />
+    <arc exit="west" move="west" destination="21" />
+  </node>
+  <node id="27" name="Northeast Vineyards">
+    <description>A broken rake leans against a trellis, grape vines curling about its length.  Flecks of rust fall from the weathered tines at each touch of a gentle breeze, while splinters catch at the clothing of unwary passers-by.  The philosophical might murmur platitudes about the return to the earth of an implement used to wrest a living from it.</description>
+    <position x="343" y="435" z="0" />
+    <arc exit="east" move="east" destination="28" />
+    <arc exit="west" move="west" destination="26" />
+  </node>
+  <node id="28" name="Northeast Vineyards">
+    <description>A cat lies beneath a trellis, unconcernedly washing her paw as she basks in the cool breeze.  Dark green leaves provide a sharp contrast with her orange and white fur, and her eyes gleam softly in the shadows as she glances about with half shut eyes.</description>
+    <position x="383" y="435" z="0" />
+    <arc exit="northeast" move="northeast" destination="29" />
+    <arc exit="west" move="west" destination="27" />
+  </node>
+  <node id="29" name="Northeast Vineyards">
+    <description>Wrens warble musically as they call out to each other from their perch in the vines.  Hidden from predators, they hop about, the leaves swaying with their movements.  A cluster of tail feathers littering the ground indicates that such safety is, at best, fleeting.</description>
+    <position x="403" y="415" z="0" />
+    <arc exit="southwest" move="southwest" destination="28" />
+  </node>
+  <node id="30" name="Northeast Vineyards">
+    <description>The view from the upper terrace is breathtaking.  A small farmhouse nestles at the base of the hill, its tile roof reflecting the pale moonlight.  A fence surrounds the farmyard, and a small stile allows workers to cross the fence to a field which lies beyond.  A path leads east, and steep climb leads down the hill to the middle terrace.</description>
+    <description>The view from the upper terrace is breathtaking.  A small farmhouse nestles at the base of the hill, the red tile of its roof warm in the light.  A fence surrounds the farmyard, and a small stile allows workers to cross the fence to a field of grain which lies beyond.  The path leads east, and a steep climb leads down the hill to the middle terrace.</description>
+    <position x="223" y="415" z="0" />
+    <arc exit="east" move="east" destination="31" />
+    <arc exit="climb" move="climb steep hill" destination="25" />
+  </node>
+  <node id="31" name="Northeast Vineyards">
+    <description>Morning glories compete with grape vines for space on the trellis, twining about each other as they grow.  The deep purple grapes look black in the moonlight, a startling contrast to the paleness of the morning glories as each climbs ever higher toward the sky.</description>
+    <description>Morning glories compete with grape vines for space on the trellis, twining about each other as they grow.  The deep purple grapes provide a startling contrast to the pale blue of the morning glories as each climbs ever higher toward the sunlight.</description>
+    <position x="243" y="415" z="0" />
+    <arc exit="northeast" move="northeast" destination="32" />
+    <arc exit="west" move="west" destination="30" />
+  </node>
+  <node id="32" name="Northeast Vineyards">
+    <description>Dark shadows loom about as dim moonlight illuminates the vines.  Leaves move in a gentle breeze, allowing glimpses of the silvered wood of the trellis on which they climb.  From a hiding place within the leaves, a cricket gently chirps, calling to its mate.  The monotonous drone of the insect lends a sense of peace to the area.</description>
+    <description>A ladybug crawls along the trellis, her red carapace spotted with black.  Her progress from leaf to leaf is slow and steady, as she seeks out the tiny aphids which form a staple of her diet.  The vines which grow along the hillside thrive as a result of her patient hunting.</description>
+    <position x="263" y="395" z="0" />
+    <arc exit="east" move="east" destination="33" />
+    <arc exit="southwest" move="southwest" destination="31" />
+  </node>
+  <node id="33" name="Northeast Vineyards">
+    <description>Grape leaves shiver in the wind, turning from deep green to a paler, greyish green as they move.  The shifting colors are dizzying, especially when combined with soft whistle of the wind past your ears, and the glimpses of the valley floor through the moving leaves, far, far below.  A dried leaf from last year's growth flutters past to drift over the terrace and off into oblivion.</description>
+    <position x="283" y="395" z="0" />
+    <arc exit="northeast" move="northeast" destination="34" />
+    <arc exit="west" move="west" destination="32" />
+  </node>
+  <node id="34" name="Northeast Vineyards">
+    <description>A mole peers about myopically from the protection of a shady trellis, his velvety grey skin blending with the shadows.  A passing motion has him diving beneath the ground to disappear without a trace, though a hint of raised earth visible beneath the grass indicates the path of his underground burrow.</description>
+    <position x="303" y="375" z="0" />
+    <arc exit="southwest" move="southwest" destination="33" />
+  </node>
+  <node id="35" name="Baearholt's Farmhold, Northeast Field">
+    <description>Golden grain gently sways beneath a faint breeze sending wave-like ripples across the field to the north.  A rail fence runs along the southern end of the field, separating it from the farmyard to the south.  A weathered wooden stile spans the fence, its broken risers allowing wayfarers to scramble across, while preventing stray animals from easily accessing the field.</description>
+    <position x="165" y="327" z="0" />
+    <arc exit="north" move="north" destination="38" />
+    <arc exit="east" move="east" destination="36" />
+    <arc exit="climb" move="climb stile" destination="3" />
+  </node>
+  <node id="36" name="Baearholt's Farmhold, Northeast Field">
+    <description>A flimsy nest has been built in the base of a shallow hole beneath a wooden fence which runs across the southern end of the field.  Three speckled eggs lie unattended in their bed of straw and feathers, awaiting their mother's return, half hidden amidst the wheat and barley which ripen in the field.</description>
+    <position x="205" y="327" z="0" />
+    <arc exit="north" move="north" destination="39" />
+    <arc exit="east" move="east" destination="37" />
+    <arc exit="west" move="west" destination="35" />
+  </node>
+  <node id="37" name="Baearholt's Farmhold, Northeast Field">
+    <description>A maple tree leans at an awkward angle over the banks of a drainage ditch to the east.  Blackened and scarred by a lightening strike, one branch has broken off to lie carelessly across the muddy bank of the ditch.  A twisted tangle of rope and a cracked wooden board are all that is left of a child's swing, now broken beyond repair.</description>
+    <position x="225" y="327" z="0" />
+    <arc exit="north" move="north" destination="40" />
+    <arc exit="west" move="west" destination="36" />
+    <arc exit="go" move="go ditch" destination="54" />
+  </node>
+  <node id="38" name="Baearholt's Farmhold, Northeast Field">
+    <description>A delicate silver spiderweb shimmers in the light, tiny dewdrops sparkling like diamonds adorning an intricate filigree net.  With each gust of wind, the fragile fabric stretches.  Eventually, it will tear, to waft away upon the wind while the spider patiently builds another -- a thing of beauty, fleeting, yet ever renewed.</description>
+    <position x="165" y="307" z="0" />
+    <arc exit="east" move="east" destination="39" />
+    <arc exit="south" move="south" destination="35" />
+  </node>
+  <node id="39" name="Baearholt's Farmhold, Northeast Field">
+    <description>Wheat and barley lie in carefully tended rows along the field, slowly ripening as the seasons change.  Eventually, the grain will dry, and workers armed with razor sharp scythes will be sent to cut and thresh it before turning the golden kernels into the ales and beers for which Baearholt's farmstead is famous.</description>
+    <position x="205" y="307" z="0" />
+    <arc exit="east" move="east" destination="40" />
+    <arc exit="south" move="south" destination="36" />
+    <arc exit="west" move="west" destination="38" />
+    <arc exit="go" move="go path" destination="42" />
+  </node>
+  <node id="40" name="Baearholt's Farmhold, Northeast Field">
+    <description>In the distance, a meadowlark sings amidst the slowly waving stalks of barley which run the length of the field.  Though carefully hidden from predators, the bird's song rings out in a joyous melody.  Nearby, water flows slowly along the floor of a drainage ditch.</description>
+    <position x="225" y="307" z="0" />
+    <arc exit="south" move="south" destination="37" />
+    <arc exit="west" move="west" destination="39" />
+    <arc exit="go" move="go ditch" destination="55" />
+  </node>
+  <node id="41" name="Baearholt's Farmhold, Northeast Field">
+    <description>A rocky spring bubbles to the surface, the excess water flowing northward through the barley.  The thin stalks are heavy with ripening barleycorns, swaying gently beneath each breath of wind.  A drainage ditch runs along the eastern end of the field, the water gently murmuring as it flows toward a pond in the distance.</description>
+    <position x="225" y="287" z="0" />
+    <arc exit="north" move="north" destination="46" />
+    <arc exit="west" move="west" destination="42" />
+    <arc exit="go" move="go ditch" destination="56" />
+  </node>
+  <node id="42" name="Baearholt's Farmhold, Northeast Field">
+    <description>Claw marks mar the soft soil of the field where the mottled brown feathers of a ring-necked pheasant lie scattered about.  Off to one side, a fist-sized paw print is clearly preserved in the hardened mud from a recent rain.  It seems the peaceful field is not without its dangers.</description>
+    <position x="205" y="287" z="0" />
+    <arc exit="north" move="north" destination="45" />
+    <arc exit="east" move="east" destination="41" />
+    <arc exit="west" move="west" destination="43" />
+    <arc exit="go" move="go path" destination="39" />
+  </node>
+  <node id="43" name="Baearholt's Farmhold, Northeast Field">
+    <description>Vibrant orange-red poppies mingle with the pale green-gold wheat slowly ripening in the field.  To the north, the normally straight furrows detour at an irregular angle around a granite boulder which juts out of the soil.</description>
+    <position x="165" y="287" z="0" />
+    <arc exit="northeast" move="northeast" destination="44" />
+    <arc exit="east" move="east" destination="42" />
+  </node>
+  <node id="44" name="Baearholt's Farmhold, Northeast Field">
+    <description>Water pools in a shallow hollow beneath the shadow of the granite boulder to the west, making the field muddy underfoot.  A quail, followed by her four chicks, can be glimpsed scurrying quickly amidst the tender stalks of the fall crop of theronuligh athael wheat, a soft grain favored by local brewers.</description>
+    <position x="185" y="267" z="0" />
+    <arc exit="east" move="east" destination="45" />
+    <arc exit="southwest" move="southwest" destination="43" />
+  </node>
+  <node id="45" name="Baearholt's Farmhold, Northeast Field">
+    <description>The smell of freshly tilled soil and growing things combine to bring a warm feeling of security to the area.  Sharpened senses detect the dry rustle of grain stalks, an oddly friendly and comforting noise, as some unseen fox or pheasant moves through the field.  In the distance, a farmhand weeds the tender growing shoots of wheat and barley, a stolid example of industry and other traditional country virtues.</description>
+    <position x="205" y="267" z="0" />
+    <arc exit="go" move="go farm track" destination="47" />
+    <arc exit="east" move="east" destination="46" />
+    <arc exit="south" move="south" destination="42" />
+    <arc exit="west" move="west" destination="44" />
+  </node>
+  <node id="46" name="Baearholt's Farmhold, Northeast Field">
+    <description>A narrow rivulet, runoff from a nearby spring, flows sluggishly over the gnarled root of a long-dead tree stump before tumbling over the muddy bank into a drainage ditch.  Shelf lichen grows along the tree stump, pale and white in the sunlight which nurtures the barley growing in this section of the field.</description>
+    <position x="225" y="267" z="0" />
+    <arc exit="south" move="south" destination="41" />
+    <arc exit="west" move="west" destination="45" />
+    <arc exit="go" move="go ditch" destination="57" />
+  </node>
+  <node id="47" name="Baearholt's Farmhold, Northeast Field">
+    <description>A caterpillar writhes slowly on a blade of grass, preoccupied with spinning its cocoon.  Driven by instinct, soon it will undergo the changes to transform it from a slow, ponderous creeper into a delicate winged beauty.</description>
+    <position x="205" y="247" z="0" />
+    <arc exit="north" move="north" destination="49" />
+    <arc exit="east" move="east" destination="48" />
+    <arc exit="go" move="go farm track" destination="45" />
+    <arc exit="west" move="west" destination="53" />
+  </node>
+  <node id="48" name="Baearholt's Farmhold, Northeast Field">
+    <description>Broken stalks and scattered barleycorns lie trampled in the mud beside the bank of a drainage ditch.  A smooth stone sports a dried bloodstain, while nearby, a frayed strip of canvas lies discarded on the ground.</description>
+    <position x="225" y="247" z="0" />
+    <arc exit="north" move="north" destination="50" />
+    <arc exit="west" move="west" destination="47" />
+    <arc exit="go" move="go ditch" destination="58" />
+  </node>
+  <node id="49" name="Baearholt's Farmhold, Northeast Field">
+    <description>Hops vines twine about a high wooden fence on the northern end of the field, clinging to it for support as gravity tugs ceaselessly downward.  Cone-shaped fruit pods bob on the vines, slowly ripening.  When the pods dry to the point where they rustle like paper, they will be gathered to produce the beer for which the Baearholt family is famous.</description>
+    <position x="205" y="207" z="0" />
+    <arc exit="east" move="east" destination="50" />
+    <arc exit="south" move="south" destination="47" />
+    <arc exit="west" move="west" destination="52" />
+  </node>
+  <node id="50" name="Baearholt's Farmhold, Northeast Field">
+    <description>A drainage ditch runs alongside the eastern edge of the field, filled with waist-deep silted water.  As the land slopes down to the north, the water tumbles over piles of glistening smooth rocks before falling into the placid pond to the north.</description>
+    <position x="225" y="207" z="0" />
+    <arc exit="north" move="north" destination="51" />
+    <arc exit="south" move="south" destination="48" />
+    <arc exit="west" move="west" destination="49" />
+    <arc exit="go" move="go ditch" destination="60" />
+  </node>
+  <node id="51" name="Baearholt's Farmhold, Northeast Field">
+    <description>A tangle of hops vines climbs the fence which borders the northern side of the field, the green seedpods bobbing with each gust of wind.  The field stretches out to the south and west, row after row of golden wheat and barley gently swaying in rippling waves.</description>
+    <position x="225" y="187" z="0" />
+    <arc exit="south" move="south" destination="50" />
+    <arc exit="go" move="go pond" destination="61" />
+    <arc exit="climb" move="climb stile" destination="62" />
+  </node>
+  <node id="52" name="Baearholt's Farmhold, Northeast Field">
+    <description>A rabbit peers furtively out from beneath a cluster of hops vines which trail along the ground, its pink nose twitching nervously.  To the south, pale green stalks of wheat rise about knee-high on the soft loamy soil of the field.</description>
+    <position x="165" y="207" z="0" />
+    <arc exit="east" move="east" destination="49" />
+    <arc exit="south" move="south" destination="53" />
+  </node>
+  <node id="53" name="Baearholt's Farmhold, Northeast Field">
+    <description>A massive granite boulder juts up from the western edge of the field.  From the weathered pockmarks on its surface, someone has tried to use a pickaxe to reduce the rock to rubble, yet still it stands, asserting the dominance of nature over mans will.  The furrows of the field merely swerve about the outcropping, pale green wheat softening its outline.</description>
+    <position x="165" y="247" z="0" />
+    <arc exit="north" move="north" destination="52" />
+    <arc exit="east" move="east" destination="47" />
+  </node>
+  <node id="54" name="Drainage Ditch" color="#0000FF">
+    <description>Maple leaves swirl atop the muddy brown water which flows through the drainage ditch.  Though only knee-deep, the silt clouds the water obscuring the floor of the ditch, and making travel difficult.  A fallen branch provides a place to scramble up the bank to the nearby field.</description>
+    <position x="265" y="327" z="0" />
+    <arc exit="north" move="swim north" destination="55" />
+    <arc exit="go" move="go branch" destination="37" />
+  </node>
+  <node id="55" name="Drainage Ditch" color="#0000FF">
+    <description>Water flows slowly northward along the drainage ditch, the gentle current swirling unprotestingly about obstacles in its path.  The muddy bank is slick, but it's probably possible to scramble over to the nearby field.</description>
+    <position x="265" y="307" z="0" />
+    <arc exit="north" move="swim north" destination="56" />
+    <arc exit="south" move="swim south" destination="54" />
+    <arc exit="go" move="go bank" destination="40" />
+  </node>
+  <node id="56" name="Drainage Ditch" color="#0000FF">
+    <description>A shallow spot along the bank allows a slippery scramble across the muddy sides to the field to the west.  Smooth green vines dangle over the bank, making the climb easier.  A narrow irrigation streamlet enters the ditch to the north, the extra water speeding the sullen flow of the current and causing treacherous eddies to swirl about.</description>
+    <position x="265" y="287" z="0" />
+    <arc exit="north" move="swim north" destination="57" />
+    <arc exit="south" move="swim south" destination="55" />
+    <arc exit="go" move="go bank" destination="41" />
+  </node>
+  <node id="57" name="Drainage Ditch" color="#0000FF">
+    <description>A narrow rivulet tumbles over the muddy bank from the field to the west, adding to the water flowing through the ditch.  The current drags at your legs and pulls you inexorably northward.</description>
+    <position x="265" y="267" z="0" />
+    <arc exit="north" move="swim north" destination="58" />
+    <arc exit="south" move="swim south" destination="56" />
+    <arc exit="go" move="go bank" destination="46" />
+  </node>
+  <node id="58" name="Drainage Ditch" color="#0000FF">
+    <description>Water swirls around smooth limestone rocks at the bottom of the ditch forming rippling patterns on the surface.  The nearby field runs along the edge of the shallow bank, explaining the barleycorns which float downstream with the current.</description>
+    <position x="265" y="247" z="0" />
+    <arc exit="north" move="swim north" destination="59" />
+    <arc exit="south" move="swim south" destination="57" />
+    <arc exit="go" move="go bank" destination="48" />
+  </node>
+  <node id="59" name="Drainage Ditch" color="#0000FF">
+    <description>Years of erosion have eaten away at the bank of the ditch, forming a dreary, muddy and generally unprepossessing little cave beneath the overhanging bank.  Vines trail over the edge of the field, further concealing the tiny cavern from view.</description>
+    <position x="265" y="227" z="0" />
+    <arc exit="north" move="swim north" destination="60" />
+    <arc exit="south" move="swim south" destination="58" />
+  </node>
+  <node id="60" name="Drainage Ditch" color="#0000FF">
+    <description>The water tumbles down an incline to splash into the still waters of a mill pond which lies beside a low brick building.  To the west, a mud-slick bank leads to a field of grain slowly ripening, the golden stalks nearly ready for harvest.</description>
+    <position x="265" y="207" z="0" />
+    <arc exit="north" move="swim north" destination="61" />
+    <arc exit="south" move="swim south" destination="59" />
+    <arc exit="go" move="go bank" destination="50" />
+  </node>
+  <node id="61" name="Mill Pond" color="#0000FF">
+    <description>Water sparkles as it tumbles over smoothly polished rocks where a ditch drains into the mill pond behind the brewery.  Cattails sway in the still water near the shore, their delicate brown and green stalks reflecting in the mirror-like surface of the silted brown water.</description>
+    <position x="265" y="187" z="0" />
+    <arc exit="south" move="swim south" destination="60" />
+    <arc exit="go" move="go brewery" destination="62" />
+  </node>
+  <node id="62" name="Baearholt's Farmhold, Farmyard" color="#FFBF00">
+    <description>Ruddy-tailed chickens wander about the yard, snuffling in the dirt as you make your way along the path connecting Baearholt's Tavern to the north, and the brewery to the south.  Beside the brewery is a covered well, its rough grey stonework softened by climbing ivy which clings to its surface.  A wooden fence, bridged by a stile, separates the farmyard from the grain fields.  Off to the side, orchard trees stand in neatly pruned rows, their branches heavy with fruit.</description>
+    <position x="245" y="167" z="0" />
+    <arc exit="go" move="go pond" destination="61" />
+    <arc exit="climb" move="climb stile" destination="51" />
+    <arc exit="go" move="go tavern" destination="63" />
+    <arc exit="go" move="go brewery" destination="66" />
+    <arc exit="go" move="go orchard" destination="83" />
+  </node>
+  <node id="63" name="Baearholt's Farmhold, Taproom" note="Taproom" color="#FF0000">
+    <description>Dark oak beams criss-cross the low whitewashed ceiling in the taproom of Baearholt's Farmhold.  In the corner, a bard sits on a tall stool playing a rapid melody on her gittern as patrons join in a hearty drinking song and sample the quality meads and ales for which Baearholt's is known.</description>
+    <position x="245" y="117" z="0" />
+    <arc exit="out" move="out" destination="64" />
+    <arc exit="go" move="go door" destination="62" />
+  </node>
+  <node id="64" name="Baearholt's Farmhold">
+    <description>Just off the Northern Trade Route stands an ivy-covered small brick building which houses Baearholt's Tavern.  Part of the family farmhold, it is renowned for its meads and ale, all of which are brewed on the premises under Ivor Baearholt's exacting supervision.</description>
+    <position x="225" y="117" z="0" />
+    <arc exit="go" move="go trail" destination="65" />
+    <arc exit="go" move="go tavern" destination="63" />
+  </node>
+  <node id="65" name="Northern Trade Road, Grasslands" note="Map7_NTR.xml">
+    <description>Open grassland mingles with a thinning forest from the north.  Here and there among the trees cattle wander.  They casually dine on the lush grass and occasionally reach up to consume the delicate leaves on the lower branches of the trees.  To the north, low hills rise up gently from the plains.  Southward, a heavy haze or smoke can be made out.</description>
+    <description>Open fields to either side can be dimly seen.  Faintly, there comes a trace of woodsmoke, perhaps from the campfires of local herdsmen warming themselves against the night chill.  Nearby, a rounded shape proves to be that of a sleeping cow.</description>
+    <position x="205" y="117" z="0" />
+    <arc exit="south" move="south" />
+    <arc exit="northwest" move="northwest" />
+    <arc exit="go" move="go trail" destination="64" />
+  </node>
+  <node id="66" name="Baearholt's Farmhold, Brewery">
+    <description>Tarnished copper pots hang from the whitewashed wall above a wooden table in the brightly-lit kitchen of Baearholt's brewery.  On the table, roughly crushed grain soaks in a wooden vat, barely covered with luke-warm water.  The ovens built into the walls keep the room warm and filled with the aroma of baking bread.</description>
+    <position x="295" y="117" z="0" />
+    <arc exit="west" move="west" destination="67" />
+    <arc exit="out" move="out" destination="62" />
+  </node>
+  <node id="67" name="Baearholt's Farmhold, Brewery">
+    <description>Sprouted grain lies spread across a rough granite tabletop, covered with a thin layer of cheesecloth.  A heavy-set woman, her linen sleeves rolled up to her elbows, wields a thick wooden roller over the table, crushing the malted grain before transferring it to water-filled copper pots.  Across the room, a Halfling lad scrubs the interior of one of the pots before turning it over to dry.</description>
+    <position x="275" y="117" z="0" />
+    <arc exit="north" move="north" destination="68" />
+    <arc exit="east" move="east" destination="66" />
+  </node>
+  <node id="68" name="Baearholt's Farmhold, Brewery">
+    <description>Wooden crates line the whitewashed walls, stacked about shoulder-high for a human.  Several are missing slats, while a hammer and wood are lying atop one crate -- evidently being mended before the harvest season.  In the corner, a fruit press stands ready for the first crop of fruit from the multitude of trees in the family orchards.  The juice will be turned into honey-sweetened mead, while the pulp flavors the ales produced at the brewery.</description>
+    <position x="275" y="97" z="0" />
+    <arc exit="east" move="east" destination="69" />
+    <arc exit="south" move="south" destination="67" />
+  </node>
+  <node id="69" name="Baearholt's Farmhold, Brewery">
+    <description>Steam rises from an iron cauldron which hangs above an open firepit.  Stacks of wood lie piled nearby, ready to be warped into shape for the waist-high barrels used to age the mead and ale produced at the brewery each year.  Off in a corner, finished barrels have been piled one atop the other from floor to ceiling.  A trap door in the floor leads down to the underground aging rooms.</description>
+    <position x="295" y="97" z="0" />
+    <arc exit="west" move="west" destination="68" />
+    <arc exit="go" move="go trap door" destination="70" />
+  </node>
+  <node id="70" name="Baearholt's Brewery, Aging Rooms">
+    <description>Chains descend through a trap door in the earthen ceiling, their iron links creaking noisily as barrels of mead or ale are chosen to be moved upstairs.  In the fluttering shadows, half-seen rodents skitter about.  Wooden barrels line the tunnel walls.  Given the uncertain lighting, there's little way of telling just how far the passages extend.</description>
+    <position x="315" y="97" z="0" />
+    <arc exit="north" move="north" destination="73" />
+    <arc exit="east" move="east" destination="76" />
+    <arc exit="go" move="go trap door" destination="69" />
+  </node>
+  <node id="73" name="Baearholt's Brewery, Aging Rooms">
+    <description>Chittering noises echo along the passage as half-seen rodents skitter about.  Wooden barrels line both sides of the tunnel walls for as far as you can see.  Given the uncertain lighting, there's little way of telling just how far the passages extend.</description>
+    <position x="315" y="77" z="0" />
+    <arc exit="northeast" move="northeast" destination="75" />
+    <arc exit="south" move="south" destination="70" />
+    <arc exit="northwest" move="northwest" destination="74" />
+  </node>
+  <node id="74" name="Baearholt's Brewery, Aging Rooms">
+    <description>Cork sheets litter the table which stands at the end of the tunnel.  Cutting knives soak in a sink beneath a sullen trickle of water which echoes about the tunnels.  A reed torch flickers half-heartedly in its sconce, the darkness favoring the rodents skittering about.  Wooden barrels line the tunnel walls.  Given the uncertain lighting, there's little way of telling just how far the passages extend.</description>
+    <position x="295" y="57" z="0" />
+    <arc exit="southeast" move="southeast" destination="73" />
+  </node>
+  <node id="75" name="Baearholt's Brewery, Aging Rooms">
+    <description>Glass bottles lie in sawdust-filled wooden crates which block the end of the passage.  Chittering noises echo from the shadows, as half-felt drafts send shivers down your spine.  Off in a corner, dusty implements used to cork the bottles lie upon a table, scattered about.  Wooden barrels line the tunnel walls.  Given the uncertain lighting, there's little way of telling just how far the passages extend.</description>
+    <position x="335" y="57" z="0" />
+    <arc exit="southwest" move="southwest" destination="73" />
+  </node>
+  <node id="76" name="Baearholt's Brewery, Aging Rooms">
+    <description>Chittering noises echo along earthen walls as half-seen rodents skitter about the aging rooms.  Wooden bins filled with barrels line the tunnel walls.  One of the bins has collapsed, leaving the barrels piled haphazardly in a corner.  Given the uncertain lighting, there's little way of telling just how far the network of underground passages extends beneath the farm.</description>
+    <position x="335" y="97" z="0" />
+    <arc exit="southeast" move="southeast" destination="77" />
+    <arc exit="south" move="south" destination="82" />
+    <arc exit="west" move="west" destination="70" />
+  </node>
+  <node id="77" name="Baearholt's Brewery, Aging Rooms">
+    <description>Children once might have played down here, their forgotten voices singing in the shadows.  Now, isolated footsteps echo as half-seen spiderwebs float in the dusty silence, and dust kittens skitter about.  Wooden barrels line the tunnel walls.  Given the uncertain lighting, there's little way of telling just how far the passages extend.</description>
+    <position x="357" y="119" z="0" />
+    <arc exit="south" move="south" destination="78" />
+    <arc exit="northwest" move="northwest" destination="76" />
+  </node>
+  <node id="78" name="Baearholt's Brewery, Aging Rooms">
+    <description>Chittering insects scrabble along the hall, their ruby eyes glinting from the shadows.  Their noises echo along earthen walls as half-seen forms seem to dance in the shadows which skitter about the tunnel.  Wooden barrels lie piled neatly along the tunnel walls.  Given the uncertain lighting, there's little way of telling just how far the network of underground passages extends beneath the farm.</description>
+    <position x="357" y="139" z="0" />
+    <arc exit="north" move="north" destination="77" />
+    <arc exit="southwest" move="southwest" destination="79" />
+  </node>
+  <node id="79" name="Baearholt's Brewery, Aging Rooms">
+    <description>A sweet scent of fermenting mead, or perhaps of decaying flesh, wafts through the air to send an atavistic chill down the spine.  Chittering noises echo along earthen walls as half-seen rodents skitter about the tunnel.  Wooden barrels lie tumbled into piles which might kindly be described as a line along the tunnel walls.  Given the uncertain lighting, there's little way of telling just how far the network of underground passages extends beneath the farm.</description>
+    <position x="340" y="156" z="0" />
+    <arc exit="northeast" move="northeast" destination="78" />
+    <arc exit="west" move="west" destination="80" />
+  </node>
+  <node id="80" name="Baearholt's Brewery, Aging Rooms">
+    <description>Chittering noises echo along earthen walls as half-seen rodents skitter about the muddy floor.  Wooden slats have been driven into place to hold the barrels which line the tunnel walls.  Given the uncertain lighting, there's little way of telling just how far the network of underground passages extends beneath the farm.</description>
+    <position x="319" y="156" z="0" />
+    <arc exit="east" move="east" destination="79" />
+    <arc exit="northwest" move="northwest" destination="81" />
+  </node>
+  <node id="81" name="Baearholt's Brewery, Aging Rooms">
+    <description>A wooden mallet lies abandoned upon the muddy floor, surrounded by a pool of mead dripping from a gnawed wooden barrel.  Chittering noises echo along earthen walls as half-seen rodents skitter about the aging rooms.  Wooden bins filled with barrels line the tunnel walls.  Given the uncertain lighting, there's little way of telling just how far the network of underground passages extends beneath the farm.</description>
+    <position x="302" y="139" z="0" />
+    <arc exit="east" move="east" destination="82" />
+    <arc exit="southeast" move="southeast" destination="80" />
+  </node>
+  <node id="82" name="Baearholt's Brewery, Aging Rooms">
+    <description>Ruby eyes gaze out from shadows beneath a broken chair.  Chittering noises echo along earthen walls as half-seen rodents skitter about the aging rooms.  Wooden bins filled with barrels line the tunnel walls.  Given the uncertain lighting, there's little way of telling just how far the network of underground passages extends beneath the farm.</description>
+    <position x="335" y="139" z="0" />
+    <arc exit="north" move="north" destination="76" />
+    <arc exit="west" move="west" destination="81" />
+  </node>
+  <node id="83" name="Baearholt's Farmhold, Orchard">
+    <description>The sinuous apple tree trunks complement the strong green tones of what appears to be newly scythed grassy undergrowth.  Ripe red apples dangle overhead from branches ready to be harvested.</description>
+    <position x="477" y="264" z="0" />
+    <arc exit="east" move="east" destination="84" />
+    <arc exit="northwest" move="northwest" destination="92" />
+    <arc exit="go" move="go farmyard" destination="62" />
+  </node>
+  <node id="84" name="Baearholt's Farmhold, Orchard">
+    <description>The paw prints of a very large animal mar the soft undergrowth beneath a particularly large tree.  The trunk is savagely clawed and bits of bark lie scattered at its base.</description>
+    <position x="517" y="264" z="0" />
+    <arc exit="northeast" move="northeast" destination="85" />
+    <arc exit="west" move="west" destination="83" />
+  </node>
+  <node id="85" name="Baearholt's Farmhold, Orchard">
+    <description>Baskets of freshly harvested cherries are stacked beneath the trees and left to rot! A tall ladder lies twisted and broken on the ground.</description>
+    <position x="537" y="244" z="0" />
+    <arc exit="southwest" move="southwest" destination="84" />
+    <arc exit="northwest" move="northwest" destination="86" />
+  </node>
+  <node id="86" name="Baearholt's Farmhold, Orchard">
+    <description>Wild black cherry trees with their rough, scaly black trunk and smoother, reddish brown branches occupy this part of the orchard.  Clusters of dark red cherries hang from their limbs.</description>
+    <position x="517" y="224" z="0" />
+    <arc exit="northeast" move="northeast" destination="87" />
+    <arc exit="southeast" move="southeast" destination="85" />
+  </node>
+  <node id="87" name="Baearholt's Farmhold, Orchard">
+    <description>A red shouldered hawk works a slow spiral over the orchard looking for its supper.  A tiny chipmunk twitters and cautiously peeks out from beneath a log at a fallen pear in hunger.</description>
+    <position x="537" y="204" z="0" />
+    <arc exit="southwest" move="southwest" destination="86" />
+    <arc exit="northwest" move="northwest" destination="88" />
+  </node>
+  <node id="88" name="Baearholt's Farmhold, Orchard">
+    <description>A swarming bee hive hangs from a nearby branch of a pear tree.  Rivulets of honey drip from elaborate combs in the nest.  A bee smoker lies on the ground smoke still listlessly coming out of its snout.</description>
+    <position x="517" y="184" z="0" />
+    <arc exit="southeast" move="southeast" destination="87" />
+    <arc exit="west" move="west" destination="89" />
+  </node>
+  <node id="89" name="Baearholt's Farmhold, Orchard">
+    <description>Leathery leaved pear trees stand majestically in rows.  Soft yellow pears glisten with dew in the light.  A large honey bee streaks past.</description>
+    <position x="437" y="184" z="0" />
+    <arc exit="east" move="east" destination="88" />
+    <arc exit="southeast" move="southeast" destination="90" />
+  </node>
+  <node id="90" name="Baearholt's Farmhold, Orchard">
+    <description>Cracked and splintered branches litter the ground beneath the trees.  In the distance, heavily laden pear trees stand in neatly pruned rows.</description>
+    <position x="457" y="204" z="0" />
+    <arc exit="southeast" move="southeast" destination="91" />
+    <arc exit="northwest" move="northwest" destination="89" />
+  </node>
+  <node id="91" name="Baearholt's Farmhold, Orchard">
+    <description>A wheelbarrow full of apples lies on its side, its contents spilled to the ground. In the distance, heavily laden pear trees stand in neatly pruned rows.  Crushed, tiny mustard plant blooms lay lifeless underfoot.  A tall ladder leans against the heavy trunk of a nearby tree.</description>
+    <position x="477" y="224" z="0" />
+    <arc exit="southwest" move="southwest" destination="92" />
+    <arc exit="northwest" move="northwest" destination="90" />
+    <arc exit="climb" move="climb ladder" destination="95" />
+  </node>
+  <node id="92" name="Baearholt's Farmhold, Orchard">
+    <description>Overripe apples litter the ground beneath the apple trees.  Black ants swarm over the spoiled fruit, gathering bits of juicy pulp, then return to their nest.</description>
+    <position x="457" y="244" z="0" />
+    <arc exit="northeast" move="northeast" destination="91" />
+    <arc exit="southeast" move="southeast" destination="83" />
+  </node>
+  <node id="95" name="Baearholt's Farmhold, Apple Tree">
+    <description>This large sturdy limb is hidden in the lush branches of the apple tree.  It is an ideal spot for a lovers' tryst.  Roughly scratched in the trunk is a heart with faded initials.</description>
+    <position x="457" y="224" z="0" />
+    <arc exit="climb" move="climb ladder" destination="91" />
+  </node>
+  <label text="Wood Trolls">
+    <position x="299" y="388" z="0" />
+  </label>
+  <label text="Musk Hogs, Wild Boars">
+    <position x="335" y="508" z="0" />
+  </label>
+  <label text="Black Rats">
+    <position x="19" y="352" z="0" />
+  </label>
+  <label text="NTR">
+    <position x="112" y="477" z="0" />
+  </label>
+  <label text="(South Entrance)">
+    <position x="87" y="493" z="0" />
+  </label>
+  <label text="NTR">
+    <position x="147" y="71" z="0" />
+  </label>
+  <label text="(North Entrance)">
+    <position x="119" y="89" z="0" />
+  </label>
+  <label text="Cougars (day), Small Grendels (night)">
+    <position x="321" y="448" z="0" />
+  </label>
+  <label text="Silverfish">
+    <position x="6" y="375" z="0" />
+  </label>
+  <label text="Greater Water Sprites">
+    <position x="279" y="245" z="0" />
+  </label>
+  <label text="Undead Gerbils">
+    <position x="71" y="307" z="0" />
+  </label>
+  <label text="Black Rats">
+    <position x="143" y="396" z="0" />
+  </label>
+  <label text="Elder Razortusk Sows &amp; Boars">
+    <position x="3" y="260" z="0" />
+  </label>
+  <label text="Elder Storm Ganders &amp; Goose">
+    <position x="3" y="217" z="0" />
+  </label>
+  <label text="(drainage ditch)">
+    <position x="290" y="263" z="0" />
+  </label>
+  <label text="Baearholt's Brewery">
+    <position x="259" y="27" z="0" />
+  </label>
+  <label text="Animated Objects">
+    <position x="373" y="100" z="0" />
+  </label>
+  <label text="(cups, bowls, etc)">
+    <position x="374" y="116" z="0" />
+  </label>
+  <label text="Baearholt's Orchard">
+    <position x="449" y="276" z="0" />
+  </label>
+  <label text="Baearholt's Vineyards">
+    <position x="226" y="533" z="0" />
+  </label>
+  <label text="Small Birdcatcher Spiders">
+    <position x="554" y="191" z="0" />
+  </label>
+  <label text="Brown Tree Snakes">
+    <position x="554" y="208" z="0" />
+  </label>
+  <label text="Baearholt's Farmhouse">
+    <position x="-16" y="432" z="0" />
+  </label>
+  <label text="Tavern">
+    <position x="221" y="95" z="0" />
+  </label>
+</zone>

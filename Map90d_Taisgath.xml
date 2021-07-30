@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Taisgath" id="90d">
+  <node id="1" name="Taisgath Guildhouse, Walk of the Winds">
+    <description>From above, the swirling vortex of tile is incredibly lifelike, threatening to pull observers from the narrow walkway.  The thin ledge of shell has a slightly unnerving resiliency that belies its strength.  Just before dropping off into the eye of the whirlpool, it turns up through a natural opening in the ceiling.</description>
+    <position x="110" y="100" z="0" />
+    <arc exit="up" move="up" destination="2" />
+    <arc exit="down" move="down" destination="3" />
+  </node>
+  <node id="2" name="Taisgath Guildhouse, Walk of the Winds" note="Erekinzil|Shard|Ways|Grazhir" color="#FF00FF">
+    <description>A slender spiraled horn of iridescence rises from the top of the guildhall to meet the sky.  Below, the island spreads out to the south and the lagoon is no more than a small puddle splashed upon the shore.  A narrow railing of brass guards the careless observer.</description>
+    <position x="110" y="80" z="0" />
+    <arc exit="down" move="down" destination="1" />
+  </node>
+  <node id="3" name="Taisgath Guildhouse, Walk of the Winds" note="GL Moon Mage|Lomtaun|RS Moon Mage" color="#FF8000">
+    <description>The flood of blue and white spirals into the chamber and a mosaic whirlpool threatens to engulf those seeking knowledge as they cross the hall to the lectern of Guildmaster.  A natural curl of the shell curves up around the outer wall to an opening far above.</description>
+    <position x="110" y="120" z="0" />
+    <arc exit="south" move="south" destination="4" />
+    <arc exit="up" move="up" destination="1" />
+  </node>
+  <node id="4" name="Taisgath Guildhouse, Walk of the Winds">
+    <description>The wash of water closes in overhead and begins to turn in a dizzying funnel of waves.  Tiny fish of silver and gold are swept along with the maelstrom as it pours into a central chamber.</description>
+    <position x="110" y="140" z="0" />
+    <arc exit="north" move="north" destination="3" />
+    <arc exit="northeast" move="northeast" destination="5" />
+  </node>
+  <node id="5" name="Taisgath Guildhouse, Walk of the Winds">
+    <description>Waves of azure rise up along the walls, threatening to engulf the passage as it funnels further into the heights of the guildhall.  Flecks of silver upon the blue, sparkle like tiny grains of sand caught in the fury of the rushing water.</description>
+    <position x="170" y="120" z="0" />
+    <arc exit="southwest" move="southwest" destination="4" />
+    <arc exit="northwest" move="northwest" destination="6" />
+  </node>
+  <node id="6" name="Taisgath Guildhouse, Walk of the Winds">
+    <description>The glistening mosaic of tiles begins to rise on either side of the passage, covering the lower section of wall with whitecaps.  The passage glides upward and around another turn in the spiral of the shell to the southeast.</description>
+    <position x="150" y="100" z="0" />
+    <arc exit="southeast" move="southeast" destination="5" />
+    <arc exit="southwest" move="southwest" destination="7" />
+  </node>
+  <node id="7" name="Taisgath Guildhouse, Walk of the Winds">
+    <description>The salt-scented breeze along the corridor picks up as the grade of the climb increases, adding a slight chill to the air.  The walk passes another sweeping arch into the heart of the guild that has been boarded over.</description>
+    <position x="130" y="120" z="0" />
+    <arc exit="northeast" move="northeast" destination="6" />
+    <arc exit="southeast" move="southeast" destination="8" />
+  </node>
+  <node id="8" name="Taisgath Guildhouse, Walk of the Winds">
+    <description>Overlooking the high bluffs along the western coast of the isle, a tall window whispers sea songs to passersby.  The corridor narrows even further as it ascends, but still not quite enough to make two-way foot traffic a problem.</description>
+    <position x="150" y="140" z="0" />
+    <arc exit="east" move="east" destination="9" />
+    <arc exit="northwest" move="northwest" destination="7" />
+  </node>
+  <node id="9" name="Taisgath Guildhouse, Walk of the Winds">
+    <description>A small section of the outer wall has been carved away here, leading to a narrow terrace.  A brisk breeze blows through the opening and down along the passageway to the northeast.</description>
+    <position x="230" y="140" z="0" />
+    <arc exit="northeast" move="northeast" destination="32" />
+    <arc exit="south" move="south" destination="10" />
+    <arc exit="west" move="west" destination="8" />
+  </node>
+  <node id="10" name="Taisgath Guildhouse, Terrace">
+    <description>This narrow terrace, protected from the weather by a long overhang of horned shell, offers a breathtaking panorama of the island and the shimmering waters beyond.  Windswept grassy hillocks roll away from the guildhouse, and beyond it, a sailing ship glides slowly across the crystal waves.  A brass telescope has been mounted at the edge of the deck offering an enhanced view of the sea and sky.</description>
+    <position x="230" y="160" z="0" />
+    <arc exit="north" move="north" destination="9" />
+  </node>
+  <node id="11" name="Taisgath Guildhouse, Walk of the Winds">
+    <description>A low corridor snakes off southwest between two ridges of gleaming shell.  The main passage begins to narrow and the walk steepens slightly as it continues to wind clockwise toward the spire.</description>
+    <position x="230" y="80" z="0" />
+    <arc exit="southeast" move="southeast" destination="33" />
+    <arc exit="west" move="west" destination="12" />
+    <arc exit="southwest" move="southwest" destination="37" />
+  </node>
+  <node id="12" name="Taisgath Guildhouse, Walk of the Winds">
+    <description>A tall narrow window, very nearly like an arrow slit, overlooks the western arm of Crescent Cove.  An ocean breeze whispers along the opening, producing a faint melody.  In less convivial surroundings, the wind song would be haunting.</description>
+    <position x="210" y="80" z="0" />
+    <arc exit="east" move="east" destination="11" />
+    <arc exit="southwest" move="southwest" destination="13" />
+  </node>
+  <node id="13" name="Taisgath Guildhouse, Walk of the Winds">
+    <description>Another inner chamber is accessed here through a sweeping arch with a lintel of silverwood.  Faint lights glow beyond the doorway, but little else is visible in the subdued lighting of the corridor.</description>
+    <position x="190" y="100" z="0" />
+    <arc exit="northeast" move="northeast" destination="12" />
+    <arc exit="south" move="south" destination="14" />
+    <arc exit="go" move="go arch" destination="41" />
+  </node>
+  <node id="14" name="Taisgath Guildhouse, Walk of the Winds">
+    <description>The Walk of the Winds slopes upward gently as it winds clockwise through the interior of the guild.  Gleaming waves, created with an intricate pattern of blue and white tile on the floor, sweep toward the spire.  A soft breeze blows along the corridor from somewhere above carrying the scent of the sea and some faint musical tones.</description>
+    <position x="190" y="130" z="0" />
+    <arc exit="north" move="north" destination="13" />
+    <arc exit="southeast" move="southeast" destination="15" />
+  </node>
+  <node id="15" name="Taisgath Guildhouse, Entryway">
+    <description>Dim light passes through the shell, bathing the guild entrance in a soft glow.  Sounds of guild activity echo from farther along the broad corridor that curves out of sight to the northwest.  Two towering glassine doors lead out of the guildhall.</description>
+    <description>Smokeless burning torches emit a soft light, accompanied by a heady herbal scent, bathing the guild entrance in a soft glow.  Sounds of guild activity echo from farther along the broad corridor that curves out of sight to the northwest.  Two towering glassine doors lead out of the guildhall.</description>
+    <position x="210" y="150" z="0" />
+    <arc exit="northwest" move="northwest" destination="14" />
+    <arc exit="go" move="go arch" destination="16" />
+    <arc exit="go" move="go door" destination="17" />
+  </node>
+  <node id="16" name="Taisgath Guildhouse, Reception Hall">
+    <description>This enormous chamber is a gathering spot for visitors and general meetings of guild interest.  Natural seating is formed by a low ridge of pearlescent shell that runs around the edge of the hall.  Glowing spheres in ornate sconces, set high along the walls, illuminate the azure carpet like sunlight on the island shoals.</description>
+    <position x="210" y="170" z="0" />
+    <arc exit="go" move="go arch" destination="15" />
+  </node>
+  <node id="17" name="Taisgath, Pebbled Trail">
+    <description>Approaching the building, its true nature becomes apparent -- it is the horned shell of some enormous sea creature.  Dotted with windows and narrow terraces, the central portion of the shell spirals into the sky.  Towering glassine doors lead through the mouth of the deserted husk.</description>
+    <position x="190" y="10" z="0" />
+    <arc exit="north" move="north" destination="18" />
+    <arc exit="east" move="east" destination="21" />
+    <arc exit="west" move="west" destination="29" />
+    <arc exit="go" move="go door" destination="15" />
+  </node>
+  <node id="18" name="Taisgath, Crescent Cove">
+    <description>This sheltered cove, bordered by a narrow stretch of white sand, offers an egress to the island for smaller sailing vessels.  To the northwest, at the tip of one of the lagoon's protective arms, lies a small outbuilding.  Southward, the spire of a conical building dominates the sky.</description>
+    <position x="190" y="-10" z="0" />
+    <arc exit="south" move="south" destination="17" />
+    <arc exit="northwest" move="northwest" destination="19" />
+    <arc exit="go" move="go lagoon" destination="43" />
+  </node>
+  <node id="19" name="Crescent Cove, Marble Shrine">
+    <description>An austere shrine of blue-veined marble stands at the edge of the lagoon's mouth.  Concentric rings of willow spread out from its circular base, the scent of spiced incense drifting from within.  To either side of the cove's entrance, jagged teeth of dark grey stone rise up to guard the northern shore.</description>
+    <position x="170" y="-30" z="0" />
+    <arc exit="southeast" move="southeast" destination="18" />
+    <arc exit="go" move="go shrine" destination="20" />
+  </node>
+  <node id="20" name="Crescent Cove, Shrine to Phelim" note="shrine" color="#FF00FF">
+    <description>Open to the sky above, this quiet enclosure is dedicated to Phelim, Lord of Dreams.  Odd sigils adorn the arches forming the shrine and a raised pedestal at the center of the shrine supports a Halfling-high statue of the deity.  Though no censers are apparent, the scent of sandalwood permeates the air.</description>
+    <position x="190" y="-50" z="0" />
+    <arc exit="out" move="out" destination="19" />
+    <arc exit="go" move="go moongate" destination="63" />
+  </node>
+  <node id="21" name="Taisgath, Pebbled Trail">
+    <description>At the crest of the hill, an odd structure is visible beside a narrow stretch of beach.  The white sand is stark against the deep blue of a small lagoon.  Southward, the trail wanders back along the shoreline.</description>
+    <position x="250" y="10" z="0" />
+    <arc exit="southeast" move="southeast" destination="22" />
+    <arc exit="west" move="west" destination="17" />
+  </node>
+  <node id="22" name="Taisgath, Pebbled Trail">
+    <description>Crushed stone grates softly underfoot as the path ascends a small hillock dotted with willow and brambles.  White-winged birds flit through the sky overhead, while gentle breezes whisper from offshore.  From somewhere out of sight, the faint sounds of a violin drift in the salty air.</description>
+    <position x="310" y="70" z="0" />
+    <arc exit="southeast" move="southeast" destination="23" />
+    <arc exit="south" move="south" destination="24" />
+    <arc exit="northwest" move="northwest" destination="21" />
+  </node>
+  <node id="23" name="Taisgath, Sheltered Docks" note="gypsy">
+    <description>There are several boats harbored here, all festooned with dangling bells, glass and gaethzen lamps, wooden figureheads, and assortments of colored cloth and canvas.  The uptempo strains of a violin drift across the salty air, rising and falling in conjunction with the sloshing waves.  Strands of smoke drift up from the brightly painted fleet of vessels, no doubt the origin of the potent scent of spiced meals cooking.</description>
+    <position x="330" y="90" z="0" />
+    <arc exit="northwest" move="northwest" destination="22" />
+  </node>
+  <node id="24" name="Taisgath, Pebbled Trail">
+    <description>This pebbled trail winds roughly south and north, beside a high bamboo fence that stretches along the eastern shore.  Unseen woodland creatures scurry through the thick underbrush toward the west.</description>
+    <position x="310" y="110" z="0" />
+    <arc exit="north" move="north" destination="22" />
+    <arc exit="south" move="south" destination="25" />
+  </node>
+  <node id="25" name="Taisgath, Eastern Gates">
+    <description>Manicured trails lined with small dark stones wind along the coastline of the small island.  Wide bamboo gates set in a matching fence to the east permit access to the sailing docks.</description>
+    <position x="310" y="150" z="0" />
+    <arc exit="north" move="north" destination="24" />
+    <arc exit="southwest" move="southwest" destination="26" />
+    <arc exit="go" move="go gate" destination="34" />
+  </node>
+  <node id="26" name="Taisgath, Pebbled Trail">
+    <description>The walkway winds through a small grove of willows and the sea glimmers through the foliage to the south.  The soft murmur of the ocean against the shore is muted by their trailing branches.</description>
+    <position x="250" y="210" z="0" />
+    <arc exit="northeast" move="northeast" destination="25" />
+    <arc exit="west" move="west" destination="27" />
+  </node>
+  <node id="27" name="Taisgath, Pebbled Trail">
+    <description>A particularly tall spire of granite rises from the waves at this corner of the isle like a frozen sentinel.  Thick coats of dark lichen over the weathered stone provide testimony to its age.  Smaller jagged teeth of grey rock along the shore prevent a suitable landing for any ocean travellers.</description>
+    <position x="130" y="210" z="0" />
+    <arc exit="east" move="east" destination="26" />
+    <arc exit="northwest" move="northwest" destination="30" />
+  </node>
+  <node id="28" name="Taisgath, Pebbled Trail">
+    <description>A small stand of trees lines the inland side of the pathway with a wall of tightly knit branches.  The ocean view is quite startling, with the sea spread like a thick azure carpet to the horizon.</description>
+    <position x="70" y="70" z="0" />
+    <arc exit="northeast" move="northeast" destination="29" />
+    <arc exit="south" move="south" destination="30" />
+    <arc exit="go" move="go bamboo hut" destination="64" />
+  </node>
+  <node id="29" name="Taisgath, Pebbled Trail">
+    <description>The island trail rises from the east to turn and follow the coastline southwest just before plummeting into the sea.  A rocky cliff looks over the ocean toward the main continent, far from view.</description>
+    <position x="130" y="10" z="0" />
+    <arc exit="east" move="east" destination="17" />
+    <arc exit="southwest" move="southwest" destination="28" />
+  </node>
+  <node id="30" name="Taisgath, Pebbled Trail">
+    <description>The trail is divided here, leading east toward the island's interior and continuing along the barren coastline.  Grey seabirds wheel against the heavens with faint screeching cries carried on a salt-tainted breeze.</description>
+    <position x="70" y="150" z="0" />
+    <arc exit="north" move="north" destination="28" />
+    <arc exit="east" move="east" destination="31" />
+    <arc exit="southeast" move="southeast" destination="27" />
+  </node>
+  <node id="31" name="Taisgath, Grove of the Obelisk">
+    <description>A translucent obelisk, the small island's namesake, dominates the center of this silent grove.  Oddly, no sounds of wildlife penetrate the thick foliage surrounding the small meadow.  A slab of reddish-brown stone lies to one side of the obelisk.</description>
+    <position x="90" y="150" z="0" />
+    <arc exit="west" move="west" destination="30" />
+    <arc exit="go" move="go slab stone" destination="44" />
+  </node>
+  <node id="32" name="Taisgath Guildhouse, Walk of the Winds">
+    <description>One of the guild's tall windows sings softly along the corridor.  Just opposite, a particularly wide arch opens onto another central room.  The smells of fresh-baked bread drift from within.</description>
+    <position x="250" y="120" z="0" />
+    <arc exit="north" move="north" destination="33" />
+    <arc exit="southwest" move="southwest" destination="9" />
+    <arc exit="go" move="go arc" destination="36" />
+    <arc exit="go" move="go arch" destination="36" />
+  </node>
+  <node id="33" name="Taisgath Guildhouse, Walk of the Winds">
+    <description>Waves of blue and white tile race along the hallway as it winds out of sight to the south.  The intricate floor mosaic gives the illusion of increased speed as the passage narrows, with gleaming white-capped waves bordered by rushing patterns of foam.</description>
+    <position x="250" y="100" z="0" />
+    <arc exit="south" move="south" destination="32" />
+    <arc exit="northwest" move="northwest" destination="11" />
+  </node>
+  <node id="34" name="Taisgath, Docks" note="dock">
+    <description>A long dock, lined with pillars made from delicately carved cherry wood, stretches along the eastern shoreline.  Surmounted by a sign lettered in silver script, a wide pair of bamboo gates stands open to visitors.</description>
+    <position x="340" y="150" z="0" />
+    <arc exit="south" move="south" destination="35" />
+    <arc exit="go" move="go gate" destination="25" />
+  </node>
+  <node id="35" name="Taisgath Docks, Night Sky Landing" note="Night Sky" color="#FF00FF">
+    <description>Seabirds screech and dive into the waves at the end of the dock.  Grasping shellfish from the shoals, they rise high above the rocky shoreline to release their unfortunate prey.</description>
+    <description>The celestial light of the heavens sparkles across the ocean waves even on the darkest of nights.  Seabirds occasionally wheel across the skies with a screech.</description>
+    <position x="340" y="170" z="0" />
+    <arc exit="north" move="north" destination="34" />
+    <arc exit="go" move="go night" destination="65" />
+  </node>
+  <node id="36" name="Taisgath Guildhouse, Dining Hall">
+    <description>Lined with long communal tables made from dark-stained cherry wood, the exotic scents of spiced meat and herbal concoctions fill this luxurious dining hall.  No kitchens are in sight, the builders having gone to some trouble to conceal any evidence of the mundane.  Nonetheless, servants periodically bustle in and out with heaping trays of food or empty dishes, coming and going through doorways that vanish from sight the moment they're closed.</description>
+    <position x="270" y="100" z="0" />
+    <arc exit="go" move="go arch" destination="32" />
+  </node>
+  <node id="37" name="Taisgath Guildhouse, Service Hallway">
+    <description>Dank and gloomy, a smoking torch lights the way along the cramped service passages at the very heart of the guild.  Corridors wander off drunkenly in various directions, following the natural contours of the shell's structure.  Most areas are blocked by low doorways, shaped to fit the irregular openings and sounds of activity drift in from the main hallway.</description>
+    <position x="220" y="90" z="0" />
+    <arc exit="down" move="down" destination="38" />
+    <arc exit="go" move="go door" destination="40" />
+    <arc exit="go" move="go circular door" destination="40" />
+    <arc exit="northeast" move="northeast" destination="11" />
+  </node>
+  <node id="38" name="Taisgath Guildhouse, Guard Room" note="guard">
+    <description>A particularly unusual room somewhere in the center of the guild.  It is almost perfectly circular and the floor is covered with a complex pattern of lines.  A short pearly stairway winds up to the passages above.</description>
+    <description>Located somewhere near the center of the shell, the chamber is almost nearly circular and the floor is covered with a complex pattern of lines.  Perfectly centered within the pattern is a large cube crafted from semi-opaque crystal.  A low teak table sits near one wall, and a short pearly stairway winds up to the passages above.</description>
+    <position x="220" y="100" z="0" />
+    <arc exit="up" move="up" destination="37" />
+  </node>
+  <node id="39" name="Taisgath Guildhouse, Cleaning Closet">
+    <description>Nothing holds interest in this room beyond a bucket of dirty mop water and a filthy dust rag.  The scents of wax and antiseptic cleaners are strong in the air.</description>
+    <position x="230" y="100" z="0" />
+    <arc exit="out" move="out" destination="37" />
+  </node>
+  <node id="40" name="Taisgath Guildhouse, Chamber of Justice" note="justice">
+    <description>A magistrate shuffles through papers behind a long table, occasionally pausing to sign this one or stamp that one with his personal seal.  A harried clerk bustles back and forth between the table and a row of cabinets along one wall, in the age old dance of bureaucracy.</description>
+    <position x="210" y="100" z="0" />
+    <arc exit="go" move="go door" destination="37" />
+  </node>
+  <node id="41" name="Taisgath Guildhouse, Library" note="Library" color="#00FF00">
+    <description>Light chases away the darkness of the room from highly polished niches along the walls.  An occasional rustling from among the rows of high bookcases betrays the presence of at least one researcher.  With every footstep, the scents of dust and moldering paper fill the air.</description>
+    <position x="170" y="80" z="0" />
+    <arc exit="north" move="north" destination="42" />
+    <arc exit="go" move="go arch" destination="13" />
+  </node>
+  <node id="42" name="Taisgath Guildhouse, Contemplation Chamber">
+    <description>Windowless and dimly lit, a few scattered cushions provide seating for those who come to meditate and collate information they've gathered.  Incense slowly burns in hanging sconces, filling the dusky chamber with the soothing scent of sandalwood and a faint sheen of wispy grey smoke.</description>
+    <position x="170" y="60" z="0" />
+    <arc exit="south" move="south" destination="41" />
+  </node>
+  <node id="43" name="Crescent Cove, Lagoon">
+    <description>Bordered by a beach of silver-white sand, the small lagoon is just large enough for a relaxing swim to the edge of the open sea.  Currently guarded by a coarse bamboo gate, the lagoon provides safe harbor for smaller seacraft tied along one side of the shore.</description>
+    <position x="190" y="-30" z="0" />
+    <arc exit="go" move="go beach" destination="18" />
+  </node>
+  <node id="44" name="Beneath Taisgath Island, Subterranean Depths">
+    <description>Dense fog rolls its way up to the makeshift ceiling of crumbling basalt, riding cold blasts of chilling air rising from the inky darkness far below.  Faint illumination filters through fissures in the jet-black stonework, giving life to the deepening shadows as the light reflects off the swirling mist and vapor-moistened walls.  A soft whisper rises in volume to a cacophonous howl as cold wind rushes quickly up from the depths, only to be followed by a haunting stillness.</description>
+    <position x="70" y="190" z="0" />
+    <arc exit="down" move="down" destination="45" />
+    <arc exit="go" move="go wide fissure" destination="31" />
+  </node>
+  <node id="45" name="Beneath Taisgath Island, Subterranean Depths">
+    <description>Slick from the cold moisture-ridden air and loose crumbling rock that layers the floor, passage through the dark narrowing tunnel becomes treacherous and daunting.  Deep cuts and slashes trail the length of the pitted basalt walls, as though something extremely sharp had been dragged unwillingly into the murky depths of shadow and stone.</description>
+    <position x="70" y="210" z="0" />
+    <arc exit="southeast" move="southeast" destination="46" />
+    <arc exit="up" move="up" destination="44" />
+  </node>
+  <node id="46" name="Subterranean Depths, Limestone Strata">
+    <description>Water seeps slowly through the dark basalt of the walls, spattering loudly in shallow pools dotting the floor.  Dense shadows creep in silence along every surface, occasionally disturbed by the flickering of faint illumination as it reflects off the rippling puddles.  Just breaking through the surface of the strata above is a faint line of translucent material forming a straight edge along the ceiling border.</description>
+    <position x="110" y="250" z="0" />
+    <arc exit="northeast" move="northeast" destination="47" />
+    <arc exit="northwest" move="northwest" destination="45" />
+  </node>
+  <node id="47" name="Subterranean Depths, Limestone Strata">
+    <description>Steeply inclined and damp from the surrounding moisture, the flooring becomes quite treacherous as the path continues on its way deeper into the darkness.  A soft glow barely perceptible in the gloom illuminates a small crack in the cavern wall, the fissure heaving outward as though something had been pushing through the heavy black rock and finally given up its attempt, or merely stopped to rest before trying again.</description>
+    <position x="130" y="230" z="0" />
+    <arc exit="southwest" move="southwest" destination="46" />
+    <arc exit="west" move="west" destination="48" />
+  </node>
+  <node id="48" name="Subterranean Depths, Limestone Strata">
+    <description>Deepening shadows and echoing footfalls flow eerily behind each step around the curvature of the narrowing cavern walls.  A distant roar rises upon the still air filling the tunnel then lessens steadily into silence before crashing once again far below.  With each thunderous rush, dense mist fills the air momentarily, causing the smooth rock underfoot to become even more hazardous than before.</description>
+    <position x="70" y="230" z="0" />
+    <arc exit="east" move="east" destination="47" />
+    <arc exit="southwest" move="southwest" destination="49" />
+  </node>
+  <node id="49" name="Subterranean Depths, Limestone Strata">
+    <description>Hushed whispers echo softly through the tunnel, a multitude of muted voices chanting in discordant rhythms of incongruous verse.  Droplets of inky-black moisture trickle down the face of the rough sandstone walls, coming together in a shallow pool of rippling shadowy fluid, barren of any reflective qualities save for a faintly glowing image that appears to hover on the surface of the murky puddle.</description>
+    <position x="50" y="250" z="0" />
+    <arc exit="northeast" move="northeast" destination="48" />
+    <arc exit="south" move="south" destination="51" />
+    <arc exit="southwest" move="southwest" destination="50" />
+  </node>
+  <node id="50" name="Subterranean Depths, Limestone Strata">
+    <description>The tunnel comes to an abrupt end, though it takes several moments of staring at a featureless wall that is as black as space to realize this.  The air, chill and stale, seems to grow heavier with each passing moment.  The only sounds come from the faint dripping of some black liquid down the walls and a soft, sibilant whisper from the surrounding darkness.</description>
+    <position x="30" y="270" z="0" />
+    <arc exit="northeast" move="northeast" destination="49" />
+  </node>
+  <node id="51" name="Subterranean Depths, Limestone Strata">
+    <description>The sound of dripping water carries in faintly from the north, though curiously flat in tone.  The tunnel here seems to have a strange acoustic quality, making it easy to blame the most ordinary of sounds for that of something breathing, watching just outside the field of vision.  It is, however, harder to dismiss the darker patches of gloom that seem to move along the walls as any natural phenomena.</description>
+    <position x="50" y="270" z="0" />
+    <arc exit="north" move="north" destination="49" />
+    <arc exit="down" move="down" destination="52" />
+  </node>
+  <node id="52" name="Subterranean Depths, Bedrock Strata">
+    <description>Walls glisten with condensation, and the echoing sounds of dripping grow ever louder as the tunnel widens.  A faint glimmer comes from the near east, but this does not banish the flickering dark shapes that linger along the slick walls.  A soft, sibilant murmur reaches all travelers' ears, washing against them like the cold touch of Aldauth.</description>
+    <position x="50" y="290" z="0" />
+    <arc exit="east" move="east" destination="53" />
+    <arc exit="up" move="up" destination="51" />
+  </node>
+  <node id="53" name="Subterranean Depths, Bedrock Strata">
+    <description>Malevolent shadows linger here, unbanished even by the odd brightness of this area, and from those shadows come the soft, rhythmic sounds of something breathing.  Water drips from all around the sound of its impact against the cold stone floor is curiously flat.  The source of the unnatural, flickering light is a hefty wall of translucent material that would humble even the tallest of people.</description>
+    <position x="90" y="290" z="0" />
+    <arc exit="northeast" move="northeast" destination="54" />
+    <arc exit="west" move="west" destination="52" />
+  </node>
+  <node id="54" name="Subterranean Depths, Bedrock Strata">
+    <description>Curving around a set of great translucent shards, the cavern slopes like a great spiral ramp.  The dim light of the shards reflects from the slick stone walls and casts long shadows that reach far into the branching corridors.  From the depths below, the irregular beat of dripping water echoes faintly.</description>
+    <position x="110" y="270" z="0" />
+    <arc exit="northeast" move="northeast" destination="55" />
+    <arc exit="southwest" move="southwest" destination="53" />
+    <arc exit="west" move="west" destination="56" />
+  </node>
+  <node id="55" name="Subterranean Depths, Bedrock Strata">
+    <description>The blank, curving stone walls of this dead end magnify any sound in the deathlike silence of these tunnels.  The rustle of fabric becomes a stormy sea, and the tinkling of the persistent drops of black water becomes a slow, maddening drumbeat.  From all around comes the whisper of breath, creating a damp air that clings to flesh and stone alike.</description>
+    <position x="130" y="250" z="0" />
+    <arc exit="southwest" move="southwest" destination="54" />
+  </node>
+  <node id="56" name="Subterranean Depths, Bedrock Strata">
+    <description>Glistening like faint stars on the dank floor, translucent shards of strange material stick out in a curve along the walls.  There is a constant puff of moving air, unusual in this place where all seems still and dead, yet shadows continue to linger close as if unwilling to let through any trespass.</description>
+    <position x="90" y="270" z="0" />
+    <arc exit="east" move="east" destination="54" />
+    <arc exit="southeast" move="southeast" destination="57" />
+  </node>
+  <node id="57" name="Subterranean Depths, Scarred Tunnels">
+    <description>Jagged scars line the walls.  Older gashes, deep and smoothed by time, are overlaid with sharp jagged scrapes from a much more recent time.  Water trickles along them, creating glistening highlights along the ragged edges.  In blind rage or as a warning, something has marked this place.  Small fragments yet remain of translucent shards, leading northwest in a continuing curve.</description>
+    <position x="110" y="290" z="0" />
+    <arc exit="southwest" move="southwest" destination="58" />
+    <arc exit="northwest" move="northwest" destination="56" />
+  </node>
+  <node id="58" name="Subterranean Depths, Scarred Tunnels">
+    <description>To the northeast, the corridor narrows to become barely passable and, along with the sharp downward slope, effectively isolates this area from the surrounding tunnels.  From the rocky ceiling, large fans of some luminescent fungus dispel the darkness, making this place less attractive to the shadowy creatures that roam the cavern.  Despite the reassuring glow, however, the sounds of breathing are never far away and act as a constant reminder of what waits beyond this small sanctuary.</description>
+    <position x="90" y="310" z="0" />
+    <arc exit="northeast" move="northeast" destination="57" />
+    <arc exit="down" move="down" destination="59" />
+  </node>
+  <node id="59" name="Subterranean Depths, Flooded Cavern" color="#00FFFF">
+    <description>Vicious scars mar the dank, dark walls of the cavern.  Between the cold, black water that floods here and the sharp stalactites and stalagmites that fill the room, easy movement is but a faint hope.  Barely a glimmer of light can survive here, with the floodwater as dark as the stones themselves.</description>
+    <position x="90" y="330" z="0" />
+    <arc exit="southwest" move="swim southwest" destination="60" />
+    <arc exit="up" move="swim up" destination="58" />
+  </node>
+  <node id="60" name="Subterranean Depths, Flooded Cavern" color="#00FFFF">
+    <description>Crisscrossing claw marks rake the walls, the graffiti of vengeance and victory.  Water drips down the length of limestone pillars and from the fang-like stalactites still reaching to pierce the surface of the water.  Beneath the waterline, the hidden floor of the cavern is far from smooth.  Small holes and jutting arms of stone hinder progress, especially toward the west where the path becomes narrower.</description>
+    <position x="70" y="350" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="59" />
+    <arc exit="southeast" move="swim southeast" destination="62" />
+    <arc exit="west" move="swim west" destination="61" />
+  </node>
+  <node id="61" name="Subterranean Depths, Flooded Cavern" color="#00FFFF">
+    <description>The water here pools like a silent onyx lake, broken only by the sounds of the incessant dripping that reverberate hollowly around the chamber.  At the western edge, a series of worn stone steps lead up from the water's surface to a carved archway bearing three colored stones.</description>
+    <position x="50" y="350" z="0" />
+    <arc exit="east" move="swim east" destination="60" />
+    <arc exit="none" move="carved archway" />
+  </node>
+  <node id="62" name="Subterranean Depths, Flooded Cavern" color="#00FFFF">
+    <description>The stone walls spread from each other here, then come together at the far end of the watery cavern, forming a wide circle.  Drops of water disturb the still surface of the small underground lake and cast distorted reflections of the ubiquitous claw marks upon the walls.  Large fragments of shattered stone rise from the water's depths, their jagged edges slowly smoothing as the dripping water endlessly reshapes the rock.</description>
+    <position x="90" y="370" z="0" />
+    <arc exit="northwest" move="swim northwest" destination="60" />
+  </node>
+  <node id="63" name="Phelim's Temple, Planetarium" note="Map90_Ratha.xml|Ratha">
+    <description>The domed roof of the temple is closed and the constellations are projected on the ceiling and walls in a splendid display of the heavens.  The floor stones are black marble and glisten softly in the dim light, and the dark walls are cool and smooth to the touch.</description>
+    <description>The domed roof of Phelim's temple is open to the night sky with a large telescope pointed towards the heavens.</description>
+    <position x="170" y="-50" z="0" />
+    <arc exit="go" move="go shimmering moongate" destination="20" />
+    <arc exit="none" move="go doorway" destination="20" />
+  </node>
+  <node id="64" name="Tokka Painter's Hut, Front Room" note="Tokka Shop" color="#FF0000">
+    <description>Heavy draperies line the inner walls of this bamboo and thatch hut, intended to please the eye and shield the interior of the dwelling from any inclement weather.  Lambent illumination, thrown by the wavering flame of a box lantern suspended from the ceiling, struggles to fill the chamber.  A thick curtain divides the space, hiding a portion of the room from sight.</description>
+    <position x="50" y="70" z="0" />
+    <arc exit="out" move="out" destination="28" />
+  </node>
+  <node id="65" name="The Night Sky, Main Deck">
+    <description>The salt-stained sail rises high above, emblazoned with the form of a tall pyramid.  The captain barks orders to a meager crew of two, who don't appear in any great hurry to complete their assigned tasks.  Rigging lines and stray coils of rope create a hazardous path across the deck.</description>
+    <position x="340" y="190" z="0" />
+    <arc exit="go" move="go taisgath docks" destination="35" />
+  </node>
+  <label text="Moongate to Ratha">
+    <position x="60" y="-60" z="0" />
+  </label>
+  <label text="Taisgath">
+    <position x="220" y="-40" z="0" />
+  </label>
+  <label text="Tokka Shop">
+    <position x="20" y="40" z="0" />
+  </label>
+  <label text="Gypsy Sect">
+    <position x="320" y="100" z="0" />
+  </label>
+  <label text="Night Sky">
+    <position x="310" y="200" z="0" />
+  </label>
+  <label text="to Ratha">
+    <position x="310" y="210" z="0" />
+  </label>
+  <label text="Emaciated Umbramagus">
+    <position x="130" y="260" z="0" />
+  </label>
+  <label text="Ways">
+    <position x="100" y="60" z="0" />
+  </label>
+</zone>

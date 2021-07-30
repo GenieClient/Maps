@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Firecats" id="118e">
+  <node id="1" name="Cavern of Fire, Stalagmite Maze">
+    <description>The air feels thick and heavy with humidity as the heat bakes away what moisture seeps from the cavern's rocky walls.  Stalagmites jut up from the floor, forcing travelers to make their way through a confusing maze of passages that twist and turn, some rising, some falling, some doubling back upon themselves.  The haze of smoke, lit by a faint glow emanating from hairline cracks in the walls, makes the cavern even more disorienting.</description>
+    <position x="220" y="280" z="0" />
+    <arc exit="east" move="east" destination="4" />
+    <arc exit="north" move="north" destination="2" />
+    <arc exit="west" move="west" destination="3" />
+    <arc exit="climb" move="climb ladder" destination="14" />
+  </node>
+  <node id="2" name="Cavern of Fire, Stalagmite Maze">
+    <description>The air feels thick and heavy with humidity as the heat bakes away what moisture seeps from the cavern's rocky walls.  Stalagmites jut up from the floor, forcing travelers to make their way through a confusing maze of passages that twist and turn, some rising, some falling, some doubling back upon themselves.  The haze of smoke, lit by a faint glow emanating from hairline cracks in the walls, makes the cavern even more disorienting.</description>
+    <position x="200" y="260" z="0" />
+    <arc exit="north" move="north" destination="5" />
+    <arc exit="east" move="east" destination="1" />
+    <arc exit="west" move="west" destination="8" />
+  </node>
+  <node id="3" name="Cavern of Fire, Stalagmite Maze">
+    <description>The air feels thick and heavy with humidity as the heat bakes away what moisture seeps from the cavern's rocky walls.  Stalagmites jut up from the floor, forcing travelers to make their way through a confusing maze of passages that twist and turn, some rising, some falling, some doubling back into a dead end.  The haze of smoke, lit by a faint glow emanating from hairline cracks in the walls, makes the cavern even more disorienting.</description>
+    <position x="200" y="280" z="0" />
+    <arc exit="east" move="east" destination="1" />
+  </node>
+  <node id="4" name="Cavern of Fire, Stalagmite Maze">
+    <description>The air feels thick and heavy with humidity as the heat bakes away what moisture seeps from the cavern's rocky walls.  Stalagmites jut up from the floor, forcing travelers to make their way through a confusing maze of passages that twist and turn, some rising, some falling, some doubling back upon themselves.  The haze of smoke, lit by a faint glow emanating from hairline cracks in the walls, makes the cavern even more disorienting.</description>
+    <position x="200" y="180" z="0" />
+    <arc exit="north" move="north" destination="5" />
+    <arc exit="east" move="east" destination="9" />
+    <arc exit="south" move="south" destination="1" />
+  </node>
+  <node id="5" name="Cavern of Fire, Stalagmite Maze">
+    <description>The air feels thick and heavy with humidity as the heat bakes away what moisture seeps from the cavern's rocky walls.  Stalagmites jut up from the floor, forcing travelers to make their way through a confusing maze of passages that twist and turn, some rising, some falling, some doubling back upon themselves.  The haze of smoke, lit by a faint glow emanating from hairline cracks in the walls, makes the cavern even more disorienting.</description>
+    <position x="200" y="240" z="0" />
+    <arc exit="north" move="north" destination="6" />
+    <arc exit="east" move="east" destination="4" />
+    <arc exit="south" move="south" destination="2" />
+  </node>
+  <node id="6" name="Cavern of Fire, Stalagmite Maze">
+    <description>The air feels thick and heavy with humidity as the heat bakes away what moisture seeps from the cavern's rocky walls.  Stalagmites jut up from the floor, forcing travelers to make their way through a confusing maze of passages that twist and turn, some rising, some falling, some doubling back upon themselves.  The haze of smoke, lit by a faint glow emanating from hairline cracks in the walls, makes the cavern even more disorienting.</description>
+    <position x="280" y="240" z="0" />
+    <arc exit="north" move="north" destination="5" />
+    <arc exit="east" move="east" destination="8" />
+    <arc exit="west" move="west" destination="7" />
+  </node>
+  <node id="7" name="Cavern of Fire, Stalagmite Maze">
+    <description>The air feels thick and heavy with humidity as the heat bakes away what moisture seeps from the cavern's rocky walls.  Stalagmites jut up from the floor, forcing travelers to make their way through a confusing maze of passages that twist and turn, some rising, some falling, some doubling back into a dead end.  The haze of smoke, lit by a faint glow emanating from hairline cracks in the walls, makes the cavern even more disorienting.</description>
+    <position x="260" y="240" z="0" />
+    <arc exit="south" move="south" destination="6" />
+    <arc exit="climb" move="climb ladder" destination="10" />
+  </node>
+  <node id="8" name="Cavern of Fire, Stalagmite Maze">
+    <description>The air feels thick and heavy with humidity as the heat bakes away what moisture seeps from the cavern's rocky walls.  Stalagmites jut up from the floor, forcing travelers to make their way through a confusing maze of passages that twist and turn, some rising, some falling, some doubling back upon themselves.  The haze of smoke, lit by a faint glow emanating from hairline cracks in the walls, makes the cavern even more disorienting.</description>
+    <position x="140" y="220" z="0" />
+    <arc exit="east" move="east" destination="13" />
+    <arc exit="south" move="south" destination="6" />
+    <arc exit="west" move="west" destination="2" />
+  </node>
+  <node id="9" name="Cavern of Fire, Stalagmite Maze">
+    <description>The air feels thick and heavy with humidity as the heat bakes away what moisture seeps from the cavern's rocky walls.  Stalagmites jut up from the floor, forcing travelers to make their way through a confusing maze of passages that twist and turn, some rising, some falling, some doubling back upon themselves.  The haze of smoke, lit by a faint glow emanating from hairline cracks in the walls, makes the cavern even more disorienting.</description>
+    <position x="280" y="180" z="0" />
+    <arc exit="north" move="north" destination="11" />
+    <arc exit="south" move="south" destination="10" />
+    <arc exit="west" move="west" destination="4" />
+  </node>
+  <node id="10" name="Cavern of Fire, Stalagmite Maze">
+    <description>The air feels thick and heavy with humidity as the heat bakes away what moisture seeps from the cavern's rocky walls.  Stalagmites jut up from the floor, forcing travelers to make their way through a confusing maze of passages that twist and turn, some rising, some falling, some doubling back into a dead end.  The haze of smoke, lit by a faint glow emanating from hairline cracks in the walls, makes the cavern even more disorienting.</description>
+    <position x="260" y="160" z="0" />
+    <arc exit="south" move="south" destination="9" />
+    <arc exit="climb" move="climb ladder" destination="7" />
+  </node>
+  <node id="11" name="Cavern of Fire, Stalagmite Maze">
+    <description>The air feels thick and heavy with humidity as the heat bakes away what moisture seeps from the cavern's rocky walls.  Stalagmites jut up from the floor, forcing travelers to make their way through a confusing maze of passages that twist and turn, some rising, some falling, some doubling back upon themselves.  The haze of smoke, lit by a faint glow emanating from hairline cracks in the walls, makes the cavern even more disorienting.</description>
+    <position x="340" y="240" z="0" />
+    <arc exit="north" move="north" destination="9" />
+    <arc exit="east" move="east" destination="13" />
+    <arc exit="south" move="south" destination="12" />
+  </node>
+  <node id="12" name="Cavern of Fire, Stalagmite Maze">
+    <description>The air feels thick and heavy with humidity as the heat bakes away what moisture seeps from the cavern's rocky walls.  Stalagmites jut up from the floor, forcing travelers to make their way through a confusing maze of passages that twist and turn, some rising, some falling, some doubling back into a dead end.  The haze of smoke, lit by a faint glow emanating from hairline cracks in the walls, makes the cavern even more disorienting.</description>
+    <position x="340" y="260" z="0" />
+    <arc exit="north" move="north" destination="11" />
+  </node>
+  <node id="13" name="Cavern of Fire, Stalagmite Maze">
+    <description>The air feels thick and heavy with humidity as the heat bakes away what moisture seeps from the cavern's rocky walls.  Stalagmites jut up from the floor, forcing travelers to make their way through a confusing maze of passages that twist and turn, some rising, some falling, some doubling back upon themselves.  The haze of smoke, lit by a faint glow emanating from hairline cracks in the walls, makes the cavern even more disorienting.</description>
+    <position x="380" y="240" z="0" />
+    <arc exit="east" move="east" destination="8" />
+    <arc exit="west" move="west" destination="11" />
+    <arc exit="north" move="north" destination="14" />
+  </node>
+  <node id="14" name="Cavern of Fire, Stalagmite Maze">
+    <description>The air feels thick and heavy with humidity as the heat bakes away what moisture seeps from the cavern's rocky walls.  Stalagmites jut up from the floor, forcing travelers to make their way through a confusing maze of passages that twist and turn, some rising, some falling, some doubling back into a dead end.  The haze of smoke, lit by a faint glow emanating from hairline cracks in the walls, makes the cavern even more disorienting.</description>
+    <position x="360" y="200" z="0" />
+    <arc exit="east" move="east" destination="13" />
+    <arc exit="climb" move="climb ladder" destination="1" />
+  </node>
+</zone>

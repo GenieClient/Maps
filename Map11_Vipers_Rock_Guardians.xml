@@ -1,0 +1,1238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Leucros, Vipers and Rock Guardians" id="11">
+  <node id="1" name="Wilderness, Overgrown Path" color="#008000">
+    <description>A faint trail fades to nothing more than a thin break in the undergrowth, but seems to faintly curve east to southwest.  The heavy brush scratches and whips any exposed skin with each step forward.  An occasional rustle from areas unseen is a soft reminder that the solitude of the area is only an illusion.</description>
+    <description>Though deep, the darkness isn't complete and the chirring sounds of insects fills the air.  Pressing in all around, a thicket of scrub and brush make passage difficult.  What little light there is comes from the east.  All other directions stare back with an opaque blackness as thick as tar.</description>
+    <position x="376" y="20" z="0" />
+    <arc exit="go" move="search go faint path" destination="2" />
+    <arc exit="go" move="search go animal trail" destination="3" />
+  </node>
+  <node id="2" name="Northern Trade Road, Wooded Valley" note="Map7_NTR.xml|NTR">
+    <description>You come upon a small clearing in the heavy woods that allows a view of the sky.  A faint path can be made out that wanders into the trees, but it fades off before you can wonder about where it might lead.  There is an unnerving quiet here, even the wind seems to have died.  You feel a stranger in this wild place, perhaps an unwelcome stranger.</description>
+    <position x="376" y="0" z="0" />
+    <arc exit="northeast" move="northeast" />
+    <arc exit="southwest" move="southwest" />
+    <arc exit="go" move="go faint path" destination="1" />
+  </node>
+  <node id="3" name="Wilderness, Overgrown Path" color="#008000">
+    <description>Tangled underbrush creates a thick lattice here, and moving through it is like wading against the current in a cold stream.  The barest motion sends thin branches biting into skin.  Tiny tufts of fur snagged on undergrowth show that two-legged creatures aren't the only ones caught by surprise.</description>
+    <position x="376" y="40" z="0" />
+    <arc exit="north" move="north" destination="1" />
+    <arc exit="go" move="search go faint trail" destination="4" />
+  </node>
+  <node id="4" name="Wilderness, Overgrown Path" color="#008000">
+    <description>Reaching up from a low thicket, slender branches arc high overhead, shutting out most of the sky.  Prickly shoots from the undergrowth thrust forth in all directions, as though a young giant had tossed aside her game of jacks.</description>
+    <position x="376" y="60" z="0" />
+    <arc exit="north" move="north" destination="3" />
+    <arc exit="go" move="search go animal trail" destination="5" />
+  </node>
+  <node id="5" name="Wilderness, Dry Streambed" color="#008000">
+    <description>A lively brook once bubbled through the narrow gully, but time and drought have left only this cracked streambed as a reminder.  A few straggling weeds poke up through flakes of rock-hard dried mud.  Several courses of ancient stone line both banks, showing the hand of one who wished to control the wanderings of nature.</description>
+    <position x="376" y="80" z="0" />
+    <arc exit="go" move="search go bare spot" destination="6" />
+    <arc exit="go" move="go animal trail" destination="4" />
+    <arc exit="go" move="search go faint tracks" destination="36" />
+  </node>
+  <node id="6" name="Wilderness" color="#008000">
+    <description>Scraggly trees grow close together, poking up through the wild, arching brush.  Toward the southeast, the woods and undergrowth thicken into a dark, tangled mass, making travel confusing at best.</description>
+    <position x="396" y="100" z="0" />
+    <arc exit="east" move="east" destination="7" />
+    <arc exit="south" move="south" destination="11" />
+    <arc exit="northwest" move="northwest" destination="5" />
+    <arc exit="southeast" move="southeast" destination="16" />
+  </node>
+  <node id="7" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Dozens of tree boles of all sizes, heavily overgrown with wandering clumps of ivy and thornberry shrubs, form a green palisade broken by faint trails, seemingly at random.  The greenery is much faded and dusty and fallen leaves crunch underfoot.</description>
+    <position x="416" y="100" z="0" />
+    <arc exit="south" move="south" destination="16" />
+    <arc exit="east" move="east" destination="8" />
+    <arc exit="southeast" move="southeast" destination="19" />
+    <arc exit="west" move="west" destination="6" />
+    <arc exit="southwest" move="southwest" destination="11" />
+  </node>
+  <node id="8" name="Wilderness" color="#008000">
+    <description />
+    <description>Strangely-shaped trees rise all about you, seeming to lean in tiredly.  Faded and sere, their leaves dangle listlessly in the heavy air.</description>
+    <position x="436" y="100" z="0" />
+    <arc exit="southwest" move="southwest" destination="16" />
+    <arc exit="southeast" move="southeast" destination="20" />
+    <arc exit="south" move="south" destination="19" />
+    <arc exit="east" move="east" destination="9" />
+    <arc exit="west" move="west" destination="7" />
+  </node>
+  <node id="9" name="Wilderness" color="#008000">
+    <description>Trees and thickets of dried shrubs hem you in save for a few paths running between them.  Dead leaves cling to warped branches, rustling in the faint breezes that find their way here.</description>
+    <position x="456" y="100" z="0" />
+    <arc exit="south" move="south" destination="20" />
+    <arc exit="southeast" move="southeast" destination="10" />
+    <arc exit="west" move="west" destination="8" />
+    <arc exit="southwest" move="southwest" destination="19" />
+  </node>
+  <node id="10" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="476" y="120" z="0" />
+    <arc exit="northwest" move="northwest" destination="9" />
+    <arc exit="southwest" move="southwest" destination="21" />
+    <arc exit="west" move="west" destination="20" />
+    <arc exit="go" move="go tangled deadfall" destination="23" />
+  </node>
+  <node id="11" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Light clings like a fitful child to the thick forest and undergrowth.  Strange shadows play across the weeds and bracken, giving the illusion of movement in the undergrowth.  The eerie quiet of the woods tells a different story.</description>
+    <position x="396" y="120" z="0" />
+    <arc exit="north" move="north" destination="6" />
+    <arc exit="south" move="south" destination="12" />
+    <arc exit="southeast" move="southeast" destination="15" />
+    <arc exit="east" move="east" destination="16" />
+    <arc exit="northeast" move="northeast" destination="7" />
+  </node>
+  <node id="12" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="396" y="140" z="0" />
+    <arc exit="southeast" move="southeast" destination="14" />
+    <arc exit="east" move="east" destination="15" />
+    <arc exit="northeast" move="northeast" destination="16" />
+    <arc exit="south" move="south" destination="13" />
+    <arc exit="north" move="north" destination="11" />
+  </node>
+  <node id="13" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="396" y="160" z="0" />
+    <arc exit="north" move="north" destination="12" />
+    <arc exit="east" move="east" destination="14" />
+    <arc exit="northeast" move="northeast" destination="15" />
+  </node>
+  <node id="14" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="416" y="160" z="0" />
+    <arc exit="north" move="north" destination="15" />
+    <arc exit="northeast" move="northeast" destination="18" />
+    <arc exit="east" move="east" destination="17" />
+    <arc exit="west" move="west" destination="13" />
+    <arc exit="northwest" move="northwest" destination="12" />
+  </node>
+  <node id="15" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <description>Light clings like a fitful child to the thick forest and undergrowth.  Branches are broken at odd angles and sharp shards of stone are crushed into the ground, casualties of someone's headlong panicked flight through the deep woods.</description>
+    <position x="416" y="140" z="0" />
+    <arc exit="west" move="west" destination="12" />
+    <arc exit="east" move="east" destination="18" />
+    <arc exit="south" move="south" destination="14" />
+    <arc exit="north" move="north" destination="16" />
+    <arc exit="northeast" move="northeast" destination="19" />
+    <arc exit="southeast" move="southeast" destination="17" />
+    <arc exit="southwest" move="southwest" destination="13" />
+    <arc exit="northwest" move="northwest" destination="11" />
+  </node>
+  <node id="16" name="Wilderness" note="giant black leucros|black leucros|leucros" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="416" y="120" z="0" />
+    <arc exit="northwest" move="northwest" destination="6" />
+    <arc exit="south" move="south" destination="15" />
+    <arc exit="west" move="west" destination="11" />
+    <arc exit="northeast" move="northeast" destination="8" />
+    <arc exit="east" move="east" destination="19" />
+  </node>
+  <node id="17" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="436" y="160" z="0" />
+    <arc exit="northwest" move="northwest" destination="15" />
+    <arc exit="north" move="north" destination="18" />
+    <arc exit="east" move="east" destination="22" />
+    <arc exit="northeast" move="northeast" destination="21" />
+    <arc exit="west" move="west" destination="14" />
+  </node>
+  <node id="18" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="436" y="140" z="0" />
+    <arc exit="north" move="north" destination="19" />
+    <arc exit="northeast" move="northeast" destination="20" />
+    <arc exit="east" move="east" destination="21" />
+    <arc exit="southeast" move="southeast" destination="22" />
+    <arc exit="south" move="south" destination="17" />
+    <arc exit="southwest" move="southwest" destination="14" />
+    <arc exit="west" move="west" destination="15" />
+    <arc exit="northwest" move="northwest" destination="16" />
+  </node>
+  <node id="19" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="436" y="120" z="0" />
+    <arc exit="north" move="north" destination="8" />
+    <arc exit="northeast" move="northeast" destination="9" />
+    <arc exit="east" move="east" destination="20" />
+    <arc exit="southeast" move="southeast" destination="21" />
+    <arc exit="south" move="south" destination="18" />
+    <arc exit="southwest" move="southwest" destination="15" />
+    <arc exit="west" move="west" destination="16" />
+    <arc exit="northwest" move="northwest" destination="7" />
+  </node>
+  <node id="20" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="456" y="120" z="0" />
+    <arc exit="north" move="north" destination="9" />
+    <arc exit="south" move="south" destination="21" />
+    <arc exit="west" move="west" destination="19" />
+    <arc exit="northwest" move="northwest" destination="8" />
+    <arc exit="east" move="east" destination="10" />
+    <arc exit="southwest" move="southwest" destination="18" />
+  </node>
+  <node id="21" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="456" y="140" z="0" />
+    <arc exit="south" move="south" destination="22" />
+    <arc exit="north" move="north" destination="20" />
+    <arc exit="southwest" move="southwest" destination="17" />
+    <arc exit="west" move="west" destination="18" />
+    <arc exit="northwest" move="northwest" destination="19" />
+    <arc exit="northeast" move="northeast" destination="10" />
+  </node>
+  <node id="22" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="456" y="160" z="0" />
+    <arc exit="west" move="west" destination="17" />
+    <arc exit="north" move="north" destination="21" />
+    <arc exit="northwest" move="northwest" destination="18" />
+  </node>
+  <node id="23" name="Wilderness">
+    <description>A fearsomely large black plant rests at the bottom of two slopes.  Its serpentine, multiple stems end in large red tubular openings, which exude a smell like a cross between donkey roadkill and flayed skunk.  A seemingly endless trail of green ants enters the openings, which periodically close when full to digest their contents.</description>
+    <position x="496" y="100" z="0" />
+    <arc exit="southeast" move="southeast" destination="24" />
+    <arc exit="go" move="go tangled deadfall" destination="10" />
+  </node>
+  <node id="24" name="Wilderness">
+    <description>Green ants pile frantically on top of each other as they pour northwest, like a series of sweeping, moss-filled ocean waves.  They cover every inch of the ground, and climb over anything on it.</description>
+    <position x="516" y="120" z="0" />
+    <arc exit="south" move="south" destination="25" />
+    <arc exit="northwest" move="northwest" destination="23" />
+  </node>
+  <node id="25" name="Wilderness">
+    <description>An enormous number of green ants scurry silently to the north, down a steep incline, oblivious to all obstacles in their way.  From the safety of a sturdy tree branch, a grey owl watches the commuting colony through bulbous yellow eyes.</description>
+    <position x="516" y="140" z="0" />
+    <arc exit="north" move="north" destination="24" />
+    <arc exit="southeast" move="southeast" destination="26" />
+  </node>
+  <node id="26" name="Wilderness">
+    <description>Much of the rocky pathway is occupied by thousands of green ants.  They steadily pour northwest, down further into the primeval gloom.</description>
+    <position x="536" y="160" z="0" />
+    <arc exit="northwest" move="northwest" destination="25" />
+    <arc exit="southwest" move="southwest" destination="27" />
+  </node>
+  <node id="27" name="Wilderness">
+    <description>Large green ants issue from a series of raised cracks in the ground.  They follow a path that winds downwards to the northeast, between slim, tall fir trees that blot out the sky.</description>
+    <position x="516" y="180" z="0" />
+    <arc exit="northeast" move="northeast" destination="26" />
+    <arc exit="southwest" move="southwest" destination="28" />
+  </node>
+  <node id="28" name="Wilderness">
+    <description>The narrow road dips to the northeast, slithering darkly into a bed of large firs.  To the west it broadens under the watchful gaze of a dozen black oaks, their branches extended as though to grasp at something unseen.</description>
+    <position x="496" y="200" z="0" />
+    <arc exit="northeast" move="northeast" destination="27" />
+    <arc exit="southwest" move="southwest" destination="29" />
+  </node>
+  <node id="29" name="Wilderness">
+    <description>Black oaks, twisted with age, share the hard-packed dirt and rocks of this area with silver-barked larches.  From a deep bole in one of the oaks stares a pair of green eyes.  A low, warning snarl accompanies their unwinking glare at regular intervals.</description>
+    <position x="476" y="220" z="0" />
+    <arc exit="north" move="north" destination="31" />
+    <arc exit="northeast" move="northeast" destination="28" />
+    <arc exit="west" move="west" destination="30" />
+  </node>
+  <node id="30" name="Wilderness">
+    <description>To the north stands a small, perfectly even mound covered with hemlock, the pink petals nodding slowly in the breeze.  Surrounding it is a hedge of boar-bristle bushes.  The whole effect looks strangely artificial, as though a nameless somebody or something had deliberately planned the mound, hemlock and bushes for an altar.</description>
+    <position x="456" y="220" z="0" />
+    <arc exit="northeast" move="northeast" destination="31" />
+    <arc exit="east" move="east" destination="29" />
+    <arc exit="west" move="west" destination="32" />
+  </node>
+  <node id="31" name="Wilderness">
+    <description>Leaves as brown and sere as the pages of an old book scatter and crunch underfoot.  Something else, small and unseen, skitters quickly for shelter.</description>
+    <position x="476" y="200" z="0" />
+    <arc exit="south" move="south" destination="29" />
+    <arc exit="southwest" move="southwest" destination="30" />
+  </node>
+  <node id="32" name="Wilderness">
+    <description>A stone stairway continues upwards to the west, and down to the east.  Treacherous weeds sprout from between its slabs, long and stringy -- the perfect thing to trip an unwary traveler.</description>
+    <position x="436" y="220" z="0" />
+    <arc exit="east" move="east" destination="30" />
+    <arc exit="west" move="west" destination="33" />
+  </node>
+  <node id="33" name="Wilderness">
+    <description>A series of rough stone steps descends to the east, amidst a fringe of thick grey boar-bristle brush.  The center of each step has developed a bowed appearance due to repeated use over the years.</description>
+    <position x="416" y="220" z="0" />
+    <arc exit="east" move="east" destination="32" />
+    <arc exit="west" move="west" destination="34" />
+  </node>
+  <node id="34" name="Wilderness">
+    <description>Several sets of yellow eyes stare out unblinkingly from the safety of oak tree limbs too high for even the largest creatures to reach.  The sound of softly fluttering wings drifts down.</description>
+    <position x="396" y="220" z="0" />
+    <arc exit="east" move="east" destination="33" />
+    <arc exit="south" move="south" destination="35" />
+  </node>
+  <node id="35" name="Wilderness">
+    <description>This area is virtually barren.  Only a few low, sickly bushes survive here on the rocky soil, their branches devoid of leaves.</description>
+    <position x="396" y="240" z="0" />
+    <arc exit="north" move="north" destination="34" />
+    <arc exit="none" move="southeast" destination="103" />
+  </node>
+  <node id="36" name="Wilderness, Dry Streambed">
+    <description>A few faint tracks of small animals wander, seemingly at random, among the broken fragments of dry mud that form the old watercourse.  Thorn bushes and scrubby trees overhang the banks, futilely seeking moisture in this dry place.</description>
+    <position x="338" y="80" z="0" />
+    <arc exit="southeast" move="southeast" destination="37" />
+    <arc exit="go" move="search go animal tracks" destination="5" />
+  </node>
+  <node id="37" name="Wilderness, Dry Streambed">
+    <description>A dense thicket, full of thorns, rises suddenly in the sun-baked mud of the old streambed.  Perhaps tapping a lost spring, the deep green of the twisted branches is a marked contrast to the drier shrubs along the banks.</description>
+    <position x="358" y="100" z="0" />
+    <arc exit="south" move="south" destination="38" />
+    <arc exit="northwest" move="northwest" destination="36" />
+  </node>
+  <node id="38" name="Wilderness, Dry Streambed">
+    <description>The hard surface of the streambed rises noticeably to the south.  Crumbling chunks of rough-hewn stone along the banks show that someone once managed this watercourse for some long-forgotten purpose.</description>
+    <position x="358" y="120" z="0" />
+    <arc exit="north" move="north" destination="37" />
+    <arc exit="south" move="south" destination="39" />
+  </node>
+  <node id="39" name="Wilderness, Dry Streambed">
+    <description>Stones and gravel from the sides of the streambed have fallen down into untidy piles.  One massive boulder rises up above the rest like some patriarch among his flock.  Given its rough edges and lack of softening, this huge rock likely fell long after the stream dried up.</description>
+    <position x="358" y="140" z="0" />
+    <arc exit="north" move="north" destination="38" />
+    <arc exit="northwest" move="northwest" destination="40" />
+    <arc exit="climb" move="climb boulder" destination="41" />
+  </node>
+  <node id="40" name="Wilderness, Dry Streambed">
+    <description>A dry streambed ends in empty air.  The crumbling lip of a long-dead waterfall hangs out over a small pond some distance below.  Broken chunks of shaped rock lie to one side, their purpose unknowable to a casual look.</description>
+    <position x="338" y="120" z="0" />
+    <arc exit="southeast" move="southeast" destination="39" />
+  </node>
+  <node id="41" name="Wilderness, Dry Streambed">
+    <description>Several large rocks and small boulders form an untidy pile along the edge of a dry streambed.  Nearby, a huge growth of thorns and brambles arises.</description>
+    <position x="238" y="140" z="0" />
+    <arc exit="southwest" move="southwest" destination="42" />
+    <arc exit="down" move="down" destination="39" />
+  </node>
+  <node id="42" name="Thorn Thicket" note="Giant Thicket Vipers|Thicket Vipers|Vipers">
+    <description>A tangle of thick bushes covered with long thorns creates an interlocking mesh of spikes and vine.  Two narrow paths intersect, beaten through the stubborn shrubs, but even the crushed branches and thorns underfoot are an obstacle.</description>
+    <position x="220" y="158" z="0" />
+    <arc exit="north" move="north" destination="56" />
+    <arc exit="northeast" move="northeast" destination="41" />
+    <arc exit="east" move="east" destination="47" />
+    <arc exit="south" move="south" destination="43" />
+    <arc exit="west" move="west" destination="55" />
+  </node>
+  <node id="43" name="Thorn Thicket">
+    <description>An open area has been cleared from the thicket recently, but the voracious shrubs have begun growing back, their branches trailing into the clearing.  Rubbery shoots of new growth have pierced the bare ground, and biting green thorns already make the tender growth hostile.</description>
+    <position x="220" y="178" z="0" />
+    <arc exit="north" move="north" destination="42" />
+    <arc exit="east" move="east" destination="44" />
+    <arc exit="west" move="west" destination="48" />
+    <arc exit="northwest" move="northwest" destination="55" />
+  </node>
+  <node id="44" name="Thorn Thicket">
+    <description>Thick brush surrounds everything, rising taller than the tallest elf.  Narrow passages through the thorns fan out in several directions, but what lies around each bend is hidden from view.</description>
+    <position x="237" y="178" z="0" />
+    <arc exit="north" move="north" destination="47" />
+    <arc exit="northeast" move="northeast" destination="46" />
+    <arc exit="east" move="east" destination="45" />
+    <arc exit="west" move="west" destination="43" />
+  </node>
+  <node id="45" name="Thorn Thicket">
+    <description>The shrubs grow thicker and taller here, the way east a solid wall of dagger-thorns.  The path leads into an area hollowed out within the brake, with the shrub branches arching overhead to form a latticed roof.</description>
+    <position x="257" y="178" z="0" />
+    <arc exit="north" move="north" destination="46" />
+    <arc exit="west" move="west" destination="44" />
+  </node>
+  <node id="46" name="Thorn Thicket">
+    <description>A wild plum tree struggles upwards from the choking thorns, as the thorny vines reach upward for support.  Though the tree struggles for air and space, the remaining plums are protected from any but the swiftest and most agile birds.</description>
+    <position x="257" y="158" z="0" />
+    <arc exit="south" move="south" destination="45" />
+    <arc exit="southwest" move="southwest" destination="44" />
+    <arc exit="west" move="west" destination="47" />
+  </node>
+  <node id="47" name="Thorn Thicket">
+    <description>A dense wet smell of rotten fruit permeates the air, as thornberries protected from any beast hang overripe and decaying on the branches.  Swarms of midge-like flies fly in and out of the thorns -- if the thorns don't bite you most likely the flies will.</description>
+    <position x="237" y="158" z="0" />
+    <arc exit="east" move="east" destination="46" />
+    <arc exit="south" move="south" destination="44" />
+    <arc exit="west" move="west" destination="42" />
+  </node>
+  <node id="48" name="Thorn Thicket">
+    <description>A cluster of small slender trees rings a sparser area of the thicket. The shrubs are dwarfed here, but the thorns are even sharper.  Sticking to the paths is the only option.</description>
+    <position x="200" y="178" z="0" />
+    <arc exit="north" move="north" destination="55" />
+    <arc exit="east" move="east" destination="43" />
+    <arc exit="northwest" move="northwest" destination="49" />
+  </node>
+  <node id="49" name="Thorn Thicket">
+    <description>A high, level plain of knee-high brambles unfolds, without a tall bush or tree nearby.  The relentless sun and fierce storms have destroyed all but the persistent growth of thornberry shrubs, which are able to survive under almost any condition.  They cling to the hard rocky soil and hold this wilderness in place.</description>
+    <position x="180" y="158" z="0" />
+    <arc exit="east" move="east" destination="55" />
+    <arc exit="southeast" move="southeast" destination="48" />
+    <arc exit="go" move="go narrow path" destination="50" />
+    <arc exit="climb" move="climb steep slope" destination="65" />
+  </node>
+  <node id="50" name="Top of Chasm">
+    <description>Soft siltstone and sandstone washed away by rain through the ages have created a sheer slope that starts as a large gully and descends rapidly into an impressive arroyo.  Sculpted by the elements, large knobby boulder-like outcrops project upward from the rock forming oddly shaped sentinels to watch over the small canyon.  A narrow path leads towards the thickets to the east.</description>
+    <position x="159" y="158" z="0" />
+    <arc exit="go" move="go narrow path" destination="49" />
+    <arc exit="west" move="west" destination="51" />
+  </node>
+  <node id="51" name="Old Mill, Broken Bridge">
+    <description>A shattered bridge once provided a safe pathway from the mill to the southern side of the ravine.  Now, however, the chasm appears uncrossable as thick rotting ropes trail away from termite ridden support posts to disappear over the canyon edge.  Bits of frail wooden planking still litter the steep slope near the supports and the chasm bottom far below.</description>
+    <position x="139" y="158" z="0" />
+    <arc exit="east" move="east" destination="50" />
+    <arc exit="west" move="west" destination="52" />
+    <arc exit="northwest" move="northwest" destination="53" />
+  </node>
+  <node id="52" name="Old Mill, Near Cliff">
+    <description>Small clumps of crabgrass and scraggly shrubs give way to a gritty sandstone promontory, forming a sheer cliff that plummets down to the deep gorge below.  Across the chasm, on the far wall, layer after layer of herring-bone shaped laminations alternate with one another in the rock forming a curious pattern.</description>
+    <position x="119" y="158" z="0" />
+    <arc exit="north" move="north" destination="53" />
+    <arc exit="east" move="east" destination="51" />
+  </node>
+  <node id="53" name="Old Mill, Near Cliff">
+    <description>A deep chasm opens almost beneath your feet.  The remains of an old grist-mill sit beneath the faint shade of some scruffy trees nearby.  A broken millstone lies against the side of the mill, complete with an empty bird's nest in the center hole, though no birds appear to have used it in a long time.</description>
+    <position x="119" y="138" z="0" />
+    <arc exit="east" move="east" destination="54" />
+    <arc exit="southeast" move="southeast" destination="51" />
+    <arc exit="south" move="south" destination="52" />
+  </node>
+  <node id="54" name="Old Mill, Maple Tree">
+    <description>A long-abandoned grist mill lies beneath the weak shade of a scruffy maple tree.  A surprisingly stout lock holds the sagging front door closed.  Mouseholes gnawed into the wooden siding give shadowy glimpses into the dark interior.  A rotting pile of empty grain sacks shows obvious use as nesting material for some now-gone animal.</description>
+    <position x="139" y="138" z="0" />
+    <arc exit="west" move="west" destination="53" />
+    <arc exit="climb" move="climb maple tree" destination="58" />
+  </node>
+  <node id="55" name="Thorn Thicket">
+    <description>A hill slopes up to the west, and from the curve of the land, you can see the thornberry patch reaches to the western horizon.  A brown rabbit scurries quickly across the path before diving to disappear into the growth.</description>
+    <position x="200" y="158" z="0" />
+    <arc exit="east" move="east" destination="42" />
+    <arc exit="southeast" move="southeast" destination="43" />
+    <arc exit="south" move="south" destination="48" />
+    <arc exit="southwest" move="southwest" destination="57" />
+    <arc exit="west" move="west" destination="49" />
+  </node>
+  <node id="56" name="Thorn Thicket">
+    <description>Rising out of the thickets of thornberry shrubs is a lone pine.  Blighted by the dry land and poor soil, it still climbs to an impressive height.  Some distance away, past a totally impassible wall of brambles, a few other trees can be seen.</description>
+    <position x="220" y="138" z="0" />
+    <arc exit="south" move="south" destination="42" />
+    <arc exit="climb" move="climb lone pine" destination="64" />
+    <arc exit="go" move="go gap" destination="149" />
+  </node>
+  <node id="57" name="Thorn Thicket, High Above Chasm">
+    <description>The ground has broken away and tumbled far below to a chasm of dry rocky soil.  Some remaining fat plump thornberries cling fiercely to their protective branches, just as the shrubs themselves hold fast to the slowly eroding ground.</description>
+    <position x="180" y="178" z="0" />
+    <arc exit="northeast" move="northeast" destination="55" />
+  </node>
+  <node id="58" name="Maple Tree, Trunk">
+    <description>You cling to the thick and heavy trunk of an ancient maple tree.  Below you, a ruined mill sits in the scattered shade.  To one side, the millwheel waits for the stream that once turned it.  Cliffs rise to the northeast where the thin thread of a waterfall descends to form a small pool.  Perhaps this is where the old mill stream has gone.</description>
+    <position x="116" y="115" z="0" />
+    <arc exit="east" move="east" destination="59" />
+    <arc exit="go" move="go narrow branch" destination="60" />
+    <arc exit="climb" move="climb crude ladder" destination="54" />
+  </node>
+  <node id="59" name="Maple Tree, High Branch">
+    <description>A thick and twisted limb sways underfoot uneasily.  A gnarled branch from a creaking pine tree brushes this limb, making footing even more uncertain.</description>
+    <position x="135" y="115" z="0" />
+    <arc exit="west" move="west" destination="58" />
+    <arc exit="go" move="go tree trunk" destination="58" />
+    <arc exit="go" move="go pine branch" destination="61" />
+  </node>
+  <node id="60" name="Maple Tree, Branch">
+    <description>The heavy branch you crouch on sways near an upper story window set into the weathered side of the old mill.  To one side, the mill wheel waits endlessly for the water that no longer turns it.  Only dust now fills its rusting scoops.</description>
+    <position x="97" y="115" z="0" />
+    <arc exit="go" move="go tree trunk" destination="58" />
+  </node>
+  <node id="61" name="Pine Tree, End of Branch">
+    <description>You crouch at the narrowing tip of a swaying branch, perched high above the ground.  Far below, thick thornberry bushes wave their lance-tips, as if waiting for the inevitable fall into pain and injury.  The thin branch tip of a nearby maple brushes this tree.</description>
+    <position x="155" y="115" z="0" />
+    <arc exit="east" move="east" destination="62" />
+    <arc exit="go" move="go maple branch" destination="59" />
+  </node>
+  <node id="62" name="Pine Tree, Heavy Branch">
+    <description>Below this limb, a dense thicket of thorns squats, spear-like points glimmering a sullen green.  Bark shifts and crackles uneasily as the entire limb dips and groans under your weight.  The branch leads to a gnarled tree in one direction and further out into thin, uncaring air in the other.</description>
+    <position x="176" y="115" z="0" />
+    <arc exit="west" move="west" destination="61" />
+    <arc exit="go" move="go gnarled tree" destination="63" />
+  </node>
+  <node id="63" name="Pine Tree, Treetop">
+    <description>Numerous small branches form the twisted crown of this gnarled tree.  One particularly long branch points westward like a bony finger.  It appears unusually sturdy though the bark is loose and brittle along its surface.  Far below, a heavy growth of thorns squats in a dense thicket.</description>
+    <position x="189" y="126" z="0" />
+    <arc exit="down" move="down" destination="64" />
+    <arc exit="go" move="go heavy branch" destination="62" />
+  </node>
+  <node id="64" name="Pine Tree, Trunk">
+    <description>You rest a moment in the crotch of a dead branch that sticks out at an acute angle midway up the gnarled and twisted tree trunk.  Nearby, other trees break through the heavy thornbrake far below.</description>
+    <position x="200" y="138" z="0" />
+    <arc exit="down" move="down" destination="56" />
+    <arc exit="climb" move="climb gnarled trunk" destination="63" />
+  </node>
+  <node id="65" name="Chasm, Gully Floor" note="Rock Guardians">
+    <description>Small fan shaped deposits of sand and silt have accumulated at the base of a steep rivulet-worn slope that rises up from the northern side of the chasm.  The southern wall is far more severe rising straight up to the lip of the small canyon.</description>
+    <position x="131" y="207" z="0" />
+    <arc exit="west" move="west" destination="66" />
+    <arc exit="climb" move="climb rock fall" destination="71" />
+    <arc exit="climb" move="climb steep slope" destination="49" />
+  </node>
+  <node id="66" name="Chasm, Ruined Bridge">
+    <description>Debris from the destroyed bridge that once crossed this ravine litters the floor of the chasm.  High on the chasm walls the remnants of the bridge still dangle precariously over head, periodically adding to the wooden rubble on the canyon floor.</description>
+    <position x="111" y="207" z="0" />
+    <arc exit="east" move="east" destination="65" />
+    <arc exit="west" move="west" destination="67" />
+  </node>
+  <node id="67" name="Chasm, Rocky Floor">
+    <description>Huge blocks of arkose sandstone fill the chasm, resting at odd angles with only the slimmest cracks between them.  A fresh scar of unweathered rock high on the southern wall attests to the source of this impediment.</description>
+    <position x="91" y="207" z="0" />
+    <arc exit="east" move="east" destination="66" />
+    <arc exit="go" move="search go narrow gap" destination="68" />
+  </node>
+  <node id="68" name="Chasm, Gully Slope">
+    <description>The floor of the chasm becomes a steep slope, rapidly dropping even as the walls grow higher above.  Lichen covered boulders, both large and small, litter the bedrock slope making footing treacherous.</description>
+    <position x="71" y="207" z="0" />
+    <arc exit="down" move="down" destination="69" />
+    <arc exit="go" move="search go narrow gap" destination="67" />
+  </node>
+  <node id="69" name="Chasm, Bottom" note="Difficult Climb" color="#FFFF00">
+    <description>The bottom of the gully is a tumbled mass of broken boulders.  Few plants manage to survive in the nearly soilless ground, but within two of the many crevices, a small tree and patch of roseroot have taken hold.</description>
+    <position x="71" y="227" z="0" />
+    <arc exit="up" move="up" destination="68" />
+    <arc exit="go" move="search go narrow crevice" destination="70" />
+  </node>
+  <node id="70" name="Chasm, Cloudy Pool">
+    <description>A pool of cloudy water collects in the lowest end of the gully.  It is impossible to gauge the depth of the water, but a slow current from an unseen source creates a lazy whirlpool.</description>
+    <position x="51" y="227" z="0" />
+    <arc exit="go" move="search go narrow crevice" destination="69" />
+    <arc exit="go" move="climb rocky ledge" destination="78" />
+  </node>
+  <node id="71" name="Chasm, Passageway">
+    <description>Grey, brackish water and grimy sand cover the bottom of this corridor adjoining the chasm.  Sharp-edged granite boulders form both walls and the high, irregular ceiling overhead.  Long flow lines have deeply scored every surface.  Presumably, water cascades rapidly through this area during a strong storm.</description>
+    <position x="111" y="187" z="0" />
+    <arc exit="northwest" move="northwest" destination="72" />
+    <arc exit="climb" move="climb rock fall" destination="65" />
+  </node>
+  <node id="72" name="Chasm, Passageway">
+    <description>The splintered wreckage of a rowboat lies keel upwards among jagged white rocks that continue to the north and south.  Mildew gives the craft a coat of moss-green paint, and huge, spotted mushrooms provide a new crew.</description>
+    <position x="91" y="167" z="0" />
+    <arc exit="southeast" move="southeast" destination="71" />
+    <arc exit="northwest" move="northwest" destination="73" />
+  </node>
+  <node id="73" name="Chasm, Passageway">
+    <description>Strings of black-blistered seaweed hang from the rough-edged rocks overhead.  They drip slowly, endlessly, forming a slick mucus membrane that slithers treacherously along the sand underfoot.  Cracks in the ceiling allow a small amount of light to squeeze into the area.</description>
+    <description>Strings of black-blistered seaweed hang from the rough-edged rocks overhead.  They drip slowly, endlessly, forming a slick mucus membrane that slithers treacherously along the sand underfoot.  Cracks in the ceiling allow a small amount of light from the night sky to squeeze into the area, though you can see no stars.</description>
+    <position x="71" y="147" z="0" />
+    <arc exit="southeast" move="southeast" destination="72" />
+    <arc exit="west" move="west" destination="74" />
+  </node>
+  <node id="74" name="Chasm, Passageway">
+    <description>Small bushes dot the moist, sandy passageway as it curves east and southwest.  Their pale white, fleshy branches look like the outstretched fingers of a corpse caught in rictus.  A smell like decaying yak flesh rises from each, hanging heavily in the damp air.</description>
+    <position x="11" y="147" z="0" />
+    <arc exit="east" move="east" destination="73" />
+    <arc exit="go" move="go graveled path" destination="75" />
+  </node>
+  <node id="75" name="Chasm, Passageway">
+    <description>The gravel that lines this portion of the corridor falls off to either side into muddy depressions.  The silt-stained rocks that line them are host to hundreds of tiny egg clusters, glistening like multicolored, speck-sized gems.</description>
+    <position x="-9" y="167" z="0" />
+    <arc exit="go" move="go sandy path" destination="74" />
+    <arc exit="south" move="south" destination="76" />
+  </node>
+  <node id="76" name="Chasm, Passageway">
+    <description>Rusty ooze covers the corridor as it swings north and southeast.  Colonies of black lichen form small patches across the sodden ground and upon the craggy granite walls.</description>
+    <position x="-9" y="187" z="0" />
+    <arc exit="north" move="north" destination="75" />
+    <arc exit="southeast" move="southeast" destination="77" />
+  </node>
+  <node id="77" name="Chasm, Passageway">
+    <description>A pool of transparent yellow liquid sits placidly in the sandy passageway, its surface broken only by an occasional drip from the distant, rocky ceiling.  Trails of small, skittering creatures crisscross the floor, though the area around the tiny pool has been left completely undisturbed.</description>
+    <position x="11" y="207" z="0" />
+    <arc exit="southeast" move="southeast" destination="78" />
+    <arc exit="northwest" move="northwest" destination="76" />
+  </node>
+  <node id="78" name="Chasm, Passageway">
+    <description>Slick silt fills the cracks between the sharply protruding rocks underfoot.  The walls sweat an oil that reeks faintly of acid.  Cold dampness hangs heavily in the air of this corridor that continues to the northwest and opens up to a chasm south.</description>
+    <position x="31" y="227" z="0" />
+    <arc exit="northwest" move="northwest" destination="77" />
+    <arc exit="climb" move="climb chasm" destination="70" />
+  </node>
+  <node id="79" name="Wilderness">
+    <description>The press of slender larches on either side of the road is so close that a scraggly net of parasitic bramble has actually arched overhead.  It casts a band of shadow that renders the primeval gloom that much closer to darkest night.</description>
+    <position x="441" y="347" z="0" />
+    <arc exit="north" move="north" destination="80" />
+    <arc exit="south" move="south" destination="95" />
+    <arc exit="east" move="east" destination="81" />
+  </node>
+  <node id="80" name="Wilderness">
+    <description>Dead leaves slowly drift down in an elaborate dance from the boughs of several larches.  As they touch ground, nearby thornbush tendrils whip out.  The leaves are instantly converted to mulch.</description>
+    <position x="441" y="327" z="0" />
+    <arc exit="south" move="south" destination="79" />
+    <arc exit="none" move="northwest" destination="103" />
+  </node>
+  <node id="81" name="Wilderness">
+    <description>A large tumbleweed of boar-bristle brush lies caught in the fork of an oak tree.  It thrashes about in occasional gusts of howling wind, its thorny branches clattering against the oak's trunk like a huge abacus.</description>
+    <position x="461" y="347" z="0" />
+    <arc exit="east" move="east" destination="82" />
+    <arc exit="west" move="west" destination="79" />
+  </node>
+  <node id="82" name="Wilderness">
+    <description>Thickets of boar-bristle hedge the path to the east and west.  More than six feet high in places, they obstruct the view of all but the largest black oaks.</description>
+    <position x="481" y="347" z="0" />
+    <arc exit="southwest" move="southwest" destination="83" />
+    <arc exit="west" move="west" destination="81" />
+  </node>
+  <node id="83" name="Wilderness">
+    <description>Dark, skeletal oaks vie with massive lines of boar-bristle bushes for control of the terrain.  Each seems intent on providing as much encroaching shadow as it possibly can over the dusty, uneven road.</description>
+    <position x="461" y="367" z="0" />
+    <arc exit="northeast" move="northeast" destination="82" />
+    <arc exit="east" move="east" destination="84" />
+    <arc exit="southeast" move="southeast" destination="85" />
+  </node>
+  <node id="84" name="Wilderness">
+    <description>A recent fire has cut back the trees in an area to the north, providing a small window on the outline of faraway hills and cultivated fields.  A few fitfully winking lights send a message of hope and cheer, of warmth, shelter and companionship, made all the more poignant by its distance.</description>
+    <position x="501" y="367" z="0" />
+    <arc exit="southwest" move="southwest" destination="85" />
+    <arc exit="west" move="west" destination="83" />
+  </node>
+  <node id="85" name="Wilderness">
+    <description>The remnants of a hut remain here, its slanting timber eaves rotting against a giant oak.  A few discolored slats of a former crook fence and a badly battered door rest across the path.</description>
+    <position x="481" y="387" z="0" />
+    <arc exit="northeast" move="northeast" destination="84" />
+    <arc exit="southeast" move="southeast" destination="86" />
+    <arc exit="northwest" move="northwest" destination="83" />
+  </node>
+  <node id="86" name="Wilderness">
+    <description>Yellow-barked trees oozing a pungent, spicy odor cluster around the road like a solemn welcoming committee.  Their branches shiver constantly, setting up a rustle of imagined whispers -- all the more disconcerting as no breeze can be felt.</description>
+    <position x="501" y="407" z="0" />
+    <arc exit="south" move="south" destination="87" />
+    <arc exit="northwest" move="northwest" destination="85" />
+  </node>
+  <node id="87" name="Wilderness">
+    <description>A lime-green algae carpet parts to reveal treacherous bogs of turgidly bubbling muck.  Small insects flicker over the ooze like swiftly tossed coins.</description>
+    <position x="501" y="427" z="0" />
+    <arc exit="north" move="north" destination="86" />
+    <arc exit="southeast" move="southeast" destination="88" />
+  </node>
+  <node id="88" name="Wilderness">
+    <description>Slender elms, their barks encrusted with bulbous white fungi, stand silently at attention alongside the road.  Every few minutes a bird glimpsed only in shadow launches into flight from a leafy canopy, causing the tree to shake as though stricken by disease.</description>
+    <position x="521" y="447" z="0" />
+    <arc exit="east" move="east" destination="89" />
+    <arc exit="northwest" move="northwest" destination="87" />
+  </node>
+  <node id="89" name="Wilderness">
+    <description>A fallen oak trunk lies across a peat swamp, caked with a scum of grey algae.  From out of sight comes a chorus of full-throated frogs, so loud that their noise seems a native feature of the landscape itself.</description>
+    <position x="541" y="447" z="0" />
+    <arc exit="east" move="east" destination="90" />
+    <arc exit="west" move="west" destination="88" />
+  </node>
+  <node id="90" name="Wilderness">
+    <description>A fat brown toad with orange spots sits on a half-revealed tree root attached to a withered stump.  With its unblinking gaze, it seems more like a statue than a living creature-- until an unbelievably long tongue snakes out, snaring a lazily buzzing pearlfly.</description>
+    <position x="561" y="447" z="0" />
+    <arc exit="north" move="north" destination="91" />
+    <arc exit="northeast" move="northeast" destination="93" />
+    <arc exit="southeast" move="southeast" destination="92" />
+    <arc exit="west" move="west" destination="89" />
+  </node>
+  <node id="91" name="Wilderness">
+    <description>The stench of a dozen sewers empties into the fetid air from this bubbling peat swamp.  Lights coalesce briefly over the muck, glowing dimly like pale ghosts before they fade.</description>
+    <position x="561" y="427" z="0" />
+    <arc exit="south" move="south" destination="90" />
+  </node>
+  <node id="92" name="Wilderness">
+    <description>A few blades of snakegrass sprout from the edge of a large black pool, like hair fringing a bald man's pate.  The corpse of a small creature lies by the pool's side.  It is unrecognizable now, bloated with the scurrying traffic of hundreds of brown beetles.</description>
+    <position x="581" y="467" z="0" />
+    <arc exit="northwest" move="northwest" destination="90" />
+  </node>
+  <node id="93" name="Wilderness">
+    <description>The ground here is soft and sticky at best, a dark, protoplasmic ooze dotted by a few skeletal oaks.  A green lizard sits on the branch of one of these, calmly, slowly munching the body of a brown toad in its enormous maw.</description>
+    <position x="581" y="427" z="0" />
+    <arc exit="northeast" move="northeast" destination="94" />
+    <arc exit="southwest" move="southwest" destination="90" />
+  </node>
+  <node id="94" name="Wilderness">
+    <description>Plate-sized, shaggy mushrooms of azure and gold decorate several fallen trees.  The air is redolent with the cloying fragrance of rotting vegetation, and the sound of creatures hissing in the darkness.</description>
+    <position x="601" y="407" z="0" />
+    <arc exit="southwest" move="southwest" destination="93" />
+  </node>
+  <node id="95" name="Wilderness">
+    <description>Hundreds of tiny bleached bones, no longer than a single joint of a finger, lie scattered across the road as it ambles in several directions.  The sound of hissing to all sides gives ample warning not to touch the remnants of whatever creatures formerly lived here.</description>
+    <position x="441" y="367" z="0" />
+    <arc exit="north" move="north" destination="79" />
+    <arc exit="southeast" move="southeast" destination="98" />
+    <arc exit="southwest" move="southwest" destination="96" />
+  </node>
+  <node id="96" name="Wilderness">
+    <description>The dessicated bed of a long-vanished rivulet lies here in a small depression that weaves along the trail, keeping it company.  The images of small mollusks, imprinted years ago on fragments of sandstone, are scattered throughout the stream's dried course.</description>
+    <position x="421" y="387" z="0" />
+    <arc exit="northeast" move="northeast" destination="95" />
+    <arc exit="southeast" move="southeast" destination="97" />
+  </node>
+  <node id="97" name="Wilderness">
+    <description>Large tufts of suffocating mouser weed would have dammed and killed the stream that formerly flowed here, had it not long since dried up from other causes.  The weeds occasionally shiver, offering a reminder that not all life in this area is large enough to be visible.</description>
+    <position x="441" y="407" z="0" />
+    <arc exit="northwest" move="northwest" destination="96" />
+  </node>
+  <node id="98" name="Wilderness">
+    <description>A humanoid skull has been nailed to one of the silvery-barked larches in this area.  It displays considerably more hilarity than its owner probably did in their last living moments.  The ground slopes sharply upwards to the southeast.</description>
+    <position x="461" y="387" z="0" />
+    <arc exit="southeast" move="southeast" destination="99" />
+    <arc exit="northwest" move="northwest" destination="95" />
+  </node>
+  <node id="99" name="Wilderness">
+    <description>Skeletal branches of immense oaks crisscross overhead, preventing all view of the sky.  The rocky path declines steeply to the southwest, and angles upwards to the northwest.</description>
+    <position x="481" y="407" z="0" />
+    <arc exit="southwest" move="southwest" destination="100" />
+    <arc exit="northwest" move="northwest" destination="98" />
+  </node>
+  <node id="100" name="Wilderness">
+    <description>An overgrown path continues to the southeast.  Other points of entry into the thickly forested terrain are east and northeast, where just enough foliage has been removed to permit travel between adhering vines and thorny branches.</description>
+    <position x="461" y="427" z="0" />
+    <arc exit="northeast" move="northeast" destination="99" />
+    <arc exit="west" move="west" destination="101" />
+  </node>
+  <node id="101" name="Wilderness">
+    <description>Small fragments of charcoal are scattered about a bald spot in the vegetation, where other travelers have presumably stopped before.  A menacing shadow that expands over the former campsite turns out to be nothing more than a grey horned owl, perched on a nearby tree.</description>
+    <position x="441" y="427" z="0" />
+    <arc exit="east" move="east" destination="100" />
+    <arc exit="northwest" move="northwest" destination="102" />
+  </node>
+  <node id="102" name="Wilderness">
+    <description>A shock of blue variwinkles sprout from a hollowed-out tree stump just south of the road.  It's the single spot of bright color in a landscape dominated by black-barked trees and scraggly patches of pale green moss.</description>
+    <position x="421" y="407" z="0" />
+    <arc exit="southeast" move="southeast" destination="101" />
+  </node>
+  <node id="103" name="Wilderness">
+    <description>Tangled brown undergrowth as thick as a Dwarven beard lines this region.  Fierce ripples occasionally flee across its surface, indicating that however impenetrable it may appear to travelers, small creatures still lurk beneath its surface -- perhaps following the remnant of an old, long unused trail.</description>
+    <description>Tangled brown undergrowth as thick as a Dwarven beard lines this region.  Fierce ripples occasionally flee across its surface, indicating that however impenetrable it may appear to travelers, small creatures still lurk beneath its surface -- perhaps following the remnant of an old, long unused trail.</description>
+    <position x="418" y="280" z="0" />
+    <arc exit="none" move="southeast" destination="80" />
+    <arc exit="none" move="northwest" destination="35" />
+    <arc exit="none" move="east" destination="104" />
+    <arc exit="go" move="search go faint trail" destination="105" />
+  </node>
+  <node id="104" name="Wilderness">
+    <description>A huge dead oak overhangs the road.  One enormous crabbed branch extends directly overhead, its smaller branches splayed like a giant, outstretched claw.</description>
+    <position x="451" y="280" z="0" />
+    <arc exit="none" move="west" destination="103" />
+  </node>
+  <node id="105" name="Wilderness" color="#008000">
+    <description>The remnants of a trail lie here, marked by a large stone now overgrown with slimy white toadstools.  The dense brush crowds in, seemingly eager to obliterate even this last trace of civilization.</description>
+    <position x="543" y="330" z="0" />
+    <arc exit="none" move="north" destination="106" />
+    <arc exit="go" move="go gap" destination="107" />
+    <arc exit="none" move="south" destination="108" />
+    <arc exit="go" move="search go faint trail" destination="112" />
+  </node>
+  <node id="106" name="Wilderness" color="#008000">
+    <description>Black oaks vie for space with an expanse of grey underbrush, their crooked branches intertwined in a dark canopy.  There is no clear passage here, and one direction looks as good -- or bad -- as the next.</description>
+    <position x="543" y="310" z="0" />
+    <arc exit="none" move="north" destination="112" />
+    <arc exit="none" move="south" destination="105" />
+  </node>
+  <node id="107" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <position x="563" y="330" z="0" />
+    <arc exit="none" move="north" destination="111" />
+    <arc exit="northeast" move="northeast" destination="135" />
+    <arc exit="east" move="east" destination="136" />
+    <arc exit="southeast" move="southeast" destination="110" />
+    <arc exit="none" move="south" destination="109" />
+  </node>
+  <node id="108" name="Wilderness" color="#008000">
+    <description>A dugout barrow lies partially obscured by tangled vegetation, eight feet wide and as deep as black ink spilled against a midnight sky.  A single weathered post with a tattered cloth banner displaying crossed hands shows that this originally was a burial site.</description>
+    <position x="543" y="350" z="0" />
+    <arc exit="none" move="north" destination="105" />
+  </node>
+  <node id="109" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="563" y="350" z="0" />
+    <arc exit="none" move="north" destination="107" />
+    <arc exit="northeast" move="northeast" destination="136" />
+    <arc exit="east" move="east" destination="110" />
+  </node>
+  <node id="110" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="583" y="350" z="0" />
+    <arc exit="north" move="north" destination="136" />
+    <arc exit="northeast" move="northeast" destination="138" />
+    <arc exit="east" move="east" destination="137" />
+    <arc exit="west" move="west" destination="109" />
+    <arc exit="northwest" move="northwest" destination="107" />
+  </node>
+  <node id="111" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <position x="563" y="310" z="0" />
+    <arc exit="none" move="north" destination="113" />
+    <arc exit="northeast" move="northeast" destination="134" />
+    <arc exit="east" move="east" destination="135" />
+    <arc exit="southeast" move="southeast" destination="136" />
+    <arc exit="none" move="south" destination="107" />
+  </node>
+  <node id="112" name="Wilderness" color="#008000">
+    <description>Light penetrates with difficulty through the vine-entangled oaks and thick undergrowth that infest the landscape.  The sound of flapping wings drifts down from somewhere out of view.</description>
+    <position x="543" y="290" z="0" />
+    <arc exit="none" move="north" destination="114" />
+    <arc exit="none" move="south" destination="106" />
+  </node>
+  <node id="113" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="563" y="290" z="0" />
+    <arc exit="east" move="east" destination="134" />
+    <arc exit="southeast" move="southeast" destination="135" />
+    <arc exit="none" move="south" destination="111" />
+  </node>
+  <node id="114" name="Wilderness" color="#008000">
+    <description>A horde of dessicated boar-bristle bushes form an impenetrable barrier to the west.  They thin slightly in other directions, allowing for difficult passage.</description>
+    <position x="543" y="270" z="0" />
+    <arc exit="north" move="north" destination="116" />
+    <arc exit="northeast" move="northeast" destination="117" />
+    <arc exit="none" move="east" destination="115" />
+    <arc exit="none" move="south" destination="112" />
+  </node>
+  <node id="115" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="563" y="270" z="0" />
+    <arc exit="north" move="north" destination="117" />
+    <arc exit="northeast" move="northeast" destination="126" />
+    <arc exit="east" move="east" destination="123" />
+    <arc exit="none" move="west" destination="114" />
+    <arc exit="northwest" move="northwest" destination="116" />
+  </node>
+  <node id="116" name="Wilderness" color="#008000">
+    <description>Leaves as brown and sere as the pages of an old book scatter and crunch underfoot.  Something else, small and unseen, skitters quickly for shelter through the dense undergrowth.</description>
+    <position x="543" y="250" z="0" />
+    <arc exit="north" move="north" destination="118" />
+    <arc exit="northeast" move="northeast" destination="121" />
+    <arc exit="east" move="east" destination="117" />
+    <arc exit="southeast" move="southeast" destination="115" />
+    <arc exit="south" move="south" destination="114" />
+  </node>
+  <node id="117" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="563" y="250" z="0" />
+    <arc exit="north" move="north" destination="121" />
+    <arc exit="northeast" move="northeast" destination="127" />
+    <arc exit="east" move="east" destination="126" />
+    <arc exit="southeast" move="southeast" destination="123" />
+    <arc exit="south" move="south" destination="115" />
+    <arc exit="southwest" move="southwest" destination="114" />
+    <arc exit="west" move="west" destination="116" />
+    <arc exit="northwest" move="northwest" destination="118" />
+  </node>
+  <node id="118" name="Wilderness" color="#008000">
+    <description>Tufts of snakegrass weave their way through the tangled undergrowth of boar-bristle bushes.  Something else, small and unseen, skitters quickly for shelter.</description>
+    <position x="543" y="230" z="0" />
+    <arc exit="none" move="north" destination="119" />
+    <arc exit="none" move="northeast" destination="120" />
+    <arc exit="none" move="east" destination="121" />
+    <arc exit="southeast" move="southeast" destination="117" />
+    <arc exit="south" move="south" destination="116" />
+  </node>
+  <node id="119" name="Wilderness" color="#008000">
+    <description>Dank green moss grows over oak trees and boar-bristle bushes.  It drips slowly into the undergrowth, creating a damp sludge that makes walking unpleasant and hazardous.</description>
+    <position x="543" y="210" z="0" />
+    <arc exit="none" move="east" destination="120" />
+    <arc exit="none" move="southeast" destination="121" />
+    <arc exit="none" move="south" destination="118" />
+    <arc exit="go" move="search go faint trail" destination="103" />
+  </node>
+  <node id="120" name="Wilderness" color="#008000">
+    <description>Black oaks vie for space with an expanse of grey underbrush, their crooked branches intertwined in a dark canopy.  There is no clear passage here, and one direction looks as good -- or bad -- as the next.</description>
+    <position x="563" y="210" z="0" />
+    <arc exit="east" move="east" destination="122" />
+    <arc exit="southeast" move="southeast" destination="127" />
+    <arc exit="none" move="south" destination="121" />
+    <arc exit="none" move="southwest" destination="118" />
+    <arc exit="none" move="west" destination="119" />
+  </node>
+  <node id="121" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="563" y="230" z="0" />
+    <arc exit="none" move="north" destination="120" />
+    <arc exit="northeast" move="northeast" destination="122" />
+    <arc exit="east" move="east" destination="127" />
+    <arc exit="southeast" move="southeast" destination="126" />
+    <arc exit="south" move="south" destination="117" />
+    <arc exit="southwest" move="southwest" destination="116" />
+    <arc exit="none" move="west" destination="118" />
+    <arc exit="none" move="northwest" destination="119" />
+  </node>
+  <node id="122" name="Wilderness" color="#008000">
+    <description>A sudden scurrying movement in the endless thicket makes it seem to come alive, its branches waving like knotted, threatening tendrils.  Then the movement ceases, and the monotony of grey, tangled vegetation against grey landscape sets in once more.</description>
+    <position x="583" y="210" z="0" />
+    <arc exit="east" move="east" destination="131" />
+    <arc exit="southeast" move="southeast" destination="130" />
+    <arc exit="south" move="south" destination="127" />
+    <arc exit="southwest" move="southwest" destination="121" />
+    <arc exit="west" move="west" destination="120" />
+  </node>
+  <node id="123" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="583" y="270" z="0" />
+    <arc exit="north" move="north" destination="126" />
+    <arc exit="northeast" move="northeast" destination="128" />
+    <arc exit="east" move="east" destination="124" />
+    <arc exit="west" move="west" destination="115" />
+    <arc exit="northwest" move="northwest" destination="117" />
+  </node>
+  <node id="124" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="603" y="270" z="0" />
+    <arc exit="north" move="north" destination="128" />
+    <arc exit="northeast" move="northeast" destination="129" />
+    <arc exit="east" move="east" destination="125" />
+    <arc exit="west" move="west" destination="123" />
+    <arc exit="northwest" move="northwest" destination="126" />
+  </node>
+  <node id="125" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="623" y="270" z="0" />
+    <arc exit="north" move="north" destination="129" />
+    <arc exit="west" move="west" destination="124" />
+    <arc exit="northwest" move="northwest" destination="128" />
+  </node>
+  <node id="126" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="583" y="250" z="0" />
+    <arc exit="north" move="north" destination="127" />
+    <arc exit="northeast" move="northeast" destination="130" />
+    <arc exit="east" move="east" destination="128" />
+    <arc exit="southeast" move="southeast" destination="124" />
+    <arc exit="south" move="south" destination="123" />
+    <arc exit="southwest" move="southwest" destination="115" />
+    <arc exit="west" move="west" destination="117" />
+    <arc exit="northwest" move="northwest" destination="121" />
+  </node>
+  <node id="127" name="Wilderness" note="forest genis|genis" color="#00FF00">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="583" y="230" z="0" />
+    <arc exit="north" move="north" destination="122" />
+    <arc exit="northeast" move="northeast" destination="131" />
+    <arc exit="east" move="east" destination="130" />
+    <arc exit="southeast" move="southeast" destination="128" />
+    <arc exit="south" move="south" destination="126" />
+    <arc exit="southwest" move="southwest" destination="117" />
+    <arc exit="west" move="west" destination="121" />
+    <arc exit="northwest" move="northwest" destination="120" />
+    <arc exit="climb" move="climb oak tree" destination="145" />
+  </node>
+  <node id="128" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="603" y="250" z="0" />
+    <arc exit="north" move="north" destination="130" />
+    <arc exit="northeast" move="northeast" destination="132" />
+    <arc exit="east" move="east" destination="129" />
+    <arc exit="southeast" move="southeast" destination="125" />
+    <arc exit="south" move="south" destination="124" />
+    <arc exit="southwest" move="southwest" destination="123" />
+    <arc exit="west" move="west" destination="126" />
+    <arc exit="northwest" move="northwest" destination="127" />
+  </node>
+  <node id="129" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="623" y="250" z="0" />
+    <arc exit="north" move="north" destination="132" />
+    <arc exit="south" move="south" destination="125" />
+    <arc exit="southwest" move="southwest" destination="124" />
+    <arc exit="west" move="west" destination="128" />
+    <arc exit="northwest" move="northwest" destination="130" />
+  </node>
+  <node id="130" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="603" y="230" z="0" />
+    <arc exit="north" move="north" destination="131" />
+    <arc exit="northeast" move="northeast" destination="133" />
+    <arc exit="east" move="east" destination="132" />
+    <arc exit="southeast" move="southeast" destination="129" />
+    <arc exit="south" move="south" destination="128" />
+    <arc exit="southwest" move="southwest" destination="126" />
+    <arc exit="west" move="west" destination="127" />
+    <arc exit="northwest" move="northwest" destination="122" />
+  </node>
+  <node id="131" name="Wilderness" color="#008000">
+    <description>Emaciated branches reach out of the endless thicket, thrusting long, crooked black fingers up towards the sky.  A chorus of full-throated frogs vibrates from hidden hollows, so loud that the noise seems a native feature of the landscape itself.</description>
+    <position x="603" y="210" z="0" />
+    <arc exit="east" move="east" destination="133" />
+    <arc exit="southeast" move="southeast" destination="132" />
+    <arc exit="south" move="south" destination="130" />
+    <arc exit="southwest" move="southwest" destination="127" />
+    <arc exit="west" move="west" destination="122" />
+  </node>
+  <node id="132" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="623" y="230" z="0" />
+    <arc exit="north" move="north" destination="133" />
+    <arc exit="south" move="south" destination="129" />
+    <arc exit="southwest" move="southwest" destination="128" />
+    <arc exit="west" move="west" destination="130" />
+    <arc exit="northwest" move="northwest" destination="131" />
+  </node>
+  <node id="133" name="Wilderness" color="#008000">
+    <description>A tangled net of grey underbrush covers the ground wherever skeletal oaks do not grow.  The brush slows progress, and provides cover for the series of anonymous feral eyes that glare out at any passersby.</description>
+    <position x="623" y="210" z="0" />
+    <arc exit="south" move="south" destination="132" />
+    <arc exit="southwest" move="southwest" destination="130" />
+    <arc exit="west" move="west" destination="131" />
+  </node>
+  <node id="134" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="583" y="290" z="0" />
+    <arc exit="east" move="east" destination="140" />
+    <arc exit="southeast" move="southeast" destination="139" />
+    <arc exit="south" move="south" destination="135" />
+    <arc exit="southwest" move="southwest" destination="111" />
+    <arc exit="west" move="west" destination="113" />
+  </node>
+  <node id="135" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="583" y="310" z="0" />
+    <arc exit="north" move="north" destination="134" />
+    <arc exit="northeast" move="northeast" destination="140" />
+    <arc exit="east" move="east" destination="139" />
+    <arc exit="southeast" move="southeast" destination="138" />
+    <arc exit="south" move="south" destination="136" />
+    <arc exit="southwest" move="southwest" destination="107" />
+    <arc exit="west" move="west" destination="111" />
+    <arc exit="northwest" move="northwest" destination="113" />
+  </node>
+  <node id="136" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="583" y="330" z="0" />
+    <arc exit="north" move="north" destination="135" />
+    <arc exit="northeast" move="northeast" destination="139" />
+    <arc exit="east" move="east" destination="138" />
+    <arc exit="southeast" move="southeast" destination="137" />
+    <arc exit="south" move="south" destination="110" />
+    <arc exit="southwest" move="southwest" destination="109" />
+    <arc exit="west" move="west" destination="107" />
+    <arc exit="northwest" move="northwest" destination="111" />
+  </node>
+  <node id="137" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="603" y="350" z="0" />
+    <arc exit="north" move="north" destination="138" />
+    <arc exit="northeast" move="northeast" destination="142" />
+    <arc exit="east" move="east" destination="141" />
+    <arc exit="west" move="west" destination="110" />
+    <arc exit="northwest" move="northwest" destination="136" />
+  </node>
+  <node id="138" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="603" y="330" z="0" />
+    <arc exit="north" move="north" destination="139" />
+    <arc exit="northeast" move="northeast" destination="143" />
+    <arc exit="east" move="east" destination="142" />
+    <arc exit="southeast" move="southeast" destination="141" />
+    <arc exit="south" move="south" destination="137" />
+    <arc exit="southwest" move="southwest" destination="110" />
+    <arc exit="west" move="west" destination="136" />
+    <arc exit="northwest" move="northwest" destination="135" />
+  </node>
+  <node id="139" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="603" y="310" z="0" />
+    <arc exit="north" move="north" destination="140" />
+    <arc exit="northeast" move="northeast" destination="144" />
+    <arc exit="east" move="east" destination="143" />
+    <arc exit="southeast" move="southeast" destination="142" />
+    <arc exit="south" move="south" destination="138" />
+    <arc exit="southwest" move="southwest" destination="136" />
+    <arc exit="west" move="west" destination="135" />
+    <arc exit="northwest" move="northwest" destination="134" />
+  </node>
+  <node id="140" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="603" y="290" z="0" />
+    <arc exit="east" move="east" destination="144" />
+    <arc exit="south" move="south" destination="139" />
+    <arc exit="southwest" move="southwest" destination="135" />
+    <arc exit="west" move="west" destination="134" />
+    <arc exit="southeast" move="southeast" destination="143" />
+  </node>
+  <node id="141" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="623" y="350" z="0" />
+    <arc exit="north" move="north" destination="142" />
+    <arc exit="west" move="west" destination="137" />
+    <arc exit="northwest" move="northwest" destination="138" />
+  </node>
+  <node id="142" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="623" y="330" z="0" />
+    <arc exit="north" move="north" destination="143" />
+    <arc exit="south" move="south" destination="141" />
+    <arc exit="southwest" move="southwest" destination="137" />
+    <arc exit="west" move="west" destination="138" />
+    <arc exit="northwest" move="northwest" destination="139" />
+  </node>
+  <node id="143" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="623" y="310" z="0" />
+    <arc exit="north" move="north" destination="144" />
+    <arc exit="south" move="south" destination="142" />
+    <arc exit="southwest" move="southwest" destination="138" />
+    <arc exit="west" move="west" destination="139" />
+    <arc exit="northwest" move="northwest" destination="140" />
+  </node>
+  <node id="144" name="Wilderness" color="#008000">
+    <description>Fallen leaves rustle with the movements of a thousand crawling insects.  With no birdsong to add a melody to the eerie rhythm, the crackling and whispering becomes the murmur of an unseen voice in the night, coming from nowhere.</description>
+    <description>Daylight clings like a fitful child to the thick forest and undergrowth.  Though it is possible to venture in most directions, it promises to be a frustrating, difficult and painful battle against the stubborn resistance of the woods.  Discerning the cardinal directions is a matter of guesswork and only close observation reveals anything of worth.</description>
+    <position x="623" y="290" z="0" />
+    <arc exit="south" move="south" destination="143" />
+    <arc exit="southwest" move="southwest" destination="139" />
+    <arc exit="west" move="west" destination="140" />
+  </node>
+  <node id="145" name="Old Oak Tree, Amongst the Branches">
+    <description>Boughs hung heavy with leaves tenderly enfold the old oak tree, much like a protective glove that is designed to provide a safe haven for the hands.  High overhead, a large branch leads further up into the tree for a better view of the countryside.</description>
+    <position x="603" y="190" z="0" />
+    <arc exit="climb" move="climb gap" destination="127" />
+    <arc exit="climb" move="climb shallow knothole" destination="146" />
+    <arc exit="climb" move="climb large branch" destination="147" />
+  </node>
+  <node id="146" name="Old Oak Tree, Amongst the Branches">
+    <description>Thick and twisted, one heavily gnarled limb reaches out like a claw, softened only slightly by the tangled vines of deep green ivy curling leisurely along it.  Perched uneasily in a slight groove between two branches lie the withered remnants of a tiny nest, long abandoned by its owner.</description>
+    <position x="623" y="190" z="0" />
+    <arc exit="climb" move="climb shallow knothole" destination="145" />
+    <arc exit="climb" move="climb limb" destination="148" />
+  </node>
+  <node id="147" name="Old Oak Tree, Amongst the Branches">
+    <description>A thick latticework of leaves forms a dense, canopied bough overhead, just within arm's reach.  Rough black bark scrubs mercilessly at the hands, in stark contrast to the soft foliage it gives birth to.  Several limbs gently divide off to form cozy forks in which to sit and relax from the labors of the hunt or while planning the next adventure.</description>
+    <position x="603" y="170" z="0" />
+    <arc exit="climb" move="climb large branch" destination="145" />
+    <arc exit="climb" move="climb bough" destination="148" />
+  </node>
+  <node id="148" name="Old Oak Tree, The Treetop">
+    <description>Balancing precariously on two gnarled branches that sway underfoot allows for a spectacular view of the surrounding wilderness from the thick crown leaves.  Carved into the rough, black bark of the swiftly aging oak are a series of carefully chiseled letters.</description>
+    <position x="603" y="150" z="0" />
+    <arc exit="climb" move="climb limb" destination="146" />
+    <arc exit="climb" move="climb bough" destination="147" />
+  </node>
+  <node id="149" name="Thorn Thicket, Deep">
+    <description>Grey bushes bristling with hundreds of small, pointed thorns stand like giant sentries at silent attention in this tunnel, ready to strike at the first sign of invasion.</description>
+    <position x="248" y="39" z="0" />
+    <arc exit="east" move="east" destination="150" />
+    <arc exit="southeast" move="southeast" destination="160" />
+    <arc exit="go" move="go gap" destination="56" />
+  </node>
+  <node id="150" name="Thorn Thicket, Deep">
+    <description>Thorny brambles engulf everything in sight, forming both rug and canopy.  Through the laticework of grey branches you can dimly make out lights winking their message of cheer and warmth from distant cities.</description>
+    <description>Thorny brambles engulf everything in sight, forming both rug and canopy.  Through the latticework of grey branches you can dimly make out lights winking their message of cheer and warmth from distant cities.</description>
+    <position x="268" y="39" z="0" />
+    <arc exit="southeast" move="southeast" destination="151" />
+    <arc exit="west" move="west" destination="149" />
+  </node>
+  <node id="151" name="Thorn Thicket, Deep">
+    <description>A bristling net of thorns covers the stump of a silverwood sapling.  The remaining bark gleams in all its primal glory, but dried black stains on the thorns testify that travelers have tried to remove a few souvenir splinters from the stump in the past.</description>
+    <position x="288" y="59" z="0" />
+    <arc exit="southeast" move="southeast" destination="152" />
+    <arc exit="northwest" move="northwest" destination="150" />
+  </node>
+  <node id="152" name="Thorn Thicket, Deep">
+    <description>A few variwinkles peek out from the wild tangle of surrounding thorn bushes.  Their small purple flowers nod among the briars, dancing innocently in the fitful play of light.</description>
+    <position x="308" y="79" z="0" />
+    <arc exit="south" move="south" destination="153" />
+    <arc exit="northwest" move="northwest" destination="151" />
+  </node>
+  <node id="153" name="Thorn Thicket, Deep">
+    <description>Tendrils of snakeweed wind endlessly through mounds of dagger-thorn bushes like the work of some sylvan weaver.  The result is a clogged thicket of grey branches striped bright green, shimmering in the air as it stirs with every passing breeze.</description>
+    <position x="308" y="99" z="0" />
+    <arc exit="north" move="north" destination="152" />
+    <arc exit="south" move="south" destination="154" />
+  </node>
+  <node id="154" name="Thorn Thicket, Deep">
+    <description>The thorn thicket crests like a giant grey wave, engulfing several dead black oaks.  Wisps of nests can still be seen in their higher boughs.</description>
+    <position x="308" y="119" z="0" />
+    <arc exit="north" move="north" destination="153" />
+    <arc exit="west" move="west" destination="155" />
+  </node>
+  <node id="155" name="Thorn Thicket, Deep">
+    <description>A dark green moss expands along every curve of the sloping hills of this region.  The moss in turn is completely covered by a patchwork blanket of brush, its thorns glistening with dew.</description>
+    <position x="288" y="119" z="0" />
+    <arc exit="east" move="east" destination="154" />
+    <arc exit="west" move="west" destination="156" />
+  </node>
+  <node id="156" name="Thorn Thicket, Deep">
+    <description>Several caves open into the side of a enormous, moss-covered mound.  They were once occupied by intelligent creatures, judging by the rusty tools which lie scattered about their entrances.  However, an impenetrable wall of bramble now prevents any access.</description>
+    <position x="268" y="119" z="0" />
+    <arc exit="east" move="east" destination="155" />
+    <arc exit="northwest" move="northwest" destination="157" />
+  </node>
+  <node id="157" name="Thorn Thicket, Deep">
+    <description>A small metal cart lies on its side, its wheels broken, its spilled contents a rotted, unidentifiable mass.  Spread over its surface is a heavy layer of brambles speckled with vivid red thornberries.</description>
+    <position x="248" y="99" z="0" />
+    <arc exit="northeast" move="northeast" destination="158" />
+    <arc exit="southeast" move="southeast" destination="156" />
+  </node>
+  <node id="158" name="Thorn Thicket">
+    <description>A small animal thrashes about in the all-encompassing vegetation, trapped, reduced to anonymous pulp by the action of innumerable thorns.  The bushes that hold it seem almost alive, their scraggly branches clinging with single-minded frenzy.</description>
+    <position x="268" y="79" z="0" />
+    <arc exit="southwest" move="southwest" destination="157" />
+    <arc exit="west" move="west" destination="159" />
+  </node>
+  <node id="159" name="Thorn Thicket">
+    <description>A horde of dense brambles crowds in upon this area from all sides, and from above.  Gusts of wind send its nettled branches snicking loudly with sinister emphasis. </description>
+    <position x="248" y="79" z="0" />
+    <arc exit="northeast" move="northeast" destination="160" />
+    <arc exit="east" move="east" destination="158" />
+  </node>
+  <node id="160" name="Thorn Thicket">
+    <description>Ravens tap and pick at the engulfing net of thistle branches weaving across several defoliated oak trees.  They carefully avoid the sharp thorns, but blackened blotches underfoot reveal their occasional lack of past success.</description>
+    <position x="268" y="59" z="0" />
+    <arc exit="southwest" move="southwest" destination="159" />
+    <arc exit="northwest" move="northwest" destination="149" />
+  </node>
+  <label text="Giant Black Leucros">
+    <position x="392" y="74" z="0" />
+  </label>
+  <label text="NTR">
+    <position x="389" y="-4" z="0" />
+  </label>
+  <label text="Rock Guardians">
+    <position x="-1" y="172" z="0" />
+  </label>
+  <label text="">
+    <position x="-50" y="-30" z="0" />
+  </label>
+  <label text="Giant Black Leucros">
+    <position x="98" y="90" z="0" />
+  </label>
+  <label text="Forest Genis">
+    <position x="635" y="273" z="0" />
+  </label>
+  <label text="Giant Thicket Vipers">
+    <position x="212" y="18" z="0" />
+  </label>
+</zone>

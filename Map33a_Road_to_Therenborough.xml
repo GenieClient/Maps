@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Road to Therenborough" id="33a">
+  <node id="1" name="Mistwood Forest">
+    <description>Bark curls in pale strips from the trunks of birch trees.  Wide-leafed hosta grow in a circle around their base, thriving in the dim light of the forest.  The undergrowth is thinner, with fewer thorns, and you can hear the rush of water nearby.</description>
+    <position x="0" y="40" z="0" />
+    <arc exit="northeast" move="northeast" destination="47" />
+    <arc exit="south" move="south" destination="2" />
+  </node>
+  <node id="2" name="Mistwood Forest">
+    <description>Feathery ferns crowned with thick, cinnamon-red spikes nestle in the shade of the trees.  The trail winds around in the lazy meandering pattern typical of deer paths everywhere.  To the north, the faint burble of running water can be heard through the brush.</description>
+    <position x="0" y="60" z="0" />
+    <arc exit="north" move="north" destination="1" />
+    <arc exit="east" move="east" destination="3" />
+    <arc exit="southeast" move="southeast" destination="4" />
+  </node>
+  <node id="3" name="Mistwood Forest">
+    <description>Leathery dark green leaves flutter on bushes that grow beneath the trees, twisting to reveal a thick-veined bronze underside.  Birds swoop amongst the branches, carrying bits and pieces of grass and vines to mend their nests.</description>
+    <position x="40" y="60" z="0" />
+    <arc exit="southwest" move="southwest" destination="4" />
+    <arc exit="west" move="west" destination="2" />
+  </node>
+  <node id="4" name="Mistwood Forest">
+    <description>As the trees grow further apart, the path becomes more narrow.  Thick mounds of brush crowd the trail, competing for the sunlight and catching at passersby.  Clumps of fur caught in the grasping branches hint at others who haunt the forest.  Since the fur is about waist-high on a Gor'Tog, these others are perhaps more dangerous than an occasional thorn.</description>
+    <position x="20" y="80" z="0" />
+    <arc exit="northeast" move="northeast" destination="3" />
+    <arc exit="southeast" move="southeast" destination="5" />
+    <arc exit="south" move="south" destination="8" />
+    <arc exit="northwest" move="northwest" destination="2" />
+  </node>
+  <node id="5" name="Mistwood Forest">
+    <description>Red-leafed vines twined around the trunks and lower branches of the trees lend a splash of vivid color to the dark greens and browns.  The leafless limbs of a dead tree let in dim light to brush the forest floor, heightening the shadows.</description>
+    <description>Red-leafed vines twined around the trunks and lower branches of the trees lend a splash of vivid color to the dark greens and browns.  The leafless limbs of a dead tree let in light to brush the forest floor, heightening the dim shadows.</description>
+    <position x="60" y="80" z="0" />
+    <arc exit="south" move="south" destination="6" />
+    <arc exit="southwest" move="southwest" destination="7" />
+    <arc exit="northwest" move="northwest" destination="4" />
+  </node>
+  <node id="6" name="Mistwood Forest">
+    <description>Still and somber, pine trees lower their branches to brush the ground, drooping like dejected suitors mourning their lost loves.  The melancholy limbs show a distressing tendency to clutch at travelers trying to make their way through the forest, jabbing sharp needles into exposed skin.</description>
+    <position x="60" y="100" z="0" />
+    <arc exit="north" move="north" destination="5" />
+    <arc exit="southeast" move="southeast" destination="7" />
+  </node>
+  <node id="7" name="Mistwood Forest">
+    <description>Blight stalks the forest, leaving behind it a meandering track of dead trees, their bark peeled away in ragged curls to reveal weathered grey wood beneath.  Birds nest in the branches and hollows, and foxes or badgers lay claim to the burrows beneath the roots, but eventually the rotted wood will fall and join the decomposing leaves that carpet the forest floor.</description>
+    <position x="40" y="120" z="0" />
+    <arc exit="northeast" move="northeast" destination="5" />
+    <arc exit="south" move="south" destination="9" />
+    <arc exit="west" move="west" destination="8" />
+    <arc exit="northwest" move="northwest" destination="6" />
+  </node>
+  <node id="8" name="Mistwood Forest">
+    <description>Birds chitter in the branches -- the warbling song of a wren, the shrill scolding of a scarlet jay, the hoarse call of a large crow -- all competing in a cacophonous clash of sound that masks the rustle of dead leaves as you move.</description>
+    <position x="20" y="120" z="0" />
+    <arc exit="north" move="north" destination="4" />
+    <arc exit="east" move="east" destination="7" />
+    <arc exit="southeast" move="southeast" destination="9" />
+    <arc exit="south" move="south" destination="10" />
+  </node>
+  <node id="9" name="Mistwood Forest">
+    <description>High above, the trees' spreading branches are silhouetted against the star-lit sky.  On the forest floor, the land is cloaked in a perpetual green-tinged darkness broken from time to time by silvery shafts of moonlight piercing the canopy overhead.  Leaves crackle underfoot, a dried carpet over the thick, rich mulch.</description>
+    <description>High above, the trees vie with one another in their bloodless battle for the light.  On the forest floor, the land is cloaked in a perpetual green-tinged twilight broken from time to time by gilded shafts of sunlight piercing the canopy overhead.  Leaves crackle underfoot, a dried carpet over the thick, rich mulch.</description>
+    <position x="40" y="140" z="0" />
+    <arc exit="north" move="north" destination="7" />
+    <arc exit="northwest" move="northwest" destination="8" />
+    <arc exit="southwest" move="southwest" destination="10" />
+  </node>
+  <node id="10" name="Mistwood Forest">
+    <description>Clusters of river birch grow in pale grey stands along the edge of the clearing.  Beyond, the forest looms, tall and dark.  Mossy green vines dangle from overhanging limbs, modestly concealing the tree's trunk from view and masking the approach of anything that might be moving within the woods.  It's impossible to see which way to go to find the path in the forest.</description>
+    <position x="20" y="180" z="0" />
+    <arc exit="north" move="north" />
+    <arc exit="northeast" move="northeast" />
+    <arc exit="east" move="east" />
+    <arc exit="southeast" move="southeast" />
+    <arc exit="south" move="south" destination="12" />
+    <arc exit="southwest" move="southwest" />
+    <arc exit="west" move="west" />
+    <arc exit="northwest" move="northwest" />
+    <arc exit="climb" move="objsearch rocky.ledge climb shrub" destination="11" />
+  </node>
+  <node id="11" name="Mistwood Forest, Rocky Outcropping">
+    <description>The rock face angles outward above the ledge, making it impossible to climb past this point.  Below, you can see the deer paths' meandering track through the forest, twisting and turning in a logic known only to the deer.</description>
+    <position x="0" y="140" z="0" />
+    <arc exit="down" move="down" destination="10" />
+    <arc exit="none" move="script mistwoodcliff" destination="8" />
+  </node>
+  <node id="12" name="Mistwood Forest">
+    <description>At the top of a rocky outcropping, you can look down onto a thicket of menacing briars.  No way down is readily apparent, and the thought of dropping thrice the height of a Gor'Tog into the thorns is really not something a sane person would wish to entertain.</description>
+    <position x="20" y="220" z="0" />
+    <arc exit="north" move="north" destination="10" />
+    <arc exit="climb" move="objsearch outcropping climb handholds" destination="13" />
+  </node>
+  <node id="13" name="Mistwood Forest">
+    <description>Narrow cracks in the rock wall provide precarious hand- and footholds as you climb.  Sharp-leafed shrubs cling tenaciously to the surface, their roots threading fragile tendrils into almost invisible cracks in their search for water.</description>
+    <position x="20" y="240" z="0" />
+    <arc exit="climb" move="climb wall" destination="12" />
+    <arc exit="climb" move="climb handholds" destination="14" />
+  </node>
+  <node id="14" name="Mistwood Forest" color="#008000">
+    <description>A rocky outcropping juts up from the forest floor, surrounded by a tangle of briars along the base.  The trail ends here.  Bristly shrubs cling to the almost vertical surface in a triumph of faith over gravity, but appear too fragile to bear the weight of even the lightest Gnome.</description>
+    <position x="20" y="260" z="0" />
+    <arc exit="southwest" move="southwest" destination="15" />
+    <arc exit="climb" move="objsearch outcrop climb handholds" destination="13" />
+  </node>
+  <node id="15" name="Mistwood Forest" color="#008000">
+    <description>The path winds back and forth between tall, thin conifers that tower toward the sky, allowing only dappled patches of moonlight to filter through to the forest floor.  An occasional thick-trunked oak or graceful stands of birch compete for light and nutrients with the faster-growing pines.</description>
+    <description>The path winds back and forth between tall, thin conifers that tower toward the sky, allowing only dappled patches of sunlight to filter through to the forest floor.  An occasional thick-trunked oak or graceful stands of birch compete for light and nutrients with the faster-growing pines.</description>
+    <position x="0" y="280" z="0" />
+    <arc exit="northeast" move="northeast" destination="14" />
+    <arc exit="southeast" move="southeast" destination="16" />
+  </node>
+  <node id="16" name="Mistwood Forest" note="RTT14|RT-MFG-HWG" color="#008000">
+    <description>Fallen logs, bark peeled away to reveal weathered grey wood beneath, are arranged in a semicircle around a rock-lined fire pit.  The ashes are cold now, but wood piled between two saplings marks this as a frequent resting place for travelers.</description>
+    <position x="20" y="300" z="0" />
+    <arc exit="south" move="south" destination="17" />
+    <arc exit="northwest" move="northwest" destination="15" />
+  </node>
+  <node id="17" name="Mistwood Forest Road" color="#008000">
+    <description>A dog barks outside an isolated cabin, its shrill "yip, yip, yip" breaking the silence of the surrounding forest.  To the south, the darkness of the fir trees give way to open farmland and low, rolling hills.</description>
+    <description>A dog barks outside an isolated cabin, its shrill yip, yip, yip breaking the silence of the surrounding forest.  To the south, the darkness of the fir trees give way to open farmland and low, rolling hills.</description>
+    <position x="20" y="320" z="0" />
+    <arc exit="north" move="north" destination="16" />
+    <arc exit="southwest" move="southwest" destination="18" />
+  </node>
+  <node id="18" name="Mistwood Forest Road" color="#008000">
+    <description>The trail rises, cresting atop a small hill.  To the north, the far side of the valley is covered in trees that sway ponderously in the wind, waving back and forth in a slow and stately dance silhouetted against the night sky.</description>
+    <description>The trail rises, cresting atop a small hill.  To the north, the far side of the valley is covered in trees that sway ponderously in the wind, waving back and forth in a slow and stately green dance.  Dark green oaks, paler maples, the near-black needles on the conical pines and the quaking limbs of aspens with their flashes of silver as the wind tosses their leaves -- the forest is host to a subtle parade of colors.</description>
+    <position x="0" y="340" z="0" />
+    <arc exit="northeast" move="northeast" destination="17" />
+    <arc exit="south" move="south" destination="19" />
+  </node>
+  <node id="19" name="Mistwood Forest Road" color="#008000">
+    <description>The ground grows dark as rich pasture land gives way to rocky slopes.  Water burbles through a crack in the rocks, trickling slowly into a small pool.  Cattails and iris grow in cheerful profusion along the shore, and an occasional bullfrog splashes, unseen, but not unheard.</description>
+    <position x="0" y="360" z="0" />
+    <arc exit="north" move="north" destination="18" />
+    <arc exit="southeast" move="southeast" destination="20" />
+  </node>
+  <node id="20" name="Mistwood Forest Road" color="#008000">
+    <description>Huddled mounds of cream-colored fleece, barely visible in the nearby fields, mark the presence of a sheep farm.  Tufts of wool sway from low branches, and in the distance, the soft glow of a fire wards off the predators in the darkness.</description>
+    <description>Cream-colored sheep graze in the grass, oblivious to those passing along the lane.  Heads down, they focus solely on the transfer of greenery from ground to stomach.</description>
+    <position x="20" y="380" z="0" />
+    <arc exit="east" move="east" destination="21" />
+    <arc exit="northwest" move="northwest" destination="19" />
+  </node>
+  <node id="21" name="Mistwood Forest Road" color="#008000">
+    <description>A wooden stile leads over a fence, allowing travelers to continue along the curving road or chance a short cut across the fields.  Faint ripples in the tall grass hint at the presence of some grazing animal, or a predator in stalk of its prey.</description>
+    <position x="40" y="380" z="0" />
+    <arc exit="southwest" move="southwest" destination="22" />
+    <arc exit="west" move="west" destination="20" />
+    <arc exit="go" move="go wooden stile" destination="34" />
+  </node>
+  <node id="22" name="Mistwood Forest Road" color="#008000">
+    <description>Wind whistles through sandstone menhirs, some still standing in defiance of the elements, others sprawled gracelessly upon the grassy verge.  White stains on the rocks bear mute witness to the presence of local birds.</description>
+    <position x="20" y="400" z="0" />
+    <arc exit="northeast" move="northeast" destination="21" />
+    <arc exit="south" move="south" destination="23" />
+  </node>
+  <node id="23" name="Mistwood Forest Road" color="#008000">
+    <description>The land beside the trail grows steeper to the south as the road passes through a series of rolling hills.  The scholars who study the movement of the earth call these types of hills drumlins, with long explanations of how the air and water elementals work together to form glaciers which cool the earth heated by the World Dragon's presence.  When the glaciers recede, the dragon's shivering forms the low rolling hills.</description>
+    <position x="20" y="420" z="0" />
+    <arc exit="north" move="north" destination="22" />
+    <arc exit="southeast" move="southeast" destination="24" />
+  </node>
+  <node id="24" name="Mistwood Forest Road" color="#008000">
+    <description>The slopes beside the trail grow increasingly rocky, though low shrubs cling with tenacious determination to their footholds.  Clusters of vivid blue flowers dot the greenery just out of reach from the path.</description>
+    <position x="40" y="440" z="0" />
+    <arc exit="southwest" move="southwest" destination="25" />
+    <arc exit="northwest" move="northwest" destination="23" />
+  </node>
+  <node id="25" name="Mistwood Forest Road" color="#008000">
+    <description>Low hills, about twice the height of a Gor'Tog, rise along either side of the path in green-robed splendor.  The mounds offer shelter from the winds and a home to badgers and cliff swallows.</description>
+    <position x="20" y="460" z="0" />
+    <arc exit="northeast" move="northeast" destination="24" />
+    <arc exit="south" move="south" destination="26" />
+  </node>
+  <node id="26" name="Mistwood Forest Road" color="#008000">
+    <description>The trail narrows to a packed dirt path, barely wide enough for a single cart.  Wooden wheels have left deep ruts in which water gathers after the rain.  To judge by the thick carpet of grass growing along the side of the ruts, wagons are few and far between.</description>
+    <position x="20" y="480" z="0" />
+    <arc exit="north" move="north" destination="25" />
+    <arc exit="southwest" move="southwest" destination="27" />
+  </node>
+  <node id="27" name="Mistwood Forest Road" color="#008000">
+    <description>A low mound rises in the middle of a nearby pasture, shaded by the spreading limbs of a pin oak tree.  The grass is tall and green, fed by a gentle brook that runs through a clay culvert beneath the road.  Sheep meander through the greenery, cropping at the grain and baaing plaintively.</description>
+    <position x="0" y="500" z="0" />
+    <arc exit="northeast" move="northeast" destination="26" />
+    <arc exit="southeast" move="southeast" destination="28" />
+    <arc exit="go" move="go pasture" destination="31" />
+  </node>
+  <node id="28" name="Mistwood Forest Road" color="#008000">
+    <description>The passage of wagons traveling from local farms to the town of Riverhaven has left rutted, mud-filled tracks in the dirt trail.  A granite marker stands beside the road.</description>
+    <position x="20" y="520" z="0" />
+    <arc exit="south" move="south" destination="29" />
+    <arc exit="northwest" move="northwest" destination="27" />
+  </node>
+  <node id="29" name="Mistwood Forest Road" color="#008000">
+    <description>The road twists and turns as it passes through hedgerows that separate it from the fields.  Beyond, sheep dot the hillside as they graze on golden hay almost ready to be cut.  Bits of wool adorn the hedge here and there, soft cream against the dark green leaves.</description>
+    <position x="20" y="540" z="0" />
+    <arc exit="north" move="north" destination="28" />
+    <arc exit="south" move="south" destination="30" />
+  </node>
+  <node id="30" name="Mistwood Forest Road" note="RTT13|RT-HWG-MFG" color="#008000">
+    <description>Faded red bricks, once neatly laid in a herringbone pattern, now exist only as scraps of pavement heaved up and broken by years of neglect.  Weeds grow through the crumbled mortar, obscuring the direction of the road.  Wild roses climb in a high thicket along the northern side of the road to form a tangled mass of sweetly scented thorns.</description>
+    <position x="20" y="560" z="0" />
+    <arc exit="north" move="north" destination="29" />
+    <arc exit="south" move="south" destination="46" />
+  </node>
+  <node id="31" name="Ceceline's Meadow, Along the Road">
+    <description>The grass has grown up around the fence as if determined to reclaim the road on the far side.  Though the tracks left by years of passing wagons are still somewhat visible, nature makes an ongoing effort to recover the land stolen from it.</description>
+    <position x="-50" y="480" z="0" />
+    <arc exit="northwest" move="northwest" destination="32" />
+    <arc exit="go" move="go road" destination="27" />
+  </node>
+  <node id="32" name="Ceceline's Meadow, Along the Road" note="Barghest">
+    <description>A small hole in the side of a grassy slope is almost entirely concealed by the lush plants growing around it.  Near the entrance is a mound of earth, indicating that the digging was done recently.  In various places nearby, the grass has been cropped by the local sheep.</description>
+    <position x="-70" y="460" z="0" />
+    <arc exit="north" move="north" destination="33" />
+    <arc exit="southeast" move="southeast" destination="31" />
+    <arc exit="west" move="west" destination="42" />
+  </node>
+  <node id="33" name="Ceceline's Meadow, Along the Road">
+    <description>A large rock juts out of the surrounding grass, its weathered and grey surface visible in spite of the best efforts of the surrounding vegetation.  On its south side, a rusty red discoloration mars the surface of the stone.</description>
+    <position x="-70" y="440" z="0" />
+    <arc exit="northeast" move="northeast" destination="34" />
+    <arc exit="south" move="south" destination="32" />
+    <arc exit="west" move="west" destination="36" />
+    <arc exit="northwest" move="northwest" destination="35" />
+  </node>
+  <node id="34" name="Ceceline's Meadow, Along the Road">
+    <description>Tall grass grows up around the stile that separates this meadow from the more traveled road.  The plants are so insistent on not giving up the least bit of space that they've crowded in around the fence posts, hiding the lower part of the stile entirely from view.</description>
+    <position x="-50" y="420" z="0" />
+    <arc exit="southwest" move="southwest" destination="33" />
+    <arc exit="west" move="west" destination="35" />
+    <arc exit="go" move="go wooden stile" destination="21" />
+  </node>
+  <node id="35" name="Ceceline's Meadow">
+    <description>Each gentle breeze invites the tall grasses to dance and leaves them swaying gracefully to an unheard song.  The fence at this part of the meadow appears to have suffered some trauma -- a long cracked dent runs through one of the posts as if something has crashed into it with a great deal of force.</description>
+    <position x="-90" y="420" z="0" />
+    <arc exit="east" move="east" destination="34" />
+    <arc exit="southeast" move="southeast" destination="33" />
+    <arc exit="south" move="south" destination="36" />
+    <arc exit="southwest" move="southwest" destination="40" />
+    <arc exit="west" move="west" destination="37" />
+  </node>
+  <node id="36" name="Ceceline's Meadow">
+    <description>A looming pillar of darkness blocks out much of the sky to the west, though a few moments of careful observation resolve the shape into that of a large tree.  The tall grasses, now cloaked by shadow, give the ground a false appearance of being uneven and treacherous.</description>
+    <description>Directly to the west, a pin oak tree rises proudly from the carpet of grass, making all smaller plants look miniature by comparison.  A scattering of tiny acorns has escaped the looming shadow of its parent but they have yet to make their way into the ground and begin to challenge the great oak's supremacy.</description>
+    <position x="-90" y="440" z="0" />
+    <arc exit="north" move="north" destination="35" />
+    <arc exit="east" move="east" destination="33" />
+    <arc exit="south" move="south" destination="42" />
+    <arc exit="west" move="west" destination="40" />
+  </node>
+  <node id="37" name="Ceceline's Meadow">
+    <description>The land curves up on all sides, leaving a shallow hollow in the ground.  The small bush that has taken up residence at its bottom grows lush and dark, perhaps benefiting from extra servings of water carried down these mild slopes each time it rains.</description>
+    <position x="-110" y="420" z="0" />
+    <arc exit="east" move="east" destination="35" />
+    <arc exit="south" move="south" destination="40" />
+    <arc exit="southwest" move="southwest" destination="38" />
+  </node>
+  <node id="38" name="Ceceline's Meadow">
+    <description>The grasses in this particular area have been cropped closer to the ground, though there's no sign of why the local wildlife would have a preference for this spot.  In spite of their persecution, the plants valiantly continue to stretch skyward.</description>
+    <position x="-120" y="429" z="0" />
+    <arc exit="northeast" move="northeast" destination="37" />
+    <arc exit="southeast" move="southeast" destination="40" />
+    <arc exit="south" move="south" destination="39" />
+  </node>
+  <node id="39" name="Ceceline's Meadow">
+    <description>In the quiet of the night, plants lean in against each other, all rivalries cast aside as they conserve strength for the coming day's struggle for sunlight.  The grasses closest to the fence take advantage of its strength, resting close to its lowest rung as if in fatigue.</description>
+    <description>The vibrance and density of the local plants steadily increase at a distance from the deep shadows cast by the pin oak growing just to the northeast.  Branches as thick as a Gor'Tog's arm stretch out from the tree, but even such a mighty specimen cannot shade all the world, in spite of its best efforts.</description>
+    <position x="-120" y="450" z="0" />
+    <arc exit="north" move="north" destination="38" />
+    <arc exit="northeast" move="northeast" destination="40" />
+    <arc exit="southeast" move="southeast" destination="41" />
+  </node>
+  <node id="40" name="Ceceline's Meadow, Beneath the Oak">
+    <description>A variety of miniature acorns lies scattered across the ground, variations in the amount of damage they've accrued hinting at the variety of years represented.  The great oak stretches its branches down toward the ground as if to protect its offspring, seemingly oblivious to the suffocating nature of the shade it provides.</description>
+    <position x="-110" y="440" z="0" />
+    <arc exit="north" move="north" destination="37" />
+    <arc exit="northeast" move="northeast" destination="35" />
+    <arc exit="east" move="east" destination="36" />
+    <arc exit="southeast" move="southeast" destination="42" />
+    <arc exit="south" move="south" destination="41" />
+    <arc exit="southwest" move="southwest" destination="39" />
+    <arc exit="northwest" move="northwest" destination="38" />
+    <arc exit="climb" move="climb oak" destination="43" />
+  </node>
+  <node id="41" name="Ceceline's Meadow">
+    <description>Cheery blue flowers luxuriate in the shelter provided by a flat grey rock leaned against its brother at an angle.  Though the blooms peek out into the open in hopes of attracting wandering insects to their vibrant petals, the space through which they reach is sufficiently narrow to protect them from the hungry teeth of grazing animals.</description>
+    <position x="-110" y="460" z="0" />
+    <arc exit="north" move="north" destination="40" />
+    <arc exit="east" move="east" destination="42" />
+    <arc exit="northwest" move="northwest" destination="39" />
+  </node>
+  <node id="42" name="Ceceline's Meadow">
+    <description>There are several deep notches in the fence, so cleanly cut that they must have been made by a well-honed weapon, though why someone would have attacked an inanimate object is unclear.  To the west, a flowering plant is visible, the vivid blue of its flowers easily drawing attention among the surrounding greens and greys.</description>
+    <position x="-90" y="460" z="0" />
+    <arc exit="north" move="north" destination="36" />
+    <arc exit="east" move="east" destination="32" />
+    <arc exit="west" move="west" destination="41" />
+    <arc exit="northwest" move="northwest" destination="40" />
+  </node>
+  <node id="43" name="Pin Oak, Lower Branches">
+    <description>The lowest branches in the tree are thick and strong, tilting down toward the ground in an invitation to greater feats of climbing.  In the side of the trunk itself, some young lover has carved his beloved's initials, framed by a crude heart.</description>
+    <position x="-140" y="440" z="0" />
+    <arc exit="climb" move="climb trunk" destination="40" />
+    <arc exit="climb" move="climb middle branches" destination="44" />
+  </node>
+  <node id="44" name="Pin Oak, Midway">
+    <description>Midway up the trunk, the branches stretch out almost perfectly parallel to the ground.  The bases of the branches are largely free of leaves and offshoots, such that a spot where several burly branches have grown in close proximity makes for a secure perch, even in the darkness.  Farther out on the limbs, leaves grow thickly enough to block out any stars that might otherwise have been visible, closing around in such a way as to give the impression of being sealed in a cocoon.</description>
+    <description>Midway up the trunk, branches stretch out almost perfectly parallel to the ground.  Their bases are largely free of leaves and offshoots, and a spot where several burly branches have grown in close proximity makes for a rather comfortable seat.  Farther out on the limbs, leaves grow thick and vibrant, making this spot the center of a secure cocoon of greenery.</description>
+    <position x="-140" y="420" z="0" />
+    <arc exit="climb" move="climb lower branches" destination="43" />
+    <arc exit="climb" move="climb upper branches" destination="45" />
+  </node>
+  <node id="45" name="Pin Oak, Treetop">
+    <description>At the very top of the tree, the branches grow more ambitious and stretch out toward the sky.  From this height the ground is almost impossible to see, though the lights of a city are just barely discernable to the south.</description>
+    <description>The branches here grow thinner and more impatient for light.  They strain upward, intent on gathering every stray bit of precious energy that the sun sees fit to bestow, leaving little more than a pool of shadow for the grasses growing far below.</description>
+    <position x="-140" y="400" z="0" />
+    <arc exit="climb" move="climb middle branches" destination="44" />
+  </node>
+  <node id="46" name="Riverhaven Exterior, Trodden Path" note="Map33_Riverhaven_West_Gate.xml|Riverhaven">
+    <description>Many feet and wagons have used this path as is evident by the hard packed soil beneath your feet.  Looking to the northwest you see a small building in the distance.  To the southeast lies the town, its high walls offering sanctuary to those who call it home.  Along the river bank to the south you watch as a trader works a mule that is pulling a small barge up stream.</description>
+    <position x="20" y="580" z="0" />
+    <arc exit="north" move="north" destination="30" />
+    <arc exit="southeast" move="southeast" />
+    <arc exit="northwest" move="northwest" />
+  </node>
+  <node id="47" name="Jantspyre River, South Bank">
+    <description>The forest gives way to the banks of a swift-flowing river.  No bridge crosses the water, and the far bank is too steep to clamber out.</description>
+    <position x="20" y="20" z="0" />
+    <arc exit="southwest" move="southwest" destination="1" />
+    <arc exit="go" move="go bank" destination="48" />
+  </node>
+  <node id="48" name="Jantspyre River, In the Water" note="Map34_Mistwood_Forest.xml|Mistwood Forest|Rossman's Landing|Therenborough|Langenfirth">
+    <description>Crystal clear water tumbles, icy cold, over the rounded pebbles of the streambed.  Spray slicks the dark grey rocks on either side.  The current pushes you toward the south bank where, despite the wet surface, an agile climber could probably scramble out of the water.  Just downstream, the creek flows over a pile of logs tumbled higgledy-piggledy like some giant's jackstraws.</description>
+    <position x="20" y="0" z="0" />
+    <arc exit="east" move="east" />
+    <arc exit="go" move="go bank" destination="47" />
+  </node>
+  <label text="To Riverhaven West Gate">
+    <position x="-120" y="580" z="0" />
+  </label>
+  <label text="Barghest">
+    <position x="-120" y="400" z="0" />
+  </label>
+  <label text="Nightreaver &amp; Nightweaver Unyn">
+    <position x="-160" y="90" z="0" />
+  </label>
+  <label text="To Mistwood Forest">
+    <position x="-90" y="-10" z="0" />
+  </label>
+  <label text="PEER PATH For Directions">
+    <position x="-150" y="130" z="0" />
+  </label>
+  <label text="Search Outcropping for Handholds">
+    <position x="-160" y="230" z="0" />
+  </label>
+  <label text="Search Ledge for Shrubs">
+    <position x="-120" y="170" z="0" />
+  </label>
+</zone>

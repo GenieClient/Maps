@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Oshu'ehhrsk Manor" id="63">
+  <node id="1" name="Oshu'ehhrsk Manor, Second Floor Hall">
+    <description>The posts of its banister now nothing but stubs, a partially collapsed staircase descends to the floor below, groaning softly as it shifts.  In worse condition is the rotted carpet, split and torn to expose the gaps in the floorboards.  Along the ceiling, the brown stains from water damage create billowing clouds, floating above the dilapidation of a place in disrepair.</description>
+    <position x="380" y="60" z="0" />
+    <arc exit="west" move="west" destination="2" />
+    <arc exit="climb" move="climb collapsed stairway" destination="11" />
+  </node>
+  <node id="2" name="Oshu'ehhrsk Manor, Second Floor Hall">
+    <description>Disheveled bits of soggy paper and tattered cloth are strewn everywhere, barely covering the ragged state of the floorboards and the gaping breaks.  Revealed through these hollows is the skeleton framework, also pitted and rotted, and home to dozens of scurrying things that click and chatter as they rush through the darkened recesses.</description>
+    <position x="360" y="60" z="0" />
+    <arc exit="east" move="east" destination="1" />
+    <arc exit="west" move="west" destination="3" />
+    <arc exit="go" move="go mahogany door" destination="9" />
+  </node>
+  <node id="3" name="Oshu'ehhrsk Manor, Second Floor Hall">
+    <description>It takes little keeness of perception to note the sad state of the floor, as vacancies in the boards are commonplace and in some places allow glimpses of the level below.  Equally obvious is the cracking and waterstained plaster along the walls, devoid of paintings or ornamentation unless one counts the occasional protrustion of a rusty nail.  Not as apparent is the state of the ceiling, as shadows and murky stains disguise its stability.</description>
+    <position x="340" y="60" z="0" />
+    <arc exit="east" move="east" destination="2" />
+    <arc exit="west" move="west" destination="4" />
+    <arc exit="go" move="go mahogany door" destination="10" />
+  </node>
+  <node id="4" name="Oshu'ehhrsk Manor, Second Floor Hall">
+    <description>Smashed in various places, the walls yield tiny avalanches of plaster powder upon the blackened floor each time the manor settles or a heavy footstep shakes a loose board.  Thousands of dead and living insects litter the insides of these pockmarked walls, sometimes pouring through the fissures in a singular flow of legs, wings and carapaces.  Though mostly shattered, the walls have been reinforced around a wooden door, most likely to sturdily support the metal bands and bolts that once kept it sealed.</description>
+    <position x="320" y="60" z="0" />
+    <arc exit="north" move="north" destination="5" />
+    <arc exit="east" move="east" destination="3" />
+    <arc exit="go" move="go wooden door" hidden="True" destination="31" />
+  </node>
+  <node id="5" name="Oshu'ehhrsk Manor, Second Floor Hall">
+    <description>Resting in a concave depression of curved boards and splintered supports is a mostly intact chandelier, having apparently fallen from the dangling chain in the ceiling directly above the mess.  While easy to get around, the light fixture is permanently wedged into the floor and several gaps even allow glimpses through the weakened wood.  Ominously, the entire mass creaks as if everything will collapse any time now.</description>
+    <position x="320" y="40" z="0" />
+    <arc exit="north" move="north" destination="6" />
+    <arc exit="south" move="south" destination="4" />
+  </node>
+  <node id="6" name="Oshu'ehhrsk Manor, Second Floor Hall">
+    <description>Still retaining some semblance of a pale ivory color in spite of being heavily stained by smoke and brownish smudges and fingerprints, a decorative arch splits the hallway into two distinct sections.  Yellowed webbing stretches from the ceiling to one wall, mimicking the arch in basic shape, but its sticky confines entrap a group of skeletal rodents.  One bone in the mass is far too large to be a rat, however.</description>
+    <position x="320" y="20" z="0" />
+    <arc exit="north" move="north" destination="7" />
+    <arc exit="south" move="south" destination="5" />
+    <arc exit="go" move="go mahogany door" destination="8" />
+  </node>
+  <node id="7" name="Oshu'ehhrsk Manor, Second Floor Hall">
+    <description>Atop the filth of the derelict floor are piles of shattered glass and shiny ceramic fragments, scattered in blossomed patterns where the force that devastated vases and cups left their remains.  The wall supports a theory that someone flew into an insane rage and slung the items to purposefully break them, and bears hundreds of jagged shards embedded in its plaster surface like tiny daggers jammed in the flesh of a beast that refused to fall.</description>
+    <position x="320" y="0" z="0" />
+    <arc exit="south" move="south" destination="6" />
+  </node>
+  <node id="8" name="Oshu'ehhrsk Manor, Bedroom">
+    <description>Yellowed webbing covers the ceiling, masking sight of the wooden supports to the point that it can't be determined if they even exist.  Strands of the sticky webs dangle down from that hanging mass, shifting over the fragmented floorboards from unseen drafts, though a sizable clump sticks to one wall and therefore barely moves.  At the bottom of this net-like tendril is a desk, devoid of all drawers and glued in place by the affectionate webs as they wrap around this lone piece of furniture.</description>
+    <position x="340" y="20" z="0" />
+    <arc exit="go" move="go mahogany door" destination="6" />
+  </node>
+  <node id="9" name="Oshu'ehhrsk Manor, Bedroom">
+    <description>A shattered window allows a draft to whisk through the room, swirling the dust bunnies and lighter clutter into a graceful dance to the music of a shuddering breeze.  Spinning pirouettes and half-turns upon the vacant floor before a crumbling fireplace, the twisting refuse performs with the air's every motion.  Running from beneath the window to points all along the room are scratches and gouges, as if several somethings were shoved forcefully toward the open window.</description>
+    <position x="360" y="40" z="0" />
+    <arc exit="go" move="go mahogany door" destination="2" />
+  </node>
+  <node id="10" name="Oshu'ehhrsk Manor, Windowless Bedroom">
+    <description>Each of the windowless walls has been painted in garishly bright colors with macabre depictions of tall flames and screaming souls, twisted skeletons dancing in fire, and all manner of people drowning in burning lakes.  Otherwise, the bedroom is featureless, stripped of all furniture, most likely to make room for the wide circle of black wax that loops around the room.  In the center of this waxen design is a skull, affixed securely to the floor by a cage of oversized nails.</description>
+    <position x="340" y="40" z="0" />
+    <arc exit="go" move="go mahogany door" destination="3" />
+  </node>
+  <node id="11" name="Oshu'ehhrsk Manor, Grand Hallway">
+    <description>The planking along the hall is exposed and warped, curling inward on the passageway as though it were in the crushing grip of massive skeletal hands.  Unstable at best, the floor creaks with any applied pressure, and occasionally without any apparent stimulus at all.  Adding in its own sounds of settling to the ambient groaning of shifting wood is a partially collapsed staircase.</description>
+    <position x="320" y="120" z="0" />
+    <arc exit="west" move="west" destination="12" />
+    <arc exit="climb" move="climb collapsed staircase" destination="1" />
+  </node>
+  <node id="12" name="Oshu'ehhrsk Manor, Grand Hallway">
+    <description>Covered in a yellowed webbing that obscures their features, a pair of marble statues dutifully guard either side of a veiled mahogany archway.  Thickening near the ceiling, the webbing shifts in the errant drafts of the hallway, forming oddly familiar faces momentarily before reforming into more esoteric guises.  Ironically, the ceiling's shade of dark blue has not yet faded to the point that the semblance to a cloud-filled sky is lost.</description>
+    <position x="300" y="120" z="0" />
+    <arc exit="east" move="east" destination="11" />
+    <arc exit="west" move="west" destination="14" />
+    <arc exit="go" move="go mahogany archway" destination="13" />
+  </node>
+  <node id="13" name="Oshu'ehhrsk Manor, Den">
+    <description>Lumps of what appear to be hardened sap hang from the crown moulding, occasionally dripping greasy muck down the bricks of a broken fireplace.  Their lofty perches are surrounded by brownish water stains and yellowing webbing, unreachable from the cluttered floor.  No large pieces of furniture remain in the room -- only bits of unrecognizable debris and rotting wood.</description>
+    <position x="300" y="100" z="0" />
+    <arc exit="go" move="go mahogany archway" destination="12" />
+    <arc exit="climb" move="climb jagged hole" destination="41" />
+  </node>
+  <node id="14" name="Oshu'ehhrsk Manor, Grand Hallway">
+    <description>A pyramidal mass hangs from the ceiling by a rusting length of chain, swaying gently.  Strands of webbing drape from the masked form, dangling directly above the center of an odd circular pattern in the marble floor.  The stonework is limited to this immediate entryway, and is usurped by a wooden floor to either side of the hall -- not that this transition is easy to see, due to the large amounts of dust and refuse that cover the floor.</description>
+    <position x="280" y="120" z="0" />
+    <arc exit="east" move="east" destination="12" />
+    <arc exit="west" move="west" destination="16" />
+    <arc exit="go" move="go mahogany archway" destination="15" />
+    <arc exit="go" move="go wooden door" destination="79" />
+  </node>
+  <node id="15" name="Oshu'ehhrsk Manor, Library">
+    <description>Partly cowled by a massive maroon tapestry, a solitary window provides a limited and distorted view of the world outside.  Boards crisscross the window, further minimizing its usefulness and blocking up the larger of the vacant panes the way a vagabond might wear an eyepatch.  Rows of dilapidated shelving cover most of the other walls, the soggy remains of paper a sign that many books have been lost forever.</description>
+    <position x="280" y="100" z="0" />
+    <arc exit="go" move="go mahogany archway" destination="14" />
+  </node>
+  <node id="16" name="Oshu'ehhrsk Manor, Grand Hallway">
+    <description>Tattered remnants of carpet line the floor near the walls, crumpled and bent as though each piece were vainly attempting to crawl to some zone of safety.  Alas, the passage of days and the carelessness of the manor's inhabitants have proven there to be no place free of the stomping of rug-tearing feet, the slow disintegration of water leaks, nor the general depravity of years passing by.</description>
+    <position x="240" y="120" z="0" />
+    <arc exit="north" move="north" destination="17" />
+    <arc exit="east" move="east" destination="14" />
+    <arc exit="go" move="go mahogany doorframe" destination="27" />
+  </node>
+  <node id="17" name="Oshu'ehhrsk Manor, Grand Hallway">
+    <description>The wall is broken by a row of arched windows, each cloaked in yellowed, wispy webbing and further obscured by grey shades of grime until not even the determination of night or day in the outside world is possible.  Ceiling timbers, exposed mainly from huge gashes over each window, wear the same burden of yellowed webbing and offer glimpses of globe-like clusters tucked away between their lengths.</description>
+    <position x="240" y="100" z="0" />
+    <arc exit="north" move="north" destination="18" />
+    <arc exit="south" move="south" destination="16" />
+  </node>
+  <node id="18" name="Oshu'ehhrsk Manor, Grand Hallway">
+    <description>Shadows cast by indeterminate sources dance along the lower corners of the hall, frolicking madly as nocturnal creatures in a forest might.  Lacking substance as tricks of light and dark are prone to, the strange motions could possibly be nothing but illusion, or they could be the result of a thousand unnatural beasts from a nightmare -- the truth is unclear.</description>
+    <position x="240" y="80" z="0" />
+    <arc exit="north" move="north" destination="19" />
+    <arc exit="south" move="south" destination="17" />
+    <arc exit="go" move="go mahogany archway" destination="23" />
+    <arc exit="go" move="go mahogany door" destination="24" />
+  </node>
+  <node id="19" name="Oshu'ehhrsk Manor, Grand Hallway">
+    <description>Holes pockmark the woodwork, the results of obvious burrowing by hungry and determined teeth.  Like skeletal ribs given freedom by the flaying of flesh, the framework normally hidden by plaster and dilapidated decor is exposed.  Clues as to what slaved away to create these gaps or the reason for their existence are not forthcoming, perhaps hidden in the small piles of wet sawdust scattered along the floor.</description>
+    <position x="240" y="60" z="0" />
+    <arc exit="south" move="south" destination="18" />
+    <arc exit="go" move="go mahogany archway" destination="20" />
+  </node>
+  <node id="20" name="Oshu'ehhrsk Manor, Kitchen">
+    <description>Cabinets left open and barren, countertops stained and covered in fungal growth, and the overall unwholesome state indicate that this kitchen has not been used in a long time.  The yellowed webbing so prevalent elsewhere in the manor is present here as well, at least to a lesser extent, seemingly sewing together ceiling and wall, floor and counter.</description>
+    <position x="240" y="40" z="0" />
+    <arc exit="east" move="east" destination="21" />
+    <arc exit="go" move="go mahogany archway" destination="19" />
+  </node>
+  <node id="21" name="Oshu'ehhrsk Manor, Kitchen">
+    <description>A lifetime flickers past, and the spoils of wealthy living decay and fall away, leaving only memories of a finer time.  Food rots and turns to dust, wood crumbles with moisture, and portraits fade.  This kitchen displays these truths in all their harshness, webs draping from the ceiling like burial shrouds for the long forgotten meals prepared here.</description>
+    <position x="280" y="40" z="0" />
+    <arc exit="south" move="south" destination="22" />
+    <arc exit="west" move="west" destination="20" />
+  </node>
+  <node id="22" name="Oshu'ehhrsk Manor, Pantry">
+    <description>Dust is all that remains of the foodstuffs collected here, once so carefully labeled and placed upon the shelves in convenient containers.  Absence may make the heart grow fonder, but an absence of kitchen workers and hungry diners has left only flasks filled with murkiness, boxes marked with such frail delicacies as cookies and bread, and wine racks lined with cracked bottles.</description>
+    <position x="280" y="60" z="0" />
+    <arc exit="north" move="north" destination="21" />
+  </node>
+  <node id="23" name="Oshu'ehhrsk Manor, Dining Hall">
+    <description>Partially filling the void of the massive room is the bulk of a dining table, its dark wood matching the wall trim in type, color and poor present condition.  Empty plates still wait on the table, seemingly random in their positioning and nowhere near the single chair that sits nearby nor its long deceased occupant.</description>
+    <position x="280" y="80" z="0" />
+    <arc exit="go" move="go mahogany archway" destination="18" />
+  </node>
+  <node id="24" name="Oshu'ehhrsk Manor, Ruined Cathedral">
+    <description>Perhaps offering peace of mind to those who sought sanctuary here, the area is now littered with pieces of masonry dislocated from the ceiling high above.  Shattered beneath the force of the falling debris, the pews are little more than moldering ruin, the holes in the roofing bringing quick decay under the onslaught of rain and weather.</description>
+    <position x="220" y="80" z="0" />
+    <arc exit="west" move="west" destination="25" />
+    <arc exit="go" move="go mahogany door" destination="18" />
+  </node>
+  <node id="25" name="Oshu'ehhrsk Manor, Ruined Cathedral Altar">
+    <description>All that was the ceiling is now a heap upon the ground, elaborate reliefs and graceful alfar depictions now smashed to dust and shapeless stone from the collapse.  The pile of masonry, long ago fallen from its lofty position above, blankets what must once have been the altar area, though no sign -- not even a single candlestick -- can be seen poking from the rubble.</description>
+    <position x="200" y="80" z="0" />
+    <arc exit="east" move="east" destination="24" />
+    <arc exit="climb" move="climb shattered masonry" destination="26" />
+  </node>
+  <node id="26" name="Oshu'ehhrsk Manor, Ruined Cathedral Dais">
+    <description>Still clinging to the window frames, and still prismatic despite their ruin and unclean state, are delicate blades of stained glass.  Beneath each window's berth is a collection of colored dust and glass chips, the images they once conveyed lost completely to chaos.  Tantalizingly, the bits of blue, red, gold, and green that still remain in place portray objects that might be swords and holy symbols -- or maybe these are just random collections of glass.</description>
+    <position x="200" y="60" z="0" />
+    <arc exit="climb" move="climb shattered masonry" destination="25" />
+    <arc exit="none" move="jump window" hidden="True" destination="83" />
+  </node>
+  <node id="27" name="Oshu'ehhrsk Manor, Circular Stairwell">
+    <description>Grey wood steps ascend counterclockwise along the curved stone of the stairwell walls, rising upward and vanishing from sight.  High above is a circular shape that hangs from the center of the tower roof supports, but so lost in darkness that its purpose and form are a mystery.</description>
+    <position x="240" y="140" z="0" />
+    <arc exit="southwest" move="southwest" destination="28" />
+    <arc exit="go" move="go mahogany doorframe" destination="16" />
+  </node>
+  <node id="28" name="Oshu'ehhrsk Manor, Circular Stairwell">
+    <description>Dark cracks stand out against even the oppressive blackness of shadows that conceal the walls.  Each slat of the stair groans and creaks, as if pushed upward from some unseen force below, or as if the entire wooden structure of the stairway were shifting with every minute settling of the building.</description>
+    <position x="180" y="200" z="0" />
+    <arc exit="northeast" move="northeast" destination="27" />
+    <arc exit="southeast" move="southeast" destination="29" />
+  </node>
+  <node id="29" name="Oshu'ehhrsk Manor, Circular Stairwell">
+    <description>A bitter moistness slickens the skin as an ever-present draft spirals downward, occasionally whistling softly as it strikes the slats along the stairs.  The wood suffers from the damp air, and vacancies where steps once were beckon a tumble to the solid stone floor far below.</description>
+    <position x="200" y="220" z="0" />
+    <arc exit="northeast" move="northeast" destination="30" />
+    <arc exit="northwest" move="northwest" destination="28" />
+  </node>
+  <node id="30" name="Oshu'ehhrsk Manor, Circular Stairwell">
+    <description>Twisted tendrils wrap themselves around supports, their growth slowly suffocating the wood as they make their way up from a jagged-edged crack in the wall toward the summit of the stairs.  Interlacing themselves in tight braids, the vines threaten to replace the ascending steps with a plant life simulacrum.  Sturdy it may be, but the slow transformation appears strange and alien.</description>
+    <position x="220" y="200" z="0" />
+    <arc exit="southwest" move="southwest" destination="29" />
+    <arc exit="northwest" move="northwest" destination="31" />
+  </node>
+  <node id="31" name="Oshu'ehhrsk Manor, Circular Stairwell">
+    <description>A haunting chill in the air is stirred by the gentle disturbance of a slight draft, carrying with it the scent of something bitter.  Possible as the source of this heady smell are the beads of moisture that cling to the walls, milky white in consistency and color.  Growths of thick vines braid themselves around one another, snaking up the stairway in a seemingly intelligent course, determined lovers to the steps' framework.</description>
+    <position x="180" y="160" z="0" />
+    <arc exit="southeast" move="southeast" destination="30" />
+    <arc exit="southwest" move="southwest" destination="32" />
+    <arc exit="go" move="go wooden door" hidden="True" destination="4" />
+  </node>
+  <node id="32" name="Oshu'ehhrsk Manor, Circular Stairwell">
+    <description>Everywhere around, lining the wall stones and the thick vines that clutch the stairs, are what can only be tricks of light in the form of a thousand gasping faces.  The macabre truth screams out after but a moment's stare, shattering the mocking illusion that this could be playful light and revealing the army of desiccated bat faces that are tacked haphazardly across every available surface.</description>
+    <position x="140" y="200" z="0" />
+    <arc exit="northeast" move="northeast" destination="31" />
+    <arc exit="southeast" move="southeast" destination="33" />
+  </node>
+  <node id="33" name="Oshu'ehhrsk Manor, Circular Stairwell">
+    <description>A bell of unprecedented quality, considering the level of ruin the manor is in, hangs from the rafters above, neatly centered.  Knotted lengths of rope dangle from beneath but are out of reach, their condition not echoing the sorry state reflected in the stairs.  If not for the lengths of vines that entwine themselves in and out of the steps, it's easily conceivable that they would collapse beneath their own weight.</description>
+    <position x="200" y="260" z="0" />
+    <arc exit="northeast" move="northeast" destination="34" />
+    <arc exit="northwest" move="northwest" destination="32" />
+  </node>
+  <node id="34" name="Oshu'ehhrsk Manor, Circular Stairwell">
+    <description>Spreading out like an elegant oak reaching for the purity of sunlight, a series of tangled vines creeps its way up the wall and through a small break in the roof.  The shifting of the staircase that the plants have so powerfully entwined sets off a quiet ripping noise from the clinging growth with each motion.  Even if the stairs collapse, the ornate bell hanging above would most likely remain.</description>
+    <position x="260" y="200" z="0" />
+    <arc exit="southwest" move="southwest" destination="33" />
+    <arc exit="northwest" move="northwest" destination="35" />
+  </node>
+  <node id="35" name="Oshu'ehhrsk Manor, Circular Stairwell">
+    <description>Massive, a large ornate bell hangs almost directly across from a wooden door, the landing before the door extending nearly to the edge of the bell itself.  Knotted but only slightly stained, a pair of ropes hangs from the opposite side of the mammoth bell.  Shadow blankets the ceiling and the area around the bell, so opaque that it resembles the way a gem seller might present a fine stone.</description>
+    <position x="180" y="120" z="0" />
+    <arc exit="southeast" move="southeast" destination="34" />
+    <arc exit="go" move="go wooden door" destination="36" />
+  </node>
+  <node id="36" name="Oshu'ehhrsk Manor, Attic">
+    <description>An army of soldiers would have taken quite some time to stack the discarded and now forgotten items that fill every available niche.  Over the years, surely only a handful of servants and family members were responsible, gradually building up the collection here in storage.  Torch boxes, toys, bottles, bridles, dresses and dolls lay all about, shuffled in among odd bits of metal and covered with dust and webs.</description>
+    <position x="160" y="100" z="0" />
+    <arc exit="north" move="north" destination="39" />
+    <arc exit="east" move="east" destination="37" />
+    <arc exit="go" move="go wooden door" destination="35" />
+  </node>
+  <node id="37" name="Oshu'ehhrsk Manor, Attic">
+    <description>As if winter's first dirty snow had fallen, everything is layered with a light coating of white.  The illusion of this being an icy covering is temporary, as the nostrils quickly scream that this is the haven for what must be a huge flock of pigeons.  Though no birds are in sight, soft cooing comes from nearby, weakly sporadic like the muttered pleas of a dying man.</description>
+    <position x="180" y="100" z="0" />
+    <arc exit="east" move="east" destination="38" />
+    <arc exit="west" move="west" destination="36" />
+  </node>
+  <node id="38" name="Oshu'ehhrsk Manor, Attic">
+    <description>Soggy and stained from exposure to the elements via the lack of a ceiling, haphazard stacks of crates and barrels fill the spaces between the support beams, hiding the walls from view.  A statue of an Elf sits amid the clutter, a grotesque caricature of clashing colors vandalizing his face.  Resting at a disturbed angle, he gazes into the sky as if longing for escape, but the reality is that he is nothing but shaped granite pointed skyward.</description>
+    <position x="200" y="100" z="0" />
+    <arc exit="west" move="west" destination="37" />
+  </node>
+  <node id="39" name="Oshu'ehhrsk Manor, Attic">
+    <description>The muffled echo of something dripping sounds out, speaking cautiously from its hideaway the way a lost child might meekly call.  A vision in porcelain and glass, the mockery of a real baby lies headfirst in a dusty bin, the tiny doll's dress in tatters.  Perhaps abandoned as the owner came closer to adulthood and discarded the flights of youth, it rests -- an attendee of playful tea parties no more.</description>
+    <position x="160" y="80" z="0" />
+    <arc exit="north" move="north" destination="40" />
+    <arc exit="south" move="south" destination="36" />
+  </node>
+  <node id="40" name="Oshu'ehhrsk Manor, Attic" color="#00FF00">
+    <description>A stone S'Kra rests in a small alcove, gazing down the length of the attic with the impassive serenity of lifeless sculpture.  Behind and all around, shadows and webbing lurk, obscuring what's really present with ambiguity, and readying the mind to fill that mysterious space with an ideal.  In love, such a void might be filled with perfection that doesn't exist, but here in the darkness, the only perfection is the perfect fear of the unknown.</description>
+    <position x="160" y="60" z="0" />
+    <arc exit="south" move="south" destination="39" />
+  </node>
+  <node id="41" name="Telpengi'hhs Sara'a, Collapsed Passage">
+    <description>Mounds of dirt and shattered brick block the end of the catacomb corridor, fallen from the ceiling and filling the lower burial niches with a flood of mud and debris.  Undoubtedly, the cave-in occurred when the weak layers of soil and stone could no longer support the weight of the structure above.  Now, crowning the top of the heaps of rubble rests the base of the fireplace, the cause of the collapse.</description>
+    <position x="520" y="100" z="0" />
+    <arc exit="south" move="south" destination="42" />
+    <arc exit="climb" move="climb mound" destination="13" />
+  </node>
+  <node id="42" name="Telpengi'hhs Sara'a, Catacombs">
+    <description>Sagging timbers line the ceiling, giant fingers clutching desperately to keep the crumbling ruin of above from collapsing inward.  Everpresent cobwebs hang motionless from the rafters, filled with small victims trapped within their grasps, as yet uneaten by the web's makers.</description>
+    <position x="520" y="180" z="0" />
+    <arc exit="north" move="north" destination="41" />
+    <arc exit="east" move="east" destination="52" />
+    <arc exit="south" move="south" destination="43" />
+    <arc exit="west" move="west" destination="44" />
+  </node>
+  <node id="43" name="Telpengi'hhs Sara'a, Catacombs">
+    <description>A crowd of chipped and abused statues huddle shoulder to shoulder at the end of this narrowing passage as if each individual were fearful to touch their stony fingers to the mud-stained walls.  Some gaze with broken eyes at the ceiling, some at each other, all damaged to the point that their features are now obscured, noses missing and cheeks misshapen.  Most have lost bits and pieces which are now wedged between their awkward bodies, brittle and cracked beyond recognition.</description>
+    <position x="520" y="200" z="0" />
+    <arc exit="north" move="north" destination="42" />
+  </node>
+  <node id="44" name="Telpengi'hhs Sara'a, Catacombs">
+    <description>Angled roughly against the northern catacomb wall is a fallen support beam, the point where it lies wedged into the floor covered by clumps of debris and chips of stone.  White strings of fungus line the timber, the moisture of these dank underhalls encouraging the thick, beardlike growth.  Gashes mar the wood like random eyes and mouths, enhancing the perception that the hairy sprouts are the stubble of some misshapen face.</description>
+    <position x="500" y="180" z="0" />
+    <arc exit="east" move="east" destination="42" />
+    <arc exit="west" move="west" destination="45" />
+  </node>
+  <node id="45" name="Telpengi'hhs Sara'a, Catacombs">
+    <description>The stones along the walls are disheveled and awkwardly stacked, though it isn't apparent whether this is from poor design or the result of untold days left settling in a dark and dank corridor.  Regardless, the inexactness opens a myriad of holes and cracks, in which scurry the occasional insect seeking a meal, or the shadows of some small rodent searching for the same.  Still crowning the eastern opening at this intersection is a keystone, the words upon it difficult to make out.</description>
+    <position x="480" y="180" z="0" />
+    <arc exit="north" move="north" destination="54" />
+    <arc exit="east" move="east" destination="44" />
+    <arc exit="south" move="south" destination="55" />
+    <arc exit="west" move="west" destination="46" />
+  </node>
+  <node id="46" name="Telpengi'hhs Sara'a, Catacombs">
+    <description>The barest tickle of a draft subtly shifts the air, stirring a gentle malcontent into the normally stagnant stench, a dank scent flung freely from its hidden resting spot and sent dancing into the empty space that is the catacomb corridors.  Perhaps a trick of the darkness, the tepid smell brings with its rise and fall the sound of harsh, labored breathing, as if the ground and walls lived and choked upon their own foulness.</description>
+    <position x="460" y="180" z="0" />
+    <arc exit="east" move="east" destination="45" />
+    <arc exit="west" move="west" destination="47" />
+    <arc exit="northwest" move="northwest" destination="58" />
+  </node>
+  <node id="47" name="Telpengi'hhs Sara'a, Catacombs">
+    <description>An avalanche of cream-colored bits and yellowed slivers slides periodically down a slope of packed mud, alternating between revealing and covering the foot-sized holes sunken in the ground.  The clattering and crunch of the shifting debris -- never mind the telltale curves of eye sockets and defined shapes of teeth -- reveal the mess's true nature as not pottery or rubble, but bone.  Where this mass of discarded remains could have come from is not apparent.</description>
+    <position x="440" y="180" z="0" />
+    <arc exit="north" move="north" destination="58" />
+    <arc exit="east" move="east" destination="46" />
+    <arc exit="west" move="west" destination="48" />
+    <arc exit="up" move="up" destination="59" />
+  </node>
+  <node id="48" name="Telpengi'hhs Sara'a, Catacombs">
+    <description>Shattered against the stones whether by accident, time, or rage-filled hands, the tokens and belongings of the dead, once buried with their corpses, lay fragmented all around.  It is these broken memories of life long past that indicates an ancestor's presence at all -- without them it would be as though they'd never existed outside the realms of remembrance and myth.  Judging by the apparent age of the artifacts, those who could recall the owner's lives are themselves long dead.</description>
+    <position x="420" y="180" z="0" />
+    <arc exit="northeast" move="northeast" destination="58" />
+    <arc exit="east" move="east" destination="47" />
+    <arc exit="northwest" move="northwest" destination="49" />
+  </node>
+  <node id="49" name="Telpengi'hhs Sara'a, Catacombs">
+    <description>The aural evocations of a thousand sounds reflecting upon the faceless and scarred granite wash through the halls in a river of quiet dissonance, their sources perhaps only the settling of stone on stone or the scuttling of light-fearing insects.  With a crispness normally found within the breeze of a winter's night, the echoes come clearly but softly, imagination creating words out of random collections of noise and speaking like the ravings of a madman.</description>
+    <position x="400" y="160" z="0" />
+    <arc exit="southeast" move="southeast" destination="48" />
+    <arc exit="northwest" move="northwest" destination="50" />
+  </node>
+  <node id="50" name="Telpengi'hhs Sara'a, Catacombs">
+    <description>Several tapestries lay rotted and torn, discarded remnants of some finer era, the embroidered scenes and stories drowned in the demons of mud and water.  A single skull gazes from beneath the tattered cloth turned burial shroud, and all the while the whispers of underground noises continue like uttered prayers floating on a listless breeze or the exhalation of a final breath.</description>
+    <position x="380" y="140" z="0" />
+    <arc exit="north" move="north" destination="51" />
+    <arc exit="southeast" move="southeast" destination="49" />
+  </node>
+  <node id="51" name="Telpengi'hhs Sara'a, Catacombs" color="#804000">
+    <description>Even as the scattered bones of those interred here testify, the dead may be free of the fear and pain that the living must endure, but their mortal remains are not spared from sacrilege.  Passing the barriers between life and death, as all mortals must, and fleeing this world for the next might only bear the soul higher -- but that which is left behind may yet be victim to an unguarded fate, as the yawning grave in the mud encrusted ceiling proves.</description>
+    <position x="380" y="120" z="0" />
+    <arc exit="south" move="south" destination="50" />
+  </node>
+  <node id="52" name="Telpengi'hhs Sara'a, Catacombs">
+    <description>The remains of several coffins lean against the tiled stone wall, the planks lined up as callously as kindling.  Only shreds of red velvet peek from the ruins, but atop the stack -- and tacked spread-eagle across the only intact coffin in the pile -- is a full suit of decaying livery.  The pile blocks several of the burial niches, but since the visible ones are devoid of any contents, it would seem unlikely that whatever scoured the others clean would leave the hidden ones untouched.</description>
+    <position x="540" y="180" z="0" />
+    <arc exit="east" move="east" destination="53" />
+    <arc exit="west" move="west" destination="42" />
+  </node>
+  <node id="53" name="Telpengi'hhs Sara'a, Catacombs">
+    <description>So filled is the floor with smashed pottery, ceramic tiles, and bits of wood that any motion creates a grinding crunch that echoes throughout the entire catacombs.  Most of the burial niches are empty, potentially the source of the mess on the ground.  Cracks, splits and gouges mar their edges, but there is simply no sign of the bodies that they once contained.</description>
+    <position x="560" y="180" z="0" />
+    <arc exit="north" move="north" destination="60" />
+    <arc exit="northeast" move="northeast" destination="61" />
+    <arc exit="west" move="west" destination="52" />
+  </node>
+  <node id="54" name="Telpengi'hhs Sara'a, Catacombs">
+    <description>Visible through vacancies between the ceiling's supports, where the packed soil and stone have fallen free, are the undersides of wooden flooring slats.  Something above them occasionally moves, its muffled sounds carried down through the floor, though the source is impossible to distinguish as some living thing or the noises of natural settling.  As the shifting comes and goes, dirt falls from the ceiling.</description>
+    <position x="480" y="160" z="0" />
+    <arc exit="south" move="south" destination="45" />
+  </node>
+  <node id="55" name="Telpengi'hhs Sara'a, Catacombs">
+    <description>The blackened earth and rock of the catacomb walls yield to a row of circular, white objects, packed tightly against one another and the gaps between recently mortared.  Their true nature is readily apparent, however, as each bears darkened teeth and dirt-filled eyesockets, the skulls of many races now used as little more than wretched bricks.</description>
+    <position x="480" y="200" z="0" />
+    <arc exit="north" move="north" destination="45" />
+    <arc exit="southeast" move="southeast" destination="56" />
+  </node>
+  <node id="56" name="Telpengi'hhs Sara'a, Catacombs">
+    <description>More burrowed than built, the walls slope in crumbling curves, supported by rough-hewn timbers spaced unevenly.  Repeating the word Pivo'hrr over and over, a mosaic of bone, cloth, stone and roots has been inset haphazardly, zagging across the earthen confines as if some angry god had simply slung the word against every available surface.</description>
+    <position x="500" y="220" z="0" />
+    <arc exit="south" move="south" destination="57" />
+    <arc exit="northwest" move="northwest" destination="55" />
+  </node>
+  <node id="57" name="Telpengi'hhs Sara'a, Catacombs" color="#804000">
+    <description>A rectangle of empty space stares down from the dirt of the ceiling, the gap a result of a hollowing out of the grave above.  Littered along the ground are the remains of wood flats and moldy velvet, left behind as if that which emptied the grave could not wait to drag the coffin away, and preferred instead to crack into its contents here.  Of what the pinebox may have contained, there is no sign.</description>
+    <position x="500" y="240" z="0" />
+    <arc exit="north" move="north" destination="56" />
+  </node>
+  <node id="58" name="Telpengi'hhs Sara'a, Catacombs">
+    <description>Gracing the center of the chamber the way a delicate princess might exhibit herself at a grand ball, a jade dragon statuette perches upon a semicircle of granite.  This centerpiece, like an indignant lady of royalty, has its back turned to the outcast -- an obsidian-black door, the darkest form of shadow against the room's gloom.  If only dancers were present at this allusive gathering, they would twirl on a floor littered with crushed skulls.</description>
+    <position x="440" y="160" z="0" />
+    <arc exit="southeast" move="southeast" destination="46" />
+    <arc exit="south" move="south" destination="47" />
+    <arc exit="southwest" move="southwest" destination="48" />
+    <arc exit="go" move="go obsidian-black door" destination="113" />
+  </node>
+  <node id="59" name="Telpengi'hhs Sara'a, Catacombs">
+    <description>Wispy tendrils of white fungus and moist roots hang curtain-like over a massive split that swallows nearly half the floor.  A bleak darkness fills the abyss, gradually becoming more oppressive as further the descent goes.  Strange noises chatter up from below occasionally, echoing slightly in this room before fading as if never existing.</description>
+    <position x="440" y="200" z="0" />
+    <arc exit="down" move="down" destination="47" />
+  </node>
+  <node id="60" name="Telpengi'hhs Sara'a, Catacombs" color="#804000">
+    <description>Cream-colored fabric, torn and soiled, lies half buried, the ripples of cloth flattened and pressed into the dirty floor.  Someone has defiled a grave from the bottom up, tearing out the coffin and the body within and subjecting them to some unknown fate.  Also empty, the burial niches along the walls gaze at the bottom of the grave as if filled with slack-jawed horror at such irreverence.</description>
+    <position x="560" y="160" z="0" />
+    <arc exit="south" move="south" destination="53" />
+  </node>
+  <node id="61" name="Telpengi'hhs Sara'a, Sinkhole">
+    <description>Tumbled rock, earth, and mud make for a slick slope, angled like a miniature mountain toward the surface and whatever salvation that brings from this shattered underground.  A single skull stares vacantly upward, jaw agape as if fearful of any saving ascension rather than longing for it.</description>
+    <position x="580" y="160" z="0" />
+    <arc exit="southwest" move="southwest" destination="53" />
+    <arc exit="climb" move="climb earthen slope" destination="62" />
+  </node>
+  <node id="62" name="Silhouette Forest, Sinkhole">
+    <description>A foul stench drifts through the air, channeled on a slow breeze between the hunched forms of the surrounding trees.  In the center of these sickened woods is a cavernous sinkhole, perhaps the source of the wretched scent rather than the rubbish pit to the south.  From below, unusual sounds rise, implying the settling of rock or the motion of active inhabitants.</description>
+    <position x="580" y="280" z="0" />
+    <arc exit="southwest" move="southwest" destination="63" />
+    <arc exit="climb" move="climb cavernous sinkhole" destination="61" />
+  </node>
+  <node id="63" name="Silhouette Forest, Rubbish Pit">
+    <description>Thick with the acrid smell of decay, the air stirs little.  A tight circle of trees, their branches intermingling to form a nearly impenetrable wall, surrounds the source of the nauseating stench -- piles of rubbish, organic and otherwise, lay rotting and discarded in the center of a shallow depression in the ground.  Goblets of olive-colored slime fester beneath the heaps, attracting hordes of flies and biting insects.  Tacked to one of the blackened trees is a wooden serpent.</description>
+    <position x="560" y="300" z="0" />
+    <arc exit="northeast" move="northeast" destination="62" />
+    <arc exit="go" move="go trail" destination="64" />
+  </node>
+  <node id="64" name="Silhouette Forest, Alongside the Iron Fence">
+    <description>Not only paler than the vegetation along other sections of the fence, the vines here appear sickly and weak, struggling to cling to rather than consuming the iron barricade.  Moved easily by the natural motions of air, the ailing plant life parts amicably, giving quick but distinct glimpses of a large manor house on the other side.  The wind brings with it a slight temperature drop as well as the scent of something both bitter and sour.</description>
+    <position x="540" y="320" z="0" />
+    <arc exit="south" move="south" destination="66" />
+    <arc exit="northwest" move="northwest" destination="65" />
+    <arc exit="go" move="go trail" destination="63" />
+  </node>
+  <node id="65" name="Silhouette Forest, Alongside the Iron Fence">
+    <description>Curtains of moss drape from the tree branches above, individual tendrils wrapped by the wind into thick clumps which, when viewed from just the right angle as they twirl, create the unusual illusion of hanged men.  If this were a true sight, then it would be their feet that brush against the plant-choked fence as they swing from their twisted necks.  Despite the sickly appearance of some of the ivy, the vegetation is heavy, and thickens even further around the edges of the cul-de-sac.</description>
+    <position x="520" y="300" z="0" />
+    <arc exit="southeast" move="southeast" destination="64" />
+  </node>
+  <node id="66" name="Silhouette Forest, The Ornate Gate">
+    <description>Cascades of greenery flood over the spikes of an iron fence, curls of ivy spiraling around each support to the point that little of the actual barrier can be seen.  A chilling breeze wafts now and again, rustling the wall's covering of vegetation in waves of motion, revealing the lighter undersides of leaves in passing.  A stylized sphere of blue malite rests upon one post, not far from the highly ornate iron gate with reddish malite hinges that breaks the monotony of the fence.</description>
+    <position x="540" y="340" z="0" />
+    <arc exit="north" move="north" destination="64" />
+    <arc exit="east" move="east" destination="71" />
+    <arc exit="southwest" move="southwest" destination="67" />
+  </node>
+  <node id="67" name="Silhouette Forest, Alongside the Iron Fence">
+    <description>Oracles once claimed to see the future -- among other means -- by divining the sounds of the wind, interpreting the voices of the gods within the shrill whistle of a casual breeze.  The sounds here could hardly be confused for talk, but do strike a resemblance to the heavy sighs of a giant beast, its labored breathing pulsing in its undisturbed slumber.  Most likely, it is only the wind, its passage making the foliage rise and fall as if drawing breath.</description>
+    <position x="520" y="360" z="0" />
+    <arc exit="northeast" move="northeast" destination="66" />
+    <arc exit="west" move="west" destination="68" />
+  </node>
+  <node id="68" name="Silhouette Forest, Alongside the Iron Fence">
+    <description>But a twisting footpath, the space between the fence and the encroaching woodland is narrowed to the point that every potential step is a fight to push through low-lying brush and grasping branches.  Ironwoods raise their hefty limbs out of reach above, creating perches from which vines hang down, further tightening the way.  Along the fence itself, the sharp points of iron posts extend from the covering green, hardly out of place due to their resemblance to darkened thorns.</description>
+    <position x="500" y="360" z="0" />
+    <arc exit="east" move="east" destination="67" />
+    <arc exit="southwest" move="southwest" destination="69" />
+  </node>
+  <node id="69" name="Silhouette Forest, Alongside the Iron Fence">
+    <description>Despite the sheltering thickets of vines and plants of the surrounding wood, the air rustles the branches above and gently shakes the vines along the fence.  Leaves are plucked from their lofty homes and sent into a leisurely, spiral descent to the ground, their comrades that already have fallen joyously reveling in spinning dances as they await the new arrivals.  Along the top of the fence, rows of bowing plants pray they are not the next to plummet from grace.</description>
+    <position x="480" y="380" z="0" />
+    <arc exit="northeast" move="northeast" destination="68" />
+    <arc exit="northwest" move="northwest" destination="70" />
+  </node>
+  <node id="70" name="Silhouette Forest, Alongside the Iron Fence">
+    <description>Bowed outward where a twisted ironwood on the other side leans against it, the fence's posts are bent and rearranged in a semi-chaotic fashion.  Still, the spikes atop angle skyward even with its contorted form, deadly hindrances to those that would scale the barrier's surface.  A particularly large branch juts from the tree's trunk, raised over the spear-like fence the way a madman might threaten a henchman with impalement, yet too high to reach from the ground.</description>
+    <position x="460" y="360" z="0" />
+    <arc exit="southeast" move="southeast" destination="69" />
+  </node>
+  <node id="71" name="Silhouette Forest, Subtle Clearing">
+    <description>A wispy net of thin branches and twisting weeds seems to choke what most might consider a trail, but every errant breeze reveals the truth.  Parting and pulling away with but the lightest of forces, what at first appears to block passage to even the sharpest and narrowest of needles in reality is a clearing that allows even a full horse and carriage passage.  If only such transport still used this route, at least this small portion of the way would hardly hinder travel.</description>
+    <position x="560" y="340" z="0" />
+    <arc exit="northeast" move="northeast" destination="72" />
+    <arc exit="west" move="west" destination="66" />
+  </node>
+  <node id="72" name="Silhouette Forest, Overgrown Trail">
+    <description>A subtle orchestra plays in the sounds of leaves rustling and twirling on the ground, the babble of a stream nearby, the wind sweeping through the treetops.  Somewhere, a frog adds his voice to the song, crickets chirp from the shady depths of the woods, a bird calls out for its lover.  The natural melody rises in crescendo and falls into near silence, starting again with but a few seconds passed, proving that the power of music moves not only in the hands of a talented Bard, but in nature.</description>
+    <position x="580" y="320" z="0" />
+    <arc exit="east" move="east" destination="73" />
+    <arc exit="southwest" move="southwest" destination="71" />
+  </node>
+  <node id="73" name="Silhouette Forest, Overgrown Trail">
+    <description>All around is a wood in the truest sense of the word, obviously once a trail and perhaps even heavily used, yet now surrendered to the eternal march of nature.  Passengers must have gazed from their carriages' portals, marveling at the usual fauna and flora, their lives in populated areas subconsciously strengthening their belief that the world here was alien and inimical.  The reality now, though, shows clearly that it is humanity that is the stranger to this place.</description>
+    <position x="600" y="320" z="0" />
+    <arc exit="northeast" move="northeast" destination="74" />
+    <arc exit="west" move="west" destination="72" />
+  </node>
+  <node id="74" name="Silhouette Forest, Overgrown Trail">
+    <description>Like waves of green frozen in time, branches filled with leaves and twigs curl from the trees to the ground, sheltering the lowliest of foliage varieties.  Forming hollow caverns of vegetation, the spaces between invite comparisons to metaphysical philosophies -- reality is immaterial, little else but a shell of existence around empty space.  And still, a sweet tone of birdsong is carried on the breeze, indifferently cheerful.</description>
+    <position x="620" y="300" z="0" />
+    <arc exit="southeast" move="southeast" destination="75" />
+    <arc exit="southwest" move="southwest" destination="73" />
+  </node>
+  <node id="75" name="Silhouette Forest, Elevated Streambank">
+    <description>The liquid surface of a reed-choked stream gurgles quietly below, visible but barely through the thick-trunked ring of trees that surround the trail.  From here, its impossible to note anything about the water except that it exists, but occasionally something moves, sending a splash to tease ears yet leaving no clues for watchful eyes.  Closer, naked wood greets the searcher, indicating that something large has passed through the trees, shedding them of their bark and branches.</description>
+    <position x="640" y="320" z="0" />
+    <arc exit="north" move="north" destination="76" />
+    <arc exit="northwest" move="northwest" destination="74" />
+  </node>
+  <node id="76" name="Silhouette Forest, Carriage Trail">
+    <description>Slanting distinctly down and to the south, the trail is eroded by a series of runoffs that have destroyed any chances of travel by carriage, firmly rooting such activity to the past.  Clumps of weeds and thorny growths mask footfalls and jagged stones, and though they preserve some areas of the trail, the places barren of such plant life become shallower with every rain shower.  From beyond the veils of leaves and brush, the whispers of a trickling stream betray the destination of those washouts.</description>
+    <position x="640" y="300" z="0" />
+    <arc exit="northeast" move="northeast" destination="77" />
+    <arc exit="south" move="south" destination="75" />
+  </node>
+  <node id="77" name="Silhouette Forest, Carriage Trail">
+    <description>Weeds grow along the jagged ridges of dirt that slew across the trail, the growth's roots keeping the scars at least partially preserved from the weathering effects of the elements.  Only because of its size, the bulk of an overturned carriage rises above the tangled plants, its smashed form heaped awkwardly against a large ironwood.</description>
+    <position x="660" y="280" z="0" />
+    <arc exit="northeast" move="northeast" destination="78" />
+    <arc exit="southwest" move="southwest" destination="76" />
+  </node>
+  <node id="78" name="Silhouette Forest, Carriage Trail">
+    <description>If not for the ruts left by years of traveling carriages and horses, there would be little to distinguish this area as anything more than a random spot in the woods.  The steady use that carved the trail is long gone, however, and now thick brush and weeds threaten to choke it out of its existence and swallow it back into the surrounding forest.  Already claimed by the engulfing growth, a rusted hoop lays off to one side, a remnant of a discarded wagon wheel and a bygone era.</description>
+    <position x="680" y="260" z="0" />
+    <arc exit="east" move="east" destination="111" />
+    <arc exit="southwest" move="southwest" destination="77" />
+  </node>
+  <node id="79" name="Overgrown Manor Grounds, Before the Manor">
+    <description>Whether a result of despair or vandalism is unclear, but the tortured structure of the manor has suffered a further insult beyond the ravages of time.  As though someone had desired entry, denied by the tri-barred door that pierces the wall, the damaged and chipped bricks are centered around the door in a great arch, a result of blow after blow raining upon its stoic surface.  Still the walls hold, and still the door is the only means of entry into those hellish interiors.</description>
+    <position x="280" y="300" z="0" />
+    <arc exit="east" move="east" destination="84" />
+    <arc exit="south" move="south" destination="93" />
+    <arc exit="west" move="west" destination="80" />
+    <arc exit="go" move="go wooden door" destination="14" />
+  </node>
+  <node id="80" name="Overgrown Manor Grounds, Before the Manor">
+    <description>Located where the manor corners away from the yard is a tremendous, circular tower, majestic in size if obviously not in condition.  From near the top of its peaked roof, masonry has fallen, obliterated after the descent and turned into white dust.  Stretching in the other direction, vines and clinging plant life ascend upward, ever longing for the embrace of the infinite sky.</description>
+    <position x="260" y="300" z="0" />
+    <arc exit="east" move="east" destination="79" />
+    <arc exit="southeast" move="southeast" destination="93" />
+    <arc exit="south" move="south" destination="94" />
+    <arc exit="west" move="west" destination="81" />
+  </node>
+  <node id="81" name="Overgrown Manor Grounds, Side Yard">
+    <description>The wind moves, pervading all with the breathy sound of leaves upon leaves, the delicate crashing of branches, and the crystalline crunch of stone and dust shifting.  While the breezes don't seem potent enough to faze the manor's steadfast structure, the sound comes with every gentle gust, as if pacing out of earshot, as if a hunter stalked a cautious prey.  The coming of still air brings silence once again, no rustling of leaves, and only the afterthoughts of a phantasmal predator.</description>
+    <position x="240" y="300" z="0" />
+    <arc exit="north" move="north" destination="82" />
+    <arc exit="east" move="east" destination="80" />
+  </node>
+  <node id="82" name="Overgrown Manor Grounds, Side Yard">
+    <description>Although one basic truth is that all things perish and return to dust, the pathetic manner in which several thickets of roses have wilted and drooped speak of an almost unnatural ending.  From their thorny bases to their faded buds, a grey sickness has befallen the flowering plants, and they clutch tightly against the walls of the manor, steadying themselves under the onslaught of illness.</description>
+    <position x="240" y="280" z="0" />
+    <arc exit="north" move="north" destination="83" />
+    <arc exit="south" move="south" destination="81" />
+  </node>
+  <node id="83" name="Overgrown Manor Grounds, Side Yard by the Chapel" color="#804000">
+    <description>Some distance above, the glassy remains of an artistically rendered window still display themselves jaggedly along the frame.  Nothing else is left of the artist's impassioned creation, his hours of toil and labor vanished in a shattering of colored fragments.  The wind whistles softly through the remnants, perhaps an echo of the glassworker's lingering spirit bemoaning cruel fate and the razor-like shards left, sharp as a heartache.</description>
+    <position x="240" y="260" z="0" />
+    <arc exit="south" move="south" destination="82" />
+  </node>
+  <node id="84" name="Overgrown Manor Grounds, Before the Manor">
+    <description>Years past its construction, the red bricks of the manor remain, for the most part, intact.  The windows tell a different story, and what can be seen between the heavy boards that seal them is more a comment on the fragility of glass that of the sturdiness of stone.  In fact, the crumbling wood facades and loose tiles from the roof indicate that the entire place would have razed itself out of existence if not for the solid stonework.</description>
+    <position x="300" y="300" z="0" />
+    <arc exit="east" move="east" destination="85" />
+    <arc exit="southeast" move="southeast" destination="86" />
+    <arc exit="south" move="south" destination="92" />
+    <arc exit="southwest" move="southwest" destination="93" />
+    <arc exit="west" move="west" destination="79" />
+  </node>
+  <node id="85" name="Overgrown Manor Grounds">
+    <description>An impressive structure of brick and masonry broken by arched windows and decorative ornamentation, the manor rises over two stories.  High above, the grey slate of its tiled roof, splotched by patches of green and pitted with vacancies, supports a row of grotesque figures, easily visible only at this position in the yard.  If one gets closer to the crumbling walls, the eaves would block sight of the gargoyles.</description>
+    <position x="320" y="300" z="0" />
+    <arc exit="northeast" move="northeast" destination="96" />
+    <arc exit="south" move="south" destination="86" />
+    <arc exit="west" move="west" destination="84" />
+  </node>
+  <node id="86" name="Overgrown Manor Grounds, Front Lawns">
+    <description>A dance of paw prints and a subtle clearing in the choking weeds cries that here there are wolves, and here they brought some hapless prey down.  When the death blow came to the victim, no desperate cry could have gone out noticed as it would have been muffled by the surrounding greenery, or simply unheeded by the vacancy of the manor, or merely overlooked as natural by the untamed wilds that continue to devour this place.</description>
+    <position x="320" y="320" z="0" />
+    <arc exit="north" move="north" destination="85" />
+    <arc exit="south" move="south" destination="87" />
+    <arc exit="southwest" move="southwest" destination="91" />
+    <arc exit="west" move="west" destination="92" />
+    <arc exit="northwest" move="northwest" destination="84" />
+  </node>
+  <node id="87" name="Overgrown Manor Grounds, Front Lawns">
+    <description>The beckoning of time immortal swallows all things as do the brush and weeds engulf all things in this yard.  There is no eloquence to the overwhelming growth, no deeper meaning built into each tendril's choking caress, and no charade of performance or belief -- there is only the daily, consuming growth as nature quietly reclaims its own.</description>
+    <position x="320" y="340" z="0" />
+    <arc exit="north" move="north" destination="86" />
+    <arc exit="east" move="east" destination="88" />
+    <arc exit="southwest" move="southwest" destination="89" />
+    <arc exit="west" move="west" destination="91" />
+  </node>
+  <node id="88" name="Overgrown Manor Grounds, The Ornate Gate">
+    <description>More like a rising wave cresting and crashing within the confines of the yard's iron gate than a wall of vegetation, the leaves and vines that thicken and cling with such fervor flood over everywhere, disguising any pratfall or stumbling block.  Westward, a statue ascends from the depths of the greenery, desperate for the freedom of the sky but destined never to achieve it.</description>
+    <position x="340" y="340" z="0" />
+    <arc exit="west" move="west" destination="87" />
+  </node>
+  <node id="89" name="Overgrown Manor Grounds, Front Lawns">
+    <description>A sapling from a time gone by has now come into its own, having grown into a twisted ironwood tree that dominates the yard as it leans slovenly against the iron fence.  Far above, the limbs and branches of the giant stretch in all directions, and a fall or a jump from some of the highest would almost certainly be fatal.  The weeds that choke all else seem to abate near the ironwood's trunk.</description>
+    <position x="300" y="360" z="0" />
+    <arc exit="northeast" move="northeast" destination="87" />
+    <arc exit="northwest" move="northwest" destination="90" />
+    <arc exit="climb" move="climb ironwood tree" destination="110" />
+  </node>
+  <node id="90" name="Overgrown Manor Grounds, Front Lawns">
+    <description>Having survived the regular passage of tramping feet, the grass knows not to bend and yield, and instead rises against any oppressive motion, aided by thorny weeds and clingy twigs.  This is the domain of the overgrown, and all signs of the care that any self-respecting groundskeeper would have lavished on such an estate have been long since swallowed by the plant denizens.</description>
+    <position x="280" y="340" z="0" />
+    <arc exit="north" move="north" destination="93" />
+    <arc exit="east" move="east" destination="91" />
+    <arc exit="southeast" move="southeast" destination="89" />
+    <arc exit="northwest" move="northwest" destination="94" />
+  </node>
+  <node id="91" name="Overgrown Manor Grounds, Front Lawns" color="#804000">
+    <description>Nearly lost within the clumps of overgrowth are several bits of bone, hiding beneath the twisty blades of grass like frightened refugees.  It is not a secret that they stay there in their place of unobtrusiveness, but more likely that they were discarded when the flesh upon them gave out as the toothy gnaws upon their surfaces indicates.  Though clearly disturbed, a sunken grave nearby doesn't appear to be exhumed enough to be the source of the abandoned bone scraps.</description>
+    <position x="300" y="340" z="0" />
+    <arc exit="north" move="north" destination="92" />
+    <arc exit="northeast" move="northeast" destination="86" />
+    <arc exit="east" move="east" destination="87" />
+    <arc exit="west" move="west" destination="90" />
+    <arc exit="northwest" move="northwest" destination="93" />
+  </node>
+  <node id="92" name="Overgrown Manor Grounds, Granite Fountain" color="#00FF00">
+    <description>With arms stretched out to either side as though desiring flight, a granite statue rises unoppressed from the center of a dry fountain.  Its contorted face speaks of an intense and unmistakable desire, perhaps ascension to the gods beyond the Starry Road, or a liberation of soul and mind.</description>
+    <position x="300" y="320" z="0" />
+    <arc exit="north" move="north" destination="84" />
+    <arc exit="east" move="east" destination="86" />
+    <arc exit="south" move="south" destination="91" />
+    <arc exit="west" move="west" destination="93" />
+  </node>
+  <node id="93" name="Overgrown Manor Grounds, Front Lawns">
+    <description>A desperate audience to the sky, the weeds grow thick and tall, stretching their yellowed and blackened tops high.  Meandering paths cut their way through the overgrowth, zagging across the yards in a criss-cross of maze-like webs.  The weeds on the trails are pressed down, but not wholly downtrodden, as their bowed heads will soon curve once again skyward like their brethren not on the paths.</description>
+    <position x="280" y="320" z="0" />
+    <arc exit="north" move="north" destination="79" />
+    <arc exit="northeast" move="northeast" destination="84" />
+    <arc exit="east" move="east" destination="92" />
+    <arc exit="southeast" move="southeast" destination="91" />
+    <arc exit="south" move="south" destination="90" />
+    <arc exit="west" move="west" destination="94" />
+    <arc exit="northwest" move="northwest" destination="80" />
+  </node>
+  <node id="94" name="Overgrown Manor Grounds, Front Lawns">
+    <description>The rasp of bark-shorn wood grating together draws attention to a grouping of trees just on the other side of the surrounding fence.  Reaching up, the shorter of the pair extends a claw-like limb, desperate to touch the tips of its fellow's branches.  Casually, the other leans with the wind, a single finger of wood barely within range of the first, its trunk cushioned by cloud-like vegetation.</description>
+    <position x="260" y="320" z="0" />
+    <arc exit="north" move="north" destination="80" />
+    <arc exit="east" move="east" destination="93" />
+    <arc exit="southeast" move="southeast" destination="90" />
+    <arc exit="southwest" move="southwest" destination="95" />
+  </node>
+  <node id="95" name="Overgrown Manor Grounds, Carriage House">
+    <description>An unimposing structure, clearly a carriage house of some sort by the width of the door, lies at the end of a subtle footpath through the thick overgrowth of the manor yard.  Scarred by the events of time, the marks and splits in the building's wood nearly trace the lines of a face, framed by splintered wounds that never heal.  Above, the shifting tides of tree limbs move, presenting this reality in the light of a lucid dream, the unusual calm solemn and uninvited.</description>
+    <position x="240" y="340" z="0" />
+    <arc exit="northeast" move="northeast" destination="94" />
+    <arc exit="go" move="go carriage door" destination="108" />
+  </node>
+  <node id="96" name="Overgrown Manor Grounds, Alfar's Rest Gate" color="#804000">
+    <description>But for one nearly barren spot where a sunken grave lies, the weeds cluster in such thick clumps underfoot that the ground seems unnaturally lumpy.  The growth offers little free space, and between the clinging plant life and rusted condition, an old metal gate nearby seems to have no real chance of ever opening again.  Beyond the gate, headstones peek up from a sea of yellowing grass and choking vines.</description>
+    <position x="340" y="280" z="0" />
+    <arc exit="southwest" move="southwest" destination="85" />
+    <arc exit="go" move="go metal gate" destination="97" />
+  </node>
+  <node id="97" name="Alfar's Rest Cemetery" note="Cemetery">
+    <description>Waves and ripples spread across an ocean of golden grass, created by rustling breezes and the motions of things unseen.  Drowning in the slowly dying growth are tombstones of all styles, their massive forms now crumbling from age and dereliction.  It is this menagerie of stone shapes and thick vegetation which turns what once was a field into a twisting maze.</description>
+    <position x="340" y="240" z="0" />
+    <arc exit="north" move="north" destination="107" />
+    <arc exit="east" move="east" destination="98" />
+    <arc exit="go" move="go metal gate" destination="96" />
+  </node>
+  <node id="98" name="Alfar's Rest Cemetery">
+    <description>Whatever travesties suffered during the lives of the souls buried here, they are now suffering further indignation beyond being entombed in the cold earth.  The weeds and grass that so heavily choke the grave sites not only obscures the sinking ground filled with coffins, but in some cases mask the stone markers.  Vanished from living memory, now all signs of existence are slowly being swallowed.</description>
+    <position x="360" y="240" z="0" />
+    <arc exit="north" move="north" destination="99" />
+    <arc exit="west" move="west" destination="97" />
+  </node>
+  <node id="99" name="Alfar's Rest Cemetery">
+    <description>A distorted stone gargoyle perches nearby, crouched atop one particularly crooked headstone.  Though bunched in grassy clumps around the beast's seat, the weeds are still thick, and vines threaten to eventually win the battle that will bring the stonework to shattered ruin upon the ground.  Other fights between nature and the ancient markers have ended this way, as the piles of broken masonry indicate.</description>
+    <position x="360" y="220" z="0" />
+    <arc exit="north" move="north" destination="100" />
+    <arc exit="south" move="south" destination="98" />
+    <arc exit="west" move="west" destination="107" />
+    <arc exit="northwest" move="northwest" destination="101" />
+  </node>
+  <node id="100" name="Alfar's Rest Cemetery">
+    <description>Passage directly north is blocked by the massive lichen-coated remains of a fallen monument as well as the yellowing bristles of grass thickening either side.  Several headstones have been smashed by the monument's tumble, and even the fence has not been untouched, now bent from the force of the falling chunks.  Where once stood an impressive gesture to eternal memory is currently only the base of a massive monument and several large granite fragments.</description>
+    <position x="360" y="200" z="0" />
+    <arc exit="south" move="south" destination="99" />
+    <arc exit="west" move="west" destination="101" />
+  </node>
+  <node id="101" name="Alfar's Rest, Fallen Monument">
+    <description>An alfar statue that once capped the massive toppled monument lying across the cemetery now itself lies face down in the dirt, cracked and fragmented, its existence not as completely gone as the long past memories of the person for whom the monument was constructed.  Bowl-shaped indents along the length of the shattered ruin, no doubt formed from its falling, contain small bones and debris, as if something were using these niches the way squirrels might use a gap in a tree to save acorns.</description>
+    <position x="340" y="200" z="0" />
+    <arc exit="north" move="north" destination="103" />
+    <arc exit="northeast" move="northeast" destination="104" />
+    <arc exit="east" move="east" destination="100" />
+    <arc exit="southeast" move="southeast" destination="99" />
+    <arc exit="southwest" move="southwest" destination="105" />
+    <arc exit="west" move="west" destination="102" />
+  </node>
+  <node id="102" name="Alfar's Rest Cemetery, Derelict Graves">
+    <description>Somewhat level elsewhere, the ground slants subtly towards the wooded west, turning into a sharp slope covered with slick mud and leaves on the other side of the fence.  Wispy fog drifts wraithlike beneath the trees there, masking still shapes that might be humanoids or simply dead trees.  If the former, they are disciplined enough to not move a muscle, yet if they are the latter, the apparent possession of legs and arms is uncanny.</description>
+    <position x="320" y="200" z="0" />
+    <arc exit="northeast" move="northeast" destination="103" />
+    <arc exit="east" move="east" destination="101" />
+    <arc exit="southeast" move="southeast" destination="107" />
+    <arc exit="south" move="south" destination="105" />
+  </node>
+  <node id="103" name="Alfar's Rest Cemetery, Derelict Graves">
+    <description>Cheerful cherubs cling to the tops of several headstones, but all are defaced and bear the marks of a blade or some other metal implement that left white scars on their perfectly carved granite faces.  The notches dug through fungus as well as stone, cutting through the lichen beards that cause the statuettes to resemble some vile breed of malformed Dwarves rather than a pleasant ornamentation created in memory of those buried here.</description>
+    <position x="340" y="180" z="0" />
+    <arc exit="east" move="east" destination="104" />
+    <arc exit="south" move="south" destination="101" />
+    <arc exit="southwest" move="southwest" destination="102" />
+  </node>
+  <node id="104" name="Alfar's Rest Cemetery, Derelict Graves">
+    <description>Skulls have been jammed into the spikes on the top of the fence, each bearing teeth marks and other desecrations.  The rusting metal has left red streaks along the bony jaws and stained the eye sockets with trails of crimson tears, lending the sight the surreal quality of being a still living crowd of mourners.  Below the sun-bleached row are the matted signs that some beast nestles in this cul-de-sac.</description>
+    <position x="360" y="180" z="0" />
+    <arc exit="southwest" move="southwest" destination="101" />
+    <arc exit="west" move="west" destination="103" />
+  </node>
+  <node id="105" name="Alfar's Rest Cemetery">
+    <description>Just beyond an iron fence are the walls of a manor, hidden not only by the prison-like bars but by the heavy weeds that cover this entire field.  Still, clearly visible are the vines that stretch up the brickwork the way a withered hand might cling to a cherished heirloom.  Between this snaking display of brown shoots are windows, some broken out or boarded up, but most simply dingy, and all unreachable from here thanks to the interposing fence.</description>
+    <position x="320" y="220" z="0" />
+    <arc exit="north" move="north" destination="102" />
+    <arc exit="northeast" move="northeast" destination="101" />
+    <arc exit="east" move="east" destination="107" />
+    <arc exit="south" move="south" destination="106" />
+  </node>
+  <node id="106" name="Alfar's Rest Cemetery">
+    <description>Butted closely against the nearest wall of the manor, the iron fence that surrounds the cemetery is covered in rotting cloth, paper and bits of assorted debris.  A quick glance upward reveals the source as the second story window high above, broken out during whatever fit of rage or depression was the reason for the outpouring of sundries.</description>
+    <position x="320" y="240" z="0" />
+    <arc exit="north" move="north" destination="105" />
+    <arc exit="northeast" move="northeast" destination="107" />
+    <arc exit="climb" move="climb twisted vine" hidden="True" destination="9" />
+  </node>
+  <node id="107" name="Alfar's Rest Cemetery">
+    <description>Several paths converge here, twisting through the wild growths of dying vegetation.  Despite being sickly, the grass and weeds remain a hindrance and show no sign of yielding for man or beast.  Nonetheless, a handful of paw prints curve into the underbrush, rebelling against the brush if only for a short while before time and growth consumes them.</description>
+    <position x="340" y="220" z="0" />
+    <arc exit="east" move="east" destination="99" />
+    <arc exit="south" move="south" destination="97" />
+    <arc exit="southwest" move="southwest" destination="106" />
+    <arc exit="west" move="west" destination="105" />
+    <arc exit="northwest" move="northwest" destination="102" />
+  </node>
+  <node id="108" name="Carriage House, Livery Storage">
+    <description>Bands of iron affix a variety of pitchforks, hammers and saws to the weathered walls, as though someone feared the tools might leap forth from their resting spots if not shackled into place.  Suspended by leather straps and fraying rope, a yoke hangs, bristling with the empty paper nests of hornets.  Below, the musty, dry dirt of the floor is littered with the corpses of the dead insects.</description>
+    <position x="220" y="360" z="0" />
+    <arc exit="south" move="south" destination="109" />
+    <arc exit="go" move="go door" destination="95" />
+  </node>
+  <node id="109" name="Carriage House, Stables">
+    <description>The most notable feature here is not the weathered condition of the walls, nor the smelly straw that drops in piles from the rafters above, nor the roach-infested bridle supplies that are draped over abandoned stalls -- it is the enormous stone gargoyle statue that literally fills the entire southern wall, leering ahead with carved maliciousness.  One hand stretches out in a way that might be construed as imploringly, if it wasn't for the malevolent snarl on its horned face.</description>
+    <position x="220" y="380" z="0" />
+    <arc exit="north" move="north" destination="108" />
+  </node>
+  <node id="110" name="Within the Twisted Ironwood">
+    <description>Almost imperceptibly, the ironwood shifts, groaning slightly as the wind pulls it by its curled limbs.  One of the more twisted branches arches out over a path below, stretching across a row of sharpened fence spikes.  Obliquely, the ironwood's trunk leans against the fence itself, its slumped angle a slow threat of eventually growing to the point that the fence is victimized and pulled apart.</description>
+    <position x="320" y="360" z="0" />
+    <arc exit="climb" move="climb ironwood trunk" destination="89" />
+    <arc exit="none" move="jump ironwood branch" destination="70" />
+  </node>
+  <node id="111" name="Silhouette Forest, Near the Southern Trade Route">
+    <description>The distant sounds of travelers and caravans moving along the trade routes is muffled further by the dense vegetation that closes in upon the trail.  Not only is the aural sense dulled by the heavy cloak of plant life, but visibility is hindered beyond a stone's throw by layers of interposing leaves and branches.  Even looking above, the canopy of mingling limbs and outstretched trees blocks a fully clear view of the sky.</description>
+    <position x="700" y="260" z="0" />
+    <arc exit="east" move="east" destination="112" />
+    <arc exit="west" move="west" destination="78" />
+  </node>
+  <node id="112" name="Southern Trade Route, Esouvar Deriel" note="Map62_STR2.xml|Southern Trade Route|STR|Shard|Leth Deriel">
+    <description>A haunting shadow, perhaps the spirit of some child lost long ago to the forest, lingers in the area.  Leaves rustle, their bleak hues perhaps a shade lighter than they should be.  The dark skins of the ironwoods glimmer sullenly with the sheen of a thousand dew drops.</description>
+    <position x="720" y="260" z="0" />
+    <arc exit="northeast" move="northeast" />
+    <arc exit="south" move="south" />
+    <arc exit="west" move="west" destination="111" />
+  </node>
+  <node id="113" name="Telpengi'hhs Sara'a, Embalming Chamber">
+    <description>Colorful yet faded, a tiled mosaic covers the ceiling with a flowing depiction of an elegant cobra.  Dark dust chokes the details, but what can be seen reveals the presence of each god's avatar, held within the belly of the larger serpent.  The mosaic fills every spare section of the ceiling, stopping only where the circular columns meet its surface.</description>
+    <position x="440" y="140" z="0" />
+    <arc exit="north" move="north" destination="116" />
+    <arc exit="east" move="east" destination="114" />
+    <arc exit="west" move="west" destination="115" />
+    <arc exit="go" move="go obsidian-black door" destination="58" />
+  </node>
+  <node id="114" name="Telpengi'hhs Sara'a, Embalming Chamber">
+    <description>With the passage of time comes the decay of those things material, and no exception is granted to the clay jars and pottery lining the shelves in this nook.  Dim lighting from a torch sconce gives birth to flickering shadows behind those jars, as if the containers' crumbling states released souls that, disbelieving their freedom, still linger near their ruined bodies.</description>
+    <position x="460" y="140" z="0" />
+    <arc exit="west" move="west" destination="113" />
+  </node>
+  <node id="115" name="Telpengi'hhs Sara'a, Embalming Chamber">
+    <description>Makeshift apparatus of all type hang from the walls and ceiling, their glassy and metallic forms pointing towards a massive corpse as if they were hungry scavengers ready to devour a ripe meal.  The disfigured body lies still, its soul and living spirit long since gone, perhaps unaware of the fate of its remains.  Where once the dead were buried with great reverence, the cadaver lies here disrespected and discarded.</description>
+    <position x="420" y="140" z="0" />
+    <arc exit="east" move="east" destination="113" />
+    <arc exit="go" move="go dirty-grey door" destination="117" />
+  </node>
+  <node id="116" name="Telpengi'hhs Sara'a, Embalming Chamber" note="Asharshpar'i|Grazhir|Ways|Astral Plane">
+    <description>Grime of ages untold sullies the walls, the dankness and layered soot blanketing everything until the room appears like something from a demented painter's twisted nightmare vision, or a place where the souls of the deceased rage for eternity.  Thick with filth, the details of the ceiling and walls are obscured, sharpening the contrast of the silvery-white shard of stone inset into the ornate pedestal that rests in the center of the chamber.</description>
+    <position x="440" y="120" z="0" />
+    <arc exit="south" move="south" destination="113" />
+  </node>
+  <node id="117" name="Beneath Oshu'ehhrsk Manor, Catacombs Storage">
+    <description>Several darkened gaps mark the absence of stones in the otherwise tight construction of the granite walls.  Splinters of wood and bone lay in each, proving them to be the final resting places of a few nameless souls.  Fairly new beams of dark wood edge these gaps, squeezed between floor and ceiling for support of the massive weight above.</description>
+    <position x="420" y="120" z="0" />
+    <arc exit="go" move="go dirty-grey door" destination="115" />
+  </node>
+  <node id="118" name="Astral Plane, Asharshpar'i Conduit" note="Map150_The_Ways.xml">
+    <description>Thousands of static stars, each hanging in the sky like a little white dot, look down upon a desert of black sand.  Despite the night sky, the region is brightly lit by a web of burning energy that twists and spins through the air.  A cold wind blows through the desert, stirring up clouds of black sand that disintegrate upon contact with the blazing web.</description>
+    <position x="440" y="100" z="1" />
+  </node>
+  <label text="Seordhavor Kartais">
+    <position x="210" y="0" z="0" />
+  </label>
+  <label text="To STR">
+    <position x="720" y="230" z="0" />
+  </label>
+  <label text="Bone Wolves">
+    <position x="580" y="340" z="0" />
+  </label>
+  <label text="Revenant Zombies">
+    <position x="580" y="350" z="0" />
+  </label>
+  <label text="Germish'din">
+    <position x="420" y="210" z="0" />
+  </label>
+  <label text="Grave Worms">
+    <position x="240" y="390" z="0" />
+  </label>
+  <label text="Bone Wolves">
+    <position x="240" y="370" z="0" />
+  </label>
+  <label text="Revenant Zombies">
+    <position x="240" y="380" z="0" />
+  </label>
+  <label text="A">
+    <position x="246" y="253" z="0" />
+  </label>
+  <label text="&quot;jump window&quot; to A &gt;">
+    <position x="47" y="52" z="0" />
+  </label>
+  <label text="&gt; one way &gt;">
+    <position x="357" y="346" z="0" />
+  </label>
+  <label text="B">
+    <position x="345" y="272" z="0" />
+  </label>
+  <label text="v &quot;dig grave&quot; to B">
+    <position x="556" y="139" z="0" />
+  </label>
+  <label text="C">
+    <position x="294" y="343" z="0" />
+  </label>
+  <label text="&lt; &quot;dig grave&quot;">
+    <position x="505" y="231" z="0" />
+  </label>
+  <label text="to C">
+    <position x="523" y="244" z="0" />
+  </label>
+  <label text="v &quot;dig grave&quot; to A">
+    <position x="375" y="99" z="0" />
+  </label>
+  <label text="Cemetery">
+    <position x="340" y="250" z="0" />
+  </label>
+</zone>

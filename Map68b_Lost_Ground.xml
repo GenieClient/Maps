@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Blackthorn Canyon, Lost Ground" id="68b">
+  <node id="1" name="Corik's Wall, Graev's Gate">
+    <description>There is barely a wagon's length of space between the massive ironwood plank door and the heavy iron grating of the portcullis covering the entrance.  Suspended from chains and worked by winches, the portcullis can be slid down vertical grooves in the stone to allow passage through the gate.  On the underside of the arched gateway is a mosaic made of broken shards of colored bottle glass.  It is an odd bit of beauty in an otherwise grim and desperate place.</description>
+    <position x="460" y="-20" z="0" />
+    <arc exit="go" move="go iron portcullis" destination="2" />
+    <arc exit="go" move="go ironwood door" destination="44" />
+  </node>
+  <node id="2" name="Blackthorn Canyon, Lost Ground">
+    <description>Murky and dismal, the heavy undergrowth impedes passage and crunches noisily underfoot.  The cacophony of savage howls and an incessant rustling in the nearby brush leave one to wonder what manner of beast lies in wait for any unsuspecting victim.</description>
+    <position x="460" y="0" z="0" />
+    <arc exit="northeast" move="northeast" destination="3" />
+    <arc exit="southeast" move="southeast" destination="29" />
+    <arc exit="southwest" move="southwest" destination="17" />
+    <arc exit="west" move="west" destination="10" />
+    <arc exit="go" move="go iron portcullis" destination="1" />
+  </node>
+  <node id="3" name="Blackthorn Canyon, Lost Ground">
+    <description>Whether by day or by night, the thick mist enshrouds the earth like a blanket, though not a comforting cover.  The heavy haze obscures the direction and even the intensity of noises, making a snapping twig sound like a cracking whip or muting distant thunder to a muffled groan.</description>
+    <position x="480" y="-20" z="0" />
+    <arc exit="east" move="east" destination="4" />
+    <arc exit="south" move="south" destination="29" />
+    <arc exit="southwest" move="southwest" destination="2" />
+  </node>
+  <node id="4" name="Blackthorn Canyon, Lost Ground">
+    <description>Rows of thorny vines stretch their thick tendrils down from their stealthy breaches within the limestone wall.  Spreading their engorged fingers across the narrow lane, they make it essential to consider a careful footing at all times.</description>
+    <position x="500" y="-20" z="0" />
+    <arc exit="southeast" move="southeast" destination="5" />
+    <arc exit="west" move="west" destination="3" />
+  </node>
+  <node id="5" name="Blackthorn Canyon, Lost Ground">
+    <description>Darkness continues to seep through the heavy brush, dragging a hazy cloud of moisture along to accompany it.  Clinging vines weave their way in and out, their sole purpose being to entangle the limbs of the unwary in their unrelenting grasp.</description>
+    <position x="540" y="20" z="0" />
+    <arc exit="south" move="south" destination="6" />
+    <arc exit="southwest" move="southwest" destination="28" />
+    <arc exit="west" move="west" destination="29" />
+    <arc exit="northwest" move="northwest" destination="4" />
+  </node>
+  <node id="6" name="Blackthorn Canyon, Lost Ground" color="#FFBF00">
+    <description>Piles of bleached, old bones are scattered across the trail.  The inquisitive traveler might wonder if these are the bleak remains of those souls for whom there was no time for burial before a hasty retreat became necessary.</description>
+    <position x="540" y="40" z="0" />
+    <arc exit="north" move="rt north" destination="5" />
+    <arc exit="northeast" move="rt northeast" destination="7" />
+  </node>
+  <node id="7" name="Blackthorn Canyon, Lost Ground">
+    <description>Scattered about like mere pebbles, several large boulders are dwarfed by the size of the old, rusted-out trebuchet left deserted in the center of the trail.  Barely clinging by one end to the rather ill-wrought siege engine, the heavy sling dangles to the ground like a giant razor strap.</description>
+    <position x="560" y="20" z="0" />
+    <arc exit="south" move="rt south" destination="8" />
+    <arc exit="southwest" move="rt southwest" destination="6" />
+  </node>
+  <node id="8" name="Blackthorn Canyon, Lost Ground" color="#FFBF00">
+    <description>Several small groupings of burial mounds line the brush-strewn pathway, some marked with now illegible chunks of granite and others noticeably devoid of any such designation.  Mournful and almost ghostly, a series of wailing sobs intermittently ripples along on the breeze and mingles with the ever-increasing shadows.</description>
+    <position x="560" y="40" z="0" />
+    <arc exit="north" move="rt north" destination="7" />
+    <arc exit="southwest" move="rt southwest" destination="9" />
+  </node>
+  <node id="9" name="Blackthorn Canyon, Lost Ground" color="#FFBF00">
+    <description>Murky and dismal, the heavy undergrowth continues to impede passage and crunches noisily underfoot.  The cacophony of savage howls and an incessant rustling in the nearby brush leave one to wonder what manner of beast lies in wait for any unsuspecting victim.</description>
+    <position x="480" y="120" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="8" />
+    <arc exit="southeast" move="rt southeast" destination="26" />
+    <arc exit="west" move="rt west" destination="27" />
+  </node>
+  <node id="10" name="Blackthorn Canyon, Lost Ground">
+    <description>Whether by day or by night, the thick mist enshrouds the earth like a blanket, though not a comforting cover.  The heavy haze obscures the direction and even the intensity of noises, making a snapping twig sound like a cracking whip or muting distant thunder to a muffled groan.</description>
+    <position x="380" y="0" z="0" />
+    <arc exit="north" move="north" destination="11" />
+    <arc exit="east" move="east" destination="2" />
+    <arc exit="southeast" move="southeast" destination="17" />
+    <arc exit="south" move="south" destination="16" />
+    <arc exit="southwest" move="southwest" destination="14" />
+  </node>
+  <node id="11" name="Blackthorn Canyon, Lost Ground">
+    <description>Darkness continues to seep through the heavy brush, dragging a hazy cloud of moisture along to accompany it.  Clinging vines weave their way in and out, their sole purpose being to entangle the limbs of the unwary in their unrelenting grasp.</description>
+    <position x="380" y="-20" z="0" />
+    <arc exit="south" move="south" destination="10" />
+    <arc exit="west" move="west" destination="12" />
+  </node>
+  <node id="12" name="Blackthorn Canyon, Lost Ground" color="#FFBF00">
+    <description>Dense clusters of white pine trees form patches of a dark canopy that casts deep shadows across the trail.  Rotting beams of severely weathered timber lie scattered about, providing yet another obstacle to navigation through the encroaching demon forest.</description>
+    <position x="360" y="-20" z="0" />
+    <arc exit="east" move="rt east" destination="11" />
+    <arc exit="south" move="rt south" destination="14" />
+    <arc exit="southwest" move="rt southwest" destination="13" />
+  </node>
+  <node id="13" name="Blackthorn Canyon, Lost Ground">
+    <description>Shrouded in a dense cloud of mist and partially covered by dry brush, several rusted caltrops lie haphazardly scattered across the hard ground.  Metal spikes form the four corners of each trap, one menacing skewer left to point upwards silently through the dark underbrush.  Ominously awaiting a victim, these malicious devices only serve to make the journey even more formidable for both man and beast.</description>
+    <position x="340" y="0" z="0" />
+    <arc exit="northeast" move="northeast" destination="12" />
+  </node>
+  <node id="14" name="Blackthorn Canyon, Lost Ground">
+    <description>Several small groupings of burial mounds line the brush-strewn pathway, some marked with now illegible chunks of granite and others noticeably devoid of any such designation.  Mournful and almost ghostly, a series of wailing sobs intermittently ripples along on the breeze and mingles with the ever-increasing shadows.</description>
+    <position x="360" y="20" z="0" />
+    <arc exit="north" move="north" destination="12" />
+    <arc exit="northeast" move="northeast" destination="10" />
+    <arc exit="southeast" move="southeast" destination="15" />
+  </node>
+  <node id="15" name="Blackthorn Canyon, Lost Ground" color="#FFBF00">
+    <description>Murky and dismal, the heavy undergrowth continues to impede passage and crunches noisily underfoot.  The cacophony of savage howls and an incessant rustling in the nearby brush leave one to wonder what manner of beast lies in wait for any unsuspecting victim.</description>
+    <position x="420" y="80" z="0" />
+    <arc exit="southeast" move="southeast" destination="23" />
+    <arc exit="southwest" move="southwest" destination="16" />
+    <arc exit="northwest" move="northwest" destination="14" />
+  </node>
+  <node id="16" name="Blackthorn Canyon, Lost Ground">
+    <description>Covered with thorny vines and random patches of clinging brownish-green moss, an old well dominates the center of the clearing.  Once a popular gathering spot for the gossipmongers that previously inhabited the region, the crumbling brick and limestone structure now reeks with the stench of rotting flesh.  The overwhelming odor may even lead to the belief that it has been used as a repository for more than a few unfortunate souls.</description>
+    <position x="380" y="120" z="0" />
+    <arc exit="north" move="north" destination="10" />
+    <arc exit="northeast" move="northeast" destination="15" />
+    <arc exit="south" move="south" destination="19" />
+    <arc exit="climb" move="climb old well" destination="46" />
+  </node>
+  <node id="17" name="Blackthorn Canyon, Lost Ground" color="#FFBF00">
+    <description>Gnarled and withered with age, the broad roots of an old oak tree crawl across the ground in a vain attempt to cling to life.  Covered by dense and thorny vines as thick as a grown man's arm, the roots are nearly hidden and provide another stumbling block to passage through the mysterious wood.</description>
+    <position x="420" y="40" z="0" />
+    <arc exit="northeast" move="northeast" destination="2" />
+    <arc exit="southeast" move="southeast" destination="18" />
+    <arc exit="south" move="south" destination="24" />
+    <arc exit="northwest" move="northwest" destination="10" />
+  </node>
+  <node id="18" name="Blackthorn Canyon, Lost Ground" color="#FFBF00">
+    <description>Thorny underbrush pervades the area, scratching at every passerby and slowing every pace.  Propped unceremoniously against a withered and twisted oak tree stands the rusted remains of an old sally-port, once used as a rapid means of both strike and retreat for the defenders.</description>
+    <position x="440" y="60" z="0" />
+    <arc exit="northeast" move="northeast" destination="29" />
+    <arc exit="south" move="south" destination="23" />
+    <arc exit="northwest" move="northwest" destination="17" />
+  </node>
+  <node id="19" name="Blackthorn Canyon, Lost Ground">
+    <description>Shrouded in a dense cloud of mist and partially covered by dry brush, several rusted caltrops lie haphazardly scattered across the hard ground.  Metal spikes form the four corners of each trap, one menacing skewer left to point upwards silently through the dark underbrush.  Ominously awaiting a victim, these malicious devices only serve to make the journey even more formidable for both man and beast.</description>
+    <position x="380" y="140" z="0" />
+    <arc exit="north" move="north" destination="16" />
+    <arc exit="northwest" move="northwest" destination="20" />
+  </node>
+  <node id="20" name="Blackthorn Canyon, Lost Ground">
+    <description>Heavily cloaked in thick vines, a ring of whitewashed limestone forms a partial barrier in the center of this clearing and appears to be the remains of a small dovecote.</description>
+    <position x="340" y="100" z="0" />
+    <arc exit="north" move="north" destination="21" />
+    <arc exit="southeast" move="southeast" destination="19" />
+    <arc exit="south" move="south" destination="40" />
+    <arc exit="go" move="go opening" destination="45" />
+  </node>
+  <node id="21" name="Blackthorn Canyon, Lost Ground">
+    <description>Heavy mists cast ever-thickening shadows across the hard flat ground.  Random slabs of drab grey lias and chunks of chert form the remnants of what once may have been the outer bailey of a mighty fortress.</description>
+    <position x="340" y="80" z="0" />
+    <arc exit="south" move="south" destination="20" />
+    <arc exit="west" move="west" destination="22" />
+  </node>
+  <node id="22" name="Blackthorn Canyon, Lost Ground">
+    <description>Bleak shadows weave their way in and out among the trees and overgrown shrubbery.  At once both foreboding and mysterious, the heavy forest continues to gradually shift and shape itself to fully invade the once-thriving bailey.</description>
+    <position x="320" y="80" z="0" />
+    <arc exit="east" move="east" destination="21" />
+  </node>
+  <node id="23" name="Blackthorn Canyon, Lost Ground" color="#FFBF00">
+    <description>Dense clusters of white pine trees form patches of a dark canopy that casts deep shadows across the trail.  Rotting beams of severely weathered timber lie scattered about, providing yet another obstacle to navigation through the encroaching demon forest.</description>
+    <position x="440" y="100" z="0" />
+    <arc exit="north" move="north" destination="18" />
+    <arc exit="northwest" move="northwest" destination="15" />
+  </node>
+  <node id="24" name="Blackthorn Canyon, Lost Ground" color="#FFBF00">
+    <description>Large blocks of crenellated stone jut up through the earth, weathered and bleached by the sun long before the demon forest encroached to block out its life-giving rays.  Random piles of crumbled mortar and rubble force travelers to weave their way carefully across the narrowed pathway.</description>
+    <position x="420" y="60" z="0" />
+    <arc exit="north" move="rt north" destination="17" />
+    <arc exit="southeast" move="rt southeast" destination="25" />
+  </node>
+  <node id="25" name="Blackthorn Canyon, Lost Ground">
+    <description>Scattered about like mere pebbles, several large boulders are dwarfed by the size of the old, rusted-out trebuchet left deserted in the center of the trail.  Barely clinging by one end to the rather ill-wrought siege engine, the heavy sling dangles to the ground like a giant razor strap.</description>
+    <position x="440" y="160" z="0" />
+    <arc exit="north" move="north" destination="27" />
+    <arc exit="east" move="east" destination="26" />
+    <arc exit="northwest" move="northwest" destination="24" />
+  </node>
+  <node id="26" name="Blackthorn Canyon, Lost Ground">
+    <description>Rows of thorny vines stretch their thick tendrils down from their stealthy breaches within the limestone wall.  Spreading their engorged fingers across the narrow lane, they make it essential to consider a careful footing at all times.</description>
+    <position x="520" y="160" z="0" />
+    <arc exit="northeast" move="northeast" destination="31" />
+    <arc exit="south" move="south" destination="34" />
+    <arc exit="southwest" move="southwest" destination="35" />
+    <arc exit="west" move="west" destination="25" />
+    <arc exit="northwest" move="northwest" destination="9" />
+  </node>
+  <node id="27" name="Blackthorn Canyon, Lost Ground">
+    <description>Bleak shadows weave their way in and out among the trees and overgrown shrubbery.  At once both foreboding and mysterious, the heavy forest gradually shifts and shapes itself to fully invade the once-thriving bailey.</description>
+    <position x="440" y="120" z="0" />
+    <arc exit="northeast" move="northeast" destination="28" />
+    <arc exit="east" move="east" destination="9" />
+    <arc exit="south" move="south" destination="25" />
+  </node>
+  <node id="28" name="Blackthorn Canyon, Lost Ground">
+    <description>Several small groupings of burial mounds line the brush-strewn pathway, some marked with now illegible chunks of granite and others noticeably devoid of any such designation.  Mournful and almost ghostly, a series of wailing sobs intermittently ripples along on the breeze and mingles with the ever-increasing shadows.</description>
+    <position x="480" y="80" z="0" />
+    <arc exit="north" move="north" destination="29" />
+    <arc exit="northeast" move="northeast" destination="5" />
+    <arc exit="southeast" move="southeast" destination="30" />
+    <arc exit="southwest" move="southwest" destination="27" />
+  </node>
+  <node id="29" name="Blackthorn Canyon, Lost Ground">
+    <description>Shrouded in a dense cloud of mist and partially covered by dry brush, several rusted caltrops lie haphazardly scattered across the hard ground.  Metal spikes form the four corners of each trap, one menacing skewer left to point upwards silently through the dark underbrush.  Ominously awaiting a victim, these malicious devices only serve to make the journey even more formidable for both man and beast.</description>
+    <position x="480" y="20" z="0" />
+    <arc exit="north" move="north" destination="3" />
+    <arc exit="east" move="east" destination="5" />
+    <arc exit="south" move="south" destination="28" />
+    <arc exit="southwest" move="southwest" destination="18" />
+    <arc exit="northwest" move="northwest" destination="2" />
+  </node>
+  <node id="30" name="Blackthorn Canyon, Lost Ground">
+    <description>Piles of bleached, old bones are scattered across the trail.  The inquisitive traveler might wonder if these are the bleak remains of those souls for whom there was no time for burial before a hasty retreat became necessary.</description>
+    <position x="520" y="120" z="0" />
+    <arc exit="northeast" move="northeast" destination="32" />
+    <arc exit="east" move="east" destination="31" />
+    <arc exit="northwest" move="northwest" destination="28" />
+  </node>
+  <node id="31" name="Blackthorn Canyon, Lost Ground">
+    <description>Massive slabs of freestone lining the brush-covered trail are still heavily coated with a permanent layer of slick lime-wash.  The broken vine-clad stones make for a slippery trek, demonstrating one of the many ways the old wall was designed to deter intruders.</description>
+    <position x="560" y="120" z="0" />
+    <arc exit="southeast" move="southeast" destination="33" />
+    <arc exit="southwest" move="southwest" destination="26" />
+    <arc exit="west" move="west" destination="30" />
+  </node>
+  <node id="32" name="Blackthorn Canyon, Lost Ground">
+    <description>Shrouded in a dense cloud of mist and partially covered by dry brush, several rusted caltrops lie haphazardly scattered across the hard ground.  Metal spikes form the four corners of each trap, one menacing skewer left to point upwards silently through the dark underbrush.  Ominously awaiting a victim, these malicious devices only serve to make the journey even more formidable for both man and beast.</description>
+    <position x="560" y="140" z="0" />
+    <arc exit="east" move="east" destination="33" />
+    <arc exit="southwest" move="southwest" destination="30" />
+  </node>
+  <node id="33" name="Blackthorn Canyon, Lost Ground">
+    <description>Large blocks of crenellated stone jut up through the earth, weathered and bleached by the sun long before the demon forest encroached to block out its life-giving rays.  Random piles of crumbled mortar and rubble force travelers to weave their way carefully across the narrowed pathway.</description>
+    <position x="580" y="140" z="0" />
+    <arc exit="west" move="west" destination="32" />
+    <arc exit="northwest" move="northwest" destination="31" />
+  </node>
+  <node id="34" name="Blackthorn Canyon, Lost Ground" color="#FFBF00">
+    <description>Whether by day or by night, the thick mist enshrouds the earth like a blanket, though not a comforting cover.  The heavy haze obscures the direction and even the intensity of noises, making a snapping twig sound like a cracking whip or muting distant thunder to a muffled groan.</description>
+    <position x="520" y="180" z="0" />
+    <arc exit="north" move="rt north" destination="26" />
+    <arc exit="southeast" move="rt southeast" destination="43" />
+    <arc exit="south" move="rt south" destination="41" />
+  </node>
+  <node id="35" name="Blackthorn Canyon, Lost Ground">
+    <description>Dense clusters of white pine trees form patches of a dark canopy that casts deep shadows across the trail.  Rotting beams of severely weathered timber lie scattered about, providing yet another obstacle to navigation through the encroaching demon forest.</description>
+    <position x="430" y="230" z="0" />
+    <arc exit="northeast" move="northeast" destination="26" />
+    <arc exit="southeast" move="southeast" destination="37" />
+    <arc exit="southwest" move="southwest" destination="38" />
+    <arc exit="northwest" move="northwest" destination="36" />
+  </node>
+  <node id="36" name="Blackthorn Canyon, Lost Ground" color="#FFBF00">
+    <description>Shrouded in a dense cloud of mist and partially covered by dry brush, several rusted caltrops lie haphazardly scattered across the hard ground.  Metal spikes form the four corners of each trap, one menacing skewer left to point upwards silently through the dark underbrush.  Ominously awaiting a victim, these malicious devices only serve to make the journey even more formidable for both man and beast.</description>
+    <position x="400" y="200" z="0" />
+    <arc exit="southeast" move="rt southeast" destination="35" />
+    <arc exit="south" move="rt south" destination="38" />
+    <arc exit="southwest" move="southwest" destination="39" />
+    <arc exit="northwest" move="rt northwest" destination="40" />
+  </node>
+  <node id="37" name="Blackthorn Canyon, Lost Ground">
+    <description>Large blocks of crenellated stone jut up through the earth, weathered and bleached by the sun long before the demon forest encroached to block out its life-giving rays.  Random piles of crumbled mortar and rubble force travelers to weave their way carefully across the narrowed pathway.</description>
+    <position x="460" y="260" z="0" />
+    <arc exit="east" move="east" destination="41" />
+    <arc exit="northwest" move="northwest" destination="35" />
+  </node>
+  <node id="38" name="Blackthorn Canyon, Lost Ground">
+    <description>Heavy mists cast ever-thickening shadows across the hard flat ground.  Random slabs of drab grey lias and chunks of chert form the remnants of what once may have been the outer bailey of a mighty fortress.</description>
+    <position x="400" y="260" z="0" />
+    <arc exit="north" move="north" destination="36" />
+    <arc exit="northeast" move="northeast" destination="35" />
+  </node>
+  <node id="39" name="Blackthorn Canyon, Lost Ground" color="#FFBF00">
+    <description>Whether by day or by night, the thick mist enshrouds the earth like a blanket, though not a comforting cover.  The heavy haze obscures the direction and even the intensity of noises, making a snapping twig sound like a cracking whip or muting distant thunder to a muffled groan.</description>
+    <position x="340" y="260" z="0" />
+    <arc exit="north" move="north" destination="40" />
+    <arc exit="northeast" move="northeast" destination="36" />
+  </node>
+  <node id="40" name="Blackthorn Canyon, Lost Ground" color="#FFBF00">
+    <description>Piles of bleached, old bones are scattered across the trail.  The inquisitive traveler might wonder if these are the bleak remains of those souls for whom there was no time for burial before a hasty retreat became necessary.</description>
+    <position x="340" y="140" z="0" />
+    <arc exit="north" move="north" destination="20" />
+    <arc exit="southeast" move="southeast" destination="36" />
+    <arc exit="south" move="south" destination="39" />
+  </node>
+  <node id="41" name="Blackthorn Canyon, Lost Ground" color="#FFBF00">
+    <description>Heavy mists cast ever-thickening shadows across the hard flat ground.  Random slabs of drab grey lias and chunks of chert form the remnants of what once may have been the outer bailey of a mighty fortress.</description>
+    <position x="520" y="260" z="0" />
+    <arc exit="north" move="rt north" destination="34" />
+    <arc exit="east" move="rt east" destination="42" />
+    <arc exit="west" move="rt west" destination="37" />
+  </node>
+  <node id="42" name="Blackthorn Canyon, Lost Ground" color="#FFBF00">
+    <description>Darkness continues to seep through the heavy brush, dragging a hazy cloud of moisture along to accompany it.  Clinging vines weave their way in and out, their sole purpose being to entangle the limbs of the unwary in their unrelenting grasp.</description>
+    <position x="560" y="260" z="0" />
+    <arc exit="north" move="rt north" destination="43" />
+    <arc exit="west" move="rt west" destination="41" />
+  </node>
+  <node id="43" name="Blackthorn Canyon, Lost Ground" color="#FFBF00">
+    <description>Ever mysterious and relentlessly pulsating against the hard stone wall, the demon forest struggles to extend its mastery over the mist-covered ground.  A stern silence is broken at intervals only by pieces of a battle-torn rampart tumbling down from the top of the vine-covered wall.</description>
+    <position x="560" y="220" z="0" />
+    <arc exit="south" move="south" destination="42" />
+    <arc exit="northwest" move="northwest" destination="34" />
+  </node>
+  <node id="44" name="Blackthorn Canyon, Before the Wall" note="Map68_Shard_South_Gate.xml|Shard|Derelict Road|Whistling Wood">
+    <description>With scarcely a welcoming tree or morsel of grass on the canyon floor, birds flying over it seem to carry their provisions with them.  A few alight on the wall's parapets, but quickly fly off when the bustle of constant activity moves too close.</description>
+    <description>Flickering torches outline the wall's crenellated battlements against the night sky.  Along the top of the wall, shadowy figures flash in and out of view as they pass each merlon and crenel.</description>
+    <position x="460" y="-60" z="0" />
+    <arc exit="north" move="north" />
+    <arc exit="east" move="east" />
+    <arc exit="west" move="west" />
+    <arc exit="go" move="go gate" destination="1" />
+  </node>
+  <node id="45" name="Lost Ground, Dovecote">
+    <description>Centered around a decaying timber frame, only a random scattering of crumbled nesting compartments reveals any prior function this small building may have served.  Layers of hard-packed droppings litter the earthen floor.  A smaller ladder rests against the remaining limestone wall.</description>
+    <position x="330" y="100" z="0" />
+    <arc exit="go" move="go squat opening" destination="20" />
+  </node>
+  <node id="46" name="Lost Ground, Inside the Well">
+    <description>Pitch-black darkness engulfs the unwary soul who ventures here.  The smell of moldering flesh intermingles with the dankness of slimy puddles of water scattered randomly about.  High overhead is a small opening that holds the briefest glimpse of light and the only possible means of escape.</description>
+    <position x="390" y="120" z="0" />
+    <arc exit="climb" move="climb small opening" destination="16" />
+  </node>
+</zone>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Magma Falls" id="0">
+  <node id="1" name="Magma Falls, Lava Promenade" note="Lava Promenade">
+    <description>Walking here is precarious as the path narrows to reveal liquid pools of brilliant orange far below on either side.  Dripping from the monumentally tall dome overhead, molten rock cascades downward in sporadic streams to border the raised thoroughfare.  Glimpses of the surrounding social areas within the volcano are distorted by the waves of heat radiating upward from the fiery depths.</description>
+    <position x="160" y="80" z="0" />
+    <arc exit="north" move="north" destination="3" />
+    <arc exit="south" move="south" destination="2" />
+    <arc exit="go" move="go rope bridge" destination="5" />
+    <arc exit="go" move="go narrow ledge" destination="6" />
+  </node>
+  <node id="2" name="Magma Falls, Tunnel" note="Tunnel">
+    <description>Glowstones embedded in the low, arched ceiling take the shape of fireflies, the sculpted insects swirling purposely to direct visitors toward the promenade.  Both ground and walls bear no adornment, allowing the soft luminescence from above to reflect throughout the space.  The effect is surreal and slightly disorienting, as if the shining stone possessed limitless depths beyond its glassy surface.</description>
+    <position x="160" y="100" z="0" />
+    <arc exit="north" move="north" destination="1" />
+  </node>
+  <node id="3" name="Magma Falls, Lava Promenade">
+    <description>The churning of the lava below combined with the intermittent flow of molten rock from above creates an atmospheric gurgling sound.  Fortunately, the central walkway is designed to avoid harmful contact with the scenery, yet allow one to feel the heat and see the fury.  Flickers of torchlight are visible to the north and in the darkness across the chasms on both sides of the path.</description>
+    <position x="160" y="60" z="0" />
+    <arc exit="north" move="north" destination="4" />
+    <arc exit="south" move="south" destination="1" />
+    <arc exit="go" move="go wooden overpass" destination="10" />
+  </node>
+  <node id="4" name="Magma Falls, Ceremonial Cavern" note="Ceremonial Cavern|Cavern">
+    <description>Exactly how high the dome stretches overhead is indeterminable, so the dangling glowstones fleck the darkness like captured stars piercing an eternal night.  Dozens of candles rest upon the obsidian altar, their wavering flames supplying just enough illumination for guests to find their seats in the stone pews astride the center aisle.  Decorative carvings in the floor meander around the room and onto the walls, producing a primitive yet aesthetic embellishment.</description>
+    <position x="160" y="40" z="0" />
+    <arc exit="south" move="south" destination="3" />
+  </node>
+  <node id="5" name="Magma Falls, Toasting Pit" note="Toasting Pit">
+    <description>Several stone benches erupt out of the rock floor to encircle a small glowing hole.  Noise echoes around the low-domed space, allowing tones of laughter and joy to soften the hard surroundings.  Simple tapestries outfit the walls, and smoke from the firepit weaves around the tall stalagmites and chiseled balustrade, dampening the view of the promenade over the chasm.</description>
+    <position x="200" y="80" z="0" />
+    <arc exit="north" move="north" destination="9" />
+    <arc exit="go" move="go rope bridge" destination="1" />
+  </node>
+  <node id="6" name="Magma Falls, Escarpment" note="Escarpment">
+    <description>Fashioned into a balcony, the open-air ledge offers an escape from the entertainment inside.  The view over the chiseled stone rail depicts Elanthia in miniature, with pinpricks of color abounding in the natural landscape.  Fresh breezes chase away the heat and carry a pure, refreshing scent emanating from beyond the cavern walls.</description>
+    <position x="120" y="80" z="0" />
+    <arc exit="north" move="north" destination="7" />
+    <arc exit="go" move="go narrow ledge" destination="1" />
+  </node>
+  <node id="7" name="Magma Falls, Basalt Ballroom" note="Basalt Ballroom|Ballroom">
+    <description>Artful etchings in the ground outline a broad dance floor.  Streams of lava pouring into the chasm below from beyond the room's western edge create an enchanting backdrop for guests engaging in their leisurely pursuits.  Harmonious notes float through the air from apertures in the rock, likely from skilled musicians somewhere unseen.</description>
+    <position x="120" y="60" z="0" />
+    <arc exit="south" move="south" destination="6" />
+    <arc exit="go" move="go mist-filled opening" destination="8" />
+  </node>
+  <node id="8" name="Magma Falls, Private Grotto" note="Private Grotto|Grotto">
+    <description>Curiously alien amongst the igneous enclave, a circular pool in the room's center provides an exotic contrast to the volcano's interior as well as ambient underwater lighting.  Garlands of night-blooming lilies are suspended from the low curved ceiling, their blossoms lush and fragrant in the humid environment.  Deep hollows are carved in the side walls, each filled with pillows and perfect for intimate encounters.</description>
+    <position x="120" y="40" z="0" />
+    <arc exit="go" move="go mist-filled opening" destination="7" />
+  </node>
+  <node id="9" name="Magma Falls, Chamber of Respite" note="Chamber of Respite|Respite">
+    <description>Clean linen cloths drape across the stony wall, alluding to the meticulous upkeep of the brightly-lit area.  In between large stalactites to the north and south, a variety of surfaces offers guests the opportunity to choose from a fine selection of food and drink.  Soft burbling sounds from the river of lava below the precipice join with the conversations to make a most inviting atmosphere.</description>
+    <position x="200" y="60" z="0" />
+    <arc exit="north" move="north" destination="10" />
+    <arc exit="south" move="south" destination="5" />
+  </node>
+  <node id="10" name="Magma Falls, Obsidian Lounge" note="Obsidian Lounge|Lounge">
+    <description>Each round stone table is accompanied by a collection of matching chairs.  Ambient candles on each tabletop reveal hints of the humble setting, allowing adequate lighting for dining comfortably.  Stout Dwarven waiters bustle through occasionally to clear used dishes so the room is always immaculate.</description>
+    <position x="200" y="40" z="0" />
+    <arc exit="south" move="south" destination="9" />
+    <arc exit="go" move="go wooden overpass" destination="3" />
+  </node>
+  <label text="Tunnel">
+    <position x="141" y="104" z="0" />
+  </label>
+  <label text="Ceremonial Cavern">
+    <position x="111" y="10" z="0" />
+  </label>
+  <label text="Private Grotto">
+    <position x="43" y="32" z="0" />
+  </label>
+  <label text="Obsidian Lounge">
+    <position x="206" y="32" z="0" />
+  </label>
+  <label text="Basalt Ballroom">
+    <position x="38" y="52" z="0" />
+  </label>
+  <label text="Toasting Pit">
+    <position x="204" y="73" z="0" />
+  </label>
+  <label text="Chamber of Respite">
+    <position x="204" y="53" z="0" />
+  </label>
+</zone>

@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Misenseor Abbey" id="12a">
+  <node id="1" name="Dense Copse, Clearing">
+    <description>The dense mass of trees over to the west thins here at the edge of the forest.  The overhead foilage parts in places to reveal patches of the night sky above.  From somewhere nearby the sound of rushing water can be heard.</description>
+    <description>The dense mass of trees over to the west thins here at the edge of the forest.  Light filters in to splatter the underbrush with patches of brightness.  From somewhere nearby the sound of rushing water can be heard.</description>
+    <position x="-280" y="40" z="0" />
+    <arc exit="east" move="east" destination="2" />
+    <arc exit="west" move="west" destination="58" />
+  </node>
+  <node id="2" name="Suspension Bridge, Approach" note="Suspension Bridge">
+    <description>Mist wafts up from the depths of a deep gorge to hang thick and oppressive in the night air.  The steady drone of rushing water drowns out any forest sounds as it beats against the stone walls of the chasm and the boulders far below.  On the far side of the gorge a large rock juts up as a dark shadow sitting in wait on the edge of the precipice.</description>
+    <description>Mist wafts up from the depths of a deep gorge to hang thick and oppressive in the air.  The steady drone of rushing water drowns out any forest sounds as it beats against the stone walls of the chasm and the boulders far below.  On the far side of the gorge a large rock juts up on the edge of the precipice as if contemplating a fateful leap.</description>
+    <position x="-260" y="40" z="0" />
+    <arc exit="west" move="west" destination="1" />
+    <arc exit="go" move="go rope bridge" destination="3" />
+  </node>
+  <node id="3" name="Precipice Edge" note="Precipice Edge">
+    <description>If not for the constant sound of rushing water to reveal its presence in the gloom, it might be possible to unknowingly step from the edge of this deep chasm and fall into the inky blackness.  The trees of the nearby woods march like an army to the edge of the gorge.</description>
+    <description>Time and rushing water have carved a deep gorge through the wilderness.  A heavy mist hangs in the air, proof of the passage of the rapids far below.  Frayed cords and a couple of clinging planks are all that remain of a suspension bridge that fell into rocky chasm.</description>
+    <position x="-260" y="20" z="0" />
+    <arc exit="north" move="north" destination="4" />
+    <arc exit="go" move="go rope bridge" destination="2" />
+  </node>
+  <node id="4" name="Misenseor Abbey, Wilderness Clearing" note="Wilderness Clearing">
+    <description>A thick mist hangs over all that remains of a once well-used path -- a few paving stones now broken, cracked, and thrusting from the ground at odd angles.  Constructed of an unusual dark stone, a temple emerges from the mist to loom up in defiance over the night-shrouded wilderness.  A stairway of black granite rises from the forest floor, ending at the entrance to the temple, which is carved in the semblance of a gaping serpentine mouth.</description>
+    <description>All that remains of a once well-used path are a few paving stones -- now broken, cracked, and thrusting from the ground at odd angles.  Constructed of an unusual dark stone, a massive temple looms up in defiance over the surrounding wilderness.  The untamed forest closes in from all sides, trees reaching skyward as if to choke out the heavens.  A stairway of black granite rises from the forest floor, ending at the shadowed entrance, which is carved in the semblance of a gaping serpentine mouth.</description>
+    <position x="-260" y="0" z="0" />
+    <arc exit="south" move="south" destination="3" />
+    <arc exit="go" move="go granite stairway" destination="5" />
+  </node>
+  <node id="5" name="Misenseor Abbey, Alcove" note="Alcove">
+    <description>A thin layer of dust veils the polished black marble floor of this small chamber.  Iron torch sconces set in the walls provide no light, yet one can still make out the piles of leaves and debris that have blown in over time.  Granite benches have been placed on either side of an elaborately carved archway.  Two large serpentine incense burners, long since extinguished, still give off an exotic fragrance from a distant time.</description>
+    <position x="-260" y="-20" z="0" />
+    <arc exit="out" move="out" destination="4" />
+    <arc exit="go" move="go carved archway" destination="6" />
+  </node>
+  <node id="6" name="Misenseor Abbey, High Altar Chamber" note="Shrine1-12|Misenseor Abbey|High Altar Chamber" color="#A6A3D9">
+    <description>Wavering light produced by several glowing braziers offers enough illumination to make out discernible shapes.  A series of thirteen stone columns thrusts up from the black marble floor, the tops lost in the inky darkness high above.  Arrayed in a sweeping arc, these great columns stand like a ring of guardians, bringing focus to the high altar that rests upon a raised dais.  As if tended by unseen servants, this place of power has remained in pristine condition despite the passage of time.</description>
+    <position x="-260" y="-60" z="0" />
+    <arc exit="east" move="east" destination="7" />
+    <arc exit="out" move="out" destination="5" />
+    <arc exit="go" move="go iron grate" destination="9" />
+    <arc exit="go" move="go ironbound door" destination="10" />
+    <arc exit="go" move="go secret hatchway" destination="18" />
+  </node>
+  <node id="7" name="Misenseor Abbey, Refectory" note="Refectory">
+    <description>Years of accumulated dust rise slowly into the air, lending an unnatural quality to this neglected room.  Spanning the length of the chamber, a large wooden table stained with age and worn smooth still remains mostly intact.  Draped in a ghostly shroud of cobwebs, a chandelier hangs suspended over the center of the room, its light and warmth long ago extinguished.  The conversations and meals once held in this place are themselves spirits of the past, buried with the dead, never to be replayed again.</description>
+    <position x="-240" y="-60" z="0" />
+    <arc exit="north" move="north" destination="8" />
+    <arc exit="west" move="west" destination="6" />
+  </node>
+  <node id="8" name="Misenseor Abbey, Library">
+    <description>The musty scent of ancient parchment and leather permeates this small room, giving one cause to wonder how long since another has walked these floors.  An unnatural chill fills the air, most likely never to be dispelled by the warmth of any mortal fire.  Cobwebs lie like lacy veils over many of the room's furnishings.  A finely embroidered tapestry hangs over the mantel of a small fireplace.  Strangely a hushed stillness lies over the room, nagging at the back of the mind.</description>
+    <position x="-240" y="-80" z="0" />
+    <arc exit="south" move="south" destination="7" />
+  </node>
+  <node id="9" name="Misenseor Abbey, Hidden Cell">
+    <description>Covered by an iron grate, this small space located under the temple altar provides little room to stand erect.  The dark granite stones forming the cell are littered with moldering straw and bits of cloth.  The purpose for this cramped cell can only be imagined, but the claw-like marks left behind by some poor creature suggest a horrific tale.</description>
+    <position x="-260" y="-80" z="0" />
+    <arc exit="go" move="go iron grate" destination="6" />
+  </node>
+  <node id="10" name="Misenseor Abbey, Hallway">
+    <description>A long narrow stone hallway, whose ceiling is hidden deep in shadow, connects the main altar chamber to areas deeper within the temple.  Cold and dark, blackened iron torch sconces line the walls providing no comfort to this cramped passage.  Only the eerie echo of your every step breaks the tomblike silence.  At the north end of the hall an opening allows dim light from the outside to filter in.</description>
+    <position x="-280" y="-60" z="0" />
+    <arc exit="north" move="north" destination="11" />
+    <arc exit="go" move="go ironbound door" destination="6" />
+    <arc exit="go" move="go oak door" destination="16" />
+  </node>
+  <node id="11" name="Misenseor Abbey, Terrace">
+    <description>The once well-maintained terrace now stands in a state of disrepair.  Severe weathering has eroded the mortar, causing many of the granite stones to tumble to the ground.  The gloom of the night makes the crumbling stairway to the temple grounds below all the more treacherous.</description>
+    <position x="-280" y="-80" z="0" />
+    <arc exit="south" move="south" destination="10" />
+    <arc exit="climb" move="climb crumbling stairway" destination="12" />
+  </node>
+  <node id="12" name="Misenseor Abbey, Courtyard">
+    <description>A crumbling colonnade of darkly stained stone encircles the courtyard, silent watchmen frozen by time.  Piles of leaves, stirred by the night wind, chase unseen spirits to the edges of the courtyard where they are vanquished by the stone columns.</description>
+    <position x="-280" y="-100" z="0" />
+    <arc exit="west" move="west" destination="13" />
+    <arc exit="climb" move="climb crumbling stairway" destination="11" />
+  </node>
+  <node id="13" name="Misenseor Abbey, Garden">
+    <description>The darkness of the night is deepened by the shadow of the temple itself.  The once lush and exotic plants that flourished here have long ago succumbed to the parasitic weeds and fungus that now call the temple gardens their home.  Creepers and vines take on an otherworldly appearance in the deepening obscurity of night.  Stone statues, suffocating under the onslaught of the vines, raise their arms to the night skies, beseeching the gods for mercy from their inevitable fate.</description>
+    <position x="-300" y="-100" z="0" />
+    <arc exit="east" move="east" destination="12" />
+    <arc exit="go" move="go rusting gate" destination="14" />
+  </node>
+  <node id="14" name="Misenseor Abbey, Forest Clearing">
+    <description>The forest clearing is devoid of life -- not a single plant, bird or insect can be heard or seen.  Rising in the center of the clearing is a small mound, atop which stands a structure made of polished black onyx, a darker shadow against the night sky.  Thirteen stones, distinct against the barren earth, make a rough staircase up to the entrance of a mausoleum.</description>
+    <position x="-320" y="-100" z="0" />
+    <arc exit="go" move="go gate" destination="13" />
+    <arc exit="go" move="go stones" destination="15" />
+  </node>
+  <node id="15" name="Misenseor Abbey, Mausoleum">
+    <description>The stale air mixed with the scent of desiccated flesh is overpowering.  This corrupted odor, one that only the dead are wholly familiar with, threatens to leave living intruders gasping for breath.  Faint light barely penetrates into the structure, creating spectral shadows that dart about with every move.  Simple plaques, green with verdigris, are fitted to the capstones that line the walls.  A stray ray of light reflects upon a golden urn resting atop a serpentine pillar at the head of the chamber.</description>
+    <position x="-340" y="-100" z="0" />
+    <arc exit="out" move="out" destination="14" />
+  </node>
+  <node id="16" name="Misenseor Abbey, Private Chambers">
+    <description>The stench of rotting paper emanating from two ceiling-high bookcases makes the thick air difficult to breathe.  Standing like a sentinel against the ravages of decay and time, a massive ironwood desk dominates the western wall.  Moldering black velveteen drapes, having failed in their task to shelter this room from the elements, hang in tatters about a stone archway leading out onto a balcony.</description>
+    <position x="-300" y="-60" z="0" />
+    <arc exit="go" move="go stone archway" destination="17" />
+    <arc exit="go" move="go oak door" destination="10" />
+  </node>
+  <node id="17" name="Private Quarters, Balcony">
+    <description>The darkness of the wilderness below rises up to meet the night sky in a seamless blanket of the deepest black.  If not for the comfort of the crumbling stone railing, the illusion of being enveloped by the night would be complete.  Exposed on the northern side of the temple, the balcony is buffeted by harsh chilling winds that whistle and moan through the slits in the railing.  Directly below, the faint outline of the gardens lurks.</description>
+    <position x="-320" y="-60" z="0" />
+    <arc exit="go" move="go stone archway" destination="16" />
+  </node>
+  <node id="18" name="Misenseor Abbey, Narrow Stairway">
+    <description>A narrow, winding staircase has been chiseled into the bedrock foundation of the temple.  Twisting around a corner, the spiral passageway disappears into the unknown.  Stale air wafting up from the subterranean passages below carries with it a hint of rot and decay.  Moss and algae grow thickly on the stone steps, making for a dangerously slippery descent.</description>
+    <position x="-220" y="-20" z="0" />
+    <arc exit="down" move="down" destination="19" />
+    <arc exit="out" move="out" destination="6" />
+  </node>
+  <node id="19" name="Misenseor Abbey, Narrow Stairway">
+    <description>If not for the dim light seeping in from above this narrow stairway would be cast in total darkness.  Stone stairs slick with moss and algae present a deadly consequence for the unwary.  The cramped confine of the stone passageway is magnified by the fetid air rising from deep below.</description>
+    <position x="-220" y="0" z="0" />
+    <arc exit="up" move="up" destination="18" />
+    <arc exit="down" move="down" destination="20" />
+  </node>
+  <node id="20" name="Misenseor Abbey, Narrow Stairway">
+    <description>This narrow, winding staircase has been chiseled in the bedrock foundation of the temple.  Far above, the spiral passageway disappears as it twists around a corner.  The faintest of light cuts the gloom as the stairway opens into the darkness of a chamber below.</description>
+    <position x="-220" y="20" z="0" />
+    <arc exit="up" move="up" destination="19" />
+    <arc exit="down" move="down" destination="21" />
+  </node>
+  <node id="21" name="Misenseor Abbey, Catacombs" note="Catacombs">
+    <description>Solid rock has been hewn away to form a crude antechamber.  The stone walls and ceiling seem to press in as if trying to stifle all light, sound, and life that would dare to enter.  A skeleton leans in final rest against a large iron gate that separates the antechamber from the catacombs beyond.  Peculiar growths have sprouted from the cracks in the floor, fed by the stagnant pools of water and perpetual darkness.</description>
+    <position x="-220" y="60" z="0" />
+    <arc exit="go" move="go narrow stairway" destination="20" />
+    <arc exit="go" move="go iron gate" destination="22" />
+  </node>
+  <node id="22" name="Catacombs, Labyrinth">
+    <description>The air is cool and damp, laced with a strong malodorous scent coming from the passages beyond.  Small bits of shattered bone, torn clothing, shreds of leather and other debris litter the floor.  Near the gate, the walls are deeply scored and scratched as if something had tried to claw its way through to the other side.</description>
+    <position x="-120" y="60" z="0" />
+    <arc exit="northeast" move="northeast" destination="26" />
+    <arc exit="northwest" move="northwest" destination="23" />
+    <arc exit="go" move="go iron gate" destination="21" />
+  </node>
+  <node id="23" name="Catacombs, Labyrinth">
+    <description>A myriad of decayed cadavers lie in hastily constructed alcoves along both sides of the passage.  Twisting and turning, these halls of the dead quickly disorient and confuse.  Small pools of water, putrid with rot, fill the depressions in the uneven floor, and the odor of decay is overpowering.  An occasional alcove sits empty, giving one cause to wonder where the previous occupant now lies.</description>
+    <position x="-140" y="40" z="0" />
+    <arc exit="north" move="north" destination="24" />
+    <arc exit="southeast" move="southeast" destination="22" />
+    <arc exit="west" move="west" destination="27" />
+  </node>
+  <node id="24" name="Catacombs, Labyrinth">
+    <description>A myriad of decayed cadavers lie in hastily constructed alcoves along both sides of the passage.  Twisting and turning, these halls of the dead quickly disorient and confuse.  Small pools of water, putrid with rot, fill the depressions in the uneven floor, and the odor of decay is overpowering.  An occasional alcove sits empty, giving one cause to wonder where the previous occupant now lies.</description>
+    <position x="-140" y="0" z="0" />
+    <arc exit="east" move="east" destination="25" />
+    <arc exit="south" move="south" destination="23" />
+  </node>
+  <node id="25" name="Catacombs, Labyrinth">
+    <description>A myriad of decayed cadavers lie in hastily constructed alcoves along both sides of the passage.  Twisting and turning, these halls of the dead quickly disorient and confuse.  Small pools of water, putrid with rot, fill the depressions in the uneven floor, and the odor of decay is overpowering.  An occasional alcove sits empty, giving one cause to wonder where the previous occupant now lies.</description>
+    <position x="-100" y="0" z="0" />
+    <arc exit="south" move="south" destination="26" />
+    <arc exit="west" move="west" destination="24" />
+  </node>
+  <node id="26" name="Catacombs, Labyrinth">
+    <description>A myriad of decayed cadavers lie in hastily constructed alcoves along both sides of the passage.  Twisting and turning, these halls of the dead quickly disorient and confuse.  Small pools of water, putrid with rot, fill the depressions in the uneven floor, and the odor of decay is overpowering.  An occasional alcove sits empty, giving one cause to wonder where the previous occupant now lies.</description>
+    <position x="-100" y="40" z="0" />
+    <arc exit="north" move="north" destination="25" />
+    <arc exit="east" move="east" destination="39" />
+    <arc exit="southwest" move="southwest" destination="22" />
+  </node>
+  <node id="27" name="Catacombs, Labyrinth">
+    <description>Rubble and debris fill this burial chamber, a result of the partial collapse of the ceiling.  Many of the deceased once housed here have been crushed under the weight of the fallen stone.  Water flows freely down the western wall forming a stagnant pool.  A large iron gate once allowing egress into another region of the catacombs lies twisted and broken.</description>
+    <position x="-160" y="40" z="0" />
+    <arc exit="north" move="north" destination="28" />
+    <arc exit="east" move="east" destination="23" />
+  </node>
+  <node id="28" name="Catacombs, Labyrinth">
+    <description>A myriad of decayed cadavers lie in hastily constructed alcoves along both sides of the passage.  Twisting and turning, these halls of the dead quickly disorient and confuse.  Small pools of water, putrid with rot, fill the depressions in the uneven floor, and the odor of decay is overpowering.  An occasional alcove sits empty, giving one cause to wonder where the previous occupant now lies.</description>
+    <position x="-160" y="0" z="0" />
+    <arc exit="north" move="north" destination="29" />
+    <arc exit="south" move="south" destination="27" />
+  </node>
+  <node id="29" name="Catacombs, Labyrinth">
+    <description>A myriad of decayed cadavers lie in hastily constructed alcoves along both sides of the passage.  Twisting and turning, these halls of the dead quickly disorient and confuse.  Small pools of water, putrid with rot, fill the depressions in the uneven floor, and the odor of decay is overpowering.  An occasional alcove sits empty, giving one cause to wonder where the previous occupant now lies.</description>
+    <position x="-180" y="-20" z="0" />
+    <arc exit="north" move="north" destination="28" />
+    <arc exit="south" move="south" destination="30" />
+  </node>
+  <node id="30" name="Catacombs, Labyrinth">
+    <description>A myriad of decayed cadavers lie in hastily constructed alcoves along both sides of the passage.  Twisting and turning, these halls of the dead quickly disorient and confuse.  Small pools of water, putrid with rot, fill the depressions in the uneven floor, and the odor of decay is overpowering.  An occasional alcove sits empty, giving one cause to wonder where the previous occupant now lies.</description>
+    <position x="-160" y="-40" z="0" />
+    <arc exit="east" move="east" destination="31" />
+    <arc exit="south" move="south" destination="29" />
+  </node>
+  <node id="31" name="Catacombs, Labyrinth">
+    <description>The narrow confines of these twisting maze-like tunnels cause every sound to reverberate eerily, as if the dead that line the walls are repeating the sounds in childlike imitation.  The putrefying flesh of hundreds of corpses has served as an immeasurable feast for the incalculable vermin inhabiting this subterranean realm.  Each alcove passed provides another glimpse into the long, dark past of the temple residents.</description>
+    <position x="-140" y="-40" z="0" />
+    <arc exit="northeast" move="northeast" destination="57" />
+    <arc exit="south" move="south" destination="33" />
+    <arc exit="west" move="west" destination="30" />
+  </node>
+  <node id="32" name="Catacombs, Labyrinth">
+    <description>The claustrophobic confines of the twisting hallways serve as an unnerving reminder of their purpose.  Hundreds of corpses have been crammed tightly into the narrow niches lining the walls.  The sheer number lends credence to the dark efficiency of the temple's previous inhabitants.  Rodents and vermin -- well-fed and vicious -- dart menacingly about in the shadows.</description>
+    <position x="-100" y="-80" z="0" />
+    <arc exit="northeast" move="northeast" destination="52" />
+    <arc exit="northwest" move="northwest" destination="54" />
+    <arc exit="go" move="go stairway" destination="57" />
+  </node>
+  <node id="33" name="Catacombs, Labyrinth">
+    <description>The narrow confines of these twisting maze-like tunnels cause every sound to reverberate eerily, as if the dead that line the walls are repeating the sounds in childlike imitation.  The putrefying flesh of hundreds of corpses has served as an immeasurable feast for the incalculable vermin inhabiting this subterranean realm.  Each alcove passed provides another glimpse into the long, dark past of the temple residents.</description>
+    <position x="-140" y="-20" z="0" />
+    <arc exit="north" move="north" destination="31" />
+    <arc exit="east" move="east" destination="34" />
+  </node>
+  <node id="34" name="Catacombs, Labyrinth">
+    <description>The narrow confines of these twisting maze-like tunnels cause every sound to reverberate eerily, as if the dead that line the walls are repeating the sounds in childlike imitation.  The putrefying flesh of hundreds of corpses has served as an immeasurable feast for the incalculable vermin inhabiting this subterranean realm.  Each alcove passed provides another glimpse into the long, dark past of the temple residents.</description>
+    <position x="-100" y="-20" z="0" />
+    <arc exit="north" move="north" destination="35" />
+    <arc exit="west" move="west" destination="33" />
+  </node>
+  <node id="35" name="Catacombs, Labyrinth">
+    <description>The narrow confines of these twisting maze-like tunnels cause every sound to reverberate eerily, as if the dead that line the walls are repeating the sounds in childlike imitation.  The putrefying flesh of hundreds of corpses has served as an immeasurable feast for the incalculable vermin inhabiting this subterranean realm.  Each alcove passed provides another glimpse into the long, dark past of the temple residents.</description>
+    <position x="-100" y="-40" z="0" />
+    <arc exit="east" move="east" destination="36" />
+    <arc exit="south" move="south" destination="34" />
+    <arc exit="northwest" move="northwest" destination="57" />
+  </node>
+  <node id="36" name="Catacombs, Labyrinth">
+    <description>A myriad of decayed cadavers lie in hastily constructed alcoves along both sides of the passage.  Twisting and turning, these halls of the dead quickly disorient and confuse.  Small pools of water, putrid with rot, fill the depressions in the uneven floor, and the odor of decay is overpowering.  An occasional alcove sits empty, giving one cause to wonder where the previous occupant now lies.</description>
+    <position x="-80" y="-40" z="0" />
+    <arc exit="south" move="south" destination="37" />
+    <arc exit="west" move="west" destination="35" />
+  </node>
+  <node id="37" name="Catacombs, Labyrinth">
+    <description>A myriad of decayed cadavers lie in hastily constructed alcoves along both sides of the passage.  Twisting and turning, these halls of the dead quickly disorient and confuse.  Small pools of water, putrid with rot, fill the depressions in the uneven floor, and the odor of decay is overpowering.  An occasional alcove sits empty, giving one cause to wonder where the previous occupant now lies.</description>
+    <position x="-60" y="-20" z="0" />
+    <arc exit="north" move="north" destination="38" />
+    <arc exit="south" move="south" destination="36" />
+  </node>
+  <node id="38" name="Catacombs, Labyrinth">
+    <description>A myriad of decayed cadavers lie in hastily constructed alcoves along both sides of the passage.  Twisting and turning, these halls of the dead quickly disorient and confuse.  Small pools of water, putrid with rot, fill the depressions in the uneven floor, and the odor of decay is overpowering.  An occasional alcove sits empty, giving one cause to wonder where the previous occupant now lies.</description>
+    <position x="-80" y="0" z="0" />
+    <arc exit="south" move="south" destination="39" />
+    <arc exit="north" move="north" destination="37" />
+  </node>
+  <node id="39" name="Catacombs, Labyrinth">
+    <description>A seemingly endless line of corpses runs down the length of this burial hallway.  Propped up against the rough stone walls they stand as silent sentinels to the ages.  The large empty eye sockets of almost countless skulls stare vacuously into the deep gloom.</description>
+    <position x="-80" y="40" z="0" />
+    <arc exit="north" move="north" destination="38" />
+    <arc exit="west" move="west" destination="26" />
+    <arc exit="go" move="go iron gate" destination="40" />
+  </node>
+  <node id="40" name="Catacombs, Sepulcher">
+    <description>Archaic underground corridors twist and turn deceptively, leading to an unwelcome sense of disorientation.  The remains of unnumbered hapless souls lie in discarded piles along the walls.  The spectral silence of these underground chambers covers them in a final burial shroud.  Rodents scurry hurriedly away at the slightest sound.</description>
+    <position x="50" y="40" z="0" />
+    <arc exit="northeast" move="northeast" destination="43" />
+    <arc exit="northwest" move="northwest" destination="41" />
+    <arc exit="go" move="go iron gate" destination="39" />
+  </node>
+  <node id="41" name="Catacombs, Sepulcher">
+    <description>Archaic underground corridors twist and turn deceptively, leading to an unwelcome sense of disorientation.  The remains of unnumbered hapless souls lie in discarded piles along the walls.  The spectral silence of these underground chambers covers them in a final burial shroud.  Rodents scurry hurriedly away at the slightest sound.</description>
+    <position x="30" y="20" z="0" />
+    <arc exit="north" move="north" destination="42" />
+    <arc exit="east" move="east" destination="43" />
+    <arc exit="southeast" move="southeast" destination="40" />
+  </node>
+  <node id="42" name="Catacombs, Sepulcher">
+    <description>Archaic underground corridors twist and turn deceptively, leading to an unwelcome sense of disorientation.  The remains of unnumbered hapless souls lie in discarded piles along the walls.  The spectral silence of these underground chambers covers them in a final burial shroud.  Rodents scurry hurriedly away at the slightest sound.</description>
+    <position x="30" y="-20" z="0" />
+    <arc exit="east" move="east" destination="44" />
+    <arc exit="southeast" move="southeast" destination="45" />
+    <arc exit="south" move="south" destination="41" />
+  </node>
+  <node id="43" name="Catacombs, Sepulcher">
+    <description>Archaic underground corridors twist and turn deceptively, leading to an unwelcome sense of disorientation.  The remains of unnumbered hapless souls lie in discarded piles along the walls.  The spectral silence of these underground chambers covers them in a final burial shroud.  Rodents scurry hurriedly away at the slightest sound.</description>
+    <position x="70" y="20" z="0" />
+    <arc exit="north" move="north" destination="44" />
+    <arc exit="southwest" move="southwest" destination="40" />
+    <arc exit="west" move="west" destination="41" />
+  </node>
+  <node id="44" name="Catacombs, Sepulcher">
+    <description>Archaic underground corridors twist and turn deceptively, leading to an unwelcome sense of disorientation.  The remains of unnumbered hapless souls lie in discarded piles along the walls.  The spectral silence of these underground chambers covers them in a final burial shroud.  Rodents scurry hurriedly away at the slightest sound.</description>
+    <position x="70" y="-20" z="0" />
+    <arc exit="south" move="south" destination="43" />
+    <arc exit="southwest" move="southwest" destination="45" />
+    <arc exit="west" move="west" destination="42" />
+  </node>
+  <node id="45" name="Catacombs, Ossuary">
+    <description>Along the far wall rests a large pile of bones, a discarded collection of broken and forgotten lives.  The sheer number of bones gives rise to wonder as to how many met their untimely end in the temple above.  A grinning skull dislodged from the pile stares up vacantly from the floor where it now rests.</description>
+    <position x="50" y="0" z="0" />
+    <arc exit="northeast" move="northeast" destination="44" />
+    <arc exit="northwest" move="northwest" destination="42" />
+    <arc exit="go" move="go iron gate" destination="46" />
+  </node>
+  <node id="46" name="Catacombs, Sanctum Sanctorum">
+    <description>The burial vaults beyond, while simplistic in design, maintain an aura of venerable reverence.  An inlaid mosaic rimmed in strange, indecipherable symbols and sigils covers the floor of the chamber.  The absence of further trimmings does nothing but draw attention to the unusual pattern.</description>
+    <position x="50" y="-40" z="0" />
+    <arc exit="north" move="north" destination="49" />
+    <arc exit="northeast" move="northeast" destination="47" />
+    <arc exit="northwest" move="northwest" destination="48" />
+    <arc exit="go" move="go iron gate" destination="45" />
+  </node>
+  <node id="47" name="Catacombs, Sanctum Sanctorum">
+    <description>The dripping of water echoes hollowly throughout these rough-hewn burial chambers.  Ornate tapestries once lining the walls have fallen victim to the rot and decay native to this environment.  Multiple niches line the walls, each containing the skeleton of someone long deceased -- perhaps clerics, judging by the shrouds and markings.  Small piles of bones lie scattered about on the floor, many showing the signs of being gnawed upon by some creature.</description>
+    <position x="90" y="-80" z="0" />
+    <arc exit="south" move="south" destination="51" />
+    <arc exit="southwest" move="southwest" destination="46" />
+    <arc exit="west" move="west" destination="48" />
+  </node>
+  <node id="48" name="Catacombs, Sanctum Sanctorum">
+    <description>The dripping of water echoes hollowly throughout these rough-hewn burial chambers.  Ornate tapestries once lining the walls have fallen victim to the rot and decay native to this environment.  Multiple niches line the walls, each containing the skeleton of someone long deceased -- perhaps clerics, judging by the shrouds and markings.  Small piles of bones lie scattered about on the floor, many showing the signs of being gnawed upon by some creature.</description>
+    <position x="10" y="-80" z="0" />
+    <arc exit="east" move="east" destination="47" />
+    <arc exit="southeast" move="southeast" destination="46" />
+    <arc exit="south" move="south" destination="50" />
+  </node>
+  <node id="49" name="Catacombs, Sanctum Sanctorum">
+    <description>This small sanctuary has been carved with meticulous care and remains uncharacteristically neat when compared to the state of the rest of the catacombs.  Three finely chiseled stone platforms, without any visible ornamentation, lie evenly spaced in the center of the room.  In each corner stands a single amphora.  The faint fragrance of chamomile still lingers in the air.</description>
+    <position x="50" y="-100" z="0" />
+    <arc exit="southeast" move="southeast" destination="51" />
+    <arc exit="south" move="south" destination="46" />
+    <arc exit="southwest" move="southwest" destination="50" />
+  </node>
+  <node id="50" name="Catacombs, Sanctum Sanctorum">
+    <description>The dripping of water echoes hollowly throughout these rough-hewn burial chambers.  Ornate tapestries once lining the walls have fallen victim to the rot and decay native to this environment.  Multiple niches line the walls, each containing the skeleton of someone long deceased -- perhaps clerics, judging by the shrouds and markings.  Small piles of bones lie scattered about on the floor, many showing the signs of being gnawed upon by some creature.</description>
+    <position x="10" y="-60" z="0" />
+    <arc exit="north" move="north" destination="48" />
+    <arc exit="northeast" move="northeast" destination="49" />
+    <arc exit="east" move="east" destination="51" />
+  </node>
+  <node id="51" name="Catacombs, Sanctum Sanctorum">
+    <description>The dripping of water echoes hollowly throughout these rough-hewn burial chambers.  Ornate tapestries once lining the walls have fallen victim to the rot and decay native to this environment.  Multiple niches line the walls, each containing the skeleton of someone long deceased -- perhaps clerics, judging by the shrouds and markings.  Small piles of bones lie scattered about on the floor, many showing the signs of being gnawed upon by some creature.</description>
+    <position x="90" y="-60" z="0" />
+    <arc exit="north" move="north" destination="47" />
+    <arc exit="west" move="west" destination="50" />
+    <arc exit="northwest" move="northwest" destination="49" />
+  </node>
+  <node id="52" name="Catacombs, Labyrinth">
+    <description>The narrow passageways of these burial chambers give rise to new horrors at every turn.  Crudely carved niches lining the walls are each filled to overflowing with corpses in varying stages of decay.  Water drips slowly from the ceiling, covering the bodies in a thin veil of mineral deposits, while large colonies of fungus-like growths thrive in the darkness and corruption.</description>
+    <position x="-60" y="-120" z="0" />
+    <arc exit="southwest" move="southwest" destination="32" />
+    <arc exit="west" move="west" destination="53" />
+  </node>
+  <node id="53" name="Catacombs, Labyrinth">
+    <description>The narrow passageways of these burial chambers give rise to new horrors at every turn.  Crudely carved niches lining the walls are each filled to overflowing with corpses in varying stages of decay.  Water drips slowly from the ceiling, covering the bodies in a thin veil of mineral deposits, while large colonies of fungus-like growths thrive in the darkness and corruption.</description>
+    <position x="-100" y="-120" z="0" />
+    <arc exit="east" move="east" destination="52" />
+    <arc exit="southwest" move="southwest" destination="56" />
+    <arc exit="west" move="west" destination="54" />
+  </node>
+  <node id="54" name="Catacombs, Labyrinth">
+    <description>The narrow passageways of these burial chambers give rise to new horrors at every turn.  Crudely carved niches lining the walls are each filled to overflowing with corpses in varying stages of decay.  Water drips slowly from the ceiling, covering the bodies in a thin veil of mineral deposits, while large colonies of fungus-like growths thrive in the darkness and corruption.</description>
+    <position x="-140" y="-120" z="0" />
+    <arc exit="east" move="east" destination="53" />
+    <arc exit="southeast" move="southeast" destination="32" />
+    <arc exit="west" move="west" destination="55" />
+  </node>
+  <node id="55" name="Catacombs, Labyrinth">
+    <description>The narrow passageways of these burial chambers give rise to new horrors at every turn.  Crudely carved niches lining the walls are each filled to overflowing with corpses in varying stages of decay.  Water drips slowly from the ceiling, covering the bodies in a thin veil of mineral deposits, while large colonies of fungus-like growths thrive in the darkness and corruption.</description>
+    <position x="-180" y="-120" z="0" />
+    <arc exit="east" move="east" destination="54" />
+    <arc exit="southeast" move="southeast" destination="56" />
+  </node>
+  <node id="56" name="Catacombs, Labyrinth">
+    <description>The claustrophobic confines of the twisting hallways serve as an unnerving reminder of their purpose.  Hundreds of corpses have been crammed tightly into the narrow niches lining the walls.  The sheer number lends credence to the dark efficiency of the temple's previous inhabitants.  Rodents and vermin -- well-fed and vicious -- dart menacingly about in the shadows.</description>
+    <position x="-140" y="-80" z="0" />
+    <arc exit="northeast" move="northeast" destination="53" />
+    <arc exit="northwest" move="northwest" destination="55" />
+    <arc exit="go" move="go stairway" destination="57" />
+  </node>
+  <node id="57" name="Catacombs, Labyrinth">
+    <description>This cluttered chamber was used to store many of the personal possessions of the deceased.  Water seeping through the cracks in the walls has long ago warped and sprung many of the barrels, chests, and boxes stacked about the room.  Piles of moldering cloth, leather, and other apparel have become the nesting materials for many of the catacombs' less savory inhabitants.</description>
+    <position x="-120" y="-60" z="0" />
+    <arc exit="southeast" move="southeast" destination="35" />
+    <arc exit="southwest" move="southwest" destination="31" />
+    <arc exit="go" move="go northeast stairway" destination="32" />
+    <arc exit="go" move="go northwest stairway" destination="56" />
+  </node>
+  <node id="58" name="Dense Copse">
+    <description>The branches of pine and birch trees loom overhead, overlapping to create a canopy that nearly chokes off almost all light from hitting what little green undergrowth is here.  Dried needles and dead branches crackle underfoot with every step, the only sound that can be heard save those of the forlorn cries of a wood thrush in the distance.</description>
+    <position x="-340" y="40" z="0" />
+    <arc exit="north" move="north" hidden="True" />
+    <arc exit="northeast" move="northeast" destination="61" />
+    <arc exit="east" move="east" destination="1" />
+    <arc exit="southeast" move="southeast" hidden="True" />
+    <arc exit="south" move="south" hidden="True" />
+    <arc exit="southwest" move="southwest" hidden="True" />
+    <arc exit="west" move="west" hidden="True" />
+    <arc exit="northwest" move="northwest" hidden="True" />
+  </node>
+  <node id="59" name="Dense Copse">
+    <description>The branches of pine and birch trees loom overhead, overlapping to create a canopy that nearly chokes off almost all light from hitting what little green undergrowth is here.  Dried needles and dead branches crackle underfoot with every step, the only sound that can be heard save those of the forlorn cries of a wood thrush in the distance.</description>
+    <position x="-340" y="0" z="0" />
+    <arc exit="east" move="east" destination="62" />
+    <arc exit="go" move="go trail" destination="60" />
+  </node>
+  <node id="60" name="Northern Trade Road, Deep Forest" note="Map7_NTR.xml|NTR">
+    <description>The trees rise about you like looming tombstones in a graveyard, each one draped in shawls of sickly gray lichen.  The air is thick with a pressing sense of gloom, and you get the distinct impression that you are being watched.</description>
+    <position x="-360" y="0" z="0" />
+    <arc exit="go" move="go copse" destination="59" />
+    <arc exit="northeast" />
+    <arc exit="south" />
+  </node>
+  <node id="61" name="Dense Copse">
+    <description>The branches of pine and birch trees loom overhead, overlapping to create a canopy that nearly chokes off almost all light from hitting what little green undergrowth is here.  Dried needles and dead branches crackle underfoot with every step, the only sound that can be heard save those of the forlorn cries of a wood thrush in the distance.</description>
+    <position x="-320" y="20" z="0" />
+    <arc exit="north" move="north" hidden="True" />
+    <arc exit="northeast" move="northeast" destination="62" />
+    <arc exit="east" move="east" hidden="True" />
+    <arc exit="southeast" move="southeast" hidden="True" />
+    <arc exit="south" move="south" hidden="True" />
+    <arc exit="southwest" move="southwest" destination="58" />
+    <arc exit="west" move="west" hidden="True" />
+    <arc exit="northwest" move="northwest" hidden="True" />
+  </node>
+  <node id="62" name="Dense Copse">
+    <description>The branches of pine and birch trees loom overhead, overlapping to create a canopy that nearly chokes off almost all light from hitting what little green undergrowth is here.  Dried needles and dead branches crackle underfoot with every step, the only sound that can be heard save those of the forlorn cries of a wood thrush in the distance.</description>
+    <position x="-300" y="0" z="0" />
+    <arc exit="north" move="north" hidden="True" />
+    <arc exit="northeast" move="northeast" hidden="True" />
+    <arc exit="east" move="east" hidden="True" />
+    <arc exit="southeast" move="southeast" hidden="True" />
+    <arc exit="south" move="south" hidden="True" />
+    <arc exit="southwest" move="southwest" destination="61" />
+    <arc exit="west" move="west" destination="59" />
+    <arc exit="northwest" move="northwest" hidden="True" />
+  </node>
+  <label text="Snaer Hafwa">
+    <position x="20" y="-120" z="0" />
+  </label>
+  <label text="Crypt Fiend">
+    <position x="-30" y="-10" z="0" />
+  </label>
+  <label text="Misenseor Resuscitant">
+    <position x="-180" y="10" z="0" />
+  </label>
+  <label text="Tortured Soul">
+    <position x="-150" y="-140" z="0" />
+  </label>
+  <label text="NTR">
+    <position x="-372" y="-34" z="0" />
+  </label>
+</zone>

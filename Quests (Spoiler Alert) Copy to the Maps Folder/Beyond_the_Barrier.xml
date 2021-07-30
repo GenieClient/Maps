@@ -1,0 +1,1068 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Beyond the Barrier: The Devastation of Lyras" id="0">
+  <node id="1" name="Wilderness, Path to the Barrier">
+    <description>A dense evergreen forest grows tall in the area.  Needles constantly shed from the trees, forming a blanket of prickly debris that litters the forest floor to nearly ankle deep.  Little is visible down the thick forest path, which twists and turns around the larger tree trunks.</description>
+    <position x="1060" y="180" z="0" />
+    <arc exit="southwest" destination="2" />
+  </node>
+  <node id="2" name="Wilderness, Path to the Barrier">
+    <description>Birdsong echoes distantly through the thick forest, the sound carrying through the evergreen trees.  Verdant green undergrowth fills the forest floor, home to numerous insects.  An enormous boulder lies near the path, weathered on all sides and covered in moss. </description>
+    <description>Birdsong echoes distantly through the thick forest, the sound carrying through the evergreen trees.  Verdant green undergrowth fills the forest floor, home to numerous insects.  An enormous boulder lies near the path, weathered on all sides and covered in moss.</description>
+    <position x="1040" y="200" z="0" />
+    <arc exit="northeast" destination="1" />
+    <arc exit="west" destination="3" />
+  </node>
+  <node id="3" name="Wilderness, Path to the Barrier">
+    <description>Several runnels of water cut through the forest in a running stream, burbling from a spring at the side of the path.  Insects flit about on its surface, buzzing and making the forest alive with sound.  An oddly bent pine tree leans over the side of the stream, as if wishing to partake in the crystal clear water.</description>
+    <position x="1020" y="200" z="0" />
+    <arc exit="east" move="east" destination="2" />
+    <arc exit="southwest" move="southwest" destination="4" />
+  </node>
+  <node id="4" name="Wilderness, Path to the Barrier">
+    <description>The trees hang heavily, branches dark overhead and obscuring the night sky almost completely.  Several long branches hang thick over the path, which appears entirely unused except for deer and other large game.  Buzzing insects echo their noise through the forest, which is curiously devoid of birdsong.</description>
+    <position x="1000" y="220" z="0" />
+    <arc exit="northeast" move="northeast" destination="3" />
+    <arc exit="west" move="west" destination="5" />
+  </node>
+  <node id="5" name="Wilderness, Path to the Barrier">
+    <description>A sharp fork in the deer trail heralds water nearby, barely visible to the north through the trees as a small river that lazily flows west through the forest.  Small lily pads dot the water's surface near the bank, lightly floating on the water.  Iridescent dragonflies dart back and forth among the grasses at the bank.</description>
+    <position x="980" y="220" z="0" />
+    <arc exit="east" move="east" destination="4" />
+    <arc exit="west" move="west" destination="6" />
+    <arc exit="northwest" move="northwest" destination="7" />
+  </node>
+  <node id="6" name="Wilderness, Guarded Clearing">
+    <description>The path dips downward into a small clearing, surrounded on all sides by granite rock.  Bright green grass grows in the small clearing, fresh and vibrant.  Grey tall-capped mushrooms form a circle in the foliage, marking an area alive with a faint tinge of spiritual energy.</description>
+    <position x="960" y="220" z="0" />
+    <arc exit="east" move="east" destination="5" />
+  </node>
+  <node id="7" name="Wilderness, Path to the Barrier">
+    <description>Spindly pine trees hug close to the edge of the forest path, crowding in on either side and miring the way with numerous branches.  Several of these have been stripped clean of their needles, grazed on by some unseen fauna.  Small breaks in the trees overhead give hints of the sky above, the night sky peeking through in little patches of darkness.</description>
+    <position x="960" y="200" z="0" />
+    <arc exit="southeast" move="southeast" destination="5" />
+    <arc exit="northwest" move="northwest" destination="8" />
+  </node>
+  <node id="8" name="Wilderness, Path to the Barrier">
+    <description>Bright green moss speckles the branches of many of the trees at this gentle bend in the path, the wall of pine confining any movement to the narrow deer trail.  Several mushrooms grow between the branches of the trees, thriving on the moisture in the environment.  The hooting echo of a night owl echoes through the wilderness, the call distant and lonely.</description>
+    <position x="940" y="180" z="0" />
+    <arc exit="southeast" move="southeast" destination="7" />
+    <arc exit="west" move="west" destination="9" />
+  </node>
+  <node id="9" name="Wilderness, Path to the Barrier">
+    <description>The pine forest is somewhat thin in this area, the trees giving way more and more to the foliage near the edge of the forest.  Spaces between the branches show a large meadow to the southeast, broken up by many small rocky hills.  A constant dripping reverberates through the trees, caused by the slow but steady shedding of pine needles from the branches.</description>
+    <position x="920" y="180" z="0" />
+    <arc exit="east" move="east" destination="8" />
+    <arc exit="southwest" move="southwest" destination="10" />
+  </node>
+  <node id="10" name="Wilderness, Path to the Barrier">
+    <description>Pine saplings stand tall, attempting to expand the edge of the forest.  Despite being prickly with their needles, the undergrowth seems to be winning the battle, with numerous weeds threatening to choke the life from the youngling trees.  A foul smell comes from the west, the scent faint but pervasive like a recent death just starting to rot.</description>
+    <position x="900" y="200" z="0" />
+    <arc exit="northeast" move="northeast" destination="9" />
+    <arc exit="west" move="west" destination="11" />
+  </node>
+  <node id="11" name="Wilderness, Near the Barrier">
+    <description>Lush vegetation fills most of the area and green forests and plains are easily visible to the east.  A blackened line is carved into the ground, everything west of it dead or withering, forming a stark contrast as verdant green stands opposed to dull grey and brown.  Shortly past the dead zone, an oily wall of black energy rises from the ground, stretching as far as the eye can see.  Streaks of ominous red power crackle across it constantly, its makeup just opaque enough to bar any ability to see beyond.</description>
+    <position x="880" y="200" z="0" />
+    <arc exit="north" move="north" destination="23" />
+    <arc exit="east" move="east" destination="10" />
+    <arc exit="south" move="south" destination="12" />
+  </node>
+  <node id="12" name="Great Barrier, Dead Zone">
+    <description>Faint strands of long withered grass cover the ground, completely devoid of any moisture and turned to an ugly brown color.  No sign of rot touches the dead plants -- the foliage is simply dead and dry, and has possibly been that way for years or decades.  To the west, the Great Barrier churns and wavers, the oily darkness disappearing upward into the night sky.</description>
+    <position x="880" y="220" z="0" />
+    <arc exit="north" move="north" destination="11" />
+    <arc exit="southwest" move="southwest" destination="13" />
+  </node>
+  <node id="13" name="Great Barrier, Dead Zone">
+    <description>The pathway wends its way around a large rock, passing very close to the enormous wall of corrupted magic.  Hissing voices seem to mutter from within the Barrier, all of them a bit too faint to make out.  Beyond, vague shapes shuffle back and forth with a slow unease, although too shrouded in shadow to see more than their silhouettes.</description>
+    <position x="860" y="240" z="0" />
+    <arc exit="northeast" move="northeast" destination="12" />
+    <arc exit="southeast" move="southeast" destination="14" />
+  </node>
+  <node id="14" name="Great Barrier, Dead Zone">
+    <description>Black ichor stains the ground in random places, the last remnants of an ancient battle where the undead fell.  Permanent markings are burned into the ground, speaking of a power that scoured the undead away like a plague.  A discarded metal shield lies to one side, covered in the same long-dried filth.</description>
+    <position x="880" y="260" z="0" />
+    <arc exit="south" move="south" destination="15" />
+    <arc exit="northwest" move="northwest" destination="13" />
+  </node>
+  <node id="15" name="Great Barrier, Dead Zone">
+    <description>The line of blasted corruption continues along the edge of the forest, blackened and withered tree stumps marking the land where the foul magic touched.  Absolutely nothing grows beyond, not even a trace of insects of those scavengers attracted to the dead or dying.  The air is stagnant, marked with the scent of a death that should have decayed long ago.</description>
+    <position x="880" y="280" z="0" />
+    <arc exit="north" move="north" destination="14" />
+    <arc exit="northwest" move="northwest" destination="16" />
+  </node>
+  <node id="16" name="Great Barrier, Dead Zone">
+    <description>Small hollows mark the ground within the blasted area, scorched with blackened marks that burn deep into the ground.  Hints of ozone linger in the air, thick with the ancient clash of forbidden magic against forbidden magic.  The decaying wall of force churns just beyond, its ruined visage standing watch stoically over the devastated area.</description>
+    <position x="860" y="260" z="0" />
+    <arc exit="southeast" move="southeast" destination="15" />
+    <arc exit="south" move="south" destination="17" />
+  </node>
+  <node id="17" name="Great Barrier, Dead Zone">
+    <description>Small sections of the barrier churn with black corruption, streaking upward occasionally like sullied lightning reaching toward the sky.  A discarded orb at its base seems to be the source of the magic, but is completely surrounded by the writhing magic.  Black tendrils extend from the Barrier near the orb, as if the sphere was sentient and trying to escape the wall's clutches.</description>
+    <position x="860" y="280" z="0" />
+    <arc exit="north" move="north" destination="16" />
+    <arc exit="south" move="south" destination="18" />
+  </node>
+  <node id="18" name="Great Barrier, Dead Zone">
+    <description>The scattered bones of two skeletonized corpses are half buried into the ground, the flesh of both worn away by weathering rather than by decomposition.  Pits and marks show where the two battled fiercely, locked together in death by their mutual hatred.  Nearby, the enormous wall of seething magic churns and roils, standing sentinel over the fallen.</description>
+    <position x="860" y="300" z="0" />
+    <arc exit="north" move="north" destination="17" />
+    <arc exit="southeast" move="southeast" destination="19" />
+  </node>
+  <node id="19" name="Wilderness, Near the Barrier">
+    <description>Vegetation flourishes at an unhealthy rate just before the dead zone, both plants and flowers blooming unusually large and with a tinge of corruption where the leaves and petals are nearest to the dividing line between healthy and dead.  A small mound of ants flourishes at the unspoken border, none of the insects ever crossing the line drawn by the flowers.</description>
+    <position x="880" y="320" z="0" />
+    <arc exit="east" move="east" destination="20" />
+    <arc exit="northwest" move="northwest" destination="18" />
+  </node>
+  <node id="20" name="Wilderness, Near the Barrier">
+    <description>The seething black corruption in the wall fades somewhat, replaced predominantly by red wisps that fly upward and rapidly fade like tongues of magic racing up sheets of stained glass.  Nothing is visible past the roiling wall, even the sky blotted out by the churning magic.  The ground here, away from the barrier, is lush with life and flourishes more healthily the further from the line it is.</description>
+    <position x="900" y="320" z="0" />
+    <arc exit="east" move="east" destination="21" />
+    <arc exit="west" move="west" destination="19" />
+  </node>
+  <node id="21" name="Wilderness, Shallow Hollow">
+    <description>Muted sounds from the barrier of magic fill the air with popping and crackling sounds that accompany the constant hum of magic, although little of the wall is visible from this angle.  Rocks line the edge of the hollow, providing enough shade that a narrow strip of green grass that trickles down through the miniature ravine.  Lichen grows on the underside of a few of the rocks, easily visible between the wide gaps in the stacked stones.</description>
+    <position x="920" y="320" z="0" />
+    <arc exit="north" move="north" destination="22" />
+    <arc exit="west" move="west" destination="20" />
+  </node>
+  <node id="22" name="Wilderness, Shallow Hollow" note="Agehrilor" color="#00FF00">
+    <description>A small ring of stones surrounds the remains of a smoldering campfire nestled in the small ravine, while a small lean-to offers shelter from inclement weather.  Though the spot appears to be set up as a hunting ground, few if any footprints are visible in the soft soil.  A small tree stump stands near the campfire and is surrounded by numerous flowers, forming a makeshift altar.</description>
+    <position x="920" y="300" z="0" />
+    <arc exit="south" move="south" destination="21" />
+  </node>
+  <node id="23" name="The Great Barrier, Rift" color="#800000">
+    <description>A visible tear in the Great Barrier churns with maddening chaos, the edges of it resembling an open wound.  Hints of a desolate forest are visible through the rift, although the break shifts and changes constantly.  Faint scraps of a dark purple cloth cling to the ground in ragged threads, as if the rift was traversed recently and with great difficulty.</description>
+    <position x="880" y="180" z="0" />
+    <arc exit="northeast" move="northeast" destination="24" />
+    <arc exit="south" move="south" destination="11" />
+    <arc exit="go" move="go tear" destination="26" />
+  </node>
+  <node id="24" name="Edge of the Barrier, Scorched Land">
+    <description>Cracks in the ground seep fetid smoke tinged with the smell of rotten eggs, the fist-sized holes opening like maws in the ground and impossible to see too far down.  The ground is blackened and clings to a heavy layer of soot, still present despite the long and weary years.  Tattered scraps of what used to be a grey flag cling to a metallic pole, too faded to make out who or what it flew for.</description>
+    <position x="900" y="160" z="0" />
+    <arc exit="southwest" move="southwest" destination="23" />
+    <arc exit="northwest" move="northwest" destination="25" />
+  </node>
+  <node id="25" name="Edge of the Barrier, Scorched Land">
+    <description>Foul-smelling smoke drifts lazily over the ground, venting from cracks in the ground.  Occasionally a large jet of smoke streams upward rapidly, as if the ground was attempting to vomit up the lingering corruption.  Nothing grows in the soot-covered ground, which is choked of moisture to the point it is dry as powder.</description>
+    <position x="880" y="140" z="0" />
+    <arc exit="southeast" move="southeast" destination="24" />
+  </node>
+  <node id="26" name="Western Wastelands, Dead Forest" color="#800000">
+    <description>Skeletal, finger-like branches of bare trees reach up toward the blighted heavens, cracked and crumbling.  Not a scrap of green remains, even the old leaves long crumbled away to a greyish dust.  Jagged rocks poke up through the withered roots, exposed solely due to the complete lack of undergrowth.</description>
+    <position x="720" y="180" z="0" />
+    <arc exit="west" move="west" destination="27" />
+    <arc exit="go" move="go tear" destination="23" />
+  </node>
+  <node id="27" name="Western Wastelands, Dead Forest">
+    <description>A wide groove completely devoid of dead trees marks where a river once flowed, the water long gone.  The skeletal remains of fish litter the bottom of the dry riverbed, hinting at the abundant life that one filled the now desolate forest.  Occasional tracks still remain, hardened into the dry ground that long ago was mud.</description>
+    <position x="700" y="180" z="0" />
+    <arc exit="north" move="north" destination="28" />
+    <arc exit="east" move="east" destination="26" />
+    <arc exit="southwest" move="southwest" destination="29" />
+    <arc exit="west" move="west" destination="32" />
+    <arc exit="northwest" move="northwest" destination="33" />
+  </node>
+  <node id="28" name="Western Wastelands, Dead Forest">
+    <description>Cracks spiderweb across the dry ground between several trees, marking it as a once-lush clearing that is now dry and desolate.  Many of the trees show signs of extreme warping, as if tortured for the unforgivable sin of having lived.  Twisted branches rise high from the deformed trees, in a futile effort to escape their unholy punishment.</description>
+    <position x="700" y="140" z="0" />
+    <arc exit="south" move="south" destination="27" />
+    <arc exit="southwest" move="southwest" destination="32" />
+    <arc exit="west" move="west" destination="33" />
+  </node>
+  <node id="29" name="Western Wastelands, Dead Forest">
+    <description>The stems of what was once a thick undergrowth poke up from the dry forest floor, creating a sea of dry needles made from dry wood.  The dead branches of the trees tangle together overhead, the mass of twigs doing little to block out the gloomy sky.  Virulent patches of purplish ooze stain the ground in small patches.</description>
+    <position x="660" y="220" z="0" />
+    <arc exit="north" move="north" destination="32" />
+    <arc exit="northeast" move="northeast" destination="27" />
+    <arc exit="southwest" move="southwest" destination="30" />
+    <arc exit="west" move="west" destination="31" />
+    <arc exit="northwest" move="northwest" destination="34" />
+  </node>
+  <node id="30" name="Western Wastelands, Dead Forest">
+    <description>The bones of tiny woodland animals cling to the edges of a hollow in the ground, which apparently was once a forest spring.  Though the water is gone now, the barest hint of moisture remains in the very bottom of the hollow.  A few dried stalks of grass ring the edge of the withered spring, serving as a last bastion for life in the blighted wasteland.</description>
+    <position x="620" y="260" z="0" />
+    <arc exit="north" move="north" destination="31" />
+    <arc exit="northeast" move="northeast" destination="29" />
+    <arc exit="go" move="go path" destination="96" />
+  </node>
+  <node id="31" name="Western Wastelands, Dead Forest">
+    <description>A lone tree, impossibly large, rises in the center of the forest, its branches reaching above all others.  Its trunk is nearly as wide as a house, and numerous knots in the trunk show where boughs were once connected.  Strangely, the very top of the tree seems to cling to some semblance of life, a hint of green showing in its uppermost limbs.</description>
+    <position x="620" y="220" z="0" />
+    <arc exit="north" move="north" destination="34" />
+    <arc exit="northeast" move="northeast" destination="32" />
+    <arc exit="east" move="east" destination="29" />
+    <arc exit="south" move="south" destination="30" />
+    <arc exit="west" move="west" destination="39" />
+    <arc exit="northwest" move="northwest" destination="38" />
+  </node>
+  <node id="32" name="Western Wastelands, Dead Forest">
+    <description>The desiccated carcass of an enormous beast hangs in a tree, its flesh hollow and withered but not quite skeletonized.  Once a mighty creature, it clings to its perch even in death.  Apparently having escaped from the pervasive undead corruption that blighted the land, it could not run from the ravages of a land with no life remaining.</description>
+    <position x="660" y="180" z="0" />
+    <arc exit="north" move="north" destination="33" />
+    <arc exit="northeast" move="northeast" destination="28" />
+    <arc exit="east" move="east" destination="27" />
+    <arc exit="south" move="south" destination="29" />
+    <arc exit="southwest" move="southwest" destination="31" />
+    <arc exit="west" move="west" destination="34" />
+    <arc exit="northwest" move="northwest" destination="35" />
+  </node>
+  <node id="33" name="Western Wastelands, Dead Forest">
+    <description>Dead moss hangs dry and cracked on the branches of the withered trees, draped in ugly curtains that resemble the matted fur of an undead Prydaen.  The long-dead moss still emits a fetid smell, permeating the area in a pervasive manner that soaks into everything.  Scattered bones litter the ground in rough patches, marking where desperate battles were lost and won.</description>
+    <position x="660" y="140" z="0" />
+    <arc exit="north" move="north" destination="36" />
+    <arc exit="east" move="east" destination="28" />
+    <arc exit="southeast" move="southeast" destination="27" />
+    <arc exit="south" move="south" destination="32" />
+    <arc exit="southwest" move="southwest" destination="34" />
+    <arc exit="west" move="west" destination="35" />
+  </node>
+  <node id="34" name="Western Wastelands, Dead Forest">
+    <description>Fat tree trunks mark the innermost depths of the old forest, most unchanged over the years despite the lack of further growth.  A few still cling to leaves, although withered and brown, creating a canopy of decay overhead.  Hollows in the trees mark where animals once lived, although these too are long gone.</description>
+    <position x="620" y="180" z="0" />
+    <arc exit="north" move="north" destination="35" />
+    <arc exit="northeast" move="northeast" destination="33" />
+    <arc exit="east" move="east" destination="32" />
+    <arc exit="southeast" move="southeast" destination="29" />
+    <arc exit="south" move="south" destination="31" />
+    <arc exit="southwest" move="southwest" destination="39" />
+    <arc exit="west" move="west" destination="38" />
+  </node>
+  <node id="35" name="Western Wastelands, Dead Forest">
+    <description>Numerous dead trees surround the path through the forest, most completely stripped of their bark and heartwood.  Tooth marks from large herbivores mar the wood, apparently attempts to get what nourishment they could as the land slowly died.  The forest is deathly quiet, with absolutely no trace of any breathing wildlife remaining.</description>
+    <position x="620" y="140" z="0" />
+    <arc exit="east" move="east" destination="33" />
+    <arc exit="southeast" move="southeast" destination="32" />
+    <arc exit="south" move="south" destination="34" />
+    <arc exit="southwest" move="southwest" destination="38" />
+  </node>
+  <node id="36" name="Western Wastelands, Dead Forest">
+    <description>Withered trees hug close to what was once a deer trail through the forest, the ground marked by ancient tracks from wild game.  A noticeable stagnation hangs over the area, as if the lack of moisture has chased away everything that feasts on the dead and dying.  The largest sign of age is the dehydrated appearance of the trees combined with the absence of leaves on both the ground and the branches.</description>
+    <position x="660" y="120" z="0" />
+    <arc exit="south" move="south" destination="33" />
+    <arc exit="northwest" move="northwest" destination="37" />
+  </node>
+  <node id="37" name="Western Wastelands, Dead Forest">
+    <description>Bones from severed limbs and dismantled skeletons litter the forest floor in places, marking the site of a deadly and bloody skirmish.  Large marks remain in the trees, from rows of parallel claw marks to cleaner slashes from weapons.  Both ichor and rust-colored stains mar the trees and ground, although they do not make clear which side was the victor.</description>
+    <position x="640" y="100" z="0" />
+    <arc exit="southeast" move="southeast" destination="36" />
+    <arc exit="go" move="go gap" destination="40" />
+  </node>
+  <node id="38" name="Western Wastelands, Dead Forest">
+    <description>Thick brush blocks all progress westward, the thorns on the bushes still sharp and numerous despite the plants dying long ago.  Completely dry flowers still cling to the stalks of the large shrubs, their shape and color having taken on a unique pale blue color.  The air is sharp and clean, with no scent of decay in this portion of the forest.</description>
+    <position x="580" y="180" z="0" />
+    <arc exit="northeast" move="northeast" destination="35" />
+    <arc exit="east" move="east" destination="34" />
+    <arc exit="southeast" move="southeast" destination="31" />
+    <arc exit="south" move="south" destination="39" />
+  </node>
+  <node id="39" name="Western Wastelands, Dead Forest">
+    <description>Numerous bushes mark the edge of the forest, which hugs the bottom of a nearby cliff.  Though nothing grows here now, signs point to the woods once being lush and vibrant with life.  Dried berries still cling to a few of the bushes in clusters of bright red.</description>
+    <position x="580" y="220" z="0" />
+    <arc exit="north" move="north" destination="38" />
+    <arc exit="northeast" move="northeast" destination="34" />
+    <arc exit="east" move="east" destination="31" />
+  </node>
+  <node id="40" name="Ruined Highlands, Undead Battlefront">
+    <description>Four stone markers stand tall as a Gor'Tog on either side of the ravine, appearing to have been erected unnaturally.  Crude faces and arms are carved into the stones, giving them the crude appearance of undead soldiers.  The four sentinels all point directly toward the east, into a patch of dense, dead undergrowth.</description>
+    <position x="640" y="60" z="0" />
+    <arc exit="west" move="west" destination="41" />
+    <arc exit="northwest" move="northwest" destination="45" />
+    <arc exit="go" move="go gap" destination="37" />
+  </node>
+  <node id="41" name="Ruined Highlands, Undead Battlefront">
+    <description>The acrid smell of death rises along the length of the shallow ravine, following a thick line of oozing filth that partially fills the dry riverbed.  Twilight occasionally glints from its surface, and the occasional light colored rock stands out against the treacherous muck.  Nothing grows in this forsaken place, the land still bearing the unhealed wounds of necromancy cast long ago.</description>
+    <position x="620" y="60" z="0" />
+    <arc exit="north" move="north" destination="45" />
+    <arc exit="east" move="east" destination="40" />
+    <arc exit="southwest" move="southwest" destination="44" />
+    <arc exit="west" move="west" destination="42" />
+    <arc exit="northwest" move="northwest" destination="46" />
+  </node>
+  <node id="42" name="Ruined Highlands, Undead Battlefront">
+    <description>Unadulterated anguish is almost palpable in the area, as if the entire army of Lyras was once held in this place.  Leaving its mark throughout the dry ravine, the feeling is both physical and tangible in the air, which practically screams in its silence.  Little evidence of the is visible, however, with the only real sign the numerous footprints and trails of ichor left behind.</description>
+    <position x="600" y="60" z="0" />
+    <arc exit="north" move="north" destination="46" />
+    <arc exit="northeast" move="northeast" destination="45" />
+    <arc exit="east" move="east" destination="41" />
+    <arc exit="south" move="south" destination="44" />
+    <arc exit="west" move="west" destination="43" />
+  </node>
+  <node id="43" name="Ruined Highlands, Undead Battlefront">
+    <description>Old remnants of what was once a camp are set up in the area, although all the tents are collapsed and trampled into the dirt.  The high amount of corruption clearly shows that this was once a main camp of Lyras and one used much more recently than most activity in the area.  Broken bones litter the ground, discarded by whatever undead creature decided them no longer necessary to function.</description>
+    <position x="580" y="60" z="0" />
+    <arc exit="east" move="east" destination="42" />
+    <arc exit="southeast" move="southeast" destination="44" />
+    <arc exit="go" move="go trail" destination="67" />
+  </node>
+  <node id="44" name="Ruined Highlands, Undead Battlefront">
+    <description>Chaos presides over the bottom of the rocky valley, with footsteps and ichor staining everything.  Most of the damage to the ravine looks more recent, with little dust over the odds and ends left behind.  Black puddles ooze from the ravine floor, a wretched stench wafting from them.</description>
+    <position x="600" y="80" z="0" />
+    <arc exit="north" move="north" destination="42" />
+    <arc exit="northeast" move="northeast" destination="41" />
+    <arc exit="northwest" move="northwest" destination="43" />
+  </node>
+  <node id="45" name="Ruined Highlands, Undead Battlefront">
+    <description>The northern edge of the ravine wall holds a massive number of roots that jut in every which direction like grasping and desperate fingers.  Above, a dead weeping willow tree hangs over the edge of the ravine, appearing to be the source of the roots.  Pitch blackness fills bottom of the ravine, seeming to almost come alive and blend with the emptiness of the night.</description>
+    <position x="620" y="40" z="0" />
+    <arc exit="southeast" move="southeast" destination="40" />
+    <arc exit="south" move="south" destination="41" />
+    <arc exit="southwest" move="southwest" destination="42" />
+    <arc exit="west" move="west" destination="46" />
+  </node>
+  <node id="46" name="Ruined Highlands, Undead Battlefront">
+    <description>Cloth and leather tents are collapsed in a small corner of the ravine, looking like the area saw frequent and heavy use not long ago.  Purple and red colors make up most of the tents, although the hue looks unnatural and ugly.  Little remains except the tents themselves, abandoned and forgotten by the undead's more lofty goals.</description>
+    <position x="600" y="40" z="0" />
+    <arc exit="east" move="east" destination="45" />
+    <arc exit="southeast" move="southeast" destination="41" />
+    <arc exit="south" move="south" destination="42" />
+    <arc exit="climb" move="climb hill" destination="47" />
+  </node>
+  <node id="47" name="Western Dust Bowl, Forgotten Road">
+    <description>Grasslands extend in every direction, dead and coloring the landscape in a greyish tan color.  The long and dusty road winds its way along the edges of ravines, though these appear to have once been streams and rivers.  Far to the west, a large depression looks like it may have once been a lake.</description>
+    <position x="470" y="40" z="0" />
+    <arc exit="southwest" move="southwest" destination="48" />
+    <arc exit="climb" move="climb hill" destination="46" />
+  </node>
+  <node id="48" name="Western Dust Bowl, Forgotten Road">
+    <description>A stone marker rests on the side of the road, with a single arrow pointing south.  Other marks are made on it, though no singular one seems to mean much of anything.  The road continues through the land, offering a good view of mostly nothing on either side.</description>
+    <position x="430" y="80" z="0" />
+    <arc exit="northeast" move="northeast" destination="47" />
+    <arc exit="west" move="west" destination="49" />
+  </node>
+  <node id="49" name="Western Dust Bowl, Forgotten Road">
+    <description>The road is still clear and visible, although it has not seen much use in many years.  Grassland stretches out in gentle hills, although all the grass is dead and useless even if not decayed away.  Dust has settled over everything, coating the landscape in its dull grey color.</description>
+    <position x="410" y="80" z="0" />
+    <arc exit="east" move="east" destination="48" />
+    <arc exit="southwest" move="southwest" destination="50" />
+  </node>
+  <node id="50" name="Western Dust Bowl, Forgotten Road">
+    <description>Though the road is largely unused, it still is easily traversable, winding its way through the grassy fields to the northwest and next to the ravine to the southeast.  Scattered along the road are a few desiccated frog corpses, lying on their backs.  Dust has rendered the tiny bodies grey and withered, with no trace of moisture left inside the unfortunate animals.</description>
+    <position x="390" y="100" z="0" />
+    <arc exit="northeast" move="northeast" destination="49" />
+    <arc exit="west" move="west" destination="51" />
+  </node>
+  <node id="51" name="Western Dust Bowl, Forgotten Road">
+    <description>A vast expanse continues to the west, with little visible out to the horizon except for more dead grass.  There is evidence that life once flourished in the western lands, though little remains that still breathes.  Decay is all but nonexistent as well, rendering the dead plants to appear as if time had stopped for them entirely.</description>
+    <position x="370" y="100" z="0" />
+    <arc exit="east" move="east" destination="50" />
+    <arc exit="south" move="south" destination="52" />
+  </node>
+  <node id="52" name="Western Dust Bowl, Forgotten Road">
+    <description>The dusty road continues to the horizon in either direction, with a few twists and turns visible further away but feeling remarkably straight at any one point.  No other trails lead off from the empty road, with the only obvious route to continue following the wide path.  A weathered wood marker points to the southwest.</description>
+    <position x="370" y="140" z="0" />
+    <arc exit="north" move="north" destination="51" />
+    <arc exit="south" move="south" destination="53" />
+  </node>
+  <node id="53" name="Western Dust Bowl, Forgotten Road">
+    <description>An abandoned wooden bucket lies on the side of the wide trail, remarkably well preserved in the dry air.  Small enough to be carried by a child, the container lies next to the ravine, as if dragged out for hope of water and discarded when there was none to be found.  Dust has built up around the container, partially burying it and securing its ultimate fate.</description>
+    <position x="370" y="160" z="0" />
+    <arc exit="north" move="north" destination="52" />
+    <arc exit="southwest" move="southwest" destination="54" />
+    <arc exit="go" move="go riverbed" destination="59" />
+  </node>
+  <node id="54" name="Western Dust Bowl, Forgotten Road">
+    <description>The beginnings of civilization are apparent in the fields to the west, as a small fence starts running alongside the road.  Past the fence are fields of what may have once been berries and other fruits, though the harvest is long dead and never regrown.  All of the harvest is completely dry, rendered useless ages long ago.</description>
+    <position x="350" y="180" z="0" />
+    <arc exit="northeast" move="northeast" destination="53" />
+    <arc exit="southwest" move="southwest" destination="55" />
+  </node>
+  <node id="55" name="Western Dust Bowl, Forgotten Road">
+    <description>Thick bushes grow on the side of the path, heavy with unpicked and desiccated fruit.  Several dead bumblebees lie on the road near the berry bushes, their task of pollinating having gone unfinished.  A tall wooden fence just barely holds the dried bushes back, the massive branches pushing against the restraint.</description>
+    <position x="330" y="200" z="0" />
+    <arc exit="northeast" move="northeast" destination="54" />
+    <arc exit="west" move="west" destination="56" />
+  </node>
+  <node id="56" name="Western Dust Bowl, Forgotten Road">
+    <description>Large wheat fields grow to the northwest, unharvested but also well preserved.  A slightly unnatural tinge lingers on the stalks, however, and it appears that the food was abandoned for good reason.  The road continues onward the Hub, and village walls are just now visible in the distance.</description>
+    <position x="310" y="200" z="0" />
+    <arc exit="east" move="east" destination="55" />
+    <arc exit="west" move="west" destination="57" />
+  </node>
+  <node id="57" name="Western Dust Bowl, Forgotten Road">
+    <description>Fields of grain stand unharvested but also unrotten, preserved as if sealed in a sterile bottle spanning acres.  The wheat appears little more than a breath away from harvest, although abandoned to matters of more immediate survival.  Forgotten farm tools lie on the side of the road, most made from stone but a few made from metals.</description>
+    <position x="290" y="200" z="0" />
+    <arc exit="east" move="east" destination="56" />
+    <arc exit="southwest" move="southwest" destination="58" />
+  </node>
+  <node id="58" name="Western Dust Bowl, Sunfell Hub">
+    <description>The northern gate of the Sunfell Hub stands open, although numerous crude runes are scratched into the dry tree trunks that surround the tribal village.  Some semblance of order remains, with old logs in the wooden wall removed in favor of new and sturdier ones.  A few faint lights are visible from inside the hub, although pitch blackness reigns in the fields outside it.</description>
+    <position x="210" y="280" z="0" />
+    <arc exit="northeast" move="northeast" destination="57" />
+    <arc exit="go" move="go gate" destination="69" />
+  </node>
+  <node id="59" name="Ruined Highlands, Dry Hillside">
+    <description>Narrow ravines mark where a large river once flowed, the lifeblood of the land choked off from its most precious resource.  Several weeping willows hang mournfully over the edge of the former bank, their branches dry and no longer able to tap what is no longer there.  An abandoned wooden bucket lies on the far side of the ravine, discarded along with the hope its contents would bring.</description>
+    <position x="410" y="240" z="0" />
+    <arc exit="north" move="north" destination="60" />
+    <arc exit="northeast" move="northeast" destination="62" />
+    <arc exit="east" move="east" destination="63" />
+    <arc exit="go" move="go riverbed" destination="53" />
+    <arc exit="go" move="go river" destination="53" />
+  </node>
+  <node id="60" name="Ruined Highlands, Dry Hillside">
+    <description>A dark hill rises slightly above the grasslands like a cancerous growth, almost resembling a colossal undead creature in the shadows of night.  Small runnels of a black ooze drip slowly down the sides of the unnatural hill, staining the pale grass.  Fetid smells waft from the unstable ground, a rare sign of true decay in a land where time itself has fled.</description>
+    <position x="410" y="220" z="0" />
+    <arc exit="northeast" move="northeast" destination="61" />
+    <arc exit="east" move="east" destination="62" />
+    <arc exit="southeast" move="southeast" destination="63" />
+    <arc exit="south" move="south" destination="59" />
+  </node>
+  <node id="61" name="Ruined Highlands, Dry Hillside">
+    <description>Lying at the northern end of the dry field is the desiccated corpse of a deer, its head snapped backwards in rigor mortis.  The animal's eyes are glassy and wide open, staring at nothing as the body resists all semblance of decay.  All grass around the creature is bent away from it, showing the agony the deer went through in its last moments.</description>
+    <position x="430" y="200" z="0" />
+    <arc exit="east" move="east" destination="67" />
+    <arc exit="southeast" move="southeast" destination="68" />
+    <arc exit="south" move="south" destination="62" />
+    <arc exit="southwest" move="southwest" destination="60" />
+  </node>
+  <node id="62" name="Ruined Highlands, Dry Hillside">
+    <description>Though now empty and forgotten, the lonely grasslands have numerous game trails crisscrossing in every direction, as if deer and other small animals were once plentiful in the area.  Tracks dried into the ground compound the evidence, well preserved by the lack of moisture the area now has.  Some of the dead grass still bears evidence of having been chewed on, and the damage is remarkably well preserved.</description>
+    <position x="430" y="220" z="0" />
+    <arc exit="north" move="north" destination="61" />
+    <arc exit="northeast" move="northeast" destination="67" />
+    <arc exit="east" move="east" destination="68" />
+    <arc exit="southeast" move="southeast" destination="64" />
+    <arc exit="south" move="south" destination="63" />
+    <arc exit="southwest" move="southwest" destination="59" />
+    <arc exit="west" move="west" destination="60" />
+  </node>
+  <node id="63" name="Ruined Highlands, Dry Hillside">
+    <description>Loose rubble peppers the ground at the base of a wave-shaped cliff to the south, its lip overhanging slightly and its sheer surface making climbing impossible.  Mostly flattened now, the grass spreads northward, although some of the stalks are in in better shape than others.  The vegetation is all a light tan color now, having long ago lost both its color and its life.</description>
+    <position x="430" y="240" z="0" />
+    <arc exit="north" move="north" destination="62" />
+    <arc exit="northeast" move="northeast" destination="68" />
+    <arc exit="east" move="east" destination="64" />
+    <arc exit="west" move="west" destination="59" />
+    <arc exit="northwest" move="northwest" destination="60" />
+  </node>
+  <node id="64" name="Ruined Highlands, Dry Hillside">
+    <description>The bottom of a cliff rises tall to crest in a wave-shaped hill, marking the southern border of the grasslands.  Sticking almost straight up from the earth like a jagged knife, the cliff overhangs a bit, making climbing it impossible in this spot.  The devastated land continues stretching to the north, covered in grey all the way to the horizon.</description>
+    <position x="450" y="240" z="0" />
+    <arc exit="north" move="north" destination="68" />
+    <arc exit="northeast" move="northeast" destination="66" />
+    <arc exit="east" move="east" destination="65" />
+    <arc exit="west" move="west" destination="63" />
+    <arc exit="northwest" move="northwest" destination="62" />
+  </node>
+  <node id="65" name="Ruined Highlands, Dry Hillside">
+    <description>Feathers in the dead grass mark the corpses of colorful songbirds, stilled in their melody by the inhospitable land.  The bodies are clustered around a small depression in the ground, which still holds a cruel simulacrum of drinking water.  Apparently not all moisture is gone from this land, just rendered useless to life by the necrotic poison in the groundwater.</description>
+    <position x="470" y="240" z="0" />
+    <arc exit="north" move="north" destination="66" />
+    <arc exit="west" move="west" destination="64" />
+    <arc exit="northwest" move="northwest" destination="68" />
+    <arc exit="climb" move="climb ladder" destination="130" />
+  </node>
+  <node id="66" name="Ruined Highlands, Dry Hillside">
+    <description>Long stalks of dry grass lie bent in every direction, trampled down flat by numerous feet.  Taller grass to the east blocks the way, untouched by the army that brute forced its way through the natural barrier.  Tiny ants cling to a few of the grasses, and it's difficult to tell whether they are alive or dead.</description>
+    <position x="470" y="220" z="0" />
+    <arc exit="south" move="south" destination="65" />
+    <arc exit="southwest" move="southwest" destination="64" />
+    <arc exit="west" move="west" destination="68" />
+    <arc exit="northwest" move="northwest" destination="67" />
+  </node>
+  <node id="67" name="Ruined Highlands, Dry Hillside" color="#00FF00">
+    <description>A small ravine leads away from the grasslands, sloping steeply downward and to the northeast.  Grooves in the dirt indicate that a river or stream once flowed through the area, although the precious water is long gone.  The dead grasslands spread to the west and south, terminating at the edge of a short cliff.</description>
+    <position x="450" y="200" z="0" />
+    <arc exit="southeast" move="southeast" destination="66" />
+    <arc exit="south" move="south" destination="68" />
+    <arc exit="southwest" move="southwest" destination="62" />
+    <arc exit="west" move="west" destination="61" />
+    <arc exit="go" move="go trail" destination="43" />
+  </node>
+  <node id="68" name="Ruined Highlands, Dry Hillside">
+    <description>The foundation of a stone hut lies forgotten in the lonely wasteland, the remains of wooden furniture still apparent in the broken rooms.  Little else remains in the foundation except for a small box bed, made more comfortable with hay stuffing.  A few stalks of grass poke up through the foundation, indicating the building's death came before the blighting of the land.</description>
+    <position x="450" y="220" z="0" />
+    <arc exit="north" move="north" destination="67" />
+    <arc exit="east" move="east" destination="66" />
+    <arc exit="southeast" move="southeast" destination="65" />
+    <arc exit="south" move="south" destination="64" />
+    <arc exit="southwest" move="southwest" destination="63" />
+    <arc exit="west" move="west" destination="62" />
+    <arc exit="northwest" move="northwest" destination="61" />
+  </node>
+  <node id="69" name="Sunfell Hub, Entrance">
+    <description>Roughly hewn logs lie broken and scattered, the remnants of a hastily erected wall.  Enormous tears mar nearly all the desiccated pieces of wood, lying broken and scattered like chaff.  Several of the small wooden huts are in the same situation, having fared little better against the attack.</description>
+    <position x="190" y="300" z="0" />
+    <arc exit="east" move="east" destination="70" />
+    <arc exit="south" move="south" destination="88" />
+    <arc exit="west" move="west" destination="85" />
+    <arc exit="go" move="go gate" destination="58" />
+  </node>
+  <node id="70" name="Sunfell Hub, Razed Market">
+    <description>Cracked and brittle, the wall surrounding the hub still stands fairly straight in this area, though the wood is completely devoid of moisture.  Hiltless stone daggers lie discarded in the dirt path, some of them still caked in ichor from fighting the undead.</description>
+    <position x="210" y="300" z="0" />
+    <arc exit="southeast" move="southeast" destination="71" />
+    <arc exit="west" move="west" destination="69" />
+  </node>
+  <node id="71" name="Sunfell Hub, Razed Market">
+    <description>The remnants of several baskets line the edge of the stone huts, the skeletal remains of slaughtered small game birds stacked inside them.  Completely dry and crumbling, all hint of water has left the once thriving village.  Everything has a lurid shade of grey to it, not quite dust but nothing that appears natural.</description>
+    <position x="230" y="320" z="0" />
+    <arc exit="southeast" move="southeast" destination="72" />
+    <arc exit="southwest" move="southwest" destination="86" />
+    <arc exit="northwest" move="northwest" destination="70" />
+    <arc exit="go" move="go hut" destination="87" />
+  </node>
+  <node id="72" name="Sunfell Hub, Razed Market">
+    <description>Several stones encircle the Hub's well, which is sturdily built and stands at the center of what was once a small village square.  Greenish stains mar the stones near the well.  A foul deathlike odor emanates from the depths below, as if the land itself was no longer able to support life.</description>
+    <position x="250" y="340" z="0" />
+    <arc exit="south" move="south" destination="73" />
+    <arc exit="northwest" move="northwest" destination="71" />
+    <arc exit="go" move="go hut" destination="74" />
+  </node>
+  <node id="73" name="Sunfell Hub, Fallen Gate">
+    <description>Planks of dry and brittle wood rest against a dilapidated gate, which appears to have been abandoned for a long time.  Silence governs the night in the small cluster of broken buildings, the only sound coming from the occasional shuffling of the ever-present undead.  A small wooden jar lays abandoned on the side of the road, a few dim sparkles coming from the glass beads inside.</description>
+    <position x="250" y="360" z="0" />
+    <arc exit="north" move="north" destination="72" />
+    <arc exit="south" move="south" destination="75" />
+    <arc exit="west" move="west" destination="95" />
+    <arc exit="go" move="go gate" destination="120" />
+  </node>
+  <node id="74" name="Destroyed Hut">
+    <description>Little more than a ring of stones now, the wooden parts of this hut seem to have been carried away.  Just beyond it, wooden reinforcements to the hub's wall leave little wonder where the repurposed hut walls went.  A low stone slab stained with blood rests in one corner of the room, the only bit of furniture remaining.</description>
+    <position x="250" y="320" z="0" />
+    <arc exit="go" move="go market" destination="72" />
+  </node>
+  <node id="75" name="Sunfell Hub, Fallen Wall">
+    <description>Ruined stone walls surround a dry pool, the bottom of it cracked and dry.  No water has run here for a very long time.  Several old and abandoned toys lay near and on the dry pool's edge, indicating that this is a place where children once played.  Most are brittle and cracked from neglect, although none have been completely destroyed from malice.</description>
+    <position x="250" y="380" z="0" />
+    <arc exit="north" move="north" destination="73" />
+    <arc exit="southwest" move="southwest" destination="76" />
+  </node>
+  <node id="76" name="Sunfell Hub, Fallen Wall">
+    <description>A broken toy sword made of wood lies abandoned on the side of the Hub's outer road, its surface stained with ichor and its leather-wrapped handle pitted and cracked with age.  A much larger spear lies shattered in a similar manner, stuck into the skeletonized remains of some large beast.  Any other signs of that particular battle are long gone, worn away by the dusty wind and dry air.</description>
+    <position x="230" y="400" z="0" />
+    <arc exit="northeast" move="northeast" destination="75" />
+    <arc exit="southwest" move="southwest" destination="77" />
+    <arc exit="northwest" move="northwest" destination="92" />
+  </node>
+  <node id="77" name="Sunfell Hub, Fallen Wall">
+    <description>Several trees stand leafless and dead near the village, a few of the branches hanging over the ruined wood wall.  Ladder steps up the side of one tree lead to a small platform, used as a lookout tower.  The bones of several tiny creatures cling brokenly to the ends of the brittle rungs.</description>
+    <position x="210" y="420" z="0" />
+    <arc exit="northeast" move="northeast" destination="76" />
+    <arc exit="west" move="west" destination="78" />
+  </node>
+  <node id="78" name="Sunfell Hub, Dilapidated Huts">
+    <description>Giving some spark of green in an otherwise dead terrain, a small patch of crab grass clings to the edge of a ruined hut.  Though little more than a tuft of weed, the bright color clearly shows that not all life was scoured forever from this land.  Slightly damp patches of soil line the area around the tiny bit of living foliage, sheltered by the shadow of the hut above.</description>
+    <position x="190" y="420" z="0" />
+    <arc exit="north" move="north" destination="90" />
+    <arc exit="east" move="east" destination="77" />
+    <arc exit="west" move="west" destination="79" />
+  </node>
+  <node id="79" name="Sunfell Hub, Dilapidated Huts">
+    <description>Some signs of life still seem to exist in this nondescript corner of the Sunfell hub, the wood and stone showing evidence of minor upkeep.  Small symbols are scratched into the dusty road, evidently designed to keep away the undead.  A few drying rabbit pelts hang over a beam suspended between two slats.</description>
+    <position x="170" y="420" z="0" />
+    <arc exit="east" move="east" destination="78" />
+    <arc exit="northwest" move="northwest" destination="80" />
+  </node>
+  <node id="80" name="Sunfell Hub, Dilapidated Huts">
+    <description>The walls of several of the huts have caved in, although the damage looks to be from neglect as opposed to malice.  Small gaps in the wooden bases have weakened the structures, and several appear near collapse.  One roof has caved in completely, although the hut's interior appears mostly empty.</description>
+    <position x="150" y="400" z="0" />
+    <arc exit="northeast" move="northeast" destination="93" />
+    <arc exit="southeast" move="southeast" destination="79" />
+    <arc exit="northwest" move="northwest" destination="81" />
+  </node>
+  <node id="81" name="Sunfell Hub, Dilapidated Huts">
+    <description>Stone warehouses line the side of the hub's road, most of them collapsed and ruined but one standing out as mostly having survived the long and lonely years.  A door made out of solid stone marks its entrance, a thick layer of dust making opening and closing difficult.  Nearby, abandoned baskets are scattered through the dry grass, each one woven from a tight braid of reeds.</description>
+    <position x="130" y="380" z="0" />
+    <arc exit="north" move="north" destination="82" />
+    <arc exit="southeast" move="southeast" destination="80" />
+    <arc exit="go" move="go warehouse" destination="135" />
+  </node>
+  <node id="82" name="Sunfell Hub, Fallen Gate">
+    <description>Ruined and splintered wooden posts make up what was once the city's western gate, which has been completely caved in as if by brute force.  Several scorch marks mar the ground around the wood, testifying to the gate's strength and resistance before being pummeled down.  Portions of the wall are also heavily broken around the hinges, indicating that perhaps the wall fell before the gate did.</description>
+    <position x="130" y="360" z="0" />
+    <arc exit="north" move="north" destination="83" />
+    <arc exit="east" move="east" destination="94" />
+    <arc exit="south" move="south" destination="81" />
+  </node>
+  <node id="83" name="Sunfell Hub, Abandoned Ruins">
+    <description>The foundations of several huts lie in scorched ruins, their walls and roofs burned away.  Most appear to have been completely deserted and gutted before the burning, as if some wrath was unleashed on the huts because it could not be set upon their occupants.  A faint but noticeable acrid odor still lingers in the air, the foul magic having permanently left its mark on the area.</description>
+    <position x="130" y="340" z="0" />
+    <arc exit="northeast" move="northeast" destination="84" />
+    <arc exit="south" move="south" destination="82" />
+  </node>
+  <node id="84" name="Sunfell Hub, Abandoned Ruins">
+    <description>One hut in particular stands out, with many bite and scratch marks marring the wood that makes up its exterior.  Despite this, the building stands tall and defiant, likely due to the hard oakwood and sturdy craftsmanship that was put into it.  Numerous fresh shuffling tracks mar the ground, indicating that the undead still frequent the area regularly.</description>
+    <position x="150" y="320" z="0" />
+    <arc exit="northeast" move="northeast" destination="85" />
+    <arc exit="southeast" move="southeast" destination="91" />
+    <arc exit="southwest" move="southwest" destination="83" />
+    <arc exit="go" move="go hut" destination="136" />
+  </node>
+  <node id="85" name="Sunfell Hub, Abandoned Ruins">
+    <description>A cluster of chaotic planks of wood and other debris is set up as a makeshift barrier that spans across the road.  However, down the center of it a large swath is cleared away with marked purpose, showing clearly where a battle was fought and lost.  Broken weapons litter the ground, none of them showing any signs of wear since they fell.</description>
+    <position x="170" y="300" z="0" />
+    <arc exit="east" move="east" destination="69" />
+    <arc exit="southwest" move="southwest" destination="84" />
+  </node>
+  <node id="86" name="Sunfell Hub, Village Street">
+    <description>To the southwest, the center of the community is just barely visible in the darkness.  The hub's road carves its way straight between several of the buildings -- some of the huts still standing, but most not.  A deathly chill settles over the entire village, the near ghost town holding on to its many secrets that are blanketed by the night.</description>
+    <position x="210" y="340" z="0" />
+    <arc exit="northeast" move="northeast" destination="71" />
+    <arc exit="southwest" move="southwest" destination="89" />
+  </node>
+  <node id="87" name="Destroyed Hut">
+    <description>Little more than stone and wood rubble remains of the hut, the walls broken down in several places.  Bits of furnishing remains, although it looks like the former occupants lived a rather simple lifestyle.  Large claw marks slash the dirt floor at the corners and foundation stones, adding to the building's destruction.</description>
+    <position x="250" y="300" z="0" />
+    <arc exit="go" move="go market" destination="71" />
+  </node>
+  <node id="88" name="Sunfell Hub, Village Street">
+    <description>To the south, the center of the community is just barely visible in the darkness.  The hub's road carves its way straight between several of the buildings -- some of the huts still standing, but most not.  A deathly chill settles over the entire village, the near ghost town holding on to its many secrets that are blanketed by the night.</description>
+    <position x="190" y="320" z="0" />
+    <arc exit="north" move="north" destination="69" />
+    <arc exit="south" move="south" destination="89" />
+  </node>
+  <node id="89" name="Sunfell Hub, Community Center">
+    <description>All eight spokes of the community hub converge into this small square.  Blankets are laid out on the ground around what was once a bonfire in the very center, serving as the community meeting place.  Numerous supplies and provisions are laid out in baskets and wooden boxes, although these are all long abandoned and unusable.</description>
+    <position x="190" y="360" z="0" />
+    <arc exit="north" move="north" destination="88" />
+    <arc exit="northeast" move="northeast" destination="86" />
+    <arc exit="east" move="east" destination="95" />
+    <arc exit="southeast" move="southeast" destination="92" />
+    <arc exit="south" move="south" destination="90" />
+    <arc exit="southwest" move="southwest" destination="93" />
+    <arc exit="west" move="west" destination="94" />
+    <arc exit="northwest" move="northwest" destination="91" />
+  </node>
+  <node id="90" name="Sunfell Hub, Village Street">
+    <description>To the north, the center of the community is just barely visible in the darkness.  The hub's road carves its way straight between several of the buildings -- some of the huts still standing, but most not.  A deathly chill settles over the entire village, the near ghost town holding on to its many secrets that are blanketed by the night.</description>
+    <position x="190" y="380" z="0" />
+    <arc exit="north" move="north" destination="89" />
+    <arc exit="south" move="south" destination="78" />
+  </node>
+  <node id="91" name="Sunfell Hub, Village Street">
+    <description>To the southeast, the center of the community is just barely visible in the darkness.  The hub's road carves its way straight between several of the buildings -- some of the huts still standing, but most not.  A deathly chill settles over the entire village, the near ghost town holding on to its many secrets that are blanketed by the night.</description>
+    <position x="170" y="340" z="0" />
+    <arc exit="southeast" move="southeast" destination="89" />
+    <arc exit="northwest" move="northwest" destination="84" />
+  </node>
+  <node id="92" name="Sunfell Hub, Village Street">
+    <description>To the northwest, the center of the community is just barely visible in the darkness.  The hub's road carves its way straight between several of the buildings -- some of the huts still standing, but most not.  A deathly chill settles over the entire village, the near ghost town holding on to its many secrets that are blanketed by the night.</description>
+    <position x="210" y="380" z="0" />
+    <arc exit="southeast" move="southeast" destination="76" />
+    <arc exit="northwest" move="northwest" destination="89" />
+  </node>
+  <node id="93" name="Sunfell Hub, Village Street">
+    <description>To the northeast, the center of the community is just barely visible in the darkness.  The hub's road carves its way straight between several of the buildings -- some of the huts still standing, but most not.  A deathly chill settles over the entire village, the near ghost town holding on to its many secrets that are blanketed by the night.</description>
+    <position x="170" y="380" z="0" />
+    <arc exit="northeast" move="northeast" destination="89" />
+    <arc exit="southwest" move="southwest" destination="80" />
+  </node>
+  <node id="94" name="Sunfell Hub, Village Street">
+    <description>To the east, the center of the community is just barely visible in the darkness.  The hub's road carves its way straight between several of the buildings -- some of the huts still standing, but most not.  A deathly chill settles over the entire village, the near ghost town holding on to its many secrets that are blanketed by the night.</description>
+    <position x="170" y="360" z="0" />
+    <arc exit="east" move="east" destination="89" />
+    <arc exit="west" move="west" destination="82" />
+  </node>
+  <node id="95" name="Sunfell Hub, Village Street">
+    <description>To the west, the center of the community is just barely visible in the darkness.  The hub's road carves its way straight between several of the buildings -- some of the huts still standing, but most not.  A deathly chill settles over the entire village, the near ghost town holding on to its many secrets that are blanketed by the night.</description>
+    <position x="210" y="360" z="0" />
+    <arc exit="east" move="east" destination="73" />
+    <arc exit="west" move="west" destination="89" />
+  </node>
+  <node id="96" name="Western Wastelands, Rock Valley">
+    <description>Enormous limestone boulders surround this area of the Prydaen highlands, forming a basin that dips slightly in the middle and may have once been an old lake.  Though no water remains, signs of seaweed and aquatic life linger on the hollow's floor, a few of the specimens remarkably well preserved.  Water grooves line the rocks to the north, which may have once flowed into the nearby spring.</description>
+    <position x="620" y="320" z="0" />
+    <arc exit="south" move="south" destination="97" />
+    <arc exit="southwest" move="southwest" destination="98" />
+    <arc exit="west" move="west" destination="99" />
+    <arc exit="go" move="go path" destination="30" />
+  </node>
+  <node id="97" name="Western Wastelands, Rock Valley">
+    <description>The wide valley walls enclose a large basin that was once a freshwater lake.  Though the water is long gone, a sharp line around the exterior indicates where the lake's water level once was.  No ancient signs of battle mar the basin at all, indicating that the lake dried up well after the fighting was over.</description>
+    <position x="620" y="340" z="0" />
+    <arc exit="north" move="north" destination="96" />
+    <arc exit="southwest" move="southwest" destination="100" />
+    <arc exit="west" move="west" destination="98" />
+    <arc exit="northwest" move="northwest" destination="99" />
+  </node>
+  <node id="98" name="Western Wastelands, Rock Valley">
+    <description>Pools of greenish black ooze cling to the bottom of the rocky basin, most of them holding an almost sterile smell that speaks of an inability to rot.  Small white pebbles lie stranded in the muck, their surfaces coated with a layer of green except for their caps.  Skeletonized fish are scattered around the pools, speaking of the struggle to stay alive in a slowly drying lake.</description>
+    <position x="600" y="340" z="0" />
+    <arc exit="north" move="north" destination="99" />
+    <arc exit="northeast" move="northeast" destination="96" />
+    <arc exit="east" move="east" destination="97" />
+  </node>
+  <node id="99" name="Western Wastelands, Rock Valley">
+    <description>Massive white boulders rise up from the valley floor, some as large as houses while others are the size of caravans.  All of the enormous stones look highly weathered by water, and the surfaces of a few are polished completely smooth.  The air holds a hint of dampness, and although nothing grows, it still hints at the hope of some moisture remaining in the desolate wastes.</description>
+    <position x="600" y="320" z="0" />
+    <arc exit="east" move="east" destination="96" />
+    <arc exit="southeast" move="southeast" destination="97" />
+    <arc exit="south" move="south" destination="98" />
+    <arc exit="southwest" move="southwest" destination="110" />
+  </node>
+  <node id="100" name="Western Wastelands, Rock Valley">
+    <description>Enormous limestone boulders form the walls of the rocky valley, wending its way through the old Prydaen highlands.  Though old signs still remain, nothing grows any longer, and not even the faintest trace of insects can be seen.  A layer of dust has settled over everything, the greyish powder heavy with the scent of undeath.</description>
+    <position x="600" y="360" z="0" />
+    <arc exit="northeast" move="northeast" destination="97" />
+    <arc exit="south" move="south" destination="101" />
+  </node>
+  <node id="101" name="Western Wastelands, Rock Valley">
+    <description>Huge swaths of earth are shorn cleanly from the ground and folded upon itself, as if an immense power tore at the earth long ago.  Though some erosion and wear is visible, the cut still looks clean, as if done by a very sharp instrument.  Numerous white rocks frame the way into a valley to the north, which continues the scar in the land.</description>
+    <position x="600" y="380" z="0" />
+    <arc exit="north" move="north" destination="100" />
+    <arc exit="go" move="go ravine" destination="102" />
+  </node>
+  <node id="102" name="Western Wastelands, Ancient Battleground">
+    <description>Though many years have passed, the sign of battle still remains heavy on the land.  Discarded and broken weapons litter the ground, which is cracked and brittle, though stained rust-red in places.  Numerous obsidian arrowheads are scattered across the landscape, though little sign remains of what they were fired at.</description>
+    <position x="600" y="480" z="0" />
+    <arc exit="south" move="south" destination="109" />
+    <arc exit="southwest" move="southwest" destination="103" />
+    <arc exit="go" move="go ravine" destination="101" />
+  </node>
+  <node id="103" name="Western Wastelands, Ancient Battleground">
+    <description>In the center of the field is an old ritual circle is arranged from white stones, which are scorched black around the inner edges.  A lingering scent of death permeates the circle, and all vegetation is wiped clean from the immediate area surrounding it.  Abandoned weapons lie scattered across the ground, dropped and left where they fell.</description>
+    <position x="580" y="500" z="0" />
+    <arc exit="northeast" move="northeast" destination="102" />
+    <arc exit="east" move="east" destination="109" />
+    <arc exit="southeast" move="southeast" destination="106" />
+    <arc exit="south" move="south" destination="104" />
+    <arc exit="southwest" move="southwest" destination="107" />
+    <arc exit="west" move="west" destination="108" />
+  </node>
+  <node id="104" name="Western Wastelands, Ancient Battleground">
+    <description>Numerous footprints, all faded and worn, are pressed into the dirt in this area, which is dried out and nearly as hard as sandstone.  Both large and small, the prints vary from long trails from a shuffling gait, to quick footsteps made with almost no heel.  In many places the prints are greatly jumbled together, speaking of fierce battles in times long past.</description>
+    <position x="580" y="520" z="0" />
+    <arc exit="north" move="north" destination="103" />
+    <arc exit="northeast" move="northeast" destination="109" />
+    <arc exit="east" move="east" destination="106" />
+    <arc exit="south" move="south" destination="105" />
+    <arc exit="west" move="west" destination="107" />
+    <arc exit="northwest" move="northwest" destination="108" />
+  </node>
+  <node id="105" name="Western Wastelands, Ancient Battleground" color="#00FF00">
+    <description>Hanging limp atop a hill is a small leather flag, still stubbornly clinging to a dry branch stuck into the ground.  Nearby the flag is a tent, which shows signs of recent use.  A massive rockslide blocks the path further south, made up of jagged limestone boulders.</description>
+    <position x="580" y="540" z="0" />
+    <arc exit="north" move="north" destination="104" />
+    <arc exit="northeast" move="northeast" destination="106" />
+  </node>
+  <node id="106" name="Western Wastelands, Ancient Battleground">
+    <description>The eastern edge of the battlefield hugs the edge of a large and prominent crack in the ground, the wall sheer and the bottom lost to complete darkness.  A few hardy weeds poke up along the edge of the precipice, giving a faint glimmer of hope of life in the otherwise barren land.  Several rusted swords are scattered through the rough foliage, abandoned when their owners fell.</description>
+    <position x="600" y="520" z="0" />
+    <arc exit="north" move="north" destination="109" />
+    <arc exit="southwest" move="southwest" destination="105" />
+    <arc exit="west" move="west" destination="104" />
+    <arc exit="northwest" move="northwest" destination="103" />
+  </node>
+  <node id="107" name="Western Wastelands, Ancient Battleground">
+    <description>A small grove of trees still stands at the southwest corner of the battleground, although all of them are long dead.  Debris from the battleground still litters the clearing in the center of them, the corrupted ground staining the bark of the trees an ugly red before they died.  Rough outlines of slightly different color in the trees show where they were used for protection against spells.</description>
+    <position x="560" y="520" z="0" />
+    <arc exit="north" move="north" destination="108" />
+    <arc exit="northeast" move="northeast" destination="103" />
+    <arc exit="east" move="east" destination="104" />
+    <arc exit="go" move="go gap" destination="134" />
+  </node>
+  <node id="108" name="Western Wastelands, Ancient Battleground">
+    <description>Several large hills cover the southern edge of the battleground, blocking the view to the south except for a large mountain that rises above the desolate hills.  The ground is dry and almost crumbly, no longer holding any moisture.  A lingering scent of death faintly hangs in the air, strongest at the bases of cliffs where the cleansing wind is blocked.</description>
+    <position x="560" y="500" z="0" />
+    <arc exit="east" move="east" destination="103" />
+    <arc exit="southeast" move="southeast" destination="104" />
+    <arc exit="south" move="south" destination="107" />
+  </node>
+  <node id="109" name="Western Wastelands, Ancient Battleground">
+    <description>A large bank of rocks stands in the center of this enormous field, appearing to have been constructed rather than a natural formation.  A few bones are scattered throughout the landscape, although they are few and far between.  Numerous scratches mar the rocks, most appearing in long sets of four.</description>
+    <position x="600" y="500" z="0" />
+    <arc exit="north" move="north" destination="102" />
+    <arc exit="south" move="south" destination="106" />
+    <arc exit="southwest" move="southwest" destination="104" />
+    <arc exit="west" move="west" destination="103" />
+  </node>
+  <node id="110" name="Western Wastelands, Rock Valley">
+    <description>A narrow path hugs the western edge of the rocky valley, sloping sharply as it curves around to connect the upper edge of the basin with the rim above.  Old green algae stains the edges of the trail, retaining its color even well after death.  Numerous rocks are half sunk into the walls, stacked haphazardly on each other and anchored with dirt.</description>
+    <position x="580" y="340" z="0" />
+    <arc exit="northeast" move="northeast" destination="99" />
+    <arc exit="south" move="south" destination="112" />
+    <arc exit="climb" move="climb cliff" destination="111" />
+  </node>
+  <node id="111" name="Forlorn Wilderness, Silent Field">
+    <description>The ground in this area is quite rocky, the jagged ground inhospitable to animals and hunters alike.  A cliff overhangs an ancient battleground below, providing a good view of the extent of the destruction.  Very little grows in the area, making the land seem hostile to life despite its separation from the corruption below.</description>
+    <position x="560" y="360" z="0" />
+    <arc exit="west" move="west" destination="113" />
+    <arc exit="climb" move="climb cliff" destination="110" />
+  </node>
+  <node id="112" name="Western Wastelands, Rock Valley">
+    <description>The path ends abruptly at a single massive boulder, which looks somewhat out of place at edge of the rocky valley.  However it appears very stable, its underside sunk down to form a large portion of the valley wall.  Most of the view is blocked by rocks on every side, the sight of the Prydaen highlands elusive in this area.</description>
+    <position x="580" y="360" z="0" />
+    <arc exit="north" move="north" destination="110" />
+  </node>
+  <node id="113" name="Forlorn Wilderness, Silent Field">
+    <description>The lonely highland fields stretch out at the top of the numerous ravines in the area, the vast space seeming empty of breathing life.  Occasionally dust devils pick up debris in the distance, carrying it lazily across the terrain as sweeping grey ghosts that are uncaring of their haunts.  A bit of debris escapes from time to time, sailing upward to be lost in the sky's expanse.</description>
+    <position x="510" y="360" z="0" />
+    <arc exit="east" move="east" destination="111" />
+    <arc exit="southwest" move="southwest" destination="125" />
+    <arc exit="west" move="west" destination="114" />
+  </node>
+  <node id="114" name="Forlorn Wilderness, Silent Field">
+    <description>Numerous fist-sized rocks are half sunk into the gently sloping hillside, a product of erosion that occurred long before the land was blighted.  The stones are almost completely worn smooth on their tops, and abandoned animal burrows are common among the larger rocks.  A simple shrine was once crafted in the hollow of a shallow cliff, but it appears desecrated and rendered useless.</description>
+    <position x="490" y="360" z="0" />
+    <arc exit="east" move="east" destination="113" />
+    <arc exit="south" move="south" destination="125" />
+    <arc exit="southwest" move="southwest" destination="124" />
+    <arc exit="west" move="west" destination="115" />
+    <arc exit="northwest" move="northwest" destination="129" />
+  </node>
+  <node id="115" name="Forlorn Wilderness, Silent Field">
+    <description>Numerous cracks form strange patterns in the dirt that makes up the large highland field, the broken land having long ago surrendered its moisture.  Little is left to impede progress through the area, any vegetation long gone.  The center of the gently sloping field forms a very slight bowl shape, and the small stones sunk into the ground offer adequate footing on the long journey.</description>
+    <position x="470" y="360" z="0" />
+    <arc exit="north" move="north" destination="129" />
+    <arc exit="east" move="east" destination="114" />
+    <arc exit="southeast" move="southeast" destination="125" />
+    <arc exit="south" move="south" destination="124" />
+    <arc exit="southwest" move="southwest" destination="117" />
+    <arc exit="west" move="west" destination="116" />
+    <arc exit="northwest" move="northwest" destination="131" />
+  </node>
+  <node id="116" name="Forlorn Wilderness, Silent Field">
+    <description>The highland field ends at a steep cliff to the west, which looks down on a circular village in the distance.  Smoke rises from one of the huts, although it appears to come from a chimney rather than from destruction.  The open air is crisp and rather clean, a welcome respite from the scent of death.</description>
+    <position x="450" y="360" z="0" />
+    <arc exit="north" move="north" destination="131" />
+    <arc exit="northeast" move="northeast" destination="129" />
+    <arc exit="east" move="east" destination="115" />
+    <arc exit="southeast" move="southeast" destination="124" />
+    <arc exit="south" move="south" destination="117" />
+    <arc exit="southwest" move="southwest" destination="118" />
+  </node>
+  <node id="117" name="Forlorn Wilderness, Silent Field">
+    <description>A large ravine drops off sharply to the south, the bottom of it visible but stained with a strange black ichor.  Unhealthy-looking plants grow around the ichor, their leaves an ugly purple and red with no hint of greenery.  The highland fields spread out to the north, rising away from the ugly scene below.</description>
+    <position x="450" y="380" z="0" />
+    <arc exit="north" move="north" destination="116" />
+    <arc exit="northeast" move="northeast" destination="115" />
+    <arc exit="east" move="east" destination="124" />
+    <arc exit="west" move="west" destination="118" />
+  </node>
+  <node id="118" name="Forlorn Wilderness, Silent Field">
+    <description>Large and slippery rocks make the terrain rather treacherous, and a cliff to the west blocks off any further progress in that direction.  The sloping field makes the sky seem much larger to the south, as the view to the north is partially blocked by hills.  A steep path leads down and south, the smell of death hanging heavy on the air, although no smell of real decay accompanies it.</description>
+    <position x="430" y="380" z="0" />
+    <arc exit="northeast" move="northeast" destination="116" />
+    <arc exit="east" move="east" destination="117" />
+    <arc exit="south" move="south" destination="119" />
+  </node>
+  <node id="119" name="Blighted Gorge, Mass Graveyard">
+    <description>Numerous makeshift headstones stick out haphazardly from the ground, marking where the fallen have been buried, hopefully to not rise again.  The headstones gradually become closer and closer together toward the middle, showing a desperate lack of space.  Etchings indicate the names of those buried, although most are faded away and forgotten.</description>
+    <position x="430" y="400" z="0" />
+    <arc exit="north" move="north" destination="118" />
+    <arc exit="south" move="south" destination="122" />
+    <arc exit="southwest" move="southwest" destination="120" />
+    <arc exit="west" move="west" destination="123" />
+  </node>
+  <node id="120" name="Blighted Gorge, Mass Graveyard">
+    <description>The center of the graveyard is blocked off by a large wall made from stone, standing nearly six feet high.  The graves are evenly spaced and neat, indicating that this portion of the graveyard was built before the wars really began.  A few show damage but most simply stand stoically, marking the ancestors of the generation before the fall of the west.</description>
+    <position x="410" y="420" z="0" />
+    <arc exit="north" move="north" destination="123" />
+    <arc exit="northeast" move="northeast" destination="119" />
+    <arc exit="east" move="east" destination="122" />
+    <arc exit="south" move="south" destination="121" />
+    <arc exit="go" move="go trail" destination="73" />
+  </node>
+  <node id="121" name="Blighted Gorge, Mass Graveyard">
+    <description>A portion of the wall has broken in this area, cutting off all progress south through the graveyard.  A mass of bodies is piled up and burned, although the gruesome job looks hastily done and partially incomplete.  Numerous tracks leading away from the pyre show the price paid for the lack of thoroughness.</description>
+    <position x="410" y="440" z="0" />
+    <arc exit="north" move="north" destination="120" />
+    <arc exit="northeast" move="northeast" destination="122" />
+  </node>
+  <node id="122" name="Blighted Gorge, Mass Graveyard">
+    <description>A huge pit is dug into the eastern edge of the graveyard, filled to the brim with the remains of Prydaen and Rakash dead alike.  Most of the corpses are cremated, little remaining of the individuals except a few scorched bones.  Wood and oil jars indicate desperation as the cause of the massive pile of bodies, with discarded digging tools still laid on the side of the pit.</description>
+    <position x="430" y="420" z="0" />
+    <arc exit="north" move="north" destination="119" />
+    <arc exit="southwest" move="southwest" destination="121" />
+    <arc exit="west" move="west" destination="120" />
+    <arc exit="northwest" move="northwest" destination="123" />
+  </node>
+  <node id="123" name="Blighted Gorge, Mass Graveyard">
+    <description>Most of the graves lie broken and upturned in this area, the earth disturbed around them and clawed apart.  Scraps of cloth and burial furs lie discarded next to a few of the graves, and a few have gaping pits that show where something crawled out from below.  One particular headstone lies shattered against the graveyard wall in a dozen pieces, as if the marker was flung away in sheer rage.</description>
+    <position x="410" y="400" z="0" />
+    <arc exit="east" move="east" destination="119" />
+    <arc exit="southeast" move="southeast" destination="122" />
+    <arc exit="south" move="south" destination="120" />
+  </node>
+  <node id="124" name="Forlorn Wilderness, Silent Field">
+    <description>Dust devils laze slowly across the sloping fields, no pattern or direction to their slow crawl across the terrain.  Stacks of weathered logs, remarkably well preserved, are arranged in neat piles that make small triangles.  The wood appears to have been dragged to this place from some distance away, as opposed to cut where it lies now.</description>
+    <position x="470" y="380" z="0" />
+    <arc exit="north" move="north" destination="115" />
+    <arc exit="northeast" move="northeast" destination="114" />
+    <arc exit="east" move="east" destination="125" />
+    <arc exit="west" move="west" destination="117" />
+    <arc exit="northwest" move="northwest" destination="116" />
+  </node>
+  <node id="125" name="Forlorn Wilderness, Silent Field">
+    <description>Sloping terrain is covered with dry grass and small white pebbles, the occasional large boulder poking through the softer dirt.  A narrow path leads downward to the south, leading down the side of the hill and away from the high fields.</description>
+    <position x="490" y="380" z="0" />
+    <arc exit="north" move="north" destination="114" />
+    <arc exit="northeast" move="northeast" destination="113" />
+    <arc exit="south" move="south" destination="126" />
+    <arc exit="west" move="west" destination="124" />
+    <arc exit="northwest" move="northwest" destination="115" />
+  </node>
+  <node id="126" name="Forlorn Wilderness, Silent Path">
+    <description>A sharp corner in the path that hugs the marks the edge of a rather large cliff, the bottom of it disappearing into the inky blackness that is even darker than the night.  Small clumps of hardy weeds still cling to the edges of the boulders, spared the worst of the corruption and showing a hint of life.  Far to the east, the Great Barrier roils with red crackling energy against the night sky, the vestigial remnant of a desperate prayer.</description>
+    <position x="490" y="400" z="0" />
+    <arc exit="north" move="north" destination="125" />
+    <arc exit="west" move="west" destination="127" />
+  </node>
+  <node id="127" name="Forlorn Wilderness, Silent Path">
+    <description>The path hugs the side of the rocky hillside, with numerous flat sheets of sandstone acting as a set of natural steps.  Large ravines break up the overall landscape, and the path provides a good view of an ancient battleground far to the southwest.  A grey layer of dust covers everything, making the land itself look completely dead.</description>
+    <position x="470" y="400" z="0" />
+    <arc exit="east" move="east" destination="126" />
+    <arc exit="southwest" move="southwest" destination="128" />
+  </node>
+  <node id="128" name="Forlorn Wilderness, Silent Path">
+    <description>The path winds along the side of a rocky hill, running up and down a vertical wall that isn't quite tall enough to be called a cliff.  Tiny pockets of black ooze flows from the rocks, staining the very edges of the path with a tarlike substance.  A rope bridge is visible to the south, spanning a small ravine to connect to a dry and dead grove of trees.</description>
+    <position x="450" y="420" z="0" />
+    <arc exit="northeast" move="northeast" destination="127" />
+    <arc exit="go" move="go bridge" destination="132" />
+  </node>
+  <node id="129" name="Decayed Hillside, Ascent">
+    <description>Not quite large enough to be called a mountain, the steep hill ascends upwards to the north, while curving a bit less to the south and forming the highland fields.  Though grass remains, it appears to have wilted and died long ago.  Crackling red energy from the Great Barrier stretches along the southern horizon and diml lights the night sky, impossible to see past it to the distant but more lush east.</description>
+    <position x="470" y="340" z="0" />
+    <arc exit="north" move="north" destination="130" />
+    <arc exit="southeast" move="southeast" destination="114" />
+    <arc exit="south" move="south" destination="115" />
+    <arc exit="southwest" move="southwest" destination="116" />
+    <arc exit="west" move="west" destination="131" />
+  </node>
+  <node id="130" name="Decayed Hilltop" color="#00FF00">
+    <description>The crest of the wave-shaped hill offers an excellent view of the surroundings.  A dense but dead forest covers much of the land to the east, while to the southeast ravines and cracks in the earth split the ground like open wounds.  Wild grasslands spread to the north and south, although the vegetation has long since dried up without decaying.</description>
+    <position x="470" y="320" z="0" />
+    <arc exit="south" move="south" destination="129" />
+    <arc exit="southwest" move="southwest" destination="131" />
+    <arc exit="climb" move="climb ladder" destination="65" />
+  </node>
+  <node id="131" name="Decayed Hillside, Ascent">
+    <description>A large hill stands tall to the north, its surface tangled in dry and long-dead grass.  No real path leads up the large hill, the way mostly clear only by the overall lack of vegetation.  Stones sunk into the ground provide natural hand and footholds, making climbing the hill a bit easier.</description>
+    <position x="450" y="340" z="0" />
+    <arc exit="northeast" move="northeast" destination="130" />
+    <arc exit="east" move="east" destination="129" />
+    <arc exit="southeast" move="southeast" destination="115" />
+    <arc exit="south" move="south" destination="116" />
+  </node>
+  <node id="132" name="Western Wastelands, Bridge">
+    <description>The twisting path winds its way across a narrow ravine, a crude rope and plank bridge spanning the break.  A few of the wooden boards are missing, although the bridge still appears traversable as a whole.  Although old, the lonely bridge seems untouched by the ravages of the world around it, unmarred by any scars of battle.</description>
+    <position x="450" y="480" z="0" />
+    <arc exit="south" move="south" destination="133" />
+    <arc exit="go" move="go bridge" destination="128" />
+  </node>
+  <node id="133" name="Western Wastelands, Ancient Path">
+    <description>Created more by frequent use than by any one creature's intention, the narrow path skirts the base of a steep hill, the trees on either side making passage to it inaccessible.  Twigs poke out from the ground, once young saplings but cut off from growth before ever having a chance at life.  Almost no decay is evident, however, and even some of the leaves remain green although dry and brittle.</description>
+    <position x="450" y="500" z="0" />
+    <arc exit="north" move="north" destination="132" />
+    <arc exit="southeast" move="southeast" destination="134" />
+  </node>
+  <node id="134" name="Western Wastelands, Ancient Path">
+    <description>The path leads away from the battlefield, winding its way through dead and broken trees.  Little remains here but footprints and a lingering corruption, though it is much stronger to the northeast.  Small holes in the ground lead only to blackness, making the way forward rather treacherous.</description>
+    <position x="470" y="520" z="0" />
+    <arc exit="northwest" move="northwest" destination="133" />
+    <arc exit="go" move="go gap" destination="107" />
+  </node>
+  <node id="135" name="Stone Warehouse">
+    <description>Despite the claw marks near the doorframe, the building's inside is pristine and well kept, testifying to the care taken in the hut's construction.  Kegs line the walls in neat rows, most untapped but a few with a small spigot in the bottom.  Nearby, several filled flagons rest on a tall wooden rack, each one sealed with a thick cork.</description>
+    <position x="130" y="400" z="0" />
+    <arc exit="out" move="out" destination="81" />
+  </node>
+  <node id="136" name="Stone Hut" color="#FF0000">
+    <description>The hut is in remarkably good condition, its exterior and interior both made almost completely out of stone.  Mud reinforcements add to the sturdiness of the structure, and several weapons hang on the walls.  Leather skins cover the dirt floor, and the building seems to be in fairly well-kept shape.</description>
+    <position x="150" y="300" z="0" />
+    <arc exit="out" move="out" destination="84" />
+  </node>
+  <label text="Agehrilor ">
+    <position x="930" y="290" z="0" />
+  </label>
+  <label text="Tear in the Great Barrier">
+    <position x="750" y="160" z="0" />
+  </label>
+  <label text="Narrow   Gap">
+    <position x="600" y="80" z="0" />
+  </label>
+  <label text="Rocky Hill">
+    <position x="500" y="20" z="0" />
+  </label>
+  <label text="Degehri">
+    <position x="480" y="310" z="0" />
+  </label>
+  <label text="Destroyed Hut">
+    <position x="250" y="280" z="0" />
+  </label>
+  <label text="Sunfell Hub gate">
+    <position x="190" y="230" z="0" />
+  </label>
+  <label text="Vipife">
+    <position x="590" y="530" z="0" />
+  </label>
+  <label text="Narrow   Ravine">
+    <position x="560" y="430" z="0" />
+  </label>
+  <label text="Jagged Cliff">
+    <position x="510" y="340" z="0" />
+  </label>
+  <label text="rope   bridge">
+    <position x="420" y="450" z="0" />
+  </label>
+  <label text="rope   ladder">
+    <position x="440" y="280" z="0" />
+  </label>
+  <label text="narrow trail">
+    <position x="340" y="410" z="0" />
+  </label>
+  <label text="narrow gap">
+    <position x="500" y="520" z="0" />
+  </label>
+  <label text="dilapidated gate">
+    <position x="260" y="350" z="0" />
+  </label>
+  <label text="Claw Matron Esata">
+    <position x="90" y="270" z="0" />
+  </label>
+  <label text="rocky trail">
+    <position x="430" y="140" z="0" />
+  </label>
+  <label text="riverbed">
+    <position x="360" y="190" z="0" />
+  </label>
+  <label text="narrow   path">
+    <position x="590" y="280" z="0" />
+  </label>
+  <label text="tree trunk">
+    <position x="600" y="190" z="0" />
+  </label>
+  <label text="warehouse">
+    <position x="90" y="410" z="0" />
+  </label>
+  <label text="Start">
+    <position x="1040" y="150" z="0" />
+  </label>
+  <label text="the Essence of Corruption">
+    <position x="400" y="250" z="0" />
+  </label>
+  <label text="Degehri">
+    <position x="460" y="190" z="0" />
+  </label>
+  <label text="Lyras">
+    <position x="630" y="30" z="0" />
+  </label>
+  <label text="a mud-infused monstrosity">
+    <position x="500" y="480" z="0" />
+  </label>
+  <label text="Silent Field">
+    <position x="390" y="340" z="0" />
+  </label>
+  <label text="Mass Graveyard">
+    <position x="320" y="440" z="0" />
+  </label>
+  <label text="Rock Valley">
+    <position x="620" y="320" z="0" />
+  </label>
+  <label text="Dead Forest">
+    <position x="540" y="150" z="0" />
+  </label>
+  <label text="Undead Battlefront">
+    <position x="650" y="50" z="0" />
+  </label>
+  <label text="Dry Hillside">
+    <position x="340" y="230" z="0" />
+  </label>
+  <label text="Ancient Battleground">
+    <position x="610" y="500" z="0" />
+  </label>
+</zone>

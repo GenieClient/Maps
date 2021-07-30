@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Su Helmas: Revealed!" id="0">
+  <node id="1" name="Plaza, Central Area" note="portal" color="#00FF00">
+    <description />
+    <position x="320" y="240" z="0" />
+    <arc exit="west" destination="3" />
+    <arc exit="north" destination="4" />
+    <arc exit="south" destination="5" />
+    <arc exit="east" destination="2" />
+  </node>
+  <node id="2" name="Plaza, Eastern Area" note="purple ward" color="#00FF00">
+    <description>Piles of broken rock and sand snake across the otherwise barren stones of the plaza, the forerunners of the blasted surroundings ready to rebury the ruins under debris and dunes.</description>
+    <position x="380" y="240" z="0" />
+    <arc exit="west" move="west" destination="1" />
+  </node>
+  <node id="3" name="Plaza, Western Area" note="ziggurat climber|climber|graveyard explorer|explorer" color="#00FF00">
+    <description />
+    <position x="260" y="240" z="0" />
+    <arc exit="east" move="east" destination="1" />
+  </node>
+  <node id="4" name="Plaza, Northern Area">
+    <description />
+    <position x="320" y="220" z="0" />
+    <arc exit="south" move="south" destination="1" />
+    <arc exit="go" move="go stone house" destination="8" />
+    <arc exit="go" move="go stone building" destination="75" />
+  </node>
+  <node id="5" name="Plaza, Southern Area">
+    <description>Piles of sand and rocks show where efforts at beating back the badlands have borne fruit.  The cleared areas include a couple of stone buildings which have been reclaimed for habitation from the wasteland.</description>
+    <position x="320" y="260" z="0" />
+    <arc exit="north" move="north" destination="1" />
+    <arc exit="go" move="go stone home" destination="6" />
+    <arc exit="go" move="go stone hut" destination="7" />
+  </node>
+  <node id="6" name="Stone Home, Interior" note="Stone Home" color="#FF0000">
+    <description>Makeshift sconces line the walls, holding flickering candles that barely beat back the gloom.  Although the room has been cleared of most obstructions and debris, some still fill the corners.</description>
+    <position x="300" y="280" z="0" />
+    <arc exit="go" move="go makeshift door" destination="5" />
+  </node>
+  <node id="7" name="Stone Hut, Interior" note="Stone Hut" color="#FF0000">
+    <description>Broken boards and other debris are swept against the walls, clearing a space in the middle of the room.  A hastily assembled shelf holds a flickering lamp which sheds an irregular light throughout the building.</description>
+    <position x="340" y="280" z="0" />
+    <arc exit="go" move="go makeshift door" destination="5" />
+  </node>
+  <node id="8" name="Stone House, Interior" note="raffle|Stone House" color="#FF0000">
+    <description>A single lantern casts a fitful light over the musty chamber.  Sand drifts in small rills on the stone floor, piling up in the corners.</description>
+    <position x="340" y="200" z="0" />
+    <arc exit="go" move="go makeshift door" destination="4" />
+  </node>
+  <node id="9" name="Desolate Field, Barren Path" note="Field exit" color="#00FF00">
+    <description>Made up of dirt and rocks, the surrounding landscape is completely barren and free of life, as if all vegetation had been scoured away by an overwhelming force.  The ground is parched and dry, with spiderweb cracks running through the ground.</description>
+    <position x="0" y="80" z="0" />
+    <arc exit="north" destination="11" />
+    <arc exit="east" destination="10" />
+    <arc exit="go" move="go crumbling gate" destination="38" />
+    <arc exit="go" move="go winding path" destination="3" />
+  </node>
+  <node id="10" name="Desolate Field, Barren Path">
+    <description>A thin layer of dust saturates the stale air about one to two inches above the ground, making tiny whorls and spirals whenever disturbed.  The ground itself is completely bare and lifeless, dry as a long forgotten bone and comprised of compacted brown dirt.</description>
+    <position x="40" y="80" z="0" />
+    <arc exit="south" move="south" destination="12" />
+    <arc exit="west" move="west" destination="9" />
+    <arc exit="northwest" move="northwest" destination="14" />
+  </node>
+  <node id="11" name="Desolate Field, Barren Path">
+    <description>The ground in the area is unnaturally flat and barren, though there is little indication of what caused the unnatural ground.  To the west, large boulders block the way, tall enough that it's impossible to see past the formations.</description>
+    <position x="0" y="60" z="0" />
+    <arc exit="north" move="north" destination="14" />
+    <arc exit="southeast" move="southeast" destination="12" />
+    <arc exit="south" move="south" destination="9" />
+  </node>
+  <node id="12" name="Desolate Field, Barren Path">
+    <description>The ground in the area is a very deep brown that borders on black, as if the remnants of a blazing fire had sputtered out and then crumbled over the landscape during the eons of neglect.  The occasional small rock can be seen sunken into the dirt, but otherwise the area is flat and featureless.</description>
+    <position x="40" y="100" z="0" />
+    <arc exit="north" move="north" destination="10" />
+    <arc exit="southeast" move="southeast" destination="13" />
+    <arc exit="northwest" move="northwest" destination="11" />
+  </node>
+  <node id="13" name="Edge of the Pit">
+    <description>The ground drops off to the east as a massive pit cuts through the desolate landscape like a hole into the world.  At the bottom, a mass graveyard is clearly visible, full of long forgotten skeletons that surround a massive white obelisk that stands tall in the center of the pit.</description>
+    <position x="60" y="120" z="0" />
+    <arc exit="northwest" move="northwest" destination="12" />
+    <arc exit="climb" move="climb winding ramp" destination="19" />
+  </node>
+  <node id="14" name="Desolate Field, Barren Path">
+    <description>Loose rubble peppers the ground in scattered piles, cleared away in small paths that have little purpose.  Nothing grows in the area, and the normal signs of life are completely absent, with no animal tracks or insects in the dirt.</description>
+    <position x="0" y="40" z="0" />
+    <arc exit="east" move="east" destination="15" />
+    <arc exit="southeast" move="southeast" destination="10" />
+    <arc exit="south" move="south" destination="11" />
+  </node>
+  <node id="15" name="Desolate Field, Barren Path">
+    <description>Buried halfway in the ground lies a lone skeleton, its spine and legs completely sunken into the hardened dirt and its ribs half sticking out of the ground.  Only its head is exposed, and its posture mimics the pose of a drowning man.</description>
+    <position x="40" y="40" z="0" />
+    <arc exit="northeast" move="northeast" destination="16" />
+    <arc exit="west" move="west" destination="14" />
+  </node>
+  <node id="16" name="Desolate Field, Barren Path">
+    <description>The flat, dry ground holds little moisture, and it appears that any rain that falls simply runs off it without penetrating the surface.  Large boulders block most of the way north, though a trail wends through them, leading through the tangle of massive stones.</description>
+    <position x="60" y="20" z="0" />
+    <arc exit="east" move="east" destination="17" />
+    <arc exit="southwest" move="southwest" destination="15" />
+  </node>
+  <node id="17" name="Desolate Field, Barren Path">
+    <description>Compact and barren ground makes up the landscape in the area, and the path continues between several massive boulders that are sunk partly into the ground.  The narrow path has a feeling of intense sterility, and an almost astringent taste lingers in the stale air.</description>
+    <position x="80" y="20" z="0" />
+    <arc exit="southeast" move="southeast" destination="18" />
+    <arc exit="west" move="west" destination="16" />
+  </node>
+  <node id="18" name="Edge of the Pit">
+    <description>The desolate landscape suddenly drops off into a massive spiral-shaped pit, with extremely steep sides and forming a bowl-shaped basin.  At the bottom of the pit, numerous bleached white skeletons are visible, surrounding a massive obelisk that rises up in the center of the pit.</description>
+    <position x="100" y="40" z="0" />
+    <arc exit="northwest" move="northwest" destination="17" />
+    <arc exit="climb" move="climb winding ramp" destination="23" />
+  </node>
+  <node id="19" name="Sunken Pit, Mass Graveyard">
+    <description>The bottom of the ramp is partly covered in bleached white skeletons, scattered here and there in macabre poses.  Several of the bodies still have bits of dried out flesh clinging to them, mummified over eons in the dry air.</description>
+    <position x="100" y="120" z="0" />
+    <arc exit="north" move="north" destination="20" />
+    <arc exit="northeast" move="northeast" destination="28" />
+    <arc exit="east" move="east" destination="22" />
+    <arc exit="southeast" move="southeast" destination="21" />
+    <arc exit="climb" move="climb winding ramp" destination="13" />
+  </node>
+  <node id="20" name="Sunken Pit, Mass Graveyard">
+    <description>Numerous bare skeletons litter the ground in the area, both decay and rigor mortis having twisted them into macabre shapes.  Stray bones and skulls poke up from the compacted hard dirt, indicating that the pit has seen multiple uses over long periods of time.</description>
+    <position x="100" y="60" z="0" />
+    <arc exit="northeast" move="northeast" destination="23" />
+    <arc exit="east" move="east" destination="28" />
+    <arc exit="southeast" move="southeast" destination="22" />
+    <arc exit="south" move="south" destination="19" />
+  </node>
+  <node id="21" name="Sunken Pit, Mass Graveyard">
+    <description>Discarded skeletons litter the bottom of the massive pit, most of them partly sunken into the thick dirt that makes up the ground in this desolate area.  Huddled into the stone wall are two corpses holding hands, indicating that not everyone may have been dead before they were thrown into the pit.</description>
+    <position x="160" y="180" z="0" />
+    <arc exit="north" move="north" destination="22" />
+    <arc exit="northeast" move="northeast" destination="30" />
+    <arc exit="east" move="east" destination="27" />
+    <arc exit="northwest" move="northwest" destination="19" />
+  </node>
+  <node id="22" name="Sunken Pit, Obelisk">
+    <description>Rising high from the center of the sunken pit, the pure white obelisk stands starkly against the sky, made from some strange material that defies any weathering or vandalism.  Each of its four corners points exactly in a cardinal direction.  The southwestern face is visible here and is covered mostly in a cursive script of compact writing, though a little under a third of it is still blank.</description>
+    <position x="160" y="120" z="0" />
+    <arc exit="north" move="north" destination="28" />
+    <arc exit="east" move="east" destination="30" />
+    <arc exit="southeast" move="southeast" destination="27" />
+    <arc exit="south" move="south" destination="21" />
+    <arc exit="west" move="west" destination="19" />
+    <arc exit="northwest" move="northwest" destination="20" />
+  </node>
+  <node id="23" name="Sunken Pit, Mass Graveyard">
+    <description>The lifeless ground is covered in a massive tangle of skeletons, bleached white and stripped of flesh after long exposure to the elements.  Many of the skeletons are splintered and cracked in numerous places, indicating massive trauma before the victims' deaths.</description>
+    <position x="160" y="0" z="0" />
+    <arc exit="east" move="east" destination="24" />
+    <arc exit="southeast" move="southeast" destination="29" />
+    <arc exit="south" move="south" destination="28" />
+    <arc exit="southwest" move="southwest" destination="20" />
+    <arc exit="climb" move="climb winding ramp" destination="18" />
+  </node>
+  <node id="24" name="Sunken Pit, Mass Graveyard">
+    <description>Scraps of dark cloth still cling to several of the mummified corpses that litter the bottom of the pit, the numerous bodies dried out into empty, dry husks that give little indication to what races they were.  Though immobile and very long dead, the corpses still appear to stare forward blankly.</description>
+    <position x="220" y="0" z="0" />
+    <arc exit="southeast" move="southeast" destination="25" />
+    <arc exit="south" move="south" destination="29" />
+    <arc exit="southwest" move="southwest" destination="28" />
+    <arc exit="west" move="west" destination="23" />
+  </node>
+  <node id="25" name="Sunken Pit, Mass Graveyard">
+    <description>Piles of bones stack up against the sheer edges of the pit, creating tangles that make it impossible to tell which bones belonged to what skeleton.  Clear and crisp paths between the piles of bone are the only indication that the area is not wholly abandoned.</description>
+    <position x="280" y="60" z="0" />
+    <arc exit="south" move="south" destination="26" />
+    <arc exit="southwest" move="southwest" destination="30" />
+    <arc exit="west" move="west" destination="29" />
+    <arc exit="northwest" move="northwest" destination="24" />
+  </node>
+  <node id="26" name="Sunken Pit, Mass Graveyard">
+    <description>Relatively few skeletons lie at rest in this area compared to the rest of the pit, though the absence makes the few that remain all the more eerie, speaking of unfinished work in filling the pit.  Several of the skeletons are also not wholly bleached, indicating that they are at least somewhat newer than the rest of the pit.</description>
+    <position x="280" y="120" z="0" />
+    <arc exit="north" move="north" destination="25" />
+    <arc exit="southwest" move="southwest" destination="27" />
+    <arc exit="west" move="west" destination="30" />
+    <arc exit="northwest" move="northwest" destination="29" />
+  </node>
+  <node id="27" name="Sunken Pit, Mass Graveyard">
+    <description>Hundreds of skeletonized corpses are piled up in careless and haphazard arrangements, a testament to the brutal efficiency of whoever presided over their deaths.  Mixed into the collection of bones are many animal bones, giving hints that the killing was quite indiscriminate.</description>
+    <position x="220" y="180" z="0" />
+    <arc exit="north" move="north" destination="30" />
+    <arc exit="northeast" move="northeast" destination="26" />
+    <arc exit="west" move="west" destination="21" />
+    <arc exit="northwest" move="northwest" destination="22" />
+    <arc exit="climb" move="climb winding ramp" destination="31" />
+  </node>
+  <node id="28" name="Sunken Pit, Obelisk">
+    <description>Rising high from the center of the sunken pit, the pure white obelisk stands starkly against the sky, made from some strange material that defies any weathering or vandalism.  Each of its four corners points exactly in a cardinal direction.  The northwestern face is visible here, and numerous runes are carved onto its surface, filled in with a dark material that makes the lettering stand out.</description>
+    <position x="160" y="60" z="0" />
+    <arc exit="north" move="north" destination="23" />
+    <arc exit="northeast" move="northeast" destination="24" />
+    <arc exit="east" move="east" destination="29" />
+    <arc exit="south" move="south" destination="22" />
+    <arc exit="southwest" move="southwest" destination="19" />
+    <arc exit="west" move="west" destination="20" />
+  </node>
+  <node id="29" name="Sunken Pit, Obelisk">
+    <description>Rising high from the center of the sunken pit, the pure white obelisk stands starkly against the sky, made from some strange material that defies any weathering or vandalism.  Each of its four corners points exactly in a cardinal direction.  The northeastern face is visible here, and numerous markings that represent celestial sigils cover its surface, each one filled with the powder of semi-precious gemstones.</description>
+    <position x="220" y="60" z="0" />
+    <arc exit="north" move="north" destination="24" />
+    <arc exit="east" move="east" destination="25" />
+    <arc exit="southeast" move="southeast" destination="26" />
+    <arc exit="south" move="south" destination="30" />
+    <arc exit="west" move="west" destination="28" />
+    <arc exit="northwest" move="northwest" destination="23" />
+  </node>
+  <node id="30" name="Sunken Pit, Obelisk">
+    <description>Rising high from the center of the sunken pit, the pure white obelisk stands starkly against the sky, made from some strange material that defies any weathering or vandalism.  Each of its four corners points exactly in a cardinal direction.  The southeastern face is visible here, and appears to be completely blank, its stark white face piercing the sky like a fine white needle.</description>
+    <position x="220" y="120" z="0" />
+    <arc exit="north" move="north" destination="29" />
+    <arc exit="northeast" move="northeast" destination="25" />
+    <arc exit="east" move="east" destination="26" />
+    <arc exit="south" move="south" destination="27" />
+    <arc exit="southwest" move="southwest" destination="21" />
+    <arc exit="west" move="west" destination="22" />
+  </node>
+  <node id="31" name="Edge of the Pit">
+    <description>The edge of a massive pit is clearly visible to the north, the sides of it straight vertical and the bottom of it filled with a massive number of bleached skeletons.  In the center of the pit, an enormous obelisk rises up high, standing starkly white against its darker surroundings.</description>
+    <position x="140" y="200" z="0" />
+    <arc exit="south" move="south" destination="32" />
+    <arc exit="climb" move="climb winding ramp" destination="27" />
+  </node>
+  <node id="32" name="Desolate Field, Lifeless Trail">
+    <description>A massive collection of rocks and boulders completely block off any continuation of the shallow ravine to the east, easily filling the path past the top of the gorge.  A path to the north appears man-made, with numerous shovel marks still visible in the hard and compact dirt.</description>
+    <position x="140" y="220" z="0" />
+    <arc exit="north" move="north" destination="31" />
+    <arc exit="west" move="west" destination="33" />
+  </node>
+  <node id="33" name="Desolate Field, Lifeless Trail">
+    <description>Powdery dirt and loose pebbles litter the ravine floor, making it obvious that moisture never stays around for long in this dry and desolate place.  Both the northern and southern walls are cracked and jagged, though erosion has blunted the sharpest of the edges.</description>
+    <position x="100" y="220" z="0" />
+    <arc exit="east" move="east" destination="32" />
+    <arc exit="northwest" move="northwest" destination="34" />
+  </node>
+  <node id="34" name="Desolate Field, Lifeless Trail">
+    <description>The shallow ravine cuts through the sullen landscape like a meandering crack through brown rock, and its floor resembles an area where the dull landscape simply caved into it.  Tiny trails in the ground indicate where water flows when it rains, carving dry spiderwebs through the bare dirt.</description>
+    <position x="80" y="200" z="0" />
+    <arc exit="southeast" move="southeast" destination="33" />
+    <arc exit="west" move="west" destination="35" />
+  </node>
+  <node id="35" name="Desolate Field, Lifeless Trail">
+    <description>The shallow ravine narrows to the east, while it widens to the west to accommodate a large rock formation in the center of the path.  Rising tall from the ground, the formation appears to have once been merely a part of the landscape, ancient water having carved the paths around it.</description>
+    <position x="40" y="200" z="0" />
+    <arc exit="east" move="east" destination="34" />
+    <arc exit="west" move="west" destination="36" />
+    <arc exit="northwest" move="northwest" destination="37" />
+  </node>
+  <node id="36" name="Desolate Field, Lifeless Trail">
+    <description>The path cuts directly into the ravine wall, creating a narrow depression in the stone that marks the beginning of a cave.  However, it appears that whatever water flowed through this area was long gone before the formation could be finished, and the overhang is not enough to protect from the elements.</description>
+    <position x="20" y="200" z="0" />
+    <arc exit="north" move="north" destination="37" />
+    <arc exit="east" move="east" destination="35" />
+  </node>
+  <node id="37" name="Desolate Field, Lifeless Trail">
+    <description>The walls of the ravine widen in this area to accommodate a large brown rock formation in the center of the depression.  Dry trails mark where runnels of water used to flow in the area, punctuated by small pebbles worn smooth and round.</description>
+    <position x="20" y="180" z="0" />
+    <arc exit="southeast" move="southeast" destination="35" />
+    <arc exit="south" move="south" destination="36" />
+    <arc exit="northwest" move="northwest" destination="38" />
+  </node>
+  <node id="38" name="Desolate Field, Lifeless Trail">
+    <description>The narrow path sweeps south from the crumbling gate and lies within a shallow ravine, with all the signs of once having held a riverbed or wash.  Numerous brown pebbles line the now barren path, and it's clear that any water that falls is quickly funneled away by the sloping path.</description>
+    <position x="0" y="160" z="0" />
+    <arc exit="southeast" move="southeast" destination="37" />
+    <arc exit="go" move="go crumbling gate" destination="9" />
+  </node>
+  <node id="39" name="Ziggurat, Lower Level" note="tower exit" color="#00FF00">
+    <description>Tumbled stones litter the platform, refugees from higher on the structure.  A trail has been hacked out of the surrounding vegetation, allowing access further around the edifice.  The middle and upper platforms, covered with tangles of foliage, loom over the crude pathway.</description>
+    <position x="20" y="480" z="0" />
+    <arc exit="north" destination="40" />
+    <arc exit="east" destination="54" />
+    <arc exit="climb" move="climb staircase" destination="63" />
+    <arc exit="go" move="go shimmering portal" destination="3" />
+  </node>
+  <node id="40" name="Ziggurat, Lower Level">
+    <description>A few blocks have fallen from the heights, providing obstacles for the path hewn from the jungle.  The upper platforms tower over this, the lowest terrace.</description>
+    <position x="20" y="420" z="0" />
+    <arc exit="north" move="north" destination="41" />
+    <arc exit="south" move="south" destination="39" />
+  </node>
+  <node id="41" name="Ziggurat, Lower Level">
+    <description>Fallen stones litter the platform, refugees from higher on the edifice.  The middle and upper platforms, covered with trees and vines, loom over the twisty pathway.</description>
+    <position x="20" y="380" z="0" />
+    <arc exit="north" move="north" destination="42" />
+    <arc exit="south" move="south" destination="40" />
+  </node>
+  <node id="42" name="Ziggurat, Lower Level">
+    <description>The ever-present jungle growth crowds in on the narrow path, threatening to once more reclaim it.  Puddles from prior rains stretch across the footpath, settling into the depressions in the stones of the pyramid.</description>
+    <position x="20" y="340" z="0" />
+    <arc exit="north" move="north" destination="43" />
+    <arc exit="south" move="south" destination="41" />
+  </node>
+  <node id="43" name="Ziggurat, Lower Level">
+    <description>The middle and upper platforms, covered with foliage, rise over the trail cleared out of the surrounding vegetation.  The loud calls of insects and birds fill the area.</description>
+    <position x="20" y="280" z="0" />
+    <arc exit="east" move="east" destination="44" />
+    <arc exit="south" move="south" destination="42" />
+    <arc exit="climb" move="climb stone stairway" destination="60" />
+  </node>
+  <node id="44" name="Ziggurat, Lower Level">
+    <description>Hewn from the surrounding undergrowth, a narrow footpath twists between fallen boulders that cover the platform.  The middle and upper platforms, covered with jungle vegetation, loom over the crude pathway.</description>
+    <position x="80" y="280" z="0" />
+    <arc exit="east" move="east" destination="45" />
+    <arc exit="west" move="west" destination="43" />
+  </node>
+  <node id="45" name="Ziggurat, Lower Level">
+    <description>Some of the fallen stones have been cleared off to the side in the beginnings of attempts at archaeological work.  The two upper platforms, covered with tangles of vines, loom over the crude footpath winding between the boulders.</description>
+    <position x="120" y="280" z="0" />
+    <arc exit="east" move="east" destination="46" />
+    <arc exit="west" move="west" destination="44" />
+  </node>
+  <node id="46" name="Ziggurat, Lower Level">
+    <description>A few blocks have fallen from the heights, providing obstacles for the path hewn from the jungle.  The upper levels soar in vertical stone walls above the lower level.</description>
+    <position x="160" y="280" z="0" />
+    <arc exit="east" move="east" destination="47" />
+    <arc exit="west" move="west" destination="45" />
+  </node>
+  <node id="47" name="Ziggurat, Lower Level">
+    <description>Hewn from the surrounding flora, a crude pathway zigzags between jumbled rocks that cover the platform.  Some of the stones have been cleared off in the beginnings of attempts at archaeological work.</description>
+    <position x="220" y="280" z="0" />
+    <arc exit="south" move="south" destination="48" />
+    <arc exit="west" move="west" destination="46" />
+    <arc exit="climb" move="climb stairs" destination="57" />
+  </node>
+  <node id="48" name="Ziggurat, Lower Level">
+    <description>The middle and upper platforms, covered with tangles of foliage, loom over the crude pathway.  Tumbled stones litter the platform, refugees from higher on the structure.</description>
+    <position x="220" y="340" z="0" />
+    <arc exit="north" move="north" destination="47" />
+    <arc exit="south" move="south" destination="49" />
+  </node>
+  <node id="49" name="Ziggurat, Lower Level">
+    <description>Puddles from prior rains stretch across the footpath, settling into the depressions in the stones of the pyramid.  The ever-present jungle growth crowds in on the narrow path, threatening to once more reclaim it.</description>
+    <position x="220" y="380" z="0" />
+    <arc exit="north" move="north" destination="48" />
+    <arc exit="south" move="south" destination="50" />
+  </node>
+  <node id="50" name="Ziggurat, Lower Level">
+    <description>The middle and upper platforms, covered with vines and trees, loom over the trail hacked out of the surrounding vegetation.  The constant calls of insects and birds fill the air.</description>
+    <position x="220" y="420" z="0" />
+    <arc exit="north" move="north" destination="49" />
+    <arc exit="south" move="south" destination="51" />
+  </node>
+  <node id="51" name="Ziggurat, Lower Level">
+    <description>Hacked from the surrounding undergrowth, a narrow trace zigzags between fallen rocks that cover the platform.  Some of the stones have been cleared away to begin the process of excavation.</description>
+    <position x="220" y="480" z="0" />
+    <arc exit="north" move="north" destination="50" />
+    <arc exit="west" move="west" destination="52" />
+    <arc exit="climb" move="climb stone steps" destination="55" />
+  </node>
+  <node id="52" name="Ziggurat, Lower Level">
+    <description>The two upper platforms, covered with tangles of vines, loom over the crude trail zigzagging between fallen stones.  Some of the stones have been cleared off to the side in the beginnings of attempts at archaeological work.</description>
+    <position x="160" y="480" z="0" />
+    <arc exit="east" move="east" destination="51" />
+    <arc exit="west" move="west" destination="53" />
+  </node>
+  <node id="53" name="Ziggurat, Lower Level">
+    <description>The upper levels soar in vertical stone walls above the lower level.  A few blocks have fallen from the heights, providing obstacles for the path hewn from the jungle.</description>
+    <position x="120" y="480" z="0" />
+    <arc exit="east" move="east" destination="52" />
+    <arc exit="west" move="west" destination="54" />
+  </node>
+  <node id="54" name="Ziggurat, Lower Level">
+    <description>Hewn from the surrounding flora, a crude pathway zigzags between jumbled rocks that cover the platform.  The upper platforms tower over this, the lowest terrace.  Some of the stones have been cleared off in the beginnings of attempts at archaeological work.</description>
+    <position x="80" y="480" z="0" />
+    <arc exit="east" move="east" destination="53" />
+    <arc exit="west" move="west" destination="39" />
+  </node>
+  <node id="55" name="Ziggurat, Middle Level">
+    <description>Spreading out from the encircling trails, a large clearing fills the space between the steps and stairs moving between the levels.  A small pool of rainwater has formed in the depression between some of the stones of the floor.</description>
+    <position x="200" y="460" z="0" />
+    <arc exit="north" move="north" destination="56" />
+    <arc exit="west" move="west" destination="65" />
+    <arc exit="climb" move="climb stone steps" destination="51" />
+    <arc exit="climb" move="climb stone stairs" destination="66" />
+  </node>
+  <node id="56" name="Ziggurat, Middle Level">
+    <description>A large stone block has fallen from the upper level, forcing the footpath to diverge around it.  Vines from the surrounding forest drape across the boulder, slowly swallowing it under a blanket of foliage.</description>
+    <position x="200" y="380" z="0" />
+    <arc exit="north" move="north" destination="57" />
+    <arc exit="south" move="south" destination="55" />
+  </node>
+  <node id="57" name="Ziggurat, Middle Level">
+    <description>Most of the area is choked with undergrowth, leaving a clearing between the stairway and stairs as well as trails leading further around the ziggurat.  Pools from previous rains spread across the trail, settling into the depressions in the stones of the edifice.</description>
+    <position x="200" y="300" z="0" />
+    <arc exit="south" move="south" destination="56" />
+    <arc exit="west" move="west" destination="58" />
+    <arc exit="climb" move="climb stairs" destination="47" />
+    <arc exit="climb" move="cilmb stairway" destination="68" />
+  </node>
+  <node id="58" name="Ziggurat, Middle Level">
+    <description>Vines trail from the surrounding jungle, further impeding progress around the ziggurat.  A few boulders have detached from the terrace, forcing the trail to veer around the openings in the platform.</description>
+    <position x="140" y="300" z="0" />
+    <arc exit="east" move="east" destination="57" />
+    <arc exit="west" move="west" destination="59" />
+  </node>
+  <node id="59" name="Ziggurat, Middle Level">
+    <description>The area is filled with the sounds of birds calling and flitting amongst the trees.  A narrow footpath has been hacked out of the surrounding jungle, allowing access further around the pyramid.</description>
+    <position x="100" y="300" z="0" />
+    <arc exit="east" move="east" destination="58" />
+    <arc exit="west" move="west" destination="60" />
+  </node>
+  <node id="60" name="Ziggurat, Middle Level">
+    <description>A small pool of rainwater has formed in the depression between some of the stones of the floor.  Spreading out from the encircling trails, a large clearing fills the space between the steps and stairs moving between the levels.</description>
+    <position x="40" y="300" z="0" />
+    <arc exit="east" move="east" destination="59" />
+    <arc exit="south" move="south" destination="61" />
+    <arc exit="climb" move="climb stone stairway" destination="43" />
+    <arc exit="climb" move="climb staircase" destination="70" />
+  </node>
+  <node id="61" name="Ziggurat, Middle Level">
+    <description>Hewn from the surrounding jungle, a twisty trail snakes between the trunks of the lofty trees.  Rustles from the undergrowth indicate that the area is not uninhabited.</description>
+    <position x="40" y="360" z="0" />
+    <arc exit="north" move="north" destination="60" />
+    <arc exit="south" move="south" destination="62" />
+  </node>
+  <node id="62" name="Ziggurat, Middle Level">
+    <description>Vines from the surrounding forest drape across a fallen boulder, slowly swallowing it under a blanket of foliage.  The trail snakes around the obstacle, making its way around the ziggurat.</description>
+    <position x="40" y="400" z="0" />
+    <arc exit="north" move="north" destination="61" />
+    <arc exit="south" move="south" destination="63" />
+  </node>
+  <node id="63" name="Ziggurat, Middle Level">
+    <description>Puddles from previous downpours spread across the trail, settling into the depressions in the stones of the ziggurat.  Most of the area is choked with undergrowth, leaving a track between the steps and staircase as well as pathways leading further around the edifice.</description>
+    <position x="40" y="460" z="0" />
+    <arc exit="north" move="north" destination="62" />
+    <arc exit="east" move="east" destination="64" />
+    <arc exit="climb" move="climb staircase" destination="39" />
+    <arc exit="climb" move="climb steps" destination="72" />
+  </node>
+  <node id="64" name="Ziggurat, Middle Level">
+    <description>A few rocks have dislodged from the platform, forcing the path to veer around the openings in the terrace floor.  Vines trail from the surrounding trees, further impeding progress around the pyramid.</description>
+    <position x="100" y="460" z="0" />
+    <arc exit="east" move="east" destination="65" />
+    <arc exit="west" move="west" destination="63" />
+  </node>
+  <node id="65" name="Ziggurat, Middle Level">
+    <description>A narrow trail has been hacked out of the surrounding jungle, allowing access further around the edifice.  The air is filled with the sounds of avians calling and flitting amongst the trees.</description>
+    <position x="140" y="460" z="0" />
+    <arc exit="east" move="east" destination="55" />
+    <arc exit="west" move="west" destination="64" />
+  </node>
+  <node id="66" name="Ziggurat, Top Level">
+    <description>Flattened foliage extends around the stairway and stairs, providing a bit of a break in the overgrown tangle of undergrowth.</description>
+    <position x="180" y="440" z="0" />
+    <arc exit="north" move="north" destination="67" />
+    <arc exit="west" move="west" destination="73" />
+    <arc exit="climb" move="climb stone stairs" destination="55" />
+    <arc exit="climb" move="climb stone stairway" destination="74" />
+  </node>
+  <node id="67" name="Ziggurat, Top Level">
+    <description>A gaping hole reveals where a stone block has tumbled to a lower level.  A twisty game path winds among the shrubs, providing a way around the platform.</description>
+    <position x="180" y="380" z="0" />
+    <arc exit="north" move="north" destination="68" />
+    <arc exit="south" move="south" destination="66" />
+  </node>
+  <node id="68" name="Ziggurat, Top Level">
+    <description>Although the stairway and staircase are cleared, little other progress has been made in stripping the foliage from the pyramid.  A twisty pathway snakes into the jungle, allowing access to the rest of the upper level.</description>
+    <position x="180" y="320" z="0" />
+    <arc exit="south" move="south" destination="67" />
+    <arc exit="west" move="west" destination="69" />
+    <arc exit="climb" move="climb stone staircase" destination="74" />
+    <arc exit="climb" move="climb stairway" destination="57" />
+  </node>
+  <node id="69" name="Ziggurat, Top Level">
+    <description>Shrubs and vines almost completely choke out the narrow game trail.  The calls of birds echo from the lower platforms.</description>
+    <position x="120" y="320" z="0" />
+    <arc exit="east" move="east" destination="68" />
+    <arc exit="west" move="west" destination="70" />
+  </node>
+  <node id="70" name="Ziggurat, Top Level">
+    <description>Broken and crushed vegetation extends around the staircase and steps, providing a bit of a break in the lush tangle of foliage.</description>
+    <position x="60" y="320" z="0" />
+    <arc exit="east" move="east" destination="69" />
+    <arc exit="south" move="south" destination="71" />
+    <arc exit="climb" move="climb stone steps" destination="74" />
+    <arc exit="climb" move="climb staricase" destination="60" />
+  </node>
+  <node id="71" name="Ziggurat, Top Level">
+    <description>A lone sapling struggles to rise above the shrubs and vines congesting the platform's surface.  The narrow footpath diverts around the tree, its surface mostly trampled grass.</description>
+    <position x="60" y="380" z="0" />
+    <arc exit="north" move="north" destination="70" />
+    <arc exit="south" move="south" destination="72" />
+  </node>
+  <node id="72" name="Ziggurat, Top Level">
+    <description>Although the steps and stairs are cleared, little other progress has been made in stripping the vegetation from the ziggurat.  A narrow game trail twists into the jungle, allowing access to the rest of the upper level.</description>
+    <position x="60" y="440" z="0" />
+    <arc exit="north" move="north" destination="71" />
+    <arc exit="east" move="east" destination="73" />
+    <arc exit="climb" move="climb steps" destination="63" />
+    <arc exit="climb" move="climb stone stairs" destination="74" />
+  </node>
+  <node id="73" name="Ziggurat, Top Level">
+    <description>Little marks out the trail but trampled and broken shrubs.  Stone blocks stick up from the undergrowth at irregular intervals.</description>
+    <position x="120" y="440" z="0" />
+    <arc exit="east" move="east" destination="66" />
+    <arc exit="west" move="west" destination="72" />
+  </node>
+  <node id="74" name="Ziggurat, Peak">
+    <description>Winds sweep across the stone platform at the top of the ziggurat, scouring it clean of dirt and debris.  The vista is of mostly unbroken jungle, only occasionally broken by the summits of other ziggurats rising above their own cloaks of jungle vegetation.  Some of the stones have begun to crumble under the onslaught of water and weather, but it remains safe enough for now.</description>
+    <position x="120" y="380" z="0" />
+    <arc exit="climb" move="climb stone stairway" destination="66" />
+    <arc exit="climb" move="climb stone steps" destination="70" />
+    <arc exit="climb" move="climb stairs" destination="72" />
+    <arc exit="climb" move="climb stone stairs" destination="72" />
+    <arc exit="climb" move="climb stone staircase" destination="68" />
+  </node>
+  <node id="75" name="Stone Building, Interior" color="#FF0000">
+    <description>Dust and rubble are swept into the corners, testifying to a hasty effort to make the edifice habitable.  An occasional skittering sound comes from the shadows as the former denizens avoid the light cast by the flickering torches attached to the stone walls.</description>
+    <position x="300" y="200" z="0" />
+    <arc exit="go" move="go makeshift door" destination="4" />
+  </node>
+  <label text="Stone Home">
+    <position x="230" y="290" z="0" />
+  </label>
+  <label text="Stone Hut">
+    <position x="330" y="290" z="0" />
+  </label>
+  <label text="Stone House">
+    <position x="330" y="180" z="0" />
+  </label>
+  <label text="Ramp">
+    <position x="100" y="10" z="0" />
+  </label>
+  <label text="Ramp">
+    <position x="170" y="200" z="0" />
+  </label>
+  <label text="Gate">
+    <position x="0" y="110" z="0" />
+  </label>
+  <label text="purple ward">
+    <position x="340" y="219" z="0" />
+  </label>
+  <label text="graveyard explorer">
+    <position x="170" y="220" z="0" />
+  </label>
+  <label text="ziggurat climber">
+    <position x="180" y="240" z="0" />
+  </label>
+  <label text="ghoulish beggar">
+    <position x="280" y="20" z="0" />
+  </label>
+  <label text="ghoulish guard">
+    <position x="290" y="40" z="0" />
+  </label>
+  <label text="ghoulish teacher">
+    <position x="290" y="60" z="0" />
+  </label>
+  <label text="ghoulish fisher">
+    <position x="290" y="10" z="0" />
+  </label>
+  <label text="ghoulish socialite">
+    <position x="270" y="30" z="0" />
+  </label>
+  <label text="sandstone golem">
+    <position x="30" y="170" z="0" />
+  </label>
+  <label text="clockwork monstrosity">
+    <position x="70" y="400" z="0" />
+  </label>
+  <label text="&lt;Race&gt;-eating mantrap">
+    <position x="60" y="340" z="0" />
+  </label>
+  <label text="&lt;Race&gt;-eating mantrap">
+    <position x="70" y="300" z="0" />
+  </label>
+  <label text="clockwork monstrosity">
+    <position x="80" y="280" z="0" />
+  </label>
+  <label text="massive &lt;color&gt; rafflesias">
+    <position x="60" y="460" z="0" />
+  </label>
+  <label text="ghoulish villager">
+    <position x="290" y="70" z="0" />
+  </label>
+  <label text="ghoulish farmer">
+    <position x="290" y="50" z="0" />
+  </label>
+  <label text="Ziggurat">
+    <position x="100" y="260" z="0" />
+  </label>
+  <label text="Sunken Pit">
+    <position x="160" y="80" z="0" />
+  </label>
+  <label text="Desolate Field">
+    <position x="10" y="210" z="0" />
+  </label>
+  <label text="Ramp">
+    <position x="60" y="130" z="0" />
+  </label>
+  <label text="Stone Building">
+    <position x="250" y="180" z="0" />
+  </label>
+</zone>

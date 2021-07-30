@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Dunshade Manor" id="30a">
+  <node id="1" name="Dunshade Manor, Side Yard">
+    <description>A tall black iron fence overgrown with ivy encloses the Dunshade property, shutting out the Riverhaven streets that surround it.  Brittle leaves and dried yellow grass obscure what is left of a walkway.  The remnants of a long-abandoned child's playhouse sit forlornly in the corner of the lot.</description>
+    <position x="20" y="240" z="0" />
+    <arc exit="north" move="north" destination="3" />
+    <arc exit="east" move="east" destination="2" />
+  </node>
+  <node id="2" name="Dunshade Manor, Front Lawn">
+    <description>Nothing seems to be alive in this shadow-filled yard.  Large skeletal trees loom over the path, their dry brown leaves swirling and skittering in drifting patterns across the barren lawn.  The walkway's paving stones are broken or missing in random spots, and occasionally a large flat stone protrudes upright, as if it had been heaved up out of the ground.  A large two-story building squats at the end of the yard, the flared eaves of its tiled roof hanging over a wide front porch.</description>
+    <position x="100" y="240" z="0" />
+    <arc exit="west" move="west" destination="1" />
+    <arc exit="go" move="go front porch" destination="35" />
+    <arc exit="go" move="go iron gate" destination="57" />
+  </node>
+  <node id="3" name="Dunshade Manor, Side Yard">
+    <description>Twisted brambles and thick spiney vines have enveloped the tall iron fence, creating a wall of prickly barbs that are topped by the fence's pointed spearheads.  The manor house looms over the side yard, pressing it up against the thorny wall.  Completely cut off from the light of day, even the withered brown grass has abandoned this part of the lawn.</description>
+    <position x="20" y="180" z="0" />
+    <arc exit="north" move="north" destination="4" />
+    <arc exit="south" move="south" destination="1" />
+  </node>
+  <node id="4" name="Dunshade Manor, Flower Garden">
+    <description>A colorful mosaic fountain stands in the center of a garden of trellised rhododendrons.  The flowers grow wild and abundant, but their once-brilliant colors have a sickly pale hue, and their leaves are mottled with brown spots.  Water still splashes into the basin of the fountain, adding a welcome melody to the gloomy atmosphere.</description>
+    <position x="20" y="120" z="0" />
+    <arc exit="east" move="east" destination="5" />
+    <arc exit="south" move="south" destination="3" />
+  </node>
+  <node id="5" name="Dunshade Manor, Back Lawn">
+    <description>A wide expanse of tall grasses and weeds grows here, apparently untended for years.  To the south the two-story manor house towers above you, abandoned and desolate, it's windows empty like the blank stare of a corpse.  The melodic sound of running water comes from the west, strangely soothing in this forsaken place.  You catch a glimpse of something white hidden in the grass.</description>
+    <position x="100" y="120" z="0" />
+    <arc exit="east" move="east" destination="6" />
+    <arc exit="south" move="south" destination="7" />
+    <arc exit="west" move="west" destination="4" />
+  </node>
+  <node id="6" name="Dunshade Manor, Back Lawn">
+    <description>A large pillared mausoleum stands in a desolate section of the lawn.  The grass here is dry and brown and adorned with dead leaves and broken twigs.  An old floral wreath of long-dead chrysanthemums rests on a stand next to the open mausoleum.</description>
+    <position x="140" y="120" z="0" />
+    <arc exit="west" move="west" destination="5" />
+    <arc exit="go" move="go mausoleum" destination="8" />
+  </node>
+  <node id="7" name="Dunshade Manor, Terrace">
+    <description>Limestone slabs fit neatly together to form a smooth white floor for this terrace.  Myrtle and germander topiaries grow in large white ceramic planters that border the area -- perhaps once neatly trimmed and decorative, they now grow wild and unruly.  Wrought-iron chairs lay toppled around a matching table.</description>
+    <position x="100" y="140" z="0" />
+    <arc exit="north" move="north" destination="5" />
+    <arc exit="go" move="go glass doors" destination="37" />
+  </node>
+  <node id="8" name="Dunshade Manor, Family Crypt">
+    <description>A heavy feeling of dark despair hangs over this mausoleum like a shroud.  The thick layer of dust on the floor and the cobwebs filling the upper corners of the crypt indicate that very few mourners visit the Dunshades' resting place.  Three sealed vaults bear the names Byron, Tatia and Laurel on their faces.</description>
+    <position x="160" y="120" z="0" />
+    <arc exit="out" move="out" destination="6" />
+    <arc exit="go" move="go brass grate" destination="9" />
+  </node>
+  <node id="9" name="Dunshade Manor, Catacombs">
+    <description>A cool breeze refreshes the air, and dust casts a gentle radiance throughout the tunnel as it is lifted and floats about in the dim light.  An opening above in the shadows is just large enough for a small animal to peer through.</description>
+    <position x="180" y="100" z="0" />
+    <arc exit="northeast" move="northeast" destination="13" />
+    <arc exit="southeast" move="southeast" destination="10" />
+    <arc exit="northwest" move="northwest" destination="14" />
+  </node>
+  <node id="10" name="Dunshade Manor, Catacombs">
+    <description>Darkness drapes itself around the room, parting only for the dimly lit torches.  The roughly excavated, uneven floor makes forward movement difficult.  Scraping sounds come from the black corners and the air hangs heavily around you.</description>
+    <position x="220" y="140" z="0" />
+    <arc exit="east" move="east" destination="11" />
+    <arc exit="northwest" move="northwest" destination="9" />
+  </node>
+  <node id="11" name="Dunshade Manor, Catacombs">
+    <description>Moisture oozes from the rough tunnel walls, forming stagnant pools on the ground.  The rancid smell of decaying rodents fills the air and rotting pelts lay partially submerged on the uneven ground.</description>
+    <position x="240" y="140" z="0" />
+    <arc exit="north" move="north" destination="12" />
+    <arc exit="west" move="west" destination="10" />
+  </node>
+  <node id="12" name="Dunshade Manor, Catacombs">
+    <description>As the tunnel narrows, chittering rodents scurry about in the darkness, their eyes taking on an eerie glow as they dart back and forth.</description>
+    <position x="240" y="80" z="0" />
+    <arc exit="south" move="south" destination="11" />
+    <arc exit="northwest" move="northwest" destination="13" />
+  </node>
+  <node id="13" name="Dunshade Manor, Catacombs">
+    <description>A family arcosolium has been dug out of the east wall, lined in marble and sealed with an ornately carved slab of alabaster.  Small animal bones have been mortared in a herringbone pattern on the walls of the cavern, set with glowing opals and sparkling diamonds casting flashes of light dancing throughout the room.</description>
+    <position x="220" y="60" z="0" />
+    <arc exit="north" move="north" destination="17" />
+    <arc exit="southeast" move="southeast" destination="12" />
+    <arc exit="southwest" move="southwest" destination="9" />
+  </node>
+  <node id="14" name="Dunshade Manor, Catacombs">
+    <description>The light from the torches casts an erie reflection on the slick dark tunnel walls.  Footprints hug the walls working their way around the murky puddles in the uneven tunnel floor.  A dark woolen mitten lies partially hidden by a well-worn leather boot pushed up against the wall.</description>
+    <position x="160" y="80" z="0" />
+    <arc exit="southeast" move="southeast" destination="9" />
+    <arc exit="west" move="west" destination="15" />
+  </node>
+  <node id="15" name="Dunshade Manor, Catacombs">
+    <description>Widening as it curves north, the tunnel fills with stale air.  Light dims but the glistening walls still reflect the tiny torch flame as it wavers.  A family of rats scurry across the floor and disappears.</description>
+    <position x="140" y="80" z="0" />
+    <arc exit="north" move="north" destination="16" />
+    <arc exit="east" move="east" destination="14" />
+  </node>
+  <node id="16" name="Dunshade Manor, Catacombs">
+    <description>The tunnel comes to an abrupt end against a large granite boulder that blocks further passage.  A pile of twigs, straw and dried grass form a damp nest in the deepening shadows.</description>
+    <position x="140" y="60" z="0" />
+    <arc exit="south" move="south" destination="15" />
+  </node>
+  <node id="17" name="Dunshade Manor, Catacombs">
+    <description>Huge tree roots protrude through the earthen roof of the narrow tunnel and light filters down through a layer of leaves covering the openings where the roots have pulled away from the hard-packed dirt.  A rabbit's eyes glow red momentarily as he peers around before scampering up the roots and out into the open air.</description>
+    <position x="220" y="40" z="0" />
+    <arc exit="north" move="north" destination="18" />
+    <arc exit="south" move="south" destination="13" />
+  </node>
+  <node id="18" name="Dunshade Manor, Catacombs">
+    <description>The damp ground slopes gently downward under the once opulent manor house, now falling to ruins.  Darkness is broken by scattered torches, burning brightly in corroded sconces hanging along the uneven wall.</description>
+    <position x="220" y="20" z="0" />
+    <arc exit="south" move="south" destination="17" />
+    <arc exit="west" move="west" destination="19" />
+  </node>
+  <node id="19" name="Dunshade Manor, Catacombs">
+    <description>Hidden in the secret tunnels beneath the manor house, loculi have been cut in neat rows on each side of the gallery.  Several marble slabs have been stacked against one wall and an oil lamp sits on a wooden crate next to a small pillow and bedraggled blanket.</description>
+    <position x="200" y="20" z="0" />
+    <arc exit="east" move="east" destination="18" />
+    <arc exit="go" move="go shadows" destination="20" />
+  </node>
+  <node id="20" name="Dunshade Manor, Underground Passage">
+    <description>The walls glisten with moisture in the murky light and a rugged plank boardwalk has been constructed to cover the soggy ground that terminates abruptly against an unyielding slab of granite.</description>
+    <position x="180" y="20" z="0" />
+    <arc exit="southwest" move="southwest" destination="21" />
+    <arc exit="go" move="go opening" destination="19" />
+  </node>
+  <node id="21" name="Dunshade Manor, Narrow Underground Passage">
+    <description>The tunnel continues through a pile of rubble, intermingled with small decayed animal bones and aged mining inplements, dusty and dilapidated.  A broken lantern has been tossed aside carelessly and clear moisture drips off the walls.  A blood-stained slender dagger, frozen in place by time, has been cast aside next to a stagnant pool in the center of the room.</description>
+    <position x="160" y="40" z="0" />
+    <arc exit="northeast" move="northeast" destination="20" />
+    <arc exit="west" move="west" destination="22" />
+  </node>
+  <node id="22" name="Dunshade Manor, Narrow Underground Passage">
+    <description>A smattering of ores imbedded in the walls cause small flashes of light to dance throughout the room.  A small mound of blackened stones are arranged to form a ring on a flat area near a pile of heavy snowbeast pelts forming a shelter from the cruel cold.</description>
+    <position x="140" y="40" z="0" />
+    <arc exit="east" move="east" destination="21" />
+    <arc exit="west" move="west" destination="23" />
+  </node>
+  <node id="23" name="Dunshade Manor, Underground Passage">
+    <description>Deep grooves run along the ground as if something weighty had been dragged through the chilly passage.  Debris from the excavation is piled up against the walls, along with several picks and shovels, darkened with age, and a scattering of small mammal bones.</description>
+    <position x="120" y="40" z="0" />
+    <arc exit="north" move="north" destination="26" />
+    <arc exit="east" move="east" destination="22" />
+    <arc exit="west" move="west" destination="24" />
+  </node>
+  <node id="24" name="Dunshade Manor, Underground Passage">
+    <description>Dark and dreary, a secreted underground passage has been dug out of the damp ground below the manor, its purpose hidden.  The cragged walls narrow at the low ceiling and are barely visible in the dim light from the torches set in crude sconces.</description>
+    <position x="100" y="40" z="0" />
+    <arc exit="east" move="east" destination="23" />
+    <arc exit="west" move="west" destination="25" />
+  </node>
+  <node id="25" name="Dunshade Manor, Root Cellar">
+    <description>At the bottom of some rickety, steep stairs, shelves line three walls of the cellar, empty now except for some long forgotten jars of unidentifiable food.  Sacks of ground wheat flour are stacked near a dark shadow, under the stairs, soiled now and covered by a thick layer of grey dust.</description>
+    <position x="80" y="40" z="0" />
+    <arc exit="east" move="east" destination="24" />
+    <arc exit="climb" move="climb stairs" destination="28" />
+  </node>
+  <node id="26" name="Dunshade Manor, Underground Passage">
+    <description>Surplus planks have been stacked up in one corner as the passage slopes in a gentle incline toward an ornately carved door.  Some type of small rodent has nested in a solitary overcoat tossed carelessly near a draft of warm air coming in from the north.</description>
+    <position x="120" y="20" z="0" />
+    <arc exit="south" move="south" destination="23" />
+    <arc exit="go" move="go doo" destination="27" />
+  </node>
+  <node id="27" name="Dunshade Manor, Underground Passage">
+    <description>This house, it is said, was inhabited by a crazy man, but only whispers spread the tale.  A deep chill fills the room, unsettling and icy.  The air is strangely fresh and the room seems cared for by an unseen source.  A magnificent Elven carpet covers the hardwood floor, its colors only slightly dulled by age, and the walls of soft green silk hold torch sconces illuminating the opulent room.  An overstuffed burgundy leather chair faces a large portrait of the Dunshade family in a gilt frame.</description>
+    <position x="120" y="0" z="0" />
+    <arc exit="go" move="go door" destination="26" />
+  </node>
+  <node id="28" name="Dunshade Manor, Dark Landing">
+    <description>A small, rickety plank landing overlooks a dark root cellar with a dirt floor.  The steep stairs, treacherous in the dim lighting sway slightly from side to side as they descend into the small room.  Twisted and broken, the handrail lies on the cellar floor making movement on the stairs even more hazardous.</description>
+    <position x="60" y="40" z="0" />
+    <arc exit="go" move="go trapdoor" destination="29" />
+  </node>
+  <node id="29" name="Dunshade Manor, Kitchen">
+    <description>The spacious kitchen looks as if a whirlwind has struck it!  The festively handpainted black and white checkered floor is strewn with shattered bits of milk pitchers, wine jugs and mustard pots laying amongst bread baskets and dish towels.  A heavy marble-topped table lays on its side, and a lone unbroken vase rests against it holding a bunch of dried up sunflowers.  The only thing still in place is a wallboard holding a collection of bone-handled knives.</description>
+    <position x="60" y="180" z="0" />
+    <arc exit="south" move="south" destination="30" />
+  </node>
+  <node id="30" name="Dunshade Manor, Dining Room">
+    <description>Stylized floral motifs in contrasting burgundies and deep blues enhance each other on the heavy draped windows and wallpaper.  A shallow alcove filling the far wall displays a painted mural of a large castle.  Black walnut chairs are placed haphazardly around the enormous carved table, as if their occupants had only just abandoned them in a rush.  This impression is emphasized by the place settings on the table that still contain dried-up, half-eaten servings of a meal.</description>
+    <position x="60" y="200" z="0" />
+    <arc exit="north" move="north" destination="29" />
+    <arc exit="east" move="east" destination="31" />
+  </node>
+  <node id="31" name="Dunshade Manor, Passage">
+    <description>The walls along the wide passageway are covered with a textured silken fabric of the palest creamy beige.  Fluted glass wall sconces are placed at regular intervals along the hall.</description>
+    <position x="80" y="200" z="0" />
+    <arc exit="east" move="east" destination="32" />
+    <arc exit="west" move="west" destination="30" />
+  </node>
+  <node id="32" name="Dunshade Manor, Vestibule">
+    <description>A powerful musty odor permeates the interior of the manor, and the cool air is more unpleasantly dank than refreshing.  The long vestibule has a grey quarry-tiled floor that is littered with debris and dust.  Glazed urns sit in recessed niches in the walls, most of them shattered into small shards.</description>
+    <position x="100" y="200" z="0" />
+    <arc exit="north" move="north" destination="36" />
+    <arc exit="east" move="east" destination="33" />
+    <arc exit="west" move="west" destination="31" />
+    <arc exit="go" move="go double doors" destination="35" />
+  </node>
+  <node id="33" name="Dunshade Manor, Passage">
+    <description>The walls along the wide passageway are covered with a textured silken fabric of a muted pale green.  Fluted glass wall sconces are placed at regular intervals along the hall.</description>
+    <position x="120" y="200" z="0" />
+    <arc exit="east" move="east" destination="34" />
+    <arc exit="west" move="west" destination="32" />
+  </node>
+  <node id="34" name="Dunshade Manor, Study">
+    <description>This room has a strong masculine feel to it.  Rich burgundies and deep forest greens blend together in the plaid upholstery that covers a large roll-arm sofa and wing chair.  The chair is angled to face a painted portrait, as if the owner spent many hours contemplating it.  A massive mahogany ledger hutch fills one wall of the study.</description>
+    <position x="140" y="200" z="0" />
+    <arc exit="west" move="west" destination="33" />
+  </node>
+  <node id="35" name="Dunshade Manor, Porch">
+    <description>This long porch fronts the manor house, and at one time, it must have been a pleasant place to sit and enjoy a summer's evening.  A broken porch swing creaks and groans loudly whenever a breeze sways it.  Imposingly tall double doors lead into the house.</description>
+    <position x="100" y="220" z="0" />
+    <arc exit="go" move="go front lawn" destination="2" />
+    <arc exit="go" move="go double doors" destination="32" />
+  </node>
+  <node id="36" name="Dunshade Manor, Corridor">
+    <description>The pale grey quarry tiles that cover the floor have been broken into pieces, as if hacked by a violently swung axe.  A single handprint marks the otherwise bare walls.</description>
+    <position x="100" y="180" z="0" />
+    <arc exit="north" move="north" destination="37" />
+    <arc exit="south" move="south" destination="32" />
+    <arc exit="climb" move="climb marble staircase" destination="38" />
+  </node>
+  <node id="37" name="Dunshade Manor, Reception Room">
+    <description>This room was evidently once the site of entertainment on a grand scale.  The high vaulted ceiling supports several bell-shaped crystal chandeliers that are still intact.  A thick layer of dust covers the broad expanse of acanth wood floor, dulling its natural sheen.  Matching ornate sofas line the wall, many of them overturned or split open.  A delicately carved frieze borders the room, just below the ceiling.</description>
+    <position x="100" y="160" z="0" />
+    <arc exit="south" move="south" destination="36" />
+    <arc exit="go" move="go glass doors" destination="7" />
+  </node>
+  <node id="38" name="Dunshade Manor, Balcony">
+    <description>A dense layer of grime obscures the gloss of the marble balustrade and floor of the balcony.  Slightly overhead and to the north of you several chandeliers, their crystals forming elegant bell shapes, are suspended over the spacious reception room.  A long hallway leads south toward the family bedrooms.</description>
+    <position x="200" y="180" z="0" />
+    <arc exit="south" move="south" destination="39" />
+    <arc exit="climb" move="climb marble staircase" destination="36" />
+  </node>
+  <node id="39" name="Dunshade Manor, Hallway">
+    <description>A fancifully crafted hall runner of deep green yarn covers the floor here, bordered with twisting vines and branches that are inhabited by exotic birds and mythical animals.  Some of the glass wall sconces have been shattered, and cream-colored shards lay embedded in the rug.</description>
+    <position x="200" y="200" z="0" />
+    <arc exit="north" move="north" destination="38" />
+    <arc exit="east" move="east" destination="44" />
+    <arc exit="south" move="south" destination="40" />
+  </node>
+  <node id="40" name="Dunshade Manor, Hallway">
+    <description>Gracefully twining vines and branches border the deep green hall runner that covers the hardwood floor.  Further to the north, you can see the rug's design become more elaborate.  Sconces of cloudy, cream-hued glass are spaced at regular intervals along the pale green silk-covered walls.  On one section of the wall, the silk has been ripped to shreds, seemingly by frenzied fingernails.</description>
+    <position x="200" y="220" z="0" />
+    <arc exit="north" move="north" destination="39" />
+    <arc exit="south" move="south" destination="41" />
+    <arc exit="west" move="west" destination="42" />
+  </node>
+  <node id="41" name="Dunshade Manor, Hall's End">
+    <description>Bare hardwood planks cover the floor at the hallway's end, the polished sheen dulled by a thick layer of dust and wood chips.  Deep gouges mar the surface of the oak planks.  A set of steep stairs leads up to the manor house's attic.</description>
+    <position x="200" y="240" z="0" />
+    <arc exit="north" move="north" destination="40" />
+    <arc exit="climb" move="climb steep stairs" destination="46" />
+  </node>
+  <node id="42" name="Dunshade Manor, Master Bedroom">
+    <description>An exquisitely carved bedstead dominates the cherrywood-paneled room, its thick down mattress covered with an appliqued wedding quilt.  Two pairs of slippers sit at the foot of the bed -- one worn and masculine, the other delicate and pink.  A couple of cozy armchairs sit on either side of a stately lamp, angled toward each other, a pleasant place for a quiet late-night conversation.  Shattered pieces of glassware are strewn across the top of a lemonwood dresser.</description>
+    <position x="180" y="220" z="0" />
+    <arc exit="north" move="north" destination="43" />
+    <arc exit="east" move="east" destination="40" />
+  </node>
+  <node id="43" name="Dunshade Manor, Dressing Room">
+    <description>A subtle floral pattern on beige and cream-colored silk covers the walls of this dressing area.  Piles of crumpled clothing lay discarded around the floor and across a faded rose-colored chaise lounge.  A silk paneled changing screen hides the far end of the room from sight.</description>
+    <position x="180" y="200" z="0" />
+    <arc exit="south" move="south" destination="42" />
+    <arc exit="go" move="go changing screen" destination="45" />
+  </node>
+  <node id="44" name="Dunshade Manor, Laurel's Bedroom">
+    <description>Colorfully-painted tulips grow up the walls of this enchanting room.  A miniature sleigh bed is covered with an embroidered coverlet that repeats the floral motif of the walls.  A table set next to the window displays a glassware menagerie, the jewel-like colors of the animals are somber and dulled from the dim light filtering through the grime-coated window.</description>
+    <position x="220" y="200" z="0" />
+    <arc exit="west" move="west" destination="39" />
+  </node>
+  <node id="45" name="Dunshade Manor, Changing Room">
+    <description>The silk-covered walls are covered with numerous reddish-brown splatters that are clotted with flecks of greyish tissue.  In the far corner, the splotches are smeared together, as if something pressed against them and dragged them down to the floor, where the wood planks are discolored with a dark pool of a stain.</description>
+    <position x="160" y="200" z="0" />
+    <arc exit="out" move="out" destination="43" />
+  </node>
+  <node id="46" name="Dunshade Manor, Attic">
+    <description>A staircase emerges into a narrow, roughly-constructed attic, with bare hardwood floors and worm-eaten timbers to hold the oddly angled roof in place.  An unsettling silence hangs in the air, accompanied by a deep chill that cuts to the bone and turns breath to curlicues of frost.  Pale shafts of light from below cast the attic in deep, shifting shadows, creating the illusion that the tilting walls and jagged beams stretch almost endlessly north, vanishing into darkness.</description>
+    <position x="280" y="240" z="0" />
+    <arc exit="north" move="north" destination="47" />
+    <arc exit="climb" move="climb staircase" destination="41" />
+  </node>
+  <node id="47" name="Dunshade Manor, South Attic">
+    <description>The icy air is stifled with choking clouds of dust, as the attic twists and bends like the work of a mad architect.  Shadows dance across every surface and fill every corner, their strange wavering making the walls seem to slowly close in, like the maw of a great beast.  To the north, the bleak light from the staircase dwindles to nothingness.  There is a way around the standing timber-columns to the east, where there seems to be a sort of storage loft.</description>
+    <position x="280" y="220" z="0" />
+    <arc exit="north" move="north" destination="49" />
+    <arc exit="east" move="east" destination="48" />
+    <arc exit="south" move="south" destination="46" />
+  </node>
+  <node id="48" name="Dunshade Manor, Loft Ladder">
+    <description>Beneath the soaring ceiling, invisible in the darkness, a rickety old ladder against the wall leads to a loft above.  The rungs of the metal ladder are coated with a thick blue-black frost, the attic growing colder by the moment despite the lack of a draft, a breeze or anything to break the eerie stillness.</description>
+    <position x="300" y="220" z="0" />
+    <arc exit="west" move="west" destination="47" />
+    <arc exit="climb" move="climb metal ladder" destination="55" />
+  </node>
+  <node id="49" name="Dunshade Manor, Middle of Attic">
+    <description>This is the midpoint of the attic, but with the north and south ends lost in shadow and the ceiling timbers reeling like a dance of vertigo, it is impossible to tell whether distance and space hold any meaning in this cold realm.  Unfinished wooden partitions segregate a space to the west, where a boarded-up window once overlooked the lawns far below.</description>
+    <position x="280" y="200" z="0" />
+    <arc exit="north" move="north" destination="51" />
+    <arc exit="south" move="south" destination="47" />
+    <arc exit="west" move="west" destination="50" />
+  </node>
+  <node id="50" name="Dunshade Manor, West Window">
+    <description>Illuminated by a pale shaft of light, a single row of heavy footprints track through the thick dust on the floorboards. They run from the southern stairs to a grimy window on the western wall, where they abruptly stop.  The floor inside the prints is spotless, near polished, as if the dust that covers everything else is afraid to mar the impression.</description>
+    <position x="260" y="200" z="0" />
+    <arc exit="east" move="east" destination="49" />
+  </node>
+  <node id="51" name="Dunshade Manor, Low Arch">
+    <description>The ceiling rafters dip perilously low here as the roof veers straight down then back up again at a jagged angle.  The attic grows ever colder as one approaches the north end, and the silence of the room has become a near-tangible thing.</description>
+    <position x="280" y="180" z="0" />
+    <arc exit="north" move="north" destination="52" />
+    <arc exit="south" move="south" destination="49" />
+  </node>
+  <node id="52" name="Dunshade Manor, North Attic">
+    <description>Dust particles hang motionlessly in the frigid air at the north end of this long attic, where makeshift partitions were put up to create open storage spaces against the east and west walls.  What lurks there now is concealed by impenetrable shadow, appearing to writhe as if a blanket of snakes slither just beneath the blanket of darkness.</description>
+    <position x="280" y="160" z="0" />
+    <arc exit="east" move="east" destination="54" />
+    <arc exit="south" move="south" destination="51" />
+    <arc exit="west" move="west" destination="53" />
+  </node>
+  <node id="53" name="Dunshade Manor, West Storage">
+    <description>A few broken chairs and a rusted-shut trunk are piled in the corner of this lonely alcove, coated by a layer of frozen dust.  Only the shadows move here, wavering mockingly at the edge of vision.</description>
+    <position x="260" y="160" z="0" />
+    <arc exit="east" move="east" destination="52" />
+  </node>
+  <node id="54" name="Dunshade Manor, East Storage">
+    <description>Even in the thick of it, there is no way to break through the darkness pooled in this corner, with its cold shadows entwining like a whirlpool of pain and despair.  Dust coats the floor like a frozen river, a testament to the powers of time and decay.  The only exit is back to the west, just a little closer to the light.</description>
+    <position x="300" y="160" z="0" />
+    <arc exit="west" move="west" destination="52" />
+  </node>
+  <node id="55" name="Dunshade Manor, Storage Loft">
+    <description>Moldy crates and discarded linens are piled along the narrow planks of this tiny loft, the rotted wood creaking underfoot and threatening to give way at any moment.  While an ice-coated ladder leads down to the relative safety of the attic floor, a precarious stretch of timber is unblocked enough to allow access to the north end of the loft -- if the footing holds.</description>
+    <position x="320" y="220" z="0" />
+    <arc exit="north" move="north" destination="56" />
+    <arc exit="climb" move="climb metal ladder" destination="48" />
+  </node>
+  <node id="56" name="Dunshade Manor, Edge of Loft">
+    <description>Though it can't be more than ten feet above the attic floor, the unprotected edge of the loft seems to lean over a dizzying abyss.  A broken porcelain doll lies abandoned atop a jumble of rusted trunks, a sad reminder of the child who once played here.</description>
+    <position x="320" y="200" z="0" />
+    <arc exit="south" move="south" destination="55" />
+  </node>
+  <node id="57" name="Riverhaven, Crossroads" note="Map30_Riverhaven.xml">
+    <description>Silvermoon Road meets Crescent Way in a small crossroads.  A tangle of back alleys and side roads wanders off behind the houses and shops of town.  The traffic here is fainter, almost nonexistent and the sounds of life seem oddly muted.  Passers-by seem more hurried and keep a warier eye out than you have seen along the main roads of town.</description>
+    <position x="100" y="260" z="0" />
+    <arc exit="southeast" move="southeast" />
+    <arc exit="northwest" move="northwest" />
+    <arc exit="go" move="go gate" destination="2" />
+  </node>
+  <label text="Dark Fiends">
+    <position x="260" y="140" z="0" />
+  </label>
+  <label text="Tortured Souls">
+    <position x="160" y="160" z="0" />
+  </label>
+  <label text="Dark Fiends">
+    <position x="20" y="0" z="0" />
+  </label>
+  <label text="Pale Grey Death Spirits">
+    <position x="0" y="20" z="0" />
+  </label>
+</zone>

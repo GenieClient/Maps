@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Tethloren Island" id="99a">
+  <node id="1" name="Mooring Rock, Tethloren Island in Cha'walkas">
+    <description>Halasa Temple is a short swim due east from the mooring rock.  Waves splash and curl over the dark rocks, and the spray drenches the area with dampness.  The mist swirls thickest near the temple.</description>
+    <position x="20" y="140" z="0" />
+    <arc exit="east" move="east" destination="2" />
+  </node>
+  <node id="2" name="Cha'walkas, Water" color="#0000FF">
+    <description>To the east, Tethloren island, barely large enough to contain a white-spired temple, rises from the misty water.  The thick cloud hugs the surface of the salty water, making it difficult to distinguish where mist ends and water begins.</description>
+    <position x="60" y="140" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="13" />
+    <arc exit="east" move="swim east" destination="6" />
+    <arc exit="southeast" move="swim southeast" destination="3" />
+    <arc exit="go" move="go rock" destination="1" />
+  </node>
+  <node id="3" name="Cha'walkas, Water" color="#0000FF">
+    <description>To the northeast, Tethloren island, barely large enough to contain a white-spired temple, rises from the misty water.  The thick cloud hugs the surface of the salty water, making it difficult to distinguish where mist ends and water begins.</description>
+    <position x="100" y="180" z="0" />
+    <arc exit="north" move="swim north" destination="6" />
+    <arc exit="east" move="swim east" destination="5" />
+    <arc exit="southeast" move="swim southeast" destination="4" />
+    <arc exit="northwest" move="swim northwest" destination="2" />
+  </node>
+  <node id="4" name="Cha'walkas, Water" color="#0000FF">
+    <description>To the north, Tethloren island, barely large enough to contain a white-spired temple, rises from the misty water.  The thick cloud hugs the surface of the salty water, making it difficult to distinguish where mist ends and water begins.</description>
+    <position x="140" y="220" z="0" />
+    <arc exit="north" move="swim north" destination="5" />
+    <arc exit="east" move="swim east" destination="12" />
+    <arc exit="southeast" move="swim southeast" destination="21" />
+    <arc exit="northwest" move="swim northwest" destination="3" />
+  </node>
+  <node id="5" name="Tethloren, Tidepool" color="#0000FF">
+    <description>A drop in the level of rock underfoot keeps this section of Tethloren's bordering shore underwater in a deep pool.  The waves swell here in a rocking rising and falling motion and lap gently at the base of Halasa Temple just to the north.</description>
+    <position x="140" y="180" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="12" />
+    <arc exit="south" move="swim south" destination="4" />
+    <arc exit="west" move="swim west" destination="3" />
+    <arc exit="northwest" move="swim northwest" destination="6" />
+  </node>
+  <node id="6" name="Tethloren, Tidepool" color="#0000FF">
+    <description>Black craggy rock juts upwards, the crevices and hollowed basins filled with glittery black sand.  Urchins and tiny gold and black mottled fish dart amongst the bowls and hollows that hold water, even at the lowest tide.  Waves churn rhythmically, the salty spew of foam clinging to the dark, wet rocks.</description>
+    <position x="100" y="140" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="7" />
+    <arc exit="southeast" move="swim southeast" destination="5" />
+    <arc exit="south" move="swim south" destination="3" />
+    <arc exit="west" move="swim west" destination="2" />
+    <arc exit="climb" move="climb steps" destination="22" />
+  </node>
+  <node id="7" name="Tethloren, Tidepool" color="#0000FF">
+    <description>Black craggy rock juts upwards, the crevices and hollowed basins filled with glittery black sand.  Seaweed clings to the bowls and hollows that hold water, even at the lowest tide.  Waves churn rhythmically, the salty spew of foam clinging to the dark, wet rocks.</description>
+    <position x="140" y="100" z="0" />
+    <arc exit="northeast" move="northeast" destination="8" />
+    <arc exit="southwest" move="southwest" destination="6" />
+    <arc exit="west" move="west" destination="13" />
+  </node>
+  <node id="8" name="Tethloren, Tidepool" color="#0000FF">
+    <description>Black craggy rock juts upwards, the crevices and hollowed basins filled with glittery black sand.  A large orange starfish hides in a deep crevice that holds water, even at the lowest tide.  Waves churn rhythmically, the salty spew of foam clinging to the dark, wet rocks.</description>
+    <position x="180" y="60" z="0" />
+    <arc exit="north" move="north" destination="15" />
+    <arc exit="east" move="east" destination="16" />
+    <arc exit="southeast" move="southeast" destination="9" />
+    <arc exit="southwest" move="southwest" destination="7" />
+    <arc exit="west" move="west" destination="14" />
+  </node>
+  <node id="9" name="Tethloren, Tidepool" color="#0000FF">
+    <description>A large boulder rises to the southeast, breaking the waves that slosh against it.  Bits of smaller cracked and battered rock form the solid surface underfoot, some larger pieces jutting upwards.  The many crevices and hollows hold water, even at the lowest tide.  Waves churn rhythmically over the rocky tidepools, bringing new fish and treasures to populate the sheltered pools.</description>
+    <position x="220" y="100" z="0" />
+    <arc exit="east" move="east" destination="17" />
+    <arc exit="southeast" move="southeast" destination="10" />
+    <arc exit="northwest" move="northwest" destination="8" />
+  </node>
+  <node id="10" name="Tethloren, Tidepool" color="#0000FF">
+    <description>A single large boulder a short distance southeast of Tethloren breaks and softens the waves that slosh against it.  Within the sharp surfaces of the basalt that lines the lake floor, salt water fishes and creatures hide in the hollows and crevices of the many tidepools.</description>
+    <position x="260" y="140" z="0" />
+    <arc exit="north" move="north" destination="17" />
+    <arc exit="east" move="east" destination="18" />
+    <arc exit="south" move="south" destination="19" />
+    <arc exit="southwest" move="southwest" destination="11" />
+    <arc exit="northwest" move="northwest" destination="9" />
+  </node>
+  <node id="11" name="Tethloren, Tidepool" color="#0000FF">
+    <description>Black craggy rock juts upwards, the crevices and hollowed basins filled with glittery black sand.  Bits of broken shell lie wedged in the cracks and mottled fish dart amongst the bowls and hollows that hold water, even at the lowest tide.  Waves churn rhythmically, the salty spew of foam clinging to the dark, wet rocks.</description>
+    <position x="220" y="180" z="0" />
+    <arc exit="northeast" move="northeast" destination="10" />
+    <arc exit="east" move="east" destination="19" />
+    <arc exit="south" move="south" destination="20" />
+    <arc exit="southwest" move="southwest" destination="12" />
+  </node>
+  <node id="12" name="Tethloren, Tidepool" color="#0000FF">
+    <description>Black craggy rock juts upwards to form low barriers to break the waves and hollows to collect pools of water that remain even at low tide.  The clean salty water sparkles against the dark wet basalt flecked with foam.  Rhythmic waves create the whispering shush long associated with Peri'el's song of sleep to still the beast of the World Dragon itself.</description>
+    <position x="180" y="220" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="11" />
+    <arc exit="east" move="swim east" destination="20" />
+    <arc exit="south" move="swim south" destination="21" />
+    <arc exit="west" move="swim west" destination="4" />
+    <arc exit="northwest" move="swim northwest" destination="5" />
+  </node>
+  <node id="13" name="Cha'walkas, Water" color="#0000FF">
+    <description>To the east, Tethloren island, barely large enough to contain a white-spired temple, rises from the misty water.  The thick cloud hugs the surface of the salty water, making it difficult to distinguish where mist ends and water begins.</description>
+    <position x="100" y="100" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="14" />
+    <arc exit="east" move="swim east" destination="7" />
+    <arc exit="southwest" move="swim southwest" destination="2" />
+  </node>
+  <node id="14" name="Cha'walkas, Water" color="#0000FF">
+    <description>To the east, Tethloren island, barely large enough to contain a white-spired temple, rises from the misty water.  The thick cloud hugs the surface of the salty water, making it difficult to distinguish where mist ends and water begins.</description>
+    <position x="140" y="60" z="0" />
+    <arc exit="northeast" move="northeast" destination="15" />
+    <arc exit="east" move="east" destination="8" />
+    <arc exit="southwest" move="southwest" destination="13" />
+  </node>
+  <node id="15" name="Cha'walkas, Water" color="#0000FF">
+    <description>To the south, Tethloren island, barely large enough to contain a white-spired temple, rises from the misty water.  The thick cloud hugs the surface of the salty water, making it difficult to distinguish where mist ends and water begins.</description>
+    <position x="180" y="20" z="0" />
+    <arc exit="southeast" move="southeast" destination="16" />
+    <arc exit="south" move="south" destination="8" />
+    <arc exit="southwest" move="southwest" destination="14" />
+  </node>
+  <node id="16" name="Cha'walkas, Water" color="#0000FF">
+    <description>To the south, Tethloren island, barely large enough to contain a white-spired temple, rises from the misty water.  The thick cloud hugs the surface of the salty water, making it difficult to distinguish where mist ends and water begins.</description>
+    <position x="220" y="60" z="0" />
+    <arc exit="southeast" move="southeast" destination="17" />
+    <arc exit="west" move="west" destination="8" />
+    <arc exit="northwest" move="northwest" destination="15" />
+  </node>
+  <node id="17" name="Cha'walkas, Water" color="#0000FF">
+    <description>To the southwest, Tethloren island, barely large enough to contain a white-spired temple, rises from the misty water.  The thick cloud hugs the surface of the salty water, making it difficult to distinguish where mist ends and water begins.</description>
+    <position x="260" y="100" z="0" />
+    <arc exit="southeast" move="southeast" destination="18" />
+    <arc exit="south" move="south" destination="10" />
+    <arc exit="west" move="west" destination="9" />
+    <arc exit="northwest" move="northwest" destination="16" />
+  </node>
+  <node id="18" name="Cha'walkas, Water" color="#0000FF">
+    <description>To the west, Tethloren island, barely large enough to contain a white-spired temple, rises from the misty water.  The thick cloud hugs the surface of the salty water, making it difficult to distinguish where mist ends and water begins.</description>
+    <position x="300" y="140" z="0" />
+    <arc exit="southwest" move="southwest" destination="19" />
+    <arc exit="west" move="west" destination="10" />
+    <arc exit="northwest" move="northwest" destination="17" />
+  </node>
+  <node id="19" name="Cha'walkas, Water" color="#0000FF">
+    <description>To the west, Tethloren island, barely large enough to contain a white-spired temple, rises from the misty water.  The thick cloud hugs the surface of the salty water, making it difficult to distinguish where mist ends and water begins.</description>
+    <position x="260" y="180" z="0" />
+    <arc exit="north" move="north" destination="10" />
+    <arc exit="northeast" move="northeast" destination="18" />
+    <arc exit="southwest" move="southwest" destination="20" />
+    <arc exit="west" move="west" destination="11" />
+  </node>
+  <node id="20" name="Cha'walkas, Water" color="#0000FF">
+    <description>To the northwest, Tethloren island, barely large enough to contain a white-spired temple, rises from the misty water.  The thick cloud hugs the surface of the salty water, making it difficult to distinguish where mist ends and water begins.</description>
+    <position x="220" y="220" z="0" />
+    <arc exit="north" move="north" destination="11" />
+    <arc exit="northeast" move="northeast" destination="19" />
+    <arc exit="southwest" move="southwest" destination="21" />
+    <arc exit="west" move="west" destination="12" />
+  </node>
+  <node id="21" name="Cha'walkas, Water" color="#0000FF">
+    <description>To the north, Tethloren island, barely large enough to contain a white-spired temple, rises from the misty water.  The thick cloud hugs the surface of the salty water, making it difficult to distinguish where mist ends and water begins.</description>
+    <position x="180" y="260" z="0" />
+    <arc exit="north" move="north" destination="12" />
+    <arc exit="northeast" move="northeast" destination="20" />
+    <arc exit="northwest" move="northwest" destination="4" />
+  </node>
+  <node id="22" name="Halasa Temple, West Porch">
+    <description>The dark basalt that forms the bedrock of Tethloren is leveled, smoothed, and polished to form the floor of the temple.  Without walls, the sacred spot is open to the elements and its high arching ceiling provides little shelter from a howling storm.  Everything here is solid and indestructable, however, and the interlocking obsidian and white quartz stones that form the columns supporting the roof show no sign of mortal construct.</description>
+    <position x="160" y="160" z="0" />
+    <arc exit="northeast" move="northeast" destination="25" />
+    <arc exit="east" move="east" destination="26" />
+    <arc exit="southeast" move="southeast" destination="23" />
+    <arc exit="down" move="down" destination="6" />
+  </node>
+  <node id="23" name="Halasa Temple, South Porch" note="Shrine4-12|Eluned" color="#A6A3D9">
+    <description>The black polished floor reflects the image of a large, azurite carving of a dolphin as it emerges upwards from the surface of the stone.  Tendrils and wisps of cloudy mist cling to the columns and swirl through the temple and finally drift southwards out over the waves to blanket the surface of the lake.</description>
+    <position x="180" y="180" z="0" />
+    <arc exit="north" move="north" destination="26" />
+    <arc exit="northeast" move="northeast" destination="24" />
+    <arc exit="northwest" move="northwest" destination="22" />
+    <arc exit="climb" move="climb nautilus stairway" destination="30" />
+  </node>
+  <node id="24" name="Halasa Temple, East Porch">
+    <description>The floor of the eastern porch is inlaid with the image of a huge shark, pearly grey shale forming its body and fins.  Real sharks' teeth, thousands of them, some as large as a Halfling's head, line its open mouth.  The toothy section stretches three paces along the floor, the razor sharp triangles angled upwards to catch at unwary feet.</description>
+    <position x="200" y="160" z="0" />
+    <arc exit="southwest" move="southwest" destination="23" />
+    <arc exit="west" move="west" destination="26" />
+    <arc exit="northwest" move="northwest" destination="25" />
+  </node>
+  <node id="25" name="Halasa Temple, North Porch" note="Shrine4-13|Lemicus" color="#A6A3D9">
+    <description>The floor of the temple's northern wing is inlaid with a magnificent albatross -- shells, pebbles and smooth pieces of glass form the shape, feathers and details of Lemicus in her symbolic form.  As the open sea air gusts through the temple and fingers of mist twine about the columns, one can imagine flying aloft with the great bird among the clouds.</description>
+    <position x="180" y="140" z="0" />
+    <arc exit="southeast" move="southeast" destination="24" />
+    <arc exit="south" move="south" destination="26" />
+    <arc exit="southwest" move="southwest" destination="22" />
+    <arc exit="climb" move="climb nautilus stairway" destination="32" />
+  </node>
+  <node id="26" name="Halasa Temple, Inner Chamber">
+    <description>White quartz columns spring upwards like trees to the incised arches of the ceiling two stories overhead.  Cut into the perfectly smooth dark floor is a large jagged hole that sloshes with water and spouts a trickling stream of white cloudy mist.  The trails of mist drift upwards and out, circling in slow spirals until they find Cha'walkas, and drift on out over the lake.</description>
+    <position x="180" y="160" z="0" />
+    <arc exit="north" move="north" destination="25" />
+    <arc exit="east" move="east" destination="24" />
+    <arc exit="south" move="south" destination="23" />
+    <arc exit="west" move="west" destination="22" />
+    <arc exit="go" move="go jagged hole" destination="27" />
+  </node>
+  <node id="27" name="Halasa Temple, Pools">
+    <description>Beneath the floor of the temple is a dim cavernous area where several pools of sea water dot the darkness among the craggy rocks.  A constant mist fills the air along with a sweet memorable scent unique to this place.</description>
+    <position x="80" y="60" z="0" />
+    <arc exit="go" move="go shell-lined pool" destination="28" />
+    <arc exit="go" move="go black pool" destination="29" />
+    <arc exit="go" move="go jagged hole" destination="26" />
+    <arc exit="go" move="go misty pool" destination="41" />
+  </node>
+  <node id="28" name="Halasa Temple, A Shell-lined Pool" color="#0000FF">
+    <description>The salty water soothes and calms the spirit as well as the body.  A variety of pale-colored smooth shells decorate the bottom and sides of the pool and reflect the dim light shimmering through the water.</description>
+    <position x="60" y="60" z="0" />
+    <arc exit="out" move="out" destination="27" />
+  </node>
+  <node id="29" name="Halasa Temple, A Pool of Black Water" color="#0000FF">
+    <description>The water appears black, as no light penetrates it, nor are the bottom or sides of the pool visible.  The cold briny water sloshes gently among the rocks, the scent invigorating and refreshing.</description>
+    <position x="80" y="40" z="0" />
+    <arc exit="climb" move="climb rocky ledge" destination="27" />
+  </node>
+  <node id="30" name="Halasa Temple" note="Shrine4-11|Halasa Temple" color="#A6A3D9">
+    <description>This enclosed chamber is a safe harbor, sturdily protected from the wind and weather, unlike the lower levels of the temple.  A small arching window to the south looks out over Cha'walkas, its shape a miniature replica of the pointed arches of the walls and ceiling.  An altar placed in the center of the room is unadorned but for a low dish of incense that burns with a faint pleasant scent.</description>
+    <position x="180" y="200" z="0" />
+    <arc exit="northeast" move="northeast" destination="31" />
+    <arc exit="northwest" move="northwest" destination="33" />
+    <arc exit="climb" move="climb nautilus stairway" destination="23" />
+  </node>
+  <node id="31" name="Halasa Temple">
+    <description>This large square chamber contains nothing but four milky-white quartz benches arranged at the cardinal direction points.  A blackened brass lantern hangs from the ceiling high overhead and burns with forty blood-red candles to light the windowless room.</description>
+    <position x="220" y="160" z="0" />
+    <arc exit="southwest" move="southwest" destination="30" />
+    <arc exit="northwest" move="northwest" destination="32" />
+    <arc exit="climb" move="climb nautilus stairway" destination="34" />
+  </node>
+  <node id="32" name="Halasa Temple">
+    <description>This enclosed chamber is a safe harbor, sturdily protected from the wind and weather, unlike the lower levels of the temple.  A small arching window to the north looks out over Cha'walkas, its shape a miniature replica of the pointed arches of the walls and ceiling.  A large silver bowl rests in the center of the room -- otherwise the room is bare.</description>
+    <position x="180" y="120" z="0" />
+    <arc exit="southeast" move="southeast" destination="31" />
+    <arc exit="southwest" move="southwest" destination="33" />
+    <arc exit="climb" move="climb nautilus stairway" destination="25" />
+  </node>
+  <node id="33" name="Halasa Temple">
+    <description>A small circular window reveals the view to the west.  The stone walls and floor are covered with tapestries that soften sound, and comfortable cushions for visitors and worshipers to rest upon, or even sleep upon.  Not all pilgrims choose to make the return journey across Cha'walkas the same day.  The cadence of the lake waves splashing on the rocks below is constant and lulling, a backdrop of sound that soothes and reassures.</description>
+    <position x="140" y="160" z="0" />
+    <arc exit="northeast" move="northeast" destination="32" />
+    <arc exit="southeast" move="southeast" destination="30" />
+  </node>
+  <node id="34" name="Halasa Temple">
+    <description>This very small room with a low slanting roof serves as an antechamber.  Without ornament or color, a single candle casts small shadows against the smooth walls and floor.</description>
+    <position x="300" y="100" z="0" />
+    <arc exit="west" move="west" destination="35" />
+    <arc exit="climb" move="climb nautilus stairway" destination="31" />
+  </node>
+  <node id="35" name="Halasa Temple, Beneath the Spire">
+    <description>This octagonal room provides a panoramic view of the lake and island from the exact center of Surlaenis.  The floor is a single piece of anloral stone, or at least fitted so seamlessly that its joinings are invisible.  Overhead an octagonal, hollow spire rises many stories above.  A staircase spirals up the interior of the tower, winding to an impossible height.</description>
+    <position x="280" y="100" z="0" />
+    <arc exit="east" move="east" destination="34" />
+    <arc exit="up" move="up" destination="36" />
+  </node>
+  <node id="36" name="Halasa Temple, Spire Interior">
+    <description>The stairs cantilevered to the walls of the spire wind up in treacherous, dizzying turns.  The interior surface, inlaid with uncountable pearls, swirls in subtle patterns of color and size.  A blue-white light reflects off the many sea-gems, giving the whole of one's ascent or descent a feeling of moving in a cloudy mist.</description>
+    <position x="280" y="80" z="0" />
+    <arc exit="up" move="up" destination="37" />
+    <arc exit="down" move="down" destination="35" />
+  </node>
+  <node id="37" name="Halasa Temple, Spire Interior">
+    <description>This point is halfway up the tower.  Below, the octagonal floor of the temple shimmers with the bluish light associated with anloral.  The pearls that line the surface of the spire thin, and are embedded like raindrops that sift down from above.  The smooth quartz of the spire's construction is visible, allowing the light to softly penetrate the crystalline structure.</description>
+    <position x="280" y="60" z="0" />
+    <arc exit="up" move="up" destination="38" />
+    <arc exit="down" move="down" destination="36" />
+  </node>
+  <node id="38" name="Halasa Temple, Spire Interior">
+    <description>The spire narrows as the stairs wind in tighter turns above.  A slit in the walls of the spire looks westward towards the rising hills and Selhin Dava, and on clear days the outlines of the Sentinels rise against the sky.</description>
+    <position x="280" y="40" z="0" />
+    <arc exit="up" move="up" destination="39" />
+    <arc exit="down" move="down" destination="37" />
+  </node>
+  <node id="39" name="Halasa Temple, Spire Interior">
+    <description>A platform suspended below the top of the spire supports a silvered ladder that rises to the very peak above.  Despite the sturdy construction, the wooden slats sway with each step.  The watery sounds of the lake drift upwards and echo gently all around -- the slush of wave against rock is clear and close.</description>
+    <position x="280" y="20" z="0" />
+    <arc exit="up" move="up" destination="40" />
+    <arc exit="down" move="down" destination="38" />
+  </node>
+  <node id="40" name="Halasa Temple, Spire Interior" note="Bell" color="#00FF00">
+    <description>The peak of the spire houses a flame that burns with a penetrating light, but is without heat or apparent source.  A basket woven of seaweed holds this heatless fire that radiates as a beacon atop the temple, the light so intense that a direct gaze at it is impossible to maintain.  A silver bell hangs by a silken rope and seems to hum a gentle tone as the light strikes its polished curves.</description>
+    <position x="280" y="0" z="0" />
+    <arc exit="down" move="down" destination="39" />
+  </node>
+  <node id="41" name="Halasa Temple, Misty Pool" color="#0000FF">
+    <description>The water is shockingly warm, and a softly-scented cloudy mist rises thickly from the surface.  Gentle eddies swirl through the water to relax and sooth the tired and injured bodies that seek contemplation and quiet.</description>
+    <position x="100" y="60" z="0" />
+    <arc exit="out" move="out" destination="27" />
+  </node>
+</zone>

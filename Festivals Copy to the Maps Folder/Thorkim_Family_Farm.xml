@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Thorkim Family Farm 429" id="0">
+  <node id="1" name="Thorkim Family Farm, Apple Orchard">
+    <description>A bushel basket lies on its side next to an apple tree, its fruit spilling across the ground.  Most of the apples are partially eaten, but a whole one remains here and there.</description>
+    <position x="80" y="200" z="0" />
+    <arc exit="north" move="north" destination="22" />
+    <arc exit="southeast" move="southeast" destination="2" />
+    <arc exit="go" move="go colorful stand" />
+    <arc exit="go" move="go battered yurt" />
+    <arc exit="go" move="go silver-threaded tent" />
+  </node>
+  <node id="2" name="Thorkim Family Farm, Corn Field" note="entrance|exit" color="#FF00FF">
+    <description>Green stalks of corn stretch in some semblance of rows, though many of the plants are growing at odd angles as though animals have forced their way through the thick foliage.  The ground is littered with corn cobs, most of which are bare of their kernels.</description>
+    <position x="160" y="280" z="0" />
+    <arc exit="south" move="south" destination="3" />
+    <arc exit="northwest" move="northwest" destination="1" />
+  </node>
+  <node id="3" name="Thorkim Family Farm, Corn Field">
+    <description>Thick walls of corn plants line a narrow path covered in a multitude of hoofprints.  Ears of corn are scattered around on the ground, some half eaten, and loose corn silks are strewn over the plants, waving in the breeze like broken spider webs.</description>
+    <position x="160" y="320" z="0" />
+    <arc exit="north" move="north" destination="2" />
+    <arc exit="east" move="east" destination="4" />
+    <arc exit="go" move="go smooth-sided wagon" />
+  </node>
+  <node id="4" name="Thorkim Family Farm, Corn Field">
+    <description>The bottom half of all the corn plants are bare of their fruits and the ground around their bases is covered in hoofprints.  Several plants are bent, as though a hooved thief attempted to relieve them of the corn closer to the top.</description>
+    <position x="260" y="320" z="0" />
+    <arc exit="north" move="north" destination="5" />
+    <arc exit="west" move="west" destination="3" />
+    <arc exit="go" move="go leather tent" />
+    <arc exit="go" move="go sandalwood caravans" />
+  </node>
+  <node id="5" name="Thorkim Family Farm, Corn Field">
+    <description>A scarecrow lies in an open area, its limbs oddly splayed and its stake broken near the base.  The rustling and chirping in the surrounding corn plants indicate that birds are taking full advantage of the guard's absence.</description>
+    <position x="260" y="180" z="0" />
+    <arc exit="northeast" move="northeast" destination="7" />
+    <arc exit="east" move="east" destination="6" />
+    <arc exit="south" move="south" destination="4" />
+    <arc exit="go" move="go flower-print tent" />
+    <arc exit="go" move="go wooden wagon" />
+  </node>
+  <node id="6" name="Thorkim Family Farm, Corn Field">
+    <description>A bushel basket lies crushed and abandoned among the tall corn stalks, any contents it may have held are now gone.  Muddy hoofprints mar the broken wood slats that litter the ground.</description>
+    <position x="300" y="180" z="0" />
+    <arc exit="south" move="south" destination="9" />
+    <arc exit="west" move="west" destination="5" />
+    <arc exit="northwest" move="northwest" destination="8" />
+  </node>
+  <node id="7" name="Thorkim Family Farm, Cow Pasture">
+    <description>Hard packed dirt surrounds a wide wooden trough, around which hay is scattered, leaving leftovers from the last meal placed there.  Occasionally, a bird swoops down to swipe a piece of straw for a nearby nest.</description>
+    <position x="300" y="140" z="0" />
+    <arc exit="northeast" move="northeast" destination="19" />
+    <arc exit="southwest" move="southwest" destination="5" />
+    <arc exit="west" move="west" destination="8" />
+    <arc exit="go" move="go bronze caravan" />
+  </node>
+  <node id="8" name="Thorkim Family Farm, Cow Pasture">
+    <description>Numerous hooves have churned up the mud in a small, fenced-in pen.  Two troughs, one holding water and the other slop, are splattered with thick mud.  A distinct odor arises from small piles of dung that lay scattered in the otherwise empty pen.</description>
+    <position x="260" y="140" z="0" />
+    <arc exit="east" move="east" destination="7" />
+    <arc exit="southeast" move="southeast" destination="6" />
+    <arc exit="northwest" move="northwest" destination="20" />
+    <arc exit="go" move="go silvery tent" />
+    <arc exit="go" move="go hide tent" />
+  </node>
+  <node id="9" name="Thorkim Family Farm, Corn Field">
+    <description>Corn stalks grow high towards the sky, tall enough to tower above even the tallest Gor'Tog head.  A few partially eaten ears of corn lay scattered on the ground, surrounded by muddy hoofprints.</description>
+    <position x="300" y="320" z="0" />
+    <arc exit="north" move="north" destination="6" />
+    <arc exit="east" move="east" destination="10" />
+    <arc exit="go" move="go airy canopy" />
+  </node>
+  <node id="10" name="Thorkim Family Farm, Corn Field">
+    <description>Corn plants grow thick here, most of which are missing all of their fruit.  The lower leaves of the plants are broken and trampled into the ground, while the stalks are bent and damaged from creatures forcing their way through the dense crop.</description>
+    <position x="360" y="320" z="0" />
+    <arc exit="north" move="north" destination="11" />
+    <arc exit="west" move="west" destination="9" />
+    <arc exit="go" move="go velvet tent" />
+  </node>
+  <node id="11" name="Thorkim Family Farm, Corn Field">
+    <description>Thickly clustered corn stalks grow tall enough to obscure the view of the surrounding area, making it difficult to get any bearings.  A rotting leather strap, still attached to a broken plow, lies half buried in the dirt.</description>
+    <position x="360" y="240" z="0" />
+    <arc exit="northeast" move="northeast" destination="12" />
+    <arc exit="south" move="south" destination="10" />
+    <arc exit="go" move="go crimson yurt" />
+  </node>
+  <node id="12" name="Thorkim Family Farm, Corn Field">
+    <description>Corn stalks grow thickly in neatly planted rows, obscuring the surrounding environment.  A shovel stands upright near a cluster of weeds, its blade half buried in the dark soil.</description>
+    <position x="420" y="180" z="0" />
+    <arc exit="east" move="east" destination="13" />
+    <arc exit="southwest" move="southwest" destination="11" />
+    <arc exit="go" move="go white pavilion" />
+  </node>
+  <node id="13" name="Thorkim Family Farm, Corn Field">
+    <description>A corn plant lies on its side among its brothers, completely uprooted by some creature.  Its stalk is covered with long scrapes and tooth marks, evidence of the effort it took to pull the plant from the ground.</description>
+    <position x="460" y="180" z="0" />
+    <arc exit="north" move="north" destination="14" />
+    <arc exit="west" move="west" destination="12" />
+    <arc exit="go" move="go canvas tent" />
+  </node>
+  <node id="14" name="Thorkim Family Farm, Cow Pasture">
+    <description>A small pond is circled by hoofprints, left by the regular visitors to this cozy watering hole.  A large oak hangs over the water, providing shade to the area and a convenient scratching post for the cattle, as evidenced by the lack of bark around its midsection.</description>
+    <position x="460" y="140" z="0" />
+    <arc exit="south" move="south" destination="13" />
+    <arc exit="west" move="west" destination="15" />
+    <arc exit="go" move="go mottled tent" />
+  </node>
+  <node id="15" name="Thorkim Family Farm, Cow Pasture">
+    <description>Numerous hoofprints are trampled into otherwise soft, loamy soil, bending grass and weed alike.  The tracks are scattered in every direction, making it impossible to tell where they came from or where they lead.</description>
+    <position x="420" y="140" z="0" />
+    <arc exit="north" move="north" destination="16" />
+    <arc exit="east" move="east" destination="14" />
+    <arc exit="go" move="go fur tent" />
+  </node>
+  <node id="16" name="Thorkim Family Farm, Cow Pasture">
+    <description>Fresh hoofprints are beaten into the ground along a track that follows a fence bordering the pasture.  The beginnings of a freshly dug hole obscure the prints near one fence post, though its digger was unable to make it completely under the blockade.</description>
+    <position x="420" y="100" z="0" />
+    <arc exit="south" move="south" destination="15" />
+    <arc exit="west" move="west" destination="17" />
+    <arc exit="go" move="go smoke-filled archway" />
+  </node>
+  <node id="17" name="Thorkim Family Farm, Cow Pasture">
+    <description>Hoofprints run scattershot in multiple directions along the fencing that borders the pasture.  A broken wagon wheel leans against one post, vines curling through its spokes indicate that it has been there for quite some time.</description>
+    <position x="380" y="100" z="0" />
+    <arc exit="north" move="north" destination="18" />
+    <arc exit="east" move="east" destination="16" />
+    <arc exit="go" move="go colorful wagon" />
+  </node>
+  <node id="18" name="Thorkim Family Farm, Cow Pasture">
+    <description>Wildflowers struggle to keep hold in this pasture, crisscrossed by a variety of hoofprints.  Several colorful blooms cling around the base of a boulder, half embedded in the ground, relying on its size for protection.</description>
+    <position x="380" y="60" z="0" />
+    <arc exit="south" move="south" destination="17" />
+    <arc exit="southwest" move="southwest" destination="19" />
+    <arc exit="go" move="go cedar wagon" />
+  </node>
+  <node id="19" name="Thorkim Family Farm, Cow Pasture">
+    <description>Numerous hoofprints form a chaotic pattern in the soil beneath a gnarled oak tree, whose branches spread wide and cover a large swath of ground.  A few holes have been dug near the base of the tree, disturbing the weeds and grass around the trunk and roots.</description>
+    <position x="340" y="100" z="0" />
+    <arc exit="northeast" move="northeast" destination="18" />
+    <arc exit="southwest" move="southwest" destination="7" />
+    <arc exit="go" move="go simple tent" />
+  </node>
+  <node id="20" name="Thorkim Family Farm, Cow Pasture">
+    <description>A partially eaten bale of hay stands near a gate secured by a slightly rusted chain.  The hollow clank of a lone cow bell echoes from a distant barn, its wearer seeking the shelter of the dilapidated building rather than the openness of the field.</description>
+    <position x="180" y="60" z="0" />
+    <arc exit="southeast" move="southeast" destination="8" />
+    <arc exit="southwest" move="southwest" destination="21" />
+    <arc exit="go" move="go long caravan" />
+    <arc exit="go" move="go canvas tent" />
+  </node>
+  <node id="21" name="Thorkim Family Farm, Cow Pasture">
+    <description>Short grass and weeds have been trampled into the muddy ground which is filled with hoof marks.  Flies buzz in thick swarms around numerous cow patties that litter the landscape and fill the air with a rancid stench.</description>
+    <position x="120" y="120" z="0" />
+    <arc exit="northeast" move="northeast" destination="20" />
+    <arc exit="southwest" move="southwest" destination="22" />
+    <arc exit="northwest" move="northwest" destination="23" />
+    <arc exit="go" move="go pigsty" />
+    <arc exit="go" move="go brown tent" />
+  </node>
+  <node id="22" name="Thorkim Family Farm, Apple Orchard">
+    <description>Vines and weeds threaten to overtake the apple trees which are still struggling to bear fruit in the adverse conditions.  Apple cores litter the ground, while scratch marks mar the trunks of the trees as if creatures tried to climb them.</description>
+    <position x="80" y="160" z="0" />
+    <arc exit="northeast" move="northeast" destination="21" />
+    <arc exit="south" move="south" destination="1" />
+    <arc exit="go" move="go glass caravan" />
+    <arc exit="go" move="go canvas tent" />
+  </node>
+  <node id="23" name="Thorkim Family Farm, Apple Orchard">
+    <description>A bird's nest rests high in one of the surrounding trees, protected by a fortress of apples.  Below, hoofprints weave in and out between the tree trunks, crisscrossing over themselves to the point that it is impossible to discern a particular path.</description>
+    <position x="80" y="80" z="0" />
+    <arc exit="southeast" move="southeast" destination="21" />
+    <arc exit="south" move="south" destination="24" />
+    <arc exit="go" move="go covered wagon" />
+    <arc exit="go" move="go latticework gazebo" />
+  </node>
+  <node id="24" name="Thorkim Family Farm, Apple Orchard">
+    <description>A dead tree lies toppled across the path, bare of leaves and fruit.  Its branches are dry and brittle, suggesting it was felled quite some time ago.  Muddy streaks cross the trunk with hoofprints in the dirt on either side, evidence of a recent crossing by a small hooved creature.</description>
+    <position x="80" y="120" z="0" />
+    <arc exit="north" move="north" destination="23" />
+    <arc exit="northwest" move="northwest" destination="25" />
+  </node>
+  <node id="25" name="Thorkim Family Farm, Apple Orchard">
+    <description>Numerous empty baskets are piled high near the trunks of almost every tree in the vicinity.  A few stacks lean precariously against the trees appearing ready to join others that have already fallen to ground and into a few scraggly bushes that have gained hold.</description>
+    <position x="60" y="100" z="0" />
+    <arc exit="southeast" move="southeast" destination="24" />
+    <arc exit="south" move="south" destination="26" />
+  </node>
+  <node id="26" name="Thorkim Family Farm, Barnyard" note="Farmer Thorkim|charity chest|barrel" color="#00FF00">
+    <description>A few clumps of vegetation struggle to survive in the compacted dirt of the enclosure.  Fencing for various paddocks and corrals, along with numerous structures, help define the irregular space.  A few chickens wander across the expanse, searching for anything edible.</description>
+    <position x="60" y="120" z="0" />
+    <arc exit="north" move="north" destination="25" />
+  </node>
+  <label text="pigs">
+    <position x="48" y="124" z="0" />
+  </label>
+</zone>

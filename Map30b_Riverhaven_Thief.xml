@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Riverhaven Thief Passages" id="30b">
+  <node id="1" name="Riverhaven, Smugglers' Passage">
+    <description>The air grows lighter, scented with the freshness of woodlands and the outdoors.  Brick, dark earth, and stone give way to clay and timbers as the passage angles to meet a trapdoor secured between what appears to be some large blocks of dark-veined marble.</description>
+    <position x="120" y="20" z="0" />
+    <arc exit="south" destination="2" />
+    <arc exit="go" move="go trapdoor" destination="12" />
+  </node>
+  <node id="2" name="Riverhaven, Smugglers' Passage">
+    <description>Rotting beams of wood brace this section of the tunnel where its brick walls have cracked and eroded from the constant pressure of the surrounding earth.  An occasional faint scent of pine is carried on swirls of air that play along the passageway.</description>
+    <position x="120" y="40" z="0" />
+    <arc exit="north" move="north" destination="1" />
+    <arc exit="southwest" move="southwest" destination="3" />
+  </node>
+  <node id="3" name="Riverhaven, Smugglers' Passage">
+    <description>Fine cobblestones line this section of the passage, a touch of unexpected elegance within the tunnel's rough confines.  Perhaps borrowed from some wealthy merchant, the polished stones gleam softly in the subdued light and lead deeper into the gloom.</description>
+    <position x="100" y="60" z="0" />
+    <arc exit="northeast" move="northeast" destination="2" />
+    <arc exit="south" move="south" destination="4" />
+  </node>
+  <node id="4" name="Riverhaven, Smugglers' Passage">
+    <description>Splintered crates litter the floor, the wreckage of some hurried attempt to move what was probably illicit merchandise.  A pile of bricks has been neatly stacked along one wall in preparation for use in future tunnel repairs.</description>
+    <position x="100" y="80" z="0" />
+    <arc exit="north" move="north" destination="3" />
+    <arc exit="south" move="south" destination="5" />
+  </node>
+  <node id="5" name="Riverhaven, Smugglers' Passage">
+    <description>Groundwater has encroached here to form stagnant pools along the walls, making the air chill and heavy.  Patches of mortar gleam pale against brick and stone, silent evidence that someone is determined to maintain the passageway.</description>
+    <position x="100" y="100" z="0" />
+    <arc exit="north" move="north" destination="4" />
+    <arc exit="southwest" move="southwest" destination="6" />
+  </node>
+  <node id="6" name="Riverhaven, Smugglers' Passage">
+    <description>The tight passageway levels off deep beneath the streets of Riverhaven.  Patches of algae, sustained by the dank air, cloak the stone floor and make each step risky.  Even the faintest sounds are amplified by the close confines of the tunnel, reverberating hauntingly into its depths and creating eerie echoes that are quickly absorbed by earthen walls.</description>
+    <position x="80" y="120" z="0" />
+    <arc exit="northeast" move="northeast" destination="5" />
+    <arc exit="southwest" move="southwest" destination="7" />
+  </node>
+  <node id="7" name="Riverhaven, Smugglers' Passage">
+    <description>Cool and damp, the air holds a faint pungent odor emanating from somewhere beyond, though it may be rising from the clumps of strange pale fungus that sprout from the tunnel walls.  A small rivulet of water has worn a shallow channel in the floor, green with a slick coat of algae.</description>
+    <position x="60" y="140" z="0" />
+    <arc exit="northeast" move="northeast" destination="6" />
+    <arc exit="southwest" move="southwest" destination="8" />
+  </node>
+  <node id="8" name="Riverhaven, Smugglers' Passage">
+    <description>Winding and twisting beneath the foundations of Riverhaven's finer establishments, the tunnel is neatly bricked and mortared, and a tall ladder has been carefully bolted into the wall.  Water seeping from the surface above has begun to erode the stonework, as evidenced by the mineralized deposits that are collecting on the ceiling.</description>
+    <position x="40" y="160" z="0" />
+    <arc exit="northeast" move="northeast" destination="7" />
+    <arc exit="south" move="south" destination="9" />
+    <arc exit="climb" move="climb ladder" destination="13" />
+  </node>
+  <node id="9" name="Riverhaven, Smugglers' Passage">
+    <description>Footsteps, voices, and the clatter of workcarts filter through the insulating earth and brick of the tunnel as reminders of the world above.  Someone is careful to maintain this place -- clean straw has been thrown on the floor to absorb moisture and muffle the sound of passage.</description>
+    <position x="40" y="180" z="0" />
+    <arc exit="north" move="north" destination="8" />
+    <arc exit="southeast" move="southeast" destination="10" />
+  </node>
+  <node id="10" name="Riverhaven, Smugglers' Passage">
+    <description>A thick layer of refuse aids in dampening most noises of passage here, and probably muffles the sound of more violent activity, as well.  It appears that some of the less than chivalrous inhabitants of Riverhaven have used this hidden place for settling their disputes -- the bones of some hapless soul have been left untouched, perhaps as a reminder that even the most wary are never wary enough.</description>
+    <position x="60" y="200" z="0" />
+    <arc exit="southeast" move="southeast" destination="11" />
+    <arc exit="northwest" move="northwest" destination="9" />
+  </node>
+  <node id="11" name="Riverhaven, Smugglers' Passage">
+    <description>Winding beneath the businesses of Riverhaven, this dank tunnel must be home to all manner of vermin, as evidenced by scattered droppings and shredded piles of rags.  Walls shored up with brick are covered by a thick layer of moss and algae, a result of the constant seepage of briny water.</description>
+    <position x="80" y="220" z="0" />
+    <arc exit="northwest" move="northwest" destination="10" />
+    <arc exit="go" move="go storage crates" destination="14" />
+  </node>
+  <node id="12" name="Wildlands, Meandering Path" note="Map32_Riverhaven_North_Gate.xml">
+    <description>Two piles of ruined stones set to either side of the path look ancient beyond measure.  Between them, oversized brickwork shows through the dust and dirt of ages as the original form this trail now takes.  A dense stand of woods looms nearby, its presence dominating the landscape.  Bird-song drifts from within those green confines, lessening their air of solemnity.</description>
+    <position x="120" y="0" z="0" />
+    <arc exit="north" move="north" />
+    <arc exit="southwest" move="southwest" />
+  </node>
+  <node id="13" name="Riverhaven, Ring Road West" note="Map30_Riverhaven.xml">
+    <description>A small series of very elegant shops line the inner curve of the roadway.  A jeweler and furrier seem to be the major attraction here.  Several well-dressed ladies gaze wistfully at the expensive displays in the windows.  Two prosperous-looking Dwarves talk in low guttural voices while examining a shipment of furs packed onto a small mule.</description>
+    <position x="20" y="160" z="0" />
+    <arc exit="north" move="north" />
+    <arc exit="south" move="south" />
+  </node>
+  <node id="14" name="Riverhaven, River Road West" note="Map30_Riverhaven.xml">
+    <description>Midway between the western watch tower and the center of town, the road bustles with traffic of all sorts.  Horse-drawn wagons vie with overstuffed handcarts, while porters elbow their way between fishermen hauling baskets of fish.  Underfoot, urchins scoot and skitter in endless complex games beyond the grasp of the heedless adults around them.</description>
+    <position x="100" y="240" z="0" />
+    <arc exit="north" move="north" />
+    <arc exit="east" move="east" />
+    <arc exit="west" move="west" />
+  </node>
+</zone>

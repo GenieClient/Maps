@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Lake of Dreams" id="2">
+  <node id="1" name="Laakvor">
+    <description>At the base of the eastern slope of this hollow, the grasses are a deep, emerald green.  Tall stalks of lovely bell-shaped flowers in brilliant hues of pink, red, and purple grow along a lightly-trodden path that winds west toward some silvery trees.  The air is cool and invigorating, and the plush carpet beneath your feet makes each footfall a delight.</description>
+    <description>At the base of the eastern slope of this hollow, the grasses are deep and moist.  The moonlight reveals lovely stalks of bell-shaped flowers growing along a lightly-trodden path that winds west toward some silvery trees.  The air is cool and invigorating, and the plush carpet beneath your feet makes each footfall a delight.</description>
+    <position x="0" y="-20" z="0" />
+    <arc exit="west" move="west" destination="3" />
+    <arc exit="go" move="rt go rough trench" destination="2" />
+  </node>
+  <node id="2" name="Mycthengelde, Knoll" note="Map4_Crossing_West_Gate.xml|Crossing">
+    <description>Here at the highest point of the knoll, you can see clearly in every direction.  Far to the south, a series of low hills mark the southern horizon, while to the southeast you glimpse part of The Crossing's western wall.  Trees seem to stretch endlessly to the east and north, fringing the level area of the Mycthengelde and curling into a foggy area near the westernmost rim of the hollow.</description>
+    <description>Here at the highest point of the knoll, you are met by a cool breeze rising up from the hollow.  Tiny fireflies meander through the darkness, congregating more heavily near the shimmering trees and moonlit lake.</description>
+    <position x="0" y="0" z="0" />
+    <arc exit="south" move="south" />
+    <arc exit="go" move="go trench" destination="1" />
+  </node>
+  <node id="3" name="Laakvor">
+    <description>Butterflies hover over pale pink posies which grow with wild abandon in this part of the hollow.  Now and then you find a wild rosebush, some birds of paradise, or even a group of vivid nasturtiums.  The garden-like quality of the hollow is refreshing, and you stop to enjoy the peace and serenity that permeate the air.</description>
+    <description>Posies grow with wild abandon in this part of the hollow.  Now and then you find a wild rosebush, some birds of paradise or groups of nasturtiums bordering the path.  Crickets chirp softly in the darkness, stopping now and then to listen as you move through their territory.</description>
+    <position x="-20" y="-20" z="0" />
+    <arc exit="east" move="east" destination="1" />
+    <arc exit="southwest" move="southwest" destination="4" />
+  </node>
+  <node id="4" name="Laakvor">
+    <description>Traveling close to the edge of a shimmering lake, you are greeted by a particularly twisted willow tree which has somehow managed to make a life despite its incredible deformity.  Coiling serpent-like at the bank of the lake, its trunk as black as ebony, it is nonetheless crowned with a bevy of boughs which arch gracefully over the water's edge.  The tiny, glittering leaves of this willow punctuate the silvery shimmer of the lake surface just beyond, creating a mesmerizing effect.</description>
+    <position x="-40" y="0" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="3" />
+    <arc exit="west" move="rt west" destination="5" />
+  </node>
+  <node id="5" name="Laakvor, Lake of Dreams">
+    <description>The pristine Lake of Dreams stretches before you, its shimmering stillness beckoning like a quiet whisper.  Scanning the surface of the lake, you find yourself lapsing into a kind of trance, the occasional shimmer of sunlight on its surface soothing you like a lullaby.</description>
+    <description>The pristine Lake of Dreams stretches before you, its shimmering stillness beckoning like a quiet whisper.  Scanning the surface of the lake, you find yourself lapsing into a kind of trance, the occasional shimmer of moonlight on its surface soothing you like a lullaby.</description>
+    <position x="-60" y="0" z="0" />
+    <arc exit="east" move="rt east" destination="4" />
+    <arc exit="southeast" move="rt southeast" destination="60" />
+    <arc exit="west" move="rt west" destination="6" />
+  </node>
+  <node id="6" name="Laakvor, Lake of Dreams">
+    <description>Tiny insects dart about a clump of reeds at the lake's edge.  Their intermittent, monotonous buzzing serves to heighten your sense of drowsiness.  At the edge of the bank stands a small pool of clear water which nurses several tiger lilies.</description>
+    <position x="-80" y="0" z="0" />
+    <arc exit="east" move="rt east" destination="5" />
+    <arc exit="southwest" move="rt southwest" destination="7" />
+  </node>
+  <node id="7" name="Laakvor">
+    <description>An open patch of deep green grass stretches from the willows which grace the banks of the Lake of Dreams only a few yards away.  This cheery little meadow extends up the northern slope of the hollow, toward the thick forest that impinges on its rim.</description>
+    <description>An open patch of deep green grass stretches from the willows which grace the banks of the Lake of Dreams only a few yards away.  This quiet little meadow extends up the northern slope of the hollow, toward the thick forest which impinges on its rim.</description>
+    <position x="-100" y="20" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="6" />
+    <arc exit="southeast" move="rt southeast" destination="8" />
+  </node>
+  <node id="8" name="Laakvor">
+    <description>A mound of dirt covered by emerald grasses is all that separates two vastly different lakes.  As you travel the mound, you notice a marked difference between the shimmering light upon the surface of one lake, and the inky blackness of the other.  Just northwest you can see a delightful little meadow and several graceful willows, while southward, you notice that even the grass refuses to grow along the dark lake's banks.</description>
+    <description>A mound of dirt covered by grasses is all that separates two vastly different lakes.  As you travel the mound, you notice a marked difference between the shimmering moonlight upon the surface of one lake, and the inky blackness of the other.  Just northwest you can see a quiet clearing and several glistening willows, while southward there is nothing but darkness.  A firefly undulates through the night air, glowing fiercely at first, then disappearing entirely.</description>
+    <position x="-80" y="40" z="0" />
+    <arc exit="south" move="south" destination="9" />
+    <arc exit="northwest" move="northwest" destination="7" />
+  </node>
+  <node id="9" name="Laakvor, Lake of Smiles">
+    <description>Dark patches of oily film coat the banks of the Lake of Smiles, and gazing out onto the water you can see the same, oily film floating on its surface.  Not even the sunlight reflects on this inky lake, and where the ooze has met the grass, the ground is singed as if touched by fire.</description>
+    <position x="-80" y="60" z="0" />
+    <arc exit="north" move="north" destination="8" />
+    <arc exit="south" move="south" destination="10" />
+  </node>
+  <node id="10" name="Laakvor, Lake of Smiles">
+    <description>Your feet smush into soggy, exposed mud along the bank of the lake.  It takes most of your concentration just to avoid falling toward the uninviting water.</description>
+    <position x="-80" y="80" z="0" />
+    <arc exit="north" move="north" destination="9" />
+    <arc exit="southwest" move="southwest" destination="11" />
+  </node>
+  <node id="11" name="Laakvor, Lake of Smiles">
+    <description>As you move along the lake, you notice that a thick bubble forms once in a while on its surface, and what follows when it erupts is a thick, gelatinous sludge.  The stench from the bursting bubble is noxious, and you wonder to yourself how anyone in their right mind could name this reeking mess the Lake of Smiles.</description>
+    <position x="-100" y="100" z="0" />
+    <arc exit="northeast" move="northeast" destination="10" />
+    <arc exit="southwest" move="southwest" destination="12" />
+  </node>
+  <node id="12" name="Laakvor, Lake of Smiles">
+    <description>A rotten log points skyward from the ink-black lake, gnarled and twisted like the body of some pitiful, tortured creature.</description>
+    <position x="-120" y="120" z="0" />
+    <arc exit="northeast" move="northeast" destination="11" />
+    <arc exit="southwest" move="southwest" destination="13" />
+  </node>
+  <node id="13" name="Laakvor, Lake of Smiles">
+    <description>An incredible odor rises from this point of the lake, and as you peer upon the dark waters, you find a deer carcass half-floating at the surface.  Eyes, frozen open in stark horror, stare at you in warning of the fate that awaits you should you slip and fall.</description>
+    <position x="-140" y="140" z="0" />
+    <arc exit="northeast" move="northeast" destination="12" />
+    <arc exit="south" move="south" destination="14" />
+  </node>
+  <node id="14" name="Laakvor, Willow Grove">
+    <description>Dead and dying willow trees surround you.  Grass grows in intermittent clumps along the muddy ground, looking frail and glasslike.  The sole of a boot, a knapsack and a tin cup lie half-buried in the path, sinking slowly into the mire.  You begin to take extra care to step lightly through the area.</description>
+    <position x="-140" y="160" z="0" />
+    <arc exit="north" move="north" destination="13" />
+    <arc exit="southwest" move="southwest" destination="15" />
+  </node>
+  <node id="15" name="Laakvor, Willow Grove">
+    <description>You quickly step aside to avoid being impaled upon a sharp stump sticking out of the mud.  The trees and boulders in this place are haphazardly positioned, as if the ground were incredibly jostled then settled back down.  The mighty roots of a giant willow point skyward, while its gnarled branches sink into the muck.  A steamy heat rises from the south, blanketing the grove in a dense mist.</description>
+    <position x="-160" y="180" z="0" />
+    <arc exit="northeast" move="northeast" destination="14" />
+    <arc exit="southeast" move="southeast" destination="16" />
+    <arc exit="southwest" move="southwest" destination="19" />
+  </node>
+  <node id="16" name="Laakvor, Lake of Woes">
+    <description>Dense fog obscures everything around you, leaving little idea of what may sit in wait of your arrival.  The ground beneath you feels as solid as rock, and every now and again you hear a fantastic rumbling in the vicinity.  Moving slowly, you carefully check the area directly in front of you, searching out any hidden obstacles.</description>
+    <position x="-140" y="200" z="0" />
+    <arc exit="southeast" move="southeast" destination="17" />
+    <arc exit="northwest" move="northwest" destination="15" />
+  </node>
+  <node id="17" name="Laakvor, Lake of Woes">
+    <description>The veil of fog lifts momentarily, and to your surprise you find yourself surrounded by rock.  You are walking an incline pocked with many holes through which heat seems forced by underground bellows.  The ground is almost too warm to walk on, and you are dripping with perspiration.  </description>
+    <position x="-120" y="220" z="0" />
+    <arc exit="northwest" move="northwest" destination="16" />
+    <arc exit="up" move="up" destination="18" />
+  </node>
+  <node id="18" name="Laakvor, Lake of Woes">
+    <description>The incline levels out, and the dense fog pitches and rolls like a swift-moving cloud upon the ground.  Just as you are about to step forward, the fog clears and you stop yourself in a heart-pounding rush of adrenalin.  Before you lies a massive yawning cavity in the earth, spewing forth a heavy column of steam.  The earth trembles, and there is a deep rumbling from far below.  Though your knees grow weak, you manage to steady yourself, knowing that one false move will plummet you to your death.</description>
+    <position x="-120" y="200" z="0" />
+    <arc exit="down" move="down" destination="17" />
+  </node>
+  <node id="19" name="Laakvor, Lake of Woes">
+    <description>Deep pockets of mud trace their way along exposed rock which inclines to the south.  A thicket of thorn bushes spreads up the incline and disappears into a dense bank of fog.  Now and then, you hear a loud gurgling followed by a fantastic hiss, but the heavy mists surrounding you prevent you from seeing much of anything.</description>
+    <position x="-180" y="200" z="0" />
+    <arc exit="northeast" move="northeast" destination="15" />
+    <arc exit="southwest" move="southwest" destination="20" />
+  </node>
+  <node id="20" name="Laakvor, Lake of Woes">
+    <description>A small body of water lies to the west, swathed in a dense white mist.  You can hear a constant bubbling coming from its direction, but decide it is unwise to try to get a closer look.  The heat of the mist makes you perspire freely, and you are uncomfortably stuck to your clothes.  Breathing is difficult due to the moisture in the air.  Every step upon the exposed rock is treacherous.</description>
+    <position x="-200" y="220" z="0" />
+    <arc exit="northeast" move="northeast" destination="19" />
+    <arc exit="southwest" move="southwest" destination="21" />
+  </node>
+  <node id="21" name="Laakvor, Lake of Woes">
+    <description>Cascades of once-liquefied rock act like steps from a short stone rise to the east.  Plumes of steam from that direction drift into the area and making it difficult to see.  The only vegetation to be found is a simple black moss which hugs the rim of some seething steam vents.  Scalding water occasionally bursts from these vents and releases a noxious, gaseous odor.</description>
+    <description>Cascades of once-liquefied rock act like steps from a short stone rise to the east.  Plumes of steam from that direction drift into the area and make it difficult to see.  The only vegetation to be found is a simple black moss which hugs the rim of some seething steam vents.  Scalding water occasionally bursts from these vents and releases a noxious, gaseous odor.</description>
+    <position x="-220" y="240" z="0" />
+    <arc exit="northeast" move="northeast" destination="20" />
+    <arc exit="go" move="go geysers" destination="22" />
+  </node>
+  <node id="22" name="Forisaad, Geysers">
+    <description>With a landscape more suitable to an uninhabitable moon, the geyser field is void of color in its endless grey march.  Solid rock beneath your feet takes on the appearance of sludge, though they are most certainly solid.  The humidity in the area is staggering.</description>
+    <position x="-240" y="260" z="0" />
+    <arc exit="southeast" move="southeast" destination="24" />
+    <arc exit="southwest" move="southwest" destination="28" />
+    <arc exit="northwest" move="northwest" destination="23" />
+    <arc exit="go" move="go lake" destination="21" />
+  </node>
+  <node id="23" name="Forisaad, Geysers">
+    <description>Dull grey rock, melted by tremendous heat and then cooled to its solid form, undulates over the landscape.  Simple mosses and lichen are the only life form visible in this desolate area.</description>
+    <position x="-260" y="240" z="0" />
+    <arc exit="southeast" move="southeast" destination="22" />
+  </node>
+  <node id="24" name="Forisaad, Geysers">
+    <description>Dull grey rock, melted by tremendous heat and then cooled to its solid form, undulates over the landscape.  Simple mosses and lichen are the only life form visible in this desolate area.</description>
+    <position x="-200" y="300" z="0" />
+    <arc exit="west" move="west" destination="25" />
+    <arc exit="northwest" move="northwest" destination="22" />
+  </node>
+  <node id="25" name="Forisaad, Geysers">
+    <description>Dull grey rock, melted by tremendous heat and then cooled to its solid form, undulates over the landscape.  Simple mosses and lichen are the only life form visible in this desolate area.</description>
+    <position x="-220" y="300" z="0" />
+    <arc exit="east" move="east" destination="24" />
+    <arc exit="west" move="west" destination="26" />
+  </node>
+  <node id="26" name="Forisaad, Geysers">
+    <description>Dull grey rock, melted by tremendous heat and then cooled to its solid form, undulates over the landscape.  Simple mosses and lichen are the only life form visible in this desolate area.</description>
+    <position x="-240" y="300" z="0" />
+    <arc exit="east" move="east" destination="25" />
+    <arc exit="southwest" move="southwest" destination="27" />
+  </node>
+  <node id="27" name="Forisaad, Geysers">
+    <description>Dull grey rock, melted by tremendous heat and then cooled to its solid form, undulates over the landscape.  Simple mosses and lichen are the only life form visible in this desolate area.</description>
+    <position x="-260" y="320" z="0" />
+    <arc exit="northeast" move="northeast" destination="26" />
+    <arc exit="west" move="west" destination="30" />
+  </node>
+  <node id="28" name="Forisaad, Geysers">
+    <description>Two large geysers stand close together, creating a narrow passageway to the opposite end of the field.  The rock is slippery and coated with a slimy black moss.  A noxious, sulfuric odor hangs in the air, making it difficult to take a full breath.</description>
+    <position x="-260" y="280" z="0" />
+    <arc exit="northeast" move="northeast" destination="22" />
+    <arc exit="southwest" move="southwest" destination="29" />
+  </node>
+  <node id="29" name="Forisaad, Geysers">
+    <description>Stunted, misshapen trees struggle to grow near the edge of a seeming lake of rock, their leaves discolored to a sickly rust.  Heat rises from the ground in undulating waves within a thick, acrid moisture.</description>
+    <position x="-280" y="300" z="0" />
+    <arc exit="northeast" move="northeast" destination="28" />
+    <arc exit="southwest" move="southwest" destination="30" />
+  </node>
+  <node id="30" name="Forisaad, Geysers">
+    <description>Thick forest and steaming field of rock meet along a marshy stretch of ground punctuated by mineral deposits and shallows of salt.  A few brave trees struggle to grow upon the flat, rocky area, and beyond them rises something dense and cloudlike.  The forested slope is dense and dark, giving no indication of its penetrability.</description>
+    <position x="-300" y="320" z="0" />
+    <arc exit="northeast" move="northeast" destination="29" />
+    <arc exit="east" move="east" destination="27" />
+    <arc exit="go" move="go forested slope" destination="31" />
+  </node>
+  <node id="31" name="Forisaad, Deep Tangle">
+    <description>Very little light penetrates the overlapping boughs which weave a perpetual shadow into the forest fringe.  A heavy heated mist hangs in the air, unmoving, somewhat seductive as it wraps around roots, branches, boots and ankles.</description>
+    <position x="-320" y="340" z="0" />
+    <arc exit="southwest" move="southwest" destination="32" />
+    <arc exit="go" move="go slope" destination="30" />
+  </node>
+  <node id="32" name="Forisaad, Deep Tangle">
+    <description>Rough-edged rock cuts through the spongy ground, creating an obstacle course beneath the low-hanging tree branches.  The flora seems bent on obliterating every inch of open space, which if not taken up by some shrub or sapling, is criss-crossed by thick garlands of moss.</description>
+    <position x="-340" y="360" z="0" />
+    <arc exit="northeast" move="northeast" destination="31" />
+    <arc exit="southwest" move="southwest" destination="33" />
+  </node>
+  <node id="33" name="Forisaad, Deep Tangle">
+    <description>Tiny pools of water bubble quietly on either side of a boggy path.  Springy and tentative, the path provides no security as it dips and sways beneath even the most inconsequential weight.  Cascading moss drapes in almost calculated symmetry, appearing and disappearing in the thickening fog.</description>
+    <position x="-360" y="380" z="0" />
+    <arc exit="northeast" move="northeast" destination="32" />
+    <arc exit="southeast" move="southeast" destination="34" />
+    <arc exit="south" move="south" destination="36" />
+  </node>
+  <node id="34" name="Forisaad, Deep Tangle">
+    <description>Creeping, crawling things march along rotting logs and across moss-covered rocks.  The fog settles in a thick blanket along the ground, obscuring the path but revealing a landscape in the throes of a slow, torturous death.  Gnarled branches reach hopelessly upward, seeking the sun.</description>
+    <position x="-340" y="400" z="0" />
+    <arc exit="south" move="south" destination="35" />
+    <arc exit="northwest" move="northwest" destination="33" />
+  </node>
+  <node id="35" name="Forisaad, Deep Tangle">
+    <description>A dead tree trunk snakes out of the misty bog like a ramp leading nowhere.  Odd, unfamiliar hoots and yelps ricochet in the distance, and mysterious pinging noises drift up from the mud.</description>
+    <position x="-340" y="420" z="0" />
+    <arc exit="north" move="north" destination="34" />
+    <arc exit="west" move="west" destination="36" />
+  </node>
+  <node id="36" name="Forisaad, Deep Tangle">
+    <description>The tops of trees appear alarmingly close to the ground, a sure sign of the bog's covetous nature.  With little light penetrating the inescapable haze, there is no way to accurately assess the terrain.  Each step is an adventure in balance, carrying the possibility of oblivion.</description>
+    <position x="-360" y="420" z="0" />
+    <arc exit="north" move="north" destination="33" />
+    <arc exit="east" move="east" destination="35" />
+    <arc exit="southwest" move="southwest" destination="37" />
+  </node>
+  <node id="37" name="Forisaad, Deep Tangle">
+    <description>Off to one side of the shifting path is a rotted, crooked wall of woven thatch.  Blackened holes where fungus has eaten through pock the thing from top to bottom, in patterns that often suggest faces in the eerie half-light of the shadowy bog.</description>
+    <position x="-380" y="440" z="0" />
+    <arc exit="northeast" move="northeast" destination="36" />
+    <arc exit="south" move="south" destination="38" />
+  </node>
+  <node id="38" name="Forisaad, Deep Tangle">
+    <description>A great tree with massive branches dominates the area, like an opened hand reaching defiantly from the greedy sod.  Though the fog eddies and swirls to incredible heights, it cannot obscure this stunning landmark.</description>
+    <position x="-380" y="460" z="0" />
+    <arc exit="north" move="north" destination="37" />
+    <arc exit="southeast" move="southeast" destination="39" />
+  </node>
+  <node id="39" name="Forisaad, Deep Tangle">
+    <description>A moderate slope in the ground provides some stable footing for a change.  A thick, thorny bramble snuggles up to a particularly dense fall of moss, looking like the silhouette of a young child leaning against its mother.</description>
+    <position x="-360" y="480" z="0" />
+    <arc exit="northwest" move="northwest" destination="38" />
+    <arc exit="go" move="go rotted stump" destination="40" />
+  </node>
+  <node id="40" name="Forisaad, Deep Tangle">
+    <description>Brackish water filled with debris covers the ground, smelling like death.  Blurps and gurgles occasionally break the unsettling silence, sounding and smelling like a sluagh with stomach troubles.  A hapless victim of the bog is partially imbedded in the muck, nearly indistinguishable from the surrounding sludge.</description>
+    <position x="-340" y="500" z="0" />
+    <arc exit="southeast" move="southeast" destination="41" />
+    <arc exit="go" move="go rotted stump" destination="39" />
+  </node>
+  <node id="41" name="Forisaad, Deep Tangle">
+    <description>A small stream flows from east to west, carrying the dregs of the bog's destructive feast.  Blackened leaves, dried twigs and rotted rodent carcasses are passed into the moving water like offerings, to be transported elsewhere and stacked upon a massive funeral pyre.</description>
+    <position x="-320" y="520" z="0" />
+    <arc exit="south" move="south" destination="42" />
+    <arc exit="southwest" move="southwest" destination="43" />
+    <arc exit="northwest" move="northwest" destination="40" />
+  </node>
+  <node id="42" name="Forisaad, Deep Tangle">
+    <description>A sudden cold bristles the fog-laden air, wending around the dying trees.  There are tiny, glinting ice shards on a carpet of moss, and icicles forming on boughs and branches.  The chill is so all-encompassing, it's as if it is searching for the warm, beating heart of these barely-living things.</description>
+    <position x="-320" y="540" z="0" />
+    <arc exit="north" move="north" destination="41" />
+  </node>
+  <node id="43" name="Forisaad, Deep Tangle">
+    <description>A fallen tree provides a roadway over the increasing sludge of the bog.  A series of hopelessly-tangled roots are exposed above the water, while the tree crowns are lost within the swirling mist.  An occasional slithering sound announces the presence of an otherwise undetected creature.</description>
+    <position x="-340" y="540" z="0" />
+    <arc exit="northeast" move="northeast" destination="41" />
+    <arc exit="west" move="west" destination="44" />
+  </node>
+  <node id="44" name="Forisaad, Deep Tangle">
+    <description>Part of the marshy floor dips toward a large depression at the base of a blackened oak.  Debris sloshes toward the tree, washing the rim of the depression before disappearing into it.</description>
+    <position x="-360" y="540" z="0" />
+    <arc exit="east" move="east" destination="43" />
+    <arc exit="southeast" move="southeast" destination="45" />
+  </node>
+  <node id="45" name="Forisaad, Deep Tangle">
+    <description>Every tree in the area has been uprooted and knocked on its side, so that a great circle has been devised.  The trees lay root to crown, forming a twisted, gnarled garland filled with swampy, murky water.</description>
+    <position x="-340" y="560" z="0" />
+    <arc exit="south" move="south" destination="46" />
+    <arc exit="northwest" move="northwest" destination="44" />
+  </node>
+  <node id="46" name="Forisaad, Deep Tangle">
+    <description>In the midst of the stinking quagmire of this forsaken bog grows a single bush, covered in bright pink flowers.  Like a blessing in the midst of damnation, it stands proudly, as if by sheer force of will it can overcome the death around it.</description>
+    <position x="-340" y="580" z="0" />
+    <arc exit="north" move="north" destination="45" />
+    <arc exit="southeast" move="southeast" destination="47" />
+  </node>
+  <node id="47" name="Forisaad, Deep Tangle">
+    <description>Criss-crossed branches make a shifting catwalk above the pungent, slimy ground.  A rich, loamy odor hangs heavily in the air, hinting of cinnamon.  In the froth of the churning fog, nearby shrubs take on the appearance of monsters frozen in mid-attack.</description>
+    <position x="-320" y="600" z="0" />
+    <arc exit="west" move="west" destination="48" />
+    <arc exit="northwest" move="northwest" destination="46" />
+  </node>
+  <node id="48" name="Forisaad, Deep Tangle">
+    <description>A long-forgotten wind chime defies humidity and time to produce a faint tinkle as a warm breeze passes by.  Broken furniture is sunken into the floor of the bog -- a chair here, a desk there, a chest of drawers further on.  The faint outline of a building foundation juts out of the mire, but is nothing more than a mess of rotting planks which suggest a living area, bedroom and what might have been a kitchen.</description>
+    <position x="-340" y="600" z="0" />
+    <arc exit="east" move="east" destination="47" />
+    <arc exit="go" move="go hollow" destination="49" />
+    <arc exit="go" move="go crumpled bridge" destination="51" />
+  </node>
+  <node id="49" name="Forisaad, Deep Tangle">
+    <description>Muffled voices echo from the unseen boundaries of this painfully cramped void.  There is little room to maneuver, and at varying intervals there is a gush of water which spills in from above.  Hardly fit for any inhabitant, it is nonetheless populated by at least one furry skittering thing, which wraps itself around your ankles as it maneuvers through the darkness.</description>
+    <position x="-360" y="600" z="0" />
+    <arc exit="east" move="east" destination="48" />
+    <arc exit="up" move="up" destination="50" />
+  </node>
+  <node id="50" name="Forisaad, Deep Tangle">
+    <description>Cascading sludge pours from above, pooling in a fetid hollow within the roots which dangle from above.  The walls of this tiny cavern glisten with accumulated slime, and are populated by caterpillars, roaches and sightless beetles.  The incredible stench is enough to overpower even the most seasoned warrior.</description>
+    <position x="-360" y="580" z="0" />
+    <arc exit="down" move="down" destination="49" />
+  </node>
+  <node id="51" name="Forisaad, Deserted Village">
+    <description>Thick, searing mist shrouds the ghosts of several thatched-roof houses which stand to either side of a crumpled bridge.  Bits and pieces of the cobblestone road peek from the bog which is desperate to claim these man-made structures.  A lone tree, long dead, stands in the midst of what must have been the village green.</description>
+    <position x="-340" y="620" z="0" />
+    <arc exit="southwest" move="southwest" destination="52" />
+    <arc exit="go" move="go crumpled bridge" destination="48" />
+  </node>
+  <node id="52" name="Forisaad, Deserted Village">
+    <description>A marble statue, overgrown with lichen and sinking at an odd angle, stares into the mist as if searching for light.  Around its base is some cracked, circular stonework which was once the foundation of a large fountain.  There is also a rotting wooden gate standing before a flat area which, at one time, was the village cemetery.</description>
+    <position x="-360" y="640" z="0" />
+    <arc exit="northeast" move="northeast" destination="51" />
+    <arc exit="southeast" move="southeast" destination="53" />
+  </node>
+  <node id="53" name="Forisaad, Deserted Village">
+    <description>An old tavern, its sign still creaking softly, stands with open doors as if ready for customers.  On a second-story balcony just above it, great garlands of moss drape in pretty patterns like scarves hung out to dry.</description>
+    <position x="-340" y="660" z="0" />
+    <arc exit="southeast" move="southeast" destination="54" />
+    <arc exit="northwest" move="northwest" destination="52" />
+    <arc exit="go" move="go old tavern" destination="59" />
+  </node>
+  <node id="54" name="Forisaad, Deserted Village">
+    <description>Shrubs dead of rot line either side of the main road through this forgotten village.  Occasionally, the mist lifts enough to reveal colorful paint on the wretched buildings which stand in various stages of disrepair.</description>
+    <position x="-320" y="680" z="0" />
+    <arc exit="southwest" move="southwest" destination="55" />
+    <arc exit="northwest" move="northwest" destination="53" />
+  </node>
+  <node id="55" name="Forisaad, Deserted Village">
+    <description>A three-story building stands at the end of a cul-de-sac just off the main road.  Flanked by withered junipers and graced with a lichen-covered porte-cochere, it was probably the residence of some wealthy former inhabitant.</description>
+    <position x="-340" y="700" z="0" />
+    <arc exit="northeast" move="northeast" destination="54" />
+    <arc exit="go" move="go three-story building" destination="56" />
+  </node>
+  <node id="56" name="Forisaad, Forgotten Mansion">
+    <description>A soggy carpet sends up the strong smell of decay, and the wallpaper is splashed with mud.  The furniture in this grand foyer is smashed to pieces, covered with moss and lichen, and turning a sickly black.  The bottom portion of a grand stairway has fallen apart, eliminating any possibility of exploration among the upper rooms.</description>
+    <position x="-360" y="720" z="0" />
+    <arc exit="out" move="out" destination="55" />
+    <arc exit="go" move="go brass arch" destination="57" />
+  </node>
+  <node id="57" name="Forisaad, Forgotten Mansion">
+    <description>A once-grand dining room sits in silent ruin.  The wreckage of a deobar table which seated at least twenty is lying in the center of the room, while its accompanying chairs are smashed and piled near the walls.  Only the crystal chandelier remains intact, though it is generously coated with decades of dust.</description>
+    <position x="-380" y="720" z="0" />
+    <arc exit="west" move="west" destination="58" />
+    <arc exit="out" move="out" destination="56" />
+  </node>
+  <node id="58" name="Forisaad, Forgotten Mansion">
+    <description>This conservatory is packed with broken instruments, including an ornate harp, and speaks of a love of the bardic arts.  Heavy tapestries hang on the wall, depicting a handful of musical themes, including a lyre concert, a singing minstrel and muses dancing to the tune of a flutist.</description>
+    <position x="-400" y="720" z="0" />
+    <arc exit="east" move="east" destination="57" />
+  </node>
+  <node id="59" name="Forisaad, Deserted Village">
+    <description>Polished brass still shines along the bar rails, and several stools remain intact.  A group of tables and chairs provide a place to sit and rest, though the sofas and footrests made of upholstery have been claimed by the rot of the bog.  At the far end of the room, upon one of the tables, sits a lovely pewter vase occupied by a dead rose.</description>
+    <position x="-360" y="660" z="0" />
+    <arc exit="out" move="out" destination="53" />
+  </node>
+  <node id="60" name="Laakvor, Lake of Dreams">
+    <description>Willow trees stand like sentinels on either side of a path along the Lake of Dreams.  The interplay of light and shadow as you move upon the path tires you, numbing your senses.  You find it difficult to concentrate on anything but putting one foot in front of the other.</description>
+    <description>Willow trees stand like sentinels on either side of a path along the Lake of Dreams.  The interplay of moonlight and shadow as you move upon the path tires you, numbing your senses.  You find it difficult to concentrate on anything but putting one foot in front of the other.</description>
+    <position x="-40" y="20" z="0" />
+    <arc exit="southeast" move="southeast" destination="61" />
+    <arc exit="northwest" move="northwest" destination="5" />
+  </node>
+  <node id="61" name="Laakvor, Lake of Dreams">
+    <description>Three rounded rocks sit nestled beneath two overlapping willow trees at this point of the lake.  The glistening leaves of the tree, combined with the sparkling surface of the lake, lull you into a sense of sluggishness.  This quiet spot seems the perfect place to unwind and while away a lifetime.</description>
+    <position x="-20" y="40" z="0" />
+    <arc exit="southwest" move="southwest" destination="62" />
+    <arc exit="northwest" move="northwest" destination="60" />
+  </node>
+  <node id="62" name="Laakvor, Lake of Dreams">
+    <description>A leaf from a nearby willow spirals through the air in front of you and settles upon the water, sending out soft circular ripples.  With an overwhelming sense of lethargy, you begin to watch the outermost ripple advance across the width of the lake, until some deeply-rooted instinct tells you what you're seeing is impossible.  When you blink, you find the lake is perfectly still, and there is no sign of the fallen leaf. </description>
+    <position x="-40" y="60" z="0" />
+    <arc exit="northeast" move="northeast" destination="61" />
+    <arc exit="southwest" move="southwest" destination="63" />
+  </node>
+  <node id="63" name="Laakvor, Lake of Dreams">
+    <description>Traveling along this bank of the lake, you notice the water is so clear you can see the shallow, pebble-strewn lake bed.  Though the lake appears still, the pebbles seem to undulate slowly, redefining their shape, merging and separating.  Your sense of balance skews, and you find yourself leaning forward over the water.  It takes all of your strength to pull yourself upright and shake off the desire to sleep.</description>
+    <position x="-60" y="80" z="0" />
+    <arc exit="northeast" move="northeast" destination="62" />
+  </node>
+  <label text="Gidis">
+    <position x="-380" y="520" z="0" />
+  </label>
+  <label text="To Westgate Hunting Area">
+    <position x="-110" y="-40" z="0" />
+  </label>
+  <label text="Water Sprite, Glutinous Lipods">
+    <position x="-260" y="80" z="0" />
+  </label>
+  <label text="Water Sprite, Glutinous Lipods">
+    <position x="-310" y="330" z="0" />
+  </label>
+  <label text="Wood Troll, Field Goblins">
+    <position x="-350" y="630" z="0" />
+  </label>
+  <label text="Ring Necked">
+    <position x="-400" y="505" z="0" />
+  </label>
+</zone>

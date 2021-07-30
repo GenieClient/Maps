@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Plokks' Perspicacious Performing Panoply (2015)" id="0">
+  <node id="1" name="Plokks' Perspicacious Performing Panoply, Midway" note="Midway|bucket painted with dancing bears">
+    <description>Bounded by a ring of brightly colored wagons, the clearing is lightly paved with rainbow-hued cobblestones.  A single caravan sits amongst the wagons, the prominent banner atop its roof fluttering in the brisk mountain breeze.  Performers and spectators mill about chatting and cavorting, creating a jovial atmosphere that is enhanced by the wafting scent of tempting treats and soft pipe music.</description>
+    <position x="80" y="80" z="0" />
+    <arc exit="east" move="east" destination="2" />
+    <arc exit="go" move="go gap" destination="3" />
+    <arc exit="go" move="go colorful pavilion" destination="4" />
+    <arc exit="go" move="go small booth" destination="6" />
+    <arc exit="go" move="go circus tent" destination="7" />
+    <arc exit="go" move="go crowd" destination="8" />
+  </node>
+  <node id="2" name="Plokks' Perspicacious Performing Panoply, Midway" note="snack cart|concessions" color="#FF0000">
+    <description>Bounded by a ring of brightly colored wagons, the clearing is lightly paved with rainbow-hued cobblestones.  Performers and spectators mill about chatting and cavorting, creating a jovial atmosphere that is enhanced by the wafting scent of tempting treats and soft pipe music.</description>
+    <position x="140" y="80" z="0" />
+    <arc exit="west" move="west" destination="1" />
+    <arc exit="go" move="go patchwork tent" destination="9" />
+    <arc exit="go" move="go crowd" destination="12" />
+  </node>
+  <node id="3" name="Haalikshal Highway, The High Meadow" note="Map116_Hibarnhvidar.xml|Hibarnhvidar|Haalikshal Highway">
+    <description>For those who like bracing air, the smell of heather, and a constant wind fluttering the grass, this meadow is the place to be.  The road descends to the southwest but runs south along a hillside clearing until it disappears into the pines on the mountainside.</description>
+    <position x="40" y="80" z="0" />
+    <arc exit="south" move="south" />
+    <arc exit="southwest" move="southwest" />
+    <arc exit="go" move="go clearing" destination="1" />
+  </node>
+  <node id="4" name="Carnicats, Sales Floor" note="Carnicats" color="#FF0000">
+    <description>The smell of cats hangs heavily in this small tent, mingling with the occasional whiff of catnip.  Slender walkways circle the area near the ceiling, held up by tall supports, with occasional larger platforms holding bowls, pillowy beds, and small toys.  Above a curtain behind the counter is a flap through which the walkway passes.</description>
+    <position x="60" y="60" z="0" />
+    <arc exit="go" move="go midway" destination="1" />
+    <arc exit="go" move="go lattice archway" destination="5" />
+  </node>
+  <node id="5" name="Carnicats, Performance Ring" note="Performance Ring">
+    <description>Rows of low benches surround a large red ring in the middle of the area, filled with hoops, trapezes, and a tightrope tied between two poles.  Fine sawdust covers the ground, dotted with tiny paw prints, while colorful banners embroidered with performing cats hang overhead.</description>
+    <position x="60" y="40" z="0" />
+    <arc exit="go" move="go lattice archway" destination="4" />
+  </node>
+  <node id="6" name="Plokks' Prime Procurements" note="Plokks' Prime Procurements|Prime Procurements" color="#FF0000">
+    <description>Colorful banners, each embroidered in golden thread, hang from smooth wooden poles supporting the white tent overhead, which shades this small booth.  Pictures of performing pivuhs adorn the sides, each set in a highly embellished gilt frame.</description>
+    <position x="80" y="60" z="0" />
+    <arc exit="go" move="go midway" destination="1" />
+  </node>
+  <node id="7" name="Plokks' Perspicacious Performing Panoply, Under the Big Top" note="Under the Big Top|Big Top">
+    <description>Sheltered beneath striped canvas, the interior of this tent somehow manages to be roomy and cozy all at once.  Gaethzen orbs dot the supports, providing ample light and causing the cobblestone flooring to sparkle with rainbow hues.  A raised platform rests below an elaborate trapeze, taking up the center of the space.</description>
+    <position x="100" y="60" z="0" />
+    <arc exit="go" move="go tent flap" destination="1" />
+  </node>
+  <node id="8" name="Strength Test Game" note="Strength Test Game" color="#00FF00">
+    <description>Off to one side, a metal pole towers high above the crowds.  A sturdy wooden lever squats on the ground at its base, while a bronze bell tops the tall structure.  A roustabout leans on a heavy sledgehammer, hawking his game to passers-by.</description>
+    <position x="60" y="100" z="0" />
+    <arc exit="out" move="out" destination="1" />
+  </node>
+  <node id="9" name="Grubby's Mole Smashin' Emporium" note="Grubby's Mole Smashin' Emporium|Mole Smashin' Emporium" color="#00FF00">
+    <description>Stitched together out of everything from mud-stained flags and old sales fliers to clerical robes and even Gorbesh battle banners, the sides of the tent ripple as the wind outside blows, allowing but the merest of whistling breezes through the gaps in its poorly fashioned form.</description>
+    <position x="140" y="100" z="0" />
+    <arc exit="south" move="south" destination="10" />
+    <arc exit="go" move="go tent flap" destination="2" />
+  </node>
+  <node id="10" name="Grubby's Mole Smashin' Emporium" color="#00FF00">
+    <description>Though frayed, taut ropes rise to the peak of the tent's tattered canvas, presumably holding its structure intact.  A gust catches the tent outside, and, rather than felt, is seen as a curved wave rising up one side and washing down the other, sending the bristly ropes into an awkward dance and indicating that they are indeed fastened to nothing at all.</description>
+    <position x="140" y="120" z="0" />
+    <arc exit="north" move="north" destination="9" />
+    <arc exit="west" move="west" destination="11" />
+  </node>
+  <node id="11" name="Grubby's Mole Smashin' Emporium" color="#00FF00">
+    <description>The thumps and whistles of games going off -- seemingly at random, and with no provocation from any visible people -- echo strangely in this back portion of the tent.  The sounds mingle with the chatter of passing festival goers from beyond the canvas walls, punctuating their sentences fragmented in passing with hoots and ringing.</description>
+    <position x="120" y="120" z="0" />
+    <arc exit="east" move="east" destination="10" />
+  </node>
+  <node id="12" name="Ring Toss Game" note="Ring Toss Game" color="#00FF00">
+    <description>The once vibrant hues of the cloth-covered boxes sitting on a sturdy table to one side are muted with the coming of night.  The flickering light of a torch held by a barker nearby illuminates tiers of tinted glass bottles stacked atop the boxes in the shape of a pyramid.  He juggles wooden rings with his free hand, calling out to a passerby to try their luck at the ring-toss game.</description>
+    <position x="140" y="60" z="0" />
+    <arc exit="out" move="out" destination="2" />
+  </node>
+</zone>

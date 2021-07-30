@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Transports" id="998">
+  <node id="1" name="Lybadel, Main Deck">
+    <description>In the middle of the ship, the main deck is closest to the water of all the open decks, and on a hard heel the waves can wash over the exposed planks.  For this reason, everything is securely fastened down to keep it from sliding or being washed away, and the hatches are tightly dogged shut.  Forward lies the forecastle and an oak door leading to the galley, while aft rises the quarterdeck and under it, a cabin door.</description>
+    <position x="40" y="60" z="0" />
+    <arc exit="go" move="go oak door" destination="2" />
+    <arc exit="go" move="go cabin door" destination="3" />
+    <arc exit="climb" move="climb narrow ladder" destination="4" />
+    <arc exit="climb" move="climb steep stairway" destination="5" />
+    <arc exit="go" move="go riverhaven" destination="7" />
+    <arc exit="go" move="go surlaenis" destination="8" />
+  </node>
+  <node id="2" name="Lybadel, Galley">
+    <description>Warmly lit day and night for the benefit of hungry sailors, the galley has food and drink available at all times.  On the starboard side stands a large oval pedestal table surrounded on three sides by a built-in bench, with cabinets and cubbyholes forming its sides and back wall.  To port is a long counter, behind which is the glowing hot black iron stove and a food storage area.</description>
+    <position x="40" y="40" z="0" />
+    <arc exit="go" move="go oak door" destination="1" />
+  </node>
+  <node id="3" name="Lybadel, Crew's Quarters">
+    <description>Next to the door, the huge main-mast rises through the floor and pierces the ceiling.  A circle of hooks has been hammered into it, and various items of clothing and raingear dangle from them, swaying with the motion of the ship.  The rest of the large hold is filled with the crew's hammocks, slung between the framing poles and pillars.  Along the sides of the ship are large sea chests, unobtrusively bolted to the deck.</description>
+    <position x="40" y="80" z="0" />
+    <arc exit="go" move="go cabin door" destination="1" />
+  </node>
+  <node id="4" name="Lybadel, Quarterdeck">
+    <description>Thick as a good-sized tree, the main-mast towers above the decking at its forward edge.  Aft, the poop deck rises about eight feet above the level of the quarterdeck, and an ornately carved door leads to the captain's cabin, tucked under the higher deck.  A long bench curves along the port railing.</description>
+    <position x="20" y="40" z="0" />
+    <arc exit="climb" move="climb narrow ladder" destination="1" />
+    <arc exit="climb" move="climb steep stairway" destination="6" />
+  </node>
+  <node id="5" name="Lybadel, Foredeck">
+    <description>Varnished ironwood railings surround the foredeck on all four sides, and ropes in dizzying numbers seem to lead in every direction.  The smells of fresh varnish and salt air compete with the more appetizing odors coming from the galley stove's vent along the port rail.  The foremast rises through the decking at its forward edge, next to a gap in the railing allowing access to a column of iron rungs hammered into the edge of the deck leading down to the prow.</description>
+    <position x="60" y="40" z="0" />
+    <arc exit="climb" move="climb steep stairway" destination="1" />
+  </node>
+  <node id="6" name="Lybadel, Poop Deck">
+    <description>The ship's wheel is located here, at the highest part of the ship, almost directly above the rudder.  Over the aft rail is a steep drop down to the sea, invisible in the darkness, and three glowing lanterns hang from the railing as a warning and notice to other ships plying these waters.  Forward, the mizzenmast rises out of the decking toward the sky.</description>
+    <description>The ship's wheel is located here, at the highest part of the ship, almost directly above the rudder.  Over the aft rail is a steep drop down to the sea, and three lanterns hang from the railing as a warning and notice to other ships plying these waters.  Forward, the mizzenmast rises out of the decking toward the sky.</description>
+    <position x="20" y="20" z="0" />
+    <arc exit="climb" move="climb steep stairway" destination="4" />
+  </node>
+  <node id="7" name="Riverhaven, East Pier" note="Map30_Riverhaven.xml|Riverhaven">
+    <description>The eastern end of Riverhaven's docks juts out into the river, servicing schooners heading out into the Reshal Sea.  The pier is eerily silent, few ships making the dangerous night passage up the Faldesu River with the lighthouse out of commission.</description>
+    <position x="0" y="100" z="0" />
+    <arc exit="west" />
+    <arc exit="go" move="go lybadel" destination="1" />
+    <arc exit="go" move="go kree'la" destination="28" />
+  </node>
+  <node id="8" name="Aesry Surlaenis'a, Shadaer" note="Map98_Road_To_Aesry.xml|Aesry">
+    <description>Weathered by the sun and the salty sea air, the wooden pier stretches to the south.  Ships of all types anchor for the night, though some small boats fish near the dangerous shoals at the harbor mouth.</description>
+    <description>Weathered by the sun and the salty sea air, the wooden pier stretches to the south.  Ships of all types anchor near the pier, or sail away with sails billowing in the wind.  Several dolphins frolic in the water, leaping over the wakes of passing ships.</description>
+    <position x="80" y="60" z="0" />
+    <arc exit="south" />
+    <arc exit="go" move="go lybadel" destination="1" />
+  </node>
+  <node id="9" name="The Halasa Selhin, Main Deck">
+    <description>After years of varnishing, the main deck of the Halasa Selhin glistens like a becalmed sea.  Holding the crisp yards of her mainsail, the mainmast rises skyward to a dizzying height with the sweeping length of the boom spreading her canvas skirt to the wind.  Brightly colored pennants flutter from the halyards.</description>
+    <position x="200" y="80" z="0" />
+    <arc exit="go" move="go harbor docks" destination="10" />
+    <arc exit="go" move="aft" destination="11" />
+    <arc exit="go" move="forward" destination="12" />
+    <arc exit="go" move="go pokekehekepi" destination="15" />
+    <arc exit="go" move="go uaro dock" destination="24" />
+  </node>
+  <node id="10" name="Harbor Docks, Aesry Surlaenis'a" note="Map98_Road_To_Aesry.xml|Aesry">
+    <description>Sturdy oak planks stretch eastward towards the lights of the harbor and the shouting sailors in Denison's Pub.  Two beams of light pierce the darkness, emanating from a point high on the island's slope.</description>
+    <position x="240" y="80" z="0" />
+    <arc exit="east" />
+    <arc exit="go" move="go halasa selhin" destination="9" />
+  </node>
+  <node id="11" name="The Halasa Selhin, Aft Deck">
+    <description>Oakum, used to caulk the planking of the deck, provides sure footing near the massive wheel of mahogany that guides the ship in front of the wind and waves.  Reef points from the long boom are run around matching cleats and a marlinspike juts from a nearby railing, ready for a sailor to return to his splicing.</description>
+    <position x="200" y="100" z="0" />
+    <arc exit="go" move="forward" destination="9" />
+  </node>
+  <node id="12" name="The Halasa Selhin, Quarterdeck">
+    <description>The foremast rises through the deck from its berth in the bowels of the ship to carry the crimson foresail.  A brass fife rail, its row of belaying pins in place, encircles the mast and spare line for rigging lies in coiled stacks upon the salt-stained planks.</description>
+    <position x="200" y="60" z="0" />
+    <arc exit="go" move="aft" destination="9" />
+    <arc exit="up" move="up" destination="13" />
+    <arc exit="go" move="forward" destination="14" />
+  </node>
+  <node id="13" name="The Halasa Selhin, Rigging">
+    <description>High above the deck amongst the crosstrees, the rigging creaks and groans under the strain of holding the ship's heavy canvas.  Each flutter of the breeze sends the gaffs to swaying and your perch bobs along with them.  Figure eight loops are fastened a few feet apart across the lines so that sailors can anchor themselves during heavy seas.</description>
+    <position x="180" y="60" z="0" />
+    <arc exit="down" move="down" destination="12" />
+  </node>
+  <node id="14" name="The Halasa Selhin, Forecastle">
+    <description>The long sweep of the schooner's bowlines pass over the fore deck to anchor on the ship's jutting bowsprit.  A martingale is draped neatly over the jibboom in case the Captain calls for the raising of the headsails and, fastened to a gunnel with a twist of twine, is a carved figurine of Eluned.</description>
+    <position x="200" y="40" z="0" />
+    <arc exit="go" move="aft" destination="12" />
+  </node>
+  <node id="15" name="Pokekehekepi, Beachhead" note="Map95_Ratha_NE.xml|Pokekehekepi">
+    <description>Glittering like flowing gold, the beach runs into the ocean and disappears under the luminous waves.</description>
+    <position x="180" y="100" z="0" />
+    <arc exit="northwest" />
+    <arc exit="go" move="go halasa selhin" destination="9" />
+  </node>
+  <node id="16" name="The Skirr'lolasu, Main Deck">
+    <description>In anticipation of the sudden influx of passengers, makeshift benches have been hastily constructed from kegs, driftwood, and nets stretched tight between boards, then have been cleverly placed so that they are as out of the way as possible.  Some coiled ropes and other rigging lie scattered around, pushed out of the way so no one will trip over them.</description>
+    <position x="340" y="60" z="0" />
+    <arc exit="up" move="up" destination="17" />
+    <arc exit="go" move="go narrow door" destination="18" />
+    <arc exit="climb" move="climb split staircase" destination="19" />
+    <arc exit="go" move="forward" destination="20" />
+    <arc exit="go" move="go crossing docks" destination="21" />
+    <arc exit="go" move="go neh dock" destination="23" />
+  </node>
+  <node id="17" name="The Skirr'lolasu, Crow's Nest">
+    <description>A tattered blue flag emblazoned with a golden fish flies gracefully at the top of the mast just above the ship's bell.  As the wind blows, the flag dips down and brushes against the bell occasionally.  A battered, salt-encrusted spyglass case lies on the railing of the small platform, stuck there by some thick black goo.</description>
+    <position x="320" y="40" z="0" />
+    <arc exit="down" move="down" destination="16" />
+  </node>
+  <node id="18" name="The Skirr'lolasu, Captain's Quarters">
+    <description>This tiny room was converted from a supplies closet into the living quarters of the captain of the ship.  It is virtually filled by a small cot and a battered desk made from scavenged lumber, leaving no floor space to mill around in.  A trophy fish watches over the captain's meager possessions, smiling the same haunting grin that it died with.  Atop the dust-covered desk lies the ship's log, which obviously has not been written in for days.</description>
+    <position x="320" y="80" z="0" />
+    <arc exit="go" move="go narrow door" destination="16" />
+  </node>
+  <node id="19" name="The Skirr'lolasu, Sterncastle">
+    <description>Raised from the rest of the deck, this platform presents the perfect view of the watery path ahead.  A dull oaken wheel rises from almost the exact center of the deck, offering the ideal spot from which to steer the ship.  A square is cut in the wood planks, all hardened by years of exposure, forming a battered hatch that leads down to the decks below.</description>
+    <position x="340" y="40" z="0" />
+    <arc exit="climb" move="climb split staircase" destination="16" />
+  </node>
+  <node id="20" name="The Skirr'lolasu, Foredeck">
+    <description>A number of sailors mill around the deck, leaning over the side to check nets and lines in the water.  Occasionally, a snickering crew member wanders by a small sign covered with a crooked scrawl that has been hastily nailed to a post rising out of the deck.  Near the base of the pole, a rusted winch is attached to the deck next to the bulwark and a spritsail soars forward over the sea above it.</description>
+    <position x="340" y="80" z="0" />
+    <arc exit="go" move="aft" destination="16" />
+    <arc exit="climb" move="climb rope ladder" destination="22" />
+  </node>
+  <node id="21" name="The Crossing Docks, South End" note="Map1_Crossing.xml|Crossing">
+    <description>A number of sailors mill around the deck, leaning over the side to check nets and lines in the water.  Occasionally, a snickering crew member wanders by a small sign covered with a crooked scrawl that has been hastily nailed to a post rising out of the deck.  Near the base of the pole, a rusted winch is attached to the deck next to the bulwark and a spritsail soars forward over the sea above it.</description>
+    <description>A cacophony of smells erupt from this bustling area, most notably those of ripe fish and new wood.  Created especially for handling passengers arriving from or departing to outlying towns and provinces, the dock is often lined with ships of varying types and sizes.</description>
+    <position x="300" y="60" z="0" />
+    <arc exit="out" />
+    <arc exit="go" move="go skirr'lolasu" destination="16" />
+  </node>
+  <node id="22" name="The Skirr'lolasu, Battered Dinghy">
+    <description>Scraps of canvas lie in the belly of this ill-repaired dinghy, all eaten through by the elements.  Two slender thwarts are fitted rather crudely across the breadth of the boat with an oar propped up against the side.  The second oar has gone missing, probably lost to the ocean depths.</description>
+    <position x="360" y="80" z="0" />
+    <arc exit="climb" move="climb rope ladder" destination="20" />
+  </node>
+  <node id="23" name="Neh Dock, Port of Ratha" note="Map90_Ratha.xml|Ratha">
+    <description>Supporting the largest vessels from far-away lands, the dock has greeted both smuggler and prince, murderer and king.  It continues to perform its duty flawlessly though, without prejudice or regret.</description>
+    <position x="380" y="60" z="0" />
+    <arc exit="north" move="north" />
+    <arc exit="go" move="go skirr'lolasu" destination="16" />
+  </node>
+  <node id="24" name="Uaro Dock, Port of Ratha" note="Map90_Ratha.xml|Ratha">
+    <description>Wide and well-built, this dock was made to accommodate the heavy caravans that pass over it daily.  Workers load and unload ships in an almost endless flurry of activity.</description>
+    <position x="160" y="80" z="0" />
+    <arc exit="go" move="go halasa selhin" destination="9" />
+    <arc exit="south" />
+    <arc exit="north" />
+  </node>
+  <node id="25" name="Gondola, Cab North">
+    <description>Worn down to a dusky grey color, the proud wood once cut and fitted to compose this gondola creaks with age and disrepair, but appears to be steady.  Seats have been lifesculpted up from the floor and melded into the sides.  Weak light streams in through the yellow-tinted windows, eating away patiently at what little color remains in the tiny, musty chamber.</description>
+    <description>Painted to a deep mist-twilight color, this tiny cab creaks to itself, an eerie and disconcerting sound.  Seats flow out of the sides and bottom of the gondola, set there by lifesculptors who have been long forgotten.  The light hardly pierces the tinted windows, leaving this place feeling all the more isolated and chillingly empty.</description>
+    <position x="40" y="340" z="0" />
+    <arc exit="out" move="out" destination="37" />
+    <arc exit="south" move="south" destination="26" />
+    <arc exit="none" move="south" hidden="True" destination="39" />
+  </node>
+  <node id="26" name="Gondola, Cab South">
+    <description>Dark brown stains have worked their way into the wooden floor and seats of this small cab, griming up the windows so that the light comes in as a ruddy, dirty color.  The faintest trace of some sweetly-sick metallic scent lingers here, just barely detectable, but inescapable.  The fresh mountain air tries to push through the sour smell, but the stench remains.</description>
+    <description>Mottled stains are worked into the wooden floor and seats of this small cab, darkening the windows to a thick black opacity.  A spike of chill taints the air, the thinnest strand of some sickly-sweet metallic scent wrapping it.</description>
+    <position x="40" y="360" z="0" />
+    <arc exit="north" move="north" destination="25" />
+    <arc exit="out" move="out" destination="27" />
+    <arc exit="none" move="north" hidden="True" destination="38" />
+  </node>
+  <node id="27" name="Obsidian Pass, Platform" note="Map66_STR3.xml|Shard|South">
+    <description>The greying wooden boards of the platform have been replaced by paving stones.  Two massive granite pillars offer support for a set of thick rope cables that allow the gondola served by this platform to cross the chasm.  Stacks of building stones and mortar lie off to one side, ready to add to the structure being raised around the landing.</description>
+    <position x="60" y="380" z="0" />
+  </node>
+  <node id="28" name="The Kree'la, Main Deck">
+    <description>The deck is split down the middle by an open pit, bracketed on each end by the two masts.  The opening is more for ventilation for the rowers than for onlookers to look down on them, and rungs on each mast give access to the rower's pit.  Aft, a set of stairs climb up to the pilot's deck and underneath are located the only two cabins aboard the galley.  Rigging rises up to the masts, holding them in place, and a rope ladder ascends the forward mast.</description>
+    <position x="40" y="140" z="0" />
+    <arc exit="go" move="go small door" destination="29" />
+    <arc exit="go" move="go narrow door" destination="30" />
+    <arc exit="climb" move="climb rope ladder" destination="31" />
+    <arc exit="go" move="go riverhaven" destination="7" />
+    <arc exit="go" move="forward" destination="32" />
+    <arc exit="go" move="go neh dock" destination="33" />
+  </node>
+  <node id="29" name="The Kree'la, Captain's Cabin">
+    <description>Although the captain is the only crew member to have a private space, this tiny cabin does not offer much in the way of comfort.  A short bunk is built into the amidship's wall.  The ship's log rests on a small writing desk and map tubes hang on the wall above.  A sea chest sits under a little window on the aft wall while a lamp rests on a tiny shelf to shed a bit of light during the night.</description>
+    <position x="20" y="160" z="0" />
+    <arc exit="go" move="go small door" destination="28" />
+  </node>
+  <node id="30" name="The Kree'la, Passenger Cabin">
+    <description>Only a Gnome would call this cabin roomy, and that's if it wasn't shared with anyone.  Two small bunks line the walls across from each other, framing a chest of drawers in the narrow space between them.  If it wasn't for the tiny window in the aft wall, even a Dwarf would feel claustrophobic.  A lantern hangs from a hook in the ceiling, ready to offer its meager light during the night hours.</description>
+    <position x="60" y="160" z="0" />
+    <arc exit="go" move="go narrow door" destination="28" />
+  </node>
+  <node id="31" name="The Kree'la, Up the Mast">
+    <description>Barely a perch for a sparrow, the crow's nest allows lookouts to watch the waters before the galley, warning the crew of the hazards of breakers or brigands.  A rope ladder decends to the deck below.</description>
+    <position x="60" y="120" z="0" />
+    <arc exit="climb" move="climb rope ladder" destination="28" />
+  </node>
+  <node id="32" name="The Kree'la, Foredeck">
+    <description>Low railings around the bow offer a precarious spot to relax while watching the waves and catching a breeze.  Wooden bins hold ammunition for the mangonel which dominates the deck here.  A bucket of gooey pitch provides a flammable coating for the projectiles fired from the weapon.  A bucket of sand sits ready for any accidents that might happen with the handling of the fiery missiles.</description>
+    <position x="40" y="160" z="0" />
+    <arc exit="go" move="aft" destination="28" />
+  </node>
+  <node id="33" name="Neh Dock, Port of Ratha" note="Map90_Ratha.xml|Ratha">
+    <description>Wide and well-built, this dock was made to accommodate the heavy caravans that pass over it daily.  Workers load and unload ships in an almost endless flurry of activity.</description>
+    <position x="80" y="140" z="0" />
+    <arc exit="north" />
+    <arc exit="south" />
+    <arc exit="go" move="go kree'la" destination="28" />
+  </node>
+  <node id="34" name="Her Opulence">
+    <description>Long, wide and low, this vessel is built for utility, but the hand of luxury can be discerned in the ornately carved walnut railings, down-cushioned benches and the well polished deck.  Six lanterns along the ferry's rail fill the boat with a soft light, creating a feeling of closure from the surrounding blackness.  </description>
+    <position x="320" y="240" z="0" />
+    <arc exit="go" move="go north docks" destination="35" />
+    <arc exit="go" move="go riverhaven docks" destination="36" />
+  </node>
+  <node id="35" name="North Road, Ferry" note="Map7_NTR.xml|NTR|Crossing|Dirge|South">
+    <description>A slab of downed cedars, lashed together, rides upon the Faldesu River forming the landing for the ferry's patrons.  The nearby splash of a toad and the squawk of distant waterfowl own this place, until the new day brings the drumming of civilization.</description>
+    <position x="340" y="260" z="0" />
+    <arc exit="south" />
+    <arc exit="go" move="go ferry" destination="34" />
+    <arc exit="go" move="go ferry" destination="59" />
+  </node>
+  <node id="36" name="Riverhaven, Ferry Dock" note="Map30_Riverhaven.xml|Riverhaven|North">
+    <description>A mass of muddied footprints occasionally speckled with animal droppings, gives a glimpse into the heavy traffic of the now quiet landing.  The gentle caress of water massages the resting dock, preparing it for a new day.</description>
+    <description>Haphazardly placed crates, cages, carts, and animals have turned this solid mass of planks into more of a maze than a dock.  An eclectic mixture of people nudge for space, as the overloaded landing forces an uneasy closeness to strangers.  Some stand engrossed in conversation, while others sit in silence, keeping a watchful eye on their wares.</description>
+    <position x="340" y="220" z="0" />
+    <arc exit="east" />
+    <arc exit="go" move="go ferry" destination="34" />
+    <arc exit="go" move="go ferry" destination="59" />
+  </node>
+  <node id="37" name="Obsidian Pass, Platform" note="Map62_STR2.xml|North|Leth">
+    <description>Like an aerie forgotten in the wilderness, the platform remains despite being abandoned by its creators.  While rickety and creaking uneasily, it appears to have held up well.  Two side-by-side granite beams rise up from the edge of the ridge, around which have been wound the lengths of rope used by the gondola that provides transport over the great chasm.</description>
+    <position x="60" y="320" z="0" />
+  </node>
+  <node id="38" name="Gondola, Cab North">
+    <description>Worn down to a dusky grey color, the proud wood once cut and fitted to compose this gondola creaks with age and disrepair, but appears to be steady.  Seats have been lifesculpted up from the floor and melded into the sides.  Weak light streams in through the yellow-tinted windows, eating away patiently at what little color remains in the tiny, musty chamber.</description>
+    <description>Painted to a deep mist-twilight color, this tiny cab creaks to itself, an eerie and disconcerting sound.  Seats flow out of the sides and bottom of the gondola, set there by lifesculptors who have been long forgotten.  The light hardly pierces the tinted windows, leaving this place feeling all the more isolated and chillingly empty.</description>
+    <position x="80" y="340" z="0" />
+    <arc exit="south" move="south" destination="39" />
+    <arc exit="none" move="south" hidden="True" destination="26" />
+    <arc exit="none" move="out" destination="37" />
+  </node>
+  <node id="39" name="Gondola, Cab South">
+    <description>Dark brown stains have worked their way into the wooden floor and seats of this small cab, griming up the windows so that the light comes in as a ruddy, dirty color.  The faintest trace of some sweetly-sick metallic scent lingers here, just barely detectable, but inescapable.  The fresh mountain air tries to push through the sour smell, but the stench remains.</description>
+    <description>Mottled stains are worked into the wooden floor and seats of this small cab, darkening the windows to a thick black opacity.  A spike of chill taints the air, the thinnest strand of some sickly-sweet metallic scent wrapping it.</description>
+    <position x="80" y="360" z="0" />
+    <arc exit="north" move="north" destination="38" />
+    <arc exit="none" move="north" hidden="True" destination="25" />
+    <arc exit="none" move="out" destination="27" />
+  </node>
+  <node id="40" name="The Desert Wind">
+    <description>The Desert Wind barge is made up of a wooden flatboat mounted atop steel rails.  An elevated platform at the front of the craft is used by the team of Sand Elves that sail it through the desert ocean by controlling the team of massive yeehars that pull it.  The barge itself is full of coils of rope, wooden crates and barrels, and bulging sackcloth.</description>
+    <position x="60" y="220" z="0" />
+    <arc exit="go" move="go barge platform" destination="41" />
+    <arc exit="go" move="go dry dock" destination="50" />
+    <arc exit="go" move="go desert oasis" destination="51" />
+    <arc exit="go" move="go desert oasis" destination="53" />
+  </node>
+  <node id="41" name="Outside Muspar'i, Barge Platform" note="Map47_Muspar'i.xml|Muspar'i">
+    <description>This metal platform waits defiantly for the frequent storms that batter the walls of Muspar'i, as it huddles down in the sand.  Thick coils of rope, wrapped around the platform's steel pillars, stand ready to tie off the barges traversing the desert sea to the isolated city, and a wide ramp allows easy access for boarding and disembarking the flatboats.</description>
+    <position x="0" y="240" z="0" />
+    <arc exit="go" move="go ramp" />
+    <arc exit="go" move="go barge" destination="40" />
+    <arc exit="go" move="go barge" destination="52" />
+  </node>
+  <node id="42" name="Kertigen's Honor">
+    <description>The length of this ferry is filled to capacity with travelers making their way to the opposite bank of the Segoltha.  Several children kneel at the ferry's edge, watching the water lap gently against its side, while a group of Dwarven merchants glance longingly towards land.</description>
+    <position x="460" y="240" z="0" />
+    <arc exit="go" move="go south docks" destination="44" />
+    <arc exit="go" move="go north docks" destination="45" />
+  </node>
+  <node id="43" name="Hodierna's Grace">
+    <description>A few weary travelers lean against a railing at the bow of this ferry, anxiously waiting to reach the opposite bank.  An elderly S'Kra Mur stands alone at the stern, thoughtfully watching the shallow wake of the ferry shiver and become still.</description>
+    <position x="420" y="240" z="0" />
+    <arc exit="go" move="go south docks" destination="44" />
+    <arc exit="go" move="go north docks" destination="45" />
+  </node>
+  <node id="44" name="Southern Trade Route, Segoltha South Bank" note="Map60_STR1.xml|STR|Leth|South">
+    <description>The southern bank of the Segoltha River presents a wide, flat flood plain far to the east and west.  The alluvial soil here is deep brown and fertile, nourished by the unpredictable rains that cause the river to rise rapidly and without warning.  Off in the distance to the south, you can spy the crests of trees.  This marks the boundary of the Endrus Forest, which surrounds the fabled Elven stronghold of Leth Deriel.</description>
+    <position x="440" y="260" z="0" />
+    <arc exit="south" move="south" />
+    <arc exit="go" move="go ferry" destination="43" />
+    <arc exit="none" move="go ferry" destination="42" />
+  </node>
+  <node id="45" name="The Crossing, Alfren's Ferry" note="Map1_Crossing.xml|Crossing|North">
+    <description>Alfren's Ferry is a privately owned and operated ferry that carries folks over the broad and swift Segoltha River.  The ferry does a brisk business, since the trade route to the Elven forest reaches lies south across the river.  In the face of hostile assaults, the river serves as a formidable barrier.</description>
+    <position x="440" y="220" z="0" />
+    <arc exit="go" move="go square" />
+    <arc exit="go" move="go ferry" destination="43" />
+    <arc exit="none" move="go ferry" destination="42" />
+  </node>
+  <node id="46" name="Theren's Star, Deck">
+    <description>The first of the massive barges to traverse Lake Gwenalion, Theren's Star still maintains a quiet elegance despite its apparent age.  The utilitarian deck upon which casual travelers walk is spartan, but the decking is made of expensive tabor wood felled from far southern forests.  An oval doorway leads down to the barge's cargo bay, while an elaborately-carved wooden door provides ingress to the comfortably appointed lounge.</description>
+    <position x="200" y="260" z="0" />
+    <arc exit="go" move="go riverhaven pier" destination="47" />
+    <arc exit="go" move="go langenfirth wharf" destination="48" />
+    <arc exit="go" move="go doorway" destination="49" />
+    <arc exit="go" move="go wooden dor" destination="54" />
+  </node>
+  <node id="47" name="Riverhaven, Pier" note="Map30_Riverhaven.xml">
+    <description>Surrounded by surrealistic calm, this furthest edge of the pier stops almost a third of the way into the river.  Large, dark moorings stand like blackened sentinels at its edge, waiting for the arrival of the massive barges which service this port.</description>
+    <description>A great throng of bodies hovers over bundles, piles and jumbles of cargo here at the furthest end of the pier.  The sole purpose of the cacophony is the readying and removal of shipments for the massive, sluggish barges which service the lake that stretches between Riverhaven and the northernmost areas of the province.  The intruding maelstrom of sights, sounds and smells is almost nauseating in its intensity.</description>
+    <position x="220" y="240" z="0" />
+    <arc exit="go" move="go barge" destination="46" />
+    <arc exit="east" />
+  </node>
+  <node id="48" name="Langenfirth, Wharf" note="Map40_Langenfirth_to_Therenborough.xml">
+    <description>Nothing about this tattered replica of a wharf would instill confidence in the wary traveler.  Broken planks strafe the pier to which massive barges are tied on listing mooring rails which might tumble over at any moment.  The aged wood buckles easily beneath your feet, but apparently is tough enough to withstand the heavy cargo off-loaded each day.  Several bystanders mill about, checking their precious shipments as they wait for the next barge.</description>
+    <position x="180" y="240" z="0" />
+    <arc exit="west" />
+    <arc exit="go" move="go barge" destination="46" />
+  </node>
+  <node id="49" name="Theren's Star, Cargo Bay">
+    <description>A deep, peaty odor sifts through the wood in the belly of the barge, indicative of decades of contact with the murky waters of the lake.  Dark, damp and horribly cramped, the cargo bay is filled with crates, barrels, trunks and assorted parts needed for repairs.  A single hurricane lantern swings to and fro in time with the barge's movement.</description>
+    <position x="200" y="270" z="0" />
+    <arc exit="none" move="up" destination="46" />
+  </node>
+  <node id="50" name="Hvaral, Dry Dock" note="Map41_Marauders.xml">
+    <description>A dock extends from the stone roadway here, hanging out over a low-lying mountain road.  No water here, and certainly no ships, Hvaral's Dry Dock is serviced by barges pulled by somewhat strange looking beasts.  Outside the protection of the wall, arid mountain winds sting the faces of those who would dare to tarry in the open.  Officials in Therengia's blue and gold livery thoroughly inspect rows of crates and barrels that litter the dock, awaiting either import or export.</description>
+    <position x="120" y="240" z="0" />
+    <arc exit="east" />
+    <arc exit="go" move="go barge" destination="40" />
+    <arc exit="go" move="go barge" destination="52" />
+  </node>
+  <node id="51" name="Velaka, Desert Oasis" note="Map48_Haizen_Cugis.xml">
+    <description>A seemingly endless expanse of sand dunes stretch out to the north from the broad oasis, untouched apart from the deep channel worn in the ground by the barge route.  Pale scrub bushes strive for survival in this transitional environment, not entirely exposed to the harsh terrain while not quite safe among the lush greenery.</description>
+    <position x="80" y="240" z="0" />
+    <arc exit="south" />
+    <arc exit="go" move="go barge" destination="40" />
+    <arc exit="go" move="go barge" destination="52" />
+  </node>
+  <node id="52" name="The Suncatcher">
+    <description>The Suncatcher barge is made up of a wooden flatboat mounted atop steel rails.  An elevated platform at the front of the craft is used by the team of Sand Elves that sail it through the desert ocean by controlling the team of massive yeehars that pull it.  The barge itself is full of coils of rope, wooden crates and barrels, and bulging sackcloth.</description>
+    <position x="60" y="260" z="0" />
+    <arc exit="go" move="go barge platform" destination="41" />
+    <arc exit="go" move="go dry dock" destination="50" />
+    <arc exit="go" move="go desert oasis" destination="51" />
+    <arc exit="go" move="go desert oasis" destination="53" />
+  </node>
+  <node id="53" name="Velaka, Desert Oasis" note="Map48_Haizen_Cugis.xml">
+    <description>Low bushes and creeping vines stretch out along a downward slope from the oasis toward the desert wastes, accompanied by the dry husks of former vegetation that was not as successful.  A groove worn in the sand by the barge route skirts along the southern side of the tree line, halting the attempts of the small paradise to expand.</description>
+    <position x="40" y="240" z="0" />
+    <arc exit="northeast" />
+    <arc exit="go" move="go barge" destination="40" />
+    <arc exit="go" move="go barge" destination="52" />
+  </node>
+  <node id="54" name="Theren's Star, Lounge">
+    <description>Open windows allow cool air to circulate as the barge travels on the open lake.  Small, round tables bolted to the center floor are surrounded by cushioned bentwood chairs, while tiny booths of velvet upholstery line each side of the room.  A massive bar completes the decor, offering light snacks and beverages during the long journey.</description>
+    <position x="210" y="270" z="0" />
+    <arc exit="go" move="go arch" destination="55" />
+    <arc exit="go" move="go wooden door" destination="46" />
+  </node>
+  <node id="55" name="Theren's Star, Ditsworth's Floating Casino">
+    <description>Rope Alley is a large room filled with rope tumblers.  Groups stand around the various tumblers shouting, cheering, and moaning as they watch the results of each tug.  Every inch of available space along the room's walls is filled with a rope tumbler.  A colorful banner reading "Fortune can be thine!" hangs at one end and a large sign sits in an easel by the exit.  Several well armed Gor'Togs patrol the area.</description>
+    <position x="220" y="270" z="0" />
+    <arc exit="out" move="out" destination="54" />
+  </node>
+  <node id="56" name="Northern Pride, Main Deck">
+    <description>This is the only barge of its type to ply the waters of Lake Gwenalion.  Ambitiously designed with an upper deck for passengers, its aft is completely given over to cargo.  Built recently, everything about it smacks of economy and minimalism.</description>
+    <position x="200" y="220" z="0" />
+    <arc exit="climb" move="climb wooden stairs" destination="57" />
+    <arc exit="go" move="go riverhaven pier" destination="47" />
+    <arc exit="go" move="go langenfirth wharf" destination="48" />
+  </node>
+  <node id="57" name="Northern Pride, Upper Deck">
+    <description>A large wheel draws the attention of the crowds that fill this lavishly decorated room.  People gather with anticipation around the enormous table in front of the wheel, and their cheers and laughter follow every spin.  Some here entertain themselves in quiet conversation over good drink, paying little or no attention to the wheel at all.  An Odds Board sits behind the wheel just above an armed guard who watches everyone carefully.</description>
+    <position x="210" y="220" z="0" />
+    <arc exit="go" move="go swinging doors" destination="58" />
+    <arc exit="climb" move="climb wooden stairs" destination="56" />
+  </node>
+  <node id="58" name="Northern Pride, Ditsworth's Floating Casino">
+    <description>A large wheel draws the attention of the crowds that fill this lavishly decorated room.  People gather with anticipation around the enormous table in front of the wheel, and their cheers and laughter follow every spin.  Some here entertain themselves in quiet conversation over good drink, paying little or no attention to the wheel at all.  An Odds Board sits behind the wheel just above an armed guard who watches everyone carefully.</description>
+    <position x="220" y="220" z="0" />
+    <arc exit="out" move="out" destination="57" />
+  </node>
+  <node id="59" name="His Daring Exploit">
+    <description>Most of the passengers on this low riding barge have descended into quiet conversation, not wishing to stir the night.  A single lantern, swinging from the fore rail, pushes its dull gold rays across the dark water.</description>
+    <position x="360" y="240" z="0" />
+    <arc exit="go" move="go riverhaven docks" destination="36" />
+    <arc exit="go" move="go north docks" destination="35" />
+  </node>
+  <label text="The Lybadel">
+    <position x="40" y="10" z="0" />
+  </label>
+  <label text="The Halasa Selhin">
+    <position x="150" y="10" z="0" />
+  </label>
+  <label text="The Skirr'lolasu">
+    <position x="290" y="10" z="0" />
+  </label>
+  <label text="The Kree'la">
+    <position x="70" y="110" z="0" />
+  </label>
+  <label text="Gondola">
+    <position x="40" y="290" z="0" />
+  </label>
+  <label text="Riverhaven/NTR">
+    <position x="290" y="190" z="0" />
+  </label>
+  <label text="Muspar'i Sand">
+    <position x="24" y="188" z="0" />
+  </label>
+  <label text=" Barges">
+    <position x="40" y="198" z="0" />
+  </label>
+  <label text="Crossing/Leth">
+    <position x="400" y="190" z="0" />
+  </label>
+  <label text="Langenfirth/Riverhaven">
+    <position x="140" y="190" z="0" />
+  </label>
+</zone>

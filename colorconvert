@@ -1,0 +1,18 @@
+#!/bin/bash
+# run this script in terminal and it will convert named colors to hex colors.
+# tested on MacOS
+# cd to the maps folder first
+# Please report any bugs to Hanryu#0052 (discord) or sauva@play.net
+# This script may be reused in whole or in part as long as credit is given
+# You need gsed for the crazy line ending stuff to work.
+# This will convert to UTF-8
+
+find *.xml | \
+(while read file;
+  do iconv -f "UTF-16LE" -t "UTF-8" $file > $file.UTF-8
+  gsed 's/color="[G|g]r[a|e]y"/color="#808080"/; s/color="[S|s]ilver"/color="#C0C0C0"/; s/color="[T|t]eal"/color="#008080"/; s/color="[M|m]aroon"/color="#800000"/; s/color="[L|l]ime"/color="#00FF00"/; s/color="[R|r]ed"/color="#FF0000"/; s/color="[Y|y]ellow"/color="#FFFF00"/; s/color="[F|f]uchsia"/color="#FF00FF"/; s/color="[A|a]qua"/color="#00FFFF"/; s/color="[B|b]lue"/color="#0000FF"/; s/color="[N|n]avy"/color="#000080"/; s/color="[S|s]ienna"/color="#993300"/; s/color="[S|s]and"/color="#C2B280"/; s/color="[O|o]range"/color="#FF8000"/; s/color="[A|a]mber"/color="#FFBF00"/; s/color="[O|o]live"/color="#808000"/; s/color="[G|g]reen"/color="#008000"/; s/color="[M|m]int"/color="#00BF80"/; s/color="[P|p]eriwinkle"/color="##A6A3D9"/; s/color="[E|e]ggplant"/color="##400040"/; s/color="[P|p]urple"/color="#800080"/' $file.UTF-8 > $file.UTF-8.SED
+  iconv -f "UTF-8" -t "UTF-16LE" $file.UTF-8.SED > $file.UTF-16LE
+  rm $file.UTF-8
+  rm $file.UTF-8.SED
+  mv $file.UTF-16LE $file
+done);

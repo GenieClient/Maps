@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Untitled Map" id="0">
+  <node id="1" name="Prison, Boathouse">
+    <description>The same kind of wood used for the planking of the dock was used in the construction of the walls and floor for the boathouse.  There is no wall opposite the door to the dock, and the floor opens into the water of the bay.  A large hoist with dangling rusty chains has been mounted onto the floor near the edge.</description>
+    <position x="0" y="20" z="0" />
+    <arc exit="north" move="north" destination="2" />
+    <arc exit="go" move="go sturdy door" destination="3" />
+    <arc exit="go" move="go door" destination="3" />
+  </node>
+  <node id="2" name="Prison, Boathouse">
+    <description>The corner of the boathouse has been extended and made into a cell complete with long, iron bars that go from ceiling to floor.  A sturdy door is the only entrance and exit to the open, yet secure, room and a small table and chair rest not far from it.</description>
+    <position x="0" y="0" z="0" />
+    <arc exit="south" move="south" destination="1" />
+  </node>
+  <node id="3" name="Prison, Dock">
+    <description>Thick, sturdy pylons, constructed from the wood of the local trees, have been driven into the churning waters of the bay and lined with planking to form the dock.  Attached to one side of the dock is a wooden structure, a sturdy door leading inside.</description>
+    <position x="20" y="20" z="0" />
+    <arc exit="north" move="north" destination="4" />
+    <arc exit="go" move="go sturdy door" destination="1" />
+  </node>
+  <node id="4" name="Prison, Dock">
+    <description>Weathered and beaten by years of exposure to the pounding surf, the wooden dock creaks and groans ominously.  The sheer cliffs of the narrow gorge loom on either side like grim sentinels, silently standing watch over the doomed souls that dare venture into their stony embrace.  The only egress from the dock is a series of iron rungs ascending the glistening gneiss cliff, unless someone is foolish enough to dare the shark-infested waters of the channel.</description>
+    <position x="20" y="0" z="0" />
+    <arc exit="south" move="south" destination="3" />
+    <arc exit="climb" move="climb rungs" destination="5" />
+  </node>
+  <node id="5" name="Prison, Receiving Platform">
+    <description>Perched precariously over the churning waters below, an expansive stone platform has been carved from the dark metamorphic stone of the gorge.  A huge derrick dominates the center of the platform, a rusted iron cage resting on the ground beside it.  A rickety wooden walkway hugs the cliff wall as it crosses to the boathouse, while a series of iron rungs set in the wall descend to the dock below.</description>
+    <position x="0" y="-20" z="0" />
+    <arc exit="east" move="east" destination="6" />
+    <arc exit="climb" move="climb rung" destination="4" />
+  </node>
+  <node id="6" name="Prison, Walkway">
+    <description>The relentless advance and retreat of the sea, amplified by the narrowness of the gorge, is clearly visible through the warped and weathered planks, creating the unsettling sensation that the walkway itself is swaying to and fro.  To the west lies the receiving platform, where a large hoist waits to raise cargo from the docks below.  A boathouse constructed of native stone skulks in the eternal shadows of the cliffs to the east, a reinforced door leading into the interior of the oppressive building.</description>
+    <position x="20" y="-20" z="0" />
+    <arc exit="west" move="west" destination="5" />
+    <arc exit="go" move="go reinforced door" destination="7" />
+  </node>
+  <node id="7" name="Prison, West Entry">
+    <description>Dim light flickers in from an iron grate in the ceiling above, a grim reminder that guards can watch, and unleash a rain of bolts, from the rooftop.  A reinforced door guards the way out to the west, while a portcullis to the east can be raised or lowered to hold new arrivals until it is time for them to be escorted to their final destinations.</description>
+    <position x="40" y="-20" z="0" />
+    <arc exit="east" move="east" destination="8" />
+    <arc exit="go" move="go reinforced door" destination="6" />
+  </node>
+  <node id="8" name="Prison, Interior Passage">
+    <description>The cold stone walls of this hall offer little comfort to the doomed souls that make the journey from the west entrance to the east entrance -- from their old lives to their new.  Guards on the roof above watch the passage through a pair of iron grates, controlling the massive portcullis that can be lowered to seal the hall from the entrances.  A reinforced oak door and a pair of large ironwood doors are set into the south wall.</description>
+    <position x="60" y="-20" z="0" />
+    <arc exit="east" move="east" destination="12" />
+    <arc exit="west" move="west" destination="7" />
+    <arc exit="go" move="go reinforced door" destination="9" />
+    <arc exit="go" move="go pair of door" destination="11" />
+  </node>
+  <node id="9" name="Prison, Guard Room">
+    <description>A few simple bunks line the walls of this small room, a footlocker bolted to the ground at the base of each.  Battered and worn, a single table stands in the center, four scuffed chairs in disarray around it.  In the southeast corner, a ladder ascends to a hatch in the roof.</description>
+    <position x="60" y="-60" z="0" />
+    <arc exit="go" move="go reinforced door" destination="8" />
+    <arc exit="climb" move="climb ladder" destination="10" />
+  </node>
+  <node id="10" name="Prison, Rooftop">
+    <description>Low battlements surround the rooftop, providing a sound defense to the guards that watch over the boathouse.  From this lofty perch, sentries can cover the docks to the west as well as keep a close eye on the road to the east as it snakes its way up to the compound above.  A series of iron grates overlook the interior passage, winches on either end raising or lowering a portcullis as a secondary protection against escape.</description>
+    <position x="60" y="-100" z="0" />
+    <arc exit="go" move="go hatch" destination="9" />
+  </node>
+  <node id="11" name="Prison, Storage Area">
+    <description>Crates, barrels, and boxes line the walls of the storage area, some stacked neatly, others teetering precariously.  Cargo nets lie piled in a heap near the large, loading bay doors, a wide variety of hooks and chains hanging nearby allowing the workers to pull loads from the hoist to the dock floor.  One corner has been relegated to a makeshift office, a heavily worn desk covered with invoices and requisitions leaning haphazardly against the stone wall.</description>
+    <position x="40" y="-60" z="0" />
+    <arc exit="go" move="go door" destination="8" />
+  </node>
+  <node id="12" name="Prison, East Entry">
+    <description>Dim light flickers in from an iron grate in the ceiling above, a grim reminder that guards can watch, and unleash a rain of bolts, from the rooftop above.  A reinforced door guards the way out to the east, while a portcullis to the west can be raised or lowered to hold new arrivals here until it is time for them to be escorted to their final destinations.</description>
+    <position x="80" y="-20" z="0" />
+    <arc exit="west" move="west" destination="8" />
+    <arc exit="go" move="go reinforced door" destination="13" />
+  </node>
+  <node id="13" name="Prison, Landing">
+    <description>The sound of waves crashing against the cliffs below echoes through the confines of this narrow stone landing.  A towering wall of twisted gneiss looms to the north, while a tall stone wall prevents escape by diving into the sea to the south.  To the west lies the stone boathouse, a reinforced door the only visible means of entering the building.  A broad gate to the east guards the ascent to the compound far above.</description>
+    <position x="100" y="-20" z="0" />
+    <arc exit="go" move="go reinforced door" destination="12" />
+    <arc exit="go" move="go gate" destination="14" />
+  </node>
+  <node id="14" name="Prison, Worn Road">
+    <description>The boathouse lurks in the shadows to the west, separated from the road to the compound by a stout gate.  The gate stands tall and proud, guarding the boathouse from wild animals.  A small worn trail begins at the gate and passes through a patch of jungle as it leads closer to the cliff.</description>
+    <position x="120" y="-20" z="0" />
+    <arc exit="go" move="go trail" destination="15" />
+    <arc exit="go" move="go gate" destination="13" />
+  </node>
+  <node id="15" name="Prison, Summit">
+    <description>A narrow, rocky trail weaves back and forth up the mountain from the boathouse, hugging the sheer cliff.  The only way to continue from there is a very tall ladder.  The ladder stretches over three hundred feet straight up and is six feet wide, leaving plenty of room for even the largest prisoner or guard.</description>
+    <position x="140" y="-20" z="0" />
+    <arc exit="climb" move="climb ladder" destination="16" />
+    <arc exit="go" move="go trail" destination="14" />
+  </node>
+  <node id="16" name="Prison, Cliff Top">
+    <description>At the top of the ladder, thick jungle surrounds a rocky, dirt road.  Far below, the crushed and broken skeletons of unfortunate souls who failed to find their freedom litter the jagged rocks, left there by the guards as a warning to others who might entertain thoughts of escape.  The road twists and turns through the jungle as far as the eye can see.</description>
+    <position x="160" y="-20" z="0" />
+    <arc exit="go" move="go road" destination="17" />
+    <arc exit="climb" move="climb ladder" destination="15" />
+  </node>
+  <node id="17" name="Prison, Crossroads">
+    <description>Three roads meet in the center of this clearing.  Two branches lead into the jungle, and the last towards the compound.  All of them are level, creating a smooth path for animals to travel over.  Grass and other little green shrubs litter the area around the road, leaving the road looking empty but colorful.</description>
+    <position x="180" y="-20" z="0" />
+    <arc exit="northeast" move="northeast" destination="36" />
+    <arc exit="southeast" move="southeast" destination="35" />
+    <arc exit="northwest" move="northwest" destination="18" />
+    <arc exit="go" move="go road" destination="16" />
+  </node>
+  <node id="18" name="Prison, Ring Road West">
+    <description>One of the guard towers stands here overlooking the entrance to the prison, with walkways for the guards to observe.  The road is worn from many years of prison guards walking along the perimeter while patrolling or on the way to their posts.</description>
+    <position x="160" y="-40" z="0" />
+    <arc exit="north" move="north" destination="19" />
+    <arc exit="southeast" move="southeast" destination="17" />
+    <arc exit="climb" move="climb tower" destination="85" />
+  </node>
+  <node id="19" name="Prison, Ring Road West">
+    <description>Running close to the drop of the cliff, the road is bare and easily manageable, comprised of layers of seashells intermixed with sand.  A few large rocks break up the flatness of the island, although it still gives the appearance of a flat-topped seamount rising above sea level.  A small shrine hugs the cliffside, clinging to the narrow space between the track and the sheer drop to the waters below.</description>
+    <position x="160" y="-60" z="0" />
+    <arc exit="north" move="north" destination="20" />
+    <arc exit="south" move="south" destination="18" />
+  </node>
+  <node id="20" name="Prison, Ring Road West">
+    <description>Below the road, nestled in the curve of the cliff is a small beach.  Seabirds mill in the air, looking for washed up food or soaring aimlessly.  The sea breeze is strong here, wafting up from the distant ocean.</description>
+    <position x="160" y="-80" z="0" />
+    <arc exit="north" move="north" destination="21" />
+    <arc exit="south" move="south" destination="19" />
+  </node>
+  <node id="21" name="Prison, Ring Road West">
+    <description>Little flanks the road except sand and a field of creeping crabgrass.  The crashing sounds of waves echoes from beyond the headland.  A stone guard tower looms high above, a ladder leading inside its cold walls.</description>
+    <position x="160" y="-100" z="0" />
+    <arc exit="northeast" move="northeast" destination="22" />
+    <arc exit="south" move="south" destination="20" />
+    <arc exit="climb" move="climb ladder" destination="84" />
+  </node>
+  <node id="22" name="Prison, Ring Road North">
+    <description>Gravel fills the roadside, lined with wispy grasses and weeds.  Guard towers rise above the white-painted prison wall which stretches endlessly beside the pathway.</description>
+    <position x="180" y="-120" z="0" />
+    <arc exit="east" move="east" destination="23" />
+    <arc exit="southwest" move="southwest" destination="21" />
+    <arc exit="climb" move="climb ladder" destination="84" />
+  </node>
+  <node id="23" name="Prison, Ring Road North">
+    <description>Sand and shells give way to rich tropical foliage.  Sago palm and green bihai lend a rich emerald color to the vegetation against a background of bamboo and lush verdant grasses.</description>
+    <position x="200" y="-120" z="0" />
+    <arc exit="east" move="east" destination="24" />
+    <arc exit="west" move="west" destination="22" />
+  </node>
+  <node id="24" name="Prison, Ring Road North">
+    <description>Royal palms rise in shapely curves and turns, beside other large tropical trees, sometimes providing cool shade along the road.  The wind, rustling the palm leaves, grabs clothing as if in attempts to hold or push people around.  The start of the prison fence that encloses the work yard can be seen here.</description>
+    <position x="220" y="-120" z="0" />
+    <arc exit="east" move="east" destination="25" />
+    <arc exit="west" move="west" destination="23" />
+  </node>
+  <node id="25" name="Prison, Ring Road North">
+    <description>Bright pinks and reds of the vireya plants that have amassed here give varied color to the otherwise dark green.  A fortress of winding vines and other plants make any travel except along the road impossible.  The jungle canopy high in the air shakes from time to time.</description>
+    <position x="240" y="-120" z="0" />
+    <arc exit="east" move="east" destination="26" />
+    <arc exit="west" move="west" destination="24" />
+  </node>
+  <node id="26" name="Prison, Ring Road North">
+    <description>Purple cattleya has grown in thick patches to complement the rainbow-colored birds that can be seen flapping from tree to tree and squawking at one another.  To the east is a ladder leading up to the guard tower that oversees the prison work yard.</description>
+    <position x="260" y="-120" z="0" />
+    <arc exit="southeast" move="southeast" destination="27" />
+    <arc exit="west" move="west" destination="25" />
+    <arc exit="climb" move="climb ladder" destination="83" />
+  </node>
+  <node id="27" name="Prison, Ring Road East">
+    <description>Cattleya orchids give way to thick clumps of unidentifiable vines and bushes, dense and impenetrable.  Foliage swarms over the spiked fence enclosing the work yard, obscuring all views of the interior.</description>
+    <position x="280" y="-100" z="0" />
+    <arc exit="south" move="south" destination="28" />
+    <arc exit="northwest" move="northwest" destination="26" />
+    <arc exit="climb" move="climb ladder" destination="83" />
+  </node>
+  <node id="28" name="Prison, Ring Road East">
+    <description>Philodendrons bloom in lush profusion along the spiked fence to the west.  A low rock outcrop helps keep the trees away from the road, which winds along between the fence and the rocks.  Maidenhair ferns cluster close to the roadbed, taking advantage of the increased sunlight.</description>
+    <position x="280" y="-80" z="0" />
+    <arc exit="north" move="north" destination="27" />
+    <arc exit="south" move="south" destination="29" />
+  </node>
+  <node id="29" name="Prison, Ring Road East">
+    <description>Wataba trees line the road, crowding close and blocking almost all sight of the spiked fence.  Looped over the limb of a bush close to the road is a green vine snake, its long tongue flicking in and out as it watches the rare traveler.  A thin path leads to the east, almost overgrown in the thick stand of foliage.</description>
+    <position x="280" y="-60" z="0" />
+    <arc exit="north" move="north" destination="28" />
+    <arc exit="south" move="south" destination="30" />
+    <arc exit="go" move="go path" destination="78" />
+  </node>
+  <node id="30" name="Prison, Ring Road East">
+    <description>The road bends slightly around an enormous tree that rises up out of sight among the canopy.  Its shade has crowded out most of the normal undergrowth, leaving a clearer area for the road to pass through.</description>
+    <position x="280" y="-40" z="0" />
+    <arc exit="north" move="north" destination="29" />
+    <arc exit="south" move="south" destination="31" />
+  </node>
+  <node id="31" name="Prison, Ring Road East">
+    <description>Deep within a dense planting of bamboo, a spiked iron fence struggles to remain upright.  The road cuts wide around the stand, moving perilously close to the dark tree trunks of the ever-present jungle.  High-voiced monkey calls echo through the foliage.</description>
+    <position x="280" y="-20" z="0" />
+    <arc exit="north" move="north" destination="30" />
+    <arc exit="southwest" move="southwest" destination="32" />
+    <arc exit="climb" move="climb ladder" destination="77" />
+  </node>
+  <node id="32" name="Prison, Ring Road South">
+    <description>Surrounding fishtail palms and bamboo threaten to overgrow the road, which gets narrower here.  Some of the cane has been cut short from past attempts to keep them from reaching the road.  To the east is a ladder leading up to a guard tower.</description>
+    <position x="260" y="0" z="0" />
+    <arc exit="northeast" move="northeast" destination="31" />
+    <arc exit="west" move="west" destination="33" />
+    <arc exit="climb" move="climb ladder" destination="77" />
+  </node>
+  <node id="33" name="Prison, Ring Road South">
+    <description>Skirting the road that winds between the tropical trees and the walls of the prison is a single pendas plant.  Its broad red leaves stand out among the brown, sandy dirt of the path.  The hard walls of the prison have crumbled a bit.</description>
+    <position x="240" y="0" z="0" />
+    <arc exit="east" move="east" destination="32" />
+    <arc exit="west" move="west" destination="34" />
+  </node>
+  <node id="34" name="Prison, Ring Road South">
+    <description>Part of the road has been eroded by heavy rains, creating deep groves as the water runs down to find equilibrium.  Green areca palms have started to grow here and get thicker to the west, creating a tropical jungle.</description>
+    <position x="220" y="0" z="0" />
+    <arc exit="east" move="east" destination="33" />
+    <arc exit="west" move="west" destination="35" />
+  </node>
+  <node id="35" name="Prison, Ring Road South">
+    <description>The largest of the towers that surround the prison stands here on a small knoll, like a lighthouse overlooking its rocky shore.  Looking down over the southwest you can see the tiny boathouse that brings guards and prisoners alike to the island and the sheer cliff that keeps the prisoners from escaping.</description>
+    <position x="200" y="0" z="0" />
+    <arc exit="east" move="east" destination="34" />
+    <arc exit="northwest" move="northwest" destination="17" />
+    <arc exit="climb" move="climb tower" destination="76" />
+  </node>
+  <node id="36" name="Prison, Clearing">
+    <description>Trees have been hacked down and dragged leaving nothing to hide behind, making escape through the front gate nearly impossible.  Anyone on the tower has a clear view of the entire area, able to shoot both inside and outside the compound.  Lizards lie sunning themselves on a rock that was too large to be moved.</description>
+    <position x="160" y="240" z="0" />
+    <arc exit="east" move="east" destination="37" />
+    <arc exit="southwest" move="southwest" destination="17" />
+  </node>
+  <node id="37" name="Prison, Receiving Area">
+    <description>Flickering torchlight reveals deep gouges and scratches on the walls, mostly obscuring older images on the walls.  A shallow pool of water stands in one corner where guards used to scrub the newly arrived prisoners but now the water is fouled with refuse and debris.</description>
+    <position x="180" y="240" z="0" />
+    <arc exit="east" move="east" destination="38" />
+    <arc exit="west" move="west" destination="36" />
+  </node>
+  <node id="38" name="Prison, Processing Area">
+    <description>A massive desk dominates the western wall, flanked on either side by large racks spilling parchments and scrolls onto the ground.  Overhead, a gaethzen orb glows steadily in the gloom, chasing away the encroaching shadows.  Cabinets fill the remaining wall space, their open drawers gaping and empty.</description>
+    <position x="200" y="240" z="0" />
+    <arc exit="east" move="east" destination="40" />
+    <arc exit="south" move="south" destination="39" />
+    <arc exit="west" move="west" destination="37" />
+  </node>
+  <node id="39" name="Prison, Cramped Office">
+    <description>Grey tendrils of light creep from a dingy lantern hung from the ceiling, barely illuminating even such a tiny space.  Nothing remains of the furnishings but splinters and mattress stuffing strewn about.</description>
+    <position x="200" y="260" z="0" />
+    <arc exit="north" move="north" destination="38" />
+  </node>
+  <node id="40" name="Prison, Lower Prisoner Cell Block">
+    <description>Everything, from the walls to the doors is dark grey, shrouding the area in the dreary appearance of a rainy day.  Shreds of cloth litter the ground, although what they once were is unclear.</description>
+    <position x="220" y="240" z="0" />
+    <arc exit="north" move="north" destination="48" />
+    <arc exit="east" move="east" destination="41" />
+    <arc exit="south" move="south" destination="42" />
+    <arc exit="west" move="west" destination="38" />
+  </node>
+  <node id="41" name="Prison, Prisoner Cell">
+    <description>Four walls of a rough marble make this room appear to be more of a tomb than a cell.  The floor is extremely slippery, coated in some vile brownish substance that sloshes around with any movement.  A bed of hay has been piled in a corner, but with the screaming that echoes in the darkness, a full night's sleep seems almost impossible.</description>
+    <position x="240" y="240" z="0" />
+    <arc exit="west" move="west" destination="40" />
+  </node>
+  <node id="42" name="Prison, Lower Prisoner Cell Block">
+    <description>This side of the prison was reserved for those that misbehaved.  Damp air carries a biological odor that is not mitigated by the aromas of rotting food that emanate from the south.</description>
+    <position x="220" y="260" z="0" />
+    <arc exit="north" move="north" destination="40" />
+    <arc exit="east" move="east" destination="43" />
+    <arc exit="south" move="south" destination="45" />
+    <arc exit="west" move="west" destination="44" />
+  </node>
+  <node id="43" name="Prison, Solitary Cell">
+    <description>The dim light from the passages above casts a faint glow into the area.  This dark cell has been filled about halfway up the walls with an unusual black goo that smells worse than a paladin who hasn't washed his armor in many years.  Skulls, internal organs and half eaten animals float upon the surface.</description>
+    <position x="240" y="260" z="0" />
+    <arc exit="west" move="west" destination="42" />
+  </node>
+  <node id="44" name="Prison, Solitary Cell">
+    <description>Loud screams mingled with the scent of burned flesh assault the senses.  Darkness shrouds what little there is of this room.  Lengthy chains hang from the ceiling, much like a spider's web awaiting prey.  Strips of skin dangle from bloodstained hooks, which are affixed to the walls.  The rough-hewn walls form an indestructible barrier, leaving nothing but a barred and narrow hole as an only exit.</description>
+    <position x="200" y="280" z="0" />
+    <arc exit="east" move="east" destination="42" />
+  </node>
+  <node id="45" name="Prison, Eating Area">
+    <description>The smell of rotting food swirls around the various-sized tables that fill the room.  Dented plates litter the ground amid broken chairs.  Long bars of steel run parallel to either side of each table and are anchored at both ends.</description>
+    <position x="220" y="280" z="0" />
+    <arc exit="north" move="north" destination="42" />
+    <arc exit="go" move="go ironwood door" destination="46" />
+    <arc exit="go" move="go oak door" destination="47" />
+  </node>
+  <node id="46" name="Prison, Kitchen">
+    <description>A rotten stench permeates the area, coming from the cauldron sitting on the stove.  The tables and counters display a deep layer of dust, showing their disuse.  Empty pots and pans litter the kitchen in an organized chaos, and knives and other assorted utensils to line the walls.  A mahogany door leads to the serving area while a black ironwood door opens into the eating area.</description>
+    <position x="240" y="300" z="0" />
+    <arc exit="go" move="go mahogany door" destination="47" />
+    <arc exit="go" move="go ironwood door" destination="45" />
+  </node>
+  <node id="47" name="Prison, Serving Area">
+    <description>Pots rest on several low tables, covered with dust.  An oak door stands stoutly between this room and the eating area, while a mahogany door provides access to the kitchen.</description>
+    <position x="200" y="300" z="0" />
+    <arc exit="go" move="go mahogany door" destination="46" />
+    <arc exit="go" move="go oak door" destination="45" />
+  </node>
+  <node id="48" name="Prison, Lower Prisoner Cell Block">
+    <description>A small, reinforced portcullis dangles from the ceiling, its operating chain broken in pieces on the floor.  Lanterns hang on the walls, providing light through the grime that coats them.  Dirtier still, the floor is caked with dirt and mud.</description>
+    <position x="220" y="220" z="0" />
+    <arc exit="east" move="east" destination="49" />
+    <arc exit="south" move="south" destination="40" />
+    <arc exit="west" move="west" destination="50" />
+    <arc exit="northwest" move="northwest" destination="51" />
+    <arc exit="climb" move="climb stair" destination="58" />
+  </node>
+  <node id="49" name="Prison, Prisoner Cell">
+    <description>Carvings of names, dates, and slashes accompany the words of wisdom written on the otherwise clean walls.  A small basin lies overturned underneath a broken bamboo bed.</description>
+    <position x="240" y="220" z="0" />
+    <arc exit="west" move="west" destination="48" />
+  </node>
+  <node id="50" name="Prison, Prisoner Cell">
+    <description>Dark stone walls enclose a large dirty cell used for holding prisoners.  A small pile of rotting hay covers the corner of the floor, the only form of bed in the cell.  Cracks in the walls and brickwork show how little care the guards had for the prisoners well-being.</description>
+    <position x="200" y="220" z="0" />
+    <arc exit="east" move="east" destination="48" />
+  </node>
+  <node id="51" name="Prison, Work Yard South">
+    <description>Trapped between the foreboding stone walls to the west and the spiked fence to the east, the work yard stretches out to the north.  Countless years of mining the marble of the quarry have left the area sunken well below the ring road to the east, adding to the oppressive sense of confinement.</description>
+    <position x="200" y="200" z="0" />
+    <arc exit="north" move="north" destination="52" />
+    <arc exit="southeast" move="southeast" destination="48" />
+  </node>
+  <node id="52" name="Prison, Work Yard North">
+    <description>The ground here is uneven, rising and falling with no seeming pattern.  Gaping pits where blocks of marble have been cut free lie hidden behind high ground, unintentional traps for the unwary.  A spiked fence separates the work yard from the surrounding ring road above.  Near the compound wall is a deep pit covered with rough timbers, a staircase leading down into the darkness.</description>
+    <position x="200" y="180" z="0" />
+    <arc exit="south" move="south" destination="51" />
+    <arc exit="climb" move="climb stair" destination="53" />
+  </node>
+  <node id="53" name="Prison, The Pit">
+    <description>The flickering light of torches sends shadows scurrying across this expansive underground chamber.  A series of long ironwood worktables with accompanying benches dominates the center of the room.  Along one wall is a series of racks containing all the tools needed to work in the quarry above as well as prepare the garnets here in the Pit.  Stacks of unworked marble blocks glistening with crude garnets line another wall.  A staircase leads to the work yard above.</description>
+    <position x="200" y="160" z="0" />
+    <arc exit="east" move="east" destination="54" />
+    <arc exit="climb" move="climb stair" destination="52" />
+  </node>
+  <node id="54" name="Prison, The Pit">
+    <description>Flickering torches cast eerie shadows within the room, creating a foreboding dance of light within the dank pit.  Worktables and benches are pushed against the wall, each holding an assortment of tools for use.  Worked marble blocks stacked upon wooden slats within the center of the room await further preparations.</description>
+    <position x="220" y="160" z="0" />
+    <arc exit="east" move="east" destination="55" />
+    <arc exit="west" move="west" destination="53" />
+  </node>
+  <node id="55" name="Prison, The Pit">
+    <description>Dim light flickers upon a large sign fastened to the wall, baring a loud proclamation of moral intent.  Neatly piled upon wooden slats are roughly shaped marble blocks, each awaiting further work.  Workbenches line the center of the room, each holding the necessary tools to further the process of the material.</description>
+    <position x="240" y="160" z="0" />
+    <arc exit="east" move="east" destination="56" />
+    <arc exit="west" move="west" destination="54" />
+  </node>
+  <node id="56" name="Prison, The Pit">
+    <description>Well placed torches upon the wall create ample lighting over the workbenches.  Shaped marble blocks rest upon wooden slats, awaiting final shaping before moving onto the last of their processing.  Thick layers of debris line the floor, though a broom stands at the ready in a corner next to a waste bin.</description>
+    <position x="260" y="160" z="0" />
+    <arc exit="east" move="east" destination="57" />
+    <arc exit="west" move="west" destination="55" />
+  </node>
+  <node id="57" name="Prison, The Pit">
+    <description>Crates of garnets and slats of marble blocks rest to one side of the room.  Directly across, well lit workbenches loaded with supplies stand at the ready.  A sign carved with a stern warning is fastened upon the wall above the workspace as a deterrent to those with thieving fingers.</description>
+    <position x="280" y="160" z="0" />
+    <arc exit="west" move="west" destination="56" />
+  </node>
+  <node id="58" name="Prison, Middle Prisoner Cell Block">
+    <description>Black and grey stone forms the floor and walls of the prison hallway, punctuated by gaping openings that were once barred by doors.  Flickering shadows from torches filter upward from the stairs that lead below.</description>
+    <position x="340" y="240" z="0" />
+    <arc exit="east" move="east" destination="59" />
+    <arc exit="south" move="south" destination="61" />
+    <arc exit="west" move="west" destination="60" />
+    <arc exit="climb" move="climb stair" destination="48" />
+  </node>
+  <node id="59" name="Prison, Solitary Cell">
+    <description>The dim light from the passages above casts a faint glow into the area.  Rats scurry about the area, chattering loudly as they run from one cell to the next through small holes in the masonry.  The skeleton of an unfortunate prisoner is fastened to a wall with iron straps, a warning of sorts to those who now reside here.</description>
+    <position x="360" y="240" z="0" />
+    <arc exit="west" move="west" destination="58" />
+  </node>
+  <node id="60" name="Prison, Solitary Cell">
+    <description>Every sound reverberates within the small room, echoing within the heavy stone walls.  Frayed rope dangles from an iron grating in the ceiling, its end forming a makeshift noose.  Upon the dirty wall are rows of etched lines, marking the days a prisoner was confined in this space.</description>
+    <position x="320" y="240" z="0" />
+    <arc exit="east" move="east" destination="58" />
+  </node>
+  <node id="61" name="Prison, Middle Prisoner Cell Block">
+    <description>Black and grey stone forms the floor and walls of the prison hallway, punctuated by gaping holes where doors once stood.  The heavy material muffles sounds coming from inside the cells so that only the sound of footsteps against the ground are audible.  A musty odor envelops the entire area.</description>
+    <position x="340" y="280" z="0" />
+    <arc exit="north" move="north" destination="58" />
+    <arc exit="east" move="east" destination="62" />
+    <arc exit="south" move="south" destination="64" />
+    <arc exit="west" move="west" destination="63" />
+  </node>
+  <node id="62" name="Prison, Solitary Cell">
+    <description>Four walls of a rough marble make this room appear to be more of a tomb than a cell.  Red stains mar the cracked floor beneath thin dustings of dirt.  Within one corner is a bed of hay, a haven for insects and rodents to hide themselves, creating an uncomfortable place for one to sleep.</description>
+    <position x="360" y="280" z="0" />
+    <arc exit="west" move="west" destination="61" />
+  </node>
+  <node id="63" name="Prison, Solitary Cell">
+    <description>Manacles attached on the end of solid chains dangle against the walls.  The remains of a stained burlap shirt rests upon the sewage littered floor.  A diseased rat runs about the room frantically, seeking a way to escape this dank cell.</description>
+    <position x="320" y="280" z="0" />
+    <arc exit="east" move="east" destination="61" />
+  </node>
+  <node id="64" name="Prison, Middle Prisoner Cell Block">
+    <description>Black and grey stone forms the floor and walls of the prison hallway, punctuated by gaping holes where doors once stood.  The heavy material muffles sounds coming from inside the cells so that only the sound of footsteps against the ground are audible.  Moist, dirt-caked stairs -- apparently the source of the ever-present earthy odor -- spiral upward.</description>
+    <position x="340" y="300" z="0" />
+    <arc exit="north" move="north" destination="61" />
+    <arc exit="east" move="east" destination="65" />
+    <arc exit="west" move="west" destination="66" />
+    <arc exit="climb" move="climb stair" destination="67" />
+  </node>
+  <node id="65" name="Prison, Solitary Cell">
+    <description>Upon the walls are carvings of various people and creatures, the work of a prisoner's artistic ambition.  A small bowl lies discarded in the corner.  Stuffed sacks line along one side of the room, an attempt to create a softer bed for the resident within.</description>
+    <position x="360" y="300" z="0" />
+    <arc exit="west" move="west" destination="64" />
+  </node>
+  <node id="66" name="Prison, Prisoner Cell">
+    <description>Thick grime and dirt cover the cracked walls and floors of the cell, while the air is penetrated by the stench of rotting sewage.  The remains of a hay bed are scattered across the floor, mingling with the filth in the small, cramped quarters.  Barely audible sobbing echoes within the room, though its point of origin is undeterminable.</description>
+    <position x="320" y="300" z="0" />
+    <arc exit="east" move="east" destination="64" />
+  </node>
+  <node id="67" name="Prison, Upper Prisoner Cell Block">
+    <description>Black and grey stone forms the floor and walls of the prison hallway, punctuated by dark holes where doors used to be.  The heavy material muffles sounds coming from inside the cells so that only the sound of footsteps against the ground are audible.  A musty odor envelops the entire area, and seems the most concentrated near the stairs that spiral downward.</description>
+    <position x="440" y="220" z="0" />
+    <arc exit="north" move="north" destination="70" />
+    <arc exit="east" move="east" destination="68" />
+    <arc exit="west" move="west" destination="69" />
+    <arc exit="climb" move="climb stair" destination="64" />
+  </node>
+  <node id="68" name="Prison, Solitary Cell">
+    <description>Upon the walls are carvings of names and dates, the signs of prisoners' attempts to leave their mark.  Upon the cold, dank floor is a bed created from rat skins over a thin lining of hay.  The bones of the discarded rodents lay in a pile within a dark corner in the room.</description>
+    <position x="460" y="220" z="0" />
+    <arc exit="west" move="west" destination="67" />
+  </node>
+  <node id="69" name="Prison, Prisoner Cell">
+    <description>Thick grime and dirt cover the cracked walls and floors of the cell, while the air is penetrated by the stench of rotting sewage.  Clumps of hair rest upon the head of a lumpy cot, a skull upon the floor next to it.  Deep scratch marks within the wooden door show a desperate prisoner's attempt to claw their way free from the uninhabitable conditions within these walls.</description>
+    <position x="420" y="220" z="0" />
+    <arc exit="east" move="east" destination="67" />
+  </node>
+  <node id="70" name="Prison, Upper Prisoner Cell Block">
+    <description>Black and grey stone forms the floor and walls of the prison hallway, punctuated by narrow gaps where doors used to be.  The heavy material muffles sounds coming from inside the cells so that only the sound of footsteps against the ground are audible.  A musty odor envelops the entire area.</description>
+    <position x="440" y="200" z="0" />
+    <arc exit="north" move="north" destination="73" />
+    <arc exit="east" move="east" destination="71" />
+    <arc exit="south" move="south" destination="67" />
+    <arc exit="west" move="west" destination="72" />
+  </node>
+  <node id="71" name="Prison, Solitary Cell">
+    <description>Four walls of a rough marble make this room appear to be more of a tomb than a cell.  Red stains mar the cracked floor beneath thin dustings of dirt.  A hearty bed of hay that is relatively free of insects and rodents is piled within one corner, creating a place to rest for those confined within the walls.</description>
+    <position x="460" y="200" z="0" />
+    <arc exit="west" move="west" destination="70" />
+  </node>
+  <node id="72" name="Prison, Solitary Cell">
+    <description>Manacles attached to the end of solid chains drape against the walls.  Red stains upon the wall form a painting of a turtle resting on a bed of rocks.  While no visible bedding is within this room, a pile of splintered wood lies in a corner.</description>
+    <position x="420" y="200" z="0" />
+    <arc exit="east" move="east" destination="70" />
+  </node>
+  <node id="73" name="Prison, Upper Prisoner Cell Block">
+    <description>Black and grey stone forms the floor and walls of the prison hallway, punctuated by only by black openings.  The heavy material muffles sounds coming from inside the cells so that only the sound of footsteps against the ground are audible.  A musty odor envelops the entire area.</description>
+    <position x="440" y="180" z="0" />
+    <arc exit="east" move="east" destination="75" />
+    <arc exit="south" move="south" destination="70" />
+    <arc exit="west" move="west" destination="74" />
+  </node>
+  <node id="74" name="Prison, Solitary Cell">
+    <description>Chains dangle from the grating above, filthy water dripping off them into a bowl placed below.  Upon the dirty wall are rows of etched lines, marking the days a prisoner was confined in this space.</description>
+    <position x="420" y="180" z="0" />
+    <arc exit="east" move="east" destination="73" />
+  </node>
+  <node id="75" name="Prison, Solitary Cell">
+    <description>The dim light from the passages above casts a faint glow into the area.  Rats scurry about, chattering loudly as they run from one room to the next through small holes in the masonry.</description>
+    <position x="460" y="180" z="0" />
+    <arc exit="west" move="west" destination="73" />
+  </node>
+  <node id="76" name="Prison, Guard Tower">
+    <description>Crafted from bamboo, the guard tower stands strong against the elements.  Far below, a pathway stretches out from the compound to the docks, but not before crossing close to the base of this structure.  In the distance, the thunderous crash of the surf against rocks gives a natural warning to those who think they could escape the confines of the island.</description>
+    <position x="180" y="0" z="0" />
+    <arc exit="climb" move="climb ladder" destination="35" />
+  </node>
+  <node id="77" name="Prison, Guard Tower">
+    <description>The upkeep on this guard tower is long overdue and much needed.  The floor has started to come apart, causing cracks and large gaps to appear in the surface of the bamboo.  Discarded knives and rusting shackles have been scattered about the decaying floor.</description>
+    <position x="280" y="0" z="0" />
+    <arc exit="climb" move="climb wester ladder" destination="32" />
+    <arc exit="climb" move="climb northern ladder" destination="31" />
+  </node>
+  <node id="78" name="Prison, Tangled Path">
+    <description>Clematis vines cling to the trunks of densely growing deciduous trees.  Water has collected in pools along the trail here, turning the air into a mass of flying bugs.  A crooked path, crowded on either side by the flora that grows so vibrantly, runs through a depression between two low rock outcrops.</description>
+    <position x="300" y="-60" z="0" />
+    <arc exit="east" move="east" destination="79" />
+    <arc exit="go" move="go path" destination="29" />
+  </node>
+  <node id="79" name="Prison, Clearing">
+    <description>Opening suddenly, this small clearing forms around the fallen trunk of one of the jungle's former giants.  The decaying trunk lies in the center of the clearing, overgrown with moss and creeping vines.  Though the path is interrupted, it is easy to pick out where it begins again on the other side of the tree.</description>
+    <position x="320" y="-60" z="0" />
+    <arc exit="northeast" move="northeast" destination="80" />
+    <arc exit="west" move="west" destination="78" />
+  </node>
+  <node id="80" name="Prison, Clearing Path">
+    <description>A thick and tangled canopy overhead blocks most light, making passage slightly more hazardous than it otherwise might be.  Meandering through moss covered trunks, this faint path links two jungle clearings.  Jewel-colored dragonflies flit amongst the trees, lighting briefly on leaves and vines before resuming their colorful flights.</description>
+    <position x="340" y="-80" z="0" />
+    <arc exit="east" move="east" destination="81" />
+    <arc exit="southwest" move="southwest" destination="79" />
+  </node>
+  <node id="81" name="Prison, Clearing">
+    <description>A rock outcrop rises out of the jungle floor, its granite surface resisting all efforts of the foliage to gain purchase.  The trees grow close to the rocks, and their roots reach out, trying to find a solid grip in the cracks and crevices.  High overhead, the calls of birds echo through the canopy.</description>
+    <position x="360" y="-80" z="0" />
+    <arc exit="south" move="south" destination="82" />
+    <arc exit="west" move="west" destination="80" />
+  </node>
+  <node id="82" name="Prison, Clearing">
+    <description>Thick brush encloses this large clearing.  Granite boulders crowd closely together in a heap, many of which have been partially split into blocks.  Amongst chips and slivers of detritus, discarded chisels and mallets litter the ground.  Off to one side, near the edge of the clearing, a small, fenced-in area holds worn markers that serve as the island's cemetery.</description>
+    <position x="360" y="-60" z="0" />
+    <arc exit="north" move="north" destination="81" />
+  </node>
+  <node id="83" name="Prison, Guard Tower">
+    <description>The view from the tower offers contrasting worlds to see.  Northeastward, the lush greens of the forest set within the deep blues of the surrounding ocean look surreal, as if painted by the gods.  However, in the opposite direction, the shabby work yard with its canvas of browns and greys looms behind the dangerously sharp fences below.</description>
+    <position x="280" y="-120" z="0" />
+    <arc exit="climb" move="climb southern ladder" destination="27" />
+    <arc exit="climb" move="climb western ladder" destination="26" />
+    <arc exit="climb" move="climb ladder" destination="27" />
+  </node>
+  <node id="84" name="Prison, Guard Tower">
+    <description>Though remaining sturdily in place against the wind, the old, lashed-together bamboo still creaks and groans with each step taken upon it.  A driftwood rail surrounds the edges of the platform, giving little to no protection against a plummet off the edge.  Above, palm leaves have been secured to the bamboo frame, creating a small bungalow to relax under.</description>
+    <position x="160" y="-120" z="0" />
+    <arc exit="climb" move="climb eastern ladder" destination="22" />
+    <arc exit="climb" move="climb southern ladder" destination="21" />
+  </node>
+  <node id="85" name="Prison, Guard Tower">
+    <description>Crafted of sturdy bamboo lashed together with rough vine, the guard tower seems sturdy enough to support a good amount of weight.  The view from this perch is perfect to assess the surrounding landscape.  A makeshift ladder leads back down to the ground.</description>
+    <position x="140" y="-40" z="0" />
+    <arc exit="climb" move="climb ladder" destination="18" />
+  </node>
+</zone>

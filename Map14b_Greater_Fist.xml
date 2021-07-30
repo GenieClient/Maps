@@ -1,0 +1,1403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Greater Fist" id="14b">
+  <node id="1" name="Greater Fist Footpath, Volcano's Peak" color="#00FF00">
+    <description>Blackened and hardened lava flows swirl across the ground, creating bizarre images that look like twisted, anguished faces.  Gnarled branches of dead trees reach down, brushing at those doomed forms as if trying to provide comfort.  The corroded rails of the cart track stop not far from here in a dead end.</description>
+    <position x="280" y="220" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="2" />
+    <arc exit="go" move="go track" destination="109" />
+  </node>
+  <node id="2" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>The narrow shelf curves sharply around the volcano's shoulder, causing the path to run dangerously close to the cart track, and providing dangerous passage for those of generous girth.  A breathtaking vista is displayed all around, showing off the desolate desert far to the northwest and the sparkling sea to the northeast.</description>
+    <position x="300" y="200" z="0" />
+    <arc exit="east" move="rt east" destination="3" />
+    <arc exit="southwest" move="rt southwest" destination="1" />
+    <arc exit="go" move="go track" destination="110" />
+  </node>
+  <node id="3" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>A treacherously thin winding path comes to a startling end, effectively preventing all downward passage.  Instead, travelers must make nimble-footed use of a plank boardwalk, scarcely a Halfling's handspan in width, that follows alongside the weather-worn track braced against the volcano's shoulder.  Crumbling bits of rock and dust occasionally fall from the uppermost reaches of the mountain and onto the heads of unhappy travelers.</description>
+    <position x="320" y="200" z="0" />
+    <arc exit="east" move="rt east" destination="4" />
+    <arc exit="west" move="rt west" destination="2" />
+    <arc exit="go" move="go track" destination="111" />
+  </node>
+  <node id="4" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>A sickly yellowish vine curls its leafy fingers around the wooden track beams, occasionally poking itself between the wooden slats and onto the footpath in search of clean sunshine.  The atmosphere is fairly choked with smoke and red volcanic dust.</description>
+    <position x="340" y="200" z="0" />
+    <arc exit="east" move="rt east" destination="5" />
+    <arc exit="west" move="rt west" destination="3" />
+    <arc exit="go" move="go track" destination="112" />
+  </node>
+  <node id="5" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>The trail carefully skirts a broken and scarred rock face as it winds its way around the massive gaping holes of an avalanche in years past.  Dangerously perched adjacent to the nearly nonexistent trail, the wooden cart track is supported against the steep mountain wall by a series of wooden beams and shows significant damage -- small rocks lodged between wooden supports, cracked and sometimes absent beams, and shattered wooden slats.</description>
+    <position x="360" y="200" z="0" />
+    <arc exit="east" move="rt east" destination="6" />
+    <arc exit="west" move="rt west" destination="4" />
+    <arc exit="go" move="go track" destination="113" />
+  </node>
+  <node id="6" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>The enormous iron spikes which secure the mining tracks to this splinter of a footpath are slowly beginning to pull free, and every gust of wind causes the tracks' bracing beams to shake and groan.</description>
+    <position x="380" y="200" z="0" />
+    <arc exit="southeast" move="rt southeast" destination="7" />
+    <arc exit="west" move="rt west" destination="5" />
+    <arc exit="go" move="go track" destination="114" />
+  </node>
+  <node id="7" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>The rickety tracks take a sharp northwest-to-south turn as they cling at a steep angle to the footpath along the face of the volcano.  The mouth of the mountain looms ominously above, emitting a threatening geyser of steam and smoke.  Below, metallic rails and a barely visible trodden pathway intertwine as they make their spiraling trek to the valley.</description>
+    <position x="400" y="220" z="0" />
+    <arc exit="south" move="rt south" destination="8" />
+    <arc exit="northwest" move="rt northwest" destination="6" />
+    <arc exit="go" move="go track" destination="115" />
+  </node>
+  <node id="8" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>Between the narrow wooden track slats which run next to the path, the misty green valleys appear very far below indeed.  A milling mob of people at the base of the mountain might appear to be a mere greyish speck from this great height.  Though little is visible from this vantage point but the mountain range, off into the distance a plume of smoke can be seen rising from between the trees.</description>
+    <position x="400" y="240" z="0" />
+    <arc exit="north" move="rt north" destination="7" />
+    <arc exit="southwest" move="rt southwest" destination="9" />
+    <arc exit="go" move="go track" destination="116" />
+  </node>
+  <node id="9" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>What was once a narrow ledge comes to a crumbling end as small particles of dust and rubble release their tentative hold and plunge into the misty void miles below.  A wooden cart track clinging to the mountain wall serves as the only foothold from this point upward, while a modest path runs the length of the ledge leading to the base of the volcano.</description>
+    <position x="380" y="260" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="8" />
+    <arc exit="southwest" move="rt southwest" destination="10" />
+    <arc exit="go" move="go track" destination="117" />
+  </node>
+  <node id="10" name="Greater Fist Footpath, Narrow Ledge">
+    <description>The wind blows fiercely at this great altitude, pummeling human and stone alike with tiny, visciously sharp shards of red dust.  The stone walls are scored with innumberable scratches and scars, as they are slowly sculpted by nature's capable hands.</description>
+    <position x="360" y="280" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="9" />
+    <arc exit="west" move="rt west" destination="11" />
+  </node>
+  <node id="11" name="Greater Fist Footpath, Narrow Ledge">
+    <description>The rocks are ridden with thin sticky spider strands, likely the only occupants in this harsh environment.  A sparkling silk web arches gracefully between the rock wall and the tottering mining tracks suspended in mid-air beside the trail.</description>
+    <position x="340" y="280" z="0" />
+    <arc exit="east" move="rt east" destination="10" />
+    <arc exit="west" move="rt west" destination="12" />
+  </node>
+  <node id="12" name="Greater Fist Footpath, Narrow Ledge">
+    <description>Cradled within a diaphanous veil of sparkling spider webs, a white mass as tall as an Elothean clings to the wall.  Barely visible beneath their silken blanket, opaque eggs nearly a fist in diameter squirm and undulate with inner life.  Hundreds of long silver web strands run from wall to track, effectively preventing uninhibited passage.</description>
+    <position x="320" y="280" z="0" />
+    <arc exit="east" move="rt east" destination="11" />
+    <arc exit="west" move="rt west" destination="13" />
+  </node>
+  <node id="13" name="Greater Fist Footpath, Narrow Ledge">
+    <description>Hairline fractures run the length of the stone ledge underfoot and run up the steep mountain wall.  Looming ominously overhead, a red rock outcropping casts a shadow over the trail, trembling occasionally as winds batter the stone with gale-like force.</description>
+    <position x="300" y="280" z="0" />
+    <arc exit="east" move="rt east" destination="12" />
+    <arc exit="west" move="rt west" destination="14" />
+  </node>
+  <node id="14" name="Greater Fist Footpath, Narrow Ledge">
+    <description>Red rubble and dust crumble from the mountain wall and ledge, reacquainting travelers with the precarious state of their narrow footpath.  Thick dead roots protrude from the rock, left exposed to years of wind and water erosion.</description>
+    <position x="280" y="280" z="0" />
+    <arc exit="east" move="rt east" destination="13" />
+    <arc exit="west" move="rt west" destination="15" />
+  </node>
+  <node id="15" name="Greater Fist Footpath, Narrow Ledge">
+    <description>To either side, a steep stone wall plummets to the distant ground below and rises as if to touch the clouds above.  Only a narrow ledge desperately clinging to the rock face offers a climbable passage between the foot and cap of the mountain.  Not more than a Halfling's length from the edge of the path, the wooden cart rails hang precariously from the wall by a series of wooden supports.  Nestled between the beams, a handful of birds' nests and spider webs await the return of their creators.</description>
+    <position x="260" y="280" z="0" />
+    <arc exit="east" move="rt east" destination="14" />
+    <arc exit="southwest" move="rt southwest" destination="16" />
+  </node>
+  <node id="16" name="Greater Fist Footpath, Narrow Ledge">
+    <description>At this point the generous slope of the volcano begins to rapidly steepen until, not more than a few yards to the east, the angle of the mountain's rise is almost vertical.  Curiously, the footpath continues along a narrow ledge, whether man-made or natural is undeterminable due to its advanced state of erosion.</description>
+    <position x="240" y="300" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="15" />
+    <arc exit="northwest" move="rt northwest" destination="17" />
+  </node>
+  <node id="17" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>As the footpath takes a narrow turn north-to-southeast, a pair of rusting iron tracks nearly collides with it, hugging the eastern mountain wall.  The brittle, brown branches of a long dead tree are shattered and broken away where they once grew close to the metal struts.</description>
+    <position x="220" y="280" z="0" />
+    <arc exit="southeast" move="rt southeast" destination="16" />
+    <arc exit="northwest" move="rt northwest" destination="18" />
+    <arc exit="go" move="go track" destination="125" />
+  </node>
+  <node id="18" name="Greater Fist Footpath, Narrow Trail">
+    <description>The fragmented remains of an old mining cart lie scattered across the narrow path, time and weather having worn them beyond repair.  A detached wooden wheel wobbles unsteadily over the edge of a steep ledge, fighting vainly against the fierce wind ripping across the mountainside.  An iron axle resting across a set of metallic tracks presents a hazard to any vehicle descending the mountain.</description>
+    <position x="200" y="260" z="0" />
+    <arc exit="north" move="rt north" destination="19" />
+    <arc exit="southeast" move="rt southeast" destination="17" />
+  </node>
+  <node id="19" name="Greater Fist Footpath, Narrow Trail">
+    <description>The air is thin, moist and finely misted with the faint taste and scent of smoke.  The soil is parched and cracked, ravaged by the weather and centuries of the volcano's harsh temperament.  Brittle brown weeds grow sparsely on either side of the trail, their sickly thin leaves spread wide in a desperate plea for nourishing air, water and light.</description>
+    <position x="200" y="240" z="0" />
+    <arc exit="north" move="rt north" destination="20" />
+    <arc exit="south" move="rt south" destination="18" />
+  </node>
+  <node id="20" name="Greater Fist Footpath, Narrow Trail">
+    <description>Almost hidden beneath a large basalt boulder are the sun-bleached bones of an unidentifiable creature, apparently caught in an unfortunate avalanche.  Thin brown weeds grow between the large stones and reddish dust which threaten to overwhelm the path.</description>
+    <position x="200" y="220" z="0" />
+    <arc exit="north" move="rt north" destination="21" />
+    <arc exit="south" move="rt south" destination="19" />
+  </node>
+  <node id="21" name="Greater Fist Footpath, Narrow Trail">
+    <description>Sizzling steam rises from a jagged crevice etched into sulfur-stained basalt.  Occasionally, following a deep inner rumble, steam and smoke jet from the vent with an explosive force, only to die down to a hiss a moment later.  Tiny water droplets condense on dark stone outcroppings, drip to the floor, and trickle down the footpath in rivulets.</description>
+    <position x="200" y="200" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="22" />
+    <arc exit="south" move="rt south" destination="20" />
+  </node>
+  <node id="22" name="Greater Fist Footpath, Narrow Trail">
+    <description>Thin trickles run down from the southwestern end of the trail, collecting the red volcanic dust until it pools in small puddles of soiled water.  A pale-green fern sprouts from a moistened patch of soil, enriched by a spray of fine mist blown in from the upward path.  A dewy moisture clings to all surfaces, leaving the rocks slick and the soil slightly muddy.</description>
+    <position x="220" y="180" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="23" />
+    <arc exit="southwest" move="rt southwest" destination="21" />
+  </node>
+  <node id="23" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>A broken wooden wheel lies alongside the faint traces left by some sort of cart which passed very close to the footpath.  The corrosive fumes that drift in the air have stained its wood with a virulent array of colors.</description>
+    <position x="240" y="160" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="24" />
+    <arc exit="southwest" move="rt southwest" destination="22" />
+    <arc exit="go" move="go track" destination="131" />
+  </node>
+  <node id="24" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>Ruts criss-cross each other in faded tracks running parallel to the footpath.  There is a reek of sweating pack animal still about.</description>
+    <position x="260" y="140" z="0" />
+    <arc exit="east" move="rt east" destination="25" />
+    <arc exit="southwest" move="rt southwest" destination="23" />
+    <arc exit="go" move="go track" destination="132" />
+  </node>
+  <node id="25" name="Greater Fist Footpath, Winding Trail">
+    <description>A thin coat of yellow dust lies upon every surface.  Sulfur, brought from the deeps by the fires, has eroded in the wind to lay its patina over all, blending with the dun ash in a vile mix.</description>
+    <position x="280" y="140" z="0" />
+    <arc exit="southeast" move="rt southeast" destination="26" />
+    <arc exit="west" move="rt west" destination="24" />
+  </node>
+  <node id="26" name="Greater Fist Footpath, Winding Trail">
+    <description>The air is thin and chill, it tastes of dust and sulfur.  Yellow streaks mixed among the grey and black rocks give this spot a garish, sickly hue.</description>
+    <position x="300" y="160" z="0" />
+    <arc exit="east" move="rt east" destination="27" />
+    <arc exit="northwest" move="rt northwest" destination="25" />
+  </node>
+  <node id="27" name="Greater Fist Footpath, Winding Trail">
+    <description>The uneven road twists and turns beneath your feet, threatening to tumble you off the side into the jagged rocks far below.  Miles away, in the cold upper airs, the faint call of an eagle echoes, making the dead mountain at hand seem all the more bare.</description>
+    <position x="320" y="160" z="0" />
+    <arc exit="east" move="rt east" destination="28" />
+    <arc exit="west" move="rt west" destination="26" />
+  </node>
+  <node id="28" name="Greater Fist Footpath, Winding Trail">
+    <description>Tumbled heaps of broken obsidian are piled everywhere, remnants of some past upheaval of earth.  They gleam and glitter in the dreary light.  Catching glimpses of yourself as you move, it seems as if a bizarre army of misshapen twins follows along, aping your movements in spastic harmony.</description>
+    <position x="340" y="160" z="0" />
+    <arc exit="east" move="rt east" destination="29" />
+    <arc exit="west" move="rt west" destination="27" />
+  </node>
+  <node id="29" name="Greater Fist Footpath, Ropewalk Chasm">
+    <description>Ash and slag piled everywhere begin to resemble bizarre monuments to the dead.  The path wanders among the stones, now hugging the rockface, now veering near the crumbling edge.</description>
+    <position x="360" y="160" z="0" />
+    <arc exit="east" move="rt east" destination="30" />
+    <arc exit="west" move="rt west" destination="28" />
+  </node>
+  <node id="30" name="Greater Fist Footpath, Winding Trail">
+    <description>Each weary footstep raises a cloud of dry ash.  Broken spikes of glossy black rock rise as a forest of jagged spears in ragged clumps.</description>
+    <position x="380" y="160" z="0" />
+    <arc exit="east" move="rt east" destination="31" />
+    <arc exit="west" move="rt west" destination="29" />
+  </node>
+  <node id="31" name="Greater Fist Footpath, Winding Trail">
+    <description>The faint path winds around a spur of rock.  Curious shapes, formed from half-melted stones, tug at your imagination, forming sinister creatures at the edge of vision.</description>
+    <position x="400" y="160" z="0" />
+    <arc exit="southeast" move="rt southeast" destination="32" />
+    <arc exit="west" move="rt west" destination="30" />
+  </node>
+  <node id="32" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>Ruts from iron-shod wheels have left their mark in the friable stone.  Others have come this way it seems, and not on foot.</description>
+    <position x="420" y="180" z="0" />
+    <arc exit="east" move="rt east" destination="33" />
+    <arc exit="northwest" move="rt northwest" destination="31" />
+    <arc exit="go" move="go track" destination="140" />
+  </node>
+  <node id="33" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>The winding trail toils relentlessly along the side of the volcano.  It is as a journey for the dead, passing from shadows into shadows among endless vistas of stark barrenness.  Several sets of fresh cart tracks that run alongside the footpath are all that disturb the monotony.</description>
+    <position x="440" y="180" z="0" />
+    <arc exit="southeast" move="rt southeast" destination="34" />
+    <arc exit="west" move="rt west" destination="32" />
+    <arc exit="go" move="go track" destination="141" />
+  </node>
+  <node id="34" name="Greater Fist Footpath, Winding Trail">
+    <description>Ash has blown into heaps of dull grey material in every angle and cranny of rock.  There is not the least sign of life among the cracked and broken stones.</description>
+    <position x="460" y="200" z="0" />
+    <arc exit="south" move="rt south" destination="35" />
+    <arc exit="northwest" move="rt northwest" destination="33" />
+  </node>
+  <node id="35" name="Greater Fist Footpath, Winding Trail">
+    <description>A pathway winds in a tired and seemingly endless spiral along the rubble-strewn shoulders of this massive volcano.  Here and there, rivers of molten rock have washed across the landscape, destroying all in their path.  The stump of a once-mighty tree, burned now to charcoal, is all that is left of a green and living forest.</description>
+    <position x="460" y="220" z="0" />
+    <arc exit="north" move="rt north" destination="34" />
+    <arc exit="south" move="rt south" destination="36" />
+  </node>
+  <node id="36" name="Greater Fist Footpath, Winding Trail">
+    <description>Rocks and cinders, ranging in size from gravel to boulders of ash-colored slag larger than a Troll's appetite, are scattered across the bleak landscape.  A narrow footpath meanders through the desolation.</description>
+    <position x="460" y="240" z="0" />
+    <arc exit="north" move="rt north" destination="35" />
+    <arc exit="south" move="rt south" destination="37" />
+  </node>
+  <node id="37" name="Greater Fist Footpath, Winding Trail">
+    <description>The pathway edges along a narrow precipice of basalt that hangs out over open space.  Clouds of steam drift across the road, making your path unsure.  A ridge of curdled basalt writhes across the road, making your trek all the harder.</description>
+    <position x="460" y="260" z="0" />
+    <arc exit="north" move="rt north" destination="36" />
+    <arc exit="southeast" move="rt southeast" destination="38" />
+  </node>
+  <node id="38" name="Greater Fist Footpath, Winding Trail">
+    <description>The narrow footpath winds among cones of ash and dark, brittle rock that crumbles to jagged sand when you touch it.  The air is heavy with a flinty smell mixed with the stench of burning brimstone.  Wisps of grey smoke rise from numerous cracks in the striated rock.</description>
+    <position x="480" y="280" z="0" />
+    <arc exit="southeast" move="rt southeast" destination="39" />
+    <arc exit="northwest" move="rt northwest" destination="37" />
+  </node>
+  <node id="39" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>Cart ruts in the dust and ash approach the narrow footpath, showing another route taken by heavier traffic.  Faint marks on the rocks that bulge out of the frozen lava rills show where someone has labored to widen the path, but this work was clearly in vain.  The path, still barely a sliver of ground, hugs the tracks in the narrow space.</description>
+    <position x="500" y="300" z="0" />
+    <arc exit="south" move="rt south" destination="40" />
+    <arc exit="northwest" move="rt northwest" destination="38" />
+    <arc exit="go" move="go track" destination="147" />
+  </node>
+  <node id="40" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>Dusty cart ruts range near the narrow track, showing another route taken by other explorers.  Though it is apparent someone has tried to widen the area, their work has done little to alleviate the cramped conditions where the track and path run side by side.</description>
+    <position x="500" y="320" z="0" />
+    <arc exit="north" move="rt north" destination="39" />
+    <arc exit="south" move="rt south" destination="41" />
+    <arc exit="go" move="go track" destination="148" />
+  </node>
+  <node id="41" name="Greater Fist Footpath, Rope Bridge Approach" color="#00FF00">
+    <description>A narrow footpath ends at a rotting rope bridge that descends across a dark and fearsome gorge in one direction, and climbs up along the shoulder of a dark slag heap that has grown out of the volcano like a festering carbuncle.</description>
+    <position x="500" y="340" z="0" />
+    <arc exit="north" move="rt north" destination="40" />
+    <arc exit="southwest" move="rt southwest" destination="42" />
+    <arc exit="go" move="go track" destination="149" />
+  </node>
+  <node id="42" name="Greater Fist Footpath, Rope Bridge">
+    <description>Twin stumps, charred and splintered, form the uneasy anchorhead for an unsteady wood and rope bridge.  They lean out over a dark gorge full of noisome fumes and faint rumblings.  Surely this is a road fit only for the dead or foolhardy.</description>
+    <position x="480" y="360" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="41" />
+    <arc exit="west" move="rt west" destination="43" />
+  </node>
+  <node id="43" name="Greater Fist Footpath, Rope Bridge">
+    <description>Gaps in the aged wooden planks that make up the bridge flooring reveal a dark chasm filled with reeking smoke and old lava flows.  They writhe across the dark rocks below like petrified serpents preserved in the throes of madness.</description>
+    <position x="460" y="360" z="0" />
+    <arc exit="east" move="rt east" destination="42" />
+    <arc exit="west" move="rt west" destination="44" />
+  </node>
+  <node id="44" name="Greater Fist Footpath, Rope Bridge">
+    <description>Sagging wooden planks tied to frayed rope supports sway ominously above a jagged chasm.  The wind, stinking of sulfur and ash, makes the frail bridge moan and sway uneasily.</description>
+    <position x="440" y="360" z="0" />
+    <arc exit="east" move="rt east" destination="43" />
+    <arc exit="west" move="rt west" destination="45" />
+  </node>
+  <node id="45" name="Greater Fist Footpath, Rope Bridge">
+    <description>A pair of charred ropes, ominously frayed, arch across a gap in the side of the volcano.  Once there were many ropes to support the wood-planked pathway, but fire and heat and caustic air have eaten away at the structure until it hangs by a few threads.</description>
+    <position x="420" y="360" z="0" />
+    <arc exit="east" move="rt east" destination="44" />
+    <arc exit="west" move="rt west" destination="46" />
+  </node>
+  <node id="46" name="Greater Fist Footpath, Rope Bridge Approach" color="#00FF00">
+    <description>A rutted cart track wanders near the footpath.  Close by, a forlorn rope bridge, charred and decaying, sways in the bitter air drifting from the caldera far above.  The wooden supports appear more than half burned away, and you misdoubt they will last another awakening of the fires.</description>
+    <position x="400" y="360" z="0" />
+    <arc exit="east" move="rt east" destination="45" />
+    <arc exit="southwest" move="rt southwest" destination="47" />
+    <arc exit="go" move="go track" destination="154" />
+  </node>
+  <node id="47" name="Greater Fist Footpath, Shattered Rock">
+    <description>The ground is littered with what appears to be pieces of a stone eggshell, as if some creature from another universe had found a nesting place here.  Upon closer examination, the shell is the remnant of a bubble of magma, blown out by the pressure within the volcano into an eerie mockery of a child's soap bubble.</description>
+    <position x="380" y="380" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="46" />
+    <arc exit="west" move="rt west" destination="48" />
+  </node>
+  <node id="48" name="Greater Fist Footpath, Stone Vines">
+    <description>Runnels of frozen lava have trickled across a boulder, resembling petrified roots clinging to the cracked and fissured rock face.  Corrosive rains have pitted the surface so that it appears to resemble the Black Moon.</description>
+    <position x="360" y="380" z="0" />
+    <arc exit="east" move="rt east" destination="47" />
+    <arc exit="west" move="rt west" destination="49" />
+  </node>
+  <node id="49" name="Greater Fist Footpath, Twisting Trail">
+    <description>A worn footpath dodges between the edge of the cliff and a large pool of magma.  Upon it a large flame dances eerily, flickering about the surface at random.</description>
+    <position x="340" y="380" z="0" />
+    <arc exit="east" move="rt east" destination="48" />
+    <arc exit="west" move="rt west" destination="50" />
+  </node>
+  <node id="50" name="Greater Fist Footpath, Twisting Trail">
+    <description>Yellow sulfuric clouds billow down from above, partially obscuring a primitive granite desktop and stool that squat alongside the footpath.  A skeleton lies upon the ground, its fingerbones clawing at its throat, a heavy iron chain bolting its left leg to the desk.</description>
+    <position x="320" y="380" z="0" />
+    <arc exit="east" move="rt east" destination="49" />
+    <arc exit="southwest" move="rt southwest" destination="51" />
+  </node>
+  <node id="51" name="Greater Fist Footpath, Twisting Trail">
+    <description>A thick yellow fog drifts in from the northwest, coating every available surface in an oily mist that reeks of rotten meat.  The slick scum it has formed over the jagged rocks and footpath have borne fruit in the shape of numerous orange mushrooms.</description>
+    <position x="300" y="400" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="50" />
+    <arc exit="west" move="rt west" destination="52" />
+  </node>
+  <node id="52" name="Greater Fist Footpath, Twisting Trail">
+    <description>The footpath ambles through a desolate terrain of withered, blackened trees.  Some crumble as you pass, turning into charcoal dust that forms a sooty, choking cover which blankets the landscape.</description>
+    <position x="280" y="400" z="0" />
+    <arc exit="east" move="rt east" destination="51" />
+    <arc exit="west" move="rt west" destination="53" />
+  </node>
+  <node id="53" name="Greater Fist Footpath, Twisting Trail">
+    <description>An andesite slab the size of a hut wall has cracked free from the volcano.  It lies, fractured but largely intact, across a pair of boulders that neatly frame the footpath.  It is cooler here as a result, protected from direct heat and falling debris, but the wind howls like an imprisoned demon.</description>
+    <position x="260" y="400" z="0" />
+    <arc exit="east" move="rt east" destination="52" />
+    <arc exit="west" move="rt west" destination="54" />
+  </node>
+  <node id="54" name="Greater Fist Footpath, Twisting Trail">
+    <description>The footpath is partially blocked by a sprawling boulder of granite, its surface glinting with yellow feldspar.  The way beyond lies through a narrow ledge between the boulder's sharp edges and a sudden drop to certain death.</description>
+    <position x="240" y="400" z="0" />
+    <arc exit="east" move="rt east" destination="53" />
+    <arc exit="southwest" move="rt southwest" destination="55" />
+  </node>
+  <node id="55" name="Greater Fist Footpath, Twisting Trail">
+    <description>A bed of friable ash blankets the entire area in view.  Occasionally enough wisps aside, blown by brief gusts of fetid air, to reveal a line of light-colored marking stones that indicate safe passage.</description>
+    <position x="220" y="420" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="54" />
+    <arc exit="southwest" move="rt southwest" destination="56" />
+  </node>
+  <node id="56" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>A usable footpath with copper-framed guide poles has disappeared under a recent avalanche.  Faring better are a pair of metallic cart tracks, barely an arm's length away, huddled in the shadow of the volcanic slope.</description>
+    <position x="200" y="440" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="55" />
+    <arc exit="west" move="rt west" destination="57" />
+    <arc exit="go" move="go track" destination="164" />
+  </node>
+  <node id="57" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>The footpath and cart track trundle along uneasily next to one another on this narrow stretch of land.  A badly dented mining cart lies upended to one side, its wheels spinning rapidly in the fierce southern wind.</description>
+    <position x="140" y="440" z="0" />
+    <arc exit="east" move="rt east" destination="56" />
+    <arc exit="northwest" move="rt northwest" destination="58" />
+    <arc exit="go" move="go track" destination="165" />
+  </node>
+  <node id="58" name="Greater Fist Footpath, Twisting Trail">
+    <description>A footpath stumbles treacherously down a series of precariously balanced slate chips the size and color of a dead kelpie.  Ashen cinders swirl wildly, blown by blasts of hot sulfur-laden air.</description>
+    <position x="120" y="420" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="59" />
+    <arc exit="southeast" move="rt southeast" destination="57" />
+  </node>
+  <node id="59" name="Greater Fist Footpath, Twisting Trail">
+    <description>Several large, angular boulders have nearly obliterated portions of the footpath.  Lodged deep in the latite strata, the explosion of their impact has ripped free enough sharp-edged rock chips to stock a small quarry.</description>
+    <position x="140" y="400" z="0" />
+    <arc exit="north" move="rt north" destination="60" />
+    <arc exit="southwest" move="rt southwest" destination="58" />
+  </node>
+  <node id="60" name="Greater Fist Footpath, Twisting Trail">
+    <description>A strong breeze blows along this exposed western flank of the volcano wall.  Like a furnace blast, it whips black tuff into a swirling maelstrom of gritty, blinding ash.</description>
+    <position x="140" y="380" z="0" />
+    <arc exit="north" move="rt north" destination="61" />
+    <arc exit="south" move="rt south" destination="59" />
+  </node>
+  <node id="61" name="Greater Fist Footpath, Twisting Trail">
+    <description>A rain of charcoal-grey ribbons twist gently down the rough, granitic terrain.  All is silent, save for an occasional breeze that scatters the ribbons over the volcano's edge like last season's leaves.</description>
+    <position x="140" y="340" z="0" />
+    <arc exit="north" move="rt north" destination="62" />
+    <arc exit="south" move="rt south" destination="60" />
+  </node>
+  <node id="62" name="Greater Fist Footpath, Twisting Trail">
+    <description>A faint footpath runs across a friable ridge of high-lying rock.  Its edges are lapped by waves of dully glowing lava.  The rock smokes and bubbles continuously under the onslaught.</description>
+    <position x="140" y="300" z="0" />
+    <arc exit="north" move="rt north" destination="63" />
+    <arc exit="south" move="rt south" destination="61" />
+  </node>
+  <node id="63" name="Greater Fist Footpath, Twisting Trail">
+    <description>Only the footpath and a small granitic promontory remain untouched by waves of slowly churning lava.  Upon the promontory is a suit of bejeweled field plate armor, dazzling in its splendor.  Charred bones sticking out of the various apertures are all that remain of the former owner.</description>
+    <position x="140" y="280" z="0" />
+    <arc exit="north" move="rt north" destination="64" />
+    <arc exit="south" move="rt south" destination="62" />
+  </node>
+  <node id="64" name="Greater Fist Footpath, Twisting Trail">
+    <description>Puddles of stagnant, glowing magma collect in shallow pockets to either side of a barely discernable footpath.  The magma bubbles periodically, spewing globs of lapilli that hiss where they land.</description>
+    <position x="140" y="260" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="65" />
+    <arc exit="south" move="rt south" destination="63" />
+  </node>
+  <node id="65" name="Greater Fist Footpath, Twisting Trail">
+    <description>A series of natural dacite steps against the rock wall once conveyed a small waterfall down to this area on the volcano's western slope.  Now, an orange fluid drips languidly over the rocks, collecting in a large, viscous pool.  The plants around it have turned yellow, their dead stalks floating on the steaming morass.</description>
+    <position x="160" y="240" z="0" />
+    <arc exit="north" move="rt north" destination="66" />
+    <arc exit="southwest" move="rt southwest" destination="64" />
+  </node>
+  <node id="66" name="Greater Fist Footpath, Twisting Trail">
+    <description>A massive granitic boulder shoves violently upwards through the earth's surface like a dagger thrust from below.  Most of the ledge now hangs precariously at an angle sloping away from the wall.  Dirt crumbles and falls away as you watch.</description>
+    <position x="160" y="220" z="0" />
+    <arc exit="north" move="rt north" destination="67" />
+    <arc exit="south" move="rt south" destination="65" />
+  </node>
+  <node id="67" name="Greater Fist Footpath, Twisting Trail">
+    <description>A rivulet of bubbling yellow water runs through a landscape of cracked earth and grey schist.  It reeks of rotten eggs.  A row of dead tree stumps complete this volcanic caricature of pastoral woods and brook.</description>
+    <position x="160" y="180" z="0" />
+    <arc exit="north" move="rt north" destination="68" />
+    <arc exit="south" move="rt south" destination="66" />
+  </node>
+  <node id="68" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>The air is thick with a yellow, oily steam that coats everything in sight.  The jagged, barren latite surrounding you sweats this moisture, and the footpath beneath your feet is slippery with it.  The metal band of the nearby cart tracks have partly corroded because of it.  Your armor pieces begin to sizzle as the liquid condenses upon them.</description>
+    <position x="160" y="160" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="69" />
+    <arc exit="south" move="rt south" destination="67" />
+    <arc exit="go" move="go track" destination="176" />
+  </node>
+  <node id="69" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>Steam billows from narrow fissures in the rocky trail, warming the air to an almost uncomfortable degree.  A mining cart track hugs the inner wall of the ledge, leaving travelers on the adjacent footpath very little room to maneuver.  Far below, one can see the blasted ruins of the Sicle Grove Shelter.</description>
+    <position x="180" y="140" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="70" />
+    <arc exit="southwest" move="rt southwest" destination="68" />
+    <arc exit="go" move="go track" destination="177" />
+  </node>
+  <node id="70" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>Small rocks tumble past, bouncing eagerly off the metal rails of the cart tracks and onto the footpath which runs beside it, before finally plummeting down the mountainside.  A dusting of ash coats the ground, though the metal rails of the track gleam with use.  Footprints in the grey dust bear mute witness to others who have passed this way.</description>
+    <position x="200" y="120" z="0" />
+    <arc exit="east" move="rt east" destination="71" />
+    <arc exit="southwest" move="rt southwest" destination="69" />
+    <arc exit="go" move="go track" destination="178" />
+  </node>
+  <node id="71" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>A distant rumble echoes as you hurry along the footpath.  Despite continual exposure to storm and wind, the metal rails of the cart track which runs alongside the path are shiny, indicating frequent use.</description>
+    <position x="220" y="120" z="0" />
+    <arc exit="east" move="rt east" destination="72" />
+    <arc exit="west" move="rt west" destination="70" />
+    <arc exit="go" move="go track" destination="179" />
+  </node>
+  <node id="72" name="Greater Fist Footpath, Near Cart Track">
+    <description>Pale grey ash wafts through the air, tickling the throats of travelers making their way along the narrow footpath.  A cart track parallels the path as both traverse the ledge to the west.</description>
+    <position x="240" y="120" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="73" />
+    <arc exit="west" move="rt west" destination="71" />
+    <arc exit="go" move="go track" destination="180" />
+  </node>
+  <node id="73" name="Greater Fist Footpath, Twisting Trail">
+    <description>The north wind blows strongly, chilling travelers to the bone and pressing them back against the side of the mountain as they make their way along the narrow trail.</description>
+    <position x="260" y="100" z="0" />
+    <arc exit="east" move="rt east" destination="74" />
+    <arc exit="southwest" move="rt southwest" destination="72" />
+  </node>
+  <node id="74" name="Greater Fist Footpath, Misty Trail">
+    <description>To the northwest, water glints in the sunlight as the river flows into the great lake which separates the towns of Riverhaven and Langenfirth.  From this distance, it is difficult to make out any detail other than the weathered grey walls of Riverhaven.</description>
+    <description>To the northwest, the moonlight reflects off the waters of the river which flows into the great lake between the towns of Riverhaven and Langenfirth.  Dim lights sparkle in the distance, from the lamps which illuminate the homes of Riverhaven's residents.</description>
+    <position x="280" y="100" z="0" />
+    <arc exit="east" move="rt east" destination="75" />
+    <arc exit="west" move="rt west" destination="73" />
+  </node>
+  <node id="75" name="Greater Fist Footpath, Misty Trail">
+    <description>A gnarled tree clings to the black rock of the mountainside, warped by wind and harsh weather into a twisted tangle of branches which hovers above the trail.  Perched upon a branch, a squirrel blinks curiously down at passersby before turning its attention to more important issues, such as the nuts and other food it seeks to store for the coming winter.</description>
+    <position x="300" y="100" z="0" />
+    <arc exit="southeast" move="rt southeast" destination="76" />
+    <arc exit="west" move="rt west" destination="74" />
+  </node>
+  <node id="76" name="Greater Fist Footpath, Misty Trail">
+    <description>A bubbling noise and warm mist floats up the trail from the east, overcoming the natural chilliness of the mountain air.  To the northwest, the trail climbs steeply along the rocky ledge, leaving even the most stalwart traveler breathless with exertion.</description>
+    <position x="320" y="120" z="0" />
+    <arc exit="east" move="rt east" destination="77" />
+    <arc exit="northwest" move="rt northwest" destination="75" />
+  </node>
+  <node id="77" name="Greater Fist Footpath, Hot Springs" color="#FF0000">
+    <description>Green minerals streak the black stone of the geyser cones and the basalt path underfoot as travelers make their way through the misty, steam-filled air past bubbling hot springs.</description>
+    <position x="340" y="120" z="0" />
+    <arc exit="east" move="rt east" destination="78" />
+    <arc exit="west" move="rt west" destination="76" />
+  </node>
+  <node id="78" name="Greater Fist Footpath, Hot Springs" color="#FF0000">
+    <description>Rocky cones sit in the midst of a hot spring, towering several feet above the level of the pool.  Water bubbles within the cones, running down the glassy black rock into the spring, while clouds of steam fill the air.</description>
+    <position x="360" y="120" z="0" />
+    <arc exit="east" move="rt east" destination="79" />
+    <arc exit="west" move="rt west" destination="77" />
+  </node>
+  <node id="79" name="Greater Fist Footpath, Hot Springs" color="#FF0000">
+    <description>The path winds its way among hot springs and cones of rock as it rises up the mountain.  Water tumbles from spring to bubbling spring, before finally pouring over the mountain in a steaming cascade somewhere below.</description>
+    <position x="380" y="120" z="0" />
+    <arc exit="east" move="rt east" destination="80" />
+    <arc exit="west" move="rt west" destination="78" />
+  </node>
+  <node id="80" name="Greater Fist Footpath, Hot Springs" color="#FF0000">
+    <description>Pools have formed in the few flat areas of the trail, their steaming waters tumbling eagerly over the glassy black rock, from one to another, until they finally cascade over the ledge.  The pools are evidently fed by hot springs, and their steam fills the cool air.</description>
+    <position x="400" y="120" z="0" />
+    <arc exit="east" move="rt east" destination="81" />
+    <arc exit="west" move="rt west" destination="79" />
+  </node>
+  <node id="81" name="Greater Fist Footpath, Misty Trail">
+    <description>Moist steam fills the air, wafting down the mountainside from somewhere above.  No greenery cushions the starkness of the path, just jagged basalt which seems to bite at the feet of travelers as they carefully pick their way along the footpath.</description>
+    <position x="420" y="120" z="0" />
+    <arc exit="east" move="rt east" destination="82" />
+    <arc exit="west" move="rt west" destination="80" />
+  </node>
+  <node id="82" name="Greater Fist Footpath, Twisting Trail">
+    <description>According to a local legend, a mighty hero was slain in battle by the World Dragon.  His bones became the mountains which surround Dirge, and evermore his blackened fists tower skyward, silently cursing the heavens from which the beast fell.  As travelers make their way along the path of the towering mountain, the legend is hard to dismiss as a mere fable.</description>
+    <position x="440" y="120" z="0" />
+    <arc exit="east" move="rt east" destination="83" />
+    <arc exit="west" move="rt west" destination="81" />
+  </node>
+  <node id="83" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>A narrow rivulet of water snakes its way down the mountainside along the metal rails of the nearby cart track before finally crossing the trail to trickle over the side of the ledge.  The water smells faintly of rotten eggs, an acrid, burning stench.</description>
+    <position x="460" y="120" z="0" />
+    <arc exit="east" move="rt east" destination="84" />
+    <arc exit="west" move="rt west" destination="82" />
+    <arc exit="go" move="go track" destination="191" />
+  </node>
+  <node id="84" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>The basalt rock of the path vibrates in sympathy with the rails of the nearby cart track, as travelers make their way along the steep mountain rail.</description>
+    <position x="480" y="120" z="0" />
+    <arc exit="east" move="rt east" destination="85" />
+    <arc exit="west" move="rt west" destination="83" />
+    <arc exit="go" move="go track" destination="192" />
+  </node>
+  <node id="85" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>The mine cart track runs parallel to the trail, its narrow rails gleaming brightly in the sunlight.  Travelers make their way along the outer edge of the ledge cautiously, lest a momentary dizziness at this altitude lead to an even more dizzying fall down the mountainside.</description>
+    <description>The mine cart tracks run parallel to the trail, its narrow rails gleaming gently in the moonlight.  Travelers make their way along the outer edge of the ledge cautiously, lest a momentary dizziness at this altitude lead to an even more dizzying fall down the mountainside.</description>
+    <position x="500" y="120" z="0" />
+    <arc exit="southeast" move="rt southeast" destination="86" />
+    <arc exit="west" move="rt west" destination="84" />
+    <arc exit="go" move="go track" destination="193" />
+  </node>
+  <node id="86" name="Greater Fist Footpath, Twisting Trail">
+    <description>The steep path continues on, wending its way along the contours of the mountain.  The way is narrow, surrounded by ankle-wrenching flows of broken basalt.  To the northeast, the jagged peaks of the mountain range stretch on to the horizon.</description>
+    <position x="520" y="140" z="0" />
+    <arc exit="south" move="rt south" destination="87" />
+    <arc exit="northwest" move="rt northwest" destination="85" />
+  </node>
+  <node id="87" name="Greater Fist Footpath, Twisting Trail">
+    <description>Gnarled brush clings tenuously to the mountainside as the path climbs the rocky slope.  Mountain goats might possibly feel at home on the steep terrain, though given the sparse greenery, even that seems dubious.</description>
+    <position x="520" y="160" z="0" />
+    <arc exit="north" move="rt north" destination="86" />
+    <arc exit="south" move="rt south" destination="88" />
+  </node>
+  <node id="88" name="Greater Fist Footpath, Twisting Trail">
+    <description>Withered blades of grass growing along the steep trail add a dribble of color to the otherwise rocky landscape.  A lone bird trills somewhere in the distance, its plaintive song underscoring the surrounding desolation.</description>
+    <position x="520" y="180" z="0" />
+    <arc exit="north" move="rt north" destination="87" />
+    <arc exit="south" move="rt south" destination="89" />
+  </node>
+  <node id="89" name="Greater Fist Footpath, Twisting Trail">
+    <description>Once pristine and sweet, a cinder-choked spring flowing near the trail struggles to clean itself.  Small tracks preserved in ash testify that some animals survived the last cataclysm, at least long enough to seek water.</description>
+    <position x="520" y="220" z="0" />
+    <arc exit="north" move="rt north" destination="88" />
+    <arc exit="south" move="rt south" destination="90" />
+  </node>
+  <node id="90" name="Greater Fist Footpath, Near Cart Track">
+    <description>Ribbons of cooled lava dot the precipitate trail.  As they fell earthwards, some took on the shape of long, twisting bands of stone.  Others resemble budding flowers -- but all are sharp and treacherous to tread upon.  Glinting metal can be seen where the trail and tracks bend to the southeast.</description>
+    <position x="520" y="240" z="0" />
+    <arc exit="north" move="rt north" destination="89" />
+    <arc exit="south" move="rt south" destination="91" />
+  </node>
+  <node id="91" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>Metal rails appear from a lava tunnel, then twist southeast alongside the footpath around a large block of greenish volcanic rock sparkling with peridots.  A broken handpick lies within the tracks, and a few feet away, an old hat is jammed into the lower brambles of a thorn bush.</description>
+    <position x="520" y="260" z="0" />
+    <arc exit="north" move="rt north" destination="90" />
+    <arc exit="southeast" move="rt southeast" destination="92" />
+    <arc exit="go" move="go track" destination="199" />
+  </node>
+  <node id="92" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>Curving slightly from the northwest, the track bends towards the footpath before disappearing into a lava tunnel.  The track and footpath are laid over the bubbles of an old scoria flow, now softened by erosion and time.</description>
+    <position x="540" y="280" z="0" />
+    <arc exit="south" move="rt south" destination="93" />
+    <arc exit="northwest" move="rt northwest" destination="91" />
+    <arc exit="go" move="go track" destination="200" />
+  </node>
+  <node id="93" name="Greater Fist Footpath, Twisting Trail">
+    <description>Continuing northward, the footpath's near-perpendicular angle sends bits of rubble skittering down the trail.  The acrid scent of burnt flesh and vegetation hangs in the air despite the cleansing rains and snows of passing seasons.</description>
+    <position x="540" y="300" z="0" />
+    <arc exit="north" move="rt north" destination="92" />
+    <arc exit="south" move="rt south" destination="94" />
+  </node>
+  <node id="94" name="Greater Fist Footpath, Twisting Trail">
+    <description>Lava has pushed a hollow tree felled by seismic tremors against the edge of the trail, partially blocking the footpath.  One end of the trunk has collapsed, revealing the decaying remains of a den of squirrels huddled against each other in their nest.</description>
+    <position x="540" y="340" z="0" />
+    <arc exit="north" move="rt north" destination="93" />
+    <arc exit="southwest" move="rt southwest" destination="95" />
+  </node>
+  <node id="95" name="Greater Fist Footpath, Broken Shrine">
+    <description>Debris from a marble statue, its features shattered beyond recognition, lies strewn across the inclined trail.  Someone has piled the larger chunks by the path's edge, resulting in a strange juxtaposition of ear, foot and nose at the top of the mound.</description>
+    <position x="520" y="360" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="94" />
+    <arc exit="south" move="rt south" destination="96" />
+  </node>
+  <node id="96" name="Greater Fist Footpath, Twisting Trail">
+    <description>Dirge is visible to the southeast, off in the far distance from this vantage point on the footpath.  The buildings seem less decrepit and shabby, but the landscape can't hide the wounds and scarring inflicted by past volcanic eruptions.</description>
+    <description>The lights of Dirge are visible to the southeast off in the far distance from this vantage point on the footpath.  Night's darkness cloaks the decrepit buildings and scarred landscape below.</description>
+    <position x="520" y="400" z="0" />
+    <arc exit="north" move="rt north" destination="95" />
+    <arc exit="southeast" move="rt southeast" destination="97" />
+  </node>
+  <node id="97" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>Metal tracks appear from a mineral encrusted fissure in the rock and descend sharply, heading southeast beside the footpath.  An old boot, stiff from the elements, rests half-hidden by rubble near the rails.</description>
+    <position x="540" y="420" z="0" />
+    <arc exit="south" move="rt south" destination="98" />
+    <arc exit="northwest" move="rt northwest" destination="96" />
+    <arc exit="go" move="go track" destination="205" />
+  </node>
+  <node id="98" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>Some small, now unidentifiable creature, not quite quick enough to move off the tracks running next to the footpath, lies smeared across several wooden ties that connect the metal railings.  The fragments of fur and bone that remain haven't started to decay.</description>
+    <position x="540" y="440" z="0" />
+    <arc exit="north" move="rt north" destination="97" />
+    <arc exit="southwest" move="rt southwest" destination="99" />
+    <arc exit="go" move="go track" destination="206" />
+  </node>
+  <node id="99" name="Greater Fist Footpath, Near Cart Track" color="#00FF00">
+    <description>Shiny metal rails twist around the trail's sharp hairpin turn, almost overlapping the footpath, then disappearing behind the roots of a tree ripped from the soil.  Several wriggling white grubs cling to the exposed roots and burrow in the dirt near the trunk.</description>
+    <position x="520" y="460" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="98" />
+    <arc exit="northwest" move="rt northwest" destination="100" />
+    <arc exit="go" move="go track" destination="207" />
+  </node>
+  <node id="100" name="Greater Fist Footpath, Twisting Trail">
+    <description>At the edge of the path, an overturned basket lies fused to the ground by cinders and mud.  Nearby, several loaves of bread petrified by the ash are scattered along the trail.</description>
+    <position x="500" y="440" z="0" />
+    <arc exit="southeast" move="rt southeast" destination="99" />
+    <arc exit="northwest" move="rt northwest" destination="101" />
+  </node>
+  <node id="101" name="Greater Fist Footpath, Twisting Trail">
+    <description>A tattered bit of red silk is caught on a low thorn bush, its sparkling color out of place in the desolation.  Small, ash-filled footprints visible in the hardened muck indicate someone running westward down the steep trail.  The path curves to the southeast, then straightens.</description>
+    <position x="480" y="420" z="0" />
+    <arc exit="southeast" move="rt southeast" destination="100" />
+    <arc exit="west" move="rt west" destination="102" />
+  </node>
+  <node id="102" name="Greater Fist Footpath, Twisting Trail">
+    <description>The boulder wall lining the steep path dwindles to several piles of smaller stones mixed with old ash and singed vegetation.  A crow struts among the ashes, cawing shrilly as it searches for food.</description>
+    <position x="460" y="420" z="0" />
+    <arc exit="east" move="rt east" destination="101" />
+    <arc exit="west" move="rt west" destination="103" />
+  </node>
+  <node id="103" name="Greater Fist Footpath, Twisting Trail">
+    <description>Violet blossoms tumble from a high crevice formed by two boulders jammed together alongside the trail, mute witness to the will of life to renew itself after any catastrophe.  Other cracks in the rocks have begun to fill with ashy soil, ready to host more plants.  The trail runs in a generally eastward direction at a deeply pitched incline.</description>
+    <position x="440" y="420" z="0" />
+    <arc exit="east" move="rt east" destination="102" />
+    <arc exit="west" move="rt west" destination="104" />
+  </node>
+  <node id="104" name="Greater Fist Footpath, Twisting Trail">
+    <description>Grey-green ignimbrite boulders create a broken wall which flanks the trail as it continues at a sharp vertical angle.  Lichen has spread across the stony face and a clump of tough brown weeds cluster at the base.</description>
+    <position x="420" y="420" z="0" />
+    <arc exit="east" move="rt east" destination="103" />
+    <arc exit="west" move="rt west" destination="105" />
+  </node>
+  <node id="105" name="Greater Fist Footpath, Twisting Trail">
+    <description>Caught by a previous eruption, the preserved body of a young girl lies at the edge of the path, an outline of her form visible under a mound of ash and cinders.  Her hand appears to be curled under her chin as if in peaceful sleep.  A scrap of dull red fabric pokes through one edge of the debris covering her.</description>
+    <position x="400" y="420" z="0" />
+    <arc exit="east" move="rt east" destination="104" />
+    <arc exit="southwest" move="rt southwest" destination="106" />
+  </node>
+  <node id="106" name="Greater Fist Footpath, Twisting Trail">
+    <description>Trees, stripped of leaves by falling vitric tuffs, stand naked beside the inclining path, their trunks blackened by blasts of heat and gaseous acids from the eruptions.  A hot breeze blows through the charred branches, making a soft crackling sound.</description>
+    <position x="380" y="440" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="105" />
+    <arc exit="west" move="rt west" destination="107" />
+  </node>
+  <node id="107" name="Greater Fist Footpath, Twisting Trail">
+    <description>Mud flows have partially concealed the sharply sloping path, making passage difficult.  Ash coats the plants, masking their once-vibrant colors with a uniform grey.  A few bees explore the dusty flowers, searching fruitlessly for nectar.</description>
+    <position x="360" y="440" z="0" />
+    <arc exit="east" move="rt east" destination="106" />
+    <arc exit="west" move="rt west" destination="108" />
+  </node>
+  <node id="108" name="Greater Fist Footpath, Large Boulder">
+    <description>Cinders, ash, and mud mixed with rocky debris have collected at the base of the footpath.  Once past the mounds littering the trail, the path continues towards the summit of the volcano, twisting amid the cooling flows and ruined vegetation.</description>
+    <position x="340" y="440" z="0" />
+    <arc exit="east" move="rt east" destination="107" />
+    <arc exit="go" move="go small footpath" destination="217" />
+  </node>
+  <node id="109" name="Greater Fist Cart Track, Volcano's Peak" color="#00FF00">
+    <description>Blackened and hardened lava flows swirl across the ground, creating bizarre images that look like twisted, anguished faces.  Gnarled branches of dead trees reach down, brushing at those doomed forms as if trying to provide comfort.  An ash-covered footpath stops not far from here in a dead end.</description>
+    <position x="280" y="220" z="1" />
+    <arc exit="northeast" move="rt northeast" destination="110" />
+    <arc exit="go" move="go footpath" destination="1" />
+  </node>
+  <node id="110" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>The narrow shelf curves sharply around the volcano's shoulder, forcing this track up against the nearby footpath.  A breathtaking vista is displayed all around, showing off the desolate desert far to the northwest and the sparkling sea waters to the northeast.</description>
+    <position x="300" y="200" z="1" />
+    <arc exit="east" move="rt east" destination="111" />
+    <arc exit="southwest" move="rt southwest" destination="109" />
+    <arc exit="go" move="go footpath" destination="2" />
+  </node>
+  <node id="111" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>Winding in an upward path, the treacherously thin shelf comes to a startling end, effectively preventing all downward passage.  Instead, travelers must make use of the weather-worn track which barely looks stable enough to breathe upon.</description>
+    <position x="320" y="200" z="1" />
+    <arc exit="east" move="rt east" destination="112" />
+    <arc exit="west" move="rt west" destination="110" />
+    <arc exit="go" move="go footpath" destination="3" />
+  </node>
+  <node id="112" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>A sickly vine occasionally pokes its yellowed leaves between the wooden track slats in an effort to glean a bit of clean sunlight.  The atmosphere is fairly choked with smoke and red volcanic ash, which cast a dim shadow over the area and almost obscures the accompanying footpath.</description>
+    <position x="340" y="200" z="1" />
+    <arc exit="east" move="rt east" destination="113" />
+    <arc exit="west" move="rt west" destination="111" />
+    <arc exit="go" move="go footpath" destination="4" />
+  </node>
+  <node id="113" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>The rock face of the mountain is broken and scarred, massive gaping holes evidence of an avalanche of stones and rubble in years past.  The wooden track shakes and creaks ominously as the cart rumbles along, seeming less stable than the sliver of a path which follows each contour.</description>
+    <position x="360" y="200" z="1" />
+    <arc exit="east" move="rt east" destination="114" />
+    <arc exit="west" move="rt west" destination="112" />
+    <arc exit="go" move="go footpath" destination="5" />
+  </node>
+  <node id="114" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>Rotted timbers creak under a weight which they were never intended to support.  The beams bracing the mining rails groan and shake the cart, making the nearby footpath seem the more desirable route.</description>
+    <position x="380" y="200" z="1" />
+    <arc exit="southeast" move="rt southeast" destination="115" />
+    <arc exit="west" move="rt west" destination="113" />
+    <arc exit="go" move="go footpath" destination="6" />
+  </node>
+  <node id="115" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>The rickety tracks and faint footpath take a sharp northwest-to-south turn as they cling at a steep angle to the face of the volcano.  The mouth of the mountain looms ominously above, emitting a threatening geyser of steam and smoke.  Below, wooden tracks and a barely discernable pathway intertwine as they spiral to the valley.</description>
+    <position x="400" y="220" z="1" />
+    <arc exit="south" move="rt south" destination="116" />
+    <arc exit="northwest" move="rt northwest" destination="114" />
+    <arc exit="go" move="go footpath" destination="7" />
+  </node>
+  <node id="116" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>Between the narrow wooden track slats, the misty green valleys appear very far below indeed.  A milling mob of people at the base of the volcano would seem a mere greyish spec from this height.  Though little is visible from this vantage point but the mountain range, off in the distance a plume of smoke can be seen rising from between the trees.  The footpath, almost invisible, runs alongside the track.</description>
+    <position x="400" y="240" z="1" />
+    <arc exit="north" move="rt north" destination="115" />
+    <arc exit="southwest" move="rt southwest" destination="117" />
+    <arc exit="go" move="go footpath" destination="8" />
+  </node>
+  <node id="117" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>What was once a narrow ledge comes to a crumbling end as small particles of dust and rubble release their tentative hold and plunge into the misty void miles below.  The wooden cart track clings to the mountain wall, while the modest footpath next to it runs the length of the ledge leading to the base of the volcano.</description>
+    <position x="380" y="260" z="1" />
+    <arc exit="northeast" move="rt northeast" destination="116" />
+    <arc exit="northwest" move="rt northwest" destination="118" />
+    <arc exit="go" move="go footpath" destination="9" />
+  </node>
+  <node id="118" name="Greater Fist Cart Track, Narrow Ledge">
+    <description>The rocks are ridden with thin sticky spider strands, likely the only living occupants in this harsh environment.  A sparkling silk web archs gracefully between the rock wall and the tottering mining tracks.</description>
+    <position x="340" y="240" z="1" />
+    <arc exit="east" move="rt east" destination="120" />
+    <arc exit="west" move="rt west" destination="119" />
+  </node>
+  <node id="119" name="Greater Fist Cart Track, Narrow Ledge">
+    <description>Cradled within a diaphanous veil of sparkling spider webs, a white mass as tall as an Elothean clings to the nearby wall.  Barely visible beneath their silken blanket, opaque eggs nearly a fist in diameter squirm and undulate with inner life.  Hundreds of long silver web strands run from wall to track, effectively preventing clear, uninhibited passage on the footpath.</description>
+    <position x="320" y="240" z="1" />
+    <arc exit="east" move="rt east" destination="118" />
+    <arc exit="west" move="rt west" destination="121" />
+  </node>
+  <node id="120" name="Greater Fist Cart Track, Narrow Ledge">
+    <description>The wind blows fiercely at this great altitude, pummeling human and stone alike with tiny, visciously sharp shards of red dust.  The stone walls are scored with innumberable scratches and scars, as they are slowly sculpted by nature's capable hands.</description>
+    <position x="360" y="240" z="1" />
+    <arc exit="southeast" move="rt southeast" destination="117" />
+    <arc exit="west" move="rt west" destination="118" />
+  </node>
+  <node id="121" name="Greater Fist Cart Track, Narrow Ledge">
+    <description>Hairline fractures run the length of the stone ledge and steep mountain wall.  Looming ominously overhead, the red rock outcropping casts a shadow over the tracks ahead, trembling occasionally as winds batter the stone with gale-like force.</description>
+    <position x="300" y="240" z="1" />
+    <arc exit="east" move="rt east" destination="119" />
+    <arc exit="west" move="rt west" destination="122" />
+  </node>
+  <node id="122" name="Greater Fist Cart Track, Narrow Ledge">
+    <description>Red rubble and dust crumble from the mountainside and fall between the slats supporting the iron rails.  Thick dead roots protrude from the rock on the footpath, left exposed to the elements by years of wind and water erosion.</description>
+    <position x="280" y="240" z="1" />
+    <arc exit="east" move="rt east" destination="121" />
+    <arc exit="west" move="rt west" destination="123" />
+  </node>
+  <node id="123" name="Greater Fist Cart Track, Narrow Ledge">
+    <description>To either side, a steep stone wall plummets to the distant ground below and rises as if to touch the clouds above.  Only a narrow ledge desperately clinging to the rock face offers a climbable passage between the foot and cap of the mountain.  Not more than a Halfling's length from the edge of the path, the wooden cart rails hang precariously from the wall by a series of wooden supports.</description>
+    <position x="260" y="240" z="1" />
+    <arc exit="east" move="rt east" destination="122" />
+    <arc exit="southwest" move="rt southwest" destination="124" />
+  </node>
+  <node id="124" name="Greater Fist Cart Track, Winding Path">
+    <description>The steep rise of the volcano levels out to a generous slope, a welcome break from the hazardous tracks above.  Although planted now in firm soil, the steel rails nonetheless continue their downward descent at a breakneck pace.</description>
+    <position x="240" y="260" z="1" />
+    <arc exit="northeast" move="rt northeast" destination="123" />
+    <arc exit="southwest" move="rt southwest" destination="125" />
+  </node>
+  <node id="125" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>As the iron tracks take a narrow turn from north to southeast, they skirt the nearby footpath and hug the eastern mountain wall.  The brittle, brown branches of a long dead tree are shattered and broken away where they once grew close to the metal ruts.</description>
+    <position x="220" y="280" z="1" />
+    <arc exit="north" move="rt north" destination="126" />
+    <arc exit="northeast" move="rt northeast" destination="124" />
+    <arc exit="go" move="go footpath" destination="17" />
+  </node>
+  <node id="126" name="Greater Fist Cart Track, Winding Path">
+    <description>The fragmented remains of an old mining cart lie beside the track, time and weather having reduced them to a skeletal frame.</description>
+    <position x="220" y="260" z="1" />
+    <arc exit="north" move="rt north" destination="127" />
+    <arc exit="south" move="rt south" destination="125" />
+  </node>
+  <node id="127" name="Greater Fist Cart Track, Winding Path">
+    <description>The air is thin, moist and finely misted with the faint taste and scent of smoke.  Brittle brown weeds grow sparsely between the tracks, their sickly thin leaves spread wide in a desperate plea for nourishing air, water and light.</description>
+    <position x="220" y="240" z="1" />
+    <arc exit="north" move="rt north" destination="128" />
+    <arc exit="south" move="rt south" destination="126" />
+  </node>
+  <node id="128" name="Greater Fist Cart Track, Winding Path">
+    <description>Almost hidden beneath a large basalt boulder lie the sun-bleached bones of an unidentifiable creature, apparently caught in an unfortunate avalanche.  Thin brown weeds grow between the large stones and reddish dust which threaten to overwhelm the path ahead.</description>
+    <position x="220" y="220" z="1" />
+    <arc exit="north" move="rt north" destination="129" />
+    <arc exit="south" move="rt south" destination="127" />
+  </node>
+  <node id="129" name="Greater Fist Cart Track, Winding Path">
+    <description>Sizzling steam rises from a jagged crevice etched into sulfur-stained basalt.  Occasionally, following a deep inner rumble, steam and smoke pour from the vent with an explosive force, only to die down to a hiss within moments.</description>
+    <position x="220" y="200" z="1" />
+    <arc exit="northeast" move="rt northeast" destination="130" />
+    <arc exit="south" move="rt south" destination="128" />
+  </node>
+  <node id="130" name="Greater Fist Cart Track, Winding Path">
+    <description>The wheels of passing carts splash through thin puddles of muddy red water collected from thin rivulets running down from the trail above.  A pale-green fern sprouts from a moistened patch of soil, enriched by a fine spray of mist.</description>
+    <position x="240" y="180" z="1" />
+    <arc exit="southwest" move="rt southwest" destination="129" />
+    <arc exit="northwest" move="rt northwest" destination="131" />
+  </node>
+  <node id="131" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>All that remains of a cart is a broken wooden wheel lying between the footpath and the track.  Corrosive air-borne fumes have stained the wood with a virulent array of colors.</description>
+    <position x="220" y="160" z="1" />
+    <arc exit="northeast" move="rt northeast" destination="132" />
+    <arc exit="southeast" move="rt southeast" destination="130" />
+    <arc exit="go" move="go footpath" destination="23" />
+  </node>
+  <node id="132" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>The footpath runs parallel here, abutting the ruts of the tracks.  The reek of sweating pack animal lingers.</description>
+    <position x="240" y="140" z="1" />
+    <arc exit="southeast" move="rt southeast" destination="133" />
+    <arc exit="southwest" move="rt southwest" destination="131" />
+    <arc exit="go" move="go footpath" destination="24" />
+  </node>
+  <node id="133" name="Greater Fist Cart Track, Winding Path">
+    <description>A thin dusting of yellow sulfur powder from eroded rocks coats everything and mixes with the barren ash to create a vile, lusterless landscape.</description>
+    <position x="260" y="160" z="1" />
+    <arc exit="southeast" move="rt southeast" destination="134" />
+    <arc exit="northwest" move="rt northwest" destination="132" />
+  </node>
+  <node id="134" name="Greater Fist Cart Track, Winding Path">
+    <description>A chill wind laden with dust and sulfur makes this section of the track particularly grim.  Yellow streaks mixed with grey and black defile the rocks lining the track and nearby footpath.</description>
+    <position x="280" y="180" z="1" />
+    <arc exit="east" move="rt east" destination="135" />
+    <arc exit="northwest" move="rt northwest" destination="133" />
+  </node>
+  <node id="135" name="Greater Fist Cart Track, Winding Path">
+    <description>Jagged rocks along the track tumble over the edge of the volcano to even sharper rocks below.  A lone eagle cry echoes in the heights above, all other life fled or perished.</description>
+    <position x="300" y="180" z="1" />
+    <arc exit="east" move="rt east" destination="136" />
+    <arc exit="west" move="rt west" destination="134" />
+  </node>
+  <node id="136" name="Greater Fist Cart Track, Winding Path">
+    <description>Heaped piles of broken obsidian scattered alongside the track gleam faintly in the pale light.  The glassy rock reflects any movement, distorting the images to a contorted mockery of the living.</description>
+    <position x="320" y="180" z="1" />
+    <arc exit="east" move="rt east" destination="137" />
+    <arc exit="west" move="rt west" destination="135" />
+  </node>
+  <node id="137" name="Greater Fist Cart Track, Winding Path">
+    <description>The track spans a chasm precariously.  Shattered bleached bones flung across yellow-stained dark rocks far below demonstrate the uncertainty of crossing to the far side.</description>
+    <position x="340" y="180" z="1" />
+    <arc exit="east" move="rt east" destination="138" />
+    <arc exit="west" move="rt west" destination="136" />
+  </node>
+  <node id="138" name="Greater Fist Cart Track, Winding Path">
+    <description>Dry ash coats everything -- the cart tracks, the spikes of glossy black rock that rise like jagged spears from the powdery ground, the few pale plants that attempt to grow here.  Any movement stirs the ash which floats upward in clouds to resettle on everything again.</description>
+    <position x="360" y="180" z="1" />
+    <arc exit="east" move="rt east" destination="139" />
+    <arc exit="west" move="rt west" destination="137" />
+  </node>
+  <node id="139" name="Greater Fist Cart Track, Winding Path">
+    <description>A spur of rock juts so close to the track that the rails veer suddenly to one side to avoid it.  The cart edges scrape against the side and have worn a groove in the sinister-shaped partially melted stone.</description>
+    <position x="380" y="180" z="1" />
+    <arc exit="northeast" move="rt northeast" destination="140" />
+    <arc exit="west" move="rt west" destination="138" />
+  </node>
+  <node id="140" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>Ruts from iron-shode wheels have left their mark in the friable stone.  Others have come this way before, but by the faint footpath which skirts the track.</description>
+    <position x="400" y="160" z="1" />
+    <arc exit="east" move="rt east" destination="141" />
+    <arc exit="southwest" move="rt southwest" destination="139" />
+    <arc exit="go" move="go footpath" destination="32" />
+  </node>
+  <node id="141" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>Faint traces of heavy cart wheels cross the track.  Scattered remnants of pack animal droppings mark the footpath which runs alongside the rails.</description>
+    <position x="420" y="160" z="1" />
+    <arc exit="southeast" move="rt southeast" destination="142" />
+    <arc exit="west" move="rt west" destination="140" />
+    <arc exit="go" move="go footpath" destination="33" />
+  </node>
+  <node id="142" name="Greater Fist Cart Track, Cracked Stones">
+    <description>The track continues over cracked and broken stones.  No sign of life scurries from any crevice, for heaps of grey ash have been blown into every crack or hole.</description>
+    <position x="440" y="180" z="1" />
+    <arc exit="south" move="rt south" destination="143" />
+    <arc exit="northwest" move="rt northwest" destination="141" />
+  </node>
+  <node id="143" name="Greater Fist Cart Track, Rubble">
+    <description>The ground is covered in rubble, and the track makes its way between larger chunks and what remains of a huge charred tree stump.   Here and there the smoother surface of cooled molten rock reminds you of the fierce force seething beneath the strewn ground.</description>
+    <position x="440" y="200" z="1" />
+    <arc exit="north" move="rt north" destination="142" />
+    <arc exit="south" move="rt south" destination="144" />
+  </node>
+  <node id="144" name="Greater Fist Cart Track, Cinder Path">
+    <description>A desolate, bleak landscape lies above the cart track, which snakes upwards toward the peak.  Rocks and cinders lay scattered in a jumbled mess.</description>
+    <position x="440" y="220" z="1" />
+    <arc exit="north" move="rt north" destination="143" />
+    <arc exit="south" move="rt south" destination="145" />
+  </node>
+  <node id="145" name="Greater Fist Cart Track, Winding Path">
+    <description>A narrow precipice of basalt hangs out over open space, and the cart track hugs the rock wall as far away from the ledge as possible.   Clouds of steam drift across the tracks and the bordering footpath, obscuring what lies beyond.</description>
+    <position x="440" y="240" z="1" />
+    <arc exit="north" move="rt north" destination="144" />
+    <arc exit="southeast" move="rt southeast" destination="146" />
+  </node>
+  <node id="146" name="Greater Fist Cart Track, Ash Cones">
+    <description>A field of ash cones and brittle rock stretches above and below, the track rising steadily from the base to the volcano's top.  Wispy grey smoke rises from the cracks in the crumbling rocks.</description>
+    <position x="460" y="260" z="1" />
+    <arc exit="southwest" move="rt southwest" destination="147" />
+    <arc exit="northwest" move="rt northwest" destination="145" />
+  </node>
+  <node id="147" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>Cart ruts in the dust and ash approach the narrow footpath, showing another route taken by heavier traffic.  Faint marks on the rocks that bulge out of the frozen lava rills show where someone has labored to widen the path, but this work was clearly in vain.  The path, still barely a sliver of ground, hugs the track in the narrow space.</description>
+    <position x="440" y="280" z="1" />
+    <arc exit="northeast" move="rt northeast" destination="146" />
+    <arc exit="south" move="rt south" destination="148" />
+    <arc exit="go" move="go footpath" destination="39" />
+  </node>
+  <node id="148" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>Dusty footprints range near the narrow track, showing another route taken by other explorers.  Though it is apparent someone has tried to widen the area, their work has done little to alleviate the cramped conditions where the track and path run side by side.</description>
+    <position x="440" y="300" z="1" />
+    <arc exit="north" move="rt north" destination="147" />
+    <arc exit="south" move="rt south" destination="149" />
+    <arc exit="go" move="go footpath" destination="40" />
+  </node>
+  <node id="149" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>The footpath follows the track here, and both end at a rotting rope bridge that descends across a dark and fearsome gorge in one direction, and climbs up along the shoulder of a dark slag heap that has grown out of the volcano like a festering carbuncle.</description>
+    <position x="440" y="320" z="1" />
+    <arc exit="north" move="rt north" destination="148" />
+    <arc exit="northwest" move="rt northwest" destination="150" />
+    <arc exit="go" move="go footpath" destination="41" />
+  </node>
+  <node id="150" name="Greater Fist Cart Track, Winding Path">
+    <description>The groaning of the charred and splintered rope bridge to the south accompanies the noisome rumblings coming from the deep gorge below it, providing uneasy music for those foolhardy enough to travel this path.</description>
+    <position x="420" y="300" z="1" />
+    <arc exit="southeast" move="rt southeast" destination="149" />
+    <arc exit="west" move="rt west" destination="151" />
+  </node>
+  <node id="151" name="Greater Fist Cart Track, Winding Path">
+    <description>Just below the track, the ground opens up, revealing a dark chasm filled with reeking smoke and old lava floes that writhe across the dark rocks like petrified serpents preserved in the throes of madness.</description>
+    <position x="400" y="300" z="1" />
+    <arc exit="east" move="rt east" destination="150" />
+    <arc exit="west" move="rt west" destination="152" />
+  </node>
+  <node id="152" name="Greater Fist Cart Track, Winding Path">
+    <description>Bordering the track, sagging wooden planks tied to frayed rope supports sway ominously above a jagged chasm.  The wind, stinking of sulfur and ash, makes the frail bridge moan and sway uneasily.</description>
+    <position x="380" y="300" z="1" />
+    <arc exit="east" move="rt east" destination="151" />
+    <arc exit="west" move="rt west" destination="153" />
+  </node>
+  <node id="153" name="Greater Fist Cart Track, Winding Path">
+    <description>Off to the south, a charred rope bridge, ominously frayed, arches across a gap in the side of the volcano.</description>
+    <position x="360" y="300" z="1" />
+    <arc exit="east" move="rt east" destination="152" />
+    <arc exit="southwest" move="rt southwest" destination="154" />
+  </node>
+  <node id="154" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>A narrow footpath paces the ash-strewn ground of the cart track.  Nearby, a forlorn rope bridge, charred and decaying, sways in the bitter air drifting from the caldera far above.  The wooden supports appear more than half burned away, and you misdoubt they will last another awakening of the fires.</description>
+    <position x="340" y="320" z="1" />
+    <arc exit="northeast" move="rt northeast" destination="153" />
+    <arc exit="northwest" move="rt northwest" destination="155" />
+    <arc exit="go" move="go footpath" destination="46" />
+  </node>
+  <node id="155" name="Greater Fist Cart Track, Shattered Rock">
+    <description>The ground is littered with what appears to be pieces of a stone eggshell, as if some creature from another universe had found a nesting place here.</description>
+    <position x="320" y="300" z="1" />
+    <arc exit="southeast" move="rt southeast" destination="154" />
+    <arc exit="west" move="rt west" destination="156" />
+  </node>
+  <node id="156" name="Greater Fist Cart Track, Stone Vines">
+    <description>Nearby, runnels of frozen lava have trickled across a boulder, resembling petrified roots clinging to the cracked and fissured rock face.  Corrosive rains have pitted the surface so that it appears to resemble the black moon.</description>
+    <position x="300" y="300" z="1" />
+    <arc exit="east" move="rt east" destination="155" />
+    <arc exit="west" move="rt west" destination="157" />
+  </node>
+  <node id="157" name="Greater Fist Cart Track, Twisting Path">
+    <description>The cart track edges a large pool of magma which flickers with a dancing flame.  An overhanging cliff partially obscures the view below, as the fire glows suddenly bright in the cliff's shadow.</description>
+    <position x="280" y="300" z="1" />
+    <arc exit="east" move="rt east" destination="156" />
+    <arc exit="west" move="rt west" destination="158" />
+  </node>
+  <node id="158" name="Greater Fist Cart Track, Twisting Path">
+    <description>Sulfuric clouds of yellow mist settle from above, and drift over a granite outcropping on the far side of the bordering footpath.   A skeleton lies over the flat rock, apparently chained to it as some unknown penalty.</description>
+    <position x="260" y="300" z="1" />
+    <arc exit="east" move="rt east" destination="157" />
+    <arc exit="southwest" move="rt southwest" destination="159" />
+  </node>
+  <node id="159" name="Greater Fist Cart Track, Twisting Path">
+    <description>Every surface is coated in a yellow oily mist, thick and stinking of rotting meat.   Orange mushrooms and scum coat the jagged rocks along the footpath, and spread over the rocky rubble between the cart tracks.</description>
+    <position x="240" y="320" z="1" />
+    <arc exit="northeast" move="rt northeast" destination="158" />
+    <arc exit="west" move="rt west" destination="160" />
+  </node>
+  <node id="160" name="Greater Fist Cart Track, Twisting Path">
+    <description>Withered, blackened trees crumble to charcoal dust from the mere vibration of passing carts.  A sooty, choking blanket covers the rocks and weeds struggling for sun and air.</description>
+    <position x="220" y="320" z="1" />
+    <arc exit="east" move="rt east" destination="159" />
+    <arc exit="west" move="rt west" destination="161" />
+  </node>
+  <node id="161" name="Greater Fist Cart Track, Twisting Path">
+    <description>A fractured and splintered andesite slab shelters a portion of the nearby footpath, and bits of the slab litter the edges of the track.  A sharp wind cuts over the stones with a howling cry as it whips over the jutting edges.</description>
+    <position x="200" y="320" z="1" />
+    <arc exit="east" move="rt east" destination="160" />
+    <arc exit="west" move="rt west" destination="162" />
+  </node>
+  <node id="162" name="Greater Fist Cart Track, Twisting Path">
+    <description>The track winds dangerously over a narrow ledge.  Large tumbled boulders glinting with feldspar squeeze the passage of both the cart track and footpath tightly between rough walls and empty space.</description>
+    <position x="180" y="320" z="1" />
+    <arc exit="east" move="rt east" destination="161" />
+    <arc exit="southwest" move="rt southwest" destination="163" />
+  </node>
+  <node id="163" name="Greater Fist Cart Track, Twisting Path">
+    <description>A bed of friable ash blankets the entire area in view.  Occasionally enough wisps aside, blown by brief gusts of fetid air, to reveal the corroded metallic rails of the cart track.</description>
+    <position x="160" y="340" z="1" />
+    <arc exit="northeast" move="rt northeast" destination="162" />
+    <arc exit="southwest" move="rt southwest" destination="164" />
+  </node>
+  <node id="164" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>A usable footpath with copper-framed guide poles has disappeared under a recent avalanche's pummeling.  Faring better are the metallic rails of this cart track, huddled in the shadow of the volcanic slope.</description>
+    <position x="140" y="360" z="1" />
+    <arc exit="northeast" move="rt northeast" destination="163" />
+    <arc exit="west" move="rt west" destination="165" />
+    <arc exit="go" move="go footpath" destination="56" />
+  </node>
+  <node id="165" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>The footpath and cart track trundle along uneasily next to one another on this narrow stretch of land.  A badly dented mining cart lies upended to one side, its wheels spinning rapidly in the fierce southern wind.</description>
+    <position x="120" y="360" z="1" />
+    <arc exit="northeast" move="rt northeast" destination="166" />
+    <arc exit="east" move="rt east" destination="164" />
+    <arc exit="go" move="go footpath" destination="57" />
+  </node>
+  <node id="166" name="Greater Fist Cart Track, Twisting Path">
+    <description>The cart track angles sharply to avoid a series of precariously balanced slate chips the size and color of a dead kelpie.  Ashen cinders swirl wildly, blown by blasts of hot sulfur-laden air.</description>
+    <position x="140" y="340" z="1" />
+    <arc exit="southwest" move="rt southwest" destination="165" />
+    <arc exit="northwest" move="rt northwest" destination="167" />
+  </node>
+  <node id="167" name="Greater Fist Cart Track, Twisting Path">
+    <description>Several large, angular boulders have nearly obliterated portions of the nearby footpath.  Lodged deep in the latite strata, the explosion of their impact has ripped forth enough sharp-edged rock chips to stock a small quarry.</description>
+    <position x="120" y="320" z="1" />
+    <arc exit="north" move="rt north" destination="168" />
+    <arc exit="southeast" move="rt southeast" destination="166" />
+  </node>
+  <node id="168" name="Greater Fist Cart Track, Twisting Path">
+    <description>A strong breeze blows along this exposed western flank of the volcano wall.  Like a furnace blast, it whips black tuff into a swirling maelstrom of gritty, blinding ash.</description>
+    <position x="120" y="300" z="1" />
+    <arc exit="north" move="rt north" destination="169" />
+    <arc exit="south" move="rt south" destination="167" />
+  </node>
+  <node id="169" name="Greater Fist Cart Track, Twisting Path">
+    <description>A rain of charcoal-grey ribbons twist gently down across the rough, granitic terrain.  The rumbling of passing carts disrupts the soft murmur from an occasional breeze that scatters the ribbons over the volcano's edge like last season's leaves.</description>
+    <position x="120" y="280" z="1" />
+    <arc exit="north" move="rt north" destination="170" />
+    <arc exit="south" move="rt south" destination="168" />
+  </node>
+  <node id="170" name="Greater Fist Cart Track, Uneven Slope">
+    <description>Ripples of glowing magma begin seeping out of the path edges.  Somewhat cooler remains of the lava pool in steaming, black globs.</description>
+    <position x="120" y="260" z="1" />
+    <arc exit="north" move="rt north" destination="171" />
+    <arc exit="south" move="rt south" destination="169" />
+  </node>
+  <node id="171" name="Greater Fist Cart Track, Uneven Slope">
+    <description>A skeletal hand rises from beneath the miasma of sulfur and molten rock.  The weathered bones cling to the rock even in death, as if the very remains feared being scalded by the rough heat. </description>
+    <position x="120" y="240" z="1" />
+    <arc exit="north" move="rt north" destination="172" />
+    <arc exit="south" move="rt south" destination="170" />
+  </node>
+  <node id="172" name="Greater Fist Cart Track, Uneven Slope">
+    <description>Puddles of stagnant, glowing magma collect in shallow pockets to either side of a barely discernable footpath.  The liquid rock bubbles periodically, spewing globs of lapilli that hiss where they land.</description>
+    <position x="120" y="220" z="1" />
+    <arc exit="northeast" move="rt northeast" destination="173" />
+    <arc exit="south" move="rt south" destination="171" />
+  </node>
+  <node id="173" name="Greater Fist Cart Track, Uneven Slope">
+    <description>A series of natural dacite steps against the rock wall once conveyed a small waterfall down to this area on the volcano's western slope.  Now, an organe fluid drips languidly over the rocks, collecting in a large, viscous pool.  The plants around it have turned yellow, their dead stalks floating on the steaming morass.</description>
+    <position x="140" y="200" z="1" />
+    <arc exit="north" move="rt north" destination="174" />
+    <arc exit="southwest" move="rt southwest" destination="172" />
+  </node>
+  <node id="174" name="Greater Fist Cart Track, Uneven Slope">
+    <description>A large granite protrusion of rock penetrates the skin of the earth.  Most of the ledge uneasily peeks out from the wall of stone, curving at an odd angle.  Eroding rock and dirt slide down the flat surface.</description>
+    <position x="140" y="180" z="1" />
+    <arc exit="north" move="rt north" destination="175" />
+    <arc exit="south" move="rt south" destination="173" />
+  </node>
+  <node id="175" name="Greater Fist Cart Track, Stained River">
+    <description>A rivulet of bubbling yellow water runs through a landscape of cracked earth and grey schist.  A potent unpleasant scent rises from its surface.  Rows of twisted dead tree stumps complete this mockery of pastoral woods and brook.</description>
+    <position x="140" y="160" z="1" />
+    <arc exit="northeast" move="rt northeast" destination="176" />
+    <arc exit="south" move="rt south" destination="174" />
+  </node>
+  <node id="176" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>The air is thick with a yellow, oily steam that coats everything in sight.  The jagged, barren latite surrounding you sweats it, the nearby footpath appears slick from it, and the metal band of the cart tracks have partly eroded because of it.  Your armor pieces begin to sizzle as the liquid condenses upon them.</description>
+    <position x="160" y="140" z="1" />
+    <arc exit="northeast" move="rt northeast" destination="177" />
+    <arc exit="southwest" move="rt southwest" destination="175" />
+    <arc exit="go" move="go footpath" destination="68" />
+  </node>
+  <node id="177" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>The track hugs the mountainside, crowding the narrow footpath used by travellers making their way along the ledge.  Far below lies the tiny Halfling settlement of Sicle Grove.</description>
+    <position x="180" y="120" z="1" />
+    <arc exit="northeast" move="rt northeast" destination="178" />
+    <arc exit="southwest" move="rt southwest" destination="176" />
+    <arc exit="go" move="go footpath" destination="69" />
+  </node>
+  <node id="178" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>Small rocks tumble past, bouncing off the metal cart rails and across the adjacent footpath before plummeting over the ledge.  All a passenger can do is hunch down in the slight protection of the cart's walls.</description>
+    <position x="200" y="100" z="1" />
+    <arc exit="east" move="rt east" destination="179" />
+    <arc exit="southwest" move="rt southwest" destination="177" />
+    <arc exit="go" move="go footpath" destination="70" />
+  </node>
+  <node id="179" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>A distant rumble echoes about as the cart trundles along the track.  Despite their continual exposure to the elements, the metal rails of the tracks are shiny, indicating frequent use.  The footpath which parallels the track is narrow, eroded by years of wind and rain.</description>
+    <position x="220" y="100" z="1" />
+    <arc exit="east" move="rt east" destination="180" />
+    <arc exit="west" move="rt west" destination="178" />
+    <arc exit="go" move="go footpath" destination="71" />
+  </node>
+  <node id="180" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>The track travels along a narrow ledge of the mountain.  A sheer drop displays a startling contrast of barren and blackened land with the lush forests of Langenfirth to the northwest.  A narrow footpath squeezes against the track.</description>
+    <position x="240" y="100" z="1" />
+    <arc exit="southeast" move="rt southeast" destination="181" />
+    <arc exit="west" move="rt west" destination="179" />
+    <arc exit="go" move="go footpath" destination="72" />
+  </node>
+  <node id="181" name="Greater Fist Cart Track, Twisting Path">
+    <description>The north wind blows strongly, pushing at the carts and making them lean perilously close to the walls of the mountain as they trundle along the narrow track.</description>
+    <position x="260" y="120" z="1" />
+    <arc exit="east" move="rt east" destination="182" />
+    <arc exit="northwest" move="rt northwest" destination="180" />
+  </node>
+  <node id="182" name="Greater Fist Cart Track, Twisting Path">
+    <description>To the northwest, moonlight reflects off the waters of the river which flows into the great lake between the towns of Riverhaven and Langenfirth.  Dim lights sparkle in the distance, from the lamps which illuminate the homes of Riverhaven's residents.</description>
+    <description>To the northwest, water glints in the sunlight as the river flows into the great lake which separates the towns of Riverhaven and Langenfirth.  From this distance, it is difficult to make out any detail other than the weathered grey walls of Riverhaven.</description>
+    <position x="280" y="120" z="1" />
+    <arc exit="east" move="rt east" destination="183" />
+    <arc exit="west" move="rt west" destination="181" />
+  </node>
+  <node id="183" name="Greater Fist Cart Track, Twisting Path">
+    <description>A gnarled tree clings to the black rock of the mountainside, warped by wind and harsh weather into a twisted tangle of branches which hovers above the trail and reaches toward the track.</description>
+    <position x="300" y="120" z="1" />
+    <arc exit="southeast" move="rt southeast" destination="184" />
+    <arc exit="west" move="rt west" destination="182" />
+  </node>
+  <node id="184" name="Greater Fist Cart Track, Twisting Path" color="#00FF00">
+    <description>Although the air is chilly this high up the mountainside, a warm mist rises from below.  To the east, bubbling noises echo along the track which rises to the northwest.</description>
+    <position x="320" y="140" z="1" />
+    <arc exit="east" move="rt east" destination="185" />
+    <arc exit="northwest" move="rt northwest" destination="183" />
+    <arc exit="go" move="go footpath" destination="183" />
+  </node>
+  <node id="185" name="Greater Fist Cart Track, Twisting Path" color="#00FF00">
+    <description>Green minerals streak the black stone of the geyser cones and the wood and metal track below, as carts trundle back and forth through the misty, steam-filled air past bubbling hot springs.</description>
+    <position x="340" y="140" z="1" />
+    <arc exit="east" move="rt east" destination="186" />
+    <arc exit="west" move="rt west" destination="184" />
+    <arc exit="go" move="go footpath" destination="184" />
+  </node>
+  <node id="186" name="Greater Fist Cart Track, Twisting Path" color="#00FF00">
+    <description>Rocky cones sit in the midst of a hot spring, towering several feet above the level of the pool.  Water bubbles within the cones, running down the glassy black rock into the spring, while clouds of steam fill the air.</description>
+    <position x="360" y="140" z="1" />
+    <arc exit="east" move="rt east" destination="187" />
+    <arc exit="west" move="rt west" destination="185" />
+    <arc exit="go" move="go footpath" destination="185" />
+  </node>
+  <node id="187" name="Greater Fist Cart Track, Twisting Path">
+    <description>The path winds its way among hot springs and cones of rock as it journeys down the mountain.  Water tumbles from spring to bubbling spring, before finally pouring over the slope in a steaming cascade somewhere below.</description>
+    <position x="380" y="140" z="1" />
+    <arc exit="east" move="rt east" destination="188" />
+    <arc exit="west" move="rt west" destination="186" />
+  </node>
+  <node id="188" name="Greater Fist Cart Track, Twisting Path">
+    <description>Pools have formed in the few flat areas of the trail, their steaming waters tumbling eagerly over the glassy black rock, from one to another, until they finally cascade over the ledge.  The pools are evidently fed by hot springs, and their steam fills the cool air.</description>
+    <position x="400" y="140" z="1" />
+    <arc exit="east" move="rt east" destination="189" />
+    <arc exit="west" move="rt west" destination="187" />
+  </node>
+  <node id="189" name="Greater Fist Cart Track, Twisting Path">
+    <description>Moist steam fills the air, wafting down the mountainside from somewhere above.  No greenery cushions the starkness of the track, just jagged basalt which seems to grab at the wooden carts that roll past.</description>
+    <position x="420" y="140" z="1" />
+    <arc exit="east" move="rt east" destination="190" />
+    <arc exit="west" move="rt west" destination="188" />
+  </node>
+  <node id="190" name="Greater Fist Cart Track, Twisting Path">
+    <description>The cart rails cling to the curve of the mountain like a ring around a finger, spiralling around the steep slope.  According to a local legend, a mighty hero was slain in battle by the World Dragon.  His bones became the mountains which surround Dirge, and evermore, his blackened fists tower skyward, silently cursing the heavens from which the beast fell.</description>
+    <position x="440" y="140" z="1" />
+    <arc exit="northeast" move="rt northeast" destination="191" />
+    <arc exit="west" move="rt west" destination="189" />
+  </node>
+  <node id="191" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>A narrow rivulet of water snakes its way down the mountainside along the metal rails of the cart track, and spills past the adjacent footpath before finally trickling over the side of the ledge.  The water smells faintly of rotten eggs, an acrid, burning stench.</description>
+    <position x="460" y="120" z="1" />
+    <arc exit="east" move="rt east" destination="192" />
+    <arc exit="southwest" move="rt southwest" destination="190" />
+    <arc exit="go" move="go footpath" destination="83" />
+  </node>
+  <node id="192" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>The mountain rises steeply overhead with a sharp drop-off just a little ways to the north, creating a precariously narrow ledge for both cart and foot travel.</description>
+    <position x="480" y="120" z="1" />
+    <arc exit="east" move="rt east" destination="193" />
+    <arc exit="west" move="rt west" destination="191" />
+    <arc exit="go" move="go footpath" destination="84" />
+  </node>
+  <node id="193" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>The cart track angles sharply around the volcano's shoulder, with a dizzying view of the desolate lava flows below and the vast marshlands to the northeast.  A footpath runs alongside the track as both make their way along the narrow ledge.</description>
+    <position x="500" y="120" z="1" />
+    <arc exit="southwest" move="rt southwest" destination="194" />
+    <arc exit="west" move="rt west" destination="192" />
+    <arc exit="go" move="go footpath" destination="85" />
+  </node>
+  <node id="194" name="Greater Fist Cart Track, Twisting Path">
+    <description>The track wends its way along the contours of the mountain.  To the northeast, the jagged peaks of the mountain range stretch on to the horizon.</description>
+    <position x="480" y="140" z="1" />
+    <arc exit="northeast" move="rt northeast" destination="193" />
+    <arc exit="south" move="rt south" destination="195" />
+  </node>
+  <node id="195" name="Greater Fist Cart Track, Twisting Path">
+    <description>Gnarled brush clings tenuously to the mountainside as the path climbs the rocky slope.  Mountain goats might possibly feel at home on the steep terrain, though given the sparse greenery, even that seems dubious.</description>
+    <position x="480" y="160" z="1" />
+    <arc exit="north" move="rt north" destination="194" />
+    <arc exit="south" move="rt south" destination="196" />
+  </node>
+  <node id="196" name="Greater Fist Cart Track, Twisting Path">
+    <description>Withered bits of pale green grass growing along the steep trail add a dribble of color to the otherwise rocky landscape.  A lone bird trills somewhere in the distance, its plaintive song underscoring the surrounding desolation.</description>
+    <position x="480" y="180" z="1" />
+    <arc exit="north" move="rt north" destination="195" />
+    <arc exit="south" move="rt south" destination="197" />
+  </node>
+  <node id="197" name="Greater Fist Cart Track, Twisting Path">
+    <description>The tracks run by a cinder-choked spring, which struggles to clean itself by pushing out the cinders and ash into deep, grey folds along the water's edge.</description>
+    <position x="480" y="200" z="1" />
+    <arc exit="north" move="rt north" destination="196" />
+    <arc exit="south" move="rt south" destination="198" />
+  </node>
+  <node id="198" name="Greater Fist Cart Track, Twisting Path">
+    <description>The metal of the track glints brightly, embedded in sharp ribbons of cooled lava.  Along the neighboring footpath,  the twisting lava bands occasionally resemble a flower blossom, as the molten rock cooled to a contorted shape.</description>
+    <position x="480" y="220" z="1" />
+    <arc exit="north" move="rt north" destination="197" />
+    <arc exit="southeast" move="rt southeast" destination="199" />
+  </node>
+  <node id="199" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>The metal rails break out of the lava tunnel and twist southeast alongside the footpath, around a large block of greenish volcanic rock sparkling with peridots.  A broken handpick lies within the tracks, and a few feet away an old felt hat is jammed into the lower brambles of a thorn bush.</description>
+    <position x="500" y="240" z="1" />
+    <arc exit="southeast" move="rt southeast" destination="200" />
+    <arc exit="northwest" move="rt northwest" destination="198" />
+    <arc exit="go" move="go footpath" destination="91" />
+  </node>
+  <node id="200" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>Curving slightly from the northwest, the tracks bend towards the footpath before disappearing in a lava tunnel.  The track and footpath are laid over the bubbles of an old scoria flow, now softened by erosion and time.</description>
+    <position x="520" y="260" z="1" />
+    <arc exit="southwest" move="rt southwest" destination="201" />
+    <arc exit="northwest" move="rt northwest" destination="199" />
+    <arc exit="go" move="go footpath" destination="92" />
+  </node>
+  <node id="201" name="Greater Fist Cart Track, Twisting Path">
+    <description>To compensate for the near-vertical grade to the north, the tracks have been built upon stilts before continuing through a less steep, angled channel dug into the mountainside.  The acrid scent of burnt flesh and vegetation hangs in the air despite the cleansing rains and snows of passing seasons.</description>
+    <position x="500" y="280" z="1" />
+    <arc exit="northeast" move="rt northeast" destination="200" />
+    <arc exit="south" move="rt south" destination="202" />
+  </node>
+  <node id="202" name="Greater Fist Cart Track, Twisting Path">
+    <description>The seismic tremors felled most of the trees here, leaving the scattered like jackstraws.  The tracks are clear, but lava has pushed one of them against the edge of the neighboring footpath, nearly blocking it.</description>
+    <position x="500" y="300" z="1" />
+    <arc exit="north" move="rt north" destination="201" />
+    <arc exit="southwest" move="rt southwest" destination="203" />
+  </node>
+  <node id="203" name="Greater Fist Cart Track, Twisting Path">
+    <description>Large chunks of marble are stacked in a large pile to the east, the ever-present ash dulling the stone's natural sheen.  One chunk at the top resembles an ear, giving the mound the appearance of a hunched giant, its ear turned up to listen to the rumblings of the volcano.</description>
+    <position x="480" y="320" z="1" />
+    <arc exit="northeast" move="rt northeast" destination="202" />
+    <arc exit="south" move="rt south" destination="204" />
+  </node>
+  <node id="204" name="Cart Track, Twisting Path">
+    <description>The lights of Dirge are visible to the southeast off in the far distance from this vantage point.  Night's darkness cloaks the decrepit buildings and scarred landscape below.</description>
+    <description>Dirge is visible to the southeast off in the far distance from this vantage point.  The buildings seeming less decrepit and shabby, but the landscape can't hide the wounds and scarring inflicted by past volcanic eruptions.</description>
+    <position x="480" y="380" z="1" />
+    <arc exit="north" move="rt north" destination="203" />
+    <arc exit="southeast" move="rt southeast" destination="205" />
+  </node>
+  <node id="205" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>The cart tracks descend sharply at this point, heading southeast beside the footpath.  An old boot, stiff from the elements, rests half-hidden by rubble near the rails.</description>
+    <position x="500" y="400" z="1" />
+    <arc exit="south" move="rt south" destination="206" />
+    <arc exit="northwest" move="rt northwest" destination="204" />
+    <arc exit="go" move="go footpath" destination="97" />
+  </node>
+  <node id="206" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>Some small, now unidentifiable creature not quite quick enough to move off the tracks, lies smeared across several wooden ties that connect the metal railings.  The scraps of fur and bone that remain haven't started to decay.  About an arm's length away, the footpath continues its mimicry of the rails' twists and turns.</description>
+    <position x="500" y="420" z="1" />
+    <arc exit="north" move="rt north" destination="205" />
+    <arc exit="southwest" move="rt southwest" destination="207" />
+    <arc exit="go" move="go footpath" destination="98" />
+  </node>
+  <node id="207" name="Greater Fist Footpath, Near Footpath" color="#00FF00">
+    <description>Grey ash from the footpath covers the rails as the track nearly collides with the trail in a sharp hairpin turn.  Several wriggling white grubs cling to the exposed roots of a blackened tree and burrow in the dirt by its trunk.</description>
+    <position x="480" y="440" z="1" />
+    <arc exit="northeast" move="rt northeast" destination="206" />
+    <arc exit="northwest" move="rt northwest" destination="208" />
+    <arc exit="go" move="go footpath" destination="99" />
+  </node>
+  <node id="208" name="Greater Fist Cart Track, Twisting Path">
+    <description>The smell of sulfur hangs in the air, burning the lungs of those who ride by.  Lying near the footpath to the south is a charred and overturned basket.</description>
+    <position x="460" y="420" z="1" />
+    <arc exit="southeast" move="rt southeast" destination="207" />
+    <arc exit="northwest" move="rt northwest" destination="209" />
+  </node>
+  <node id="209" name="Greater Fist Cart Track, Twisting Path">
+    <description>A fluttering noise like the sound of flapping wings comes from a bit of red cloth caught on a low thorn bush to the south.  A hot, unpleasantly-scented breeze catches at the cloth, whipping it against the blackened branches.</description>
+    <position x="440" y="400" z="1" />
+    <arc exit="southeast" move="rt southeast" destination="208" />
+    <arc exit="west" move="rt west" destination="210" />
+  </node>
+  <node id="210" name="Greater Fist Cart Track, Twisting Path">
+    <description>The track ascends up the mountainside at a steep angle, running parallel to the neighboring footpath.  A glimmer of bright purple can be seen growing along some boulders to the south, giving mute witness to the will of life to survive any catastrophe.</description>
+    <position x="420" y="400" z="1" />
+    <arc exit="east" move="rt east" destination="209" />
+    <arc exit="west" move="rt west" destination="211" />
+  </node>
+  <node id="211" name="Greater Fist Cart Track, Twisting Path">
+    <description>Atop two nearby boulders, a startling glimpse of color stands out against the bleak grey landscape.  Ghoulish shapes of burnt and twisted trees are silhouetted agaisnt the night sky.</description>
+    <position x="400" y="400" z="1" />
+    <arc exit="east" move="rt east" destination="210" />
+    <arc exit="west" move="rt west" destination="212" />
+  </node>
+  <node id="212" name="Greater Fist Cart Track, Twisting Path">
+    <description>A jagged wall of lichen-covered boulders cuts off access to the neighboring footpath.  Hearty clumps of tough brown weeds grow along the steep incline, poking out between the tracks.</description>
+    <position x="380" y="400" z="1" />
+    <arc exit="east" move="rt east" destination="211" />
+    <arc exit="west" move="rt west" destination="213" />
+  </node>
+  <node id="213" name="Greater Fist Cart Track, Twisting Path">
+    <description>A charred form lies on the ground off to the south toward the nearby footpath.  From this point, it appears to be a body, but the details cannot be seen from here.  A flap of something red flutters on its surface.</description>
+    <position x="360" y="400" z="1" />
+    <arc exit="east" move="rt east" destination="212" />
+    <arc exit="southwest" move="rt southwest" destination="214" />
+  </node>
+  <node id="214" name="Greater Fist Cart Track, Twisting Path">
+    <description>The track twists its way through a bizarre landscape of blackened trees.  Their skeletal branches sway and crackle as a hot breeze blows flecks of charred bark from them.</description>
+    <position x="340" y="420" z="1" />
+    <arc exit="northeast" move="rt northeast" destination="213" />
+    <arc exit="west" move="rt west" destination="215" />
+  </node>
+  <node id="215" name="Greater Fist Cart Track, Twisting Path">
+    <description>The track bends around deep mud flows that obscure the stalks of ash-coated plants, leaving only the sickly grey blossoms desperately seeking a breath of clean air.</description>
+    <position x="320" y="420" z="1" />
+    <arc exit="east" move="rt east" destination="214" />
+    <arc exit="west" move="rt west" destination="216" />
+  </node>
+  <node id="216" name="Greater Fist Cart Track, Base of Volcano">
+    <description>The cart track comes to an end at the base of the volcano, stopping abruptly in a pile of cinders, ash and mud mixed with rocky debris.  Glimpses of the track twisting overhead amid the cooling flows can be seen through a screen of blackened branches.</description>
+    <position x="300" y="420" z="1" />
+    <arc exit="east" move="rt east" destination="215" />
+  </node>
+  <node id="217" name="Sicle Grove, Low Mound" note="Map7_NTR.xml|NTR">
+    <description>Smoke drifts in on hot gusts of air smelling of sulphur and burnt wood.  Steadily-falling ash blankets the area in a constant attempt to bury the landscape and a small shack in its grey embrace.  A faint footpath leads upwards.</description>
+    <position x="320" y="440" z="0" />
+    <arc exit="west" move="rt west" />
+    <arc exit="go" move="go footpath" destination="108" />
+  </node>
+  <label text="Stone-throwing Imps">
+    <position x="210" y="330" z="0" />
+  </label>
+  <label text="Danger: Hot Springs!">
+    <position x="310" y="100" z="0" />
+  </label>
+  <label text="^ Greater Fist">
+    <position x="280" y="230" z="0" />
+  </label>
+  <label text="Volcano Peak">
+    <position x="290" y="240" z="0" />
+  </label>
+  <label text="Cart Track">
+    <position x="310" y="50" z="1" />
+  </label>
+  <label text="Footpath">
+    <position x="290" y="50" z="0" />
+  </label>
+  <label text="Beware of oncoming carts!">
+    <position x="270" y="70" z="1" />
+  </label>
+  <label text="(They run every 5 minutes)">
+    <position x="270" y="80" z="1" />
+  </label>
+  <label text="NTR">
+    <position x="304" y="449" z="0" />
+  </label>
+</zone>

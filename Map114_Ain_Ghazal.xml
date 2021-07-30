@@ -1,0 +1,1194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Ain Ghazal" id="114">
+  <node id="1" name="Ain Ghazal, East Pier" note="Map113_West_Segoltha.xml|Ilaya Taipa">
+    <description>Subtle light gleams from bronze lanterns hung from a couple of tall poles, leaving shadows along a wood pier that juts off from the hard packed ground.  The pier provides a sturdy transition from road to river conveyance, with its beams wide enough for large beasts to go safely aboard.  The river's brisk waters beat against the rocks below with a wild rhythm, while a sign nearby warns of their danger.</description>
+    <description>Waiting for a skiff is made interesting by an intriguing placement of rocks.  Though many try to climb down to decipher them, they are warned off by a large, brooding Gor'Tog.  A dark wood pier juts off from the hard packed ground.</description>
+    <position x="0" y="100" z="0" />
+    <arc exit="west" move="west" destination="2" />
+    <arc exit="go" move="go skiff" hidden="True" destination="1" />
+    <arc exit="go" move="go side pier" destination="1" />
+  </node>
+  <node id="2" name="Ain Ghazal, River Road">
+    <description>The well-built and durable East Pier connects to River Road at this spot.  Skiffs take the public to and from River Clan, loading and unloading people, animals and commodities on the wide, dimly lit pier.  This road arcs to the northwest and southwest, and a steep slope leads upward.</description>
+    <description>The well-built and durable East Pier connects to River Road at this spot.  Skiffs take the public to and from River Clan, loading and unloading people, animals and commodities on the wide pier.  This road arcs to the northwest and southwest, and a steep slope leads upward.</description>
+    <position x="-60" y="100" z="0" />
+    <arc exit="east" move="east" destination="1" />
+    <arc exit="southwest" move="rt southwest" destination="3" />
+    <arc exit="northwest" move="rt northwest" destination="6" />
+    <arc exit="climb" move="climb steep slope" destination="8" />
+  </node>
+  <node id="3" name="Ain Ghazal, River Road">
+    <description>The south fork of the Segoltha River surges steadily eastward.  Compared to the aspects of the river on the other three sides of Ain Ghazal, the flow is deep and calm.  The lantern-lit South Dock, perpetually busy with ferry traffic, extends south from River Road.  The road itself curves northeast and northwest, and a steep slope leads upward.</description>
+    <description>The south fork of the Segoltha River surges steadily eastward.  Compared to the aspects of the river on the other three sides of Ain Ghazal, the flow is deep and calm.  The South Dock, perpetually busy with ferry traffic, extends south from River Road.  The road itself curves northeast and northwest, and a steep slope leads upward.</description>
+    <position x="-120" y="160" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="2" />
+    <arc exit="south" move="south" destination="4" />
+    <arc exit="northwest" move="rt northwest" destination="5" />
+    <arc exit="climb" move="climb steep slope" destination="7" />
+  </node>
+  <node id="4" name="Ain Ghazal, Ferry Dock" note="Map113_West_Segoltha.xml|Hibarnhvidar">
+    <description>Hard packed ground is littered with barrels, boxes and various conveyances awaiting the ferries' return to dock.  Smooth rock benches are scattered around the large area, for those travelers wishing to wait off their feet.  The dock itself is crafted from dark wood and braced by huge rocks and beams, while iron lanterns blaze from poles hung along each side.</description>
+    <description>Hard packed ground is littered with barrels, boxes and various conveyances awaiting the ferries' return to dock.  Smooth rock benches are scattered around the large area, for those travelers wishing to wait off their feet.  The dock itself is crafted from dark wood and braced by huge rocks and beams.</description>
+    <position x="-120" y="200" z="0" />
+    <arc exit="north" move="north" destination="3" />
+  </node>
+  <node id="5" name="Ain Ghazal, River Road">
+    <description>The Segoltha water that crashes deafeningly against Ain Ghazal rock renders the surface of the road damp and fills the air with a fine mist.  A moist cliff leads uphill.</description>
+    <description>A fine mist of water floats above the Segoltha as the river crashes into a cluster of towering boulders and cleaves to flow in two branches around the island.  The surface of the road is damp and the air reverberates with the constant thunder of the battle between Segoltha water and Ain Ghazal rock.  A low wall borders the outside edge of the River Road and the Spiral Road branches upward to the southeast, heading toward the chateau at its apex.  A moist cliff also leads uphill.</description>
+    <position x="-180" y="100" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="6" />
+    <arc exit="southeast" move="rt southeast" destination="3" />
+    <arc exit="up" move="rt up" destination="7" />
+    <arc exit="climb" move="climb moist cliff" destination="10" />
+  </node>
+  <node id="6" name="Ain Ghazal, River Road">
+    <description>The roar of the river is inescapable as it echoes between the soaring heights of the Journalai Range to the north and the mass of Ain Ghazal to the south.  The River Road, bordered by a low wall, curves southwest and southeast, and a sheer cliff lies directly above.</description>
+    <description>The north fork of the Segoltha River dashes past, freshening the air with a hint of water.  The roar of the river is inescapable as it echoes in the relatively narrow space between the soaring heights of the Journalai Range to the north and the mass of Ain Ghazal to the south.  There is always shade on this side of the island.  The River Road, bordered by a low wall, curves southwest and southeast, and a sheer cliff lies directly above.</description>
+    <position x="-120" y="40" z="0" />
+    <arc exit="southeast" move="rt southeast" destination="2" />
+    <arc exit="southwest" move="rt southwest" destination="5" />
+    <arc exit="climb" move="climb sheer cliff" destination="9" />
+  </node>
+  <node id="7" name="Ain Ghazal, Spiral Road">
+    <description>The Spiral Road curves downhill to the northwest and up to the northeast.  A steep slope leads straight down to the river and the South Dock, where ferries carrying passengers, caravans, and cargo hustle back and forth.  Overhead is a sheer cliff.</description>
+    <description>The Spiral Road begins its journey here, some distance above the river, and continues in a counter-clockwise coil up to the chateau.  Downhill to the northwest it connects with the River Road.  A steep slope leads straight down to the river and the South Dock, where ferries carrying passengers, caravans, and cargo hustle back and forth.  Overhead is a sheer cliff.</description>
+    <position x="-180" y="60" z="0" />
+    <arc exit="up" move="rt up" destination="8" />
+    <arc exit="down" move="rt down" destination="5" />
+    <arc exit="climb" move="climb sheer cliff" destination="11" />
+    <arc exit="climb" move="climb steep slope" destination="3" />
+    <arc exit="go" move="go narrow building" destination="126" />
+    <arc exit="go" move="go stable door" destination="127" />
+  </node>
+  <node id="8" name="Ain Ghazal, Spiral Road">
+    <description>A steep slope leads down to the River Road at its intersection with the East Pier.  The steady activity of passengers, skiffs, small boats, crates, barrels, and packages continues through the night.  A sheer cliff leads upward.</description>
+    <description>The northern and southern branches of the Segoltha River merge once more into a single flow surging eastward.  A steep slope leads down to the River Road at its intersection with the East Pier.  Around the pier, a protective breakwater has been constructed from carefully fitted rock to create a safe harbor for the Elven skiffs and the private boats.  A sheer cliff leads upward.</description>
+    <position x="-180" y="20" z="0" />
+    <arc exit="up" move="rt up" destination="9" />
+    <arc exit="down" move="rt down" destination="7" />
+    <arc exit="climb" move="climb sheer cliff" destination="12" />
+    <arc exit="climb" move="climb steep slope" destination="2" />
+  </node>
+  <node id="9" name="Ain Ghazal, Spiral Road">
+    <description>The sound of rushing water resonates against the mountain cliffs to the north.  Overhead is a perpendicular escarpment that appears difficult to climb, and a sheer cliff below would lead adventurous climbers down to the River Road.</description>
+    <description>The north fork of the Segoltha River races eastward, hurrying toward a reunion with its recently separated southern twin.  The northern shore across from Ain Ghazal rises steeply from the water's edge, forming the base of the lofty Journalai Range.  Overhead is a perpendicular escarpment that appears difficult to climb, and a sheer cliff below would lead adventurous climbers down to the River Road.</description>
+    <position x="-180" y="-20" z="0" />
+    <arc exit="up" move="rt up" destination="10" />
+    <arc exit="down" move="rt down" destination="8" />
+    <arc exit="climb" move="climb perpendicular escarpment" destination="13" />
+    <arc exit="climb" move="climb sheer cliff" destination="6" />
+  </node>
+  <node id="10" name="Ain Ghazal, Spiral Road">
+    <description>The roar of the river is reminiscent of a powerful waterfall.  The road, which leads up to the southeast and down to the northeast, may be a longer journey between the docks and the chateau, but it appears to be much safer than attempting to climb the perpendicular escarpment above or the sheer cliff below.</description>
+    <description>The heaving swell of the Segoltha River is split into two flows by an array of gargantuan boulders at the western edge of the island.  Great fan-shaped geysers of water erupt around the boulders, creating a roar reminiscent of a powerful waterfall.  The road, which leads up to the southeast and down to the northeast, may be a longer journey between the docks and the chateau, but it appears to be much safer than attempting to climb the perpendicular escarpment above or the sheer cliff below.</description>
+    <position x="-140" y="-20" z="0" />
+    <arc exit="up" move="rt up" destination="11" />
+    <arc exit="down" move="rt down" destination="9" />
+    <arc exit="climb" move="climb perpendicular escarpment" destination="14" />
+    <arc exit="climb" move="climb sheer cliff" destination="5" />
+  </node>
+  <node id="11" name="Ain Ghazal, Spiral Road">
+    <description>With lights reflecting in sparkles on the surface of the water, ferries move busily between the South Dock of Ain Ghazal and the Haalikshaal Highway Dock on the southern shore of the river.  The perpendicular escarpment above looks like a very difficult climb, and the sheer cliff below does not seem much easier.</description>
+    <description>About halfway between the river below and the chateau above, this location provides a panorama of mountains, forests, and the Segoltha River to the south.  The South Dock is always busy with ferry traffic between Ain Ghazal Island and the Haalikshaal Highway on the southern shore of the river.  The perpendicular escarpment above looks like a very difficult climb, and the sheer cliff below does not seem much easier.</description>
+    <position x="-140" y="-60" z="0" />
+    <arc exit="up" move="rt up" destination="12" />
+    <arc exit="down" move="rt down" destination="10" />
+    <arc exit="climb" move="climb perpendicular escarpment" destination="15" />
+    <arc exit="climb" move="climb sheer cliff" destination="7" />
+  </node>
+  <node id="12" name="Ain Ghazal, Spiral Road">
+    <description>Visible from this location are the lights of the East Pier and the lit skiffs moving downstream and upstream, to and from River Clan.  The perpendicular escarpment above might be suitable for expert climbers, and a sheer cliff leads down to the segment of the road directly below.</description>
+    <description>The north and south forks of the Segoltha River rush together like long-lost lovers, impatient and unwilling to wait an extra moment before continuing their journey to the east together.  A loop of the Spiral Road lies below, and the East Pier extends from the River Road at water level.  The perpendicular escarpment above might be suitable for expert climbers, and a sheer cliff leads down to the segment of the road directly below.</description>
+    <position x="-140" y="-100" z="0" />
+    <arc exit="up" move="rt up" destination="13" />
+    <arc exit="down" move="rt down" destination="11" />
+    <arc exit="climb" move="climb perpendicular escarpment" destination="16" />
+    <arc exit="climb" move="climb sheer cliff" destination="8" />
+  </node>
+  <node id="13" name="Ain Ghazal, Spiral Road" note="Graverobbers">
+    <description>A dim precipice overhangs the road, and an escarpment leads downward.</description>
+    <description>Another ring of the Spiral Road is visible below, and below that the northern arc of the River Road curves around the island.  The north fork of the Segoltha River leaps and plunges from west to east along the bottom of the gorge, and across the river the Journalai Mountains rise abruptly from the river's northern edge.  An overhanging precipice shades the road, and an escarpment leads downward.</description>
+    <position x="-140" y="-140" z="0" />
+    <arc exit="up" move="rt up" destination="14" />
+    <arc exit="down" move="rt down" destination="12" />
+    <arc exit="climb" move="climb overhanging precipice" destination="17" />
+    <arc exit="climb" move="climb perpendicular escarpment" destination="9" />
+    <arc exit="go" move="go earthen steps" destination="130" />
+  </node>
+  <node id="14" name="Ain Ghazal, Spiral Road">
+    <description>The crash of the river against the foot of the island thunders through the air.</description>
+    <description>Moving with prodigious force toward the island from the west, the Segoltha River creates magnificent sprays of water wherever it encounters boulders rising above the river's surface.  At the foot of the island, a formation of spectacularly large boulders bifurcates the rush of water into two branches, generating huge fan-shaped geysers and a near constant rumble.  When the sun shines on the spray, dozens of rainbows play across the airborne water droplets.</description>
+    <position x="-180" y="-140" z="0" />
+    <arc exit="up" move="rt up" destination="15" />
+    <arc exit="down" move="rt down" destination="13" />
+    <arc exit="climb" move="climb overhanging precipice" destination="18" />
+    <arc exit="climb" move="climb perpendicular escarpment" destination="10" />
+  </node>
+  <node id="15" name="Ain Ghazal, Spiral Road">
+    <description>Dimly illuminated ferries move quickly back and forth between the South Dock of Ain Ghazal and the dock at the terminus of the Haalikshaal Highway.  A precipice looms above the road, and on the other side of the road an escarpment may be a difficult shortcut to the section of road just below.</description>
+    <description>This area offers an excellent perspective of the forested mountain ranges to the south.  Three more loops of the road are visible farther down the side of the island, and the ferries are busy moving traffic between the South Dock and the Haalikshaal Highway across the river.  In the distance to the southwest, the massive bulk of Mount Hibarnhvidar is visible.  A precipice looms above the road, and on the other side of the road an escarpment may be a difficult shortcut to the section of road just below.</description>
+    <position x="-180" y="-180" z="0" />
+    <arc exit="up" move="rt up" destination="16" />
+    <arc exit="down" move="rt down" destination="14" />
+    <arc exit="climb" move="climb overhanging precipice" destination="19" />
+    <arc exit="climb" move="climb perpendicular escarpment" destination="11" />
+    <arc exit="go" move="go limestone building" destination="154" />
+  </node>
+  <node id="16" name="Ain Ghazal, Spiral Road">
+    <description>The distant lights of the East Pier and the skiffs it services are visible from this vantage.  A precipice juts out overhead, and a perpendicular escarpment lies between this section of the road and the section immediately below.</description>
+    <description>What a broad vista of the east side of the island!  Three loops of the road are visible below, along with the East Pier and the slow-moving skiffs it services.  The Segoltha River regroups after splitting into two forks around the island and rushes eastward with titanic force.  A precipice juts out overhead, and a perpendicular escarpment lies between this section of the road and the section immediately below.</description>
+    <position x="-180" y="-220" z="0" />
+    <arc exit="up" move="up" destination="17" />
+    <arc exit="down" move="down" destination="15" />
+    <arc exit="climb" move="climb overhanging precipice" destination="20" />
+    <arc exit="climb" move="climb perpendicular escarpment" destination="12" />
+  </node>
+  <node id="17" name="Ain Ghazal, Spiral Road" note="Cave Trolls">
+    <description>Directly below this section of the Spiral Road is an overhanging precipice that makes it difficult to see the lower curves of the road.  Off to one side of the road is a good-sized sinkhole.</description>
+    <description>The towering Journalai Range thrusts out from the earth just across the river from Ain Ghazal, obstructing the view of all areas farther north.  Directly below this section of the Spiral Road is an overhanging precipice that makes it difficult to see the lower curves of the road as it winds around the island.  Off to one side of the road is a sinkhole about twelve feet across.</description>
+    <position x="-140" y="-220" z="0" />
+    <arc exit="up" move="up" destination="18" />
+    <arc exit="down" move="down" destination="16" />
+    <arc exit="climb" move="climb overhanging precipice" destination="13" />
+    <arc exit="climb" move="climb jagged sinkhole" destination="77" />
+  </node>
+  <node id="18" name="Ain Ghazal, Spiral Road">
+    <description>The roar of the river is especially loud on the west side of Ain Ghazal.  Directly below, an overhanging precipice blocks the view of the rest of the island.</description>
+    <description>The mighty Segoltha River surges toward this island from the west.  On a clear day, the sparkling waters of Sawstwar Lake are visible in the distance.  As the Segoltha meets Ain Ghazal Island, immense boulders placed either by plan or by fortuitous fate block the vital force of the current and split it into two fast-moving forks that pass to the north and south of the island.  Directly below, an overhanging precipice blocks most of the view of the other western segments of the Spiral Road.</description>
+    <position x="-140" y="-260" z="0" />
+    <arc exit="up" move="up" destination="19" />
+    <arc exit="down" move="down" destination="17" />
+    <arc exit="climb" move="climb overhanging precipice" destination="14" />
+  </node>
+  <node id="19" name="Ain Ghazal, Spiral Road">
+    <description>The road curves down to the northwest and up to some iron gates in the northeast.  Directly below, an overhanging precipice blocks the view of the rest of the island.</description>
+    <description>The vast forested expanses of the Himineldar Shel lie to the south.  Miles of obscuring atmosphere between each range of mountains make it appear that each row of mountains is floating slightly above and beyond the nearer mountains.  To the southwest looms the colossal eminence of Mount Hibarnhvidar.  This road curves down to the northwest and up to some iron gates in the northeast.  Directly below, an overhanging precipice blocks most of the view of the other southern sectors of the Spiral Road.</description>
+    <position x="-140" y="-300" z="0" />
+    <arc exit="up" move="up" destination="20" />
+    <arc exit="down" move="down" destination="18" />
+    <arc exit="climb" move="climb overhanging precipice" destination="15" />
+  </node>
+  <node id="20" name="Ain Ghazal, Spiral Road">
+    <description>The gravel road that spirals down to the river and docks becomes a fitted flagstone avenue beyond the gates to the west, where the partially lit chateau looms.  A low roar reverberates from the river, but an overhanging precipice directly below blocks the view of the rest of the island.</description>
+    <description>The gravel road that spirals down to the river and the docks passes through tall iron gates to the west.  Beyond the gates, where the chateau looms, the gravel is replaced with fitted flagstone.  To the east, the vigorous Segoltha River continues its journey toward River Clan and the Reshal Sea beyond.  An overhanging precipice directly below blocks most of the view of the other eastern segments of this road.</description>
+    <position x="-140" y="-340" z="0" />
+    <arc exit="down" move="down" destination="19" />
+    <arc exit="go" move="go iron gate" destination="21" />
+    <arc exit="climb" move="climb overhanging precipice" destination="16" />
+  </node>
+  <node id="21" name="Ain Ghazal, Chateau Gatehouse">
+    <description>The cliffside chateau dominates the view.  Its entrance was designed to face the sun as it rises and the exterior architecture, with steep-angled gables, wrought-iron embellishments, crenelated cornices, and myriad turrets, captures the feel of an alpine castle.  The road leading west from this gatehouse to the chateau is paved with neatly inlaid flat limestone slabs.  Beyond the tall iron gates in the other direction, the limestone gravel road leads east and down to the docks.</description>
+    <position x="-220" y="-340" z="0" />
+    <arc exit="west" move="west" destination="22" />
+    <arc exit="go" move="go iron gate" destination="20" />
+    <arc exit="go" move="go smooth walkway" destination="146" />
+  </node>
+  <node id="22" name="Ain Ghazal Chateau, Portico">
+    <description>This covered walkway between two rows of slender marble columns leads to the massive front doors of the chateau, which dominate the west side of the portico.  Tall, brightly lit lanterns flank the magnificent doors.  The area is infused with the scents of fresh flowers and, to prevent missteps, the mosaic marble terrace is bordered with violet glowstones.  An animite arch carved with the words Ain Ghazal Auberge leads north and a small path slopes down to the south.</description>
+    <description>This covered walkway between two rows of slender marble columns leads to the massive front doors of the chateau, which dominate the west side of the portico.  Tall lanterns flank the magnificent doors.  The mosaic marble terrace is bordered with violet glowstones, which emit a dim light, while flowerpots and planter boxes add a fresh scent and a splash of color to the area.  An animite arch carved with the words Ain Ghazal Auberge leads north and a small path slopes down to the south.</description>
+    <position x="-240" y="-340" z="0" />
+    <arc exit="east" move="east" destination="21" />
+    <arc exit="go" move="go animite arch" destination="23" />
+    <arc exit="go" move="go glaes doors" destination="34" />
+    <arc exit="go" move="go stone path" destination="62" />
+  </node>
+  <node id="23" name="Ain Ghazal Auberge, Waterfall Garden">
+    <description>Tucked against the stone walls of the chateau that soar overhead into darkness, a small haven of tranquility has been lovingly created.  Gracefully carved wooden benches line the pathway from the arch to double doors crafted of subtly incised walnut that lead into the auberge.  Lighting the way, glazed lanterns hang from the trees.  A babbling waterfall glistens in the dim light and lends a musical counterpoint to quiet conversation.</description>
+    <description>Tucked against the soaring stone walls and towers of the chateau, a small haven of tranquility has been lovingly created.  Gracefully carved wooden benches line the pathway from the arch to double doors crafted of subtly incised walnut that lead into the auberge.  A tumble of stones falls from a slice of exposed cliffside, and a babbling stream of water falls with the stones, lending a musical counterpoint to quiet conversation.</description>
+    <position x="-220" y="-400" z="0" />
+    <arc exit="go" move="go walnut doors" destination="24" />
+    <arc exit="go" move="go animite arch" destination="22" />
+  </node>
+  <node id="24" name="Ain Ghazal Auberge, Lobby">
+    <description>Chairs and couches upholstered in tasteful burgundy silk brocade are scattered in clusters around this large reception area.  Dark wooden beams curve upward, meeting at the apex of the lofty ceiling, and finely detailed murals grace the walls between the beams.  The faint aroma of fine cuisine and a low hum of conversation drifts from behind some elegantly draped curtains, while the front desk lies just to the west.</description>
+    <position x="-220" y="-420" z="0" />
+    <arc exit="west" move="west" destination="26" />
+    <arc exit="go" move="go draped curtains" destination="25" />
+    <arc exit="go" move="go walnut doors" destination="23" />
+    <arc exit="go" move="go short hallway" destination="67" />
+  </node>
+  <node id="25" name="Ain Ghazal Auberge, The River Fisher" note="Food" color="#FF0000">
+    <description>Tables covered in snowy linen are scattered across a plush brandy-colored carpet, with centerpieces of flowers and candles lighting each table.  The pale glow of overhead chandeliers maintains a subdued ambiance in which the soft hum of conversation and the clink of heavy silver cutlery on fine china provide the background for an intimate dining experience.</description>
+    <description>Tables covered in snowy linen are scattered across a plush brandy-colored carpet, with centerpieces of flowers and candles lighting each table.  The pale glow of overhead chandeliers, along with dim light from the floor-to-ceiling windows creatively framed with gossamer burgundy drapes, maintains a subdued ambiance.  The soft hum of conversation and the clink of heavy silver cutlery on fine china provide the background for an intimate dining experience.</description>
+    <position x="-200" y="-420" z="0" />
+    <arc exit="go" move="go draped curtains" destination="24" />
+  </node>
+  <node id="26" name="Ain Ghazal Auberge, Front Desk">
+    <description>Just west of the main entryway, a long marble counter serves as the inn's front desk.  The Innkeeper works behind the counter, maintaining the register and controlling room keys that hang from a golden pegboard.  Travelers come and go, some arranging lodging for a night or two and others staying longer, presumably to study and contemplate with the community.  A sana'ati wood staircase with a plush, deep-burgundy carpet runner sweeps upward to the guest rooms.</description>
+    <position x="-240" y="-420" z="0" />
+    <arc exit="east" move="east" destination="24" />
+    <arc exit="go" move="go curved arch" destination="27" />
+    <arc exit="climb" move="climb sana'ati staircase" destination="28" />
+  </node>
+  <node id="27" name="Ain Ghazal Auberge, Inner Beauty" note="Makeup|Inner Beauty" color="#FF0000">
+    <description>Warm peach sponged with subtle shades of pink and cream paint adorns the walls, harmonizing with the rich orange-red tones of the flamewood arch.  A hint of sandalwood perfumes the air with its exotic fragrance.  Mirrors in carved teak frames reflect the flattering glow of the bayberry tapers positioned atop the counters and shelves, brightening the room.</description>
+    <position x="-260" y="-420" z="0" />
+    <arc exit="go" move="go curved arch" destination="26" />
+  </node>
+  <node id="28" name="Ain Ghazal Auberge, Upstairs Hall">
+    <description>Ensuring that each of the well-appointed staterooms through the doors on the east wall has a river view, this hall runs north and south deep into the rock of Ain Ghazal.  Airy and spacious with a high ceiling, despite being effectively underground, the broad corridor is well lit with several chandeliers and numerous wall sconces.  The sana'ati staircase leading down to the front desk continues upward in the form of wide, plushly carpeted sana'ati steps.</description>
+    <position x="-240" y="-440" z="0" />
+    <arc exit="go" move="go crystal door" destination="29" />
+    <arc exit="climb" move="climb sana'ati steps" destination="31" />
+    <arc exit="go" move="go goldenoak door" destination="33" />
+    <arc exit="climb" move="climb sana'ati staircase" destination="26" />
+    <arc exit="go" move="go silverwood door" destination="65" />
+    <arc exit="go" move="go platinum door" destination="66" />
+  </node>
+  <node id="29" name="Ain Ghazal Auberge, Mineral Baths">
+    <description>Well-tended plants grow alongside the paths, decorate the walls, and hang from the ceiling.  Marble steps lead down into the renowned mineral baths, and numerous oak benches and chairs offer comfortable repose between soaks.</description>
+    <position x="-220" y="-440" z="0" />
+    <arc exit="go" move="go marble steps" destination="30" />
+    <arc exit="go" move="go crystal door" destination="28" />
+    <arc exit="climb" move="climb sana'ati staircase" destination="28" />
+  </node>
+  <node id="30" name="Ain Ghazal Auberge, In The Pool" note="Pool">
+    <description>Half a dozen comfortable seats and recliners with headrests are carved into the submerged white marble.  The soothing cadence of trickling water invites carefree relaxation.</description>
+    <position x="-200" y="-460" z="0" />
+    <arc exit="go" move="go marble steps" destination="29" />
+  </node>
+  <node id="31" name="Ain Ghazal Auberge, Stair Landing">
+    <description>This spacious landing has abundant room for luggage, and the specialized furniture required for some guests, to await moving in or out of the luxurious suite at the top of the Auberge.  The vaulted ceiling rises high above, but a bright crystal chandelier adorned with dozens of Eluned's tear sapphires chases away even the thought of any gloom or darkness.</description>
+    <position x="-260" y="-440" z="0" />
+    <arc exit="go" move="go sana'ati doors" destination="32" />
+    <arc exit="climb" move="climb sana'ati steps" destination="28" />
+  </node>
+  <node id="32" name="Ain Ghazal Auberge, Palace Suite">
+    <description>This sumptuous suite affords deep-pile chestnut carpet with lush cherrywood paneling and furniture.  Detailed in gold-embroidered amaranthine silk bedding filled with eiderdown, the wide four-poster bed has a matching canopy and adjustable drapes.  Silk upholstered chairs and settee gather around a low table, and a desk and chair are available for letter writing.  The lights of the East Pier and the constantly moving River Clan skiffs far below are visible from the wide balcony.</description>
+    <description>This sumptuous suite affords deep-pile chestnut carpet with lush cherrywood paneling and furniture.  Detailed in gold-embroidered amaranthine silk bedding filled with eiderdown, the wide four-poster bed has a matching canopy and adjustable drapes.  Silk upholstered chairs and settee gather around a low table, while a desk and chair are available for letter writing.  A wide balcony offers a panoramic view of the Segoltha River, with River Clan skiffs constantly moving to and from the East Pier far below.</description>
+    <position x="-280" y="-440" z="0" />
+    <arc exit="go" move="go sana'ati doors" destination="31" />
+  </node>
+  <node id="33" name="Ain Ghazal Auberge, Gold Room">
+    <description>An oversized feather bed basks in the glow of vanilla-scented candles that highlight the gold embroidery on its burgundy silk duvet.  Warm goldenoak paneling gleams on three walls, while windows lightly curtained with diaphanous saffron fabric comprise the entire east wall.  A small, buttressed balcony, guarded by an ornate golden rail, allows one to open the window and take a step or two out to a view of the lights of the East Pier and of the River Clan skiffs that toil unceasingly.</description>
+    <description>Warm goldenoak paneling on three walls embraces a fluffy and inviting oversized feather bed with a burgundy silk duvet embroidered in gold.  Light streams through the lightly curtained windows that comprise the entire east wall, picking up highlights in both the weave of the bedding and the wood of the walls.  A small, buttressed balcony, guarded by an ornate golden rail, allows one to open the window and take a step or two out to a view of river and sky and skiffs.</description>
+    <position x="-240" y="-460" z="0" />
+    <arc exit="go" move="go goldenoak door" destination="28" />
+  </node>
+  <node id="34" name="Ain Ghazal Chateau, Foyer" note="Premium Portal|Portal" color="#FF00FF">
+    <description>As visitors enter the chateau through this enormous circular foyer, their first view is of sweeping dual stairways that lead upward in elegant curves to a gold marble balcony.  Through a dreamstone-inlaid arch to the west, between and beyond the stairways, is a lofty Great Hall lined with fluted marble columns.  Reddish light from a score of oil lamps creates a glow that warms the sky blue marble floor.</description>
+    <position x="-340" y="-360" z="0" />
+    <arc exit="south" move="south" destination="35" />
+    <arc exit="go" move="go marble arch" destination="36" />
+    <arc exit="go" move="go glaes doors" destination="22" />
+    <arc exit="go" move="go sweeping stairway" destination="72" />
+    <arc exit="go" move="go meeting portal" destination="175" />
+  </node>
+  <node id="35" name="Ain Ghazal Chateau, Amphitheater Entrance">
+    <description>Comfortable furniture is scattered throughout this elegant theater lobby, just south of the Chateau Foyer.  Gilded theatrical masks frame the amphitheater doors, and an empty marble counter, covered now with a white linen cloth, acts as a refreshment stand when the theater is in use.</description>
+    <position x="-340" y="-340" z="0" />
+    <arc exit="north" move="north" destination="34" />
+  </node>
+  <node id="36" name="Ain Ghazal Chateau, Great Hall">
+    <description>Crystal chandeliers high in the gold vaulted ceiling light this spacious area, and heavy tapestries soften the cold hardness of the stone walls.  Fluted marble columns line the hall, reflecting lightly across the crystal arabesque floor, and a plush red carpet leads up the Grand Staircase to the west.  Sisters and visitors pass along a cloistered balcony high above that encircles the room.  A marble rose and a statue stand in the middle of the chamber, and a number of busts are displayed on pedestals.</description>
+    <position x="-360" y="-360" z="0" />
+    <arc exit="north" move="north" destination="37" />
+    <arc exit="south" move="south" destination="38" />
+    <arc exit="go" move="go marble arch" destination="34" />
+    <arc exit="go" move="go grand staircase" destination="64" />
+  </node>
+  <node id="37" name="Ain Ghazal Chateau, East Hall">
+    <description>This long hallway leads north and south along the east side of the chateau, sloping slightly upward to the north.</description>
+    <position x="-360" y="-380" z="0" />
+    <arc exit="north" move="north" destination="39" />
+    <arc exit="south" move="south" destination="36" />
+    <arc exit="go" move="go mahogany door" destination="49" />
+  </node>
+  <node id="38" name="Ain Ghazal Chateau, Ballroom">
+    <description>The masterfully crafted cherry wood floor is clearly the centerpiece of this elegant ballroom.  Lit candles in dozens of niches form arches along the indigo marble walls, creating a twinkling atmosphere.  A platform at the west end of the room could easily accommodate a small orchestra.</description>
+    <position x="-360" y="-340" z="0" />
+    <arc exit="north" move="north" destination="36" />
+  </node>
+  <node id="39" name="Ain Ghazal Chateau, East Hall">
+    <description>This long hallway leads north and south along the east side of the chateau, sloping slightly upward to the north.</description>
+    <position x="-360" y="-400" z="0" />
+    <arc exit="north" move="north" destination="40" />
+    <arc exit="south" move="south" destination="37" />
+  </node>
+  <node id="40" name="Ain Ghazal Chateau, Hall Corner">
+    <description>Two long halls intersect here.  One leads west, sloping slightly upward, and the other leads south, sloping slightly downward.  At the inside corner an enclosed stairwell with steep steps tunnels upward toward the southwest.</description>
+    <position x="-360" y="-420" z="0" />
+    <arc exit="south" move="south" destination="39" />
+    <arc exit="west" move="west" destination="41" />
+    <arc exit="climb" move="climb enclosed stair" destination="68" />
+  </node>
+  <node id="41" name="Ain Ghazal Chateau, North Hall">
+    <description>This long hallway leads east and west along the north side of the chateau, sloping slightly upward to the west.</description>
+    <position x="-380" y="-420" z="0" />
+    <arc exit="east" move="east" destination="41" />
+    <arc exit="west" move="west" destination="48" />
+  </node>
+  <node id="42" name="Ain Ghazal Chateau, North Hall">
+    <description>This long hallway leads east and west along the north side of the chateau, sloping slightly upward to the west.</description>
+    <position x="-440" y="-420" z="0" />
+    <arc exit="east" move="east" destination="43" />
+    <arc exit="west" move="west" destination="44" />
+    <arc exit="go" move="go door" destination="45" />
+  </node>
+  <node id="43" name="Ain Ghazal Chateau, North Hall">
+    <description>This long hallway leads east and west along the north side of the chateau, sloping slightly upward to the west.</description>
+    <position x="-420" y="-420" z="0" />
+    <arc exit="west" move="west" destination="42" />
+    <arc exit="east" move="east" destination="48" />
+  </node>
+  <node id="44" name="Ain Ghazal Chateau, North Hall">
+    <description>This long hallway leads east and west along the north side of the chateau, sloping slightly upward to the west.</description>
+    <position x="-460" y="-420" z="0" />
+    <arc exit="east" move="east" destination="42" />
+  </node>
+  <node id="45" name="Ain Ghazal Chateau, Chapter Room 2">
+    <description>This classroom has many individual deskchairs, with a lectern and easel at the front of the room.  Next to the easel is a neatly-organized cupboard filled with rolled-up maps and documents and pointers of various lengths.  A pitcher and glass of water rest on a silver tray on one corner of the lectern.</description>
+    <position x="-440" y="-400" z="0" />
+    <arc exit="go" move="go hall door" destination="42" />
+    <arc exit="go" move="go service entry" destination="46" />
+  </node>
+  <node id="46" name="Ain Ghazal Chateau, Service Room">
+    <description>Set up to service several meeting rooms with concurrent sessions, this room is the staging area for conference refreshments.  Foods and drinks, soon to be balanced on the silver trays of the attendants, are organized on wide counters and tables.  Dirty dishes are quickly whisked off to the kitchen for cleaning.</description>
+    <position x="-420" y="-380" z="0" />
+    <arc exit="go" move="go northeast entry" destination="47" />
+    <arc exit="go" move="go northwest entry" destination="45" />
+    <arc exit="go" move="go door" destination="47" />
+    <arc exit="go" move="go swinging doors" destination="51" />
+  </node>
+  <node id="47" name="Ain Ghazal Chateau, Chapter Room 1">
+    <description>This large and functional meeting room has a polished oak table, a number of matching wooden chairs, and a chalkboard with many pieces of colored chalk.  On the long table, there is a silver tray holding a pitcher of water and some glasses.</description>
+    <position x="-400" y="-400" z="0" />
+    <arc exit="go" move="go entry" destination="46" />
+    <arc exit="go" move="go hall door" destination="48" />
+  </node>
+  <node id="48" name="Ain Ghazal Chateau, North Hall">
+    <description>This long hallway leads east and west along the north side of the chateau, sloping slightly upward to the west.</description>
+    <position x="-400" y="-420" z="0" />
+    <arc exit="go" move="go door" destination="47" />
+    <arc exit="east" move="east" destination="41" />
+    <arc exit="west" move="west" destination="43" />
+  </node>
+  <node id="49" name="Ain Ghazal Chateau, Archives Vestibule">
+    <description>The thick woolen carpet and lustrous wood paneling absorb any small noises that might be made in this quiet vestibule.  The Archive Docent sits reading a book behind a mahogany desk with a small sign on it.</description>
+    <position x="-380" y="-380" z="0" />
+    <arc exit="go" move="go mahogany door" destination="37" />
+    <arc exit="climb" move="climb flight stairs" destination="50" />
+  </node>
+  <node id="50" name="Ain Ghazal Chateau, Archives" note="Library">
+    <description>Deep within the silent rock of Ain Ghazal, the Archives proper have the same thick woolen carpet and lustrous wood paneling as the vestibule above.  Like an optical illusion, countless rows of bookshelves seem to taper off in the distance, but never quite disappear.</description>
+    <position x="-400" y="-380" z="0" />
+    <arc exit="climb" move="climb flight stairs" destination="49" />
+  </node>
+  <node id="51" name="Ain Ghazal Chateau, Kitchen">
+    <description>This room is an extension of the kitchen to the east -- equally busy, equally functional, and equally clean.  The foods cooked here suggest simpler fare than the gourmet dishes created in the adjacent room, probably because the stairway and dumbwaiter that lead to the banquet room connect directly to that kitchen.  Nevertheless, delectable aromas fill the air.</description>
+    <position x="-420" y="-320" z="0" />
+    <arc exit="east" move="east" destination="52" />
+    <arc exit="south" move="south" destination="53" />
+    <arc exit="go" move="go swinging doors" destination="46" />
+  </node>
+  <node id="52" name="Ain Ghazal Chateau, Kitchen">
+    <description>This capacious kitchen is constantly bustling, like a beehive disturbed by a fool.  Every inch of wall space is utilized by ovens, stoves, counters, sinks, and an icebox, with waist-high islands in the center of the room and appetizing aromas coming from every direction.  Cooks, servers and dishwashers hurry about their business, weaving in and out around each other without ever colliding.  Despite the energy of controlled chaos, the room is exceptionally clean and maintains a functionally low noise level.</description>
+    <position x="-400" y="-320" z="0" />
+    <arc exit="east" move="east" destination="55" />
+    <arc exit="south" move="south" destination="54" />
+    <arc exit="west" move="west" destination="51" />
+    <arc exit="climb" move="climb small stairway" destination="64" />
+  </node>
+  <node id="53" name="Ain Ghazal Chateau, Refectory">
+    <description>Like most institutional dining rooms, this room is simple and functional.  Nevertheless, the long rows of tables and benches are smoothly sanded and polished, curving gently to support the average human form.  There are a few taller tables with significantly bigger benches, and a few tables and benches that are much smaller.  Simple glass lamps mounted on wall brackets provide ample light.</description>
+    <position x="-420" y="-300" z="0" />
+    <arc exit="north" move="north" destination="51" />
+    <arc exit="east" move="east" destination="54" />
+    <arc exit="south" move="south" destination="61" />
+  </node>
+  <node id="54" name="Ain Ghazal Chateau, Refectory">
+    <description>Like most institutional dining rooms, this room is simple and functional.  Nevertheless, the long rows of tables and benches are smoothly sanded and polished, curving gently to support the average human form.  There are a few taller tables with significantly bigger benches, and a few tables and benches that are much smaller.  Simple glass lamps mounted on wall brackets provide ample light.</description>
+    <position x="-400" y="-300" z="0" />
+    <arc exit="north" move="north" destination="52" />
+    <arc exit="east" move="east" destination="56" />
+    <arc exit="south" move="south" destination="60" />
+    <arc exit="west" move="west" destination="53" />
+  </node>
+  <node id="55" name="Ain Ghazal Chateau, Common Room">
+    <description>Stuffed chairs line the walls and numerous small tables surrounded by simple wooden chairs are set up in the middle of this large room.  Bright wall lamps allow reading and studying throughout the room, although quiet conversation sometimes turns to animated discussion here.  Serious study is best left to other areas of the chateau.</description>
+    <position x="-380" y="-320" z="0" />
+    <arc exit="east" move="east" destination="58" />
+    <arc exit="south" move="south" destination="56" />
+    <arc exit="west" move="west" destination="52" />
+  </node>
+  <node id="56" name="Ain Ghazal Chateau, Dormitory">
+    <description>This quiet dormitory is filled with rows of spartan and austere cots, about half of which are occupied by sleeping forms.  Most of the cots are about six feet long, but there are a few that are longer.  Widely spaced wall lamps offer dim light.</description>
+    <position x="-380" y="-300" z="0" />
+    <arc exit="north" move="north" destination="55" />
+    <arc exit="east" move="east" destination="57" />
+    <arc exit="south" move="south" destination="59" />
+    <arc exit="west" move="west" destination="54" />
+  </node>
+  <node id="57" name="Ain Ghazal Chateau, Study">
+    <description>This brightly-lit study hall provides chairs in partitioned nooks along the walls, chairs in individual carrels, and solitary desk chairs.  Only the scratching of pens on paper and the rustle of book pages being turned break the absolute silence.</description>
+    <position x="-360" y="-300" z="0" />
+    <arc exit="north" move="north" destination="58" />
+    <arc exit="west" move="west" destination="56" />
+  </node>
+  <node id="58" name="Ain Ghazal Chateau, Private Foyer">
+    <description>This entryway has plenty of room for residents to hang cloaks on pegs and several racks on which they may place wet or dirty shoes and boots.  Benches allow sitting while removing footgear, and a neat stack of soft slippers is available for anyone who might need them.</description>
+    <position x="-360" y="-320" z="0" />
+    <arc exit="south" move="south" destination="57" />
+    <arc exit="west" move="west" destination="55" />
+    <arc exit="go" move="go narrow door" destination="62" />
+  </node>
+  <node id="59" name="Ain Ghazal Chateau, Dormitory">
+    <description>This quiet dormitory is filled with rows of spartan and austere cots, about half of which are occupied by sleeping forms.  Most of the cots are about six feet long, but there are a few that are longer.  Widely spaced wall lamps offer dim light.</description>
+    <position x="-380" y="-280" z="0" />
+    <arc exit="north" move="north" destination="56" />
+    <arc exit="west" move="west" destination="60" />
+    <arc exit="go" move="go trap door" destination="155" />
+  </node>
+  <node id="60" name="Ain Ghazal Chateau, Dormitory">
+    <description>This quiet dormitory is filled with rows of spartan and austere cots, about half of which are occupied by sleeping forms.  Most of the cots are about six feet long, but there are a few that are longer.  Widely spaced wall lamps offer dim light.</description>
+    <position x="-400" y="-280" z="0" />
+    <arc exit="north" move="north" destination="54" />
+    <arc exit="east" move="east" destination="59" />
+    <arc exit="west" move="west" destination="61" />
+  </node>
+  <node id="61" name="Ain Ghazal Chateau, Dormitory">
+    <description>This quiet dormitory is filled with rows of spartan and austere cots, about half of which are occupied by sleeping forms.  Most of the cots are about six feet long, but there are a few that are longer.  Widely spaced wall lamps offer dim light.</description>
+    <position x="-420" y="-280" z="0" />
+    <arc exit="north" move="north" destination="53" />
+    <arc exit="east" move="east" destination="60" />
+  </node>
+  <node id="62" name="Ain Ghazal Chateau, Private Entrance">
+    <description>Framed by lovely climbing honeysuckle vines, a sturdy narrow door leads into the chateau.  A small stone path leads north and up to the portico, while a faint trail heads farther south and down.</description>
+    <position x="-340" y="-320" z="0" />
+    <arc exit="go" move="go narrow door" destination="58" />
+    <arc exit="go" move="go faint trail" destination="63" />
+    <arc exit="go" move="go stone path" destination="22" />
+  </node>
+  <node id="63" name="Ain Ghazal, Green Glade">
+    <description>In this protected glade, surrounded by thick vineyards, tall green grass sways in an ever-present soft breeze.  An oval bed of densely-blooming daisies lights up the center of the glade, and a faint trail slopes up to the north.</description>
+    <description>The glow from dozens of fireflies plays off the tall, swaying grass and lights up a dense bed of daisies in the center of the glade.  A faint trail slopes up to the north.</description>
+    <position x="-340" y="-300" z="0" />
+    <arc exit="go" move="go faint trail" destination="62" />
+    <arc exit="go" move="go sunset-red tent" destination="177" />
+  </node>
+  <node id="64" name="Ain Ghazal Chateau, Banquet Room">
+    <description>The vaulted ceiling far above is painted to resemble the nighttime sky with twinkling stars.  Eleven tables with lace tablecloths, exceptional place settings, fresh flowers, and an elegant chandelier over each table, seem prepared for a banquet.  One table is prominent on a raised dais at the end of the room, and ten longer tables lie perpendicular to the head table.  The Grand Staircase is to the east and a smaller service stairway to the south, next to a spotless dumbwaiter, leads down to the kitchens.</description>
+    <position x="-400" y="-340" z="0" />
+    <arc exit="climb" move="climb small stairway" destination="52" />
+    <arc exit="go" move="go grand staircase" destination="36" />
+  </node>
+  <node id="65" name="Ain Ghazal Auberge, Silver Room">
+    <description>In this cozy room, fine beeswax candles and plush rugs add warmth to the polished hardwood floor around a large bed with a burgundy comforter.  Sheer white drapes cover the tall windows along the east wall, with silver threads in their shimmering folds catching glints of candle fire.  Centered in the glass wall, a balcony juts out so that guests may open the window and step up to a sturdy silver rail.  From that vista the lights of the East Pier and its River Clan skiffs are visible throughout the night.</description>
+    <position x="-260" y="-460" z="0" />
+    <arc exit="go" move="go silverwood door" destination="28" />
+  </node>
+  <node id="66" name="Ain Ghazal Auberge, Platinum Room">
+    <description>Rare adderwood paneling, with its swirling and weaving grain, glows in the candlelight.  The four-poster adderwood bed, covered in rich rose and platinum brocade, is embellished with a matching canopy.  Tall windows draped with silvery lace curtains fill the east wall, and a cantilevered balcony extends a pace or two to a filigreed platinum rail.  From the balcony, there is an excellent vista of the Segoltha River flowing downstream, with the lights of the East Pier and the River Clan skiffs far below.</description>
+    <position x="-220" y="-460" z="0" />
+    <arc exit="go" move="go platinum door" destination="28" />
+  </node>
+  <node id="67" name="Ain Ghazal Auberge, Conversation Room">
+    <description>Low tables surrounded by plushly upholstered chairs fill the room, spaced just far enough apart that conversations can be private.  Thick carpeting on the floor and burgundy velvet drapes contribute to the hushed environment.  Some patrons stand near the tall windows on the east side of the room, sipping drinks and gazing down at the lights of the East Pier and its constantly laboring skiffs.  A waitress glides across the room, taking orders and serving drinks and light meals.</description>
+    <position x="-200" y="-440" z="0" />
+    <arc exit="go" move="go short hallway" destination="24" />
+  </node>
+  <node id="68" name="Ain Ghazal Chateau, Steep Enclosed Stairwell">
+    <description>This is one of the rare areas in the chateau that seems uncomfortably confined and almost claustrophobic.  A long vertical ladder with rungs carved into the stone leads up, and a steep enclosed stair leads down.</description>
+    <position x="-360" y="-440" z="0" />
+    <arc exit="climb" move="climb enclosed stair" destination="40" />
+    <arc exit="climb" move="climb vertical ladder" destination="69" />
+  </node>
+  <node id="69" name="Ain Ghazal Chateau, Bell Tower Bastion">
+    <description>A crenelated wall girds this outdoor platform surrounding the high bell tower.  The Journalai Mountains loom darkly to the north, and the Himineldar Shel shade the south.  Far below, the lights of the East Pier and the South Dock guide their respective skiffs and ferries from one shore to another.  A short stairway goes up to the bell chamber itself, and a wooden door is visible under the stairs.  Rungs carved into the stone lead down into the chateau.</description>
+    <position x="-360" y="-460" z="0" />
+    <arc exit="climb" move="climb short stairway" destination="70" />
+    <arc exit="climb" move="climb carved rungs" destination="68" />
+    <arc exit="go" move="go wooden door" destination="71" />
+  </node>
+  <node id="70" name="Ain Ghazal Chateau, Bell Chamber">
+    <description>Dozens of bronze bells of various sizes are bolted to huge wooden beams and obviously remain stationary during performances.  Movable metal clappers, connected to thick wires that disappear through tiny oval slots in the marble floor, carry the impulses of the carillonneur from the batons below to the bells above.  A short stairway leads down to the bastion.</description>
+    <position x="-360" y="-480" z="0" />
+    <arc exit="climb" move="climb short stairway" destination="69" />
+  </node>
+  <node id="71" name="Ain Ghazal Chateau, Clavier Room">
+    <description>The walls, ceiling and floors are paneled with rare burled thuya wood, oiled to a lustrous sheen.  A raised platform with a restraining banister allows visitors to observe the carillonneur from a short distance, so as not to interfere with the musical performance.  Two banks of batons, one at waist level and the other at the feet, form the musical keyboard for this centuries-old carillon.  Connected to each baton is a thick wire that leads through the ceiling to the bell chamber above.</description>
+    <position x="-380" y="-460" z="0" />
+    <arc exit="go" move="go wooden door" destination="69" />
+  </node>
+  <node id="72" name="Ain Ghazal Chateau, Balcony Above Foyer">
+    <description>To the west, this gold marble balcony continues around the walls of the Great Hall, high above the floor.  Sweeping dual stairways lead in elegant curves down to the foyer, a steep spiral staircase leads upward, and a cherry wood door opens to the south.</description>
+    <position x="-320" y="-380" z="0" />
+    <arc exit="west" move="west" destination="73" />
+    <arc exit="go" move="go sweeping stairway" destination="34" />
+    <arc exit="go" move="go cherry door" destination="74" />
+    <arc exit="go" move="go spiral staircase" destination="75" />
+  </node>
+  <node id="73" name="Ain Ghazal Chateau, Balcony Above Great Hall">
+    <description>This cloistered balcony circumnavigates the perimeter of the Great Hall, far above its remarkable floor.  The elaborate crystal chandeliers are almost within reach.</description>
+    <position x="-340" y="-380" z="0" />
+    <arc exit="east" move="east" destination="72" />
+    <arc exit="go" move="go great hall" destination="36" />
+  </node>
+  <node id="74" name="Ain Ghazal Chateau, Music Conservatory" note="Harpsichord">
+    <description>Rich reddish brown cherry wood paneling, a deep-piled wool carpet, and dramatic drapes that flow in graceful curves across the entire ceiling cover every inch of the stone that encases this room.  Locked display cases showcase some of the instruments acquired by the Sisters over the years.  In one corner a huge concert harp stands behind a burgundy velvet rope, and behind another rope is a magnificent harpsichord.</description>
+    <position x="-320" y="-400" z="0" />
+    <arc exit="go" move="go cherry door" destination="72" />
+  </node>
+  <node id="75" name="Ain Ghazal Chateau, Synod Audience Chamber">
+    <description>Rich wall hangings and a thick carpet deaden sounds in this room.  Through a carved stone arch, rows of audience chairs fill the four balconies overlooking the Synod Chamber.</description>
+    <position x="-340" y="-400" z="0" />
+    <arc exit="go" move="go spiral staircase" destination="72" />
+    <arc exit="go" move="go stone arch" destination="76" />
+  </node>
+  <node id="76" name="Ain Ghazal Chateau, Synod Seating">
+    <description>This audience balcony overlooks the dais of the Synod Chamber.  The individual, carved and polished mahogany seats are simple yet comfortable, with smooth armrests.</description>
+    <position x="-340" y="-420" z="0" />
+    <arc exit="out" move="out" destination="75" />
+  </node>
+  <node id="77" name="Kradhren Caverns, Sinkhole" note="mine" color="#993300">
+    <description>A jagged hole high above shows the sky, making this cavern appear to be some sort of sinkhole.  Boulders of all sizes litter the area, perhaps flung there by some long-past cave-in.  Soft green moss spreads across the floor like a living carpet, growing thickest directly under the wide opening.  Many bones poke through the greenery, the remains of some poor, doomed animals that fell to their deaths.</description>
+    <position x="-20" y="-400" z="0" />
+    <arc exit="north" move="north" destination="79" />
+    <arc exit="south" move="south" destination="91" />
+    <arc exit="west" move="west" destination="78" />
+    <arc exit="climb" move="climb jagged sinkhole" destination="17" />
+  </node>
+  <node id="78" name="Kradhren Caverns, Amphitheater" color="#993300">
+    <description>A shallow stream runs along the bottom of a boulder-strewn passage for a short distance before disappearing into a narrow fissure running across the floor.  One wall of the passage is sheer rock, but the other is formed of tumbled boulders atop one another almost like tiered amphitheater seating.</description>
+    <position x="-40" y="-400" z="0" />
+    <arc exit="east" move="east" destination="77" />
+    <arc exit="southwest" move="southwest" destination="84" />
+  </node>
+  <node id="79" name="Kradhren Caverns, Twisting Tunnel" color="#993300">
+    <description>Odd bumps and protrusions cover the walls of the passage.  Some are smaller than a pea while others are larger than a boobrie egg.  The unusual formation gives the rock appearance of popcorn.</description>
+    <position x="-20" y="-420" z="0" />
+    <arc exit="north" move="north" destination="80" />
+    <arc exit="southwest" move="southwest" destination="77" />
+  </node>
+  <node id="80" name="Kradhren Caverns, The Rock Fall" color="#993300">
+    <description>The passage flares high and wide into a cavernous chamber where heaps of rubble litter the broad floor.  The debris spills from an enormous rock fall in the center of the room.  Multi-colored layers of stone are exposed on the ceiling where the chunks of rock have recently broken off, adding to the pile fallen in past upheavals.</description>
+    <position x="-20" y="-440" z="0" />
+    <arc exit="northeast" move="northeast" destination="82" />
+    <arc exit="south" move="south" destination="79" />
+    <arc exit="west" move="west" destination="81" />
+    <arc exit="go" move="go jagged opening" destination="97" />
+  </node>
+  <node id="81" name="Kradhren Caverns, The Squeeze" color="#993300">
+    <description>Stone walls press inward, constricting the passage to its claustrophobic narrowest.  Red-swirled flowstone curtains flecked with sparkling mica nearly seal the tunnel at one point, leaving a narrow opening to squeeze through.</description>
+    <position x="-40" y="-440" z="0" />
+    <arc exit="east" move="east" destination="80" />
+    <arc exit="go" move="go narrow opening" destination="115" />
+  </node>
+  <node id="82" name="Kradhren Caverns, Twisting Tunnel" color="#993300">
+    <description>An extensive maze of cracks runs across the limestone walls and ceiling.  Dense clusters of calcite deposited by the mineral-rich water fill the intersecting fractures.  The resulting veins of white crystal stand out starkly against dark grey rock, as intricate as ornamental fretwork.</description>
+    <position x="-20" y="-460" z="0" />
+    <arc exit="north" move="north" destination="83" />
+    <arc exit="south" move="south" destination="80" />
+  </node>
+  <node id="83" name="Kradhren Caverns, Twisting Tunnel" color="#993300">
+    <description>A tier of white stalactites festoons the ceiling like elegant chandeliers.  Jagged stone stalagmites mark a staggered path through the cavern.  The way is treacherous, littered with loosely piled mounds of pebbles and slabs that shift underfoot.</description>
+    <position x="-20" y="-480" z="0" />
+    <arc exit="south" move="south" destination="82" />
+    <arc exit="climb" move="climb way down" destination="119" />
+  </node>
+  <node id="84" name="Kradhren Caverns, Drogor's Gullet" color="#993300">
+    <description>Dark rock walls press close, forming a cramped tunnel.  The ceiling is festooned with rows of razor-sharp, blood-red stalactites that curve ever so slightly.  Fang-like stalagmites jutting up from the floor do little to dispel the impression of traveling down some monster's throat.</description>
+    <position x="-60" y="-380" z="0" />
+    <arc exit="northeast" move="northeast" destination="78" />
+    <arc exit="down" move="down" destination="85" />
+  </node>
+  <node id="85" name="Kradhren Caverns, The Red Pillars" color="#993300">
+    <description>Boulders littering the floor have lain undisturbed for ages, as proved by the white flowstone formation that drapes across the top and down one side of a massive pile.  Out of the pile extends a pair of red pillars connecting it to the ceiling.</description>
+    <position x="-60" y="-360" z="0" />
+    <arc exit="southwest" move="southwest" destination="86" />
+    <arc exit="up" move="up" destination="84" />
+  </node>
+  <node id="86" name="Kradhren Caverns, Sewing Room" color="#993300">
+    <description>This narrow passage inclines steeply, making footing precarious.  A thick layer of loose rock and mud covering the floor compounds the problem, but with care and balance it is possible to move onwards.  Needle-like sprays of white crystal radiate from the walls and ceiling, adding a further impediment to travel.</description>
+    <position x="-80" y="-340" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="85" />
+    <arc exit="northwest" move="rt northwest" destination="87" />
+  </node>
+  <node id="87" name="Kradhren Caverns, Flowstone Cavern" color="#993300">
+    <description>Moisture percolating through the porous rocks above forms thin rivulets of water trickling across an immense and intricate white flowstone formation banded with shades of blue, grey and green.  The sound of water splashing as it drips into the puddles that litter the floor echoes incessantly in the large cavern.</description>
+    <position x="-100" y="-360" z="0" />
+    <arc exit="north" move="north" destination="88" />
+    <arc exit="southeast" move="southeast" destination="86" />
+  </node>
+  <node id="88" name="Kradhren Caverns, The Plunge" color="#993300">
+    <description>Narrow and treacherous, the way becomes less like a path than a ledge on the face of a steep rock wall.  Over the rim of the ledge, the crevasse plunges almost straight down, without any cracks or crevices to provide a solid grip for climbing.  The far wall of the cavern is hidden in the darkness, and only the echoes hint at its existence.</description>
+    <position x="-100" y="-380" z="0" />
+    <arc exit="southeast" move="southeast" destination="87" />
+    <arc exit="northwest" move="northwest" destination="89" />
+  </node>
+  <node id="89" name="Kradhren Caverns, Twisting Tunnel" color="#993300">
+    <description>Shattered remains of a rock wall that once divided two smaller caverns cover the floor.  The stone lies splintered, destroyed by some angry force.  Scarred flowstone remnants cling to the ceiling and walls, their broken edges curiously clean, as if cut with surgical precision.  A distant rumble shivers the rock underfoot, perceptibly stronger to the north.</description>
+    <position x="-100" y="-400" z="0" />
+    <arc exit="north" move="north" destination="90" />
+    <arc exit="south" move="south" destination="88" />
+  </node>
+  <node id="90" name="Kradhren Caverns, By The Waterfall" color="#993300">
+    <description>A narrow shelf runs along the edge of a sheer precipice as it passes beneath a roaring cataract.  Bursting forth from a fissure high in the wall, the cascade of water falls in a thundering torrent into a churning black pool far below.  Mist wafts up from the depths of the gorge, slicking the rocks with condensation.</description>
+    <position x="-100" y="-420" z="0" />
+    <arc exit="south" move="south" destination="89" />
+  </node>
+  <node id="91" name="Kradhren Caverns, Twisting Tunnel" color="#993300">
+    <description>Underfoot lie patches of thick mud and golden-brown sand, but the walls are slick and clean.  Overhead the flat expanse of the ceiling is marred only by a few tiny cracks which extend a few feet then disappear into the smooth stone.</description>
+    <position x="-20" y="-380" z="0" />
+    <arc exit="north" move="north" destination="77" />
+    <arc exit="south" move="south" destination="92" />
+  </node>
+  <node id="92" name="Kradhren Caverns, Twisting Tunnel" color="#FFBF00">
+    <description>Twisting and turning, the narrow tunnel weaves a circuitous and disorienting path between craggy rock walls.  The ground underfoot is a slippery layer of mud and stone that shifts with every step.</description>
+    <position x="-20" y="-360" z="0" />
+    <arc exit="north" move="rt north" destination="91" />
+    <arc exit="northeast" move="rt northeast" destination="93" />
+    <arc exit="southeast" move="rt southeast" destination="94" />
+  </node>
+  <node id="93" name="Kradhren Caverns, Mosaic Passage" color="#993300">
+    <description>A river once flowed freely through this tunnel, depositing a muddy clay residue which hardened over time.  Studded with chunks of white rock, the dark red clay covers the floor and rises halfway up the wall, looking much like a tile mosaic.</description>
+    <position x="0" y="-380" z="0" />
+    <arc exit="east" move="east" destination="95" />
+    <arc exit="southwest" move="southwest" destination="92" />
+  </node>
+  <node id="94" name="Kradhren Caverns, Muddy Pit" color="#993300">
+    <description>Moisture seeps from the walls in slow trickles, pooling on a slick floor of dark clay mixed with sand.  Anyone wading through the cavern is in danger of being mired by the molasses-like consistency of the knee-deep sludge.  Jutting out of the muck is a low flowstone formation which is relatively smooth and flat in places, making it possible to sit upon.</description>
+    <position x="0" y="-340" z="0" />
+    <arc exit="northwest" move="northwest" destination="92" />
+    <arc exit="climb" move="climb steep slope" destination="125" />
+  </node>
+  <node id="95" name="Kradhren Caverns, Cathedral Cavern" color="#993300">
+    <description>A broad open area lies between crowded ranks of stalagmites and massive, green-streaked columns.  With no rubble barring the way, it resembles nothing so much as a wide aisle in some great cathedral.</description>
+    <position x="20" y="-380" z="0" />
+    <arc exit="southeast" move="southeast" destination="96" />
+    <arc exit="west" move="west" destination="93" />
+  </node>
+  <node id="96" name="Kradhren Caverns, Copper Grotto" color="#993300">
+    <description>A thick vein of copper flows down one wall and runs across the floor.  The glittering metallic line has many spidery offshoots, each spreading for a short distance then tapering off into ever-thinner veins before disappearing altogether.</description>
+    <position x="40" y="-360" z="0" />
+    <arc exit="northwest" move="northwest" destination="95" />
+  </node>
+  <node id="97" name="Kradhren Caverns, Twisting Tunnel" color="#993300">
+    <description>Widening slightly into a long channel of high-walled stone, the ceiling is lost in shadow high overhead.  A dun crystalline crust covers the walls, powdering and flaking with the lightest pressure.</description>
+    <position x="0" y="-440" z="0" />
+    <arc exit="east" move="east" destination="98" />
+    <arc exit="go" move="go jagged opening" destination="80" />
+  </node>
+  <node id="98" name="Kradhren Caverns, Sparkling Grotto" color="#993300">
+    <description>The passage widens abruptly to reveal a grotto whose ceiling is lost in shadow high overhead.  Creamy flowstone curtains whorled with blue and green drape the walls.  Flecks of pure white calcite crystals are woven into the flowstone, sparkling with reflected light.</description>
+    <position x="20" y="-440" z="0" />
+    <arc exit="northeast" move="northeast" destination="99" />
+    <arc exit="south" move="south" destination="100" />
+    <arc exit="west" move="west" destination="97" />
+  </node>
+  <node id="99" name="Kradhren Caverns, Twisting Tunnel" color="#993300">
+    <description>The walls slope sharply inward, narrowing and lowering the passage.  At the narrowest point the ceiling is low enough that members of the taller races would need to hunch over to keep from hitting their heads.</description>
+    <position x="40" y="-460" z="0" />
+    <arc exit="southeast" move="southeast" destination="101" />
+    <arc exit="southwest" move="southwest" destination="98" />
+  </node>
+  <node id="100" name="Kradhren Caverns, The Drawing Deep" color="#993300">
+    <description>Although the bulk of it has long since crumbled into the gorge, a natural stone bridge once spanned the stream rushing through a channel carved deep into the rock.  The swift-moving water cuts across the cavern before disappearing into a narrow fissure.  From the black depths of the fissure comes a disquieting sucking sound.</description>
+    <position x="20" y="-420" z="0" />
+    <arc exit="north" move="north" destination="98" />
+  </node>
+  <node id="101" name="Kradhren Caverns, Twisting Tunnel" color="#993300">
+    <description>Stalagmites and rocky scree litter the floor and hinder the explorer in this long tunnel.  A pair of collapsed columns lean against one another for support.  Wedged tightly between one wall and a broken stalagmite, a slab of fallen stone rests at a near level angle, forming a natural table.</description>
+    <position x="60" y="-440" z="0" />
+    <arc exit="south" move="south" destination="102" />
+    <arc exit="west" move="west" destination="99" />
+  </node>
+  <node id="102" name="Kradhren Caverns, Twisting Tunnel" color="#993300">
+    <description>Fragments of the ceiling have collapsed here and there along the length of the tunnel.  The dark fissures exposed by the fall are jeweled with minerals that contrast starkly with the surrounding dull grey rock.</description>
+    <position x="60" y="-420" z="0" />
+    <arc exit="north" move="north" destination="101" />
+    <arc exit="south" move="south" destination="103" />
+  </node>
+  <node id="103" name="Kradhren Caverns, Twisting Tunnel" color="#993300">
+    <description>The walls curve gently upward and inward to form a natural hemisphere of dark grey, mica-flecked stone.  Crystal spar decorates the ceiling and walls, tracing some of the cracks in a glittering display.  Sand lies deep on the floor, save for a few small piles of crystalline debris, apparently the remnant of something once attached to the ceiling that now lies in shattered ruin.</description>
+    <position x="80" y="-400" z="0" />
+    <arc exit="southeast" move="southeast" destination="104" />
+    <arc exit="northwest" move="northwest" destination="102" />
+  </node>
+  <node id="104" name="Kradhren Caverns, The Great Hall" color="#993300">
+    <description>Widening abruptly, the tunnel affords a view of stately stone formations.  Untold years of dripping water depositing layers of colorful minerals have resulted in stalactites and stalagmites streaked with shades of blue and green.  Some meet in the middle to form columns, demonstrating the great age of this hall.</description>
+    <position x="100" y="-380" z="0" />
+    <arc exit="south" move="south" destination="107" />
+    <arc exit="southwest" move="southwest" destination="105" />
+    <arc exit="west" move="west" destination="103" />
+    <arc exit="climb" move="climb large gash" destination="110" />
+  </node>
+  <node id="105" name="Kradhren Caverns, Whistling Passage" color="#993300">
+    <description>A narrowing of the passage forces air to flow past with increased velocity, producing a faint whistling sound.  Thick, twisted stone columns run the length of the tunnel, like a marble colonnade supporting the vaulted ceiling of a grand ballroom.</description>
+    <position x="80" y="-360" z="0" />
+    <arc exit="northeast" move="northeast" destination="104" />
+    <arc exit="southwest" move="southwest" destination="106" />
+  </node>
+  <node id="106" name="Kradhren Caverns, Reflection Pools" color="#993300">
+    <description>A large flowstone formation banded in grey and white forms one wall in this gigantic cavern.  Numerous rimstone pools hug the bottom edge of the stone curtain, spilling downwards in terraced sections.  The unusually clear waters reflect the stalactites hanging from the ceiling overhead, creating the illusion of ruined towers drowned deep within the pools.</description>
+    <position x="60" y="-340" z="0" />
+    <arc exit="north" move="north" destination="105" />
+  </node>
+  <node id="107" name="Kradhren Caverns, Choked Passage" color="#993300">
+    <description>Although this cavern must have once been fairly open, passage is now made difficult by rock formations jutting up from the floor and rubble where great stalactites have fallen in ages past.</description>
+    <position x="100" y="-360" z="0" />
+    <arc exit="north" move="north" destination="104" />
+    <arc exit="southeast" move="southeast" destination="108" />
+  </node>
+  <node id="108" name="Kradhren Caverns, Twisting Tunnel" color="#993300">
+    <description>Seams in the ceiling are lined with long, needle-like clusters of stalactites, commonly referred to as cave straw.  At intervals, mineral-rich water gathers from above to drip down onto the point of one of the many stalagmites.  Fragments of broken crystal needles litter the floor, resembling splinters of glass.</description>
+    <position x="100" y="-340" z="0" />
+    <arc exit="north" move="north" destination="107" />
+    <arc exit="south" move="south" destination="109" />
+  </node>
+  <node id="109" name="Kradhren Caverns, White Grotto" color="#993300">
+    <description>Slanted walls and narrow passageways leave little room to maneuver without brushing against the delicate crystalline formations covering the rock.  Resembling fluttering ribbons frozen in a moment of time, twisting streamers of snowy calcite lend the grotto the appearance of a wedding pavilion.</description>
+    <position x="100" y="-320" z="0" />
+    <arc exit="northeast" move="northeast" destination="108" />
+  </node>
+  <node id="110" name="Kradhren Caverns, Twisting Tunnel" color="#993300">
+    <description>The rock itself grows darker here, indicating a change in the nature of the stone as the passage winds its way onward.  Flecks of crystal glitter in the walls and ceiling.  The floor is uneven and covered with pebbles poking up through a layer of powdery sand.</description>
+    <position x="100" y="-420" z="0" />
+    <arc exit="northeast" move="northeast" destination="111" />
+    <arc exit="climb" move="climb steep wall" destination="104" />
+  </node>
+  <node id="111" name="Kradhren Caverns, Hot Springs" color="#993300">
+    <description>Rock walls soar upwards, coming together gradually to form a natural dome enclosing a cavern cratered with hot springs.  The stone floor is wildly uneven, creating ridges and half-walls of buckled stone that pose a threat to anyone walking through.  Brown and red streaked columns rise like twisting trees to support the vaulted ceiling high above.</description>
+    <position x="120" y="-440" z="0" />
+    <arc exit="east" move="east" destination="112" />
+    <arc exit="southeast" move="southeast" destination="113" />
+    <arc exit="southwest" move="southwest" destination="110" />
+  </node>
+  <node id="112" name="Kradhren Caverns, Bubbling Spring" color="#993300">
+    <description>A hot spring roils and steams in the upper end of the gallery, rimmed by crowded stalagmites and flowstone streaked lemon-yellow.  The drab rock walls are smooth and damp, intermittently veined with yellow and red.  A faint, sulphuric scent rises from the pool.</description>
+    <position x="140" y="-440" z="0" />
+    <arc exit="south" move="south" destination="113" />
+    <arc exit="west" move="west" destination="111" />
+  </node>
+  <node id="113" name="Kradhren Caverns, The Sauna" color="#993300">
+    <description>A soft mist spills out over the ground, issuing forth from a number of tiny fissures along one wall.  The air here feels warmer than in the rest of the cave, and it smells slightly of rotten eggs.  Deep crevices in the walls are lined with sparkling white crystals studded with lemon-yellow mineral deposits.</description>
+    <position x="140" y="-420" z="0" />
+    <arc exit="north" move="north" destination="112" />
+    <arc exit="south" move="south" destination="114" />
+    <arc exit="northwest" move="northwest" destination="111" />
+  </node>
+  <node id="114" name="Kradhren Caverns, Steamy Grotto" color="#993300">
+    <description>Welling up from a crevice in the wall, a steamy trickle of water flows down a rock outcropping and into a shallow pool.  A creeping vapor clings to the surface of the water, filling the area with the stench of rotten eggs.</description>
+    <position x="140" y="-390" z="0" />
+    <arc exit="north" move="north" destination="113" />
+  </node>
+  <node id="115" name="Kradhren Caverns, Shallow River Bed" color="#0000FF">
+    <description>Carved from the rock by an underground river, the tunnel walls are smooth rather than rough, and the ceiling and floor are barren of rocky growths.  Reduced now to a shallow stream, the clear waters cover a bed of fine sand with leaf fragments and water-polished quartz pebbles.</description>
+    <position x="-60" y="-440" z="0" />
+    <arc exit="north" move="swim north" destination="116" />
+    <arc exit="southwest" move="swim southwest" destination="117" />
+    <arc exit="go" move="go narrow opening" destination="81" />
+  </node>
+  <node id="116" name="Kradhren Caverns, Twisting Tunnel" color="#0000FF">
+    <description>Smooth stone walls are covered with beads of water dripping down with inexorable slowness.  Puddles and tiny pools cover the floor, some spilling over to merge with the stream that winds between green- and blue-marbled stalagmites before disappearing into a pile of rocks.</description>
+    <position x="-60" y="-460" z="0" />
+    <arc exit="south" move="swim south" destination="115" />
+  </node>
+  <node id="117" name="Kradhren Caverns, Shallow River Bed" color="#0000FF">
+    <description>Shallow water laps gently at the edges of a tumble of boulders in the middle of the cavern.  The water-worn rocks, too heavy to be pushed any further by the river that carved these tunnels ages ago, are riddled with dark scars where erosion has eaten away the outer stone.</description>
+    <position x="-80" y="-420" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="115" />
+    <arc exit="up" move="swim up" destination="118" />
+  </node>
+  <node id="118" name="Kradhren Caverns, The Drains" color="#0000FF">
+    <description>Walls of water-cut limestone are covered with jagged edges, ready to slice whatever might fall down upon them.  Hundreds of trickling streams of water pour from the holes in the ceiling high overhead.  The water gathers in shallow rivulets before spilling down the sloping passage.  An uneven fault splits the floor, forking into many more.  The fissures split and split again, covering most of the floor with a web of flaws.</description>
+    <position x="-80" y="-440" z="0" />
+    <arc exit="down" move="swim down" destination="117" />
+  </node>
+  <node id="119" name="Kradhren Caverns, Muddy Passage" color="#FFBF00">
+    <description>Soaring up from the mud, strangely shaped columns stretch into the dark recesses of the stalactite-studded ceiling.  Yielding to the pull of gravity, heavy droplets of water saturated with dissolved minerals slide down the needle-like rock formations, dropping from above and forming miniature craters in the mud on impact.</description>
+    <position x="-20" y="-500" z="0" />
+    <arc exit="northwest" move="rt northwest" destination="120" />
+    <arc exit="climb" move="climb rocky outcrop" destination="83" />
+  </node>
+  <node id="120" name="Kradhren Caverns, Twisting Tunnel" color="#993300">
+    <description>The rock walls and floor of this steeply sloping corridor are riddled with occasional splits and fissures.  Most can be stepped over with ease, but some would have to be jumped across by anyone shorter than an Olvi.</description>
+    <position x="-40" y="-520" z="0" />
+    <arc exit="north" move="north" destination="121" />
+    <arc exit="southeast" move="southeast" destination="119" />
+    <arc exit="west" move="west" destination="122" />
+  </node>
+  <node id="121" name="Kradhren Caverns, Twisting Tunnel" color="#993300">
+    <description>Draping from the ceiling to the edge of a blue-green pool is an expansive curtain of a creamy translucent mineral, dominating the small grotto.  Thin rivulets of water stream from cracks in the ceiling and flow down the curtain and into the pool with unusual quiet.</description>
+    <position x="-40" y="-540" z="0" />
+    <arc exit="south" move="south" destination="120" />
+  </node>
+  <node id="122" name="Kradhren Caverns, Crystal Grotto" color="#993300">
+    <description>Outcrops of crystal spar interspersed among the formations that cover the walls and ceiling make the grotto sparkle.  Only the smooth stone floor remains free of decoration and is coated with a fine grit of pulverized rock.</description>
+    <position x="-60" y="-520" z="0" />
+    <arc exit="east" move="east" destination="120" />
+    <arc exit="southwest" move="southwest" destination="123" />
+  </node>
+  <node id="123" name="Kradhren Caverns, Twisting Tunnel" color="#993300">
+    <description>Blue-grey stone glitters with mineral deposits, flecks of gold glimmer in veins of quartz in the walls, and still more quartz forms rosettes adorned with many large, lustrous, dark red needles.</description>
+    <position x="-80" y="-500" z="0" />
+    <arc exit="northeast" move="northeast" destination="122" />
+    <arc exit="south" move="south" destination="124" />
+  </node>
+  <node id="124" name="Kradhren Caverns, Glass Bower" color="#993300">
+    <description>Transparent stalactites grow from the ceiling, resembling glass more than stone.  Glittering like a glassblower's display, every surface is covered with curling streamers of crystalline minerals clustered together to form cave flowers.</description>
+    <position x="-80" y="-480" z="0" />
+    <arc exit="north" move="north" destination="123" />
+  </node>
+  <node id="125" name="Kradhren Caverns, Muddy Passage" color="#993300">
+    <description>Every exposed surface -- the floor, walls and even the ceiling -- is coated with thick mud.  Sloping downward, the ankle-deep muck gives way to a still pool of dark water filling one end of the cavern.  One can only surmise that the mud was deposited by receding floodwaters which filled the cave recently.</description>
+    <position x="20" y="-320" z="0" />
+    <arc exit="climb" move="climb steep slope" destination="94" />
+  </node>
+  <node id="126" name="Ain Ghazal, Exchange Building" note="Clerk|Minister|Trader Outpost" color="#00FF00">
+    <description>The marble walls of the exchange floor are shadowed in the evening light, which seems to come from a skylight.  The skylight has a curious cover of overlapping plates of gold that form a circular shape over the glass.  A small stream of light is allowed to escape, focusing on certain tiles which create the pattern of a blue crested moon.  An oak door to the north has been deeply chiseled and painted with the image of a bag of gold, while to the south lies a grand stone arch.</description>
+    <position x="-200" y="60" z="0" />
+    <arc exit="south" move="south" destination="127" />
+    <arc exit="out" move="out" destination="7" />
+    <arc exit="go" move="go oak door" destination="128" />
+    <arc exit="go" move="go stone arch" destination="127" />
+  </node>
+  <node id="127" name="Ain Ghazal, Caravan Stables" note="Caravan Stables" color="#00FF00">
+    <description>Despite the white marble walls, the stable area at first glance seems quite ordinary except for the fact that it is strikingly clean.  Square tiles of cobbled stone are set with great accuracy across the floor, and the stable doors all look freshly whitewashed.  Large windows that look out onto a small exercise yard are constantly open to let in fresh air, while mild lavender incense drifts through the room mixed with the smell of fresh hay.</description>
+    <position x="-200" y="80" z="0" />
+    <arc exit="north" move="north" destination="126" />
+    <arc exit="out" move="out" destination="7" />
+  </node>
+  <node id="128" name="Ain Ghazal, Private Depository" note="Teller" color="#00FF00">
+    <description>Were it not for the bag of coins painted upon the carved door, it might be difficult to recognize this large marble room as a bank at all, despite the vault and pristine white counter at the far side of the room.  Comfortable couches sit across from each other on either side of polished counting tables, providing a place for the island's residents to rest during their errands and chat with their fellow sisters.  A tall decanter of blue liquid sits on a mirrored tray on one of the tables.</description>
+    <position x="-220" y="60" z="0" />
+    <arc exit="north" move="north" destination="129" />
+    <arc exit="go" move="go oak door" destination="126" />
+  </node>
+  <node id="129" name="Ain Ghazal, Foreign Exchange Vault" note="Exchanger" color="#00FF00">
+    <description>An old counting table with a carefully repaired leg has been positioned in the front part of the vault, sectioned off with hide partitions as if the office were an afterthought.  A small sign has been tacked to the partition behind the table.</description>
+    <position x="-220" y="40" z="0" />
+    <arc exit="south" move="south" destination="128" />
+  </node>
+  <node id="130" name="Ain Ghazal, Catacombs">
+    <description>Smooth and contoured, the earthen walls of the catacombs curve into an arch overhead.  Long abandoned and frequently looted from the desiccated and neglected appearance of the worn stone slabs set deep into the walls, the underground tunnels are a no-man's land.  A faint rumbling and uneven piles of dust indicate that the structure is not wholly stable.</description>
+    <position x="-60" y="-140" z="0" />
+    <arc exit="northeast" move="northeast" destination="131" />
+    <arc exit="climb" move="climb earthen steps" destination="13" />
+  </node>
+  <node id="131" name="Ain Ghazal, Catacombs">
+    <description>Pillars of stone completely covered in neat stacks of bone nearly block the way through the catacomb tunnels here.  Shoulder blades, arranged together like the petals on a large, macabre flower, dot the roughened ceiling above.</description>
+    <position x="-40" y="-160" z="0" />
+    <arc exit="northeast" move="northeast" destination="132" />
+    <arc exit="southeast" move="southeast" destination="135" />
+    <arc exit="southwest" move="southwest" destination="130" />
+  </node>
+  <node id="132" name="Ain Ghazal, Catacombs">
+    <description>Hunks of rubble block what appear to have been narrow stairs leading further down into the catacombs.  The sound of rushing water can be heard from somewhere nearby, creating a somewhat fresh, though malodorous, breeze.</description>
+    <position x="-20" y="-180" z="0" />
+    <arc exit="north" move="north" destination="133" />
+    <arc exit="northeast" move="northeast" destination="134" />
+    <arc exit="southwest" move="southwest" destination="131" />
+  </node>
+  <node id="133" name="Ain Ghazal, Catacombs">
+    <description>Partially caved in, this section of the catacombs is laden with gritty dust.  The skulls that adorned what was once an archway are strewn underfoot, many crushed or missing jaws from the careless stomping of those who would rob the graves of the dead.</description>
+    <position x="-20" y="-200" z="0" />
+    <arc exit="north" move="north" destination="137" />
+    <arc exit="northeast" move="northeast" destination="138" />
+    <arc exit="south" move="south" destination="132" />
+    <arc exit="west" move="west" destination="136" />
+  </node>
+  <node id="134" name="Ain Ghazal, Catacombs">
+    <description>A stone chest sits empty, its lid far from it and cracked in two.  Crossed femurs form a web-like sculpture, the pattern creating an arch that spans the room.  Now and then, a faint dripping sound can be heard echoing through the catacombs.</description>
+    <position x="0" y="-200" z="0" />
+    <arc exit="north" move="north" destination="138" />
+    <arc exit="northeast" move="northeast" destination="140" />
+    <arc exit="southwest" move="southwest" destination="132" />
+    <arc exit="northwest" move="northwest" destination="137" />
+  </node>
+  <node id="135" name="Ain Ghazal, Catacombs">
+    <description>Dank and musty, the air of the catacombs leaves much to be desired.  Heavy stone slabs are partly fallen to one side of the tunnel, revealing scraps of fabric and a few protruding bones.  Rusty streaks mar the floor.</description>
+    <position x="-20" y="-140" z="0" />
+    <arc exit="northwest" move="northwest" destination="131" />
+  </node>
+  <node id="136" name="Ain Ghazal, Catacombs">
+    <description>A macabre pyramid of skulls is displayed against a low wall, the empty eyes staring forward and the toothy mouths in a perpetual lipless grin.  Dark stains mark a few of the stone chips that litter the ground, a testament to the instability of the earthen ceiling overhead.</description>
+    <position x="-40" y="-200" z="0" />
+    <arc exit="east" move="east" destination="133" />
+  </node>
+  <node id="137" name="Ain Ghazal, Catacombs">
+    <description>Vertebrae strung on rusted steel bars edge a broad altar, its onyx surface cracked and marred, leaving it unfit for the worship of whatever deity it was built in the name of.  A round design of skulls and ribs is arranged in a macabre pattern on the floor.</description>
+    <position x="-20" y="-220" z="0" />
+    <arc exit="southeast" move="southeast" destination="134" />
+    <arc exit="south" move="south" destination="133" />
+  </node>
+  <node id="138" name="Ain Ghazal, Catacombs">
+    <description>Narrowing dramatically here, the irregularly slanted walls of the catacombs betray the instability of this dank underworld.  A sporadic torch flickers along the winding maze, providing dim light to see by.</description>
+    <position x="0" y="-220" z="0" />
+    <arc exit="northeast" move="northeast" destination="139" />
+    <arc exit="east" move="east" destination="140" />
+    <arc exit="southeast" move="southeast" destination="141" />
+    <arc exit="south" move="south" destination="134" />
+    <arc exit="southwest" move="southwest" destination="133" />
+  </node>
+  <node id="139" name="Ain Ghazal, Catacombs">
+    <description>Stacks of bones are offset by the occasional skull, the ancient piles reaching the span of either side of the catacomb's tunnels here.  The air is especially thick in this section of the underground, the dust clinging to it evidence of recent movement.</description>
+    <position x="20" y="-240" z="0" />
+    <arc exit="south" move="south" destination="140" />
+    <arc exit="southwest" move="southwest" destination="138" />
+  </node>
+  <node id="140" name="Ain Ghazal, Catacombs">
+    <description>A trickle of water makes its way down the rugged wall, its path marked by a deep, rusty groove.  Skulls resting on shallow stone shelves line the opposite wall from floor to ceiling, the ends adorned with a cascading pattern of jaw bones.</description>
+    <position x="20" y="-220" z="0" />
+    <arc exit="north" move="north" destination="139" />
+    <arc exit="southeast" move="southeast" destination="142" />
+    <arc exit="southwest" move="southwest" destination="134" />
+    <arc exit="west" move="west" destination="138" />
+  </node>
+  <node id="141" name="Ain Ghazal, Catacombs">
+    <description>Jaws and finger bones create a complex design that spans the ceiling of the catacombs here.  Longer bones, perhaps from forearms, create a makeshift frame for the gruesome artwork.</description>
+    <position x="20" y="-200" z="0" />
+    <arc exit="east" move="east" destination="142" />
+    <arc exit="southeast" move="southeast" destination="143" />
+    <arc exit="northwest" move="northwest" destination="138" />
+  </node>
+  <node id="142" name="Ain Ghazal, Catacombs">
+    <description>Full skeletons line the catacombs here, tattered remnants of clothing from a former life hanging like spider webs from barren trees.  The figures are bereft of jewelry, no doubt looted long ago.</description>
+    <position x="40" y="-200" z="0" />
+    <arc exit="west" move="west" destination="141" />
+    <arc exit="northwest" move="northwest" destination="140" />
+  </node>
+  <node id="143" name="Ain Ghazal, Catacombs">
+    <description>Triangles formed of stacked pelvises are joined by starbursts of ribs and vertebrae in a close-knit formation here.  Skulls line the upper part of the wall, though some have fallen and shattered on the stone floor, teeth scattered as if from a barroom brawl.</description>
+    <position x="40" y="-180" z="0" />
+    <arc exit="southwest" move="southwest" destination="144" />
+    <arc exit="northwest" move="northwest" destination="141" />
+  </node>
+  <node id="144" name="Ain Ghazal, Catacombs">
+    <description>Long bones are woven together to form a series of diamonds along the path here.  Inside the space between the white, worn skeletal remains are polished skulls with their mouths agape.</description>
+    <position x="20" y="-160" z="0" />
+    <arc exit="northeast" move="northeast" destination="143" />
+    <arc exit="west" move="west" destination="145" />
+  </node>
+  <node id="145" name="Ain Ghazal, Catacombs">
+    <description>A flickering torch lights the catacomb tunnel here, revealing a section oddly barren of bone or grime.  Rust-hued streaks along the floor give the impression of something very large and heavily bleeding being dragged away.</description>
+    <position x="0" y="-160" z="0" />
+    <arc exit="east" move="east" destination="144" />
+  </node>
+  <node id="146" name="Ain Ghazal, Premium Society Garden" note="Premium Society Garden">
+    <description>A perfectly manicured lawn surrounds the opulent resort building.  Neat cobblestone paths meander through flower beds, leading to clusters of comfortable chairs and tables.  Dark hedges and dim groves of trees hint of secluded areas for quiet meditation or secret rendezvous.  The front doors are directly to the west, and a smooth walkway bordered with lush, blooming flowers leads eastward to the Spiral Road.</description>
+    <position x="-200" y="-260" z="0" />
+    <arc exit="southwest" move="southwest" destination="150" />
+    <arc exit="northwest" move="northwest" destination="148" />
+    <arc exit="go" move="go front doors" destination="147" />
+    <arc exit="go" move="go paved walkway" destination="21" />
+  </node>
+  <node id="147" name="Ain Ghazal, Formal Parlor" note="Formal Parlor">
+    <description>This warm and inviting room welcomes members with complimentary libations, appetizers and even full meals for those requiring such sustenance.  Elegant furniture is spaced to meet all needs.  A private nook hosts an individual lounge for one who might wish to quietly read a novel.  There are also luxurious armchairs encircling a commodious oval table around which a coterie of close friends might gather.  Well-lit by several ornate chandeliers, the room is designed to create a friendly ambiance.</description>
+    <position x="-260" y="-260" z="0" />
+    <arc exit="north" move="north" destination="151" />
+    <arc exit="south" move="south" destination="152" />
+    <arc exit="go" move="go front doors" destination="146" />
+  </node>
+  <node id="148" name="Ain Ghazal, Premium Society Garden North">
+    <description>The Journalai Mountains loom darkly to the north, but many of the rooms and towers of the Chateau emit twinkling lights.  An ambrosial fragrance wafts through the air, undoubtedly emanating from the carefully cultivated beds of flowers that weave through the cherry tree orchard.  Some garden chairs and lounges padded with soft cushions invite friends to gather around a table with an attached umbrella.</description>
+    <position x="-260" y="-320" z="0" />
+    <arc exit="southeast" move="southeast" destination="146" />
+    <arc exit="southwest" move="southwest" destination="149" />
+  </node>
+  <node id="149" name="Ain Ghazal, Premium Society Garden West">
+    <description>A peach tree grove guards the bluff where the Segoltha River crashes against the island's huge boulders, creating magnificent sprays of water that blow across the landscape like clouds across the sky.  Scattered lawn chairs and lounges offer the opportunity to relax, and a table with an enormous attached umbrella is available for those who might wish to gather and converse.</description>
+    <position x="-320" y="-260" z="0" />
+    <arc exit="northeast" move="northeast" destination="148" />
+    <arc exit="southeast" move="southeast" destination="150" />
+  </node>
+  <node id="150" name="Ain Ghazal, Premium Society Garden South">
+    <description>Rolling mountain ranges unfold darkly to the south.  Some twinkling lights, probably traffic along the Haalikshal Highway and the city of Hibarnhvidar, are visible upriver to the west.  A stand of pear trees lines the bluff, and some chairs are arranged near a table fastened with a huge umbrella.</description>
+    <position x="-260" y="-200" z="0" />
+    <arc exit="northeast" move="northeast" destination="146" />
+    <arc exit="northwest" move="northwest" destination="149" />
+  </node>
+  <node id="151" name="Ain Ghazal, Professional Affairs" note="Professional Affairs">
+    <description>Paneled in oak of superior quality and cut, this stately room functions as the Society's center of business operations.  A dignified oak desk, scattered with piles of papers held in place with a variety of paperweights, occupies a position of command in the center of the room.  Neat stacks of bank books and vault books distinctly designed to honor Ain Ghazal rest on a platinum tray.  The civil servant seated at the desk works busily at writing and filing, seeming to take no notice of you or anyone else.</description>
+    <position x="-260" y="-280" z="0" />
+    <arc exit="south" move="south" destination="147" />
+    <arc exit="west" move="west" destination="153" />
+  </node>
+  <node id="152" name="Ain Ghazal, Artisans' Lounge" note="Artisans' Lounge">
+    <description>Sky-blue silk drapes frame the south-facing window and heavy royal blue velvet curtains cloak the west wall.  A formal waiting list is poised upon a golden easel in the center of the room and a long sofa, perfect for a comfortable wait, rests conveniently along the east wall.  Four padded wooden chairs surround a simple square table positioned near the window.</description>
+    <position x="-260" y="-240" z="0" />
+    <arc exit="north" move="north" destination="147" />
+  </node>
+  <node id="153" name="Ain Ghazal, Gem Acquisitions" note="Gems">
+    <description>White pilasters separate this small oak-paneled room from the office directly to the east.  Although the windowless space is only dimly lit by wall lamps, a bright lantern illuminates the wide oak counter.</description>
+    <position x="-280" y="-280" z="0" />
+    <arc exit="east" move="east" destination="151" />
+  </node>
+  <node id="154" name="Sephina's Lockbane" note="Lockpick Shop" color="#FF0000">
+    <description>Chiseled in an elegantly textured style, limestone walls enclose this small building.  Two airy open windows flank the arched doorway, small terracotta pots filled with night-blooming flowers resting on the windowsills.  Just past a richly woven rug spread on the floor is a low stone counter guarding an array of locksmithing supplies on the shelves against the back wall.  Sephina sits on a padded brocade stool near a small side window, gazing out over the nighttime vista of the island.</description>
+    <description>Chiseled in an elegantly textured style, limestone walls enclose this small building.  Two airy open windows flank the arched doorway, small terracotta pots filled with leafy green plants resting on the windowsills.  Just past a richly woven rug spread on the floor is a low stone counter guarding an array of locksmithing supplies on the shelves and hooks against the back wall.  Sephina sits on a padded brocade stool near a small side window displaying a view of the island.</description>
+    <description>Chiseled in an elegantly textured style, limestone walls enclose this small building.  Two airy open windows flank the arched doorway, small terracotta pots filled with night-blooming flowers resting on the windowsills.  Just past a richly woven rug spread on the floor is a low stone counter guarding an array of locksmithing supplies on the shelves and hooks against the back wall.  Sephina sits on a padded brocade stool near a small side window, gazing out over the nighttime vista of the island.</description>
+    <position x="-200" y="-180" z="0" />
+    <arc exit="go" move="go arched doorway" destination="15" />
+  </node>
+  <node id="155" name="Tunnels">
+    <description>Smoothly cut, the stone passage leads downwards towards the heart of Ain Ghazal.  Elegantly carved mikkhalbamar sconces light the way, holding thick white beeswax candles clustered in trios, instead of torches.  A richly patterned Musparan rug stretches the full length of the tunnel, disappearing around the curve of the pathway.</description>
+    <position x="-400" y="-240" z="0" />
+    <arc exit="south" move="south" destination="156" />
+    <arc exit="go" move="go trap door" destination="59" />
+  </node>
+  <node id="156" name="Tunnels">
+    <description>Lit by the warm glow of the hundreds of candles set into elegant mikkhalbamar sconces, the cut stone passageway twists deeper into the core of the island.  Footfall is muffled by the rich Musparan silk rug that stretches the entire length of the tunnel, its perfect fit with the route's curves so exact that it must be custom-made.  A low bronze table pushed against the smooth stone wall bears a fragrant array of dragon mouth orchids planted in a smooth amethyst vase ringed with silver filigree.</description>
+    <position x="-400" y="-220" z="0" />
+    <arc exit="north" move="north" destination="155" />
+    <arc exit="southeast" move="southeast" destination="157" />
+  </node>
+  <node id="157" name="Tunnels">
+    <description>Slanting downward, the liquid-smooth grey stone floor continues its trek through the rocky island.  Richly woven exotic silk forms the long rug that runs the entire length of the tunnel, its pattern in this room forming thick knotwork in sandy hues.  Myriad jewel-toned colors sparkle in a mosaic wall hanging, creating a detailed sunburst pattern encircled by four moons.</description>
+    <position x="-380" y="-200" z="0" />
+    <arc exit="south" move="south" destination="158" />
+    <arc exit="northwest" move="northwest" destination="156" />
+  </node>
+  <node id="158" name="Tunnels">
+    <description>An elaborate porcelain vase bearing a gilded shesegri pattern stands against where the passageway splits, the southwest taking a steep downward turn and the southeast continuing its gradual descent, with an expansive Musparan silk rug showing the way from the north.  Overhead, a chandelier of delicate starfire topaz and gold fills the room with a pale blue light.</description>
+    <position x="-380" y="-180" z="0" />
+    <arc exit="north" move="north" destination="157" />
+    <arc exit="southeast" move="southeast" destination="161" />
+    <arc exit="southwest" move="southwest" destination="159" />
+  </node>
+  <node id="159" name="Tunnels">
+    <description>Sloping at a steep angle, the tunnel is lit by pale amethyst oil lamps hung from bronze hooks on the smooth stone walls.  Little can be seen further to the southwest, where the tunnel curves again on its descent into the belly of the island.  Opening to the northwest is another tunnel that might be missed by travelers hurrying southward.</description>
+    <position x="-400" y="-160" z="0" />
+    <arc exit="northeast" move="northeast" destination="158" />
+    <arc exit="southwest" move="southwest" destination="160" />
+    <arc exit="northwest" move="northwest" destination="162" />
+  </node>
+  <node id="160" name="Tunnels">
+    <description>Web-like veins of pyrite glitter from the surface of the cut stone tunnel, illuminated by the delicate lavender oil lamps hung along the path.  The sound of rushing water can be heard from somewhere nearby, echoing oddly in this subterranean space.</description>
+    <position x="-420" y="-140" z="0" />
+    <arc exit="northeast" move="northeast" destination="159" />
+    <arc exit="west" move="west" destination="174" />
+    <arc exit="go" move="go dark passage" destination="176" />
+  </node>
+  <node id="161" name="Tunnels">
+    <description>Water trickling from a gold-edged crack in the wall collects in a wide black marble basin on the grey stone floor.  Crystal-clear liquid slides down against a smooth sheet of pale green tsavorite affixed to the stone.  The light from the beeswax candles along the walls illuminates little past the geometrically patterned exotic rug underfoot.</description>
+    <position x="-360" y="-160" z="0" />
+    <arc exit="southeast" move="southeast" destination="167" />
+    <arc exit="northwest" move="northwest" destination="158" />
+  </node>
+  <node id="162" name="Ain Ghazal, Quality Subterranean Apartments" color="#00FFFF">
+    <description>Gracefully incised, wall-mounted platinum candelabra, each presenting three beeswax candles, create a dim but adequate light, while the plush carpet deadens most of the sounds that might be generated by residents or passersby.  The walls and high ceiling are paneled with warm, rich agarwood, which imbues this area with its complex and pleasing aroma.</description>
+    <position x="-420" y="-180" z="0" />
+    <arc exit="southeast" move="southeast" destination="159" />
+    <arc exit="west" move="west" destination="163" />
+  </node>
+  <node id="163" name="Ain Ghazal, Deluxe Subterranean Suites" color="#00FFFF">
+    <description>The rich scent of agarwood wafts along the quiet corridor, which widens to the west.  A smooth but unpolished flamewood pole is fixed solidly in the center of the area, disappearing into the darkness above.</description>
+    <position x="-440" y="-180" z="0" />
+    <arc exit="east" move="east" destination="162" />
+    <arc exit="west" move="west" destination="164" />
+  </node>
+  <node id="164" name="Ain Ghazal, Exclusive Subterranean Lodgings" color="#00FFFF">
+    <description>This sizable residential area is spacious enough to ensure that no neighbors share walls or disturb each other's peace and quiet.  In the middle of the neighborhood, a solidly positioned flamewood pole disappears into the darkness above.</description>
+    <position x="-460" y="-180" z="0" />
+    <arc exit="east" move="east" destination="163" />
+    <arc exit="west" move="west" destination="165" />
+  </node>
+  <node id="165" name="Ain Ghazal, Premier Subterranean Residences" color="#00FFFF">
+    <description>This expansive district offers grand freestanding homes for those who can afford them.  Decorative platinum lampposts replace the candelabra of the smaller suburbs, and the pavement is composed of marble slabs fit tightly together like a large, freeform puzzle.  Midway across the area, a slim but sturdy flamewood pole disappears into the darkness above.</description>
+    <position x="-480" y="-180" z="0" />
+    <arc exit="east" move="east" destination="164" />
+    <arc exit="west" move="west" destination="166" />
+  </node>
+  <node id="166" name="Ain Ghazal, Estates Town Square" color="#00FFFF">
+    <description>If there were any doubts about the wealth accumulated here over the centuries, this Town Square puts those suspicions to rest.  Eye-catching lines of spectacular, gold-gilded architecture and streets paved in smooth, lustrous gold bricks surround a verdant park boasting an assortment of statuary.  The air is so fresh and clean, one might wonder if this is actually a subterranean cavern.  The sky overhead looks dark with a sprinkling of stars -- is it just a painted ceiling far above?</description>
+    <description>If there were any doubts about the wealth accumulated here over the centuries, this Town Square puts those suspicions to rest.  Eye-catching lines of spectacular, gold-gilded architecture and streets paved in smooth gold bricks gleaming with a lustrous sheen surround a verdant park boasting an assortment of statuary.  The air is so fresh and clean, one might wonder if this is actually a subterranean cavern.  The sky overhead looks blue with a few indistinct clouds -- is it just a painted ceiling far above?</description>
+    <position x="-500" y="-180" z="0" />
+    <arc exit="east" move="east" destination="165" />
+  </node>
+  <node id="167" name="Thieves' Guild">
+    <description>Richly carved of purplish black walnut, a thick arch bearing a scene of battling dragons and wyverns spans the entrance to the guild proper towards the south.  A Musparan silk rug leads northwest from the chamber, its elaborately fringed twisted cloth-of-gold edge positioned just shy of a candelabra-flanked entryway.</description>
+    <position x="-340" y="-140" z="0" />
+    <arc exit="south" move="south" destination="168" />
+    <arc exit="northwest" move="northwest" destination="161" />
+  </node>
+  <node id="168" name="Thieves' Guild">
+    <description>Reclining on a linden chair set with stiff brocatelle cushions, a pale Elven woman with platinum-hued hair and silvery grey eyes sits with one arm draped against an elegantly carved sana'ati bin.  Overhead, a hematite chandelier lights the room with hundreds of votive candles set in intricate ewys holders.  A silvery mirror is hung along one wall, its blackwood frame studded with dark sapphires.</description>
+    <position x="-340" y="-120" z="0" />
+    <arc exit="north" move="north" destination="167" />
+    <arc exit="south" move="south" destination="172" />
+    <arc exit="west" move="west" destination="169" />
+  </node>
+  <node id="169" name="Thieves' Guild">
+    <description>A golden panther statue is poised in a crouch on a jagged black jade branch which juts from the wall at an odd angle.  Below the feline is a long ironwood table covered in white votive candles in varying stages of burning.  The grey walls here are a slightly darker hue than elsewhere in the guild, as though seeped in shadow.  A crimson mat of woven kokona grass covers the floor.</description>
+    <position x="-360" y="-120" z="0" />
+    <arc exit="east" move="east" destination="168" />
+    <arc exit="south" move="south" destination="170" />
+    <arc exit="go" move="pull branch;go silk doorway" destination="173" />
+    <arc exit="go" move="go silk doorway" destination="173" />
+  </node>
+  <node id="170" name="Thieves' Guild, Lounge">
+    <description>A rug of raw silk is spread over the majority of this spacious room, lit by a twilight-blue crystal and silver chandelier.  Heaps of pillows are strewn about the floor, kept warm by low bronze braziers.  Brocade couches grace the edges of the space, and in the center is a wide marble table loaded with food and drink.</description>
+    <position x="-360" y="-100" z="0" />
+    <arc exit="north" move="north" destination="169" />
+    <arc exit="southeast" move="southeast" destination="171" />
+    <arc exit="go" move="go dark portal" destination="179" />
+  </node>
+  <node id="171" name="Thieves' Guild, Kitchen">
+    <description>Rich red oilcloth rugs dot this cavernous kitchen.  A potbellied iron stove sits in the center of the room, its exterior lavishly decorated with wrought night-blooming flowers of all kinds.  A built-in Wayerd pyramid rests directly under an air shaft, placed on a tall rowan table with stout legs ending in carved lion's paws.  A long granite countertop provides plenty of room for a stationary unlonchai bucket -- with not a bit of food in sight, this kitchen is obviously not meant for preparing meals.</description>
+    <position x="-340" y="-80" z="0" />
+    <arc exit="north" move="north" destination="172" />
+    <arc exit="northwest" move="northwest" destination="170" />
+  </node>
+  <node id="172" name="Ain Ghazal, Thieves' Guild">
+    <description>A lustrous nightstalker silk rug of a rich purple hue lies before a broad arched doorway, the twisted strands gleaming in the light of elaborate porphyry candelabra dangling pale crystals.  The grey stone walls are carved with a simple pattern of intertwining roses and thorns in circular sections.</description>
+    <position x="-340" y="-100" z="0" />
+    <arc exit="north" move="north" destination="168" />
+    <arc exit="south" move="south" destination="171" />
+    <arc exit="go" move="go arched doorway" destination="178" />
+  </node>
+  <node id="173" name="Thieves' Guild, Guildleader Office" note="GL Thief" color="#FF8000">
+    <description>Lit by thick beeswax candles set behind pale blue glass, this room exists beneath a delicate veil of shadow.  A wide desk of grey ironwood edged with a carved pattern of interwoven shrikes and thorns dominates the room, its surface completely bare.  A miniature dragonwood tree rests in the only lit corner beside a large silver lever, its branches lifesculpted into strangely ethereal shapes.  Small sparks of light flit from leaf to leaf in the blink of an eye, hinting at a greater mystery to this plant.</description>
+    <position x="-380" y="-120" z="0" />
+    <arc exit="go" move="pull lever;go silk doorway" destination="169" />
+  </node>
+  <node id="174" name="Underground River">
+    <description>A short stone ledge hangs over an underground river, the water crystal clear as it moves through locked metal grates on each end of the cave.  A long ironwood bench carved with images of vineyards sits off to one side, safe and dry on the pier-like jutting of rock.</description>
+    <position x="-440" y="-140" z="0" />
+    <arc exit="east" move="east" destination="160" />
+  </node>
+  <node id="175" name="Fang Cove, Fate's Fortune Lane" note="Map150_Fang_Cove.xml">
+    <description>A towering marble archway opens a gap in the wall to the north and separates the ongoing construction and somewhat more refined completed structures of Fate's Fortune Lane from the crude structures and makeshift walkway along the beach.  The entrance to a squat, wide bungalow sits in opposition to the arch, and the sheltering cliffs of Fang's Peak rise up from behind it.  To either side of the arch, cobblestones of different shapes and sizes have been laid out to form the wide Fate's Fortune Lane.</description>
+    <position x="-380" y="-400" z="1" />
+    <arc exit="north" move="north" />
+    <arc exit="east" move="east" />
+    <arc exit="west" move="west" />
+    <arc exit="go" move="go exit portal" destination="34" />
+  </node>
+  <node id="176" name="Ain Ghazal, Passageway">
+    <description>Smoothly cut from the stone beneath the surface of the island, the walls of this cramped passageway leave little room for maneuvering.  An oil lamp tinted a dark purple hue lends enough muted light to see by.</description>
+    <position x="-440" y="-120" z="0" />
+    <arc exit="go" move="go violet-tinged passageway" destination="160" />
+    <arc exit="go" move="go stone passageway" hidden="True" destination="145" />
+  </node>
+  <node id="177" name="Given By The Sun, Offerings" note="Given By The Sun" color="#FF0000">
+    <description>An arrangement of gaethzen suns hang from the support structure of this humble tent, their light clustered around the three simple wooden stands that are neatly arranged an even distance from each other and the walls.  Covering the floor is a worn but clean rug in a sunny yellow hue.  Leading back outside, a tent flap stands open.</description>
+    <position x="-340" y="-280" z="0" />
+    <arc exit="go" move="go tent flap" destination="63" />
+  </node>
+  <node id="178" name="Thieves' Guild, Shop" note="Thief Shop" color="#FF0000">
+    <description>Looking more like a spacious storeroom than a shop, goods here are displayed on opulent holders.  An elevated tray and a rowan crate flank a series of silver racks placed on a small patterned rug.  The scent of exotic spices rises from a diminutive brass incense burner set beside a set of shelves, a velvet-draped pedestal beneath it.</description>
+    <position x="-320" y="-100" z="0" />
+    <arc exit="go" move="go arched doorway" destination="172" />
+  </node>
+  <node id="179" name="Thieves' Guild, Grandmaster's Lounge" note="Thief Grandmaster Lounge">
+    <description>Swathed in sheer silks the hues of eventide, this room is designed with comfort and impeccable style.  Low couches of chocolate-brown velvet are piled high with golden firesilk cushions, the seating all arranged in a curving semicircle.  A gilded cage is home to a pouting fire sprite, her petulant gaze displaying her obvious unhappiness with the golden chains which bind her.</description>
+    <position x="-360" y="-80" z="0" />
+    <arc exit="go" move="go dark portal" destination="170" />
+  </node>
+  <label text="Himineldar Shel">
+    <position x="-150" y="210" z="0" />
+  </label>
+  <label text="Cave Trolls">
+    <position x="10" y="-480" z="0" />
+  </label>
+  <label text="Graverobbers">
+    <position x="-70" y="-240" z="0" />
+  </label>
+  <label text="Ain Ghazal">
+    <position x="-170" y="-560" z="0" />
+  </label>
+  <label text="Ilaya Taipa">
+    <position x="-10" y="60" z="0" />
+  </label>
+</zone>

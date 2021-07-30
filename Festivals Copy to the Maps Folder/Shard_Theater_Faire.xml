@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Shard Theater Faire 419 (2016)" id="0">
+  <node id="1" name="Shard Faire Fields, North" note="North" color="#FF00FF">
+    <description>Fresh green grass creates a lush, natural carpet across the ground around a flower-draped wrought iron archway.  Spotting the field with hues of purple and blue are tiny violets with heart-shaped petals.</description>
+    <position x="120" y="80" z="0" />
+    <arc exit="east" move="east" destination="2" />
+    <arc exit="southeast" move="southeast" destination="6" />
+    <arc exit="south" move="south" destination="4" />
+    <arc exit="southwest" move="southwest" destination="8" />
+    <arc exit="west" move="west" destination="3" />
+    <arc exit="go" move="go leather tent" destination="10" />
+    <arc exit="go" move="go barn-shaped wagon" destination="11" />
+    <arc exit="go" move="go iron archway" />
+  </node>
+  <node id="2" name="Shard Faire Fields, Northeast" note="NE|platinum-trimmed slot machine" color="#00FF00">
+    <description>Daring to grow ankle-high, the grass holds a deep green hue.  Thicker clumps of it grow together to create an almost bush-like effect.  Sheltering in the shade of the largest bunch is a cluster of pale orange zinnia blooms.</description>
+    <position x="180" y="80" z="0" />
+    <arc exit="south" move="south" destination="6" />
+    <arc exit="southwest" move="southwest" destination="4" />
+    <arc exit="west" move="west" destination="1" />
+    <arc exit="go" move="go silverwood shack" destination="12" />
+    <arc exit="go" move="go colorful caravan" destination="16" />
+  </node>
+  <node id="3" name="Shard Faire Fields, Northwest" note="NW|platinum-trimmed slot machine" color="#00FF00">
+    <description>An array of different flowers have taken over from the grass in this section of the field.  Bright orange poppies vie for space alongside intense, bright blue warbels and the more delicate-looking widow's lace with their dark, purplish centers.</description>
+    <position x="60" y="80" z="0" />
+    <arc exit="east" move="east" destination="1" />
+    <arc exit="southeast" move="southeast" destination="4" />
+    <arc exit="south" move="south" destination="8" />
+    <arc exit="go" move="go domed shelter" destination="18" />
+    <arc exit="go" move="go hide tent" destination="48" />
+    <arc exit="go" move="go long caravan" destination="50" />
+  </node>
+  <node id="4" name="Shard Faire Fields, Center" note="Center|gift">
+    <description>Casting twisting branches in all directions, a maple tree stands guard over the middle of the field.  One of its branches dips low enough to the ground to be used as a makeshift bench.  The grass beneath the large tree is sparse but soft.  Peeking out from between the roots are delicate rose-tinged snow trillum.</description>
+    <position x="120" y="140" z="0" />
+    <arc exit="north" move="north" destination="1" />
+    <arc exit="northeast" move="northeast" destination="2" />
+    <arc exit="east" move="east" destination="6" />
+    <arc exit="southeast" move="southeast" destination="7" />
+    <arc exit="south" move="south" destination="5" />
+    <arc exit="southwest" move="southwest" destination="9" />
+    <arc exit="west" move="west" destination="8" />
+    <arc exit="northwest" move="northwest" destination="3" />
+    <arc exit="go" move="go silversteel doorway" destination="62" />
+    <arc exit="go" move="go canvas tent" destination="19" />
+    <arc exit="go" move="go wood-frame pavilion" destination="20" />
+  </node>
+  <node id="5" name="Shard Faire Fields, South" note="South">
+    <description>Tall grasses sway back and forth with any breeze, their ends curling downward with their own weight.  An Elamiri rose bush has taken root here, the pale blue-tinged petals of the delicate blossoms standing out against the riot of green around them.</description>
+    <position x="120" y="200" z="0" />
+    <arc exit="north" move="north" destination="4" />
+    <arc exit="northeast" move="northeast" destination="6" />
+    <arc exit="east" move="east" destination="7" />
+    <arc exit="west" move="west" destination="9" />
+    <arc exit="northwest" move="northwest" destination="8" />
+    <arc exit="go" move="go path" destination="31" />
+    <arc exit="go" move="go silk tent" destination="32" />
+    <arc exit="go" move="go cotton pavilion" destination="35" />
+  </node>
+  <node id="6" name="Shard Faire Fields, East">
+    <description>Growing in neat rows as if planted that way, a veritable rainbow of tulips have taken hold here.  Bits of grass struggle to grow past the sturdy stems of the perennials.  Showing off their petals of crimson, gold, peach and violet, the flowers dip and bow with any passing breeze.</description>
+    <position x="180" y="140" z="0" />
+    <arc exit="north" move="north" destination="2" />
+    <arc exit="south" move="south" destination="7" />
+    <arc exit="southwest" move="southwest" destination="5" />
+    <arc exit="west" move="west" destination="4" />
+    <arc exit="northwest" move="northwest" destination="1" />
+    <arc exit="go" move="go wooden caravan" destination="24" />
+    <arc exit="go" move="go wooden stall" destination="27" />
+  </node>
+  <node id="7" name="Shard Faire Fields, Southeast" note="SE|gold-trimmed slot machine" color="#00FF00">
+    <description>Crafted from polished iron and adorned with soft pillows, a bench is set up among the tall grasses.  Planted at one end of the seat is a white lilac bush, while an amethyst-hued one grows at the other end.  Here and there, the buzzing of bees can be heard as they go from flower to flower.</description>
+    <position x="180" y="200" z="0" />
+    <arc exit="north" move="north" destination="6" />
+    <arc exit="west" move="west" destination="5" />
+    <arc exit="northwest" move="northwest" destination="4" />
+    <arc exit="go" move="go bronze-clad caravan" destination="37" />
+    <arc exit="go" move="go glitter-coated shack" destination="40" />
+    <arc exit="go" move="go food wagons" destination="56" />
+  </node>
+  <node id="8" name="Shard Faire Fields, West">
+    <description>A massive windflower bush stretches its many limbs out and up to display its bright pink and yellow blooms above the grassy field.  Fluttering in and out of sight, many different colorful butterflies visit the flowers before flying away again.</description>
+    <position x="60" y="140" z="0" />
+    <arc exit="north" move="north" destination="3" />
+    <arc exit="northeast" move="northeast" destination="1" />
+    <arc exit="east" move="east" destination="4" />
+    <arc exit="southeast" move="southeast" destination="5" />
+    <arc exit="south" move="south" destination="9" />
+    <arc exit="go" move="go colorful wagon" destination="28" />
+    <arc exit="go" move="go ebony caravan" destination="30" />
+  </node>
+  <node id="9" name="Shard Faire Fields, Southwest" note="SW|silver-trimmed slot machine" color="#00FF00">
+    <description>Boasting petals in the hues of summer's twilight, a single peony bush grows among the Olvi-high grasses.  Crossing the edge of the field is a small stream, its waters giving off a musical tinkling sound as they move over the white pebbles that make up the banks.</description>
+    <position x="60" y="200" z="0" />
+    <arc exit="north" move="north" destination="8" />
+    <arc exit="northeast" move="northeast" destination="4" />
+    <arc exit="east" move="east" destination="5" />
+    <arc exit="go" move="go cotton tent" destination="46" />
+    <arc exit="go" move="go colorful wagon" destination="47" />
+  </node>
+  <node id="10" name="The Traveling Cook" note="Traveling Cook" color="#FF0000">
+    <description>A central wooden pole pulls the leathern ceiling of this small shop upwards.  On opposite sides of the pole, two racks display cooking instruments and non-perishable foodstuffs, while a metal chest filled with shaved ice preserves meats and other perishables.</description>
+    <position x="100" y="60" z="0" />
+    <arc exit="go" move="go tent flap" destination="1" />
+  </node>
+  <node id="11" name="Bitty Bovines" note="Bitty Bovines" color="#FF0000">
+    <description>Pine panels create the walls and the sloping roof, helping to create the impression of the inside of a very small and clean barn.  Shuttered windows are propped open to allow any stray breeze free entry.  A tiny corral is set up in the middle of the room and holds a collection of toy cows.  Nearby, a large metal milk pail is overflowing with stuffed cows in many colors.  A miniature picnic table sits next to the barn door, set with a checkered table cloth and food.</description>
+    <position x="120" y="60" z="0" />
+    <arc exit="go" move="go barn door" destination="1" />
+  </node>
+  <node id="12" name="Getting Back to Basics, Carry It" note="Getting Back to Basics|Carry It" color="#FF0000">
+    <description>Glossy walls are covered with a light polish to bring out the soft tones of the wood, while round windows are set evenly to catch any bit of light from outside.  A warm red carpet extends across the floor ending just before the silverwood door, leaving a foot of bare wood.  Two racks are set up in the middle of the room to best display their wares.</description>
+    <position x="200" y="60" z="0" />
+    <arc exit="north" move="north" destination="13" />
+    <arc exit="east" move="east" destination="15" />
+    <arc exit="go" move="go silverwood door" destination="2" />
+  </node>
+  <node id="13" name="Getting Back to Basics, Carry It Too" note="Carry It Too" color="#FF0000">
+    <description>Glossy walls are covered with a light polish to bring out the soft tones of the wood, while round windows are set evenly to catch any bit of light from outside.  A soft orange carpet extends across the floor and under a pair of stands that are set in the middle of the area.</description>
+    <position x="200" y="50" z="0" />
+    <arc exit="east" move="east" destination="14" />
+    <arc exit="south" move="south" destination="12" />
+  </node>
+  <node id="14" name="Getting Back to Basics, Magic It" note="Magic It" color="#FF0000">
+    <description>Glossy walls are covered with a light polish to bring out the soft tones of the wood, while round windows are set evenly to catch any bit of light from outside.  A bright yellow carpet extends across the floor and under a set of gleaming tables that are placed in the center of the room.</description>
+    <position x="210" y="50" z="0" />
+    <arc exit="south" move="south" destination="15" />
+    <arc exit="west" move="west" destination="13" />
+  </node>
+  <node id="15" name="Getting Back to Basics, Skin It" note="Skin It" color="#FF0000">
+    <description>Glossy walls are covered with a light polish to bring out the soft tones of the wood, while round windows are set evenly to catch any bit of light from outside.  A lush green carpet extends across the floor and under some counters that are set side by side in the center of the area.</description>
+    <position x="210" y="60" z="0" />
+    <arc exit="north" move="north" destination="14" />
+    <arc exit="west" move="west" destination="12" />
+  </node>
+  <node id="16" name="Tatmoos, For The Love of Moos" note="Tatmoos" color="#00FF00">
+    <description>The walls are painted with colorful murals depicting herds of black and white bovines idling away a sunny day among fields of flowers and butterflies.  An open doorway allows access to the outside while a long counter across one wall holds a catalog and a menu of choices.  Attendants wander to and fro offering advice before customers see one of the tattoo artists.</description>
+    <position x="180" y="60" z="0" />
+    <arc exit="west" move="west" destination="17" />
+    <arc exit="go" move="go open doorway" destination="2" />
+  </node>
+  <node id="17" name="Tatmoos, More Moos" color="#00FF00">
+    <description>A bevy of mice filled murals cover the walls of the room, each mouse shown engaged in some exciting activity from sailing the high seas to exploring an ancient temple.  A polished counter displays a catalog and a menu of choices.  Attendants wander back and forth across the area offering assistance before customers see one of the tattoo artists.</description>
+    <position x="170" y="60" z="0" />
+    <arc exit="east" move="east" destination="16" />
+  </node>
+  <node id="18" name="Open Lotus Designs, Showroom" note="Open Lotus Designs" color="#FF0000">
+    <description>Well-organized shelves holding various sundries including liquid-filled vials, piles of stems, and a multitude of bobbins and thread line the wall behind a wide sales counter of rich Ilithian cedar.  A young Elothean clerk with silver-gilt hair drifts gracefully about the shop and through a curtain in the back as she tends to various duties, frequently checking on the garments in a wardrobe and nearby mannequin, but always prepared to assist a customer.  The subtle aroma of sage drifts from a shallow brazier fixed to a central pole alongside additional items for display.</description>
+    <position x="40" y="80" z="0" />
+    <arc exit="go" move="go exit" destination="3" />
+  </node>
+  <node id="19" name="Albrhae's Adornments, Prydaen Essentials and Accessories" note="Albrhae's Adornments" color="#FF0000">
+    <description>The interior of the tent is supported by a wide arch, separating the shopping floor into two distinct areas.  On this side, shelves hold colorful displays of fabrics in a myriad of colors, and the counter that spans through both rooms holds a collection of accessories.</description>
+    <position x="100" y="130" z="0" />
+    <arc exit="go" move="go tent flap" destination="4" />
+    <arc exit="go" move="go archway" destination="61" />
+  </node>
+  <node id="20" name="Scribbles, Detailed Correspondence" note="Scribbles|Detailed Correspondence" color="#FF0000">
+    <description>Rice paper walls, cross sectioned by slender pieces of golden wood, separate the different areas of this shop.  Enclosed in square glass, candles sit in every spare bit of space to give extra lighting aided by a huge skylight that allows any light from outside to enter.  A smooth shelf holds trays of paper and a selection of boxes and kits while a low table displays its many different quills for sale.</description>
+    <position x="200" y="120" z="0" />
+    <arc exit="north" move="north" destination="21" />
+    <arc exit="east" move="east" destination="23" />
+    <arc exit="go" move="go wood-framed doorway" destination="4" />
+  </node>
+  <node id="21" name="Scribbles, Artist's Folly" note="Artist's Folly" color="#00FF00">
+    <description>A skylight completely covers the ceiling, designed to catch any available light and direct it into the room below.  Rounded glass lanterns are spaced evenly about the area and upon the polished table that sits amid a pile of soft pillows.  A pair of easels are set up in opposite corners, each one matched with a low stool.</description>
+    <position x="200" y="110" z="0" />
+    <arc exit="east" move="east" destination="22" />
+    <arc exit="south" move="south" destination="20" />
+  </node>
+  <node id="22" name="Scribbles, Sparkling Discourse" note="Sparkling Discourse" color="#FF0000">
+    <description>Rice paper walls of ocean-blue are highlighted by the multitude of glass enclosed candles placed carefully around the room.  A large skylight assists the flickering tapers by allowing any outside light to stream through onto the sale surfaces.  Paper is neatly stack in wooden trays that rest between matching shelves, each holding artist tools.  On the other side of a woven mat, a glossy table displays a choice of boxes.</description>
+    <position x="210" y="110" z="0" />
+    <arc exit="south" move="south" destination="23" />
+    <arc exit="west" move="west" destination="21" />
+  </node>
+  <node id="23" name="Scribbles, Drawing Conclusions" note="Drawing Conclusions" color="#FF0000">
+    <description>Pale walls of green rice paper enclose this part of the shop, glowing slightly from the candles hidden behind the panels.  More candles cluster behind hanging glass lanterns to aid the huge skylight in providing light to the merchandise.  Trays of paper sit next to an array of paintbrushes atop a polished table, while a shelf holds beautiful boxes and kits designed to tempt any artist.  A curving stand holds neatly folded clothes.</description>
+    <position x="210" y="120" z="0" />
+    <arc exit="north" move="north" destination="22" />
+    <arc exit="west" move="west" destination="20" />
+  </node>
+  <node id="24" name="Explorers' Outfitters, Willow Room" note="Explorers' Outfitters" color="#FF0000">
+    <description>Curving willow limbs create an abstract pattern across the walls and ceiling, while thicker branches are crafted into rounded tables that seem to flow up from the polished floor.  A single piece of the same wood is used to create the arching willow doorway that leads back outside.</description>
+    <position x="200" y="140" z="0" />
+    <arc exit="east" move="east" destination="25" />
+    <arc exit="go" move="go willow doorway" destination="6" />
+  </node>
+  <node id="25" name="Explorers' Outfitters, Oak Room" color="#FF0000">
+    <description>Oak walls are polished to a high sheen that is contrasted only by the black oak used in the floor and walls.  In the center of the room rests two stands, one in the lightly hued wood and the other in the darker coloring.</description>
+    <position x="210" y="140" z="0" />
+    <arc exit="east" move="east" destination="26" />
+    <arc exit="west" move="west" destination="24" />
+  </node>
+  <node id="26" name="Explorers' Outfitters, Cherry Room" color="#FF0000">
+    <description>Pale cherry wood is artfully carved in a curving maze-like pattern across the walls and ceiling, while the floor is left smooth but otherwise untouched.  Set so their edges create a triangle-shape between them, are three short tables.</description>
+    <position x="220" y="140" z="0" />
+    <arc exit="west" move="west" destination="25" />
+  </node>
+  <node id="27" name="Split Personalities, Difference of Opinion" note="Split Personalities" color="#FF0000">
+    <description>Painted figures cover the walls, the costumed people of all races depicted with more color than talent.  What is possibly a Gor'Tog wearing a curling golden wig, a pink bandeau and a matching skirt takes up the whole back wall.  A large table sits on a plush orange rug in the center of the room.  Hued a bright red, the doorway leads back out.</description>
+    <position x="200" y="160" z="0" />
+    <arc exit="go" move="go red doorway" destination="6" />
+  </node>
+  <node id="28" name="Auntie Phanie's Phancies, Sales Floor" note="Auntie Phanie's Phancies" color="#FF0000">
+    <description>This area of the wagon's interior has been painted a cheery pink on the ceiling and walls interrupted only by a meringue-white door, while the floor has been covered in a vibrant carpet woven with a tart motif.  Streamers of ribbon, punctuated by bows at even intervals, hang from the crossbeams just above a long display counter and decorate all three of the tables that dominate the space.  Attendant Rosaya bustles about excitedly, making sure everything runs smoothly.</description>
+    <position x="40" y="120" z="0" />
+    <arc exit="west" move="west" destination="29" />
+    <arc exit="go" move="go meringue-white door" destination="8" />
+  </node>
+  <node id="29" name="Auntie Phanie's Phancies, Sitting Room" color="#FF0000">
+    <description>Framed simply and hung low on the blue walls are several paintings of baked goods.  Several plush couches are arranged around a low table decorated with several small bouquets of snowdrops.  Off to the side is a thick black curtain fringed with golden tassels.</description>
+    <position x="30" y="120" z="0" />
+    <arc exit="east" move="east" destination="28" />
+  </node>
+  <node id="30" name="Almodivar's Caravan, Waiting and Reception" note="Almodivar's Caravan" color="#00FF00">
+    <description>Numerous tiny gaethzen orbs ringed with covelite are set into the exposed beams of the ceiling, bathing the room in a soft glow that plays off of the bronze inlay fitted between each plank making up its walls.  A heavy curtain bisects the far wall, its dark fabric showing just a hint of sheen that betrays its having been oiled to the point of waterproofing.</description>
+    <position x="40" y="140" z="0" />
+    <arc exit="go" move="go thick door" destination="8" />
+  </node>
+  <node id="31" name="Games, Javelin Throw" note="Javelin Throw" color="#00FF00">
+    <description>Devoid of foliage and open to the sky, a large field extends for over one thousand feet, giving hurled javelins an ample landing spot.</description>
+    <position x="120" y="220" z="0" />
+    <arc exit="out" move="out" destination="5" />
+  </node>
+  <node id="32" name="Tildi's Faire Flowers" note="Tildi's Faire Flowers" color="#FF0000">
+    <description>Pale silver silk drapes from a carved silverwood center pole, while more round beams, each one carved with twining vines, are spaced equally around the area to create space.  Hanging down are a dozen glass fireflies, their rainbow-hued bellies holding candles that cause the light to refract against the walls in a dazzling array of colors.  Shelves are set up circling the tent, spaced to give shoppers plenty of room.</description>
+    <position x="140" y="220" z="0" />
+    <arc exit="north" move="north" destination="33" />
+    <arc exit="east" move="east" destination="34" />
+    <arc exit="go" move="go tent flap" destination="5" />
+  </node>
+  <node id="33" name="Tildi's Faire Flowers, Petals" color="#FF0000">
+    <description>Layers of overlapping silk petals form the walls on this side of the tent, helping to give the impression of being inside a huge flower.  Golden stamens sprout from the highest point of the ceiling, their tips crafted from yellow glass and filled with candles to create light.  Placed in the center of the room to best make use of the soft glow from the lights are three metal stands.</description>
+    <position x="140" y="210" z="0" />
+    <arc exit="south" move="south" destination="32" />
+  </node>
+  <node id="34" name="Tildi's Faire Flowers, Sea Flowers" color="#FF0000">
+    <description>Silk hued to match that of the sea on a summer's day forms the ceiling and walls of this corner of the tent.  Dangling from the polished wooden supports are tendrils of fabric dyed and cut to look like seaweed floating in the ocean.  Gleaming wooden tables are set up at angles to each other, their surfaces lightly polished to best show off their wares.</description>
+    <position x="150" y="220" z="0" />
+    <arc exit="west" move="west" destination="32" />
+  </node>
+  <node id="35" name="Unicornucopia, Hats and Horns" note="Unicornucopia" color="#FF0000">
+    <description>Dozens of tiny gaethzen animals dangle from the domed ceiling, lighting the area softly.  Three low wooden tables display neatly arranged wares from their places along the walls.  The center of the room is taken up by a black gold unicorn statue, its form standing proudly upon a platform of glass.</description>
+    <position x="100" y="220" z="0" />
+    <arc exit="west" move="west" destination="36" />
+    <arc exit="go" move="go exit flap" destination="5" />
+  </node>
+  <node id="36" name="Unicornucopia, Hooves Have It" color="#FF0000">
+    <description>Draped from the poles more critters formed from gaethzen give soft light to the room.  Polished to a sheen, three tables are set up around a central display.  Black-hued glass supports the resting figure of a unicorn statue, its shape crafted from white gold.  Strands of colorful flowers are wrapped around its neck.</description>
+    <position x="90" y="220" z="0" />
+    <arc exit="east" move="east" destination="35" />
+  </node>
+  <node id="37" name="Dwarven Deals, Dapper Dress" note="Dwarven Deals" color="#FF0000">
+    <description>Sparsely decorated, the wooden walls surround a gravel-coated floor.  Several sales surfaces appear fully stocked with wares and the sound of gravel against gravel makes a constant din, crunching constantly under the busy crowd's feet.</description>
+    <position x="200" y="200" z="0" />
+    <arc exit="north" move="north" destination="38" />
+    <arc exit="south" move="south" destination="39" />
+    <arc exit="go" move="go gear-shaped door" destination="7" />
+  </node>
+  <node id="38" name="Dwarven Deals, Danger and Discord" color="#FF0000">
+    <description>Sparsely decorated, the wooden walls surround a gravel-coated floor.  Several sales surfaces appear fully stocked with wares and the sound of gravel against gravel makes a constant din, crunching constantly under the busy crowd's feet.</description>
+    <position x="200" y="190" z="0" />
+    <arc exit="south" move="south" destination="37" />
+  </node>
+  <node id="39" name="Dwarven Deals, Depot" color="#FF0000">
+    <description>Sparsely decorated, the wooden walls surround a gravel-coated floor.  Several sales surfaces appear fully stocked with wares and the sound of gravel against gravel makes a constant din, crunching constantly under the busy crowd's feet.</description>
+    <position x="200" y="210" z="0" />
+    <arc exit="north" move="north" destination="37" />
+  </node>
+  <node id="40" name="The Shimmer Shack, A Pinch of Glitter" note="Shimmer Shack" color="#FF0000">
+    <description>Streaks of red, orange and yellow glitter cover the walls and ceiling, the colors mimic that of a sunset without any of the subtly of color.  A bright yellow rug of plush cotton takes up the entire floor and shimmers with sprinkles of glitter that have chipped off the walls.  Two tables, both coated with glitter, one in orange and one in red, sit side by side, sparkling with any hint of light.  A wide archway leads back out.</description>
+    <position x="180" y="240" z="0" />
+    <arc exit="northeast" move="northeast" destination="41" />
+    <arc exit="east" move="east" destination="44" />
+    <arc exit="go" move="go wide archway" destination="7" />
+  </node>
+  <node id="41" name="The Shimmer Shack, Body Shine" color="#FF0000">
+    <description>Black paint, only lightly sprinkled with glitter, coats the ceiling, walls and floor.  Here and there, using white, yellow and purple hues, the suggestion of stars is depicted upon the dark background.  The brightest spots of color are the tables placed about the room, each one decked out in a single color of glitter paint.</description>
+    <position x="190" y="230" z="0" />
+    <arc exit="east" move="east" destination="42" />
+    <arc exit="southwest" move="southwest" destination="40" />
+  </node>
+  <node id="42" name="The Shimmer Shack, Sparkle Faces" color="#FF0000">
+    <description>White glitter paint backs the images of frolicking figures that are painted upon the walls.  Every race appears to be represented, from the tiny male Gnome wearing a tutu to a female Gor'Tog caught in the middle of an impressive leap.  Each figure sports some form of decoration on their face.  Glitter painted tables are huddled in the center of the room over a sparkling rug of blue and green.</description>
+    <position x="200" y="230" z="0" />
+    <arc exit="south" move="south" destination="43" />
+    <arc exit="west" move="west" destination="41" />
+  </node>
+  <node id="43" name="The Shimmer Shack, The Rainbow Sapphire Collection" color="#FF0000">
+    <description>Every imaginable color of glitter is sprayed across the walls in what might be an odd attempt at a rainbow.  Three tables sit evenly spaced about the area, each one painted a combination of hues.  A shimmering white rug is tucked under everything and reflects back the mad mass of colors that fill the room.</description>
+    <position x="200" y="240" z="0" />
+    <arc exit="north" move="north" destination="42" />
+    <arc exit="east" move="east" destination="45" />
+    <arc exit="west" move="west" destination="44" />
+  </node>
+  <node id="44" name="The Shimmer Shack, A Dose of Shimmer" color="#FF0000">
+    <description>The entire ceiling is painted with blue glitter, globs of glitter have left trails down the green of the walls.  Flowers, made of brightly hued glitter, are artistically drawn around the bottom half of the area and atop the wooden tables.  A carpet of long green strands shimmers, as it too is littered with left over shards of glitter.  Tucked into one corner is a device with half a dozen legs and made from many different sized barrels and vials all connected by glass pipes that appear to be filled with yet more glitter.  Every so often the device belches smoke filled with a rainbow of glitter.</description>
+    <position x="190" y="240" z="0" />
+    <arc exit="east" move="east" destination="43" />
+    <arc exit="west" move="west" destination="40" />
+  </node>
+  <node id="45" name="The Shimmer Shack, Rainbow Sapphire Alcove" color="#FF0000">
+    <description>Swaths of shimmering black silk drape from the ceiling, muting the light in this small area.  A pile of onyx-hued cushions is arrayed along one wall and contrast sharply with the white floor that appears to be lacquered in glitter.  Set in the middle of the room are two low wooden tables, one painted to match the silk, while the other is colored to match the floor.</description>
+    <position x="210" y="240" z="0" />
+    <arc exit="west" move="west" destination="43" />
+  </node>
+  <node id="46" name="Flower Faire, Flowers with Flare" note="Flower Faire" color="#FF0000">
+    <description>Fading through an array of colors, the walls of the tent give the impression of being inside of a rainbow.  Flowers matching the varying shades drape in large loops from the ceiling and sides.  Painted with colorful blooms and green leaves, delicate wooden shelves are suspended from the support poles.</description>
+    <position x="40" y="200" z="0" />
+    <arc exit="go" move="go tent flap" destination="9" />
+  </node>
+  <node id="47" name="The Kitten Emporium, Cozy Homes" note="Kitten Emporium" color="#FF0000">
+    <description>One wall is painted with an idyllic scene depicting a rather dignified tomcat dressed in spats, pinstripe trousers and a vest complete with pocket orlog.  He holds to his eyes a strange gold viewing device and is peering across a field at a fanciful bird perched in a tree.  Peaking from over the tom's shoulder is a tubby tabby dressed in what appears to be an attempt to mimic the refinement of the other cat's outfit.  Nothing on the tabby quite matches in color or style, including the tea cozy that she is using for a hat.  Above the painting is a banner while below are simple sales stands.</description>
+    <position x="40" y="220" z="0" />
+    <arc exit="go" move="go door" destination="9" />
+  </node>
+  <node id="48" name="Designs from Local Artists, Front Parlor" note="Designs from Local Artists" color="#00FF00">
+    <description>A lantern hanging from the center pole gives off an amber light that lends a dusky sheen to everything -- and everyone -- within the bearhide walls.  Esoteric and marvelous shapes and designs crawl over the entire inner surface, guiding the eye from one wonder to the next in a dizzying journey of the imagination.  The cloying scent of jasmine and sandalwood wafts from small oil burners while long wooden benches, intricately carved with whorls and sigils, offer a place to sit and avoid most of the smoke.</description>
+    <position x="40" y="60" z="0" />
+    <arc exit="northwest" move="northwest" destination="49" />
+    <arc exit="go" move="go tent opening" destination="3" />
+  </node>
+  <node id="49" name="Designs from Local Artists, Extended Parlor" color="#00FF00">
+    <description>A lantern hanging nearby throws a warm amber light, projecting a dusky sheen onto everything in sight within the bearhide walls.  Plastered art and designs are displayed, showcasing past and present works.  The wafting scent of sandalwood blends with that of jasmine emits from small oil burners, and long wooden benches provide seating away from the smoke.</description>
+    <position x="30" y="50" z="0" />
+    <arc exit="southeast" move="southeast" destination="48" />
+  </node>
+  <node id="50" name="Flowering Furniture" note="Flowering Furniture" color="#FF0000">
+    <description>Outwardly curving, wooden walls enclose the caravan, helping to give the impression of space despite the scattering of furniture samples taking up most of the floor.  Grass-green paint lavishly coats the entire area.  Sconces set every few feet to make up for the lack of windows, each one molded into the shape of a rose.  An arched exit sits in the middle of one wall.</description>
+    <position x="80" y="40" z="0" />
+    <arc exit="east" move="east" destination="51" />
+    <arc exit="west" move="west" destination="53" />
+    <arc exit="go" move="go arched exit" destination="3" />
+  </node>
+  <node id="51" name="Flowering Furniture" color="#FF0000">
+    <description>Outwardly curving, wooden walls enclose the caravan, helping to give the impression of space despite the scattering of furniture samples taking up most of the floor.  Sky-blue paint lavishly coats the entire area, blending with the green that appears to the west.  Sconces set every few feet to make up for the lack of windows, each one molded into the shape of a daisy.</description>
+    <position x="90" y="40" z="0" />
+    <arc exit="east" move="east" destination="52" />
+    <arc exit="west" move="west" destination="50" />
+  </node>
+  <node id="52" name="Flowering Furniture, Waiting Area" note="furniture alteration list" color="#00FF00">
+    <description>Outwardly curving, wooden walls enclose the caravan, helping to give the impression of space despite the huge couch and table taking up most of the floor.  Rose-red paint lavishly coats the entire area, blending with the blue that appears to the west.  Sconces set every few feet to make up for the lack of windows, each one molded into the shape of a crocus.</description>
+    <position x="100" y="40" z="0" />
+    <arc exit="west" move="west" destination="51" />
+  </node>
+  <node id="53" name="Flowering Furniture" color="#FF0000">
+    <description>Outwardly curving, wooden walls enclose the caravan, helping to give the impression of space despite the scattering of furniture samples taking up most of the floor.  Sunny-yellow paint lavishly coats the entire area, blending with the green that appears to the east.  Sconces set every few feet to make up for the lack of windows, each one molded into the shape of a lily.</description>
+    <position x="70" y="40" z="0" />
+    <arc exit="east" move="east" destination="50" />
+    <arc exit="west" move="west" destination="54" />
+  </node>
+  <node id="54" name="Flowering Furniture" color="#FF0000">
+    <description>Outwardly curving, wooden walls enclose the caravan, helping to give the impression of space despite the scattering of furniture samples taking up most of the floor.  Sunset-orange paint lavishly coats the entire area, blending with the yellow that appears to the east.  Sconces set every few feet to make up for the lack of windows, each one molded into the shape of a peony.</description>
+    <position x="60" y="40" z="0" />
+    <arc exit="east" move="east" destination="53" />
+    <arc exit="west" move="west" destination="55" />
+  </node>
+  <node id="55" name="Flowering Furniture" color="#FF0000">
+    <description>Outwardly curving, wooden walls enclose the caravan, helping to give the impression of space despite the huge tables taking up most of the floor.  Petal-purple paint lavishly coats the entire area, blending with the orange that appears to the east.  Sconces set every few feet to make up for the lack of windows, each one molded into the shape of a violet.</description>
+    <position x="50" y="40" z="0" />
+    <arc exit="east" move="east" destination="54" />
+  </node>
+  <node id="56" name="Fair Faire Fare, Deep-Fried Happiness" note="Fair Faire Fare|Deep-Fried Happiness" color="#FF0000">
+    <description>The walls are painted with a riot of sunrise-hued colors, ranging from a fire red at the bottom to the palest of yellows at the top.  Polished to a sheen and immaculately clean, the floor is paneled wood.  Two simple wood counters display an array of freshly fried foods.</description>
+    <position x="220" y="160" z="0" />
+    <arc exit="east" move="east" destination="57" />
+    <arc exit="go" move="go sunrise-hued doorway" destination="7" />
+  </node>
+  <node id="57" name="Fair Faire Fare, Caketopia" note="Caketopia" color="#FF0000">
+    <description>Painted a metallic yellow and overlaid with midnight blue lace, the walls take on the appearance of the night's sky.  A glass moon filled with candles dangles from the ceiling, giving off a bright glow.  Two velvet-draped counters stretch across the room, holding freshly made treats.</description>
+    <position x="230" y="160" z="0" />
+    <arc exit="east" move="east" destination="58" />
+    <arc exit="west" move="west" destination="56" />
+  </node>
+  <node id="58" name="Fair Faire Fare, Nigh Spirits" note="Nigh Spirits" color="#FF0000">
+    <description>Water flows down in thin sheets over three of the four walls, backed by bumpy rocks.  It tinkles as it falls into a narrow stream that encircles the room.  A lip of curling glass protects the wood floor and soft blue rug from the water's occasional splashing.  Shelves full of drinks line the final wall to display the shop's wares.</description>
+    <position x="240" y="160" z="0" />
+    <arc exit="east" move="east" destination="59" />
+    <arc exit="west" move="west" destination="57" />
+  </node>
+  <node id="59" name="Fair Faire Fare, Berry Goodness" note="Berry Goodness" color="#FF0000">
+    <description>Vines grow up trellis-covered walls, their roots securely settled in troughs of dirt that edge the glass floor.  Water laps calmly under the thick glass, shifting with any movement of the wagon.  Two clear glass counters hold an array of food.</description>
+    <position x="250" y="160" z="0" />
+    <arc exit="east" move="east" destination="60" />
+    <arc exit="west" move="west" destination="58" />
+  </node>
+  <node id="60" name="Fair Faire Fare, Bundles of Bliss" note="Bundles of Bliss" color="#FF0000">
+    <description>Dappled with brightly hued flowers, green fields are painted part way up the walls until the emerald-hue gives away to a cheerful blue sky.  A zigzagging plush blue rug runs down the aisle between the neatly polished counters.</description>
+    <position x="260" y="160" z="0" />
+    <arc exit="west" move="west" destination="59" />
+  </node>
+  <node id="61" name="Albrhae's Adornments, Marblesilk and More" note="Marblesilk and More" color="#FF0000">
+    <description>Opposite the arch is a long bar holding draping lengths of fabric in glorious hues, clearly the focal point of the back wall.  Shelves stack atop each other on either side of the bar, piled high with more vibrant fabrics.  A counter that spans through both rooms holds a collection of accessories.</description>
+    <position x="90" y="130" z="0" />
+    <arc exit="go" move="go archway" destination="19" />
+  </node>
+  <node id="62" name="Ritva's Raffles" note="Ritva's Raffles|raffles" color="#00FF00">
+    <description>Glass walls hold vine covered white trellises upon their domed surfaces.  Peeking out from between the heart-shaped green leaves are a riot of differently colored morning glories in all stages of bloom.  An engraved silversteel counter rests in front of a draping curtain of vines, the combination serves to effectively hide the back half of the room from prying eyes.  Hanging from braided white ribbons is the raffle results board.</description>
+    <position x="110" y="160" z="0" />
+    <arc exit="go" move="go silversteel doorway" destination="4" />
+  </node>
+</zone>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Wyvern Arena" id="997">
+  <node id="1" name="Wyvern Arena, Spectator's Perch" note="Spectator's Perch|EXIT portal|portal">
+    <description>Numerous lacquered cedar benches are arranged in tiers, affording a fine view of the arena below.  A mesh screen has been placed in front of the benches to protect the spectators, while scarred stone walls protect this spot from the elements.</description>
+    <position x="20" y="20" z="0" />
+    <arc exit="go" move="go arch" destination="2" />
+  </node>
+  <node id="2" name="Wyvern Arena, Triage Area" note="Triage Area" color="#00FFFF">
+    <description>The cold stone floor of this room slopes slightly toward a rough metal trough, allowing for good drainage and easy cleaning.  Heavy wrought iron cots are arranged at intervals along the back wall.  Standing sentinel over each cot, large brass lamps provide excellent lighting for the healers and attendants.</description>
+    <position x="20" y="40" z="0" />
+    <arc exit="west" move="west" destination="3" />
+    <arc exit="go" move="go arch" destination="1" />
+    <arc exit="go" move="go ramp" destination="4" />
+  </node>
+  <node id="3" name="Wyvern Arena, Alcove" note="Alcove">
+    <description>This tiny alcove is dominated by a rough-hewn granite statue of a proud wolverine standing guard over a simple cedar altar.  The floor is strewn with fresh evergreen boughs, their dense, verdant needles hushing the area and lending the air a sharp, crisp scent.</description>
+    <position x="0" y="40" z="0" />
+    <arc exit="east" move="east" destination="2" />
+  </node>
+  <node id="4" name="Wyvern Arena, Red Corner" note="Red Corner">
+    <description>Several blood splatters down the wall are framed on either side by a series of bloody hand prints.  Drag marks line the sand, and irregular dark droplets follow the trail back towards the triage area.</description>
+    <position x="40" y="40" z="0" />
+    <arc exit="north" move="north" destination="5" />
+    <arc exit="northeast" move="northeast" destination="6" />
+    <arc exit="east" move="east" destination="7" />
+    <arc exit="go" move="go ramp" destination="2" />
+  </node>
+  <node id="5" name="Wyvern Arena, Yellow Corner" note="Yellow Corner">
+    <description>Niches carved in the chilled stone walls provide storage for those no longer with the living.  The arena attendants place the bodies in the niches out of way of further harm until they can be dragged out.  Tiny dried trickles of unidentifiable fluids trail down from recess, the only remnant of the departed.</description>
+    <position x="40" y="0" z="0" />
+    <arc exit="east" move="east" destination="8" />
+    <arc exit="southeast" move="southeast" destination="6" />
+    <arc exit="south" move="south" destination="4" />
+  </node>
+  <node id="6" name="Wyvern Arena, Centerfield" note="Centerfield">
+    <description>Light from evenly placed wall torches illuminates the the dirty white sand of the stadium floor, which is packed rather hard in places.  The cloying smells of blood and sweat mingle in the air, hanging thick and making the arena smell rather musty.  Clouds of sand roll across the arena like a low fog, added to frequently by the fierce battles.</description>
+    <position x="60" y="20" z="0" />
+    <arc exit="northeast" move="northeast" destination="8" />
+    <arc exit="southeast" move="southeast" destination="7" />
+    <arc exit="southwest" move="southwest" destination="4" />
+    <arc exit="northwest" move="northwest" destination="5" />
+  </node>
+  <node id="7" name="Wyvern Arena, Blue Corner" note="Blue Corner">
+    <description>Impaled in the wall is the massive blade of a sword, snapped off like the tooth of a large predator.  Several scorch marks line the wall leading to a massive mark still bearing the silhouette of the victim of an attack where his body protected the wall from damage.</description>
+    <position x="80" y="40" z="0" />
+    <arc exit="north" move="north" destination="8" />
+    <arc exit="west" move="west" destination="4" />
+    <arc exit="northwest" move="northwest" destination="6" />
+  </node>
+  <node id="8" name="Wyvern Arena, Green Corner" note="Green Corner">
+    <description>An iron portcullis blocks a dark tunnel leading deep within the walls.  Howls and screeches drift across the sands from the doorway, mingling with the sounds of the spectators.  Swarms of gnats fly thick in the air like angry black clouds, occasionally darting to the walls to feast on the blood of the recently dead.</description>
+    <position x="80" y="0" z="0" />
+    <arc exit="south" move="south" destination="7" />
+    <arc exit="southwest" move="southwest" destination="6" />
+    <arc exit="west" move="west" destination="5" />
+  </node>
+</zone>

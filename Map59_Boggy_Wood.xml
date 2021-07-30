@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Boggy Wood" id="59">
+  <node id="1" name="Eik Wood, Granite Outcroppings">
+    <description>Granite outcroppings scattered among the trees and brush sit like the abandoned toys of giants.  The trail leads deeper into the forest and back up over a larger sloping granite monolith partially buried in the soil.</description>
+    <position x="160" y="60" z="0" />
+    <arc exit="east" move="east" destination="2" />
+    <arc exit="climb" move="climb monolith" destination="12" />
+  </node>
+  <node id="2" name="Eik Wood, Granite Outcroppings">
+    <description>The trail splits and falls sharply down towards the east -- both paths down are filled with loose stones and earth.  With care and balance it is possible to move fairly quietly, but it is not an easy journey.  The walk westwards is a casual stroll by comparison.</description>
+    <position x="180" y="60" z="0" />
+    <arc exit="northeast" move="northeast" destination="5" />
+    <arc exit="west" move="west" destination="1" />
+    <arc exit="down" move="down" destination="3" />
+  </node>
+  <node id="3" name="Glomsk-Eik, Traveler's Path">
+    <description>An eerie quiet settles in the surrounding trees.  The atmosphere is alert -- every footstep too loud.</description>
+    <position x="200" y="60" z="0" />
+    <arc exit="southeast" move="southeast" destination="4" />
+    <arc exit="up" move="up" destination="2" />
+  </node>
+  <node id="4" name="Glomsk-Eik, Traveler's Path">
+    <description>The forest begins to grow darker towards the east as the canopy of ancient oak trees shadows the path.</description>
+    <position x="220" y="80" z="0" />
+    <arc exit="northwest" move="northwest" destination="3" />
+  </node>
+  <node id="5" name="Eik Wood, Northern Trail">
+    <description>Leaves crunch underfoot, and birds and small animals scurry through the tree branches and across the forest floor.  Nature has provided plentifully for them here, and they pause only briefly to glance at travelers on the trail before darting on about their concerns.</description>
+    <position x="200" y="40" z="0" />
+    <arc exit="north" move="north" destination="6" />
+    <arc exit="southwest" move="southwest" destination="2" />
+  </node>
+  <node id="6" name="Eik Wood, Northern Trail">
+    <description>The branches of a large walnut tree spread overhead.  This section of the forest is less dense than other nearby areas of the woods.  The night sky is clearly visible from sections of the path.</description>
+    <description>A large walnut tree spreads its branches over the path.  Here might be a good place to rest and have a short repast.  A few smaller trees have sprung up between the older trees, but the growth is not thick enough to hide the approach of anyone or anything.</description>
+    <position x="200" y="20" z="0" />
+    <arc exit="northeast" move="northeast" destination="7" />
+    <arc exit="south" move="south" destination="5" />
+  </node>
+  <node id="7" name="Eik Wood, Northern Trail">
+    <description>The ground feels slightly squishy underfoot from spongy decaying mosses and leaves.  The sound of trickling water comes from the east, while a small hill slopes gently to the northwest.  The ground looks firmer to the southwest where the stately trees guard an older part of the forest.</description>
+    <position x="220" y="0" z="0" />
+    <arc exit="east" move="east" destination="8" />
+    <arc exit="southwest" move="southwest" destination="6" />
+    <arc exit="northwest" move="northwest" destination="9" />
+  </node>
+  <node id="8" name="Eik Wood, Stream Bank">
+    <description>A narrow stream bubbles gently from the northwest as ferns, river willows, and birches line the water course.  It is merely a jump to cross to the eastern bank, but the vibrant color of the thick moss and a distorting mist covering everything in that direction, makes the path westwards more inviting.</description>
+    <position x="240" y="0" z="0" />
+    <arc exit="west" move="west" destination="7" />
+    <arc exit="go" move="go stream" destination="13" />
+    <arc exit="go" move="go eastern bank" destination="37" />
+  </node>
+  <node id="9" name="Eik Wood, Northern Trail">
+    <description>The path crests at the top of a gently sloping hill, leveling off as it progresses westwards, and falling gently to thicker copses below.  A cool dampness permeates the night air.</description>
+    <description>The path crests at the top of a gently sloping hill, leveling off as it progresses westwards, and falling gently to thicker copses below.  Sunlight glimmers brightly in patches, and the air feels clean and fresh with dampness.</description>
+    <position x="200" y="-20" z="0" />
+    <arc exit="southeast" move="southeast" destination="7" />
+    <arc exit="west" move="west" destination="10" />
+  </node>
+  <node id="10" name="Eik Wood, Northern Trail">
+    <description>The path narrows and new slender growth flourishes along its border.  A few birch trees are mixed with young hardwoods, and a thick rich mulch of decaying leaves softens the sound along the way.</description>
+    <position x="180" y="-20" z="0" />
+    <arc exit="east" move="east" destination="9" />
+    <arc exit="west" move="west" destination="11" />
+  </node>
+  <node id="11" name="Eik Wood, Spring Source">
+    <description>Pure spring water flows quietly into a pool formed by a large granite basin.  Plush mossy banks slope up from the edges of the pool, and young saplings merge into the thickening woods surrounding the path.  This is a place of holy solitude, and only the hush of whispers can disturb the quiet.</description>
+    <position x="160" y="-20" z="0" />
+    <arc exit="east" move="east" destination="10" />
+    <arc exit="go" move="go pool" destination="16" />
+  </node>
+  <node id="12" name="Eik Wood, Granite Outcroppings" note="Map61_Leth_Deriel.xml">
+    <description>A smooth, sloping granite outcropping, like a monolith fallen and half buried, stands as a gate between familiar ground and the forest beyond.  With the momentum of a trot it is an easy climb up and over to the forest trail.</description>
+    <position x="140" y="60" z="0" />
+    <arc exit="southwest" move="southwest" />
+    <arc exit="climb" move="climb monolith" destination="1" />
+  </node>
+  <node id="13" name="Brynn Rill, Stream Bed" color="#0000FF">
+    <description>The stream flows as silently as water can move here, the banks high and cradling the spring water in a narrow bed.  Ground moss grows on both sides down to the water, and a bright blue dragonfly flits over some floating oak leaves.</description>
+    <position x="300" y="-40" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="17" />
+    <arc exit="northwest" move="swim northwest" destination="14" />
+    <arc exit="go" move="go western bank" destination="8" />
+  </node>
+  <node id="14" name="Brynn Rill, Stream Bed" color="#0000FF">
+    <description>The water is deep and icy cold here, and Lemicus' laughter seems to burble up from the depths below.  The water shimmers when disturbed with a vibrant greenish-blue hue.</description>
+    <description>Tiny silvery fish swim rapidly through the current like shimmering coins of treasure.  The water is deep and icy cold here, and Lemicus' laughter seems to burble up from the depths below.  A ray of sun illuminates the clarity of the water, which at times takes on a vibrant greenish-blue hue.</description>
+    <position x="280" y="-60" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="13" />
+    <arc exit="northwest" move="swim northwest" destination="15" />
+  </node>
+  <node id="15" name="Brynn Rill, Stream Bed" color="#0000FF">
+    <description>Water spills sparkling over the edge of a granite basin to the northwest, the source of the spring.  A small wren chirps confidently from the branch of a sapling, singing a sweet melody that harmonizes with the tumble of water.</description>
+    <position x="260" y="-80" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="14" />
+    <arc exit="climb" move="climb basin edge" destination="16" />
+  </node>
+  <node id="16" name="Eik Wood, Spring Pool">
+    <description>Within the pool, the cold and deep and clear water bathes the body and spirit, tasting of minerals and reminiscent of snow.  The spring seeps upwards from deep underground, the source invisible and quiet.  The water spills over the basin's edge to form a stream to the southeast.</description>
+    <position x="240" y="-80" z="0" />
+    <arc exit="out" move="out" destination="11" />
+    <arc exit="go" move="go basin edge" destination="15" />
+  </node>
+  <node id="17" name="Brynn Rill, Stream Bed" color="#0000FF">
+    <description>The odor of crushed chocolate mint rises from the water, and patches of dense tiny-leafed plants crowd along the western bank.  Bright crystalline sand lines the bottom of the stream bed as it gradually broadens along its course southward.</description>
+    <position x="320" y="-20" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="18" />
+    <arc exit="northwest" move="swim northwest" destination="13" />
+  </node>
+  <node id="18" name="Brynn Rill, Stream Bed" color="#0000FF">
+    <description>Splashing and rustling noises come from somewhere further downstream, but whatever shy creature has made them stays hidden in the bordering vegetation.  The water is cold but not unpleasant -- refreshing and invigorating in its clear, sweet taste.</description>
+    <position x="340" y="0" z="0" />
+    <arc exit="south" move="swim south" destination="19" />
+    <arc exit="northwest" move="swim northwest" destination="17" />
+  </node>
+  <node id="19" name="Brynn Rill, Stream Bed" color="#0000FF">
+    <description>The stream runs wide, deep and quiet here.  Nasty looking briars and thorns crowd in from the west, warding plump green berries hanging low towards the water.  A swirling mist obscures most of the eastern bank.  Continuing along the stream bed is the only way out.</description>
+    <position x="340" y="20" z="0" />
+    <arc exit="north" move="swim north" destination="18" />
+    <arc exit="southeast" move="swim southeast" destination="20" />
+  </node>
+  <node id="20" name="Brynn Rill, Stream Bed" color="#0000FF">
+    <description>A gentle bend in the stream's course sends the clear spring water tumbling over a knee-high waterfall.  A soft laughter rises as this sparkling rill dances on southwards.</description>
+    <position x="360" y="40" z="0" />
+    <arc exit="south" move="swim south" destination="21" />
+    <arc exit="northwest" move="swim northwest" destination="19" />
+  </node>
+  <node id="21" name="Brynn Rill, Stream Bed" color="#0000FF">
+    <description>The eastern stream bank is guarded with birch trees smothered in a thick stringy moss that coats the trunks and trails from branches into the current of the stream.  A smoky mist rises where the growth touches the water with a quiet hiss barely perceptible over the stream's bubbling.</description>
+    <position x="360" y="60" z="0" />
+    <arc exit="north" move="swim north" destination="20" />
+    <arc exit="southeast" move="swim southeast" destination="22" />
+  </node>
+  <node id="22" name="Brynn Rill, Stream Bed" color="#0000FF">
+    <description>The water rushes along with a tinkling brightness, tugging at water plants that trail into the stream.  It is difficult to judge the width and depth of the stream bed, but it appears to be a safe place to explore.</description>
+    <position x="380" y="80" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="23" />
+    <arc exit="northwest" move="swim northwest" destination="21" />
+  </node>
+  <node id="23" name="Brynn Rill, Small Pool" color="#0000FF">
+    <description>The pool is head deep to a Halfling and although a bit small for swimming, it is a cool pleasant place.  Small silvery splashes glint just beneath the surface and the sweet smell of ginger and peppery watercress soothes and stimulates the senses.</description>
+    <position x="400" y="100" z="0" />
+    <arc exit="south" move="south" destination="24" />
+    <arc exit="northwest" move="swim northwest" destination="22" />
+  </node>
+  <node id="24" name="Glomsk-Eik, Streamside">
+    <description>The path continues eastwards across a large fallen birch log bridging the stream, and down along the western bank of the stream to the south.  The stream has formed a clear pool here, reflecting a pale light even in the darkness.  A few silvery flashes flicker across the surface, then quickly vanish.</description>
+    <description>The path continues eastwards across a large fallen birch log bridging the stream, and down along the western bank of the stream to the south.  The stream has formed a clear pool here, sparkling in the sunlight.  A few silvery thin fish flicker across the surface, then dive deeply out of sight.</description>
+    <position x="400" y="120" z="0" />
+    <arc exit="southeast" move="southeast" destination="25" />
+    <arc exit="go" move="go clear pool" destination="23" />
+    <arc exit="go" move="go birch log" destination="28" />
+  </node>
+  <node id="25" name="Glomsk-Eik, Streamside">
+    <description>The path winds between scrubby willows as beautiful ferns unfurl from the dark soggy ground.  Water cresses grow from the stream onto the shore, making it difficult to distinguish solid ground from the stream itself.</description>
+    <description>The path winds between scrubby willows as beautiful ferns stretch up to the filtered sunlight.  Water cresses grow from the stream onto the shore, making it difficult to distinguish firm ground from the stream itself.</description>
+    <position x="420" y="140" z="0" />
+    <arc exit="southeast" move="southeast" destination="26" />
+    <arc exit="northwest" move="northwest" destination="24" />
+  </node>
+  <node id="26" name="Glomsk-Eik, Streamside">
+    <description>Willows and birch trees line a merry stream, the damp ground nourishing emerging fiddlehead fern fronds.  Mossy stones in the stream are perfectly spaced for crossing over, though the far side of the stream is enveloped in an eerie greenish grey mist.</description>
+    <position x="440" y="160" z="0" />
+    <arc exit="southeast" move="southeast" destination="27" />
+    <arc exit="northwest" move="northwest" destination="25" />
+  </node>
+  <node id="27" name="Glomsk-Eik, Briar Trail">
+    <description>Thick brambles hang over the path, which slopes gently downhill to the north.  Despite the briars that snag and tear at clothes, the thicket serves as a protective shelter from gusty winds.</description>
+    <position x="460" y="180" z="0" />
+    <arc exit="northwest" move="northwest" destination="26" />
+  </node>
+  <node id="28" name="The Mey Mists, Boggy Wood">
+    <description>Birch trees spread out in all directions on the eastern bank of the stream.  Gaps between the trees lead off to no particular destination, and a thick quiet hangs heavy in the air.  In the dark, a faintly glowing greenish-grey mist rises up from soft ground, and the moss clinging to the trunks of the birches emits a pale luminescence.</description>
+    <description>Birch trees spread out in all directions on the eastern bank of the stream.  Gaps between the trees lead off to no particular destination, and a thick quiet hangs heavy in the air.  A greenish-grey mist rises up from off the mossy boggy ground, much like the moss which makes its way up the trunks of the birches.</description>
+    <position x="380" y="280" z="0" />
+    <arc exit="northeast" move="northeast" destination="33" />
+    <arc exit="east" move="east" destination="29" />
+    <arc exit="northwest" move="northwest" destination="34" />
+    <arc exit="go" move="go birch log" destination="24" />
+  </node>
+  <node id="29" name="The Mey Mists, Boggy Wood">
+    <description>A sharp staccato sound breaks suddenly through the gloom.  A woodpecker!  Or, perhaps the cackle of some distant (one would hope distant) evil being.  Each step squelches in the soggy ground.</description>
+    <position x="400" y="280" z="0" />
+    <arc exit="south" move="south" destination="30" />
+    <arc exit="west" move="west" destination="28" />
+  </node>
+  <node id="30" name="The Mey Mists, Boggy Wood">
+    <description>A flash of silver to the south reveals a bend in the widening stream.  Cattail tufts waft in the greyness of the mist -- grey surrounds everything, pierced only by the vibrant green of moss and fern.</description>
+    <position x="400" y="300" z="0" />
+    <arc exit="north" move="north" destination="29" />
+    <arc exit="northeast" move="northeast" destination="31" />
+  </node>
+  <node id="31" name="The Mey Mists, Boggy Wood">
+    <description>Young willows and birches grow intertwined here in a motionless dance.  The mist thickens and thins inexplicably, as it draws the traveler into the dance, ever weaving among the trees in search of a trail.</description>
+    <position x="420" y="280" z="0" />
+    <arc exit="north" move="north" destination="33" />
+    <arc exit="south" move="south" destination="32" />
+    <arc exit="southwest" move="southwest" destination="30" />
+  </node>
+  <node id="32" name="The Mey Mists, Boggy Wood">
+    <description>Cattails and watercress mark the boundary of Brynn Rill, but the ground to the south is too soft and boggy to reach the water.  Through the thick coalescing moisture, the burbling of the stream sounds deadened and distant.</description>
+    <position x="420" y="300" z="0" />
+    <arc exit="north" move="north" destination="31" />
+  </node>
+  <node id="33" name="The Mey Mists, Boggy Wood">
+    <description>Moss and bark has been newly scraped from the trunk of a large birch, as though a frantic animal had attempted to claw its way to the branches above.  Whether or not whatever was seeking its escape was successful, remains a mystery.</description>
+    <position x="400" y="260" z="0" />
+    <arc exit="north" move="north" destination="41" />
+    <arc exit="south" move="south" destination="31" />
+    <arc exit="southwest" move="southwest" destination="28" />
+    <arc exit="northwest" move="northwest" destination="39" />
+  </node>
+  <node id="34" name="The Mey Mists, Boggy Wood">
+    <description>The birches grow right down into the stream bed, the moss richly coating the trunks and branches with a fragile luminance.  The air is sweet and fresh, but it is difficult to draw a deep breath.</description>
+    <description>The birches grow right down into the stream bed, the moss richly coating the trunks and branches.  The air is sweet and fresh, but it is difficult to draw a deep breath.</description>
+    <position x="300" y="200" z="0" />
+    <arc exit="northeast" move="northeast" destination="39" />
+    <arc exit="southeast" move="southeast" destination="28" />
+    <arc exit="southwest" move="southwest" destination="36" />
+    <arc exit="northwest" move="northwest" destination="35" />
+  </node>
+  <node id="35" name="The Mey Mists, Boggy Wood">
+    <description>Oddly enough, this part of the forest is devoid of animal life -- in the darkness no birds call, no small animals scutter.  Breathing is labored and effortful.</description>
+    <position x="280" y="180" z="0" />
+    <arc exit="northeast" move="northeast" destination="43" />
+    <arc exit="southeast" move="southeast" destination="34" />
+    <arc exit="northwest" move="northwest" destination="38" />
+  </node>
+  <node id="36" name="The Mey Mists, Boggy Wood">
+    <description>A large fallen log lies northwards, slippery with damp moss.  Huge ferns curl up around the log, and rather than trample through the unsure footing among the ferns, the log offers a straight path north and south.</description>
+    <position x="220" y="160" z="0" />
+    <arc exit="north" move="north" destination="51" />
+    <arc exit="northeast" move="northeast" destination="34" />
+    <arc exit="south" move="south" destination="37" />
+  </node>
+  <node id="37" name="The Mey Mists, Boggy Wood">
+    <description>A mist full of tiny water droplets surrounds everything on the eastern bank of the stream.  All sound falls muted and dull.  Birch trees coated with stringy green and greyish moss spread out in all directions.</description>
+    <description>A mist full of pinpoint water drops surrounds everything on the eastern bank of the stream.  All sound falls muted and dull.  Birch trees coated with stringy green and greyish moss spread out in all directions.</description>
+    <position x="220" y="200" z="0" />
+    <arc exit="north" move="north" destination="36" />
+    <arc exit="northeast" move="northeast" destination="38" />
+    <arc exit="go" move="go western bank" destination="8" />
+  </node>
+  <node id="38" name="The Mey Mists, Boggy Wood">
+    <description>The ground feels softer, rather than more solid, the farther away from the stream one travels.  Although not exactly a bog, it might be a good idea to test each step before committing all your weight.</description>
+    <position x="260" y="160" z="0" />
+    <arc exit="northeast" move="northeast" destination="49" />
+    <arc exit="southeast" move="southeast" destination="35" />
+    <arc exit="southwest" move="southwest" destination="37" />
+  </node>
+  <node id="39" name="The Mey Mists, Boggy Wood">
+    <description>A hammock woven of living vines stretches between two tall birches, the birch limbs creating a bower of shelter.  But for the eerie green moss and disturbing mist, this would be a sylvan paradise.</description>
+    <position x="320" y="180" z="0" />
+    <arc exit="north" move="north" destination="43" />
+    <arc exit="east" move="east" destination="40" />
+    <arc exit="southeast" move="southeast" destination="33" />
+    <arc exit="southwest" move="southwest" destination="34" />
+  </node>
+  <node id="40" name="The Mey Mists, Boggy Wood">
+    <description>A thick tangle of vines creates a tent of shelter, moisture condensing on the stems and leaves and running in rivulets to drip incessantly on swelling mounds of moss.  A creaking noise pierces the quiet -- surely that sound is only the branches of the trees rubbing against each other.</description>
+    <position x="340" y="180" z="0" />
+    <arc exit="east" move="east" destination="41" />
+    <arc exit="west" move="west" destination="39" />
+  </node>
+  <node id="41" name="The Mey Mists, Boggy Wood">
+    <description>Greyish-white fungi spears emerge from the green moss, thriving on the moisture in the air and ground.  This forest area might likewise be called both beautiful and disturbingly repulsive, as a forboding sense of the unreal penetrates the fog.</description>
+    <position x="400" y="180" z="0" />
+    <arc exit="south" move="south" destination="33" />
+    <arc exit="west" move="west" destination="40" />
+    <arc exit="northwest" move="northwest" destination="42" />
+  </node>
+  <node id="42" name="The Mey Mists, Boggy Wood">
+    <description>Blood red heart-shaped berries adorn low lying bushes, providing the first splash of color beyond the eternal green and grey of this wood.  They glisten with moisture and appear to be rich in juice, but whether they are nourishing or deadly is unclear.</description>
+    <position x="360" y="140" z="0" />
+    <arc exit="southeast" move="southeast" destination="41" />
+    <arc exit="southwest" move="southwest" destination="43" />
+    <arc exit="northwest" move="northwest" destination="44" />
+  </node>
+  <node id="43" name="The Mey Mists, Boggy Wood">
+    <description>Footing is particularly treacherous here, the ground suddenly wetter and more boggy than expected.  Luckily, a few small birches grow midst the wettest part, providing a handhold to steadier ground beyond.</description>
+    <position x="320" y="160" z="0" />
+    <arc exit="northeast" move="northeast" destination="42" />
+    <arc exit="south" move="south" destination="39" />
+    <arc exit="southwest" move="southwest" destination="35" />
+    <arc exit="northwest" move="northwest" destination="46" />
+  </node>
+  <node id="44" name="The Mey Mists, Boggy Wood">
+    <description>Moisture drips like tears off delicate twigs, and a soft cooing and sighing brushes through the tree tops.  The mist coats the ground and trees with its phosphorescent gleam.  The trail leads deeper and deeper into woods.</description>
+    <description>Moisture drips like tears off delicate twigs, and a soft cooing and sighing brushes through the tree tops.  Very little light makes it way through the fog and trees.  The trail leads deeper and deeper into woods.</description>
+    <position x="340" y="120" z="0" />
+    <arc exit="southeast" move="southeast" destination="42" />
+    <arc exit="west" move="west" destination="45" />
+  </node>
+  <node id="45" name="The Mey Mists, Boggy Wood">
+    <description>Something moves on the tree ahead.  A sinuous yellow-green snake with glinting eyes regards you indifferently as it undulates among the camouflaging moss-coated branches.  No other natural animal has shown its presence here, making this snake more unusual than it ought to be.</description>
+    <position x="320" y="120" z="0" />
+    <arc exit="east" move="east" destination="44" />
+    <arc exit="southwest" move="southwest" destination="46" />
+  </node>
+  <node id="46" name="The Mey Mists, Boggy Wood">
+    <description>A pounding heartbeat keeps rhythm with every step, and gradually it registers the sound is that of your own blood.  From time to time the greenish moss seems to stir, though it may only be the surrounding mist swirling slowly.</description>
+    <position x="300" y="140" z="0" />
+    <arc exit="northeast" move="northeast" destination="45" />
+    <arc exit="southeast" move="southeast" destination="43" />
+    <arc exit="west" move="west" destination="49" />
+    <arc exit="northwest" move="northwest" destination="47" />
+  </node>
+  <node id="47" name="The Mey Mists, Boggy Wood">
+    <description>The mist grows heavy and thick here and obscures any trees more than a few feet away with a palely glowing light.  The moss and ferns look like an inviting place to spend the night.</description>
+    <description>The mist grows heavy and thick here and obscures any trees more than a few feet away.  In the lulling calm, the moss and ferns look like comfortable places to make a bed.</description>
+    <position x="280" y="120" z="0" />
+    <arc exit="southeast" move="southeast" destination="46" />
+    <arc exit="northwest" move="northwest" destination="48" />
+  </node>
+  <node id="48" name="The Mey Mists, Boggy Wood">
+    <description>Leaves and branches whisper seductively, moving gently in an unfelt breeze.  Weariness seems to lift and your step grows quicker and lighter despite the boggy ground and dense branches that block the path.</description>
+    <description>Leaves and branches whisper seductively, moving gently in an unfelt breeze.  Weariness seems to lift and your step grows quicker and lighter despite the boggy ground and dense branches that obscure the path.</description>
+    <position x="260" y="100" z="0" />
+    <arc exit="southeast" move="southeast" destination="47" />
+    <arc exit="west" move="west" destination="50" />
+    <arc exit="northwest" move="northwest" destination="42" />
+  </node>
+  <node id="49" name="The Mey Mists, Boggy Wood">
+    <description>Tall luminiferous ferns fill this gap in the trees.  Through the glimmer of mist, birch trees stand at watch, drawing one towards their sheltering arms.</description>
+    <description>Ferns, elbow high on a tall Elf, fill this gap in the trees.  Passage is slow, for it seems criminal to trample these beautiful plants carelessly.  Through the mist, birch trees stand at watch, drawing one towards their sheltering arms.</description>
+    <position x="280" y="140" z="0" />
+    <arc exit="east" move="east" destination="46" />
+    <arc exit="southwest" move="southwest" destination="38" />
+    <arc exit="northwest" move="northwest" destination="50" />
+  </node>
+  <node id="50" name="The Mey Mists, Boggy Wood">
+    <description>Water oozes from the ground with every step, and birch branches hanging with moss reach out to tear at faces and clothes as you fight for passage.  No path remains completely clear, although some trees are easier to pass by than others.</description>
+    <position x="240" y="100" z="0" />
+    <arc exit="east" move="east" destination="48" />
+    <arc exit="southeast" move="southeast" destination="49" />
+    <arc exit="southwest" move="southwest" destination="51" />
+  </node>
+  <node id="51" name="The Mey Mists, Boggy Woods">
+    <description>The birches were cut here at one time.  The knee-high stumps stand like tombstones to the departed.  The tree moss is especially dense here, coating ground, stumps, and even as high as the branches of the remaining trees.  Stark patches of luminescent moss flicker through the darkness.</description>
+    <description>The birches were cut here at one time.  The knee-high stumps stand like tombstones to the departed.  The tree moss is especially dense here, coating ground, stumps, and even as high as the branches of the remaining trees.</description>
+    <position x="220" y="120" z="0" />
+    <arc exit="northeast" move="northeast" destination="50" />
+    <arc exit="south" move="south" destination="36" />
+  </node>
+  <label text="Brynn Rill">
+    <position x="290" y="30" z="0" />
+  </label>
+  <label text="Boggy Wood">
+    <position x="240" y="215" z="0" />
+  </label>
+</zone>

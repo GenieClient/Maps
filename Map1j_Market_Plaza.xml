@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Market Plaza" id="1j">
+  <node id="1" name="The Crossing, Mongers' Square" note="Map1_Crossing.xml|Mongers' Square|Bazaar|Crossing">
+    <description>Set into the center of the bazaar's main square is a bronzed fountain depicting the fatherly figure of Divyaush, his long chiseled beard covering the top of his robes and his painted azure eyes gazing into the water below.  Children and shoppers stop on their way past, often wetting their hands or their faces in the cool clear water.  To the southwest, brightly covered pennants sail above the sea of canvas that is the Traders' Market tent.</description>
+    <position x="240" y="140" z="0" />
+    <arc exit="go" move="go market plaza" destination="2" />
+  </node>
+  <node id="2" name="Market Plaza, Foyer" note="Foyer|listings board|board" color="#00FF00">
+    <description>The high ceiling and sand rose painted walls make this entry feel open and expansive.  A large round ironwood table is centered on a thickly-piled rug that covers the middle of the polished marble floor.  Large copper urns filled with preserved peacock feathers and fronds have been placed at each corner of a large listings board.  Rich brown leather couches line the opposite wall.</description>
+    <position x="140" y="140" z="0" />
+    <arc exit="north" move="north" destination="3" />
+    <arc exit="go" move="go archway" destination="19" />
+    <arc exit="go" move="go office" destination="18" />
+    <arc exit="go" move="go iron gate" destination="1" />
+  </node>
+  <node id="3" name="Market Plaza, Sun Room" note="Sun Room">
+    <description>Painted a soft blue, the walls compliment the matching sunburst stained glass windows that are set in deep frames on each wall.  Low wicker benches with moss green cushions are positioned between the entries to the individual shops.  Shoppers move along leisurely, arms laden with baskets and bags overflowing with their latest finds.</description>
+    <position x="140" y="80" z="0" />
+    <arc exit="east" move="east" destination="4" />
+    <arc exit="southeast" move="southeast" destination="11" />
+    <arc exit="south" move="south" destination="2" />
+    <arc exit="southwest" move="southwest" destination="14" />
+    <arc exit="west" move="west" destination="10" />
+    <arc exit="go" move="go hallway" destination="7" />
+    <arc exit="climb" move="climb marble staircase" destination="29" />
+    <arc exit="go" move="go spiral ramp" destination="35" />
+  </node>
+  <node id="4" name="Market Plaza, Water Room" note="Water Room">
+    <description>Rounded benches ring a small fountain in the middle of the room.  Light from a centralized chandelier reflects off polished glass pieces that have been strewn in the clear crystal water.  Small tables with decorated jars holding bamboo shoots are positioned between the entries to each shop.</description>
+    <position x="260" y="80" z="0" />
+    <arc exit="northeast" move="northeast" destination="5" />
+    <arc exit="west" move="west" destination="3" />
+  </node>
+  <node id="5" name="Market Plaza, Grass Room" note="Grass Room">
+    <description>Intricately woven reeds are displayed in a starburst matting, the differing sized rays pointing to each shop, as if it direct shoppers to their destinations.  Baskets are piled artistically along the two long walls of this rectangular room.  Guards pass quietly among the shoppers, alert behind their relaxed facade.</description>
+    <position x="320" y="10" z="0" />
+    <arc exit="southwest" move="southwest" destination="4" />
+    <arc exit="northwest" move="northwest" destination="6" />
+  </node>
+  <node id="6" name="Market Plaza, Solarium" note="Solarium">
+    <description>The night sky can be seen through the long panes of glass set along the walls near the ceiling.  Lantern light softens the edges of the two rows of topiary animals and intricately manicured miniature evergreens in large marble urns.  Gaps have been left to allow entry into the various shops.</description>
+    <description>Long panes of glass are set into the long walls near the ceiling.  Too high to provide a view of the outside, they allow sunlight for the two rows of topiary animals intermingled with intricately manicured miniature evergreens in large marble urns.  Gaps have been left to allow entry into the various shops.</description>
+    <position x="260" y="-60" z="0" />
+    <arc exit="southeast" move="southeast" destination="5" />
+    <arc exit="southwest" move="southwest" destination="7" />
+    <arc exit="go" move="go garden" destination="17" />
+  </node>
+  <node id="7" name="Market Plaza, Food Court" note="Food Court">
+    <description>Small wrought-iron tables with two to four matching chairs are situated sporadically around this large room.  A young Elven maid moves quietly around the area filling a large bin with used glasses and cutlery.  A row of carts with large wheels line two opposite walls.  Soft music from a lyre player provides a comfortable background for the low conversations between diners and passing shoppers.</description>
+    <position x="140" y="60" z="0" />
+    <arc exit="northeast" move="northeast" destination="6" />
+    <arc exit="northwest" move="northwest" destination="8" />
+    <arc exit="go" move="go hallway" destination="3" />
+  </node>
+  <node id="8" name="Market Plaza, Forest Room" note="Forest Room">
+    <description>Carved totems have been arranged in a casual snaking pattern down the length of the room.  With enough space between them for easy passage to the shop entries, shoppers pause and point out the animals and birds easily recognized in the wood.</description>
+    <position x="20" y="-60" z="0" />
+    <arc exit="southeast" move="southeast" destination="7" />
+    <arc exit="southwest" move="southwest" destination="9" />
+    <arc exit="go" move="go garden" destination="17" />
+  </node>
+  <node id="9" name="Market Plaza, Dimly-Lit Storage" note="Dimly-Lit Storage|Storage">
+    <description>Defying gravity, crates, boxes and stacked tables are piled high along the walls to the ceiling.  With a wide cleared path running down the center, light from the entry way quickly diminishes down the length of the room, leaving the far end barely discernable.  A push cart holding a large box stands ready for the rest of the inventory to be loaded.</description>
+    <position x="-40" y="10" z="0" />
+    <arc exit="northeast" move="northeast" destination="8" />
+    <arc exit="southeast" move="southeast" destination="10" />
+  </node>
+  <node id="10" name="Market Plaza, Meeting Room" note="Meeting Room">
+    <description>Carpeting spans the room from wall to wall, muffling the footsteps of the few errant shoppers that have lost their way.  A long table with straight-backed chairs pushed tightly against it is the only furniture present.  A portrait of a dignified S'kra Mur gentleman hangs at the head.</description>
+    <position x="20" y="80" z="0" />
+    <arc exit="east" move="east" destination="3" />
+    <arc exit="northwest" move="northwest" destination="9" />
+  </node>
+  <node id="11" name="Market Plaza, Moon Room" note="Moon Room">
+    <description>A mural of a horizon with a setting sun surrounds the room in variegated shades of rose and purple near the base, moving towards a brushing of silvery grey at the ceiling.  On three separate walls, the three moons of Elanthia are in various stages of rising or waning.  Constellations have been painted on the floor in splashes of white against the black marble.</description>
+    <position x="160" y="100" z="0" />
+    <arc exit="east" move="east" destination="12" />
+    <arc exit="south" move="south" destination="13" />
+    <arc exit="northwest" move="northwest" destination="3" />
+  </node>
+  <node id="12" name="Market Plaza, Armor Room" note="Armor Room">
+    <description>Deep-set niches in the walls hold a variety of helms, armets and other head armor.  Placed centrally in the room, a tall mannequin fully bedecked in a set of ornamental heavy plate has been polished to a pristine shine.  Low chairs have been placed on each side of the shop entrances, the high backs formed from obsidian-bossed tower shields.</description>
+    <position x="180" y="100" z="0" />
+    <arc exit="west" move="west" destination="11" />
+  </node>
+  <node id="13" name="Market Plaza, Lodge Room" note="Lodge Room">
+    <description>Windows looking out over a snow-covered mountain terrain have been painted onto the walls.  Large game trophies on cherrywood bases are mounted above two lit fieldstone fireplaces on either side of the room.  Leather couches draped with snowbeast throws have been placed back to back in the center of the room, a place to rest in comfort before embarking on the next round of shops.</description>
+    <position x="160" y="120" z="0" />
+    <arc exit="north" move="north" destination="11" />
+  </node>
+  <node id="14" name="Market Plaza, Gladiolus Room" note="Gladiolus Room">
+    <description>Hanging tight to the ceiling, gaethzen lamps in the shapes of large humming birds and butterflies in flight provide a bright light that flows over the enormous round marble planter in the center of the room.  Gladiolus in rich soil provides the room with a warm scent and a vivid display of color, ranging from white to shades of deep purple.  Elven ivy has been planted around the edge of the flowers and flows over the side to the floor.</description>
+    <position x="120" y="100" z="0" />
+    <arc exit="northeast" move="northeast" destination="3" />
+    <arc exit="south" move="south" destination="16" />
+    <arc exit="west" move="west" destination="15" />
+  </node>
+  <node id="15" name="Market Plaza, Fire Room" note="Fire Room">
+    <description>Passing shoppers stop to take in the vivid mural of the Greater Fist that covers two walls with the artistic rendition of lava flowing into swirls on the shining maple floor.  Prickly plants with bright crimson blooms line a burgundy runner laid down the center of the room.  Flickering torches in brass sconces are set on either side of the entrances to the trader shops along the walls.</description>
+    <position x="100" y="100" z="0" />
+    <arc exit="east" move="east" destination="14" />
+  </node>
+  <node id="16" name="Market Plaza, Library" note="Library">
+    <description>Bookcases filled with volumes of varying bindings and size line both lengths of the room, built even above the shop entrances to provide more space.  Two rows of benches with padded seats have been placed back to back in the center.  An attendant moves about quietly, picking up the stray volumes and at times stopping to climb a small ladder he carries to get a book for anyone interested.</description>
+    <position x="120" y="120" z="0" />
+    <arc exit="north" move="north" destination="14" />
+  </node>
+  <node id="17" name="Market Plaza, Garden" note="Garden">
+    <description>Tall shepherd's hooks hold oil lanterns that throw shadows over the hedges of varying heights that have been grown in amazing patterns throughout the garden.  In various corners small white tables, chairs and benches are set to provide a resting spot or a site for intimate conversations.  A bronzed statue of a man is in the center, its base ringed with candles.</description>
+    <description>Hedges of varying heights have been grown in amazing patterns throughout the garden.  In various corners small white tables, chairs and benches are set to provide a resting spot or a site for intimate conversations.  A bronzed statue of a man is in the center, its base ringed with vibrant roses and myrtle.</description>
+    <position x="140" y="-60" z="0" />
+    <arc exit="east" move="east" destination="6" />
+    <arc exit="west" move="west" destination="8" />
+  </node>
+  <node id="18" name="Market Plaza, Office" note="Office" color="#00FF00">
+    <description>Four desks are situated behind a long counter that spans across the busy room.  A clerk nods and rushes forward to swing open a half-door to allow entry for groups of traders usually in deep discussions with a vendor or other merchants.  A large cork board has various announcements and billings arranged meticulously in rows.</description>
+    <position x="140" y="160" z="0" />
+    <arc exit="out" move="out" destination="2" />
+  </node>
+  <node id="19" name="Furniture Gallery, Foyer" note="Furniture Gallery">
+    <description>Masterful presentation skill is present in every aspect of the gallery foyer.  Neatly trimmed decor surrounds the ornate entrances leading in all directions, and helpful attendants stroll casually about, tending to the needs of their customers.</description>
+    <position x="60" y="180" z="0" />
+    <arc exit="north" move="north" destination="20" />
+    <arc exit="southeast" move="southeast" destination="21" />
+    <arc exit="south" move="south" destination="22" />
+    <arc exit="southwest" move="southwest" destination="23" />
+    <arc exit="west" move="west" destination="24" />
+    <arc exit="northwest" move="northwest" destination="25" />
+    <arc exit="out" move="out" destination="2" />
+  </node>
+  <node id="20" name="Furniture Gallery, Tables" note="Tables" color="#FF0000">
+    <description>Tastefully arranged tables of various materials fill the room, each cordoned off by a red velvet cord and lit with gaethzen orbs.  A sign stands on a prominent easel, summarizing what the furniture in this room can be used for.</description>
+    <position x="60" y="140" z="0" />
+    <arc exit="north" move="north" destination="26" />
+    <arc exit="south" move="south" destination="19" />
+    <arc exit="west" move="west" destination="27" />
+    <arc exit="northwest" move="northwest" destination="28" />
+  </node>
+  <node id="21" name="Furniture Gallery, Floors" note="Floors" color="#FF0000">
+    <description>Tastefully arranged panels of various materials fill the room, each cordoned off by a red velvet cord and lit with gaethzen orbs.  A sign stands on a prominent easel, summarizing what the furniture in this room can be used for.</description>
+    <position x="80" y="200" z="0" />
+    <arc exit="northwest" move="northwest" destination="19" />
+  </node>
+  <node id="22" name="Furniture Gallery, Walls" note="Walls" color="#FF0000">
+    <description>Tastefully arranged panels of various materials fill the room, each cordoned off by a red velvet cord and lit with gaethzen orbs.  A sign stands on a prominent easel, summarizing what the furniture in this room can be used for.</description>
+    <position x="60" y="200" z="0" />
+    <arc exit="north" move="north" destination="19" />
+  </node>
+  <node id="23" name="Furniture Gallery, Counters" note="Counters" color="#FF0000">
+    <description>Tastefully arranged counters of various materials fill the room, each cordoned off by a red velvet cord and lit with gaethzen orbs.  A sign stands on a prominent easel, summarizing what the furniture in this room can be used for.</description>
+    <position x="40" y="200" z="0" />
+    <arc exit="northeast" move="northeast" destination="19" />
+  </node>
+  <node id="24" name="Furniture Gallery, Entrances" note="Entrances" color="#FF0000">
+    <description>Tastefully arranged entrances of various shapes and sizes fill the room, each cordoned off by a red velvet cord and lit with gaethzen orbs.  A sign stands on a prominent easel, summarizing what the furniture in this room can be used for.</description>
+    <position x="40" y="180" z="0" />
+    <arc exit="east" move="east" destination="19" />
+  </node>
+  <node id="25" name="Furniture Gallery, Backroom Doors" note="Backroom Doors|Doors" color="#FF0000">
+    <description>Tastefully arranged doors of various shapes and sizes fill the room, each cordoned off by a red velvet cord and lit with gaethzen orbs.  A sign stands on a prominent easel, summarizing what the furniture in this room can be used for.</description>
+    <position x="40" y="160" z="0" />
+    <arc exit="southeast" move="southeast" destination="19" />
+  </node>
+  <node id="26" name="Furniture Gallery, Wall Hangings" note="Wall Hangings" color="#FF0000">
+    <description>Tastefully arranged racks of various materials fill the room, each cordoned off by a red velvet cord and lit with gaethzen orbs.  A sign stands on a prominent easel, summarizing what the furniture in this room can be used for.</description>
+    <position x="60" y="120" z="0" />
+    <arc exit="south" move="south" destination="20" />
+  </node>
+  <node id="27" name="Furniture Gallery, Trunks" note="Trunks" color="#FF0000">
+    <description>Tastefully arranged trunks of various materials fill the room, each cordoned off by a red velvet cord and lit with gaethzen orbs.  A sign stands on a prominent easel, summarizing what the furniture in this room can be used for.</description>
+    <position x="40" y="140" z="0" />
+    <arc exit="east" move="east" destination="20" />
+  </node>
+  <node id="28" name="Furniture Gallery, Cabinets" note="Cabinets" color="#FF0000">
+    <description>Tastefully arranged cabinets of various materials fill the room, each cordoned off by a red velvet cord and lit with gaethzen orbs.  A sign stands on a prominent easel, summarizing what the furniture in this room can be used for.</description>
+    <position x="40" y="120" z="0" />
+    <arc exit="southeast" move="southeast" destination="20" />
+  </node>
+  <node id="29" name="Market Plaza Cellar, Tasting Room" note="Cellar|Tasting Room">
+    <description>Glossy mahogany wainscoting covers the lower halves of the stacked limestone walls.  Paintings depicting famous vineyards grace the upper halves, bracketed by the downward curves of the brick ceiling toward the pillars that support it.  Comfortable chairs and low tables are arranged companionably near a polished black marble bar containing wines to sample, and a conservatively-dressed male Prydaen stands by to assist.</description>
+    <position x="220" y="60" z="0" />
+    <arc exit="north" move="north" destination="30" />
+    <arc exit="climb" move="climb marble staircase" destination="3" />
+  </node>
+  <node id="30" name="Market Plaza Cellar, Bottle Room" note="Bottle Room">
+    <description>Racks upon racks of wine bottles line the walls, and between them heavy square columns rise up to join the vaulted ceiling.  Each column bears a framed watercolor painting depicting a different wine variety.</description>
+    <position x="220" y="40" z="0" />
+    <arc exit="north" move="north" destination="31" />
+    <arc exit="south" move="south" destination="29" />
+  </node>
+  <node id="31" name="Market Plaza Cellar, Stomping Room" note="Stomping Room">
+    <description>Arched brick ceilings converge from four different directions, forming a large double-vaulted room full of compound curves and lined with buttressing columns.  An assortment of grape-pressing equipment is lined up along one wall, leaving enough open space that several couples could dance here with room to spare.</description>
+    <position x="220" y="20" z="0" />
+    <arc exit="north" move="north" destination="32" />
+    <arc exit="east" move="east" destination="34" />
+    <arc exit="south" move="south" destination="30" />
+    <arc exit="west" move="west" destination="33" />
+  </node>
+  <node id="32" name="Market Plaza Cellar, Fermentation Room" note="Fermentation Room">
+    <description>Huge vats line a stacked limestone wall at the cellar's end.  An arched brick ceiling looms low overhead, supported by a double row of heavy stone columns that march back toward the center of the cellar on either side.  Shop entrances pierce the walls between the columns.</description>
+    <position x="220" y="0" z="0" />
+    <arc exit="south" move="south" destination="31" />
+  </node>
+  <node id="33" name="Market Plaza Cellar, Cooper Room" note="Cooper Room">
+    <description>Broad square pillars rise up to support the barrel-vaulted brick ceiling, and shop entrances pierce the stacked stone walls in between.  This area also contains a working cooperage, and shoppers can pause a while to watch the coopers at hard at work on unfinished barrels with their tools, firepits and racks of supplies close at hand.</description>
+    <description>Broad square pillars rise up to support the barrel-vaulted brick ceiling, and shop entrances pierce the stacked stone walls in between.  This area also contains a working cooperage by day, and nighttime shoppers can pause a while to have a look at the neatly-stored tools and unfinished barrels.</description>
+    <position x="200" y="20" z="0" />
+    <arc exit="east" move="east" destination="31" />
+  </node>
+  <node id="34" name="Market Plaza Cellar, Barrel Room" note="Barrel Room">
+    <description>Arched openings line the room, formed by the pillars that hold up the low tunnel-vaulted ceiling.  Within the openings, the round faces of massive oaken casks protrude, each resting upon a sturdy brick cradle.  At the far end, smaller barrels are stacked against the wall, awaiting shipment to wholesale customers.</description>
+    <position x="240" y="20" z="0" />
+    <arc exit="west" move="west" destination="31" />
+  </node>
+  <node id="35" name="Market Plaza Upstairs, Volcano Room" note="Upstairs|Volcano Room">
+    <description>A model of the Greater Fist rests on a display table in the middle of this area, complete with tiny caravans and surrounding towns and villages.  The broad white walls between the shops exhibit a collection of fine paintings of volcanoes in varying stages of activity and dormancy.</description>
+    <position x="60" y="60" z="0" />
+    <arc exit="east" move="east" destination="36" />
+    <arc exit="west" move="west" destination="42" />
+    <arc exit="go" move="go spiral ramp" destination="3" />
+  </node>
+  <node id="36" name="Market Plaza Upstairs, Palm Room" note="Palm Room">
+    <description>An atrium of sorts, this room has a high glass ceiling, with tall palm trees in wide planters rising nearly to its peak.  A cluster of chairs and small tables underneath allow shoppers to relax and regroup while taking in a grand view of Crossing through the mostly-glass south and east walls.</description>
+    <description>An atrium of sorts, this room has a high glass ceiling currently darkened by night.  Palm trees rise up into the darkness out of wide planters underneath.  A cluster of chairs and small tables at the base of the trees allow shoppers to relax and regroup while taking in a the night lights of Crossing through the mostly-glass south and east walls.</description>
+    <position x="80" y="60" z="0" />
+    <arc exit="northeast" move="northeast" destination="37" />
+    <arc exit="west" move="west" destination="35" />
+  </node>
+  <node id="37" name="Market Plaza Upstairs, Ocean Room" note="Ocean Room">
+    <description>Reclaimed teak flooring and cypress woodwork, both heavily varnished, give this room a decidedly nautical air.  Broad white walls between each pair of shops display a collection of maritime antiques including a ship's bell.  The windows on the east wall look out over eastern Crossing, and far beyond that lies the dull blue-gray line of open water.</description>
+    <description>Reclaimed teak flooring and cypress woodwork, both heavily varnished, give this room a decidedly nautical air.  Broad white walls between each pair of shops display a collection of maritime antiques including a ship's bell.  The windows on the east wall look out over the nighttime lights of eastern Crossing.</description>
+    <position x="100" y="40" z="0" />
+    <arc exit="southwest" move="southwest" destination="36" />
+    <arc exit="northwest" move="northwest" destination="38" />
+  </node>
+  <node id="38" name="Market Plaza Upstairs, Tundra Room" note="Tundra Room">
+    <description>A massive set of curved mammoth tusks has pride of place in the center of the broad corridor, mounted upon a large glass display.  More specimens of tundra life decorate the walls between the shops, allowing visitors to see and learn as they shop.</description>
+    <position x="80" y="20" z="0" />
+    <arc exit="southeast" move="southeast" destination="37" />
+    <arc exit="southwest" move="southwest" destination="39" />
+  </node>
+  <node id="39" name="Market Plaza Upstairs, Jungle Room" note="Jungle Room">
+    <description>Stained glass windows with polished teak casements portray various lush jungle scenes, offering filtered light in jewel-like tones.  Shop entrances line up opposite, with vases of vibrant jungle flowers mounted on the walls between each set of doors.</description>
+    <description>Currently darkened by night, stained glass windows with polished teak casements grace the north side of the room.  Shop entrances line up opposite, with vases of vibrant jungle flowers mounted on the walls between each set of doors.</description>
+    <position x="60" y="40" z="0" />
+    <arc exit="northeast" move="northeast" destination="38" />
+    <arc exit="northwest" move="northwest" destination="40" />
+  </node>
+  <node id="40" name="Market Plaza Upstairs, Savannah Room" note="Savannah Room">
+    <description>A framed panoramic painting of a savannah scene occupies the broad white wall between a pair of shop entrances, and glassy-eyed hunting trophies line each wall overhead.  Windows on the northern side of the room overlook the Crossing bazaar and the north end of town.</description>
+    <description>A framed panoramic painting of a savannah scene occupies the broad white wall between a pair of shop entrances, and glassy-eyed hunting trophies line each wall overhead.  Night-darkened windows on the northern side of the room overlook the torch-lit Crossing bazaar and the northern end of town.</description>
+    <position x="40" y="20" z="0" />
+    <arc exit="southeast" move="southeast" destination="39" />
+    <arc exit="southwest" move="southwest" destination="41" />
+  </node>
+  <node id="41" name="Market Plaza Upstairs, Desert Room" note="Desert Room">
+    <description>Windows look out over western Crossing on one side, and shop entrances are spaced out along the wall opposite them.  An exhibit of desert artifacts dominates the center of the room, laid out in a long freestanding glass counter, with a tall potted cactus standing nearby.</description>
+    <description>Darkened windows look out over western Crossing's night lights on one side, and shop entrances are spaced out along the wall opposite.  An exhibit of desert artifacts dominates the center of the room, laid out in a long freestanding glass counter, with a tall potted cactus standing nearby.</description>
+    <position x="20" y="40" z="0" />
+    <arc exit="northeast" move="northeast" destination="40" />
+    <arc exit="southeast" move="southeast" destination="42" />
+  </node>
+  <node id="42" name="Market Plaza Upstairs, River Room" note="River Room">
+    <description>An exhibit of framed paintings depicting barges at work and other river scenes decorates the walls between the shops.  Windows to the southwest give a panoramic view of the joining of the Segoltha and Oxenwaithe, with the rest of Crossing sprawled around them.</description>
+    <description>An exhibit of framed paintings depicting barges at work and other river scenes decorates the walls between the shops.  Darkened windows to the southwest give a panoramic view of Crossing's city lights.</description>
+    <position x="40" y="60" z="0" />
+    <arc exit="east" move="east" destination="35" />
+    <arc exit="northwest" move="northwest" destination="41" />
+  </node>
+  <label text="Furniture Gallery">
+    <position x="20" y="210" z="0" />
+  </label>
+  <label text="Mongers' Square">
+    <position x="201" y="149" z="0" />
+  </label>
+  <label text="Market Plaza">
+    <position x="107" y="-25" z="0" />
+  </label>
+  <label text="Upstairs">
+    <position x="32" y="-1" z="0" />
+  </label>
+  <label text="Cellar">
+    <position x="227" y="27" z="0" />
+  </label>
+</zone>

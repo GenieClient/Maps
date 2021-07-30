@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Segoltha River" id="50">
+  <node id="1" name="Riverbank Trail">
+    <description>The sounds of the city fade slightly into the background, muffled by the steep slope of the riverbank that lines the trail.  The path follows the river, edging along the slippery slope that is littered with old bottles, broken wood and dead fish.</description>
+    <position x="260" y="100" z="0" />
+    <arc exit="west" move="west" destination="2" />
+    <arc exit="climb" move="climb steep slope" destination="8" />
+  </node>
+  <node id="2" name="Riverbank Trail">
+    <description>The fading sounds of the city to the north are overpowered by the constant rushing and reverberation of the river below.  The stench of dead fish is intense along the refuse-littered slope.</description>
+    <position x="240" y="100" z="0" />
+    <arc exit="east" move="east" destination="1" />
+    <arc exit="west" move="west" destination="3" />
+  </node>
+  <node id="3" name="Riverbank Trail">
+    <description>To the west, piles of debris and junk block any possible passage.  The riverbank to the north is too steep to climb, as evidenced by the bits of torn cloth and slide marks that mar the muddy surface.  Below is the Selgotha river, its murky depths slightly calmer in this spot as the westward rushing currents slow to navigate the city-built embankment.</description>
+    <position x="220" y="100" z="0" />
+    <arc exit="east" move="east" destination="2" />
+    <arc exit="go" move="dive river" destination="4" />
+  </node>
+  <node id="4" name="Segoltha River, North Bank" color="#000080">
+    <description>Swiftly rushing water cascades over a rocky riverbed, channeling towards treacherous rapids that block further progress downstream.  A small defile in the river bank allows a quick scramble up to safety.</description>
+    <position x="200" y="120" z="0" />
+    <arc exit="west" move="swim west" destination="5" />
+    <arc exit="climb" move="climb bank" destination="3" />
+  </node>
+  <node id="5" name="Segoltha River, North Bank" color="#000080">
+    <description>Hugging the river bank, the swirling waters surge against the slick banks.  Undercurrents seethe beneath the surface, seeking to drag the unwary down into the river's heart.</description>
+    <position x="180" y="120" z="0" />
+    <arc exit="east" move="swim east" destination="4" />
+    <arc exit="west" move="swim west" destination="6" />
+  </node>
+  <node id="6" name="Segoltha River, North Bank" color="#000080">
+    <description>Surging currents batter against the mud banks, undercutting them and adding their silt to the muddy waters that comprise the Segoltha.  Whirling eddies mark the surface, hiding the treacherous undertow.</description>
+    <position x="160" y="120" z="0" />
+    <arc exit="east" move="swim east" destination="5" />
+    <arc exit="west" move="swim west" destination="7" />
+  </node>
+  <node id="7" name="Segoltha River, Midstream" color="#000080">
+    <description>Twisting currents of silt-laden water surge just below the river's surface.  A churning, heaving mass of dirty brown waves, the torrent of water stretches as far as the eye can see.</description>
+    <position x="140" y="120" z="0" />
+    <arc exit="north" move="swim north" destination="32" />
+    <arc exit="northeast" move="swim northeast" destination="7" />
+    <arc exit="east" move="swim east" destination="6" />
+    <arc exit="southeast" move="swim southeast" destination="7" />
+    <arc exit="south" move="swim south" destination="9" />
+    <arc exit="southwest" move="swim southwest" destination="9" />
+    <arc exit="west" move="swim west" destination="7" />
+    <arc exit="northwest" move="swim northwest" destination="32" />
+  </node>
+  <node id="8" name="The Crossing, Haven's End" note="Map1_Crossing.xml|Crossing|NE">
+    <description>This is the end of the road - literally.  All to the north and west, this dead end is surrounded by a weed-choked vacant lot, a remnant of some ancient farmer's croft or field that was incorporated into the Crossing early on in its evolution.  The dark, rich bank of the Segoltha River rises steeply to the south, a difficult climb due to the slick and precipitous slope.</description>
+    <position x="280" y="100" z="0" />
+    <arc exit="east" move="east" />
+  </node>
+  <node id="9" name="Segoltha River, Midstream" color="#010165">
+    <description>Twisting currents of silt-laden water surge just below the river's surface.  A churning, heaving mass of dirty brown waves, the torrent of water stretches as far as the eye can see.</description>
+    <position x="140" y="140" z="0" />
+    <arc exit="north" move="swim north" destination="7" />
+    <arc exit="south" move="swim south" destination="10" />
+    <arc exit="northeast" move="swim northeast" destination="9" />
+    <arc exit="east" move="swim east" destination="9" />
+    <arc exit="southeast" move="swim southeast" destination="9" />
+    <arc exit="southwest" move="swim southwest" destination="10" />
+    <arc exit="west" move="swim west" destination="9" />
+    <arc exit="northwest" move="swim northwest" destination="7" />
+  </node>
+  <node id="10" name="Segoltha River, Midstream" color="#010165">
+    <description>Twisting currents of silt-laden water surge just below the river's surface.  A churning, heaving mass of dirty brown waves, the torrent of water stretches as far as the eye can see.</description>
+    <position x="140" y="160" z="0" />
+    <arc exit="south" move="swim south" destination="11" />
+    <arc exit="north" move="swim north" destination="9" />
+    <arc exit="northeast" move="swim northeast" destination="10" />
+    <arc exit="northwest" move="swim northwest" destination="9" />
+    <arc exit="east" move="swim east" destination="10" />
+    <arc exit="west" move="swim west" destination="10" />
+    <arc exit="southeast" move="swim southeast" destination="10" />
+    <arc exit="southwest" move="swim southwest" destination="11" />
+  </node>
+  <node id="11" name="Segoltha River, Midstream" color="#010165">
+    <description>Twisting currents of silt-laden water surge just below the river's surface.  A churning, heaving mass of dirty brown waves, the torrent of water stretches as far as the eye can see.</description>
+    <position x="140" y="180" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="11" />
+    <arc exit="north" move="swim north" destination="10" />
+    <arc exit="south" move="swim south" destination="12" />
+    <arc exit="northwest" move="swim northwest" destination="10" />
+    <arc exit="east" move="swim east" destination="11" />
+    <arc exit="west" move="swim west" destination="11" />
+    <arc exit="southeast" move="swim southeast" destination="11" />
+    <arc exit="southwest" move="swim southwest" destination="12" />
+  </node>
+  <node id="12" name="Segoltha River, Near the Boulder" color="#000080">
+    <description>Rising majestically above the rushing water, a massive rock outcropping emerges from the muddy river in the distance.  Forming a small islet in the watercourse, the top is crowned by a colossal tree.</description>
+    <position x="140" y="200" z="0" />
+    <arc exit="south" move="swim south" destination="13" />
+    <arc exit="north" move="swim north" destination="11" />
+    <arc exit="northeast" move="swim northeast" destination="12" />
+    <arc exit="northwest" move="swim northwest" destination="11" />
+    <arc exit="east" move="swim east" destination="12" />
+    <arc exit="west" move="swim west" destination="12" />
+    <arc exit="southeast" move="swim southeast" destination="12" />
+    <arc exit="southwest" move="swim southwest" destination="13" />
+  </node>
+  <node id="13" name="Segoltha River, Near the Boulder" color="#000080">
+    <description>Towering over the river's surface, the looming bulk of the rocky island creates a sheltered area in the churning currents of the river.  Silt has been deposited in the refuge, forming a small muddy shoreline.  Mud gives way to drier sand of a bank that hugs the edge of the rock.</description>
+    <position x="140" y="220" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="13" />
+    <arc exit="south" move="swim south" destination="14" />
+    <arc exit="north" move="swim north" destination="12" />
+    <arc exit="northwest" move="swim northwest" destination="12" />
+    <arc exit="east" move="swim east" destination="13" />
+    <arc exit="southeast" move="swim southeast" destination="13" />
+    <arc exit="go" move="go shoreline" destination="37" />
+  </node>
+  <node id="14" name="Segoltha River, Near the Boulder" color="#000080">
+    <description>Scattered driftwood piled along the muddy shore testifies to the power of the river, each pile deposited high above the current waterline by vanished floods.  Tiny tracks of unknown animals spread a delicate tracery across the mud and sand.</description>
+    <position x="140" y="240" z="0" />
+    <arc exit="south" move="swim south" destination="15" />
+    <arc exit="north" move="swim north" destination="13" />
+    <arc exit="northeast" move="swim northeast" destination="14" />
+    <arc exit="east" move="swim east" destination="14" />
+    <arc exit="southeast" move="swim southeast" destination="14" />
+    <arc exit="southwest" move="swim southwest" destination="15" />
+    <arc exit="go" move="go shore" destination="38" />
+  </node>
+  <node id="15" name="Segoltha River, Near the Boulder" color="#000080">
+    <description>Rising majestically above the rushing water, a massive rock outcropping emerges from the muddy river in the distance.  Forming a small islet in the watercourse, the top is crowned by a colossal tree.</description>
+    <position x="140" y="260" z="0" />
+    <arc exit="north" move="swim north" destination="14" />
+    <arc exit="south" move="swim south" destination="16" />
+    <arc exit="northeast" move="swim northeast" destination="15" />
+    <arc exit="east" move="swim east" destination="15" />
+    <arc exit="southeast" move="swim southeast" destination="15" />
+    <arc exit="southwest" move="swim southwest" destination="16" />
+    <arc exit="west" move="swim west" destination="15" />
+    <arc exit="northwest" move="swim northwest" destination="14" />
+  </node>
+  <node id="16" name="Segoltha River, Midstream" color="#010165">
+    <description>Twisting currents of silt-laden water surge just below the river's surface.  A churning, heaving mass of dirty brown waves, the torrent of water stretches as far as the eye can see.</description>
+    <position x="140" y="280" z="0" />
+    <arc exit="north" move="swim north" destination="15" />
+    <arc exit="south" move="swim south" destination="17" />
+    <arc exit="northeast" move="swim northeast" destination="16" />
+    <arc exit="east" move="swim east" destination="16" />
+    <arc exit="southeast" move="swim southeast" destination="16" />
+    <arc exit="southwest" move="swim southwest" destination="17" />
+    <arc exit="west" move="swim west" destination="16" />
+    <arc exit="northwest" move="swim northwest" destination="15" />
+  </node>
+  <node id="17" name="Segoltha River, Midstream" color="#010165">
+    <description>Twisting currents of silt-laden water surge just below the river's surface.  A churning, heaving mass of dirty brown waves, the torrent of water stretches as far as the eye can see.</description>
+    <position x="140" y="300" z="0" />
+    <arc exit="north" move="swim north" destination="16" />
+    <arc exit="south" move="swim south" destination="18" />
+    <arc exit="northeast" move="swim northeast" destination="17" />
+    <arc exit="east" move="swim east" destination="17" />
+    <arc exit="southeast" move="swim southeast" destination="17" />
+    <arc exit="southwest" move="swim southwest" destination="18" />
+    <arc exit="west" move="swim west" destination="17" />
+    <arc exit="northwest" move="swim northwest" destination="16" />
+  </node>
+  <node id="18" name="Segoltha River, Midstream" color="#010165">
+    <description>Twisting currents of silt-laden water surge just below the river's surface.  A churning, heaving mass of dirty brown waves, the torrent of water stretches as far as the eye can see.</description>
+    <position x="140" y="320" z="0" />
+    <arc exit="north" move="swim north" destination="17" />
+    <arc exit="south" move="swim south" destination="19" />
+    <arc exit="northeast" move="swim northeast" destination="18" />
+    <arc exit="east" move="swim east" destination="18" />
+    <arc exit="southeast" move="swim southeast" destination="18" />
+    <arc exit="southwest" move="swim southwest" destination="19" />
+    <arc exit="west" move="swim west" destination="18" />
+    <arc exit="northwest" move="swim northwest" destination="17" />
+  </node>
+  <node id="19" name="Segoltha River, Midstream" color="#010165">
+    <description>Twisting currents of silt-laden water surge just below the river's surface.  A churning, heaving mass of dirty brown waves, the torrent of water stretches as far as the eye can see.</description>
+    <position x="140" y="340" z="0" />
+    <arc exit="north" move="swim north" destination="18" />
+    <arc exit="south" move="swim south" destination="20" />
+    <arc exit="northeast" move="swim northeast" destination="19" />
+    <arc exit="east" move="swim east" destination="19" />
+    <arc exit="southeast" move="swim southeast" destination="19" />
+    <arc exit="southwest" move="swim southwest" destination="20" />
+    <arc exit="west" move="swim west" destination="19" />
+    <arc exit="northwest" move="swim northwest" destination="18" />
+  </node>
+  <node id="20" name="Segoltha River, Midstream" color="#010165">
+    <description>Twisting currents of silt-laden water surge just below the river's surface.  A churning, heaving mass of dirty brown waves, the torrent of water stretches as far as the eye can see.</description>
+    <position x="140" y="360" z="0" />
+    <arc exit="north" move="swim north" destination="19" />
+    <arc exit="south" move="swim south" destination="21" />
+    <arc exit="northeast" move="swim northeast" destination="20" />
+    <arc exit="east" move="swim east" destination="20" />
+    <arc exit="southeast" move="swim southeast" destination="20" />
+    <arc exit="southwest" move="swim southwest" destination="21" />
+    <arc exit="west" move="swim west" destination="20" />
+    <arc exit="northwest" move="swim northwest" destination="19" />
+  </node>
+  <node id="21" name="Segoltha River, Midstream" color="#010165">
+    <description>Twisting currents of silt-laden water surge just below the river's surface.  A churning, heaving mass of dirty brown waves, the torrent of water stretches as far as the eye can see.</description>
+    <position x="140" y="380" z="0" />
+    <arc exit="north" move="swim north" destination="20" />
+    <arc exit="south" move="swim south" destination="22" />
+    <arc exit="northeast" move="swim northeast" destination="21" />
+    <arc exit="east" move="swim east" destination="21" />
+    <arc exit="southeast" move="swim southeast" destination="21" />
+    <arc exit="southwest" move="swim southwest" destination="22" />
+    <arc exit="west" move="swim west" destination="21" />
+    <arc exit="northwest" move="swim northwest" destination="20" />
+  </node>
+  <node id="22" name="Segoltha River, Near the South Bank" color="#000080">
+    <description>Distant treetops show above the swirling water, shrouded in mist and haze.  The seething waves are heavy with silt and debris carried downstream from distant mountains.  Little eddies on the river's surface conceal dangerous currents below.</description>
+    <position x="140" y="400" z="0" />
+    <arc exit="west" move="swim west" destination="22" />
+    <arc exit="north" move="swim north" destination="21" />
+    <arc exit="northwest" move="swim northwest" destination="21" />
+    <arc exit="northeast" move="swim northeast" destination="22" />
+    <arc exit="east" move="swim east" destination="22" />
+    <arc exit="southeast" move="swim southeast" destination="23" />
+    <arc exit="south" move="swim south" destination="23" />
+  </node>
+  <node id="23" name="Segoltha River, South Bank" color="#0000FF">
+    <description>Sheltered by the ruined bulk of a stranded ship, the current here is gentle compared to the rushing cataract in the middle of the river.  The protection of the hulk allows sand to accumulate, creating a small beach along the south shore.  Debris from the wrecked ship litters the bank with boards and timbers weathered from the elements.</description>
+    <position x="140" y="420" z="0" />
+    <arc exit="north" move="swim north" destination="22" />
+    <arc exit="east" move="swim east" destination="31" />
+    <arc exit="southeast" move="swim southeast" destination="25" />
+    <arc exit="south" move="swim south" destination="24" />
+  </node>
+  <node id="24" name="Fisherman's Trail, Near the Wreck">
+    <description>In the tiny cove, the bulk of a wrecked ship lies beached along the shore to the west.  Lying on its side, it is an easy scramble up a pile of debris to the main deck.  Near the shore, a small firepit, surrounded by stumps, is filled with half-burned wood and ashes.  Snapped fishing lines and rusted hooks litter the ground, testifying to the normal usage of the cove.</description>
+    <position x="140" y="440" z="0" />
+    <arc exit="east" move="east" destination="25" />
+    <arc exit="north" move="north" destination="23" />
+    <arc exit="northeast" move="northeast" destination="31" />
+    <arc exit="go" move="go shipwreck" destination="42" />
+  </node>
+  <node id="25" name="Fisherman's Trail, River Bank">
+    <description>Muddy riverbank gives way to a grassy path, as a footpath slopes down to the shore.  The call of shorebirds echoes through the area, mixed with the sounds of buzzing insects and scurrying rodents in the underbrush.</description>
+    <position x="160" y="440" z="0" />
+    <arc exit="north" move="north" destination="31" />
+    <arc exit="east" move="east" destination="26" />
+    <arc exit="west" move="west" destination="24" />
+    <arc exit="northwest" move="northwest" destination="23" />
+  </node>
+  <node id="26" name="Fisherman's Trail, Footpath">
+    <description>The vegetation grows thickly here, fertilized by the steady stream of birds and wildlife attracted to the nearby river.  To the west, the riverbank subsides into a more gradual slope, easing entrance into the water for animals and fishermen alike.  Here however, the man-made bank drops off treacherously, its slippery slope inviting the sounds of the river to permeate the area.</description>
+    <position x="180" y="440" z="0" />
+    <arc exit="east" move="east" destination="27" />
+    <arc exit="west" move="west" destination="25" />
+  </node>
+  <node id="27" name="Fisherman's Trail, Footpath">
+    <description>The tree-lined trail winds an erratic route along the riverbank, eternally muddy and smelling of fish.  The bank drops off steeply into the river below, a deadly climb for anyone foolish enough to try.</description>
+    <position x="200" y="440" z="0" />
+    <arc exit="east" move="east" destination="28" />
+    <arc exit="west" move="west" destination="26" />
+  </node>
+  <node id="28" name="Fisherman's Trail, Footpath">
+    <description>The path continues along a slight slope as it winds its way beside the river.  Large rocks and mossy boulders make the way a bit more treacherous, and the shadows cast by the large trees to the south cause the area to stay quite moist.  The blaring of a ferry's horn can be heard occasionally, far in the distance.</description>
+    <position x="220" y="440" z="0" />
+    <arc exit="east" move="east" destination="29" />
+    <arc exit="west" move="west" destination="27" />
+  </node>
+  <node id="29" name="Fisherman's Trail, Footpath">
+    <description>The well-worn path winds its way erratically between and around the few hardy bushes and shrubs that cling to the perpetually muddy riverbank.  Sparse vegetation interspersed with forgotten whiskey bottles and broken fishing poles lines the edges of the beaten track between the river to the west and the trail running southeast to the trade route.</description>
+    <position x="240" y="440" z="0" />
+    <arc exit="west" move="west" destination="28" />
+    <arc exit="go" move="go small trail" destination="30" />
+  </node>
+  <node id="30" name="Southern Trade Route, Segoltha Plain" note="Map60_STR1.xml|STR1|South">
+    <description>Sparse grass, weeds and a few hardy shrubs grow along this flat stretch of land that lies between the river bluffs and the nearby woodland.  The angry floods sweep away most of the vegetation, and each time the waters subside, life must begin here anew.  To the northeast lie the outskirts of Chelsea Overlook, a small community overlooking the south bank of the Segoltha.</description>
+    <position x="260" y="460" z="0" />
+    <arc exit="north" move="north" />
+    <arc exit="northeast" move="northeast" />
+    <arc exit="south" move="south" />
+    <arc exit="go" move="go footpath" destination="29" />
+  </node>
+  <node id="31" name="Segoltha River, South Bank" color="#0000FF">
+    <description>Tenacious reeds and rushes cling to the riverbed, holding fast while surrounded by the swift current.  Sand and mud mix along the curving shore of this sheltered cove.  Although there are scattered trees along the riverbank, the forest is thin enough to allow passage up the bank and into the forest.</description>
+    <position x="160" y="420" z="0" />
+    <arc exit="south" move="swim south" destination="25" />
+    <arc exit="southwest" move="swim southwest" destination="24" />
+    <arc exit="west" move="swim west" destination="23" />
+    <arc exit="northwest" move="swim northwest" destination="22" />
+  </node>
+  <node id="32" name="Segoltha River, Midstream" color="#010165">
+    <description>Twisting currents of silt-laden water surge just below the river's surface.  A churning, heaving mass of dirty brown waves, the torrent of water stretches as far as the eye can see.</description>
+    <position x="140" y="100" z="0" />
+    <arc exit="north" move="swim north" destination="33" />
+    <arc exit="northeast" move="swim northeast" destination="33" />
+    <arc exit="east" move="swim east" destination="32" />
+    <arc exit="southeast" move="swim southeast" destination="32" />
+    <arc exit="south" move="swim south" destination="7" />
+    <arc exit="southwest" move="swim southwest" destination="7" />
+    <arc exit="west" move="swim west" destination="32" />
+    <arc exit="northwest" move="swim northwest" destination="33" />
+  </node>
+  <node id="33" name="Segoltha River, North Bank" color="#000080">
+    <description>Swirling eddies seethe underneath the dirty brown river lapping against the muddy bank.  At the water's edge, a minuscule shelf of mud hugs the slick slope.</description>
+    <position x="140" y="80" z="0" />
+    <arc exit="east" move="swim east" destination="33" />
+    <arc exit="southeast" move="swim southeast" destination="33" />
+    <arc exit="south" move="swim south" destination="32" />
+    <arc exit="southwest" move="swim southwest" destination="32" />
+    <arc exit="west" move="swim west" destination="33" />
+    <arc exit="climb" move="climb riverbank" destination="34" />
+  </node>
+  <node id="34" name="Tiger Clan, Riverbank">
+    <description>The trees in this area give way to a gently sloping riverbank.  Tufts of grass bravely peek through the sand in thick brownish clumps, adding a bit of traction on the perpetually muddy slope.  A slightly worn trail leads down the bank towards the murky river below.</description>
+    <position x="140" y="60" z="0" />
+    <arc exit="northwest" move="northwest" destination="35" />
+    <arc exit="climb" move="climb riverbank" destination="33" />
+  </node>
+  <node id="35" name="Tiger Clan, Grassy Trail">
+    <description>Along a trail lined with willows, the smells of soggy grass, dead fish and peat moss permeate the atmosphere.  The bubbling and splashing of the nearby river overpower the usual sounds of the night, the looming trees giving cover to all manner of creatures within the depths of their shadows.</description>
+    <description>Along a trail lined with willows, the smells of soggy grass, dead fish and peat moss permeate the atmosphere.  The bubbling and splashing of the nearby river overpower the usual sounds of the wilderness, causing the shadowed areas of the trees and tall grasses to seem almost menacing in their silence.</description>
+    <description>Along a trail lined with willows, the smells of soggy grass, dead fish and peat moss permeate the atmosphere.  The bubbling and splashing of the nearby river overpower the usual sounds of the night, the looming trees giving cover to all manner of creatures within the depths of their shadows.</description>
+    <position x="120" y="40" z="0" />
+    <arc exit="southeast" move="southeast" destination="34" />
+    <arc exit="go" move="go tall grass" destination="36" />
+  </node>
+  <node id="36" name="Tiger Clan Home, Old Mill" note="Map4a_Tiger_Clan.xml|Tiger Clan|NW">
+    <description>An old mill looks over the shoreline of the Segoltha River, its massive waterwheel splashing and churning the river's deep water.  Tall grasses and willows grow abundantly around the mill grounds.</description>
+    <description>An old mill looks over the shoreline of the Segoltha River, its massive waterwheel splashing and churning the river's deep water.  Tall grasses and willows grow abundantly around the mill grounds.  Village women stand in groups collecting bundles of willow wands and grass.</description>
+    <position x="100" y="20" z="0" />
+    <arc exit="northeast" move="northeast" />
+  </node>
+  <node id="37" name="Segoltha River, Sandbar" note="Sandbar">
+    <description>Secluded and safely out of reach of the swift-moving river, plants and animals seem to thrive here as evidenced by the extremely lush environs.  Young moss-covered trees are scattered haphazardly about, their strong roots taking advantage of the ideal conditions.</description>
+    <position x="120" y="220" z="0" />
+    <arc exit="south" move="south" destination="38" />
+    <arc exit="none" move="dive river" destination="13" />
+  </node>
+  <node id="38" name="Segoltha River, Sandbar">
+    <description>This little island is lush and teeming with life, but the sound of the rushing river engulfs even the most persistent of birds and insects.  A huge boulder takes up most of this area, rising from the sand like a miniature mountain.</description>
+    <position x="120" y="240" z="0" />
+    <arc exit="north" move="north" destination="37" />
+    <arc exit="none" move="dive river" destination="14" />
+    <arc exit="climb" move="climb huge boulder" destination="39" />
+  </node>
+  <node id="39" name="Boulder, Base of Tree">
+    <description>The large rock is clean and worn smooth by years of harsh weather and flooded banks, its only adornment a massive pine tree, seemingly growing out of the rock face itself.  A long, thick rope dangles from one of the massive branches above.</description>
+    <position x="100" y="240" z="0" />
+    <arc exit="climb" move="climb huge boulder" destination="38" />
+    <arc exit="climb" move="climb pine tree" destination="40" />
+  </node>
+  <node id="40" name="A Massive Pine Tree, Platform" note="Massive Pine Tree|Pine Tree|Platform">
+    <description>Crude yet serviceable, a narrow platform has been built into the larger tree limbs.  A rocking chair sits precariously at one end, facing the panoramic view.  The tree continues to rise impossibly far above, providing ample shade while discouraging further exploration into its extensive heights.  One particularly narrow branch appears to lead further up -- but it would probably take a monkey to navigate it.</description>
+    <position x="100" y="220" z="0" />
+    <arc exit="climb" move="climb pine tree" destination="39" />
+    <arc exit="climb" move="climb narrow branch" destination="41" />
+    <arc exit="none" move="rt jump dangling rope" />
+  </node>
+  <node id="41" name="A Massive Pine Tree, Upper Branch">
+    <description>The night sky is overwhelming in its closeness, the darkness like a blanket to anyone who is brave enough to venture upon the treetops.  The branch sways delicately in the breeze that sometimes whisks through the treetops.  The overpowering sound of falling pine needles, rustling vines and leaves emphasizes the isolation of the surroundings, the muffled sound of the rushing river a soothing background noise.  A flash of city lights sparkles in the distance.</description>
+    <description>High up in the tree, hidden from the ground below by a layer of lichen and thickly intertwined vines is this somewhat precarious perch.  The branch, its leaves trembling perilously, sways delicately in the breeze that sometimes rustles through the treetops.  The view of the river is spectacular, its rushing water sparkling and swirling with a life of its own.</description>
+    <position x="100" y="200" z="0" />
+    <arc exit="climb" move="climb large branch" destination="40" />
+  </node>
+  <node id="42" name="Wreck, Near the Bow" note="Shipwreck|Wreck">
+    <description>The one remaining mast juts upward from the ruined deck, leaning at an angle as it rises above the surrounding forest.  Missing planks on the deck make the footing treacherous, and the gaps provide glimpses into the sand- and muck-filled holds below.  Anything of value has long since been stripped from the ship, leaving only weathered wood and scraps of rope and canvas.</description>
+    <position x="120" y="440" z="0" />
+    <arc exit="north" move="north" destination="43" />
+    <arc exit="south" move="south" destination="45" />
+    <arc exit="go" move="go shore" destination="24" />
+    <arc exit="climb" move="climb wooden mast" destination="46" />
+  </node>
+  <node id="43" name="Wreck, Near the Stern">
+    <description>Protruding from the tilted decking, the shattered remnant of the mainmast dominates the area.  Little remains of the cordage and spars that once graced the mast except some bits and pieces of wood scattered about the deck.</description>
+    <position x="120" y="420" z="0" />
+    <arc exit="north" move="north" destination="44" />
+    <arc exit="south" move="south" destination="42" />
+  </node>
+  <node id="44" name="Wreck, Stern">
+    <description>Decking ends abruptly above the swirling water of the river as the stern of the ship drops off into the muddy brown waters of the Segoltha.  Broken planks and timbers give mute testimony to the power of the river.  Little remains of the name once emblazoned on the stern, only the faded letters CK and FI.</description>
+    <position x="120" y="400" z="0" />
+    <arc exit="south" move="south" destination="43" />
+  </node>
+  <node id="45" name="Wreck, Bow">
+    <description>Directly below the bow, a large, gaping hole opens in the hull, vivid testimony to the reason the ship lies beached on the shore.  Mud and muck spills from the breach, from which weeds and vines clinging to the dirt climb up the exposed wood surface.  Little remains of the rigging and tackle, just bits and pieces of rope scattered on the planks of the deck.  The stump of a bowsprit points at the surrounding forest.</description>
+    <position x="120" y="460" z="0" />
+    <arc exit="north" move="north" destination="42" />
+  </node>
+  <node id="46" name="Wreck, Mast">
+    <description>Only half the crow's nest remains, little more than a platform with rickety railings dangling precipitously above the forest canopy.  Rotten wood makes the footing dangerous, and holes in the decking give glimpses of the sheer drop to the wreck below.  Not far above the lookout post, the mast breaks off, trailing bits of rope and tackle that undulate in the slightest breeze.  Precarious handholds on the mast permit climbing back down to the wreck below.</description>
+    <position x="100" y="440" z="0" />
+    <arc exit="climb" move="climb wooden mast" destination="42" />
+  </node>
+  <label text="Crossing">
+    <position x="240" y="80" z="0" />
+  </label>
+  <label text="Tiger Clan">
+    <position x="40" y="10" z="0" />
+  </label>
+  <label text="STR1">
+    <position x="250" y="415" z="0" />
+  </label>
+  <label text="Shipwreck">
+    <position x="50" y="410" z="0" />
+  </label>
+  <label text="The Boulder">
+    <position x="60" y="250" z="0" />
+  </label>
+  <label text="Pine Tree">
+    <position x="70" y="180" z="0" />
+  </label>
+  <label text="&gt; &gt; &gt; River Current &gt; &gt; &gt;">
+    <position x="180" y="260" z="0" />
+  </label>
+  <label text="River Sprites">
+    <position x="40" y="450" z="0" />
+  </label>
+  <label text="Leth">
+    <position x="250" y="430" z="0" />
+  </label>
+</zone>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="West Segoltha" id="113">
+  <node id="1" name="Ilaya Taipa, Baso Dock">
+    <description>The harbor wall towers high above the Baso, or Stranger's, dock.  While the interior town walls are elaborately carved and even highlighted with vivid, jewel-toned enamel, the outer have been smoothed as sheer as the stonemason's art can make them, providing no cracks where climbers could make their way up.  Foreign merchants must dock here to take on or offload cargo, or to pick up passengers for the trip up the river.</description>
+    <position x="520" y="120" z="0" />
+    <arc exit="go" move="go oak doors" destination="5" />
+    <arc exit="go" move="go skiff" destination="2" />
+    <arc exit="go" move="go skiff" destination="3" />
+  </node>
+  <node id="2" name="A Birch Skiff">
+    <description>This particular skiff is roomy and solid with benches only slightly worn from use.  A lantern is hung at one end, shining its light against the surrounding darkness.  It makes a slight jingling noise as it sways along with the boat.</description>
+    <description>This particular skiff is roomy and solid with benches only slightly worn from use.  A lantern is hung at one end, though only lit at night.  It makes a slight jingling noise as it sways along with the boat.</description>
+    <position x="440" y="100" z="0" />
+    <arc exit="go" move="go dock" destination="1" />
+    <arc exit="go" move="go dock" destination="4" />
+  </node>
+  <node id="3" name="A Highly Polished Skiff">
+    <description>The newly crafted skiff smells of fresh wood and paint, its sides practically gleaming with polish.  Wide benches are padded with grasses braided to form oblong cushions that are tied with leather thongs.  A brass bell hangs below a tall lantern, ready to be rung when another skiff gets too close for comfort along the water way.</description>
+    <position x="440" y="140" z="0" />
+    <arc exit="go" move="go dock" destination="1" />
+    <arc exit="go" move="go dock" destination="4" />
+  </node>
+  <node id="4" name="Ain Ghazal, East Pier">
+    <description>Subtle light gleams from bronze lanterns hung from a couple of tall poles, leaving shadows along a wood pier that juts off from the hard packed ground.  The pier provides a sturdy transition from road to river conveyance, with its beams wide enough for large beasts to go safely aboard.  The river's brisk waters beat against the rocks below with a wild rhythm, while a sign nearby warns of their danger.</description>
+    <description>Waiting for a skiff is made interesting by an intriguing placement of rocks.  Though many try to climb down to decipher them, they are warned off by a large, brooding Gor'Tog.  A dark wood pier juts off from the hard packed ground.</description>
+    <position x="360" y="120" z="0" />
+    <arc exit="west" move="west" destination="10" />
+    <arc exit="go" move="go side pier" destination="11" />
+    <arc exit="go" move="go skiff" destination="2" />
+    <arc exit="go" move="go skiff" destination="3" />
+  </node>
+  <node id="5" name="Ilaya Taipa, Northeast Harbor Wall" note="Map112_Ilaya_Taipa.xml|Ilaya Tapia">
+    <description>Stone walls run almost the entire length of the harbor, save for a gap about thirty paces wide through which ships may enter their home port.  A log boom stretches between two towers to bar that gap, allowing only those whose identity has been verified by the guards to make their way into the village itself.  Heavy oak doors in the wall provide access to the outer docks where foreign traders may unload their wares.</description>
+    <position x="540" y="140" z="0" />
+    <arc exit="northeast" move="northeast" />
+    <arc exit="southwest" move="southwest" />
+    <arc exit="go" move="go oak doors" destination="1" />
+  </node>
+  <node id="6" name="Haalikshal Highway, Ferry Dock">
+    <description>An ample dock lies in an elbow of the river, and to its stones is fastened the stout chain that guides the ferry.  Although many a fisherman would like to tie his punt or rowboat here, the ferrymen fend them off, warning them against fouling the tow-line or, with more urgency, against getting caught between the heavy timbers of the ferry and the stones of the dock.</description>
+    <position x="80" y="300" z="0" />
+    <arc exit="west" move="west" destination="7" />
+    <arc exit="go" move="go ferry" destination="12" />
+    <arc exit="go" move="go ferry" destination="13" />
+  </node>
+  <node id="7" name="Haalikshal Highway, Himineldar Shel to Ain Ghazal" note="Map123_Himineldar_Shel.xml">
+    <description>The road moves among low hills, through a patchwork quilt of fields and wood lots.  The cry of a boatman on the nearby river breaks the night silence from time to time.</description>
+    <description>The road moves among low hills, through a patchwork quilt of tilled and fallow fields parted by an occasional wood lot.  Oxen plowing, cattle grazing or field hands working are familiar sights along the way, and one sees plenty of travelers this close to the ferry. </description>
+    <position x="60" y="300" z="0" />
+    <arc exit="east" move="east" destination="6" />
+    <arc exit="southwest" move="southwest" />
+  </node>
+  <node id="8" name="Ain Ghazal, Ferry Dock">
+    <description>Hard packed ground is littered with barrels, boxes and various conveyances awaiting the ferries' return to dock.  Smooth rock benches are scattered around the large area, for those travelers wishing to wait off their feet.  The dock itself is crafted from dark wood and braced by huge rocks and beams, while iron lanterns blaze from poles hung along each side.</description>
+    <description>Hard packed ground is littered with barrels, boxes and various conveyances awaiting the ferries' return to dock.  Smooth rock benches are scattered around the large area, for those travelers wishing to wait off their feet.  The dock itself is crafted from dark wood and braced by huge rocks and beams.</description>
+    <position x="280" y="200" z="0" />
+    <arc exit="north" move="north" destination="9" />
+    <arc exit="go" move="go ferry" destination="12" />
+    <arc exit="go" move="go ferry" destination="13" />
+  </node>
+  <node id="9" name="Ain Ghazal, River Road" note="Map114_Ain_Ghazal.xml">
+    <description>The south fork of the Segoltha River surges steadily eastward.  Compared to the aspects of the river on the other three sides of Ain Ghazal, the flow is deep and calm.  The lantern-lit South Dock, perpetually busy with ferry traffic, extends south from River Road.  The road itself curves northeast and northwest, and a steep slope leads upward.</description>
+    <description>The south fork of the Segoltha River surges steadily eastward.  Compared to the aspects of the river on the other three sides of Ain Ghazal, the flow is deep and calm.  The South Dock, perpetually busy with ferry traffic, extends south from River Road.  The road itself curves northeast and northwest, and a steep slope leads upward.</description>
+    <position x="280" y="180" z="0" />
+    <arc exit="northeast" move="northeast" />
+    <arc exit="south" move="south" destination="8" />
+    <arc exit="northwest" move="northwest" />
+  </node>
+  <node id="10" name="Ain Ghazal, River Road" note="Map114_Ain_Ghazal.xml">
+    <description>The well-built and durable East Pier connects to River Road at this spot.  Skiffs take the public to and from River Clan, loading and unloading people, animals and commodities on the wide, dimly lit pier.  This road arcs to the northwest and southwest, and a steep slope leads upward.</description>
+    <description>The well-built and durable East Pier connects to River Road at this spot.  Skiffs take the public to and from River Clan, loading and unloading people, animals and commodities on the wide pier.  This road arcs to the northwest and southwest, and a steep slope leads upward.</description>
+    <position x="340" y="120" z="0" />
+    <arc exit="east" move="east" destination="4" />
+    <arc exit="southwest" move="southwest" />
+    <arc exit="northwest" move="northwest" />
+  </node>
+  <node id="11" name="Ain Ghazal, Side Pier">
+    <description>The river surges past, merging at the eastern end of the island in white-capped eddies that swirl around the pier's pilings.  Dead fish and waterweeds mingle with the aroma of cookshops to the west.  Coils of tarred ropes lash the pilings to the base of the pier, leaving dark streaks against still-bright patches of new wood that mark this as a recent extension to the main dock.</description>
+    <position x="360" y="100" z="0" />
+    <arc exit="go" move="go east pier" destination="4" />
+  </node>
+  <node id="12" name="The Evening Star">
+    <description>Hard packed ground is littered with barrels, boxes and various conveyances awaiting the ferries' return to dock.  Smooth rock benches are scattered around the large area, for those travelers wishing to wait off their feet.  The dock itself is crafted from dark wood and braced by huge rocks and beams, while iron lanterns blaze from poles hung along each side.</description>
+    <position x="180" y="260" z="0" />
+    <arc exit="go" move="go dock" destination="8" />
+    <arc exit="go" move="go dock" destination="6" />
+  </node>
+  <node id="13" name="The Damaris' Kiss">
+    <description>Long and low, the sleek lines of the ferry are designed so that it slips through the water with a minimum of disturbance.  Benches are scattered along the railing, with gaps where the Gor'Tog polemen stand to push the boat across the river.  Cables run up to a massive chain strung from shore to shore just overhead, providing a leash to keep the ferry from being pushed downriver by the strong current.</description>
+    <position x="160" y="240" z="0" />
+    <arc exit="go" move="go dock" destination="6" />
+    <arc exit="go" move="go dock" destination="8" />
+  </node>
+  <label text="3 minute ride, 1 minute dock">
+    <position x="80" y="200" z="0" />
+  </label>
+  <label text="Ain Ghazal">
+    <position x="250" y="120" z="0" />
+  </label>
+  <label text="Ilaya Taipa">
+    <position x="540" y="100" z="0" />
+  </label>
+  <label text="to Hibarnhvidar, Raven's Point">
+    <position x="30" y="330" z="0" />
+  </label>
+  <label text="?`?.??.???`?.??.???`?.??.???`?.??.???">
+    <position x="370" y="80" z="0" />
+  </label>
+  <label text="`?.??.???`?.??.??    `?.??.???`?.??.???">
+    <position x="370" y="100" z="0" />
+  </label>
+  <label text="`?.??.???`?.??.???`?.??.???`?.??.???">
+    <position x="370" y="120" z="0" />
+  </label>
+  <label text="`?.??.???`?.??.???`?.??.???`?.??.???">
+    <position x="360" y="140" z="0" />
+  </label>
+  <label text="`?.??.???`?.??.???`?.??.???`?.??.???">
+    <position x="350" y="160" z="0" />
+  </label>
+  <label text="`?.??.???`?.??.???`?.??.???`?.??.???">
+    <position x="340" y="180" z="0" />
+  </label>
+  <label text="`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???">
+    <position x="290" y="200" z="0" />
+  </label>
+  <label text="`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???">
+    <position x="50" y="220" z="0" />
+  </label>
+  <label text="`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???">
+    <position x="50" y="240" z="0" />
+  </label>
+  <label text="`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???">
+    <position x="50" y="260" z="0" />
+  </label>
+  <label text="`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.??.???`?.?">
+    <position x="50" y="280" z="0" />
+  </label>
+  <label text="Segoltha River">
+    <position x="310" y="310" z="0" />
+  </label>
+  <label text="Haalikshal Highway">
+    <position x="30" y="310" z="0" />
+  </label>
+  <label text="7 minute ride, 2 minute dock">
+    <position x="390" y="60" z="0" />
+  </label>
+</zone>

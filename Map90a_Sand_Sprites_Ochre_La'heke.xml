@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Sand Sprites and Ochre La'heke" id="90a">
+  <node id="1" name="Ratha, Port Walk" note="Map90_Ratha.xml|Ratha">
+    <description>The walk comes to an abrupt end in an angle between the water and the blank wall of a warehouse.  Rags and trash slowly molder against the board wall, which itself seems in little better repair.  Fruit rinds and a dead fish or two float in the water below.</description>
+    <position x="400" y="200" z="0" />
+    <arc exit="northeast" move="northeast" />
+    <arc exit="go" move="go gap" destination="2" />
+  </node>
+  <node id="2" name="Ratha, Rocky Shore" color="#0000FF">
+    <description>Below the shadow of the rickety buildings and warehouses of the city, a steep, rugged shore leads down into the shallows.  Rocks jut out along the coastline, while ocean waves rush past with frothy white peaks to crash along the cliffs.  Off in the distance, caught on the sharp crags is an abandoned ship, lying partially on its side.  The shallows themselves seem traversable between the rocks and the bluffs, the obstacles helping to keep the undertow in check.</description>
+    <position x="360" y="200" z="0" />
+    <arc exit="southwest" move="swim southwest" destination="3" />
+    <arc exit="go" move="go narrow gap" destination="1" />
+  </node>
+  <node id="3" name="Ratha, Rocky Shallows" color="#0000FF">
+    <description>Waves rush by on their way to the shore, randomly pushing through as much as thigh-deep on a Human, pulling back to just covering the ankles.  The smell of brine and fish is heavy here, and the steady sea breeze feels soft from all the salt in the air.  The faint, sometimes ghostly light of the nighttime sky skips along the water, leaving patches of sparkle on the otherwise dark and rolling surface.</description>
+    <description>Waves rush by on their way to the shore, randomly pushing through as much as thigh-deep on a Human, pulling back to just covering the ankles.  The smell of brine and fish is heavy here, and the steady sea breeze feels soft from all the salt in the air.  Seagulls dive across the waves in the distance, sometimes braking to light on the rocks and look out towards the sea.</description>
+    <position x="320" y="240" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="2" />
+    <arc exit="southwest" move="swim southwest" destination="4" />
+    <arc exit="go" move="go sea cave" destination="8" />
+  </node>
+  <node id="4" name="Ratha, Rocky Shallows" color="#0000FF">
+    <description>Tiny eddies form behind the spiked rocks, swirling pools of murky water within the constant movement of the ocean.  In the distance is the ominous shadow of a wrecked ship, a disturbing reminder of the perils of sea travel.  Above, alongside the cliffs towards the east are the ramshackle warehouses that mark the edge of the city, a gloomy enough sight in itself.</description>
+    <position x="300" y="260" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="3" />
+    <arc exit="west" move="swim west" destination="5" />
+  </node>
+  <node id="5" name="Ratha, Rocky Shallows" color="#0000FF">
+    <description>Off in the distance beyond the rolling waves that crash against the coast, the remains of the ship once known as the Seerah cast a ghost-like shadow against the waters.  Sharp narrow crags line the shallows, causing a treacherous path for any boat unlucky enough to travel too close to the shoreline.  The strong current pulls back and forth against one's feet, rushing to shore with an energy all of its own.</description>
+    <description>Off in the distance beyond the rolling waves that crash against the coast, the remains of the ship once known as the Seerah bleach from the constant battering of the waves and the elements.  Knife-like crags line the shallows, causing a treacherous path for any boat unlucky enough to travel too close to the shoreline.  The strong current pulls back and forth against one's feet, rushing to shore with an energy all of its own.</description>
+    <position x="280" y="260" z="0" />
+    <arc exit="east" move="swim east" destination="4" />
+    <arc exit="northwest" move="swim northwest" destination="6" />
+    <arc exit="go" move="go sea cave" destination="21" />
+  </node>
+  <node id="6" name="Ratha, Rocky Shallows" color="#0000FF">
+    <description>The sea winds whip across the cliffs, helping to push the waves against the crowns of the jagged rocks, launching bursts of water that spray out into stinging, salty ocean air.  To the west lies the shadow of a large ship, impaled upon the rocks as if being displayed as a trophy of Drogor's wrath.</description>
+    <position x="260" y="240" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="5" />
+    <arc exit="west" move="swim west" destination="7" />
+  </node>
+  <node id="7" name="Ratha, Wreck of the Seerah" color="#0000FF">
+    <description>Snagged upon the large jagged rocks of the ironbound coast, the remnants of a past glory lie within the bowels of the ship once known as the Seerah.  Ocean waves slap along the sides as they race towards the cliff-lined shores, the craft unbudging from its impaled position.  The doomed vessel has been beached at a steep angle with its foremast lying between the boulders, the rotting wood slippery with moss.  No other masts seem to have survived the perilous last voyage.</description>
+    <position x="220" y="240" z="0" />
+    <arc exit="east" move="swim east" destination="6" />
+    <arc exit="climb" move="climb cliff opening" destination="25" />
+    <arc exit="climb" move="climb foremast" destination="26" />
+  </node>
+  <node id="8" name="Ratha, Taph'botuk">
+    <description>Like the inside of a shell, the sounds of the sea and the air move through the drafty cave and create strange, hollow echoes in the natural corridors under the cliff.  Water laps in from the opening, but a thick sediment has built up from higher tides, a haphazard barrier that helps to keep the waves in check.</description>
+    <position x="320" y="200" z="0" />
+    <arc exit="northeast" move="northeast" destination="9" />
+    <arc exit="west" move="west" destination="19" />
+    <arc exit="go" move="go cave opening" destination="3" />
+  </node>
+  <node id="9" name="Ratha, Taph'botuk">
+    <description>Smells of brine, sand and silt saturate the curving passage, so strongly it clings to the lips with bitter flavor.  Occasionally a heavy ocean breeze drafts in from the west, vibrating along with the waves in the tight confines of the cave.</description>
+    <position x="340" y="180" z="0" />
+    <arc exit="north" move="north" destination="10" />
+    <arc exit="southwest" move="southwest" destination="8" />
+  </node>
+  <node id="10" name="Ratha, Taph'botuk">
+    <description>Fine, dry sand covers the floor of the cave in a thick blanket, curiously fresh and unpacked, as if it had been laid there on purpose.  A weakened breeze draws through the cave from the south, brushing the sand and whisking away any marks that might have been left behind by intruders.</description>
+    <position x="340" y="60" z="0" />
+    <arc exit="north" move="north" destination="11" />
+    <arc exit="south" move="south" destination="9" />
+    <arc exit="west" move="west" destination="18" />
+  </node>
+  <node id="11" name="Ratha, Taph'botuk">
+    <description>Granite walls smoothed over by sand-filled breezes encase this niche, providing reassuring support under the weight of the imposing cliffs.  Soft echoes chime through the area from the caverns beyond, whispering the secrets of the sea.</description>
+    <position x="340" y="40" z="0" />
+    <arc exit="south" move="south" destination="10" />
+    <arc exit="northwest" move="northwest" destination="12" />
+  </node>
+  <node id="12" name="Ratha, Lower Taph'botuk">
+    <description>Piles of limestone and sandstone rubble lie along the northern and eastern walls of this damp cavern, left behind from the collapsed southern wall and pushed aside in an attempt to clear a passage from the west to the southeast.  White, slightly damp sand blankets the ground, barely visible in the dim light coming from the southeast.</description>
+    <position x="320" y="20" z="0" />
+    <arc exit="southeast" move="southeast" destination="11" />
+    <arc exit="southwest" move="southwest" destination="17" />
+    <arc exit="west" move="west" destination="13" />
+  </node>
+  <node id="13" name="Ratha, Lower Taph'botuk">
+    <description>Packed wet sand fills the floor of the corridor, sticking to the granite walls like clumps of moss.  Water seeps in from a small crack along the bottom of the southern wall, bubbling out rank, filthy seawater that is slurped up by the sand.</description>
+    <position x="280" y="20" z="0" />
+    <arc exit="east" move="east" destination="12" />
+    <arc exit="west" move="west" destination="14" />
+  </node>
+  <node id="14" name="Ratha, Lower Taph'botuk">
+    <description>The sand here is unusually dry and loose compared to the rest of the cavern, sparkling with unnatural light.  The sand seems extremely deep and is difficult to walk on, but somehow manages to hold the weight enough so that anyone attempting to traverse it doesn't sink any further down than their ankles.  To the southeast, the ground dips down slightly and disappears into a cavern of murky water.</description>
+    <position x="240" y="20" z="0" />
+    <arc exit="east" move="east" destination="13" />
+    <arc exit="southeast" move="southeast" destination="15" />
+  </node>
+  <node id="15" name="Ratha, Lower Taph'botuk" color="#0000FF">
+    <description>Shallow sandy water fills the cavern as it dips slightly below the water table, filling the area with the nauseatingly strong smell of brine.  Gentle breezes enter from the northwest but do little to relieve the stench from the stagnant air.</description>
+    <position x="260" y="40" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="16" />
+    <arc exit="northwest" move="swim northwest" destination="14" />
+  </node>
+  <node id="16" name="Ratha, Lower Taph'botuk" color="#0000FF">
+    <description>Shallow sandy water fills the cavern as it dips slightly below the water table, filling the area with the nauseatingly strong smell of brine.  To the north, the ground rises slightly into a wet, sandy cavern, while the other two directions promise little relief from the stench.</description>
+    <position x="280" y="60" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="17" />
+    <arc exit="northwest" move="swim northwest" destination="15" />
+    <arc exit="go" move="go sandy cavern" destination="30" />
+  </node>
+  <node id="17" name="Ratha, Lower Taph'botuk" color="#0000FF">
+    <description>Shallow sandy water fills the cavern as it dips slightly below the water table, filling the area with the nauseatingly strong smell of brine.  Gentle breezes enter from the northeast but do little to relieve the stagnant air.</description>
+    <position x="300" y="40" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="12" />
+    <arc exit="southwest" move="swim southwest" destination="16" />
+  </node>
+  <node id="18" name="Ratha, Taph'botuk">
+    <description>Narrow and jagged, this small natural alcove is covered with odd, deformed stalactites and stalagmites, thin needles that hang from above and lumps that poke up out of the sand below.  The cracked ceiling is extremely damp, and water condenses into little beaded droplets that slide down the mineral formations, dropping off and hitting the stalagmites with a maddening, resonating, drip, drip, dripping sound.</description>
+    <position x="320" y="60" z="0" />
+    <arc exit="east" move="east" destination="10" />
+  </node>
+  <node id="19" name="Ratha, Taph'botuk">
+    <description>A brisk breeze twists around the echoing caverns, carrying the smell of fish and brine away with the wind.  Cloaked with an eroding wall of sandstone, a thick layer of granite is exposed behind the large, damp fissures that mar the surface of the cave.</description>
+    <position x="300" y="200" z="0" />
+    <arc exit="east" move="east" destination="8" />
+    <arc exit="south" move="south" destination="20" />
+  </node>
+  <node id="20" name="Ratha, Taph'botuk">
+    <description>The sound of slowly dripping water reverberates through the cave, an elusive but persistent noise that can be easily heard over the murmuring waves and the moan of the wind through the tunnels.  The ceiling dips down slightly in the center of the passage, making it difficult for the taller races to walk through comfortably.</description>
+    <position x="300" y="220" z="0" />
+    <arc exit="north" move="north" destination="19" />
+    <arc exit="west" move="west" destination="21" />
+  </node>
+  <node id="21" name="Ratha, Taph'botuk">
+    <description>Salt water moves through the opening with the tides, making tiny pools in the natural crevices in the floor of the cave.  Strange voices resound within the hollow shelter beneath the cliffs, speaking in a melodic language that matches the rhythm of the waves.</description>
+    <position x="280" y="220" z="0" />
+    <arc exit="east" move="east" destination="20" />
+    <arc exit="northwest" move="northwest" destination="22" />
+    <arc exit="go" move="go cave opening" destination="5" />
+  </node>
+  <node id="22" name="Ratha, Taph'botuk">
+    <description>Rushing echoes, louder than standing under a waterfall, boom through the room on a mad course as the natural acoustics of this room give added dimension to the ear-splitting crashing of the waves.  Dim light filters in from a flue-like passage leading upward, causing the sandstone walls to glint and sparkle as if encrusted with gems.</description>
+    <position x="260" y="200" z="0" />
+    <arc exit="southeast" move="southeast" destination="21" />
+    <arc exit="west" move="west" destination="23" />
+    <arc exit="up" move="up" destination="24" />
+  </node>
+  <node id="23" name="Ratha, Taph'botuk">
+    <description>Nestled away from the rest of the cavern system, this low, rounded cubbyhole is relatively quiet, with only the soft whispers of the wind and sea filtering through the room from the east.  Delicate sea mosses cling to the rocky walls, blanketing fissures opened by small trickles of seawater that seep in as waves crash against the outside of the cave.</description>
+    <position x="240" y="200" z="0" />
+    <arc exit="east" move="east" destination="22" />
+  </node>
+  <node id="24" name="Ratha, Taph'botuk">
+    <description>Strong wind, light and sounds of the waves surge through the cramped tunnel, heading down the slope into the caverns.  To the west, the tunnel opens up into a cavern that looks over the sea.</description>
+    <position x="260" y="180" z="0" />
+    <arc exit="west" move="west" destination="25" />
+    <arc exit="down" move="down" destination="22" />
+  </node>
+  <node id="25" name="Ratha, Taph'botuk">
+    <description>Blossoming out into a fantastic vista of the sea, a large opening looks out into the night, acting as a natural balcony.  Scorched driftwood lies on darkened sand in the center of the cave, as if someone had tried to camp here and left in a hurry.</description>
+    <description>Blossoming out into a fantastic vista of the sea, a large opening looks out into the daylight, acting as a natural balcony.  Scorched driftwood lies on darkened sand in the center of the cave, as if someone had tried to camp here and left in a hurry.</description>
+    <position x="220" y="180" z="0" />
+    <arc exit="east" move="east" destination="24" />
+    <arc exit="climb" move="climb natural opening" destination="7" />
+  </node>
+  <node id="26" name="The Seerah, Foredeck">
+    <description>Rusted chains, frayed rope, and fragments of wood litter the foredeck, the debris scattered across the slanting ship.  With its weight crushing the sea-torn starboard rails, the giant foremast provides a bridge between the ship and the shallows, its upper portion now partly wedged in the rocks like a toothpick between the teeth.  Occasionally a fierce wave crashes against the creaking vessel, spraying it with water but doing little to move the ship from its impaled position.</description>
+    <position x="180" y="240" z="0" />
+    <arc exit="north" move="north" destination="27" />
+    <arc exit="south" move="south" destination="28" />
+    <arc exit="climb" move="climb foremast" destination="7" />
+    <arc exit="climb" move="climb leaning steps" destination="31" />
+  </node>
+  <node id="27" name="The Seerah, Prow">
+    <description>Heavily pitched mahogany rails along the foredeck of the ship converge on the pulpit just above the headless figurehead.  Rusted chains and debris litter the area, most piled upon the lower eastern end of the prow.  Occasional spray slickens the deck, making it slightly hazardous.  Nestled between the rails is a small shrine, constructed from sea stones and hardened sand.</description>
+    <position x="180" y="220" z="0" />
+    <arc exit="south" move="south" destination="26" />
+  </node>
+  <node id="28" name="The Seerah, Main Deck">
+    <description>Securely nailed, a row of small tables lines the port side main deck, slanting in unison with the angle of the ship as if their battered surfaces were bowing to the cliff-lined coast.  Large sections of greying planks show through chipped white paint, and disturbingly large cracks cross the wood from the stress of the crash.  In the center, the remains of the main mast stick out like a jagged spike.</description>
+    <position x="180" y="260" z="0" />
+    <arc exit="north" move="north" destination="26" />
+    <arc exit="south" move="south" destination="29" />
+  </node>
+  <node id="29" name="The Seerah, Quarterdeck">
+    <description>Splitting through the deck like a giant tree stump are the remains of the mizzenmast.  Its once proud sails have long since disappeared, leaving only rusted rings, wood splinters, and rope fragments to remember them by.  A narrow, steep stairs matches the deck's angle, making them a little trickier to navigate.</description>
+    <position x="180" y="280" z="0" />
+    <arc exit="north" move="north" destination="28" />
+    <arc exit="climb" move="climb sideways steps" destination="34" />
+    <arc exit="climb" move="climb angled stairs" destination="36" />
+  </node>
+  <node id="30" name="Ratha, Lower Taph'botuk, Quicksand Pit" color="#FFFF00">
+    <description>The circular cavern is filled with waterlogged sand causing anything that touches it to immediately start sinking into its ravenous depths.  Light seems to fail here, as if a deep foreboding has permanently settled in the room, strangling any hope of ever leaving the cavern alive.</description>
+    <position x="260" y="80" z="0" />
+    <arc exit="go" move="go shallow water" destination="16" />
+  </node>
+  <node id="31" name="The Seerah, Zo Deck">
+    <description>Joined to the veranda-like upper deck, the heavily sloped bulkhead supports the frame of the foredeck above.  Large empty casks stained with wine are lashed together with frayed rope to either side of a large door leading into the forward rooms.  Flanking it on either side are oddly leaning steps, offering a precarious way up.</description>
+    <position x="140" y="220" z="0" />
+    <arc exit="south" move="south" destination="32" />
+    <arc exit="climb" move="climb leaning steps" destination="26" />
+    <arc exit="go" move="go large door" destination="48" />
+  </node>
+  <node id="32" name="The Seerah, Zo Deck">
+    <description>The stump of the main mast pushes up from the deck, marking the amidships point of the vessel.  Large rusting rotting winches wait with little purpose now for the sails of the vessel that will never be raised again.</description>
+    <position x="140" y="240" z="0" />
+    <arc exit="north" move="north" destination="31" />
+    <arc exit="south" move="south" destination="33" />
+    <arc exit="up" move="up" destination="38" />
+    <arc exit="down" move="down" destination="35" />
+  </node>
+  <node id="33" name="The Seerah, Zo Deck">
+    <description>To the north, forward on the ship, the remains of the main mast stick up through the deck like the back side of a nail, its splintered timber blasted by the forces of nature.  A narrow doorway leads into a small officers' quarters, the unnatural tilt to the ship making it a little difficult to walk through.</description>
+    <position x="140" y="260" z="0" />
+    <arc exit="north" move="north" destination="32" />
+    <arc exit="up" move="up" destination="36" />
+    <arc exit="down" move="down" destination="34" />
+    <arc exit="go" move="go narrow doorway" destination="41" />
+  </node>
+  <node id="34" name="The Seerah, Zo Deck">
+    <description>Salty ocean spray saturates the deck as waves bank off the rock that holds the ship.  More effective than any anchor, the dark rock clings to the vessel like the pincer of a crab, holding it firmly in a timeless grasp.  Warped pin rails angle toward the coast, the damaged brass trim coating them with an unwholesome green tinge.</description>
+    <position x="160" y="260" z="0" />
+    <arc exit="north" move="north" destination="35" />
+    <arc exit="up" move="up" destination="33" />
+    <arc exit="climb" move="climb sideways steps" destination="29" />
+  </node>
+  <node id="35" name="The Seerah, Zo Deck">
+    <description>Tossed and tangled ropes and line are strewn about the deck near the starboard gunwale, mixed with rusting equipment tossed out of several overturned buckets.  To the east a circular hole provides a view of the rocky shoreline.</description>
+    <position x="160" y="240" z="0" />
+    <arc exit="south" move="south" destination="34" />
+    <arc exit="up" move="up" destination="32" />
+  </node>
+  <node id="36" name="The Seerah, Zo Deck">
+    <description>Encased in pitched mahogany is a series of rooms with rusty yet detailed ironwork that betrays the former elegance of this bleak deck.  Streaks of green stain the wood and coat the pin rails along the bulkhead.</description>
+    <position x="120" y="280" z="0" />
+    <arc exit="north" move="north" destination="37" />
+    <arc exit="down" move="down" destination="33" />
+    <arc exit="go" move="go mahogany door" destination="39" />
+    <arc exit="climb" move="climb angled stairs" destination="29" />
+  </node>
+  <node id="37" name="The Seerah, Zo Deck">
+    <description>Splintering benches are nailed to the deck, looking out and up towards the sky.  Some of the benches have lost planks, and one has lost a leg, long since reclaimed by the sea.</description>
+    <position x="120" y="260" z="0" />
+    <arc exit="north" move="north" destination="38" />
+    <arc exit="south" move="south" destination="36" />
+  </node>
+  <node id="38" name="The Seerah, Zo Deck">
+    <description>Ocean spray splashes into the air as waves crash against the hull -- only the steep angle of the ship protects the port gunwale from a constant drenching.  Pin rails line the deck, some of them tied with the unraveled remains of rope and lines, bleached and tangled like an old crone's hair.</description>
+    <position x="120" y="240" z="0" />
+    <arc exit="south" move="south" destination="37" />
+    <arc exit="down" move="down" destination="32" />
+    <arc exit="go" move="go cargo hatch" destination="42" />
+  </node>
+  <node id="39" name="The Seerah, Zo Deck, Captain's Quarters">
+    <description>This anteroom has obviously seen better days, its once stylish layout and expensive furniture tossed and battered.  Several moldy books remain strapped in place on a dully-veneered bookshelf clinging to the port wall.  A folded punee is latched to the wall on the other side, while a small side table with a broken leg rests near an aft-facing porthole.</description>
+    <position x="100" y="300" z="0" />
+    <arc exit="east" move="east" destination="40" />
+    <arc exit="out" move="out" destination="36" />
+  </node>
+  <node id="40" name="The Seerah, Zo Deck, Captain's Quarters">
+    <description>Darkened and shredded fabric covers the walls of this devastated dining suite.  The round top of the halmik dining table has been snapped in two by a small writing desk, lying overturned between the sundered pieces as if thrown by some extreme force.  Scorch marks scuff the floors below a smattering of shards made up of pottery and glass.  Only the quality of the wood and elegance of the rotting fabrics betrays a once proud and ornate interior.</description>
+    <position x="120" y="300" z="0" />
+    <arc exit="west" move="west" destination="39" />
+  </node>
+  <node id="41" name="The Seerah, Zo Deck, Officers' Quarters">
+    <description>Smeared moldy charts and maps litter the floor as a trickle of water seeps over them, leaking from a crack in the seal around a small porthole.  The angle of the deck has caused the beds and chairs to slide to the lower eastern side, and only a large footlocker remains against the upper wall.  Strange creaks and groans echo through the room making it feel like the boat will split at any moment.</description>
+    <position x="140" y="300" z="0" />
+    <arc exit="go" move="go narrow doorway" destination="33" />
+  </node>
+  <node id="42" name="The Seerah, Submerged Roi Deck, Forward Cargo" color="#0000FF">
+    <description>Filtered light streams down from the top of a submerged stairway, dimly illuminating the flooded cargo hold.  Strange echoes sound in the water throughout the huge hold, and in the water it's entirely impossible to tell where the sounds are coming from.  Cables and nets still cling to the moss covered sides and ceiling, carrying cargo that has long passed the point of being identifiable.</description>
+    <position x="80" y="240" z="0" />
+    <arc exit="south" move="swim south" destination="43" />
+    <arc exit="go" move="go submerged stair" destination="38" />
+  </node>
+  <node id="43" name="The Seerah, Submerged Roi Deck, Steerage" color="#0000FF">
+    <description>Smack in the belly of the ship, the steerage compartment is built around the still intact base of the main mast.  The frames of several bunks line the bulkheads below a series of iron shelves, seriously corroded in the salty water.  The light is extremely dim, the ghostly illumination entering from the forward hold.  Debris covers the floor, coated with a blanket of sea moss that thrives in the somewhat protected environment.</description>
+    <position x="80" y="260" z="0" />
+    <arc exit="north" move="swim north" destination="42" />
+    <arc exit="south" move="swim south" destination="44" />
+  </node>
+  <node id="44" name="The Seerah, Submerged Roi Deck, Corridor" color="#000080">
+    <description>The corridor is dark and eerie as the hollow, underwater sounds travel through the passage.  Doorways lead up on the northern side and down on the southern side, into even darker waters.</description>
+    <position x="80" y="280" z="0" />
+    <arc exit="north" move="swim north" destination="43" />
+    <arc exit="up" move="swim up" destination="45" />
+    <arc exit="down" move="swim down" destination="46" />
+  </node>
+  <node id="45" name="The Seerah, Roi Deck, Aft Storage" color="#0000FF">
+    <description>Large cargo nets float in the water, attached to pivots near the ceiling.  Along the floor, coils of rope are strewn out below a blanket of moss, resembling snakes under a furry carpet.</description>
+    <position x="100" y="260" z="0" />
+    <arc exit="down" move="swim down" destination="44" />
+  </node>
+  <node id="46" name="The Seerah, Submerged Roi Deck, Brig" color="#0000FF">
+    <description>This small room was once used as the brig, its cell in the lower portion of the room.  The cell door has been slung open, its iron bars white and corroded.  Tiny spores float in the dark water and collect on the inside walls of the compartment.</description>
+    <position x="80" y="300" z="0" />
+    <arc exit="up" move="swim up" destination="44" />
+    <arc exit="down" move="swim down" destination="47" />
+  </node>
+  <node id="47" name="The Seerah, Roi Deck, Brig Cell" note="Oyster Room" color="#000080">
+    <description>A section of rock has erupted through the aft side of the cell, making the cramped space even tighter than before the crash.  Spawning in the tiny yet secure area, a hungry-looking bed of fang oysters spreads out over the floor, helping to keep the water in the area relatively clear.</description>
+    <position x="80" y="320" z="0" />
+    <arc exit="up" move="swim up" destination="46" />
+  </node>
+  <node id="48" name="The Seerah, Zo Deck, Galley">
+    <description>A large room punctuated by the stem of the foremast is filled with overturned tables and benches, covered with broken pottery and flatware.  Burnt-out hurricane lamps hang on hooks fastened close to the ceiling, away from two large portholes on either side of the room.  The walls are marred with scratches and holes, and a couple of telltale forks are stuck deep in the wall.</description>
+    <position x="120" y="220" z="0" />
+    <arc exit="out" move="out" destination="31" />
+    <arc exit="go" move="go large door" destination="31" />
+    <arc exit="climb" move="climb steep stairs" destination="49" />
+  </node>
+  <node id="49" name="The Seerah, Do Deck, Corridor">
+    <description>The amidships corridor stretches on in darkness, flanked by a succession of broken lanterns.  All the cabins on the lower starboard side of the ship are heavily flooded, and the stench of the sea is prevalent through the hallway.</description>
+    <position x="40" y="220" z="0" />
+    <arc exit="south" move="south" destination="50" />
+    <arc exit="up" move="up" destination="54" />
+    <arc exit="down" move="down" destination="55" />
+    <arc exit="climb" move="climb steep stairs" destination="48" />
+    <arc exit="go" move="go flooded stairwell" destination="62" />
+  </node>
+  <node id="50" name="The Seerah, Do Deck, Corridor">
+    <description>The amidships corridor stretches on in darkness, flanked by a succession of broken lanterns.  All the cabins on the lower starboard side of the ship are heavily flooded, and the stench of the sea is prevalent through the hallway.</description>
+    <position x="40" y="240" z="0" />
+    <arc exit="north" move="north" destination="49" />
+    <arc exit="south" move="south" destination="51" />
+    <arc exit="up" move="up" destination="56" />
+    <arc exit="down" move="down" destination="57" />
+  </node>
+  <node id="51" name="The Seerah, Do Deck, Corridor">
+    <description>The amidships corridor stretches on in darkness, flanked by a succession of broken lanterns.  All the cabins on the lower starboard side of the ship are heavily flooded, and the stench of the sea is prevalent through the hallway.</description>
+    <position x="40" y="260" z="0" />
+    <arc exit="north" move="north" destination="50" />
+    <arc exit="south" move="south" destination="52" />
+    <arc exit="up" move="up" destination="58" />
+    <arc exit="down" move="down" destination="59" />
+  </node>
+  <node id="52" name="The Seerah, Do Deck, Corridor">
+    <description>The amidships corridor stretches on in darkness, flanked by a succession of broken lanterns.  All the cabins on the lower starboard side of the ship are heavily flooded, and the stench of the sea is prevalent through the hallway.</description>
+    <position x="40" y="280" z="0" />
+    <arc exit="north" move="north" destination="51" />
+    <arc exit="south" move="south" destination="53" />
+    <arc exit="up" move="up" destination="60" />
+    <arc exit="down" move="down" destination="61" />
+  </node>
+  <node id="53" name="The Seerah, Do Deck, Recreation Room">
+    <description>Surrounding the post of the mizzenmast, this large room is damp and dreary.  Scattered on the floor amidst broken tables are ruined cards, darts, paper and games.  A small warped stage is covered with ripped charts and scrolls, tossed out of low bookshelves nailed to the starboard wall.</description>
+    <position x="40" y="300" z="0" />
+    <arc exit="north" move="north" destination="52" />
+  </node>
+  <node id="54" name="The Seerah, Do Deck, Slanted Cabin">
+    <description>The simple furniture of a bed and overturned chair have slid down to lean on the lower wall, and only a small table, securely nailed to the floor, remains in place.  Other than the debris of broken lanterns and tossed plain linens from the tiny bed, the room is free from damage.</description>
+    <position x="60" y="200" z="0" />
+    <arc exit="down" move="down" destination="49" />
+  </node>
+  <node id="55" name="The Seerah, Do Deck, Flooded Cabin">
+    <description>Originally meant to provide some comfort and privacy for guests aboard, this dark and tiny cabin has turned into an example of the dangers of the sea.  Rotten wood floats in the murky water standing in the eastern half of the room, and the air is filled with the stench of mold, soured linens and brackish water.</description>
+    <position x="20" y="220" z="0" />
+    <arc exit="up" move="up" destination="49" />
+  </node>
+  <node id="56" name="The Seerah, Do Deck, Slanted Cabin">
+    <description>The simple furniture of a bed and overturned chair have slid down to lean on the lower wall, and only a small table, securely nailed to the floor, remains in place.  Other than the debris of broken lanterns and tossed plain linens from the tiny bed, the room is free from damage.</description>
+    <position x="60" y="240" z="0" />
+    <arc exit="down" move="down" destination="50" />
+  </node>
+  <node id="57" name="The Seerah, Do Deck, Flooded Cabin">
+    <description>Originally meant to provide some comfort and privacy for guests aboard, this dark and tiny cabin has turned into an example of the dangers of the sea.  Rotten wood floats in the murky water standing in the eastern half of the room, and the air is filled with the stench of mold, soured linens and brackish water.</description>
+    <position x="20" y="240" z="0" />
+    <arc exit="up" move="up" destination="50" />
+  </node>
+  <node id="58" name="The Seerah, Do Deck, Slanted Cabin">
+    <description>The simple furniture of a bed and overturned chair have slid down to lean on the lower wall, and only a small table, securely nailed to the floor, remains in place.  Other than the debris of broken lanterns and tossed plain linens from the tiny bed, the room is free from damage.</description>
+    <position x="60" y="260" z="0" />
+    <arc exit="down" move="down" destination="51" />
+  </node>
+  <node id="59" name="The Seerah, Do Deck, Flooded Cabin">
+    <description>Originally meant to provide some comfort and privacy for guests aboard, this dark and tiny cabin has turned into an example of the dangers of the sea.  Rotten wood floats in the murky water standing in the eastern half of the room, and the air is filled with the stench of mold, soured linens and brackish water.</description>
+    <position x="20" y="260" z="0" />
+    <arc exit="up" move="up" destination="51" />
+  </node>
+  <node id="60" name="The Seerah, Do Deck, Slanted Cabin">
+    <description>The simple furniture of a bed and overturned chair have slid down to lean on the lower wall, and only a small table, securely nailed to the floor, remains in place.  Other than the debris of broken lanterns and tossed plain linens from the tiny bed, the room is free from damage.</description>
+    <position x="60" y="280" z="0" />
+    <arc exit="down" move="down" destination="52" />
+  </node>
+  <node id="61" name="The Seerah, Do Deck, Flooded Cabin">
+    <description>Originally meant to provide some comfort and privacy for guests aboard, this dark and tiny cabin has turned into an example of the dangers of the sea.  Rotten wood floats in the murky water standing in the eastern half of the room, and the air is filled with the stench of mold, soured linens and brackish water.</description>
+    <position x="20" y="280" z="0" />
+    <arc exit="up" move="up" destination="52" />
+  </node>
+  <node id="62" name="The Seerah, Roi Deck, Submerged Galley Storage">
+    <description>The water here is extremely murky, filled with barrels that float near the ceiling of the room.  Dim light filters in from above, glinting off of glass and rusting pots and pans and utensils once used to feed hungry sailors.</description>
+    <position x="20" y="200" z="0" />
+    <arc exit="up" move="up" destination="49" />
+  </node>
+  <node id="63" name="Lower Taph'botuk, Sandsprite Lair" color="#FFFF00">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>Mounds of dry white sand fill the expansive cavern, fashioned into small burrows.  Neatly groomed paths split off in opposite directions, heading further into the sand mounds.  Above, the ceiling looks strangely unstable, its sandy surface moving in waves as if held back by an unseen force.  Chilling breezes drift through the cavern, slightly bitter with the smell of brine.</description>
+    <position x="180" y="120" z="0" />
+    <arc exit="east" destination="64" />
+    <arc exit="west" destination="70" />
+  </node>
+  <node id="64" name="Lower Taph'botuk, Sandsprite Lair">
+    <description>Mosses and sand-loving grasses fill a large portion of the cavern, fed by a trickle of water that seeps from the northern wall and trickles into the sandy ground below.  Carefully raked sand provides a path around the garden.  A tall dune has been built to partially block off the southwestern cavern, as if attempting to protect the crop of mosses from whatever lies beyond its border.</description>
+    <position x="200" y="120" z="0" />
+    <arc exit="southwest" move="southwest" destination="65" />
+    <arc exit="west" move="west" destination="63" />
+  </node>
+  <node id="65" name="Lower Taph'botuk, Sandcrab Lair">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>Large, half-filled holes of wet sand have been burrowed into the ground around the rocky cavern.  Groomed sand paths stretch through the area beside long ditches of irrigating water.  Strange clicking noises can be heard from every direction, betraying the presence of the crabs that are apparently being corralled here.</description>
+    <position x="180" y="140" z="0" />
+    <arc exit="northeast" move="northeast" destination="64" />
+    <arc exit="east" move="east" destination="66" />
+  </node>
+  <node id="66" name="Lower Taph'botuk, Sandcrab Lair">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>A large rock formation stands in the center of the room, encircled by a groomed sandy path.  Warm air drifts in from the east, while from the south comes the stench of brine.  Several sand-burrowed holes litter the floor, some of them coming up to the very edge of the pathways.</description>
+    <position x="200" y="140" z="0" />
+    <arc exit="east" move="east" destination="67" />
+    <arc exit="south" move="south" destination="68" />
+    <arc exit="west" move="west" destination="65" />
+  </node>
+  <node id="67" name="Lower Taph'botuk, Sandcrab Hatchery">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>Tiny energetic baby crabs skitter across the floor of this small cavern, some of them swimming in a small pool of water in the center of the room.  Fresh algae and underground plants cling to the sides of the room and along the bottom of the pool, giving the newly hatched crabs plenty of fresh food.  A detailed sand sculpture stands in front of the cavern entrance in the shape of a sand sprite holding out her hands.</description>
+    <position x="220" y="140" z="0" />
+    <arc exit="west" move="west" destination="66" />
+  </node>
+  <node id="68" name="Lower Taph'botuk, Sandcrab Lair">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>Cold, damp air wafts in from the southwest, settling over the clumped wet sand and glistening over rubble fallen from the rocky walls.  Dainty footprints crisscross over the wet sand, accompanied by the much smaller, prong-like prints of sand crabs.</description>
+    <position x="200" y="160" z="0" />
+    <arc exit="north" move="north" destination="66" />
+    <arc exit="southwest" move="southwest" destination="69" />
+  </node>
+  <node id="69" name="Lower Taph'botuk, Sandcrab Lair">
+    <description>A large pool of water takes up most of the cavern, filled with tiny fish and plants, providing a comfortable feeding area for the sand crabs.  The room is filled with the smell of the sea, and a dull hollow sound seems to echo from behind the thick granite walls.</description>
+    <position x="180" y="180" z="0" />
+    <arc exit="northeast" move="northeast" destination="68" />
+  </node>
+  <node id="70" name="Lower Taph'botuk, Sandsprite Lair">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>Dry white sand sifts onto the path from great mounds along the western wall, marring its neatly smoothed appearance.  Fragrant mosses cling to the walls, helping to freshen the heavy cavern air.</description>
+    <position x="160" y="120" z="0" />
+    <arc exit="northeast" move="northeast" destination="71" />
+    <arc exit="east" move="east" destination="63" />
+    <arc exit="northwest" move="northwest" destination="73" />
+  </node>
+  <node id="71" name="Lower Taph'botuk, Sandsprite Lair">
+    <description>Mounds of sand lie to either side of a freshly groomed path.  Along the walls, lush algae and moss thrive in the cool, damp cavern, helping to keep the air clean.  Fresh spring water seeps from the walls beneath the algae, filling a small shell basin that has been cleverly designed to capture it.</description>
+    <position x="180" y="100" z="0" />
+    <arc exit="east" move="east" destination="72" />
+    <arc exit="southwest" move="southwest" destination="70" />
+  </node>
+  <node id="72" name="Lower Taph'botuk, Sandsprite Lair">
+    <description>Shells and coral have been stacked into piles here, along with freshly gathered seaweed.  The small, chilly cavern is apparently being used as a community storage room, filled with sand-crafted bowls of live fish, gathered mosses and other supplies.</description>
+    <position x="200" y="100" z="0" />
+    <arc exit="west" move="west" destination="71" />
+  </node>
+  <node id="73" name="Lower Taph'botuk, Sand Pile">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>The cavern is filled with a large cone of fresh sand that reaches the ceiling, making the cylindrical room feel like the bottom of an hourglass.  Curiously, the ceiling of sand seems suspended in place by some unknown force, sometimes weakening enough to release a light dusting of sand to rain down, adding to the pile below.</description>
+    <position x="140" y="100" z="0" />
+    <arc exit="southeast" move="southeast" destination="70" />
+    <arc exit="climb" move="climb sand pile" destination="14" />
+  </node>
+  <label text="Sand Sprites">
+    <position x="680" y="-350" z="0" />
+  </label>
+  <label text="Ochre La'heke">
+    <position x="80" y="190" z="0" />
+  </label>
+  <label text="Ratha">
+    <position x="370" y="170" z="0" />
+  </label>
+  <label text="Sand Sprite Lair">
+    <position x="80" y="130" z="0" />
+  </label>
+  <label text="Sink in this room to A below -&gt;">
+    <position x="100" y="70" z="0" />
+  </label>
+  <label text="A">
+    <position x="181" y="106" z="0" />
+  </label>
+  <label text="Sand Sprites">
+    <position x="250" y="160" z="0" />
+  </label>
+  <label text="Sand Sprites">
+    <position x="250" y="-10" z="0" />
+  </label>
+  <label text="(need light source)">
+    <position x="70" y="140" z="0" />
+  </label>
+  <label text="&lt;- Pearl Diving Room">
+    <position x="90" y="310" z="0" />
+  </label>
+  <label text="Wreck of the Seerah">
+    <position x="0" y="170" z="0" />
+  </label>
+  <label text="Rocky Shallows">
+    <position x="240" y="270" z="0" />
+  </label>
+</zone>

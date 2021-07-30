@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Lost Crossing" id="8a">
+  <node id="1" name="Observatory, Gallery Corridor">
+    <description>Slowly-dying torches in wrought-iron sconces flank this oddly cold corridor, the hallway sloping upwards a bit as it opens into a foyer to the south.  Northward, a line of portraits hang on the ancient ironwood walls.</description>
+    <position x="140" y="-80" z="0" />
+    <arc exit="north" move="north" destination="2" />
+    <arc exit="south" move="south" destination="14" />
+  </node>
+  <node id="2" name="Observatory, Gallery Corridor">
+    <description>An ironwood-framed portrait and a ragged parchment portrait are hung carefully on the walls, not a speck of dust on their weathered canvasses.  This gallery continues to the north, and leads into a short connecting hallway to the south.</description>
+    <position x="140" y="-100" z="0" />
+    <arc exit="north" move="north" destination="3" />
+    <arc exit="south" move="south" destination="1" />
+  </node>
+  <node id="3" name="Observatory, Gallery Corridor">
+    <description>The air here is deathly cold, the chill centered around a black velvet portrait hanging on one wall.  The opposite wall features a broad, colorful portrait, hung at a slightly skewed angle.  The gallery stretches north and south from here.</description>
+    <position x="140" y="-120" z="0" />
+    <arc exit="north" move="north" destination="4" />
+    <arc exit="south" move="south" destination="2" />
+  </node>
+  <node id="4" name="Observatory, Gallery Corridor">
+    <description>The northern end of this small gallery features two pieces of artwork, a stately portrait and a vivid oil painting, hung directly across from one another.  The gallery continues to the south, and an open archway trimmed in black ironwood looks out onto a circular chamber to the north.</description>
+    <position x="140" y="-140" z="0" />
+    <arc exit="north" move="north" destination="5" />
+    <arc exit="south" move="south" destination="3" />
+  </node>
+  <node id="5" name="Observatory, Council Chamber">
+    <description>Twelve chairs surround a high table in the center of this rounded chamber, and a shining gold plaque with an inscription repeated in half as many languages hangs on the far wall.  Beyond that there is nothing here, save a near-tangible stillness and a low, powerful thrumming just barely at the edges of hearing.  A section of the wall shows signs of recent repairs and construction centered about a heavily reinforced passageway.</description>
+    <position x="140" y="-160" z="0" />
+    <arc exit="south" move="south" destination="4" />
+    <arc exit="go" move="go passage" destination="6" />
+  </node>
+  <node id="6" name="Damp Passage, Dark Tunnel" color="#0000FF">
+    <description>Coarsely hollowed out sandstone walls, covered in luminous crimson fungus, run from an opening in the foundation stones and disappear southward into a veil of darkness.  Water drips through tiny cracks between the blocks, creating a light condensation down the length of the rough passageway.  As if in dance, the drops trickle down the stone, sent into motion by the subtle vibrations from a low rumbling sound.</description>
+    <position x="140" y="-180" z="0" />
+    <arc exit="down" move="swim down" destination="7" />
+    <arc exit="go" move="go wall opening" destination="5" />
+  </node>
+  <node id="7" name="Damp Passage, Dark Tunnel" color="#0000FF">
+    <description>A carpet of crimson fungus glows like fiery dragon's eye rubies to create an illusion of fire beneath the chilly waters.  Slopping to the south, the water and fungus churn into an ooze shining with the appearance of flowing lava.  There is no heat here, however, only the chill and moisture of soaking wet stonework.</description>
+    <position x="160" y="-180" z="0" />
+    <arc exit="up" move="swim up" destination="6" />
+    <arc exit="down" move="swim down" destination="8" />
+  </node>
+  <node id="8" name="Damp Passage, Dark Tunnel" color="#0000FF">
+    <description>Buried deeply within the earth, this dank tunnel is a refuge for things long forgotten.  The fetid scent of sludge and rot wafts through the passage.  Bent and rusting sconces along the wall provided illumination at one time, but now do little else but rattle gently under the constant thrumming that vibrates the walls.</description>
+    <position x="160" y="-200" z="0" />
+    <arc exit="up" move="swim up" destination="7" />
+    <arc exit="climb" move="climb ladder" destination="9" />
+  </node>
+  <node id="9" name="Old Sewers, Northern Conduit" color="#0000FF">
+    <description>Wedge-fit granite blocks form a waterway wide enough for Gor'Togs to splash from end to end five abreast.  Water seeps in drips down a long ladder leading above, to fall upon the water below.  Lapping at the walls, crimson ooze floats on the water's surface bathing the area in a fiery radiance.</description>
+    <position x="180" y="-200" z="0" />
+    <arc exit="north" move="swim north" destination="11" />
+    <arc exit="south" move="swim south" destination="10" />
+    <arc exit="climb" move="climb ladder" destination="8" />
+  </node>
+  <node id="10" name="Old Sewers, Northern Conduit" color="#0000FF">
+    <description>Stuck in the gaps of the stones, the crimson fungi illuminate the vicinity, driving the shadows from their posts within the rock's nooks and crannies.  High overhead, still more of the red ooze lurks where it has clustered untouched for countless years.  Amid the swirling eddies, a massive sewer gate bars access to the corridor south.</description>
+    <position x="180" y="-180" z="0" />
+    <arc exit="north" move="swim north" destination="9" />
+  </node>
+  <node id="11" name="Old Sewers, Northern Conduit" color="#0000FF">
+    <description>Adhering to a twist in the conduit, a low creeping vapor clings to the surface of the water.  Lit from below by a crimson glow, the dense and heavy mist impresses the likeness of a fiery, gargantuan viper slowly passing.  Gradually to the south the fog tapers to a fading shimmering tendril, completing the illusion.</description>
+    <position x="180" y="-220" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="12" />
+    <arc exit="south" move="swim south" destination="9" />
+  </node>
+  <node id="12" name="Old Sewers, Northern Conduit" color="#0000FF">
+    <description>To the north a bright reddish glow fills the conduit like a setting autumn sun.  The bottom rungs of a wrought-iron ladder fixed into the wall are covered in a thick coating of dingy scum.  Next to the ladder, a bronze plaque is posted in the wall at about the normal chest height for humans.</description>
+    <position x="200" y="-240" z="0" />
+    <arc exit="north" move="swim north" destination="13" />
+    <arc exit="southwest" move="swim southwest" destination="11" />
+    <arc exit="climb" move="climb ladder" destination="16" />
+  </node>
+  <node id="13" name="Old Sewers, Northern Conduit" color="#0000FF">
+    <description>Ending abruptly due to an immense cave-in, the northern route is completely filled with jagged rubble.  Blanketed in the sewer fungi, the visible half-oval of debris draws a picture much like the sun settling into the waters on her daily voyage.</description>
+    <position x="200" y="-260" z="0" />
+    <arc exit="south" move="swim south" destination="12" />
+  </node>
+  <node id="14" name="Observatory, Foyer" note="Rolagi|Grazhir|Ways|Astral Plane" color="#FF00FF">
+    <description>A sweeping staircase draped with a royal blue carpet descends from the first floor of the observatory into this mahogany-walled foyer.  A long, velvet-padded bench runs along the wall beside a gilded archway to the east.  A narrower corridor opens to the north, the passage dimly lit by flickering torches.</description>
+    <position x="140" y="-60" z="0" />
+    <arc exit="north" move="north" destination="1" />
+    <arc exit="climb" move="climb sweeping staircase" destination="15" />
+    <arc exit="go" move="go gilded archway" destination="86" />
+  </node>
+  <node id="15" name="Observatory, First Level" note="Map8_Crossing_East_Gate.xml|Crossing|Observatory|Moon Mage Observatory">
+    <description>Occasional whispers pass among the flora in the dim darkness at the room's southeastern edge, an eerily familiar conversation lingering just out of mind's reach.  The northern wall bears a prominent inlay of variously-sized circular tiles.</description>
+    <description>Occasional pillars of light slant down through a thinning in the flora on the room's southeastern edge.  Pools of brilliant gold dapple, coalesce and fade across the floor as Day passes on her merry way.  The northern wall bears a prominent inlay of variously-sized circular tiles.</description>
+    <position x="140" y="-40" z="0" />
+    <arc exit="east" move="east" />
+    <arc exit="south" move="south" />
+    <arc exit="climb" move="climb sweeping staircase" destination="14" />
+  </node>
+  <node id="16" name="The Sewers, Narrow Passage" color="#0000FF">
+    <description>The narrow passage winds to the southwest.  Piles of unwanted refuse lay all about and the air is heavy with the odor of the crimson ooze pooled upon the area.  From somewhere comes the slight shuddering of a low, droning noise, but the source is indistinguishable, and if not for the vibrations of the ooze, the sound would be almost impossible to notice at all.</description>
+    <position x="60" y="-240" z="0" />
+    <arc exit="southwest" move="swim southwest" destination="17" />
+    <arc exit="climb" move="climb ladder" destination="12" />
+  </node>
+  <node id="17" name="The Sewers, Narrow Passage" color="#0000FF">
+    <description>Moisture condenses upon the walls and drips down to form a shallow channel of water through the center of the tunnel.  Shapeless lumps drift uneasily on the surface of the small sluggish river, occasionally bumping one another and coagulating into larger forms or breaking apart into smaller chunks.</description>
+    <position x="40" y="-220" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="16" />
+    <arc exit="southeast" move="swim southeast" destination="18" />
+  </node>
+  <node id="18" name="The Sewers, Narrow Passage" color="#0000FF">
+    <description>The waterway continues onward, and thick oil rolls across its surface in languid patterns.  The stagnant air is oppressive, with no draft or wind relieving the nearly tangible stench, and its thick presence almost masks the gentle shuddering noise that is so ever present in these underground passages.</description>
+    <position x="60" y="-200" z="0" />
+    <arc exit="south" move="swim south" destination="19" />
+    <arc exit="northwest" move="swim northwest" destination="17" />
+  </node>
+  <node id="19" name="The Sewers, Narrow Passage" color="#0000FF">
+    <description>A broken doll floats aimlessly on the surface of the murky water.  Its delicate porcelain face is cracked, broken as the dreams of this forgotten underworld.  Above, the stone of the passage is slickened with sludge and ooze that drips down, as if mourning the doll's pathetic demise with foul tears.</description>
+    <position x="60" y="-180" z="0" />
+    <arc exit="north" move="swim north" destination="18" />
+    <arc exit="southwest" move="swim southwest" destination="20" />
+  </node>
+  <node id="20" name="The Sewers, Lost Crossing" color="#0000FF">
+    <description>The passage widens as the shadowy river spills downward through the center of an underground ruin.  Slime-covered water runs among broken pillars and flows around the warped wreckage of buildings, sloshing from the askew windows and trickling through vacant doorframes where once people mingled, lived, and -- judging from the ruin -- died.</description>
+    <position x="40" y="-160" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="19" />
+    <arc exit="down" move="swim down" destination="21" />
+  </node>
+  <node id="21" name="The Sewers, Lost Crossing" color="#0000FF">
+    <description>Shattered stone columns are strangled by thick roots piercing the cavern ceiling.  Their rough coiling forms patiently grasp the stonework, reclaiming nature's territory from the hands of long dead artisans.  Though light, the water is quick as it rushes down the ruins and into the crimson glow below, churning debris and thick sludge within its sloshing currents.</description>
+    <position x="40" y="-140" z="0" />
+    <arc exit="up" move="swim up" destination="20" />
+    <arc exit="down" move="swim down" destination="22" />
+  </node>
+  <node id="22" name="The Sewers, Lost Crossing" color="#0000FF">
+    <description>Portions of the walls have collapsed, exposing clay pipes, cracked and caked with filth.  An unfortunate explorer witnessed the event, as his skeleton is still pinned against one wall by ragged conduits torn down in the cascade of stone.  The water splashes past his remains, slicking stone and bone alike with indifferent wetness.</description>
+    <position x="40" y="-120" z="0" />
+    <arc exit="up" move="swim up" destination="21" />
+    <arc exit="down" move="swim down" destination="23" />
+  </node>
+  <node id="23" name="The Sewers, Lost Crossing" color="#0000FF">
+    <description>A dark and crudely carved inscription runs the length of one column.  The glyphs, engraved into the ancient rock, are smeared and muddled by filth and time, eradicating any chance at deciphering the message.  The crumbling edge of a wall looms nearby, yet another building collapsing slowly under the force of the waters.</description>
+    <position x="40" y="-100" z="0" />
+    <arc exit="up" move="swim up" destination="22" />
+    <arc exit="go" move="go crumbling wall" destination="24" />
+  </node>
+  <node id="24" name="The Sewers, Lost Crossing" color="#0000FF">
+    <description>Shattered statues line the water's flow issuing from the crumbling limestone wall.  Their broken faces are contorted into haunted expressions, eroded away by the dampness and marred by the waters' angry hand.  Piles of lumpy sludge congregate around the statues' stone forms, sticking in some places like filthy beards.</description>
+    <position x="40" y="-80" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="27" />
+    <arc exit="southwest" move="swim southwest" destination="25" />
+    <arc exit="go" move="go crumbling wall" destination="23" />
+  </node>
+  <node id="25" name="The Sewers, Lost Crossing" color="#0000FF">
+    <description>Large collections of rotting household debris line the sides of this tunnel.  The close proximity of the trash heaps makes the darkness more tangible.  Water burbles softly as the slow-moving river continues to wind its way among the obstacles, gradually removing bits from the piles and resorting the mess in random clusters.</description>
+    <position x="20" y="-60" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="24" />
+    <arc exit="south" move="swim south" destination="26" />
+  </node>
+  <node id="26" name="The Sewers, Lost Crossing" color="#0000FF">
+    <description>A splintered door drifts above a sea of filth, a make-shift bridge for rats scurrying about the tunnel.  The rotting wood gingerly floats on the water, dancing slowly in the currents.  Drops of something dark and dank fall from the uneven ceiling stones, splashing as they strike the water and vanish into the murk.</description>
+    <position x="20" y="-40" z="0" />
+    <arc exit="north" move="swim north" destination="25" />
+  </node>
+  <node id="27" name="The Sewers, Lost Crossing" color="#0000FF">
+    <description>The wall of a small stone building has burst, spilling piles of books and scrolls into the passage.  The mound of paper has swollen to immense proportions, blocking entrance to the ancient library.  Thick layers of green and yellow mildew blanket the moldering tomes.</description>
+    <position x="60" y="-60" z="0" />
+    <arc exit="south" move="swim south" destination="28" />
+    <arc exit="northwest" move="swim northwest" destination="24" />
+  </node>
+  <node id="28" name="The Sewers, Lost Crossing" color="#0000FF">
+    <description>The water courses a bit more rapidly through this sunken room, thick foam mingling with the river of sludge.  A thick oily substance tenuously clings to the surrounding walls and small slithering forms writhe beneath the black veil.  Even the blocks that thrust from the crumbling ceiling are not spared the inky covering.</description>
+    <position x="60" y="-40" z="0" />
+    <arc exit="north" move="swim north" destination="27" />
+    <arc exit="southwest" move="swim southwest" destination="29" />
+  </node>
+  <node id="29" name="The Sewers, Lost Crossing" color="#0000FF">
+    <description>Glowing softly, crimson lumps of a strange luminous fungus float in the water and cling to the walls.  The surface of a pile of discarded furniture ripples, glistening in the dim light.  Closer examination reveals the motion to be hundreds of small seething forms crawling over the mound.</description>
+    <position x="40" y="-20" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="28" />
+    <arc exit="climb" move="climb iron ladder" destination="30" />
+  </node>
+  <node id="30" name="Old Sewers, Western Conduit" color="#0000FF">
+    <description>Soot forms the outline of a shadowy figure clinging to the tunnel's south wall.  Below it and set into a niche are the remains of a rotting campfire.  A slender, rusting iron ladder climbs the opposite wall, leading upwards.  Sludge and slime drip down from the upper level, congealing on the floor in a gelatinous mass.</description>
+    <position x="40" y="20" z="0" />
+    <arc exit="east" move="east" destination="32" />
+    <arc exit="west" move="west" destination="31" />
+    <arc exit="climb" move="climb iron ladder" destination="29" />
+  </node>
+  <node id="31" name="Old Sewers, Western Conduit" color="#0000FF">
+    <description>A swirl of water indicates the presence of a drain somewhere in the murky depths.  The small vortex hungrily draws both liquid and scum into it, pulling the sinister mixture below the surface.</description>
+    <position x="20" y="20" z="0" />
+    <arc exit="east" move="east" destination="30" />
+  </node>
+  <node id="32" name="Old Sewers, Western Conduit" color="#0000FF">
+    <description>A dim flicker penetrates the gloom from the east.  Murky water trickles down the center of the passage, glimmering darkly in the scant light.  Something nearby sloshes through the water and then skitters up the wall -- perhaps just an insect tracing a regular hunting route in search of food.</description>
+    <position x="60" y="20" z="0" />
+    <arc exit="east" move="east" destination="33" />
+    <arc exit="west" move="west" destination="30" />
+  </node>
+  <node id="33" name="Old Sewers, Western Conduit" color="#0000FF">
+    <description>Sulfurous fumes rise through a cracked iron vent, mingling with the stale air of the corridor for a devastating combination of rotten egg smells and the scent of mold.  Mottled shadows and light dance just beyond the metal opening, reflections of the water trickling down the walls.</description>
+    <position x="80" y="20" z="0" />
+    <arc exit="east" move="east" destination="34" />
+    <arc exit="west" move="west" destination="32" />
+  </node>
+  <node id="34" name="Old Sewers, Western Conduit" color="#0000FF">
+    <description>An odd coppery scent, reminiscent of a forge, underlies the stench of sludge and refuse.  The combination is potent and heady, occasional faint whispers of air carrying the odor eastward.  Bubbles gurgle along the conduit walls, exasperated from something unseen in the murk, adding their own distinct smell to the thick air.</description>
+    <position x="100" y="20" z="0" />
+    <arc exit="east" move="east" destination="35" />
+    <arc exit="west" move="west" destination="33" />
+  </node>
+  <node id="35" name="Old Sewers, Western Conduit" color="#0000FF">
+    <description>Ragged wooden blocks are all that remain of failed attempts to shore the tunnel walls.  One section of the wall has collapsed revealing sodden dirt that partially blocks the waterway.  Bulbous violet mushrooms sprout from the exposed earth.</description>
+    <position x="120" y="20" z="0" />
+    <arc exit="east" move="east" destination="36" />
+    <arc exit="west" move="west" destination="34" />
+  </node>
+  <node id="36" name="Old Sewers, Western Conduit" color="#0000FF">
+    <description>Splintered pieces of deobar are strewn about, the remains of some smashed furnishings.  Decaying bits of fabric trail from the slivered wood like sailors desperately clinging for life in an ocean tempest.  All around, the walls trickle with the dampness of water and thick fuzzy molds, turning into frothy slime as the combination drips down.</description>
+    <position x="140" y="20" z="0" />
+    <arc exit="northeast" move="northeast" destination="37" />
+    <arc exit="west" move="west" destination="35" />
+  </node>
+  <node id="37" name="Old Sewers, Western Conduit" color="#0000FF">
+    <description>The tunnel constricts to the east, channeling the murky waste waters.  The stream disappears over a slight lip near the constriction with a soft whisper as though trickling down the maw of some enormous beast.</description>
+    <position x="160" y="0" z="0" />
+    <arc exit="east" move="east" destination="38" />
+    <arc exit="southwest" move="southwest" destination="36" />
+  </node>
+  <node id="38" name="Old Sewers, Intersection" color="#0000FF">
+    <description>The floor of the intersection is a single massive grate.  Fetid water runs in from the cardinal directions and pours into an ominously dark pit beneath the grate.  Oddly, there's no sound to indicate the murky fluids ever reach the bottom.</description>
+    <position x="180" y="0" z="0" />
+    <arc exit="north" move="north" destination="46" />
+    <arc exit="east" move="swim east" destination="39" />
+    <arc exit="south" move="south" destination="47" />
+    <arc exit="west" move="west" destination="37" />
+  </node>
+  <node id="39" name="Old Sewers, Eastern Conduit" color="#0000FF">
+    <description>The echoes of trickling water filter through the gloom to the west.  A collection of water-worn stones, too heavy to be pushed any further by the weak stream of water, have run aground on subterranean shoals.</description>
+    <position x="200" y="0" z="0" />
+    <arc exit="east" move="east" destination="40" />
+    <arc exit="west" move="west" destination="38" />
+  </node>
+  <node id="40" name="Old Sewers, Eastern Conduit" color="#0000FF">
+    <description>Angular tool marks surround a dark crack along the side of the conduit wall.  The frenzy of the makers' desperation is obvious in the small pile of rubble below the rupture.  Pale lichen maintains a tenuous hold where the tunnel wall is torn away.</description>
+    <position x="220" y="0" z="0" />
+    <arc exit="east" move="east" destination="41" />
+    <arc exit="west" move="west" destination="39" />
+    <arc exit="go" move="go jagged hole" destination="60" />
+  </node>
+  <node id="41" name="Old Sewers, Eastern Conduit" color="#0000FF">
+    <description>Dark crimson fungus covers the walls and the floor.  Thick clouds of spores, drifting on a faint breath of stagnant air, cast a soft red aura over the area and lend an eerie beauty to the desolation.  As the airborne specks touch the water, they foam, leaving frothy pink bubbles across the surface of the murky liquid.</description>
+    <position x="240" y="0" z="0" />
+    <arc exit="east" move="east" destination="42" />
+    <arc exit="west" move="west" destination="40" />
+  </node>
+  <node id="42" name="Old Sewers, Eastern Conduit" color="#0000FF">
+    <description>Through fissures in the vaulted roof, dark water and a sort of nebulous vapor ooze between the flagstones, trickling down three times the height of a man to splatter noisily into the sludge-choked stream below.  Churned by the small waterfall's action, the goo gurgles happily with a brown and red foam as it receives its disgusting gift from above.</description>
+    <position x="260" y="0" z="0" />
+    <arc exit="east" move="east" destination="43" />
+    <arc exit="west" move="west" destination="41" />
+  </node>
+  <node id="43" name="Old Sewers, Eastern Conduit" color="#0000FF">
+    <description>The scents of death and decay fill this section of tunnels more than usual, drifting on the subtle air currents, an ethereal serpent coiling around the senses with an asphyxiating grasp.  A neatly stacked pile is the source of the stench, and is now the home to hordes of slug-like vermin.</description>
+    <position x="280" y="0" z="0" />
+    <arc exit="east" move="east" destination="44" />
+    <arc exit="west" move="west" destination="42" />
+  </node>
+  <node id="44" name="Old Sewers, Eastern Conduit" color="#0000FF">
+    <description>Odd feathery molds sprout in a phosphorescent circle about a small stagnant pool, as if they were delicately robed priests paying homage at an altar font.  A chilling draft bows the mold, drawing their harsh fingertips across the surface of the murky puddle and sending gentle ripples across the filth.</description>
+    <position x="300" y="0" z="0" />
+    <arc exit="east" move="east" destination="45" />
+    <arc exit="west" move="west" destination="43" />
+  </node>
+  <node id="45" name="Old Sewers, Eastern Conduit" color="#0000FF">
+    <description>The intermittent sound of thrumming echoes down the passage as water moving swiftly east slices between the bars of a massive steel gate.  The collision of water sends a spray of clammy mist into the air, soaking the walls with dirty muck and assaulting the nostrils with a foul smelling fog.</description>
+    <position x="320" y="0" z="0" />
+    <arc exit="west" move="west" destination="44" />
+  </node>
+  <node id="46" name="Old Sewers, Northern Conduit" color="#0000FF">
+    <description>Braced against a massive sewer gate, a small hut stands mid-stream in a decaying heap.  The water eddies around the walls jutting upward from the murky depths.  Air bubbles bearing unpleasant fumes stumble to the surface around the ruins of the building.</description>
+    <position x="180" y="-20" z="0" />
+    <arc exit="south" move="south" destination="38" />
+  </node>
+  <node id="47" name="Old Sewers, Southern Conduit" color="#0000FF">
+    <description>Clay drainpipes line the walls, cracked and smashed beyond repair in some spots and partially intact in others.  Viscous noxious-smelling liquids sluggishly drip from the broken pipes to fall into the water.  Briefly, iridescent ripples spread as the oily goo hits the murky liquid, but these are quickly squelched by the dark flow.</description>
+    <position x="180" y="20" z="0" />
+    <arc exit="north" move="north" destination="38" />
+    <arc exit="south" move="south" destination="48" />
+  </node>
+  <node id="48" name="Old Sewers, Southern Conduit" color="#0000FF">
+    <description>An old drainage grate rusts to one side of the conduit.  Bits and pieces of fallen debris catch hold in the wire mesh as viscous water drains slowly through the blockage.  A sound like a gurgling death cry rings up from the grate as sewage falls though to the unknown below.</description>
+    <position x="180" y="40" z="0" />
+    <arc exit="north" move="north" destination="47" />
+    <arc exit="south" move="south" destination="49" />
+    <arc exit="climb" move="climb drainage grate" destination="51" />
+  </node>
+  <node id="49" name="Old Sewers, Southern Conduit" color="#0000FF">
+    <description>Small feeder pipes lining the walls drip thick sludge and slime from the upper levels down muck-covered stones into the passing water.  Steam rises into the air where the warmer sludge meets the cooler water, the subtle hissing all but lost between the sound of gurgling ooze and the steady shudder of something unseen vibrating the walls.</description>
+    <position x="180" y="60" z="0" />
+    <arc exit="north" move="north" destination="48" />
+    <arc exit="south" move="south" destination="50" />
+  </node>
+  <node id="50" name="Old Sewers, Southern Conduit" color="#0000FF">
+    <description>This section of tunnel thrums with regular vibrations from below, and bits of ooze drip regularly from the ceiling into the shuddering water.  The rhythmic pulse has taken its toll, as the conduit is riddled with fractures.  Further passage south is blocked by a massive grate.</description>
+    <position x="180" y="80" z="0" />
+    <arc exit="north" move="north" destination="49" />
+  </node>
+  <node id="51" name="The Sewers, Lost Crossing" color="#0000FF">
+    <description>Water trickles through a large drainage vent from above with a struggling gurgle, taking small bits of debris and sludge in the process.  A flickering light source beyond the grate refracts through oily droplets of water in a prismatic display.</description>
+    <position x="160" y="60" z="0" />
+    <arc exit="southwest" move="southwest" destination="52" />
+    <arc exit="climb" move="climb drainage grate" destination="48" />
+  </node>
+  <node id="52" name="The Sewers, Lost Crossing" color="#0000FF">
+    <description>Shards of glass peek out from beneath the surface of the water, ready to spear the unwary upon their filthy edges.  Jagged bits of crystal take on an almost fae quality as they glare angrily in the dim red light.  Small bits of refuse stream past, oblivious to their fate, and uncaring if they should collide against the sharpened shards.</description>
+    <position x="140" y="80" z="0" />
+    <arc exit="northeast" move="northeast" destination="51" />
+    <arc exit="southeast" move="southeast" destination="59" />
+    <arc exit="west" move="west" destination="53" />
+  </node>
+  <node id="53" name="The Sewers, Lost Crossing" color="#0000FF">
+    <description>Rotting barrels, strips of filthy cloth, rusted iron poles and other debris gathered from among the ruins compose a crude hut, which tilts perilously close to extinction.  Set upon the shaky and muck-covered stones that rise from the dark water, it appears as if any major tremor would end its existence.</description>
+    <position x="100" y="80" z="0" />
+    <arc exit="east" move="east" destination="52" />
+    <arc exit="southeast" move="southeast" destination="57" />
+    <arc exit="southwest" move="southwest" destination="54" />
+  </node>
+  <node id="54" name="The Sewers, Lost Crossing" color="#0000FF">
+    <description>Odd bits of smashed tile rise in jagged points above the murky water.  Their sharp porcelain edges catch the surface, forcing the dark stream to ripple and waver as it diverts around the debris.  The face of a nearby wall is completely concealed by a congealing collection of sludge, and while clumps ooze down to unite in the water, additional repellent drops slither down from above to replenish the muck.</description>
+    <position x="80" y="100" z="0" />
+    <arc exit="northeast" move="northeast" destination="53" />
+    <arc exit="south" move="south" destination="55" />
+  </node>
+  <node id="55" name="The Sewers, Lost Crossing" color="#0000FF">
+    <description>Dim light reflects upon the surface of the rippling waters, distorted by sludge and motion as the liquid laps against building remains.  The flickering light pulsates in disorienting patterns, adding further confusion to the dim ruined shapes beneath the water.</description>
+    <position x="80" y="140" z="0" />
+    <arc exit="north" move="north" destination="54" />
+    <arc exit="northeast" move="northeast" destination="56" />
+  </node>
+  <node id="56" name="The Sewers, Lost Crossing" color="#0000FF">
+    <description>Branches trapped in the earth above, murky water flows around the remains of a mighty oak tree.  The base has been rotted away and its warped black form juts down from the ceiling like a decayed tooth.  Half-buried in the slow stream are signs of a cobblestone walk, but the ooze has turned them into amorphous shapes, and threatens to do the same to the tree.</description>
+    <position x="100" y="120" z="0" />
+    <arc exit="northeast" move="northeast" destination="57" />
+    <arc exit="southwest" move="southwest" destination="55" />
+  </node>
+  <node id="57" name="The Sewers, Lost Crossing" color="#0000FF">
+    <description>Water eddies around a section of the town that's been bowled upward by underground pressures.  Slick cobblestones evenly arranged amongst the ruins gleam in the fitful light of the crimson ooze like gems set into a crown of rubble.</description>
+    <position x="120" y="100" z="0" />
+    <arc exit="southeast" move="southeast" destination="58" />
+    <arc exit="southwest" move="southwest" destination="56" />
+    <arc exit="northwest" move="northwest" destination="53" />
+  </node>
+  <node id="58" name="The Sewers, Lost Crossing" color="#0000FF">
+    <description>Just visible behind piles of rubble, a ruined storefront has collapsed inward.  Rotting strips of fabric are entangled in the debris, decorations for some macabre festival of forgotten souls.  The water sloshes past, desperately clutching at the cloth shreds that dangle too low, eager to secret them away in its murky caress.</description>
+    <position x="140" y="120" z="0" />
+    <arc exit="northeast" move="northeast" destination="59" />
+    <arc exit="northwest" move="northwest" destination="57" />
+  </node>
+  <node id="59" name="The Sewers, Lost Crossing" color="#0000FF">
+    <description>The remains of a crystalline sculpture lean forlornly against one wall.  Once an elegant figure, the entire lower half is shattered.  Thousands of tiny glassy shards lie in the muck and liquid of the tunnel, still rather shiny despite the oily slickness that covers everything.  A low humming makes the wall stones quiver subtly, revealed as the sludge shakes sympathetically.</description>
+    <position x="160" y="100" z="0" />
+    <arc exit="southwest" move="southwest" destination="58" />
+    <arc exit="northwest" move="northwest" destination="52" />
+  </node>
+  <node id="60" name="The Sewers, Dark Passage" color="#0000FF">
+    <description>Quarry stones stacked along the sewer's wall and a narrow path leading southward indicates work performed after the sewer's creation.  Broken scaffolding, shattered lanterns, and deep scores in the rock walls are all that remain of this work site.  A small stream of water trickles from the conduit beyond through a jagged rip pooling over the stacked stones.</description>
+    <position x="220" y="20" z="0" />
+    <arc exit="south" move="south" destination="61" />
+    <arc exit="go" move="go jagged rip" destination="40" />
+  </node>
+  <node id="61" name="The Sewers, Dark Passage" color="#0000FF">
+    <description>Charred sticks of blackened wood drift upon the surface of the muck and the scent of smoke mingles with the bitter odors of coppery sludge.  The spent torches drift across the water, their wasted forms forlornly meandering amidst the debris.</description>
+    <position x="220" y="40" z="0" />
+    <arc exit="north" move="north" destination="60" />
+    <arc exit="south" move="south" destination="62" />
+  </node>
+  <node id="62" name="The Sewers, Dark Passage" color="#0000FF">
+    <description>Although covered with soot and filth, an enormous crystallized lion yet retains its majesty among charred ruins.  Rivulets of dark liquid run over the worn stone, slowly erasing the grandeur of the fine statue.  The sculpture's hindquarter is heavily etched by the steady flow, foretelling the beast's fate.</description>
+    <position x="220" y="60" z="0" />
+    <arc exit="north" move="north" destination="61" />
+    <arc exit="south" move="south" destination="63" />
+  </node>
+  <node id="63" name="The Sewers, Dark Passage" color="#0000FF">
+    <description>From gaps within a carpet of ash and charcoal, dark gold-flecked granite paving stones peek from the charred skeletal remains of a large structure.  An inky darkness lingers beyond rows of shadowy pillars.</description>
+    <position x="220" y="80" z="0" />
+    <arc exit="north" move="north" destination="62" />
+    <arc exit="go" move="go shadowy pillars" destination="64" />
+  </node>
+  <node id="64" name="Buried Mansion, Grand Ballroom">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>Marble pillars support an arched ceiling decorated with faded frescoes of the gods in traditional settings.  In front of a set of double doors, a complex sigil of ruby is inlaid upon the center of a decaying obsidian floor.  The squares of parquet rest warped and torn by the relentless ravages of moisture.</description>
+    <position x="220" y="100" z="0" />
+    <arc exit="east" move="east" destination="66" />
+    <arc exit="west" move="west" destination="65" />
+    <arc exit="go" move="go marble pillars" destination="63" />
+    <arc exit="go" move="go double doors" destination="69" />
+  </node>
+  <node id="65" name="Buried Mansion, Conservatory">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>Formerly a protector enclosing this area, the delicate etched-glass dome and walls are but a casualty, the battle lost to the elemental forces.  Fetid vapor rises in a haze from the center of what was perhaps a once lavish dolphin-shaped pool.  Glowing green plants drift eerily upon the water's surface, their glistening tendrils reaching out to coil around rocks and nearby hunks of rotten wood as if to consume them.</description>
+    <position x="200" y="100" z="0" />
+    <arc exit="east" move="east" destination="64" />
+  </node>
+  <node id="66" name="Buried Mansion, Hallway">
+    <description>Chunks of plaster have fallen from the walls of this low-ceiled hallway, revealing the rotting wooden framework and support stones of the mansion.  The floor is littered with not only the plaster's remains but with bits of wood and rock, perhaps knocked free by the steady thrumming that vibrates the entire place.  From the east drifts a faint but peculiarly hateful odor.</description>
+    <position x="240" y="100" z="0" />
+    <arc exit="east" move="east" destination="67" />
+    <arc exit="south" move="south" destination="70" />
+    <arc exit="west" move="west" destination="64" />
+  </node>
+  <node id="67" name="Buried Mansion, Kitchen">
+    <description>Warped shelving runs the length of one wall, covered with the vestigial remains of a working kitchen.  A cracked kettle lies on its side beside an iron stove caked with rust.  The subtle sour odor of rotting food remains despite the years of decay.</description>
+    <position x="260" y="100" z="0" />
+    <arc exit="north" move="north" destination="68" />
+    <arc exit="west" move="west" destination="66" />
+  </node>
+  <node id="68" name="Buried Mansion, Pantry">
+    <description>Frayed bits of rope, twine, and sharp hooks used for curing meat hang from the ceiling.  They coil and curl, their worn edges rotted and unraveling from both moisture and time.  A number of tall crates are carefully stacked against a wall, their empty frames covered with muck.</description>
+    <position x="260" y="80" z="0" />
+    <arc exit="south" move="south" destination="67" />
+  </node>
+  <node id="69" name="Buried Mansion, Salon">
+    <description>Marble support pillars from the rooms above have crashed through the ceiling to drop tiles, rubble, and other debris, wreaking havoc upon the once sedate area.  A soft, flickering glow emanates from a cracked tzgaa orb, cradled in a stained marble hand reaching from within a pile of rubble.  The wan light sputters uneasily, casting eerie shadows and doing little to alleviate the gloom.</description>
+    <position x="220" y="120" z="0" />
+    <arc exit="east" move="east" destination="70" />
+    <arc exit="south" move="south" destination="73" />
+    <arc exit="west" move="west" destination="71" />
+    <arc exit="go" move="go double doors" destination="64" />
+  </node>
+  <node id="70" name="Buried Mansion, Hallway">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>Stylized floral motifs envelop the cracking, flaking, and peeling walls, and under the soot and damp these frescos take on the appearance of haunting visages.  Fluted glass wall sconces holding tzgaa orbs are precisely placed at regular intervals along the hall.  A dense layer of grime and ash covering the marble floor has been disturbed as if something was dragged through the area.</description>
+    <position x="240" y="120" z="0" />
+    <arc exit="north" move="north" destination="66" />
+    <arc exit="east" move="east" destination="74" />
+    <arc exit="south" move="south" destination="75" />
+    <arc exit="west" move="west" destination="69" />
+  </node>
+  <node id="71" name="Buried Mansion, Study">
+    <description>Dark ooze trickles down a sharp rock shelf forced outward by the weight above.  It lazily drops onto the face of a torn painting, running down the pale cheek of the figure captured on the ruined canvas like some festering wound.  Amidst the destruction of the room, an elegant desk and chair of ironwood are astonishingly unsoiled.</description>
+    <position x="200" y="120" z="0" />
+    <arc exit="east" move="east" destination="69" />
+    <arc exit="south" move="south" destination="72" />
+  </node>
+  <node id="72" name="Buried Mansion, Library">
+    <description>Like the midnight sky, soot blankets the smooth marble canopy stretching over this moldering chamber.  Dozens of blackened ironwood shelves, scorched to a dark patina, line the dust-filled walls.  The treasure of ages past now lie converted to the currency of ashes and cinders.</description>
+    <position x="200" y="140" z="0" />
+    <arc exit="north" move="north" destination="71" />
+  </node>
+  <node id="73" name="Buried Mansion, Entry Hall">
+    <description>What was once a grand entryway is now cleft by a huge crack from forces without.  The foyer is filled with an assortment of rubble and blocked by debris, a phosphorescent crimson fungus flourishing in chinks among the stones.</description>
+    <position x="220" y="140" z="0" />
+    <arc exit="north" move="north" destination="69" />
+  </node>
+  <node id="74" name="Buried Mansion, Stairwell">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>Acceding to the demands of time, a stairwell's marble column has been crushed from the forces above and now lies in blocks and fine particles covering the stairwell floor.  Odd footprints linger in the powdered stone.  Filth muddies their forms, blurring anything distinctive that might indicate their origin.  </description>
+    <description>Acceding to the demands of time, a stairwell's marble column has been crushed from the forces above and now lies in blocks and fine particles covering the stairwell floor.  Odd footprints linger in the powdered stone.  Filth muddies their forms, blurring anything distinctive that might indicate their origin.</description>
+    <position x="260" y="120" z="0" />
+    <arc exit="west" move="west" destination="70" />
+    <arc exit="down" move="down" destination="85" />
+  </node>
+  <node id="75" name="Buried Mansion, Hallway">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>Crumbling and overgrown with roots, a set of stone steps leads interminably up into nothingness.  Muck spills down the steps, pooling into greasy, brown puddles on either side that dance slightly with the constant vibrations that shake the walls.</description>
+    <position x="240" y="140" z="0" />
+    <arc exit="north" move="north" destination="70" />
+  </node>
+  <node id="76" name="Dark Tunnel, Narrow Passage">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>Set in regular intervals along the walls are tzgaa orbs, their bases wrapped with darkened mold that cling tenaciously to the sides of the tunnel, and threaten to absorb as much of the wan light as possible.  Each orb twitches with movement, sympathetically shaking with the deep vibrations that shudder throughout these passages.</description>
+    <position x="300" y="120" z="0" />
+    <arc exit="north" move="north" destination="82" />
+    <arc exit="go" move="rt go debris-choked crevice" destination="77" />
+  </node>
+  <node id="77" name="Vast Cavern, Sandstone Ledge">
+    <description>Excavated back into the depths of the earth, a crude vault has been wrestled from the ancient sandstone.  Craggy and discolored by the dampness of the ages, the stone cavity begins far below to embrace the dank above.</description>
+    <position x="300" y="140" z="0" />
+    <arc exit="climb" move="climb steps" destination="78" />
+    <arc exit="none" move="rt dig debris-choked crevice" destination="76" />
+  </node>
+  <node id="78" name="Vast Cavern, Scarred Chamber">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>Whether by design or simply from random creation, intricate patterns circle the dank ruins that litter the floor of the cavern.  Hundreds of massive claw marks interweave with each other, tracking back and forth between the cavern walls, the ruins, and up along a sizable length of the ceiling.</description>
+    <position x="300" y="160" z="0" />
+    <arc exit="south" move="south" destination="79" />
+    <arc exit="climb" move="climb steps" destination="77" />
+  </node>
+  <node id="79" name="Vast Cavern, Central Collapse">
+    <description>Upon the floor of this uneven and jumbled cavern are the cluttered remains of a collapse, the heavy stone and block shattered and cracked from the obvious force of their fall.  Despite the mammoth rocks' weight, they quiver and shudder with the constant vibrations that echo throughout this vast underground.  Humming audibly and partially buried, lies a slagged pile of translucent material.</description>
+    <position x="300" y="180" z="0" />
+    <arc exit="north" move="north" destination="78" />
+    <arc exit="west" move="west" destination="80" />
+  </node>
+  <node id="80" name="Vast Cavern, Sidereal Collapse">
+    <description>Deeply embedded in the walls is an array of translucent shards, stuck fast as if hurled like arrows from a giant crossbow.  Chime-like overtones ring out from the shards as they quiver and pulse in sympathy with a deep, persistent thrumming that fills the air.  Rubble lies strewn everywhere, and so pockmarked is the ceiling and walls that it's a wonder the cavern is actually able to support itself against the constant vibrations.</description>
+    <position x="280" y="180" z="0" />
+    <arc exit="east" move="east" destination="79" />
+    <arc exit="down" move="down" destination="81" />
+  </node>
+  <node id="81" name="Vast Cavern, Sunken Collapse" color="#00FF00">
+    <description>Massive blocks of stone and shattered rock fill this sunken pit incompletely, revealing dark gaps through which pebbles and debris slide into occasionally.  Wedged between some of the choking collapse is a partially crushed glove, frozen in a grasping gesture as it lies pinned into place.  The remains of its owner are certainly buried beneath the ruin nearby.</description>
+    <position x="260" y="180" z="0" />
+    <arc exit="up" move="up" destination="80" />
+  </node>
+  <node id="82" name="Dark Tunnel, Narrow Passage">
+    <description>The surface of an elongated puddle shimmers forebodingly with iridescent patterns as striated rainbows of oil catch the flickering light from a tzgaa orb torch.  Bubbling up thickly, the acrid odors of sulfur and decay flee the muck, making this segment of the passage a most disagreeable place to be.</description>
+    <position x="300" y="100" z="0" />
+    <arc exit="south" move="south" destination="76" />
+    <arc exit="up" move="up" destination="83" />
+  </node>
+  <node id="83" name="Dark Tunnel, Narrow Passage">
+    <description>The floor quivers with a constant vibration that shakes the rubble, and despite what must have been years of settling, some of the smaller bits occasionally slide down the floor's descending slope.  Though haphazardly patched with blocks, an opening in one of the walls is still visible.</description>
+    <position x="280" y="120" z="0" />
+    <arc exit="down" move="down" destination="82" />
+    <arc exit="go" move="go opening" destination="84" />
+  </node>
+  <node id="84" name="Buried Mansion, Cellar">
+    <description>Blackened wreckage lies in ruin on the cellar floor, and the scattered bones included in the mess tell a tale of the violence which must have once swept through the area.  A pile of shattered stones near a wall marks the effort someone went through to create an opening.  Filled with darkness, where it leads is unclear, but the walls shake with the vibrations of a powerful noise.</description>
+    <position x="280" y="140" z="0" />
+    <arc exit="up" move="up" destination="85" />
+    <arc exit="go" move="go opening" destination="83" />
+  </node>
+  <node id="85" name="Buried Mansion, Stairwell">
+    <description>Circling around open air, this staircase of smoky stone must have taken dozens of workmen to build, given the obvious precision carving and number of steps.  Years of neglect, and whatever event caused the collapse of this entire underground area, have taken their toll, however, and gaps between some steps indicate that they may not stand forever.  From below, the constant thrumming noise grows louder.</description>
+    <position x="260" y="140" z="0" />
+    <arc exit="up" move="up" destination="74" />
+    <arc exit="down" move="down" destination="84" />
+  </node>
+  <node id="86" name="Observatory, Reception Lounge">
+    <description>Candles flickering in wall sconces of ornate bronzework light this wide chamber, the ebony hardwood floor reflecting a bright sheen from the passage of countless slippered feet.  A light smell of incense hangs in the air, tickling the nostrils of passersby as it wafts through a gilded archway to the west.</description>
+    <position x="160" y="-60" z="0" />
+    <arc exit="east" move="east" destination="87" />
+    <arc exit="go" move="go gilded archway" destination="14" />
+  </node>
+  <node id="87" name="Observatory, Seers' Passage">
+    <description>This short hallway runs from west to east, opening into a larger area through a golden arch at the west end.  Curtains of various colors cover open doorways lining both sides of the hall, the closest a gold one on the north wall, and a silver to the south.</description>
+    <position x="180" y="-60" z="0" />
+    <arc exit="east" move="east" destination="88" />
+    <arc exit="west" move="west" destination="86" />
+    <arc exit="go" move="go gold curtain" destination="97" />
+    <arc exit="go" move="go silver curtain" destination="98" />
+  </node>
+  <node id="88" name="Observatory, Seers' Passage">
+    <description>A pair of alcoves stand opposite each other in this section of the corridor, each covered by a metal-colored curtain.  The opening to the north sports an iron-colored drapery, and the one to the south is graced by a cloth of copper.</description>
+    <position x="200" y="-60" z="0" />
+    <arc exit="east" move="east" destination="89" />
+    <arc exit="west" move="west" destination="87" />
+    <arc exit="go" move="go copper curtain" destination="95" />
+    <arc exit="go" move="go iron-colored curtain" destination="96" />
+  </node>
+  <node id="89" name="Observatory, Seers' Passage">
+    <description>The end of this corridor can be seen, not far to the east.  A bronze curtain hangs across an alcove on the north wall, and a deep crimson one to the south.</description>
+    <position x="220" y="-60" z="0" />
+    <arc exit="east" move="east" destination="90" />
+    <arc exit="west" move="west" destination="88" />
+    <arc exit="go" move="go crimson curtain" destination="93" />
+    <arc exit="go" move="go bronze curtain" destination="94" />
+  </node>
+  <node id="90" name="Observatory, Seers' Passage">
+    <description>The corridor ends here at a cold mahogany wall, the passage stretching far to the west.  An ivory curtain hangs over the northern opening, while one of midnight black conceals its southern counterpart.</description>
+    <position x="240" y="-60" z="0" />
+    <arc exit="west" move="west" destination="89" />
+    <arc exit="go" move="go black curtain" destination="91" />
+    <arc exit="go" move="go ivory curtain" destination="92" />
+  </node>
+  <node id="91" name="Observatory, Ebony Room" color="#00FFFF">
+    <description>This small, round parlor is bounded by a series of doors, each the entry to a guild member's residence.  Furnished with a low table and chairs, callers may wait for friends who may be entertaining or working.  Everything is trimmed in shades of ebony, matching the curtain hanging over the exit.</description>
+    <position x="240" y="-40" z="0" />
+    <arc exit="go" move="go black curtain" destination="90" />
+  </node>
+  <node id="92" name="Observatory, White Room" color="#00FFFF">
+    <description>This small, round parlor is bounded by a series of doors, each the entry to a guild member's residence.  Furnished with a low table and chairs, callers may wait for friends who may be entertaining or working.  Everything is trimmed in shades of ivory, matching the curtain hanging over the exit.</description>
+    <position x="240" y="-80" z="0" />
+    <arc exit="go" move="go white curtain" destination="90" />
+  </node>
+  <node id="93" name="Observatory, Crimson Room" color="#00FFFF">
+    <description>This small, round parlor is bounded by a series of doors, each the entry to a guild member's residence.  Furnished with a low table and chairs, callers may wait for friends who may be entertaining or working.  Everything is trimmed in shades of crimson, matching the curtain hanging over the exit.</description>
+    <position x="220" y="-40" z="0" />
+    <arc exit="go" move="go crimson curtain" destination="89" />
+  </node>
+  <node id="94" name="Observatory, Bronze Room" color="#00FFFF">
+    <description>This small, round parlor is bounded by a series of doors, each the entry to a guild member's residence.  Furnished with a low table and chairs, callers may wait for friends who may be entertaining or working.  Everything is trimmed in shades of bronze, matching the curtain hanging over the exit.</description>
+    <position x="220" y="-80" z="0" />
+    <arc exit="go" move="go bronze curtain" destination="89" />
+  </node>
+  <node id="95" name="Observatory, Copper Room" color="#00FFFF">
+    <description>This small, round parlor is bounded by a series of doors, each the entry to a guild member's residence.  Furnished with a low table and chairs, callers may wait for friends who may be entertaining or working.  Everything is trimmed in shades of copper, matching the curtain hanging over the exit.</description>
+    <position x="200" y="-40" z="0" />
+    <arc exit="go" move="go copper curtain" destination="88" />
+  </node>
+  <node id="96" name="Observatory, Iron Room" color="#00FFFF">
+    <description>This small, round parlor is bounded by a series of doors, each the entry to a guild member's residence.  Furnished with a low table and chairs, callers may wait for friends who may be entertaining or working.  Everything is trimmed in shades of iron-grey, matching the curtain hanging over the exit.</description>
+    <position x="200" y="-80" z="0" />
+    <arc exit="go" move="go iron-colored curtain" destination="88" />
+  </node>
+  <node id="97" name="Observatory, Gold Room" color="#00FFFF">
+    <description>This small, round parlor is bounded by a series of doors, each the entry to a guild member's residence.  Furnished with a low table and chairs, callers may wait for friends who may be entertaining or working.  Everything is trimmed in shades of gold, matching the curtain hanging over the exit.</description>
+    <position x="180" y="-40" z="0" />
+    <arc exit="go" move="go gold curtain" destination="87" />
+  </node>
+  <node id="98" name="Observatory, Silver Room" color="#00FFFF">
+    <description>This small, round parlor is bounded by a series of doors, each the entry to a guild member's residence.  Furnished with a low table and chairs, callers may wait for friends who may be entertaining or working.  Everything is trimmed in shades of silver, matching the curtain hanging over the exit.</description>
+    <position x="180" y="-80" z="0" />
+    <arc exit="go" move="go silver curtain" destination="87" />
+  </node>
+  <label text="Pale Death Spirits">
+    <position x="200" y="-30" z="0" />
+  </label>
+</zone>

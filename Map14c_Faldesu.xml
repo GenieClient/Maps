@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Faldesu River" id="14c">
+  <node id="1" name="Faldesu River" color="#00FFFF">
+    <description>The swift waters of the river swirl violently, causing an undertow which threatens to drag down unwary swimmers.  To the south, the bank rises like a stony wave, an image belied by the deteriorating ruins of an old stone bridge.</description>
+    <position x="340" y="240" z="0" />
+    <arc exit="north" move="swim north" destination="3" />
+    <arc exit="northeast" move="swim northeast" />
+    <arc exit="east" move="swim east" />
+    <arc exit="southeast" move="swim southeast" destination="2" />
+    <arc exit="south" move="swim south" />
+    <arc exit="southwest" move="swim southwest" />
+    <arc exit="west" move="swim west" />
+    <arc exit="northwest" move="swim northwest" />
+  </node>
+  <node id="2" name="Faldesu River, South Bank" note="south" color="#00FFFF">
+    <description>A high, rocky bank supports the remains of a large stone bridge which once spanned the river.  From across the wide river the sounds of Riverhaven carry.  Further to the east, the swift waters slow near the tall reeds of an encroaching marsh.</description>
+    <position x="340" y="260" z="0" />
+    <arc exit="north" move="swim north" />
+    <arc exit="northeast" move="swim northeast" destination="1" />
+    <arc exit="northwest" move="swim northwest" />
+    <arc exit="climb" move="climb stone bridge" destination="21" />
+  </node>
+  <node id="3" name="Faldesu River" color="#00FFFF">
+    <description>The swift waters of the river swirl violently, causing an undertow which threatens to drag down unwary swimmers.  To the south, the remains of a crumbling bridge can easily be seen on the bank.</description>
+    <position x="340" y="220" z="0" />
+    <arc exit="north" move="swim north" />
+    <arc exit="northeast" move="swim northeast" destination="4" />
+    <arc exit="east" move="swim east" />
+    <arc exit="southeast" move="swim southeast" destination="1" />
+    <arc exit="south" move="swim south" />
+    <arc exit="southwest" move="swim southwest" />
+    <arc exit="west" move="swim west" />
+    <arc exit="northwest" move="swim northwest" />
+  </node>
+  <node id="4" name="Faldesu River" color="#00FFFF">
+    <description>The swift waters of the river swirl violently, causing an undertow which threatens to drag down unwary swimmers.  To the south, the remains of a crumbling bridge can easily be seen on the bank.</description>
+    <position x="340" y="200" z="0" />
+    <arc exit="north" move="swim north" />
+    <arc exit="northeast" move="swim northeast" destination="5" />
+    <arc exit="east" move="swim east" />
+    <arc exit="southeast" move="swim southeast" destination="3" />
+    <arc exit="south" move="swim south" />
+    <arc exit="southwest" move="swim southwest" />
+    <arc exit="west" move="swim west" />
+    <arc exit="northwest" move="swim northwest" />
+  </node>
+  <node id="5" name="Faldesu River" color="#00FFFF">
+    <description>The swift waters of the river swirl violently, causing an undertow which threatens to drag down unwary swimmers.  To the south, the remains of a crumbling bridge can easily be seen on the bank.</description>
+    <position x="340" y="180" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="6" />
+    <arc exit="south" move="swim south" />
+    <arc exit="north" move="swim north" />
+    <arc exit="west" move="swim west" />
+    <arc exit="northwest" move="swim northwest" />
+    <arc exit="east" move="swim east" />
+    <arc exit="southeast" move="swim southeast" destination="4" />
+    <arc exit="southwest" move="swim southwest" />
+  </node>
+  <node id="6" name="Faldesu River" color="#00FFFF">
+    <description>The swift waters of the river swirl violently, causing an undertow which threatens to drag down unwary swimmers.  In the distance, the ruined bridge on the south bank can be discerned.</description>
+    <position x="340" y="160" z="0" />
+    <arc exit="north" move="swim north" />
+    <arc exit="northeast" move="swim northeast" destination="7" />
+    <arc exit="east" move="swim east" />
+    <arc exit="southeast" move="swim southeast" destination="5" />
+    <arc exit="south" move="swim south" />
+    <arc exit="southwest" move="swim southwest" />
+    <arc exit="west" move="swim west" />
+    <arc exit="northwest" move="swim northwest" />
+  </node>
+  <node id="7" name="Faldesu River" color="#00FFFF">
+    <description>The swift waters of the river swirl violently, causing an undertow which threatens to drag down unwary swimmers.  In the distance, the ruined bridge on the south bank can be discerned.</description>
+    <position x="340" y="140" z="0" />
+    <arc exit="north" move="swim north" />
+    <arc exit="northeast" move="swim northeast" destination="8" />
+    <arc exit="east" move="swim east" />
+    <arc exit="southeast" move="swim southeast" destination="6" />
+    <arc exit="south" move="swim south" />
+    <arc exit="southwest" move="swim southwest" />
+    <arc exit="west" move="swim west" />
+    <arc exit="northwest" move="swim northwest" />
+  </node>
+  <node id="8" name="Faldesu River" color="#00FFFF">
+    <description>The swift waters of the river swirl violently, causing an undertow which threatens to drag down unwary swimmers.  In the distance, the ruined bridge on the south bank can be discerned.</description>
+    <position x="340" y="120" z="0" />
+    <arc exit="north" move="swim north" destination="9" />
+    <arc exit="northeast" move="swim northeast" />
+    <arc exit="east" move="swim east" />
+    <arc exit="southeast" move="swim southeast" destination="7" />
+    <arc exit="south" move="swim south" />
+    <arc exit="southwest" move="swim southwest" />
+    <arc exit="west" move="swim west" />
+    <arc exit="northwest" move="swim northwest" />
+  </node>
+  <node id="9" name="Faldesu River" color="#00FFFF">
+    <description>An enormous slab of rock is upthrust in the river to the north, cutting the water like a knife.  Downriver of the formation a low, forested island lies, a green tail to a stony comet.</description>
+    <position x="340" y="100" z="0" />
+    <arc exit="northeast" move="swim northeast" />
+    <arc exit="east" move="swim east" />
+    <arc exit="southeast" move="swim southeast" destination="8" />
+    <arc exit="south" move="swim south" />
+    <arc exit="southwest" move="swim southwest" />
+    <arc exit="west" move="swim west" />
+    <arc exit="northwest" move="swim northwest" destination="10" />
+  </node>
+  <node id="10" name="Faldesu River" note="boulder" color="#00FFFF">
+    <description>The rushing waters split around a huge boulder rising out of the river to the east.  The rock formation is worn inward where the water has taken its toll, but higher up on the rock garlands of green vines adorn the crown.</description>
+    <position x="320" y="80" z="0" />
+    <arc exit="north" move="swim north" />
+    <arc exit="northeast" move="swim northeast" destination="11" />
+    <arc exit="southeast" move="swim southeast" destination="9" />
+    <arc exit="south" move="swim south" />
+    <arc exit="southwest" move="swim southwest" />
+    <arc exit="west" move="swim west" />
+    <arc exit="northwest" move="swim northwest" />
+  </node>
+  <node id="11" name="Faldesu River" color="#00FFFF">
+    <description>An enormous slab of rock is upthrust in the river to the south, cutting the water like a knife.  Downriver of the formation a low, forested island lies, a green tail to a stony comet.</description>
+    <position x="340" y="60" z="0" />
+    <arc exit="north" move="swim north" />
+    <arc exit="northeast" move="swim northeast" destination="12" />
+    <arc exit="east" move="swim east" />
+    <arc exit="southeast" move="swim southeast" />
+    <arc exit="southwest" move="swim southwest" destination="10" />
+    <arc exit="west" move="swim west" />
+    <arc exit="northwest" move="swim northwest" />
+  </node>
+  <node id="12" name="Faldesu River" color="#00FFFF">
+    <description>The currents swirl violently in their rush downriver, the swift waters threatening to drag down the unwary swimmer.  To the north, the walls of Riverhaven are visible in the distance.</description>
+    <position x="340" y="40" z="0" />
+    <arc exit="north" move="swim north" />
+    <arc exit="northeast" move="swim northeast" destination="13" />
+    <arc exit="east" move="swim east" />
+    <arc exit="southeast" move="swim southeast" destination="11" />
+    <arc exit="south" move="swim south" />
+    <arc exit="southwest" move="swim southwest" />
+    <arc exit="west" move="swim west" />
+    <arc exit="northwest" move="swim northwest" />
+  </node>
+  <node id="13" name="Faldesu River" color="#00FFFF">
+    <description>The currents swirl violently in their rush downriver, the swift waters threatening to drag down the unwary swimmer.  To the north, the walls of Riverhaven are visible in the distance.</description>
+    <position x="340" y="20" z="0" />
+    <arc exit="north" move="swim north" />
+    <arc exit="northeast" move="swim northeast" destination="14" />
+    <arc exit="east" move="swim east" />
+    <arc exit="southeast" move="swim southeast" destination="12" />
+    <arc exit="south" move="swim south" />
+    <arc exit="southwest" move="swim southwest" />
+    <arc exit="west" move="swim west" />
+    <arc exit="northwest" move="swim northwest" />
+  </node>
+  <node id="14" name="Faldesu River" color="#00FFFF">
+    <description>The currents swirl violently in their rush downriver, the swift waters threatening to drag down the unwary swimmer.  To the north, the walls of Riverhaven are visible in the distance.</description>
+    <position x="340" y="0" z="0" />
+    <arc exit="north" move="swim north" />
+    <arc exit="northeast" move="swim northeast" destination="15" />
+    <arc exit="east" move="swim east" />
+    <arc exit="southeast" move="swim southeast" destination="13" />
+    <arc exit="south" move="swim south" />
+    <arc exit="southwest" move="swim southwest" />
+    <arc exit="west" move="swim west" />
+    <arc exit="northwest" move="swim northwest" />
+  </node>
+  <node id="15" name="Faldesu River" color="#00FFFF">
+    <description>The currents swirl violently in their rush downriver, the swift waters threatening to drag down the unwary swimmer.  To the north, the walls of Riverhaven are visible in the distance.</description>
+    <position x="340" y="-20" z="0" />
+    <arc exit="north" move="swim north" />
+    <arc exit="northeast" move="swim northeast" destination="16" />
+    <arc exit="east" move="swim east" />
+    <arc exit="southeast" move="swim southeast" destination="14" />
+    <arc exit="south" move="swim south" />
+    <arc exit="southwest" move="swim southwest" />
+    <arc exit="west" move="swim west" />
+    <arc exit="northwest" move="swim northwest" />
+  </node>
+  <node id="16" name="Faldesu River" color="#00FFFF">
+    <description>The currents swirl violently in their rush downriver, the swift waters threatening to drag down the unwary swimmer.  To the north, the walls of Riverhaven are visible in the distance.</description>
+    <position x="340" y="-40" z="0" />
+    <arc exit="north" move="swim north" />
+    <arc exit="northeast" move="swim northeast" destination="17" />
+    <arc exit="east" move="swim east" />
+    <arc exit="southeast" move="swim southeast" destination="15" />
+    <arc exit="south" move="swim south" />
+    <arc exit="southwest" move="swim southwest" />
+    <arc exit="west" move="swim west" />
+    <arc exit="northwest" move="swim northwest" />
+  </node>
+  <node id="17" name="Faldesu River" color="#00FFFF">
+    <description>The currents swirl violently in their rush downriver, the swift waters threatening to drag down the unwary swimmer.  To the north, the town of Riverhaven squats on the bank, its high walls brooding over the turbulent Faldesu.</description>
+    <position x="340" y="-60" z="0" />
+    <arc exit="north" move="swim north" />
+    <arc exit="northeast" move="swim northeast" destination="18" />
+    <arc exit="east" move="swim east" />
+    <arc exit="southeast" move="swim southeast" destination="16" />
+    <arc exit="south" move="swim south" />
+    <arc exit="southwest" move="swim southwest" />
+    <arc exit="west" move="swim west" />
+    <arc exit="northwest" move="swim northwest" />
+  </node>
+  <node id="18" name="Faldesu River" color="#00FFFF">
+    <description>The currents swirl violently in their rush downriver, the swift waters threatening to drag down the unwary swimmer.  To the north, the town of Riverhaven squats on the bank, its high walls brooding over the turbulent Faldesu.</description>
+    <position x="340" y="-80" z="0" />
+    <arc exit="north" move="swim north" />
+    <arc exit="northeast" move="swim northeast" destination="19" />
+    <arc exit="east" move="swim east" />
+    <arc exit="southeast" move="swim southeast" destination="17" />
+    <arc exit="south" move="swim south" />
+    <arc exit="southwest" move="swim southwest" />
+    <arc exit="west" move="swim west" />
+    <arc exit="northwest" move="swim northwest" />
+  </node>
+  <node id="19" name="Faldesu River" color="#00FFFF">
+    <description>The currents swirl violently in their rush downriver, the swift waters threatening to drag down the unwary swimmer.  To the north, the town of Riverhaven squats on the bank, its high walls brooding over the turbulent Faldesu.</description>
+    <position x="340" y="-100" z="0" />
+    <arc exit="north" move="swim north" />
+    <arc exit="northeast" move="swim northeast" destination="20" />
+    <arc exit="east" move="swim east" />
+    <arc exit="southeast" move="swim southeast" destination="18" />
+    <arc exit="south" move="swim south" />
+    <arc exit="southwest" move="swim southwest" />
+    <arc exit="west" move="swim west" />
+    <arc exit="northwest" move="swim northwest" />
+  </node>
+  <node id="20" name="Faldesu River, North Bank" note="north" color="#00FFFF">
+    <description>The Riverhaven town wall stretches out into the waters a short distance upriver from a crumbling stone bridge.  An orange glow rises above the dark wall from the torches and lamps of the town along with the low buzz of voices muffled by the night.  Several small fishing boats bob in the sheltered part of the river near the town wall, silently awaiting their masters.</description>
+    <description>The Riverhaven town wall stretches out into the waters a short distance upriver from a crumbling stone bridge.  The sounds of pleading beggars and creaking merchant wagons grate against the peaceful sounds of the rolling river.  Small fishing boats bob in the sheltered cove formed by the town wall, their weather-wary owners busy on the bank mending nets and patching sail.</description>
+    <description>The Riverhaven town wall stretches out into the waters a short distance upriver from a crumbling stone bridge.  The sounds of pleading beggars and creaking merchant wagons grate against the peaceful sounds of the rolling river.  Small fishing boats bob in the sheltered cove formed by the town wall, their weather-wary owners busy on the bank mending nets and patching sail.</description>
+    <position x="340" y="-120" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="19" />
+    <arc exit="south" move="swim south" />
+    <arc exit="southwest" move="swim southwest" />
+    <arc exit="climb" move="climb stone bridge" destination="22" />
+  </node>
+  <node id="21" name="The Marsh, Stone Road" note="Map7_NTR.xml|NTR|Crossing">
+    <description>A large stone bridge that once spanned the expanse of the river here, now lays in ruin.  The town of Riverhaven, the bridge's orginal destination, sits on the other side.  Gazing at the town, the orange glow of the town's street torches forms an eerie dome in the night sky.  To the southeast, a wall of reeds creeps down from a group of trees into the river and attempts to survive the currents of the river.</description>
+    <description>A large stone bridge that once spanned the expanse of the river here, now lays in ruin.  The town of Riverhaven, the bridge's original destination, sits on the other side.  Gazing at the town, you notice a haze of brown lingers in the air, no doubt the result of the forges and smoke houses at work.  To the southeast, a wall of reeds creeps down from a group of trees into the river and attempts to survive its currents.</description>
+    <description>A large stone bridge that once spanned the river here now lies in ruins.  The town of Riverhaven, the bridge's original destination, sits on the other side.  Gazing at the town, you notice that a brown haze lingers in the air, no doubt the result of the forges and smokehouses at work.  To the southeast, a wall of reeds creeps down from a group of trees into the river and attempts to survive its currents.</description>
+    <description>A large stone bridge that once spanned the river here now lies in ruins.  The town of Riverhaven, the bridge's original destination, sits on the other side.  Gazing at the town, you notice that the orange glow of the town's street torches forms an eerie dome in the night sky.  To the southeast, a wall of reeds creeps down from a group of trees into the river and attempts to survive the currents of the river.</description>
+    <position x="340" y="280" z="0" />
+    <arc exit="southeast" move="southeast" />
+  </node>
+  <node id="22" name="Riverhaven, Stone Bridge" note="Map31_Riverhaven_East_Gate.xml|Riverhaven">
+    <description>The lanes outside the eastern gate of Riverhaven are crowded with the bustle of street peddlers and merchant wagons coming and going in a great rush to sell their wares.  Beggars line the paved road, aware that the more influential and wealthy folks use this gate.  They hover, hands extended, hoping that a moment of kindness and charity might befall them.  A stone bridge that once provided passage across the river is now little more than a crumbling stone pier used by some local fishermen.</description>
+    <position x="340" y="-140" z="0" />
+    <arc exit="northeast" move="northeast" />
+    <arc exit="none" move="dive river" destination="20" />
+  </node>
+  <label text="East is the easiest direction to swim,">
+    <position x="60" y="-50" z="0" />
+  </label>
+  <label text="To Riverhaven East Gate">
+    <position x="200" y="-140" z="0" />
+  </label>
+  <label text="To the NTR">
+    <position x="270" y="270" z="0" />
+  </label>
+  <label text="Center Boulder, hardest swim">
+    <position x="150" y="70" z="0" />
+  </label>
+  <label text="(south on the south side of the boulder, north on the north side)">
+    <position x="0" y="-10" z="0" />
+  </label>
+  <label text="FALDESU RIVER">
+    <position x="100" y="-100" z="0" />
+  </label>
+  <label text="and always takes you back to shore">
+    <position x="60" y="-30" z="0" />
+  </label>
+</zone>

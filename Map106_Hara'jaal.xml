@@ -1,0 +1,1758 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Hara'jaal" id="106">
+  <node id="1" name="Beach, Hara'jaal" note="Beach Dock">
+    <description>The black sand beach stretches to either side of a makeshift stone quay.  Piles of wood stand off to one side of a jerry-rigged hut.  A short distance from the shanty, a large dug out pit, encircled by black stones, is lined with the remains of many fires.</description>
+    <position x="-40" y="-100" z="0" />
+    <arc exit="east" move="east" destination="2" />
+    <arc exit="south" move="south" destination="5" />
+    <arc exit="west" move="west" destination="6" />
+  </node>
+  <node id="2" name="Hara'jaal, Beach">
+    <description>The beach is extremely rocky through here.  Stiff sage grass grows in tight clumps in the black sands.  A sheer cliff closes off the shore from the rest of the island.</description>
+    <position x="-20" y="-100" z="0" />
+    <arc exit="southeast" move="southeast" destination="3" />
+    <arc exit="southwest" move="southwest" destination="5" />
+    <arc exit="west" move="west" destination="1" />
+  </node>
+  <node id="3" name="Hara'jaal, Beach">
+    <description>Wind-blasted shrubs edge the base of a sheer cliff that looms over the beach.  Very little coastline stands between the ocean and the tall precipice.  A number of bleached wooden skeletons, remnants of wrecked ships, lie broken amidst the tangles of surrounding brush.</description>
+    <position x="0" y="-80" z="0" />
+    <arc exit="southeast" move="southeast" destination="4" />
+    <arc exit="northwest" move="northwest" destination="2" />
+  </node>
+  <node id="4" name="Hara'jaal, Beach">
+    <description>The beach ends at a sheer rock wall.  Withered roots and vines cover the cliff like a network of brown capillaries.  Cadaverous bushes hold a tenuous grip on the small amount of beach left by the ocean.</description>
+    <position x="20" y="-60" z="0" />
+    <arc exit="northwest" move="northwest" destination="3" />
+    <arc exit="climb" move="climb up" destination="15" />
+  </node>
+  <node id="5" name="Hara'jaal, Beach">
+    <description>An extremely steep mass of slick obsidian rises up and out of view.  Deep shadows pervade the area.  Very little of the beach is visible from here.</description>
+    <position x="-40" y="-80" z="0" />
+    <arc exit="north" move="north" destination="1" />
+    <arc exit="northeast" move="northeast" destination="2" />
+    <arc exit="northwest" move="northwest" destination="6" />
+    <arc exit="none" move="search;#send 4 go shadowed opening" destination="9" />
+  </node>
+  <node id="6" name="Hara'jaal, Beach">
+    <description>Thick bushes, sun-scorched a dark brown, edge a steep cliff hiding the foot of the stone barrier.  The surf beats hard against the obsidian grit beach.</description>
+    <position x="-60" y="-100" z="0" />
+    <arc exit="east" move="east" destination="1" />
+    <arc exit="southeast" move="southeast" destination="5" />
+    <arc exit="southwest" move="southwest" destination="7" />
+  </node>
+  <node id="7" name="Hara'jaal, Beach">
+    <description>The black sands of the beach stretch around thirty feet from the surf to a tall cliff.  Shrubs edge the steepness, blocking the view of the cliff's base.</description>
+    <position x="-80" y="-80" z="0" />
+    <arc exit="northeast" move="northeast" destination="6" />
+    <arc exit="southwest" move="southwest" destination="8" />
+  </node>
+  <node id="8" name="Hara'jaal, Beach">
+    <description>The beach ends abruptly at a tall escarpment.  Thorny brush grows around the base of the steep rock wall.  Brown vines climb the wall along with a number of creepers that grip the steepness precariously.</description>
+    <position x="-100" y="-60" z="0" />
+    <arc exit="northeast" move="northeast" destination="7" />
+    <arc exit="climb" move="climb up" destination="26" />
+  </node>
+  <node id="9" name="Hara'jaal, Old Lava Tube">
+    <description>A small beam of light streams down from high above, illuminating the ridged obsidian walls of the tunnel.  The damp air in this shaft smells vaguely of sulfur and strongly of mildew.</description>
+    <position x="-40" y="-60" z="0" />
+    <arc exit="out" move="out" destination="5" />
+    <arc exit="climb" move="climb shaft" destination="10" />
+  </node>
+  <node id="10" name="Hara'jaal, Old Lava Tube">
+    <description>The walls of the tunnel fold outward to form a small platform with just enough room to stand on.  A muted light fills the shaft, coloring everything in shades of grey.</description>
+    <position x="-40" y="-40" z="0" />
+    <arc exit="climb" move="climb shaft" destination="11" />
+    <arc exit="climb" move="climb tube" destination="9" />
+  </node>
+  <node id="11" name="Hara'jaal, Old Lava Tube">
+    <description>Sharp protrusions along the obsidian walls of the tunnel create precarious handholds, while the sulfurous residue underfoot causes the shadowy ledge jutting out from the shaft to be anything but a comfortable resting spot.</description>
+    <position x="-40" y="-20" z="0" />
+    <arc exit="climb" move="climb shaft" destination="12" />
+    <arc exit="climb" move="climb tube" destination="10" />
+  </node>
+  <node id="12" name="Hara'jaal, Old Lava Tube">
+    <description>Small pebbles shift and slide down the walls of the lava tube, quickly vanishing into the darkened abyss below.  Jagged chips of obsidian crunch underfoot, mute testament to the effort and determination needed to scale the shaft's heights.</description>
+    <position x="-40" y="0" z="0" />
+    <arc exit="climb" move="climb shaft" destination="13" />
+    <arc exit="climb" move="climb tube" destination="11" />
+  </node>
+  <node id="13" name="Hara'jaal, Old Lava Tube">
+    <description>The shaft comes to an end at a small outcrop opposite a hole in the wall.  Fresh air and light pours in from the opening.</description>
+    <position x="-40" y="20" z="0" />
+    <arc exit="out" move="out" destination="14" />
+    <arc exit="climb" move="climb tube" destination="12" />
+  </node>
+  <node id="14" name="Hara'jaal, Amo Potha Telga">
+    <description>The sandy beach is visible below at the foot of this tall cliff.  A steep slope leads down into a deep wooded thicket.  In the distance is the island's mother, an ancient mist-covered volcano, rising high above the forest's canopy.  The top of an old lava tube is barely discernible.</description>
+    <position x="-40" y="40" z="0" />
+    <arc exit="go" move="go lava tube" destination="13" />
+    <arc exit="climb" move="climb slope" destination="21" />
+  </node>
+  <node id="15" name="A Steep Cliff">
+    <description>A narrow ledge offers a brief respite from the climb.  A fall from this height, unlikely to be fatal, would definitely be detrimental to a person's health and well-being.</description>
+    <position x="20" y="-40" z="0" />
+    <arc exit="climb" move="script autoclimbup" destination="16" />
+    <arc exit="climb" move="script autoclimbdown" destination="4" />
+  </node>
+  <node id="16" name="A Steep Cliff">
+    <description>Sparse handholds provide a moment to catch a quick breath.  It is a sheer drop to the ground from here.  A network of brown and partially withered vines cover the rock face.</description>
+    <position x="20" y="-20" z="0" />
+    <arc exit="climb" move="script autoclimbup" destination="17" />
+    <arc exit="climb" move="script autoclimbdown" destination="15" />
+  </node>
+  <node id="17" name="A Steep Cliff">
+    <description>This slight perch is a dizzying height from the beach at the foot of the rocky precipice.  A puny black conifer hangs grimly by its feeble looking roots from the sheer overhang.</description>
+    <position x="20" y="0" z="0" />
+    <arc exit="climb" move="script autoclimbup" destination="18" />
+    <arc exit="climb" move="script autoclimbdown" destination="16" />
+  </node>
+  <node id="18" name="Hara'jaal, Amo Potha Telga">
+    <description>The black sands of the beach are visible below at the foot of this obsidian and granite cliff.  A slight slope leads down into a deep wooded thicket.  In the distance is the island's mother, an ancient mist-covered volcano, rising high above the forest's canopy.</description>
+    <position x="20" y="20" z="0" />
+    <arc exit="southwest" move="southwest" destination="19" />
+    <arc exit="climb" move="script autoclimbdown" destination="17" />
+  </node>
+  <node id="19" name="Hara'jaal, Amo Potha Telga">
+    <description>A faint path opens up here from the south.  The ground slopes away from a tangled thicket heading up a steady but gradual incline to the northeast.</description>
+    <position x="0" y="40" z="0" />
+    <arc exit="northeast" move="northeast" destination="18" />
+    <arc exit="go" move="go faint path" destination="20" />
+  </node>
+  <node id="20" name="Hara'jaal, Amo Potha Telga" color="#FFBF00">
+    <description>Thick-growing brush closes around the barely visible path, throwing all into deep shadows.  Black branches, like cadaverous fingers, block the skies above.</description>
+    <position x="-40" y="80" z="0" />
+    <arc exit="north" move="rt north" destination="21" />
+    <arc exit="northeast" move="rt northeast" destination="19" />
+    <arc exit="south" move="rt south" destination="27" />
+    <arc exit="northwest" move="rt northwest" destination="22" />
+    <arc exit="go" move="go thick-growing brush" destination="28" />
+  </node>
+  <node id="21" name="Hara'jaal, Amo Potha Telga">
+    <description>A faint path opens up into this clearing and leads into the tangled thicket in the south.  The ground slopes steeply to the north.</description>
+    <position x="-40" y="60" z="0" />
+    <arc exit="go" move="go faint path" destination="20" />
+    <arc exit="climb" move="climb slope" destination="14" />
+  </node>
+  <node id="22" name="Hara'jaal, Amo Potha Telga">
+    <description>A faint path opens up into this clearing on the edge of a tangled thicket.  The ground slopes to the northwest in a steady but gradual incline.</description>
+    <position x="-80" y="40" z="0" />
+    <arc exit="northwest" move="northwest" destination="23" />
+    <arc exit="go" move="go faint path" destination="20" />
+  </node>
+  <node id="23" name="Hara'jaal, Amo Potha Telga">
+    <description>The beach and ocean are visible below at the foot of this tall cliff.  A slight slope leads down into a deep wooded thicket.  In the distance is the island's mother, an ancient mist-covered volcano, rising high above the forest's canopy.</description>
+    <position x="-100" y="20" z="0" />
+    <arc exit="southeast" move="southeast" destination="22" />
+    <arc exit="climb" move="climb down" destination="24" />
+  </node>
+  <node id="24" name="A Steep Cliff">
+    <description>This slight perch is a dizzying height from the beach at the foot of the rocky precipice.  A spider web of vines covers the sheer surface of the overhang.</description>
+    <position x="-100" y="0" z="0" />
+    <arc exit="climb" move="script autoclimbdown" destination="25" />
+    <arc exit="climb" move="script autoclimbup" destination="23" />
+  </node>
+  <node id="25" name="A Steep Cliff">
+    <description>Sparse handholds provide a moment to catch a quick breath.  It is a sheer drop to the ground from here.  Small trees have a precarious hold on the rock face but still seem to squeak out a meager life.</description>
+    <position x="-100" y="-20" z="0" />
+    <arc exit="climb" move="script autoclimbdown" destination="26" />
+    <arc exit="climb" move="script autoclimbup" destination="24" />
+  </node>
+  <node id="26" name="A Steep Cliff">
+    <description>A narrow ledge offers a brief respite from the climb.  A fall from this height, unlikely to be fatal, would definitely be detrimental to a person's health and well-being.</description>
+    <position x="-100" y="-40" z="0" />
+    <arc exit="climb" move="script autoclimbdown" destination="8" />
+    <arc exit="climb" move="script autoclimbup" destination="25" />
+  </node>
+  <node id="27" name="Hara'jaal, Amo Potha Telga" color="#FFBF00">
+    <description>The pitch-black dirt of the ground is covered in dark green moss.  Thorny bushes along the faint trail give off a powerful stench of rot and mold.</description>
+    <position x="-40" y="100" z="0" />
+    <arc exit="north" move="rt north" destination="20" />
+    <arc exit="south" move="rt south" destination="29" />
+  </node>
+  <node id="28" name="A Hidden Grotto" note="Shrine|Trothfang" color="#4080FF">
+    <description>Thick brush surrounds this bowl-shaped depression, hiding the outside world from view.  Tall stones, pockmarked with age, encircle an obsidian altar.  The air seems eerily still and empty of noise from the surrounding forest.</description>
+    <position x="-60" y="80" z="0" />
+    <arc exit="climb" move="climb overgrown slope" destination="20" />
+  </node>
+  <node id="29" name="Hara'jaal, Amo Potha Telga" color="#FFBF00">
+    <description>Brush closes in on every side of the trail like stout walls.  Large roots break through the black soil, causing the trail to fade in and out.</description>
+    <position x="-40" y="120" z="0" />
+    <arc exit="north" move="rt north" destination="27" />
+    <arc exit="south" move="rt south" destination="30" />
+  </node>
+  <node id="30" name="Hara'jaal, Amo Potha Telga" color="#FFBF00">
+    <description>Darkness shrouds the already faint trail as the surrounding trees' leafy boughs block the sky overhead.  Thorny vines, covering everything nearby, give off an acrid scent.</description>
+    <position x="-40" y="140" z="0" />
+    <arc exit="north" move="rt north" destination="29" />
+    <arc exit="southeast" move="rt southeast" destination="31" />
+  </node>
+  <node id="31" name="Hara'jaal, Amo Potha Telga">
+    <description>The trail opens up into a grassy glade.  A giant oak tree growing in the center of the clearing rises high above the forest canopy.  Black vines hang down from the foliage like dark curtains.</description>
+    <position x="-20" y="160" z="0" />
+    <arc exit="southeast" move="southeast" destination="34" />
+    <arc exit="northwest" move="northwest" destination="30" />
+    <arc exit="climb" move="climb oak tree" destination="32" />
+  </node>
+  <node id="32" name="Amo Potha Telga, A Tree">
+    <description>Thick limbs come together at the trunk, creating a natural cup-shaped platform.  Some of the branches stretch upward into the upper portion of the tree.</description>
+    <position x="0" y="160" z="0" />
+    <arc exit="climb" move="climb thick branch" destination="33" />
+    <arc exit="climb" move="climb tree trunk" destination="31" />
+  </node>
+  <node id="33" name="Amo Potha Telga, A Tree">
+    <description>From atop the tree one can see over top of the forest's canopy which stretches in all directions like a great green carpet.  To the south the ancient volcano that gave birth to the island is seen rising over the woods.</description>
+    <position x="20" y="160" z="0" />
+    <arc exit="climb" move="climb thick branch" destination="32" />
+  </node>
+  <node id="34" name="Hara'jaal, Amo Potha Telga" color="#FFBF00">
+    <description>Thick walls of vegetation surround the faint trail on every side.  The trees grow straight and tall, their dense foliage blocking out the sky.</description>
+    <position x="0" y="180" z="0" />
+    <arc exit="south" move="rt south" destination="35" />
+    <arc exit="northwest" move="rt northwest" destination="31" />
+  </node>
+  <node id="35" name="Hara'jaal, Amo Potha Telga" color="#FFBF00">
+    <description>Dense detritus covers the rough path, leaving only the protruding tree roots visible.  A number of sharp-thorned bushes line the barely visible trail.</description>
+    <position x="0" y="200" z="0" />
+    <arc exit="north" move="rt north" destination="34" />
+    <arc exit="south" move="rt south" destination="36" />
+  </node>
+  <node id="36" name="Hara'jaal, Amo Potha Telga" color="#FFBF00">
+    <description>The thicket becomes impassable to the south, while clearing further to the east.  A dry wind blows through the dark foliage, carrying with it a sweet scent.</description>
+    <position x="0" y="220" z="0" />
+    <arc exit="north" move="rt north" destination="35" />
+    <arc exit="east" move="rt east" destination="37" />
+  </node>
+  <node id="37" name="Hara'jaal, Amo Potha Telga">
+    <description>The brush is thin through this area, making the trail much easier to navigate.  To the west, the forest phases into dense thickets filled with murky shadows.</description>
+    <position x="20" y="220" z="0" />
+    <arc exit="east" move="east" destination="38" />
+    <arc exit="west" move="west" destination="36" />
+  </node>
+  <node id="38" name="Hara'jaal, Amo Potha Telga">
+    <description>Large fingers of igneous rock, worn down by many years of erosion, border the trail as it makes it way eastward.</description>
+    <position x="40" y="220" z="0" />
+    <arc exit="east" move="east" destination="39" />
+    <arc exit="west" move="west" destination="37" />
+  </node>
+  <node id="39" name="Hara'jaal, Amo Potha Telga">
+    <description>Scrubby grasses grow in the cracks of the rocky trail.  A great mountain rises to the south, blocking out the sky with its impressive height.</description>
+    <position x="60" y="220" z="0" />
+    <arc exit="south" move="south" destination="40" />
+    <arc exit="west" move="west" destination="38" />
+  </node>
+  <node id="40" name="Hara'jaal, Amo Potha Telga">
+    <description>The rough terrain makes the trail harder to navigate as it draws close to the foot of the island's volcanic mother.  Scrawny trees cover the mountain's craggy heights.</description>
+    <position x="60" y="240" z="0" />
+    <arc exit="north" move="north" destination="39" />
+    <arc exit="south" move="south" destination="41" />
+  </node>
+  <node id="41" name="Hara'jaal, Amo Potha Telga">
+    <description>The trail is blocked to the south by the mountain's steep walls, forcing it to skirt the ancient volcano.  Massive protrusions and wafer-thin ledges of obsidian extend from the volcano's surface, overhanging the path like branches from a tree of smoked glass.</description>
+    <position x="60" y="260" z="0" />
+    <arc exit="north" move="north" destination="40" />
+    <arc exit="southwest" move="southwest" destination="42" />
+  </node>
+  <node id="42" name="Hara'jaal, Amo Potha Telga">
+    <description>A wide grassland is the only thing visible to the south and west from here.  The trail continues to circle around the mountain that takes up the whole of the eastern horizon.</description>
+    <position x="40" y="280" z="0" />
+    <arc exit="northeast" move="northeast" destination="41" />
+    <arc exit="southwest" move="southwest" destination="43" />
+  </node>
+  <node id="43" name="Hara'jaal, Amo Potha Telga">
+    <description>Black ridges of stone cross the trail, making it difficult to continue onward in places.  Sharp-leafed weeds grow up out of the cracks in the path.</description>
+    <position x="20" y="300" z="0" />
+    <arc exit="northeast" move="northeast" destination="42" />
+    <arc exit="south" move="south" destination="44" />
+  </node>
+  <node id="44" name="Hara'jaal, Amo Potha Telga">
+    <description>The air smells vaguely of sulfur gasses through this area.  Withered trees seem to scavenge a meager existence on the slopes of the mountain, though how the scrawny things hold purchase on the craggy rocks is difficult to see.</description>
+    <position x="20" y="320" z="0" />
+    <arc exit="north" move="north" destination="43" />
+    <arc exit="south" move="south" destination="45" />
+  </node>
+  <node id="45" name="Hara'jaal, Amo Potha Telga">
+    <description>Following along the foot of the mountain to the north, the trail turns to the southeast here, away from the volcano.  A vast grassland can be seen further to the west and south, though there seems to be no clear way to reach it as of yet.</description>
+    <position x="20" y="340" z="0" />
+    <arc exit="north" move="north" destination="44" />
+    <arc exit="southeast" move="southeast" destination="46" />
+  </node>
+  <node id="46" name="Hara'jaal, Amo Potha Telga">
+    <description>Though still stunted, the vegetation seems to be finding greater purchase along the trail as it moves southeast.  The north is full of the majestic glory of the volcano that gave birth to the black sands of the island.</description>
+    <position x="40" y="360" z="0" />
+    <arc exit="southeast" move="southeast" destination="47" />
+    <arc exit="northwest" move="northwest" destination="45" />
+  </node>
+  <node id="47" name="Hara'jaal, Amo Potha Telga">
+    <description>The trail turns east here, beginning a descent into a grass-filled valley.  To the north, the steep walls of the island's volcanic mother cause the path to turn westerly, skirting the mountain as it continues onward.</description>
+    <position x="60" y="380" z="0" />
+    <arc exit="east" move="east" destination="48" />
+    <arc exit="northwest" move="northwest" destination="46" />
+  </node>
+  <node id="48" name="Hara'jaal, Amo Potha Telga">
+    <description>The trail pauses for a moment on top of this low hill.  To the north, one can still see the massive expanse of the volcano that gave rise to this island.  The south holds nothing but a vast grassland.  Close by, the thunder of a waterfall can barely be heard, echoing from some unseen valley.</description>
+    <position x="80" y="380" z="0" />
+    <arc exit="south" move="south" destination="49" />
+    <arc exit="west" move="west" destination="47" />
+  </node>
+  <node id="49" name="Hara'jaal, Glaren Kweld">
+    <description>A slope leads down into a plain of tall blue-black grasses.  The grassland stretches far into the distance like a living sea, waving with the tiniest breeze.  To the north are the slopes of the island's mother, an ancient volcano.</description>
+    <position x="80" y="400" z="0" />
+    <arc exit="north" move="north" destination="48" />
+    <arc exit="none" move="climb slope" destination="197" />
+  </node>
+  <node id="50" name="Hara'jaal, Fal Daelfa">
+    <description>Running water can be heard through the thick foliage to the east, though no clear trail leads in that direction.  The trees are thin and tall, competing for every bit of sunlight.</description>
+    <position x="260" y="540" z="0" />
+    <arc exit="north" move="north" destination="52" />
+    <arc exit="south" move="south" destination="51" />
+  </node>
+  <node id="51" name="Hara'jaal, Fal Daelfa">
+    <description>The land slopes gently to the southwest, leading into a small valley.  Marshy patches of ground make the trail a bit difficult to negotiate at points.</description>
+    <position x="260" y="560" z="0" />
+    <arc exit="north" move="north" destination="50" />
+    <arc exit="southwest" move="southwest" destination="53" />
+  </node>
+  <node id="52" name="Hara'jaal, Glaren Kweld">
+    <description>A grassland stretches far into the north while a vast river plain is visible to the south.  Sparse shrubbery lines a barely recognizable trail that leads towards the river.  To the north, the summit of the island's volcano is still visible.</description>
+    <position x="260" y="520" z="0" />
+    <arc exit="north" move="north" destination="196" />
+    <arc exit="go" move="go trail" destination="50" />
+  </node>
+  <node id="53" name="Hara'jaal, Fal Daelfa">
+    <description>Small pools of stagnant water pervade this grass-covered depression.  Gnats swarm around the puddles of black sludge.  Squat, leafy trees encircle the dell, throwing the area into deep shadows.</description>
+    <position x="240" y="580" z="0" />
+    <arc exit="northeast" move="northeast" destination="51" />
+    <arc exit="southwest" move="southwest" destination="54" />
+  </node>
+  <node id="54" name="Hara'jaal, Fal Daelfa">
+    <description>The ground here begins to bank down into a small valley to the northeast.  A strong smell of rotting detritus drifts up from the shadowed glen.  Scattered shrubs close the gaps around the tall trees in the area, blocking most of the surroundings from view.</description>
+    <position x="220" y="600" z="0" />
+    <arc exit="northeast" move="northeast" destination="53" />
+    <arc exit="south" move="south" destination="55" />
+  </node>
+  <node id="55" name="Hara'jaal, Fal Daelfa">
+    <description>To the southeast, a tree-covered hillock rises up, crowned with a finger of rock that is visible over the treetops.  A tall thicket runs along the trail that continues south.</description>
+    <position x="220" y="620" z="0" />
+    <arc exit="north" move="north" destination="54" />
+    <arc exit="south" move="south" destination="56" />
+  </node>
+  <node id="56" name="Hara'jaal, Fal Daelfa">
+    <description>The trail cuts a tunnel through the rugged copse, bypassing a dense thicket of thorny vines that blocks the way south and skirts a hillock to the northeast.  Some black sap, dripping from the vines, is giving off a pungent aroma.</description>
+    <position x="220" y="640" z="0" />
+    <arc exit="north" move="north" destination="55" />
+    <arc exit="east" move="east" destination="57" />
+  </node>
+  <node id="57" name="Hara'jaal, Fal Daelfa">
+    <description>Sounds of running water are coming out of the east.  A dark thicket rises up in the west, the vague trail disappearing within it.</description>
+    <position x="240" y="640" z="0" />
+    <arc exit="east" move="east" destination="58" />
+    <arc exit="west" move="west" destination="56" />
+  </node>
+  <node id="58" name="Hara'jaal, Fal Daelfa">
+    <description>The path opens up into a sandy clearing, with the black waters of the Seord Fal visible through the bushes that line the riverbank.  Gaunt cypress knees covered in grey-green algae surround a large moss-covered cypress tree growing on the edge of the glade.</description>
+    <position x="260" y="640" z="0" />
+    <arc exit="southwest" move="southwest" destination="59" />
+    <arc exit="west" move="west" destination="57" />
+    <arc exit="climb" move="climb cypress tree" destination="116" />
+  </node>
+  <node id="59" name="Hara'jaal, Fal Daelfa">
+    <description>The track runs along a steep cliff that borders a dark river.  Lush bushes grow along the top of the rocky overhang.  A large cypress tree can be seen over the other treetops to the northeast.</description>
+    <position x="240" y="660" z="0" />
+    <arc exit="northeast" move="northeast" destination="58" />
+    <arc exit="south" move="south" destination="60" />
+    <arc exit="climb" move="climb steep cliff" destination="71" />
+  </node>
+  <node id="60" name="Hara'jaal, Fal Daelfa">
+    <description>The land slopes to the southeast towards the river, which burbles loudly in the distance.  Black boulders, overgrown with thick vines, stick up out of the ground, merging into a tall cliff to the north.</description>
+    <position x="240" y="680" z="0" />
+    <arc exit="north" move="north" destination="59" />
+    <arc exit="southeast" move="southeast" destination="61" />
+  </node>
+  <node id="61" name="Hara'jaal, Fal Daelfa">
+    <description>A sheer cliff sweeps up to the west, blocking the view.  The trail runs along the muddy riverside here, with tall sedge grass blocking the view of the black waters.</description>
+    <position x="260" y="700" z="0" />
+    <arc exit="south" move="south" destination="62" />
+    <arc exit="northwest" move="northwest" destination="60" />
+    <arc exit="climb" move="climb sedge grass" destination="122" />
+  </node>
+  <node id="62" name="Hara'jaal, Fal Daelfa">
+    <description>Tall banks of sedge grass border the swift waters of the Seord Fal as its runs along the trail here.  The rumbling of the water's currents fill the area with its noise.</description>
+    <position x="260" y="720" z="0" />
+    <arc exit="north" move="north" destination="61" />
+    <arc exit="south" move="south" destination="63" />
+    <arc exit="climb" move="climb sedge grass" destination="123" />
+  </node>
+  <node id="63" name="Hara'jaal, Fal Daelfa">
+    <description>The black waters of the Seord Fal can be seen through the tall banks of sedge grass that grow along the river's edge.  Marshy ground makes the trail slippery as it continues to the north and south.</description>
+    <position x="260" y="740" z="0" />
+    <arc exit="north" move="north" destination="62" />
+    <arc exit="south" move="south" destination="64" />
+    <arc exit="climb" move="climb sedge grass" destination="124" />
+  </node>
+  <node id="64" name="Hara'jaal, Fal Daelfa">
+    <description>Sedge grass borders the riverbank, blocking all but glimpses of the river's murky water.  The trail rises to the southwest, climbing to the top of a wooded hillock.</description>
+    <position x="260" y="760" z="0" />
+    <arc exit="north" move="north" destination="63" />
+    <arc exit="southwest" move="southwest" destination="65" />
+    <arc exit="climb" move="climb sedge grass" destination="125" />
+  </node>
+  <node id="65" name="Hara'jaal, Fal Daelfa">
+    <description>The path opens into a grassy clearing atop this hill.  One can see the ocean in the far distance to the south and the Seord Fal just over the cliff to the east.</description>
+    <position x="240" y="780" z="0" />
+    <arc exit="northeast" move="northeast" destination="64" />
+    <arc exit="southwest" move="southwest" destination="66" />
+    <arc exit="climb" move="climb steep cliff" destination="126" />
+  </node>
+  <node id="66" name="Hara'jaal, Fal Daelfa">
+    <description>The trail becomes more defined as it heads south while the forest becomes denser to the north.  Dark verdant bushes, with prickly leaves, grow on both sides of the path.  The burble of running water can be heard coming from the east.</description>
+    <position x="220" y="800" z="0" />
+    <arc exit="northeast" move="northeast" destination="65" />
+    <arc exit="south" move="south" destination="67" />
+    <arc exit="go" move="go slippery slope" destination="133" />
+  </node>
+  <node id="67" name="Hara'jaal, Fal Daelfa">
+    <description>A black ridge fills the horizon to the south with the signs of civilization.  A partially destroyed hut on the side of the road is visible in that direction.</description>
+    <position x="220" y="820" z="0" />
+    <arc exit="north" move="north" destination="66" />
+    <arc exit="south" move="south" destination="68" />
+  </node>
+  <node id="68" name="Hara'jaal, Fal Daelfa">
+    <description>A tall ridge cuts across the landscape, forcing the path to circle around it to the southeast.  Sharp-edged grasses border the trail along with a number of thick-leafed, thorny bushes.</description>
+    <position x="220" y="840" z="0" />
+    <arc exit="north" move="north" destination="67" />
+    <arc exit="southeast" move="southeast" destination="69" />
+    <arc exit="go" move="go faint path" destination="168" />
+  </node>
+  <node id="69" name="Hara'jaal, Fal Daelfa">
+    <description>The swift currents of the Seord Fal are visible to the east while a huge wall of obsidian and granite rises high to the west.  The path passes between these two natural obstructions.  A walled town is visible to the south beyond the ridgeline.</description>
+    <position x="240" y="860" z="0" />
+    <arc exit="southwest" move="southwest" destination="70" />
+    <arc exit="northwest" move="northwest" destination="68" />
+  </node>
+  <node id="70" name="Hara'jaal, Fal Daelfa">
+    <description>The trail runs right up to a wood and iron palisade gate.  All the foliage has been cleared around the wall's perimeter.  The town, huddled tight against the side of a cliff, uses the area's natural fortifications to create a strong defensive position.  A mountainous ridge rises to the north and continues over the horizon to the west.</description>
+    <position x="220" y="880" z="0" />
+    <arc exit="northeast" move="northeast" destination="69" />
+    <arc exit="go" move="go palisade gate" destination="79" />
+  </node>
+  <node id="71" name="Hara'jaal, Nardel Aesker">
+    <description>Weathered expanses of light grey ignimbrite create a wide ledge atop a massive escarpment.  On clear days, the immense dome of sky meeting sea creates the illusion that the shore hundreds of feet below is farther away.  Faint glints and glimmers of sunlight reflected off the raging black waters of the Seord Fal filter through the heavy brush lining its banks, while the dormant peak of Nardel Aesker looms overhead.</description>
+    <description>Weathered expanses of light grey ignimbrite create a wide ledge atop a massive escarpment.  On cloudless nights, the glittering expanse of stars overhead cause the shadowed outlines of the land far below to seem even farther away than merely hundreds of feet straight down.  The stillness of the night makes it possible to hear a faint echo from the raging black waters of the Seord Fal, while the dormant peak of Nardel Aesker looms overhead.</description>
+    <position x="200" y="660" z="0" />
+    <arc exit="west" move="west" destination="72" />
+    <arc exit="climb" move="climb massive escarpment" destination="59" />
+  </node>
+  <node id="72" name="Hara'jaal, Nardel Aesker">
+    <description>A thick ledge of heavily textured ignimbrite curves toward the west, creating a treacherous path that angles up the sloping sides of the volcano.  Greyish-green tufts of scraggly bushes struggle to gain secure footing amidst the rifts left behind as silent testimonies of ancient eruptions, creating homes for the hardy wildlife attempting to make the rocky crevices their home.</description>
+    <description>A thick ledge of heavily textured ignimbrite curves toward the west, creating a treacherous path that angles up the sloping sides of the volcano.  Dark shadows obscure the shapes of scraggly bushes struggling to gain secure footing amidst the rifts left behind as silent testimonies of ancient eruptions.</description>
+    <position x="180" y="660" z="0" />
+    <arc exit="east" move="east" destination="71" />
+    <arc exit="northwest" move="northwest" destination="73" />
+  </node>
+  <node id="73" name="Hara'jaal, Nardel Aesker">
+    <description>Small pebbles and glistening fragments of basalt crunch underfoot.  Stark grey remnants of petrified trees partially hide a deep fissure in the cliff side, its shadowed depths creating a natural chimney up the side of the volcano.</description>
+    <description>Small pebbles and glistening fragments of basalt echo softly in the dark night as they crunch underfoot.  Stark grey remnants of petrified trees partially hide a deep fissure in the cliff, its shadowed depths creating a natural chimney up the side of the volcano.</description>
+    <position x="160" y="640" z="0" />
+    <arc exit="southeast" move="southeast" destination="72" />
+    <arc exit="northwest" move="northwest" destination="74" />
+  </node>
+  <node id="74" name="Hara'jaal, Nardel Aesker">
+    <description>Scraggly bushes cling to crevices in the dark glassy volcanic rock, creating a tenuous habitat for the hardy wildlife struggling to make this barren land its home.  Tiny scrapings of sharp claws digging into the rock can be heard skittering from hiding places in ledges above to havens in the fissures below.</description>
+    <description>Pale streams of light filtering down from the nighttime sky outline scraggly bushes clinging to crevices in the dark glassy volcanic rock that create a tenuous habitat for the hardy wildlife struggling to make this barren land its home.  Tiny scrapings of sharp claws digging into the rock can be heard skittering from hiding places in the ledges above to havens in the fissures below.</description>
+    <position x="140" y="620" z="0" />
+    <arc exit="southeast" move="southeast" destination="73" />
+    <arc exit="northwest" move="northwest" destination="75" />
+  </node>
+  <node id="75" name="Hara'jaal, Nardel Aesker">
+    <description>A lone stand of trees prevails amidst vast swaths of destruction.  Towering above the rifts left behind by the hardening rhyolite of ancient volcanic landslides, the verdant tops of the stately evergreens create a dramatic contrast to the grey ignimbrite and black basalt of the surrounding landscape.</description>
+    <description>A lone stand of trees prevails amidst vast swaths of destruction.  Soft starlight turns the tops of the stately evergreens towering above the rifts left behind by the hardening rhyolite of an ancient volcanic landslide into ghostly giants.</description>
+    <position x="120" y="600" z="0" />
+    <arc exit="southeast" move="southeast" destination="74" />
+    <arc exit="northwest" move="northwest" destination="76" />
+  </node>
+  <node id="76" name="Hara'jaal, Nardel Aesker">
+    <description>Dead brown pine needles cover the ground, and dry twigs buried in the thick carpet of fallen needles snap loudly underfoot.  Overhead, the sunlight filters through thick branches, causing the jutting granite rifts to be covered in a greyish-green lichen.  A path winding between the towering evergreens leads north up the sloping side of the dormant volcano.</description>
+    <description>Dead brown pine needles cover the ground, and dry twigs buried in the thick carpet of fallen needles snap loudly underfoot.  Overhead, thick branches cast shadows against the jutting granite rifts covered in a greyish-green lichen.  A path winding between the towering evergreens leads north up the sloping side of the dormant volcano.</description>
+    <position x="100" y="580" z="0" />
+    <arc exit="north" move="north" destination="77" />
+    <arc exit="southeast" move="southeast" destination="75" />
+  </node>
+  <node id="77" name="Hara'jaal, Nardel Aesker">
+    <description>Sharp bits of lapilli shift underfoot, making the steep slope of the trail winding ever upward along the volcano's side even more treacherous.  The ground trembles slightly causing the nearby stand of trees to lurch and sway as if marking the passage of giant footsteps.</description>
+    <description>Sharp bits of lapilli shift underfoot, making the steep slope of the trail winding ever upward along the volcano's side even more treacherous.  Shadowy outlines of the trees below stretch across the basalt surface of the cliff creating monstrous images that lurch and sway with each brush of a passing breeze.</description>
+    <position x="100" y="560" z="0" />
+    <arc exit="north" move="north" destination="78" />
+    <arc exit="south" move="south" destination="76" />
+  </node>
+  <node id="78" name="Hara'jaal, Nardel Aesker">
+    <description>A massive rock slide blocks all attempts at ascending the volcano from this point.  A thick ledge lies just out of reach to the east, but the glassy sheen of quartz glinting in the mirrored inky black surface of the basalt that separates this ledge from that one discourages any thought of accessing it from here.</description>
+    <description>A massive rock slide blocks all attempts at ascending the volcano from this point.  The shadowy presence of a thick ledge just out of reach to the east seems to continue higher up the side of the volcano.  However, the glassy sheen of moonlight glinting against the quartz in the mirrored inky black surface of the basalt that separates this ledge from that one discourages any thought of accessing it from here.</description>
+    <position x="100" y="540" z="0" />
+    <arc exit="south" move="south" destination="77" />
+  </node>
+  <node id="79" name="The Enclave, Dinshek Sango">
+    <description>The palisade gate, a sturdy construction of wood and iron, stands open to allow for traffic in and out of the town.  A couple of shabbily dressed guards keep a sharp eye on people that approach the gate.</description>
+    <position x="20" y="620" z="0" />
+    <arc exit="southwest" move="southwest" destination="80" />
+    <arc exit="go" move="go palisade gate" destination="70" />
+  </node>
+  <node id="80" name="The Enclave, Bonfa Jegu">
+    <description>The road here is very muddy, slowing progress for those who follow it under the wall's parapet towards the town gate.  Slits along the walls and overhead have been strategically placed to fire missiles at any unwanted visitors.</description>
+    <position x="0" y="640" z="0" />
+    <arc exit="northeast" move="northeast" destination="79" />
+    <arc exit="south" move="south" destination="85" />
+    <arc exit="southwest" move="southwest" destination="84" />
+    <arc exit="west" move="west" destination="81" />
+    <arc exit="go" move="go iron door" destination="195" />
+  </node>
+  <node id="81" name="The Enclave, Athor Boren">
+    <description>All of the buildings along this cobblestone street have been built flush to the town's wall to provide better protection.  The structures are in a much better state of repair then others in the town.</description>
+    <position x="-20" y="640" z="0" />
+    <arc exit="east" move="east" destination="80" />
+    <arc exit="south" move="south" destination="84" />
+    <arc exit="west" move="west" destination="82" />
+    <arc exit="go" move="go trimmed door" destination="193" />
+  </node>
+  <node id="82" name="The Enclave, Athor Boren">
+    <description>This stretch of road is clear of buildings, giving the area an almost run-down appearance.  The parapet that runs along the top of the town's wall is wider here, overhanging the street.</description>
+    <position x="-40" y="640" z="0" />
+    <arc exit="east" move="east" destination="81" />
+    <arc exit="southwest" move="southwest" destination="83" />
+    <arc exit="climb" move="climb wooden ladder" destination="115" />
+  </node>
+  <node id="83" name="The Enclave, Raenaden Jegu">
+    <description>A brick manor, fenced round with a monstrosity of iron, fills up the entire side of this section of street.  Shabbily dressed guards loiter around the stoop of the house.  Lamps, mounted along the length of the manor's fence, illuminate the estate with bright pools of light.</description>
+    <position x="-60" y="660" z="0" />
+    <arc exit="northeast" move="northeast" destination="82" />
+    <arc exit="southeast" move="southeast" destination="91" />
+    <arc exit="southwest" move="southwest" destination="92" />
+    <arc exit="go" move="go brick manor" destination="189" />
+  </node>
+  <node id="84" name="The Enclave, Bonfa Jegu">
+    <description>A house built from mismatched planks of wood stands along this section of road.  Colorful cloth of all sorts hang on a whitewashed slat fence that surrounds the building.</description>
+    <position x="-20" y="660" z="0" />
+    <arc exit="north" move="north" destination="81" />
+    <arc exit="northeast" move="northeast" destination="80" />
+    <arc exit="east" move="east" destination="85" />
+    <arc exit="southwest" move="southwest" destination="91" />
+    <arc exit="go" move="go driftwood door" destination="194" />
+  </node>
+  <node id="85" name="The Enclave, Naen Boren">
+    <description>The dark cobblestone road runs parallel to the town's tall defensive wall.  Whether the wall has been built to keep the wilderness out or the Baron's minions in is a matter of opinion.</description>
+    <position x="0" y="660" z="0" />
+    <arc exit="north" move="north" destination="80" />
+    <arc exit="south" move="south" destination="86" />
+    <arc exit="west" move="west" destination="84" />
+  </node>
+  <node id="86" name="The Enclave, Naen Boren">
+    <description>The muddy road here runs between the town's wall and the back of some ramshackle buildings.  Streaks of black pitch stain the walls and the few intact cobblestones of the street.</description>
+    <position x="0" y="680" z="0" />
+    <arc exit="north" move="north" destination="85" />
+    <arc exit="south" move="south" destination="87" />
+    <arc exit="climb" move="climb wooden ladder" destination="110" />
+  </node>
+  <node id="87" name="The Enclave, Naen Boren">
+    <description>Large chunks are missing from the cobblestone street, creating dangerous potholes in the road.  Part of the wood platform that runs along the top of the wall sags dangerously overhead.</description>
+    <position x="0" y="700" z="0" />
+    <arc exit="north" move="north" destination="86" />
+    <arc exit="south" move="south" destination="89" />
+    <arc exit="west" move="west" destination="88" />
+    <arc exit="go" move="go building" destination="186" />
+  </node>
+  <node id="88" name="The Enclave, Raenaden Jegu">
+    <description>A few rough looking warehouses line the road along this area.  The buildings are surrounded with a tall wooden fence, topped with sharp spikes.</description>
+    <position x="-20" y="700" z="0" />
+    <arc exit="east" move="east" destination="87" />
+    <arc exit="southeast" move="southeast" destination="89" />
+    <arc exit="south" move="south" destination="90" />
+    <arc exit="northwest" move="northwest" destination="91" />
+    <arc exit="go" move="go wooden door" destination="181" />
+  </node>
+  <node id="89" name="The Enclave, Raenaden Jegu">
+    <description>The wharfs are visible to the southeast from this cobblestone crossroad.  A suspension bridge hangs over the street connecting walkways that line the town's walls.  Steady streams of traffic move in and out of a small tavern located on one of the corners.</description>
+    <position x="0" y="720" z="0" />
+    <arc exit="north" move="north" destination="87" />
+    <arc exit="southeast" move="southeast" destination="98" />
+    <arc exit="west" move="west" destination="90" />
+    <arc exit="northwest" move="northwest" destination="88" />
+    <arc exit="go" move="go small tavern" destination="182" />
+  </node>
+  <node id="90" name="The Enclave, Jaalfilt Jegu">
+    <description>Everything along this part of town is soot covered.  Smoke, pouring from the chimneys of a shop on this street, seems to be the culprit.  Even the cobblestones of the roadway are stained a much darker color.</description>
+    <position x="-20" y="720" z="0" />
+    <arc exit="north" move="north" destination="88" />
+    <arc exit="east" move="east" destination="89" />
+    <arc exit="west" move="west" destination="97" />
+    <arc exit="go" move="go shop" destination="179" />
+  </node>
+  <node id="91" name="The Enclave, Raenaden Jegu">
+    <description>A small building, rising in the center of this dusty intersection, is surrounded by shabbily dressed guards.  The building has iron bars on the windows and a fence of sharp wooden stakes.</description>
+    <position x="-40" y="680" z="0" />
+    <arc exit="northeast" move="northeast" destination="84" />
+    <arc exit="southeast" move="southeast" destination="88" />
+    <arc exit="southwest" move="southwest" destination="94" />
+    <arc exit="northwest" move="northwest" destination="83" />
+    <arc exit="go" move="go small building" destination="173" />
+  </node>
+  <node id="92" name="The Enclave, Athor Boren">
+    <description>A quaint cottage has been constructed against the sheer rock cliff that serves as the town's back wall.  Well-kept flower beds line both the street in front of the small house and the brick walkway that leads to the dwelling's white painted door.</description>
+    <position x="-80" y="680" z="0" />
+    <arc exit="northeast" move="northeast" destination="83" />
+    <arc exit="south" move="south" destination="93" />
+    <arc exit="go" move="go quaint cottage" destination="188" />
+  </node>
+  <node id="93" name="The Enclave, Athor Boren">
+    <description>A steep cliff rises along this edge of the town, acting as a back wall.  Little rivulets of water flow briskly down the overhanging face of rock, providing moisture for the tufts of grass growing up through the cracks in the cobblestones.</description>
+    <position x="-80" y="700" z="0" />
+    <arc exit="north" move="north" destination="92" />
+    <arc exit="east" move="east" destination="94" />
+    <arc exit="south" move="south" destination="95" />
+    <arc exit="go" move="go wood shack" destination="175" />
+  </node>
+  <node id="94" name="The Enclave, Bonfa Jegu">
+    <description>A few rough looking warehouses line the road along this area.  The buildings are surrounded with a tall metal fence, topped with sharp spikes.</description>
+    <position x="-60" y="700" z="0" />
+    <arc exit="northeast" move="northeast" destination="91" />
+    <arc exit="south" move="south" destination="96" />
+    <arc exit="southwest" move="southwest" destination="95" />
+    <arc exit="west" move="west" destination="93" />
+  </node>
+  <node id="95" name="The Enclave, Jaalfilt Jegu">
+    <description>Stacks of barrels and crates fill this corner of town.  A massive heap of trash is piled up outside of a large building.  Thick black smoke billows out of a huge brick smokestack built against the structure.</description>
+    <position x="-80" y="720" z="0" />
+    <arc exit="north" move="north" destination="93" />
+    <arc exit="northeast" move="northeast" destination="94" />
+    <arc exit="east" move="east" destination="96" />
+    <arc exit="climb" move="climb wooden ladder" destination="103" />
+  </node>
+  <node id="96" name="The Enclave, Jaalfilt Jegu">
+    <description>A sickly yellow building built on this intersection has a rough chimney spewing unhealthy looking brown smoke that stinks of rotten flesh.  The cobblestones of the road are stained with sallow patches.</description>
+    <position x="-60" y="720" z="0" />
+    <arc exit="north" move="north" destination="94" />
+    <arc exit="east" move="east" destination="97" />
+    <arc exit="west" move="west" destination="95" />
+    <arc exit="go" move="go building" destination="176" />
+  </node>
+  <node id="97" name="The Enclave, Jaalfilt Jegu">
+    <description>Dark blotches and oily stains cover the street, the town wall, and the backs of the buildings.  The whole area smells rank with the fumes coming from nearby businesses.</description>
+    <position x="-40" y="720" z="0" />
+    <arc exit="east" move="east" destination="90" />
+    <arc exit="west" move="west" destination="96" />
+  </node>
+  <node id="98" name="The Enclave, Smuggler's Wharf">
+    <description>Ships of all sizes are tied up to these docks that extend well into the protected bay.  Shabbily dressed guards keep a sharp eye on the pier entrances.  Shipment crates are stacked up under tattered canvas shelters that line the wharf area.</description>
+    <position x="20" y="740" z="0" />
+    <arc exit="northwest" move="northwest" destination="89" />
+    <arc exit="go" move="go shimmering archway" destination="99" />
+    <arc exit="go" move="go wharf" destination="100" />
+  </node>
+  <node id="99" name="Droughtman's Maze, The Opal Lounge" note="MapTF1_The_Arch.xml|Arch">
+    <description>The lighting here is dim, but not enough to obscure the opalescent wallpaper.  Couches and upholstered chairs in every shade of the rainbow are scattered around the room in groups, surrounding tables set with food.  A bar occupies one wall, which is hung with a mirror that only magnifies the maelstrom of color in the room.  One has to wonder, is the decor an attempt at opulence, or is it intended to induce patrons to drink more, just to blunt their senses?</description>
+    <position x="60" y="760" z="0" />
+    <arc exit="east" move="east" />
+    <arc exit="west" move="west" />
+    <arc exit="go" move="go d-shaped door" destination="98" />
+  </node>
+  <node id="100" name="Smuggler's Wharf">
+    <description>The dock is strongly constructed of long planks that have been stained with a tar mixture to provide some weather protection.  Crates, stacked up along the length of the wharf, are covered with heavy canvas tarps.</description>
+    <position x="20" y="760" z="0" />
+    <arc exit="south" move="south" destination="101" />
+    <arc exit="west" move="west" destination="102" />
+    <arc exit="go" move="go ramp" destination="98" />
+  </node>
+  <node id="101" name="Sumilo Dock" note="Sumilo Dock">
+    <description>The platform of the dock is wrapped around with a thick, spongy material that protects it from being damaged when ships pull up.  The dock planks are deeply scarred from the loading and unloading of cargo.</description>
+    <position x="20" y="780" z="0" />
+    <arc exit="north" move="north" destination="100" />
+  </node>
+  <node id="102" name="Smuggler's Wharf">
+    <description>Huge pilings that support the dock are reinforced with bands of iron.  Thick cables run between posts set along the edge of the dock, guarding against accidental falls.</description>
+    <position x="0" y="760" z="0" />
+    <arc exit="east" move="east" destination="100" />
+  </node>
+  <node id="103" name="The Enclave, South Wall" note="Tail Tattoos">
+    <description>This wooden platform runs along the top of the wall, giving the city's guard a good view of the ocean and any approaching ships.  A metal railing on the interior edge guards against accidental falls from this height.</description>
+    <position x="-80" y="740" z="0" />
+    <arc exit="east" move="east" destination="104" />
+    <arc exit="climb" move="climb wooden ladder" destination="95" />
+  </node>
+  <node id="104" name="The Enclave, South Wall">
+    <description>This wooden platform runs along the top of the wall, giving the city's guard a good view of the ocean and any approaching ships.  A metal railing on the interior edge guards against accidental falls from this height.</description>
+    <position x="-60" y="740" z="0" />
+    <arc exit="east" move="east" destination="105" />
+    <arc exit="west" move="west" destination="103" />
+  </node>
+  <node id="105" name="The Enclave, South Wall">
+    <description>This wooden platform runs along the top of the wall, giving the city's guard a good view of the ocean and any approaching ships.  A metal railing on the interior edge guards against accidental falls from this height.</description>
+    <position x="-40" y="740" z="0" />
+    <arc exit="east" move="east" destination="106" />
+    <arc exit="west" move="west" destination="104" />
+  </node>
+  <node id="106" name="The Enclave, South Wall">
+    <description>This wooden platform runs along the top of the wall, giving the city's guard a good view of the ocean and any approaching ships.  A metal railing on the interior edge guards against accidental falls from this height.</description>
+    <position x="-20" y="740" z="0" />
+    <arc exit="east" move="east" destination="107" />
+    <arc exit="west" move="west" destination="105" />
+  </node>
+  <node id="107" name="The Enclave, South Wall">
+    <description>This wooden platform runs along the top of the wall, giving the city's guard a good view of the city's dock area.  A metal railing on the interior edge guards against accidental falls from this height.</description>
+    <position x="0" y="740" z="0" />
+    <arc exit="west" move="west" destination="106" />
+    <arc exit="go" move="go hanging bridge" destination="108" />
+  </node>
+  <node id="108" name="The Enclave, East Wall">
+    <description>This wooden platform runs along the top of the wall, giving the city's guard a good view of the city's dock area.  A metal railing on the interior edge guards against accidental falls from this height.</description>
+    <position x="20" y="720" z="0" />
+    <arc exit="north" move="north" destination="109" />
+    <arc exit="go" move="go hanging bridge" destination="107" />
+  </node>
+  <node id="109" name="The Enclave, East Wall">
+    <description>This wooden platform runs along the top of the wall, giving the city's guard a good view of the eastern cliffs that enclose the island.  A metal railing on the interior edge guards against accidental falls from this height.</description>
+    <position x="20" y="700" z="0" />
+    <arc exit="north" move="north" destination="110" />
+    <arc exit="south" move="south" destination="108" />
+  </node>
+  <node id="110" name="The Enclave, East Wall">
+    <description>This wooden platform runs along the top of the wall, giving the city's guard a good view of the eastern cliffs that enclose the island.  A metal railing on the interior edge guards against accidental falls from this height.</description>
+    <position x="20" y="680" z="0" />
+    <arc exit="north" move="north" destination="111" />
+    <arc exit="south" move="south" destination="109" />
+    <arc exit="climb" move="climb wooden ladder" destination="86" />
+  </node>
+  <node id="111" name="The Enclave, East Wall">
+    <description>This wooden platform runs along the top of the wall, giving the city's guard a good view of the main gate that leads out to the island's interior.  A metal railing on the interior edge guards against accidental falls from this height.</description>
+    <position x="20" y="640" z="0" />
+    <arc exit="south" move="south" destination="110" />
+    <arc exit="go" move="go hanging bridge" destination="112" />
+  </node>
+  <node id="112" name="The Enclave, North Wall">
+    <description>This wooden platform runs along the top of the wall, giving the city's guard a good view of the main gate that leads out to the island's interior.  A metal railing on the interior edge guards against accidental falls from this height.</description>
+    <position x="0" y="620" z="0" />
+    <arc exit="west" move="west" destination="113" />
+    <arc exit="go" move="go hanging bridge" destination="111" />
+  </node>
+  <node id="113" name="The Enclave, North Wall">
+    <description>This wooden platform runs along the top of the wall, giving the city's guard a good view of the surrounding wilderness.  A metal railing on the interior edge guards against accidental falls from this height.</description>
+    <position x="-20" y="620" z="0" />
+    <arc exit="east" move="east" destination="112" />
+    <arc exit="west" move="west" destination="114" />
+  </node>
+  <node id="114" name="The Enclave, North Wall">
+    <description>This wooden platform runs along the top of the wall, giving the city's guard a good view of the surrounding wilderness.  A metal railing on the interior edge guards against accidental falls from this height.</description>
+    <position x="-40" y="620" z="0" />
+    <arc exit="east" move="east" destination="113" />
+    <arc exit="west" move="west" destination="115" />
+  </node>
+  <node id="115" name="The Enclave, North Wall">
+    <description>This wooden platform runs along the top of the wall, giving the city's guard a good view of the surrounding wilderness.  A metal railing on the interior edge guards against accidental falls from this height.</description>
+    <position x="-60" y="620" z="0" />
+    <arc exit="east" move="east" destination="114" />
+    <arc exit="climb" move="climb wooden ladder" destination="82" />
+  </node>
+  <node id="116" name="Hara'jaal, Cypress Tree">
+    <description>The deep gouges time and weather have left in the trunk of this tree create an inviting perch for surveying the glade below.  The splintered remains of one hefty branch lean precariously against the tree while the dark waters of the river swirl around its algae covered end.</description>
+    <position x="280" y="640" z="0" />
+    <arc exit="climb" move="climb tree trunk" destination="58" />
+    <arc exit="climb" move="climb large branch" destination="117" />
+  </node>
+  <node id="117" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>The water becomes somewhat shallower through here as it sweeps southward, increasing speed as the river narrows.  The clamor of a nearby waterfall can be easily distinguished as coming from upstream.</description>
+    <description>The water becomes somewhat shallower through here as it sweeps southward, increasing speed as the river narrows before plunging over a steep barricade of jammed logs and other debris.  The clamor of a nearby waterfall can be easily distinguished as coming from upstream.</description>
+    <position x="300" y="640" z="0" />
+    <arc exit="north" move="swim north" destination="118" />
+    <arc exit="northeast" move="swim northeast" destination="148" />
+    <arc exit="east" move="swim east" destination="149" />
+    <arc exit="climb" move="climb cypress branch" destination="116" />
+  </node>
+  <node id="118" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>A dark slab of stone hangs over the water where the river has relentlessly worn away at the bank.  The churning of the currents has a musical, almost hypnotic rhythm.</description>
+    <position x="300" y="620" z="0" />
+    <arc exit="north" move="swim north" destination="119" />
+    <arc exit="northeast" move="swim northeast" destination="147" />
+    <arc exit="east" move="swim east" destination="148" />
+    <arc exit="southeast" move="swim southeast" destination="149" />
+    <arc exit="south" move="swim south" destination="117" />
+  </node>
+  <node id="119" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>A small but steep waterfall empties across the breadth of the river, churning the black waters.  The muddy bank provides no way to reach the shore along here.  Sharp rocks poke through the river's surface, making the swift currents even more dangerous.</description>
+    <position x="300" y="600" z="0" />
+    <arc exit="east" move="swim east" destination="147" />
+    <arc exit="southeast" move="swim southeast" destination="148" />
+    <arc exit="south" move="swim south" destination="118" />
+  </node>
+  <node id="120" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>The racing stream thunders against the riverbank, throwing up sheets of white-capped water.  Trees, growing along the river's edge, seem to lean away from the ongoing chaos of the rapids.</description>
+    <description>The racing stream thunders against the riverbank, throwing up sheets of white-capped water.  Trees, growing along the river's edge, seem to lean away from the ongoing chaos of the rapids formed as the torrents pour over a barricade to the north.</description>
+    <position x="300" y="660" z="0" />
+    <arc exit="east" move="swim east" destination="150" />
+    <arc exit="southeast" move="swim southeast" destination="151" />
+    <arc exit="south" move="swim south" destination="121" />
+  </node>
+  <node id="121" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>The river rages, spinning out small whirlpools and dangerous eddies.  Mud and water spray up out of the crashing waves.</description>
+    <position x="300" y="680" z="0" />
+    <arc exit="north" move="swim north" destination="120" />
+    <arc exit="northeast" move="swim northeast" destination="150" />
+    <arc exit="east" move="swim east" destination="151" />
+    <arc exit="southeast" move="swim southeast" destination="152" />
+    <arc exit="south" move="swim south" destination="122" />
+  </node>
+  <node id="122" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>The black river beats roughly against tall patches of sedge grass that is growing along the riverbank.  Rocks, jutting out of the water, make the currents quite choppy in places.</description>
+    <description>The black river beats roughly against tall patches of sedge grass growing along the riverbank.  Rocks, jutting out of the water, make the currents quite choppy and provide a foundation for an enormous logjam to grow, which blocks further passage downstream.</description>
+    <position x="300" y="700" z="0" />
+    <arc exit="north" move="swim north" destination="121" />
+    <arc exit="northeast" move="swim northeast" destination="151" />
+    <arc exit="east" move="swim east" destination="152" />
+    <arc exit="south" move="swim south" destination="123" />
+    <arc exit="climb" move="climb sedge grass" destination="61" />
+  </node>
+  <node id="123" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>Sedge grass grows tall along the riverbank, blocking most of the muddy shore from view.  The sound of the swift-moving water fills the area with its loud rumbling.</description>
+    <position x="300" y="720" z="0" />
+    <arc exit="north" move="swim north" destination="122" />
+    <arc exit="northeast" move="swim northeast" destination="152" />
+    <arc exit="climb" move="climb sedge grass" destination="62" />
+  </node>
+  <node id="124" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>The black waters of the Seord Fal run swiftly on its course.  Trees, overhanging the riverbanks, send their branches down to brush against the water's surface.</description>
+    <description>The black waters of the Seord Fal run swiftly on its course.  Trees overhanging the riverbanks send their branches down to brush against the water's surface.</description>
+    <position x="300" y="740" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="153" />
+    <arc exit="east" move="swim east" destination="154" />
+    <arc exit="southeast" move="swim southeast" destination="145" />
+    <arc exit="south" move="swim south" destination="125" />
+    <arc exit="climb" move="climb sedge grass" destination="63" />
+  </node>
+  <node id="125" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>Beyond some sedge grass, growing along the riverbank, is a muddy trail which leads away from the river.  Slippery rocks make the footing treacherous all along the river's boundaries.</description>
+    <description>Beyond some sedge grass growing along the riverbank is a muddy trail which leads away from the river.  Slippery rocks make the footing treacherous all along the river's boundaries.</description>
+    <position x="300" y="760" z="0" />
+    <arc exit="north" move="swim north" destination="124" />
+    <arc exit="northeast" move="swim northeast" destination="154" />
+    <arc exit="east" move="swim east" destination="145" />
+    <arc exit="southeast" move="swim southeast" destination="127" />
+    <arc exit="south" move="swim south" destination="126" />
+    <arc exit="climb" move="climb sedge grass" destination="64" />
+  </node>
+  <node id="126" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>The river turns sharply to the east here, making the riverbank almost unreachable in the mighty currents.  The waters pound against the cliffs to the south.</description>
+    <position x="300" y="780" z="0" />
+    <arc exit="north" move="swim north" destination="125" />
+    <arc exit="northeast" move="swim northeast" destination="145" />
+    <arc exit="east" move="swim east" destination="127" />
+    <arc exit="climb" move="climb steep cliff" destination="65" />
+  </node>
+  <node id="127" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>The thunderous watercourse continues on speedily as it makes its way south.  Slippery rocks make up the streambed, making the river even more hazardous.</description>
+    <description>The thunderous watercourse flows on speedily as it makes its way south.  Slippery rocks make up the streambed, making the river even more hazardous.  The waters pour through a gap in the logjam to the south, funneled into a mighty torrent.</description>
+    <position x="320" y="780" z="0" />
+    <arc exit="north" move="swim north" destination="145" />
+    <arc exit="northeast" move="swim northeast" destination="146" />
+    <arc exit="east" move="swim east" destination="144" />
+    <arc exit="south" move="swim south" destination="128" />
+    <arc exit="west" move="swim west" destination="126" />
+    <arc exit="northwest" move="swim northwest" destination="125" />
+  </node>
+  <node id="128" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>The black river cuts a deep channel, creating steep stone cliffs that are unreachable due to the swiftly moving water.  Wisps of fog hang over the cold stream.</description>
+    <description>The black river cuts a deep channel, creating steep stone cliffs that are unreachable due to the swiftly moving water.  Wisps of fog hang over the cold rapids.</description>
+    <position x="320" y="800" z="0" />
+    <arc exit="north" move="swim north" destination="127" />
+    <arc exit="east" move="swim east" destination="129" />
+    <arc exit="southeast" move="swim southeast" destination="130" />
+  </node>
+  <node id="129" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>Though the river is not quite as wide through here, the riverbank is increasingly steep.  The currents shift and dance wildy as the stream speeds southward.</description>
+    <position x="340" y="800" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="143" />
+    <arc exit="south" move="swim south" destination="130" />
+    <arc exit="west" move="swim west" destination="128" />
+  </node>
+  <node id="130" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>Large fingers of rock cut through the surface of the river, chopping the water into waves of white foam.  Trees atop the stream's sheer edge send roots down the bank.</description>
+    <position x="340" y="820" z="0" />
+    <arc exit="north" move="swim north" destination="129" />
+    <arc exit="east" move="swim east" destination="143" />
+    <arc exit="southeast" move="swim southeast" destination="142" />
+    <arc exit="south" move="swim south" destination="131" />
+    <arc exit="northwest" move="swim northwest" destination="128" />
+    <arc exit="climb" move="climb tree roots" destination="164" />
+  </node>
+  <node id="131" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>Black waters boil over the rocks in the river.  The swift currents pull everything southward towards the open sea.</description>
+    <position x="340" y="840" z="0" />
+    <arc exit="north" move="swim north" destination="130" />
+    <arc exit="northeast" move="swim northeast" destination="143" />
+    <arc exit="east" move="swim east" destination="142" />
+    <arc exit="southeast" move="swim southeast" destination="132" />
+  </node>
+  <node id="132" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>Sandy deltas, covered with thorny brush, split up the river into smaller branches as it makes its final approach to the open sea.  Sprays of cold mist shoot up from the choppy currents as they beat up against the tongues of land.</description>
+    <position x="360" y="860" z="0" />
+    <arc exit="east" move="swim east" destination="137" />
+    <arc exit="south" move="swim south" destination="135" />
+    <arc exit="southwest" move="swim southwest" destination="133" />
+    <arc exit="northwest" move="swim northwest" destination="131" />
+  </node>
+  <node id="133" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>Deep channels hold the swift black waters in a tight embrace.  Wisps of fog enwreathe fingers of rock that poke through the river's surface.</description>
+    <description>Deep channels hold the swift, black waters in a tight embrace.  Wisps of fog enwreathe fingers of rock that poke through the river's surface.</description>
+    <position x="340" y="880" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="132" />
+    <arc exit="southwest" move="swim southwest" destination="134" />
+  </node>
+  <node id="134" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>The black river dumps out into the wide open sea, creating strong crosscurrents and eddies.  A sandbar disappears amongst the thick vegetation along the shore.</description>
+    <description>The black river dumps out into the wide-open sea, creating strong crosscurrents and eddies.  A sandbar disappears amongst the thick vegetation along the shore.</description>
+    <position x="320" y="900" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="133" />
+    <arc exit="climb" move="climb shore" destination="164" />
+  </node>
+  <node id="135" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>Swirling currents eat away at the tongues of rock and sand that cut into the river.  Cold air blows off the black water, giving birth to little curls of haze.</description>
+    <position x="360" y="880" z="0" />
+    <arc exit="north" move="swim north" destination="132" />
+    <arc exit="south" move="swim south" destination="136" />
+  </node>
+  <node id="136" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>The black river dumps out into the wide open sea, creating strong crosscurrents and eddies.  A sandbar near the mouth of the river creates a natural bridge towards the shore.</description>
+    <position x="360" y="900" z="0" />
+    <arc exit="north" move="swim north" destination="135" />
+    <arc exit="climb" move="climb sandbar" destination="134" />
+  </node>
+  <node id="137" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>Sandy deltas, covered with thorny brush, split up the river into smaller branches as it makes its final approach to the open sea.  Sprays of cold mist shoot up from the choppy currents as they beat up against the tongues of land.</description>
+    <position x="380" y="860" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="140" />
+    <arc exit="south" move="swim south" destination="138" />
+    <arc exit="west" move="swim west" destination="132" />
+  </node>
+  <node id="138" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>Sharp rocks cut through the surface of the speeding river.  The black water thunders against the edges of the sandy deltas that wall in the stream.</description>
+    <position x="380" y="880" z="0" />
+    <arc exit="north" move="swim north" destination="137" />
+    <arc exit="south" move="swim south" destination="139" />
+  </node>
+  <node id="139" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>The black river dumps out into the wide open sea, creating strong crosscurrents and eddies.  A sandbar near the mouth of the river creates a natural bridge towards the shore.</description>
+    <description>The black river dumps out into the wide-open sea, creating strong crosscurrents and eddies.  A sandbar near the mouth of the river creates a natural bridge towards the shore.</description>
+    <position x="380" y="900" z="0" />
+    <arc exit="north" move="swim north" destination="138" />
+    <arc exit="climb" move="climb sandbar" destination="136" />
+  </node>
+  <node id="140" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>Dark thorny brush lines the riverbanks like tall walls.  The rough currents roar loudly as they fling themselves against the rocks in the stream.</description>
+    <description>Dark, thorny brush lines the riverbanks like tall walls.  The rough currents roar loudly as they fling themselves against the rocks in the stream.</description>
+    <position x="400" y="880" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="141" />
+    <arc exit="northwest" move="swim northwest" destination="137" />
+  </node>
+  <node id="141" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>The black river dumps out into the wide open sea, creating strong crosscurrents and eddies.  A sandbar near the mouth of the river creates a natural bridge towards the shore.</description>
+    <description>The black river dumps out into the wide-open sea, creating strong crosscurrents and eddies.  A sandbar near the mouth of the river creates a natural bridge towards the shore.</description>
+    <position x="420" y="900" z="0" />
+    <arc exit="northwest" move="swim northwest" destination="140" />
+    <arc exit="climb" move="climb sandbar" destination="139" />
+  </node>
+  <node id="142" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>The river seethes violently, throwing up sprays of mist that cool the air.  Sharp rocks cut through the surface of the stream, providing the racing water with something to slam against.</description>
+    <description>The river seethes violently, throwing up sprays of mist that cool the air.  Sharp rocks cut through the surface of the stream, providing little obstacle to the racing waters before they slam against the wall of logs to the south.</description>
+    <position x="360" y="840" z="0" />
+    <arc exit="north" move="swim north" destination="143" />
+    <arc exit="west" move="swim west" destination="131" />
+    <arc exit="northwest" move="swim northwest" destination="130" />
+  </node>
+  <node id="143" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>Swirling eddies beat against the shore and the rocks visible standing in the stream.  A light fog overhangs the river, churned up from the cold waters.</description>
+    <description>Swirling eddies beat against the shore and the rocks visible standing in the cascade.  A light fog overhangs the river, churned up from the cold waters.</description>
+    <position x="360" y="820" z="0" />
+    <arc exit="south" move="swim south" destination="142" />
+    <arc exit="southwest" move="swim southwest" destination="131" />
+    <arc exit="west" move="swim west" destination="130" />
+    <arc exit="northwest" move="swim northwest" destination="129" />
+  </node>
+  <node id="144" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>The stream has grown much wider here, making the riverbank unreachable in the mighty currents.  Skeletal trees, swallowed by flooding waters, emerge from the river's surface.</description>
+    <description>The torrent moves swiftly and treacherously over large rocks to create rapids, making the riverbank unreachable in the mighty currents.  Skeletal trees, swallowed by flooding waters, emerge from the river's surface.  Downed trees have piled up here, creating an barrier preventing passage downstream.</description>
+    <position x="340" y="780" z="0" />
+    <arc exit="north" move="swim north" destination="146" />
+    <arc exit="west" move="swim west" destination="127" />
+    <arc exit="northwest" move="swim northwest" destination="145" />
+  </node>
+  <node id="145" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>The thunderous watercourse crashes onward as it makes its way south.  Rocks and rushing water make the river extremely hazardous to traverse.</description>
+    <position x="320" y="760" z="0" />
+    <arc exit="north" move="swim north" destination="154" />
+    <arc exit="northeast" move="swim northeast" destination="155" />
+    <arc exit="east" move="swim east" destination="146" />
+    <arc exit="southeast" move="swim southeast" destination="144" />
+    <arc exit="south" move="swim south" destination="127" />
+    <arc exit="southwest" move="swim southwest" destination="126" />
+    <arc exit="west" move="swim west" destination="125" />
+    <arc exit="northwest" move="swim northwest" destination="124" />
+  </node>
+  <node id="146" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>The river widens here and the riverbank climbs steeply from the mighty currents.  Skeletal trees, swallowed by flooding waters, emerge from the river's surface.</description>
+    <position x="340" y="760" z="0" />
+    <arc exit="north" move="swim north" destination="155" />
+    <arc exit="south" move="swim south" destination="144" />
+    <arc exit="southwest" move="swim southwest" destination="127" />
+    <arc exit="west" move="swim west" destination="145" />
+    <arc exit="northwest" move="swim northwest" destination="154" />
+  </node>
+  <node id="147" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>The thunder of cascading water fills the area, originating from the steep falls that empty into the river here.  Dark, murky depths hide the sharp stones of the riverbed.</description>
+    <position x="320" y="600" z="0" />
+    <arc exit="east" move="swim east" destination="159" />
+    <arc exit="southeast" move="swim southeast" destination="158" />
+    <arc exit="south" move="swim south" destination="148" />
+    <arc exit="southwest" move="swim southwest" destination="118" />
+    <arc exit="west" move="swim west" destination="119" />
+  </node>
+  <node id="148" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>A large boulder, protruding up from the river's bottom, blocks the swift current, making a still place in the midst of the rushing stream.  Thin-legged insects dance along the surface of the black water, searching for food or becoming food themselves.</description>
+    <description>A large boulder protruding up from the river's bottom blocks the swift current, making a still place in the midst of the rushing stream.  Thin-legged insects dance along the surface of the black water, searching for food or becoming food themselves.</description>
+    <position x="320" y="620" z="0" />
+    <arc exit="north" move="swim north" destination="147" />
+    <arc exit="northeast" move="swim northeast" destination="159" />
+    <arc exit="east" move="swim east" destination="158" />
+    <arc exit="southeast" move="swim southeast" destination="157" />
+    <arc exit="south" move="swim south" destination="149" />
+    <arc exit="southwest" move="swim southwest" destination="117" />
+    <arc exit="west" move="swim west" destination="118" />
+    <arc exit="northwest" move="swim northwest" destination="119" />
+  </node>
+  <node id="149" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>The water deepens here as it sweeps southward, the currents swirling as the river narrows.  The clamor of a nearby waterfall can be easily distinguished as coming from upstream.</description>
+    <description>The water becomes somewhat shallower through here as it sweeps southward, increasing speed as the river narrows before plunging over a steep barricade of jammed logs and other debris.  The clamor of a nearby waterfall can be easily distinguished as coming from upstream.</description>
+    <position x="320" y="640" z="0" />
+    <arc exit="north" move="swim north" destination="148" />
+    <arc exit="northeast" move="swim northeast" destination="158" />
+    <arc exit="east" move="swim east" destination="157" />
+    <arc exit="west" move="swim west" destination="117" />
+    <arc exit="northwest" move="swim northwest" destination="118" />
+  </node>
+  <node id="150" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>Though the current is quite strong along here, the river is a bit more shallow.  A beach of scoured white sand lines the east riverbank.</description>
+    <description>Though the current is quite strong along here, the river is a bit more shallow after plunging over a barricade of logs and debris.  A beach of scoured white sand lines the east riverbank.</description>
+    <position x="320" y="660" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="157" />
+    <arc exit="south" move="swim south" destination="151" />
+    <arc exit="southwest" move="swim southwest" destination="121" />
+    <arc exit="west" move="swim west" destination="120" />
+    <arc exit="go" move="go sand beach" destination="161" />
+  </node>
+  <node id="151" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>Black waters beat up against treacherous banks.  The river crashes against the rocks that protrude through the stream's surface, hurdling over them in bursts of spray.</description>
+    <position x="320" y="680" z="0" />
+    <arc exit="north" move="swim north" destination="150" />
+    <arc exit="south" move="swim south" destination="152" />
+    <arc exit="southwest" move="swim southwest" destination="122" />
+    <arc exit="west" move="swim west" destination="121" />
+    <arc exit="northwest" move="swim northwest" destination="120" />
+  </node>
+  <node id="152" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>A white sand beach extends outward into the racing currents.  Sharp rocks cut through the river's surface like knife blades.</description>
+    <description>A white sand beach extends outward into the racing currents.  Sharp rocks cut through the river's surface like knife blades, providing a surface logs to pile up in a tremendous logjam.  The only outlet for the raging waters is through a small channel to the southeast.</description>
+    <position x="320" y="700" z="0" />
+    <arc exit="north" move="swim north" destination="151" />
+    <arc exit="southeast" move="swim southeast" destination="156" />
+    <arc exit="southwest" move="swim southwest" destination="123" />
+    <arc exit="west" move="swim west" destination="122" />
+    <arc exit="northwest" move="swim northwest" destination="121" />
+    <arc exit="go" move="go sand beach" destination="160" />
+  </node>
+  <node id="153" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>The thunderous watercourse continues on speedily as it makes its way south.  Rocks blocking the water make the river even more hazardous to traverse.</description>
+    <position x="320" y="720" z="0" />
+    <arc exit="east" move="swim east" destination="156" />
+    <arc exit="southeast" move="swim southeast" destination="155" />
+    <arc exit="south" move="swim south" destination="154" />
+    <arc exit="southwest" move="swim southwest" destination="124" />
+  </node>
+  <node id="154" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>The thunderous watercourse crashes onward as it makes its way south.  Rocks blocking the water make the river even more hazardous to traverse.</description>
+    <position x="320" y="740" z="0" />
+    <arc exit="north" move="swim north" destination="153" />
+    <arc exit="northeast" move="swim northeast" destination="156" />
+    <arc exit="east" move="swim east" destination="155" />
+    <arc exit="southeast" move="swim southeast" destination="146" />
+    <arc exit="south" move="swim south" destination="145" />
+    <arc exit="southwest" move="swim southwest" destination="125" />
+    <arc exit="west" move="swim west" destination="124" />
+  </node>
+  <node id="155" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>The stream has grown much wider here, making the riverbank unreachable in the mighty currents.  Skeletal trees, swallowed by flooding waters, emerge from the river's surface.</description>
+    <position x="340" y="740" z="0" />
+    <arc exit="north" move="swim north" destination="156" />
+    <arc exit="south" move="swim south" destination="146" />
+    <arc exit="southwest" move="swim southwest" destination="145" />
+    <arc exit="west" move="swim west" destination="154" />
+    <arc exit="northwest" move="swim northwest" destination="153" />
+  </node>
+  <node id="156" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>Fierce rapids tear at the white sand beach that stretches out into the inky river.  A cool mist, spraying up from the crashing currents, fills the air.</description>
+    <position x="340" y="720" z="0" />
+    <arc exit="south" move="swim south" destination="155" />
+    <arc exit="southwest" move="swim southwest" destination="154" />
+    <arc exit="west" move="swim west" destination="153" />
+    <arc exit="northwest" move="swim northwest" destination="152" />
+    <arc exit="go" move="go sand beach" destination="163" />
+  </node>
+  <node id="157" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>The river narrows here, speeding away faster as it flows to the southwest.  A bar of white sand stretches out into the stream, channeling the water away from the east bank.</description>
+    <position x="340" y="640" z="0" />
+    <arc exit="north" move="swim north" destination="158" />
+    <arc exit="southwest" move="swim southwest" destination="150" />
+    <arc exit="west" move="swim west" destination="149" />
+    <arc exit="northwest" move="swim northwest" destination="148" />
+    <arc exit="go" move="go white sandbar" destination="162" />
+  </node>
+  <node id="158" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>Giant trees and thick brush line the bank of the river like a massive wall.  Slime-covered branches stick up out of the water, adding to the danger of the speeding currents.</description>
+    <position x="340" y="620" z="0" />
+    <arc exit="north" move="swim north" destination="159" />
+    <arc exit="south" move="swim south" destination="157" />
+    <arc exit="southwest" move="swim southwest" destination="149" />
+    <arc exit="west" move="swim west" destination="148" />
+    <arc exit="northwest" move="swim northwest" destination="147" />
+  </node>
+  <node id="159" name="Hara'jaal, Seord Fal" color="#0000FF">
+    <description>Swift currents slap hard against the rocky riverbank.  Water, black as a squid's ink, spills over a steep cliff into the river's swirling currents.</description>
+    <position x="340" y="600" z="0" />
+    <arc exit="south" move="swim south" destination="158" />
+    <arc exit="southwest" move="swim southwest" destination="148" />
+    <arc exit="west" move="swim west" destination="147" />
+  </node>
+  <node id="160" name="Hara'jaal, Sandy Bank">
+    <description>A black boulder, scoured almost to a polish by water, protrudes up from the sun-bleached sands.  The hedge that guards the east side of the beach grows tall and dense like the wall of a fortress.</description>
+    <position x="360" y="700" z="0" />
+    <arc exit="north" move="north" destination="161" />
+    <arc exit="southeast" move="southeast" destination="163" />
+    <arc exit="go" move="go river" destination="152" />
+  </node>
+  <node id="161" name="Hara'jaal, Sandy Bank">
+    <description>A pungent odor seems to originate from the thorny bushes that line the eastern edge of the beach.  Piles of deadwood and rocks, washed up from the river, cover a large portion of the sandy ground.</description>
+    <position x="360" y="660" z="0" />
+    <arc exit="northeast" move="northeast" destination="162" />
+    <arc exit="south" move="south" destination="160" />
+    <arc exit="go" move="go river" destination="150" />
+  </node>
+  <node id="162" name="Hara'jaal, Sandy Bank">
+    <description>The water brushes hard against the white sands of the beach.  A thick hedge of thorny brush blocks the beach off from all but the rushing river.</description>
+    <position x="380" y="640" z="0" />
+    <arc exit="southwest" move="southwest" destination="161" />
+    <arc exit="go" move="go river" destination="157" />
+  </node>
+  <node id="163" name="Hara'jaal, Sandy Bank">
+    <description>Thorny bushes and the swift flowing river seem to be fighting a titanic battle over this small scrap of beach.  The roots of the thick hedges has been exposed in many places where rushing water has taken its toll and eroded the soil.</description>
+    <description>Thorny bushes and the swift flowing river seem to be fighting a titanic battle over this small scrap of beach.  The roots of the thick hedges have been exposed in many places where rushing water has taken its toll and eroded the soil.</description>
+    <position x="380" y="720" z="0" />
+    <arc exit="northwest" move="northwest" destination="160" />
+    <arc exit="go" move="go river" destination="156" />
+  </node>
+  <node id="164" name="A Black Sand Path">
+    <description>A thicket of dense thorns surround the path, forming a dark tunnel.  The air is thick and oppressive, with the scent of decomposition pervading everything.</description>
+    <position x="300" y="880" z="0" />
+    <arc exit="north" move="north" destination="165" />
+  </node>
+  <node id="165" name="A Black Sand Path">
+    <description>A thicket of dense thorns surround the path, forming a dark tunnel.  The air is thick and oppressive, with the scent of decomposition pervading everything.</description>
+    <position x="300" y="860" z="0" />
+    <arc exit="north" move="north" destination="166" />
+  </node>
+  <node id="166" name="A Black Sand Path">
+    <description>A thicket of dense thorns surround the path, forming a dark tunnel.  The air is thick and oppressive, with the scent of decomposition pervading everything.</description>
+    <position x="300" y="840" z="0" />
+    <arc exit="north" move="north" destination="167" />
+  </node>
+  <node id="167" name="A Black Sand Path">
+    <description>A thicket of dense thorns surround the path, forming a dark tunnel.  The air is thick and oppressive, with the scent of decomposition pervading everything.</description>
+    <position x="300" y="820" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="64" />
+  </node>
+  <node id="168" name="Hara'jaal, Faint Path">
+    <description>The hum and whine of insects blend with the sound of trickling water and squishing mud.  Barbed branches reach out to tug at any loose clothing while thick mud puddles create deep sink holes along the way.  A broken gate is silhouetted against the light shining from the doorway of a small mud hovel.</description>
+    <description>Dense brush makes it difficult to follow the path.  Barbed branches reach out to snag at any loose clothing while water trickles across the ground, making it a muddy mess.  The path ends in front of a broken down gate that leads into a yard scattered with debris.  A number of chickens peck and scratch at the ground next to a mud-packed, straw hovel.</description>
+    <position x="260" y="840" z="0" />
+    <arc exit="go" move="go faint path" destination="68" />
+    <arc exit="go" move="go broken gate" destination="169" />
+    <arc exit="go" move="go faint trail" destination="171" />
+  </node>
+  <node id="169" name="Hara'jaal, Muddy Courtyard">
+    <description>Stillness weighs heavily in the yard, not a bird twitters nor insect hums.  A yellow shaft of light streams out the broken door of a small mud hovel and bathes charred bits of crudely made furniture, lying about the muddy yard, in an eerie light.</description>
+    <description>A stillness weighs heavily in the yard, not a bird twitters nor insect hums.  There is no respite from the sucking mud that pulls at anything on its surface.  Charred remains of crudely made furniture along with broken bits of pottery are evidence that the hovel has recently been vandalized.</description>
+    <position x="260" y="820" z="0" />
+    <arc exit="go" move="go gate" destination="168" />
+    <arc exit="go" move="go driftwood door" destination="170" />
+  </node>
+  <node id="170" name="Hara'jaal, Mud Hovel" note="Drogor|Depart|shrine" color="#400040">
+    <description>A firepit holds a meager fire at the center of the tiny, one room hovel and is the only light in this windowless place.  A mat of palm fronds and a ratty blanket lies in one corner of the earth-packed floor.  The only proof that someone resides here is a pot at the center of the fire that gives off the noxious aroma of some foul porridge.  A small altar has been constructed from an old ship's door that sits on two large pieces of driftwood.</description>
+    <description>The hovel has been ransacked many times over, leaving nothing but the bare essentials.  A mat of palm fronds lies in one corner of the earth-packed floors along with a ratty blanket and serves as a bed.  A small firepit is centered in the room with a dented pot, filled with some odoriferous type of porridge, resting on a flat rock in the middle of the fire.  In one corner an altar has been created from an old ship's door and sits on two large pieces of driftwood.</description>
+    <position x="280" y="820" z="0" />
+    <arc exit="go" move="go driftwood door" destination="169" />
+  </node>
+  <node id="171" name="A Muddy Trail">
+    <description>The steady drone of insects is punctuated by the harsher and more guttural sounds of the larger nocturnal creatures roaming the surrounding vegetation.  Thin rivulets of water snake eastwards down the trail, and a small opening in the brush to the west is nearly covered by a massive web whose architect, a huge orange spider, sways silently among the upper strands.</description>
+    <description>Dense brush and barbed, low-hanging branches press in from all sides of the trail, which is little more than a tunnel carved through the living strata.  Rivulets of water snake across the muddy ground, and tiny droplets glisten among the strands of a spider's web which stretches across the upper portion of the path.  Its architect, a massive orange spider the size of a Tog's fist, is perched along the upper edge, surveying the dark opening leading further west.</description>
+    <position x="260" y="860" z="0" />
+    <arc exit="go" move="go muddy trail" destination="168" />
+    <arc exit="go" move="go massive web" destination="172" />
+  </node>
+  <node id="172" name="Hara'Jaal, A Small Clearing" color="#00FFFF">
+    <description>The dense brush and towering trees recede to form a small, almost circular glade.  Illuminated by a shaft of light shining through a gap in the entwined branches overhead, a solitary cypress stump stands lonely vigil over a collapsed excavation.  A few beads of moisture glisten among the strands of a massive web nearly covering the entrance to a small trail.</description>
+    <description>The dense brush and towering trees have receded to form a small glade bathed in perpetual twilight.  At the western edge, just inside the impenetrable ring of vegetation, a solitary cypress stump stands lonely vigil over a collapsed excavation.  Towards the east, a massive web nearly covers the entrance to a small trail.</description>
+    <position x="260" y="880" z="0" />
+    <arc exit="go" move="go massive web" destination="171" />
+  </node>
+  <node id="173" name="Baron's Forset, Teller" note="Teller|Bank" color="#00FF00">
+    <description>The wattle-and-daub walls and grimy floors of this cramped, single-room building disguise the fact that this is the financial hub of the outlaw empire set up by the Baron and his minions.  Locked behind a sturdy steel cage, the bank clerks transact the day's business.  Off to the side of the room, a murky corner holds the moneychanger's cubicle.</description>
+    <position x="-50" y="680" z="0" />
+    <arc exit="out" move="out" destination="91" />
+    <arc exit="go" move="go shadow-filled corner" destination="174" />
+  </node>
+  <node id="174" name="Baron's Forset, Moneychanger" note="Exchanger" color="#00FF00">
+    <description>This tiny cubicle is the work area for the clerk who handles money exchanges.  Thin, makeshift walls provide an illusory sense of separation from the main room of the bank.</description>
+    <position x="-60" y="680" z="0" />
+    <arc exit="east" move="east" destination="173" />
+  </node>
+  <node id="175" name="Solvajelt Lasa'Zindu" note="Tattoo" color="#FF0000">
+    <description>The wood walls are splashed with a rainbow assortment of colors.  Pots of dyes and paints are piled high on shelves and stacked in corners, alongside wooden racks holding rows of the slender bone needles used to create designs on living skin or scales.  A number of assistants stand ready to aid the master skin artists as they work with their customers.</description>
+    <position x="-90" y="700" z="0" />
+    <arc exit="out" move="out" destination="93" />
+  </node>
+  <node id="176" name="Oblichek's Fine Furs" note="Bundles" color="#00FF00">
+    <description>The air is full of unpleasant odors, coming from other parts of the building.  Stacks of bundled skins and furs are piled up against the walls.  A number of assistants hang about in the shadows, awaiting the chance to buy hides and other trophies for their master.</description>
+    <position x="-40" y="710" z="0" />
+    <arc exit="west" move="west" destination="177" />
+    <arc exit="out" move="out" destination="96" />
+  </node>
+  <node id="177" name="Oblichek's Fine Furs">
+    <description>The walls in this room are hung with skins stretched out on drying racks.  A large counter constructed from a variety of different bones sits in the middle of the floor.</description>
+    <position x="-50" y="710" z="0" />
+    <arc exit="north" move="north" destination="178" />
+    <arc exit="east" move="east" destination="176" />
+  </node>
+  <node id="178" name="Oblichek's Fine Furs" note="Oblichek">
+    <description>Large vats fill the entire room.  Clouds of obnoxious fumes spew out of the chemical soup contained within the tubs.  A shallow trench runs the length of the floor to drain away spills.  Dark stains cover the walls.</description>
+    <position x="-50" y="700" z="0" />
+    <arc exit="south" move="south" destination="177" />
+  </node>
+  <node id="179" name="Calorak's Weapons and Armor" note="Weapons">
+    <description>Large oil lamps, emitting more oily smoke than light, illuminate the shop and its wares.  The sharp scent of smelted iron hangs heavy in the air.  The soot-stained black walls are bare, except for a spike from which hangs a heavy leather apron.  A thick leather curtain, leading to another area of the shop, is tacked to a doorframe.</description>
+    <position x="-20" y="730" z="0" />
+    <arc exit="east" move="east" destination="180" />
+    <arc exit="out" move="out" destination="90" />
+  </node>
+  <node id="180" name="Calorak's Weapons and Armor" note="Armor">
+    <description>Lamps, mounted to the walls, light the shop's smoke stained walls and displays.  The flagstone floor is deeply gouged in many places where heavy objects have been dragged across it.</description>
+    <position x="-10" y="730" z="0" />
+    <arc exit="west" move="west" destination="179" />
+  </node>
+  <node id="181" name="The Enclave, Sh'aar's Trove" note="Pawnshop|Sh'aar's Trove" color="#00FF00">
+    <description>Mismatched paintings cover the walls, while long shelves bolted between them hold a medley of questionable treasures, presided over by the pawnbroker Dumi Sh'aar.  Engraved boxes compete for space with musical instruments, tools, books, and other oddments.  A glass-topped counter in front of the room holds an assortment of trinkets and jewelry -- some tawdry, some so regal in design that distant journeys must have brought them to this place.</description>
+    <position x="-30" y="700" z="0" />
+    <arc exit="go" move="go wooden door" destination="88" />
+  </node>
+  <node id="182" name="Driftwood Tavern, Common Room" note="Driftwood Tavern" color="#FF0000">
+    <description>The floor of the tavern is covered with sawdust.  Fish-oil lamps, burning dimly throughout the building, give off a rank scent that is only a smidge better than the lingering smells of puke and spilt ale.  The bar, with plenty of stools lined up beside it, takes up a majority of one wall.  A large booth, opposite the bar, provides a small bit of privacy for those in need of some.</description>
+    <position x="60" y="700" z="0" />
+    <arc exit="out" move="out" destination="89" />
+    <arc exit="climb" move="climb narrow staircase" destination="183" />
+    <arc exit="go" move="go large booth" destination="185" />
+  </node>
+  <node id="183" name="Driftwood Tavern, Below the Eaves">
+    <description>Here at the top of the stairs, the tavern's sloping roof meets the outside wall at an abrupt angle, creating a rather tricky hazard for the tavern's taller or more inebriated guests to navigate.  Several doors can be seen at the western end of the hallway, faintly illuminated by a sputtering brass ship's lantern.</description>
+    <description>Here at the top of the stairs, the tavern's sloping roof meets the outside wall at an abrupt angle, creating a rather tricky hazard for the tavern's taller or more inebriated guests to navigate.  Several doors can be seen at the western end of the hallway, faintly illuminated by a sputtering brass ship's lantern.  A small storage area lurks under the roof just north of the landing.</description>
+    <position x="60" y="690" z="0" />
+    <arc exit="west" move="west" destination="184" />
+    <arc exit="climb" move="climb narrow staircase" destination="182" />
+    <arc exit="north" destination="225" />
+  </node>
+  <node id="184" name="Driftwood Tavern, Upstairs Hallway" color="#00FFFF">
+    <description>A pitted brass ship's lantern hangs from one wall, its sputtering flame barely illuminating the cramped hallway.  An old barstool, liberated from downstairs, sits below the lantern.  The wooden floorboards are gapped and scarred yet the noise from below is curiously muffled.</description>
+    <position x="50" y="690" z="0" />
+    <arc exit="east" move="east" destination="183" />
+  </node>
+  <node id="185" name="Driftwood Tavern, Booth">
+    <description>High-backed benches and thick tapestries hanging from the ceiling dampen the clamor from the common room.  A dark-stained menu is tacked roughly to the wall.</description>
+    <position x="50" y="700" z="0" />
+    <arc exit="east" move="east" destination="182" />
+  </node>
+  <node id="186" name="Anli Delban Reste, Bar" note="Bar">
+    <description>Wide cracks in the roof and walls let the night air in, but the reek of sweat and stale air still fills the room.  Oil lamps hanging on the walls shed dim illumination on the grime-choked reed mats covering the floor.  The center of the room is dominated by a large, crudely gouged-out pit which appears to be filled with mud.  In one corner, a thick-waisted bartender hovers, surrounded by his ale barrels.</description>
+    <position x="-10" y="690" z="0" />
+    <arc exit="out" move="out" destination="87" />
+    <arc exit="go" move="go mud pit" destination="187" />
+  </node>
+  <node id="187" name="Anli Delban Reste, A Mud Pit">
+    <description>This area is walled off from the rest of the tavern with rough wood timbers.  Thick, brown mud fills the pit and bubbles messily from trapped air in its depths.</description>
+    <position x="-20" y="680" z="0" />
+    <arc exit="out" move="out" destination="186" />
+  </node>
+  <node id="188" name="A Cottage" note="Kersharin|Empath|Autopath|Healer|Hospital" color="#00FF00">
+    <description>The interior of this single-room home is bright and serene, with every inch organized to be both tidy and functional.  Curtains the color of morning sunshine, tied back with cords of emerald cotton, frame the windows, and lush houseplants are set on neat shelves lining the walls.  A marble slab covered with an immaculate white sheet provides a spot for the Empath's customers to rest.  Near the window, a little rack is filled with drying herbs, and their scent fills the air with a refreshing tang.</description>
+    <position x="-90" y="680" z="0" />
+    <arc exit="out" move="out" destination="92" />
+  </node>
+  <node id="189" name="Var'Quel Manor, Hallway" note="Var'Quel Manor|Manor">
+    <description>Luxurious carpets line the floor of this corridor.  The clean whitewashed walls fill the air of the hall with a strong scent of lime.  Lamps, hanging from the lobby's ceiling, illuminate the hallway.</description>
+    <position x="-80" y="640" z="0" />
+    <arc exit="north" move="north" destination="191" />
+    <arc exit="east" move="east" destination="192" />
+    <arc exit="west" move="west" destination="190" />
+    <arc exit="out" move="out" destination="83" />
+  </node>
+  <node id="190" name="Var'Quel Manor, Captain's Office">
+    <description>Weapons and shields of all types are mounted on the walls of this office.  The captain of the Baron's guard sits behind his desk, a monstrous creation of wood and iron.  Banners, taken from pirated ships, hang from the ceiling.</description>
+    <position x="-90" y="640" z="0" />
+    <arc exit="out" move="out" destination="189" />
+  </node>
+  <node id="191" name="Var'Quel Manor, Hallway">
+    <description>Shabbily dressed guards stand to the sides of a marble arch.  A spiral staircase leads to an upper balcony and the top floor of the manor.  Dark tapestries hang on the walls, and lamps illuminate the corridor.</description>
+    <position x="-80" y="630" z="0" />
+    <arc exit="south" move="south" destination="189" />
+    <arc exit="climb" move="climb spiral staircase" destination="221" />
+  </node>
+  <node id="192" name="Var'Quel Manor, Clerk's Office">
+    <description>This room is filled with a disarray of ledgers and loose parchments.  Behind an ink-stained wooden desk, stacked high with books, sits the Baron's clerk who handles the day to day business of the town.  The office smells of old leather bindings and moldy rag paper.</description>
+    <position x="-70" y="640" z="0" />
+    <arc exit="out" move="out" destination="189" />
+  </node>
+  <node id="193" name="The Enclave, Sohrac's Gembuyers" note="Gem Shop|Gembuyers" color="#FF0000">
+    <description>Evening's soft light filters through a ruby-hued glass skylight and gives the room a warm glow.  Shadows cast from barred windows flicker across the locked cabinets protecting gemstones glittering in velvet-lined trays, their brilliance rivalling the stars themselves.  Gem buyer Abira Sohrac sips a cup of tea and smiles a welcome as she reaches for an empty sorting-tray in preparation for her next customer.</description>
+    <position x="-20" y="630" z="0" />
+    <arc exit="go" move="go trimmed door" destination="81" />
+  </node>
+  <node id="194" name="The Enclave, Tehya's Stitchery" note="Clothing|Tehya's Stitchery" color="#FF0000">
+    <description>No exclusive urban clothier, this shop is devoted to the taste of buccaneers and renegades both male and female.  Bolts of bright cotton, patterned batiks, and exotic silks are piled in a glorious profusion in heavy oak cabinets lining the pale turquoise walls.  The seamstress Tehya Garlane strides about the room, a length of scarlet homespun flung over one shoulder, flashing her brilliant smile and bantering with customers while adjusting the garments hung neatly on display.</description>
+    <position x="-30" y="660" z="0" />
+    <arc exit="go" move="go driftwood door" destination="84" />
+  </node>
+  <node id="195" name="The Enclave, Jewelry Shop" note="Jewelry" color="#FF0000">
+    <description>Whale oil lanterns cast a hazy glow over the cluttered shop and coat the display cases with a thin film of soot.  Two long, narrow windows are grimy and barred shut, holding in the fetid odor of unwashed bodies and cheap cologne.  Betina, the shop's owner, shares lewd comments and bawdy laughter with the burly Gor 'Tog guards milling about.</description>
+    <position x="0" y="630" z="0" />
+    <arc exit="go" move="go iron door" destination="80" />
+  </node>
+  <node id="196" name="Hara'jaal, Glaren Kweld" note="Rock Room">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="260" y="500" z="0" />
+    <arc exit="north" move="north" destination="197" />
+    <arc exit="northeast" move="northeast" destination="197" />
+    <arc exit="east" move="east" destination="197" />
+    <arc exit="southeast" move="southeast" hidden="True" destination="220" />
+    <arc exit="south" move="south" destination="52" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="220" />
+    <arc exit="west" move="west" hidden="True" destination="220" />
+    <arc exit="northwest" move="northwest" destination="197" />
+  </node>
+  <node id="197" name="Hara'jaal, Glaren Kweld" color="#FFFF00">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="260" y="460" z="0" />
+    <arc exit="north" move="north" destination="198" />
+    <arc exit="northeast" move="northeast" destination="198" />
+    <arc exit="east" move="east" destination="198" />
+    <arc exit="southeast" move="southeast" destination="198" />
+    <arc exit="south" move="south" destination="198" />
+    <arc exit="southwest" move="southwest" destination="198" />
+    <arc exit="west" move="west" destination="198" />
+    <arc exit="northwest" move="northwest" destination="198" />
+    <arc exit="climb" move="climb slope" destination="49" />
+  </node>
+  <node id="198" name="Hara'jaal, Glaren Kweld" color="#FFFF00">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="260" y="440" z="0" />
+    <arc exit="north" move="north" destination="199" />
+    <arc exit="northeast" move="northeast" destination="199" />
+    <arc exit="east" move="east" destination="199" />
+    <arc exit="southeast" move="southeast" destination="197" />
+    <arc exit="south" move="south" destination="197" />
+    <arc exit="southwest" move="southwest" destination="197" />
+    <arc exit="west" move="west" destination="197" />
+    <arc exit="northwest" move="northwest" destination="199" />
+  </node>
+  <node id="199" name="Hara'jaal, Glaren Kweld" color="#FFFF00">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="260" y="420" z="0" />
+    <arc exit="north" move="north" destination="200" />
+    <arc exit="northeast" move="northeast" destination="200" />
+    <arc exit="east" move="east" destination="200" />
+    <arc exit="southeast" move="southeast" destination="198" />
+    <arc exit="south" move="south" destination="198" />
+    <arc exit="southwest" move="southwest" destination="198" />
+    <arc exit="west" move="west" destination="197" />
+    <arc exit="northwest" move="northwest" destination="200" />
+  </node>
+  <node id="200" name="Hara'jaal, Glaren Kweld" color="#FFFF00">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="260" y="400" z="0" />
+    <arc exit="north" move="north" destination="201" />
+    <arc exit="northeast" move="northeast" destination="201" />
+    <arc exit="east" move="east" destination="201" />
+    <arc exit="southeast" move="southeast" destination="199" />
+    <arc exit="south" move="south" destination="199" />
+    <arc exit="southwest" move="southwest" destination="199" />
+    <arc exit="west" move="west" destination="199" />
+    <arc exit="northwest" move="northwest" destination="201" />
+  </node>
+  <node id="201" name="Hara'jaal, Glaren Kweld" color="#FFFF00">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="260" y="380" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="202" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="202" />
+    <arc exit="east" move="east" hidden="True" destination="202" />
+    <arc exit="southeast" move="southeast" destination="200" />
+    <arc exit="south" move="south" destination="200" />
+    <arc exit="southwest" move="southwest" destination="200" />
+    <arc exit="west" move="west" destination="200" />
+    <arc exit="northwest" move="northwest" hidden="True" destination="202" />
+  </node>
+  <node id="202" name="Hara'jaal, Glaren Kweld">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="340" y="480" z="0" />
+    <arc exit="north" move="north" destination="203" />
+    <arc exit="northeast" move="northeast" destination="203" />
+    <arc exit="east" move="east" destination="203" />
+    <arc exit="southeast" move="southeast" hidden="True" destination="201" />
+    <arc exit="south" move="south" hidden="True" destination="201" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="201" />
+    <arc exit="west" move="west" hidden="True" destination="201" />
+    <arc exit="northwest" move="northwest" destination="203" />
+  </node>
+  <node id="203" name="Hara'jaal, Glaren Kweld">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="340" y="460" z="0" />
+    <arc exit="north" move="north" destination="204" />
+    <arc exit="northeast" move="northeast" destination="204" />
+    <arc exit="east" move="east" destination="204" />
+    <arc exit="southeast" move="southeast" destination="202" />
+    <arc exit="south" move="south" destination="202" />
+    <arc exit="southwest" move="southwest" destination="202" />
+    <arc exit="west" move="west" destination="202" />
+    <arc exit="northwest" move="northwest" destination="204" />
+  </node>
+  <node id="204" name="Hara'jaal, Glaren Kweld">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="340" y="440" z="0" />
+    <arc exit="north" move="north" destination="205" />
+    <arc exit="northeast" move="northeast" destination="205" />
+    <arc exit="east" move="east" destination="205" />
+    <arc exit="southeast" move="southeast" destination="203" />
+    <arc exit="south" move="south" destination="203" />
+    <arc exit="southwest" move="southwest" destination="203" />
+    <arc exit="west" move="west" destination="203" />
+    <arc exit="northwest" move="northwest" destination="205" />
+  </node>
+  <node id="205" name="Hara'jaal, Glaren Kweld">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="340" y="420" z="0" />
+    <arc exit="north" move="north" destination="206" />
+    <arc exit="northeast" move="northeast" destination="206" />
+    <arc exit="east" move="east" destination="206" />
+    <arc exit="southeast" move="southeast" destination="204" />
+    <arc exit="south" move="south" destination="204" />
+    <arc exit="southwest" move="southwest" destination="204" />
+    <arc exit="west" move="west" destination="204" />
+    <arc exit="northwest" move="northwest" destination="206" />
+  </node>
+  <node id="206" name="Hara'jaal, Glaren Kweld">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="340" y="400" z="0" />
+    <arc exit="north" move="north" destination="207" />
+    <arc exit="northeast" move="northeast" destination="207" />
+    <arc exit="east" move="east" destination="207" />
+    <arc exit="southeast" move="southeast" destination="205" />
+    <arc exit="south" move="south" destination="205" />
+    <arc exit="southwest" move="southwest" destination="205" />
+    <arc exit="west" move="west" destination="205" />
+    <arc exit="northwest" move="northwest" destination="207" />
+  </node>
+  <node id="207" name="Hara'jaal, Glaren Kweld">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="340" y="380" z="0" />
+    <arc exit="north" move="north" destination="208" />
+    <arc exit="northeast" move="northeast" destination="208" />
+    <arc exit="east" move="east" destination="208" />
+    <arc exit="southeast" move="southeast" destination="206" />
+    <arc exit="south" move="south" destination="206" />
+    <arc exit="southwest" move="southwest" destination="206" />
+    <arc exit="west" move="west" destination="206" />
+    <arc exit="northwest" move="northwest" destination="208" />
+  </node>
+  <node id="208" name="Hara'jaal, Glaren Kweld">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="340" y="360" z="0" />
+    <arc exit="north" move="north" destination="209" />
+    <arc exit="northeast" move="northeast" destination="209" />
+    <arc exit="east" move="east" destination="209" />
+    <arc exit="southeast" move="southeast" destination="207" />
+    <arc exit="south" move="south" destination="207" />
+    <arc exit="southwest" move="southwest" destination="207" />
+    <arc exit="west" move="west" destination="207" />
+    <arc exit="northwest" move="northwest" destination="209" />
+  </node>
+  <node id="209" name="Hara'jaal, Glaren Kweld">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="340" y="340" z="0" />
+    <arc exit="north" move="north" destination="210" />
+    <arc exit="northeast" move="northeast" destination="210" />
+    <arc exit="east" move="east" destination="210" />
+    <arc exit="southeast" move="southeast" destination="208" />
+    <arc exit="south" move="south" destination="208" />
+    <arc exit="southwest" move="southwest" destination="208" />
+    <arc exit="west" move="west" destination="208" />
+    <arc exit="northwest" move="northwest" destination="210" />
+  </node>
+  <node id="210" name="Hara'jaal, Glaren Kweld">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="340" y="320" z="0" />
+    <arc exit="north" move="north" destination="211" />
+    <arc exit="northeast" move="northeast" destination="211" />
+    <arc exit="east" move="east" destination="211" />
+    <arc exit="southeast" move="southeast" destination="209" />
+    <arc exit="south" move="south" destination="209" />
+    <arc exit="southwest" move="southwest" destination="209" />
+    <arc exit="west" move="west" destination="209" />
+    <arc exit="northwest" move="northwest" destination="211" />
+  </node>
+  <node id="211" name="Hara'jaal, Glaren Kweld">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="340" y="300" z="0" />
+    <arc exit="north" move="north" destination="212" />
+    <arc exit="northeast" move="northeast" destination="212" />
+    <arc exit="east" move="east" destination="212" />
+    <arc exit="southeast" move="southeast" destination="210" />
+    <arc exit="south" move="south" destination="210" />
+    <arc exit="southwest" move="southwest" destination="210" />
+    <arc exit="west" move="west" destination="210" />
+    <arc exit="northwest" move="northwest" destination="212" />
+  </node>
+  <node id="212" name="Hara'jaal, Glaren Kweld">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="340" y="280" z="0" />
+    <arc exit="north" move="north" destination="213" />
+    <arc exit="northeast" move="northeast" destination="213" />
+    <arc exit="east" move="east" destination="213" />
+    <arc exit="southeast" move="southeast" destination="211" />
+    <arc exit="south" move="south" destination="211" />
+    <arc exit="southwest" move="southwest" destination="211" />
+    <arc exit="west" move="west" destination="211" />
+    <arc exit="northwest" move="northwest" destination="213" />
+  </node>
+  <node id="213" name="Hara'jaal, Glaren Kweld">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="340" y="260" z="0" />
+    <arc exit="north" move="north" destination="214" />
+    <arc exit="northeast" move="northeast" destination="214" />
+    <arc exit="east" move="east" destination="214" />
+    <arc exit="southeast" move="southeast" destination="212" />
+    <arc exit="south" move="south" destination="212" />
+    <arc exit="southwest" move="southwest" destination="212" />
+    <arc exit="west" move="west" destination="212" />
+    <arc exit="northwest" move="northwest" destination="214" />
+  </node>
+  <node id="214" name="Hara'jaal, Glaren Kweld">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="340" y="240" z="0" />
+    <arc exit="north" move="north" destination="215" />
+    <arc exit="northeast" move="northeast" destination="215" />
+    <arc exit="east" move="east" destination="215" />
+    <arc exit="southeast" move="southeast" destination="213" />
+    <arc exit="south" move="south" destination="213" />
+    <arc exit="southwest" move="southwest" destination="213" />
+    <arc exit="west" move="west" destination="213" />
+    <arc exit="northwest" move="northwest" destination="215" />
+  </node>
+  <node id="215" name="Hara'jaal, Glaren Kweld">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="340" y="220" z="0" />
+    <arc exit="north" move="north" destination="216" />
+    <arc exit="northeast" move="northeast" destination="216" />
+    <arc exit="east" move="east" destination="216" />
+    <arc exit="southeast" move="southeast" destination="214" />
+    <arc exit="south" move="south" destination="214" />
+    <arc exit="southwest" move="southwest" destination="214" />
+    <arc exit="west" move="west" destination="214" />
+    <arc exit="northwest" move="northwest" destination="216" />
+  </node>
+  <node id="216" name="Hara'jaal, Glaren Kweld">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="340" y="200" z="0" />
+    <arc exit="north" move="north" destination="217" />
+    <arc exit="northeast" move="northeast" destination="217" />
+    <arc exit="east" move="east" destination="217" />
+    <arc exit="southeast" move="southeast" destination="215" />
+    <arc exit="south" move="south" destination="215" />
+    <arc exit="southwest" move="southwest" destination="215" />
+    <arc exit="west" move="west" destination="215" />
+    <arc exit="northwest" move="northwest" destination="217" />
+  </node>
+  <node id="217" name="Hara'jaal, Glaren Kweld">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="340" y="180" z="0" />
+    <arc exit="north" move="north" destination="218" />
+    <arc exit="northeast" move="northeast" destination="218" />
+    <arc exit="east" move="east" destination="218" />
+    <arc exit="southeast" move="southeast" destination="216" />
+    <arc exit="south" move="south" destination="216" />
+    <arc exit="southwest" move="southwest" destination="216" />
+    <arc exit="west" move="west" destination="216" />
+    <arc exit="northwest" move="northwest" destination="218" />
+  </node>
+  <node id="218" name="Hara'jaal, Glaren Kweld">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="340" y="160" z="0" />
+    <arc exit="north" move="north" destination="219" />
+    <arc exit="northeast" move="northeast" destination="219" />
+    <arc exit="east" move="east" destination="219" />
+    <arc exit="southeast" move="southeast" destination="217" />
+    <arc exit="south" move="south" destination="217" />
+    <arc exit="southwest" move="southwest" destination="217" />
+    <arc exit="west" move="west" destination="217" />
+    <arc exit="northwest" move="northwest" destination="219" />
+  </node>
+  <node id="219" name="Hara'jaal, Glaren Kweld">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="340" y="140" z="0" />
+    <arc exit="north" move="north" destination="220" />
+    <arc exit="northeast" move="northeast" destination="220" />
+    <arc exit="east" move="east" destination="220" />
+    <arc exit="southeast" move="southeast" destination="218" />
+    <arc exit="south" move="south" destination="218" />
+    <arc exit="southwest" move="southwest" destination="218" />
+    <arc exit="west" move="west" destination="218" />
+    <arc exit="northwest" move="northwest" destination="220" />
+  </node>
+  <node id="220" name="Hara'jaal, Glaren Kweld">
+    <description>Ropy grass presses in on every side, hiding all but the vaguest impression of pathways.  The ground is covered with a dense loam which cushions footfalls.  Rotting detritus fills the air with a heavy scent.</description>
+    <position x="340" y="120" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="196" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="196" />
+    <arc exit="east" move="east" hidden="True" destination="196" />
+    <arc exit="southeast" move="southeast" destination="219" />
+    <arc exit="south" move="south" destination="219" />
+    <arc exit="southwest" move="southwest" destination="219" />
+    <arc exit="west" move="west" destination="219" />
+    <arc exit="northwest" move="northwest" hidden="True" destination="196" />
+  </node>
+  <node id="221" name="Var'Quel Manor, Upstairs Hallway">
+    <description>The landing is bordered with a brass railing.  A darkly varnished oak door is directly opposite the spiral staircase that leads downstairs.  A porcelain floor vase, standing in the corner, is full of aromatic flowers.</description>
+    <position x="-80" y="620" z="0" />
+    <arc exit="north" move="north" destination="222" />
+    <arc exit="go" move="go oak door" destination="224" />
+    <arc exit="climb" move="climb spiral staircase" destination="191" />
+  </node>
+  <node id="222" name="Var'Quel Manor, Upstairs Hallway">
+    <description>The corridor is bare of ornamentation except for a small banner embroidered with the crest of House Var'Quel.  A gold framed door and a polished rosewood door stand across from one another at the end of the hall.</description>
+    <position x="-80" y="610" z="0" />
+    <arc exit="south" move="south" destination="221" />
+    <arc exit="go" move="go rosewood door" destination="223" />
+  </node>
+  <node id="223" name="Var'Quel Manor, The Red Room">
+    <description>Sanguine walls, hung with rose-colored draperies, blend well with the ruddy silk sheets of the room's bed.  Ceramic vases, standing in the corners, are filled with long stemmed pink carnations.</description>
+    <position x="-90" y="610" z="0" />
+    <arc exit="go" move="go rosewood door" destination="222" />
+  </node>
+  <node id="224" name="Var'Quel Manor, The Blue Room">
+    <description>A large four posted bed, covered in azure silk sheets, sits in the center of this large bedroom.  The walls are painted a deep blue and hung with dark tapestries.  Fresh flowers are laid out on the bedding, filling the room with a sweet scent.</description>
+    <position x="-90" y="620" z="0" />
+    <arc exit="go" move="go oak door" destination="221" />
+  </node>
+  <node id="225" name="Driftwood Tavern, Storage">
+    <description>Cramped by the low-hanging roof, there is little room to turn around, much less stand upright under the roofbeams.  A dusty barrel and trunk are shoved haphazardly into corners, allowing some movement.  Dust motes hang in the air, slowly drifting to rest on the grimy floor.</description>
+    <position x="60" y="680" z="0" />
+    <arc exit="south" move="south" destination="183" />
+  </node>
+  <label text="Telga Moradu">
+    <position x="80" y="630" z="0" />
+  </label>
+  <label text="Smuggler's Enclave">
+    <position x="-70" y="580" z="0" />
+  </label>
+  <label text="Corsairs">
+    <position x="70" y="670" z="0" />
+  </label>
+  <label text="Heggarangi Boars">
+    <position x="160" y="540" z="0" />
+  </label>
+  <label text="Clouded Arzumos">
+    <position x="150" y="710" z="0" />
+  </label>
+  <label text="Scaly Seordmaor">
+    <position x="-80" y="340" z="0" />
+  </label>
+  <label text="Retan Dolomars">
+    <position x="20" y="190" z="0" />
+  </label>
+  <label text="Bawdy Swains">
+    <position x="70" y="680" z="0" />
+  </label>
+  <label text="Inn">
+    <position x="-310" y="-600" z="1" />
+  </label>
+  <label text="1 (north to other side)">
+    <position x="210" y="350" z="0" />
+  </label>
+  <label text="1 (south to other side)">
+    <position x="290" y="500" z="0" />
+  </label>
+  <label text="2 ( north to other side)">
+    <position x="290" y="90" z="0" />
+  </label>
+  <label text="2 (SE to other side) --">
+    <position x="130" y="490" z="0" />
+  </label>
+  <label text="Poloh'izh">
+    <position x="210" y="290" z="0" />
+  </label>
+  <label text="Glaren Kweld Maze">
+    <position x="180" y="270" z="0" />
+  </label>
+  <label text="climb slope to go to one of these 5 rooms:">
+    <position x="10" y="410" z="0" />
+  </label>
+  <label text="To progress through the maze traveling south:">
+    <position x="80" y="-60" z="0" />
+  </label>
+  <label text="go north 20-25 times until you see a rock, and then go south once">
+    <position x="80" y="-40" z="0" />
+  </label>
+  <label text="To progress through the maze traveling north:">
+    <position x="80" y="10" z="0" />
+  </label>
+  <label text="north once (or until you see a slope), then climb slope">
+    <position x="80" y="30" z="0" />
+  </label>
+  <label text="Hara'Jaal">
+    <position x="40" y="-110" z="0" />
+  </label>
+  <label text="Sumilo Dock">
+    <position x="-20" y="790" z="0" />
+  </label>
+  <label text="Sailfin Lizard">
+    <position x="350" y="600" z="0" />
+  </label>
+  <label text="Piranah">
+    <position x="260" y="662" z="0" />
+  </label>
+  <label text="Large">
+    <position x="400" y="850" z="0" />
+  </label>
+  <label text="Lachmate">
+    <position x="390" y="860" z="0" />
+  </label>
+  <label text="Crab Spider">
+    <position x="360" y="680" z="0" />
+  </label>
+  <label text="Huge">
+    <position x="375" y="670" z="0" />
+  </label>
+  <label text="River Boa">
+    <position x="360" y="800" z="0" />
+  </label>
+  <label text="Sleek Hele'la">
+    <position x="350" y="750" z="0" />
+  </label>
+</zone>

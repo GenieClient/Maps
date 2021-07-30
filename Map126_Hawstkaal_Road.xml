@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Hawstkaal Road" id="126">
+  <node id="1" name="Hawstkaal Road, Archer's Ford" note="Archer's Ford" color="#0000FF">
+    <description>Occasional small twigs and pine needles float lazily toward the southwest, indicating the river's direction of passage.  Shallow enough that one can see one's own feet on the bottom in the crystal clear water, this is an ideal spot at which to make a crossing.  Some of the broad, tall trees that crowd nearby are riddled with ancient arrows, giving a hint to the origin of the name, Archer's Ford.</description>
+    <position x="-150" y="20" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="2" />
+    <arc exit="northwest" move="swim northwest" destination="81" />
+  </node>
+  <node id="2" name="Hawstkaal Road, Archer's Ford" color="#0000FF">
+    <description>Even toward the center of the river, the water is shallow enough to remain below the heads of the shorter races.  A combination of silt, twigs, and stone makes the bottom a tad slippery but still navigable.</description>
+    <position x="-130" y="40" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="3" />
+    <arc exit="northwest" move="swim northwest" destination="1" />
+  </node>
+  <node id="3" name="Hawstkaal Road, Archer's Ford" color="#0000FF">
+    <description>Jutting just a bit above the surface, a partially submerged tree causes the flow to split and go around either side.  Away from the banks, the river is beyond the reach of the forest's green canopy, leaving a clear opening to the sky.</description>
+    <position x="-110" y="60" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="4" />
+    <arc exit="northwest" move="swim northwest" destination="2" />
+  </node>
+  <node id="4" name="Hawstkaal Road, Archer's Ford" note="Archer's Ford" color="#0000FF">
+    <description>Burbling softly, the river flows placidly on its leisurely journey to the southwest.  Fallen debris from the overhanging greenery cushions the flat rocks beneath the surface, making this shallow section a promising choice for a crossing.</description>
+    <position x="-90" y="80" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="5" />
+    <arc exit="northwest" move="swim northwest" destination="3" />
+  </node>
+  <node id="5" name="Hawstkaal Road, Riverbank">
+    <description>Flowing gently at this point, the Biiskbowr River meanders down from the Journelai Range to the east, eventually emptying into the multi-armed Sawstwar Lake.  The trees seem to have been trimmed back from the road sometime in the past, leaving a wide staging area for a group crossing.</description>
+    <position x="-70" y="100" z="0" />
+    <arc exit="south" move="south" destination="6" />
+    <arc exit="northwest" move="northwest" destination="4" />
+  </node>
+  <node id="6" name="Hawstkaal Road, Through the Forest">
+    <description>Sloping down toward the north, the ground is a mixture of damp moss and stone with a smattering of pine needles on top.  The trees to either side seem a trifle further apart than they do to the south.</description>
+    <position x="-70" y="120" z="0" />
+    <arc exit="north" move="north" destination="5" />
+    <arc exit="southeast" move="southeast" destination="7" />
+  </node>
+  <node id="7" name="Hawstkaal Road, Through the Forest">
+    <description>Muddy patches make the footing somewhat slippery as the road inclines slightly on its way toward the nearby river.  A few small sticks caked with dirt lean against an old tree stump, which appears to be a popular place for travelers to rest and clean their boots.</description>
+    <position x="-50" y="140" z="0" />
+    <arc exit="south" move="south" destination="8" />
+    <arc exit="northwest" move="northwest" destination="6" />
+  </node>
+  <node id="8" name="Hawstkaal Road, Through the Forest">
+    <description>Lying a bit lower than the land to either side, the hard-packed dirt that passes for paved road has slowly become a morass of black goop.  Ruts of varying description run at odd angles, indicating many a wagon has been caught unaware of the depth of the quagmire.  Black bugs of various sizes swarm up into the air or scurry off into the underbrush with alarming regularity.</description>
+    <position x="-50" y="160" z="0" />
+    <arc exit="north" move="north" destination="7" />
+    <arc exit="southwest" move="southwest" destination="9" />
+  </node>
+  <node id="9" name="Hawstkaal Road, Through the Forest">
+    <description>An upended tree rests on the surrounding foliage, parallel to the forest floor.  Bits of grass and soil surround the exposed roots, and the hollow beneath appears to have been usurped as home to a burrowing animal.</description>
+    <position x="-70" y="180" z="0" />
+    <arc exit="northeast" move="northeast" destination="8" />
+    <arc exit="southwest" move="southwest" destination="10" />
+  </node>
+  <node id="10" name="Hawstkaal Road, Through the Forest">
+    <description>The road skirts the edge of a hillside with a faint path splitting off to trail down the slope.  A deep rut in the road at the fork looks as if a wagon may have turned around in the rain.</description>
+    <position x="-80" y="200" z="0" />
+    <arc exit="north" move="north" destination="9" />
+    <arc exit="southeast" move="southeast" destination="13" />
+    <arc exit="southwest" move="southwest" destination="11" />
+  </node>
+  <node id="11" name="Hawkstkaal Road, Near the Road">
+    <description>Sloping away from the main road, this half-buried trail meanders down the slope of the ravine.  A few hardy ke'nag trees provide sparse cover for the hillside.  Nestled in a high crook of the closest tree is a grey assortment of twigs and grasses.</description>
+    <position x="-100" y="220" z="0" />
+    <arc exit="northeast" move="northeast" destination="10" />
+    <arc exit="southwest" move="southwest" destination="12" />
+  </node>
+  <node id="12" name="Hawkstkaal Road, On the Slope">
+    <description>The path abruptly ends at the beginning of a steep slope into a ravine.  An assortment of stones riddles the hillside, sharing space with little but the ke'nag trees.  High above, the thick forest looms over the top of the hillside its shadows spreading like dark fingers down the slope.</description>
+    <position x="-120" y="240" z="0" />
+    <arc exit="northeast" move="northeast" destination="11" />
+    <arc exit="climb" move="climb small opening" destination="21" />
+  </node>
+  <node id="13" name="Hawstkaal Road, Through the Forest">
+    <description>Majestic pines have deposited their needles over this area, spreading it with a pungent cloak.  Pebbles, pushed off to the sides, blend with the green and brown covering to mask the road's boundaries.  Beneath the carpet of needles lie small, abrupt gradients that can trip unwary travelers.</description>
+    <position x="-60" y="220" z="0" />
+    <arc exit="southeast" move="southeast" destination="14" />
+    <arc exit="northwest" move="northwest" destination="10" />
+  </node>
+  <node id="14" name="Hawstkaal Road, Through the Forest">
+    <description>A multitude of branches form a thick canopy that envelops the road, giving it a close, protected ambience.  The limbs, thickly covered with lush needles, interlock like praying hands.</description>
+    <position x="-40" y="240" z="0" />
+    <arc exit="southeast" move="southeast" destination="15" />
+    <arc exit="northwest" move="northwest" destination="13" />
+  </node>
+  <node id="15" name="Hawstkaal Road, Through the Forest">
+    <description>Interspersed between the trees are stacks of rocks and excavations that give the land a pimpled appearance.  The piles appear orderly, as if someone had a purpose in mind at the time they did the digging.  A few holes encroach upon the road, presenting a tripping hazard for the unwary.</description>
+    <position x="-20" y="260" z="0" />
+    <arc exit="southwest" move="southwest" destination="16" />
+    <arc exit="northwest" move="northwest" destination="14" />
+  </node>
+  <node id="16" name="Hawstkaal Road, Through the Forest">
+    <description>Heavy foliage surrounds the road and creates the illusion of impediments as it curves slightly.  To the northeast, it appears to dead-end at a group of tree trunks, and the southwest appears blocked by pines as it angles to the horizon.</description>
+    <position x="-40" y="280" z="0" />
+    <arc exit="northeast" move="northeast" destination="15" />
+    <arc exit="southwest" move="southwest" destination="17" />
+  </node>
+  <node id="17" name="Hawstkaal Road, Through the Forest">
+    <description>Terrain changes are subtle, but the foliage and ground cover are a more varied mix of pine and the local Ke'nag tree.  A sparse cover of fallen needles is interspersed with straggly grass.  Distant enough from the edge of a nearby cliff to ensure the integrity of the surface in foul weather, the road consists of packed dirt and vegetation.</description>
+    <position x="-60" y="300" z="0" />
+    <arc exit="northeast" move="northeast" destination="16" />
+    <arc exit="southwest" move="southwest" destination="18" />
+  </node>
+  <node id="18" name="Hawstkaal Road, Through the Forest">
+    <description>Pungent pine needles form a thick carpet that freshens the air with fragrance while muffling all sounds to a dull crunch.  A venerable pine that has survived years of buffeting winds spreads its two remaining branches in an encompassing embrace around a much younger tree.</description>
+    <position x="-80" y="320" z="0" />
+    <arc exit="northeast" move="northeast" destination="17" />
+    <arc exit="south" move="south" destination="22" />
+    <arc exit="northwest" move="northwest" destination="19" />
+  </node>
+  <node id="19" name="Hawkstkaal Road, A Fork">
+    <description>Sloping northwest, this path runs between the main road above and a deep ravine below.  The trees overhead are dense and block any view of the main road.</description>
+    <position x="-100" y="300" z="0" />
+    <arc exit="southeast" move="southeast" destination="18" />
+    <arc exit="northwest" move="northwest" destination="20" />
+  </node>
+  <node id="20" name="Off The Hawstkaal Road, Ravine">
+    <description>The gnarled roots of old ke'nag trees stubbornly claw at what little soil exists amidst the jumble of boulders littering the sides of this ravine.  One tenacious tree, top heavy with branches, hangs almost horizontally suspended over the slope.  The descent on this side looks passable, until it disappears beneath overhanging branches.</description>
+    <position x="-120" y="280" z="0" />
+    <arc exit="southeast" move="southeast" destination="19" />
+    <arc exit="go" move="go steep slope" destination="21" />
+  </node>
+  <node id="21" name="Beneath the Ravine, A Cavern" note="Peri'el|Altar">
+    <description>An overhang of solid earth just misses completely encasing this hollow.  Walls of sandstone alternate with slate creating a patterned march to a rough dirt floor.  A circle of medium size rocks guards an oblong boulder that dominates the room.  On the east wall a series of stones leads up to a small opening.  You also see an oblong boulder with a shell on it.</description>
+    <description>An overhang of solid earth just misses completely encasing this hollow.  Walls of sandstone alternate with slate creating a patterned march to a rough dirt floor.  A circle of medium size rocks guards an oblong boulder that dominates the room.  On the east wall a series of stones leads up to a small opening.</description>
+    <position x="-140" y="260" z="0" />
+    <arc exit="climb" move="climb stones" destination="12" />
+  </node>
+  <node id="22" name="Hawstkaal Road, Through the Forest">
+    <description>The air hangs heavily, and the only noise is that of nature pursuing its business of life and death.  A distant rustle in the pines could be a forest denizen or merely a pinecone as it comes to rest on the well-padded ground.</description>
+    <position x="-80" y="340" z="0" />
+    <arc exit="north" move="north" destination="18" />
+    <arc exit="southwest" move="southwest" destination="23" />
+  </node>
+  <node id="23" name="Hawstkaal Road, Through the Forest">
+    <description>Bare, stony patches interrupt the green expanse of the forest here and there as the foothills of the Journelai Range encroach on the soft tranquility of the evergreens.</description>
+    <position x="-100" y="360" z="0" />
+    <arc exit="northeast" move="northeast" destination="22" />
+    <arc exit="south" move="south" destination="24" />
+  </node>
+  <node id="24" name="Hawstkaal Road, Through the Forest">
+    <description>Cresting a short hill, the road curls around a granite tor to the east.  The trees nearby seem to shy away from the rock as if it might reach out and crush them.</description>
+    <position x="-100" y="380" z="0" />
+    <arc exit="north" move="north" destination="23" />
+    <arc exit="southeast" move="southeast" destination="25" />
+  </node>
+  <node id="25" name="Hawstkaal Road, Through the Forest">
+    <description>The site of a many years old lightning strike can be seen to the east.  Dark green moss crawls over the edge of a deep gash in the stony forest floor.  Mangled trees, a few still resolutely clinging to life, protrude at awkward angles from the ground near the opening.</description>
+    <position x="-80" y="400" z="0" />
+    <arc exit="southwest" move="southwest" destination="26" />
+    <arc exit="northwest" move="northwest" destination="24" />
+  </node>
+  <node id="26" name="Hawstkaal Road, Through the Forest">
+    <description>Gaps in the greenery cause alternating patches of light and shadow along the way.  The harsh calls of raptors interrupt the silence periodically as they glide above, searching for prey.</description>
+    <description>Gaps in the greenery allow celestial bodies in the night sky to shine faint patches of light amid the shadows.  An occasional soft hoot emanates from an unseen owl, likely searching for a meal.</description>
+    <position x="-100" y="420" z="0" />
+    <arc exit="northeast" move="northeast" destination="25" />
+    <arc exit="south" move="south" destination="27" />
+  </node>
+  <node id="27" name="Hawstkaal Road, Through the Forest">
+    <description>Sparse clusters of pine and spruce line the way to either side.  Jagged chunks of rock jut among the needles lining the path as the mountains begin to encroach upon the peaceful woods.</description>
+    <position x="-100" y="440" z="0" />
+    <arc exit="north" move="north" destination="26" />
+    <arc exit="south" move="south" destination="28" />
+  </node>
+  <node id="28" name="Hawstkaal Road, A Clearing">
+    <description>There is a small clearing among the trees here.  At its center is a simple grey pedestal upon which stand marble figures of a Dwarf and a Gor'Tog, their hands clasped in friendship.  A small bronze plaque is mounted at its base.</description>
+    <position x="-100" y="460" z="0" />
+    <arc exit="north" move="north" destination="27" />
+    <arc exit="southwest" move="southwest" destination="29" />
+  </node>
+  <node id="29" name="Hawstkaal Road, Through the Forest">
+    <description>The woods are interrupted by a huge boulder, forcing the road to veer to the west on its way southward.  Scattered elsewhere along the ground are small chunks of rock, possibly pieces that broke off when the huge stone fell.</description>
+    <position x="-120" y="480" z="0" />
+    <arc exit="northeast" move="northeast" destination="28" />
+    <arc exit="southwest" move="southwest" destination="30" />
+  </node>
+  <node id="30" name="Hawstkaal Road, Through the Forest">
+    <description>Chunks of rock are interspersed among the moss and pine needles.  Trees begin to give way to stone among the foothills of the mountains to the east.</description>
+    <position x="-140" y="500" z="0" />
+    <arc exit="northeast" move="northeast" destination="29" />
+    <arc exit="south" move="south" destination="31" />
+  </node>
+  <node id="31" name="Hawstkaal Road, Through the Forest">
+    <description>A boulder, perhaps dislodged from the mountains to the east, blocks off passage on the eastern side, where there are traces of what appears to be an old path.  A more freshly blazed passage goes around it to the other side, providing continued smooth travel for those not adept at rock climbing.</description>
+    <position x="-140" y="520" z="0" />
+    <arc exit="north" move="north" destination="30" />
+    <arc exit="south" move="south" hidden="True" destination="32" />
+  </node>
+  <node id="32" name="Hawstkaal Road, Through the Forest">
+    <description>A layer of pine needles lies fallen from the firs on either side of the road.  Passage is nearly silent except for the occasional crunch of a breaking twig under foot, hoof, or wheel.</description>
+    <position x="20" y="220" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="31" />
+    <arc exit="south" move="south" destination="33" />
+  </node>
+  <node id="33" name="Hawstkaal Road, Through the Forest">
+    <description>Many of the trees here have the bark stripped away from the trunks near ground level.  Now and then, a rustling can be heard from deeper in the woods.  It seems likely that some gnawing creatures live nearby.</description>
+    <position x="20" y="240" z="0" />
+    <arc exit="north" move="north" destination="32" />
+    <arc exit="southeast" move="southeast" destination="34" />
+  </node>
+  <node id="34" name="Hawstkaal Road, Through the Forest">
+    <description>Intermittent breezes blow across the path as the road goes over a small hill.  The trees are somewhat sparser here, leaving more chance of exposure to the elements.</description>
+    <position x="40" y="260" z="0" />
+    <arc exit="southeast" move="southeast" destination="35" />
+    <arc exit="northwest" move="northwest" destination="33" />
+  </node>
+  <node id="35" name="Hawstkaal Road, Through the Forest">
+    <description>A bald spot in the springy forest floor of moss and evergreen needles has become moist enough to turn to mud, making the going a bit slippery.  The divots here and there may indicate awkward landings by the unwary.</description>
+    <position x="60" y="280" z="0" />
+    <arc exit="south" move="south" destination="36" />
+    <arc exit="northwest" move="northwest" destination="34" />
+  </node>
+  <node id="36" name="Hawstkaal Road, Through the Forest">
+    <description>There is a wide ditch in the middle of the road.  Several heavy wooden planks have been placed across it to allow passage, but they seem a bit wobbly.</description>
+    <position x="60" y="300" z="0" />
+    <arc exit="north" move="north" destination="35" />
+    <arc exit="south" move="south" destination="37" />
+  </node>
+  <node id="37" name="Hawstkaal Road, Through the Forest">
+    <description>The trees are particularly dense in the part of the woods.  One large pine near the roadway's edge is apparently home to a woodpecker, based on the intermittent hammering sounds coming from it.</description>
+    <position x="60" y="320" z="0" />
+    <arc exit="north" move="north" destination="36" />
+    <arc exit="south" move="south" destination="38" />
+  </node>
+  <node id="38" name="Hawstkaal Road, Through the Forest">
+    <description>A layer of moss along the road adds spring to the traveler's steps and muffles the sounds of footfalls.  Beneath the canopy of trees veiling the area, an almost palpable sense of peace seems to hover in the air, enticing many a sojourner to tarry in this green sanctuary.</description>
+    <position x="60" y="340" z="0" />
+    <arc exit="north" move="north" destination="37" />
+    <arc exit="southeast" move="southeast" destination="39" />
+  </node>
+  <node id="39" name="Hawstkaal Road, Through the Forest">
+    <description>A bed of pine needles cushions the forest floor on either side of the packed dirt road.  Little can be heard save for the rush of the river as it passes to the south.</description>
+    <position x="80" y="360" z="0" />
+    <arc exit="southeast" move="southeast" destination="40" />
+    <arc exit="northwest" move="northwest" destination="38" />
+  </node>
+  <node id="40" name="Hawstkaal Road, Through the Forest">
+    <description>The foothills of the Himeneldar Shel Mountains fade into a patchy forest on this side of the Segoltha.  Off to the south, the Chedik Bridge, with the city and mountains beyond it, is still visible through gaps in the trees.</description>
+    <position x="100" y="380" z="0" />
+    <arc exit="south" move="south" destination="41" />
+    <arc exit="northwest" move="northwest" destination="39" />
+  </node>
+  <node id="41" name="Hawstkaal Road, North River Bank" note="RTF18|RT-HNG-PT" color="#C2B280">
+    <description>The impressive Chedik bridge spans the Segoltha to the south, rising in a sturdy granite arch above the rapids.  To the north, the Dwarven-laid paving stones end abruptly, and the road becomes packed dirt, still navigable but more subject to the whims of nature.</description>
+    <position x="100" y="400" z="0" />
+    <arc exit="north" move="north" destination="40" />
+    <arc exit="south" move="south" destination="42" />
+  </node>
+  <node id="42" name="Hawstkaal Road, Chedik Bridge">
+    <description>At this end of the span, there is little sense of being in an urban region.  The road to the north leads into a densely wooded area, while the view to south is that of the mountains only, with Hibarnhvidar hidden behind the rise of the bridge's surface.  Upon reaching the riverbank, the paving stones fade to dirt, perhaps signaling the boundary of Dwarven influence on the land.</description>
+    <position x="100" y="420" z="0" />
+    <arc exit="north" move="north" destination="41" />
+    <arc exit="south" move="south" destination="43" />
+  </node>
+  <node id="43" name="Hawstkaal Road, Chedik Bridge">
+    <description>Beginning its downward slope to the north, the bridge is bracketed by a pair of impressive granite towers, twins to those on the south side.  Serving as stanchions, which, along with the heavy iron chains, support this marvel of Dwarven engineering, they rise up from the Segoltha, seemingly immune to the ravages of nature.  A heavy steel door is set into each of them, although the rust on the locks and hinges suggests that they have not seen any use in quite a while.</description>
+    <position x="100" y="440" z="0" />
+    <arc exit="north" move="north" destination="42" />
+    <arc exit="south" move="south" destination="44" />
+  </node>
+  <node id="44" name="Hawstkaal Road, Chedik Bridge" note="RTF12|RT-HNG-BC" color="#C2B280">
+    <description>Cresting above the thundering rapids, the bridge affords the traveler a panoramic vista of the entire region.  To the north, the forests of northern Forfedhdar extend as far as the eye can see.  Southward lies the great walled city of Hibarnhvidar, backed by the mountains rising in the distance.  The river rushes onward to the west, where it empties into the many-armed Sawstwar Lake.</description>
+    <position x="100" y="460" z="0" />
+    <arc exit="north" move="north" destination="43" />
+    <arc exit="south" move="south" destination="45" />
+  </node>
+  <node id="45" name="Hawstkaal Road, Chedik Bridge">
+    <description>The bridge arcs upward to the north, flanked on either side by massive granite towers to which the bridge is anchored by thick iron chains.  Heavy steel doors lead into the huge structures, although they look anything but inviting.  Looking to the south, one can see Hibarnhvidar's water wheel, endlessly turning in the mighty Segoltha.</description>
+    <position x="100" y="480" z="0" />
+    <arc exit="north" move="north" destination="44" />
+    <arc exit="south" move="south" destination="46" />
+    <arc exit="go" move="script hibintelligence" destination="56" />
+  </node>
+  <node id="46" name="Hawstkaal Road, Chedik Bridge">
+    <description>The stone paving continues, grading slightly upward as it meshes nearly seamlessly into the beginning of the Chedik Bridge, which exhibits the same high standard of Dwarven craftsmanship as the road that approaches it.  Below, rapids thunder against jagged rocks protruding from the river, providing a severe hazard to travel by water but an excellent source of power for the nearby city.  Gazing southward, one can see the walls of Hibarnhvidar looming against the backdrop of the mountains in the distance.</description>
+    <position x="100" y="500" z="0" />
+    <arc exit="north" move="north" destination="45" />
+    <arc exit="south" move="south" destination="47" />
+  </node>
+  <node id="47" name="Hawstkaal Road, Approach to Hibarnhvidar">
+    <description>A steady stream of visitors tromps to and from Hibarnhvidar's Northwest Gate just to the south.  Belying the diminutive stature of its Dwarven builders, the hulking portal of iron and stone makes even the Gor'Togs among the pedestrians seem small as they pass beneath its arch.  The rush of the nearby Segoltha River mutes the hubbub of feet, hooves, and wheels passing alone the stone road.</description>
+    <position x="100" y="520" z="0" />
+    <arc exit="north" move="north" destination="46" />
+    <arc exit="south" move="south" destination="48" />
+  </node>
+  <node id="48" name="Gate to Hibarnhvidar" note="Gate to Hibarnhvidar">
+    <description>Nestled against a steep incline, a massive stone gate stands between the road proper and the city of Hibarnhvidar.  Slight movement can be seen high atop the platforms that flank the gate's entrance.  Carefully laid stonework provides a broad area just before the gate, and narrows into the path leading away from the city.  Brushed and smoothed, the stones are evenly spaced, all traces of weed or loose gravel removed.  A multi-pointed star marks the stone at the center of the entryway.</description>
+    <position x="100" y="540" z="0" />
+    <arc exit="north" move="north" destination="47" />
+    <arc exit="west" move="west" destination="50" />
+    <arc exit="go" move="go gate" destination="49" />
+  </node>
+  <node id="49" name="Outer Hibarnhvidar, Market Road" note="Map116_Hibarnhvidar.xml|Hibarnhvidar">
+    <description>The impressive edifice of the outer city's Northwest Gate marks the end of Market Road.  Travelers from distant destinations jostle against one another as they pass in and out of the gate, making way for a wagonload of timber in from the Paasvadh Forest.  A wiry nomad from the distant Arid Steppes ignores all the distractions of the metropolis, striding purposefully into the city on his appointed task.</description>
+    <description>Almost invisible in the darkness, the massive stones of the Northwest Gate rise up in the night to mark the end of Market Road.  The outline of guards walking their rounds on the platforms high above can be seen as they pass near torches.  A few tired travelers still stagger in from the wilderness beyond, obviously anxious to be done with the day's business.</description>
+    <position x="120" y="540" z="0" />
+    <arc exit="east" move="east" />
+    <arc exit="go" move="go northwest gate" destination="48" />
+  </node>
+  <node id="50" name="Great Salt Road, Road to Hibarnhvidar" note="Great Salt Road">
+    <description>Stones, smooth and tightly packed, spread across the ground to form a road free from wagon ruts and puddles.  Wide enough to accommodate two wagons passing each other, the path slopes gently on either side to allow water and other debris to flow away from traffic.  Twisting slightly, the road enters a broad waiting area to the west, and forested land to the east.  Thick iron lanterns suspended from rods mounted in the ground offer guidance when the path is shrouded in darkness.</description>
+    <description>Thick iron lanterns suspended from rods mounted in the ground cast the path in flickers of light that shift as the lanterns move with the stiff night breeze.  The road broadens in one direction while disappearing into darkness in the other.</description>
+    <position x="80" y="540" z="0" />
+    <arc exit="east" move="east" destination="48" />
+    <arc exit="west" move="west" destination="51" />
+  </node>
+  <node id="51" name="Great Salt Road, Road to Hibarnhvidar">
+    <description>Sparsely scattered shrubs alongside the road direct it to a large forest of towering evergreens.  The air is crisp from the elevation, causing the tips of the highest tree branches to remain a frosty white, even during the summer months.  A small turnout made of a single large stone offers room for travelers to step aside for a brief rest before continuing on.  A ring of stones, blackened but clean, sits near the turnout, providing a safe place for a fire to fight the chill.</description>
+    <description>A small wagon seems camped for the night on the turnout, its canvas tied tightly to protect the goods and people inside.  Glowing embers mound in the ring of stones nearby, brightened by the occasional gust of wind passing over the road.</description>
+    <position x="60" y="540" z="0" />
+    <arc exit="east" move="east" destination="50" />
+    <arc exit="west" move="west" destination="52" />
+  </node>
+  <node id="52" name="Great Salt Road, Road to Hibarnhvidar">
+    <description>Despite the flow of traffic, a gentle hush marks the division between the open road and the entrance to the forest.  Tall red pine trees shelter the path from cold winds, while enormous fir and spruce trees create a fragrant canopy far overhead.  Dried needles scatter across the forest floor, carpeting the earth in tones of brown and red.  The road carefully winds through the area, twining around tree trunks as needed, disturbing as little of the forest as possible.</description>
+    <position x="40" y="540" z="0" />
+    <arc exit="east" move="east" destination="51" />
+    <arc exit="southwest" move="southwest" destination="53" />
+  </node>
+  <node id="53" name="Great Salt Road, Road to Hibarnhvidar">
+    <description>Pale blue columbines peek shyly from behind tree trunks in the distance, their color more vivid compared to the darkness of the forest.  Only the occasional bird call or shout from a traveler to his wagon team interrupts the silence.  Even these sound muffled, buffered by the massive trees.  The path itself is swept clean of needles and dirt, tidy piles cushioning the sides of the stones.</description>
+    <description>Only the occasional nocturnal bird call or shout from a traveler to his wagon team interrupts the silence.  Even these sound muffled, buffered by the massive trees.  The path itself is swept clean of needles and dirt, tidy piles cushioning the sides of the stones.</description>
+    <position x="20" y="560" z="0" />
+    <arc exit="northeast" move="northeast" destination="52" />
+    <arc exit="southwest" move="southwest" destination="54" />
+  </node>
+  <node id="54" name="Great Salt Road, Road to Hibarnhvidar">
+    <description>Patches of sky flash through the branches criss-crossing overhead, the shapes and sizes shifting with every breeze.  No wind disturbs at ground level other than that created by passing wagons.</description>
+    <description>Patches of sky flash through the branches criss-crossing overhead, darkened and overlapping such that it's difficult to determine which branch belongs to which tree.  No wind disturbs at ground level other than that created by passing wagons.</description>
+    <position x="0" y="580" z="0" />
+    <arc exit="northeast" move="northeast" destination="53" />
+    <arc exit="west" move="west" destination="55" />
+  </node>
+  <node id="55" name="Great Salt Road, Road to Hibarnhvidar">
+    <description>A small wooden shack leans precariously to one side, supported by boulders propped against the wood.  A thin trickle of smoke eddies in lazy spirals from a thin steel pipe poking from the roof of the shack.  Mounted on wooden braces, a large oak keg to the right of the door drips steadily, forming a dark patch in the pine needles below it.  A small dirt path leading to the shack from the main road has been stomped flat and cleared of debris.</description>
+    <position x="-20" y="580" z="0" />
+    <arc exit="east" move="east" destination="54" />
+    <arc exit="west" move="west" destination="57" />
+    <arc exit="go" move="go crooked shack" destination="58" />
+  </node>
+  <node id="56" name="Chedik Bridge, Engineer's Tower" note="Engineer's Tower|Intelligence" color="#FFFF00">
+    <description>This cluttered chamber at the bottom of the tower looks more like a classroom than a base of operations for maintenance of a massive stone structure.  There are several benches facing a desk behind which a large dusty slate is bolted to the wall.  A prominent sign is posted to one side of the slate.</description>
+    <position x="80" y="480" z="0" />
+    <arc exit="out" move="out" destination="45" />
+  </node>
+  <node id="57" name="Great Salt Road, Road to Hibarnhvidar">
+    <description>The path turns suddenly, circling around a giant redwood.  A large arch at the base of the trunk displays a hollow blackened by fire.  Despite the damage, the tree continues to thrive, and branches thick with needles spread high overhead.  The woodsy scent is strong here, earthy and damp and nearly overpowering.</description>
+    <position x="-40" y="580" z="0" />
+    <arc exit="east" move="east" destination="55" />
+    <arc exit="west" move="west" destination="60" />
+  </node>
+  <node id="58" name="Bvarn's Shack, Main Room">
+    <description>Small and tidy, the walls and roof of this room tilt oddly.  A comforting heat emanates from a potbellied stove in the corner, the chimney of which twists and bends in order to reach the ceiling.  Near the stove stands a sturdy little cot covered with a patchwork quilt.  A small wooden table is placed underneath the only window in the shack.  Carefully centered on the table, an ornate blue glass vase holds a bountiful cluster of white asters.</description>
+    <position x="-20" y="600" z="0" />
+    <arc exit="east" move="east" destination="59" />
+    <arc exit="go" move="go wooden door" destination="55" />
+  </node>
+  <node id="59" name="Bvarn's Shack, Storage">
+    <description>Light from the other room combined with that illuminating the cracks in the walls highlight a storage area.  A small shelf of assorted supplies stands snugly against the wall to the left of the doorway.  The remainder of the room is composed of stacks and stacks of kegs in various sizes.</description>
+    <position x="0" y="600" z="0" />
+    <arc exit="west" move="west" destination="58" />
+  </node>
+  <node id="60" name="Great Salt Road, Road to Hibarnhvidar">
+    <description>The trees are thinly scattered, the dustings of needles sparse.  Mounds of soft, brown earth create an undulating appearance across the forest floor, some containing small burrows from unknown creatures.  Clumps of white asters gather tidily on both sides of the path, their placement reflecting an odd blend of wildness and cultivation.  White petals, disturbed from their stems, speckle the road like grains of rice.</description>
+    <position x="-60" y="580" z="0" />
+    <arc exit="east" move="east" destination="57" />
+    <arc exit="west" move="west" destination="61" />
+  </node>
+  <node id="61" name="Great Salt Road, Road to Hibarnhvidar">
+    <description>Like a line of soldiers, the trees stand straight and even as if to create a natural gate signaling the edge of the forest.  The road is carefully laid both within and beyond the woods, each stone smoothed and precisely cut.  The cracks between each stone are filled and packed to allow for easy passage.  Directly in line with the first row of trees, the center stone bears an etched, multi-pointed star.</description>
+    <position x="-80" y="580" z="0" />
+    <arc exit="east" move="east" destination="60" />
+    <arc exit="southwest" move="southwest" destination="62" />
+  </node>
+  <node id="62" name="Great Salt Road, Road to Hibarnhvidar">
+    <description>A landscape artist's vision, the road stretches across a small plain dotted with shrubs and patches of wildflowers.  Boulders glisten when the light touches them, reflecting the minerals embedded deep within and contrasting with the dark line of evergreens in the distance.</description>
+    <description>Faint glimpses of shrubs and muted white boulders show in the darkness, fading away into the black with each turn of the road.  The pale stones of the path appear luminous in comparison to the shroud of night enclosing the area and drifting to a black line in the distance.</description>
+    <position x="-100" y="600" z="0" />
+    <arc exit="northeast" move="northeast" destination="61" />
+    <arc exit="southwest" move="southwest" destination="63" />
+  </node>
+  <node id="63" name="Great Salt Road, Road to Hibarnhvidar">
+    <description>Despite the mountainous surroundings, this span of roadway is flat, flanked by stubby grass on either side.  Patches of bare earth and grey stone appear between the clumps of grass, replaced by larger shrubs as the road continues in the direction of Hibarnhvidar.  In the distance, the stone towers of the Stelik Bridge peek from behind the turns of the path.</description>
+    <description>Despite the mountainous surroundings, this span of roadway is flat, flanked by stubby grass on either side.  Patches of grey stone appear between the clumps of grass, barely visible in the dark.  In the distance, the stone towers of the Stelik Bridge, illuminated by the fire cauldrons the guards maintain, peek from behind the turns of the path.</description>
+    <position x="-120" y="620" z="0" />
+    <arc exit="northeast" move="northeast" destination="62" />
+    <arc exit="west" move="west" destination="64" />
+  </node>
+  <node id="64" name="Great Salt Road, Road to Hibarnhvidar">
+    <description>Circumnavigating a large boulder, the path veers sharply toward the edge of a cliff.  Sturdy iron chains mounted to thick rods along the path provide a level of protection for those traveling.  Special care has been taken with the condition of the road in this section to ensure the safety of those passing through.</description>
+    <position x="-140" y="620" z="0" />
+    <arc exit="east" move="east" destination="63" />
+    <arc exit="southwest" move="southwest" destination="65" />
+  </node>
+  <node id="65" name="Great Salt Road, Road to Hibarnhvidar">
+    <description>The road climbs higher, gradually leveling to a flattened clifftop.  Stones cut to fit snugly on the slope offer support to the hooves and feet that navigate the path.  Far below, flashes of white hint at the turbulent water moving through the ravine.</description>
+    <position x="-160" y="640" z="0" />
+    <arc exit="northeast" move="northeast" destination="64" />
+    <arc exit="south" move="south" destination="66" />
+  </node>
+  <node id="66" name="Great Salt Road, Road to Hibarnhvidar">
+    <description>Still in the shadow of the supports composing the Stelik Bridge, flickers of movement are visible from the water churning below.  Across the ravine, smoky-grey crags crowned by snowfall jut toward the sky in endless ranges.  The road slopes steeply, curving toward the north before vanishing from view.</description>
+    <position x="-160" y="660" z="0" />
+    <arc exit="north" move="north" destination="65" />
+    <arc exit="west" move="west" destination="67" />
+  </node>
+  <node id="67" name="Great Salt Road, Stelik Bridge">
+    <description>The stones flow smoothly from bridge to land, making the transition barely noticeable.  Only the large stone anchorages on either side of the structure, to which thick iron chains are mounted, mark the difference between solid ground and suspension in the air.  Below the bridge, rock crumbles to water along the banks, the river swirling along in whirls and tumbles.</description>
+    <position x="-180" y="660" z="0" />
+    <arc exit="east" move="east" destination="66" />
+    <arc exit="west" move="west" destination="68" />
+  </node>
+  <node id="68" name="Stelik Bridge, East Towers">
+    <description>Stone towers loom high overhead on either side of the roadway, connected by a series of three parallel walkways.  The chain supports for the bridge rise steeply to their mountings on the towers before descending on the other side.  Iron-banded wooden doors at the base of each tower provide entry to those responsible for guarding and maintaining the bridge, while the thick locks deter all others.</description>
+    <position x="-200" y="660" z="0" />
+    <arc exit="east" move="east" destination="67" />
+    <arc exit="west" move="west" destination="69" />
+  </node>
+  <node id="69" name="Great Salt Road, Stelik Bridge">
+    <description>The iron chains arc low, supporting additional chains that are bolted to platforms mounted on the outer edges of the bridge.  Lanterns hung from iron hooks attached to the same platforms provide assistance at night and during bad weather.  Despite the well-fortified design, the openness of the draped chains offers a dizzying vista of snow-capped mountains, jagged rock, and fast-flowing water in the ravine below.</description>
+    <description>The iron chains arc low, secured by additional chains bolted to platforms mounted on the edge of the path.  Glowing lanterns hang from iron hooks, casting shadows on the path.  Gurgles from the flowing water drift through the open design of the bridge, reverberating off the walls of the ravine.</description>
+    <position x="-220" y="660" z="0" />
+    <arc exit="east" move="east" destination="68" />
+    <arc exit="west" move="west" destination="70" />
+  </node>
+  <node id="70" name="Stelik Bridge, West Towers">
+    <description>Twins to their eastern neighbors across the ravine, walkways connect the enormous towers rising high overhead.  Cauldrons of fire spout flame atop each stone tower, appearing tiny due to the vast height separating the top of the tower from the bridge passage.</description>
+    <position x="-240" y="660" z="0" />
+    <arc exit="east" move="east" destination="69" />
+    <arc exit="west" move="west" destination="71" />
+  </node>
+  <node id="71" name="Great Salt Road, Stelik Bridge">
+    <description>Chains of iron drape from the near tower to the wide anchorages that support the elaborate bridge.  Massive beams and carefully laid stones comprise the floor of the structure, each placed to protect those needing to cross the ravine.</description>
+    <position x="-260" y="660" z="0" />
+    <arc exit="east" move="east" destination="70" />
+    <arc exit="west" move="west" destination="72" />
+  </node>
+  <node id="72" name="Great Salt Road">
+    <description>The giant stone towers of the Stelik Bridge rise gracefully to the sky, their shadows falling across the path even at a distance.  The road is unpaved but appears well tended as it is absent of craters or large stones.  Jagged rock banks line both sides of the path, their surfaces covered with sparse vegetation.  An occasional bird flies overhead, winging across the river or toward the mountains before finally disappearing from view.</description>
+    <description>The giant stone towers of the Stelik Bridge rise gracefully to the sky, the flames on top of them appearing as tiny torches from a distance.  Shadows on the path meld into total darkness at the edges of the road, discouraging travelers from wandering too far.</description>
+    <position x="-280" y="660" z="0" />
+    <arc exit="east" move="east" destination="71" />
+    <arc exit="northwest" move="northwest" destination="73" />
+  </node>
+  <node id="73" name="Great Salt Road">
+    <description>The road ascends gently as it moves away from the bridge, the path snaking upon itself as it wanders around slabs of rock and an occasional stunted tree.  Each turn seems to take the path to a new level, and a noticeable chill touches the air at the higher points.  A small turnout offers a broad vista of the bridge, the river, and the forested mountains beyond.</description>
+    <position x="-300" y="640" z="0" />
+    <arc exit="southeast" move="southeast" destination="72" />
+    <arc exit="northwest" move="northwest" destination="74" />
+  </node>
+  <node id="74" name="Great Salt Road">
+    <description>The vegetation is sparse in some areas of the jagged landscape, but flourishes in others.  A young pine tree has cleaved a large boulder in two, the halves forever separated by the sturdy trunk now standing between them.</description>
+    <position x="-320" y="620" z="0" />
+    <arc exit="north" move="north" destination="75" />
+    <arc exit="southeast" move="southeast" destination="73" />
+  </node>
+  <node id="75" name="Great Salt Road, Dabrushin Pass">
+    <description>Brisk winds brush over the road, funneled by the rocks and trees that line the pathway.  Pine needles and leaves tumble from above with each gust, and the tiny flowers that peep from between the rocks bow their heads to keep their petals from being torn apart by the bitter blows.</description>
+    <position x="-320" y="600" z="0" />
+    <arc exit="north" move="north" destination="76" />
+    <arc exit="south" move="south" destination="74" />
+  </node>
+  <node id="76" name="Great Salt Road, Dabrushin Pass">
+    <description>Despite the wind funneling through the pass, the air is touched with silence.  No birds chatter, no rocks tumble or clatter, and even the wind, though sometimes blowing heartily, seems subdued in its passage.  From the trees hang bits of torn fabric, faded along the edges but still vibrant where they have been knotted to the branches.  Their frayed ends flitter and tangle with every gust.</description>
+    <position x="-320" y="580" z="0" />
+    <arc exit="north" move="north" destination="77" />
+    <arc exit="south" move="south" destination="75" />
+  </node>
+  <node id="77" name="Great Salt Road, Dabrushin Mine">
+    <description>A vicious gash in the earth's surface mars the landscape, with boulders and trees cracked and piled in heaps.  Rusted and dull chisels and picks lie scattered among the rubble, half-buried under the debris.  Thick boards are crossed over the opening, hammered heavily into place to bar entry to the old mine.  Though the boards appear weathered, some of the nails are freshly driven, their heads still shiny.</description>
+    <position x="-320" y="560" z="0" />
+    <arc exit="south" move="south" destination="76" />
+    <arc exit="northwest" move="northwest" destination="78" />
+  </node>
+  <node id="78" name="Great Salt Road, Summit">
+    <description>The path peaks in this spot, descending toward the Stelik Bridge in the southeast, and trickling to a narrow trail to the west.  Patches of rough grass grow among the rocks, and the trees are mostly undisturbed by the winds that rush through the pass below.  To one side, a stone block embedded into the ground holds a tall iron hook.  Attached to the hook is a solid iron ring from which a gold band dangles.</description>
+    <position x="-340" y="540" z="0" />
+    <arc exit="southeast" move="southeast" destination="77" />
+    <arc exit="west" move="west" destination="79" />
+  </node>
+  <node id="79" name="Great Salt Road, Rough Trail">
+    <description>The trees and rocks crowd the path, making passage difficult as well as dangerous.  Sudden turns and steep drop-offs camouflaged by heavy underbrush as well as any light shifting through the branches overhead threaten the safety of even the most careful traveler.</description>
+    <position x="-360" y="540" z="0" />
+    <arc exit="east" move="east" destination="78" />
+    <arc exit="west" move="west" destination="80" />
+  </node>
+  <node id="80" name="Great Salt Road, Rough Trail">
+    <description>The path ends abruptly here, overgrown with weeds and brush that eliminate any sign of which direction the path may have gone.  Silvery-green pricklebushes grow abundantly, their yellow needles bobbing against velvety leaves.</description>
+    <position x="-380" y="540" z="0" />
+    <arc exit="east" move="east" destination="79" />
+  </node>
+  <node id="81" name="Hawstkaal Road, Riverbank" note="Riverbank|Biiskbowr">
+    <description>A wide, smooth portion of road leads down to the northern bank of the Biiskbowr, which flows at a stately pace just to the southeast.  The tracks from numerous wheels, hooves and boots indicate that much of the local traffic passes this way.</description>
+    <position x="-170" y="0" z="0" />
+    <arc exit="southeast" move="southeast" destination="1" />
+    <arc exit="northwest" move="northwest" hidden="True" destination="82" />
+  </node>
+  <node id="82" name="Hawstkaal Road, Dense Forest">
+    <description>The evergreens begin to close in again as the road marches northward away from Archer's Ford and the river to the southeast.  A rush of water splashing over stones is audible in the distance.</description>
+    <position x="-150" y="440" z="0" />
+    <arc exit="north" move="north" destination="83" />
+    <arc exit="southeast" move="southeast" hidden="True" destination="81" />
+  </node>
+  <node id="83" name="Hawstkaal Road, Dense Forest">
+    <description>The packed earth underfoot bears a bit of moisture, making it soft enough that many of the fallen pine needles have been stamped into it so that they have become more than merely a covering but rather a part of the road itself.  On this green carpet, even heavy boots and hooves pass as quietly as slippers.</description>
+    <position x="-150" y="420" z="0" />
+    <arc exit="south" move="south" destination="82" />
+    <arc exit="northwest" move="northwest" destination="84" />
+  </node>
+  <node id="84" name="Hawstkaal Road, Dense Forest">
+    <description>Downhill to the southeast, the gurgle of the Biiskbowr River, or as the local Gor'Togs call it, The Wet River, can be heard.  That sound seems to wrap a soft blanket around the area, rendering it otherwise silent save for a barely-heard birdsong every now and then.</description>
+    <position x="-170" y="400" z="0" />
+    <arc exit="southeast" move="southeast" destination="83" />
+    <arc exit="west" move="west" destination="85" />
+  </node>
+  <node id="85" name="Hawstkaal Road, Dense Forest">
+    <description>A spiky canopy shelters the lush forest, seemingly enforcing a hush upon all within it.  Even the insects feasting upon the remains of a rotten tree trunk observe a certain degree of decorum, and the occasional snap of a twig caused by some passing animal has a curious muted quality.</description>
+    <position x="-190" y="400" z="0" />
+    <arc exit="east" move="east" destination="84" />
+    <arc exit="west" move="west" destination="86" />
+  </node>
+  <node id="86" name="Hawstkaal Road, Dense Forest">
+    <description>An enormous spruce lies fallen across the packed-dirt road.  In what must have been a heroic effort, some hardy soul has chopped a slice several feet wide through it.  Although it looks to be a tight squeeze for a caravan, passage is once again possible.</description>
+    <position x="-210" y="400" z="0" />
+    <arc exit="east" move="east" destination="85" />
+    <arc exit="west" move="west" destination="87" />
+  </node>
+  <node id="87" name="Hawstkaal Road, Dense Forest">
+    <description>As it winds its way upward, the roadway crosses over slabs of rock, which serve as a reminder that, although the region is forested, it also abuts a mountain range.  The remains of a small campfire can be seen on one such piece of stone, a handy spot on which to cook, devoid of flammable vegetation.</description>
+    <position x="-230" y="400" z="0" />
+    <arc exit="east" move="east" destination="86" />
+    <arc exit="northwest" move="northwest" destination="88" />
+  </node>
+  <node id="88" name="Hawstkaal Road, Dense Forest">
+    <description>Tiny pale blue and white wildflowers dot the roadside, poking intrepidly between fallen pine needles.  A fringe of small mushrooms circles a tall larch.  Sheltered beneath the tree's branches is a flat, moss-covered rock, which looks to be an ideal location for a summer picnic.</description>
+    <position x="-250" y="380" z="0" />
+    <arc exit="southeast" move="southeast" destination="87" />
+    <arc exit="west" move="west" destination="89" />
+  </node>
+  <node id="89" name="Hawstkaal Road, Dense Forest">
+    <description>A small pool with vegetation floating on its surface is situated within sight of the road.  Varied hoof and paw prints lead up to the water's edge, suggesting that the local fauna come here often to drink.  On the far side, there are occasional stirrings and flashes of movement from creatures too wary of travelers to come out into the open.</description>
+    <position x="-270" y="380" z="0" />
+    <arc exit="east" move="east" destination="88" />
+    <arc exit="west" move="west" destination="90" />
+  </node>
+  <node id="90" name="Hawstkaal Road, Dense Forest">
+    <description>From far above the treetops, an occasional hawk sounds its harsh cry as it soars down from the northern heights.  The undergrowth rustles as small land-bound creatures scurry for cover.</description>
+    <position x="-290" y="380" z="0" />
+    <arc exit="east" move="east" destination="89" />
+    <arc exit="northwest" move="northwest" destination="91" />
+  </node>
+  <node id="91" name="Hawstkaal Road, Dense Forest">
+    <description>A clump of firs stands at the top of a short rise.  One tree in particular is marked with a yellow blaze, perhaps put there by one of the local trackers.  Nearby is a pair of flat-topped stumps, cut off at an ideal height for them to serve as stools.</description>
+    <position x="-310" y="360" z="0" />
+    <arc exit="north" move="north" destination="92" />
+    <arc exit="southeast" move="southeast" destination="90" />
+  </node>
+  <node id="92" name="Hawstkaal Road, Dense Forest">
+    <description>A jagged ridge rises to the east as the road climbs northward.  The trees give way to chunks of stone as they approach the edge.  As it passes, the road leans slightly away to the west as if it were leery of a fall.</description>
+    <position x="-310" y="340" z="0" />
+    <arc exit="north" move="north" destination="93" />
+    <arc exit="south" move="south" destination="91" />
+  </node>
+  <node id="93" name="Hawstkaal Road, Dense Forest">
+    <description>A wooden signpost, bearing two carved arms pointing in opposite directions, is planted solidly in the ground by the side of the road.  Puffs of dust are kicked up as travelers pass over the crumbly surface of crushed stone mixed with dried pine needles.</description>
+    <position x="-310" y="320" z="0" />
+    <arc exit="north" move="north" destination="94" />
+    <arc exit="south" move="south" destination="92" />
+  </node>
+  <node id="94" name="Hawstkaal Road, Dense Forest">
+    <description>Stones battle tenacious roots for supremacy as the land climbs northward.  The evergreens of the forest persist here, but the mountains that rise to the east make their presence known.</description>
+    <position x="-310" y="300" z="0" />
+    <arc exit="north" move="north" destination="95" />
+    <arc exit="south" move="south" destination="93" />
+  </node>
+  <node id="95" name="Hawstkaal Road, Dense Forest">
+    <description>A few night birds call down from the trees, while insects buzz and hum from the undergrowth.  Vague shadows shift amid the vegetation as barely seen denizens of the night dart about.</description>
+    <description>A cacophony of bird calls echoes down from the trees, where raucous jays bully wrens and sparrows, and warblers sing, oblivious to the fracases.  Flashes of color peek through the greenery periodically as bright tanagers flit among the tops of the firs and spruces.</description>
+    <position x="-310" y="280" z="0" />
+    <arc exit="north" move="north" destination="96" />
+    <arc exit="south" move="south" destination="94" />
+  </node>
+  <node id="96" name="Hawstkaal Road, Dense Forest">
+    <description>The road appears to be blocked by a clump of cedars however, it merely loops around to either side.  Evidently, the Gor'Togs in the region were unwilling to cut the fragrant trees down, which they prize because they smell nice.</description>
+    <position x="-310" y="260" z="0" />
+    <arc exit="north" move="north" destination="97" />
+    <arc exit="south" move="south" destination="95" />
+  </node>
+  <node id="97" name="Hawstkaal Road, Dense Forest">
+    <description>Although there is packed dirt sufficiently wide to accommodate a caravan proceeding smoothly up the slope to the northwest, next to it there is a rough log stairway that leads the same way.  The reason for this is not apparent.  Perhaps someone was bored.</description>
+    <position x="-310" y="240" z="0" />
+    <arc exit="south" move="south" destination="96" />
+    <arc exit="northwest" move="northwest" destination="98" />
+    <arc exit="climb" move="climb log stairway" destination="98" />
+  </node>
+  <node id="98" name="Hawstkaal Road, Dense Forest">
+    <description>The roadway cuts its way through the woods, continuing its gradual climb.  Alongside it is a peculiar stairway that appears to lead just down the road a bit.  Near the head of the stairs is a roundish rock with a bit of paint on it.</description>
+    <position x="-330" y="220" z="0" />
+    <arc exit="southeast" move="southeast" destination="97" />
+    <arc exit="northwest" move="northwest" destination="99" />
+    <arc exit="climb" move="climb log stairway" destination="97" />
+  </node>
+  <node id="99" name="Hawstkaal Road, Dense Forest" note="RTF14|RT-BC-PT" color="#C2B280">
+    <description>Situated at the peak of its steady, gradual climb from the Biiskbowr River, the land is relatively level here but begins to descend to the southeast.  A ring of firs circles a small clearing, which houses a stone bench upon which weary travelers can rest.</description>
+    <position x="-350" y="200" z="0" />
+    <arc exit="southeast" move="southeast" destination="98" />
+    <arc exit="northwest" move="northwest" destination="100" />
+  </node>
+  <node id="100" name="Hawstkaal Road, Dense Forest">
+    <description>A fresh scent of pine greets one's nostrils upon passing through these dense woods.  The air in this unspoiled region is clean, though often brisk, and there is seldom a sound other than those made by animals, birds, the wind, or cones crunching underfoot.</description>
+    <position x="-370" y="180" z="0" />
+    <arc exit="southeast" move="southeast" destination="99" />
+    <arc exit="northwest" move="northwest" destination="101" />
+  </node>
+  <node id="101" name="Hawstkaal Road, Dense Forest" note="RTF17|RT-BC-PF" color="#C2B280">
+    <description>Far from large cities or towns, animals in this forest have little fear of passersby.  Here and there, one can see deer browsing shoots of grass unconcernedly or a hare twitching its nose in curiosity.  A sound in the distance is more likely to be the growl of a prowling bear than a hammer striking an anvil.</description>
+    <position x="-390" y="160" z="0" />
+    <arc exit="southeast" move="southeast" destination="100" />
+    <arc exit="northwest" move="northwest" destination="102" />
+  </node>
+  <node id="102" name="Hawstkaal Road, Dense Forest">
+    <description>The reek of skunk cabbage wafts from a clump of thick leaves growing at the edge of a tiny creek that trickles from the north.  From a distance, the smell isn't very strong, but when the leaves are bruised, crushed, or otherwise damaged, they release an intense odor that attracts insects and may cause eyes to water.</description>
+    <position x="-410" y="140" z="0" />
+    <arc exit="southeast" move="southeast" destination="101" />
+    <arc exit="northwest" move="northwest" destination="103" />
+  </node>
+  <node id="103" name="Hawstkaal Road, Boar Clan Bridge" note="Map127_Boar_Clan.xml|Boar Clan">
+    <description>Meeting the road at a right angle, a moss-clad stone bridge leads over a shallow chasm through which a thin creek flows.  The road narrows substantially as it continues to the northeast, becoming little more than a path and showing far fewer signs of passage than the wider, well-trodden section leading southeast.</description>
+    <position x="-430" y="120" z="0" />
+    <arc exit="northeast" move="northeast" />
+    <arc exit="southeast" move="southeast" destination="102" />
+    <arc exit="go" move="go stone bridge" destination="103" />
+  </node>
+  <label text="Great Salt Road">
+    <position x="-270" y="620" z="0" />
+  </label>
+  <label text="Hawstkaal Road">
+    <position x="-160" y="150" z="0" />
+  </label>
+  <label text="Archer's Ford">
+    <position x="-215" y="35" z="0" />
+  </label>
+  <label text="A">
+    <position x="30" y="210" z="0" />
+  </label>
+  <label text="A">
+    <position x="-130" y="510" z="0" />
+  </label>
+  <label text="To Boar Clan">
+    <position x="-410" y="90" z="0" />
+  </label>
+  <label text="To Hibarnhvidar">
+    <position x="60" y="545" z="0" />
+  </label>
+  <label text="B">
+    <position x="-200" y="0" z="0" />
+  </label>
+  <label text="B">
+    <position x="-160" y="450" z="0" />
+  </label>
+  <label text="Peri'el">
+    <position x="-180" y="250" z="0" />
+  </label>
+  <label text="Intelligence">
+    <position x="17" y="472" z="0" />
+  </label>
+  <label text="(Biiskbowr)">
+    <position x="-210" y="50" z="0" />
+  </label>
+</zone>

@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Sea Caves" id="98a">
+  <node id="1" name="Sea Caves, Tunnel">
+    <description>Cool wind blows in from the sea and down into the tunnel.  Flecks of mica glitter in the walls, floor, and ceiling of the basalt passageway.  Green moss grows tentatively across the ground and partway up the sides of the tunnel where the late rays of sunlight fall before the sun goes to its rest.  The sound of the pounding surf echoes faintly down the hall.</description>
+    <position x="20" y="60" z="0" />
+    <arc exit="southeast" move="southeast" destination="2" />
+    <arc exit="go" move="go wide opening" destination="97" />
+  </node>
+  <node id="2" name="Sea Caves, Tunnel">
+    <description>The surging of the sea registers as a slight throbbing in the earth and a faint tickle of salt in the air.  The sparkling passage leads smoothly and directly away from the trail and ocean into the hard rock of the seaside cliffs.</description>
+    <position x="40" y="80" z="0" />
+    <arc exit="southeast" move="southeast" destination="3" />
+    <arc exit="northwest" move="northwest" destination="1" />
+  </node>
+  <node id="3" name="Sea Caves, Tunnel">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>A slender path winds its way through the chamber, the floor to either side rising gradually until it meets the shallowly arched roof.  Short stalactites crowd the ceiling, dripping lonely drops of water.  The floor, aside from the worn path, is pocked with puddles and tiny pools.  As water drips into the higher pools they overflow their small banks and send a miniature stream running down to the next pool where the event is repeated until the overflow has dribbled out onto the path.</description>
+    <position x="60" y="100" z="0" />
+    <arc exit="southeast" move="southeast" destination="4" />
+    <arc exit="northwest" move="northwest" destination="2" />
+  </node>
+  <node id="4" name="Crystal Cave">
+    <description>An outcrop of clear crystals bursts from a red and gold rock formation like the morning sun rising over a forest of stalagmites growing thickly on the cavern floor.  Several long stalactites glisten from where they hang on the ceiling, letting fall an occasional drop of water.</description>
+    <position x="80" y="120" z="0" />
+    <arc exit="southeast" move="southeast" destination="5" />
+    <arc exit="northwest" move="northwest" destination="3" />
+  </node>
+  <node id="5" name="Sea Caves">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>Water cascades down the glistening walls of the large cavern and drips rapidly from many long stalactites.  Rivulets of water meander across the uneven floor pooling in a depression near the center of the room.  Flecks of mica glimmer like thousands of tiny stars through the thin sheets of water.  Numerous stalagmites jab upwards, dribbled spires and towers of some god's languorous dream.</description>
+    <position x="100" y="140" z="0" />
+    <arc exit="southeast" move="southeast" destination="12" />
+    <arc exit="south" move="south" destination="6" />
+    <arc exit="northwest" move="northwest" destination="4" />
+    <arc exit="down" move="down" destination="8" />
+  </node>
+  <node id="6" name="Sea Caves, Passageway">
+    <description>The long passageway is cramped and close.  Damp walls press in from the sides and great care must be exercised to avoid smashing one's head against the ubiquitous stalactites or barking one's shins on the solid stalagmites which seem to move to get in the way.  The glittering speckles imbedded in the rock do very little to banish the stark shadows which grow blackly behind the hanging rock and across the obstacle-studded floor.</description>
+    <position x="100" y="200" z="0" />
+    <arc exit="north" move="north" destination="5" />
+    <arc exit="east" move="east" destination="7" />
+  </node>
+  <node id="7" name="Sea Caves, Hot Spring">
+    <description>A small pool burbles and steams in the lower end of the small cavern, a wide ledge running about its edge.  The walls are smooth and damp, intermittently adorned with a fragile blue and green fungus.  A sweet, floral scent wafts from the pool.</description>
+    <position x="120" y="200" z="0" />
+    <arc exit="west" move="west" destination="6" />
+    <arc exit="go" move="go small pool" destination="16" />
+  </node>
+  <node id="8" name="Sea Caves">
+    <description>No water glistens here.  The small room's floor is uneven and covered with rocky dust.  Multi-colored layers of rock are exposed in the ceiling where chunks have recently broken off and fallen.  Gouges and long scrapes mar one wall where something frantically scratched it some time ago.</description>
+    <position x="60" y="140" z="0" />
+    <arc exit="south" move="south" destination="9" />
+    <arc exit="up" move="up" destination="5" />
+  </node>
+  <node id="9" name="Sea Caves, Cavern">
+    <description>A small waterfall pours from the low ceiling into a long shallow pool running along one wall of the elongated chamber.  Rocks and stalagmites crowd its banks almost like a dam.  Several stalactites reach their long points down nearly to the surface of the pool.  Where free from hanging rock formations, the ceiling is covered with a blue-green fungus tinged with yellow.  The basalt wall opposite the pool is streaked with yellow, red, and green veins like wisps of colored smoke against a midnight sky.</description>
+    <position x="60" y="160" z="0" />
+    <arc exit="north" move="north" destination="8" />
+    <arc exit="southeast" move="southeast" destination="10" />
+  </node>
+  <node id="10" name="Sea Caves, Cavern">
+    <description>A ledge skirts its way about this huge chamber.  Between the ledge and the wall rises an enormous pile of rubble which has fallen from the ceiling above.  The caved in portion of the roof is as flat and round as a plate, and the coloring of the exposed rock forms an image which resembles a large shark.  On the other side of the ledge, the floor tilts steeply down among large bits of rock debris, broken stalagmites and shattered stalactites before reaching the far side of the cavern.</description>
+    <position x="80" y="180" z="0" />
+    <arc exit="northwest" move="northwest" destination="9" />
+    <arc exit="climb" move="climb rubble" destination="11" />
+  </node>
+  <node id="11" name="Shrine of Drogor" note="Shrine4-14|Drogor" color="#A6A3D9">
+    <description>The top of the pile of rubble is just out of reach of the ceiling of the chamber, where the image of a ferocious shark is clear on a barren circle of stone.  Small bones litter the top of the rubble pile, and offerings lie scattered about the loose stone.</description>
+    <position x="60" y="180" z="0" />
+    <arc exit="climb" move="climb rubble" destination="10" />
+  </node>
+  <node id="12" name="Sea Caves, Passageway">
+    <description>Warm light glows from a thick vein of clear crystal intersecting the tunnel.  The vein must break through the surface somewhere above and reflect the sunlight down.  Green metallic tendrils cobweb the walls, forked lightning forms frozen forever in the rock.  A small garden of mushrooms has taken up residence on a shelf in the basalt walls which has managed to accumulate enough soil to support the little forest.</description>
+    <position x="120" y="160" z="0" />
+    <arc exit="east" move="east" destination="13" />
+    <arc exit="northwest" move="northwest" destination="5" />
+  </node>
+  <node id="13" name="Sea Caves, Large Cavern">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>A damp rock curtain glitters like a grey-green waterfall tumbling down the southern wall of the cavern to spill out across the floor in an uneven carpet of stone.  A tall column reaches up into the dark recesses of the stalactite studded ceiling.  The sound of water splattering as it hits the floor or a receiving stalagmite echoes weirdly in the chamber.</description>
+    <position x="140" y="160" z="0" />
+    <arc exit="southeast" move="southeast" destination="14" />
+    <arc exit="west" move="west" destination="12" />
+    <arc exit="climb" move="climb stone column" destination="17" />
+    <arc exit="climb" move="climb rock curtain" destination="18" />
+  </node>
+  <node id="14" name="Sea Caves, Passageway">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>The passage narrows enough that a Gor'Tog would have to squeeze to get its shoulders through, but the ceiling is lost from sight as a crevice extends far above into the darkness.  The walls are smooth and straight rather than uneven and rough, as is the case elsewhere in the caverns.</description>
+    <position x="160" y="180" z="0" />
+    <arc exit="south" move="south" destination="15" />
+    <arc exit="northwest" move="northwest" destination="13" />
+    <arc exit="climb" move="climb crevice" destination="40" />
+  </node>
+  <node id="15" name="Sea Caves, Cavern">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>A host of slender stone columns join the ceiling and floor, giving the glimmering cavern the look of a palace ballroom.  The ropey veined basalt, glistening with dampness, is a polished marble dance floor.  The long stalactites are glittering chandeliers.  The elegant stalagmites, clustered in tight knots, are indolent courtiers.  A low shelf skirts the northeast side of the chamber, wide and smooth.</description>
+    <position x="160" y="200" z="0" />
+    <arc exit="north" move="north" destination="14" />
+  </node>
+  <node id="16" name="Hot Spring" color="#0000FF">
+    <description>The water is almost too hot to endure but is strangely relaxing.  The sweet scent of the steam eases the mind, soothing away worries as the rejuvenating water loosens stiff muscles.  Each inhalation clears the head with a startling sharpness while inducing a wistful sleepiness.</description>
+    <position x="120" y="180" z="0" />
+    <arc exit="climb" move="climb wide ledge" destination="7" />
+  </node>
+  <node id="17" name="A Nook">
+    <description>A large lip of rock forms a pocket in the ceiling within easy reach of the thick stone column.  The nook is amazingly dry and feels a bit cooler than the chamber below.  A bed of fresh rushes lies invitingly in the rear of the cavity.</description>
+    <position x="120" y="140" z="0" />
+    <arc exit="climb" move="climb stone column" destination="13" />
+  </node>
+  <node id="18" name="Above the Curtain" note="Above the Curtain|Curtain">
+    <description>A wide ledge spreads out across the top of the rock curtain.  The air feels warm and moist, and it smells slightly of rotten eggs.  A few stalactites hang near the edge of the ledge above the curtain, but otherwise the ceiling and floor are barren of rocky growths.</description>
+    <position x="140" y="140" z="0" />
+    <arc exit="north" move="north" destination="33" />
+    <arc exit="northeast" move="northeast" destination="26" />
+    <arc exit="northwest" move="northwest" destination="19" />
+    <arc exit="climb" move="climb rock curtain" destination="13" />
+  </node>
+  <node id="19" name="Steam Vents">
+    <description>The air is warm and humid.  Beads of water cover the walls and roof, dripping down with inexorable slowness.  The rock is patterned with holes and vents of all sizes, and no stalactites or stalagmites grow.</description>
+    <position x="120" y="120" z="0" />
+    <arc exit="north" move="north" destination="23" />
+    <arc exit="southeast" move="southeast" destination="18" />
+    <arc exit="northwest" move="northwest" destination="20" />
+  </node>
+  <node id="20" name="Steam Vents">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>Wisps of steam rise from the holes and pits in the walls.  The air is hot, muggy, and foul smelling, making breathing difficult.  A roiling cloud of steam churns against the high roof of the wide chamber.</description>
+    <position x="80" y="80" z="0" />
+    <arc exit="north" move="north" destination="22" />
+    <arc exit="southeast" move="southeast" destination="19" />
+    <arc exit="northwest" move="northwest" destination="21" />
+  </node>
+  <node id="21" name="Steam Vents">
+    <description>The tunnel comes to a gradual end here, the passage diameter narrowing abrupty to a small cone with a dark hole at its end.  The vents in the wall are all very small, giving the appearance that the tunnel is covered with a huge mud dauber's nest.  Jets of steam spray occasionally from the holes.</description>
+    <position x="60" y="60" z="0" />
+    <arc exit="southeast" move="southeast" destination="20" />
+  </node>
+  <node id="22" name="Steam Vents">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>The tunnel dwindles and separates into three large vents which sink into the rocky floor.  The vents in the wall are all very small, giving the appearance that the tunnel is covered with a huge mud dauber's nest.  Jets of steam spray occasionally from the holes.</description>
+    <position x="80" y="60" z="0" />
+    <arc exit="south" move="south" destination="20" />
+  </node>
+  <node id="23" name="Steam Vents">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>Glassy basalt glitters darkly on the walls, ceiling, and floor.  All surfaces have a peculiar scalloped appearance, the small depressions varying between smooth and glassy or rough and pitted.  The small ridges are sharp and jagged.  A fall or misstep would likely rend flesh from the unlucky fumbler.</description>
+    <position x="120" y="100" z="0" />
+    <arc exit="north" move="north" destination="25" />
+    <arc exit="south" move="south" destination="19" />
+    <arc exit="northwest" move="northwest" destination="24" />
+  </node>
+  <node id="24" name="Steam Vents">
+    <description>The passageway ends at a deep pit which belches forth great clouds of steam and scalding water.  The heat is almost unbearable.  The vents in the wall are all very small, giving the appearance that the tunnel is covered with a huge mud dauber's nest.  Jets of steam spray occasionally from the holes.</description>
+    <position x="100" y="80" z="0" />
+    <arc exit="southeast" move="southeast" destination="23" />
+  </node>
+  <node id="25" name="Steam Vents">
+    <description>A black tarry substance coats the walls of the miserably horrid-smelling dead end.  A thick crack in the floor, crusted with black scabrous material, releases foul emissions into the air.  The vents in the wall are all very small, giving the appearance that the tunnel is covered with a huge mud dauber's nest.  Jets of steam spray occasionally from the holes.</description>
+    <position x="120" y="80" z="0" />
+    <arc exit="south" move="south" destination="23" />
+  </node>
+  <node id="26" name="Steam Vents">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>Odd holes and vents riddle the walls of the passage.  Some are too small to poke in a finger, others are larger than a Gor Tog's head.  The unusual construction gives the rock a soft, spongy look, but it is quite firm and warm to the touch.</description>
+    <position x="160" y="120" z="0" />
+    <arc exit="north" move="north" destination="30" />
+    <arc exit="northeast" move="northeast" destination="27" />
+    <arc exit="southwest" move="southwest" destination="18" />
+  </node>
+  <node id="27" name="Steam Vents">
+    <description>Steam gushes into the small chamber from several flues in the walls and floor.  Some of the dense clouds escape through small shafts in the ceiling, leaving a light mist blanketing the room.</description>
+    <position x="200" y="80" z="0" />
+    <arc exit="north" move="north" destination="29" />
+    <arc exit="northeast" move="northeast" destination="28" />
+    <arc exit="southwest" move="southwest" destination="26" />
+  </node>
+  <node id="28" name="Steam Vents">
+    <description>The walls have the oozy appearance of mud, piling in soft-looking folds towards the floor.  Several fist-sized holes line the top of the walls around the chamber, shooting gouts of steam and spitting out hot mud.  Wisps of steam linger about the walls and floor in smoky tendrils.</description>
+    <position x="220" y="60" z="0" />
+    <arc exit="southwest" move="southwest" destination="27" />
+  </node>
+  <node id="29" name="Steam Vents" color="#00FF00">
+    <description>Sharp crystals sprout all about the chamber.  Black, clear, crimson, and azure spikes thrust up to snag the unwary.  Rather than sparkling beautifully, the crystals radiate a dim, unhealthy green glow.  Steam swirls sluggishly around the room of the cavern, shrouding some crystals in a thin veil.</description>
+    <position x="200" y="60" z="0" />
+    <arc exit="south" move="south" destination="27" />
+  </node>
+  <node id="30" name="Steam Vents">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>The walls of the small chamber are oddly shaped with bulges and strange eruptions in the rock.  The ceiling bows down in the center as if tired of holding up the tons of rock overhead.  Tiny holes riddle the undulated floor of the chamber.  The air is thick and hot with a halo of steam floating around the edges of the ceiling.</description>
+    <position x="160" y="100" z="0" />
+    <arc exit="north" move="north" destination="31" />
+    <arc exit="northeast" move="northeast" destination="32" />
+    <arc exit="south" move="south" destination="26" />
+  </node>
+  <node id="31" name="Steam Vents">
+    <description>The jagged entrance opens into a smooth black-glass oval.  The surface is nearly unmarred, only minor blemishes interrupt the dark reflective walls.</description>
+    <position x="160" y="80" z="0" />
+    <arc exit="south" move="south" destination="30" />
+  </node>
+  <node id="32" name="Steam Vents">
+    <description>The tunnel comes to an end in a small chamber, the floor sinking down to a narrow shaft in the floor.  Gurgling sounds echo up the shaft, and geysers of steam blast intermittently from the hole.  Above the pit, the ceiling is blasted smooth.  Water condensation runs down the pock-marked walls from the ceiling.</description>
+    <position x="180" y="80" z="0" />
+    <arc exit="southwest" move="southwest" destination="30" />
+  </node>
+  <node id="33" name="Steam Vents">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>The uneven floor and bulging walls of the moderately sized chamber are pocked with eerie dark mouths, vents, wells, and holes.  Some of the orifices emit tendrils of hot steam, other release nauseous fumes, a very few intermittently burp out scalding water.  The smells and sounds are sickeningly remniscent of a sour stomach.</description>
+    <position x="140" y="80" z="0" />
+    <arc exit="northeast" move="northeast" destination="34" />
+    <arc exit="south" move="south" destination="18" />
+    <arc exit="northwest" move="northwest" destination="37" />
+  </node>
+  <node id="34" name="Steam Vents">
+    <description>Thick clouds of steam make for terrible visibility in the narrow passageway.  Hot air blows through the cramped confines, tugging at loose articles of clothing and nearly blistering the skin.</description>
+    <position x="160" y="60" z="0" />
+    <arc exit="north" move="north" destination="36" />
+    <arc exit="northeast" move="northeast" destination="35" />
+    <arc exit="southwest" move="southwest" destination="33" />
+  </node>
+  <node id="35" name="Steam Vents">
+    <description>The large cavern is honeycombed with vents and fissures of all sizes.  One would need to step carefully to avoid turning an ankle on the uneven and pit-strewn floor.  A loud hissing noise fills the room.  Steam billows from several sunken orifices about the chamber, and the walls sweat heavily.  A glassy-black basalt outcropping gleams in the center of the room.</description>
+    <position x="180" y="40" z="0" />
+    <arc exit="southwest" move="southwest" destination="34" />
+  </node>
+  <node id="36" name="Steam Vents">
+    <description>Small fissures split the floor and walls, allowing blasts of hot air and steam to shoot up from somewhere below.  The air is heavy with the stench of rotting eggs and has a sharp quality which makes eyes water and heads pound.  Beads of water drip down the slick green walls.</description>
+    <position x="160" y="40" z="0" />
+    <arc exit="south" move="south" destination="34" />
+  </node>
+  <node id="37" name="Steam Vents">
+    <description>A large puddle of muddy water burbles slowly in the lower portion of the small chamber.  A couple of stalactites drip sadly into the puddle, looking as if they are about to melt away.  The floor has a treacherous, slimy feel to it and the walls and ceiling glisten damply.  In the wall behind the pool of muck is a small hole.</description>
+    <position x="120" y="60" z="0" />
+    <arc exit="north" move="north" destination="39" />
+    <arc exit="southeast" move="southeast" destination="33" />
+    <arc exit="northwest" move="northwest" destination="38" />
+  </node>
+  <node id="38" name="Steam Vents">
+    <description>The passage is blocked by an old cave-in -- tons of rock cut off movement into a smaller side passage.  Steady streams of hot steam billow from several chinks around the edges of the rock pile.  The vents in the wall are all very small, giving the appearance that the tunnel is covered with a huge mud dauber's nest.  Jets of steam spray occasionally from the holes.</description>
+    <position x="100" y="40" z="0" />
+    <arc exit="southeast" move="southeast" destination="37" />
+  </node>
+  <node id="39" name="Steam Vents">
+    <description>Three strange mounds rise from the floor of the small cavern.  An ash-grey mud burbles out of one of the mounds, and the other two belch out putrid smelling fumes and steam.  The vents and holes in the wall are all very small, giving the appearance that the tunnel is covered with a huge mud dauber's nest.  Jets of steam spray occasionally from the holes.</description>
+    <position x="120" y="40" z="0" />
+    <arc exit="south" move="south" destination="37" />
+  </node>
+  <node id="40" name="Sea Caves, Crevice">
+    <description>The top of the crevice ends at a slender opening in the wall.  A faint breath of warm air caresses the flesh on its way up the natural chimney.  The walls and ceiling are much drier and the air less humid than down below.</description>
+    <position x="220" y="180" z="0" />
+    <arc exit="climb" move="climb crevice" destination="14" />
+    <arc exit="go" move="go slender opening" destination="41" />
+  </node>
+  <node id="41" name="Upper Caverns">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>A huge flat slab of rock serves as a floor in this shaft, ending at a dark slot-like opening splitting the north wall horizontally.  The low ceiling and walls are likewise even and flat, although the texture is rough to the touch.  A fine grit of pulverized rock is scattered across the peculiar chamber.</description>
+    <position x="240" y="200" z="0" />
+    <arc exit="south" move="south" destination="42" />
+    <arc exit="go" move="go dark opening" destination="40" />
+  </node>
+  <node id="42" name="Upper Caverns">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>The small dome-shaped chamber is unremarkable except for the smoothness of its surfaces.  The floor is even and level with only a light coating of rock dust.  The walls slope gently inward and upward to the apex of the hemisphere of black stone.</description>
+    <position x="240" y="220" z="0" />
+    <arc exit="north" move="north" destination="41" />
+    <arc exit="south" move="south" destination="43" />
+  </node>
+  <node id="43" name="Upper Caverns">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>Passages lead out of the large chamber like spokes from the hub of a wagon wheel.  Dust and rubble cover the floor in cluttered disarray.  The ceiling is lost behind many layers of webbing, old and new, as if to hold back the falling stone of the roof.  A small cairn stands in the center of the room.</description>
+    <position x="260" y="280" z="0" />
+    <arc exit="north" move="north" destination="44" />
+    <arc exit="northeast" move="northeast" destination="46" />
+    <arc exit="east" move="east" destination="49" />
+    <arc exit="southeast" move="southeast" destination="57" />
+    <arc exit="south" move="south" destination="52" />
+    <arc exit="southwest" move="southwest" destination="54" />
+    <arc exit="west" move="west" destination="50" />
+    <arc exit="northwest" move="northwest" destination="42" />
+  </node>
+  <node id="44" name="Upper Caverns">
+    <description>A thick black ichor creeps down the southern wall of the chamber from a thin crack where the smooth wall slab meets the rough rock of the ceiling.  The excretion has built up at the base of the wall and solidified into a scabrous crust.  Remarkably, the room is free of the ubiquitous dust and rubble encountered elsewhere.</description>
+    <position x="260" y="240" z="0" />
+    <arc exit="north" move="north" destination="45" />
+    <arc exit="southeast" move="southeast" destination="46" />
+    <arc exit="south" move="south" destination="43" />
+  </node>
+  <node id="45" name="Upper Caverns">
+    <description>Sloping steeply down to the northeast, the floor is pocked with numerous pits and festooned with fallen rock.  The extreme southwest end of the room is flat and even for a couple of paces before the ground begins its descent.  A couple of out-of-place boulders are worn down and polished on their tops.</description>
+    <position x="260" y="220" z="0" />
+    <arc exit="southeast" move="southeast" destination="47" />
+    <arc exit="south" move="south" destination="44" />
+  </node>
+  <node id="46" name="Upper Caverns">
+    <description>The upper reaches of the chamber are cloaked in deep shadows.  Strewn among the unusually large stones and rubble are a litter of cracked bones and other less savory detritus of death.  One wall is cloven with an ominous crack running from the floor up into the darkness above.  Many smaller spidery lines fork off from the main split.</description>
+    <description>It's pitch dark and you can't see a thing!</description>
+    <position x="280" y="260" z="0" />
+    <arc exit="northeast" move="northeast" destination="47" />
+    <arc exit="south" move="south" destination="49" />
+    <arc exit="southwest" move="southwest" destination="43" />
+    <arc exit="west" move="west" destination="44" />
+  </node>
+  <node id="47" name="Upper Caverns">
+    <description>A deep crevice splits the cavern in the east.  A narrow bridge of stone arches over the abyss to a small landing.  The sound of running water echoes loudly through the chamber, reverberating off the high ceiling.  Heaps of rubble litter the expansive floor.</description>
+    <description>It's pitch dark and you can't see a thing!</description>
+    <position x="300" y="240" z="0" />
+    <arc exit="south" move="south" destination="48" />
+    <arc exit="southwest" move="southwest" destination="46" />
+    <arc exit="west" move="west" destination="45" />
+    <arc exit="climb" move="climb deep crevice" destination="96" />
+    <arc exit="go" move="go stone bridge" destination="95" />
+  </node>
+  <node id="48" name="Upper Caverns">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>The intersecting tunnels form a small chamber only a few paces across.  The foot of one of the corner walls forms a low shelf worn smooth by use.  The rubble and loose stones in the area are swept aside forming a low ring of debris which passes in front of the passage openings -- a formidable barrier to marauding mice, but naught else.</description>
+    <position x="340" y="280" z="0" />
+    <arc exit="east" move="east" destination="58" />
+    <arc exit="southwest" move="southwest" destination="56" />
+    <arc exit="west" move="west" destination="49" />
+    <arc exit="northwest" move="northwest" destination="47" />
+  </node>
+  <node id="49" name="Upper Caverns">
+    <description>A large clump of webbing obscures and fills a man-sized nook in one wall.  Crisscrossing the high ceiling is a multitude of webs.  Clouds of fine dust sift down occasionally through the thick strands with a dry rasping rustle.</description>
+    <position x="300" y="280" z="0" />
+    <arc exit="east" move="east" destination="48" />
+    <arc exit="southwest" move="southwest" destination="57" />
+    <arc exit="west" move="west" destination="43" />
+    <arc exit="northwest" move="northwest" destination="46" />
+  </node>
+  <node id="50" name="Upper Caverns">
+    <description>The small chamber is little more than a widening of the connecting passages.  A web of cracks spreads across the otherwise flat and featureless floor.  The ceiling is also afflicted with cracks, and wide slates of rock appear on the verge of releasing their tenuous grip and dashing to pieces below.</description>
+    <position x="220" y="280" z="0" />
+    <arc exit="east" move="east" destination="43" />
+    <arc exit="southeast" move="southeast" destination="54" />
+    <arc exit="west" move="west" destination="51" />
+  </node>
+  <node id="51" name="Upper Caverns">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>A long tube has been cut into the rock with great force.  The rounded walls are rough and uneven, but the shaft runs in a nearly perfect straight line, a testament to the power of the earth.  Shards of mica sparkle in the dark surfaces of the stone.  Looking down the tunnel is like gazing into a well of stars.</description>
+    <position x="180" y="280" z="0" />
+    <arc exit="east" move="east" destination="50" />
+    <arc exit="southeast" move="southeast" destination="55" />
+  </node>
+  <node id="52" name="Upper Caverns">
+    <description>A dark cut slices through one wall of the chamber running from a gaping hole in the ceiling down through a narrow slot in the floor.  A thin stream of water runs along the channel, falling through the hole from somewhere above only to disappear into the rocky earth.  The gurgling sound of running water is a pleasant diversion from the unnatural silence of these dry caverns.</description>
+    <position x="260" y="320" z="0" />
+    <arc exit="north" move="north" destination="43" />
+    <arc exit="northeast" move="northeast" destination="57" />
+    <arc exit="south" move="south" destination="53" />
+    <arc exit="northwest" move="northwest" destination="54" />
+  </node>
+  <node id="53" name="Upper Caverns">
+    <description>A thin coat of ashen dust covers everything in the wide cavern.  Strange scuffling marks are etched in the dust as if someone tried sweeping the room with the wrong end of a broom.  Thick webs shroud the roof of the chamber from view, glinting the same silvery-greyness as the fine layer of grit below.</description>
+    <position x="260" y="360" z="0" />
+    <arc exit="north" move="north" destination="52" />
+    <arc exit="northwest" move="northwest" destination="55" />
+  </node>
+  <node id="54" name="Upper Caverns">
+    <description>The misshapen ceiling hangs down in several banded layers.  Parts of the great rock plates have fallen, leaving black gaps like missing teeth grinning down from above.  Piles of rubble lie in chaotic disarray beneath the gaping holes.  At infrequent intervals, fountains of dust rain down from the pits and scatter on the rocks below.</description>
+    <position x="240" y="300" z="0" />
+    <arc exit="north" move="north" destination="50" />
+    <arc exit="northeast" move="northeast" destination="43" />
+    <arc exit="east" move="east" destination="52" />
+    <arc exit="southwest" move="southwest" destination="55" />
+  </node>
+  <node id="55" name="Upper Caverns">
+    <description>The floor lies like a rumpled blanket in untidy folds of rock and makes for precarious footing.  Loose stones, pebbles, and dust do not help the matter.  A long slab of stone leans tiredly against the wall, forming a small niche beneath.</description>
+    <position x="200" y="340" z="0" />
+    <arc exit="north" move="north" destination="51" />
+    <arc exit="northeast" move="northeast" destination="54" />
+    <arc exit="east" move="east" destination="53" />
+  </node>
+  <node id="56" name="Upper Caverns">
+    <description>Thick gouges evidence an effort to widen the narrow passage here.  Knobs of rock protrude from the irregular walls and thrust into the room to crowd the small space.  Dust and flakes of rock litter the ground, crunching sharply when trod upon.</description>
+    <description>It's pitch dark and you can't see a thing!</description>
+    <position x="320" y="340" z="0" />
+    <arc exit="north" move="north" destination="48" />
+    <arc exit="northwest" move="northwest" destination="57" />
+    <arc exit="climb" move="climb steep staircase" destination="85" />
+  </node>
+  <node id="57" name="Upper Caverns">
+    <description>A disturbingly large pair of disembodied chelicerae lies haphazardly against a wall.  Poking out from beneath a large rock fall are several long slivers of chitinous plate.  Trailers of aged webbing dangle in silver-grey patches from the walls and ceiling.</description>
+    <description>It's pitch dark and you can't see a thing!</description>
+    <position x="280" y="300" z="0" />
+    <arc exit="north" move="north" destination="49" />
+    <arc exit="southeast" move="southeast" destination="56" />
+    <arc exit="west" move="west" destination="52" />
+    <arc exit="northwest" move="northwest" destination="43" />
+  </node>
+  <node id="58" name="Upper Caverns">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>Columns of stone sprout from the floor and tower up into the web-veiled reaches of the high ceiling.  Nine of the mammoth shafts connect floor and ceiling like living fibers stretching between rent flesh.  The cavern is easily fifty paces across at its widest point and at least half as high.  Ropes of webbing connect the upper reaches of the pillars in intricate patterns which shift and glimmer with each vibration.</description>
+    <position x="360" y="280" z="0" />
+    <arc exit="west" move="west" destination="48" />
+    <arc exit="climb" move="climb stone column" destination="59" />
+  </node>
+  <node id="59" name="Lofty Perch">
+    <description>A small ledge juts from the side of the column near the ceiling, just wide enough to stand on comfortably.  Instead of walls, the ledge is ringed by the complex webs built all about the upper portion of the cavern.</description>
+    <position x="380" y="280" z="0" />
+    <arc exit="up" move="up" destination="60" />
+    <arc exit="climb" move="climb stone column" destination="58" />
+  </node>
+  <node id="60" name="Upper Caverns, On the Column">
+    <description>The ledge curls its way up and around the wide column.  Thick strands of silk, anchored to the sturdy stone, create difficult obstacles.  Several planes of webbing stretch across the upper reaches of the high cavern, providing easy access to all areas by whatever creature fashioned them.</description>
+    <position x="380" y="300" z="0" />
+    <arc exit="up" move="up" destination="61" />
+    <arc exit="down" move="down" destination="61" />
+  </node>
+  <node id="61" name="Upper Caverns, On the Column">
+    <description>The ledge curls its way up and around the wide column.  A vast network of thick webbing spans the upper reaches of the high cavern.  Anchored on the stone column, stalactites, and the rock walls, the strands create easy access paths for the creatures dwelling therein.</description>
+    <position x="380" y="320" z="0" />
+    <arc exit="up" move="up" destination="62" />
+    <arc exit="down" move="down" destination="60" />
+  </node>
+  <node id="62" name="Upper Caverns, On the Column">
+    <description>The ledge curls its way up and around the wide column.  Thick strands of silk, anchored to the sturdy stone, create difficult obstacles.  Several planes of webbing stretch across the upper reaches of the high cavern, providing easy access to all areas by whatever creature fashioned them.</description>
+    <position x="380" y="340" z="0" />
+    <arc exit="up" move="up" destination="63" />
+    <arc exit="down" move="down" destination="61" />
+  </node>
+  <node id="63" name="Upper Caverns, On the Column">
+    <description>The ledge curls its way up and around the thick stone column.  Enormous webs cast their strong silken strands across the upper reaches of the cavern, connecting pillar to wall to stalactite in a dazzling pattern of intersecting and concentric silver lines.</description>
+    <position x="380" y="360" z="0" />
+    <arc exit="up" move="up" destination="64" />
+    <arc exit="down" move="down" destination="62" />
+  </node>
+  <node id="64" name="Upper Caverns, On the Column">
+    <description>The ledge curls its way up and around the rock column.  Long, thick silk strands sweep across the upper reaches of the chamber, shimmering silver rays as the threads stir in the dim reaches of the cave.  Above, the ceiling is visible through a few more layers of webbing.</description>
+    <position x="380" y="380" z="0" />
+    <arc exit="up" move="up" destination="65" />
+    <arc exit="down" move="down" destination="63" />
+  </node>
+  <node id="65" name="Upper Caverns, On the Column">
+    <description>The ledge curls its way up and around the wide column.  A vast network of webs fans across the upper reaches of the cavern, glistening damply from water caught falling from small stalactites above.  Only a sparse layer of thick grey strands spans the space between this ledge and the roof of the high chamber.</description>
+    <position x="380" y="400" z="0" />
+    <arc exit="up" move="up" destination="66" />
+    <arc exit="down" move="down" destination="64" />
+  </node>
+  <node id="66" name="Upper Caverns, Top of the Column">
+    <description>The narrow ledge ends near the rough ceiling of the huge cavern.  A single horizontal plane of webbing stretches across the area below the roof at the level of the ledge.  The many layers filling the nether region create the impression of clouds or fog floating below.  Nearly out of reach, where the thick column joins the vaulted ceiling, is a faintly illuminated, rough hole.</description>
+    <position x="380" y="420" z="0" />
+    <arc exit="down" move="down" destination="65" />
+    <arc exit="climb" move="climb rough hole" destination="67" />
+  </node>
+  <node id="67" name="Wide Cavern">
+    <description>Very faint illumination is provided by a flaking patch of glowing fungus clinging to a fallen rock.  An enormous cavern spreads out of sight into the darkness, stony floor and soaring walls fading into the unlit areas beyond.  Nearly hidden behind some crumbling stalagmites, a narrow opening sinks into the floor near the wall of the wide cavern.  A huge stalagmite and stalactite pair occupy the center of the chamber.</description>
+    <position x="400" y="420" z="0" />
+    <arc exit="north" move="north" destination="68" />
+    <arc exit="northeast" move="northeast" destination="72" />
+    <arc exit="east" move="east" destination="73" />
+    <arc exit="southeast" move="southeast" destination="75" />
+    <arc exit="south" move="south" destination="69" />
+    <arc exit="climb" move="climb narrow opening" destination="66" />
+  </node>
+  <node id="68" name="Wide Cavern">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>A pile of rubble litters the area where a falling stalactite or roof plate has shattered on the ground.  The walls at this end of the long cavern are smooth and dry.  Silver-grey dust coats everything in a soft film.</description>
+    <position x="400" y="380" z="0" />
+    <arc exit="east" move="east" destination="72" />
+    <arc exit="southeast" move="southeast" destination="73" />
+    <arc exit="south" move="south" destination="67" />
+  </node>
+  <node id="69" name="Wide Cavern">
+    <description>It's pitch dark and you can't see a thing!</description>
+    <description>Smokey quartz and fool's gold gleam from a multitude of small outcrops in an ancient rock curtain draped down the wall.  Like dripping candle wax, the sediment crawled down the wall millenia ago and solidified in odd lumps and long streams, even pooling on the floor in a thick, rippled mass of stone.</description>
+    <position x="400" y="460" z="0" />
+    <arc exit="north" move="north" destination="67" />
+    <arc exit="northeast" move="northeast" destination="75" />
+    <arc exit="east" move="east" destination="74" />
+    <arc exit="southeast" move="southeast" destination="71" />
+    <arc exit="south" move="south" destination="70" />
+  </node>
+  <node id="70" name="Wide Cavern">
+    <description>Luminous lichens grow on the rocks, stalagmites and walls, providing a dim yellow glow.  In the shadows of a pile of rubble, a narrow hole cuts down into the earth, its smooth sides providing little purchase.</description>
+    <position x="400" y="500" z="0" />
+    <arc exit="north" move="north" destination="69" />
+    <arc exit="northeast" move="northeast" destination="74" />
+    <arc exit="east" move="east" destination="71" />
+    <arc exit="climb" move="climb dark hole" destination="77" />
+  </node>
+  <node id="71" name="Wide Cavern">
+    <description>Blanketing the area is a thick carpet of fine-textured black pumice.  A few short stalagmites poke up through the layer of powder.  The huge, echoing chamber expands to the north and west where an awe-inspiring paired stalactite and stalagmite reach towards each other in a much awaited embrace.</description>
+    <position x="440" y="500" z="0" />
+    <arc exit="north" move="north" destination="74" />
+    <arc exit="west" move="west" destination="70" />
+    <arc exit="northwest" move="northwest" destination="69" />
+  </node>
+  <node id="72" name="Wide Cavern">
+    <description>Occupying this dark corner of the huge chamber is a heaping stack of bones.  Small insects skitter in and over the gleaming white remains.  The sweet scent of decay tickles the nose faintly in the otherwise dank air.</description>
+    <position x="440" y="380" z="0" />
+    <arc exit="south" move="south" destination="73" />
+    <arc exit="southwest" move="southwest" destination="67" />
+    <arc exit="west" move="west" destination="68" />
+  </node>
+  <node id="73" name="Wide Cavern">
+    <description>Numerous small stalagmites crowd the space between the base of the great fang in the center of the chamber and the jagged wall of the cavern.  The floor is dry and dusty, the thick layers of webbing strewn across the upper cavern catching any water droplets which might have fallen from stalactites hidden above.</description>
+    <position x="440" y="420" z="0" />
+    <arc exit="north" move="north" destination="72" />
+    <arc exit="south" move="south" destination="74" />
+    <arc exit="southwest" move="southwest" destination="75" />
+    <arc exit="west" move="west" destination="67" />
+    <arc exit="northwest" move="northwest" destination="68" />
+  </node>
+  <node id="74" name="Wide Cavern">
+    <description>Puddles of dust dot the uneven floor.  Bits of fractured stone lie scattered about the area.  Carved into the wall of the chamber is a skeletal fish.</description>
+    <position x="440" y="460" z="0" />
+    <arc exit="north" move="north" destination="73" />
+    <arc exit="south" move="south" destination="71" />
+    <arc exit="southwest" move="southwest" destination="70" />
+    <arc exit="west" move="west" destination="69" />
+    <arc exit="northwest" move="northwest" destination="75" />
+  </node>
+  <node id="75" name="Wide Cavern, The Fangs">
+    <description>A gigantic stalagmite erupts from the floor, reaching high up towards the point of an equally massive stalactite.  Hanging from the web-shrouded ceiling, the stalactite is an awesome reflection of the lower fang on a silvery pond of silk.</description>
+    <position x="420" y="440" z="0" />
+    <arc exit="northeast" move="northeast" destination="73" />
+    <arc exit="southeast" move="southeast" destination="74" />
+    <arc exit="southwest" move="southwest" destination="69" />
+    <arc exit="northwest" move="northwest" destination="67" />
+    <arc exit="climb" move="climb stalagmite" destination="76" />
+  </node>
+  <node id="76" name="The Fangs, The Pinnacle">
+    <description>The irregular surface provides many tiny ledges and hand holds near the tip of the stalagmite.  Only a few feet above, a drop of water slowly forms at the slender tip of the fang, gradually growing in size until gravity finally wrests it away to fall upon the rock below.</description>
+    <position x="380" y="440" z="0" />
+    <arc exit="climb" move="climb stalagmite" destination="75" />
+  </node>
+  <node id="77" name="The Chimney">
+    <description>A split in the rock provides a thin lip of stone on which to rest above the dark hole descending below.  The narrow chimney rises steeply above, smooth and barren of handholds.  The crumbling remains of glowing lichens on the wall provide poor illumination to the cramped spot.</description>
+    <position x="400" y="520" z="0" />
+    <arc exit="climb" move="climb dark hole" destination="78" />
+  </node>
+  <node id="78" name="The Chimney">
+    <description>A split in the rock provides a thin lip of stone on which to rest above the dark hole descending below.  The narrow chimney rises steeply above, smooth and barren of handholds.  Weak light from far above drives back the nearly palpable darkness.</description>
+    <position x="400" y="540" z="0" />
+    <arc exit="climb" move="climb dark hole" destination="79" />
+  </node>
+  <node id="79" name="The Chimney">
+    <description>A slight change of the shaft's orientation provides a thin ledge of stone on which to rest above the dark hole descending below.  The narrow chimney rises straight up above, smooth and barren of handholds.  The barest trickle of light reaches down from what seems an infinite distance above, providing just enough illumination to question the darkness.</description>
+    <position x="420" y="540" z="0" />
+    <arc exit="climb" move="climb dark hole" destination="80" />
+  </node>
+  <node id="80" name="The Chimney">
+    <description>A split in the rock provides a thin lip of stone on which to rest above the dark hole descending below.  The narrow chimney rises straight up above, smooth and barren of handholds.  The darkness thickens like a shroud.  The memory of light gleaming within provides more sight than the pale wraith of illumination above.</description>
+    <position x="420" y="520" z="0" />
+    <arc exit="climb" move="climb dark hole" destination="81" />
+  </node>
+  <node id="81" name="The Chimney">
+    <description>A slight change of the shaft's orientation provides a thin ledge of stone on which to rest above the dark hole descending below.  The narrow chimney rises steeply above, smooth and barren of handholds.  A light so faint it can only be called such in comparison to the dark below illuminates the area, its source unidentifiable.</description>
+    <position x="440" y="520" z="0" />
+    <arc exit="climb" move="climb dark hole" destination="82" />
+    <arc exit="climb" move="climb chimney" destination="80" />
+  </node>
+  <node id="82" name="Small Cavern">
+    <description>The walls and floor of the chamber are smooth with barely a chisel mark to betray the skilled hand of whatever worked the stone.  Overhead, however, the walls curve to the domed ceiling in the usual rough way of caverns.  A narrow hole, chimney-like bores its way out through the roof.</description>
+    <description>It's pitch dark and you can't see a thing!</description>
+    <position x="480" y="480" z="0" />
+    <arc exit="north" move="north" destination="85" />
+    <arc exit="northeast" move="northeast" destination="84" />
+    <arc exit="east" move="east" destination="83" />
+    <arc exit="climb" move="climb narrow chimney" destination="81" />
+  </node>
+  <node id="83" name="Small Cavern">
+    <description>The walls and floor of the chamber are smooth with barely a chisel mark to betray the skilled hand of whatever worked the stone.  Overhead, however, the walls curve to the domed ceiling in the usual rough way of caverns.  Slicing out of the east wall is a small passageway.</description>
+    <position x="500" y="480" z="0" />
+    <arc exit="north" move="north" destination="84" />
+    <arc exit="east" move="east" destination="86" />
+    <arc exit="west" move="west" destination="82" />
+    <arc exit="northwest" move="northwest" destination="85" />
+  </node>
+  <node id="84" name="Small Cavern">
+    <description>The walls and floor of the chamber are smooth with barely a chisel mark to betray the skilled hand of whatever worked the stone.  Overhead, however, the walls curve to the domed ceiling in the usual rough way of caverns.  A wide ledge of stone, cluttered with shards of pottery and ceramics, juts from the wall.</description>
+    <position x="500" y="460" z="0" />
+    <arc exit="south" move="south" destination="83" />
+    <arc exit="southwest" move="southwest" destination="82" />
+    <arc exit="west" move="west" destination="85" />
+  </node>
+  <node id="85" name="Small Cavern">
+    <description>The walls and floor of the chamber are smooth with barely a chisel mark to betray the skilled hand of whatever worked the stone.  Overhead, however, the walls curve to the domed ceiling in the usual rough way of caverns.  A smooth-walled alcove, slightly larger than a burly dwarf, cuts into the wall.</description>
+    <position x="480" y="460" z="0" />
+    <arc exit="east" move="east" destination="84" />
+    <arc exit="southeast" move="southeast" destination="83" />
+    <arc exit="south" move="south" destination="82" />
+    <arc exit="climb" move="climb steep staircase" destination="56" />
+  </node>
+  <node id="86" name="Narrow Passage">
+    <description>The entire passage is finely cut through the black rock, though it is a bit narrow for 'Togs.  It is impossible to tell where chisel may have touched stone in its creation.</description>
+    <position x="520" y="480" z="0" />
+    <arc exit="east" move="east" destination="87" />
+    <arc exit="west" move="west" destination="83" />
+  </node>
+  <node id="87" name="The Rift">
+    <description>A narrow passage ends at a tall crevice which runs north and south through the cavern.  A ledge, wide enough for safety, protrudes into the rift and overhangs the deep gash.  The sound of rushing water reverberates through the space.</description>
+    <position x="540" y="480" z="0" />
+    <arc exit="west" move="west" destination="86" />
+    <arc exit="climb" move="climb crevice" destination="88" />
+  </node>
+  <node id="88" name="Underground River" color="#0000FF">
+    <description>A swift river blasts through the narrow chasm, roiling madly in its stoney bed.  Glowing lichens growing on the high walls cast a dim illumination on the raging torrent.  High above, a wide ledge protrudes from the wall, hanging out over the river.</description>
+    <position x="560" y="460" z="0" />
+    <arc exit="north" move="swim north" destination="92" />
+    <arc exit="south" move="swim south" destination="89" />
+    <arc exit="climb" move="climb wall" destination="87" />
+  </node>
+  <node id="89" name="Underground River" color="#0000FF">
+    <description>Strong jets of water from underground streams emptying into the river below the surface cause powerful swirls and chop.  The deep waters move swiftly between the sheer walls of the high crevice.  Glowing lichens cast their dim illumination on the river below.</description>
+    <position x="560" y="480" z="0" />
+    <arc exit="north" move="swim north" destination="88" />
+    <arc exit="south" move="swim south" destination="90" />
+  </node>
+  <node id="90" name="Underground Streams" color="#0000FF">
+    <description>Glowing lichens, high above, cast a dim illumination on the gushing streams below.  Water cascades in frothy veils and powerful sprays from large holes in the sides of the fissure.  The torrent swells to several feet in depth, churning mightily as it tumbles away.</description>
+    <position x="560" y="500" z="0" />
+    <arc exit="north" move="swim north" destination="89" />
+    <arc exit="south" move="swim south" destination="91" />
+  </node>
+  <node id="91" name="Underground Streams, Source" color="#0000FF">
+    <description>Hundreds of fountains of water pour from holes in the rock walls at the end of the crevice.  The water gathers in an ankle deep pool before rushing away to the north.  Glowing lichens, high above, cast a dim illumination on the streams below.</description>
+    <position x="560" y="520" z="0" />
+    <arc exit="north" move="swim north" destination="90" />
+  </node>
+  <node id="92" name="Underground River" color="#0000FF">
+    <description>A swift river blasts through the narrow chasm, roiling madly in its stoney bed.  Glowing lichens growing on the high walls cast a dim illumination on the raging torrent.</description>
+    <position x="560" y="440" z="0" />
+    <arc exit="north" move="swim north" destination="111" />
+    <arc exit="south" move="swim south" destination="88" />
+  </node>
+  <node id="93" name="Underground River" color="#0000FF">
+    <description>The crevice comes to an abrupt end, but the river punches through the rock, rushing noisily through a wide opening in the wall of stone.</description>
+    <position x="560" y="400" z="0" />
+    <arc exit="north" move="swim north" destination="94" />
+    <arc exit="south" move="swim south" destination="111" />
+  </node>
+  <node id="94" name="Underground River, Underwater" color="#000080">
+    <description>A torrent of water rushes through the wide tunnel dragging all along with it.  Scouring the rock as it goes, the river wears down the stone, occasionally tearing off a chunk and pushing it along in the flood.</description>
+    <position x="560" y="380" z="0" />
+    <arc exit="north" move="swim north" destination="100" />
+    <arc exit="south" move="swim south" destination="93" />
+  </node>
+  <node id="95" name="Upper Caverns">
+    <description>A deep crevice runs across the open end of the chamber, spanned by an arched stone bridge.  The roof of the cavern is considerably lower on this side of the bridge.  The walls form a smooth hemisphere, as if the area were carved from the rock much like the bridge.</description>
+    <description>It's pitch dark and you can't see a thing!</description>
+    <position x="340" y="260" z="0" />
+    <arc exit="go" move="go stone bridge" destination="47" />
+    <arc exit="climb" move="climb crevice" destination="98" />
+  </node>
+  <node id="96" name="Chasm River" color="#0000FF">
+    <description>The deep water rushes wildly between the craggy walls rising to either side.  High above, the bridge arches over the chasm, its underside dimly lit.  Water splashes high up the wall as it tumbles through, bashing against the rough stone.  Debris in the water, propelled by the swift current, strikes swimmers with great force.  The swirling waters drain out through a low tunnel in the wall.  A strange luminescence glows faintly from under the water.</description>
+    <position x="560" y="240" z="0" />
+    <arc exit="south" move="swim south" destination="99" />
+    <arc exit="climb" move="climb craggy wall" destination="47" />
+    <arc exit="go" move="go low tunnel" destination="104" />
+  </node>
+  <node id="97" name="Aesry Surlaenis'a, Cliff Path" note="Map98_Road_to_Aesry.xml">
+    <description>Running jaggedly from northeast to southwest, a massive fissure has cleaved the face of the rock like an old battle scar.  A warm damp breeze wheezes forth from the darkness, and faintly, the steady drip, drip of falling water can be heard from deep inside the stone.</description>
+    <position x="0" y="60" z="0" />
+    <arc exit="south" move="south" />
+    <arc exit="up" move="up" />
+  </node>
+  <node id="98" name="Chasm River" color="#0000FF">
+    <description>The deep water rushes wildly between the craggy walls rising to either side.  High above, the bridge arches over the chasm, its underside dimly lit.  Water splashes high up the wall as it tumbles through, bashing against the rough stone.  Debris in the water, propelled by the swift current, strikes swimmers with great force.  Water gushes from a low opening in the south wall.  A strange luminescence glows faintly from under the water.</description>
+    <position x="560" y="280" z="0" />
+    <arc exit="north" move="swim north" destination="99" />
+    <arc exit="south" move="swim south" destination="103" />
+    <arc exit="climb" move="climb craggy wall" destination="95" />
+  </node>
+  <node id="99" name="Chasm River" color="#0000FF">
+    <description>The deep water rushes wildly between the craggy walls rising to either side.  High above, the bridge arches over the chasm, its underside dimly lit.  Water splashes high up the wall as it tumbles through, bashing against the rough stone.  Debris in the water, propelled by the swift current, strikes swimmers with great force.  A strange luminescence glows faintly from under the water.</description>
+    <position x="560" y="260" z="0" />
+    <arc exit="north" move="swim north" destination="96" />
+    <arc exit="south" move="swim south" destination="98" />
+  </node>
+  <node id="100" name="Underground River, Underwater" color="#000080">
+    <description>A torrent of water rushes through the wide tunnel dragging all along with it.  Scouring the rock as it goes, the river wears down the stone, occasionally tearing off a chunk and pushing it along in the flood.</description>
+    <position x="560" y="360" z="0" />
+    <arc exit="north" move="swim north" destination="101" />
+    <arc exit="south" move="swim south" destination="94" />
+  </node>
+  <node id="101" name="Underground River, Underwater" color="#000080">
+    <description>A torrent of water rushes through the wide tunnel dragging all along with it.  Scouring the rock as it goes, the river wears down the stone, occasionally tearing off a chunk and pushing it along in the flood.</description>
+    <position x="560" y="340" z="0" />
+    <arc exit="north" move="swim north" destination="102" />
+    <arc exit="south" move="swim south" destination="100" />
+  </node>
+  <node id="102" name="Underground River, Underwater" color="#000080">
+    <description>A torrent of water rushes through the wide tunnel dragging all along with it.  Scouring the rock as it goes, the river wears down the stone, occasionally tearing off a chunk and pushing it along in the flood.</description>
+    <position x="560" y="320" z="0" />
+    <arc exit="north" move="swim north" destination="103" />
+    <arc exit="south" move="swim south" destination="101" />
+  </node>
+  <node id="103" name="Underground River, Underwater" color="#000080">
+    <description>A torrent of water rushes through the wide tunnel dragging all along with it.  Scouring the rock as it goes, the river wears down the stone, occasionally tearing off a chunk and pushing it along in the flood.</description>
+    <position x="560" y="300" z="0" />
+    <arc exit="north" move="swim north" destination="98" />
+    <arc exit="south" move="swim south" destination="102" />
+  </node>
+  <node id="104" name="Underground River, Underwater" color="#000080">
+    <description>A torrent of water rushes through the wide tunnel dragging all along with it.  Scouring the rock as it goes, the river wears down the stone, occasionally tearing off a chunk and pushing it along in the flood.</description>
+    <position x="560" y="220" z="0" />
+    <arc exit="north" move="swim north" destination="105" />
+    <arc exit="south" move="swim south" destination="96" />
+  </node>
+  <node id="105" name="Underground River, Underwater" color="#000080">
+    <description>A torrent of water rushes through the wide tunnel dragging all along with it.  Scouring the rock as it goes, the river wears down the stone, occasionally tearing off a chunk and pushing it along in the flood.</description>
+    <position x="560" y="200" z="0" />
+    <arc exit="north" move="swim north" destination="106" />
+    <arc exit="south" move="swim south" destination="104" />
+  </node>
+  <node id="106" name="Underground River, Underwater" color="#000080">
+    <description>A torrent of water rushes through the wide tunnel dragging all along with it.  Scouring the rock as it goes, the river wears down the stone, occasionally tearing off a chunk and pushing it along in the flood.</description>
+    <position x="560" y="180" z="0" />
+    <arc exit="northwest" move="swim northwest" destination="107" />
+    <arc exit="south" move="swim south" destination="105" />
+  </node>
+  <node id="107" name="Underground River, Underwater" color="#000080">
+    <description>A torrent of water rushes through the wide tunnel dragging all along with it.  Scouring the rock as it goes, the river wears down the stone, occasionally tearing off a chunk and pushing it along in the flood.</description>
+    <position x="540" y="160" z="0" />
+    <arc exit="northwest" move="swim northwest" destination="108" />
+    <arc exit="southeast" move="swim southeast" destination="106" />
+  </node>
+  <node id="108" name="Underground River, Underwater" color="#000080">
+    <description>A torrent of water rushes through the wide tunnel dragging all along with it.  Scouring the rock as it goes, the river wears down the stone, occasionally tearing off a chunk and pushing it along in the flood.</description>
+    <position x="520" y="140" z="0" />
+    <arc exit="northwest" move="swim northwest" destination="110" />
+    <arc exit="southeast" move="swim southeast" destination="107" />
+  </node>
+  <node id="109" name="Ocean, Near the Cove" note="Map98_Road_to_Aesry.xml">
+    <description>Among sheer towering cliffs is nestled a small sandy cove, a picture of bliss next to the fury of waves breaking on the massive wall of stone.  The water, here at the mouth of the cove, bobs gently with the incoming waves, lifting swimmers on its rolling crest.  The wide, sweet sea spreads out to the north and west, its swells rising and falling with its own secret rhythms.</description>
+    <position x="480" y="100" z="0" />
+    <arc exit="east" move="east" />
+  </node>
+  <node id="110" name="Underground River, Underwater" color="#000080">
+    <description>A torrent of water rushes through the wide tunnel dragging all along with it.  Scouring the rock as it goes, the river wears down the stone, occasionally tearing off a chunk and pushing it along in the flood.</description>
+    <position x="500" y="120" z="0" />
+    <arc exit="northwest" move="swim northwest" destination="109" />
+    <arc exit="southeast" move="swim southeast" destination="108" />
+  </node>
+  <node id="111" name="Underground River" color="#0000FF">
+    <description>A swift river blasts through the narrow chasm, roiling madly in its stoney bed.  Glowing lichens growing on the high walls cast a dim illumination on the raging torrent.</description>
+    <position x="560" y="420" z="0" />
+    <arc exit="north" move="swim north" destination="93" />
+    <arc exit="south" move="swim south" destination="92" />
+  </node>
+  <label text="Drogor">
+    <position x="50" y="185" z="0" />
+  </label>
+  <label text="Elba Darvager">
+    <position x="480" y="490" z="0" />
+  </label>
+  <label text="Nightstalker Unyn">
+    <position x="390" y="360" z="0" />
+  </label>
+  <label text="Nightweaver Unyn">
+    <position x="-20" y="120" z="0" />
+  </label>
+  <label text="Nightreaver Unyn">
+    <position x="150" y="260" z="0" />
+  </label>
+  <label text="Nipoh Oshu">
+    <position x="110" y="20" z="0" />
+  </label>
+</zone>

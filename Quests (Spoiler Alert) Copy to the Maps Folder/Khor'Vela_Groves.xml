@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Grove of the Sacred Khor'Vela" id="0">
+  <node id="1" name="Grove of the Sacred Khor'Vela, The Heart">
+    <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the south.  A soft red light suffuses the area from the coils of khor'vela vine that slink across the floor.  Only an occasional tumor or sore is visible on the tendrils.</description>
+    <description>The rock ceiling ascends towards an opening to the south.  Soft red light is emitted from the diseased khor'vela vines creeping across the floor.</description>
+    <position x="0" y="0" z="0" />
+    <arc exit="southeast" move="southeast" destination="4" />
+    <arc exit="south" move="south" destination="3" />
+    <arc exit="southwest" move="southwest" destination="2" />
+  </node>
+  <node id="2" name="Grove of the Sacred Khor'Vela, The Heart">
+    <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the east.  A soft red light suffuses the area from the coils of khor'vela vine that slink across the floor.  Only an occasional tumor or sore is visible on the tendrils.</description>
+    <description>The rock ceiling ascends towards an opening to the east.  Faint red light is emitted from the diseased khor'vela vines creeping across the floor.</description>
+    <position x="-20" y="20" z="0" />
+    <arc exit="northeast" move="northeast" destination="1" />
+    <arc exit="east" move="east" destination="3" />
+    <arc exit="southeast" move="southeast" destination="5" />
+  </node>
+  <node id="3" name="Grove of the Sacred Khor'Vela, The Heart" note="vortex1" color="#FF00FF">
+    <description>Its withered limbs stretching towards the gaping opening, a sickly khor'vela tree stands isolated in the center of the otherwise bare garden.  A soft red light suffuses the area, originating in the diseased plant that dominates the space.  Gardening tools litter the area, testimony to the effort to cure the vegetation.</description>
+    <description>A sickly khor'vela tree stands isolated in the center of a bare garden.  A soft red light comes from the plant and suffuses the area.</description>
+    <position x="0" y="20" z="0" />
+    <arc exit="north" move="north" destination="1" />
+    <arc exit="east" move="east" destination="4" />
+    <arc exit="south" move="south" destination="5" />
+    <arc exit="west" move="west" destination="2" />
+  </node>
+  <node id="4" name="Grove of the Sacred Khor'Vela, The Heart">
+    <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the west.  A soft red light suffuses the area from the coils of khor'vela vine that slink across the floor.  Only an occasional tumor or sore is visible on the tendrils.</description>
+    <description>The rock ceiling ascends towards an opening to the west.  Pale red light is emitted from the diseased khor'vela vines creeping across the floor.</description>
+    <position x="20" y="20" z="0" />
+    <arc exit="southwest" move="southwest" destination="5" />
+    <arc exit="west" move="west" destination="3" />
+    <arc exit="northwest" move="northwest" destination="1" />
+  </node>
+  <node id="5" name="Grove of the Sacred Khor'Vela, The Heart">
+    <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the north.  A soft red light suffuses the area from the coils of khor'vela vine that slink across the floor.  Only an occasional tumor or sore is visible on the tendrils.|The rock ceiling ascends towards an opening to the north.  Muted red light is emitted from the diseased khor'vela vines undulating across the floor.</description>
+    <position x="0" y="40" z="0" />
+    <arc exit="north" move="north" destination="3" />
+    <arc exit="northeast" move="northeast" destination="4" />
+    <arc exit="northwest" move="northwest" destination="2" />
+  </node>
+  <node id="6" name="Grove of the Sacred Khor'Vela, The Sickness">
+    <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the south.  The darkness suffusing the area comes from the coils of khor'vela vine that slink across the floor.  Tumors and sores completely cover the vines, rotting it from within.  The air is thick with the putrid odors of decay.|The rock ceiling ascends towards an opening to the south.  Darkess suffuses the area, seemingly coming from the diseased khor'vela vines creeping across the floor.</description>
+    <position x="120" y="0" z="0" />
+    <arc exit="southeast" destination="9" />
+    <arc exit="south" destination="8" />
+    <arc exit="southwest" destination="7" />
+  </node>
+  <node id="7" name="Grove of the Sacred Khor'Vela, The Sickness">
+    <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the east.  The darkness suffusing the area comes from the coils of khor'vela vine that slink across the floor.  Tumors and sores completely cover the vines, rotting it from within.  The air is thick with the putrid odors of decay.|The rock ceiling ascends towards an opening to the east.  Darkess permeates the area, seemingly coming from the diseased khor'vela vines creeping across the floor.</description>
+    <position x="100" y="20" z="0" />
+    <arc exit="northeast" move="northeast" destination="6" />
+    <arc exit="east" move="east" destination="8" />
+    <arc exit="southeast" move="southeast" destination="10" />
+  </node>
+  <node id="8" name="Grove of the Sacred Khor'Vela, The Sickness" note="vortex2" color="#FF00FF">
+    <description>Its sickly limbs stretching towards the gaping opening, a rotting khor'vela tree stands isolated in the center of the otherwise bare garden.  Darkness suffuses the area, pouring forth from the diseased trunk and devouring light almost as quickly as it appears.  Rusted shears, clippers and other tools litter the area, their handles rotted and covered in the same blight killing the khor'vela tree.  The air is thick with the putrid odors of decay.</description>
+    <description>A rotting khor'vela tree stands isolated in the center of a bare garden.  Darkness emenates from the plant and suffuses the area.</description>
+    <position x="120" y="20" z="0" />
+    <arc exit="north" move="north" destination="6" />
+    <arc exit="east" move="east" destination="9" />
+    <arc exit="south" move="south" destination="10" />
+    <arc exit="west" move="west" destination="7" />
+  </node>
+  <node id="9" name="Grove of the Sacred Khor'Vela, The Sickness">
+    <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the west.  The darkness suffusing the area comes from the coils of khor'vela vine that slink across the floor.  Tumors and sores completely cover the vines, rotting it from within.  The air is thick with the putrid odors of decay.</description>
+    <description>The rock ceiling ascends towards an opening to the west.  Darkess bathes the area, seemingly coming from the diseased khor'vela vines creeping across the floor.</description>
+    <position x="140" y="20" z="0" />
+    <arc exit="southwest" move="southwest" destination="10" />
+    <arc exit="west" move="west" destination="8" />
+    <arc exit="northwest" move="northwest" destination="6" />
+  </node>
+  <node id="10" name="Grove of the Sacred Khor'Vela, The Sickness">
+    <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the north.  The darkness suffusing the area comes from the coils of khor'vela vine that slink across the floor.  Tumors and sores completely cover the vines, rotting it from within.  The air is thick with the putrid odors of decay.</description>
+    <description>The rock ceiling ascends towards an opening to the north.  Darkess washes the area, seemingly coming from the diseased khor'vela vines creeping across the floor.</description>
+    <position x="120" y="40" z="0" />
+    <arc exit="north" move="north" destination="8" />
+    <arc exit="northeast" move="northeast" destination="9" />
+    <arc exit="northwest" move="northwest" destination="7" />
+  </node>
+  <node id="11" name="Grove of the Sacred Khor'Vela, The Hope">
+    <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the south.  A soft yellow light suffuses the area from the coils of khor'vela vine that slink across the floor.  Few sores are visible, a sign that the blight is somehow being held at bay here.  The smells of medicines fill the small cavern.</description>
+    <description>The rock ceiling ascends towards an opening to the south.  Soft yellow light is emitted from the diseased khor'vela vines creeping across the floor.</description>
+    <position x="60" y="80" z="0" />
+    <arc exit="southeast" destination="14" />
+    <arc exit="south" destination="13" />
+    <arc exit="southwest" destination="12" />
+  </node>
+  <node id="12" name="Grove of the Sacred Khor'Vela, The Hope">
+    <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the east.  A soft yellow light suffuses the area from the coils of khor'vela vine that slink across the floor.  Few sores are visible, a sign that the blight is somehow being held at bay here.  The smells of medicines fill the small cavern.</description>
+    <description>The rock ceiling ascends towards an opening to the east.  Faint yellow light is emitted from the diseased khor'vela vines creeping across the floor.</description>
+    <position x="40" y="100" z="0" />
+    <arc exit="northeast" move="northeast" destination="11" />
+    <arc exit="east" move="east" destination="13" />
+    <arc exit="southeast" move="southeast" destination="15" />
+  </node>
+  <node id="13" name="Grove of the Sacred Khor'Vela, The Hope" note="vortex3" color="#FF00FF">
+    <description>Thick, healthy limbs stretch upwards towards the gaping opening overhead.  Bandages soaked in different colored liquids wrap around the trunk, limbs and exposed roots.  A soft yellow light suffuses the area, originating from the ailing plant dominating the space.  Spades, clippers, pots of tiny saplings and other tools are neatly arranged on shelves alongside glass jars of liquids, pastes, unguents and other healing reagents.</description>
+    <description>An ailing khor'vela tree stands isolated in the center of a bare garden.  A soft yellow light comes from the plant and suffuses the area.</description>
+    <position x="60" y="100" z="0" />
+    <arc exit="north" move="north" destination="11" />
+    <arc exit="east" move="east" destination="14" />
+    <arc exit="south" move="south" destination="15" />
+    <arc exit="west" move="west" destination="12" />
+  </node>
+  <node id="14" name="Grove of the Sacred Khor'Vela, The Hope">
+    <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the west.  A soft yellow light suffuses the area from the coils of khor'vela vine that slink across the floor.  Few sores are visible, a sign that the blight is somehow being held at bay here.  The smells of medicines fill the small cavern.|The rock ceiling ascends towards an opening to the west.  Pale yellow light is emitted from the diseased khor'vela vines creeping across the floor.</description>
+    <position x="80" y="100" z="0" />
+    <arc exit="southwest" move="southwest" destination="15" />
+    <arc exit="west" move="west" destination="13" />
+    <arc exit="northwest" move="northwest" destination="11" />
+  </node>
+  <node id="15" name="Grove of the Sacred Khor'Vela, The Hope">
+    <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the north.  A soft yellow light suffuses the area from the coils of khor'vela vine that slink across the floor.  Few sores are visible, a sign that the blight is somehow being held at bay here.  The smells of medicines fill the small cavern.|The rock ceiling ascends towards an opening to the north.  Muted yellow light is emitted from the diseased khor'vela vines undulating across the floor.</description>
+    <position x="60" y="120" z="0" />
+    <arc exit="north" move="north" destination="13" />
+    <arc exit="northeast" move="northeast" destination="14" />
+    <arc exit="northwest" move="northwest" destination="12" />
+  </node>
+  <node id="16" name="Grove of the Sacred Khor'Vela, The Head">
+    <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the south.  A soft blue light suffuses the area from the coils of khor'vela vine that slink across the floor.  Tumors and sores cover the vines, oozing fluids and emitting a rank odor.|The rock ceiling ascends towards an opening to the south.  Soft blue light is emitted from the diseased khor'vela vines creeping across the floor.</description>
+    <position x="0" y="160" z="0" />
+    <arc exit="southeast" move="southeast" destination="19" />
+    <arc exit="south" move="south" destination="18" />
+    <arc exit="southwest" move="southwest" destination="17" />
+  </node>
+  <node id="17" name="Grove of the Sacred Khor'Vela, The Head">
+    <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the east.  A faint blue light bathes the area from the loops of khor'vela vine that writhe across the floor.  Pustules and boils cover the vines, oozing fluids and emitting a rotten odor.</description>
+    <description>The rock ceiling ascends towards an opening to the east.  Faint blue light is emitted from the diseased khor'vela vines creeping across the floor.</description>
+    <position x="-20" y="180" z="0" />
+    <arc exit="northeast" move="northeast" destination="16" />
+    <arc exit="east" move="east" destination="18" />
+    <arc exit="southeast" move="southeast" destination="20" />
+  </node>
+  <node id="18" name="Grove of the Sacred Khor'Vela, The Head" note="vortex4" color="#FF00FF">
+    <description>Its withered limbs stretching towards the gaping opening, a sickly khor'vela tree stands isolated in the center of the otherwise bare garden.  A soft blue light suffuses the area, originating in the diseased plant that dominates the space.  Tools scattered around the area testify to the effort to cure the vegetation.</description>
+    <description>A sickly khor'vela tree stands isolated in the center of a bare garden.  A soft blue light comes from the plant and suffuses the area.</description>
+    <position x="0" y="180" z="0" />
+    <arc exit="north" move="north" destination="16" />
+    <arc exit="east" move="east" destination="19" />
+    <arc exit="south" move="south" destination="20" />
+    <arc exit="west" move="west" destination="17" />
+  </node>
+  <node id="19" name="Grove of the Sacred Khor'Vela, The Head">
+    <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the west.  A pale blue light permeates the area from the tendrils of khor'vela vine that creep across the floor.  Boils and sores cover the vines, oozing fluids and emitting a sour odor.|The rock ceiling ascends towards an opening to the west.  Pale blue light is emitted from the diseased khor'vela vines creeping across the floor.</description>
+    <position x="20" y="180" z="0" />
+    <arc exit="southwest" move="southwest" destination="20" />
+    <arc exit="west" move="west" destination="18" />
+    <arc exit="northwest" move="northwest" destination="16" />
+  </node>
+  <node id="20" name="Grove of the Sacred Khor'Vela, The Head">
+    <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the north.  A muted blue light washes the area from the twists of khor'vela vine that undulate across the floor.  Abscesses and blisters cover the vines, spurting fluids and emitting a noxious odor.|The rock ceiling ascends towards an opening to the north.  Muted blue light is emitted from the diseased khor'vela vines undulating across the floor.</description>
+    <position x="0" y="200" z="0" />
+    <arc exit="north" move="north" destination="18" />
+    <arc exit="northeast" move="northeast" destination="19" />
+    <arc exit="northwest" move="northwest" destination="17" />
+  </node>
+  <node id="21" name="Grove of the Sacred Khor'Vela, The Reach">
+    <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the south.  A soft green light suffuses the area from the coils of khor'vela vine that slink across the floor.  Tumors and sores cover the vines, oozing fluids and emitting a rank odor.|The rock ceiling ascends towards an opening to the south.  Soft green light is emitted from the diseased khor'vela vines creeping across the floor.</description>
+    <position x="120" y="160" z="0" />
+    <arc exit="southeast" move="southeast" destination="24" />
+    <arc exit="south" move="south" destination="23" />
+    <arc exit="southwest" move="southwest" destination="22" />
+  </node>
+  <node id="22" name="Grove of the Sacred Khor'Vela, The Reach">
+    <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the east.  A faint green light bathes the area from the loops of khor'vela vine that writhe across the floor.  Pustules and boils cover the vines, oozing fluids and emitting a rotten odor.</description>
+    <description>The rock ceiling ascends towards an opening to the east.  Faint green light is emitted from the diseased khor'vela vines creeping across the floor.</description>
+    <position x="100" y="180" z="0" />
+    <arc exit="northeast" move="northeast" destination="21" />
+    <arc exit="east" move="east" destination="23" />
+    <arc exit="southeast" move="southeast" destination="25" />
+  </node>
+  <node id="23" name="Grove of the Sacred Khor'Vela, The Reach" note="vortex5" color="#FF00FF">
+    <description>Its withered limbs stretching towards the gaping opening, a sickly khor'vela tree stands isolated in the center of the otherwise bare garden.  A soft green light suffuses the area, originating in the diseased plant that dominates the space.  Efforts to cure the vegetation show in the scattering of gardening implements through the area.</description>
+    <description>A sickly khor'vela tree stands isolated in the center of a bare garden.  A soft green light comes from the plant and suffuses the area.</description>
+    <position x="120" y="180" z="0" />
+    <arc exit="north" move="north" destination="21" />
+    <arc exit="east" move="east" destination="24" />
+    <arc exit="south" move="south" destination="25" />
+    <arc exit="west" move="west" destination="22" />
+  </node>
+  <node id="24" name="Grove of the Sacred Khor'Vela, The Reach">
+    <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the west.  A pale green light permeates the area from the tendrils of khor'vela vine that creep across the floor.  Boils and sores cover the vines, oozing fluids and emitting a sour odor.</description>
+    <description>The rock ceiling ascends towards an opening to the west.  Pale green light is emitted from the diseased khor'vela vines creeping across the floor.</description>
+    <position x="140" y="180" z="0" />
+    <arc exit="southwest" move="southwest" destination="25" />
+    <arc exit="west" move="west" destination="23" />
+    <arc exit="northwest" move="northwest" destination="21" />
+  </node>
+  <node id="25" name="Grove of the Sacred Khor'Vela, The Reach">
+    <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the north.  A muted green light washes the area from the twists of khor'vela vine that undulate across the floor.  Abscesses and blisters cover the vines, spurting fluids and emitting a noxious odor.|The rock ceiling ascends towards an opening to the north.  Muted green light is emitted from the diseased khor'vela vines undulating across the floor.</description>
+    <position x="120" y="200" z="0" />
+    <arc exit="north" move="north" destination="23" />
+    <arc exit="northeast" move="northeast" destination="24" />
+    <arc exit="northwest" move="northwest" destination="22" />
+  </node>
+  <label text="The Heart">
+    <position x="-27" y="45" z="0" />
+  </label>
+  <label text="The Sickness">
+    <position x="84" y="45" z="0" />
+  </label>
+  <label text="The Hope">
+    <position x="35" y="125" z="0" />
+  </label>
+  <label text="The Head">
+    <position x="-26" y="205" z="0" />
+  </label>
+  <label text="The Reach">
+    <position x="92" y="205" z="0" />
+  </label>
+</zone>

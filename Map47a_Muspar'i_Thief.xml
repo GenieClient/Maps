@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Muspar'i Thief Passages" id="47a">
+  <node id="1" name="Muspar'i, Great Gate Square" note="Map47_Muspar'i.xml">
+    <description>The draconic hulk known as the Great Gate of Muspar'i dominates the square named after it, towering over the mosaic path underfoot.  Serving as the near-singular point of travel between the merchant city and the Velaka Desert, the gate is at once both intimidating and awe-inspiring.</description>
+    <position x="380" y="360" z="0" />
+    <arc exit="southwest" move="southwest" />
+    <arc exit="northwest" move="northwest" />
+    <arc exit="go" move="go great gate" />
+    <arc exit="go" move="go footpath" destination="22" />
+  </node>
+  <node id="2" name="Muspar'i, Tuul Yamshuk Staho" note="Map47_Muspar'i.xml">
+    <description>A small plaza forms here at the elbow of the staho where two other streets feed into it, centering upon a rather extravagant fountain.  Converging traffic from the multiple ways melds together in a colorful and very noisy dance as people try to find their way to their destination.  The tall facade of the city bank rises behind a line of palms to a cobalt blue tile roof, dominating the north side of the plaza, broken only by its heavy wooden gate.</description>
+    <position x="160" y="200" z="0" />
+    <arc exit="northeast" move="northeast" />
+    <arc exit="southeast" move="southeast" />
+    <arc exit="west" move="west" />
+    <arc exit="northwest" move="northwest" />
+    <arc exit="go" move="go wooden gate" />
+    <arc exit="go" move="go discreet curtain" destination="15" />
+  </node>
+  <node id="3" name="Muspar'i, Golden Heights" note="Map47_Muspar'i.xml">
+    <description>Several twisting passages meet in a labyrinthine tangle at the crest of the hill, where a steep cliff prohibits further progress to the south.  Mournful gusts of wind sweep showers of fine sand across the crumbling remains of buildings left to bake in the merciless sun.  One ancient stone construct, alone maintaining some semblance of its former glory, stands apart at the edge of the precipice.</description>
+    <description>Several twisting passages meet in a labyrinthine tangle at the crest of the hill, where a steep cliff drops away into empty darkness, prohibiting further progress to the south.  Mournful gusts of wind sweep showers of fine sand across the crumbling remains of buildings lying shrouded in shadows.  One ancient stone construct, alone maintaining some semblance of its former glory, stands apart at the edge of the precipice.</description>
+    <position x="220" y="20" z="0" />
+    <arc exit="north" move="north" />
+    <arc exit="northeast" move="northeast" />
+    <arc exit="east" move="east" />
+    <arc exit="west" move="west" />
+  </node>
+  <node id="4" name="Muspar'i, Shorka's Square" note="Map47_Muspar'i.xml">
+    <description>Shorka's statue presides over the comings and goings in this square, the city's bureaucrats beneath her gaze as they cross the mosaicked stretches between various government offices, as if in her service still.  To the southeast, the North King's Passage meanders through the twisting curves of the city, leading away from the square.</description>
+    <position x="80" y="260" z="0" />
+    <arc exit="southeast" move="southeast" />
+    <arc exit="southwest" move="southwest" />
+    <arc exit="northwest" move="northwest" />
+    <arc exit="go" move="go justice offices" />
+    <arc exit="go" move="go sand-coated pathway" destination="10" />
+  </node>
+  <node id="5" name="Muspar'i, Kings' Hidden Passage">
+    <description>Smears of black soot along the golden sandstone walls thrive due to the constant burning flames of the torches lighting the narrow space.  Despite the warm, fiery glow, the steps plunging into the cliff's dark depths still appear to slant at a steep and treacherous angle.  The only saving grace for the cramped passage is the absence of the violent, blustering sand churning through the air.</description>
+    <position x="160" y="20" z="0" />
+    <arc exit="climb" move="climb sandstone steps" destination="6" />
+    <arc exit="go" move="sear;go door" destination="3" />
+  </node>
+  <node id="6" name="Cavern in the Cliffs, Domed Hall">
+    <description>Shadows undulate across the low ceiling, as flames from the torches near the steps regulate the ebb and flow of light.  The round room's smooth walls and shallow alcoves give the impression that this makeshift shelter was merely the result of some natural imperfection in the solid mass of rock rather than something hollowed out by hand.  Though the decor is mostly spartan, the floor houses dozens of pillows strewn in no discernable order, while several throw rugs create a path toward a stone ramp.</description>
+    <position x="160" y="60" z="0" />
+    <arc exit="climb" move="climb sandstone steps" destination="5" />
+    <arc exit="go" move="go side alcove" destination="7" />
+    <arc exit="go" move="go private corner" destination="8" />
+    <arc exit="go" move="go stone ramp" destination="9" />
+  </node>
+  <node id="7" name="Cavern in the Cliffs, Rest Area">
+    <description>Partitioned off from the hall by a translucent curtain, the space provides a smidge of privacy while still allowing the sights and sounds from outside to filter in.  The wall curves deeper into the rock, creating a small, dark recess where many worn pillows accumulate like giant mushrooms in the hollow of a log.  Exotic spiced smoke wafts from tiny burning cones of incense deposited inside small crevices carved into the rock.</description>
+    <position x="180" y="60" z="0" />
+    <arc exit="go" move="go main hall" destination="6" />
+  </node>
+  <node id="8" name="Cavern in the Cliffs, Crescentic Corner" note="Bin" color="#00FF00">
+    <description>Echoes meander inward from the main room, bringing tones of voices and activity to the secluded alcove.  Set up as a modest office, the area features a desk, chair and cabinet all in matching ironwood.  The lack of additional furniture, however, indicates extraneous distractions from guests are likely not welcome unless invited.</description>
+    <position x="140" y="60" z="0" />
+    <arc exit="go" move="go main hall" destination="6" />
+  </node>
+  <node id="9" name="Cavern in the Cliffs, Drop-off">
+    <description>The ramp slopes severely downward from the hall, ending in a constricted semicircle of a ledge.  An unstable wooden railing separates the tangible from the apparent nothingness past all visible surroundings.  Unfortunately, the light from the central sanctuary fails to penetrate the darkness beyond the edge, revealing none of its secrets, much to the displeasure of the inquisitive and the delight of the thrill-seeking.</description>
+    <position x="160" y="80" z="0" />
+    <arc exit="go" move="go stone ramp" destination="6" />
+    <arc exit="climb" move="climb narrow ledge" destination="27" />
+  </node>
+  <node id="10" name="Muspar'i, Behind the Justice Office">
+    <description>Overflow from the dump floods the shadowy crescent of space between a tall wall and the back of the building.  Dimly lit by the city's nighttime haze, simplistic texturing upon the stone reveals several imperfect attempts at defying the judicial authorities inside.</description>
+    <description>Overflow from the dump floods the crescent of space between a tall wall and the back of the building.  In apparent defiance of the judicial authorities inside, graffiti litters the stone, etched with several imperfect hands.</description>
+    <position x="40" y="220" z="0" />
+    <arc exit="go" move="go sand-coated pathway" destination="4" />
+    <arc exit="climb" move="climb hemp net" destination="11" />
+    <arc exit="climb" move="climb tall wall" destination="24" />
+  </node>
+  <node id="11" name="Muspar'i, Rooftop">
+    <description>Laid bare to face the glory of the night sky, the square of flat sandstone still retains the warmth from the desert sun.  The streets below lack their usual conversations of expensive treasures and rare finds, leaving the rooftop in marked silence.  Sand upon the ground manages to refract some of the available light, sparkling subtly like so many of the city's fantastic jewels exchanging hands.</description>
+    <description>Laid bare to face the full brunt of the desert sun, the square of flat sandstone releases heat in palpable waves that distort the air.  Conversations from below, mainly discussion of expensive treasures and rare finds, filter upward and illustrate the shoppers' and merchants' activity on the street.  In keeping with the theme, the sand sparkles brilliantly upon the ground like so many of the city's fantastic jewels exchanging hands.</description>
+    <position x="60" y="220" z="0" />
+    <arc exit="climb" move="climb hemp net" destination="10" />
+    <arc exit="climb" move="climb iron catwalk" destination="12" />
+  </node>
+  <node id="12" name="Muspar'i, Rooftop">
+    <description>Though the spiky clusters in the corners of the confined space are no more than shadowy in the night's dim, they radiate warmth likely retained from bathing in the heat during the day.  A few cylindrical pipes sprout from the sandstone like motionless statues in an outdoor gallery.  The desert breeze blows over the openings, transforming them into crude instruments that color the silence with low, windy tones.</description>
+    <description>Scraps of metal cluster neatly in the corners of the confined space, promising blisters and pain to anyone foolish enough to tamper with them after immersion in the desert heat.  Sprouting from the sandstone, a few cylindrical pipes emit vapors from the forge below, gifting clouds to the almost always clear and sunny sky.  Dull clangs from singing hammers add a musical element to the atmosphere.</description>
+    <position x="80" y="220" z="0" />
+    <arc exit="climb" move="climb iron catwalk" destination="11" />
+    <arc exit="climb" move="climb slippery tarpaulin" destination="13" />
+  </node>
+  <node id="13" name="Muspar'i, Above the Marketplace">
+    <description>Despite the darkness, the distinctive buzz of the renowned bazaar below is still present, albeit more subdued.  Stacked wooden pallets produce a shadowy maze due to their inadvertent partitioning of the broad space.  When moonlight passes through the gaps in the planks, the illumination cast upon the ground mimics checkered tiles in a fancy salon.</description>
+    <description>Jingling coins, excited voices and braying pack animals characterize the distinctive buzz of the renowned bazaar below.  Wooden pallets bleached by the sun litter the area, placed here in stacks of five and ten and inadvertently producing partitions that divide the space, giving it a mazelike appearance.  When sunlight passes through the gaps in the planks, the shadows cast upon the ground mimic checkered tiles in a fancy salon.</description>
+    <position x="100" y="220" z="0" />
+    <arc exit="climb" move="climb slippery tarpaulin" destination="12" />
+    <arc exit="climb" move="climb canvas awning" destination="14" />
+  </node>
+  <node id="14" name="Muspar'i, Rooftop">
+    <description>Situated in nearly the direct center of the city, the space here thrums with the pulse of urban nightlife.  A grand landscape of black and blue predominates, the regular desert hues painted over with shadow and darkness with a few twinkles of white from lit windows.  The silhouette of the Golden Heights towers over the rest of the streets, imposing an almost perceptible presence amidst the other structural inhabitants.</description>
+    <description>Situated in nearly the direct center of the city, the space here thrums with the bustle of daily life.  A grand landscape of yellow and tan predominates, though the colorful banners outside some vendors' stalls offer variety.  The angles of the Golden Heights tower over the rest of the streets, imposing an almost perceptible presence amidst the other structural inhabitants.</description>
+    <position x="120" y="220" z="0" />
+    <arc exit="climb" move="climb canvas awning" destination="13" />
+    <arc exit="climb" move="climb ironwood ladder" destination="15" />
+  </node>
+  <node id="15" name="Muspar'i, Rear Lot">
+    <description>Sturdy wooden posts frame the small box of land, the fencing intended to provide as much asylum as possible, keeping the area's activity away from the prying eyes of local authorities.  A low canvas spreads across one corner to create a section completely overtaken by shadows.  Improvised seating in the form of discarded crates delivers a modicum of utilitarian hospitality.</description>
+    <description>Sturdy wooden posts frame the small box of land, the fencing intended to provide as much privacy as possible, keeping the area's activity away from the prying eyes of the public.  A low canvas spreads across one corner to create a section of shaded ground, an unpretentious respite from the scorching heat.  Improvised seating in the form of discarded fruit crates delivers a modicum of utilitarian hospitality.</description>
+    <position x="160" y="260" z="0" />
+    <arc exit="climb" move="climb ironwood ladder" destination="14" />
+    <arc exit="climb" move="climb palm tree" destination="16" />
+    <arc exit="go" move="go discreet curtain" destination="2" />
+  </node>
+  <node id="16" name="Muspar'i, Up a Palm Tree">
+    <description>Hidden amidst the shadows harbored by the branches and fronds, a circular platform extends inconspicuously around the trunk, high above the street.  The location provides a bird's-eye view of all activity below, though the volume of travelers is lessened by the onset of night.  A string of glowing lanterns stretches across the road to connect the tree to the rooftop of an adjacent building.</description>
+    <description>Hidden amidst the branches and fronds, a circular platform extends inconspicuously around the trunk, high above the street.  The location provides a bird's-eye view of all activity below, making the spot an ideal sniper's perch.  A string of vibrant lanterns stretches across the road to connect the tree to the rooftop of an adjacent building.</description>
+    <position x="200" y="220" z="0" />
+    <arc exit="climb" move="climb palm's trunk" destination="15" />
+    <arc exit="climb" move="climb string" destination="17" />
+  </node>
+  <node id="17" name="Muspar'i, Rooftop">
+    <description>The rooftop's surface shifts underfoot, with its layer of confetti and sand grinding against the tiles with each movement from intruders.  Though quieter now due to the late anlas, music from the streets serenades the space high above the enduring crowds, the noise bouncing off the walls to fill each crevice with sound.  The festivities distract potential onlookers from gazing at the rooftop for very long, rather entrancing them with magic and song to keep them occupied with their immediate surroundings.</description>
+    <description>An accumulation of faded confetti mixes with the desert sand to form an unusual carpet upon the rooftop.  Music and laughter from the performances in the streets sound just as lively here as if one were participating face to face, the noise bouncing off the city walls and bombarding everything in sight.  Thankfully, the festivities distract any potential onlookers from gazing at the rooftop for very long, ensuring some semblance of isolation amidst the chaos.</description>
+    <position x="220" y="240" z="0" />
+    <arc exit="climb" move="climb string" destination="16" />
+    <arc exit="climb" move="climb thin tightrope" destination="18" />
+  </node>
+  <node id="18" name="Muspar'i, Atop Heketha Theater">
+    <description>Pushed astray by sporadic desert winds, broken bottles and empty cartons roll across the rooftop in rhythmic fashion.  Squat ledges bordering the area as well as imperfect wooden lattices stand out, blacker than the deep blue of the night sky.  The sound of people is never far away, especially during the mad dashes in and out of the theater before and after each performance.</description>
+    <description>Broken bottles and empty cartons on the rooftop suggest the multiple uses of the building's topmost floor.  Squat ledges border the area, and in certain places, wooden planks form an imperfect lattice for increased security along the edges.  The sound of people is never far away despite the heat's attempts to suck the life out of everything that moves.</description>
+    <position x="240" y="260" z="0" />
+    <arc exit="climb" move="climb thin tightrope" destination="17" />
+    <arc exit="climb" move="climb wooden beam" destination="19" />
+  </node>
+  <node id="19" name="Muspar'i, Rooftop">
+    <description>The singular melody plucked from a string instrument strains to eke out an existence amidst the quietude above the streets.  Several dark banners stationed in even intervals inflate with each gust of wind, adding a percussive beat to the periodic movement in the city.  The fabric also buffers rooftop loiterers from the all-too-observant eyes of law enforcement prowling through the shadows.</description>
+    <description>Discordant notes of practicing musicians clash together, failing to harmonize and instead composing a riot of noise below.  Several colorful banners stationed in even intervals around the rooftop billow in the blowing wind and lure customers into the shop underneath with eye-catching intrigue.  The fabric also buffers rooftop loiterers from the near constant attack from sweltering heat and shifting sands.</description>
+    <position x="260" y="280" z="0" />
+    <arc exit="climb" move="climb wooden beam" destination="18" />
+    <arc exit="climb" move="climb metal pole" destination="20" />
+  </node>
+  <node id="20" name="Muspar'i, Rooftop">
+    <description>The end of the sun's daily crusade slows the journeys of so many of the city's inhabitants.  A faint sulfuric aroma lingers within the hushed atmosphere, the odor a remnant of the secretive production processes carried on during the business day.  The night's cooler breezes dissipate the pungency, only to be faced with the same problem the following evening.</description>
+    <description>As the sun travels across the sky, so do the dedicated patrons through the city's shops, each person appearing stunted in stature from this heightened perspective.  A curious sulfuric aroma lingers with the tiny tornados of sand here, the odor betraying the secret production processes of various chemicals beneath the roof.  The day's warmth exaggerates the problem as the sun releases torrents of heat upon the roof.</description>
+    <position x="280" y="300" z="0" />
+    <arc exit="climb" move="climb metal pole" destination="19" />
+    <arc exit="climb" move="climb splintered clapboard" destination="21" />
+  </node>
+  <node id="21" name="Muspar'i, Rooftop">
+    <description>Chiefly used as a storage facility, the rooftop houses dozens of crates brimming with shadows.  Gentle tings reminiscent of distant cathedral bells dance around the rooftop, seeming to come from the improbable musical stylings of the boxes themselves.  The enchanting scent of jasmine oil pervades the night air like a persistent perfume salesman.</description>
+    <description>Chiefly used as a storage facility, the rooftop houses dozens of crates brimming with small vials and other vessels.  A few of the opened boxes submit their contents to the constant contingent of sand in the breeze, and the grit tings upon contact with the material like the ringing of a thousand tiny golden bells.  The enchanting scent of jasmine oil pervades the warm air, escaping into the open from slim vents on the side of the building.</description>
+    <position x="300" y="320" z="0" />
+    <arc exit="climb" move="climb splintered clapboard" destination="20" />
+    <arc exit="climb" move="climb knotted rope" destination="22" />
+  </node>
+  <node id="22" name="Muspar'i, Shadow of the Great Gate">
+    <description>This chunk of land hides in the overwhelming darkness, both from the structural behemoth and the presence of night.  Though it is hard to tell precisely due to limited visibility, the lot appears free of unnecessary objects and even the coating of sand upon the ground.  Everything about the area exudes separation and discretion.</description>
+    <description>This chunk of land hides in the absence of light produced by the structural behemoth.  No unnecessary objects mar the lot, which appears to receive regular cleaning in an effort to avoid any unwanted attention from the city maintenance workers.  Even the ground feels recently swept of its coating of sand, likely to eliminate the crunching of grit from hastened and frequent footsteps.</description>
+    <position x="300" y="360" z="0" />
+    <arc exit="climb" move="climb knotted rope" destination="21" />
+    <arc exit="go" move="go footpath" destination="1" />
+    <arc exit="go" move="go iron gate" destination="23" />
+  </node>
+  <node id="23" name="Muspar'i, Urban Oasis">
+    <description>Lofty palm trees obscure the night sky almost completely, ensuring complete seclusion for visitors to the shadowy pool.  Occasionally, moonlight seeps through the dark leaves to stripe both the water and its border of sandstone bricks.  The pool's gentle undulations draw attention to a barely visible mosaic lining the bottom.</description>
+    <description>Shaded almost completely by the heavy cover of lofty palm trees, this small manmade pool brims with crystal blue refreshment.  Daylight peeks through the verdant green leaves to stripe both the water and the bordering sandstone bricks.  The pool's gentle undulations artistically distort the elaborate mosaic of vibrant tiles lining the bottom.</description>
+    <position x="280" y="360" z="0" />
+    <arc exit="go" move="go iron gate" destination="22" />
+  </node>
+  <node id="24" name="Muspar'i, Garbage Dump">
+    <description>A collection of the entire city's disposed unpleasantness, the multiple levels of rotting refuse serve to destabilize one's footing and balance.  The sounds of opportunistic rodents moving through the rubbish sporadically fill the air, squeaking and crunching their way through the night in their own private tunnels.  Fortunately, the stifling heat of day is abated by the night's breezes, causing the reeking odor to relax its affront, at least until dawn.</description>
+    <description>Stained from years of exposure to all of the city's disposed unpleasantness, the ground bears a resemblance to distressed leather in both color and texture.  Opportunistic rodents scurry through the rubbish, only sporadically visible but always heard.  As if demanding attention simply by existing, the reeking odor emanating from the waste takes advantage of the heat, soaking the area in an almost tangible coating of taint.</description>
+    <position x="40" y="180" z="0" />
+    <arc exit="northeast" move="northeast" destination="25" />
+    <arc exit="climb" move="climb tall wall" destination="10" />
+  </node>
+  <node id="25" name="Muspar'i, Back Alley">
+    <description>Stinking piles line the narrow passage, obviously not intended for public use, let alone at night.  Not subdued by the lack of the sun's heat, the stench forces passersby to squeeze up against the towering wall, presumably on the northwestern side of the city due to its height.  Sand sprinkles down from unseen locations above the cliff opposite the wall, likely kicked up by the howling desert wind.</description>
+    <description>Piles of stinking refuse line the narrow passage, obviously not intended for public use.  The garbage forces passersby to squeeze up against the towering wall that separates the northwestern side of the city from the desolate desert.  Sand sprinkles down like snow, kicked up in passing breezes from unseen locations atop the cliff opposite the wall.</description>
+    <position x="60" y="160" z="0" />
+    <arc exit="southwest" move="southwest" destination="24" />
+    <arc exit="go" move="go crack" destination="26" />
+  </node>
+  <node id="26" name="Base of the Cliffs, Triangular Tunnel" note="Column">
+    <description>Almost imperceptible against the predominant blackness, a sliver of light alludes to passage beyond the enormous cavern.  The corridor widens from the hint of illumination in a 'V' shape, though nothing beyond a massive sandstone column is evident.  Pinpricks of sound punctuate the quiet, quite possibly the noise of rock tumbling in the distance or the plight of a creature trapped and blinded by the dark.</description>
+    <position x="80" y="160" z="0" />
+    <arc exit="go" move="sear;go crack" destination="25" />
+    <arc exit="climb" move="climb column" destination="30" />
+  </node>
+  <node id="27" name="Depths of the Cliffs, Vertical Expanse">
+    <description>Malformations in the steep side provide crude hand and footholds for ascending and descending.  As the rock face plunges further into the darkness, the temperature cools noticeably, yet the air remains stagnant from eons spent in the gargantuan cave.  The occasional clattering of falling rock breaks the monotony, both obliterating the silence and impressing upon travelers the inherent danger of scaling the wall.</description>
+    <position x="80" y="80" z="0" />
+    <arc exit="climb" move="climb narrow ledge" destination="9" />
+    <arc exit="climb" move="climb rock face" destination="28" />
+  </node>
+  <node id="28" name="Depths of the Cliffs, Platform">
+    <description>Somehow, a miracle of engineering allows a short wooden landing to extend outward horizontally from the stone goliath.  Lack of railing reinforces precise, calculated and deliberate movement, lest one should meet an untimely demise at the hands of the groping darkness.  The origins of a manmade rope bridge begin at the platform's edge opposite the rock face.</description>
+    <position x="80" y="100" z="0" />
+    <arc exit="climb" move="climb rock face" destination="27" />
+    <arc exit="go" move="go rope bridge" destination="29" />
+  </node>
+  <node id="29" name="Depths of the Cliffs, Rope Bridge">
+    <description>The darkness along the walkway is almost welcoming, dulling the reality of the perilous journey across the groaning slats.  Creaks from the rope and wood shuttle around the cliff interior, colliding against the walls and ceiling in the far distance and returning as mere shadows of their original selves.  Traveling across the bridge with nothing but two lengths of rope to fence one in creates the sensation of walking blindly through the Void itself.</description>
+    <position x="80" y="120" z="0" />
+    <arc exit="go" move="go wooden platform" destination="28" />
+    <arc exit="go" move="go sandstone column" destination="30" />
+  </node>
+  <node id="30" name="Depths of the Cliffs, Sandstone Column">
+    <description>The navigable area here is circular and slanted to a slight degree, with all sides exposed to the great abundance of empty space all around.  Two pikes fused into the ground on one side initiate an unstable-looking bridge comprised of little more than rope, wood and knots.  Thick notches extend down the side of the precipitous column, chiseled from the solid stone with substantial depth to aid climbing efforts.</description>
+    <position x="80" y="140" z="0" />
+    <arc exit="go" move="go rope bridge" destination="29" />
+    <arc exit="climb" move="climb column" destination="26" />
+  </node>
+  <label text="Muspar'i">
+    <position x="210" y="30" z="0" />
+  </label>
+  <label text="Golden Heights">
+    <position x="190" y="40" z="0" />
+  </label>
+  <label text="Bin">
+    <position x="128" y="39" z="0" />
+  </label>
+  <label text="Muspar'i">
+    <position x="50" y="270" z="0" />
+  </label>
+  <label text="Muspar'i">
+    <position x="140" y="160" z="0" />
+  </label>
+  <label text="Muspar'i">
+    <position x="360" y="320" z="0" />
+  </label>
+  <label text="Justice Offices">
+    <position x="42" y="284" z="0" />
+  </label>
+  <label text="Bank">
+    <position x="147" y="174" z="0" />
+  </label>
+  <label text="Gate Square">
+    <position x="351" y="334" z="0" />
+  </label>
+</zone>

@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Rossman's Landing" id="34a">
+  <node id="1" name="Rossman's Landing, Eastgate Road" note="Eastgate Road|Gate">
+    <description>Within the wooden palisade, work has begun on a stone curtain wall.  About six spans in width, it abuts the existing town wall, reinforcing the logs and providing a more secure defense for the residents.  Beginning at the stone arch around the portcullis, the new wall extends to the north and south about half the length of the existing lumber one.</description>
+    <position x="220" y="20" z="0" />
+    <arc exit="north" move="north" destination="7" />
+    <arc exit="south" move="south" destination="3" />
+    <arc exit="go" move="go arch" destination="2" />
+  </node>
+  <node id="2" name="Rossman's Landing, Foregate Passage">
+    <description>A guard stands just within the iron-banded outer gates, checking travelers as they come through.  The high archway leading to the town is guarded by a massive iron portcullis, raised and lowered by a windlass someplace within.  Gaps between the logs roofing the foregate passage allow defenders to rain down rocks, hot oil or other, less appealing substances upon would-be intruders.</description>
+    <position x="240" y="20" z="0" />
+    <arc exit="go" move="go arch" destination="1" />
+    <arc exit="go" move="go gate" destination="134" />
+  </node>
+  <node id="3" name="Rossman's Landing, Eastgate Road">
+    <description>The pungent aroma and muffled neighs of horses mark the low building nearby as a stable, even without the horseshoe-shaped wooden sign hanging above the door.  Ostlers and grooms bustle about, some walking horses, others carrying buckets of water from a nearby well to fill the trough in front.  A wagon off to one side holds the day's supply of manure, ready to be carried outside the walls for use on the fields.</description>
+    <position x="220" y="40" z="0" />
+    <arc exit="north" move="north" destination="1" />
+    <arc exit="south" move="south" destination="4" />
+    <arc exit="go" move="go stable" destination="43" />
+  </node>
+  <node id="4" name="Rossman's Landing, Eastgate Road">
+    <description>A tanner's shop emits a pungent odor of ammonia and other, less palatable odors.  Flayed hides, scraped clean of hair, are lashed to wooden stretchers and set to dry.  The tanner's apprentices work around open vats in the courtyard beside the building, soaking fresh skins in noxious solutions of ammonia and salts or dying tanned leather to order for a customer.</description>
+    <position x="220" y="60" z="0" />
+    <arc exit="north" move="north" destination="3" />
+    <arc exit="south" move="south" destination="5" />
+    <arc exit="go" move="go shop" destination="45" />
+  </node>
+  <node id="5" name="Rossman's Landing, Eastgate Road">
+    <description>Ten tall wooden towers hold the town's supply of grain against the winter months, with space enough to walk around below.  Barley, wheat, oats, rye and corn - all are stored against the coming cold.  Tiny hovels built from peeled logs and patchy plaster chinking huddle beneath the silos, homes for the town's poorer residents.</description>
+    <position x="220" y="80" z="0" />
+    <arc exit="north" move="north" destination="4" />
+    <arc exit="south" move="south" destination="6" />
+    <arc exit="go" move="go shop" destination="44" />
+  </node>
+  <node id="6" name="Rossman's Landing, Eastgate Road">
+    <description>A wooden watch tower, little more than an open shack on tall stilts, overlooks the town walls.  The stone curtain wall does not yet extend this far to the south around the town, but the tower provides a shelter of sorts for guards patrolling the palisade's upper walkway.</description>
+    <position x="220" y="100" z="0" />
+    <arc exit="north" move="north" destination="5" />
+  </node>
+  <node id="7" name="Rossman's Landing, Eastgate Road">
+    <description>Log houses chinked with pale plaster line the narrow, winding street.  Workmen have been demolishing poorly built shacks huddled along the inner palisade to make way for the new stone curtain wall under construction.  Wagons bringing in building stone and carrying away lumber for use elsewhere leave deep ruts in the dirt road.  Towering above the small houses, a fortress rises on a steep hill to the west, overlooking the rest of the town.</description>
+    <position x="220" y="0" z="0" />
+    <arc exit="north" move="north" destination="8" />
+    <arc exit="south" move="south" destination="1" />
+  </node>
+  <node id="8" name="Rossman's Landing, Eastgate Road">
+    <description>A patch of marigolds struggle for survival in a small garden beside the road, beaten down by the heavy boots of the workers constructing the curtain wall.  The houses are built close together, most sharing a common wall with its neighbors on either side.  Fire must remain an ever-present danger in the tiny village.</description>
+    <position x="220" y="-20" z="0" />
+    <arc exit="north" move="north" destination="9" />
+    <arc exit="south" move="south" destination="7" />
+  </node>
+  <node id="9" name="Rossman's Landing, Eastgate Road">
+    <description>A stone drum tower rises at the corner of the wooden palisades.  Completed prior to the building of the stone walls, the tower offers a vantage point for guards keeping watch over the fields around the town, as well as housing for those not currently on duty.  The smell of baking bread wafts through the air from some nearby inn or housewife's kitchen.</description>
+    <position x="220" y="-40" z="0" />
+    <arc exit="south" move="south" destination="8" />
+    <arc exit="west" move="west" destination="10" />
+  </node>
+  <node id="10" name="Rossman's Landing, Northwall Road">
+    <description>Built against the wooden palisade, the town's sole tavern does a brisk business day and night.  Uniformed guardsmen, shopkeepers, fishermen and herdsmen wander in and out for a pint of ale or a bite to eat.</description>
+    <position x="200" y="-40" z="0" />
+    <arc exit="east" move="east" destination="9" />
+    <arc exit="west" move="west" destination="11" />
+    <arc exit="go" move="go tavern" destination="42" />
+  </node>
+  <node id="11" name="Rossman's Landing, Northwall Road">
+    <description>Thatched roofed cottages huddle together in the shadows of the log palisade surrounding the town.  Carvings decorate the exposed timber beams -- on one house, a gargoyle hunched beneath the eaves, on another, dark brown roses peep out amidst the pale white plaster.  Flimsy stalls against the outer wall can be quickly set up and dismantled on market days.</description>
+    <position x="180" y="-40" z="0" />
+    <arc exit="east" move="east" destination="10" />
+    <arc exit="west" move="west" destination="12" />
+  </node>
+  <node id="12" name="Rossman's Landing, Northwall Road">
+    <description>Cattle mill about in an enclosed common area, shifting drowsily in the darkness.  The sweet scent of roses drifts on the night air, not quite masking the smell of the animals.  Torches flicker high above on the hill as the guards make their rounds of the keep walls.</description>
+    <description>Workers muck out a muddy field, shoveling the dung left by the village's cattle into a small wicker-sided cart.  Sweet scented roses grow in profusion around the common area, enclosing it with their thorns and ameliorating the smell.</description>
+    <position x="160" y="-40" z="0" />
+    <arc exit="east" move="east" destination="11" />
+    <arc exit="south" move="south" destination="14" />
+    <arc exit="west" move="west" destination="13" />
+  </node>
+  <node id="13" name="Rossman's Landing, Northwall Road">
+    <description>The road narrows to be simply a packed dirt path that runs along the eastern end of the soldiers' drill field to a small gate in the walls.  Too narrow for a wagon or cart, the gate allows drovers to herd the town's cattle out to graze during the day.</description>
+    <position x="140" y="-40" z="0" />
+    <arc exit="east" move="east" destination="12" />
+    <arc exit="go" move="go gate" destination="47" />
+  </node>
+  <node id="14" name="Rossman's Landing, Waterway Road">
+    <description>Lazy tendrils of smoke curl up from the chimneys on either end of a long thatched-roof barracks, quickly dissipating into nothingness.  Situated behind the main building, smaller brick structures huddle along the edge of the keep's outermost ditch to the west.</description>
+    <position x="160" y="-20" z="0" />
+    <arc exit="north" move="north" destination="12" />
+    <arc exit="south" move="south" destination="15" />
+    <arc exit="go" move="go barracks" destination="39" />
+  </node>
+  <node id="15" name="Rossman's Landing, Waterway Road">
+    <description>A small store does a brisk business as shoppers stride in and out with baskets over their arms.  The sign over the entry is painted with the image of a juggler tossing a ham, a dagger and a skull.  To the west, a cobbled road begins its climb up a steep incline toward the keep that towers over the rest of the town.</description>
+    <position x="160" y="0" z="0" />
+    <arc exit="north" move="north" destination="14" />
+    <arc exit="south" move="south" destination="16" />
+    <arc exit="west" move="west" destination="22" />
+    <arc exit="go" move="go store" destination="38" />
+  </node>
+  <node id="16" name="Rossman's Landing, Waterway Road">
+    <description>Most houses in the town are built side-by-side, sharing their walls with their neighbors.  Here, however, a narrow cobblestone alley has been left between two buildings, flanked by a woven wicker gate.  Scraggly rose bushes growing on either side twine their thorny branches to form a fragrant arch over the passage.</description>
+    <position x="160" y="20" z="0" />
+    <arc exit="north" move="north" destination="15" />
+    <arc exit="south" move="south" destination="17" />
+    <arc exit="go" move="go gate" destination="23" />
+  </node>
+  <node id="17" name="Rossman's Landing, Waterway Road">
+    <description>Sheaves of grain and flowers bound with dark green vines decorate the doors of a small church.  Unlike the other buildings in town, the church has been finished with split-wood shingles and stone walls.  A small garden surrounds the walls, filled with fruit trees, dawns-eye daisies and morning glories.</description>
+    <position x="160" y="40" z="0" />
+    <arc exit="north" move="north" destination="16" />
+    <arc exit="southwest" move="southwest" destination="18" />
+    <arc exit="go" move="go church" destination="36" />
+  </node>
+  <node id="18" name="Rossman's Landing, Waterway Road">
+    <description>Dark brown cowhides are visible beneath the thatched roofs on nearby buildings.  Soaked with water, the skins reduce the risk of fire in close-packed wooden structures.  Several of the houses have mirrored glass witch balls, traditionally believed to ward off evil, hanging from the windows.</description>
+    <position x="140" y="60" z="0" />
+    <arc exit="northeast" move="northeast" destination="17" />
+    <arc exit="southwest" move="southwest" destination="19" />
+  </node>
+  <node id="19" name="Rossman's Landing, Waterway Road">
+    <description>Waves of heat and the smell of fresh bread billow out the open door of a nearby brick bakery.  Few houses have the luxury of their own oven, so local housewives bring their daily meals to the baker to cook in his.</description>
+    <position x="120" y="80" z="0" />
+    <arc exit="northeast" move="northeast" destination="18" />
+    <arc exit="southwest" move="southwest" destination="20" />
+    <arc exit="go" move="go bakery" destination="35" />
+  </node>
+  <node id="20" name="Rossman's Landing, Waterway Road">
+    <description>Visitors to the town can find shelter for the night at a nearby guesthouse.  A sign, painted with a picture of a hart resting its head in a woman's lap, sways over the porch railing.  Neatly tended window boxes are home to a colorful jumble of flowers, and the door is open to all.</description>
+    <position x="100" y="100" z="0" />
+    <arc exit="northeast" move="northeast" destination="19" />
+    <arc exit="southwest" move="southwest" destination="21" />
+    <arc exit="go" move="go guesthouse" destination="33" />
+    <arc exit="go" move="go guest" destination="33" />
+  </node>
+  <node id="21" name="Rossman's Landing, Waterway Road">
+    <description>A door in the town walls reveals a rope ladder dangling over the edge of the cliff, leading down to the river bank far below.  In times of attack, the ladder can be drawn up to repel invaders, or the rope may simply be cut, ensuring the town's security.  Two mules hitched to a windlass drive a counter-weighted wooden platform used to haul packages up from the docks.</description>
+    <position x="80" y="120" z="0" />
+    <arc exit="northeast" move="northeast" destination="20" />
+    <arc exit="climb" move="climb ladder" destination="27" />
+  </node>
+  <node id="22" name="Rossman's Landing, Foregate Bridge" note="Foregate Bridge|bridge">
+    <description>A steep-sided ditch runs the length of the village, separating the town from Rossgallan Keep.  The western side of the earthwork is higher than the eastern and topped by a spiked wooden palisade wall.  Anyone wishing to enter the keep must cross a narrow drawbridge, no wider than a single cart, flanked by wooden guard towers on either end.</description>
+    <position x="100" y="0" z="0" />
+    <arc exit="east" move="east" destination="15" />
+    <arc exit="go" move="go drawbridge" destination="37" />
+  </node>
+  <node id="23" name="Rossman's Landing, Narrow Alley" note="Narrow Alley">
+    <description>Nestled in the shadow of a small church to the south, a tiny thatched-roof cottage squats at the end of the alley.  Beyond it, a grassy courtyard between the rows of houses provides a gathering place for residents of the town.</description>
+    <position x="180" y="20" z="0" />
+    <arc exit="east" move="east" destination="24" />
+    <arc exit="out" move="out" destination="16" />
+    <arc exit="go" move="go cottage" destination="108" />
+  </node>
+  <node id="24" name="Rossman's Landing, Grassy Courtyard" color="#00FFFF">
+    <description>The town's houses present a severe face to the city streets, but their back doors lead to a riot of color in this grassy courtyard.  Running the length of the town, the wide strip provides a safe place for children to play and small gardens for each resident.  Dovecotes and chicken coops huddle behind each house, extending the village food supplies.</description>
+    <position x="200" y="20" z="0" />
+    <arc exit="north" move="north" destination="25" />
+    <arc exit="south" move="south" destination="26" />
+    <arc exit="west" move="west" destination="23" />
+  </node>
+  <node id="25" name="Rossman's Landing, Grassy Courtyard" color="#00FFFF">
+    <description>Fragrant herbs grow in cheerful clusters at the northern end of the courtyard.  Rosemary and lavender, chives and rue, colorful blue-flowered wolfsbane and lemon balm all perfume the air with a heady fragrance.  In one corner, an angled turf bench covered with creeping thyme releases its scent every time a visitor sits down to enjoy the surroundings.</description>
+    <position x="200" y="0" z="0" />
+    <arc exit="south" move="south" destination="24" />
+  </node>
+  <node id="26" name="Rossman's Landing, Grassy Courtyard" color="#00FFFF">
+    <description>Wild rose bushes bloom in sweet profusion, their thorny stems clinging to a whitewashed pergola.  Wooden benches nestled beneath the lattice structure provide a place for housewives to gossip during the day, sheltered from the sun, or lovers to meet at night.</description>
+    <position x="200" y="40" z="0" />
+    <arc exit="north" move="north" destination="24" />
+  </node>
+  <node id="27" name="Rossman's Landing, River's Edge">
+    <description>Workers bustle about, carrying boxes and crates between the docks, a warehouse and a counter-weighted wooden platform.  The Traders' Guild crest is prominently displayed over the lintel of a sturdy brick building off to one side.  Burly guards keep a watchful eye on their surroundings, always prepared to sound the alarm in case of intruders.</description>
+    <position x="80" y="140" z="0" />
+    <arc exit="go" move="go dock" destination="28" />
+    <arc exit="climb" move="climb ladder" destination="21" />
+    <arc exit="go" move="go build" destination="29" />
+  </node>
+  <node id="28" name="Lake Gwenalion, Rossman's Landing Dock" note="Dock" color="#FF00FF">
+    <description>The green waters of Lake Gwenalion darken with silt from the Jantspyre River as the two merge here at Rossman's Landing.  Fishing boats and private craft keep the dock workers busy repairing nets, salting and drying the day's catch or shifting cargo between ship and town.</description>
+    <position x="80" y="160" z="0" />
+    <arc exit="go" move="go shore" destination="27" />
+  </node>
+  <node id="29" name="Traders' Guild Outpost, Foyer" note="Trader Outpost">
+    <description>Metal bars cover the tall, narrow windows, allowing little light to filter through.  Candles chase away the shadows of the foyer, bringing warmth to the cold hall.</description>
+    <position x="90" y="140" z="0" />
+    <arc exit="out" move="out" destination="27" />
+    <arc exit="go" move="go shop" destination="30" />
+    <arc exit="go" move="go vault" destination="31" />
+  </node>
+  <node id="30" name="Traders' Guild Outpost, Gem Shop" note="Gems" color="#00FF00">
+    <description>Thick tapers hang in a wrought iron chandelier, shedding their light over the plush grey carpet and pale walls.  An assortment of tools lie on a velvet-topped lapidary's bench, padded to prevent damage to the precious gems.  Working with scales and loupe, the goldsmith examines each stone for flaws and determines its value before bagging it and storing it away in a strongbox.</description>
+    <position x="90" y="150" z="0" />
+    <arc exit="out" move="out" destination="29" />
+  </node>
+  <node id="31" name="Traders' Guild Outpost, Depository" note="Teller" color="#00FF00">
+    <description>Footsteps are muffled by the plush brown carpet and paneled walls of the depository.  No mere ostentation, the soft, dark surfaces allow clerks to easily spot any spilled coins, and keep them from rolling away.  Young traders work under the careful supervision of their masters, always alert for any possible pilfering.</description>
+    <position x="100" y="140" z="0" />
+    <arc exit="out" move="out" destination="29" />
+    <arc exit="go" move="go booth" destination="32" />
+  </node>
+  <node id="32" name="Traders' Guild Outpost, Exchange" note="Exchange" color="#00FF00">
+    <description>Neatly labeled coffers hold coins of various demonimations and currencies, all arranged on shelves lining the paneled walls.  As in the outer room, plush brown carpet cushions the floor, preventing any dropped coin from rolling away.  Apprentices labor beneath the watchful eyes of Master Traders, counting coins and making change for visitors to the booth.</description>
+    <position x="100" y="150" z="0" />
+    <arc exit="out" move="out" destination="31" />
+  </node>
+  <node id="33" name="Hartsease Guesthouse, Entry" note="Hartsease Guesthouse">
+    <description>Armchairs and couches in muted shades of plum and ecru surround a cheerfully glowing fire in the entry hall.  Vases of fresh flowers on the side tables fill the room with a spicy fragrance that mingles with the sharp tang of apple wood smoke.  Run by Hartsease Weaver, a widow, the building features dormitory style accommodations and a common room where guests may eat the food they bring with them.</description>
+    <position x="90" y="90" z="0" />
+    <arc exit="out" move="out" destination="20" />
+    <arc exit="go" move="go room" destination="34" />
+  </node>
+  <node id="34" name="Hartsease Guesthouse, Common Room">
+    <description>Sturdy rectory tables and low benches offer a quiet place to eat and drink food brought with you or bought from the nearby bakery.  At the back of the room, the door leading to the kitchen and the owner's private quarters is half-hidden by a rice paper screen.</description>
+    <position x="80" y="90" z="0" />
+    <arc exit="out" move="out" destination="33" />
+  </node>
+  <node id="35" name="Rossman's Landing, Goldbricker's Bakery" note="Goldbricker's Bakery|Bakery" color="#FF0000">
+    <description>Heat pours off the brick ovens along the far wall.  The baker and his apprentices bustle about, kneading bread, chopping wood and performing other mundane tasks.  Near the door, a wood-slatted baker's rack displays the day's wares.</description>
+    <position x="110" y="70" z="0" />
+    <arc exit="out" move="out" destination="19" />
+  </node>
+  <node id="36" name="Rossman's Landing, Church" note="Shrine2-06|Berengaria|Church|Depart" color="#A6A3D9">
+    <description>A stained glass window fills the eastern wall, situated to catch the rising sun.  Beneath it, the altar is covered by a grass-green velvet cloth embroidered with images of cows and grain to honor the goddess Berengaria.  Sheaves of wheat bound with ribbons decorate the walls of this simple village church.</description>
+    <position x="150" y="40" z="0" />
+    <arc exit="out" move="out" destination="17" />
+  </node>
+  <node id="37" name="Rossgallan Keep, Foregate">
+    <description>From the top of the motte, the lights of the town spread out to the east, about twenty feet below.  A steep wooden drawbridge leads down, over the ditches at the base of the hill, to the streets of Rossman's Landing.  Rossgallan Keep is guarded by a palisade fence -- sharpened wooden posts sunk deep in the ground around the flat hilltop -- which is broken only by a heavy iron-banded gate.</description>
+    <description>From the top of the motte, the thatched roofs of the town spread out to the east, about twenty feet below.  A steep wooden drawbridge leads down, over the ditches at the base of the hill, to the streets of Rossman's Landing.  Rossgallan Keep is guarded by a palisade fence -- sharpened wooden posts sunk deep in the ground around the flat hilltop -- which is broken only by a heavy iron-banded gate.</description>
+    <position x="40" y="0" z="0" />
+    <arc exit="go" move="go drawbridge" destination="22" />
+    <arc exit="go" move="go gate" destination="63" />
+  </node>
+  <node id="38" name="Jester's General Store, Salesroom" note="Jester's General Store|General" color="#FF0000">
+    <description>The salesroom is packed almost to the bursting point -- boxes filled with weapons piled next to barrels of bows and baskets of small beanbags.  A narrow path winds its way in a serpentine fashion past bolts of cloth and a rack of clothes.  Even the rafters are laden with hams, cheeses and other foodstuffs.  Eauin Jester, the store's owner, does a brisk business.</description>
+    <position x="170" y="0" z="0" />
+    <arc exit="out" move="out" destination="15" />
+  </node>
+  <node id="39" name="Guard Barracks, Mess Hall" note="Barracks">
+    <description>Wooden benches surround simple planed-board tables in the mess hall.  Used for meals, the room is also a popular gathering place for off-duty guardsmen seeking a game of cards, dice or chess, or a comfortable place to sit while honing a sword or patching a leather jerkin.</description>
+    <position x="170" y="-20" z="0" />
+    <arc exit="out" move="out" destination="14" />
+    <arc exit="go" move="go door" destination="40" />
+    <arc exit="go" move="go kitchen" destination="41" />
+  </node>
+  <node id="40" name="Guard Barracks, Dormitory">
+    <description>Rows of bunks stacked one atop the other line the walls of the room.  A wooden trunk at the bottom and between each set of bunks holds a guard's personal belongings.  Swinging doors separate the dormitory from the mess hall.</description>
+    <position x="180" y="-20" z="0" />
+    <arc exit="go" move="go door" destination="39" />
+  </node>
+  <node id="41" name="Guard Barracks, Kitchen">
+    <description>Brick ovens line the back wall, heating the building in the winter.  Piles of potatoes, beans and rice are held in wicker bins near the door.  On the stove, soup simmers gently, and a basket of fruit offers between-meal snacks for the town's guards.</description>
+    <position x="180" y="-10" z="0" />
+    <arc exit="out" move="out" destination="39" />
+  </node>
+  <node id="42" name="Portman's Tavern, Common Room" note="Portman's Tavern|Tavern" color="#FF0000">
+    <description>Little more than the front room of Portman's house, the tavern features benches framing the brick fireplace and four tables with just enough room to squeeze into the chairs.  A barmaid offers stew and ale as she makes her rounds of the patrons, collecting her coins before a drop is served.</description>
+    <position x="200" y="-30" z="0" />
+    <arc exit="out" move="out" destination="10" />
+  </node>
+  <node id="43" name="Skipstone Stables" note="Skipstone Stables|Stable" color="#00FF00">
+    <description>Sturdy wooden stalls line the walls of the stable, each with their own manger and water bucket.  A thick layer of clean straw bedding covers the floor, cushioning the animals' feet, and tack is neatly slung over the wall between the stalls.  Behind the building, a small corral gives the beasts room to exercise.</description>
+    <position x="210" y="40" z="0" />
+    <arc exit="out" move="out" destination="3" />
+  </node>
+  <node id="44" name="A. R. Cayne's Majikul Serplize" note="A. R. Cayne's Majikul Serplize|Magic" color="#FF0000">
+    <description>Dilapidated piles of clutter lean at odd angles in the tiny shop, leaving little room for shoppers to browse amidst the peculiar assortments of wares.  An old birdcage hangs from the rafters above a slate-topped worktable, while buckets and coffers vie for space with a porcelain hair cache and a large iron cauldron.</description>
+    <position x="210" y="80" z="0" />
+    <arc exit="out" move="out" destination="5" />
+    <arc exit="go" move="go door" destination="46" />
+  </node>
+  <node id="45" name="Drinak's Tannery" note="Drinak's Tannery|Bundles" color="#00FF00">
+    <description>Sweet rushes strewn with strongly scented herbs cushion the floor but do little to eliminate the rank stench of the vats in the courtyard outside.  Piles of furs bound into bales sit around the room, waiting to be shipped.</description>
+    <position x="210" y="60" z="0" />
+    <arc exit="out" move="out" destination="4" />
+  </node>
+  <node id="46" name="A. R. Cayne's Majikul Serplize, Broom Closet" color="#FF0000">
+    <description>As always, the dirtiest room seems to be the one in which the brooms are kept hanging in clusters from wooden pegs.  Mounds of dust are carelessly swept under the scrap of rug on the floor, and mouse droppings litter the corners with careless abandon.  A wooden door leads back to the main sales floor.</description>
+    <position x="200" y="80" z="0" />
+    <arc exit="go" move="go door" destination="44" />
+  </node>
+  <node id="47" name="Shepherd's Meadow, At the Gate" note="Shepherd's Meadow">
+    <description>A weathered wooden gate is set securely into a tall palisade wall stretching two stories high.  The fresh breeze fights a losing battle in its effort to mask the smell of the cattle that pass through daily to graze on the fragrant grass.</description>
+    <description>A weathered wooden gate is suspended between a section of palisade wall that rises two stories high.  The rich, fragrant grass of the meadow competes in vain with the smell of the animals brought here to graze.</description>
+    <position x="140" y="-80" z="0" />
+    <arc exit="north" move="north" destination="48" />
+    <arc exit="northeast" move="northeast" destination="59" />
+    <arc exit="east" move="east" destination="58" />
+    <arc exit="go" move="go gate" destination="13" />
+  </node>
+  <node id="48" name="Shepherd's Meadow, Grazing Land">
+    <description>Torch light flickers in the windows of the keep that overlooks the town to the southwest.  Patches of sweet clover grow at the edge of the split rail fence that runs along the western border of this meadow.</description>
+    <description>The silk standard atop the keep in the distance snaps in a sudden breeze.  Undulating grass underfoot provides rich feed for the cattle that graze nearby.</description>
+    <position x="140" y="-100" z="0" />
+    <arc exit="north" move="north" destination="49" />
+    <arc exit="northeast" move="northeast" destination="62" />
+    <arc exit="east" move="east" destination="59" />
+    <arc exit="southeast" move="southeast" destination="58" />
+    <arc exit="south" move="south" destination="47" />
+  </node>
+  <node id="49" name="Shepherd's Meadow, Grazing Land">
+    <description>Starlight glints off the surface of an empty bottle lying forgotten in the grass beneath the split rail fence.  To the east, the meadow spreads out in golden glory.</description>
+    <description>An empty bottle lies beneath the split rail fence, lodged under matted grass, perhaps left by a local farmer who paused to refresh himself.  Insects buzz incessantly around a small pile of manure, their discordant hum a basso counterpoint to the high bleating of sheep, grazing in the distance.</description>
+    <position x="140" y="-120" z="0" />
+    <arc exit="north" move="north" destination="50" />
+    <arc exit="northeast" move="northeast" destination="51" />
+    <arc exit="east" move="east" destination="62" />
+    <arc exit="southeast" move="southeast" destination="59" />
+    <arc exit="south" move="south" destination="48" />
+  </node>
+  <node id="50" name="Shepherd's Meadow, Grazing Land">
+    <description>Soft starlight kisses the tops of trees in the near distance to the north, marking the edge of a large wood.  The meadow stretches southward, a golden blanket of rich feed for the cattle that graze here.</description>
+    <description>Marking out the northernmost boundary of the grazing pasture, the split rail fence turns sharply off to the east here.  In the distance to the north, the beginning of a large wood evinces itself, populated with trees stretching their branches in supplication toward the sky.</description>
+    <position x="140" y="-140" z="0" />
+    <arc exit="east" move="east" destination="51" />
+    <arc exit="southeast" move="southeast" destination="62" />
+    <arc exit="south" move="south" destination="49" />
+  </node>
+  <node id="51" name="Shepherd's Meadow, Grazing Land">
+    <description>The canopy of the heavens gazes peacefully over this wide field of grass.  The weathered split rail fence along the northern border is draped in shadow, and the scurrying of tiny woodland creatures can be heard, breaking the silence of the night.</description>
+    <description>The wind-weathered uprights of the split rail fence march stolidly into the distance, marking out the northern boundary of this verdant pasture.  The sweet trill of a bluebird calling to his mate sparkles on the fresh breeze.</description>
+    <position x="160" y="-140" z="0" />
+    <arc exit="east" move="east" destination="52" />
+    <arc exit="southeast" move="southeast" destination="61" />
+    <arc exit="south" move="south" destination="62" />
+    <arc exit="southwest" move="southwest" destination="49" />
+    <arc exit="west" move="west" destination="50" />
+  </node>
+  <node id="52" name="Shepherd's Meadow, Grazing Land">
+    <description>Diamond-bright dewdrops cling to the petals of a group of jes-roses that has somehow escaped the notice of the animals feasting on the tender grass of the meadow.</description>
+    <description>A solitary clump of fragrant jes-roses takes refuge here against the split rail fence, a sweet delicacy somehow missed by the grazing animals in the meadow.</description>
+    <position x="180" y="-140" z="0" />
+    <arc exit="east" move="east" destination="53" />
+    <arc exit="southeast" move="southeast" destination="54" />
+    <arc exit="south" move="south" destination="61" />
+    <arc exit="southwest" move="southwest" destination="62" />
+    <arc exit="west" move="west" destination="51" />
+  </node>
+  <node id="53" name="Shepherd's Meadow, Grazing Land" note="RTT22|RT-SM-MF" color="#C2B280">
+    <description>Carefully stacked building implements and lengths of unfinished wood cast long shadows here in the northeast corner of the meadow.  The faint odor of cooked meat and wood smoke lingers in the night air, betraying the recent presence of fence menders who used this as a gathering place to eat and rest.</description>
+    <description>Various building implements and lengths of unfinished wood are stacked here in the northeast corner of the meadow, awaiting future repairs to the split rail fence.  A stone fire ring and the scattered bones of small animals indicate this clearing might have been used as a gathering place for builders to eat and have a brief rest from their labors.</description>
+    <position x="200" y="-140" z="0" />
+    <arc exit="south" move="south" destination="54" />
+    <arc exit="southwest" move="southwest" destination="61" />
+    <arc exit="west" move="west" destination="52" />
+  </node>
+  <node id="54" name="Shepherd's Meadow, Grazing Land">
+    <description>A large rock, expertly detoured by the split rail fence, casts a proprietary shadow over the rich grass of this field.  The evening air gently brushes the heads of the gathering of wildflowers at its base.</description>
+    <description>The split rail fence detours around a large rock the builders must not have been able to move.  Wildflowers grow in profusion around its base, as if staking out their own territory.</description>
+    <position x="200" y="-120" z="0" />
+    <arc exit="north" move="north" destination="53" />
+    <arc exit="south" move="south" destination="55" />
+    <arc exit="southwest" move="southwest" destination="60" />
+    <arc exit="west" move="west" destination="61" />
+    <arc exit="northwest" move="northwest" destination="52" />
+  </node>
+  <node id="55" name="Shepherd's Meadow, Grazing Land">
+    <description>Gentle starlight shines through the leaves of a towering oak tree that stands benevolently on the other side of the split rail fence.  From the close-cropped grass beneath, the scurrying of small nocturnal creatures can be heard.</description>
+    <description>Occasionally a bright-eyed squirrel stops to perch atop the split rail fence, seeking acorns from the mighty oak tree that towers majestically overhead.  The rippling grasses of the meadow offer up the scent of wildflowers along with the droppings of cattle.</description>
+    <position x="200" y="-100" z="0" />
+    <arc exit="north" move="north" destination="54" />
+    <arc exit="south" move="south" destination="56" />
+    <arc exit="southwest" move="southwest" destination="57" />
+    <arc exit="west" move="west" destination="60" />
+    <arc exit="northwest" move="northwest" destination="61" />
+  </node>
+  <node id="56" name="Shepherd's Meadow, Grazing Land">
+    <description>Pale celestial light crowns the top of a stone drum tower situated here at the corner of the palisade wall.  Sentries pass back and forth across its eastern edge, alert for the presence of invaders.</description>
+    <description>The looming shadow of a stone drum tower falls across this corner of the meadow.  Sentries pace its outer edge, casting a watchful eye over the eastern border of the palisade.</description>
+    <position x="200" y="-80" z="0" />
+    <arc exit="north" move="north" destination="55" />
+    <arc exit="west" move="west" destination="57" />
+    <arc exit="northwest" move="northwest" destination="60" />
+  </node>
+  <node id="57" name="Shepherd's Meadow, Grazing Land">
+    <description>Muffled sounds of song and laughter float across the palisade wall on the night air.  The gentle breeze ruffles the sweet grass of this verdant meadow, like a whisper of forgotten music.</description>
+    <description>Snatches of song and merriment drift across the palisade wall, borne on the gentle breeze.  From time to time, a startled field mouse scurries through the grass, perhaps seeking escape from a predator on the wing.</description>
+    <position x="180" y="-80" z="0" />
+    <arc exit="north" move="north" destination="60" />
+    <arc exit="northeast" move="northeast" destination="55" />
+    <arc exit="east" move="east" destination="56" />
+    <arc exit="west" move="west" destination="58" />
+    <arc exit="northwest" move="northwest" destination="59" />
+  </node>
+  <node id="58" name="Shepherd's Meadow, Grazing Land">
+    <description>The night sky gazes peacefully over this wide field of aromatic grass that stretches northward into the distance.  To the southwest, a keep stands on a hill, a sentinel against invaders.</description>
+    <description>Sweet smelling grass, about waist-high on a Halfling, shows signs of recent voracious grazing by a large number of herd animals, perhaps cattle or sheep.  In the distance to the southwest, a keep rises over the land, ever watchful against invaders.</description>
+    <position x="160" y="-80" z="0" />
+    <arc exit="north" move="north" destination="59" />
+    <arc exit="northeast" move="northeast" destination="60" />
+    <arc exit="east" move="east" destination="57" />
+    <arc exit="west" move="west" destination="47" />
+    <arc exit="northwest" move="northwest" destination="48" />
+  </node>
+  <node id="59" name="Shepherd's Meadow, Grazing Land">
+    <description>The scattered wildflowers in the grass of the verdant meadow have closed for the night.  An occasional owl swoops low, and with a flash of talons, captures its evening meal.</description>
+    <description>Wildflowers are scattered among the waving grass of the wide field, dotting the landscape with bright spots of color.  Occasionally the bleating of sheep can be heard, carried on the breeze.</description>
+    <position x="160" y="-100" z="0" />
+    <arc exit="north" move="north" destination="62" />
+    <arc exit="northeast" move="northeast" destination="61" />
+    <arc exit="east" move="east" destination="60" />
+    <arc exit="southeast" move="southeast" destination="57" />
+    <arc exit="south" move="south" destination="58" />
+    <arc exit="southwest" move="southwest" destination="47" />
+    <arc exit="west" move="west" destination="48" />
+    <arc exit="northwest" move="northwest" destination="49" />
+  </node>
+  <node id="60" name="Shepherd's Meadow, Grazing Land">
+    <description>A sentry gives a staccato cry atop the stone tower to the southwest, breaking the stillness of the evening air.  The fresh herbal scent of the grass underfoot mingles with the smell of animals.</description>
+    <description>Sturdy stonework and vigilant sentries top a drum tower to the southeast, testimony to attacks against the gentle folk of Rossman's Landing.  The ground underfoot is packed by the passage of hooves, the meadow grass cropped short by grazing animals.</description>
+    <position x="180" y="-100" z="0" />
+    <arc exit="north" move="north" destination="61" />
+    <arc exit="northeast" move="northeast" destination="54" />
+    <arc exit="east" move="east" destination="55" />
+    <arc exit="southeast" move="southeast" destination="56" />
+    <arc exit="south" move="south" destination="57" />
+    <arc exit="southwest" move="southwest" destination="58" />
+    <arc exit="west" move="west" destination="59" />
+    <arc exit="northwest" move="northwest" destination="62" />
+  </node>
+  <node id="61" name="Shepherd's Meadow, Grazing Land">
+    <description>The evening breeze lifts the leaves of the old hickory tree that stands here, carrying the scent of wildflowers and wood smoke.</description>
+    <description>A stalwart hickory tree rises from the rippling grass, its thick branches offering an expanse of sweet shade around moss-covered roots.</description>
+    <position x="180" y="-120" z="0" />
+    <arc exit="north" move="north" destination="52" />
+    <arc exit="northeast" move="northeast" destination="53" />
+    <arc exit="east" move="east" destination="54" />
+    <arc exit="southeast" move="southeast" destination="55" />
+    <arc exit="south" move="south" destination="60" />
+    <arc exit="southwest" move="southwest" destination="59" />
+    <arc exit="west" move="west" destination="62" />
+    <arc exit="northwest" move="northwest" destination="51" />
+  </node>
+  <node id="62" name="Shepherd's Meadow, Grazing Land">
+    <description>Starlight pools in the hollows formed by the scattered clumps of grass.  A soft rustling heralds the approach of a brown rabbit, heading home to his burrow.</description>
+    <description>A tawny brown rabbit pops in and out of view among the hummocks of sweet grass, heading home to his burrow nearby.  The sprightly breeze carries an herbal scent mixed with the smell of animals.</description>
+    <position x="160" y="-120" z="0" />
+    <arc exit="north" move="north" destination="51" />
+    <arc exit="northeast" move="northeast" destination="52" />
+    <arc exit="east" move="east" destination="61" />
+    <arc exit="southeast" move="southeast" destination="60" />
+    <arc exit="south" move="south" destination="59" />
+    <arc exit="southwest" move="southwest" destination="48" />
+    <arc exit="west" move="west" destination="49" />
+    <arc exit="northwest" move="northwest" destination="50" />
+  </node>
+  <node id="63" name="Rossgallan Keep, Eastcourt Gate" color="#00FFFF">
+    <description>Built on a flat-topped hill above the rest of the town, the keep consists of a grassy torch-lit courtyard surrounded by a wooden palisade fence.  Small buildings dot the perimeter of the enclosure, the furthest ones visible only as lighted windows in the darkness.  A long two-story manor occupies the western side of the courtyard, housing the Rossman family and their personal retainers, and watch fires burn atop the octagonal towers along the north and south walls.</description>
+    <description>Built on a flat-topped hill above the rest of the town, the keep consists of a grassy courtyard surrounded by a wooden palisade fence.  Small buildings dot the perimeter of the enclosure, with orchards and grazing areas in the center.  A long two-story manor occupies the western side of the courtyard, housing the Rossman family and their personal retainers, and octagonal towers provide lookout posts along the north and south walls.</description>
+    <position x="20" y="0" z="0" />
+    <arc exit="north" move="north" destination="74" />
+    <arc exit="south" move="south" destination="64" />
+    <arc exit="southwest" move="southwest" destination="82" />
+    <arc exit="west" move="west" destination="76" />
+    <arc exit="northwest" move="northwest" destination="79" />
+    <arc exit="go" move="go gate" destination="37" />
+  </node>
+  <node id="64" name="Rossgallan Keep, Southeast Courtyard">
+    <description>Smoke and soot drift from the southeast, darkening the timber and plaster walls of a small shop and the wooden posts of the palisade beyond.  A sign swaying above the shop's door bears the painted image of a fist clutching a sword.</description>
+    <position x="20" y="30" z="0" />
+    <arc exit="north" move="north" destination="63" />
+    <arc exit="southwest" move="southwest" destination="65" />
+    <arc exit="west" move="west" destination="82" />
+    <arc exit="northwest" move="northwest" destination="76" />
+    <arc exit="go" move="go shop" destination="106" />
+  </node>
+  <node id="65" name="Rossgallan Keep, Southeast Courtyard">
+    <description>Though quieter than during the daytime, the ring of hammers against metal still resounds as blacksmiths ply their trade in a nearby forge.  One of the only stone buildings within the keep, sparks billow forth in the darkness as someone within pumps the bellows, sending a wave of heat eastward across the courtyard.</description>
+    <description>The ring of hammers against metal resounds as blacksmiths ply their trade in a nearby forge.  One of the only stone buildings within the keep, sparks and soot billow forth from the chimney stack as someone within pumps the bellows, sending a cloud of smoke drifting eastward across the courtyard.</description>
+    <position x="-10" y="60" z="0" />
+    <arc exit="north" move="north" destination="82" />
+    <arc exit="northeast" move="northeast" destination="64" />
+    <arc exit="west" move="west" destination="66" />
+    <arc exit="northwest" move="northwest" destination="83" />
+  </node>
+  <node id="66" name="Rossgallan Keep, Southcourt Tower" color="#00FFFF">
+    <description>At the southern end of the keep, a high wooden tower, twin to one to the north, rises above the palisade wall, offering a commanding view of the areas surrounding the town.</description>
+    <position x="-40" y="60" z="0" />
+    <arc exit="north" move="north" destination="83" />
+    <arc exit="northeast" move="northeast" destination="82" />
+    <arc exit="east" move="east" destination="65" />
+    <arc exit="west" move="west" destination="67" />
+    <arc exit="northwest" move="northwest" destination="75" />
+    <arc exit="go" move="go tower" destination="131" />
+  </node>
+  <node id="67" name="Rossgallan Keep, Southwest Courtyard">
+    <description>South of the jousting field, a stable is home to the keep's horses.  Massive animals, able to charge even while bearing the weight of full barding plus that of a man in armor, shift restlessly in the darkness of their fenced-in pasture.</description>
+    <description>South of the jousting field, a stable is home to the keep's horses.  Massive animals, able to charge even while bearing the weight of full barding plus that of a man in armor, nicker softly in the fenced-in pasture.</description>
+    <position x="-70" y="60" z="0" />
+    <arc exit="north" move="north" destination="75" />
+    <arc exit="northeast" move="northeast" destination="83" />
+    <arc exit="east" move="east" destination="66" />
+    <arc exit="northwest" move="northwest" destination="68" />
+    <arc exit="go" move="go stable" destination="86" />
+  </node>
+  <node id="68" name="Rossgallan Keep, Southwest Courtyard">
+    <description>The ripe fragrance of the horses grazing in a pen behind the stable to the southeast permeates the area, identifying the building even in the darkness.  A small kennel attached to the building houses drowsy hunting dogs.  Other animals shift from foot to foot as they sleep, clustered about each other within a makeshift rope enclosure.</description>
+    <description>The ripe fragrance of the horses grazing in a pen behind the stable to the southeast permeates the area, drawing flies that are as attracted to the nearby manure pile as to horses themselves.  Hunting dogs bay within a kennel attached to the building.  Other animals freely roam the courtyard, cropping the grass and swishing their tails irritably at the children charged with chasing them away from the Keep's gardens.</description>
+    <position x="-100" y="30" z="0" />
+    <arc exit="north" move="north" destination="69" />
+    <arc exit="northeast" move="northeast" destination="78" />
+    <arc exit="east" move="east" destination="75" />
+    <arc exit="southeast" move="southeast" destination="67" />
+    <arc exit="go" move="go kennel" destination="85" />
+  </node>
+  <node id="69" name="Rossgallan Keep, West Courtyard">
+    <description>Wooden torches flicker in the darkness, sending shadows stretching up the palisade wall and emphasizing the dark places between the bundles of thatch mounded atop the roof of a nearby chapel.  Two wooden ravens face each other above the lintel of the door, one on either side of a saturnine carved face.  Careful craftsmanship and attention to the least significant detail makes this not only a shelter for worshippers, but an offering of the craftsman's labor to the greater glory of Kertigen.</description>
+    <description>In the shadow of the western wall, bundles of golden thatch mound atop the roof of a nearby chapel.  Two wooden ravens face each other above the lintel of the door, one on either side of a benevolent carved face.  Careful craftsmanship and attention to the least significant detail makes this not only a shelter for worshippers, but an offering of the craftsman's labor to the greater glory of Kertigen.</description>
+    <position x="-100" y="0" z="0" />
+    <arc exit="north" move="north" destination="70" />
+    <arc exit="northeast" move="northeast" destination="81" />
+    <arc exit="east" move="east" destination="78" />
+    <arc exit="southeast" move="southeast" destination="75" />
+    <arc exit="south" move="south" destination="68" />
+    <arc exit="go" move="go chapel" destination="84" />
+  </node>
+  <node id="70" name="Rossgallan Keep, Northwest Courtyard">
+    <description>A large manor house nestles in the northwest corner of the courtyard.  Little is visible in the darkness but the pale plaster walls and the flickering glow of torches or candles behind closed shutters.  The faint scent of smoke drifts up from the chimney of a small stone kitchen beside the manor.</description>
+    <description>A large manor house nestles in the northwest corner of the courtyard.  Two stories tall, with exposed beams and white lime plaster, the house is topped by a clay tile roof broken by several shuttered dormers.  Beside it, smoke drifts up from the chimney of a low stone kitchen.</description>
+    <position x="-100" y="-30" z="0" />
+    <arc exit="northeast" move="northeast" destination="71" />
+    <arc exit="east" move="east" destination="81" />
+    <arc exit="southeast" move="southeast" destination="78" />
+    <arc exit="south" move="south" destination="69" />
+    <arc exit="go" move="go house" destination="89" />
+    <arc exit="go" move="go kitchen" hidden="True" destination="96" />
+  </node>
+  <node id="71" name="Rossgallan Keep, Northwest Courtyard">
+    <description>A pair of targets, one red, one brown, are mounted on split logs in this corner of the courtyard.  Hard to make out in the flickering torchlight, a few gouges in the palisade mark the places where the archers have missed, imbedding their arrows in the wooden wall around the keep.</description>
+    <description>A pair of targets, one red, one brown, are mounted on split logs in this corner of the courtyard.  Scuff marks in the grass show where the targets have been moved closer or further away from the firing line, and a few gouges in the palisade mark the places where the archers have missed, imbedding their arrows in the wooden wall around the keep.</description>
+    <position x="-70" y="-60" z="0" />
+    <arc exit="east" move="east" destination="72" />
+    <arc exit="southeast" move="southeast" destination="80" />
+    <arc exit="south" move="south" destination="81" />
+    <arc exit="southwest" move="southwest" destination="70" />
+    <arc exit="go" move="go hut" destination="101" />
+  </node>
+  <node id="72" name="Rossgallan Keep, Northcourt Tower" color="#00FFFF">
+    <description>Watch fires flare atop the two wooden towers rising up over the palisade fence that surrounds the motte, one here in the center of the north wall and a matching tower in the center of the south.  The tower provides shelter for guards on duty and access to the covered walkway along the top of the walls.</description>
+    <description>Two wooden towers rise up over the palisade fence that surrounds the motte, one here in the center of the north wall and a matching tower in the center of the south.  The tower provides shelter for guards on duty and access to the covered walkway along the top of the walls.</description>
+    <position x="-40" y="-60" z="0" />
+    <arc exit="east" move="east" destination="73" />
+    <arc exit="southeast" move="southeast" destination="79" />
+    <arc exit="south" move="south" destination="80" />
+    <arc exit="southwest" move="southwest" destination="81" />
+    <arc exit="west" move="west" destination="71" />
+    <arc exit="go" move="go tower" destination="109" />
+  </node>
+  <node id="73" name="Rossgallan Keep, Northeast Courtyard" note="Fruit Trees" color="#00FFFF">
+    <description>Grass grows in a smoothly cropped lawn beneath the gnarled branches of fruit trees.  The tree trunks block the light from the torches around the perimeter of the keep, enveloping you in darkness.</description>
+    <description>Green grass grows in a smoothly cropped lawn beneath the gnarled branches of fruit trees.  The high walls of the palisade shelter the trees from the cold winter winds, without blocking the sunlight needed for growth.</description>
+    <position x="-10" y="-60" z="0" />
+    <arc exit="southeast" move="southeast" destination="74" />
+    <arc exit="south" move="south" destination="79" />
+    <arc exit="southwest" move="southwest" destination="80" />
+    <arc exit="west" move="west" destination="72" />
+  </node>
+  <node id="74" name="Rossgallan Keep, Northeast Courtyard" color="#00FFFF">
+    <description>Wisps of fragrant smoke drift through the air, most strongly near a stone smokehouse.  Several small buildings huddle in the darkness around the bases of tall wooden silos.</description>
+    <description>Wisps of fragrant smoke drift out of a stone smokehouse where hams and fish are hung to preserve them for the cold season.  Several small buildings cluster around the bases of tall wooden silos filled with grain.</description>
+    <position x="20" y="-30" z="0" />
+    <arc exit="south" move="south" destination="63" />
+    <arc exit="southwest" move="southwest" destination="76" />
+    <arc exit="west" move="west" destination="79" />
+    <arc exit="northwest" move="northwest" destination="73" />
+    <arc exit="go" move="go smokehouse" destination="105" />
+  </node>
+  <node id="75" name="Rossgallan Keep, Courtyard">
+    <description>Splintered wooden pells lie discarded in a pile to one side of a practice field.  To the south, a rail fence encloses the jousting grounds, now quiet in the darkness.</description>
+    <description>Splintered wooden pells lie discarded in a pile to one side of a practice field.  To the south, a rail fence encloses the jousting grounds where the keep's fighters practice riding and tilting against wooden barrels and other obstacles or against each other.</description>
+    <position x="-70" y="30" z="0" />
+    <arc exit="north" move="north" destination="78" />
+    <arc exit="northeast" move="northeast" destination="77" />
+    <arc exit="east" move="east" destination="83" />
+    <arc exit="southeast" move="southeast" destination="66" />
+    <arc exit="south" move="south" destination="67" />
+    <arc exit="west" move="west" destination="68" />
+    <arc exit="northwest" move="northwest" destination="69" />
+  </node>
+  <node id="76" name="Rossgallan Keep, Courtyard">
+    <description>A long, low building nestles beneath a high thatched roof at the eastern end of the courtyard, giving it an odd resemblance to an elongated haystack with a chimney at either end.  The steep angle of the roof helps keep snow from accumulating during the winters.</description>
+    <position x="-10" y="0" z="0" />
+    <arc exit="north" move="north" destination="79" />
+    <arc exit="northeast" move="northeast" destination="74" />
+    <arc exit="east" move="east" destination="63" />
+    <arc exit="southeast" move="southeast" destination="64" />
+    <arc exit="south" move="south" destination="82" />
+    <arc exit="southwest" move="southwest" destination="83" />
+    <arc exit="west" move="west" destination="77" />
+    <arc exit="northwest" move="northwest" destination="80" />
+  </node>
+  <node id="77" name="Rossgallan Keep, Courtyard" note="Rossgallan Keep">
+    <description>Pale gravel paths contrast vividly with the cropped green grass that covers the enclosed motte.  Small buildings dot the perimeter of the grounds, while twin towers, one to the north, one to the south, loom in the distance above the palisade walls.</description>
+    <position x="-40" y="0" z="0" />
+    <arc exit="north" move="north" destination="80" />
+    <arc exit="northeast" move="northeast" destination="79" />
+    <arc exit="east" move="east" destination="76" />
+    <arc exit="southeast" move="southeast" destination="82" />
+    <arc exit="south" move="south" destination="83" />
+    <arc exit="southwest" move="southwest" destination="75" />
+    <arc exit="west" move="west" destination="78" />
+    <arc exit="northwest" move="northwest" destination="81" />
+  </node>
+  <node id="78" name="Rossgallan Keep, Courtyard">
+    <description>Low stone benches, pale in night's deep shadows, cluster in a circle beneath the spreading branches of a mistwood tree.  The scents of sweet pea blossoms and roses drift through the evening air, perfuming the darkness with their fragrance.  An occasional nicker of a restless horse drifts through the darkness from the south.</description>
+    <description>Low stone benches cluster in a circle beneath the shade of a spreading mistwood tree.  Sweet pea blossoms, roses and other fragrant flowers perfume the air, making this gentle bower a delightful place to sit and sew for the ladies of the keep as they watch the exertions of the warriors in the practice fields to the south.</description>
+    <position x="-70" y="0" z="0" />
+    <arc exit="north" move="north" destination="81" />
+    <arc exit="northeast" move="northeast" destination="80" />
+    <arc exit="east" move="east" destination="77" />
+    <arc exit="southeast" move="southeast" destination="83" />
+    <arc exit="south" move="south" destination="75" />
+    <arc exit="southwest" move="southwest" destination="68" />
+    <arc exit="west" move="west" destination="69" />
+    <arc exit="northwest" move="northwest" destination="70" />
+  </node>
+  <node id="79" name="Rossgallan Keep, Courtyard">
+    <description>Low-cropped grass stretches out across the courtyard, broken by gravel paths leading from building to building.  To the west, candlelight lends a golden glow to the windows of a two-story manor, its pale plastered walls barely visible in the darkness.</description>
+    <description>Low-cropped grass stretches out across the courtyard, broken by gravel paths leading from building to building.  To the west, a two-story manor dominates the others in the keep, with a clay tile roof instead of thatch, and plastered and half-timbered walls instead of whitewashed wood.</description>
+    <position x="-10" y="-30" z="0" />
+    <arc exit="north" move="north" destination="73" />
+    <arc exit="east" move="east" destination="74" />
+    <arc exit="southeast" move="southeast" destination="63" />
+    <arc exit="south" move="south" destination="76" />
+    <arc exit="southwest" move="southwest" destination="77" />
+    <arc exit="west" move="west" destination="80" />
+    <arc exit="northwest" move="northwest" destination="72" />
+  </node>
+  <node id="80" name="Rossgallan Keep, Courtyard">
+    <description>Spilled water and foot traffic churn the ground beside the keep's well to mud, only somewhat controlled by the gravel on the path around it.  A small ring of moss-covered rocks surrounds the well itself, with a slanted split-shingled roof to keep the leaves out of the water.  Nearby wooden benches offer a place for courting couples to enjoy stolen moments in the darkness before returning with the water to kitchen, barracks or anywhere else it may be needed.</description>
+    <description>Spilled water and foot traffic churn the ground beside the keep's well to mud, only somewhat controlled by the gravel on the path around it.  A small ring of moss-covered rocks surrounds the well itself, with a slanted split-shingled roof to keep the leaves out of the water.  Nearby wooden benches offer a place to rest a bucket or to sit for a companionable gossip before carrying the bucket to kitchen, barracks or anywhere else it may be needed.</description>
+    <position x="-40" y="-30" z="0" />
+    <arc exit="north" move="north" destination="72" />
+    <arc exit="northeast" move="northeast" destination="73" />
+    <arc exit="east" move="east" destination="79" />
+    <arc exit="southeast" move="southeast" destination="76" />
+    <arc exit="south" move="south" destination="77" />
+    <arc exit="southwest" move="southwest" destination="78" />
+    <arc exit="west" move="west" destination="81" />
+    <arc exit="northwest" move="northwest" destination="71" />
+  </node>
+  <node id="81" name="Rossgallan Keep, Courtyard">
+    <description>The sharp tang of medicinal and kitchen herbs perfume the gardens, unseen in the darkness.  Pale white muslin cloches cluster in long rows, sheltering berries or other tender plants from the cool night air.  The shoulder-high wicker frameworks behind a low bench provide a decorative accent, as well as support for peas and beans during the growing season.</description>
+    <description>Medicinal and kitchen herbs grow in neatly kept rows, perfuming the air with their sharp fragrance.  Other beds hold root vegetables, thickly mulched with salt hay, or tender leafy greens and berries growing beneath the shelter of a muslin cloche.  The shoulder-high wicker frameworks behind a low bench provide a decorative accent, as well as support for peas and beans during the growing season.</description>
+    <position x="-70" y="-30" z="0" />
+    <arc exit="north" move="north" destination="71" />
+    <arc exit="northeast" move="northeast" destination="72" />
+    <arc exit="east" move="east" destination="80" />
+    <arc exit="southeast" move="southeast" destination="77" />
+    <arc exit="south" move="south" destination="78" />
+    <arc exit="southwest" move="southwest" destination="69" />
+    <arc exit="west" move="west" destination="70" />
+  </node>
+  <node id="82" name="Rossgallan Keep, Courtyard">
+    <description>Vats of foul-smelling liquid squat in the grassy yard of a nearby cottage, knee-high obstacles in the darkness.  A low structure along the side houses a few chickens drowsily huddled in their roosts.</description>
+    <description>Vats of dye splattered in rainbow hues stand in the grassy yard of a nearby cottage, while hanks of yarn and drapes of fabric hang from rattan racks to dry.  From time to time, chickens nose about, scratching at the grass in their ongoing hunt for fallen grains.</description>
+    <position x="-10" y="30" z="0" />
+    <arc exit="north" move="north" destination="76" />
+    <arc exit="northeast" move="northeast" destination="63" />
+    <arc exit="east" move="east" destination="64" />
+    <arc exit="south" move="south" destination="65" />
+    <arc exit="southwest" move="southwest" destination="66" />
+    <arc exit="west" move="west" destination="83" />
+    <arc exit="northwest" move="northwest" destination="77" />
+    <arc exit="go" move="go cottage" destination="107" />
+  </node>
+  <node id="83" name="Rossgallan Keep, Courtyard">
+    <description>Wood shavings litter the ground beside a small workshop, left over from the day's work.  Barrel staves, stacked in neat piles beside the building, await the attentions of the cooper.  A small sign, carved with a picture of a mallet and wood chisel, sways above the workshop's open door, and candles within the shop cast a golden glow over finely wrought cabinetry on display.</description>
+    <description>Wood shavings litter the ground beside a small workshop as apprentices labor with chamfers to form the staves for barrels, the end results stacked in neat piles beside the building awaiting the attentions of the cooper.  A small sign, carved with a picture of a mallet and wood chisel, sways above the workshop's open door, through which is visible finely wrought cabinetry made by the master craftsman.</description>
+    <position x="-40" y="30" z="0" />
+    <arc exit="north" move="north" destination="77" />
+    <arc exit="northeast" move="northeast" destination="76" />
+    <arc exit="east" move="east" destination="82" />
+    <arc exit="southeast" move="southeast" destination="65" />
+    <arc exit="south" move="south" destination="66" />
+    <arc exit="southwest" move="southwest" destination="67" />
+    <arc exit="west" move="west" destination="75" />
+    <arc exit="northwest" move="northwest" destination="78" />
+    <arc exit="go" move="go workshop" destination="102" />
+  </node>
+  <node id="84" name="Rossgallan Keep, Chapel of Kertigen" note="Chapel of Kertigen|Kertigen's chapel">
+    <description>Polished mistwood, carved with vertical panels of ravens, raccoons, and welkins, adorns the walls of the chapel.  No pews offer places to sit, but the bare stone floor is softened by a few prayer rugs for worshippers.  At the front of the chapel, a wide carved panel depicts a bearded man with a raven perched upon his shoulder, with smaller side panels showing a woodcarver helped by a welkin, and a saturnine man watching a raccoon play with a broken cartwheel.</description>
+    <position x="-110" y="0" z="0" />
+    <arc exit="out" move="out" destination="69" />
+  </node>
+  <node id="85" name="Rossgallan Keep, Kennel" note="Kennel" color="#FF0000">
+    <description>An assortment of dogs, confined in simple willow pens, bay noisily as the assistant kennel-master moves about tending to their needs.  The kennel contains no lady's lap dogs, just working dogs that guard the local sheep or work the boats on the lake, or hunting dogs bred to pursue everything from rabbits to deer.</description>
+    <position x="-110" y="30" z="0" />
+    <arc exit="out" move="out" destination="68" />
+  </node>
+  <node id="86" name="Rossgallan Keep, Stables" note="Horses" color="#FF0000">
+    <description>Half-height wooden walls divide the stable into individual stalls, with a wide aisle running the length of the building.  Layers of straw on the floor cushion the hoofs of the animals that live within.  Each stall has a hay-filled manger mounted along the wall beside a water bucket, and blankets and saddles are flung over the partitions.</description>
+    <position x="-80" y="70" z="0" />
+    <arc exit="north" move="north" destination="87" />
+    <arc exit="out" move="out" destination="67" />
+    <arc exit="go" move="go room" destination="88" />
+  </node>
+  <node id="87" name="Rossgallan Keep, Stable">
+    <description>At the end of the stables, the air is redolent with the fragrance of fresh hay and oiled leather, and the ring of iron-shod hooves against the stone floor echoes about the building.  The last stall holds no horses.  Instead, it's used as the office of the stablemaster, Sasha, who works at a low table mounted against the wall.</description>
+    <position x="-80" y="60" z="0" />
+    <arc exit="south" move="south" destination="86" />
+  </node>
+  <node id="88" name="Rossgallan Keep, Tack Room" note="Tack Room|Garnett" color="#FF0000">
+    <description>A lean woman with weathered skin, Hostler Garnett rules over the tack room of the Keep's stables, offering everything from spare bridles to an apple to treat a favored horse.  Her leather palm thimble and awl are always in use as she works to mend an old bridle or replace the padding in a worn saddle, muttering all the while about the carelessness of the riders.</description>
+    <position x="-70" y="70" z="0" />
+    <arc exit="out" move="out" destination="86" />
+  </node>
+  <node id="89" name="Rossgallan Manor, Great Hall" note="Manor">
+    <description>The great hall is expansive with a soaring ceiling of intersecting beams and rafters.  Three candle-laden iron chandeliers provide illumination, and light reflects softly off the polished inlaid wood floor.  Backed benches are the only furnishings, easily arranged for any ceremony upon the dais at the west end of the hall.</description>
+    <description>The great hall is expansive with a soaring ceiling of intersecting beams and rafters.  Three large arched windows and three iron chandeliers provide illumination, and light reflects softly off the polished inlaid wood floor.  Backed benches are the only furnishings, easily arranged for any ceremony upon the dais at the west end of the hall.</description>
+    <position x="-110" y="-40" z="0" />
+    <arc exit="northeast" move="northeast" destination="90" />
+    <arc exit="out" move="out" destination="70" />
+    <arc exit="go" move="go pantry" destination="95" />
+    <arc exit="go" move="go dais" destination="103" />
+  </node>
+  <node id="90" name="Rossgallan Manor, Hallway">
+    <description>Wide and spacious, the main hallway accommodates guests and those on official business at the manor.  Iron sconces for illumination are interspersed with long benches and an occasional decoration on the wall -- a painting of game and autumn fruit, a battered shield with unusual workmanship, an oval mirror within a mistwood frame.</description>
+    <position x="-100" y="-50" z="0" />
+    <arc exit="northeast" move="northeast" destination="91" />
+    <arc exit="southwest" move="southwest" destination="89" />
+    <arc exit="go" move="go door" destination="97" />
+  </node>
+  <node id="91" name="Rossgallan Manor, Hallway">
+    <description>Wide and spacious, the main hallway accommodates guests and those on official business at the manor.  Iron sconces for illumination are interspersed with long benches and an occasional decoration on the wall -- a painting of a young woman with fair hair, weapons, and a shelf with decorative jars.</description>
+    <position x="-90" y="-60" z="0" />
+    <arc exit="southwest" move="southwest" destination="90" />
+    <arc exit="west" move="west" destination="92" />
+    <arc exit="go" move="go arched door" destination="98" />
+    <arc exit="go" move="go plain door" destination="100" />
+  </node>
+  <node id="92" name="Rossgallan Manor, Hallway">
+    <description>A bend in the hallway connects the public portion of the manor to the area housing retainers and others in their private apartments.  The plaster between the framed timber walls is a warm ocher color and a thick wool runner covers the floor planks to deaden noise.  Sconces provide additional light along the length of the hall towards the north.  Although simple and sturdy, the decor is pleasing and comfortable, an excellent balance between practical and aesthetic.</description>
+    <position x="-100" y="-60" z="0" />
+    <arc exit="north" move="north" destination="93" />
+    <arc exit="east" move="east" destination="91" />
+  </node>
+  <node id="93" name="Rossgallan Manor, Hallway">
+    <description>Several private apartments within the manor are accessible from this hallway, a quiet wing off from the primary public area.  Mostly bare, except for the thick carpet covering the wide planked floor and an occasional wall hanging, the peace is broken only by an infrequent shout from beyond the manor confines or a scurrying domestic maid going about her duties.</description>
+    <position x="-100" y="-70" z="0" />
+    <arc exit="north" move="north" destination="94" />
+    <arc exit="south" move="south" destination="92" />
+  </node>
+  <node id="94" name="Rossgallan Manor, Hallway">
+    <description>At the end of the hallway is a shuttered casement window.  Beneath it, a clay pot with a cascade of scented geraniums flourishes -- their green leaves and pale pink blossoms a refreshing contrast to the practical design of the house.  Similar doors, individualized by small brass plates, lead to the private apartments of retainers and residents.</description>
+    <description>At the end of the hallway is a casement window with a shutter to increase or limit the spill of light.  Ochre plaster walls glow from the warm daylight, and a clay pot of scented geraniums flourishes -- their green leaves and pale pink blossoms a refreshing contrast to the practical design of the house.  Similar doors, individualized by small brass plates, lead to the private apartments of retainers and residents.</description>
+    <position x="-100" y="-80" z="0" />
+    <arc exit="south" move="south" destination="93" />
+  </node>
+  <node id="95" name="Rossgallan Manor, Butler's Pantry" note="Butler's Pantry">
+    <description>Silver and gold serving dishes stand behind iron-barred glass doors in a heavy cabinet along one side of the corridor.  For everyday use, stacks of wooden platters lie beside flatbread trenchers atop a low table conveniently located beside the entrance to the great hall, ready to be snatched up when needed.  A small hearth keeps food warm until it's ready to be served.</description>
+    <position x="-110" y="-30" z="0" />
+    <arc exit="out" move="out" destination="89" />
+    <arc exit="go" move="go passage" destination="96" />
+    <arc exit="go" move="go kitchen" destination="96" />
+  </node>
+  <node id="96" name="Rossgallan Manor, Kitchens" note="Kitchens">
+    <description>Bread dough rises in covered baskets beside the hearth, out of the way of the servants who bustle from job to job in the kitchens.  Pots of fragrant soup and nut porridge simmer over the fire, a joint of meat turns slowly on its spit as it roasts, and the ingredients for some kind of rice dish lie sprawled across one of the tables.  A stone sink near the doorway is empty now, though buckets of coarse sand and water sit nearby, ready for washing dishes after meals.</description>
+    <position x="-110" y="-20" z="0" />
+    <arc exit="out" move="out" hidden="True" destination="70" />
+    <arc exit="go" move="go passage" destination="95" />
+  </node>
+  <node id="97" name="Rossgallan Manor, Steward's Office" note="Steward's Office">
+    <description>Organization of the office bodes well for the future of the manor.  The person in charge of the financial and daily affairs of the manor and keep appears to be meticulous in detail -- a shelf behind his work table contains various lists and accounts.  The room itself is inviting, with clean rugs underfoot, a comfortable settee in front of a mullioned window that looks out over the courtyard, and several chairs for those attending to business with the steward.</description>
+    <position x="-100" y="-40" z="0" />
+    <arc exit="go" move="go door" destination="90" />
+  </node>
+  <node id="98" name="Rossgallan Manor, Armory" note="Armory">
+    <description>Shelves and bins line the walls, broken only by arched mullioned windows, and form rows and columns like soldiers ready for deployment.  Chain, scale, and plate armor in varying sizes are ready and polished for service, and a wide variety of offensive weapons, particularly longswords and halberds, are edged and gleaming.  This armory is ever ready for any unexpected attack upon Rossman's fortress.</description>
+    <position x="-90" y="-70" z="0" />
+    <arc exit="out" move="out" destination="91" />
+    <arc exit="go" move="go storeroom" destination="99" />
+  </node>
+  <node id="99" name="Rossgallan Manor, Storeroom">
+    <description>Disorder has taken hold in the small storeroom, with no apparent system for organization.  Broken weapons and less than perfect armor are crammed in crates ready to be returned to the forge.  Many items look quite serviceable, but have nevertheless failed to meet the required standards.</description>
+    <position x="-90" y="-80" z="0" />
+    <arc exit="out" move="out" destination="98" />
+    <arc exit="go" move="go door" destination="98" />
+  </node>
+  <node id="100" name="Rossgallan Manor, Constable's Office" note="Constable's Office">
+    <description>Simple, no-frills, stark even -- the Constable's main headquarters features a desk, chair and chest.  A single window high above is barred.  Muffled sounds come from below the floor.</description>
+    <position x="-90" y="-50" z="0" />
+    <arc exit="go" move="go door" destination="91" />
+  </node>
+  <node id="101" name="Sticks and Stones, Slings and Supplies" note="Sticks and Stones|Slings and Supplies" color="#FF0000">
+    <description>Staff slings and bows hang on the back wall of the shop, carefully displayed to highlight the work of the craftsman who made them.  From time to time, the sound of a stone thudding against the side of the building marks the prowess of some young guardsman practicing against the targets outside.</description>
+    <position x="-70" y="-70" z="0" />
+    <arc exit="out" move="out" destination="71" />
+  </node>
+  <node id="102" name="Rossgallan Keep, Cabinet Maker's Workshop" note="Cabinet Maker's Workshop" color="#FF0000">
+    <description>Fragrant wood shavings and sawdust litter the corners of the cabinet maker's shop.  The center of the room is used to display the craftsman's art to the discerning home-owner.</description>
+    <position x="-53" y="40" z="0" />
+    <arc exit="out" move="out" destination="83" />
+  </node>
+  <node id="103" name="Rossgallan Manor, Great Hall Dais" note="Dais">
+    <description>Neither large nor ornate, the dais nevertheless is befitting a ruler.  Two steps above the floor of the Great Hall, it has room for a table for honored guests, but at present only two massive chairs are pushed against the back wall.  Creamy linen drapes curtain the area, hanging from a carved wood header above.</description>
+    <position x="-120" y="-40" z="0" />
+    <arc exit="go" move="go gallery" destination="104" />
+    <arc exit="go" move="go hall" destination="89" />
+  </node>
+  <node id="104" name="Rossgallan Manor, Musicians Gallery" note="Musicians Gallery">
+    <description>Raised and screened from the dais along the northern side of the hall, this small gallery is well equipped for musicians' needs.  The plaster walls are hung with a thick tapestry to keep out chilling drafts.  There are several benches and stands for music, as well as storage cabinets to house spare resin, strings, and cleaning cloths.</description>
+    <position x="-120" y="-30" z="0" />
+    <arc exit="out" move="out" destination="103" />
+  </node>
+  <node id="105" name="Rossgallan Keep, Smokehouse" note="Smokehouse">
+    <description>A smoky fire smolders in a brazier at the center of the smokehouse, surrounded by racks of butterflied fish stacked on the ground, and hams and sausages hanging from the rafters.  The dense smoke coils around the meat, scenting and drying it for long storage against lean times.</description>
+    <position x="30" y="-30" z="0" />
+    <arc exit="out" move="out" destination="74" />
+  </node>
+  <node id="106" name="Rossgallan Keep, Weaponsmith's Shop" note="Weaponsmith's Shop" color="#FF0000">
+    <description>With a dirt floor and roughly finished wooden walls, not to mention the crudely darned breeches hanging from the edge of the apprentices' sleeping loft above, the shop will never win prizes for its charm.  But Lord Rossman has long been known for his skill as a blacksmith, and he and his journeymen offer a fine selection of halberds and longswords to customers who visit his Keep.</description>
+    <position x="30" y="30" z="0" />
+    <arc exit="out" move="out" destination="64" />
+  </node>
+  <node id="107" name="Rossgallan Keep, Dyer's Cottage" note="Dyer's Cottage" color="#00FF00">
+    <description>Fleeces in all colors of the rainbow hang, lashed to wooden stretcher frames, from the walls of the tiny cottage.  Brilliant arrays of dyed fabrics in carefully folded stacks line the shelves along the walls, ready for customers to collect the work they commissioned.</description>
+    <position x="0" y="40" z="0" />
+    <arc exit="out" move="out" destination="82" />
+  </node>
+  <node id="108" name="Gretzyl the Herbalist's Cottage" note="Gretzyl the Herbalist's Cottage|Herbs" color="#FF0000">
+    <description>Herb-filled cheesecloth bags, waxed-covered cheese and spicy string-bound sausages hang from the rafters to dry, filling the cottage with a delicious fragrance.  A wooden potting bench along the back wall holds the implements of the herbalist's profession -- weights and measuring scales, a shallow wooden mortar, some empty earthenware jars and jugs of sweet oil.</description>
+    <position x="180" y="10" z="0" />
+    <arc exit="out" move="out" destination="23" />
+  </node>
+  <node id="109" name="Rossgallan Keep, North Tower">
+    <description>Fresh hay strewn over the rough floor of the tower freshens the air despite the close quarters and lingering scents of oiled metal, leather and sweat.  Weapons hang on the walls and a vellum nailed to a post is marked with names and x's designating officers on watch duty.  Beside the door are a bucket of fresh water and a barrel of apples.</description>
+    <position x="-40" y="-80" z="0" />
+    <arc exit="out" move="out" destination="72" />
+    <arc exit="climb" move="climb ladder" destination="110" />
+  </node>
+  <node id="110" name="Rossgallan Keep, North Tower" note="North Tower">
+    <description>The upper room of the north tower opens east and west onto the wooden ramparts.  Its octagonal roof is supported by thick beams from which dangle ropes and hooks to keep extra provisions in the rafters overhead.  Iron-banded chests line the walls as storage for weapons, ammunitions and armor as well as seats for weary guards.  Light pierces through a narrow window which looks out to the northern reaches of Mistwood Forest beyond the nearby fields and the northern section of the town below the motte.</description>
+    <position x="-40" y="-110" z="0" />
+    <arc exit="east" move="east" destination="121" />
+    <arc exit="west" move="west" destination="111" />
+    <arc exit="climb" move="climb ladder" destination="109" />
+  </node>
+  <node id="111" name="Rossgallan Keep, Northwest Wall Walk">
+    <description>Arrow loops cut into the northern wall of the wooden parapet are interspersed with an occasional hinged shutter that opens for a better view of the territory below.  A slanting tiled roof overhead protects from weather and potential raining projectiles, and a railing lends some safety from a misstep along the bailey side.  A solid wall forms a barrier below the railing, perhaps in response to any stray arrow from the archery field in the bailey below.</description>
+    <position x="-70" y="-110" z="0" />
+    <arc exit="west" move="west" destination="112" />
+    <arc exit="go" move="go tower" destination="110" />
+  </node>
+  <node id="112" name="Rossgallan Keep, Northwest Wall Walk">
+    <description>The northwest corner of the allure is wider as the walkway cantilevers out over the wall for a better view of both the lake to the west and the nearby fields and forest to the north.  A bench built into the rampart provides a step up to peer out and a spot to view the intersecting walkways, but the roof of the manor house blocks the southeastern view.  Overhead, a slanted tile roof protects from weather and projectiles, and a railing lends some safety from a misstep along the bailey side.</description>
+    <position x="-100" y="-110" z="0" />
+    <arc exit="east" move="east" destination="111" />
+    <arc exit="southwest" move="southwest" destination="113" />
+  </node>
+  <node id="113" name="Rossgallan Keep, Western Wall Walk">
+    <description>Arrow loops cut into the western ramparts reveal the expanse of Lake Gwenalion at the bottom of the high cliff that guards the western edge of Rossgallan Keep.  A slanting tiled roof overhead protects from weather, and a railing lends some safety from a misstep along the bailey side.  Looking towards the courtyard is the back of the manor house with a narrow rear yard behind it.  Roofs of storage sheds are visible directly below.</description>
+    <position x="-150" y="-60" z="0" />
+    <arc exit="northeast" move="northeast" destination="112" />
+    <arc exit="south" move="south" destination="114" />
+  </node>
+  <node id="114" name="Rossgallan Keep, Western Wall Walk">
+    <description>Arrow loops cut into the western ramparts reveal the expanse of Lake Gwenalion at the bottom of the high cliff that guards the western edge of Rossgallan Keep.  From this point to the north, the wall walk runs behind the manor house, enclosing it completely within the high walls.  A slanting tiled roof overhead protects from weather, and a railing lends some safety from a misstep along the bailey side.</description>
+    <position x="-150" y="-30" z="0" />
+    <arc exit="north" move="north" destination="113" />
+    <arc exit="south" move="south" destination="115" />
+  </node>
+  <node id="115" name="Rossgallan Keep, Western Wall Walk">
+    <description>Arrow loops cut into the western ramparts reveal the expanse of Lake Gwenalion at the bottom of the high cliff that guards the western edge of Rossgallan Keep.  Although unlikely any attackers could scale the steep cliff from the lake, a ladder leads up to a lookout platform overhead to monitor any unusual activity on the lake.  A railing lends some safety from a misstep along the bailey side, with the back and the thatched-roof of the chapel visible below.</description>
+    <position x="-150" y="0" z="0" />
+    <arc exit="north" move="north" destination="114" />
+    <arc exit="south" move="south" destination="116" />
+    <arc exit="climb" move="climb ladder" destination="120" />
+  </node>
+  <node id="116" name="Rossgallan Keep, Western Wall Walk">
+    <description>Arrow loops cut into the western ramparts reveal the expanse of Lake Gwenalion at the bottom of the high cliff that guards the western edge of Rossgallan Keep.  A slanting tiled roof overhead protects from weather, and a railing lends some safety from a misstep along the bailey side.  The familiar odors and sounds from the stable pens below fill the air.</description>
+    <position x="-150" y="30" z="0" />
+    <arc exit="north" move="north" destination="115" />
+    <arc exit="south" move="south" destination="117" />
+  </node>
+  <node id="117" name="Rossgallan Keep, Western Wall Walk">
+    <description>Arrow loops cut into the western ramparts reveal the expanse of Lake Gwenalion at the bottom of the high cliff that guards the western edge of Rossgallan Keep.  The crumbling and jagged cliff rocks are bare but for a rare tree or shrub struggling to grow amongst them.  The slanting tiled roof overhead protects from weather, and the view of the courtyard below reveals the jousting fields, stables, kennels and mews housed in this quadrant of the keep.</description>
+    <position x="-150" y="60" z="0" />
+    <arc exit="north" move="north" destination="116" />
+    <arc exit="southeast" move="southeast" destination="118" />
+  </node>
+  <node id="118" name="Rossgallan Keep, Southwest Wall Walk">
+    <description>The southwest corner of the allure is wider as the walkway cantilevers out over the wall for a better view of both Lake Gwenalion below to the west and the river mouth to the south.  A bench built into the rampart provides a step up to peer out and a spot to view the intersecting wall walks leading north and east.  Overhead, a slanted tile roof protects from weather and any unlikely projectile.  Beyond a safety railing on the courtyard side is a view of the roofs of the stables and animal pens.</description>
+    <position x="-100" y="110" z="0" />
+    <arc exit="east" move="east" destination="119" />
+    <arc exit="northwest" move="northwest" destination="117" />
+  </node>
+  <node id="119" name="Rossgallan Keep, Southwest Wall Walk">
+    <description>Arrow loops cut into the southern wall of the wooden parapet are interspersed with an occasional hinged shutter that opens for a better view of the river mouth below.  A slanting tiled roof overhead protects from weather and raining projectiles, although the southwest section of the keep is additionally guarded by the high cliffs where the Jantspyre flows into the lake.  The railing lends some safety from a misstep along the bailey side, where the familiar sounds and odors of horses mingle.</description>
+    <position x="-70" y="110" z="0" />
+    <arc exit="west" move="west" destination="118" />
+    <arc exit="go" move="go tower" destination="132" />
+  </node>
+  <node id="120" name="Rossgallan Keep, Watch Platform" note="Watch Platform">
+    <description>Wind whips across the small platform sheltered by a wooden roof, but the view is spectacular.  To the east and south, beyond Rossman's Landing, the Jantspyre flows to meet Lake Gwenalion, with the Mistwood Forest beyond.  Westward there is a commanding watch of the lake - any suspicious boat activity would be easily tracked from here.  A sturdy railing surrounds the platform, one side whittled with haphazard notches.</description>
+    <position x="-160" y="0" z="0" />
+    <arc exit="climb" move="climb ladder" destination="115" />
+  </node>
+  <node id="121" name="Rossgallan Keep, Northeast Wall Walk">
+    <description>Arrow loops cut into the northern wall of the wooden parapet are interspersed with an occasional hinged shutter that opens for a better view of the territory below.  A slanting tiled roof overhead protects from weather and potential raining projectiles, and a railing lends some safety from a misstep along the bailey side.  There is view of the tops of the fruit trees growing to the south over the railing.</description>
+    <position x="-10" y="-110" z="0" />
+    <arc exit="east" move="east" destination="122" />
+    <arc exit="go" move="go tower" destination="110" />
+    <arc exit="climb" move="climb ladder" destination="128" />
+  </node>
+  <node id="122" name="Rossgallan Keep, Northeast Wall Walk">
+    <description>The northeast corner of the allure is wider where the walkway cantilevers out over the wall for a better view of the lands to the north and the town east of the motte.  A bench built into the northeast rampart functions as a step up to peer out over the ramparts and a resting spot with a view down the walkways extending south and west.  Overhead, a slanted tile roof protects from weather and potential raining projectiles, and a railing lends some safety from a misstep along the bailey side.</description>
+    <position x="20" y="-110" z="0" />
+    <arc exit="southeast" move="southeast" destination="123" />
+    <arc exit="west" move="west" destination="121" />
+  </node>
+  <node id="123" name="Rossgallan Keep, Eastern Wall Walk">
+    <description>Arrow loops cut into the eastern wall of the wooden parapet are interspersed with an occasional hinged shutter that opens for a better view of the town below.  A slanting tiled roof overhead protects from weather and potential raining projectiles, and a railing lends some safety from a misstep along the bailey side.  Visible within the courtyard to the west are the tops of fruit trees and several low, thatch-roofed buildings to the southwest.</description>
+    <position x="70" y="-60" z="0" />
+    <arc exit="south" move="south" destination="124" />
+    <arc exit="northwest" move="northwest" destination="122" />
+  </node>
+  <node id="124" name="Rossgallan Keep, Eastern Wall Walk">
+    <description>Arrow loops cut into the eastern wall of the wooden parapet are interspersed with an occasional hinged shutter that opens for a better view of the town below.  A slanting tiled roof overhead protects from weather and any projectiles, and a railing lends some safety from a misstep along the bailey side.  Among the buildings westward within the courtyard is a wooden silo, and the sweet scent of smoke swirls thickly from the smokehouse nearby.</description>
+    <position x="70" y="-30" z="0" />
+    <arc exit="north" move="north" destination="123" />
+    <arc exit="south" move="south" destination="125" />
+  </node>
+  <node id="125" name="Rossgallan Keep, Eastern Wall Walk">
+    <description>The keep gate is directly below this section of the allure or wall walk.  Part of the east rampart wall can be opened by a heavy, hinged shutter to allow defenders to attack any invaders below.  Additionally, an iron plate fitted in a hole in the floor may be removed in order to dump noxious materials.  Several well-placed arrow slots, or loops, allow maximum concealed views of any approachers.  The slanted tile roof shelters soldiers from the weather and any projectiles fired in attack.</description>
+    <position x="70" y="-10" z="0" />
+    <arc exit="north" move="north" destination="124" />
+    <arc exit="south" move="south" destination="126" />
+  </node>
+  <node id="126" name="Rossgallan Keep, Eastern Wall Walk">
+    <description>Arrow loops cut into the eastern wall of the wooden parapet are interspersed with an occasional hinged shutter that opens for a better view of the town below.  A slanting tiled roof overhead protects from weather and any projectiles, and a railing lends some safety from a misstep along the bailey side.  Within the courtyard to the west are the roofs of several small buildings and shops clustered in the southeast quadrant and up against the eastern wall.</description>
+    <position x="70" y="30" z="0" />
+    <arc exit="north" move="north" destination="125" />
+    <arc exit="south" move="south" destination="127" />
+  </node>
+  <node id="127" name="Rossgallan Keep, Eastern Wall Walk">
+    <description>Arrow loops cut into the eastern wall of the wooden parapet are interspersed with an occasional hinged shutter that opens for a better view of the town below.  A slanting tiled roof overhead protects from weather and any projectiles, and a railing lends some safety from a misstep along the bailey side.  From within the keep, ringing sounds of metal on metal and billows of smoke and flying sparks emanate from a stone building.</description>
+    <position x="70" y="60" z="0" />
+    <arc exit="north" move="north" destination="126" />
+    <arc exit="southwest" move="southwest" destination="129" />
+  </node>
+  <node id="128" name="Rossgallan Keep, North Tower Roof">
+    <description>The gently sloping roof is covered with thin fireproof slates, and the ridge is flattened to hold a huge, shallow tenuated iron basin.  By day the basin is scrubbed, polished and tilted up at an angle to reflect and flash in the sunlight.  By night a massive watch fire burns within it as a beacon, asserting the keep's presence and fortitude.  Smoke and embers at night only add to the ever-present danger of falling off the roof -- those who man the tower roofs must be nimble, alert and diligent.</description>
+    <position x="-10" y="-120" z="0" />
+    <arc exit="climb" move="climb ladder" destination="121" />
+  </node>
+  <node id="129" name="Rossgallan Keep, Southeast Wall Walk">
+    <description>The southeast corner of the allure is wider as the walkway cantilevers out over the wall for a better view of both the town below to the east and the river to the south.  A bench built into the rampart provides a step up to peer out and a spot to view the intersecting wall walks leading north and west.  Overhead, a slanted roof protects from weather and projectiles.  Beyond a safety railing on the courtyard side is a view of the roofs of small buildings clustered throughout the southeast quadrant.</description>
+    <position x="20" y="110" z="0" />
+    <arc exit="northeast" move="northeast" destination="127" />
+    <arc exit="west" move="west" destination="130" />
+  </node>
+  <node id="130" name="Rossgallan Keep, Southeast Wall Walk">
+    <description>Arrow loops cut into the southern wall of the wooden parapet are interspersed with an occasional hinged shutter that opens for a better view of the town and river below.  A slanting tiled roof overhead protects from weather and potential raining projectiles, and a railing lends some safety from a misstep along the bailey side.  Smoke, sparks and noise issue from the stone forge below within the courtyard.</description>
+    <position x="-10" y="110" z="0" />
+    <arc exit="east" move="east" destination="129" />
+    <arc exit="go" move="go tower" destination="132" />
+    <arc exit="climb" move="climb ladder" destination="133" />
+  </node>
+  <node id="131" name="Rossgallan Keep, South Tower">
+    <description>A jumble of crates with straw packing is piled against one wall with a grey-striped cat sleeping curled up in an empty box.  Fine ashes and soot drift through the air from the nearby forge, and a thin coat of grimy dust covers everything, including a keg set upon a makeshift trestle table.</description>
+    <position x="-40" y="80" z="0" />
+    <arc exit="out" move="out" destination="66" />
+    <arc exit="climb" move="climb ladder" destination="132" />
+  </node>
+  <node id="132" name="Rossgallan Keep, South Tower" note="South Tower">
+    <description>The upper room of the south tower opens east and west onto the wooden ramparts.  Its octagonal roof is supported by thick beams from which dangle ropes and hooks to keep extra provisions in the rafters overhead.  Iron-banded chests line the walls as storage for weapons, ammunitions and armor as well as seats for weary guards.  Light pierces through a narrow window that looks south towards the juncture of Lake Gwenalion and the Jantspyre River far below.</description>
+    <position x="-40" y="110" z="0" />
+    <arc exit="east" move="east" destination="130" />
+    <arc exit="west" move="west" destination="119" />
+    <arc exit="climb" move="climb ladder" destination="131" />
+  </node>
+  <node id="133" name="Rossgallan Keep, South Tower Roof">
+    <description>The gently sloping roof is covered with thin fireproof slates, and the ridge is flattened to hold a huge, shallow tenuated iron basin.  By day the basin is scrubbed, polished and tilted up at an angle to reflect and flash in the sunlight.  By night a massive watch fire burns within it as a beacon, asserting the keep's presence and fortitude.  Smoke and embers at night only add to the ever-present danger of falling off the roof -- those who man the tower roofs must be nimble, alert and diligent.</description>
+    <position x="-10" y="120" z="0" />
+    <arc exit="climb" move="climb ladder" destination="130" />
+  </node>
+  <node id="134" name="Rossman's Landing, Southeast Gate" note="Map34_Mistwood_Forest.xml|Forest|Mistwood Forest|Gryphons">
+    <description>A wooden palisade, about twice the height of an Elf, rises above the fields around the town.  Pacing back and forth on a walkway, a guard is visible through the palisade's arrow slits, while others man the gates.  A series of shallow trenches filled with sharpened wooden stakes surround the town, offering further defense against attack.</description>
+    <position x="280" y="20" z="0" />
+    <arc exit="east" move="east" />
+    <arc exit="go" move="go gate" destination="2" />
+  </node>
+  <label text="Bristleback Peccaries">
+    <position x="140" y="-75" z="0" />
+  </label>
+  <label text="Mistwood Forest">
+    <position x="222" y="0" z="0" />
+  </label>
+  <label text="Bundles">
+    <position x="162" y="52" z="0" />
+  </label>
+  <label text="Trader Outpost">
+    <position x="105" y="137" z="0" />
+  </label>
+  <label text="Rossgallan Keep">
+    <position x="-85" y="-150" z="0" />
+  </label>
+  <label text="Shepherd's Meadow">
+    <position x="120" y="-160" z="0" />
+  </label>
+  <label text="Magic">
+    <position x="163" y="72" z="0" />
+  </label>
+  <label text="Stable">
+    <position x="224" y="33" z="0" />
+  </label>
+  <label text="Dock">
+    <position x="46" y="153" z="0" />
+  </label>
+  <label text="Church">
+    <position x="107" y="32" z="0" />
+  </label>
+  <label text="Horses">
+    <position x="-95" y="75" z="0" />
+  </label>
+  <label text="Kennel">
+    <position x="-140" y="35" z="0" />
+  </label>
+  <label text="Dyer">
+    <position x="5" y="43" z="0" />
+  </label>
+  <label text="Weapons">
+    <position x="19" y="11" z="0" />
+  </label>
+</zone>

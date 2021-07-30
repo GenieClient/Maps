@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="The Microcosm" id="999">
+  <node id="1" name="Astral Plane, Pillar of Nightmares" note="Rolagi|Tabelrem">
+    <description>Countless streams of steel-grey light writhe and hiss like snakes mere hand spans below you.  Every few moments, one of the energy streams explodes outward from the mass with incredible speed and twists wildly through the air before dissipating.  A jagged purple and black pillar rises from the serpentine mass and climbs up into the distant, flickering sky.</description>
+    <position x="20" y="100" z="0" />
+    <arc exit="west" hidden="True" destination="8" />
+    <arc exit="east" destination="2" />
+    <arc exit="up" destination="10" />
+    <arc exit="down" destination="9" />
+  </node>
+  <node id="2" name="Astral Plane, Pillar of Tradition" note="Auilusi|Dor'na'torna|Dornatorna">
+    <description>Bright silvery-white light burns like the surface of a star a few hand spans beneath your feet.  Narrowly focused beams of light rise from the surface and gently sway in response to some unfelt wind.  A pillar of light, by all appearances simply an overly large beam, ascends into the flickering sky.</description>
+    <position x="60" y="100" z="0" />
+    <arc exit="west" destination="1" />
+    <arc exit="east" destination="3" />
+    <arc exit="up" destination="10" />
+    <arc exit="down" destination="9" />
+    <arc exit="none" move="focus Dor'na'torna" destination="28" />
+  </node>
+  <node id="3" name="Astral Plane, Pillar of Secrets" note="Marendin|Besoge">
+    <description>Heat rises from a still, black mass a few hand spans beneath your feet.  A constant crackling sound issues from the surface, often accompanied by rapidly expanding blooms of burning shadows.  A dull grey pillar emerges from the inky surface and blends into the dim, flickering sky a few dozen feet up.</description>
+    <position x="100" y="100" z="0" />
+    <arc exit="west" destination="2" />
+    <arc exit="east" destination="4" />
+    <arc exit="up" destination="10" />
+    <arc exit="down" destination="9" />
+    <arc exit="none" move="focus marendin" destination="25" />
+  </node>
+  <node id="4" name="Astral Plane, Pillar of Unity">
+    <description>Vortices of brightly colored energy, each a different hue, rapidly twirl a few hand spans beneath your feet.  Sprays of burning light are constantly ejected from the spinning energy, sending prismatic arcs flying through the sky.  A pillar of swirling light rises up into the flickering sky from the center of the vortices.</description>
+    <position x="140" y="100" z="0" />
+    <arc exit="west" destination="3" />
+    <arc exit="east" destination="5" />
+    <arc exit="up" destination="10" />
+    <arc exit="down" destination="9" />
+  </node>
+  <node id="5" name="Astral Plane, Pillar of the Shrew" note="Emalerje">
+    <description>An almost blinding pillar of purple-tinged white light, resembling a lightning bolt frozen in mid-strike, emerges from the depths of a violently billowing cloud of shadows a few hand spans below you.  Bolts of light shoot out from the pillar and ground themselves into the black cloud.</description>
+    <position x="180" y="100" z="0" />
+    <arc exit="west" destination="4" />
+    <arc exit="east" destination="6" />
+    <arc exit="up" destination="10" />
+    <arc exit="down" destination="9" />
+    <arc exit="none" move="focus emalerje" destination="26" />
+  </node>
+  <node id="6" name="Astral Plane, Pillar of the Heavens" note="Asharshpar'i|Asharshpari|Tamigen">
+    <description>Burning white lights twist and flicker high above your head, creating the illusion of a brilliant night sky.  The same energy as the lights overhead flows smoothly along a wide congruent plane a few hand spans below your feet.  A slender pillar of blazing light joins the plane below to the heavens above and randomly discharges violent streams of energy.</description>
+    <position x="220" y="100" z="0" />
+    <arc exit="west" destination="5" />
+    <arc exit="east" destination="7" />
+    <arc exit="up" destination="10" />
+    <arc exit="down" destination="9" />
+  </node>
+  <node id="7" name="Astral Plane, Pillar of Introspection" note="Dinegavren|Taniendar">
+    <description>A surface of cyan light ripples gently a few hand spans below your feet, creating the illusion of a luminescent ocean.  Brief-lived waves crash against a pillar of white light that rises from the depths, sending beams of sparkling light flying through the air.</description>
+    <position x="260" y="100" z="0" />
+    <arc exit="west" destination="6" />
+    <arc exit="east" destination="8" />
+    <arc exit="up" destination="10" />
+    <arc exit="down" destination="9" />
+    <arc exit="none" move="focus dinegavren" destination="22" />
+  </node>
+  <node id="8" name="Astral Plane, Pillar of Fortune" note="Erekinzil|Mintais">
+    <description>A large source of golden light pulsates like the rhythm of a heart-beat a few hand spans below your feet.  Thin threads of energy rise from within the golden light and arrange themselves into seemingly random patterns in the sky.  The patterns eventually meet in a single spot, where they weave into a spun pillar that rises into the flickering sky.</description>
+    <position x="300" y="100" z="0" />
+    <arc exit="west" destination="7" />
+    <arc exit="east" hidden="True" destination="1" />
+    <arc exit="up" destination="10" />
+    <arc exit="down" destination="9" />
+    <arc exit="none" move="focus erekinzil" destination="24" />
+    <arc exit="none" move="focus mintais" destination="27" />
+  </node>
+  <node id="9" name="Astral Plane, Broken Pillar">
+    <description>A jungle of energy streams converge in the area, complicating both navigation and sight.  The landscape among the prolific energy streams feels almost insubstantial:  a deep chill fills the air and the eight pillars in the distance are vague, grey silhouettes.  A slowly twisting mass of streams creates the outline of a pillar in the center of the area.</description>
+    <position x="160" y="140" z="0" />
+    <arc exit="north" hidden="True" destination="1" />
+    <arc exit="northeast" hidden="True" destination="2" />
+    <arc exit="east" hidden="True" destination="3" />
+    <arc exit="southeast" hidden="True" destination="4" />
+    <arc exit="south" hidden="True" destination="5" />
+    <arc exit="southwest" hidden="True" destination="6" />
+    <arc exit="west" hidden="True" destination="7" />
+    <arc exit="northwest" hidden="True" destination="8" />
+  </node>
+  <node id="10" name="Astral Plane, Pillar of Convergence">
+    <description>The main surface of a disc-shaped plane of seething silvery-white energy stretches in every direction from here.  Odd colors and disturbances in the surface of the disc appear as it curves downward toward eight pillars in the distance, each jutting out horizontally like the spokes of a wheel.  A stunted silvery-white pillar, standing only about ten feet high, is set in the center of the disc.</description>
+    <position x="160" y="60" z="0" />
+    <arc exit="north" hidden="True" destination="5" />
+    <arc exit="northeast" hidden="True" destination="4" />
+    <arc exit="east" hidden="True" destination="3" />
+    <arc exit="southeast" hidden="True" destination="2" />
+    <arc exit="south" hidden="True" destination="1" />
+    <arc exit="southwest" hidden="True" destination="8" />
+    <arc exit="west" hidden="True" destination="7" />
+    <arc exit="northwest" hidden="True" destination="6" />
+  </node>
+  <node id="22" name="Astral Plane, Dinegavren Conduit">
+    <description>Buildings of irregular shape and size, each constructed from slick grey stones, dominate the landscape.  Narrow cobblestone streets and dirt alleys wend their way between the buildings and through thick fog banks.  Burning beams of light thread across the landscape indiscriminately, evaporating the fog they touch yet passing harmlessly through the structures.</description>
+    <position x="260" y="40" z="0" />
+    <arc exit="none" move="script apmove" destination="7" />
+    <arc exit="none" move="script apmove" destination="22" />
+  </node>
+  <node id="24" name="Astral Plane, Erekinzil Conduit">
+    <description>A sandy expanse stretches out in every direction, littered with titanic, half-buried remains.  Bones made out of black, glassy material stick out from the ground in distressed poses, left unceremoniously where the corpses fell.  Arcs of burning silvery light discharge from one morbid pylon to the next, creating a crude maze of pathways.  The Microcosm is visible in the azure sky, its conduits blazing with heat and, shaped as they are, reminiscent of a nova.</description>
+    <position x="300" y="40" z="0" />
+    <arc exit="none" move="script apmove" destination="8" />
+    <arc exit="none" move="script apmove" destination="24" />
+  </node>
+  <node id="25" name="Astral Plane, Marendin Conduit">
+    <description>Giant geometric solids wrought from black metal float in a cold, steel-grey void.  The metal islands are connected to each other by narrow bridges, creating a network of shapes that seems to go on forever in every direction.  Interconnected streams of burning energy sway around the void, passing harmlessly through the islands.</description>
+    <position x="100" y="40" z="0" />
+    <arc exit="none" move="script apmove" destination="25" />
+    <arc exit="none" move="script apmove" destination="3" />
+  </node>
+  <node id="26" name="Astral Plane, Emalerje Conduit">
+    <description>Monoliths of featureless grey rock rise up from a flat plain covered with ruddy ash.  Each of the rocks is set at a right angle and precisely the same distance from the others, creating a uniform pattern that extends all the way to the horizon.  Streams of burning, white energy discharge from one monolith to the next in a seemingly random order.</description>
+    <position x="180" y="40" z="0" />
+    <arc exit="none" move="script apmove" destination="26" />
+    <arc exit="none" move="script apmove" destination="5" />
+  </node>
+  <node id="27" name="Astral Plane, Mintais Conduit">
+    <description>Broken and barren land stretches out beneath an impossibly large, bloated sun.  Deep crevices slice through the ash-grey plain and jagged mountains rise to pierce the sky on the eastern horizon.  Interwoven beams of silvery-white light dance across the blasted landscape and seem to extrude more heat than the bloated sun.</description>
+    <position x="300" y="160" z="0" />
+    <arc exit="none" move="script apmove" destination="27" />
+    <arc exit="none" move="script apmove" destination="8" />
+  </node>
+  <node id="28" name="Astral Plane, Dor'na'torna Conduit">
+    <description>A desolate steppe of mist-grey grass stretches to the horizon under the cold light of Xibar.  Though the air feels calm and the night sky is clear, the discolored grass whips and sways as though under assault by a storm.  An intricate web of burning light runs across the steppe, its fierce beams in constant motion.</description>
+    <position x="60" y="40" z="0" />
+    <arc exit="none" move="script apmove" destination="28" />
+    <arc exit="none" move="script apmove" destination="2" />
+  </node>
+  <label text="The Microcosm">
+    <position x="20" y="0" z="0" />
+  </label>
+</zone>

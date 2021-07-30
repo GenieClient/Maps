@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Ice Caves - Adan'f Spirit Dancers and Mages" id="68a">
+  <node id="1" name="Ice Caves, Stone Forest" color="#993300">
+    <description>Among the great teeth of stone a narrow stream weaves its way down out the darkness.  Revealed by its path is an archway that opens to the west, offering a sloping passage beneath faded markings that have become illegible over time.</description>
+    <description>Among the great teeth of stone a narrow stream weaves its way down out of the darkness.  Revealed by its path is an archway that opens to the west, offering a sloping passage beneath faded markings that have become illegible over time.</description>
+    <position x="280" y="260" z="0" />
+    <arc exit="east" move="east" destination="2" />
+    <arc exit="go" move="go arch" destination="3" />
+  </node>
+  <node id="2" name="Ice Caves, Cave Mouth" color="#993300">
+    <description>Like the maw of some great beast, the stalagmite and stalactite-filled cave's stone teeth are as sharp as time and nature can make them.  Beyond the cavern's gaping entrance, a forest of stone rises.  Yet, the pillars are coated in black ice, reminders of the spell that once kept this area frozen -- the area and its inhabitants, feared even by their creators.</description>
+    <position x="300" y="260" z="0" />
+    <arc exit="west" move="west" destination="1" />
+    <arc exit="out" move="out" destination="29" />
+  </node>
+  <node id="3" name="Ice Caves, Sloping Passageway" color="#993300">
+    <description>Following the steep incline of the passage, the stream flows downhill seeking escape from the dark chill of the caverns.  Scratches mar the rocks that make up the tunnel's walls, showing signs of frantic digging by some sort of clawed beasts.</description>
+    <position x="260" y="260" z="0" />
+    <arc exit="east" move="east" destination="1" />
+    <arc exit="west" move="west" destination="4" />
+  </node>
+  <node id="4" name="Ice Caves, Frozen Pool" color="#993300">
+    <description>Stalagmites, straining to reach the ceiling, surround a pool of water that rests in the center of the chamber.  The stream cuts through the pool, vanishing under its ice-coated surface, before re-emerging from the pool's far side.</description>
+    <position x="240" y="260" z="0" />
+    <arc exit="east" move="east" destination="3" />
+    <arc exit="southwest" move="southwest" destination="5" />
+  </node>
+  <node id="5" name="Ice Caves, Narrow Tunnel" color="#993300">
+    <description>Floodwater escaping from the shallow stream cutting through the tunnel floor fills the area with mud and grime.  What little ground there is to walk on is a mire that is both slow and treacherous.</description>
+    <position x="220" y="280" z="0" />
+    <arc exit="northeast" move="northeast" destination="4" />
+    <arc exit="west" move="west" destination="6" />
+  </node>
+  <node id="6" name="Ice Caves, Underground Lake" color="#993300">
+    <description>Years of erosion have cut a shallow stream into the hard rock floor of the tunnel as the lake's waters seek a faster means of escape from the dark confines of the massive cavern.  A bridge of stone rises out from the passageway and offers the only means of crossing the freezing waters.</description>
+    <position x="180" y="280" z="0" />
+    <arc exit="east" move="east" destination="5" />
+    <arc exit="go" move="go bridge" destination="7" />
+  </node>
+  <node id="7" name="Ice Caves, Underground Lake" color="#993300">
+    <description>Descending out of the darkness, the bridge comes to rest on a narrow ledge that juts from the cavern walls.  Once there was nothing but a void within this hollow mountain, but now melting ice has formed a great lake that spreads out beyond the light's reach.</description>
+    <position x="180" y="240" z="0" />
+    <arc exit="northwest" move="northwest" destination="8" />
+    <arc exit="go" move="go bridge" destination="6" />
+  </node>
+  <node id="8" name="Ice Caves, Frozen Cavern" color="#993300">
+    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
+    <position x="160" y="220" z="0" />
+    <arc exit="north" move="north" destination="26" />
+    <arc exit="northeast" move="northeast" destination="9" />
+    <arc exit="southeast" move="southeast" destination="7" />
+    <arc exit="northwest" move="northwest" destination="15" />
+  </node>
+  <node id="9" name="Ice Caves, Frozen Cavern" color="#993300">
+    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.  Several skulls have been piled in a corner, an eerie trophy of some sort.</description>
+    <position x="180" y="200" z="0" />
+    <arc exit="north" move="north" destination="28" />
+    <arc exit="northeast" move="northeast" destination="10" />
+    <arc exit="southwest" move="southwest" destination="8" />
+    <arc exit="west" move="west" destination="26" />
+    <arc exit="northwest" move="northwest" destination="16" />
+  </node>
+  <node id="10" name="Ice Caves, Frozen Cavern" color="#993300">
+    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
+    <position x="200" y="180" z="0" />
+    <arc exit="southwest" move="southwest" destination="9" />
+    <arc exit="west" move="west" destination="28" />
+    <arc exit="northwest" move="northwest" destination="11" />
+    <arc exit="go" move="go gap" destination="48" />
+  </node>
+  <node id="11" name="Ice Caves, Frozen Cavern" color="#993300">
+    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
+    <position x="180" y="160" z="0" />
+    <arc exit="north" move="north" destination="22" />
+    <arc exit="southeast" move="southeast" destination="10" />
+    <arc exit="south" move="south" destination="28" />
+    <arc exit="southwest" move="southwest" destination="16" />
+    <arc exit="west" move="west" destination="27" />
+    <arc exit="northwest" move="northwest" destination="12" />
+  </node>
+  <node id="12" name="Ice Caves, Frozen Cavern" color="#993300">
+    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
+    <position x="160" y="140" z="0" />
+    <arc exit="southeast" move="southeast" destination="11" />
+    <arc exit="south" move="south" destination="27" />
+    <arc exit="southwest" move="southwest" destination="13" />
+  </node>
+  <node id="13" name="Ice Caves, Frozen Cavern" color="#993300">
+    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
+    <position x="140" y="160" z="0" />
+    <arc exit="northeast" move="northeast" destination="12" />
+    <arc exit="east" move="east" destination="27" />
+    <arc exit="southeast" move="southeast" destination="16" />
+    <arc exit="south" move="south" destination="25" />
+    <arc exit="southwest" move="southwest" destination="14" />
+  </node>
+  <node id="14" name="Ice Caves, Frozen Cavern" color="#993300">
+    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
+    <position x="120" y="180" z="0" />
+    <arc exit="northeast" move="northeast" destination="13" />
+    <arc exit="east" move="east" destination="25" />
+    <arc exit="southeast" move="southeast" destination="15" />
+    <arc exit="northwest" move="northwest" destination="17" />
+  </node>
+  <node id="15" name="Ice Caves, Frozen Cavern" color="#993300">
+    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
+    <position x="140" y="200" z="0" />
+    <arc exit="north" move="north" destination="25" />
+    <arc exit="northeast" move="northeast" destination="16" />
+    <arc exit="east" move="east" destination="26" />
+    <arc exit="southeast" move="southeast" destination="8" />
+    <arc exit="southwest" move="southwest" destination="20" />
+    <arc exit="northwest" move="northwest" destination="14" />
+  </node>
+  <node id="16" name="Ice Caves, Cavern's Heart" color="#993300">
+    <description>Torches are set up in a circle around a gaping chasm that opens in the hard frozen stone of the cavern's floor.  At the north edge of the void, an iron altar stained with dried blood stands flanked by two large silver braziers.  Light from the fires fill the surrounding cavern and flicker in a light breeze that constantly rises from the chasm.</description>
+    <position x="160" y="180" z="0" />
+    <arc exit="north" move="north" destination="27" />
+    <arc exit="northeast" move="northeast" destination="11" />
+    <arc exit="east" move="east" destination="28" />
+    <arc exit="southeast" move="southeast" destination="9" />
+    <arc exit="south" move="south" destination="26" />
+    <arc exit="southwest" move="southwest" destination="15" />
+    <arc exit="west" move="west" destination="25" />
+    <arc exit="northwest" move="northwest" destination="13" />
+    <arc exit="climb" move="climb gaping chasm" destination="47" />
+  </node>
+  <node id="17" name="Ice Caves, Dim Tunnel" color="#993300">
+    <description>Light from the main cavern only barely challenges the darkness that shrouds the tunnel as it turns to dig deeper into the ice coated walls.  Underneath the bloodstained ice that covers the ground, deep scratches mar the dark stone leading further into the black passageway.</description>
+    <position x="100" y="160" z="0" />
+    <arc exit="southeast" move="southeast" destination="14" />
+    <arc exit="west" move="west" destination="18" />
+  </node>
+  <node id="18" name="Ice Caves, Dim Tunnel" color="#993300">
+    <description>Set into the frozen walls is a large iron door covered in scrollwork that blocks further passage into the tunnel.  Odd symbols are crafted into the framework supporting the door, but aside from vague dragon-like shapes, their meanings are lost.</description>
+    <position x="80" y="160" z="0" />
+    <arc exit="east" move="east" destination="17" />
+    <arc exit="go" move="go door" destination="19" />
+  </node>
+  <node id="19" name="Ice Caves, Larder" color="#993300">
+    <description>Cold air circulates about this small chamber creating a frosty environment that chills the blood.  In times past the tunnel obviously continued further into the dark stone walls, but because of a cave-in, that option is no longer available.  It has since been transformed into a larder for the Adan'f and bodies are stacked haphazardly about the area, kept fresh by the cold air coming from behind the cave-in.</description>
+    <position x="80" y="140" z="0" />
+    <arc exit="go" move="go door" destination="18" />
+  </node>
+  <node id="20" name="Ice Caves, Dim Tunnel" color="#993300">
+    <description>Dark stone coated with black ice reflects the light from the main cavern, absorbing it and hiding it away.  The result is a dim passageway that leads further into the frozen caves.</description>
+    <position x="120" y="220" z="0" />
+    <arc exit="northeast" move="northeast" destination="15" />
+    <arc exit="south" move="south" destination="21" />
+  </node>
+  <node id="21" name="Ice Caves, Recessed Alcove" color="#993300">
+    <description>Light rarely finds its way back to this cold dark corner.  Long ago the passage continued further into the black walls, but due to a cave-in in the past the way is completely blocked off.  Gouges in the walls around the cave-in show evidence of digging, but none actually make it through the hard stone.</description>
+    <position x="120" y="240" z="0" />
+    <arc exit="north" move="north" destination="20" />
+  </node>
+  <node id="22" name="Ice Caves, Dim Tunnel" color="#993300">
+    <description>Darkness shrouds this tunnel as it burrows away into the ice coated stone.  From time to time firelight from the main cavern reflects off veins of rock crystal that have been revealed by past digging, their soft glimmering accounting for what little light there is.</description>
+    <position x="180" y="140" z="0" />
+    <arc exit="northeast" move="northeast" destination="23" />
+    <arc exit="south" move="south" destination="11" />
+  </node>
+  <node id="23" name="Ice Caves, Crevice" color="#993300">
+    <description>Narrowing abruptly, the walls close in tight making passage through the crevice slow going.  The veins of rock crystal in the dark stone grow more evident and seem to be increasing in size as the tunnel gets further from the main chambers.</description>
+    <position x="200" y="120" z="0" />
+    <arc exit="north" move="north" destination="24" />
+    <arc exit="southwest" move="southwest" destination="22" />
+  </node>
+  <node id="24" name="Ice Caves, Crystal Cavern" color="#993300">
+    <description>Cut from the very heart of a massive vein of crystal, the passage ends here in a pocket of precious stone.  Smooth sheets of crystal make up the walls, their multicolored hues of blues and reds and greens sending off bursts of color as light from the main cavern bounces back through the dark stone tunnels to reach this small confine.</description>
+    <position x="200" y="100" z="0" />
+    <arc exit="south" move="south" destination="23" />
+  </node>
+  <node id="25" name="Ice Caves, Frozen Cavern" color="#993300">
+    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
+    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
+    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
+    <position x="140" y="180" z="0" />
+    <arc exit="north" move="north" destination="13" />
+    <arc exit="east" move="east" destination="16" />
+    <arc exit="south" move="south" destination="15" />
+    <arc exit="west" move="west" destination="14" />
+  </node>
+  <node id="26" name="Ice Caves, Frozen Cavern" color="#993300">
+    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
+    <position x="160" y="200" z="0" />
+    <arc exit="north" move="north" destination="16" />
+    <arc exit="east" move="east" destination="9" />
+    <arc exit="south" move="south" destination="8" />
+    <arc exit="west" move="west" destination="15" />
+  </node>
+  <node id="27" name="Ice Caves, Frozen Cavern" color="#993300">
+    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
+    <position x="160" y="160" z="0" />
+    <arc exit="north" move="north" destination="12" />
+    <arc exit="east" move="east" destination="11" />
+    <arc exit="south" move="south" destination="16" />
+    <arc exit="west" move="west" destination="13" />
+  </node>
+  <node id="28" name="Ice Caves, Frozen Cavern" color="#993300">
+    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
+    <position x="180" y="180" z="0" />
+    <arc exit="north" move="north" destination="11" />
+    <arc exit="east" move="east" destination="10" />
+    <arc exit="south" move="south" destination="9" />
+    <arc exit="west" move="west" destination="16" />
+  </node>
+  <node id="29" name="Whistling Wood, Clearing" note="Map68_Shard_South_Gate.xml|Shard South">
+    <description>The worm-riddled ranks of the whispering woods open onto a great clearing filled with light from the sky above.  A streambed cuts through the ground, running from the mouth of a large cave and towards the east.</description>
+    <position x="300" y="200" z="0" />
+    <arc exit="north" move="north" />
+  </node>
+  <node id="30" name="Whistling Wood, Narrow Path" note="Map68_Shard_South_Gate.xml|Shard North">
+    <description>A dark canopy of leaves hangs over this narrow path through the Whistling Wood.  To the south, a large boulder forces the path to detour around it.  Raw stumps and piles of stones show that the bypass has been recently constructed.</description>
+    <position x="300" y="60" z="0" />
+    <arc exit="north" move="north" destination="31" />
+    <arc exit="southwest" move="southwest" />
+    <arc exit="climb" move="climb boulder" />
+  </node>
+  <node id="31" name="Whistling Wood, Fissure">
+    <description>Among the worm-riddled trees that crowd this forest clearing, a great fissure has rent the ground opening up a passageway into the dark depths.  Heading off to the south, a weed-choked path offers the only way out of the clearing.</description>
+    <description>Among the worm-riddled trees that crowd this forest clearing, a great fissure has rent the ground, opening a passageway into the depths.  To the south, a weed-choked path offers the only way out of the clearing.</description>
+    <position x="300" y="40" z="0" />
+    <arc exit="south" move="south" destination="30" />
+    <arc exit="climb" move="climb deep fissure" destination="32" />
+  </node>
+  <node id="32" name="Ice Caves, Fissure" color="#993300">
+    <description>Disturbed graves poke from the walls of the fissure as the steep stone tilts to meet the surface.  A partially uncovered coffin juts out of the walls providing a place to rest between climbs, its surface pitted and scarred from whatever ripped it from the ground.</description>
+    <position x="300" y="20" z="0" />
+    <arc exit="climb" move="climb deep gouges" destination="33" />
+    <arc exit="climb" move="climb fissure walls" destination="31" />
+  </node>
+  <node id="33" name="Ice Caves, Fissure" color="#993300">
+    <description>A narrow niche in the wall, once the home of a large boulder, allows adventurers to rest between climbs through the steep fissure.  Walls of grey granite rise high all around, crumbling in places as cracks weaken the entire area.</description>
+    <position x="300" y="0" z="0" />
+    <arc exit="climb" move="climb narrow niche" destination="34" />
+    <arc exit="climb" move="climb granite walls" destination="32" />
+  </node>
+  <node id="34" name="Ice Caves, Fissure" color="#993300">
+    <description>Boulders litter the ground of the chamber, having been knocked from the walls by whatever caused the fissure to open.  Decaying remains of various Adan'f cover the floor, their bones crushed in places by falling rocks.</description>
+    <position x="280" y="0" z="0" />
+    <arc exit="west" move="west" destination="35" />
+    <arc exit="climb" move="climb fissure walls" destination="33" />
+  </node>
+  <node id="35" name="Ice Caves, Crumbling Passageway" color="#993300">
+    <description>Walls of loose black soil surround the passage as it leads through the cold earth.  Towards the east a fissure through the very bedrock has opened up a path to the surface, offering a way to escape from the dark confines of the caves.</description>
+    <position x="260" y="0" z="0" />
+    <arc exit="east" move="east" destination="34" />
+    <arc exit="southwest" move="southwest" destination="36" />
+  </node>
+  <node id="36" name="Ice Caves, Crumbling Passageway" color="#0000FF">
+    <description>Water from the west has weakened the walls, allowing the loose soil to slip free to clog the ground.  Moss covering the ceiling acts as a net to keep the earth above from joining the mess of mud that slows travel through the passage.</description>
+    <position x="240" y="20" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="35" />
+    <arc exit="west" move="swim west" destination="37" />
+  </node>
+  <node id="37" name="Ice Caves, Flooded Tunnel" color="#0000FF">
+    <description>Swirling whirlpools sweep through the area sending sediment throughout the water, choking off all visibility.  A break in one of the crumbling walls is the cause of the flooded chamber, the current pushing southwest.</description>
+    <description>Lazy whirlpools float through the area toward the southwest, spreading clouds of sediment in the water that completely obstruct visibility.  A break in one of the crumbling walls is the source of the flood.</description>
+    <position x="220" y="20" z="0" />
+    <arc exit="east" move="swim east" destination="36" />
+    <arc exit="southwest" move="swim southwest" destination="38" />
+  </node>
+  <node id="38" name="Ice Caves, Flooded Tunnel" color="#0000FF">
+    <description>Water rushes through the room as currents pull it this way and that through the dark confine.  Near the floor a pitch black hole is barely visible against the lesser grey of the surrounding water, and it is this opening that is causing the currents as it sucks the water down.</description>
+    <description>A slight current moves the water this way and that, but always toward a dark hole, barely visible near the floor.  The water is draining through the hole, creating the slow surge.</description>
+    <position x="200" y="40" z="0" />
+    <arc exit="north" move="swim north" destination="39" />
+    <arc exit="northeast" move="swim northeast" destination="37" />
+  </node>
+  <node id="39" name="Ice Caves, Flooded Tunnel" color="#0000FF">
+    <description>Freezing water, clouded with sediment from the loose soil that comprises the walls, fills the tunnel from top to bottom.  Currents within the water make movement difficult as they try to pull you south.</description>
+    <description>Freezing water clouded with soil from the walls fills the tunnel from floor to ceiling.  A sluggish current does little to hinder movement.</description>
+    <position x="200" y="20" z="0" />
+    <arc exit="south" move="swim south" destination="38" />
+    <arc exit="west" move="swim west" destination="40" />
+  </node>
+  <node id="40" name="Ice Caves, Crumbling Passageway" color="#0000FF">
+    <description>The ground slopes down to the east where it meets and disappears beneath the freezing cold water that has risen to flood the tunnel.  What is left of the remaining dry ground is concentrated in the moldy ceiling, clinging tenaciously above the water as if afraid to drown.</description>
+    <description>The passageway slopes down to the east and disappears beneath the bone-chilling water that floods the tunnel.</description>
+    <position x="180" y="20" z="0" />
+    <arc exit="east" move="swim east" destination="39" />
+    <arc exit="southwest" move="swim southwest" destination="41" />
+  </node>
+  <node id="41" name="Ice Caves, Crumbling Passageway" color="#993300">
+    <description>Water seeps through the ground here, making the ground wet and soggy, clinging to anything that touches it.  Puddles gather in old footprints making miniature lakes leading through the passageway.</description>
+    <description>Water seeps from the ground here, making it wet and soggy, clinging to anything it touches.  Along the passageway, puddles gather in old footprints like miniature lakes.</description>
+    <position x="160" y="40" z="0" />
+    <arc exit="northeast" move="northeast" destination="40" />
+    <arc exit="southwest" move="southwest" destination="42" />
+  </node>
+  <node id="42" name="Ice Caves, Crumbling Passageway" color="#993300">
+    <description>Chunks of rocks jut forth from the loose soil that makes up the walls of the passage.  Here and there ice-coated stones have fallen from the ceiling, making movement through the area difficult at best.</description>
+    <position x="140" y="60" z="0" />
+    <arc exit="northeast" move="northeast" destination="41" />
+    <arc exit="west" move="west" destination="43" />
+  </node>
+  <node id="43" name="Ice Caves, Crumbling Passageway" color="#993300">
+    <description>Walls of crumbling black dirt packed loosely together make up the sides of this passage.  To the west, a small hole offers the only way to get through a wall of granite that blocks the rest of the tunnel, while to the east the passageway continues further into the darkness.</description>
+    <position x="120" y="60" z="0" />
+    <arc exit="east" move="east" destination="42" />
+    <arc exit="west" move="west" destination="44" />
+  </node>
+  <node id="44" name="Ice Caves, Dead End" color="#993300">
+    <description>Body parts from all the races litter the bottom of this chasm.  For most of them it appears that this was where they died after a long fall and a terrible meeting with the hard stone floor.  Old blood stains the ground, and the sickening stench of decaying flesh fills the air, challenging even the strongest stomach.  The only way out is through a crumbling passage leading off to the east, or by climbing the towering chasm walls.</description>
+    <position x="80" y="60" z="0" />
+    <arc exit="east" move="east" destination="43" />
+    <arc exit="climb" move="climb chasm walls" destination="45" />
+  </node>
+  <node id="45" name="Ice Caves, Chasm" color="#993300">
+    <description>Black ice coats the walls of the chasm making climbing in either direction a perilous adventure.</description>
+    <description>Black ice coats the walls and floor of the chasm, making climbing in either direction a perilous adventure.</description>
+    <position x="80" y="40" z="0" />
+    <arc exit="climb" move="climb wide ledge" destination="44" />
+    <arc exit="climb" move="climb chasm wall" destination="46" />
+  </node>
+  <node id="46" name="Ice Caves, Chasm" color="#993300">
+    <description>Darkness fills this empty void as it sinks down into the frozen stone of the surrounding caves.  The chasm walls rise upwards around the small ledge that offers a brief respite from the harsh climb above and below.</description>
+    <position x="80" y="20" z="0" />
+    <arc exit="climb" move="climb chasm wall" destination="47" />
+    <arc exit="climb" move="climb small ledge" destination="45" />
+  </node>
+  <node id="47" name="Ice Caves, Chasm" color="#993300">
+    <description>A ring of firelight breaks the darkness as the steep frozen walls open up above into a large cavern filled with torches.</description>
+    <position x="80" y="0" z="0" />
+    <arc exit="climb" move="climb crumbling ledge" destination="46" />
+    <arc exit="climb" move="climb chasm wall" destination="16" />
+  </node>
+  <node id="48" name="Ice Caves, Narrow Bridge">
+    <description>Water surges directly below a narrow stretch of stone that connects the cavern walls with a slender pillar of rock that rises up out of the glacial lake.  Although the bridge is made of the same dark stone that makes up the walls, none of the reassuring strength is apparent, and each step across it is a test of willpower.</description>
+    <position x="220" y="180" z="0" />
+    <arc exit="east" move="east" destination="49" />
+    <arc exit="go" move="go gap" destination="10" />
+  </node>
+  <node id="49" name="Ice Caves, Rock Pillar">
+    <description>Rising from the depths of the lake, this pillar overlooks much of the hollow mountain.  Waves slap against the slender base and spray from their crests makes the chill even more apparent.  A massive glacier is barely visible to the northeast as it slowly slips beneath the water's surface, and to the southwest, the vague outline of a bridge rises into the darkness.</description>
+    <position x="240" y="180" z="0" />
+    <arc exit="west" move="west" destination="48" />
+  </node>
+  <label text="Adan'f Spirit Dancers">
+    <position x="220" y="130" z="0" />
+  </label>
+  <label text="Adan'f Shadow Mages">
+    <position x="220" y="150" z="0" />
+  </label>
+</zone>

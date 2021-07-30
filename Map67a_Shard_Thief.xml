@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Shard Thief Passages" id="67a">
+  <node id="1" name="Shard, Tunnels">
+    <description>A sturdy wooden ladder dead ends just overhead at the loosely boarded over opening of an abandoned well, and continues downward into a smooth round shaft deep into the earth.  Muffled echoing footsteps and hoofbeats reveal the close proximity of the surface.  A tunnel in the western wall slopes sharply down out of sight, while another tunnel leads north, continuing just under the surface.</description>
+    <description>The tunnel walls are noticeably damper here  -- possibly because the passage lies beneath one of Shard's many waterways.  The steady dripping of moisture calls up frightening visions of the tons of water overhead.</description>
+    <description>Overhead is the loose cover on an abandoned well on the surface, to judge by the muffled footsteps and hoofbeats coming from above.  Directly below the opening, a wooden ladder descends into a shaft in the earth.  A tunnel leads north just under the surface, and another tunnel in the western wall slopes sharply down out of sight.</description>
+    <description>This large cellar looks like a storeroom: stacks of crates, some bearing the Traders' Guild emblem, wrapped canvas bundles, and barrels of liquor are arranged in neat piles against the walls.  A dark doorway in the southern wall leads into a narrow tunnel.</description>
+    <position x="240" y="120" z="0" />
+    <arc exit="north" move="north" destination="7" />
+    <arc exit="west" move="west" destination="2" />
+    <arc exit="up" move="up" destination="8" />
+    <arc exit="climb" move="climb ladder" destination="13" />
+  </node>
+  <node id="2" name="Shard, Tunnels">
+    <description>The tunnel walls are noticeably damper here  -- possibly because the passage lies beneath one of Shard's many waterways.  The steady dripping of moisture calls up frightening visions of the tons of water overhead.</description>
+    <position x="200" y="120" z="0" />
+    <arc exit="east" move="east" destination="1" />
+    <arc exit="west" move="west" destination="3" />
+  </node>
+  <node id="3" name="Shard Tunnels">
+    <description>The tunnels widen into a broad oval area where three tunnels converge.  It looks like someone has made their home here at some time in the past.  Debris is scattered throughout the room, and a long unused firepit sits in the north corner.  A pile of mouldering crates near the firepit looks like it might have served as a bed frame.  Perhaps some thief on the run sought shelter here from the forces of law and order.</description>
+    <position x="160" y="120" z="0" />
+    <arc exit="east" move="east" destination="2" />
+    <arc exit="southeast" move="southeast" destination="5" />
+    <arc exit="northwest" move="northwest" destination="4" />
+  </node>
+  <node id="4" name="Shard Tunnels">
+    <description>Brick arches support the foundation of the street overhead, where a barred sewer grate provides easy access to the surface.  Reeking piles of rancid produce have been dumped here by the bazaar vendors above, and the stench discourages any curious surface dwellers from paying this area too close attention.  The sewer tunnel slopes steeply downwards to the southeast.</description>
+    <description>Broad oaken beams support the flagstone foundation of the street overhead, where a barred sewer grate in one corner provides easy entrance and exit to the surface.  A rancid reek rises from piles of discarded produce dumped here by the bazaar vendors above, which discourages any curious surface dwellers from paying this area too close attention.  The sewer tunnel slopes steeply downwards to the southeast beyond your vision.</description>
+    <position x="120" y="80" z="0" />
+    <arc exit="southeast" move="southeast" destination="3" />
+    <arc exit="go" move="go sewer grate" destination="11" />
+  </node>
+  <node id="5" name="Shard Tunnels">
+    <description>A stream of refuse flows through a rough channel cut into the floor, reeking of sewage and things better left unexplored.  A rough-hewn shaft in the ceiling rises toward the surface, spotted with slippery but useable stone handholds.  The tunnel continues into the distance to the northwest and slopes upwards slightly to the south.</description>
+    <description>A steady stream of putrid refuse flows through a rough channel cut into the floor.  The sickening stench is almost more than you can stand, reeking of sewage, decay, and other things unmentionable.  A rough hewn shaft in the ceiling rises towards the surface, spotted with slippery but useable carved stone handholds.  The tunnel continues into the distance to the northwest and slopes upwards slightly to the south.</description>
+    <position x="200" y="160" z="0" />
+    <arc exit="south" move="south" destination="6" />
+    <arc exit="northwest" move="northwest" destination="3" />
+    <arc exit="up" move="up" destination="9" />
+  </node>
+  <node id="6" name="Shard, Ruined Building" note="Map67_Shard.xml|Building">
+    <description>Crumbling stone walls sunken into the earth are all that remain to mark this area as the basement of some long abandoned structure.  A skeletal framework rises into the sky above, framing the outline of what used to be the first floor.  The few surviving beams are blackened and charred.</description>
+    <position x="200" y="200" z="0" />
+    <arc exit="out" move="out" />
+    <arc exit="go" move="go doorway" destination="5" />
+  </node>
+  <node id="7" name="Shard, Basement">
+    <description>This large cellar looks like a storeroom: stacks of crates, some bearing the Traders' Guild emblem, wrapped canvas bundles, and barrels of liquor are arranged in neat piles against the walls.  A dark doorway in the southern wall leads into a narrow tunnel.</description>
+    <description>This large storm cellar looks like some sort of storage area.  Stacks of crates, some bearing the trader's guild logo, are arranged in neat piles against the walls, along with wrapped canvas bundles and barrels of liquor.  A dark doorway in the southern wall leads into a narrow tunnel.</description>
+    <position x="240" y="80" z="0" />
+    <arc exit="south" move="south" destination="1" />
+    <arc exit="go" move="go cellar doors" destination="12" />
+  </node>
+  <node id="8" name="Shard, Sunstone Street" note="Map67_Shard.xml|Sunstone">
+    <description>The gentle rise of the Bridge of Wrens glitters over the western horizon, its slow arch disappearing as it dips down.  Beyond that, the flanged spikes of the Temple of Light shoot up, snagging on the sky.  The shadow of the city walls falls heavily across the ground, protective of the houses and businesses it enfolds.</description>
+    <position x="280" y="80" z="0" />
+    <arc exit="east" move="east" />
+    <arc exit="west" move="west" />
+    <arc exit="go" move="go well" destination="1" />
+  </node>
+  <node id="9" name="Shard, Abandoned Building">
+    <description>Once inside, it is obvious that this abandoned carriage barn is not as abandoned as other buildings in the neighborhood.  Although unpainted, the walls are shored up with sound wooden planking, and the flagstone floor is swept clean.  A ladder pokes from an opening in the floor.</description>
+    <description>From inside, you can see that this abandoned carriage barn is not so abandoned as other buildings in the neighborhood.  Although badly in need of painting, the walls are shorn up with fresh wooden planking, invisible from the outside, and the flagstone floor is swept clean.  A ladder pokes above the surface of a deep shaft into the earth.</description>
+    <position x="160" y="160" z="0" />
+    <arc exit="out" move="out" destination="10" />
+    <arc exit="climb" move="climb ladder" destination="5" />
+  </node>
+  <node id="10" name="Shard, Crystal Lane" note="Map67_Shard.xml|Crystal">
+    <description>The promise of thriving life that otherwise lingers in the rest of the city has died here.  Crumbling homes that can no longer support families, businesses that cannot stave off petty thieves or entice customers, and the shells of buildings have been left to rot along the street.  To the northwest, the grandiose beauty of the Great Tower seems to overshadow and demoralize what little dignity the residents here hope to cling to.</description>
+    <position x="120" y="160" z="0" />
+    <arc exit="southeast" move="southeast" />
+    <arc exit="southwest" move="southwest" />
+    <arc exit="northwest" move="northwest" />
+    <arc exit="go" move="go barn" destination="9" />
+  </node>
+  <node id="11" name="Shard, Emerald Lane Open Market" note="Map67_Shard.xml|Emerald">
+    <description>Patched tents and booths formed of slats of wood that vary wildly in type and color bloom in clumps of full and myriad colors around the stiffer and more prestigious backs of the homes on Diamond Street to the north and northeast.  The curve of a bridge allows passage to Moonstone Street to the southwest.</description>
+    <position x="120" y="40" z="0" />
+    <arc exit="southeast" move="southeast" />
+    <arc exit="southwest" move="southwest" />
+    <arc exit="northwest" move="northwest" />
+    <arc exit="go" move="go sewer grate" destination="4" />
+  </node>
+  <node id="12" name="Shard, Katamba's Crescent Road" note="Map67_Shard.xml|Katamba">
+    <description>Brickwell Tower, site for the Traders of Shard, rises to the southeast, silhouetted against the sky in an impressive composition of grey and red brick.  The chatter of water rushing through the city floats up from the same direction.  The sides of cleanly whitewashed homes edge in the street, their walls painted with tiny tendrils of ivy and starflowers that at first glance lead the eye to believe them real.</description>
+    <description>Brickwell Tower, site for the Traders of Shard, rises to the southeast, a dark silhouette rendered grim by the painted shades of night.  The mumble of an in-city riverlet floats up from the same direction as the tower, the fresh scent of chilly water accompanying the sound on its journey.  Shadowed homes painted with indiscernable images hedge in the street to the south.</description>
+    <position x="240" y="40" z="0" />
+    <arc exit="southeast" move="southeast" />
+    <arc exit="west" move="west" />
+    <arc exit="go" move="go cellar doors" destination="7" />
+  </node>
+  <node id="13" name="Undershard, Tunnels">
+    <description>The tunnel changes from bare rock to brickwork along a smoothly paved corridor.  The skilled masonry contrasts with the rough, unfinished stone passageways to the west and southwest.  Overhead, an open well climbs far into the shadows, lit by torches attached to the wall every few feet.</description>
+    <position x="320" y="200" z="0" />
+    <arc exit="southwest" move="southwest" destination="15" />
+    <arc exit="west" move="west" destination="14" />
+    <arc exit="climb" move="climb ladder" destination="1" />
+  </node>
+  <node id="14" name="Undershard, Tunnels">
+    <description>The fissure widens slightly into a narrow passage, one that has obviously been worked, but not by skilled hands.  The walls are rough and badly chipped, and the floor is covered with fragments of stone that make the footing treacherous.</description>
+    <position x="280" y="200" z="0" />
+    <arc exit="east" move="east" destination="13" />
+    <arc exit="out" move="out" destination="16" />
+  </node>
+  <node id="15" name="Undershard, Tunnels">
+    <description>A small bubble in the rock has been enlarged and shaped to provide just enough room to stand in.  Inside the rounded walls, the incessant cries of the grey market merchants are reduced to mere whispers.  A fire outside the entrance lights a long cramped corridor cut through the rock to the northeast.</description>
+    <position x="280" y="240" z="0" />
+    <arc exit="northeast" move="northeast" destination="13" />
+    <arc exit="out" move="out" destination="17" />
+  </node>
+  <node id="16" name="Undershard, The Grey Market" note="Map67_Shard.xml">
+    <description>This corner of the market runs up along one of the cavern's walls, the black stone inscribed with old Imperial records but the glyphs long since obscured by crude graffitti and chiseled obscenities.  A large stall stands nearby, its billowing sheets woven of purple thread instead of grey like all the others, and the locals give it a wide berth.</description>
+    <position x="240" y="200" z="0" />
+    <arc exit="north" move="north" />
+    <arc exit="southwest" move="southwest" />
+    <arc exit="west" move="west" />
+    <arc exit="go" move="go natural fissure" destination="14" />
+  </node>
+  <node id="17" name="Shard, Grey Market" note="Map67_Shard.xml">
+    <description>The shanty is little more than an open roofed partition, constructed of unmatched bits of wood, paper, and metal, with one side butting up against the cavern wall.  Soot stains the walls in one shadowed corner near the back where a ring of stones holds a small fire.  Roughly scrawled graffiti in several languages covers every clean spot on the walls and one symbol in particular, a bloody dagger, seems to predominate.  It probably belongs to the local gang of thugs whose home this seems to be.</description>
+    <position x="240" y="280" z="0" />
+    <arc exit="out" move="out" />
+    <arc exit="go" move="go low opening" destination="15" />
+  </node>
+  <node id="18" name="Shard, Smuggler's Bridge">
+    <description>Calls from the guards above echo down to a narrow strip of sand beneath the soaring walls of Shard.  The river laps quietly at this beach, marked heavily by footprints leading right into the water.  The prints head toward a sandbar rising barely above the surface about fifty feet out.</description>
+    <position x="40" y="160" z="0" />
+    <arc exit="go" move="go door" destination="19" />
+    <arc exit="go" move="go sandbar" destination="20" />
+  </node>
+  <node id="19" name="Shard, Katamba's Crescent Road" note="Map67_Shard.xml|Shard">
+    <description>The high walls of the city curve out of sight to the west, terminating at the city gates to the east.  Homes edge in on the trail, crowding up to the path before stopping their progression.  A small brass plaque is embedded into the walls, commemorating this place for some far away reason.</description>
+    <position x="40" y="200" z="0" />
+    <arc exit="east" move="east" />
+    <arc exit="west" move="west" />
+    <arc exit="go" move="go maintenance door" destination="18" />
+  </node>
+  <node id="20" name="Shard, Smuggler's Bridge">
+    <description>The river flows silently by on all sides of this narrow sandbar.  From here you can see the city of Shard silhouetted like a sharp blade against the sky.  Footprints in the sand lead into the water towards a tiny beach beneath the walls.  A few feet away sits a flat stone piling rising a few feet above the water's surface.</description>
+    <description>The river flows by on all sides of this narrow sandbar.  A number of footprints lead west, pointing across the water to a narrow beach beneath the walls of Shard.  To the east, a row of stone pilings rises a few feet above the water's surface, with the nearest one not far away.</description>
+    <position x="40" y="120" z="0" />
+    <arc exit="go" move="go stone piling" destination="21" />
+    <arc exit="go" move="go beach" destination="18" />
+  </node>
+  <node id="21" name="Shard, Smuggler's Bridge">
+    <description>Wide stone pilings sunk into the water look like they might have been placed there for a bridge which was never built.  Now they provide a precarious walkway across the river beyond the town walls.  The pilings stop about fifty feet from the far shore, but from here you can just make out a narrow sandbar that should indicate a place to ford the last stretch.</description>
+    <position x="40" y="80" z="0" />
+    <arc exit="north" move="north" destination="22" />
+    <arc exit="south" move="south" destination="20" />
+  </node>
+  <node id="22" name="Shard, Smuggler's Bridge">
+    <description>Tall, drooping trees form a protective circle around a tiny cove on the riverbank.  Scorched pits in the sand mark old campfires screened by the trees from the walls of Shard.  The reason for the campsite is obvious -- a row of stone pilings stretches out into the river, providing a way across that avoids the heavily guarded North Gate.</description>
+    <description>Tall drooping trees form a protective circle around this tiny riverbank cove.  Although it is deserted now, scorched pits in the sand mark old campfires screened by the trees from the walls of Shard.  Looking at the river, the reason for the campsite becomes obvious--a row of abandoned stone pilings stretches out into the river, providing a way across besides the heavily guarded North Gate.</description>
+    <position x="40" y="40" z="0" />
+    <arc exit="east" move="east" destination="23" />
+    <arc exit="south" move="south" destination="21" />
+  </node>
+  <node id="23" name="South Trade Route, Journey's Rest" note="Map66_STR3.xml|STR">
+    <description>The Southern Trade Route meets Shard's North Bridge here at the Journey's Rest.  Travelers often use this convenient stopping point to recheck their gear before moving on.</description>
+    <position x="80" y="40" z="0" />
+    <arc exit="north" move="north" />
+    <arc exit="south" move="south" />
+    <arc exit="go" move="go hidden trail" destination="22" />
+  </node>
+  <label text="Katamba's Crescent">
+    <position x="193" y="6" z="0" />
+  </label>
+  <label text="Sunstone Street">
+    <position x="275" y="87" z="0" />
+  </label>
+  <label text="Emerald Lane">
+    <position x="122" y="48" z="0" />
+  </label>
+  <label text="Crystal Lane">
+    <position x="81" y="134" z="0" />
+  </label>
+  <label text="Ruined Building">
+    <position x="109" y="191" z="0" />
+  </label>
+  <label text="Undershard">
+    <position x="209" y="210" z="0" />
+  </label>
+  <label text="Undershard">
+    <position x="209" y="286" z="0" />
+  </label>
+  <label text="East">
+    <position x="225" y="19" z="0" />
+  </label>
+  <label text="Katamba's Crescent">
+    <position x="10" y="207" z="0" />
+  </label>
+  <label text="West">
+    <position x="26" y="220" z="0" />
+  </label>
+  <label text="STR">
+    <position x="65" y="14" z="0" />
+  </label>
+</zone>

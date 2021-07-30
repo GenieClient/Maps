@@ -1,0 +1,1209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Riverhaven East Gate" id="31">
+  <node id="1" name="Riverhaven, River Road East" note="Map30_Riverhaven.xml|Riverhaven">
+    <description>The town wall curves down to the river and extends out into it with the heavily-fortified Eastern Tower rising above to keep watch and to control the river traffic.  A small path passes beneath the tower's shadow and through a narrow gate, wandering along the barren riverbank and out of town.  A few boats are pulled up along the shore or bob gently in the current, tied to the many poles used to control river traffic.</description>
+    <position x="20" y="-60" z="0" />
+    <arc exit="north" move="north" />
+    <arc exit="west" move="west" />
+    <arc exit="go" move="go gate" destination="2" />
+  </node>
+  <node id="2" name="Riverhaven, Stone Bridge" note="Drogor|Kraelyst start point|travel start point" color="#A6A3D9">
+    <description>The lanes outside the eastern gate of Riverhaven are crowded with the bustle of street peddlers and merchant wagons coming and going in a great rush to sell their wares.  Beggars line the paved road, aware that the more influential and wealthy folks use this gate.  They hover, hands extended, hoping that a moment of kindness and charity might befall them.  A stone bridge that once provided passage across the river is now little more than a crumbling stone pier used by some local fishermen.</description>
+    <position x="60" y="-100" z="0" />
+    <arc exit="northeast" move="northeast" destination="3" />
+    <arc exit="go" move="go boggy path" destination="40" />
+    <arc exit="go" move="go east gate" destination="1" />
+    <arc exit="none" move="dive river" destination="79" />
+  </node>
+  <node id="3" name="Riverhaven Road, South Road">
+    <description>The dirt surface of the South Road is trampled and wide at this point from the heavy traffic of merchant wagons and travelers.  Following the natural cut through the foothills, the road continues northward and dips out of sight.  A faint moisture hangs in the air from the Faldesu river directly to the south.  The eastern gate of Riverhaven can be seen off to the southwest.</description>
+    <position x="80" y="-120" z="0" />
+    <arc exit="north" move="north" destination="4" />
+    <arc exit="southwest" move="southwest" destination="2" />
+    <arc exit="go" move="go iron gates" destination="127" />
+  </node>
+  <node id="4" name="Riverhaven Road, South Road" note="Ranger grove|Ranger tent|large tent|RTT10|RT-HEG-ZS" color="#C2B280">
+    <description>A grove of trees grows between the road and Riverhaven's defensive wall just to the west.  A large tent is nestled within the grove.  Several smaller tents have been added as extension to the back of the larger one, hiding in back of it like children peeking out from behind their mother.  A tall guard tower looms above the treetops with a silhouetted figure pacing its perimeter, surveying the surrounding area with an ever watchful eye.</description>
+    <position x="80" y="-140" z="0" />
+    <arc exit="northeast" move="northeast" destination="5" />
+    <arc exit="south" move="south" destination="3" />
+    <arc exit="go" move="go large tent" destination="77" />
+  </node>
+  <node id="5" name="Riverhaven Road, The Cemetery">
+    <description>Cresting the top of the hill, the town's cemetery is plainly in view from here.  A small metal gate leads inside the fenced-in area, apparently rusted closed.  A few dead flowers placed on some of the graves are a gloomy contrast to those plots that are well-maintained and freshly flowered by the occupants' family and friends.  The road dips down into the plains to the northeast and heads southward toward the town of Riverhaven.</description>
+    <position x="100" y="-160" z="0" />
+    <arc exit="northeast" move="northeast" destination="6" />
+    <arc exit="southwest" move="southwest" destination="4" />
+    <arc exit="go" move="go dirt trail" destination="101" />
+  </node>
+  <node id="6" name="Riverhaven Road, The Foothills">
+    <description>Although not always in sight, the road winds its way northeast through the small hills, its destination the plains ahead.  A few ancient trees stand about like scouts for the forest creeping down the large mountains far off to the north.  Glancing southwest, an iron fence can be seen where the road heads over a hilltop.</description>
+    <position x="120" y="-180" z="0" />
+    <arc exit="north" move="north" destination="7" />
+    <arc exit="southwest" move="southwest" destination="5" />
+    <arc exit="go" move="go small footpath" destination="63" />
+  </node>
+  <node id="7" name="Riverhaven Road, The Foothills" note="RTT09|RT-HEG-HNG" color="#C2B280">
+    <description>The road weaves through a gathering of large round boulders as it heads down into the plains which, judging from the number of burrow holes in the area, have become home for a family of ground squirrels.  To the south, the road meanders its way up and through some small foothills.  Although there can be little doubt that this route was well-traveled at one time, it shows only moderate signs of recent use.</description>
+    <position x="120" y="-200" z="0" />
+    <arc exit="northeast" move="northeast" destination="8" />
+    <arc exit="south" move="south" destination="6" />
+  </node>
+  <node id="8" name="Riverhaven Road, The Foothills">
+    <description>The route wanders at a slight incline from the foothills above to the plains below and to the north.  An old, unrepaired rut from a wagon wheel cuts deeply into the dirt surface of the road, providing a home for a family of black beetles.</description>
+    <position x="140" y="-220" z="0" />
+    <arc exit="north" move="north" destination="9" />
+    <arc exit="southwest" move="southwest" destination="7" />
+  </node>
+  <node id="9" name="The Northeast Wilds, The Road">
+    <description>Various trails converge from the plains to form a road that leads up into the foothills to the southwest.  Thick brush covers the plains in the east, as it works its way toward a marsh in the distant southeast. The wind whips about you here as it tries to escape from the open land and over the hills.  The broad route continues north along the brush.</description>
+    <position x="140" y="-240" z="0" />
+    <arc exit="north" move="north" destination="10" />
+    <arc exit="south" move="south" destination="8" />
+  </node>
+  <node id="10" name="The Northeast Wilds, Plains Path">
+    <description>A sweet, pleasant smell drifts up from the weeds and brush that border the road.  Rustling movements can be seen in the growth as the lesser creatures of Elanthia scurry further into hiding.  Far off in the distance to the west and northwest the plains are dotted with flocks of sheep, sometimes surrounding a squat sheepherder's shack.  A small trail can be seen here heading off to the east.</description>
+    <position x="140" y="-260" z="0" />
+    <arc exit="south" move="south" destination="9" />
+    <arc exit="go" move="go small trail" destination="11" />
+  </node>
+  <node id="11" name="Northeast Wilds, Deer Trail">
+    <description>The narrow trail, forged by generations of wandering wildlife, wends its way to the south through thick, chest-high brush.  It is quieter here than to the north, where the unmistakable and unrelenting cries of ravens fill the air.</description>
+    <position x="200" y="-260" z="0" />
+    <arc exit="south" move="south" destination="12" />
+    <arc exit="go" move="go small trail" destination="10" />
+  </node>
+  <node id="12" name="Northeast Wilds, Deer Trail">
+    <description>Bushes rustle at your passing, driving birds and lizards into panic-stricken flight.  Every movement produces an incredible amount of noise that would drive away every sensible deer for miles.  However, it may attract more predatory creatures.</description>
+    <position x="200" y="-240" z="0" />
+    <arc exit="north" move="north" destination="11" />
+    <arc exit="southwest" move="southwest" destination="13" />
+  </node>
+  <node id="13" name="Northeast Wilds, Deer Trail">
+    <description>The meandering trail takes the path of least resistance through the thick brush rather than proceeding in a straight line from origin to destination.  The soil, not especially rich, is carpeted by fallen, decomposing fronds.  A loud buzz heralds the departure of a fat bumblebee.</description>
+    <description>The meandering trail takes the path of least resistance through the thick brush rather than proceeding in a straight line from origin to destination.  Moonlight gleams on a damp, rotting carpet of fallen fronds as fireflies flicker dimly off in the distance.</description>
+    <position x="180" y="-220" z="0" />
+    <arc exit="northeast" move="northeast" destination="12" />
+    <arc exit="south" move="south" destination="14" />
+  </node>
+  <node id="14" name="Northeast Wilds, Deer Trail">
+    <description>The narrow trail is barely discernible as it twists through the dense scrub.  Every bend and crook has some purpose known only to the instincts of the animals that forged the path.  Nearby bladebrush fronds bristle menacingly, keeping animals and adventurers at bay.</description>
+    <position x="180" y="-200" z="0" />
+    <arc exit="north" move="north" destination="13" />
+    <arc exit="southeast" move="southeast" destination="15" />
+  </node>
+  <node id="15" name="Northeast Wilds, Deer Trail">
+    <description>The trail bends sharply here to avoid an intimidating cluster of bladebrush.  In the corner of your eye you catch the bright glimmer of sunlight reflecting off water to the southeast.</description>
+    <description>The trail bends sharply here.  The profile of an intimidating cluster of bladebrush can be seen against the starry backdrop of the night sky.</description>
+    <position x="200" y="-180" z="0" />
+    <arc exit="east" move="east" destination="16" />
+    <arc exit="west" move="west" destination="25" />
+    <arc exit="northwest" move="northwest" destination="14" />
+  </node>
+  <node id="16" name="Northeast Wilds, Path">
+    <description>This east-west path cuts directly through the dense brush, too straight and regular to be the work of animals.  A wooden stake with a red ribbon tied around it serves to mark the junction of the path and the twisting deer trail.</description>
+    <position x="220" y="-180" z="0" />
+    <arc exit="east" move="east" destination="17" />
+    <arc exit="west" move="west" destination="15" />
+  </node>
+  <node id="17" name="Northeast Wilds, Path">
+    <description>A gnarled tree has been uprooted and dragged to one side of the path.  A few eager weeds, or possibly just ugly flowers, are already emerging from the dirt-filled place where the tree so recently stood.</description>
+    <position x="240" y="-180" z="0" />
+    <arc exit="east" move="east" destination="18" />
+    <arc exit="west" move="west" destination="16" />
+  </node>
+  <node id="18" name="Northeast Wilds, Path">
+    <description>Tough, hardy bushes with thick leaves and nasty thorns scrabble toward the pathway, but fall short by several handlengths.  The fresh markings of a well-applied machete or axe have cut a ruthless path through the brush, much to the woe of the plants that would cling to the flesh of passersby foolish enough to push through too quickly.</description>
+    <position x="260" y="-180" z="0" />
+    <arc exit="southeast" move="southeast" destination="19" />
+    <arc exit="west" move="west" destination="17" />
+  </node>
+  <node id="19" name="Northeast Wilds, Path">
+    <description>The path follows the southern shore of a small stagnant pond completely overgrown with an unwholesome yellow scum.  A stand of gnarled trees has been felled and their roots and branches stripped, leaving a stack of logs to one side.  It looks as if some large animal has been digging by the woodpile recently.</description>
+    <position x="280" y="-160" z="0" />
+    <arc exit="east" move="east" destination="20" />
+    <arc exit="northwest" move="northwest" destination="18" />
+  </node>
+  <node id="20" name="Zaulfung, Clearing">
+    <description>A mighty stench, the bouquet of the Zaulfung, wafts in over the waist-deep brush to the south.  The swamp itself, like a black stain on Elanthia's green robes, is visible beyond the scrub.  A natural clearing opens up to the northeast, while a wide manmade path strikes eastward.</description>
+    <position x="320" y="-160" z="0" />
+    <arc exit="north" move="north" destination="24" />
+    <arc exit="northeast" move="northeast" destination="21" />
+    <arc exit="west" move="west" destination="19" />
+  </node>
+  <node id="21" name="Zaulfung, Clearing">
+    <description>Thick bushes with barbed finger-length thorns serve as a boundary for this clearing.  A few have been cleared away, allowing access to a lunat pierwalk leading south to a chickee out over the swamp.  Bees flit between the bright yellow flowers, their pollination a welcome activity unhindered by the wicked barbs.</description>
+    <description>Thick bushes with barbed finger-length thorns serve as a boundary for this clearing.  A few have been cleared away, allowing access to a lunat pierwalk leading south to a chickee out over the swamp.  The bright wood of the pierwalk shines starkly in the gloom of the night.</description>
+    <position x="340" y="-180" z="0" />
+    <arc exit="north" move="north" destination="23" />
+    <arc exit="northeast" move="northeast" destination="22" />
+    <arc exit="southwest" move="southwest" destination="20" />
+    <arc exit="west" move="west" destination="24" />
+    <arc exit="go" move="go pierwalk" destination="38" />
+  </node>
+  <node id="22" name="Zaulfung, Clearing">
+    <description>Four logs have been arranged in a square around a large fire pit to provide seating for a dozen or more.  An iron cauldron rests beside the pit, now filled with rainwater and serving as a breeding ground for mosquitos, as if the expanse of swamp weren't large enough for the omnipresent pests.</description>
+    <position x="360" y="-200" z="0" />
+    <arc exit="southwest" move="southwest" destination="21" />
+    <arc exit="west" move="west" destination="23" />
+  </node>
+  <node id="23" name="Zaulfung, Clearing">
+    <description>A shallow trench directs rainwater to the southeast rather than letting it flow downhill into the fire pit.  A pair of tulvora trees, intertwined as if locked in either loving embrace or deadly combat, occupy this corner of the clearing.  Their fragrant leaves not only serve to repel damaging insects, but nearly cover the stench of the swamp.</description>
+    <position x="340" y="-200" z="0" />
+    <arc exit="east" move="east" destination="22" />
+    <arc exit="south" move="south" destination="21" />
+    <arc exit="southwest" move="southwest" destination="24" />
+  </node>
+  <node id="24" name="Zaulfung, Clearing" note="Wild Boars">
+    <description>The damp ground bears the tracks of hundreds of hooves as well as the lighter marks of a boobrie's passing.  The dried-out husk of a boar lies half-buried in the mud, its corpse trampled by its brethren.  A scattering of bloodstained grey feathers indicates that the boar did not die peacefully.</description>
+    <position x="320" y="-180" z="0" />
+    <arc exit="northeast" move="northeast" destination="23" />
+    <arc exit="east" move="east" destination="21" />
+    <arc exit="south" move="south" destination="20" />
+  </node>
+  <node id="25" name="Zaulfung, Standing Stones" note="Standing Stones|Warding Stones">
+    <description>This curiously circular clearing looks as if all its vegetation was blasted away centuries ago in an arcane duel.  A pair of imposing standing stones, one grey and smooth, the other blackened and charred, face each other across the clearing.  To the east and southeast are narrow gaps leading through the otherwise impenetrable scrub, while the path to the southwest is a broken tangle of exposed roots.</description>
+    <description>This circular clearing is dominated by the presence of two imposing standing stones, silent sentinels of an ancient power.  A shadow deeper than the night reaches across the clearing from the south, while at the north end the stark grey stone looms pale and ghostlike.</description>
+    <position x="180" y="-180" z="0" />
+    <arc exit="east" move="east" destination="15" />
+    <arc exit="southeast" move="southeast" destination="36" />
+    <arc exit="southwest" move="southwest" destination="26" />
+  </node>
+  <node id="26" name="Zaulfung, Boar Trail">
+    <description>The bare dirt of the trail is extremely uneven thanks to the digging of boars and the crisscrossing of thick, tough bladebrush roots.  Extra care must be taken to avoid spraining an ankle.</description>
+    <position x="160" y="-160" z="0" />
+    <arc exit="northeast" move="northeast" destination="25" />
+    <arc exit="south" move="south" destination="27" />
+  </node>
+  <node id="27" name="Zaulfung, Boar Trail">
+    <description>The path is wide enough here for a full-sized carriage, though it would undoubtedly break an axle on the rough and broken ground.  A column of ants marches purposefully across the trail.</description>
+    <position x="160" y="-140" z="0" />
+    <arc exit="north" move="north" destination="26" />
+    <arc exit="southeast" move="southeast" destination="28" />
+  </node>
+  <node id="28" name="Zaulfung, Boar Trail">
+    <description>The path is made treacherous by roots as big around as a barbarian's bicep.  If it is supposed to be leading somewhere in particular, it's taking neither the most direct nor the easiest route.  It opens up into a marshy clearing to the south and meanders northwest to drier ground.  A large spider pauses its work to regard you dispassionately from its web in a nearby scrub pine.</description>
+    <position x="180" y="-120" z="0" />
+    <arc exit="south" move="south" destination="29" />
+    <arc exit="northwest" move="northwest" destination="27" />
+  </node>
+  <node id="29" name="Zaulfung, Marsh">
+    <description>The tangle of scrub to the north gives way to more open terrain here, where the vegetation is too thin to hold back the cold wind.  A rough trail twists haphazardly northward, apparently the work of a half-mad boar or a drunken band of Gor'Tog rangers.</description>
+    <position x="180" y="-100" z="0" />
+    <arc exit="east" move="east" destination="30" />
+    <arc exit="south" move="south" destination="33" />
+    <arc exit="go" move="go boar trail" destination="28" />
+  </node>
+  <node id="30" name="Zaulfung, Marsh">
+    <description>Through a curtain of dead Vilt stalks, you can see a weed-choked pond to the east.  A pair of baleful orange eyes stares at you from the center of the pond, the only part of some unspeakable creature not submerged in the noisome water.</description>
+    <position x="220" y="-100" z="0" />
+    <arc exit="south" move="south" destination="31" />
+    <arc exit="west" move="west" destination="29" />
+  </node>
+  <node id="31" name="Zaulfung, Marsh" note="RTT11|RT-ZS-HEG" color="#C2B280">
+    <description>Each step leaves a deep impression in the boggy earth.  Not surprisingly, a pair of boots are stuck in the mud here.  The ground looks a bit drier and more solid to the west, but softer and muddier to the south.  Beyond the pond to the east, there is no promise of drier ground.</description>
+    <position x="220" y="-80" z="0" />
+    <arc exit="north" move="north" destination="30" />
+    <arc exit="south" move="south" destination="32" />
+    <arc exit="west" move="west" destination="33" />
+  </node>
+  <node id="32" name="Zaulfung, Marsh">
+    <description>The Zaulfung stretches out endlessly to your east, though there are no notable landmarks to guide your passage through the treacherous swamp.  A lone Troiliff flower grows here among the more common grasses and weeds.</description>
+    <position x="220" y="-60" z="0" />
+    <arc exit="north" move="north" destination="31" />
+    <arc exit="go" move="go faint trail" destination="85" />
+  </node>
+  <node id="33" name="Zaulfung, Marsh">
+    <description>The open marsh offers no shelter from the surprisingly cold and bitter eastern wind.  It blows through the brush to the west and bears the boggy stench of the forbidding Zaulfung, the devil swamp.  To the southeast, a tall cypress stands like a lone sentry watching over the region.</description>
+    <position x="180" y="-80" z="0" />
+    <arc exit="north" move="north" destination="29" />
+    <arc exit="east" move="east" destination="31" />
+    <arc exit="southeast" move="southeast" destination="34" />
+  </node>
+  <node id="34" name="Zaulfung, Cypress">
+    <description>A solitary cypress stands here, casting its shadow over the marsh and towering over the area like no other tree within sight.  The boughs are hung with Maiden's Tress, which fortunately seems to be dormant in the cold.</description>
+    <position x="200" y="-60" z="0" />
+    <arc exit="northwest" move="northwest" destination="33" />
+    <arc exit="climb" move="climb cypress tree" destination="35" />
+  </node>
+  <node id="35" name="Zaulfung, High Perch">
+    <description>Heavy branches laden with moss and Maiden's Tress provide a gloomy shade above the marshy ground.  Thick slats of pine, stained by weather and age, make the floor of what might have once been a hunter's blind.  The Zaulfung, a region of weed-choked ponds and boggy marshland, stretches out to the eastern horizon.</description>
+    <description>Furtive movements in the distant shadows catch your eye, but dark tangles of moss against the darker night leave little to be seen.  The platform provides a place to rest, but no shelter from the cold wind or the eerie nocturnal noises of the swamp.</description>
+    <position x="180" y="-60" z="0" />
+    <arc exit="down" move="down" destination="34" />
+  </node>
+  <node id="36" name="Zaulfung, Deer Trail">
+    <description>Countless deer have left deep tracks in the soft soil en route to a watering hole to the southeast.  However, their prints are somewhat eroded, as if the trail has been recently abandoned.  A northwesterly breeze carries with it a whiff of decay.</description>
+    <position x="200" y="-160" z="0" />
+    <arc exit="southeast" move="southeast" destination="37" />
+    <arc exit="northwest" move="northwest" destination="25" />
+    <arc exit="go" move="go thick brush" destination="36" />
+  </node>
+  <node id="37" name="Zaulfung, Watering Hole">
+    <description>This watering hole is the final destination of the trail.  Final seems to be the operative word for the unlucky deer, several days dead, which lies rotting on the shore.  Even without the stench and the flies, one look at the fouled water is enough to discourage you from lingering for a drink.</description>
+    <position x="220" y="-140" z="0" />
+    <arc exit="northwest" move="northwest" destination="36" />
+  </node>
+  <node id="38" name="Zaulfung, Chickee" note="Swamp Trolls">
+    <description>Overturned crates, smashed alchemical equipment, and bones not yet bleached by the sun lay amidst the debris strewn about this wide platform which rises from the mire below on stout ironwood pilings.  A strange sigil the color of dried blood has been painted in the center of the chickee.</description>
+    <description>This platform, rising from the mire below on stout ironwood pilings, is faintly illuminated by a luminescent sigil painted on the stout boards.  Its eerie glow outlines the silhouettes of several smashed crates and glints off hundreds of shards of broken glass.</description>
+    <position x="400" y="-180" z="0" />
+    <arc exit="down" move="down" destination="39" />
+    <arc exit="go" move="go pierwalk" destination="21" />
+  </node>
+  <node id="39" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="440" y="-80" z="0" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="109" />
+    <arc exit="southeast" move="southeast" destination="81" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="111" />
+    <arc exit="northwest" move="northwest" destination="108" />
+    <arc exit="up" move="up" destination="38" />
+  </node>
+  <node id="40" name="Pejek Bog, A Narrow Path">
+    <description>A low fog obscures the features of the ground not far from the path.  Ferns and clumps of grasses raise their heads above it here and there, indicating areas where it may be safe to stand.  The wide expanses of mist make the path seem the more inviting means of traveling through this section of the bog.  Soft rustling noises mingle with gurgles and the slow steady drip, drip, drip of water as it falls into puddles below the mist.</description>
+    <description>Low banks of vapor swirling along the ground pick up the faintest trace of moon or starlight, lending a ghostly glow to the darkest night.  The low-lying fog banks define the path by leaving it dark as it winds through the eerie glow.</description>
+    <position x="-60" y="-100" z="0" />
+    <arc exit="northeast" move="northeast" destination="41" />
+    <arc exit="go" move="go boggy path" destination="2" />
+  </node>
+  <node id="41" name="Pejek Bog, A Narrow Path">
+    <description>Warm moist air rises from the bog no matter what the season.  Along with the mist that wafts from the ground, a peculiar scent lingers as well.  The mingled odors of rotting leaves and stagnant water blend with something faintly metallic.</description>
+    <position x="-40" y="-120" z="0" />
+    <arc exit="east" move="east" destination="42" />
+    <arc exit="southwest" move="southwest" destination="40" />
+  </node>
+  <node id="42" name="Pejek Bog, A Fork In The Path">
+    <description>Here the path leads in three different directions, each shadowed with a faint mist.  The murky water of the bog is glimpsed through sickly yellow grass and there is no indication if one path is better then the next.</description>
+    <description>Here the path leads in three different directions, each shadowed with a faint mist.  The murky water of the bog is glimpsed through sickly yellow grass, and there is no indication if one path is better than the next.</description>
+    <description>Here the path leads in three different directions, each obstructed with a faintly glowing mist.  The murky water of the bog is glimpsed through sickly yellow grass, and there is no indication if one path is better than the next.</description>
+    <position x="-20" y="-120" z="0" />
+    <arc exit="north" move="north" destination="43" />
+    <arc exit="west" move="west" destination="41" />
+    <arc exit="northwest" move="northwest" destination="47" />
+  </node>
+  <node id="43" name="Pejek Bog, Wandering The Muck" note="Frogs">
+    <description>Pale golden grass grows thick along the ground, surrounding large clay-bottomed puddles.  The water is filled with silt, which makes seeing the bottom of the pools difficult.  Soft rustling sounds arise from the grass as breezes touch it, interspersed with the croaking of what sounds like thousands of frogs.</description>
+    <position x="-20" y="-140" z="0" />
+    <arc exit="north" move="north" destination="44" />
+    <arc exit="south" move="south" destination="42" />
+  </node>
+  <node id="44" name="Pejek Bog, Wandering The Muck">
+    <description>A trio of deep parallel grooves interrupts the normal sporadic pattern of grass tufts and puddles.  Something heavy must have been dragged through the swamp at some point in the past.  The grooves look almost like the marks of a giant clawed foot swiping across the bog.</description>
+    <position x="-20" y="-160" z="0" />
+    <arc exit="northeast" move="northeast" destination="45" />
+    <arc exit="south" move="south" destination="43" />
+    <arc exit="northwest" move="northwest" destination="46" />
+  </node>
+  <node id="45" name="Pejek Bog, Wandering The Muck">
+    <description>Sickly looking grasses and vile-scented puddles stretch out on all sides as far as the eye can see.  No tree or rise in the land's elevation breaks the monotony.  Sunk almost entirely below the surface of the bog, a discolored stone which may have once been white is just visible amongst the grasses.</description>
+    <position x="0" y="-180" z="0" />
+    <arc exit="southwest" move="southwest" destination="44" />
+    <arc exit="west" move="west" destination="46" />
+  </node>
+  <node id="46" name="Pejek Bog, Beside A Bubbling Pool">
+    <description>Carried on the breeze, the air is scented with a sickly-sweet metallic tinge.  Discolored water thick with reddish-brown clots of mud bubbles up from the bog and flows outward in slow, rippling waves.  The resemblance to a bleeding wound is almost eerie.</description>
+    <description>Carried on the breeze, a sickly-sweet metallic tinge tinges the air.  Discolored water thick with reddish-brown clots of mud bubbles up from the bog and flows outward in slow, rippling waves.  The resemblance to a bleeding wound is almost eerie.</description>
+    <position x="-40" y="-180" z="0" />
+    <arc exit="southeast" move="southeast" destination="44" />
+    <arc exit="east" move="east" destination="45" />
+  </node>
+  <node id="47" name="Pejek Bog, Beside A Foundation">
+    <description>Not far from the path, an oblong depression surrounded by stone is all that remains of someone's cottage.  Coppery water has filled the depression, and a few sickly lilies bloom near the center.  A blackened stump leans toward the water where a tree once shaded the dooryard.</description>
+    <position x="-60" y="-160" z="0" />
+    <arc exit="southeast" move="southeast" destination="42" />
+    <arc exit="northwest" move="northwest" destination="48" />
+  </node>
+  <node id="48" name="Pejek Bog, A Twisting Path">
+    <description>The ground surrounding this stretch of path is slightly drier than in many areas of the swamp.  The mist is not as thick here, though the grass that grows here still carries a sickly yellow tinge.  A low stone wall nearby provides a relatively dry place to sit.</description>
+    <description>The ground surrounding this stretch of path is slightly drier than in many areas of the swamp.  Fortunately, the mist is not as thick here, though the grass that grows still carries a sickly yellow tinge.  A low stone wall nearby provides a relatively dry place to sit.</description>
+    <position x="-80" y="-180" z="0" />
+    <arc exit="northeast" move="northeast" destination="49" />
+    <arc exit="southeast" move="southeast" destination="47" />
+    <arc exit="north" move="north" destination="50" />
+  </node>
+  <node id="49" name="Pejek Bog, A Twisting Path">
+    <description>The slight rise in the level of the land has left the ground here almost entirely dry.  A single pine tree grows a short distance from the path, twisted and bent nearly double, yet apparently still alive and growing.</description>
+    <description>The slight rise in the level of the land has left the ground here almost entirely dry.  A single pine tree thrives a short distance from the path, twisted and bent nearly double, yet apparently still alive and growing.</description>
+    <position x="-60" y="-200" z="0" />
+    <arc exit="southwest" move="southwest" destination="48" />
+    <arc exit="northwest" move="northwest" destination="50" />
+  </node>
+  <node id="50" name="Pejek Bog, Beside A Brook">
+    <description>Rust-colored water flows sluggishly past the end of the nearly overgrown path.  The current is barely enough to move the sediment at the bottom.  If it were not for the steady progress of the occasional blade of grass floating along, it would hardly be noticeable at all.  Occasionally, a soft splashing sound reveals the presence of some small creature jumping into or out of the water, though the tendrils of mist that creep across the surface conceal just what might be lying beneath.</description>
+    <description>The path fades away to nothing at the water's edge.  Soft splashing sounds indicate where the water flows, likely the movements of tiny bog-dwellers searching for a nighttime meal.  Tendrils of dark mist creep across the surface and, along with the darkness, conceal what might be lying beneath.</description>
+    <position x="-80" y="-220" z="0" />
+    <arc exit="southeast" move="southeast" destination="49" />
+    <arc exit="climb" move="climb bank" destination="51" />
+    <arc exit="south" move="south" destination="48" />
+  </node>
+  <node id="51" name="Pejek Bog, Following A Brook" note="Vipers" color="#0000FF">
+    <description>The sediment on the bottom of this small body of water is reddish-brown, and quite thick.  Any movement of the surface of the water causes waves of an unpleasant metallic odor to rise.</description>
+    <description>The sediment on the bottom of this small body of water is reddish-brown and quite thick.  Any movement of the surface of the water causes waves of an unpleasant metallic odor to rise.</description>
+    <position x="-100" y="-240" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="53" />
+    <arc exit="southwest" move="swim southwest" destination="52" />
+    <arc exit="climb" move="climb bank" destination="50" />
+  </node>
+  <node id="52" name="Pejek Bog, Following A Brook" color="#0000FF">
+    <description>Thick as gravy and almost as brown, the current of the brook fades away to almost nothing as the sodden ground absorbs the water, without leaving any clear path for it to follow.</description>
+    <description>Thick as gravy and almost as brown, the current of the brook fades away to almost nothing as the sodden ground absorbs the water without leaving any clear path for it to follow.</description>
+    <position x="-120" y="-220" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="51" />
+    <arc exit="go" move="go western bank" destination="59" />
+  </node>
+  <node id="53" name="Pejek Bog, Following A Brook" color="#0000FF">
+    <description>Thick silt lines the creek bed and tints the water reddish.  Beneath the surface, slick stones make walking a dangerous venture.  Occasionally, something moves just beneath the sediment, causing dark clouds to fill the water above it.</description>
+    <description>Thick silt lines the creek bed and tints the water reddish.  Beneath the surface, slick stones make walking a dangerous venture.  Occasionally, something moves just beneath the sediment, causing dark clouds to fill the water.</description>
+    <position x="-80" y="-260" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="54" />
+    <arc exit="southwest" move="swim southwest" destination="51" />
+  </node>
+  <node id="54" name="Pejek Bog, A Shallow Pool" color="#0000FF">
+    <description>Dried grasses line the edges of this pool, drooping over the water without quite touching the surface.  The water is extremely murky, which makes seeing the bottom nearly impossible.  The air carries a constant odor of something rotting, though exactly from what is not apparent.</description>
+    <position x="-60" y="-280" z="0" />
+    <arc exit="southwest" move="swim southwest" destination="53" />
+    <arc exit="northwest" move="swim northwest" destination="55" />
+    <arc exit="go" move="go elaborate dam" destination="131" />
+  </node>
+  <node id="55" name="Pejek Bog, A Shallow Pool" color="#0000FF">
+    <description>Tall bushes with spiked branches line the edge of the water, creating a hiding place for tiny creatures that swim or fly between the vicious thorns.</description>
+    <position x="-80" y="-300" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="58" />
+    <arc exit="southeast" move="swim southeast" destination="54" />
+    <arc exit="northwest" move="swim northwest" destination="56" />
+    <arc exit="north" move="swim north" destination="57" />
+  </node>
+  <node id="56" name="Pejek Bog, A Shallow Pool" color="#0000FF">
+    <description>A low stone wall lies partially submerged in the stinking water.  Pale mortar still clings in the spaces between many of the stones.  A line of discoloration shows the high-water mark, nearly a foot above where the waterline now is.</description>
+    <description>Partially submerged in the stinking water is a low stone wall.  Pale mortar still clings in the spaces between many of the stones.  A line of discoloration shows the high-water mark, nearly a foot above where the waterline is now.</description>
+    <position x="-100" y="-320" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="57" />
+    <arc exit="southeast" move="swim southeast" destination="55" />
+    <arc exit="east" move="swim east" destination="58" />
+  </node>
+  <node id="57" name="Pejek Bog, A Shallow Pool" color="#0000FF">
+    <description>Brownish algae swirls along the surface of the water, obscuring everything below it.  Dried grasses rustle softly in every passing breeze.</description>
+    <description>Brownish algae swirl along the surface of the water, obscuring everything below it.  Dried grasses rustle softly in every passing breeze.</description>
+    <position x="-80" y="-340" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="58" />
+    <arc exit="southwest" move="swim southwest" destination="56" />
+    <arc exit="south" move="swim south" destination="55" />
+  </node>
+  <node id="58" name="Pejek Bog, A Shallow Pool" color="#0000FF">
+    <description>The water here is unusually clear, revealing the bottom of the pool.  Instead of a muddle of roots and muck, it consists of a neatly ordered pattern of squared-off stones laid end to end.  With the exception of being under water and tilted at an angle, it is almost smooth enough to be a dance floor.</description>
+    <description>The water here is unusually clear.  Instead of a muddle of roots and muck, it consists of a neatly ordered pattern of squared-off stones laid end to end.  With the exception of being under water and tilted at an angle, it is almost smooth enough to be a dance floor.</description>
+    <position x="-60" y="-320" z="0" />
+    <arc exit="southwest" move="swim southwest" destination="55" />
+    <arc exit="northwest" move="swim northwest" destination="57" />
+    <arc exit="west" move="swim west" destination="56" />
+  </node>
+  <node id="59" name="Pejek Bog, The Deep Muck">
+    <description>Pools of water are so prevalent amongst the clumps of nearly dead grass, it appears swimming might be easier than walking.  Nearby, a small stump lies overturned, the bare roots exposed and vulnerable in the cool, misty air.</description>
+    <position x="-140" y="-200" z="0" />
+    <arc exit="northwest" move="northwest" destination="60" />
+    <arc exit="go" move="go bank" destination="52" />
+  </node>
+  <node id="60" name="Pejek Bog, Gate" note="Unyns">
+    <description>Standing tall in the muck, a rusted wrought-iron fence rises high above the soaked ground.  Though time has taken its toll on the metal, it is still quite sturdy.</description>
+    <description>Standing tall in the muck, a rusted wrought-iron fence rises high above the soaked ground.  Though time has taken its toll on the metal, it is still quite sturdy.  The gatekeeper's shack next to the boundary crouches low to the ground like a hunchbacked ogre, with a rickety ladder angled against the side as if for support rather than utility.</description>
+    <position x="-160" y="-220" z="0" />
+    <arc exit="southeast" move="southeast" destination="59" />
+    <arc exit="south" move="south" destination="61" />
+    <arc exit="go" move="go shack" destination="62" />
+    <arc exit="go" move="go whitewashed gate" destination="135" />
+  </node>
+  <node id="61" name="Pejek Bog, Beside The Fence">
+    <description>Muck and mud pool around the fence, neither side looking in better condition then the other.  Why the fence is here in the first place is anyone's guess.</description>
+    <description>Muck and mud pool around the fence, neither side looking in better condition than the other.  Why the fence is here in the first place is anyone's guess.</description>
+    <position x="-160" y="-200" z="0" />
+    <arc exit="north" move="north" destination="60" />
+  </node>
+  <node id="62" name="Pejek Bog, Inside The Gatehouse">
+    <description>Though it is hardly cozy, this little shack provides shelter from the worst of the weather outside.  Simple stick furnishings line the walls, appearing ready to serve as firewood if need be.  There doesn't seem to be anything that shows a trace of the gatekeeper's personality within this small space.</description>
+    <position x="-160" y="-240" z="0" />
+    <arc exit="go" move="go door" destination="60" />
+  </node>
+  <node id="63" name="Northeast Wilds, Piedmont" color="#00FFFF">
+    <description>A scattering of pines dot the rolling, grassy landscape.  To the side of the path, a pair of skeletal boulders lie heaped against one another, their foundations settled deeply into the damp earth.</description>
+    <position x="60" y="-180" z="0" />
+    <arc exit="northeast" move="northeast" destination="64" />
+    <arc exit="go" move="go small footpath" destination="6" />
+  </node>
+  <node id="64" name="Northeast Wilds, Piedmont" color="#00FFFF">
+    <description>Loblolly pines clamber down from a hill to the south.  Ramrod-straight and rugged, they lend a touch of somber dark green to all seasons.</description>
+    <position x="70" y="-190" z="0" />
+    <arc exit="east" move="east" destination="65" />
+    <arc exit="southwest" move="southwest" destination="63" />
+  </node>
+  <node id="65" name="Northeast Wilds, Piedmont" color="#00FFFF">
+    <description>The path meanders between several pairs of loblolly pines, standing stiffly at attention as though an appointed honor guard.  Small bird nests decorate the high branches of the closest trees.</description>
+    <position x="80" y="-190" z="0" />
+    <arc exit="northeast" move="northeast" destination="66" />
+    <arc exit="west" move="west" destination="64" />
+  </node>
+  <node id="66" name="Northeast Wilds, Piedmont" color="#00FFFF">
+    <description>A rich darkness huddles among the deep places within a grove of concolor firs and loblolly pines.  Sets of yellow eyes stare out, unwinking and without sound.</description>
+    <position x="90" y="-200" z="0" />
+    <arc exit="north" move="north" destination="67" />
+    <arc exit="southwest" move="southwest" destination="65" />
+  </node>
+  <node id="67" name="Northeast Wilds, Piedmont" color="#00FFFF">
+    <description>Brown and burnt orange pine needles crunch softly underfoot.  Occasional birdsong floats upon the air, as fresh and pure as morning on winter's first day.</description>
+    <position x="90" y="-220" z="0" />
+    <arc exit="south" move="south" destination="66" />
+    <arc exit="northwest" move="northwest" destination="68" />
+  </node>
+  <node id="68" name="Northeast Wilds, Piedmont" color="#00FFFF">
+    <description>Unseen creatures skitter back and forth on pine branches overhead, the only evidence of their passage the occasional, sharp rustle of disturbed leaves.</description>
+    <position x="80" y="-230" z="0" />
+    <arc exit="southeast" move="southeast" destination="67" />
+    <arc exit="west" move="west" destination="69" />
+  </node>
+  <node id="69" name="Northeast Wilds, Piedmont" color="#00FFFF">
+    <description>The press of pine and fir trees squeezes both sides of the path.  Piles of red clay lie in small heaps nearby, apparently the tailings of a small creature's burrow.</description>
+    <position x="70" y="-230" z="0" />
+    <arc exit="east" move="east" destination="68" />
+    <arc exit="southwest" move="southwest" destination="70" />
+  </node>
+  <node id="70" name="Northeast Wilds, Piedmont" color="#00FFFF">
+    <description>A blasted sycamore tree lies stretched out alongside the path.  Its blackened trunk is a husk of fungus-encrusted bark, long since rotted out.  Other sycamores dot the landscape, stern and forbidding.</description>
+    <position x="60" y="-220" z="0" />
+    <arc exit="northeast" move="northeast" destination="69" />
+    <arc exit="west" move="west" destination="71" />
+  </node>
+  <node id="71" name="Northeast Wilds, Piedmont" color="#00FFFF">
+    <description>The path swings wide around a glade of tall fir trees.  Small creatures occasionally dart into view to stare from under the trees' protective shadow.</description>
+    <position x="50" y="-220" z="0" />
+    <arc exit="east" move="east" destination="70" />
+    <arc exit="northwest" move="northwest" destination="72" />
+  </node>
+  <node id="72" name="Northeast Wilds, Piedmont" color="#00FFFF">
+    <description>Firs and honey pines envelop the landscape.  A towering stillness mantles the woods, with only the push of breeze through treetops filling the silence.</description>
+    <position x="40" y="-230" z="0" />
+    <arc exit="north" move="north" destination="73" />
+    <arc exit="southeast" move="southeast" destination="71" />
+  </node>
+  <node id="73" name="Northeast Wilds, Piedmont" color="#00FFFF">
+    <description>The path tops a small promentory crest, providing an excellent view of the surrounding pine woods.  Elegant and sturdy, they form a permanant green cloak across this portion of the foothills.</description>
+    <position x="40" y="-240" z="0" />
+    <arc exit="northeast" move="northeast" destination="74" />
+    <arc exit="south" move="south" destination="72" />
+  </node>
+  <node id="74" name="Northeast Wilds, Piedmont" color="#00FFFF">
+    <description>A storm has partially desolated this woodland area, leaving some trees standing, and easily uprooting others as though with a slap of giant hand.  Fallen logs lie decorated with plate-sized shaggy mushrooms.  They gleam luridly in sapphire and gold, offsetting the uniformity of grey tree bark and dark green needles.</description>
+    <position x="50" y="-250" z="0" />
+    <arc exit="east" move="east" destination="75" />
+    <arc exit="southwest" move="southwest" destination="73" />
+  </node>
+  <node id="75" name="Northeast Wilds, Piedmont" color="#00FFFF">
+    <description>A giant fir lies toppled across the path, surrounded by a coterie of pine saplings. The tree's roots hang high like frozen tentacles twenty feet off the ground, caked with large stones and rubbish.</description>
+    <position x="60" y="-250" z="0" />
+    <arc exit="northeast" move="northeast" destination="76" />
+    <arc exit="west" move="west" destination="74" />
+  </node>
+  <node id="76" name="Northeast Wilds, Piedmont" color="#00FFFF">
+    <description>A blasted patriarch of a sycamore stands alone in a burned-out field of charcoal and ashes.  The sycamore's black, leafless branches seem to grasp at the air, clattering against one another with every gust of wind.</description>
+    <position x="70" y="-260" z="0" />
+    <arc exit="southwest" move="southwest" destination="75" />
+  </node>
+  <node id="77" name="Riverhaven, Ranger's Guild" note="GL Ranger|Ievia|RS Ranger" color="#FF8000">
+    <description>Finely crafted torch lamps stand in each corner of this large tent.  They, along with the other furniture appear oddly out of place in this rustic setting.  Carpets, two and three deep, cover the dirt floor.  Journeywoman Ievia stands before you, smiling broadly.</description>
+    <position x="60" y="-140" z="0" />
+    <arc exit="out" move="out" destination="4" />
+    <arc exit="go" move="go arch" destination="78" />
+  </node>
+  <node id="78" name="Riverhaven, Ranger's Guild">
+    <description>Ferns, small trees and plants have been used to build a living wall around this area set aside just for Rangers and their guests.</description>
+    <position x="40" y="-140" z="0" />
+    <arc exit="go" move="go arch" destination="77" />
+  </node>
+  <node id="79" name="Faldesu River, North Bank" note="Map14c_Faldesu.xml|Faldesu River">
+    <description>The Riverhaven town wall stretches out into the waters a short distance upriver from a crumbling stone bridge.  An orange glow rises above the dark wall from the torches and lamps of the town along with the low buzz of voices muffled by the night.  Several small fishing boats bob in the sheltered part of the river near the town wall, silently awaiting their masters.</description>
+    <description>The Riverhaven town wall stretches out into the waters a short distance upriver from a crumbling stone bridge.  The sounds of pleading beggars and creaking merchant wagons grate against the peaceful sounds of the rolling river.  Small fishing boats bob in the sheltered cove formed by the town wall, their weather-wary owners busy on the bank mending nets and patching sail.</description>
+    <position x="100" y="-60" z="0" />
+    <arc exit="southeast" move="southeast" />
+    <arc exit="south" move="south" />
+    <arc exit="southwest" move="southwest" />
+    <arc exit="climb" move="climb stone bridge" destination="2" />
+  </node>
+  <node id="80" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="480" y="-40" z="0" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="39" />
+    <arc exit="southeast" move="southeast" destination="82" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="83" />
+    <arc exit="northwest" move="northwest" destination="81" />
+  </node>
+  <node id="81" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="460" y="-60" z="0" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="108" />
+    <arc exit="southeast" move="southeast" destination="80" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="110" />
+    <arc exit="northwest" move="northwest" destination="39" />
+  </node>
+  <node id="82" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="500" y="-20" z="0" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="81" />
+    <arc exit="southeast" move="southeast" destination="83" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="109" />
+    <arc exit="northwest" move="northwest" destination="80" />
+  </node>
+  <node id="83" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="520" y="0" z="0" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="80" />
+    <arc exit="east" move="east" destination="84" />
+    <arc exit="southeast" move="southeast" destination="111" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="108" />
+    <arc exit="northwest" move="northwest" destination="82" />
+  </node>
+  <node id="84" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="540" y="0" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="124" />
+    <arc exit="east" move="east" destination="112" />
+    <arc exit="south" move="south" hidden="True" destination="115" />
+    <arc exit="west" move="west" destination="83" />
+  </node>
+  <node id="85" name="Zaulfung, Swamp">
+    <description>All here is mire and misery.  It is difficult to tell where the pond ends and the land begins, for walking in either produces the same squishy result.  The disquieting squelch of some untold creature stalking through the swamp makes you long for drier ground.</description>
+    <position x="220" y="-40" z="0" />
+    <arc exit="east" move="east" destination="86" />
+  </node>
+  <node id="86" name="Zaulfung, Swamp">
+    <description>While most swamps are home to hundreds of species of plants, birds, and reptiles, this one is lacking in vitality and variety.  One could paint this swamp in three colors: grey, grey-brown, and grey-green. Even the birdsong is monotonous and melancholy.</description>
+    <position x="240" y="-40" z="0" />
+    <arc exit="east" move="east" destination="87" />
+    <arc exit="west" move="west" destination="85" />
+  </node>
+  <node id="87" name="Zaulfung, Swamp">
+    <description>An abundance of standing water makes this a fine and fitting home for mosquitoes and weeds, but little else.  The ground to the west is higher and drier, though a double row of Vilt stalks to the north indicates a causeway between two ponds.</description>
+    <position x="260" y="-40" z="0" />
+    <arc exit="north" move="north" destination="88" />
+    <arc exit="west" move="west" destination="86" />
+  </node>
+  <node id="88" name="Zaulfung, Swamp">
+    <description>This would be a land bridge between two ponds, if only it weren't half a foot underwater.  It doesn't seem to be a natural formation, though why any builder would bother in this reeking morass is anyone's guess.  The causeway, demarcated by dead Vilt stalks, rises slightly as it progresses to the northeast.</description>
+    <position x="260" y="-60" z="0" />
+    <arc exit="northeast" move="northeast" destination="89" />
+    <arc exit="south" move="south" destination="87" />
+  </node>
+  <node id="89" name="Zaulfung, Swamp">
+    <description>Mud, your constant companion, squelches in your boots, is caked on your clothing and matted in your hair.  The only escape from it is to wash it off with fetid pond water, an unpalatable prospect.  The mud continues to the north but seems less pervasive to the northwest, while the southwest route is flooded but passable.</description>
+    <position x="280" y="-80" z="0" />
+    <arc exit="north" move="north" destination="90" />
+    <arc exit="southwest" move="southwest" destination="88" />
+    <arc exit="northwest" move="northwest" destination="91" />
+    <arc exit="go" move="go curving path" destination="96" />
+  </node>
+  <node id="90" name="Zaulfung, Swamp">
+    <description>Stinking mud and sullen water surround this dismal point on three sides.  A fish leaps out of what looked like a mere mud puddle, the slap of displaced water echoing heavily.  To the northwest, across a corner of the pond, the land rises triumpantly from the morass only to be crowded by dense brush.</description>
+    <position x="280" y="-100" z="0" />
+    <arc exit="south" move="south" destination="89" />
+    <arc exit="west" move="west" destination="91" />
+  </node>
+  <node id="91" name="Zaulfung, Swamp" note="Spiny Dyrachis">
+    <description>An unnerving wail breaks out suddenly.  It takes a moment to realize it's not a banshee, just a sudden gust of wind, colder than it should be.  This whole area feels quite chill, as if something had leached out all the warmth.</description>
+    <position x="260" y="-100" z="0" />
+    <arc exit="north" move="north" destination="92" />
+    <arc exit="east" move="east" destination="90" />
+    <arc exit="southeast" move="southeast" destination="89" />
+    <arc exit="go" move="go brush" destination="93" />
+  </node>
+  <node id="92" name="Zaulfung, Swamp">
+    <description>This narrow patch of dry ground has the appearance of gradually losing a battle on two fronts.  It is sinking slowly into the encroaching bog, while a conquering army of briars marches inch by inch, year by year, to close off the remaining space.  There are no apparent trails through the brush.</description>
+    <position x="260" y="-140" z="0" />
+    <arc exit="south" move="south" destination="91" />
+    <arc exit="go" move="go thick brush" destination="36" />
+  </node>
+  <node id="93" name="Zaulfung, Dense Thicket">
+    <description>Tall brittle bushes, sickly-grey and leafless, intertwine with an overgrowth of savage thorn-vine, leaving little room for unencumbered passage.  Bent and broken branches, heavily laden with old insect cocoons, arch and weave into a thick canopy above, effectively blocking out light.</description>
+    <position x="240" y="-120" z="0" />
+    <arc exit="south" move="south" destination="94" />
+    <arc exit="out" move="out" destination="91" />
+  </node>
+  <node id="94" name="Zaulfung, Dense Thicket">
+    <description>A thousand thorns rip at your clothing and tear at your flesh.  A family of spiders has created a bower of glistening, sticky webs strung between the branches and thorns of this dense thicket.  The dull stench of rot and decay rises from the molding and mildewed leaves beneath your feet.</description>
+    <position x="240" y="-100" z="0" />
+    <arc exit="north" move="north" destination="93" />
+    <arc exit="south" move="south" destination="95" />
+  </node>
+  <node id="95" name="Zaulfung, Thicket Clearing" note="Shrine2-03|Urrem'tier|Thicket Clearing" color="#A6A3D9">
+    <description>The brittle fingers of greyed and dying brush reach toward you imploringly from all sides.  A ring of broken and yellow bones forms a formidable barrier around a gaping hole in the earth.  A faint rustling interspersed with long periods of silence warns you of foreign eyes watching, and waiting.</description>
+    <position x="240" y="-80" z="0" />
+    <arc exit="north" move="north" destination="94" />
+  </node>
+  <node id="96" name="Zaulfung, Swamp">
+    <description />
+    <position x="320" y="-40" z="0" />
+    <arc exit="southeast" move="southeast" destination="97" />
+    <arc exit="go" move="go path" destination="89" />
+    <arc exit="south" move="south" destination="98" />
+    <arc exit="southwest" move="southwest" />
+    <arc exit="north" move="north" />
+    <arc exit="northeast" move="northeast" />
+    <arc exit="west" move="west" />
+  </node>
+  <node id="97" name="Zaulfung, Swamp">
+    <description />
+    <position x="340" y="-20" z="0" />
+    <arc exit="west" move="west" destination="98" />
+    <arc exit="north" move="north" destination="99" />
+    <arc exit="northwest" move="northwest" destination="96" />
+    <arc exit="northeast" move="northeast" />
+    <arc exit="south" move="south" />
+    <arc exit="southeast" move="southeast" />
+    <arc exit="southwest" move="southwest" />
+    <arc exit="climb" move="climb sickly tree" destination="100" />
+  </node>
+  <node id="98" name="Zaulfung, Swamp">
+    <description />
+    <position x="320" y="-20" z="0" />
+    <arc exit="north" move="north" destination="96" />
+    <arc exit="east" move="east" destination="97" />
+    <arc exit="northeast" move="northeast" destination="99" />
+    <arc exit="southeast" move="southeast" />
+    <arc exit="south" move="south" />
+    <arc exit="southwest" move="southwest" />
+    <arc exit="west" move="west" />
+    <arc exit="northwest" move="northwest" />
+  </node>
+  <node id="99" name="Zaulfung, Swamp">
+    <description />
+    <position x="340" y="-40" z="0" />
+    <arc exit="southwest" move="southwest" destination="98" />
+    <arc exit="south" move="south" destination="97" />
+    <arc exit="west" move="west" destination="96" />
+    <arc exit="north" move="north" />
+    <arc exit="northeast" move="northeast" />
+    <arc exit="east" move="east" />
+    <arc exit="southeast" move="southeast" />
+    <arc exit="northwest" move="northwest" />
+  </node>
+  <node id="100" name="Zaulfung, Swamp" note="Map31a_Zaulfung.xml">
+    <description>Feeble branches are all that stand between yourself and a perilous fall to the marsh below.  From this altitude you are afforded a vantage of the swamp stretching out to the east and west, divided by a thick wall of scraggly brush that seems to rise around this very tree.  A single sturdy branch appears to bridge this gap, heading eastward.</description>
+    <position x="380" y="-20" z="0" />
+    <arc exit="east" move="east" />
+  </node>
+  <node id="101" name="Riverhaven Road, Blackthorn Grove">
+    <description>A dirt trail winds steadily through the lightly-wooded area below Riverhaven's cemetery.  Tall grasses, overgrown and going to seed, sway and bend in the slight breeze, as if bowing to anyone or anything that makes its way along the path.  </description>
+    <position x="100" y="-140" z="0" />
+    <arc exit="east" move="east" destination="102" />
+    <arc exit="up" move="up" destination="5" />
+  </node>
+  <node id="102" name="Riverhaven Road, Blackthorn Grove">
+    <description>Bright pink flowers dot the tall grasses which grow along the side of the trail.  Butterflies flutter from hedge to hedge and disappear with the trail between the trunks of giant blackthorn trees to the east.</description>
+    <position x="120" y="-140" z="0" />
+    <arc exit="west" move="west" destination="101" />
+    <arc exit="go" move="go blackthorn trees" destination="103" />
+  </node>
+  <node id="103" name="Riverhaven Road, Blackthorn Grove">
+    <description>Heavily shaded by the tall canopy of blackthorn trees, the grove is eerily quiet.  Though scant grasses mark the boundary of the trees, the remainder of the area is paved with tiny chips of white granite.  In the center of the grove stands a small mausoleum, with marble pillars flanking great iron doors.</description>
+    <position x="140" y="-140" z="0" />
+    <arc exit="west" move="west" destination="102" />
+    <arc exit="go" move="go small mausoleum" destination="104" />
+  </node>
+  <node id="104" name="Blackthorn Grove, Mausoleum">
+    <description>Rows of carved columns supporting a vaulted ceiling make up this compact yet navigable main corridor.  Quartz steps lead from the entryway to the floor, and shallow alcoves stand off to either side of the entrance.  Before you, at the opposite end of an ornate stone coffin, stands a grand marble font beyond a wrought-iron gate.  The room exudes a comfortable chill.</description>
+    <position x="140" y="-120" z="0" />
+    <arc exit="out" move="out" destination="103" />
+    <arc exit="go" move="go west alcove" destination="105" />
+    <arc exit="go" move="go east alcove" destination="106" />
+    <arc exit="go" move="go wrought-iron gate" destination="107" />
+  </node>
+  <node id="105" name="Mausoleum, West Alcove">
+    <description>Hanging between three gleaming torches set high on the wall is a pair of thick, dark tapestries which drape from ceiling to floor.  Two tiny sarcophagi lie in state in the middle of the alcove, each crowned with a dried floral arrangement.</description>
+    <position x="120" y="-120" z="0" />
+    <arc exit="out" move="out" destination="104" />
+  </node>
+  <node id="106" name="Mausoleum, East Alcove">
+    <description>Three etched glass portraits set in high-arched windows reflect the small amount of light provided by burning torcheres.  As light passes over each portrait, the images dance with a kind of surreal, prismatic glow.</description>
+    <position x="160" y="-120" z="0" />
+    <arc exit="out" move="out" destination="104" />
+  </node>
+  <node id="107" name="Mausoleum, Alcove of the Font" color="#00FF00">
+    <description>Quartz steps lead from the floor of the mausoleum to the alcove in which sits this grand marble font.  The font once housed a perpetual flame, but is now dormant.  A large piece of glass has been meticulously fitted to it as a cover.  To either side stand identical marble altars.</description>
+    <position x="140" y="-100" z="0" />
+    <arc exit="down" move="down" destination="104" />
+  </node>
+  <node id="108" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="420" y="-100" z="0" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="83" />
+    <arc exit="southeast" move="southeast" destination="39" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="82" />
+    <arc exit="northwest" move="northwest" destination="109" />
+  </node>
+  <node id="109" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="400" y="-120" z="0" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="82" />
+    <arc exit="southeast" move="southeast" destination="108" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="39" />
+    <arc exit="northwest" move="northwest" destination="110" />
+  </node>
+  <node id="110" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="380" y="-140" z="0" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="81" />
+    <arc exit="southeast" move="southeast" destination="109" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="80" />
+    <arc exit="northwest" move="northwest" destination="111" />
+  </node>
+  <node id="111" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="360" y="-160" z="0" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="39" />
+    <arc exit="southeast" move="southeast" destination="110" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="81" />
+    <arc exit="northwest" move="northwest" destination="83" />
+  </node>
+  <node id="112" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="560" y="0" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="125" />
+    <arc exit="east" move="east" destination="113" />
+    <arc exit="south" move="south" hidden="True" destination="116" />
+    <arc exit="west" move="west" destination="84" />
+  </node>
+  <node id="113" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="580" y="0" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="126" />
+    <arc exit="east" move="east" destination="114" />
+    <arc exit="south" move="south" hidden="True" destination="117" />
+    <arc exit="west" move="west" destination="112" />
+  </node>
+  <node id="114" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="600" y="0" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="125" />
+    <arc exit="east" move="east" destination="115" />
+    <arc exit="south" move="south" hidden="True" destination="118" />
+    <arc exit="west" move="west" destination="113" />
+  </node>
+  <node id="115" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="620" y="0" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="84" />
+    <arc exit="east" move="east" destination="116" />
+    <arc exit="south" move="south" hidden="True" destination="119" />
+    <arc exit="west" move="west" destination="114" />
+  </node>
+  <node id="116" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="640" y="0" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="112" />
+    <arc exit="east" move="east" destination="117" />
+    <arc exit="south" move="south" hidden="True" destination="120" />
+    <arc exit="west" move="west" destination="115" />
+  </node>
+  <node id="117" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="660" y="0" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="113" />
+    <arc exit="east" move="east" destination="118" />
+    <arc exit="south" move="south" hidden="True" destination="121" />
+    <arc exit="west" move="west" destination="116" />
+  </node>
+  <node id="118" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="680" y="0" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="114" />
+    <arc exit="east" move="east" destination="119" />
+    <arc exit="south" move="south" hidden="True" destination="122" />
+    <arc exit="west" move="west" destination="117" />
+  </node>
+  <node id="119" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="700" y="0" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="115" />
+    <arc exit="east" move="east" destination="120" />
+    <arc exit="south" move="south" hidden="True" destination="123" />
+    <arc exit="west" move="west" destination="118" />
+  </node>
+  <node id="120" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="720" y="0" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="116" />
+    <arc exit="east" move="east" destination="121" />
+    <arc exit="south" move="south" hidden="True" destination="124" />
+    <arc exit="west" move="west" destination="119" />
+  </node>
+  <node id="121" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="740" y="0" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="117" />
+    <arc exit="east" move="east" destination="122" />
+    <arc exit="south" move="south" hidden="True" destination="125" />
+    <arc exit="west" move="west" destination="120" />
+  </node>
+  <node id="122" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="760" y="0" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="118" />
+    <arc exit="east" move="east" destination="123" />
+    <arc exit="south" move="south" hidden="True" destination="126" />
+    <arc exit="west" move="west" destination="121" />
+  </node>
+  <node id="123" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="780" y="0" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="119" />
+    <arc exit="east" move="east" destination="124" />
+    <arc exit="south" move="south" hidden="True" destination="114" />
+    <arc exit="west" move="west" destination="122" />
+  </node>
+  <node id="124" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="820" y="0" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="120" />
+    <arc exit="east" move="east" destination="125" />
+    <arc exit="south" move="south" hidden="True" destination="84" />
+    <arc exit="west" move="west" destination="123" />
+  </node>
+  <node id="125" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="840" y="0" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="121" />
+    <arc exit="east" move="east" destination="126" />
+    <arc exit="south" move="south" hidden="True" destination="112" />
+    <arc exit="west" move="west" destination="124" />
+  </node>
+  <node id="126" name="Zaulfung, Trackless Swamp">
+    <description>Knee-deep brackish water conceals the treacherous slippery mud beneath.</description>
+    <position x="860" y="0" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="122" />
+    <arc exit="south" move="south" hidden="True" destination="113" />
+    <arc exit="west" move="west" destination="125" />
+  </node>
+  <node id="127" name="Order of the Dragon Shield, Grounds" note="Order of the Dragon Shield|ODS">
+    <description>Sprawling trees dot the vast, well-manicured grounds.  Along the white gravel path that winds its way to the Order house's grand double doors, beds of seasonal blooms encircle a stately central fountain.  In the distance, a picket fence borders off a small garden, while the opposing lawn bears a hedged area large enough to host a variety of functions.</description>
+    <description>Sprawling trees dot the vast, well-manicured grounds, lit only by the soft candlelight from the nearby windows.  Along the white gravel path that winds its way through the darkness to the Order house's grand double doors, a hulking mass is poised amid a stately central fountain, encircled by a bedding of seasonal blooms that sway and taunt from their shadowy cover.  In the distance, a fence borders off a small garden, while the opposing lawn bears a hedged area large enough to host a variety of functions.</description>
+    <position x="100" y="-100" z="0" />
+    <arc exit="go" move="go iron gates" destination="3" />
+    <arc exit="go" move="go double doors" destination="128" />
+  </node>
+  <node id="128" name="Order of the Dragon Shield, Lobby">
+    <description>Rich tapestries hung upon the off-white walls offset the dark marbled floors of the spacious lobby.  Dominating the room overhead is a stained-glass dome which complements the broad, arched windows that overlook the grounds.  Ornate candelabras cast a soft glow over the glass display case resting against a far wall and the elegant sofas provided for relaxation.  Tucked into a corner near a sweeping staircase, a comfortable chair sits near a small oaken table, cordoned off from the rest of the area.</description>
+    <position x="120" y="-80" z="0" />
+    <arc exit="east" move="east" destination="129" />
+    <arc exit="go" move="go double doors" destination="127" />
+    <arc exit="go" move="go darkened archway" destination="130" />
+  </node>
+  <node id="129" name="Order of the Dragon Shield, Grand Banquet Hall" note="Grand Banquet Hall|Banquet Hall">
+    <description>Golden chandeliers hang from ornate medallions at measured intervals along the grand vaulted ceiling, bathing the room in a soft candlelit glow.  Satin brocade drapes swept back with clusters of fresh flowers, cascade elegantly down the beamed dragonwood walls along the edges of the polished hardwood dance floor.  Comfortable couches, each accompanied by a small oval table, dot the corners of the large room while soft music drifts from behind a silk screen.</description>
+    <position x="140" y="-80" z="0" />
+    <arc exit="west" move="west" destination="128" />
+  </node>
+  <node id="130" name="Order of the Dragon Shield, The Tankard" note="Tankard">
+    <description>Thick oak beams frame the rough, white plastered walls which display a variety of weapons and mounted beast heads, while a gleaming suit of armor stands sentinel beside a nearby archway.  Wooden trestle tables, surrounded by banded barrel chairs, overlook the grounds through a grand arched window and provide ample seating for those visiting the inviting pub to enjoy a refreshing drink and hearty meal.  Redolent scents from the long bar mingle with the faint smell of fire-roasted fare that wafts through the air from the grand river rock fireplace.</description>
+    <position x="100" y="-80" z="0" />
+    <arc exit="go" move="go archway" destination="128" />
+  </node>
+  <node id="131" name="Pejek Bog, Stagnant Pool" color="#0000FF">
+    <description>Held in place by an elaborate dam of twigs, debris and larger lengths of timber, the water has stagnated and allowed dark green mosses to flourish amid the reeds and other water grasses.  Buzzing swarms of winged insects compete for territory in the air with little care given to their avian predators.  A fist-sized patch of red fungus clings to the decaying remnants of a tree's trunk.</description>
+    <position x="-20" y="-300" z="0" />
+    <arc exit="northeast" move="northeast" destination="132" />
+    <arc exit="east" move="east" destination="133" />
+    <arc exit="southeast" move="southeast" destination="134" />
+    <arc exit="go" move="go elaborate dam" destination="54" />
+  </node>
+  <node id="132" name="Pejek Bog, Stagnant Pool" color="#0000FF">
+    <description>The muddy shore, such as it is, hosts thicker patches of grass and wild growths of various vines that have felled many of the aged trees.  Hoof and paw prints from countless members of the local wildlife overlap one another to create a dizzying array of maze-like trails, each preserved by the stillness of the bog's water.</description>
+    <position x="0" y="-320" z="0" />
+    <arc exit="southeast" move="southeast" destination="133" />
+    <arc exit="south" move="south" destination="134" />
+    <arc exit="southwest" move="southwest" destination="131" />
+  </node>
+  <node id="133" name="Pejek Bog, Stagnant Pool" color="#0000FF">
+    <description>The sickly sweet stench of decay teases at the edge of the stagnated water's unpleasant odor.  A stillness of sound and life is only occasionally breached by a swarm of buzzing insects temporarily disturbed by a stealthy attacker.</description>
+    <position x="20" y="-300" z="0" />
+    <arc exit="southwest" move="southwest" destination="134" />
+    <arc exit="west" move="west" destination="131" />
+    <arc exit="northwest" move="northwest" destination="132" />
+  </node>
+  <node id="134" name="Pejek Bog, Stagnant Pool" color="#0000FF">
+    <description>A large clumping of red clay juts from the still water.  Rust-colored tendrils snake through the stagnant pool, often following barely concealed footprints of man and beast alike that lead away from the mound.  Resembling a sponge, the porous surface is densely pitted with small holes and a low, steady buzz comes from within.</description>
+    <position x="0" y="-280" z="0" />
+    <arc exit="north" move="north" destination="132" />
+    <arc exit="northeast" move="northeast" destination="133" />
+    <arc exit="northwest" move="northwest" destination="131" />
+  </node>
+  <node id="135" name="Pejek Bog, Gate">
+    <description>A pair of large tree stumps sits beside the fence, which frames a wide expanse of mud that may once have been a road.  The broken trees' remaining branches reach toward the sky, bereft of leaves or any other signs of life.</description>
+    <position x="-180" y="-240" z="0" />
+    <arc exit="south" move="south" destination="136" />
+    <arc exit="southwest" move="southwest" destination="140" />
+    <arc exit="west" move="west" destination="139" />
+    <arc exit="go" move="go whitewashed gate" destination="60" />
+  </node>
+  <node id="136" name="Pejek Bog, Beside The Fence">
+    <description>The fence extends as far as the eye can see to the north and to the south.  The land visible through the railings doesn't really seem any different from what is on this side.</description>
+    <position x="-180" y="-220" z="0" />
+    <arc exit="north" move="north" destination="135" />
+    <arc exit="south" move="south" destination="137" />
+    <arc exit="west" move="west" destination="140" />
+  </node>
+  <node id="137" name="Pejek Bog, Beside The Fence">
+    <description>The fence shows years of use but is still sturdy in its stature.  Grasses along the fence line are stained a reddish-brown, perhaps from the rust-colored muck that also calls this area home.</description>
+    <position x="-180" y="-200" z="0" />
+    <arc exit="north" move="north" destination="136" />
+    <arc exit="south" move="south" destination="138" />
+    <arc exit="southwest" move="southwest" destination="141" />
+    <arc exit="northwest" move="northwest" destination="140" />
+  </node>
+  <node id="138" name="Pejek Bog, Beside The Fence">
+    <description>Rusty flakes peel away from the fence poles and collect in the spindly grasses and mossy conglomerations.  Pudding-like dollops of mud settle on the nearby peat like cowpats in a bleak pasture.</description>
+    <position x="-180" y="-180" z="0" />
+    <arc exit="north" move="north" destination="137" />
+    <arc exit="west" move="west" destination="141" />
+  </node>
+  <node id="139" name="Pejek Bog, A Muddy Thoroughfare">
+    <description>This broad expanse of mud is edged with puddles and clumps of the ever-present yellowed grass that grows throughout the bog.  The view to either side is more of the same, with strands of mist floating low across the ground in patches.</description>
+    <position x="-200" y="-240" z="0" />
+    <arc exit="east" move="east" destination="135" />
+    <arc exit="south" move="south" destination="140" />
+    <arc exit="west" move="west" destination="142" />
+  </node>
+  <node id="140" name="Pejek Bog, Wandering The Muck">
+    <description>Grey-green algae coats the water in a thick, goopy layer above inches of murky, likely diseased liquid.  Only the most intrepid swamp grass grows visibly aside from the primitive plant life.  The bog's mobile inhabitants must wade through an unsettling amount of decomposing organisms in order to reach desired destinations.</description>
+    <position x="-200" y="-220" z="0" />
+    <arc exit="north" move="north" destination="139" />
+    <arc exit="northeast" move="northeast" destination="135" />
+    <arc exit="east" move="east" destination="136" />
+    <arc exit="southeast" move="southeast" destination="137" />
+  </node>
+  <node id="141" name="Pejek Bog, Wandering The Muck">
+    <description>A single marble pillar rests on the ground in three pieces.  The stone is thicker around than any two Gor'Togs standing face to face.  Simple lines were carved into sides at some point in the past, but now the ornamentation is all discolored and stained by the muck.</description>
+    <position x="-200" y="-180" z="0" />
+    <arc exit="northeast" move="northeast" destination="137" />
+    <arc exit="east" move="east" destination="138" />
+    <arc exit="west" move="west" destination="163" />
+  </node>
+  <node id="142" name="Pejek Bog, A Muddy Thoroughfare">
+    <description>A large tree leans drunkenly by the edge of the path near a blackened stump.  Its form can easily be made out because of the faintly luminescent lichen which covers it.  It rises eerily from the mist, pointing off toward the east.</description>
+    <position x="-220" y="-240" z="0" />
+    <arc exit="north" move="north" destination="143" />
+    <arc exit="east" move="east" destination="139" />
+    <arc exit="west" move="west" destination="148" />
+    <arc exit="northwest" move="northwest" destination="149" />
+  </node>
+  <node id="143" name="Pejek Bog, Wandering The Muck">
+    <description>Just north of a large blackened stump, the swamp quickly regains its claim on the land.  The muddy ground carries the impressions of various footprints from travelers who have passed on by this muck-ridden expanse.</description>
+    <position x="-220" y="-260" z="0" />
+    <arc exit="northeast" move="northeast" destination="144" />
+    <arc exit="south" move="south" destination="142" />
+    <arc exit="southwest" move="southwest" destination="148" />
+    <arc exit="west" move="west" destination="149" />
+  </node>
+  <node id="144" name="Pejek Bog, Wandering The Muck">
+    <description>A badly stained skeleton of some large creature rests half-buried in the muck adjacent to a small stone pillar.  The skull itself is gone, making identification difficult, but the shape of the bones that remain resemble those from a yak or a large mule.  The orange tint to the bones attests to time spent beneath the water and mud.</description>
+    <position x="-200" y="-280" z="0" />
+    <arc exit="north" move="north" destination="145" />
+    <arc exit="southwest" move="southwest" destination="143" />
+    <arc exit="northwest" move="northwest" destination="147" />
+  </node>
+  <node id="145" name="Pejek Bog, Wandering The Muck">
+    <description>Rustling noises from breezes through the dried grasses create an almost soothing undertone of sound.  The scent rising from the muck is strong enough to keep even a tired hunter awake.</description>
+    <position x="-200" y="-300" z="0" />
+    <arc exit="north" move="north" destination="146" />
+    <arc exit="south" move="south" destination="144" />
+    <arc exit="west" move="west" destination="147" />
+  </node>
+  <node id="146" name="Pejek Bog, Wandering The Muck">
+    <description>A wide expanse of reddish-brown water stretches off to the north.  The liquid is warm enough to steam in the normally cool air of the swamp.  Slime-covered stones extend a short way into the water, the row carefully stacked together to form what must have once been a pleasant spot for fishing.</description>
+    <position x="-200" y="-320" z="0" />
+    <arc exit="south" move="south" destination="145" />
+    <arc exit="southwest" move="southwest" destination="147" />
+  </node>
+  <node id="147" name="Pejek Bog, Wandering The Muck">
+    <description>Each footfall through the mire creates uncouth slopping noises from the abundance of mud and muck below the turbid water.  Peat tannins tinge the liquid a characteristic brown, incidentally a color that matches nearly every plant and alga in the vicinity.</description>
+    <position x="-220" y="-300" z="0" />
+    <arc exit="northeast" move="northeast" destination="146" />
+    <arc exit="east" move="east" destination="145" />
+    <arc exit="southeast" move="southeast" destination="144" />
+  </node>
+  <node id="148" name="Pejek Bog, A Muddy Thoroughfare">
+    <description>Yellowish grass encroaches on the edges of the sodden roadway.  The mud along the thoroughfare matches the surrounding clumps of brown weeds, making it difficult to tell just where the bog begins and the roadway ends.  Numerous footprints in the muck show where people and creatures have slogged through.</description>
+    <position x="-240" y="-240" z="0" />
+    <arc exit="north" move="north" destination="149" />
+    <arc exit="northeast" move="northeast" destination="143" />
+    <arc exit="east" move="east" destination="142" />
+    <arc exit="west" move="west" destination="150" />
+  </node>
+  <node id="149" name="Pejek Bog, Wandering The Muck">
+    <description>Broken branches jut from the quagmire at all angles, disturbingly resembling fingers worming through the shallows attempting to scratch and prod passersby.  Filthy moss creeps up the bark of rotting stumps and felled logs from the murky liquid below.</description>
+    <position x="-240" y="-260" z="0" />
+    <arc exit="east" move="east" destination="143" />
+    <arc exit="southeast" move="southeast" destination="142" />
+    <arc exit="south" move="south" destination="148" />
+  </node>
+  <node id="150" name="Pejek Bog, Stairs To Nowhere">
+    <description>A wide flight of marble stairs rests at the end of the thoroughfare.  Consisting of three broad slabs of pale yellowish marble, they are intricately carved across the front of each riser.  Time has worn away some of the detail, but various aspects of the gods can still be made out in places.  There is nothing else around to explain why the steps are here or to what they once led.</description>
+    <position x="-260" y="-240" z="0" />
+    <arc exit="east" move="east" destination="148" />
+    <arc exit="south" move="south" destination="158" />
+    <arc exit="northwest" move="northwest" destination="151" />
+  </node>
+  <node id="151" name="Pejek Bog, Wandering The Muck">
+    <description>Every breeze creates soft rustling noises from the dried grasses which grow in clumps among the puddles.  A faint metallic odor wafts up from the mud.</description>
+    <position x="-280" y="-260" z="0" />
+    <arc exit="north" move="north" destination="152" />
+    <arc exit="southeast" move="southeast" destination="150" />
+  </node>
+  <node id="152" name="Pejek Bog, A Green Patch">
+    <description>A subtle variation in the ground's angle has caused all of the water to drain from a large circular patch of land.  The grass that grows everywhere in the bog is not present within this drier area.  Instead, an intensely green moss covers the ground thickly, leaving no spot bare.</description>
+    <position x="-280" y="-280" z="0" />
+    <arc exit="north" move="north" destination="154" />
+    <arc exit="northeast" move="northeast" destination="153" />
+    <arc exit="south" move="south" destination="151" />
+    <arc exit="northwest" move="northwest" destination="155" />
+  </node>
+  <node id="153" name="Pejek Bog, Wandering The Muck">
+    <description>Reddish-brown mud is dotted with clumps of dead and dying grass.  The dripping of water is a constant undertone to the soft rustle of the grasses in the breeze.  Every now and then, something larger splashes into a nearby puddle, creating a diversion from the otherwise lulling palette of sounds.</description>
+    <position x="-260" y="-300" z="0" />
+    <arc exit="southwest" move="southwest" destination="152" />
+    <arc exit="west" move="west" destination="155" />
+    <arc exit="northwest" move="northwest" destination="154" />
+  </node>
+  <node id="154" name="Pejek Bog, Wandering The Muck">
+    <description>Tendrils of mist swirl over the ground's surface like pale snakes, following every current of the passing air.  The fog seems to muffle the normal sounds of the bog, leaving this unremarkable section of swamp feeling very isolated.</description>
+    <position x="-280" y="-320" z="0" />
+    <arc exit="north" move="north" destination="156" />
+    <arc exit="east" move="east" destination="157" />
+    <arc exit="southeast" move="southeast" destination="153" />
+    <arc exit="south" move="south" destination="152" />
+    <arc exit="southwest" move="southwest" destination="155" />
+  </node>
+  <node id="155" name="Pejek Bog, Wandering The Muck">
+    <description>Submerged in the muck, a huge monolith of black granite looms overhead.  It is surrounded by a wide channel of water that looks quite unhealthy.  Bubbles rise to the surface constantly, and the stench of dead and rotting flesh arising from the liquid is almost unbearable.</description>
+    <position x="-300" y="-300" z="0" />
+    <arc exit="northeast" move="northeast" destination="154" />
+    <arc exit="east" move="east" destination="153" />
+    <arc exit="southeast" move="southeast" destination="152" />
+  </node>
+  <node id="156" name="Pejek Bog, Wandering The Muck">
+    <description>Sunken almost below the water level, the muck that passes for dirt in this part of the swamp is broken only by the occasional small hummock of oddly browned grasses.</description>
+    <position x="-280" y="-340" z="0" />
+    <arc exit="southeast" move="southeast" destination="157" />
+    <arc exit="south" move="south" destination="154" />
+  </node>
+  <node id="157" name="Pejek Bog, Wandering The Muck">
+    <description>A small hillock of almost-dried grasses rises above the reddish-brown water.  Wisps of steam waft about on almost imperceptible breezes, carrying the scent of brackish water mingled with rotting vegetation.  Night darkens everything but a few stones covered in luminescent light-green lichen.</description>
+    <position x="-260" y="-320" z="0" />
+    <arc exit="west" move="west" destination="154" />
+    <arc exit="northwest" move="northwest" destination="156" />
+  </node>
+  <node id="158" name="Pejek Bog, Wandering The Muck">
+    <description>The ground here is quite muddy with very little plant life left standing.  There are footprints in the mire, ranging from the delicate crosshatch of water birds to deep ruts where something large and heavy slid in the muck.</description>
+    <position x="-260" y="-220" z="0" />
+    <arc exit="north" move="north" destination="150" />
+    <arc exit="south" move="south" destination="159" />
+    <arc exit="southwest" move="southwest" destination="160" />
+  </node>
+  <node id="159" name="Pejek Bog, Wandering The Muck">
+    <description>Darkness shadows the dried grasses that stretch far into the distance.  Splotches of water and clumps of grass leave the vast expanse of the bog with the appearance of a marshy wasteland.</description>
+    <position x="-260" y="-200" z="0" />
+    <arc exit="north" move="north" destination="158" />
+    <arc exit="southwest" move="southwest" destination="161" />
+    <arc exit="west" move="west" destination="160" />
+  </node>
+  <node id="160" name="Pejek Bog, Wandering The Muck">
+    <description>Surrounded by the dried brown grasses and reddish-brown puddles, a single rosebush grows.  The dusky green of the leaves and pale pink of the blooms stand in contrast to the normal palette of bog colors.  It appears to be the only such plant around, leaving the mystery of its existence an unanswered question.</description>
+    <position x="-280" y="-200" z="0" />
+    <arc exit="northeast" move="northeast" destination="158" />
+    <arc exit="east" move="east" destination="159" />
+    <arc exit="south" move="south" destination="161" />
+  </node>
+  <node id="161" name="Pejek Bog, Wandering The Muck">
+    <description>A large square section of ground is oddly blackened, as if it had been burned.  The air carries a faint scent of smoke, though everything is wet and nothing appears to have been on fire recently.</description>
+    <position x="-280" y="-180" z="0" />
+    <arc exit="north" move="north" destination="160" />
+    <arc exit="northeast" move="northeast" destination="159" />
+    <arc exit="east" move="east" destination="162" />
+  </node>
+  <node id="162" name="Pejek Bog, Wandering The Muck">
+    <description>The return of the dried grass to the color palette is a welcome relief after the surrounding areas.  Even the air is relatively free of the bog's vile odors.</description>
+    <position x="-260" y="-180" z="0" />
+    <arc exit="northeast" move="northeast" destination="164" />
+    <arc exit="east" move="east" destination="163" />
+    <arc exit="west" move="west" destination="161" />
+  </node>
+  <node id="163" name="Pejek Bog, Wandering The Muck">
+    <description>Extra water in the mix makes this patch of ground exceptionally soft.  Almost no grass grows, leaving the soil exposed.  Its texture and appearance is approximately that of clotted blood, and the stench is nearly the same as well.</description>
+    <position x="-220" y="-180" z="0" />
+    <arc exit="east" move="east" destination="141" />
+    <arc exit="west" move="west" destination="162" />
+    <arc exit="northwest" move="northwest" destination="164" />
+  </node>
+  <node id="164" name="Pejek Bog, Wandering The Muck">
+    <description>Chunks of peat swollen with fetid water float like buoys between nests of brown grass and twigs.  Occasionally, movement under the surface churns the thin film of moss accumulated atop the bog.  The liquid barely ripples, so laden with debris and detritus it can hardly move.</description>
+    <position x="-240" y="-200" z="0" />
+    <arc exit="southeast" move="southeast" destination="163" />
+    <arc exit="southwest" move="southwest" destination="162" />
+  </node>
+  <label text="Riverhaven East Gate">
+    <position x="-110" y="-70" z="0" />
+  </label>
+  <label text="Swamp Trolls">
+    <position x="480" y="-70" z="0" />
+  </label>
+  <label text="Serpents">
+    <position x="-130" y="-270" z="0" />
+  </label>
+  <label text="Vipers">
+    <position x="-130" y="-260" z="0" />
+  </label>
+  <label text="Frogs">
+    <position x="-40" y="-200" z="0" />
+  </label>
+  <label text="Spiny Dyrachis">
+    <position x="260" y="-130" z="0" />
+  </label>
+  <label text="Lesser Sluagh">
+    <position x="260" y="-120" z="0" />
+  </label>
+  <label text="(shifting maze)">
+    <position x="310" y="-70" z="0" />
+  </label>
+  <label text="Zaulfung">
+    <position x="320" y="-80" z="0" />
+  </label>
+  <label text="Lesser Sluagh">
+    <position x="300" y="-10" z="0" />
+  </label>
+  <label text="Lesser Shadow Hound">
+    <position x="280" y="0" z="0" />
+  </label>
+  <label text="Lesser Sluagh">
+    <position x="480" y="-80" z="0" />
+  </label>
+  <label text="Faldesu River">
+    <position x="70" y="-50" z="0" />
+  </label>
+  <label text="Serpents only">
+    <position x="10" y="-330" z="0" />
+  </label>
+  <label text="(premium only)">
+    <position x="10" y="-320" z="0" />
+  </label>
+  <label text="Nightstalker Unyns - Night">
+    <position x="-300" y="-160" z="0" />
+  </label>
+  <label text="Rhoat Moda - Day">
+    <position x="-280" y="-170" z="0" />
+  </label>
+  <label text="(premium only)">
+    <position x="-270" y="-150" z="0" />
+  </label>
+  <label text="Wild Boar">
+    <position x="265" y="-210" z="0" />
+  </label>
+  <label text="Boobrie">
+    <position x="270" y="-200" z="0" />
+  </label>
+</zone>

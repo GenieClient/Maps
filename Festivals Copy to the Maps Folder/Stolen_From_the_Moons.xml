@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Stolen from the Moons 415 (2015)" id="0">
+  <node id="1" name="Vela'Tohr Edge, Secluded Grove" note="Secluded Grove|grove|Boar Clan">
+    <description>Quiet permeates this small glade, punctuated occasionally by sounds from the creatures of the night.  Lichen growing along the branches and tree trunks cause the area to glow with a faint green light.</description>
+    <description>The sense of darkness that permeates the surrounding woods seems to be lifted here.  Birds and other small creatures can be heard through the underbrush as well as rustlings of other origins.</description>
+    <position x="180" y="160" z="0" />
+    <arc exit="go" move="go moonsilk pavilion" destination="2" />
+  </node>
+  <node id="2" name="Stolen from the Moons, Once Fallen" note="Once Fallen" color="#FF0000">
+    <description>Swags of pale moonsilk drape from the middle of the room, creating a tent-like atmosphere.  Plush rugs cover the floor from end to end, muffling the sound of footsteps.  Soft pillows make a pile against one wall and add to the lush feeling of comfort.  A round table stands alone in the middle of the room, a thick candle centered on it.</description>
+    <position x="180" y="140" z="0" />
+    <arc exit="north" move="north" destination="3" />
+    <arc exit="out" move="out" destination="1" />
+  </node>
+  <node id="3" name="Stolen from the Moons, Blue Moon" note="Blue Moon" color="#FF0000">
+    <description>Flowing blue silk hangs down the walls, catching the light from the single lantern dangling on a long chain from the center of the ceiling.  The blued glass has been cut with stars, casting their shapes onto the fabric.  A round, deep blue rug holds a ring of pedestals.</description>
+    <position x="180" y="120" z="0" />
+    <arc exit="north" move="north" destination="4" />
+    <arc exit="east" move="east" destination="7" />
+    <arc exit="south" move="south" destination="2" />
+    <arc exit="west" move="west" destination="8" />
+  </node>
+  <node id="4" name="Stolen from the Moons, Red Moon Rising" note="Red Moon Rising" color="#FF0000">
+    <description>Sanguine-hued silk enclosing the area eerily reflects light from the many candles spaced around the room's edges, with each small fire encased in swirled black and red glass.  Any shift of the fabric gives the illusion of blood and shadows running down the walls.  Pedestals of blackwood share space on the center of the octagonal rug.</description>
+    <position x="180" y="80" z="0" />
+    <arc exit="north" move="north" destination="5" />
+    <arc exit="east" move="east" destination="9" />
+    <arc exit="south" move="south" destination="3" />
+    <arc exit="west" move="west" destination="10" />
+  </node>
+  <node id="5" name="Stolen from the Moons, Special Selections" note="Special Selections" color="#FF0000">
+    <description>This section of the pavilion is done in pure white, needing very little light to keep the room lit.  A few candles flicker from their holders on the wall, the metal painted to match everything else.  Three pedestals flank a dressmaker's dummy, all of which rest upon a snowy, plush rug.</description>
+    <position x="180" y="60" z="0" />
+    <arc exit="north" move="north" destination="6" />
+    <arc exit="south" move="south" destination="4" />
+  </node>
+  <node id="6" name="Stolen from the Moons, Moon Drops" note="Moon Drops" color="#FF0000">
+    <description>Pearl-hued silk creates a backdrop to faceted drops of crystal that hang from thin wires across the ceiling.  They catch and refract any light in a rainbow of colors, aided by the carefully placed candles around the room.  A trio of crystalline pedestals group in the center of an octagonal rug of white fur.</description>
+    <position x="180" y="40" z="0" />
+    <arc exit="south" move="south" destination="5" />
+  </node>
+  <node id="7" name="Stolen from the Moons, Antechamber" note="Antechamber|alterations" color="#00FF00">
+    <description>A low moonsilver table sits in the center of the area surrounded by plump white velvet pillows.  Lamps edged with verdant moonsilver vines are spaced at even intervals around the ceiling.  Hanging from a heavy blackened moonsilver chain is a miniature moonsilver house, complete with glass windows and a wraparound porch.  A silvery curtain creates an opening in one wall.</description>
+    <position x="200" y="120" z="0" />
+    <arc exit="north" move="north" destination="9" />
+    <arc exit="west" move="west" destination="3" />
+  </node>
+  <node id="8" name="Stolen from the Moons, Darkness Falls" note="Darkness Falls" color="#FF0000">
+    <description>Black silk lines the walls, billowing slightly whenever it's caught by a breeze to create ever-shifting shadows and light.  Two sconces offer just enough light to see the wares displayed on the redwood pedestals.  A small rug woven to resemble intertwining black vines covers the floor.</description>
+    <position x="160" y="120" z="0" />
+    <arc exit="north" move="north" destination="10" />
+    <arc exit="east" move="east" destination="3" />
+    <arc exit="northwest" move="northwest" destination="11" />
+  </node>
+  <node id="9" name="Stolen from the Moons, Raffle Collection" note="Raffle Collection" color="#FF0000">
+    <description>Alternating panels of black and white silk create the walls of this large room.  A rug of soft black cashmere runs between eight tables of different sizes and shapes.  The mismatched tables form two lines and are set far enough apart to allow even a Gor'Tog to walk around them.  Over each surface hangs a bright lamp, serving to light the items on display.</description>
+    <position x="200" y="80" z="0" />
+    <arc exit="south" move="south" destination="7" />
+    <arc exit="west" move="west" destination="4" />
+  </node>
+  <node id="10" name="Stolen from the Moons, Burgeoning Moon" note="Burgeoning Moon" color="#FF0000">
+    <description>Starting with a pale sea green at the top and darkening to a nighttime forest green at the bottom, the heavy silk draping this area barely stirs despite movement within.  Evenly spaced, four square lamps light a pair of carved glaes pedestals that sit firmly in the middle of the room.</description>
+    <position x="160" y="80" z="0" />
+    <arc exit="east" move="east" destination="4" />
+    <arc exit="south" move="south" destination="8" />
+    <arc exit="southwest" move="southwest" destination="11" />
+  </node>
+  <node id="11" name="Stolen from the Moons, Flowering Moon" note="Flowering Moon" color="#FF0000">
+    <description>Lavender silk as fine as a mist drapes down from above, fluttering with any breeze, either caused by movement within or outside forces.  A single round globe holding a candle dangles in the center of the room just above a plush rug of dark purple.  Resting to either side of the light are a pair of platinum pedestals, their contents displayed upon the polished surfaces.</description>
+    <position x="140" y="100" z="0" />
+    <arc exit="northeast" move="northeast" destination="10" />
+    <arc exit="southeast" move="southeast" destination="8" />
+  </node>
+</zone>
