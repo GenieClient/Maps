@@ -5416,6 +5416,7 @@
     <position x="140" y="1840" z="0" />
     <arc exit="north" move="north" destination="810" />
     <arc exit="southwest" move="southwest" destination="812" />
+    <arc exit="go" move="go cave entrance" destination="821" />
   </node>
   <node id="812" name="Foothills, Rocky Pass">
     <description>Densely packed scrub and the rise of a few hardy and wind-twisted trees skirt the narrow pass.  The shadow of the jealous hillside swallows all that lies in its grip, leaving little purchase for sunlight.  Scattered bird calls echo between the tiny valleys created by the insurmountable slopes, belying the emptiness that fills in the gaps the pass has created.</description>
@@ -5433,7 +5434,7 @@
   <node id="814" name="Wooded Hills, East Slope" note="Onyx Gargoyles|Gargoyles">
     <description>The smooth surface of the slope curves gently in a wave of smooth, blood dark grass.  Due to a thick mist, the valley floor is inscrutable save for the flash of odd architectural protrusions that claw upwards in a futile attempt to escape the darkness.</description>
     <description>The smooth surface of the slope curves gently in a wave of glass green foliage.  A mist demurely hides the valley floor from prying eyes, offering only teasing glimpses of the tops of jagged marble structures and obelisks that happen to escape its swirling grey clutches.  Overhead, the sky is obscured by the rise of stoney hills as the footrail travels restlessly up and down the hillside.</description>
-    <position x="120" y="1900" z="0" />
+    <position x="100" y="1900" z="0" />
     <arc exit="southwest" move="southwest" destination="819" />
     <arc exit="northwest" move="northwest" destination="815" />
     <arc exit="climb" move="climb hillside" destination="813" />
@@ -5441,42 +5442,80 @@
   <node id="815" name="Vale, Journalai Outskirts">
     <description>A glowing white marble marker lies in two whole pieces, its rune-covered surface rendered illegible from years of work by eolian forces.  Despite the presence of ivy and lichen on the other marble architecture in the area, the marker remains remarkably clear of encroaching foliage.  The darkened hillside that cups the valley flows gently down to the foot of the toppled stone giant, treating it with more deference than the city's conquerers and subsequent plunderers did.</description>
     <description>A massive white marble marker lies in two whole pieces, its rune-covered surface rendered illegible from years of work by eolian forces.  Despite the presence of ivy and lichen on the other marble architecture in the area, the marker remains remarkably clear of encroaching foliage.  The hillside that cups the valley flows gently down to the foot of the toppled stone giant, treating it with more deference than the city's conquerers and subsequent plunderers did.</description>
-    <position x="80" y="1860" z="0" />
+    <position x="80" y="1880" z="0" />
     <arc exit="southeast" move="southeast" destination="814" />
     <arc exit="southwest" move="southwest" destination="820" />
     <arc exit="up" move="up" destination="816" />
   </node>
   <node id="816" name="Wooded Hills, East Slope">
     <description>Springy aspens, shimmering maples, and rampant wild rose vines nervously huddle along the sides of the slope, hedging in the vale floor with a barrier that is at times impenetrable and at other times suspiciously thin.  The hoots of gloom-loving owls and the cackle of corbies haunt the treetops, weaving in and out of the all-blanketing mist like lost souls.</description>
-    <position x="80" y="1880" z="0" />
+    <position x="40" y="1880" z="0" />
     <arc exit="south" move="south" destination="817" />
     <arc exit="down" move="down" destination="815" />
   </node>
   <node id="817" name="Wooded Hills, Top of Hill">
     <description>Trees and other vegetation clear out at the top of the hilltop, creating a bare space whipped by the wind and weather.  Bare rocks fight with lichens and other hardy species to cling to the slope.  The clearing allows a more expansive view across the valley and the further reaches, showing glimpses of abandoned ruins in the distance.</description>
-    <position x="80" y="1900" z="0" />
+    <position x="40" y="1900" z="0" />
     <arc exit="north" move="north" destination="816" />
     <arc exit="south" move="south" destination="818" />
   </node>
   <node id="818" name="Wooded Hills, East Slope">
     <description>Heavy, black-leafed bushes cluster around the trees that form the overgrown barrier of the Journalai Vale.  The air is bone-numbingly chill here, cutting through the thickest clothing to bite at the very soul.  Down the slope, the lonely and broken remains of the city just barely push up through the mist.</description>
-    <position x="80" y="1920" z="0" />
+    <position x="40" y="1920" z="0" />
     <arc exit="north" move="north" destination="817" />
     <arc exit="down" move="down" destination="819" />
+    <arc exit="go" move="go rocky glade" destination="823" />
   </node>
   <node id="819" name="Vale, Journalai Outskirts">
     <description>The vale meets up with the steep curve of the hills that protect it here.  The occluding mists combine with the darkness to create a powerfully limited range of vision.  Faint grunts and other unidentifiable sounds come from above, soft but nonetheless insidious.</description>
     <description>The vale meets up with the steep curve of the hills that protect it here.  Though the occluding mist limits vision, the faint outlines of dark trees can be detected bordering the top of the hill, creating a tangible boundary between the ruins and the hinterland that surrounds it.  Hazy figures move like ghostly shadows through the wilderness, a hint of something sinister amidst the cemetary-like stillness of the dead city.</description>
-    <position x="80" y="1940" z="0" />
+    <position x="80" y="1920" z="0" />
     <arc exit="northeast" move="northeast" destination="814" />
     <arc exit="northwest" move="northwest" destination="820" />
     <arc exit="up" move="up" destination="818" />
   </node>
   <node id="820" name="Vale, Journalai Ruins">
     <description>A cracked and perilous-looking pylon marks the gateway into the city, its lintel carved with the defaced visage of an unknown goddess who yet beckons all to pass beneath her with outspread arms.  Moss, ivy, and lichen have crept steadily into the cracks in the gateway, slowly nibbling away at what must have once been a proud testimony to some artisan's genius.  The collapsed rubble that was once the outer curtain of the city's walls yet serves as a barrier.</description>
-    <position x="40" y="1900" z="0" />
+    <position x="60" y="1900" z="0" />
     <arc exit="northeast" move="northeast" destination="815" />
     <arc exit="southeast" move="southeast" destination="819" />
+  </node>
+  <node id="821" name="Foothills Cave, Front">
+    <description>Gnawed and broken bones litter the cavern's entrance, some so old they shatter at a touch, others so new that they still have bits of meat rotting on them.  Set into the deep dirt floor are a number of depressions covered with coarse hair that appear to be sleeping spots for the denizens of this spacious cave.  A deep musky odor pervades the space, further testimony to the bestial nature of the inhabitants.</description>
+    <position x="160" y="1840" z="0" />
+    <arc exit="east" move="east" destination="822" />
+    <arc exit="go" move="go entrance" destination="811" />
+  </node>
+  <node id="822" name="Foothills Cave, Back">
+    <description>Sloping downwards towards the back of the cave, the rocky ceiling merges with the slate floor and cuts off all further progress underground.  Dirt has drifted into the crevices and corners, adding to the cramped feeling at the edges of the cavern.  There are fewer signs of the inhabitants here, perhaps because they find it more cramped than the entrance.</description>
+    <position x="180" y="1840" z="0" />
+    <arc exit="west" move="west" destination="821" />
+  </node>
+  <node id="823" name="Wooded Hills, Rocky Glade">
+    <description>Cupped within the hills, this small glade is strewn with boulders and rocks amongst the swaying grasses of the dell's floor.  Towering trees rim the area, enclosing it within the forest's welcoming embrace.</description>
+    <position x="20" y="1920" z="0" />
+    <arc exit="southwest" move="southwest" destination="826" />
+    <arc exit="west" move="west" destination="824" />
+  </node>
+  <node id="824" name="Wooded Hills, Rocky Glade">
+    <description>Bending in the slightest breeze, some cattails mark a small declivity that gathers moisture from the surrounding hillsides.  Birds flit from the forest's edge to the puddle, their cries filling the daytime sky with song and noise.</description>
+    <position x="0" y="1920" z="0" />
+    <arc exit="east" move="east" destination="823" />
+    <arc exit="south" move="south" destination="826" />
+    <arc exit="west" move="west" destination="825" />
+  </node>
+  <node id="825" name="Wooded Hills, Rocky Glade">
+    <description>Swaying grasses fill the space between the trees, hiding any movement of small animals near the ground.  A few boulders peek above the vegetation, their glossy black surfaces gleaming in any available light.</description>
+    <position x="-20" y="1920" z="0" />
+    <arc exit="east" move="east" destination="824" />
+    <arc exit="southeast" move="southeast" destination="826" />
+  </node>
+  <node id="826" name="Wooded Hills, Rocky Glade">
+    <description>Standing alone in the swaying grasses, a giant oak tree spreads its limbs widely in the glade.  An interloper from the surrounding forested hillsides, the sprawling branches provide ample space for nesting birds.</description>
+    <position x="0" y="1940" z="0" />
+    <arc exit="north" move="north" destination="824" />
+    <arc exit="northeast" move="northeast" destination="823" />
+    <arc exit="northwest" move="northwest" destination="825" />
   </node>
   <label text="Warrior Mage">
     <position x="460" y="2440" z="0" />
@@ -5494,7 +5533,7 @@
     <position x="520" y="1950" z="0" />
   </label>
   <label text="Rock Trolls">
-    <position x="110" y="1700" z="0" />
+    <position x="100" y="1710" z="0" />
   </label>
   <label text="Abandoned Mine">
     <position x="570" y="1710" z="0" />
@@ -5662,6 +5701,9 @@
     <position x="130" y="1850" z="0" />
   </label>
   <label text="Onyx Gargoyles">
-    <position x="-20" y="1860" z="0" />
+    <position x="20" y="1930" z="0" />
+  </label>
+  <label text="Rock Trolls">
+    <position x="280" y="1800" z="0" />
   </label>
 </zone>
