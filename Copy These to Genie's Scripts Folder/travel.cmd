@@ -7,7 +7,7 @@ put #class rp on
 # Script to Travel for Genie3 #
 # Originally written by Chris/Achilles
 # Revitalized and Robustified by Shroom
-# version 3.3
+# version 3.4
 # Requires EXP Plugin by VTCifer #
 #
 # USAGE - .travel <destination> <room number>  (room is optional!)
@@ -72,7 +72,12 @@ if ("$charactername") = ("$char3") then var shardcitizen no
 if ("$charactername") = ("$char4") then var shardcitizen no
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
-# CHANGELOG - Latest Update: 6/29/2021
+# CHANGELOG - Latest Update: 8/7/2021
+#
+# - Script should now run faster overall
+# - Streamlined Travel from Map 68 (South of Shard) - Should Climb Walls into Shard if enough Athletics 
+# - Fixed a couple various bugs 
+# - Tweaked Log Echo 
 #
 # - Fixed bug in Travel back from Aesry
 # - Added new Destinations - Oasis / Haizen 
@@ -220,7 +225,6 @@ pause 0.0001
 TOP:
 put #mapper reset
 pause 0.0001
-pause 0.0001
 gosub PREMIUM_CHECK
 pause 0.0001
 put #var save
@@ -231,7 +235,7 @@ if matchre("$guild", "Necromancer") then
           pause
           pause 0.2
      }
-put #echo >Log * Travel script start: $zonename (map $zoneid: room $roomid)
+put #echo >Log #b3b3f9 * Travel Start: $zonename (map $zoneid: $roomid)
 if ($hidden) then send unhide
 pause 0.0001
 pause 0.0001
@@ -305,19 +309,20 @@ if (("$zoneid" = "0") || ("$roomid" = "0")) then
           echo ### Unknown map or room id - Attempting to move in random direction to recover
           gosub MOVERANDOM
      }
-pause 0.0001
 if (("$zoneid" = "0") || ("$roomid" = "0")) then gosub MOVERANDOM
-pause 0.0001
 if ("$zoneid" = "0") then
      {
           ECHO ### You are in a spot not recognized by Genie, please start somewhere else! ###
           exit
      }
-pause 0.001
+pause 0.0001
+pause 0.0001
+pause 0.0001
 if ("$zoneid" = "2d") then gosub AUTOMOVE temple
 if ("$zoneid" = "1j") then gosub AUTOMOVE cross
 if ("$zoneid" = "2a") then gosub AUTOMOVE cross
-pause 0.001
+pause 0.0001
+pause 0.0001
 if (matchre("%destination", "\b(ratha|hara?j?a?a?l?)") && matchre("$zoneid", "\b(1|30|42|47|61|66|67|90|99|107|108|116)\b")) then
      {
           if (matchre("$game", "(?i)DRX") && (%portal = 1)) then
@@ -800,7 +805,24 @@ if ("$zoneid" = "67a") then gosub AUTOMOVE shard
 if ("$zoneid" = "69") then gosub AUTOMOVE 1
 if ("$zoneid" = "68a") then gosub AUTOMOVE 29
 if ("$zoneid" = "68b") then gosub AUTOMOVE 44
-if (("$zoneid" = "68") && ("$guild" = "Thief")) then gosub AUTOMOVE 15
+if ("$zoneid" = "68") then
+     {
+     if (matchre("$roomname", "(Blackthorn Canyon|Corik's Wall|Stormfells|Shadow's Reach|Reach Forge|Darkling Wood, Trader Outpost)") || (($roomid > 67) && ($roomid < 75))) then
+          {
+               gosub AUTOMOVE 68
+               gosub AUTOMOVE 65
+               gosub AUTOMOVE 62
+               pause 0.1
+          }
+     if ($Athletics.Ranks > 250) then
+          {
+               gosub AUTOMOVE 2
+               pause 0.2
+               put climb wall
+               wait
+               pause 0.4
+          }
+     }
 if (("$zoneid" = "68") && matchre("%shardcitizen", "(?i)yes")) then
      {
           gosub AUTOMOVE 1
@@ -1569,12 +1591,29 @@ if ("$zoneid" = "123") then gosub AUTOMOVE 175
 if ("$zoneid" = "69") then gosub AUTOMOVE 1
 if ("$zoneid" = "68a") then gosub AUTOMOVE 29
 if ("$zoneid" = "68b") then gosub AUTOMOVE 44
-if (("$zoneid" = "68") && ("$guild" = "Thief")) then gosub AUTOMOVE 15
-if (("$zoneid" = "68") && matchre("%shardcitizen", "(?i)yes")) then
+if ("$zoneid" = "68") then
+     {
+     if (matchre("$roomname", "(Blackthorn Canyon|Corik's Wall|Stormfells|Shadow's Reach|Reach Forge|Darkling Wood, Trader Outpost)") || (($roomid > 67) && ($roomid < 75))) then
           {
-              gosub AUTOMOVE 1
-              gosub AUTOMOVE 135
+               gosub AUTOMOVE 68
+               gosub AUTOMOVE 65
+               gosub AUTOMOVE 62
+               pause 0.1
           }
+     if ($Athletics.Ranks > 250) then
+          {
+               gosub AUTOMOVE 2
+               pause 0.2
+               put climb wall
+               wait
+               pause 0.4
+          }
+     }
+if (("$zoneid" = "68") && matchre("%shardcitizen", "(?i)yes")) then
+     {
+          gosub AUTOMOVE 1
+          gosub AUTOMOVE 135
+     }
 if (("$zoneid" = "68") && matchre("%shardcitizen", "(?i)no")) then gosub AUTOMOVE 15
 if (matchre("$game", "(?i)DRX") && (%portal = 1)) then
      {
@@ -2454,12 +2493,30 @@ FORD_2:
 if ("$zoneid" = "65") then gosub AUTOMOVE 1
 if ("$zoneid" = "68b") then gosub AUTOMOVE 44
 if ("$zoneid" = "68a") then gosub AUTOMOVE 29
-if (("$zoneid" = "68") && ("$guild" = "Thief")) then gosub AUTOMOVE 15
-if (("$zoneid" = "68") && matchre("%shardcitizen", "(?i)yes")) then
+if ("$zoneid" = "68") then
+     {
+     if (matchre("$roomname", "(Blackthorn Canyon|Corik's Wall|Stormfells|Shadow's Reach|Reach Forge|Darkling Wood, Trader Outpost)") || (($roomid > 67) && ($roomid < 75))) then
           {
-              gosub AUTOMOVE 1
-              gosub AUTOMOVE 129
+               gosub AUTOMOVE 68
+               gosub AUTOMOVE 65
+               gosub AUTOMOVE 62
+               pause 0.1
           }
+     if ($Athletics.Ranks > 250) then
+          {
+               gosub AUTOMOVE 2
+               pause 0.2
+               put climb wall
+               wait
+               pause 0.4
+          }
+     }
+if (("$zoneid" = "68") && matchre("%shardcitizen", "(?i)yes")) then
+     {
+          gosub AUTOMOVE 1
+          pause 0.1
+          gosub AUTOMOVE 135
+     }
 if (("$zoneid" = "68") && matchre("%shardcitizen", "(?i)no")) then gosub AUTOMOVE 15
 if (matchre("$game", "(?i)DRX") && (%portal = 1)) then
      {
@@ -2471,8 +2528,9 @@ if (("$zoneid" = "67") && ("$guild" = "Thief")) then
               gosub AUTOMOVE 23
           }
 if ("$zoneid" = "67a") then gosub AUTOMOVE STR
-if ("$zoneid" = "67") then gosub AUTOMOVE 132
+if ("$zoneid" = "67") then gosub AUTOMOVE West
 if ("$zoneid" = "66") then gosub AUTOMOVE 217
+pause 0.2
 if ("$zoneid" = "69") then gosub AUTOMOVE 283
 FORD_3:
 if (("$zoneid" = "127") && matchre("%detour", "(raven|outer|inner|ain)")) then gosub AUTOMOVE 510
@@ -2611,7 +2669,7 @@ ARRIVED:
   put #parse REACHED YOUR DESTINATION
   # put #play Just Arrived.wav
   echo ## WOW! YOU ARRIVED AT YOUR DESTINATION: %destination in %t seconds!  That's FAST! ##
-  put #echo >Log Travel script arrival at: $zonename (map $zoneid: room $roomid)
+  put #echo >Log #9cd6a3 * Travel Arrival: $zonename (map $zoneid: room $roomid)
   put #class arrive off
   exit
 ######################################################################################
