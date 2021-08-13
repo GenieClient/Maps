@@ -1398,7 +1398,7 @@
     <position x="-800" y="-580" z="0" />
     <arc exit="go" move="go linwood door" destination="208" />
   </node>
-  <node id="212" name="Steelclaw Clan, Granzer's Repairs" note="Granzer's Repairs|Repair Metal" color="#00FF00">
+  <node id="212" name="Steelclaw Clan, Granzer's Repairs" note="Granzer's Repairs|Alternate Repairs" color="#00FF00">
     <description>The forge of Mastersmith Granzer Wothhome is a model of efficiency and industry.  Assistants scurry about, keeping the fires stoked and at peak temperature, while the smith himself, a whipcord Elven man with a commanding presence, shapes the steel that comes hot from the forge.</description>
     <position x="-730" y="-580" z="0" />
     <arc exit="out" move="out" destination="100" />
@@ -3439,7 +3439,7 @@
     <position x="-140" y="-60" z="0" />
     <arc exit="climb" move="script autoclimbdown" destination="493" />
   </node>
-  <node id="495" name="Waystation, Ylono's Repairs" note="Waystation|Ylono's Repairs|Repair Leather" color="#00FF00">
+  <node id="495" name="Waystation, Ylono's Repairs" note="Waystation|Ylono's Repairs|Repair" color="#00FF00">
     <description>Feeble light from an ancient lantern does little to lessen the shadows filling the corners of the repair shop.  Ylono huddles behind a rickety wooden table covered with scraps of leather used for his repairs.  A smoke-stained banner hung from the rafters proudly proclaims, "Best Repairs in Elanthia!"</description>
     <position x="-630" y="-320" z="0" />
     <arc exit="out" move="out" destination="71" />
