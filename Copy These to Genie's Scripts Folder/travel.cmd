@@ -72,7 +72,7 @@ if ("$charactername") = ("$char3") then var shardcitizen no
 if ("$charactername") = ("$char4") then var shardcitizen no
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
-# CHANGELOG - Latest Update: 8/7/2021
+# CHANGELOG - Latest Update: 9/9/2021
 #
 # - Script should now run faster overall
 # - Streamlined Travel from Map 68 (South of Shard) - Should Climb Walls into Shard if enough Athletics 
@@ -957,7 +957,8 @@ if (("$zoneid" = "7") && matchre("%detour", "(arthe|dirge|kaerna|stone|misen|sor
          if ("%detour" = "dirge") then
              {
                  gosub AUTOMOVE 147
-                 gosub AUTOMOVE 38
+                 if ("$zoneid" = "7") then gosub AUTOMOVE 147
+                 if ("$zoneid" = "13") then gosub AUTOMOVE 11
              }
          if ("%detour" = "arthe") then gosub AUTOMOVE 535
          if ("%detour" = "kaerna") then gosub AUTOMOVE 352
@@ -4435,22 +4436,22 @@ CROC_RET:
      pause 0.1
 CROC_MOVE:
      math croc.count add 1
-     if (%croc.count > 5) && ("%direction" = "sw") then
+     if (%croc.count > 6) && ("%direction" = "sw") then
           {
                var direction north
                var croc.count 0
           }
-     if (%croc.count > 5) && ("%direction" = "north") then
+     if (%croc.count > 6) && ("%direction" = "north") then
           {
                var direction south
                var croc.count 0
           }
-     if (%croc.count > 5) && ("%direction" = "south") then
+     if (%croc.count > 6) && ("%direction" = "south") then
           {
                var direction east
                var croc.count 0
           }
-     if (%croc.count > 5) && ("%direction" = "east") then
+     if (%croc.count > 6) && ("%direction" = "east") then
           {
                var direction sw
                var croc.count 0
@@ -4465,6 +4466,7 @@ CROC_MOVE:
      goto CROC_MOVE
 REEDGO:
      pause .0001
+     pause 0.1
      pause .0001
      matchre CROC_RET ^You are engaged
      matchre REEDGO ^\.\.\.wait|^Sorry, you may only type|^You.*are.*still.*stunned\.

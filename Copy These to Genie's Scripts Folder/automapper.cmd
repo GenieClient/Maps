@@ -6,8 +6,10 @@ put #class combat off
 put #class joust off
 
 # automapper.cmd version 7.4
-# last changed: July 22, 2021
 
+# last changed: Aug 29, 2021
+
+# - Added missing match for MOVE_RETRY (for climbing in Abandoned Mine) 
 # - Updated stow foot logic to handle prayer mats
 # - Added move_PAUSE routine for better handling of walking through areas with long RT causing automapper to trip up on itself
 # - Added support for getting ice skates from portal bag as a secondary check
@@ -136,7 +138,7 @@ ABSOLUTE_TOP:
      var move_OK ^Obvious (paths|exits)|^It's pitch dark|The shop appears to be closed\, but you catch the attention of a night attendant inside\,
      var move_FAIL ^You can't swim in that direction|You can't go there|^A powerful blast of wind blows you to the|^What were you referring to|^I could not find what you were referring to\.|^You can't sneak in that direction|^You can't ride your.+(broom|carpet) in that direction|^You can't ride your.+(broom|carpet) in that direction|^You can't ride that way\.$
      var move_RETRY_GO ^You can't climb that\.$
-     var move_RETRY ^\.\.\.wait|^Sorry, you may only|^Sorry, system is slow|^You can't ride your.+(broom|carpet) in that direction|^You can't ride your.+(broom|carpet) in that direction|^The weight of all|lose your balance during the effort|^You are still stunned|^You're still recovering from your recent|^The mud gives way beneath your feet as you attempt to climb higher, sending you sliding back down the slope instead\!
+     var move_RETRY ^\.\.\.wait|^Sorry, you may only|^Sorry, system is slow|^You can't ride your.+(broom|carpet) in that direction|^You can't ride your.+(broom|carpet) in that direction|^The weight of all|lose your balance during the effort|^You are still stunned|^You're still recovering from your recent|^The mud gives way beneath your feet as you attempt to climb higher, sending you sliding back down the slope instead\!|You're not sure you can
      var move_RETREAT ^You are engaged to|^You try to move, but you're engaged|^While in combat|^You can't do that while engaged|^You can't do that\!  You\'re in combat\!
      var move_WEB ^You can't do that while entangled in a web|As you start to move, you find yourself snared
      var move_WAIT ^You continue climbing|^You begin climbing|^You really should concentrate on your journey|^You step onto a massive stairway

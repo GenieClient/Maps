@@ -1761,6 +1761,7 @@
   </node>
   <node id="267" name="The Chapel of Raven's Point" note="Chapel of Raven's Point|Altar">
     <description>In stark contrast to the hovels that fill the walls of Raven's Point, the interior of the chapel is adorned with rare gems and metals gathered from the four corners of Forfedhdar.  A massive raven, carved from black stone streaked with glittering veins of gold, dominates the rear of the church, its talons curling tightly around the edges of the altar and holding it aloft.  Halos of lingering incense hover above the burning candles that line the foot of the exterior walls, fending off the pressing darkness.</description>
+    <description>In stark contrast to the hovels that fill the walls of Raven's Point, the interior of the chapel is adorned with rare gems and metals gathered from the four corners of Forfedhdar.  A massive raven carved from black stone streaked with glittering veins of gold, dominates the rear of the church, its talons curling tightly around the edges of the altar and holding it aloft.  Halos of lingering incense hover above the burning candles that line the foot of the exterior walls, fending off the pressing darkness.</description>
     <position x="400" y="660" z="0" />
     <arc exit="go" move="go mikkhalbamar archway" destination="132" />
   </node>
