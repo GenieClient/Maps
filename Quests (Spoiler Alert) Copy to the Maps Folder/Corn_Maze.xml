@@ -3950,7 +3950,7 @@
     <description>Stunted and blighted stalks of corn stand withered in the darkness, insects on them making them seem eerily undead.</description>
     <position x="670" y="680" z="0" />
     <arc exit="north" move="north" destination="412" />
-    <arc exit="east" move="east" destination="426" />
+    <arc exit="east" move="east" destination="442" />
     <arc exit="west" move="west" destination="424" />
   </node>
   <node id="426" name="Sleeping Dragon Corn Maze, Exit" note="Corn Maze Exit|Exit|shop01|harried Halfling" color="#FF00FF">
@@ -4055,6 +4055,12 @@
     <description>The moonlight reveals a small valley stretched out between the surrounding hills.  You can see a multitude of tiny lamplights twinkling in the darkness below, and faroff sounds of laughter and singing hover in the sweet evening air.  The faint outline of a road descends down into the night-cloaked valley.</description>
     <position x="-10" y="-20" z="0" />
     <arc exit="go" move="go meandering path" destination="1" />
+  </node>
+  <node id="442" name="Corn Maze, Exit">
+    <description>The corn in this section of the cornfield seems sad and withered, with both the leaves and the stalks almost fully yellowed with only occasional streaks of green within them.  A large portion of the crop is partially bent over, tangled up with each other and unfit for both harvesting and consumption.  A large swath of corn is cut out of the field in a jagged line, likely to separate the diseased corner of the field from the otherwise healthy harvest.</description>
+    <position x="690" y="680" z="0" />
+    <arc exit="west" move="west" destination="425" />
+    <arc exit="go" move="go exit" destination="426" />
   </node>
   <label text="Labyrinth">
     <position x="47" y="6" z="0" />
