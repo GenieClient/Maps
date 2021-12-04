@@ -380,97 +380,97 @@
     <arc exit="west" move="west" destination="56" />
     <arc exit="climb" move="climb earthen stairs" destination="58" />
   </node>
-  <node id="58" name="Aesry Surlaenis'a, Shadaer Jama">
+  <node id="58" name="Aesry Surlaenis'a, Shadaer Jama" color="#008000">
     <description>Sound softens beneath the birch trees due to the thick mulch of old leaves that blankets the ground.  Small cones hang from the weeping side branches of the graceful trees, dripping moisture from their tips.  Split logs reinforce the earthen steps that climb up to the crown of the pass.</description>
     <position x="440" y="-60" z="0" />
     <arc exit="east" move="east" destination="59" />
     <arc exit="climb" move="climb earthen steps" destination="57" />
   </node>
-  <node id="59" name="Aesry Surlaenis'a, Shadaer Jama">
+  <node id="59" name="Aesry Surlaenis'a, Shadaer Jama" color="#008000">
     <description>Young birch woods line the upper slopes as the harbor road approaches the crest of Selhin Dava.  A few dry leaves scutter across the packed surface of the road and tumble with every breeze on the slopes beneath the trees.</description>
     <position x="460" y="-60" z="0" />
     <arc exit="west" move="west" destination="58" />
     <arc exit="climb" move="climb terrace stairs" destination="60" />
   </node>
-  <node id="60" name="Aesry Surlaenis'a, Shadaer Jama">
+  <node id="60" name="Aesry Surlaenis'a, Shadaer Jama" color="#008000">
     <description>Birches border the road, their slender twiggy branches arching overhead and patterning the view of the sky.  Their attenuated trunks stand pale against the dark soil until they disappear into a shadowy blur in the distance.</description>
     <position x="480" y="-60" z="0" />
     <arc exit="east" move="east" destination="61" />
     <arc exit="climb" move="climb terrace stairs" destination="59" />
     <arc exit="go" move="go narrow path" destination="62" />
   </node>
-  <node id="61" name="Aesry Surlaenis'a, Shadaer Jama">
+  <node id="61" name="Aesry Surlaenis'a, Shadaer Jama" color="#008000">
     <description>Wooden timbers reinforce the packed earthen stairs cut into the hillside.  The road's descent is steeper and longer than usual, and this group of steps has a smooth, polished handrailing for the weary to cling to and catch a breath.  The heathered slopes meet birch woods here, the eastern lower inclines covered with scrub and grasses, the birch climbing the higher terraces to the pass.</description>
     <position x="500" y="-60" z="0" />
     <arc exit="west" move="west" destination="60" />
     <arc exit="climb" move="climb earthen stairs" destination="73" />
   </node>
-  <node id="62" name="Aesry Surlaenis'a, Birch Path" color="#C2B280">
+  <node id="62" name="Aesry Surlaenis'a, Birch Path" color="#008000">
     <description>The narrow path threads its way among the birches, with the steep slant of the hillside banking the western edge.  Young birches nevertheless manage to cling to the near vertical slope.  The rustle of leaves and twigs is constant as the drooping branches move with the slightest disturbance in the air.</description>
     <position x="480" y="-40" z="0" />
     <arc exit="southeast" move="southeast" destination="63" />
     <arc exit="go" move="go shadaer jama" destination="60" />
   </node>
-  <node id="63" name="Aesry Surlaenis'a, Birch Path">
+  <node id="63" name="Aesry Surlaenis'a, Birch Path" color="#008000">
     <description>The ground is soft underfoot.  Birch trees spread in all directions, their silvery-grey leaves whispering the language of trees in a soothing rustle.  Spots of greenish moss grow on some of the thicker trunks.</description>
     <position x="500" y="-20" z="0" />
     <arc exit="south" move="south" destination="64" />
     <arc exit="northwest" move="northwest" destination="62" />
   </node>
-  <node id="64" name="Aesry Surlaenis'a, Birch Path">
+  <node id="64" name="Aesry Surlaenis'a, Birch Path" color="#008000">
     <description>The trees cluster so densely that it is difficult to be certain of the path.  One larger tree, with blackish-grey bark, stands like a mother to her smaller children, her crown well above the rest of the wood.  Fluttering leaves and flickering shadows dance in constant motion.</description>
     <position x="500" y="0" z="0" />
     <arc exit="north" move="north" destination="63" />
     <arc exit="south" move="south" destination="65" />
   </node>
-  <node id="65" name="Aesry Surlaenis'a, End of Path">
+  <node id="65" name="Aesry Surlaenis'a, End of Path" color="#008000">
     <description>The path comes to an abrupt end at the top of a steep bank.  The tops of birch trees fill the view below and to the southeast, and tendrils of a dense mist float amongst the growth.  The bank of the dropoff is crumbling dirt, covered with many seasons' fallen leaves.  Each footfall rattles the dead foliage underfoot, loudly jarring the suddenly noticeable quiet.</description>
     <position x="500" y="20" z="0" />
     <arc exit="north" move="north" destination="64" />
     <arc exit="climb" move="climb steep bank" destination="66" />
   </node>
-  <node id="66" name="Aesry Surlaenis'a, Lower Birch Wood">
+  <node id="66" name="Aesry Surlaenis'a, Lower Birch Wood" color="#008000">
     <description>A leaf-covered hillside leads up to the west.  Some partially uprooted birches lean down the sharp incline --  many broken and dead branches prop one tree at a near horizonal angle.  To the east, smaller stunted trees with a green-grey moss coating the bark overlap their boughs to form a net of branches.  A faint, green-tinged mist creeps silently throughout.</description>
     <position x="500" y="40" z="0" />
     <arc exit="east" move="east" destination="67" />
     <arc exit="climb" move="climb hillside" destination="65" />
   </node>
-  <node id="67" name="Aesry Surlaenis'a, Lower Birch Wood">
+  <node id="67" name="Aesry Surlaenis'a, Lower Birch Wood" color="#008000">
     <description>Every tree within sight is splattered with a greenish-grey moss, a clinging growth that looks more like a disease than a co-habitant.  The leaves covering the ground are crusted with the same stringy substance, which perhaps emerges from the ground to grow up the trunks of the trees.  The branches are still as the fog twines about them, and the familar rustling of their twigs and leaves is absent.</description>
     <position x="520" y="40" z="0" />
     <arc exit="southeast" move="southeast" destination="68" />
     <arc exit="west" move="west" destination="66" />
   </node>
-  <node id="68" name="Aesry Surlaenis'a, Lower Birch Wood">
+  <node id="68" name="Aesry Surlaenis'a, Lower Birch Wood" color="#008000">
     <description>Heart-shaped, dark green leathery leaves of wild ginger grow in a sweeping arc over the ground.  The spicy fragrance fills the air with a wet, warm odor.  Moss hangs from the birch branches in twisted strands like locks of hair.  Sounds still suddenly, except for a sourceless, arrhythmic dripping sound.</description>
     <position x="540" y="60" z="0" />
     <arc exit="southwest" move="southwest" destination="69" />
     <arc exit="northwest" move="northwest" destination="67" />
     <arc exit="down" move="down" destination="72" />
   </node>
-  <node id="69" name="Aesry Surlaenis'a, Lower Birch Wood">
+  <node id="69" name="Aesry Surlaenis'a, Lower Birch Wood" color="#008000">
     <description>Five mature birches grew and died here -- nothing stands now but their skeletons, thoroughly coated in the moss.  An unpleasant green-tinted mist fills the air, as a steamy vapor evaporates from the mossy surfaces.  Brittle broken twigs thatch the soggy ground.</description>
     <position x="520" y="80" z="0" />
     <arc exit="north" move="north" destination="70" />
     <arc exit="northeast" move="northeast" destination="68" />
   </node>
-  <node id="70" name="Aesry Surlaenis'a, Lower Birch Wood">
+  <node id="70" name="Aesry Surlaenis'a, Lower Birch Wood" color="#008000">
     <description>The wall of the hillside blocks the view west.  Small saplings grow along it except near a dark vertical gash.  Sathramoss covers most of the hole, and in one more season, will completely cloak it.  A vaporous mist hovers about the moss, forming along its edges.</description>
     <position x="520" y="60" z="0" />
     <arc exit="southeast" move="southeast" destination="71" />
     <arc exit="south" move="south" destination="69" />
   </node>
-  <node id="71" name="Aesry Surlaenis'a, Lower Birch Wood">
+  <node id="71" name="Aesry Surlaenis'a, Lower Birch Wood" color="#008000">
     <description>A dress woven of grass and leaves hangs caught on a broken branch, as if someone had left it behind in a desperate escape.  The ground is very boggy here, and footprints fill quickly with green water.  Sound is deadened by the birch growth, voices muffled by the heavy misty air.</description>
     <position x="540" y="80" z="0" />
     <arc exit="northwest" move="northwest" destination="70" />
   </node>
-  <node id="72" name="Aesry Surlaenis'a, Lower Birch Wood">
+  <node id="72" name="Aesry Surlaenis'a, Lower Birch Wood" color="#008000">
     <description>A dip in the terrain houses a shelter where the infrangible barrier of trees prevents further movement into the wood.  Beneath a canopy of tangled boughs hangs a hammock, woven from the living branches of two white-barked birches.  Although the moss spreads over the ground like embroidery, the trees here are as yet untouched by the blight.  The mist is thinner, but lingers heavily within the surrounding forest.</description>
     <position x="560" y="60" z="0" />
     <arc exit="up" move="up" destination="68" />
   </node>
-  <node id="73" name="Aesry Surlaenis'a, Shadaer Jama">
+  <node id="73" name="Aesry Surlaenis'a, Shadaer Jama" color="#008000">
     <description>Wooden timbers reinforce the packed earthen stairs cut into the hillside.  The high stair climb may have created the need for the wooden handrail which gives the weary a place to cling to and catch a breath.  A line of birch trees grows up the western slopes as the heathery moorland yields to the slender shapes of silvery forest.</description>
     <position x="520" y="-60" z="0" />
     <arc exit="east" move="east" destination="74" />
@@ -530,7 +530,7 @@
     <arc exit="east" move="east" destination="82" />
     <arc exit="climb" move="climb terrace stairs" destination="80" />
   </node>
-  <node id="82" name="Aesry Surlaenis'a, Shadaer Jama">
+  <node id="82" name="Aesry Surlaenis'a, Shadaer Jama" color="#008000">
     <description>Dark granite stone reinforces the steep stairs cut into the hillside.  A group of birch trees shelters this section of dirt road.  Given the constant twittering and rattling branches, the cluster of trees is a popular perch for local songbirds which dart in and out of the branches.</description>
     <description>Dark granite stone reinforces the steep stairs cut into the hillside.  A group of birch trees shelters this section of dirt road, their branches reaching upwards towards the night sky.</description>
     <position x="620" y="-140" z="0" />

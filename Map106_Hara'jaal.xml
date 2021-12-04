@@ -301,7 +301,7 @@
     <arc exit="north" move="north" destination="48" />
     <arc exit="none" move="climb slope" destination="197" />
   </node>
-  <node id="50" name="Hara'jaal, Fal Daelfa">
+  <node id="50" name="Hara'jaal, Fal Daelfa" color="#008000">
     <description>Running water can be heard through the thick foliage to the east, though no clear trail leads in that direction.  The trees are thin and tall, competing for every bit of sunlight.</description>
     <position x="260" y="540" z="0" />
     <arc exit="north" move="north" destination="52" />
@@ -331,19 +331,19 @@
     <arc exit="northeast" move="northeast" destination="53" />
     <arc exit="south" move="south" destination="55" />
   </node>
-  <node id="55" name="Hara'jaal, Fal Daelfa">
+  <node id="55" name="Hara'jaal, Fal Daelfa" color="#008000">
     <description>To the southeast, a tree-covered hillock rises up, crowned with a finger of rock that is visible over the treetops.  A tall thicket runs along the trail that continues south.</description>
     <position x="220" y="620" z="0" />
     <arc exit="north" move="north" destination="54" />
     <arc exit="south" move="south" destination="56" />
   </node>
-  <node id="56" name="Hara'jaal, Fal Daelfa">
+  <node id="56" name="Hara'jaal, Fal Daelfa" color="#008000">
     <description>The trail cuts a tunnel through the rugged copse, bypassing a dense thicket of thorny vines that blocks the way south and skirts a hillock to the northeast.  Some black sap, dripping from the vines, is giving off a pungent aroma.</description>
     <position x="220" y="640" z="0" />
     <arc exit="north" move="north" destination="55" />
     <arc exit="east" move="east" destination="57" />
   </node>
-  <node id="57" name="Hara'jaal, Fal Daelfa">
+  <node id="57" name="Hara'jaal, Fal Daelfa" color="#008000">
     <description>Sounds of running water are coming out of the east.  A dark thicket rises up in the west, the vague trail disappearing within it.</description>
     <position x="240" y="640" z="0" />
     <arc exit="east" move="east" destination="58" />
