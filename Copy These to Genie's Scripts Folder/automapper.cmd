@@ -5,9 +5,9 @@ put #class arrive off
 put #class combat off
 put #class joust off
 
-# automapper.cmd version 7.4
+# automapper.cmd version 7.5
 
-# last changed: Aug 29, 2021
+# last changed: Nov 6, 2021
 
 # - Added missing match for MOVE_RETRY (for climbing in Abandoned Mine) 
 # - Updated stow foot logic to handle prayer mats
@@ -507,12 +507,22 @@ stop.invis:
      if ("$guild" = "Necromancer") then put release eotb
      if ("$guild" = "Moon Mage") then put release rf
      pause 0.5
-     pause 0.4
+     pause 0.2
      goto move.knock
 turn.cloak:
+     pause 0.1
+     matchre turn.cloak ^\.\.\.wait|^Sorry\,
+     matchre turn.cloak ^You pull your cloak
+     matchre remove.cloak ^You attempt to
+     matchre move.knock ^You pull down your
      put turn my cloak
+     matchwait 10
+     goto move.knock
+remove.cloak:
+     pause 0.1
+     pause 0.1
+     put remove my cloak
      pause 0.5
-     pause 0.2
      goto move.knock
 move.drag:
 move.sneak:
@@ -882,7 +892,7 @@ POWERWALK:
      matchre POWERWALK.DONE ^\s*\(Roundtime\s*\:?
      matchre POWERWALK.DONE ^Something in the area is interfering
      put perceive
-	 matchwait
+	matchwait
 POWERWALK.DONE:
      gosub clear
      goto loop
@@ -890,7 +900,7 @@ SEARCHWALK:
      pause
      send search
      wait
-	 pause
+	pause
      gosub clear
      goto loop
 SEARCHWALK.DONE:
@@ -928,6 +938,13 @@ move.done:
      if ($mapwalk) then
           {
                goto mapwalk
+          }
+     if matchre("($righthand|$lefthand)", "cloak") then
+          {
+               pause 0.1
+               put wear my cloak
+               pause 0.3
+               pause 0.2
           }
      gosub clear
      goto loop
