@@ -5,9 +5,9 @@ put #class arrive off
 put #class combat off
 put #class joust off
 
-# automapper.cmd version 7.5
+# automapper.cmd version 7.6
 
-# last changed: Nov 6, 2021
+# last changed: Feb 5, 2022
 
 # - Added missing match for MOVE_RETRY (for climbing in Abandoned Mine) 
 # - Updated stow foot logic to handle prayer mats
@@ -161,6 +161,7 @@ ABSOLUTE_TOP:
      gosub actions
      goto loop
      # ---------------
+     
 actions:
      action (mapper) if %movewait = 0 then shift;if %movewait = 0 then math depth subtract 1;if len("%2") > 0 then echo Next move: %2 when %move_OK
      action (mapper) goto move.torch when %move_TORCH
@@ -189,7 +190,7 @@ actions:
      action (mapper) goto move.climb.mount.fail when %climb_mount_FAIL
      action (mapper) goto move.kneel when maybe if you knelt down first\?
      action (mapper) goto move.lie when ^The passage is too small to walk that way\.  You'll have to get down and crawl\.|There's just barely enough room here to squeeze through, and no more.
-     action (mapper) var footitem $1;goto stowfootitem when ^You notice an?(?:(?:\s\b\w+\B)?(?:intricately|etched|polished|carved|engraved)*).*?(\S+) (?:(?=acid-etched|accented|adorned|affixed|attached|balanced|banded|bearing|bound|branded|braided|caked|carved|chased|chisled|cloaked|clutching|coated|constructed|connected|covered|crafted|crested|crowned|dangling|decorated|deformed|designed|detailed|disPlaying|draped|dyed|embedded|embellished|embroidered|enblazoned|enbossed|encrusted|engraved|enhanced|entitled|etched|fashioned|festooned|featuring|filed|filled|firestained|fitted|flecked|fletched|flaunting|forged|formed|from|gleaming|hewn|highlighted|hilted|hung|in|incised|inlaid|inscribed|inset|intricately|joined|labeled|lavishly|lined|linked|made|marked|mottled|mounted|of|ornamented|padded|painted|polished|reinforced|resembling|rimed|rivited|scattered|scarred|scorched|sealed|set|shaped|shod|spiraled|stamped|stitched|streaked|strung|studded|surmounted|swathed|tangled|tethered|that|tied|tinged|tinted|titled|that|tipped|tooled|topped|trimmed|veined|whorled|wrapped|wrought|with).*)?(?:lying )?at your feet, and do not wish to leave it behind\.
+     action (mapper) var footitem $1;goto stowfootitem when ^You notice an|a?(?:(?:\s\b\w+\B)?(?:intricately|etched|polished|carved|engraved)*).*?(\S+) (?:(?=acid-etched|accented|adorned|affixed|appliqued|attached|balanced|banded|bearing|bound|branded|braided|caked|carved|chased|chisled|cloaked|clutching|coated|constructed|connected|covered|crafted|crested|crowned|dangling|decorated|deformed|designed|detailed|displaying|draped|dyed|embedded|embellished|embroidered|enblazoned|enbossed|encrusted|engraved|enhanced|entitled|etched|fashioned|festooned|featuring|filed|filled|firestained|fitted|flecked|fletched|flaunting|forged|formed|from|gleaming|hewn|highlighted|hilted|hung|in|incised|inlaid|inscribed|inset|intricately|joined|labeled|lavishly|lined|linked|made|marked|mottled|mounted|of|ornamented|padded|painted|polished|reinforced|resembling|rimed|rivited|scattered|scarred|scorched|sealed|set|shaped|shod|spiraled|stamped|stitched|streaked|strung|studded|surmounted|swathed|tangled|tethered|that|tied|tinged|tinted|titled|that|tipped|tooled|topped|trimmed|veined|whorled|wrapped|wrought|with).*)?(?:lying )?at your feet, and do not wish to leave it behind\.
      action (skates) var wearingskates 1 when ^You slide your ice skates on your feet and tightly tie the laces\.|^Your ice skates help you traverse the frozen terrain\.|^Your movement is hindered a little by your ice skates\.
      action (skates) var wearingskates 0 when ^You untie your skates and slip them off of your feet\.
      action var slow_on_ice 1; echo Ice detected! when ^You had better slow down\! The ice is|^At the speed you are traveling
