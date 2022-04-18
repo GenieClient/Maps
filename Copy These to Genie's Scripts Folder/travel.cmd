@@ -7,7 +7,7 @@ put #class rp on
 # Script to Travel for Genie3 #
 # Originally written by Chris/Achilles
 # Revitalized and Robustified by Shroom
-# version 3.4
+# version 3.7
 # Requires EXP Plugin by VTCifer #
 #
 # USAGE - .travel <destination> <room number>  (room is optional!)
@@ -48,15 +48,15 @@ put #class rp on
 ##########################################
 ##  RANKS TO SWIM THE SEGOLTHA RIVER    ##
 ##  TIGER CLAN TO STR OR VICA VERSA     ##
-    var segoltha 550
+    var segoltha 2550
 ##########################################
 ## RANKS TO CLIMB UNDERGONDOLA SHORTCUT ##
 ## Some can do at ~500 w/ buffs & rope  ##
-    var undergondola 540
+    var undergondola 2540
 ##########################################
 ##########################################
 ## RANKS TO USE UNDER-SEGOLTHA (THIEF)  ##
-    var undersegoltha 50
+    var undersegoltha 2250
 ##########################################
 ##########################################
 ## EANKS FOR VELAKA SHORTCUT TO MUSPARI ##
@@ -72,7 +72,12 @@ if ("$charactername") = ("$char3") then var shardcitizen no
 if ("$charactername") = ("$char4") then var shardcitizen no
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
-# CHANGELOG - Latest Update: 9/9/2021
+# CHANGELOG - Latest Update: 4/18/2022
+#
+# - Fixed a bug causing a lockup/genie crash when taking public transport
+#
+# - Will Climb walls to enter Shard from the West/South/North if you have 350+ Athletics
+# - Robustified Travel from Muspari/Fornsted area
 #
 # - Script should now run faster overall
 # - Streamlined Travel from Map 68 (South of Shard) - Should Climb Walls into Shard if enough Athletics 
@@ -155,7 +160,7 @@ NODESTINATION:
   Echo ## Riverhaven | Rossmans | Langenfirth   ##
   Echo ## El'Bains | Zaulfun | Therenborough    ##
   Echo ## Fornsted | Zaulfung |  Throne City    ##
-  Echo ## Hvaral | Haizen | Oasis |  Yeehar     ##
+  Echo ## Hvaral | Haizen | Oasis | Yeehar      ##
   Echo ## Muspar'i                              ##
   Echo -------------------------------------------
   Echo ## Ilithi:
@@ -170,15 +175,16 @@ NODESTINATION:
   Echo ## Inner Hib | Hibarnhvidar |Boar Clan   ##
   Echo -------------------------------------------
   Echo ## Qi:
-  Echo ## Aesy Surlaenis'a | Ratha | M'riss     ##
+  Echo ## Aesry Surlaenis'a | Ratha | M'riss     ##
   Echo ## Mer'Kresh | Hara'jaal (TF only)       ##
+  Echo ## Taisgath                              ##
   Echo -------------------------------------------
   exit
 INIT:
 # debug 5
 # action goto START when ^Just when it seems you will never reach the end of the road
 action goto NOPASSPORT when No one proceeds through this checkpoint without a passport
-action goto NOCOIN when You haven't got enough (.+) to pay for your trip\.|You reach your funds\, but realize you\'re short\.|\"Hey\,\"\s+he says\,\s+\"You haven\'t got enough Lirums to pay for your trip\.
+action goto NOCOIN when You haven't got enough (.+) to pay for your trip\.|You reach your funds, but realize you\'re short\.|\"Hey,\"\s+he says,\s+\"You haven't got enough Lirums to pay for your trip\.
 ## action goto START when \"What in tarnation
 action (moving) var Moving 1 when Obvious (path|exits)|Roundtime
 action var offtransport platform when a barge platform
@@ -186,18 +192,18 @@ action var offtransport pier when the Riverhaven pier
 action var offtransport beach when You also see the beach|mammoth and the beach
 action var offtransport ladder when You also see a ladder|mammoth and a ladder
 action var offtransport wharf when the Langenfirth wharf
-action var offtransport dock when \[\"Her Opulence\"\]|\[\"Hodierna\'s Grace\"\]|\[\"Kertigen\'s Honor\"\]|\[\"His Daring Exploit\"\]|\[The Evening Star\]|\[The Damaris\' Kiss\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[\"Imperial Glory\"\]|\[\"The Riverhawk\"\]|Baso Docks|a dry dock|the salt yard dock|covered stone dock|\[The Galley Sanegazat\]|\[The Galley Cercorim\]|\[Aboard the Warship\, Gondola\]
-action put fatigue when ^You can see a ferry approaching on the left side.|^The ferry|^A kingfisher|^A burst of|^The Elven|^The skiff|^The polemen|^Small waves|^The sturdy stone|^You are about a fourth of the way across\.|^The ferry moves away\, nearly out of view\.|ferry passing you on the left\.|^You are nearing the docks\.|^A swarm of eels passes beneath the keel\, probably on their way to the river\'s fresh water to spawn\.|followed by the clatter of wood on wood\.|^A family of dolphins leaps from the water beside the galley\.|^Some geese in a perfect V fly north high overhead\.|^Some small blue sharks slide past through the water\.|^A sailor walks by with a coil of rope\.|^A green turtle as large as a tower shield swims past\,|^You are nearing the docks\.|A drumbeat sounds through the ship\.|^You are about a fourth of the way across\.|^A galley comes into sight\, its oars beating rhythmically\.|^The galley moves away\, the beat of its drum slowly fading\.|^For a few minutes\, the drumbeat from below is echoed across the water by the beat from the galley passing on the left\.|The door swings shut of its own accord, and the gondola pushes off\.|The platform vanishes against the ridgeline\.|The gondola arrives at the center of the chasm\, and keeps heading (north|south)\.|The cab trundles on along as the ropes overhead creak and moan\.|The ropes creak as the gondola continues (north|south)\.|^The gondola creaks as a wind pushes it back and forth\.|^You hear a bell ring out three times|^The barge|^Several oars pull|^All that is visible|^The opposite bank|^A few of the other passengers|^The shore disappears
-action put fatigue when ^A desert oasis|^The oasis|The endless expanse of the desert|The dock disappears from view quickly|sand-bearing winds buffet|Several skilled yeehar-handlers|^The Sand Elf|^The harsh winds|^The Gemfire Mountains|^The extreme heat causes|^The sand barge|^The large yeehars|^The murderous shriek|dark-skinned elf|Dark-skinned Elves|^As the barge is pulled|^As the dirigible continues|^The thick canopy of|^The dirigible|^The sinuous Southern Trade Route|^The Reshal Sea|^The peculiar sight|^A long moment of breathless suspense|^A Gnomish mechanic|^As the dirigible|^A breathtaking panorama|^The Gnomish operators|^The river quickly gives|^A massive peak|^A large flock|^Far below\, you see|^The Greater Fist|^A clangorous commotion|^Passing over land|^A human who had been|^A cowled passenger peers|^The balloon|^A few scattered islands|^The mammoth\'s fur|^The sea mammoth|^The air cools|^Scarcely visible in|^Another sea mammoth|^Steadily climbing\,|^As the airship leaves the mountain range|^With a swift turn of the|^With another yank on the|^The pilot adjusts his controls|^Turning his wheel\, the pilot points the airship|^With a confident spin of the|^Coming down from the mountain|^A whoosh of steam escapes|^The warship (rumbles|continues)|The tropical island|(crewmen|crewman) (works|rush|swabs)|Sputtering loudly\, the cast-iron stove|Gnomish (crew|pilot|crewman)|warship (proceeds|continues)
+action var offtransport dock when \[\"Her Opulence\"\]|\[\"Hodierna's Grace\"\]|\[\"Kertigen's Honor\"\]|\[\"His Daring Exploit\"\]|\[The Evening Star\]|\[The Damaris' Kiss\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[\"Imperial Glory\"\]|\[\"The Riverhawk\"\]|Baso Docks|a dry dock|the salt yard dock|covered stone dock|\[The Galley Sanegazat\]|\[The Galley Cercorim\]|\[Aboard the Warship, Gondola\]|\[The Halasa Selhin, Main Deck\]
+action put fatigue when ^You can see a ferry approaching on the left side.|^The ferry|^A kingfisher|^A burst of|^The Elven|^The skiff|^The polemen|^Small waves|^The sturdy stone|^You are about a fourth of the way across\.|^The ferry moves away, nearly out of view\.|ferry passing you on the left\.|^You are nearing the docks\.|^A swarm of eels passes beneath the keel, probably on their way to the river's fresh water to spawn\.|followed by the clatter of wood on wood\.|^A family of dolphins leaps from the water beside the galley\.|^Some geese in a perfect V fly north high overhead\.|^Some small blue sharks slide past through the water\.|^A sailor walks by with a coil of rope\.|^A green turtle as large as a tower shield swims past,|^You are nearing the docks\.|A drumbeat sounds through the ship\.|^You are about a fourth of the way across\.|^A galley comes into sight, its oars beating rhythmically\.|^The galley moves away, the beat of its drum slowly fading\.|^For a few minutes, the drumbeat from below is echoed across the water by the beat from the galley passing on the left\.|The door swings shut of its own accord, and the gondola pushes off\.|The platform vanishes against the ridgeline\.|The gondola arrives at the center of the chasm, and keeps heading (north|south)\.|The cab trundles on along as the ropes overhead creak and moan\.|The ropes creak as the gondola continues (north|south)\.|^The gondola creaks as a wind pushes it back and forth\.|^You hear a bell ring out three times|^The barge|^Several oars pull|^All that is visible|^The opposite bank|^A few of the other passengers|^The shore disappears
+action put fatigue when ^A desert oasis|^The oasis|The endless expanse of the desert|The dock disappears from view quickly|sand-bearing winds buffet|Several skilled yeehar-handlers|^The Sand Elf|^The harsh winds|^The Gemfire Mountains|^The extreme heat causes|^The sand barge|^The large yeehars|^The murderous shriek|dark-skinned elf|Dark-skinned Elves|^As the barge is pulled|^As the dirigible continues|^The thick canopy of|^The dirigible|^The sinuous Southern Trade Route|^The Reshal Sea|^The peculiar sight|^A long moment of breathless suspense|^A Gnomish mechanic|^As the dirigible|^A breathtaking panorama|^The Gnomish operators|^The river quickly gives|^A massive peak|^A large flock|^Far below, you see|^The Greater Fist|^A clangorous commotion|^Passing over land|^A human who had been|^A cowled passenger peers|^The balloon|^A few scattered islands|^The mammoth's fur|^The sea mammoth|^The air cools|^Scarcely visible in|^Another sea mammoth|^Steadily climbing,|^As the airship leaves the mountain range|^With a swift turn of the|^With another yank on the|^The pilot adjusts his controls|^Turning his wheel, the pilot points the airship|^With a confident spin of the|^Coming down from the mountain|^A whoosh of steam escapes|^The warship (rumbles|continues)|The tropical island|(crewmen|crewman) (works|rush|swabs)|Sputtering loudly, the cast-iron stove|Gnomish (crew|pilot|crewman)|warship (proceeds|continues)
 action put look when ^Your destination
-action put #tvar spellEOTB 0 when ^Your corruptive mutation fades\, revealing you to the world once more\.
+action put #tvar spellEOTB 0 when ^Your corruptive mutation fades, revealing you to the world once more\.
 action put #tvar spellEOTB 1 when ^You feel a rippling sensation throughout your body as your corruptive mutation alters you and your equipment into blind spots invisible to the world\.
-action put #tvar spellEOTB 1 when ^Your spell subtly alters the corruptive mutation upon you\, creating a blind spot once more\.
-action put #tvar spellEOTB 1 when ^You sense the Eyes of the Blind spell upon you\, which will last .*\.
-action put #tvar spellROC 0 when ^The Rite of Contrition matrix loses cohesion\, leaving your aura naked\.
+action put #tvar spellEOTB 1 when ^Your spell subtly alters the corruptive mutation upon you, creating a blind spot once more\.
+action put #tvar spellEOTB 1 when ^You sense the Eyes of the Blind spell upon you, which will last .*\.
+action put #tvar spellROC 0 when ^The Rite of Contrition matrix loses cohesion, leaving your aura naked\.
 action put #tvar spellROC 0 when eval ($SpellTimer.RiteofContrition.active = 0)
-action put #tvar spellROC 1 when ^You weave a field of sublime corruption\, concealing the scars in your aura under a layer of magical pretense\.
-action put #tvar spellROC 1 when ^You sense the Rite of Contrition spell upon you\, which will last .*\.
+action put #tvar spellROC 1 when ^You weave a field of sublime corruption, concealing the scars in your aura under a layer of magical pretense\.
+action put #tvar spellROC 1 when ^You sense the Rite of Contrition spell upon you, which will last .*\.
 action put #tvar spellROG 1 when ^You project your self-image outward on a gust of psychic miasma
 action put #tvar spellROG 1 when eval ($SpellTimer.RiteofGrace.active = 1)
 action put #tvar spellROG 0 when eval ($SpellTimer.RiteofGrace.active = 0)
@@ -223,7 +229,7 @@ if !def(guild) then gosub INFO_CHECK
 if !def(circle) then gosub INFO_CHECK
 pause 0.0001
 TOP:
-put #mapper reset
+# put #mapper reset
 pause 0.0001
 gosub PREMIUM_CHECK
 pause 0.0001
@@ -285,10 +291,10 @@ if matchre("$roomname", "Maelshyve's Ascent") then gosub MAELSHYVE_ASCENT_ESCAPE
 if matchre("$roomname", "(Abyssal Descent|Abyssal Seed)") then gosub ABYSSAL_ESCAPE
 if matchre("$roomname", "Deadman's Confide, Beach") then gosub DEADMAN_ESCAPE
 if matchre("$roomname", "Adder's Nest") then gosub ADDERNEST_ESCAPE
-if matchre("$roomname", "Temple of the North Wind\, Catacombs") then gosub NORTHWIND_ESCAPE
-if matchre("$roomname", "Temple of the North Wind\, High Priestess\' Sanctum") then gosub ASKETI_ESCAPE
-if matchre("$roomname", "Temple of the North Wind\, Dark Sanctuary") then gosub ASKETI_ESCAPE
-if matchre("$roomname", "Temple of the North Wind\, Last Sacrifice") then gosub ASKETI_ESCAPE
+if matchre("$roomname", "Temple of the North Wind, Catacombs") then gosub NORTHWIND_ESCAPE
+if matchre("$roomname", "Temple of the North Wind, High Priestess' Sanctum") then gosub ASKETI_ESCAPE
+if matchre("$roomname", "Temple of the North Wind, Dark Sanctuary") then gosub ASKETI_ESCAPE
+if matchre("$roomname", "Temple of the North Wind, Last Sacrifice") then gosub ASKETI_ESCAPE
 if matchre("$roomname", "Asketi's Mount") then gosub ASKETI_ESCAPE
 if matchre("$roomname", "The Fangs of Ushnish") then gosub USHNISH_ESCAPE
 if matchre("$roomname", "Temple of Ushnish") then gosub USHNISH_ESCAPE_2
@@ -323,13 +329,13 @@ if ("$zoneid" = "1j") then gosub AUTOMOVE cross
 if ("$zoneid" = "2a") then gosub AUTOMOVE cross
 pause 0.0001
 pause 0.0001
-if (matchre("%destination", "\b(ratha|hara?j?a?a?l?)") && matchre("$zoneid", "\b(1|30|42|47|61|66|67|90|99|107|108|116)\b")) then
+if (matchre("%destination", "\b(ratha|hara?j?a?a?l?|tais?g?a?t?h?)") && matchre("$zoneid", "\b(1|30|42|47|61|66|67|90|99|107|108|116)\b")) then
      {
           if (matchre("$game", "(?i)DRX") && (%portal = 1)) then
           {
                if (matchre("$zoneid", "\b(1|30|40|47|67|99|107|116)\b") && (%ported = 0)) then gosub PORTAL_TIME
           }
-     if (matchre("$game", "(?i)DRF") && matchre("%destination", "\brath?a?") || (%premium = 1) && matchre("%destination", "\brath?a?")) then
+     if (matchre("$game", "(?i)DRF") && matchre("%destination", "\b(rath?a?|tais?g?a?t?h?)") || (%premium = 1) && matchre("%destination", "\b(rath?a?|tais?g?a?t?h?)")) then
                {
                     echo *** GOING TO FC
                     gosub TO_SEACAVE
@@ -337,7 +343,7 @@ if (matchre("%destination", "\b(ratha|hara?j?a?a?l?)") && matchre("$zoneid", "\b
                     var toratha 1
                     gosub JOINLOGIC
                     gosub AUTOMOVE 252
-                    goto ARRIVED
+                    if matchre("%destination", "\bratha") then goto ARRIVED
                }
       if (matchre("$game", "(?i)DRF") && matchre("%destination", "\b(haraj?a?a?l?)")) then
           {
@@ -348,7 +354,7 @@ if (matchre("%destination", "\b(ratha|hara?j?a?a?l?)") && matchre("$zoneid", "\b
                goto ARRIVED
           }
     }
-if (("$zoneid" = "90") && !matchre("%destination", "\b(rath?a?|aesr?y?|hara)")) then
+if (("$zoneid" = "90") && !matchre("%destination", "\b(rath?a?|aesr?y?|hara|taisg?a?t?h?)")) then
     {
           if (matchre("$game", "(?i)DRX") && (%portal = 1)) then
                {
@@ -363,6 +369,14 @@ if (("$zoneid" = "90") && !matchre("%destination", "\b(rath?a?|aesr?y?|hara)")) 
         pause
         gosub JOINLOGIC
         gosub AUTOMOVE 2
+    }
+if (("$zoneid" = "90") && matchre("%destination", "\btais?g?a?t?h?")) then
+    {
+        gosub AUTOMOVE 398
+        pause 0.5
+        put go moongate
+        pause
+        goto ARRIVED
     }
 if (("$zoneid" = "150") && !matchre("%destination", "\b(rath?a?|acen?e?m?a?c?r?a?)")) then
      {
@@ -632,6 +646,18 @@ if matchre("%destination", "\b(merk?r?e?s?h?|kre?s?h?)") then
             var detour merk
             goto THERENGIA
     }
+if matchre("%destination", "\b(tais?g?a?t?h?)") then
+    {
+            var detour ratha
+            if ("$zoneid" = "150") then
+                {
+                    gosub AUTOMOVE 2
+                    var toratha 1
+                    gosub JOINLOGIC
+                    gosub AUTOMOVE 398
+                    goto ARRIVED
+                }
+    }
 if matchre("%destination", "\b(har?a?j?a?a?l?)") then
     {
             var detour hara
@@ -685,7 +711,7 @@ gosub JOINLOGIC
 AESRY_LONG_2:
 pause 0.2
 gosub AUTOMOVE 234
-gosub JOINLOGIC
+gosub FERRYLOGIC
 goto ARRIVED
 
 # TRAVEL
@@ -945,7 +971,17 @@ if ("$zoneid" = "10") then gosub AUTOMOVE 116
 if ("$zoneid" = "9b") then gosub AUTOMOVE 9
 if ("$zoneid" = "14b") then gosub AUTOMOVE 217
 if ("$zoneid" = "11") then gosub AUTOMOVE 2
-if (("$zoneid" = "1") && matchre("%detour", "(arthe|dirge|kaerna|stone|misen|sorrow|fist|beisswurms|bucca|viper)")) then gosub AUTOMOVE 171
+if (("$zoneid" = "1") && matchre("%detour", "(arthe|dirge|kaerna|stone|misen|sorrow|fist|beisswurms|bucca|viper)")) then
+     {
+          if ($invisible = 1) then
+               {
+                    gosub AUTOMOVE N gate
+                    gosub AUTOMOVE NTR
+                    goto CROSSING_2
+               }
+          gosub AUTOMOVE 171
+     }
+CROSSING_2:
 if (("$zoneid" = "7") && matchre("%detour", "(arthe|dirge|kaerna|stone|misen|sorrow|fist|beisswurms|bucca|viper)")) then
      {
          if matchre("%destination", "(?i)ushnish") then
@@ -1356,14 +1392,21 @@ if (("$zoneid" = "62") && matchre("$game", "(?i)DR")) then
 ILITHI_3:
 if (("$zoneid" = "69") && matchre("%detour", "ye{2,}t")) then
           {
+              echo
               echo ############################
               echo *** CONGRATULATIONS!!!!
               echo *** SECRET YOLO OPTION SELECTED!
+              echo *** SPECIAL SURPRISE AHEAD!!!!!!
               echo ############################
+              echo
+              pause 0.9
+              pause 0.3
               gosub AUTOMOVE 530
-              echo ############
-              echo *** YEEEEET!!!
-              echo ############
+              echo
+              echo #############
+              echo *** YEEEEEEEEEET!!!!!
+              echo #############
+              echo
               goto ARRIVED
           }
 if (("$zoneid" = "69") && matchre("(horse|spire|wyvern)","%detour")) then
@@ -1380,6 +1423,20 @@ if (("$zoneid" = "66") && ("%detour" = "garg")) then
               goto ARRIVED
           }
 #if (("$zoneid" = "69") && ("%shardcitizen" = "yes")) then gosub AUTOMOVE 31
+if ("$zoneid" = "69") then
+     {
+          if ($Athletics.Ranks > 350) then
+               {
+                    gosub AUTOMOVE 10
+                    pause 0.01
+                    send climb wall
+                    pause 0.5
+                    pause 0.3
+                    gosub MOVE north
+                    gosub MOVE climb ladder
+                    pause 0.001
+               }
+     }
 if ("$zoneid" = "69") then gosub AUTOMOVE 1
 if ("$zoneid" = "68a") then gosub AUTOMOVE 29
 if (("$zoneid" = "68") && matchre("(adan'f|corik)","%detour")) then
@@ -1388,6 +1445,17 @@ if (("$zoneid" = "68") && matchre("(adan'f|corik)","%detour")) then
               if ("%detour" = "adan'f") then gosub AUTOMOVE 29
               goto ARRIVED
           }
+if ("$zoneid" = "68") then
+     {
+          if ($Athletics.Ranks > 350) then
+               {
+                    gosub AUTOMOVE 2
+                    pause 0.01
+                    send climb wall
+                    pause 0.5
+                    pause 0.3
+               }
+     }
 if (("$zoneid" = "68") && ("$guild" = "Thief")) then gosub AUTOMOVE 225
 if ("$zoneid" = "67a") then gosub AUTOMOVE shard
 if (("$zoneid" = "68") && matchre("%shardcitizen", "(?i)yes")) then gosub AUTOMOVE 1
@@ -1396,7 +1464,7 @@ if (("$zoneid" = "67") && matchre("alfren","%detour")) then
           {
               goto CROSSING
           }
-if (("$zoneid" = "67") && ("$guild" = "Thief") && matchre("(steel|ylono|fayrin|horse|spire|wyvern)","%detour")) then
+if (("$zoneid" = "67") && ("$guild" = "Thief") && matchre("%detour", "(steel|ylono|fayrin|horse|spire|wyvern)")) then
           {
               gosub AUTOMOVE 566
               gosub AUTOMOVE 23
@@ -1411,8 +1479,8 @@ if (("$zoneid" = "67") && ("$guild" = "Thief") && matchre("(adan'f|corik)","%det
               if ("%detour" = "corik") then gosub AUTOMOVE 114
           }
 if (("$zoneid" = "67") && matchre("%detour", "ye{2,}t")) then gosub AUTOMOVE west
-if (("$zoneid" = "67") && matchre("(steel|ylono|fayrin|horse|spire|wyvern|corik|adan'f)","%detour")) then gosub AUTOMOVE 132
-if (("$zoneid" = "66") && matchre("(steel|fayrin|ylono|corik|adan'f)","%detour")) then
+if (("$zoneid" = "67") && matchre("%detour", "(steel|ylono|fayrin|horse|spire|wyvern|corik|adan'f)")) then gosub AUTOMOVE 132
+if (("$zoneid" = "66") && matchre("%detour", "(steel|fayrin|ylono|corik|adan'f)")) then
           {
               if ("%detour" = "steel") then gosub AUTOMOVE 99
               if ("%detour" = "fayrin") then gosub AUTOMOVE 127
@@ -1449,13 +1517,27 @@ if (("$zoneid" = "66") && matchre("(steel|fayrin|ylono|corik|adan'f)","%detour")
                   }
               goto ARRIVED
           }
-if (("$zoneid" = "66") && matchre("(horse|spire|wyvern)","%detour")) then
+if (("$zoneid" = "66") && matchre("%detour", "(horse|spire|wyvern)")) then
           {
               gosub AUTOMOVE 217
               if ("%detour" = "horse") then gosub AUTOMOVE 199
               if ("%detour" = "spire") then gosub AUTOMOVE 334
               if ("%detour" = "wyvern") then gosub AUTOMOVE 15
           }
+if ("$zoneid" = "66") then
+     {
+          if ($Athletics.Ranks > 350) then
+          {
+               gosub AUTOMOVE 70
+               pause 0.01
+               send climb wall
+               pause 0.5
+               pause 0.3
+               gosub MOVE east
+               gosub MOVE climb ladder
+               pause 0.001
+          }
+     }
 if (("$zoneid" = "66") && ("$guild" = "Thief")) then
           {
                gosub AUTOMOVE 66
@@ -1499,7 +1581,7 @@ goto ARRIVED
 #################################################################################
 THERENGIA:
 var label THERENGIA
-if (("$zoneid" = "47") && !matchre("%destination", "muspari")) then goto ARRIVED
+if (("$zoneid" = "47") && matchre("%destination", "muspari")) then goto ARRIVED
 if (matchre("$game", "(?i)DRX") && (%portal = 1)) then
      {
           if (matchre("$zoneid", "\b(1|30|40|47|67|99|107|116)\b") && (%ported = 0)) then gosub PORTAL_TIME
@@ -1723,7 +1805,7 @@ if ("$zoneid" = "1") then
      {
           if ($invisible = 1) then
                {
-                    gosub AUTOMOVE north
+                    gosub AUTOMOVE N gate
                     gosub AUTOMOVE NTR
                     goto THERENGIA_1
                }
@@ -1823,7 +1905,7 @@ if (("$zoneid" = "48") && matchre("%detour", "oasis")) then
           gosub AUTOMOVE 22
           if matchre("%destination", "(?i)oasis?") then goto ARRIVED
      }
-if (("$zoneid" = "41") && matchre("%detour", "(rossman|lang|theren|rakash|el'bain|haven|zaulfung)")) then 
+if (("$zoneid" = "41") && !matchre("%detour", "(muspari|fornsted|oasis)")) then
           {
               gosub AUTOMOVE 53
               pause 0.5
@@ -2777,7 +2859,7 @@ PASSPORTCHECK:
   return
 FERRYLOGIC:
   gosub INFO_CHECK
-  if contains("(1|7|30|35|60|40|41|47|48|113|106|107|108|150)","$zoneid") then goto FERRY
+  if contains("(1|7|30|35|60|40|41|47|48|90|113|106|107|108|150)","$zoneid") then goto FERRY
   if matchre ("$roomname","Aboard the Mammoth") then goto FERRY
   if matchre("$roomname", "Gondola") then
      {
@@ -2807,25 +2889,31 @@ FERRYLOGIC:
         }
   else goto NODESTINATION
 GONDOLA:
+  var Loop 0
   pause 0.1
   if matchre("$roomname", "Gondola") then goto ONGONDOLA
   pause 0.1
   send look
   pause 2
-  matchre ONGONDOLA \[Gondola\,
+  matchre ONGONDOLA \[Gondola,
+  echo
   echo *** Waiting for Gondola to arrive
+  echo
+GONDOLA_LOOP:
+  math Loop add 1
+  if (%Loop > 6) then
+        {
+            echo
+            echo *** Waiting for Gondola to arrive
+            echo
+            var Loop 0
+        }
   if matchre ("$roomobjs","gondola") then send go gondola
-  matchwait 5
-  if matchre ("$roomobjs","gondola") then send go gondola
+  if matchre("$roomname", "Gondola") then goto ONGONDOLA
   pause 2
-  if matchre ("$roomobjs","gondola") then send go gondola
-  pause 2
-  if matchre ("$roomobjs","gondola") then send go gondola
-  pause 2
-  goto GONDOLA
+  goto GONDOLA_LOOP
 ONGONDOLA:
-  pause
-  pause
+  pause 0.8
   if ("%direction" = "north") && ($north = 1) then gosub MOVE north
   if ("%direction" = "south") && ($south = 1) then gosub MOVE south
 GONDOLAWAIT:
@@ -2865,54 +2953,56 @@ STOP_INVIS:
      pause 0.3
 FERRY:
   pause 0.1
+  var offtransport dock
   if ($invisible) then goto STOP_INVIS
   pause 0.1
-  matchre ONFERRY \[\"Her Opulence\"\]|\[\"Hodierna\'s Grace\"\]|\[\"Kertigen\'s Honor\"\]|\[\"His Daring Exploit\"\]|\[\"Northern Pride\"\, Main Deck\]|\[\"Theren\'s Star\"\, Deck\]|\[The Evening Star\]|\[The Damaris\' Kiss\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[\"The Desert Wind\"\]|\[\"The Suncatcher\"\]|\[\"The Riverhawk\"\]|\[\"Imperial Glory\"\]\"Hodierna\'s Grace\"|\"Her Opulence\"\]|\[The Galley Cercorim\]|\[The Jolas\, Fore Deck\]|\[Aboard the Warship\, Gondola\]|\[The Halasa Selhin\, Main Deck\]|\[Aboard the Mammoth\, Platform\]
-  matchre ONFERRY Secured to the gigantic balloon overhead\, the armored ironwood gondola dangles on a convoluted network of hempen rope\.
+  matchre ONFERRY \[\"Her Opulence\"\]|\[\"Hodierna\'s Grace\"\]|\[\"Kertigen\'s Honor\"\]|\[\"His Daring Exploit\"\]|\[\"Northern Pride\", Main Deck\]|\[\"Theren\'s Star\", Deck\]|\[The Evening Star\]|\[The Damaris\' Kiss\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[\"The Desert Wind\"\]|\[\"The Suncatcher\"\]|\[\"The Riverhawk\"\]|\[\"Imperial Glory\"\]\"Hodierna\'s Grace\"|\"Her Opulence\"\]|\[The Galley Cercorim\]|\[The Jolas, Fore Deck\]|\[Aboard the Warship, Gondola\]|\[The Halasa Selhin, Main Deck\]|\[Aboard the Mammoth, Platform\]
+  matchre ONFERRY Secured to the gigantic balloon overhead, the armored ironwood gondola dangles on a convoluted network of hempen rope\.
   matchre ONFERRY ^One of the barge\'s crew members stops you and requests a transportation fee|A row of benches occupies the deck
-  matchre ONFERRY Long\, wide and low\, this vessel is built for utility\, but the hand of luxury can be discerned in the ornately carved walnut railings\, down-cushioned benches and the well polished deck
-  matchre ONFERRY ^A few weary travelers lean against a railing at the bow of this ferry\, anxiously waiting to reach the opposite bank\.
-  matchre ONFERRY ^The ferry rocks gently as you step aboard\. Surrounded by the cool\, briny air of the Segoltha\, you take your place on the deserted deck and gaze up into the night sky\.
-  matchre ONFERRY ^Most of the passengers on this low riding barge have descended into quiet conversation\, not wishing to stir the night\. A single lantern, swinging from the fore rail\, pushes its dull gold rays across the dark water\. 
+  matchre ONFERRY Long, wide and low, this vessel is built for utility, but the hand of luxury can be discerned in the ornately carved walnut railings, down-cushioned benches and the well polished deck
+  matchre ONFERRY ^A few weary travelers lean against a railing at the bow of this ferry, anxiously waiting to reach the opposite bank\.
+  matchre ONFERRY ^The ferry rocks gently as you step aboard\. Surrounded by the cool, briny air of the Segoltha, you take your place on the deserted deck and gaze up into the night sky\.
+  matchre ONFERRY ^Most of the passengers on this low riding barge have descended into quiet conversation, not wishing to stir the night\. A single lantern, swinging from the fore rail, pushes its dull gold rays across the dark water\. 
   matchre ONFERRY ^This is the only barge of its type to ply the waters of Lake Gwenalion|^A white-washed wood railing surrounds the entire upper deck of the barge
-  matchre ONFERRY ^The first of the massive barges to traverse Lake Gwenalion\, \"Theren\'s Star\" still maintains a quiet elegance despite its apparent age\.
-  matchre ONFERRY ^Long and low\, the sleek lines of the ferry are designed so that it slips through the water with a minimum of disturbance\.
+  matchre ONFERRY ^The first of the massive barges to traverse Lake Gwenalion, \"Theren\'s Star\" still maintains a quiet elegance despite its apparent age\.
+  matchre ONFERRY ^Long and low, the sleek lines of the ferry are designed so that it slips through the water with a minimum of disturbance\.
   matchre ONFERRY ^This particular skiff is roomy and solid with benches only slightly worn from use
   matchre ONFERRY ^The newly crafted skiff smells of fresh wood and paint\.
-  matchre ONFERRY ^The warship (continues|rumbles)|^The din of battle abates as the Gnomish crew|^Sputtering loudly\, the cast\-iron stove
+  matchre ONFERRY ^The warship (continues|rumbles)|^The din of battle abates as the Gnomish crew|^Sputtering loudly, the cast-iron stove
   matchre ONFERRY ^The resounding boom of a nearby cannon|^A flaming arrow narrowly misses the balloon|^Your ears are left ringing as the crew begins to fire the cannons|^Fang's Peak sinks below the southern horizon
   matchre ONFERRY ^The Desert Wind barge is made up of a wooden flatboat mounted atop steel rails
-  matchre ONFERRY ^The deck of the wooden barge is mostly covered with tightly packed crates and barrels\, all tied down so as not to tumble about or fall overboard during the sometimes turbulent river journeys\.
-  matchre ONFERRY ^A row of water-stained benches occupies the deck of the Imperial Glory\, where wealthy passengers can sit at ease and view the beautiful landscape\, rolling forests and a few sandy beaches\, of southern Therengia\.
+  matchre ONFERRY ^The deck of the wooden barge is mostly covered with tightly packed crates and barrels, all tied down so as not to tumble about or fall overboard during the sometimes turbulent river journeys\.
+  matchre ONFERRY ^A row of water-stained benches occupies the deck of the Imperial Glory, where wealthy passengers can sit at ease and view the beautiful landscape, rolling forests and a few sandy beaches, of southern Therengia\.
   matchre ONFERRY ^The light bowl-shaped boat has a blue leather hide stretched tightly over its birch sapling frame
   matchre ONFERRY ^Flecks of foam spray through the air when the Jolas cuts through the waves\.
-  matchre ONFERRY ^The deck is split down the middle by an open pit\, bracketed on each end by the two masts\.
-  matchre ONFERRY ^Walking in this tiny area is difficult due to the litter of ropes\, some coiled and some stretching from the railings and belaying pins up into the maze of wood and canvas above\.
-  matchre ONFERRY ^In anticipation of the sudden influx of passengers\, makeshift benches have been hastily constructed from kegs\, driftwood\, and nets stretched tight between boards\, then have been cleverly placed so that they are as out of the way as possible\.
-  matchre ONFERRY ^Passengers and cargo crowd the deck of the sleek\, black galley\.
+  matchre ONFERRY ^The deck is split down the middle by an open pit, bracketed on each end by the two masts\.
+  matchre ONFERRY ^Walking in this tiny area is difficult due to the litter of ropes, some coiled and some stretching from the railings and belaying pins up into the maze of wood and canvas above\.
+  matchre ONFERRY ^In anticipation of the sudden influx of passengers, makeshift benches have been hastily constructed from kegs, driftwood, and nets stretched tight between boards, then have been cleverly placed so that they are as out of the way as possible\.
+  matchre ONFERRY ^Passengers and cargo crowd the deck of the sleek, black galley\.
   matchre ONFERRY ^The light bowl-shaped boat has a new leathery hide stretched tightly over its birch sapling frame\.
-  matchre ONFERRY ^The galley\, like its twin\, carries passengers and cargo\, but it can easily become a war galley\.
+  matchre ONFERRY ^The galley, like its twin, carries passengers and cargo, but it can easily become a war galley\.
   matchre ONFERRY ^The bowsprit attached to the jib boom on the bow is rigged to hold three triangular foresails in front of the foremast\.
   matchre ONFERRY ^The length of this ferry is filled to capacity with travelers making their way to the opposite bank of the Segoltha
   matchre ONFERRY ^A few weary travelers lean against a railing at the bow of this ferry
-  matchre ONFERRY ^Passengers and cargo crowd the deck of the sleek\, black galley\.|^The galley\, like its twin\, carries passengers and cargo\,|^Grease spewed from the galley
+  matchre ONFERRY ^Passengers and cargo crowd the deck of the sleek, black galley\.|^The galley, like its twin, carries passengers and cargo,|^Grease spewed from the galley
   matchre ONFERRY ^The Selhin ties off to the Uaro Dock\!
   matchre STOP_INVIS ^How do you expect the barge crew to let you onboard if they can't see you\?
   send look
   pause 0.5
   pause 0.2
-  if matchre ("$roomobjs","Gnomish warship") then send join warship
-  if matchre ("$roomobjs","Riverhawk") then send go riverhawk
-  if matchre ("$roomobjs","Imperial") then send go imperial glory
-  if matchre ("$roomobjs","Star") then send go ferry
-  if matchre ("$roomobjs","skiff") then send go skiff
-  if matchre ("$roomobjs","Kiss") then send go ferry
-  if matchre ("$roomobjs","ferry") then send go ferry
-  if matchre ("$roomobjs","barge") then send go barge
-  if matchre ("$roomobjs","galley") then send go galley
-  if matchre ("$roomobjs","Jolas") then send go jolas
-  if matchre ("$roomobjs","Selhin") then send go selhin
-  if matchre ("$roomobjs","warship") then send join warship
+  if matchre("$roomobjs","Gnomish warship") then send join warship
+  if matchre("$roomobjs","Riverhawk") then send go riverhawk
+  if matchre("$roomobjs","Imperial") then send go imperial glory
+  if matchre("$roomobjs","Star") then send go ferry
+  if matchre("$roomobjs","skiff") then send go skiff
+  if matchre("$roomobjs","Kiss") then send go ferry
+  if matchre("$roomobjs","ferry") then send go ferry
+  if matchre("$roomobjs","barge") then send go barge
+  if matchre("$roomobjs","galley") then send go galley
+  if matchre("$roomobjs","Jolas") then send go jolas
+  if matchre("$roomobjs","Selhin") then send go selhin
+  if matchre("$roomobjs","Halasa") then put go selhin
+  if matchre("$roomobjs","warship") then send join warship
   matchwait 5
   if matchre ("$roomname","Aboard the Mammoth") then goto ONFERRY
   if matchre ("$roomname","Imperial") then goto ONFERRY
@@ -2942,7 +3032,7 @@ ONFERRY:
   pause 0.1
   pause 0.1
   echo
-  echo ### Riding on public transport. Final Destination: %destination
+  echo ### Riding on public transport.
   echo
   if ($hidden = 0) then send hide
   pause
@@ -2954,9 +3044,10 @@ ONFERRY:
      }
   if matchre ("$roomname","(Jolas|Selhin)") then goto shiploop
   matchre OASIS_CHECK ^The sand barge pulls up to a desert oasis and stops\.
-  matchre OFFTHERIDE dock and its crew ties the (ferry|barge) off\.|^You come to a very soft stop|^The skiff lightly taps|^The sand barge pulls into dock|^The barge pulls into dock|The crew ties it off and runs out the gangplank\.
+  matchre OFFTHERIDE dock and its crew ties the (ferry|barge) off\.|^You come to a very soft stop|^The skiff lightly taps|^The sand barge pulls into dock|^The barge pulls into dock|The crew ties it off and runs out the gangplank\.|^The captain barks the order to tie off the Selhin to the docks\.|^The captain barks the order to tie off the Jolas to the docks\.
   matchre OFFTHERIDE ^The warship lands with a creaky lurch|^The captain barks the order to tie off .+ to the docks\.|returning to Fang Cove|returning to Ratha
-  matchwait
+  matchwait 60
+  goto ONFERRY
 
 OASIS_CHECK:
   pause 0.1
@@ -3016,14 +3107,27 @@ JOINLOGIC:
   pause 0.1
   pause 0.1
   put look
-  matchre ONJOINED ^\[Aboard the Dirigible\, Gondola\]|^\[Alongside a Wizened Ranger\]|^An intricate network of silken rope|^\[Aboard the Balloon\, Gondola\]|^A veritable spiderweb of ropes secures|^Thick\, barnacle\-encrusted ropes secure the platform to the|\[Aboard the Mammoth\, Platform\]|\[The Bardess' Fete\, Deck\]|^Silken rigging suspends the sweeping teak|\[Aboard the Warship\, Gondola\]
+  matchre ONJOINED ^\[Aboard the Dirigible, Gondola\]|^\[Alongside a Wizened Ranger\]|^An intricate network of silken rope|^\[Aboard the Balloon, Gondola\]|^A veritable spiderweb of ropes secures|^Thick, barnacle-encrusted ropes secure the platform to the|\[Aboard the Mammoth, Platform\]|\[The Bardess' Fete, Deck\]|^Silken rigging suspends the sweeping teak|\[Aboard the Warship, Gondola\]
   pause 0.3
   pause 0.2
-  if matchre("$roomobjs $roomname", "(^\[Aboard the Dirigible\, Gondola\]|^\[Alongside a Wizened Ranger\]|^An intricate network of silken rope|^\[Aboard the Balloon\, Gondola\]|^A veritable spiderweb of ropes secures|^Thick\, barnacle\-encrusted ropes secure the platform to the|\[Aboard the Mammoth\, Platform\]|\[The Bardess' Fete\, Deck\]|^Silken rigging suspends the sweeping teak|\[Aboard the Warship\, Gondola\])") then goto ONJOINED
+  if matchre("$roomobjs $roomname", "(^\[Aboard the Dirigible, Gondola\]|^\[Alongside a Wizened Ranger\]|^An intricate network of silken rope|^\[Aboard the Balloon, Gondola\]|^A veritable spiderweb of ropes secures|^Thick, barnacle-encrusted ropes secure the platform to the|\[Aboard the Mammoth, Platform\]|\[The Bardess' Fete, Deck\]|^Silken rigging suspends the sweeping teak|\[Aboard the Warship, Gondola\])") then goto ONJOINED
   if matchre("$roomobjs","warship") then send join warship
   if matchre("$roomobjs","airship") then put join airship
   if matchre("$roomobjs","dirigible") then put join dirigible;join dirigible
   if matchre("$roomobjs","balloon") then put join balloon;join balloon
+  if matchre("$roomobjs","Gnomish warship") then send join warship
+  if matchre("$roomobjs","Riverhawk") then send go riverhawk
+  if matchre("$roomobjs","Imperial") then send go imperial glory
+  if matchre("$roomobjs","Star") then send go ferry
+  if matchre("$roomobjs","skiff") then send go skiff
+  if matchre("$roomobjs","Kiss") then send go ferry
+  if matchre("$roomobjs","ferry") then send go ferry
+  if matchre("$roomobjs","barge") then send go barge
+  if matchre("$roomobjs","galley") then send go galley
+  if matchre("$roomobjs","Jolas") then send go jolas
+  if matchre("$roomobjs","Selhin") then send go selhin
+  if matchre("$roomobjs","Halasa") then put go selhin
+  if matchre("$roomobjs","warship") then send join warship
   if matchre("$roomobjs","wizened ranger") then put join wizened ranger;join wizened ranger
   if (("$zoneid" = "58") && matchre("$roomobjs","tall sea mammoth")) then put join tall mammoth
   if (("$zoneid" = "90") && matchre("$roomobjs","massive sea mammoth")) then put join sea mammoth
@@ -3044,12 +3148,12 @@ ONJOINED:
   pause 0.1
   echo ### Riding on Transport!
   pause 0.1
-  matchre OFFJOINED ^The grasses of this wide clearing|^From its northwest\-facing position|^A deep firepit has been hacked into the frozen earth|^The distance between the surrounding hills is narrower|^The ironwood platform has withstood|^A rickety platform in the top of this huge\,|^Beyond the harbor\, spray is thrown|^Giant boulders are scattered|^Crudely assembled yet sturdy just the|\[Fang Cove\, Dock\]|\[Smuggler\'s Wharf\]|\[Outside Muspar\'i\]|\[Northeast Wilds\, Grimsage Way\]|^The once pristine tower of the Warrior Mages|returning to Fang Cove|returning to Ratha
+  matchre OFFJOINED ^The grasses of this wide clearing|^From its northwest-facing position|^A deep firepit has been hacked into the frozen earth|^The distance between the surrounding hills is narrower|^The ironwood platform has withstood|^A rickety platform in the top of this huge,|^Beyond the harbor, spray is thrown|^Giant boulders are scattered|^Crudely assembled yet sturdy just the|\[Fang Cove, Dock\]|\[Smuggler's Wharf\]|\[Outside Muspar\'i\]|\[Northeast Wilds, Grimsage Way\]|^The once pristine tower of the Warrior Mages|returning to Fang Cove|returning to Ratha
   matchwait
 OFFJOINED:
   put look
   wait
-  if matchre("$roomname", "Rocky Path") then put go beach
+  if matchre("$roomname", "(Rocky Path|Shore Walk)") then put go beach
   pause
   put #mapper reset
   return
@@ -3374,12 +3478,12 @@ EXCHANGE:
      var Coin $0
 EXCHANGE.CONTINUE:
      pause 0.1
-     matchre EXCHANGE.CONTINUE ^\.\.\.wait\s+\d+\s+sec(?:onds?|s)?\.?|^Sorry\,
+     matchre EXCHANGE.CONTINUE ^\.\.\.wait\s+\d+\s+sec(?:onds?|s)?\.?|^Sorry,
      matchre EXCHANGE.FINISH ^You hand your money to the money-changer\.\s*After collecting a.* fee, .* hands you .*\.
      matchre EXCHANGE.FINISH Enjoy the holiday, friend\!
      matchre EXCHANGE.FINISH ^The money-changer says crossly, \"A transaction that small isn't worth my time\.\s*The minimum is one bronze or ten coppers\.\"
-     matchre EXCHANGE.FINISH ^You count out all of your .* and drop them in the proper jar\.\s*After figuring a .* fee in the ledger beside the jar\, you reach into the one filled with .* and withdraw .*\.
-     matchre EXCHANGE.FINISH ^One of the guards mutters\, \"None of that\, $charactername\.\s*You'd be lucky to get anything at all with an exchange that small\.\"
+     matchre EXCHANGE.FINISH ^You count out all of your .* and drop them in the proper jar\.\s*After figuring a .* fee in the ledger beside the jar, you reach into the one filled with .* and withdraw .*\.
+     matchre EXCHANGE.FINISH ^One of the guards mutters, \"None of that, $charactername\.\s*You'd be lucky to get anything at all with an exchange that small\.\"
      matchre EXCHANGE.FINISH ^But you don't have any .*\.
      matchre EXCH.INVIS ^How can you exchange money when you can't be seen\?
      matchre EXCHANGE.SMALLER transactions larger than a thousand
@@ -3389,13 +3493,13 @@ EXCHANGE.CONTINUE:
 EXCHANGE.SMALLER:
      pause 0.1
      pause 0.1
-     matchre EXCHANGE.SMALLER ^\.\.\.wait\s+\d+\s+sec(?:onds?|s)?\.?|^Sorry\,
+     matchre EXCHANGE.SMALLER ^\.\.\.wait\s+\d+\s+sec(?:onds?|s)?\.?|^Sorry,
      matchre EXCHANGE.SMALLER ^You hand your .* to the money-changer\.\s*After collecting a.* fee, .* hands you .*\.
      matchre RETURN ^The money-changer says crossly, \"A transaction that small isn't worth my time\.\s*The minimum is one bronze or ten coppers\.\"
-     matchre RETURN ^One of the guards mutters\, \"None of that\, $charactername\.\s*You'd be lucky to get anything at all with an exchange that small\.\"
+     matchre RETURN ^One of the guards mutters, \"None of that, $charactername\.\s*You'd be lucky to get anything at all with an exchange that small\.\"
      matchre EXCH.INVIS ^How can you exchange money when you can't be seen\?
      matchre EXCHANGE.CONTINUE Enjoy the holiday, friend\!
-     matchre EXCHANGE.CONTINUE ^You count out all of your .* and drop them in the proper jar\.\s*After figuring a .* fee in the ledger beside the jar\, you reach into the one filled with .* and withdraw .*\.
+     matchre EXCHANGE.CONTINUE ^You count out all of your .* and drop them in the proper jar\.\s*After figuring a .* fee in the ledger beside the jar, you reach into the one filled with .* and withdraw .*\.
      matchre EXCHANGE.CONTINUE ^But you don't have any .*\.
      matchre EXCHANGE.CONTINUE ^You don't have that many
      matchre EXCHANGE.FINISH ^There is no money-changer here\.
@@ -3792,7 +3896,7 @@ ROC_1:
      put cast
      pause 0.6
      pause 0.3
-     matchre ROC_1 ivory mask|bone structure beneath is subtly altered|gleaming with arcane power|mutative nervous system|whitened ridges|black mist|sheath of spell\-disrupting miasma|sensitive eye\-cysts
+     matchre ROC_1 ivory mask|bone structure beneath is subtly altered|gleaming with arcane power|mutative nervous system|whitened ridges|black mist|sheath of spell-disrupting miasma|sensitive eye-cysts
      matchre ROC_RETURN You are
      put look $charactername
      matchwait 2
@@ -3802,6 +3906,7 @@ ROC_RETURN:
      return
 EOTB:
      var EOTBLoop 0
+     var NecroPrep EOTB
 EOTB_1:
      if (($spellEOTB = 1) && ($invisible = 1)) then goto NECRO.DONE
      pause 0.1
@@ -3881,7 +3986,7 @@ STOW1:
      var LOCATION STOW1
      if "$righthand" = "vine" then put drop vine
      if "$lefthand" = "vine" then put drop vine
-     matchre WAIT ^\.\.\.wait|^Sorry\,
+     matchre WAIT ^\.\.\.wait|^Sorry,
      matchre IMMOBILE ^You don't seem to be able to move to do that
      matchre WEBBED ^You can't do that while entangled in a web
      matchre STUNNED ^You are still stunned
@@ -4470,8 +4575,8 @@ REEDGO:
      pause .0001
      matchre CROC_RET ^You are engaged
      matchre REEDGO ^\.\.\.wait|^Sorry, you may only type|^You.*are.*still.*stunned\.
-     matchre CROC_MOVE ^\[The Marsh\, In The Water\]|^What were you
-     matchre OUT_OF_CROCS ^\[The Marsh\, Stone Road\]
+     matchre CROC_MOVE ^\[The Marsh, In The Water\]|^What were you
+     matchre OUT_OF_CROCS ^\[The Marsh, Stone Road\]
      put go reed
      matchwait 20
      goto CROC_MOVE
@@ -4517,7 +4622,7 @@ PUT:
      var LOCATION PUT_1
      PUT_1:
      pause 0.001
-     matchre WAIT ^\.\.\.wait|^Sorry\,|^Please wait\.
+     matchre WAIT ^\.\.\.wait|^Sorry,|^Please wait\.
      matchre IMMOBILE ^You don't seem to be able to move to do that
      matchre WEBBED ^You can't do that while entangled in a web
      matchre STUNNED ^You are still stunned
@@ -4526,21 +4631,21 @@ PUT:
      matchre PUT_STAND ^You should stand up first\.|^Maybe you should stand up\.
      matchre WAIT ^\[Enter your command again if you want to\.\]
      matchre RETURN_CLEAR You'?r?e? (?:hand|slip|put|get|.+ to|.+ fan|can't|leap|tug|quickly|dance|reverently|breathe|switch|deftly|swiftly|untie|sheathe|strap|slide|desire|raise|sling|pull|drum|trace|wear|tap|recall|press|hang|gesture|push|move|whisper|lean|tilt|cannot|mind|drop|drape|loosen|work|lob|spread|not|fill|will|now|slowly|quickly|spin|filter|need|shouldn't|pour|blow|twist|struggle|place|knock|toss|set|add|search|circle|fake|weave|shove|try|must|wave|sit|fail|turn|already|can\'t|glance|bend|swing|chop|bash|dodge|feint|draw|parry|carefully|quietly|sense|begin|rub|sprinkle|stop|combine|take|decide|insert|lift|retreat|load|fumble|exhale|yank|allow|have|are|wring|icesteel|scan|vigorously|adjust|bundle|ask|form|lose|remove|accept|pick|silently|realize|open|grab|fade|offer|tap|aren't|kneel|don\'t|close|let|find|attempt|tie|roll|attach|feel(?! fully rested)|read|reach|gingerly|come|effortlessly|corruption|count|secure|unload|briefly|zills|remain|release|shield) .*(?:\.|\!|\?)?
-     matchre RETURN_CLEAR ^Brother Durantine|^Durantine|^Mags|^Ylono|^Malik|^Kilam|^Ragge|^Randal|^Catrox|^Kamze|^Unspiek|^Wyla|^Ladar|^Dagul|^Granzer|^Fekoeti|^Diwitt|(?:An|The|A) attendant|^The clerk|A Dwarven|^.*He says\,
+     matchre RETURN_CLEAR ^Brother Durantine|^Durantine|^Mags|^Ylono|^Malik|^Kilam|^Ragge|^Randal|^Catrox|^Kamze|^Unspiek|^Wyla|^Ladar|^Dagul|^Granzer|^Fekoeti|^Diwitt|(?:An|The|A) attendant|^The clerk|A Dwarven|^.*He says,
      matchre RETURN_CLEAR ^The (?: clerk|teller|attendant|mortar|pestle|tongs|bowl|riffler|hammer|gem|book|page|lockpick|sconce|voice|waters|contours) .*(?:\.|\!|\?)?
-     matchre RETURN_CLEAR ^Quietly touching your lips with the tips of your fingers as you kneel\, you make the Cleric's sign with your hand\.
-     matchre RETURN_CLEAR ^You sense that you are as pure of spirit as you can be\, and you are ready for whatever rituals might face you\.
+     matchre RETURN_CLEAR ^Quietly touching your lips with the tips of your fingers as you kneel, you make the Cleric's sign with your hand\.
+     matchre RETURN_CLEAR ^You sense that you are as pure of spirit as you can be, and you are ready for whatever rituals might face you\.
      matchre RETURN_CLEAR ^You don't have a (.+) coin on you\!\s*The (.+) spider looks at you in forlorn disappointment\.|^The (.+) spider turns away
      matchre RETURN_CLEAR ^It would be a shame|It's already open\!|^Brushing your fingers|There are already openings|Sensing your intent
      matchre RETURN_CLEAR ^Roundtime\:?|^\[Roundtime\:?|^\(Roundtime\:?|^\[Roundtime|^Roundtime|\[Roundtime
-     matchre RETURN_CLEAR That will cost .* to repair\.\s*Just give it to me again if you want\, and I'll have it ready in .*\.
+     matchre RETURN_CLEAR That will cost .* to repair\.\s*Just give it to me again if you want, and I'll have it ready in .*\.
      matchre RETURN_CLEAR It will cost .* and take .* to repair .*\.\s*Just ask me again and I can get started\.
      matchre RETURN_CLEAR Lucky for you\!\s*That isn't damaged\!|I will not repair something that isn't broken\.
-     matchre RETURN_CLEAR I'm sorry\, but I don't work on those|There isn't a scratch on that\, and I'm not one to rob you\.
+     matchre RETURN_CLEAR I'm sorry, but I don't work on those|There isn't a scratch on that, and I'm not one to rob you\.
      matchre RETURN_CLEAR I don't work on those here\.|I don\'t repair those here|Please don't lose this ticket\!
      matchre RETURN_CLEAR This is an exclusive item reserved for a certain subset of the population
      matchre RETURN_CLEAR suddenly leaps toward you|and flies towards you|with a flick
-     matchre RETURN_CLEAR ^Please rephrase that command\.|^I could not find|^Perhaps you should|^I don\'t|^Weirdly\,
+     matchre RETURN_CLEAR ^Please rephrase that command\.|^I could not find|^Perhaps you should|^I don\'t|^Weirdly,
      matchre RETURN_CLEAR ^That (?:is|has) already|^(.+) what\?
      matchre RETURN_CLEAR ^The .*(is|has|are|slides|fades)
      matchre RETURN_CLEAR ^Obvious (?:exits|paths)
@@ -4563,8 +4668,8 @@ PUT:
      matchre RETURN_CLEAR ^Allows a Moon Mage|^Smoking commands are
      matchre RETURN_CLEAR ^A (?:slit|pair|shadow) .*(?:\.|\!|\?)?
      matchre RETURN_CLEAR ^Your (?:actions|dance|nerves) .*(?:\.|\!|\?)?
-     matchre RETURN_CLEAR ^Having no further use for .*\, you discard it\.
-     matchre RETURN_CLEAR ^After a moment\, .*\.
+     matchre RETURN_CLEAR ^Having no further use for .*, you discard it\.
+     matchre RETURN_CLEAR ^After a moment, .*\.
      matchre RETURN_CLEAR ^.* (?:is|are) not in need of cleaning\.
      matchre RETURN_CLEAR ^The .* is not damaged enough to warrant repair\.
      matchre RETURN_CLEAR \[Type INVENTORY HELP for more options\]|\[Use INVENTORY HELP for more options\.\]
@@ -4576,10 +4681,10 @@ PUT:
      matchre RETURN_CLEAR ^That tool does not seem suitable for that task\.
      matchre RETURN_CLEAR ^There (isn\'t|doesn\'t seem to be) any more room in .*
      matchre RETURN_CLEAR ^\[Ingredients can be added by using ASSEMBLE Ingredient1 WITH Ingredient2\]
-     matchre RETURN_CLEAR ^\s*LINK ALL CANCEL\s*\- Breaks all links
+     matchre RETURN_CLEAR ^\s*LINK ALL CANCEL\s*- Breaks all links
      matchre RETURN_CLEAR ^This ritual may only be performed on a corpse\.
      matchre RETURN_CLEAR ^There is nothing else to face\!
-     matchre RETURN_CLEAR ^Stalking is an inherently stealthy endeavor\, try being out of sight\.
+     matchre RETURN_CLEAR ^Stalking is an inherently stealthy endeavor, try being out of sight\.
      matchre RETURN_CLEAR ^You're already stalking|^There aren't any
      matchre RETURN_CLEAR ^You don't think you have enough focus to do that\.
      matchre RETURN_CLEAR ^You have no idea how to cast that spell\.
@@ -4589,7 +4694,7 @@ PUT:
      matchre RETURN_CLEAR Page|^As the world|^Obvious|^A ravenous energy
      matchre RETURN_CLEAR ^In the|^The attendant|^That is already open\.|^Your inner
      matchre RETURN_CLEAR ^(\S+) hands you|^Searching methodically|^But you haven\'t prepared a symbiosis\!
-     matchre RETURN_CLEAR ^Illustrations of complex\,|^It is labeled|^Your nerves
+     matchre RETURN_CLEAR ^Illustrations of complex,|^It is labeled|^Your nerves
      matchre RETURN_CLEAR ^The lockpick|^Doing that|is not required to continue crafting
      matchre RETURN_CLEAR ^Without (any|a|the)
      send %putaction
@@ -4608,10 +4713,10 @@ MOVE:
      var lastmoved %Direction
      pause 0.01
 MOVE_RESUME:
-     matchre MOVE_RETRY ^\.\.\.wait|^Sorry\, you may only type|^Please wait\.|You are still stunned\.
-     matchre MOVE_RESUME ^You make your way up the .*\.\s*Partway up\, you make the mistake of looking down\.\s*Struck by vertigo\, you cling to the .* for a few moments\, then slowly climb back down\.
-     matchre MOVE_RESUME ^You pick your way up the .*\, but reach a point where your footing is questionable\.\s*Reluctantly\, you climb back down\.
-     matchre MOVE_RESUME ^You approach the .*\, but the steepness is intimidating\.
+     matchre MOVE_RETRY ^\.\.\.wait|^Sorry, you may only type|^Please wait\.|You are still stunned\.
+     matchre MOVE_RESUME ^You make your way up the .*\.\s*Partway up, you make the mistake of looking down\.\s*Struck by vertigo, you cling to the .* for a few moments, then slowly climb back down\.
+     matchre MOVE_RESUME ^You pick your way up the .*, but reach a point where your footing is questionable\.\s*Reluctantly, you climb back down\.
+     matchre MOVE_RESUME ^You approach the .*, but the steepness is intimidating\.
      matchre MOVE_RESUME ^You struggle
      matchre MOVE_RESUME ^You blunder
      matchre MOVE_RESUME ^You slap
@@ -4620,8 +4725,8 @@ MOVE_RESUME:
      matchre MOVE_RESUME ^You flounder around in the water\.
      matchre MOVE_RETREAT ^You are engaged to .*\!
      matchre MOVE_RETREAT ^You can't do that while engaged\!
-     matchre MOVE_STAND ^You start up the .*\, but slip after a few feet and fall to the ground\!\s*You are unharmed but feel foolish\.
-     matchre MOVE_STAND ^Running heedlessly over the rough terrain\, you trip over an exposed root and land face first in the dirt\.
+     matchre MOVE_STAND ^You start up the .*, but slip after a few feet and fall to the ground\!\s*You are unharmed but feel foolish\.
+     matchre MOVE_STAND ^Running heedlessly over the rough terrain, you trip over an exposed root and land face first in the dirt\.
      matchre MOVE_STAND ^You can\'t do that while lying down\.
      matchre MOVE_STAND ^You can\'t do that while sitting\!
      matchre MOVE_STAND ^You can\'t do that while kneeling\!
@@ -4629,11 +4734,11 @@ MOVE_RESUME:
      matchre MOVE_STAND ^You don\'t seem
      matchre MOVE_STAND ^You must stand first\.
      matchre MOVE_STAND ^Stand up first.
-     matchre MOVE_DIG ^You make no progress in the mud \-\- mostly just shifting of your weight from one side to the other\.
-     matchre MOVE_DIG ^You find yourself stuck in the mud\, unable to move much at all after your pathetic attempts\.
-     matchre MOVE_DIG ^You struggle forward\, managing a few steps before ultimately falling short of your goal\.
-     matchre MOVE_DIG ^Like a blind\, lame duck\, you wallow in the mud in a feeble attempt at forward motion\.
-     matchre MOVE_DIG ^The mud holds you tightly\, preventing you from making much headway\.
+     matchre MOVE_DIG ^You make no progress in the mud -- mostly just shifting of your weight from one side to the other\.
+     matchre MOVE_DIG ^You find yourself stuck in the mud, unable to move much at all after your pathetic attempts\.
+     matchre MOVE_DIG ^You struggle forward, managing a few steps before ultimately falling short of your goal\.
+     matchre MOVE_DIG ^Like a blind, lame duck, you wallow in the mud in a feeble attempt at forward motion\.
+     matchre MOVE_DIG ^The mud holds you tightly, preventing you from making much headway\.
      matchre MOVE_DIG ^You fall into the mud with a loud \*SPLUT\*\.
      matchre MOVE_FAIL_BAIL ^You can't go there
      matchre MOVE_FAILED ^Noticing your attempt
@@ -4651,7 +4756,7 @@ MOVE_RETRY:
      goto MOVE_RESUME
 MOVE_STAND:
      pause 0.1
-     matchre MOVE_STAND ^\.\.\.wait|^Sorry\,|^Please wait\.
+     matchre MOVE_STAND ^\.\.\.wait|^Sorry,|^Please wait\.
      matchre MOVE_STAND ^You are overburdened and cannot manage to stand\.
      matchre MOVE_STAND ^The weight
      matchre MOVE_STAND ^You try
@@ -4665,7 +4770,7 @@ MOVE_STAND:
 MOVE_RETREAT:
      pause 0.1
      if ($invisible = 1) then gosub STOP_INVIS
-     matchre MOVE_RETREAT ^\.\.\.wait|^Sorry\,|^Please wait\.
+     matchre MOVE_RETREAT ^\.\.\.wait|^Sorry,|^Please wait\.
      matchre MOVE_RETREAT ^You retreat back to pole range\.
      matchre MOVE_RETREAT ^You stop advancing
      matchre MOVE_RETREAT ^You try to back away
@@ -4677,17 +4782,17 @@ MOVE_RETREAT:
      goto MOVE_RETREAT
 MOVE_DIG:
      pause 0.1
-     matchre MOVE_DIG ^\.\.\.wait|^Sorry\,|^Please wait\.
+     matchre MOVE_DIG ^\.\.\.wait|^Sorry,|^Please wait\.
      matchre MOVE_DIG ^You struggle to dig off the thick mud caked around your legs\.
      matchre MOVE_STAND ^You manage to dig enough mud away from your legs to assist your movements\.
-     matchre MOVE_DIG_STAND ^Maybe you can reach better that way\, but you'll need to stand up for that to really do you any good\.
+     matchre MOVE_DIG_STAND ^Maybe you can reach better that way, but you'll need to stand up for that to really do you any good\.
      matchre MOVE_RESUME ^You will have to kneel
      send dig
      matchwait 10
      goto MOVE_DIG
 MOVE_DIG_STAND:
      pause 0.1
-     matchre MOVE_DIG_STAND ^\.\.\.wait|^Sorry\,|^Please wait\.
+     matchre MOVE_DIG_STAND ^\.\.\.wait|^Sorry,|^Please wait\.
      matchre MOVE_DIG_STAND ^The weight
      matchre MOVE_DIG_STAND ^You try
      matchre MOVE_DIG_STAND ^You are overburdened and cannot manage to stand\.
@@ -4719,7 +4824,7 @@ STAND:
      delay 0.0001
      var LOCATION STAND_1
      STAND_1:
-     matchre WAIT ^\.\.\.wait|^Sorry\,
+     matchre WAIT ^\.\.\.wait|^Sorry,
      matchre WAIT ^Roundtime\:?|^\[Roundtime\:?|^\(Roundtime\:?
      matchre WAIT ^The weight of all your possessions prevents you from standing\.
      matchre WAIT ^You are overburdened and cannot manage to stand\.
@@ -4762,7 +4867,7 @@ USHNISH_GO22:
      if ($standing = 0) then gosub STAND
      if contains("$roomobjs", "low tunnel") then goto USHNISH_GO3
      gosub RETREAT
-     matchre USHNISH_GO3 ^At the bottom of the hollow\, a low tunnel is revealed
+     matchre USHNISH_GO3 ^At the bottom of the hollow, a low tunnel is revealed
      matchre USHNISH_GO22 ^You stop pushing
      send push boulder
      matchwait 20
@@ -4781,7 +4886,7 @@ USHNISH_GO3:
 USHNISH_GO_3:
      pause 0.1
      matchre USHNISH_GO_3 ^Sorry
-     matchre USHNISH_GO_ZONE1 ^Wriggling on your stomach\, you crawl into a low tunnel
+     matchre USHNISH_GO_ZONE1 ^Wriggling on your stomach, you crawl into a low tunnel
      matchre USHNISH_GO3 ^It\'s a pretty tight fit
      send go tunnel
      matchwait 20
@@ -5304,7 +5409,7 @@ AUTOMOVE_GO:
 AUTOMOVE_STAND:
      pause 0.1
      if ($standing = 1) then goto AUTOMOVE_RETURN
-     matchre AUTOMOVE_STAND ^\.\.\.wait|^Sorry\,|^Please wait\.
+     matchre AUTOMOVE_STAND ^\.\.\.wait|^Sorry,|^Please wait\.
      matchre AUTOMOVE_STAND ^Roundtime\:?|^\[Roundtime\:?|^\(Roundtime\:?|^\[Roundtime|^Roundtime
      matchre AUTOMOVE_STAND ^The weight of all your possessions prevents you from standing\.
      matchre AUTOMOVE_STAND ^You are still stunned\.
@@ -5355,8 +5460,8 @@ RETREAT:
      var LOCATION RETREAT
      if (%retreatLoop > 5) then goto RETREAT_RETURN
      if ($standing = 0) then gosub STAND
-     matchre RETREAT ^\.\.\.wait|^Sorry\,|^Please wait\.
-     matchre WAIT ^\.\.\.wait|^Sorry\,|^Please wait\.
+     matchre RETREAT ^\.\.\.wait|^Sorry,|^Please wait\.
+     matchre WAIT ^\.\.\.wait|^Sorry,|^Please wait\.
      matchre STUNNED ^You are still stunned
      matchre WEBBED ^You can't do that while entangled in a web
      matchre IMMOBILE ^You don't seem to be able to move to do that
@@ -5379,8 +5484,8 @@ RETREAT:
      math retreatLoop add 1
      if ($standing = 0) then gosub STAND
      if (%retreatLoop > 6) then goto RETREAT_RETURN
-     matchre 2RETREAT ^\.\.\.wait|^Sorry\,|^Please wait\.
-     matchre WAIT ^\.\.\.wait|^Sorry\,|^Please wait\.
+     matchre 2RETREAT ^\.\.\.wait|^Sorry,|^Please wait\.
+     matchre WAIT ^\.\.\.wait|^Sorry,|^Please wait\.
      matchre STUNNED ^You are still stunned
      matchre WEBBED ^You can't do that while entangled in a web
      matchre IMMOBILE ^You don't seem to be able to move to do that
@@ -5410,8 +5515,8 @@ RETREAT_FLEE_1:
      pause 0.1
      if ($standing = 0) then gosub STAND
      if (%retreatloop > 6) then goto FLEE_NOW
-     matchre RETREAT_FLEE_1 ^\.\.\.wait|^Sorry\,|^Please wait\.
-     matchre WAIT ^\.\.\.wait|^Sorry\,|^Please wait\.
+     matchre RETREAT_FLEE_1 ^\.\.\.wait|^Sorry,|^Please wait\.
+     matchre WAIT ^\.\.\.wait|^Sorry,|^Please wait\.
      matchre STUNNED ^You are still stunned
      matchre WEBBED ^You can't do that while entangled in a web
      matchre IMMOBILE ^You don't seem to be able to move to do that
