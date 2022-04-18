@@ -1,4 +1,4 @@
-#debuglevel 5
+#debug 10
 put #class racial on
 put #class rp on
 #put #class arrive off
@@ -48,15 +48,15 @@ put #class rp on
 ##########################################
 ##  RANKS TO SWIM THE SEGOLTHA RIVER    ##
 ##  TIGER CLAN TO STR OR VICA VERSA     ##
-    var segoltha 2550
+    var segoltha 550
 ##########################################
 ## RANKS TO CLIMB UNDERGONDOLA SHORTCUT ##
 ## Some can do at ~500 w/ buffs & rope  ##
-    var undergondola 2540
+    var undergondola 540
 ##########################################
 ##########################################
 ## RANKS TO USE UNDER-SEGOLTHA (THIEF)  ##
-    var undersegoltha 2250
+    var undersegoltha 250
 ##########################################
 ##########################################
 ## EANKS FOR VELAKA SHORTCUT TO MUSPARI ##
@@ -193,9 +193,11 @@ action var offtransport beach when You also see the beach|mammoth and the beach
 action var offtransport ladder when You also see a ladder|mammoth and a ladder
 action var offtransport wharf when the Langenfirth wharf
 action var offtransport dock when \[\"Her Opulence\"\]|\[\"Hodierna's Grace\"\]|\[\"Kertigen's Honor\"\]|\[\"His Daring Exploit\"\]|\[The Evening Star\]|\[The Damaris' Kiss\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[\"Imperial Glory\"\]|\[\"The Riverhawk\"\]|Baso Docks|a dry dock|the salt yard dock|covered stone dock|\[The Galley Sanegazat\]|\[The Galley Cercorim\]|\[Aboard the Warship, Gondola\]|\[The Halasa Selhin, Main Deck\]
-action put fatigue when ^You can see a ferry approaching on the left side.|^The ferry|^A kingfisher|^A burst of|^The Elven|^The skiff|^The polemen|^Small waves|^The sturdy stone|^You are about a fourth of the way across\.|^The ferry moves away, nearly out of view\.|ferry passing you on the left\.|^You are nearing the docks\.|^A swarm of eels passes beneath the keel, probably on their way to the river's fresh water to spawn\.|followed by the clatter of wood on wood\.|^A family of dolphins leaps from the water beside the galley\.|^Some geese in a perfect V fly north high overhead\.|^Some small blue sharks slide past through the water\.|^A sailor walks by with a coil of rope\.|^A green turtle as large as a tower shield swims past,|^You are nearing the docks\.|A drumbeat sounds through the ship\.|^You are about a fourth of the way across\.|^A galley comes into sight, its oars beating rhythmically\.|^The galley moves away, the beat of its drum slowly fading\.|^For a few minutes, the drumbeat from below is echoed across the water by the beat from the galley passing on the left\.|The door swings shut of its own accord, and the gondola pushes off\.|The platform vanishes against the ridgeline\.|The gondola arrives at the center of the chasm, and keeps heading (north|south)\.|The cab trundles on along as the ropes overhead creak and moan\.|The ropes creak as the gondola continues (north|south)\.|^The gondola creaks as a wind pushes it back and forth\.|^You hear a bell ring out three times|^The barge|^Several oars pull|^All that is visible|^The opposite bank|^A few of the other passengers|^The shore disappears
-action put fatigue when ^A desert oasis|^The oasis|The endless expanse of the desert|The dock disappears from view quickly|sand-bearing winds buffet|Several skilled yeehar-handlers|^The Sand Elf|^The harsh winds|^The Gemfire Mountains|^The extreme heat causes|^The sand barge|^The large yeehars|^The murderous shriek|dark-skinned elf|Dark-skinned Elves|^As the barge is pulled|^As the dirigible continues|^The thick canopy of|^The dirigible|^The sinuous Southern Trade Route|^The Reshal Sea|^The peculiar sight|^A long moment of breathless suspense|^A Gnomish mechanic|^As the dirigible|^A breathtaking panorama|^The Gnomish operators|^The river quickly gives|^A massive peak|^A large flock|^Far below, you see|^The Greater Fist|^A clangorous commotion|^Passing over land|^A human who had been|^A cowled passenger peers|^The balloon|^A few scattered islands|^The mammoth's fur|^The sea mammoth|^The air cools|^Scarcely visible in|^Another sea mammoth|^Steadily climbing,|^As the airship leaves the mountain range|^With a swift turn of the|^With another yank on the|^The pilot adjusts his controls|^Turning his wheel, the pilot points the airship|^With a confident spin of the|^Coming down from the mountain|^A whoosh of steam escapes|^The warship (rumbles|continues)|The tropical island|(crewmen|crewman) (works|rush|swabs)|Sputtering loudly, the cast-iron stove|Gnomish (crew|pilot|crewman)|warship (proceeds|continues)
-action put look when ^Your destination
+action send fatigue when ^You can see a ferry approaching on the left side\.|^The ferry|^A kingfisher|^A burst of|^The Elven|^The skiff|^The polemen|^Small waves|^The sturdy stone|^You are about a fourth of the way across\.|^The ferry moves away, nearly out of view\.|ferry passing you on the left\.|^You are nearing the docks\.|^A swarm of eels passes beneath the keel, probably on their way to the river's fresh water to spawn\.|followed by the clatter of wood on wood\.|^A family of dolphins leaps from the water beside the galley\.|^Some geese in a perfect V fly north high overhead\.|^Some small blue sharks slide past through the water\.|^A sailor walks by with a coil of rope\.|^A green turtle as large as a tower shield swims past
+action send fatigue when ^You are nearing the docks\.|A drumbeat sounds through the ship\.|^You are about a fourth of the way across\.|^A galley comes into sight, its oars beating rhythmically\.|^The galley moves away, the beat of its drum slowly fading\.|^For a few minutes, the drumbeat from below is echoed across the water by the beat from the galley passing on the left\.|The door swings shut of its own accord, and the gondola pushes off\.|^The platform vanishes against the ridgeline\.|^The gondola arrives at the center of the chasm, and keeps heading (north|south)\.|^The cab trundles on along as the ropes overhead creak and moan\.|^The ropes creak as the gondola continues (north|south)\.|^The gondola creaks as a wind pushes it back and forth\.|^You hear a bell ring out three times|^The barge|^Several oars pull|^All that is visible|^The opposite bank|^A few of the other passengers|^The shore disappears
+action send fatigue when ^A desert oasis|^The oasis|^The endless expanse of the desert|^The dock disappears from view quickly|sand-bearing winds buffet|^Several skilled yeehar-handlers|^The Sand Elf|^The harsh winds|^The Gemfire Mountains|^The extreme heat causes|^The sand barge|^The large yeehars|^The murderous shriek|dark-skinned elf|Dark-skinned Elves|^As the barge is pulled|^As the dirigible continues|^The thick canopy of|^The dirigible|^The sinuous Southern Trade Route|^The Reshal Sea|^The peculiar sight|^A long moment of breathless suspense
+action send fatigue when ^A Gnomish mechanic|^As the dirigible|^A breathtaking panorama|^The Gnomish operators|^The river quickly gives|^A massive peak|^A large flock|^Far below, you see|^The Greater Fist|^A clangorous commotion|^Passing over land|^A human who had been|^A cowled passenger peers|^The balloon|^A few scattered islands|^The mammoth's fur|^The sea mammoth|^The air cools|^Scarcely visible in|^Another sea mammoth|^Steadily climbing,|^As the airship leaves the mountain range|^With a swift turn of the|^With another yank on the|^The pilot adjusts his controls|^Turning his wheel, the pilot points the airship|^With a confident spin of the|^Coming down from the mountain|^A whoosh of steam escapes|^The warship (rumbles|continues)|The tropical island|(crewmen|crewman) (works|rush|swabs)|Sputtering loudly, the cast-iron stove|Gnomish (crew|pilot|crewman)|warship (proceeds|continues)
+action send look when ^Your destination
 action put #tvar spellEOTB 0 when ^Your corruptive mutation fades, revealing you to the world once more\.
 action put #tvar spellEOTB 1 when ^You feel a rippling sensation throughout your body as your corruptive mutation alters you and your equipment into blind spots invisible to the world\.
 action put #tvar spellEOTB 1 when ^Your spell subtly alters the corruptive mutation upon you, creating a blind spot once more\.
@@ -1376,6 +1378,7 @@ if (("$zoneid" = "62") && ("$game"= "DRF")) then
               pause 0.5
               gosub AUTOMOVE 2
               gosub FERRYLOGIC
+              goto ILITHI_3
           }
 if (("$zoneid" = "62") && matchre("$game", "(?i)DR")) then
           {
@@ -1388,6 +1391,7 @@ if (("$zoneid" = "62") && matchre("$game", "(?i)DR")) then
               pause 0.1
               gosub AUTOMOVE 2
               gosub FERRYLOGIC
+              goto ILITHI_3
           }
 ILITHI_3:
 if (("$zoneid" = "69") && matchre("%detour", "ye{2,}t")) then
@@ -2889,36 +2893,69 @@ FERRYLOGIC:
         }
   else goto NODESTINATION
 GONDOLA:
-  var Loop 0
-  pause 0.1
-  if matchre("$roomname", "Gondola") then goto ONGONDOLA
   pause 0.1
   send look
-  pause 2
+  pause
+  pause 0.5
+  if matchre("$roomname", "Gondola") then goto ONGONDOLA
   matchre ONGONDOLA \[Gondola,
+  matchwait 2
   echo
   echo *** Waiting for Gondola to arrive
   echo
 GONDOLA_LOOP:
-  math Loop add 1
-  if (%Loop > 6) then
-        {
-            echo
-            echo *** Waiting for Gondola to arrive
-            echo
-            var Loop 0
-        }
   if matchre ("$roomobjs","gondola") then send go gondola
   if matchre("$roomname", "Gondola") then goto ONGONDOLA
   pause 2
+  if matchre ("$roomobjs","gondola") then send go gondola
+  if matchre("$roomname", "Gondola") then goto ONGONDOLA
+  pause 2
+  if matchre ("$roomobjs","gondola") then send go gondola
+  if matchre("$roomname", "Gondola") then goto ONGONDOLA
+  pause 2
+  if matchre ("$roomobjs","gondola") then send go gondola
+  if matchre("$roomname", "Gondola") then goto ONGONDOLA
+  pause 2
+  if matchre ("$roomobjs","gondola") then send go gondola
+  if matchre("$roomname", "Gondola") then goto ONGONDOLA
+  pause 2
+  if matchre ("$roomobjs","gondola") then send go gondola
+  if matchre("$roomname", "Gondola") then goto ONGONDOLA
+  pause 2
+  if matchre ("$roomobjs","gondola") then send go gondola
+  if matchre("$roomname", "Gondola") then goto ONGONDOLA
+  pause 2
+  if matchre ("$roomobjs","gondola") then send go gondola
+  if matchre("$roomname", "Gondola") then goto ONGONDOLA
+  pause 2
+  if matchre ("$roomobjs","gondola") then send go gondola
+  if matchre("$roomname", "Gondola") then goto ONGONDOLA
+  pause 2
+  if matchre ("$roomobjs","gondola") then send go gondola
+  if matchre("$roomname", "Gondola") then goto ONGONDOLA
+  pause 2
+  if matchre ("$roomobjs","gondola") then send go gondola
+  if matchre("$roomname", "Gondola") then goto ONGONDOLA
+  pause 2
+  if matchre ("$roomobjs","gondola") then send go gondola
+  if matchre("$roomname", "Gondola") then goto ONGONDOLA
+  pause 2
+  if matchre ("$roomobjs","gondola") then send go gondola
+  if matchre("$roomname", "Gondola") then goto ONGONDOLA
+  pause 2
+  echo
+  echo *** Waiting for Gondola to arrive
+  echo
   goto GONDOLA_LOOP
 ONGONDOLA:
   pause 0.8
   if ("%direction" = "north") && ($north = 1) then gosub MOVE north
   if ("%direction" = "south") && ($south = 1) then gosub MOVE south
 GONDOLAWAIT:
-  pause
-  if ($out) then goto GONDOLAOUT
+  echo
+  echo *** ON GONDOLA - Heading %direction
+  echo
+  #if ($out) then goto GONDOLAOUT
   waitforre ^With a soft
   if ($standing = 0) then gosub STAND
 GONDOLAOUT:
@@ -2927,12 +2964,14 @@ GONDOLAOUT:
   put look
   pause 0.8
   if ($out = 0) then goto GONDOLAWAIT
-  gosub MOVE out
+  send out
   pause
-  put #mapper reset
+  pause
+  # put #mapper reset
   pause 0.2
   pause 0.2
   return
+#############################################################
 STOP_INVIS:
      delay 0.001
      if ("$guild" = "Necromancer") then
