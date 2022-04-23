@@ -59,7 +59,7 @@ put #class rp on
     var undersegoltha 50
 ##########################################
 ##########################################
-## EANKS FOR VELAKA SHORTCUT TO MUSPARI ##
+## RANKS FOR VELAKA DESERT SHORTCUT TO MUSPARI ##
     var muspari.shortcut 750
 ##########################################
 ## MULTIPLE CHARACTER SUPPORT FOR SHARD CITIZEN VARIABLE
@@ -70,9 +70,10 @@ if ("$charactername") = ("$char1") then var shardcitizen yes
 if ("$charactername") = ("$char2") then var shardcitizen no
 if ("$charactername") = ("$char3") then var shardcitizen no
 if ("$charactername") = ("$char4") then var shardcitizen no
+####"
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
-# CHANGELOG - Latest Update: 4/18/2022
+# CHANGELOG - Latest Update: 4/23/2022
 #
 # - Fixed a bug causing a lockup/genie crash when taking public transport
 #
