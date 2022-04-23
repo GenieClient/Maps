@@ -56,7 +56,7 @@ put #class rp on
 ##########################################
 ##########################################
 ## RANKS TO USE UNDER-SEGOLTHA (THIEF)  ##
-    var undersegoltha 250
+    var undersegoltha 50
 ##########################################
 ##########################################
 ## EANKS FOR VELAKA SHORTCUT TO MUSPARI ##
