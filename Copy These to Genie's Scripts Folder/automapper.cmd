@@ -974,6 +974,7 @@ return:
 stowfootitem:
      #debug 10
      pause 0.001
+     eval footitem replacere("%footitem", "([\w'-]+\s){0,5}", "")
      if matchre("%footitem", "(mat|rug|cloth|tapestry)") then
           {
                put roll %footitem
