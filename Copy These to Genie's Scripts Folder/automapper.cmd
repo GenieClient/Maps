@@ -5,10 +5,11 @@ put #class arrive off
 put #class combat off
 put #class joust off
 
-# automapper.cmd version 7.6
+# automapper.cmd version 7.7
 
-# last changed: Feb 5, 2022
-
+# last changed: June 19, 2022
+#
+# - Updated Stow Foot logic trigger - Removed Old Obsolete Regex Trigger since stow foot logic now in game
 # - Added missing match for MOVE_RETRY (for climbing in Abandoned Mine) 
 # - Updated stow foot logic to handle prayer mats
 # - Added move_PAUSE routine for better handling of walking through areas with long RT causing automapper to trip up on itself
@@ -190,7 +191,8 @@ actions:
      action (mapper) goto move.climb.mount.fail when %climb_mount_FAIL
      action (mapper) goto move.kneel when maybe if you knelt down first\?
      action (mapper) goto move.lie when ^The passage is too small to walk that way\.  You'll have to get down and crawl\.|There's just barely enough room here to squeeze through, and no more.
-     action (mapper) var footitem $1;goto stowfootitem when ^You notice an|a?(?:(?:\s\b\w+\B)?(?:intricately|etched|polished|carved|engraved)*).*?(\S+) (?:(?=acid-etched|accented|adorned|affixed|appliqued|attached|balanced|banded|bearing|bound|branded|braided|caked|carved|chased|chisled|cloaked|clutching|coated|constructed|connected|covered|crafted|crested|crowned|dangling|decorated|deformed|designed|detailed|displaying|draped|dyed|embedded|embellished|embroidered|enblazoned|enbossed|encrusted|engraved|enhanced|entitled|etched|fashioned|festooned|featuring|filed|filled|firestained|fitted|flecked|fletched|flaunting|forged|formed|from|gleaming|hewn|highlighted|hilted|hung|in|incised|inlaid|inscribed|inset|intricately|joined|labeled|lavishly|lined|linked|made|marked|mottled|mounted|of|ornamented|padded|painted|polished|reinforced|resembling|rimed|rivited|scattered|scarred|scorched|sealed|set|shaped|shod|spiraled|stamped|stitched|streaked|strung|studded|surmounted|swathed|tangled|tethered|that|tied|tinged|tinted|titled|that|tipped|tooled|topped|trimmed|veined|whorled|wrapped|wrought|with).*)?(?:lying )?at your feet, and do not wish to leave it behind\.
+     action (mapper) var footitem $1;goto stowfootitem when ^You notice (?:an |a )?(.+) at your feet, and do not wish to leave it behind\.
+     # action (mapper) var footitem $1;goto stowfootitem when ^You notice an|a?(?:(?:\s\b\w+\B)?(?:intricately|etched|polished|carved|engraved)*).*?(\S+) (?:(?=acid-etched|accented|adorned|affixed|appliqued|attached|balanced|banded|bearing|bound|branded|braided|caked|carved|chased|chisled|cloaked|clutching|coated|constructed|connected|covered|crafted|crested|crowned|dangling|decorated|deformed|designed|detailed|displaying|draped|dyed|embedded|embellished|embroidered|enblazoned|enbossed|encrusted|engraved|enhanced|entitled|etched|fashioned|festooned|featuring|filed|filled|firestained|fitted|flecked|fletched|flaunting|forged|formed|from|gleaming|hewn|highlighted|hilted|hung|in|incised|inlaid|inscribed|inset|intricately|joined|labeled|lavishly|lined|linked|made|marked|mottled|mounted|of|ornamented|padded|painted|polished|reinforced|resembling|rimed|rivited|scattered|scarred|scorched|sealed|set|shaped|shod|spiraled|stamped|stitched|streaked|strung|studded|surmounted|swathed|tangled|tethered|that|tied|tinged|tinted|titled|that|tipped|tooled|topped|trimmed|veined|whorled|wrapped|wrought|with).*)?(?:lying )?at your feet, and do not wish to leave it behind\.
      action (skates) var wearingskates 1 when ^You slide your ice skates on your feet and tightly tie the laces\.|^Your ice skates help you traverse the frozen terrain\.|^Your movement is hindered a little by your ice skates\.
      action (skates) var wearingskates 0 when ^You untie your skates and slip them off of your feet\.
      action var slow_on_ice 1; echo Ice detected! when ^You had better slow down\! The ice is|^At the speed you are traveling
@@ -199,15 +201,13 @@ actions:
      return
 loop:
      gosub wave
-     delay 0.1
+     delay 0.0001
      goto loop
 wave:
-     delay 0.0001
      if (%depth > 0) then return
      if_1 goto wave_do
      goto done
 wave_do:
-     delay 0.01
      var depth 0
      if_1 gosub move %1
      if %typeahead < 1 then 
@@ -215,28 +215,28 @@ wave_do:
           if %typeahead < %typeahead.max then math typeahead add 1
           return
 	 }
-     delay 0.01
+     delay 0.0001
      if_2 gosub move %2
      if %typeahead < 2 then 
 	 {	
           if %typeahead < %typeahead.max then math typeahead add 1
           return
 	 }
-     delay 0.01
+     delay 0.0001
      if_3 gosub move %3
      if %typeahead < 3 then 
 	 {	
           if %typeahead < %typeahead.max then math typeahead add 1
           return
 	 }
-     delay 0.01
+     delay 0.0001
      if_4 gosub move %4
      if %typeahead < 4 then 
 	 {	
           if %typeahead < %typeahead.max then math typeahead add 1
           return
 	 }
-     delay 0.01
+     delay 0.0001
      if_5 gosub move %5
      return
 done:
@@ -348,12 +348,12 @@ move.power:
      if (%depth > 1) then waiteval (1 = %depth)
      put %movement
      nextroom
-	 if (($Attunement.LearningRate = 34) || ($Attunement.Ranks = 1750)) then goto MOVE.DONE
+	if (($Attunement.LearningRate = 34) || ($Attunement.Ranks = 1750)) then goto MOVE.DONE
      matchre MOVE.DONE ^\s*Roundtime\s*\:?
      matchre MOVE.DONE ^\s*\[Roundtime\s*\:?
      matchre MOVE.DONE ^\s*\(Roundtime\s*\:?
      matchre MOVE.DONE ^Something in the area is interfering
-	 matchre MOVE.DONE ^You feel an extremely pervasive ward 
+	matchre MOVE.DONE ^You feel an extremely pervasive ward 
      put perceive
      matchwait
 move.room:
@@ -879,7 +879,7 @@ move.failed:
      put %movement
      matchwait 5
 end_retry:
-     pause
+     pause 0.2
      goto return.clear
 caravan:
      waitforre ^Your .*\, following you\.
@@ -950,7 +950,7 @@ move.done:
      gosub clear
      goto loop
 return:
-     pause 0.001
+     pause 0.0001
      if ($standing = 0) then gosub STAND
      if ($caravan) then
           {
