@@ -5,10 +5,11 @@ put #class arrive off
 put #class combat off
 put #class joust off
 
-# automapper.cmd version 7.7
+# automapper.cmd version 7.8
 
-# last changed: June 19, 2022
+# last changed: June 21, 2022
 #
+# - Robustified Ice road logic and getting ice skates 
 # - Updated Stow Foot logic trigger - Removed Old Obsolete Regex Trigger since stow foot logic now in game
 # - Added missing match for MOVE_RETRY (for climbing in Abandoned Mine) 
 # - Updated stow foot logic to handle prayer mats
@@ -402,12 +403,15 @@ skate.check:
 skate.check.2:
      var checked 1
      action (mapper) off
-     pause 0.01
+     pause 0.2
+     put look in my portal
+     pause 0.2
+     pause 0.1
      echo *** Checking for Ice Skates! ***
      matchre skate.yes ^You tap
      matchre skate.no ^I could not|^What were you
      put tap my skate in my watery portal
-     matchwait 7
+     matchwait 8
 skate.no:
      var slow_on_ice 1
      var wearingskates 0
@@ -433,7 +437,10 @@ footwear.check:
 footware.remove:
      var item $0
      var removed 1
+     echo
+     echo *** FOOTWEAR FOUND
      echo *** Removing: %item
+     echo
      pause 0.2
      pause 0.1
      put remove my %item
@@ -444,14 +451,14 @@ footware.remove:
 footwear.none:
 skate.get:
      pause 0.001
-	match wear.skates You get
-	match footwear.stow You need a free hand
+	matchre wear.skates ^You get|^You are already holding
+	matchre footwear.stow ^You need a free hand
      matchre skate.get.2 ^I could not|^What were you
      put get my skates
 	matchwait 5
 skate.get.2:
      pause 0.001
-	match wear.skates You get
+	matchre wear.skates ^You get|^You are already holding
 	match footwear.stow You need a free hand
      matchre skate.no ^I could not|^What were you
      put get my skates from my watery portal
