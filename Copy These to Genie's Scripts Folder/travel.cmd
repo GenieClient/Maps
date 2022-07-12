@@ -3610,7 +3610,7 @@ STOP.INVIS:
      
 
 INFO_CHECK:
-     action put #var guild $1 when Guild\: (\S+)
+     action put #var guild $1 when Guild\:\s+(.*)$
      action put #var circle $1 when Circle\: (\d+)
      action var kronars 0 when No Kronars\.
      action var kronars $1;eval kronars replacere("%kronars",",","") when \(([0-9,]*) copper Kronars\)\.
