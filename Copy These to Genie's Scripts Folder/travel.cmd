@@ -7,7 +7,7 @@ put #class rp on
 # Script to Travel for Genie3 #
 # Originally written by Chris/Achilles
 # Revitalized and Robustified by Shroom
-# version 3.7
+# version 3.8
 # Requires EXP Plugin by VTCifer #
 #
 # USAGE - .travel <destination> <room number>  (room is optional!)
@@ -73,7 +73,9 @@ if ("$charactername") = ("$char4") then var shardcitizen no
 ####"
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
-# CHANGELOG - Latest Update: 4/23/2022
+# CHANGELOG - Latest Update: 7/25/2022
+#
+# - Fixed bug in setting Guild 
 #
 # - Fixed a bug causing a lockup/genie crash when taking public transport
 #
@@ -325,6 +327,7 @@ if ("$zoneid" = "0") then
 pause 0.0001
 if ("$zoneid" = "2d") then gosub AUTOMOVE temple
 if ("$zoneid" = "1j") then gosub AUTOMOVE cross
+if ("$zoneid" = "1l") then gosub AUTOMOVE cross
 if ("$zoneid" = "2a") then gosub AUTOMOVE cross
 pause 0.0001
 if (matchre("%destination", "\b(ratha|hara?j?a?a?l?|tais?g?a?t?h?)") && matchre("$zoneid", "\b(1|30|42|47|61|66|67|90|99|107|108|116)\b")) then
@@ -2980,16 +2983,18 @@ STOP_INVIS:
                put khri stop silence vanish
                pause 0.3
           }
-     if ("$guild" = "Moon Mage") then
+     if matchre("$guild", "(Moon Mage|Moon)") then
           {
                put release rf
                pause 0.3
           }
      pause 0.3
+return
+
 FERRY:
   pause 0.1
   var offtransport dock
-  if ($invisible) then goto STOP_INVIS
+  if ($invisible) then gosub STOP_INVIS
   pause 0.1
   matchre ONFERRY \[\"Her Opulence\"\]|\[\"Hodierna\'s Grace\"\]|\[\"Kertigen\'s Honor\"\]|\[\"His Daring Exploit\"\]|\[\"Northern Pride\", Main Deck\]|\[\"Theren\'s Star\", Deck\]|\[The Evening Star\]|\[The Damaris\' Kiss\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[\"The Desert Wind\"\]|\[\"The Suncatcher\"\]|\[\"The Riverhawk\"\]|\[\"Imperial Glory\"\]\"Hodierna\'s Grace\"|\"Her Opulence\"\]|\[The Galley Cercorim\]|\[The Jolas, Fore Deck\]|\[Aboard the Warship, Gondola\]|\[The Halasa Selhin, Main Deck\]|\[Aboard the Mammoth, Platform\]
   matchre ONFERRY Secured to the gigantic balloon overhead, the armored ironwood gondola dangles on a convoluted network of hempen rope\.
@@ -3610,7 +3615,7 @@ STOP.INVIS:
      
 
 INFO_CHECK:
-     action put #var guild $1 when Guild\: (\S+)
+     action put #var guild $1 when Guild\:\s+(.*)$
      action put #var circle $1 when Circle\: (\d+)
      action var kronars 0 when No Kronars\.
      action var kronars $1;eval kronars replacere("%kronars",",","") when \(([0-9,]*) copper Kronars\)\.
@@ -3623,7 +3628,7 @@ INFO_CHECK:
      waitforre ^\s*Encumbrance\s*\:
      pause 0.1
      pause 0.01     
-     action remove Guild\: (\S+)
+     action remove Guild\:\s+(.*)$
      action remove Circle\: (\d+)
      return
     
