@@ -14,7 +14,10 @@ var waitfor_action 0
 var ice_collect 0
 
 # automapper.cmd version 7.9
-# last changed: June 25, 2022
+# last changed: July 17, 2022
+
+# July 17 2022 - Shroom
+# Added standing checks before moving wall in gear gate bypass
 
 # June 25, 2022 - TenderVittle's Touches:
 # Added variable action gosub to handle doing commands you really want to make sure are done right. This is a toggle.
@@ -931,6 +934,7 @@ GEAR.GATE.BYPASS:
 	var wall 0
 
 GEAR.GATE.BYPASS.CHECK:
+     if (!$standing) then gosub STAND
 	if matchre ("$roomobjs","a gouged stone wall") then var wall 1
 	if ("$roomid" = "263") then var wall_trigger basin
 	if ("$roomid" = "264") then var wall_trigger torch
@@ -944,6 +948,7 @@ GEAR.GATE.BYPASS.CHECK:
 		}
 	if (%wall) then 
 		{
+          if (!$standing) then gosub STAND
 		move go wall
 		action (ggbypass) off
 		action (mapper) on
