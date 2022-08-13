@@ -17,6 +17,7 @@ var ice_collect 0
 # last changed: July 17, 2022
 
 # July 17 2022 - Shroom
+# Fixed bug in Move_Stow
 # Added standing checks before moving wall in gear gate bypass
 
 # June 25, 2022 - TenderVittle's Touches:
@@ -356,8 +357,8 @@ MOVE.ROOM:
 	goto MOVE.DONE
 
 MOVE.STOW:
-	if !matchre ("Empty","$lefthand") then gosub STOW_LEFT
-	if !matchre ("Empty","$righthand") then goto STOW_RIGHT
+	if !matchre ("Empty","$lefthand") then gosub STOW.LEFT
+	if !matchre ("Empty","$righthand") then goto STOW.RIGHT
 	if matchre("$righthand", "khuj|staff|atapwi") then put wear $righthandnoun
 	pause 0.2
 	pause 0.2
@@ -1239,11 +1240,11 @@ ACTION.STOW.HANDS:
 	goto ACTION
 
 ACTION.STOW.UNLOAD:
-	var unloadables sling|bow|blowgun|arbalest|arbalist|chunenguti|hrr'ibu|jiranoci|jranoki|mahil|taisgwelduan|uku'uanstaho
+	var unloadables crossbow|sling|bow|blowgun|arbalest|arbalist|chunenguti|hrr'ibu|jiranoci|jranoki|mahil|taisgwelduan|uku'uanstaho
 	var actionbackup %action
 	var successbackup %success
-	if matchre ("%righthand","%unloadables") then var action unload my $righthandnoun
-	if matchre ("%lefthand","%unloadables") then var action unload my $lefthandnoun
+	if matchre ("$righthand","%unloadables") then var action unload my $righthandnoun
+	if matchre ("$lefthand","%unloadables") then var action unload my $lefthandnoun
 	var success ^Roundtime\:|^You unload
 	gosub ACTION
 	gosub STOW.HANDS
@@ -1278,7 +1279,7 @@ ACTION.MAPPER.ON:
 	matchre ACTION.STOW.HANDS ^You must have at least one hand free to do that|^You need a free hand
 	matchre ACTION.WAIT ^You're unconscious|^You are still stunned|^You can't do that while|^You don't seem to be able to
 	matchre ACTION.FAIL ^There isn\'t any more room|^You just can't get the .* to fit
-	matchre STOW.UNLOAD ^You should unload
+	matchre ACTION.STOW.UNLOAD ^You should unload
 	put %action
 	matchwait 0.5
 	if %waitfor_action = 1 then goto ACTION
