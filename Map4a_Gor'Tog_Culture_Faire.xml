@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Tiger Clan: Gor'Tog Culture Faire 416 (2015)" id="4a">
+  <node id="1" name="Tiger Clan Home, Dirt Pathway">
+    <description>The clang of a blacksmith's hammer comes from the doorway of a stone building fronted with a large shoeing yard.  A Gor'Tog farmer works at shoeing an ox suspended in a leather sling.  The uncomfortable ox rolls its eye to look at you and lets out a protesting bellow.</description>
+    <position x="220" y="80" z="0" />
+    <arc exit="north" move="north" destination="14" />
+    <arc exit="southeast" move="southeast" destination="2" />
+    <arc exit="go" move="go stone building" destination="18" />
+  </node>
+  <node id="2" name="Tiger Clan Home, Dirt Pathway">
+    <description>A willow-framed building with a thatched broom roof faces the path.  Strutting proudly across the front of the house is a family of geese.  The youngest stops to peck at something on the ground, until he is nudged onward by his elders.  A carved signpost stands at the pathway.</description>
+    <position x="260" y="120" z="0" />
+    <arc exit="south" move="south" destination="3" />
+    <arc exit="northwest" move="northwest" destination="1" />
+  </node>
+  <node id="3" name="Tiger Clan Home, Dirt Pathway">
+    <description>Clumps of bushes grow around a stone cottage topped with a roof thatched with heather.  A night owl perches atop the cottage peering down at you, its white face luminous in the dark night.  It lets out a single hoot, then flaps its wings and vanishes into the darkness.</description>
+    <description>Colorful flowers and bushes laden with berries grow in a wild, brilliant display around a stone cottage topped with a roof thatched with heather.  A small grey donkey pokes its head out of the open doorway and gazes at you inquisitively.</description>
+    <position x="260" y="160" z="0" />
+    <arc exit="north" move="north" destination="2" />
+    <arc exit="southwest" move="southwest" destination="4" />
+    <arc exit="go" move="go stone cottage" destination="19" />
+  </node>
+  <node id="4" name="Tiger Clan Home, Dirt Pathway">
+    <description>A wagon is parked alongside the pathway, banners flapping in the night breeze.  It appears to be closed up for the night.  You hear a faint snoring coming from within.  Just beyond the village green to the south, you can see the glowing windows of a large building and the dark silhouette of a mill.</description>
+    <description>A colorful wagon is parked alongside the pathway, red and gold banners flapping in the breeze, the rippling cloth nearly drowning out a faint snoring coming from within.  Clustered together at the nether end of the village are a small village green with an impressive manor house and an old mill just beyond it.</description>
+    <position x="220" y="200" z="0" />
+    <arc exit="northeast" move="northeast" destination="3" />
+    <arc exit="northwest" move="northwest" destination="5" />
+    <arc exit="go" move="go village green" destination="7" />
+    <arc exit="go" move="go colorful wagon" destination="22" />
+    <arc exit="go" move="go daisy-yellow tent" destination="107" />
+  </node>
+  <node id="5" name="Tiger Clan Home, Dirt Pathway">
+    <description>From somewhere off to the south you can hear the rumble and splash of the miller's waterwheel.  A straw thatched house is set off from the path with clay pots, bowls and urns displayed in its windows.</description>
+    <position x="180" y="160" z="0" />
+    <arc exit="southeast" move="southeast" destination="4" />
+    <arc exit="northwest" move="northwest" destination="6" />
+  </node>
+  <node id="6" name="Tiger Clan Home, Dirt Pathway">
+    <description>A rickety wagon lurches past you, pulled by wide-horned oxen.  A Gor'Tog wagoneer walking alongside the rumbling vehicle nods and tips his hat as he passes by.  Clouds of dust eddy about the deep ruts left in the dirt roadway as the cart passes.  A sturdy wood and stone building marks the local Trader's Guild outpost.</description>
+    <position x="140" y="120" z="0" />
+    <arc exit="southeast" move="southeast" destination="5" />
+    <arc exit="go" move="go outpost" destination="23" />
+  </node>
+  <node id="7" name="Tiger Clan Home, Village Green" note="Village Green|togball bin" color="#00FF00">
+    <description>The village green is filled with the night music of crickets and a lone owl who sits perched on a branch, hooting solemnly.  A wooden bridge spans a dark crevice to the south.</description>
+    <description>Squeals and giggles come from a group of Gor'Tog children who are running around a small, blindfolded lad.  The lad stumbles around, flailing his arms, trying to tag one of the others.  A wooden bridge spans across a deep moat to the south, where a large manor house stands proudly overlooking the surrounding area.  The village stocks are set off in the far corner of the green.</description>
+    <position x="220" y="260" z="0" />
+    <arc exit="north" move="north" destination="4" />
+    <arc exit="east" move="east" destination="9" />
+    <arc exit="southwest" move="southwest" destination="11" />
+    <arc exit="west" move="west" destination="8" />
+    <arc exit="northwest" move="northwest" destination="10" />
+    <arc exit="go" move="go moat bridge" destination="26" />
+  </node>
+  <node id="8" name="Tiger Clan Home, Dirt Pathway">
+    <description>A column of smoke spirals out of the tall stone chimney of a simple brick building.  The dirt path to its door is trampled hard, and a delicious aroma wafts from the open doorway.</description>
+    <position x="180" y="260" z="0" />
+    <arc exit="east" move="east" destination="7" />
+    <arc exit="go" move="go brick building" destination="24" />
+  </node>
+  <node id="9" name="Tiger Clan Home, Churchyard">
+    <description>A neat line of flat white stones paves the pathway leading up to the door of an old church.  A small cemetery has been set off in the churchyard, bordered by low hedges of lavender.</description>
+    <position x="260" y="260" z="0" />
+    <arc exit="west" move="west" destination="7" />
+    <arc exit="go" move="go old church" destination="56" />
+    <arc exit="go" move="go small cemetery" destination="58" />
+    <arc exit="go" move="go green yurt" destination="110" />
+  </node>
+  <node id="10" name="Tiger Clan Home, Dirt Pathway">
+    <description>The dirt pathway ends at a small toft fronting a cottage where candlelight shimmers from the windows.  Dark, herbal-scented shrubs border the yard.</description>
+    <description>The dirt pathway ends at a small, neatly-kept toft that fronts a quaint cottage.  Bees buzz industriously around the tall shrubs of sage, rosemary and nutmeg geranium that border the yard, attracted by their spicy herbal fragrance.</description>
+    <position x="180" y="220" z="0" />
+    <arc exit="southeast" move="southeast" destination="7" />
+    <arc exit="go" move="go small toft" destination="12" />
+  </node>
+  <node id="11" name="Tiger Clan Home, Old Mill" note="Old Mill">
+    <description>An old mill looks over the shoreline of the Segoltha River, its massive waterwheel splashing and churning the river's deep water.  Tall grasses and willows grow abundantly around the mill grounds.</description>
+    <description>An old mill looks over the shoreline of the Segoltha River, its massive waterwheel splashing and churning the river's deep water.  Tall grasses and willows grow abundantly around the mill grounds.  Village women stand in groups collecting bundles of willow wands and grass.</description>
+    <position x="180" y="300" z="0" />
+    <arc exit="northeast" move="northeast" destination="7" />
+    <arc exit="none" move="search go faint trail" destination="73" />
+    <arc exit="go" move="go muddy path" destination="75" />
+    <arc exit="go" move="go green tent" destination="114" />
+  </node>
+  <node id="12" name="Tiger Clan Home, Cottage Toft">
+    <description>Chickens, pigs and donkeys roam freely in the yard, penned in by the high shrubs that surround them.  A quaint little stone cottage with a roof thatched with rushes sits at the far end of the toft.  Bunches of herbs hang in its open windows.  A purple lark hops back and forth along the roof's edge, eyeing you suspiciously.  Perhaps it guards a nest up there in the rushes?</description>
+    <position x="160" y="220" z="0" />
+    <arc exit="go" move="go small cottage" destination="13" />
+    <arc exit="go" move="go dirt pathway" destination="10" />
+  </node>
+  <node id="13" name="Tiger Clan Home, Small Cottage" note="Herbs|Neesa" color="#FF0000">
+    <description>The scents of aromatic smoke and drying herbs hang in the air in this tidy one-room cottage.  A tall drying cupboard stands against one wall, conveniently near the stone hearth.  An odd assortment of vials, flasks and copper pots line the mantel.  Bunches of herbs hang from wooden pegs mounted into the ceiling beams and window frames.  The floor is beaten earth covered with fresh rushes.  A stooped old woman works a set of bellows, keeping the hearth's fire going at full blast.</description>
+    <position x="160" y="210" z="0" />
+    <arc exit="out" move="out" destination="12" />
+    <arc exit="go" move="go back door" destination="25" />
+  </node>
+  <node id="14" name="Tiger Clan Home, Dirt Pathway" note="Dirt Pathway">
+    <description>A river-rock wall extends east to west, protecting the northern end of a rambling village.  The open village gate looks out across a vast stretch of the fields worked by the villagers.  A dirt pathway winds southward through a collection of cottages, shops and huts standing at odd angles, most with a fence or ditch fronting the path.  Farmers, returning from a day in the fields, find fellowship and food in the conveniently-located pub, The Pig's Pannage, its open doors just a short walk from the gate.</description>
+    <position x="220" y="40" z="0" />
+    <arc exit="south" move="south" destination="1" />
+    <arc exit="go" move="go village gate" destination="15" />
+    <arc exit="go" move="go pig's pannage" destination="16" />
+  </node>
+  <node id="15" name="Grassland Path, Village Gate" note="Map4_Crossing_West_Gate.xml|Gate|Crossing">
+    <description>A long rock wall extends east and west bordered by the grassland path.  Beyond the wall you can make out the thatched rooftops of the village homesteads.  The massive village gate stands open, its wooden beams painted with colorful gold and black stripes.</description>
+    <position x="220" y="20" z="0" />
+    <arc exit="east" move="east" />
+    <arc exit="west" move="west" />
+  </node>
+  <node id="16" name="Tiger Clan Home, Pub" note="Pub|Gurta" color="#FF0000">
+    <description>A huge black and gold banner dominates the wall behind a massive stone bar.  Several Gor'Tog farmers are huddled together at one end, muttering to each other in low, rumbling voices.  Gurta, the alewife, slams a tankard on the bar and sends it sailing down to the farmers.  A platter of bacon and beans follows the tankard.</description>
+    <position x="230" y="40" z="0" />
+    <arc exit="out" move="out" destination="14" />
+    <arc exit="go" move="go dimly-lit alcove" destination="17" />
+  </node>
+  <node id="17" name="Tiger Clan Home, Alcove">
+    <description>A booth with a wooden table and benches is tucked into the alcove, offering a quieter spot for private conversation.  Occasionally the loud thunk of a metal tankard being slammed onto the bar makes you aware of the activities in the central part of the pub.</description>
+    <position x="240" y="40" z="0" />
+    <arc exit="out" move="out" destination="16" />
+  </node>
+  <node id="18" name="Tiger Clan Home, Havor's Forge" note="Havor's Forge|Weapons" color="#FF0000">
+    <description>The smell of hot iron assails you as you enter the domain of Havor, the Gor'Tog blacksmith.  A massive anvil and stone forge stand side by side on the hard dirt floor, and tools of the blacksmith's craft lay neatly arranged on a wooden bench.  Several grinding wheels and a bin holding lengths of iron make up the rest of Havor's shop.</description>
+    <position x="210" y="80" z="0" />
+    <arc exit="out" move="out" destination="1" />
+  </node>
+  <node id="19" name="Sazu's Cottage, Byre">
+    <description>A mule brays in surprise as you enter his domain, and several chickens flap their wings, annoyed at the intrusion.  Mounds of hay and nesting shelves provide sleeping places for the occupants.  A deep ditch separates the byre from the living area to the south, and a narrow wooden ramp provides access.</description>
+    <position x="270" y="160" z="0" />
+    <arc exit="out" move="out" destination="3" />
+    <arc exit="go" move="go narrow ramp" destination="20" />
+  </node>
+  <node id="20" name="Sazu's Cottage, Dyeing Chamber" note="Sazu's Cottage|Dyer" color="#FF0000">
+    <description>Sazu, the Gor'Tog dyer, stands at a black iron kettle, stirring the liquid within.  She reaches up to grab a handful of berries from an overhead basket, and tosses them into the pot.  Dozens of wicker baskets hang from the ceiling, along with bunches of drying flowers.  Unglazed windows have their shutters opened to let in the daytime breezes.  A dye menu chart is nailed next to a ladder which appears to lead to a room overhead.</description>
+    <description>Sazu, the Gor'Tog dyer, works industriously at a table, pounding dried flowers into a fine powder.  She tosses the colorful powder into a black iron kettle, and stirs the liquid within.  Dozens of wicker baskets hang from the ceiling, along with bunches of the drying flowers.  The cottage windows are shuttered tightly against the night air.  A dye menu chart is nailed next to a ladder which appears to lead to a room overhead.</description>
+    <position x="280" y="160" z="0" />
+    <arc exit="go" move="go narrow ramp" destination="19" />
+    <arc exit="climb" move="climb wooden ladder" destination="21" />
+  </node>
+  <node id="21" name="Sazu's Cottage, Sleeping Loft">
+    <description>A simple straw pallet is the only furnishing here, but the loft has been festively decorated with bunches of lavender heather in earthenware pots and colorfully dyed garments hanging from wall pegs.</description>
+    <position x="290" y="160" z="0" />
+    <arc exit="climb" move="climb wooden ladder" destination="20" />
+  </node>
+  <node id="22" name="Tiger Clan Home, Peddler's Wagon" note="Peddler's Wagon|General" color="#FF0000">
+    <description>Every inch of this roomy covered wagon has been used efficently to store an amazing array of trinkets, colorful clothing and carryalls.  The peddler Posimur reclines against the back of the wagon half asleep midst a pile of discarded cloth, leather and string.</description>
+    <position x="230" y="200" z="0" />
+    <arc exit="out" move="out" destination="4" />
+  </node>
+  <node id="23" name="Tiger Clan, Trader's Guild Outpost" note="Trading Outpost" color="#00FF00">
+    <description>This outpost is a replica of the great Trader Guild buildings in the larger towns.  Designed for easy buying and selling of bulk goods by Guild members, it is crammed and jammed with crates, boxes and packages of all manner and value.  A worried-looking Guild trade minister is at hand to expedite transactions and to make sure none of the goods leave without the proper fees and monies being exchanged.</description>
+    <position x="140" y="110" z="0" />
+    <arc exit="out" move="out" destination="6" />
+  </node>
+  <node id="24" name="Tiger Clan Home, Communal Ovens">
+    <description>A massive brick and iron oven fills the small shop, leaving barely enough space for the portly baxter Fernar, who stands behind a narrow wooden counter.  The delicious aroma of baking bread emanates from the oven, along with waves of intense heat.  The bulky Gor'Tog removes a tray of plump buns, and squirms back around to place them on the countertop.  A village woman enters the shop, hands Fernar a bowl of rising dough with brisk instructions, then lumbers purposefully out the door.</description>
+    <position x="160" y="240" z="0" />
+    <arc exit="out" move="out" destination="8" />
+  </node>
+  <node id="25" name="Tiger Clan Home, Cottage Croft">
+    <description>The croft behind the stone cottage is a bountiful herb garden overflowing with clumps of hyssop, angelica, liverwort, monkshood and sweet woodruff.  The abundant growth partially obscures a stone birdbath where a family of purple larks sit, sipping at the water and cheerfully chirping to each other.</description>
+    <description>Heady herbal scents rise from the dark clumps that fill the croft garden.  A stone birdbath sits silent and still in the center of the garden.</description>
+    <position x="160" y="200" z="0" />
+    <arc exit="go" move="go back door" destination="13" />
+  </node>
+  <node id="26" name="Manor House, Courtyard" note="Manor House">
+    <description>A group of ducks waddles past the wooden moat bridge, quacking loudly to each other.  An enormous manor house and its surrounding buildings are sprawled across the southern end of the village, hugging the shoreline of the Segoltha River.  The impressive appearance of the house is somewhat marred by a large freckled pig that lays sound asleep next to the massive hardwood door.</description>
+    <description>Candlelight twinkles from the many windows of an enormous manor house that is sprawled across the southern end of the village, hugging the shoreline of the Segoltha River.  The low sound of snoring comes from the house, and you notice a large pig laying sound asleep next to the massive hardwood door.</description>
+    <position x="220" y="400" z="0" />
+    <arc exit="east" move="east" destination="27" />
+    <arc exit="go" move="go moat bridge" destination="7" />
+    <arc exit="go" move="go hardwood door" destination="41" />
+  </node>
+  <node id="27" name="Manor House, Orchard" note="Orchard">
+    <description>A grove of trees covered with deep green, glossy leaves and laden with plump fuzzy peaches stands just east of a large manor house.  A cobblestone path winds through the trees toward a group of buildings to the south.</description>
+    <position x="240" y="400" z="0" />
+    <arc exit="west" move="west" destination="26" />
+    <arc exit="go" move="go cobblestone path" destination="28" />
+  </node>
+  <node id="28" name="Manor House, Pathway">
+    <description>A Gor'Tog housemaid emerges from a stone building carrying a huge silver platter of roasted meat.  She hurries it through a side door of the manor house.  Opposite the stone building is a brick structure with neatly-trimmed rosemary and lavender hedges surrounding it.  Several women in servant's garb hang freshly washed garments and linen on the hedges to dry.</description>
+    <position x="240" y="440" z="0" />
+    <arc exit="east" move="east" destination="29" />
+    <arc exit="go" move="go side door" destination="33" />
+    <arc exit="go" move="go cobblestone path" destination="27" />
+    <arc exit="go" move="go stone building" destination="31" />
+    <arc exit="go" move="go brick structure" destination="32" />
+    <arc exit="go" move="go trail" destination="103" />
+  </node>
+  <node id="29" name="Manor House, Pathway">
+    <description>A strong, unpleasant odor comes from a stone-block building where bits of bones and brownish stains cover the entryway.  Dozens of flies buzz and crawl over the strong mesh covering the building's window.</description>
+    <position x="260" y="440" z="0" />
+    <arc exit="west" move="west" destination="28" />
+    <arc exit="go" move="go stone building" destination="30" />
+  </node>
+  <node id="30" name="Manor House, Game Larder">
+    <description>The unmistakable odor of putrefying meat assails you when you enter the larder, lessened only slightly by the breeze flowing through the mesh-covered windows that are arranged all around the building.  A large iron wheel mounted in the ceiling supports several slabs of meat and carcasses of game birds.  Brine barrels and salting tubs are placed alongside a stone chopping block.</description>
+    <position x="280" y="420" z="0" />
+    <arc exit="out" move="out" destination="29" />
+  </node>
+  <node id="31" name="Manor House, Kitchen" note="Kitchen">
+    <description>The tantalizing aroma of roasting meat and herbs emanates from a massive brick hearth on the far wall.  An iron spit revolves slowing over the fire, powered by a strange contraption.  Sitting conveniently at the hearthside are a tinderbox and a huge wooden bin.  Shelves on the walls are covered with neatly arranged supplies, and sturdy wooden pegs mounted in the beams of the high vaulted ceiling hold hanging bunches of garlic and onions.  A long deal table occupies the center of the stone floor.</description>
+    <position x="260" y="420" z="0" />
+    <arc exit="out" move="out" destination="28" />
+  </node>
+  <node id="32" name="Manor House, Washhouse" note="Washhouse">
+    <description>Enormous coopered tubs fill the room, some filled with clothes soaking in soap-filmed water.  Several washboards and an assortment of wash-sticks hang from the wall.  An earthenware soapdish holds a few greyish lye-balls.</description>
+    <position x="220" y="420" z="0" />
+    <arc exit="out" move="out" destination="28" />
+  </node>
+  <node id="33" name="Manor House, Hallway">
+    <description>This short hallway contains a wooden entryway leading out to the curia on the west side and a servant's door on the east.  A young serving girl comes through the door, carrying a covered platter toward the buttery to the north.</description>
+    <position x="200" y="440" z="0" />
+    <arc exit="north" move="north" destination="34" />
+    <arc exit="south" move="south" destination="35" />
+    <arc exit="go" move="go servant's door" destination="28" />
+    <arc exit="go" move="go wooden entryway" destination="52" />
+  </node>
+  <node id="34" name="Manor House, Buttery">
+    <description>Dishes and cups are arranged in piles and stacks atop wooden shelves that line the walls.  A Gor'Tog girl dressed in servant's garb stands at a slopstone, her hands emersed in a large metal washtub scrubbing crockery in sudsy water.</description>
+    <description>Dishes and cups are arranged in piles and stacks atop wooden shelves that line the walls.  Loaves of fresh baked bread wrapped in clean cloths are lined up on a table, awaiting the morning meal.</description>
+    <position x="200" y="420" z="0" />
+    <arc exit="south" move="south" destination="33" />
+    <arc exit="go" move="go plain doorway" destination="39" />
+  </node>
+  <node id="35" name="Manor House, Dry Larder">
+    <description>The west wall of the larder is covered with an enormous blue cupboard, while the east wall holds an equally large purple cupboard.  Birdcages containing blackbirds, larks, plovers and thrushes hang from the ceiling among muslin bags of drying herbs.</description>
+    <position x="200" y="460" z="0" />
+    <arc exit="north" move="north" destination="33" />
+    <arc exit="south" move="south" destination="36" />
+  </node>
+  <node id="36" name="Manor House, Wet Larder">
+    <description>This dimly-lit larder is cool and damp.  A light breeze wafts in from mesh-covered windows, easing the strong fishy smell that hangs in the air.  The brick floor slopes downward toward a drainage hole in the center.  Thick slate shelves contain fresh fish, cuts of meat and vegetables covered with muslin and handfuls of wet rushes.</description>
+    <position x="200" y="480" z="0" />
+    <arc exit="north" move="north" destination="35" />
+    <arc exit="south" move="south" destination="37" />
+  </node>
+  <node id="37" name="Manor House, Servant's Passage">
+    <description>This cramped passageway connects the servant's areas.  Some stone stairs lead down to the manor's ale cellar.</description>
+    <position x="200" y="500" z="0" />
+    <arc exit="north" move="north" destination="36" />
+    <arc exit="northwest" move="northwest" destination="38" />
+    <arc exit="go" move="go closet door" destination="53" />
+    <arc exit="climb" move="climb stairs" destination="54" />
+  </node>
+  <node id="38" name="Manor House, Servant's Passage">
+    <description>The clanking of iron comes from a wooden door, as a weary-looking Gor'tog maid passes through it, heading up some rickety steps for a much-needed break.</description>
+    <position x="180" y="480" z="0" />
+    <arc exit="southeast" move="southeast" destination="37" />
+    <arc exit="go" move="go wooden door" destination="52" />
+    <arc exit="climb" move="climb rickety steps" destination="55" />
+  </node>
+  <node id="39" name="Manor House, Dining Hall" note="Dining Hall">
+    <description>The heavy blue velvet drapes that cover the many windows in the room are trimmed with shiny gold fringe.  A long mahogany dining table is surrounded by highback chairs, with a large throne-like chair occupying the master's place at the head of the table.  A massive sideboard runs the length of one wall, its surface laden with food.</description>
+    <position x="200" y="400" z="0" />
+    <arc exit="out" move="out" destination="40" />
+    <arc exit="go" move="go plain doorway" destination="34" />
+  </node>
+  <node id="40" name="Manor House, Hallway">
+    <description>A Gor'Tog dressed in servant's garb drags a leashed goat out of a wood-framed opening in the south wall.  The animal, stubbornly munching on a candlestick, tosses its head in irritation as it follows the man.  Delicious aromas of roasted meat waft through a wooden arch to the west.</description>
+    <position x="200" y="380" z="0" />
+    <arc exit="west" move="west" destination="41" />
+    <arc exit="go" move="go wooden arch" destination="39" />
+    <arc exit="go" move="go wood-framed opening" destination="74" />
+  </node>
+  <node id="41" name="Manor House, Vestibule" note="Vestibule">
+    <description>The high-ceilinged vestibule leads from the manor's entry to an ornately carved wooden archway that opens out to the central courtyard.  Tiers of purple velvet with gold fringe top the vestibule and connecting passageway walls, adding a garish touch to the otherwise attractive room.</description>
+    <position x="180" y="380" z="0" />
+    <arc exit="east" move="east" destination="40" />
+    <arc exit="west" move="west" destination="42" />
+    <arc exit="go" move="go wooden archway" destination="52" />
+    <arc exit="go" move="go hardwood door" destination="26" />
+    <arc exit="go" move="go small doorway" destination="45" />
+  </node>
+  <node id="42" name="Manor House, Corridor">
+    <description>The walls topped with tiers of purple velvet continue down the east-west stretch of corridor.  A Gor'Tog housemaid, wielding a broom, chases an angrily clucking chicken around a bend to the south.</description>
+    <position x="160" y="380" z="0" />
+    <arc exit="east" move="east" destination="41" />
+    <arc exit="south" move="south" destination="43" />
+    <arc exit="go" move="go acanth door" destination="46" />
+    <arc exit="go" move="go open doorway" destination="47" />
+  </node>
+  <node id="43" name="Manor House, Corridor">
+    <description>Several prosperous-looking Halfling traders emerge from an iron door, stepping aside gingerly to avoid a mother pig who has chosen a central spot on the corridor floor to nurse her young.  They chuckle to each other about the hazards of finding good caravan guards these days, as they head north.</description>
+    <position x="160" y="400" z="0" />
+    <arc exit="north" move="north" destination="42" />
+    <arc exit="south" move="south" destination="44" />
+    <arc exit="go" move="go iron door" destination="49" />
+    <arc exit="go" move="go wooden door" destination="48" />
+  </node>
+  <node id="44" name="Manor House, Corridor">
+    <description>The corridor ends at an enormous purple door that fills most of the south wall.  A smaller blue door leads to the west.  This end of the hall seems much quieter, with not a pig or chicken in sight.</description>
+    <position x="160" y="420" z="0" />
+    <arc exit="north" move="north" destination="43" />
+    <arc exit="go" move="go blue door" destination="50" />
+    <arc exit="go" move="go purple door" destination="51" />
+  </node>
+  <node id="45" name="Manor House, Cloak Room">
+    <description>Several cloaks and greatcoats belonging to the manor's guests hang on wooden coatracks.  A collection of muddied boots have been tossed in a discarded jumble in a dark corner.</description>
+    <position x="180" y="360" z="0" />
+    <arc exit="out" move="out" destination="41" />
+  </node>
+  <node id="46" name="Manor House, Library" note="Library">
+    <description>Impressive acanth wood bookshelves line the walls here.  Several books reside on the shelves, but most are heaped in a pile on the floor.  A young goat stands over them, contentedly munching on some pages.</description>
+    <position x="160" y="360" z="0" />
+    <arc exit="go" move="go acanth door" destination="42" />
+  </node>
+  <node id="47" name="Manor House, Drawing Room" note="Drawing Room">
+    <description>This richly, but rather garishly furnished drawing room contains an ancient central hearth where a hearty fire crackles.  Vivid purple and blue flowers cover the long couches and chairs, and equally bright matching flowers spread across the carpeted floor.  The furniture has a dusty appearance, as if the room has been unused for awhile.</description>
+    <position x="140" y="360" z="0" />
+    <arc exit="out" move="out" destination="42" />
+  </node>
+  <node id="48" name="Manor House, Ortug's Study" note="Ortug's Study">
+    <description>Chaos rules in this unorganized jumble that Ortug calls a study.  Unsteady piles of papers and books cover the floor and desk, forming the Grandmaster's preferred filing system.  A brown and white feathered chicken makes her way through the maze of stacks, squawking and flapping her wings when a single paper drifts down from the desk, sailing over her head and onto the floor.</description>
+    <position x="140" y="380" z="0" />
+    <arc exit="south" move="south" destination="49" />
+    <arc exit="out" move="out" destination="43" />
+  </node>
+  <node id="49" name="Manor House, Guardroom" note="Guardroom">
+    <description>The Grandmaster Ortug lumbers slowly around a group of Gor'Tog guards, proudly examining their bright purple uniforms.  The guards listen carefully as Ortug instructs them.  He recites, Some person mess with caravan, you bash them!  Some critter mess with caravan, you bash it!  Several of the guards nod thoughtfully, while another carefully scratches a reminder note on a crumpled piece of paper.</description>
+    <position x="140" y="400" z="0" />
+    <arc exit="north" move="north" destination="48" />
+    <arc exit="out" move="out" destination="43" />
+  </node>
+  <node id="50" name="Manor House, Bedroom" note="Bedroom">
+    <description>This small bedroom belongs to the family's son, Grob, who is sitting on the floor studying something.  He quickly shoves a piece of paper under the bed, giving you a furtive glance.  Toy war clubs and shields are strewn around the room, and a small version of the Tiger Clan guard uniform hangs from a peg on the wall.</description>
+    <position x="140" y="420" z="0" />
+    <arc exit="out" move="out" destination="44" />
+  </node>
+  <node id="51" name="Manor House, Master Bedroom" note="Master Bedroom">
+    <description>The Borthgar master bedroom is a visual disaster!  The purple paisley bed quilt clashes with the red floral rugs and blue checquered draperies.  Resomba, the manor mistress, sits in a massive rocking chair trying to do some embroidery.  She glowers at her work and impatiently yanks out some stitching, ripping the fabric in the process.</description>
+    <position x="160" y="440" z="0" />
+    <arc exit="out" move="out" destination="44" />
+  </node>
+  <node id="52" name="Manor House, Curia" note="Curia">
+    <description>This open-air courtyard is bustling with activity.  Young Gor'Tog housemaids giggle and laugh together as they sit in the shade, peeling vegetables for the evening meal.  Occasionally, they gaze admiringly at several sweating, muscular guards who are training with hefty iron clubs.  The clang of iron against iron fills the air.  A large archway leads into the main part of the manor.</description>
+    <description>The clang of iron against iron jars the peaceful night in this open-air courtyard.  Two young men from Ortug's team of guards train with massive metal clubs.  The sweat on their hefty Gor'Tog arms glimmers in the dim light from their candles.  A large archway leads into the main part of the manor.</description>
+    <position x="180" y="440" z="0" />
+    <arc exit="go" move="go wooden entryway" destination="33" />
+    <arc exit="go" move="go plain door" destination="38" />
+    <arc exit="go" move="go archway" destination="41" />
+  </node>
+  <node id="53" name="Manor House, Linen Closet" note="Linen Closet">
+    <description>A large fitted cupboard takes up most of the space in the little linen closet.  A wooden mending table, set off to the side, holds a frayed monogrammed sheet with a threaded needle still stuck in it.</description>
+    <position x="220" y="500" z="0" />
+    <arc exit="out" move="out" destination="37" />
+  </node>
+  <node id="54" name="Manor House, Ale Cellar" note="Ale Cellar">
+    <description>A massive copper dominates the cellar room.  Ale barrels stand in rows on the sawdust-strewn cobbled floor.  A Gor'Tog woman, her head covered by a purple kerchief, uses a wooden paddle to stir some malt into the liquid held in a large mash tun.  A shelf holds casks of yeast and tubs of malt.  By the foot of the stairs, a wincing elderly Gor'Tog man holds a stringy wig between two fingertips as if he were disposing of a dead rat.</description>
+    <position x="180" y="500" z="0" />
+    <arc exit="climb" move="climb stairs" destination="37" />
+  </node>
+  <node id="55" name="Manor House, Servants' Quarters" note="Servants' Quarters">
+    <description>This large attic room holds several curtained bedsteads that are tucked into the eaves of the manor roof.  Short stools and a single table holding a metal wash basin are the only other furnishings here.</description>
+    <position x="160" y="480" z="0" />
+    <arc exit="down" move="down" destination="38" />
+  </node>
+  <node id="56" name="Tiger Clan Home, Old Church" note="Shrine1-07|Albreda|Old Church|Church" color="#A6A3D9">
+    <description>Some rows of wooden pews are set before a simple altar.  A symbol carved in the shape of a dove rests on a dais, and a quiet peace fills the space in tribute to Albreda's blessing.  Light filters through a high window with dust motes dancing in the tranquil beams.</description>
+    <description>Some rows of wooden pews are set before a simple altar.  A symbol carved in the shape of a dove rests on a dais, and a quiet peace fills the space in tribute to Albreda's blessing.  Candlelight casts a tranquil glow over the walls and pews and gives the space a safe and warm feeling at any hour of the night.</description>
+    <position x="260" y="270" z="0" />
+    <arc exit="out" move="out" destination="9" />
+    <arc exit="climb" move="climb wobbly ladder" destination="57" />
+  </node>
+  <node id="57" name="Old Church, Belfry">
+    <description>The ivory-colored balustrade surrounding the belfry is carved with stylized representations of birds and animals.  The view below is of the church cemetery to the north, and the village green off to the west.</description>
+    <position x="260" y="280" z="0" />
+    <arc exit="climb" move="climb rickety ladder" destination="56" />
+  </node>
+  <node id="58" name="Tiger Clan Home, Cemetery" note="Cemetery">
+    <description>The final resting places of individuals and entire families are marked with carved stones.  The history of the village is written in the epitaphs.  A tiny mound of freshly turned earth covered with flowers gives testimony to the continuing function of the cemetery in the cycle of life and death.</description>
+    <position x="300" y="260" z="0" />
+    <arc exit="north" move="north" destination="59" />
+    <arc exit="out" move="out" destination="9" />
+  </node>
+  <node id="59" name="Tiger Clan Home, Cemetery">
+    <description>The headstones here are plainer and newer than the section of the cemetery closest to the church.  A lavender hedge separates the sacred ground from the surrounding countryside, with a Halfling-high stone wall stretching across the northern boundary.</description>
+    <position x="300" y="240" z="0" />
+    <arc exit="south" move="south" destination="58" />
+    <arc exit="go" move="go dark gap" destination="60" />
+  </node>
+  <node id="60" name="A Dark Gap">
+    <description>Cold, clammy, damp dark surrounds everything.  An odor of decay permeates the stale air.</description>
+    <position x="300" y="220" z="0" />
+    <arc exit="out" move="out" destination="59" />
+    <arc exit="go" move="go narrow hole" destination="61" />
+  </node>
+  <node id="61" name="Underground, A Dark Cavern" note="Underground|Dark Spirits">
+    <description>A large cavern, with passages excavated in several directions, drips with ooze and foul decay.  The ground is slippery with mud and the walls and floor appear to pulse and shift, as if this were the belly of some sluggishly digesting beast.</description>
+    <position x="340" y="300" z="0" />
+    <arc exit="north" move="north" destination="64" />
+    <arc exit="east" move="east" destination="63" />
+    <arc exit="south" move="south" destination="68" />
+    <arc exit="west" move="west" destination="62" />
+    <arc exit="go" move="go narrow hole" destination="60" />
+  </node>
+  <node id="62" name="Underground, A Dark Cavern">
+    <description>A large cavern, with passages excavated in several directions, drips with ooze and foul decay.  The ground is slippery with mud and the walls and floor appear to pulse and shift, as if this were the belly of some sluggishly digesting beast.</description>
+    <position x="320" y="300" z="0" />
+    <arc exit="north" move="north" destination="65" />
+    <arc exit="east" move="east" destination="61" />
+    <arc exit="south" move="south" destination="67" />
+  </node>
+  <node id="63" name="Underground, A Dark Cavern">
+    <description>A large cavern, with passages excavated in several directions, drips with ooze and foul decay.  The ground is slippery with mud and the walls and floor appear to pulse and shift, as if this were the belly of some sluggishly digesting beast.</description>
+    <position x="360" y="300" z="0" />
+    <arc exit="north" move="north" destination="66" />
+    <arc exit="south" move="south" destination="69" />
+    <arc exit="west" move="west" destination="61" />
+  </node>
+  <node id="64" name="Underground, A Dark Cavern">
+    <description>A large cavern, with passages excavated in several directions, drips with ooze and foul decay.  The ground is slippery with mud and the walls and floor appear to pulse and shift, as if this were the belly of some sluggishly digesting beast.</description>
+    <position x="340" y="280" z="0" />
+    <arc exit="west" move="west" destination="65" />
+    <arc exit="east" move="east" destination="66" />
+    <arc exit="south" move="south" destination="61" />
+  </node>
+  <node id="65" name="Underground, A Dark Cavern">
+    <description>A large cavern, with passages excavated in several directions, drips with ooze and foul decay.  The ground is slippery with mud and the walls and floor appear to pulse and shift, as if this were the belly of some sluggishly digesting beast.</description>
+    <position x="320" y="280" z="0" />
+    <arc exit="south" move="south" destination="62" />
+    <arc exit="east" move="east" destination="64" />
+  </node>
+  <node id="66" name="Underground, A Dark Cavern">
+    <description>A large cavern, with passages excavated in several directions, drips with ooze and foul decay.  The ground is slippery with mud and the walls and floor appear to pulse and shift, as if this were the belly of some sluggishly digesting beast.</description>
+    <position x="360" y="280" z="0" />
+    <arc exit="south" move="south" destination="63" />
+    <arc exit="west" move="west" destination="64" />
+  </node>
+  <node id="67" name="Underground, A Dark Cavern">
+    <description>A large cavern, with passages excavated in several directions, drips with ooze and foul decay.  The ground is slippery with mud and the walls and floor appear to pulse and shift, as if this were the belly of some sluggishly digesting beast.</description>
+    <position x="320" y="320" z="0" />
+    <arc exit="north" move="north" destination="62" />
+    <arc exit="south" move="south" destination="70" />
+    <arc exit="east" move="east" destination="68" />
+  </node>
+  <node id="68" name="Underground, A Dark Cavern">
+    <description>A large cavern, with passages excavated in several directions, drips with ooze and foul decay.  The ground is slippery with mud and the walls and floor appear to pulse and shift, as if this were the belly of some sluggishly digesting beast.</description>
+    <position x="340" y="320" z="0" />
+    <arc exit="north" move="north" destination="61" />
+    <arc exit="south" move="south" destination="71" />
+    <arc exit="east" move="east" destination="69" />
+    <arc exit="west" move="west" destination="67" />
+  </node>
+  <node id="69" name="Underground, A Dark Cavern">
+    <description>A large cavern, with passages excavated in several directions, drips with ooze and foul decay.  The ground is slippery with mud and the walls and floor appear to pulse and shift, as if this were the belly of some sluggishly digesting beast.</description>
+    <position x="360" y="320" z="0" />
+    <arc exit="north" move="north" destination="63" />
+    <arc exit="south" move="south" destination="72" />
+    <arc exit="west" move="west" destination="68" />
+  </node>
+  <node id="70" name="Underground, A Dark Cavern">
+    <description>A large cavern, with passages excavated in several directions, drips with ooze and foul decay.  The ground is slippery with mud and the walls and floor appear to pulse and shift, as if this were the belly of some sluggishly digesting beast.</description>
+    <description>It's pitch dark and you can't see a thing!</description>
+    <position x="320" y="340" z="0" />
+    <arc exit="north" move="north" destination="67" />
+    <arc exit="east" move="east" destination="71" />
+  </node>
+  <node id="71" name="Underground, A Dark Cavern">
+    <description>A large cavern, with passages excavated in several directions, drips with ooze and foul decay.  The ground is slippery with mud and the walls and floor appear to pulse and shift, as if this were the belly of some sluggishly digesting beast.</description>
+    <description>It's pitch dark and you can't see a thing!</description>
+    <position x="340" y="340" z="0" />
+    <arc exit="north" move="north" destination="68" />
+    <arc exit="east" move="east" destination="72" />
+    <arc exit="west" move="west" destination="70" />
+  </node>
+  <node id="72" name="Underground, A Dark Cavern">
+    <description>A large cavern, with passages excavated in several directions, drips with ooze and foul decay.  The ground is slippery with mud and the walls and floor appear to pulse and shift, as if this were the belly of some sluggishly digesting beast.</description>
+    <position x="360" y="340" z="0" />
+    <arc exit="north" move="north" destination="69" />
+    <arc exit="west" move="west" destination="71" />
+  </node>
+  <node id="73" name="Tiger Clan, Grassy Trail" note="Map50_Segoltha_River.xml|Segoltha River">
+    <description>Along a trail lined with willows, the smells of soggy grass, dead fish and peat moss permeate the atmosphere.  The bubbling and splashing of the nearby river overpower the usual sounds of the wilderness, causing the shadowed areas of the trees and tall grasses to seem almost menacing in their silence.</description>
+    <description>Along a trail lined with willows, the smells of soggy grass, dead fish and peat moss permeate the atmosphere.  The bubbling and splashing of the nearby river overpower the usual sounds of the night, the looming trees giving cover to all manner of creatures within the depths of their shadows.</description>
+    <position x="180" y="320" z="0" />
+    <arc exit="southeast" move="southeast" />
+  </node>
+  <node id="74" name="Manor House, Lamp Room">
+    <description>Dozens of long tapered candles hang from pegs on the walls, while a row of oil lanterns spans the top of a long wooden cabinet.</description>
+    <position x="200" y="360" z="0" />
+    <arc exit="out" move="out" destination="40" />
+  </node>
+  <node id="75" name="Togball Field, Sideline">
+    <description>A thick covering of uneven grass is interrupted here and there by several thick tree stumps that have been sawed off at just the right height to comfortably fit a pair of typical 'Tog buttocks.  Along the edge of the field of play stands a thick wooden pole with a goblin skull mounted on the top.</description>
+    <position x="20" y="280" z="0" />
+    <arc exit="east" move="east" destination="76" />
+    <arc exit="west" move="west" destination="81" />
+    <arc exit="go" move="go togball field" destination="82" />
+    <arc exit="go" move="go muddy path" destination="11" />
+  </node>
+  <node id="76" name="Togball Field, Visitors' Bench">
+    <description>Most of the ground has been reduced to bare dirt by the passage of many heavy feet.  An occasional hardy clump of turf manages to survive, dotting the dull brown with spots of green.  Dominating the area is a huge log that has been split lengthwise and laid parallel to the field, clearly intended as a bench.  At either end of the bench is a large water barrel.  A wolf skull on a thick wooden pole stands along the edge of the field of play.</description>
+    <position x="40" y="280" z="0" />
+    <arc exit="east" move="east" destination="77" />
+    <arc exit="west" move="west" destination="75" />
+    <arc exit="go" move="go togball field" destination="84" />
+  </node>
+  <node id="77" name="Togball Field, Spectators' Grandstand" note="Grandstand">
+    <description>A tall wooden grandstand, composed of tiers of stout oaken planks, rises above the sideline, providing a prime view of the action near midfield.  Bits of old food, scraps of torn pennants, and other assorted detritus litter the ground underneath and the well-trampled mud and grass alongside.  An ogre skull on a thick wooden pole stands along the edge of the field of play.</description>
+    <position x="60" y="280" z="0" />
+    <arc exit="east" move="east" destination="78" />
+    <arc exit="west" move="west" destination="76" />
+    <arc exit="go" move="go togball field" destination="85" />
+  </node>
+  <node id="78" name="Togball Field, Home Team Bench">
+    <description>The passage of many heavy feet has reduced the ground to bare dirt.  An occasional hardy clump of turf manages to survive, dotting the dull brown with spots of green.  Dominating the area is a huge log that has been split lengthwise and laid parallel to the field, clearly intended as a bench.  At either end of the bench is a large water barrel with a large bronze tiger emblem bolted to it.  A cougar skull on a thick wooden pole stands along the edge of the field of play.</description>
+    <position x="80" y="280" z="0" />
+    <arc exit="east" move="east" destination="79" />
+    <arc exit="west" move="west" destination="77" />
+    <arc exit="go" move="go togball field" destination="86" />
+  </node>
+  <node id="79" name="Togball Field, Sideline">
+    <description>Apparently the dumping ground for stones cleared from the field proper, this area is littered with a variety of large rocks.  Many of them look suitable for sitting on with a fair view of the field, although some appear to be uncomfortably pointy or jagged.  A hog skull on a thick wooden pole stands along the edge of the field of play.</description>
+    <position x="100" y="280" z="0" />
+    <arc exit="east" move="east" destination="80" />
+    <arc exit="west" move="west" destination="78" />
+    <arc exit="go" move="go togball field" destination="87" />
+  </node>
+  <node id="80" name="Togball Field, Ball Holding Pen">
+    <description>A large steel pen sits amid the uncut grass.  A pair of guards in Tiger Clan livery sit dozing in front of the gate.  The cage rattles slightly as they snore.</description>
+    <description>A large steel pen sits amid the uncut grass.  A pair of bored-looking guards in Tiger Clan livery sit in front of the gate playing Rock, Paper, Scissors.  Both appear to be choosing Rock repeatedly, and they scratch their heads in agitation.</description>
+    <position x="120" y="280" z="0" />
+    <arc exit="west" move="west" destination="79" />
+  </node>
+  <node id="81" name="Togball Field, Snack Area" note="Snack Area" color="#FF0000">
+    <description>This small square of scraggly turf is littered with discarded mugs and bits of dropped foodstuffs.  Beneath a pair of gnarled oak trees is a rickety lean-to.</description>
+    <position x="0" y="280" z="0" />
+    <arc exit="east" move="east" destination="75" />
+  </node>
+  <node id="82" name="Togball Field, Orange Attack Zone South">
+    <description>Scraggly clumps of turf are interspersed with bare patches of dirt.  A goblin skull on a stout blue pole marks the area.</description>
+    <position x="20" y="260" z="0" />
+    <arc exit="north" move="north" destination="101" />
+    <arc exit="northeast" move="northeast" destination="102" />
+    <arc exit="east" move="east" destination="84" />
+    <arc exit="west" move="west" destination="83" />
+    <arc exit="northwest" move="northwest" destination="89" />
+    <arc exit="go" move="go sideline" destination="75" />
+  </node>
+  <node id="83" name="Togball Field, Behind the Goal Line">
+    <description>There is little here other than a patchy covering of grass.  To the east is the field of play.  A stout log fence runs along the southern and western sides to prevent the attempted escape of panicked balls.</description>
+    <position x="0" y="260" z="0" />
+    <arc exit="north" move="north" destination="89" />
+    <arc exit="northeast" move="northeast" destination="101" />
+    <arc exit="east" move="east" destination="82" />
+  </node>
+  <node id="84" name="Togball Field, Orange Half-Forward South">
+    <description>Scraggly clumps of turf are interspersed with bare patches of dirt.  A wolf skull on a stout blue pole marks the area.</description>
+    <position x="40" y="260" z="0" />
+    <arc exit="north" move="north" destination="102" />
+    <arc exit="northeast" move="northeast" destination="100" />
+    <arc exit="east" move="east" destination="85" />
+    <arc exit="west" move="west" destination="82" />
+    <arc exit="northwest" move="northwest" destination="101" />
+    <arc exit="go" move="go sideline" destination="76" />
+  </node>
+  <node id="85" name="Togball Field, Midfield South">
+    <description>Scraggly clumps of turf are interspersed with bare patches of dirt.  An ogre skull on a stout blue pole marks the area.</description>
+    <position x="60" y="260" z="0" />
+    <arc exit="north" move="north" destination="100" />
+    <arc exit="northeast" move="northeast" destination="99" />
+    <arc exit="east" move="east" destination="86" />
+    <arc exit="west" move="west" destination="84" />
+    <arc exit="northwest" move="northwest" destination="102" />
+    <arc exit="go" move="go sideline" destination="77" />
+  </node>
+  <node id="86" name="Togball Field, Black Half-Forward South">
+    <description>Scraggly clumps of turf are interspersed with bare patches of dirt.  A cougar skull on a stout blue pole marks the area.</description>
+    <position x="80" y="260" z="0" />
+    <arc exit="north" move="north" destination="99" />
+    <arc exit="northeast" move="northeast" destination="98" />
+    <arc exit="east" move="east" destination="87" />
+    <arc exit="west" move="west" destination="85" />
+    <arc exit="northwest" move="northwest" destination="100" />
+    <arc exit="go" move="go sideline" destination="78" />
+  </node>
+  <node id="87" name="Togball Field, Black Attack Zone South">
+    <description>Scraggly clumps of turf are interspersed with bare patches of dirt.  A hog skull on a stout blue pole marks the area.</description>
+    <position x="100" y="260" z="0" />
+    <arc exit="north" move="north" destination="98" />
+    <arc exit="northeast" move="northeast" destination="99" />
+    <arc exit="east" move="east" destination="88" />
+    <arc exit="west" move="west" destination="86" />
+    <arc exit="northwest" move="northwest" destination="99" />
+    <arc exit="go" move="go sideline" destination="79" />
+  </node>
+  <node id="88" name="Togball Field, Behind the Goal Line">
+    <description>There is little here other than a patchy covering of grass.  To the west is the field of play.  A stout log fence runs along the southern and eastern sides to prevent the attempted escape of panicked balls.</description>
+    <position x="120" y="260" z="0" />
+    <arc exit="north" move="north" destination="97" />
+    <arc exit="west" move="west" destination="87" />
+    <arc exit="northwest" move="northwest" destination="98" />
+  </node>
+  <node id="89" name="Togball Field, Behind the Goal">
+    <description>A stout log fence runs along the western edge of this area.  To the east are two thick orange logs embedded upright in the ground to serve as goalposts.</description>
+    <position x="0" y="240" z="0" />
+    <arc exit="north" move="north" destination="90" />
+    <arc exit="northeast" move="northeast" destination="91" />
+    <arc exit="east" move="east" destination="101" />
+    <arc exit="southeast" move="southeast" destination="82" />
+    <arc exit="south" move="south" destination="83" />
+  </node>
+  <node id="90" name="Togball Field, Behind the Goal Line">
+    <description>There is little here other than a patchy covering of grass.  To the east is the field of play.  A stout log fence runs along the northern and western sides to prevent the attempted escape of panicked balls.</description>
+    <position x="0" y="220" z="0" />
+    <arc exit="east" move="east" destination="91" />
+    <arc exit="southeast" move="southeast" destination="101" />
+    <arc exit="south" move="south" destination="89" />
+  </node>
+  <node id="91" name="Togball Field, Orange Attack Zone North">
+    <description>Scraggly clumps of turf are interspersed with bare patches of dirt.  An imposing spiked fence blocks egress to the north.  A goblin skull on a stout green pole marks the area.</description>
+    <position x="20" y="220" z="0" />
+    <arc exit="east" move="east" destination="92" />
+    <arc exit="southeast" move="southeast" destination="102" />
+    <arc exit="south" move="south" destination="101" />
+    <arc exit="southwest" move="southwest" destination="89" />
+    <arc exit="west" move="west" destination="90" />
+  </node>
+  <node id="92" name="Togball Field, Orange Half-Forward North">
+    <description>Scraggly clumps of turf are interspersed with bare patches of dirt.  An imposing spiked fence blocks egress to the north.  A wolf skull on a stout green pole marks the area.</description>
+    <position x="40" y="220" z="0" />
+    <arc exit="east" move="east" destination="93" />
+    <arc exit="southeast" move="southeast" destination="100" />
+    <arc exit="south" move="south" destination="102" />
+    <arc exit="southwest" move="southwest" destination="101" />
+    <arc exit="west" move="west" destination="91" />
+  </node>
+  <node id="93" name="Togball Field, Midfield North">
+    <description>Scraggly clumps of turf are interspersed with bare patches of dirt.  An imposing spiked fence blocks egress to the north.  An ogre skull on a stout green pole marks the area.</description>
+    <position x="60" y="220" z="0" />
+    <arc exit="east" move="east" destination="94" />
+    <arc exit="southeast" move="southeast" destination="99" />
+    <arc exit="south" move="south" destination="100" />
+    <arc exit="southwest" move="southwest" destination="102" />
+    <arc exit="west" move="west" destination="92" />
+  </node>
+  <node id="94" name="Togball Field, Black Half-Forward North">
+    <description>Scraggly clumps of turf are interspersed with bare patches of dirt.  An imposing spiked fence blocks egress to the north.  A cougar skull on a stout green pole marks the area.</description>
+    <position x="80" y="220" z="0" />
+    <arc exit="east" move="east" destination="95" />
+    <arc exit="southeast" move="southeast" destination="98" />
+    <arc exit="south" move="south" destination="99" />
+    <arc exit="southwest" move="southwest" destination="100" />
+    <arc exit="west" move="west" destination="93" />
+  </node>
+  <node id="95" name="Togball Field, Black Attack Zone North">
+    <description>Scraggly clumps of turf are interspersed with bare patches of dirt.  An imposing spiked fence blocks egress to the north.  A hog skull on a stout green pole marks the area.</description>
+    <position x="100" y="220" z="0" />
+    <arc exit="east" move="east" destination="96" />
+    <arc exit="southeast" move="southeast" destination="97" />
+    <arc exit="south" move="south" destination="98" />
+    <arc exit="southwest" move="southwest" destination="99" />
+    <arc exit="west" move="west" destination="94" />
+  </node>
+  <node id="96" name="Togball Field, Behind the Goal Line">
+    <description>There is little here other than a patchy covering of grass.  To the west is the field of play.  A stout log fence runs along the northern and eastern sides to prevent the attempted escape of panicked balls.</description>
+    <position x="120" y="220" z="0" />
+    <arc exit="south" move="south" destination="97" />
+    <arc exit="southwest" move="southwest" destination="98" />
+    <arc exit="west" move="west" destination="95" />
+  </node>
+  <node id="97" name="Togball Field, Behind the Goal">
+    <description>A stout log fence runs along the eastern edge of this area.  To the west are two thick black logs embedded upright in the ground to serve as goalposts.</description>
+    <position x="120" y="240" z="0" />
+    <arc exit="north" move="north" destination="96" />
+    <arc exit="south" move="south" destination="88" />
+    <arc exit="southwest" move="southwest" destination="87" />
+    <arc exit="west" move="west" destination="98" />
+    <arc exit="northwest" move="northwest" destination="95" />
+  </node>
+  <node id="98" name="Togball Field, Black Blood Zone">
+    <description>This part of the field is marred by numerous divots, leaving only a few hardy patches of grass undisturbed.  Two thick black logs are embedded upright in the ground on the east side, forming the goal.  On the west end is a stout red pole with a hog skull on top of it, signifying the edge of the Blood Zone.</description>
+    <position x="100" y="240" z="0" />
+    <arc exit="north" move="north" destination="95" />
+    <arc exit="northeast" move="northeast" destination="96" />
+    <arc exit="east" move="east" destination="97" />
+    <arc exit="southeast" move="southeast" destination="88" />
+    <arc exit="south" move="south" destination="87" />
+    <arc exit="southwest" move="southwest" destination="86" />
+    <arc exit="west" move="west" destination="99" />
+    <arc exit="northwest" move="northwest" destination="94" />
+  </node>
+  <node id="99" name="Togball Field, Black Half-Forward Center">
+    <description>Scraggly clumps of turf are interspersed with bare patches of dirt.  A faint track with no grass at all runs east-west down the center, likely the result of numerous 'Togs attempting to take the most direct route toward the goal.  A cougar skull on a stout red pole marks the area.</description>
+    <position x="80" y="240" z="0" />
+    <arc exit="north" move="north" destination="94" />
+    <arc exit="northeast" move="northeast" destination="95" />
+    <arc exit="east" move="east" destination="98" />
+    <arc exit="southeast" move="southeast" destination="87" />
+    <arc exit="south" move="south" destination="86" />
+    <arc exit="southwest" move="southwest" destination="87" />
+    <arc exit="west" move="west" destination="100" />
+    <arc exit="northwest" move="northwest" destination="93" />
+  </node>
+  <node id="100" name="Togball Field, Midfield">
+    <description>This section of the field is virtually all dirt with almost no grass in evidence.  There is a small crater in the center, where countless scrambles for the ball have occurred.  A stout red pole with an ogre skull on it marks the area as Midfield.</description>
+    <position x="60" y="240" z="0" />
+    <arc exit="north" move="north" destination="93" />
+    <arc exit="northeast" move="northeast" destination="94" />
+    <arc exit="east" move="east" destination="99" />
+    <arc exit="southeast" move="southeast" destination="86" />
+    <arc exit="south" move="south" destination="85" />
+    <arc exit="southwest" move="southwest" destination="86" />
+    <arc exit="west" move="west" destination="102" />
+    <arc exit="northwest" move="northwest" destination="92" />
+  </node>
+  <node id="101" name="Togball Field, Orange Blood Zone">
+    <description>This part of the field is marred by numerous divots, leaving only a few hardy patches of grass undisturbed.  Two thick orange logs are embedded upright in the ground on the west side, forming the goal.  On the east end is a stout red pole with a goblin skull on top of it, signifying the edge of the Blood Zone.</description>
+    <position x="20" y="240" z="0" />
+    <arc exit="north" move="north" destination="91" />
+    <arc exit="northeast" move="northeast" destination="92" />
+    <arc exit="east" move="east" destination="102" />
+    <arc exit="southeast" move="southeast" destination="84" />
+    <arc exit="south" move="south" destination="82" />
+    <arc exit="southwest" move="southwest" destination="83" />
+    <arc exit="west" move="west" destination="89" />
+    <arc exit="northwest" move="northwest" destination="90" />
+  </node>
+  <node id="102" name="Togball Field, Orange Half-Forward Center">
+    <description>Scraggly clumps of turf are interspersed with bare patches of dirt.  A faint track with no grass at all runs east-west down the center, likely the result of numerous 'Togs attempting to take the most direct route toward the goal.  A wolf skull on a stout red pole marks the area.</description>
+    <position x="40" y="240" z="0" />
+    <arc exit="north" move="north" destination="92" />
+    <arc exit="northeast" move="northeast" destination="93" />
+    <arc exit="east" move="east" destination="100" />
+    <arc exit="southeast" move="southeast" destination="85" />
+    <arc exit="south" move="south" destination="84" />
+    <arc exit="southwest" move="southwest" destination="85" />
+    <arc exit="west" move="west" destination="101" />
+    <arc exit="northwest" move="northwest" destination="91" />
+  </node>
+  <node id="103" name="Manor House, Poultry Yard">
+    <description>The gentle fluttering of wings and occasional cooing come from the dark huddled shadows of sleeping birds.  A stone dairy and great barn overlook the yard, and some wooden steps lead down toward the Segoltha River's edge.</description>
+    <position x="240" y="460" z="0" />
+    <arc exit="go" move="go stone dairy" destination="104" />
+    <arc exit="go" move="go great barn" destination="105" />
+    <arc exit="climb" move="climb wooden steps" destination="106" />
+    <arc exit="go" move="go trail" destination="28" />
+  </node>
+  <node id="104" name="Manor House, Dairy">
+    <description>The gurgle of trickling water resounds pleasantly in the peaceful tranquility of this ceramic-tiled room.  Slate shelves trimmed with marble edge the walls, providing a cool surface for the flat pans of separating milk.  A Gor'tog dairymaid wielding a pair of grooved wooden batlets deftly shapes a portion of butter, then adds a decorative Tiger imprint with a butter stamp.</description>
+    <position x="260" y="460" z="0" />
+    <arc exit="out" move="out" destination="103" />
+  </node>
+  <node id="105" name="Manor House, Caravan Barn">
+    <description>The soft lowing of cattle mingles with the more strident sounds of yaks and mules being unharnessed by strapping Gor'Togs.  A similiar group can be spied through the stable door, swiftly unloading caravans and pack animals.  Tired traders troop towards the manor house and a meal, passing beneath a large painted sign.</description>
+    <position x="220" y="460" z="0" />
+    <arc exit="out" move="out" destination="103" />
+  </node>
+  <node id="106" name="Manor House, Waterfront">
+    <description>The deep waters of the mighty Segoltha River lap against the wooden planks of the Grandmaster's boats that are securely tied at the shore.  Across the river and far off to the south, you can see the treetops of the massive Endrus Forest.</description>
+    <position x="240" y="480" z="0" />
+    <arc exit="climb" move="climb wooden steps" destination="103" />
+  </node>
+  <node id="107" name="Smash 'Em, Handle with Care" note="Smash 'Em" color="#FF0000">
+    <description>The cotton sides are pulled back and tied to the support poles, giving the area an open feeling and allowing any breezes to come through.  Along the back of the makeshift room two sturdy wooden pens hold an assortment of togballs while two flanking tables display the cases to hold them.  A huge arrow painted bright yellow points the way out.</description>
+    <position x="220" y="160" z="0" />
+    <arc exit="east" move="east" destination="108" />
+    <arc exit="go" move="go way out" destination="4" />
+  </node>
+  <node id="108" name="Smash 'Em, Something to Wear" color="#FF0000">
+    <description>The cotton sides are pulled back and tied to the support poles, giving the area and open feeling and allowing any breezes to come through.  Along one side are two racks holding an array of neatly hung jerseys while a pair of shelves sit across from them displaying a collection of togball boots.</description>
+    <position x="230" y="160" z="0" />
+    <arc exit="north" move="north" destination="109" />
+    <arc exit="west" move="west" destination="107" />
+  </node>
+  <node id="109" name="Smash 'Em, Bash 'Em" color="#FF0000">
+    <description>The cotton sides are pulled back and tied to the support poles, giving the area and open feeling and allowing any breezes to come through.  A pair of large wooden bins sit square in the middle of the room.</description>
+    <position x="230" y="150" z="0" />
+    <arc exit="south" move="south" destination="108" />
+  </node>
+  <node id="110" name="Togs for Togs, Garb" note="Togs for Togs" color="#FF0000">
+    <description>A fine array of clothing hung on racks and hooks surrounds the area, appearing to be separated by sizes.  Along the eastern wall, brightly colored signs denote a Gor'Tog section, and the opposing wall hosts a simple sign that seems to be marked with a great deal of scribbles and small stick figures.</description>
+    <position x="260" y="240" z="0" />
+    <arc exit="north" move="north" destination="111" />
+    <arc exit="northeast" move="northeast" destination="112" />
+    <arc exit="northwest" move="northwest" destination="113" />
+    <arc exit="go" move="go flap" destination="9" />
+  </node>
+  <node id="111" name="Togs for Togs, Games" color="#FF0000">
+    <description>This part of the tent is set up much like a play area, featuring a wide space to allow patrons to challenge each other and pick over a few sport-related goods.  A nearby cart laden with food and drinks provides refreshment and a subtle encouragement to boisterous activities.</description>
+    <position x="260" y="230" z="0" />
+    <arc exit="south" move="south" destination="110" />
+  </node>
+  <node id="112" name="Togs for Togs, Grub" color="#FF0000">
+    <description>From behind a large counter with a glass display full of meats, the sizzling sounds of a skillet can be heard.  A series of tables in the area are laden with various baked and cooked goods, their scents wafting through the air of the tall tent.</description>
+    <position x="270" y="230" z="0" />
+    <arc exit="southwest" move="southwest" destination="110" />
+  </node>
+  <node id="113" name="Togs for Togs, Goods" color="#FF0000">
+    <description>Cleanly swept, the area on this side of the tent appears very orderly and well put together.  Arranged to produce maximum space for browsing customers, several surfaces display a myriad of wares for sale.</description>
+    <position x="250" y="230" z="0" />
+    <arc exit="southeast" move="southeast" destination="110" />
+  </node>
+  <node id="114" name="Stomper's Corner, Showroom" note="Stomper's Corner" color="#FF0000">
+    <description>Other than its vivid green hue and a rather generous overhead clearance, this tent is unremarkable.  Although available to all comers, the goods for sale here clearly reflect Toggish enthusiasms.</description>
+    <position x="160" y="280" z="0" />
+    <arc exit="go" move="go tent flap" destination="11" />
+  </node>
+  <label text="Dark Spirits">
+    <position x="310" y="350" z="0" />
+  </label>
+  <label text="Manor House">
+    <position x="60" y="390" z="0" />
+  </label>
+  <label text="West Gate Hunting Area">
+    <position x="180" y="0" z="0" />
+  </label>
+  <label text="Segoltha River">
+    <position x="100" y="320" z="0" />
+  </label>
+  <label text="Weapons">
+    <position x="168" y="60" z="0" />
+  </label>
+  <label text="Leather Dyer">
+    <position x="262" y="140" z="0" />
+  </label>
+  <label text="Peddler's Wagon">
+    <position x="233" y="191" z="0" />
+  </label>
+  <label text="Herbs">
+    <position x="143" y="180" z="0" />
+  </label>
+</zone>
