@@ -301,8 +301,14 @@ MOVE:
 	if ($drag) then
 		{
 		var type drag
-		if matchre("%movement", "(swim|climb|web|muck|rt|wait|stairs|slow|go|script|room) ([\S ]+)") then var movement drag $drag.target $2
-		else var movement drag $drag.target %movement
+		if matchre("%movement", "(swim|climb|web|muck|rt|wait|stairs|slow|go|script|room) ([\S ]+)") then
+			{
+			var movement drag $drag.target $2
+			}
+		else
+			{
+			var movement drag $drag.target %movement
+			}
 		if matchre("%movement", "^(swim|climb|web|muck|rt|wait|slow|drag|script|room|dive) ") then
 			{
 			var type $1
@@ -856,21 +862,25 @@ CARAVAN:
 
 POWERWALK:
 	var action perceive
+	var typeahead.max 0
 	var success ^\s*Roundtime\s*\:?|^\s*\[Roundtime\s*\:?|^\s*\(Roundtime\s*\:?|^Something in the area is interfering
 	goto ACTION.WALK
 
 SEARCHWALK:
 	var action search
+	var typeahead.max 0
 	var success ^You search around|^After a careful search|^You notice|^Roundtime\:|^You push through bushes|^You scan|^There seems to be|^You walk around the perimeter|^Just under the Bridge
 	goto ACTION.WALK
 
 FORAGEWALK:
 	var action forage $forage
+	var typeahead.max 0
 	var success ^Roundtime|^Something in the area is interfering
 	goto ACTION.WALK
 
 MAPWALK:
 	var action study my map
+	var typeahead.max 0
 	var success ^The map has a large 'X' marked in the middle of it
 	goto ACTION.WALK
 
@@ -878,10 +888,11 @@ MOVE.DONE:
 	if (!$standing) then gosub STAND
 	if ((%cloak_off) && (matchre ("$lefthand|$righthand","%cloaknouns"))) then gosub WEAR.CLOAK
 	if ($caravan) then goto CARAVAN
-	if ($powerwalk) then
+	if ($powerwalk && ($Attunement.LearningRate < 34) && ($Attunement.Ranks < 1750)) then {goto POWERWALK}
+	else
 		{
-		if (($Attunement.LearningRate > 33) || ($Attunement.Ranks > 1749)) then put #var powerwalk 0
-		goto powerwalk
+		put #var powerwalk 0
+		var typeahead.max $automapper.typeahead
 		}
 	if ($searchwalk) then goto SEARCHWALK
 	if ($mapwalk) then goto MAPWALK
@@ -892,10 +903,11 @@ RETURN:
 	pause 0.0001
 	if (!$standing) then gosub STAND
 	if ($caravan) then goto CARAVAN
-	if ($powerwalk) then
+	if ($powerwalk && ($Attunement.LearningRate < 34) && ($Attunement.Ranks < 1750)) then {goto POWERWALK}
+	else
 		{
-		if (($Attunement.LearningRate > 33) || ($Attunement.Ranks > 1749)) then put #var powerwalk 0
-		goto POWERWALK
+		put #var powerwalk 0
+		var typeahead.max $automapper.typeahead
 		}
 	if ($searchwalk) then goto SEARCHWALK
 	if ($mapwalk) then goto MAPWALK
@@ -1284,6 +1296,7 @@ ACTION.FAIL:
 	put #echo
 
 ACTION.RETURN:
+  if ($roundtime > 0) then {pause %command_pause}
 	if (%subscript) then return
 	action (mapper) on
 	return
