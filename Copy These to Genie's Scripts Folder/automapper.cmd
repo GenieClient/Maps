@@ -430,6 +430,8 @@ ICE.PAUSE:
 	return
 
 MOVE.KNOCK:
+  if ($roundtime > 0) then {pause %command_pause}
+	matchre MOVE.KNOCK ^\.\.\.wait|^Sorry,|^You are still stun|^You can't do that while entangled
 	matchre SHARD.FAILED Sorry\, you\'re not a citizen
 	matchre MOVE.DONE %move_OK|All right, welcome back|opens the door just enough to let you slip through|wanted criminal
 	matchre CLOAK.LOGIC ^You turn away, disappointed\.
