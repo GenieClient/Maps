@@ -12,9 +12,8 @@ var command_pause 0.02
 var waitfor_action 0
 # 1: collect rocks on the ice road when lacking skates; 0; just wait 15 seconds with no RT instead
 var ice_collect 0
-
 # automapper.cmd version 7.9
-# last changed: July 17, 2022
+# last changed: 9/22/22
 
 # July 17 2022 - Shroom
 # Fixed bug in Move_Stow
@@ -145,6 +144,7 @@ ABSOLUTE.TOP:
 	if !def(powerwalk) then put #tvar powerwalk 0
 	if !def(searchwalk) then put #tvar searchwalk 0
 	if !def(drag) then put #tvar drag 0
+     put #var drag 0
 # ---------------
 	action var current_path %0 when ^You go
 	if ($mapwalk) then
@@ -419,7 +419,7 @@ ICE.PAUSE:
 MOVE.KNOCK:
 	matchre SHARD.FAILED Sorry\, you\'re not a citizen
 	matchre MOVE.DONE %move_OK|All right, welcome back|opens the door just enough to let you slip through|wanted criminal
-	matchre CLOAK.LOGIC I can't see your face
+	matchre CLOAK.LOGIC ^You turn away, disappointed\.
 	matchre STOP.INVIS The gate guard can't see you
 	put knock gate
 	matchwait 10
