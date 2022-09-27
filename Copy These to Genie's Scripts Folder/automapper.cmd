@@ -12,12 +12,17 @@ var command_pause 0.02
 var waitfor_action 0
 # 1: collect rocks on the ice road when lacking skates; 0; just wait 15 seconds with no RT instead
 var ice_collect 0
-# automapper.cmd version 7.9
-# last changed: 9/22/22
 
-# July 17 2022 - Shroom
-# Fixed bug in Move_Stow
-# Added standing checks before moving wall in gear gate bypass
+# automapper.cmd version 7.20220922
+# last changed: September 22, 2022
+
+#2022-09-22
+# Hanryu - powerwalk smoother/ranger blend
+# - if you're powerwalking, set typeahead to 0, once you're done powerwalking, set it back to $automapper.typeahead global
+# - added release blend for rangers
+# - added ...wait checkes to a few matches that were missing them
+# - fixed trigger for dropping your feature hiding cloak
+# - moved a bunch of the pauses to >pause %command_pause
 
 # June 25, 2022 - TenderVittle's Touches:
 # Added variable action gosub to handle doing commands you really want to make sure are done right. This is a toggle.
@@ -49,7 +54,11 @@ var ice_collect 0
 # Increased wait time on Ice as was going too fast in some cases
 # Added Special Support for the Stone Wall in Cragstone Vale 
 # Fixed a bug in the Retry Logic
-#
+
+# July 17 2022 - Shroom
+# Fixed bug in Move_Stow
+# Added standing checks before moving wall in gear gate bypass
+
 # VTCifer -  Changed default debug level at the top to be more useful
 # Fixed whitespace
 # Added match for powerwalk
@@ -293,8 +302,14 @@ MOVE:
 	if ($drag) then
 		{
 		var type drag
-		if matchre("%movement", "(swim|climb|web|muck|rt|wait|stairs|slow|go|script|room) ([\S ]+)") then var movement drag $drag.target $2
-		else var movement drag $drag.target %movement
+		if matchre("%movement", "(swim|climb|web|muck|rt|wait|stairs|slow|go|script|room) ([\S ]+)") then
+			{
+			var movement drag $drag.target $2
+			}
+		else
+			{
+			var movement drag $drag.target %movement
+			}
 		if matchre("%movement", "^(swim|climb|web|muck|rt|wait|slow|drag|script|room|dive) ") then
 			{
 			var type $1
@@ -360,10 +375,9 @@ MOVE.STOW:
 	if !matchre ("Empty","$lefthand") then gosub STOW.LEFT
 	if !matchre ("Empty","$righthand") then goto STOW.RIGHT
 	if matchre("$righthand", "khuj|staff|atapwi") then put wear $righthandnoun
-	pause 0.2
-	pause 0.2
+	pause %command_pause
 	put %movement
-	pause 0.1
+	pause %command_pause
 	goto MOVE.DONE
 
 MOVE.BOAT:
@@ -374,7 +388,7 @@ MOVE.BOAT:
 
 MOVE.BOAT.ARRIVED:
 	put %movement
-	pause 0.1
+	pause %command_pause
 	goto MOVE.DONE
 
 MOVE.ICE:
@@ -403,24 +417,26 @@ ICE.COLLECT:
 	var success ^Now what did the|^You take a step back and run up to the pile|^I could not find
 	gosub ACTION
 	var slow_on_ice 0
-	pause 0.5
+	pause %command_pause
 	return
 
 ICE.PAUSE:
 	action (mapper) off
-	pause 0.1
+	pause %command_pause
 	echo *** Pausing 15 seconds to regain footing on slippery ice. ***
 	pause 15
 	var slow_on_ice 0
-	pause 0.5
+	pause %command_pause
 	action (mapper) on
 	return
 
 MOVE.KNOCK:
+  if ($roundtime > 0) then {pause %command_pause}
+	matchre MOVE.KNOCK ^\.\.\.wait|^Sorry,|^You are still stun|^You can't do that while entangled
 	matchre SHARD.FAILED Sorry\, you\'re not a citizen
 	matchre MOVE.DONE %move_OK|All right, welcome back|opens the door just enough to let you slip through|wanted criminal
 	matchre CLOAK.LOGIC ^You turn away, disappointed\.
-	matchre STOP.INVIS The gate guard can't see you
+	matchre STOP.INVIS ^The gate guard can't see you
 	put knock gate
 	matchwait 10
 
@@ -434,15 +450,15 @@ SHARD.FAILED:
 	goto MOVE.DONE
 
 STOP.INVIS:
-	if ("$guild" = "Thief") then put khri stop silence vanish
-	if ("$guild" = "Necromancer") then put release eotb
+	if ("$guild" = "Thief") then send khri stop silence vanish
+	if ("$guild" = "Necromancer") then send release eotb
 	if ("$guild" = "Moon Mage") then 
 		{
-		put release rf
-		put release sov
+		send release rf
+		send release sov
 		}
-	pause 0.5
-	pause 0.4
+	if ("$guild" = "Ranger") then send release blend
+	pause %command_pause
 	goto MOVE.KNOCK
 
 CLOAK.LOGIC:
@@ -454,42 +470,37 @@ MOVE.SNEAK:
 MOVE.SWIM:
 MOVE.RT:
 ####added this to stop trainer
-	pause 0.3
-	pause 0.2
+	pause %command_pause
 	if (%depth > 1) then waiteval (1 = %depth)
 	eval movement replacere("%movement", "script crossingtrainerfix ", "")
 	put %movement
-	pause 0.3
-	pause 0.2
+	pause %command_pause
 	goto MOVE.DONE
 
 MOVE.TORCH:
 	action (mapper) off
-	pause 0.1
+	pause %command_pause
 	echo *** RESETTING STONE WALL
-	pause 0.3
-	pause 0.1
+	pause %command_pause
 	if ($roomid = 264) then send turn torch on wall
 	if ($roomid = 263) then send turn basin on wall
 	action (mapper) on
-	pause 0.3
-	pause 0.1
+	pause %command_pause
 	put go wall
 	goto MOVE.DONE
 
 MOVE.WEB:
 	if ($webbed) then waiteval (!$webbed)
-	pause 0.1
+	pause %command_pause
 	put %movement
-	pause 0.1
-	pause 0.1
+	pause %command_pause
 	goto MOVE.DONE
 
 MOVE.MUCK:
 	action (mapper) off
-	pause
+	pause %command_pause
 	if (!$standing) then put stand
-	matchre MOVE.MUCK ^You struggle to dig|^Maybe you can reach better that way, but you'll need to stand up for that to really do you any good\.
+	matchre MOVE.MUCK ^\.\.\.wait|^Sorry,|^You are still stun|^You can't do that while entangled|^You struggle to dig|^Maybe you can reach better that way, but you'll need to stand up for that to really do you any good\.
 	matchre MOVE.MUCK.DONE ^You manage to dig|^You will have to kneel closer|^You stand back up.|^You fruitlessly dig
 	put dig
 	matchwait
@@ -521,24 +532,21 @@ MOVE.CLIMB.WITH.ROPE:
 	action (mapper) off
 	if !matchre("$righthand|$lefthand", "braided heavy rope") then
 		{
-		pause 0.001
-		pause 0.1
+		pause %command_pause1
 		put get my braided rope
-		pause 0.2
+		pause %command_pause
 		}
 	if !matchre("$righthand|$lefthand", "heavy rope") then
 		{
-		pause 0.001
-		pause 0.1
+		pause %command_pause
 		put get my heavy rope
-		pause 0.2
+		pause %command_pause
 		}
 	action (mapper) on
 	if (("$guild" = "Thief") && ($concentration > 50)) then
 		{
 		put khri flight focus
 		pause 2
-		pause 0.5
 		}
 	pause 0.001
 	if matchre("$righthand|$lefthand", "heavy rope") then goto MOVE.CLIMB.WITH.APP.AND.ROPE
@@ -556,7 +564,6 @@ MOVE.CLIMB.WITH.APP.AND.ROPE:
 		pause 0.001
 		put khri flight focus
 		pause 2
-		pause 0.5
 		}
 	matchre STOW.ROPE %move_OK
 	matchre MOVE.CLIMB.WITH.APP.AND.ROPE %climb_FAIL
@@ -566,31 +573,26 @@ MOVE.CLIMB.WITH.APP.AND.ROPE:
 STOW.ROPE:
 	if matchre("$righthandnoun|$lefthandnoun", "rope") then
 		{
-		pause 0.1
+		pause %command_pause
 		put stow my rope
-		pause 0.5
-		pause 0.5
+		pause %command_pause
 		}
 	goto MOVE.DONE
 
 MOVE.SEARCH:
 	put search
 	pause $roundtime
-	pause 0.3
-	pause 0.2
-	pause 0.1
+	pause %command_pause
 	put %movement
-	pause 0.2
+	pause %command_pause
 	goto MOVE.DONE
 
 MOVE.OBJSEARCH:
 	put search %searchObj
-	pause 0.3
-	pause 0.2
-	pause 0.1
+	pause %command_pause
 	if $broom_carpet = 1 then eval movement replacere("%movement", "climb ", "go ")
 	put %movement
-	pause 0.2
+	pause %command_pause
 	goto MOVE.DONE
 
 MOVE.SCRIPT:
@@ -660,25 +662,25 @@ FATIGUE.CHECK:
 	pause
 
 MOVE.INVIS:
-	pause 0.001
-	if ("$guild" = "Thief") then put khri stop silence vanish
-	if ("$guild" = "Necromancer") then put release eotb
+	if ("$guild" = "Thief") then send khri stop silence vanish
+	if ("$guild" = "Necromancer") then send release eotb
 	if ("$guild" = "Moon Mage") then 
 		{
-		put release rf
-		put release sov
+		send release rf
+		send release sov
 		}
-	pause 0.3
-	pause 0.2
+	if ("$guild" = "Ranger") then send release blend
+	if ($hidden) then send unhide
+	pause %command_pause
 	put %movement
-	pause 0.5
+	pause %command_pause
 	goto MOVE.DONE
 
 FATIGUE.WAIT:
 	if ($stamina > 55) then
 		{
 		put %movement
-		pause
+		pause %command_pause
 		goto move.done
 		}
 	echo *** Pausing to recover stamina
@@ -687,7 +689,7 @@ FATIGUE.WAIT:
 
 MOVE.STAIRS:
 MOVE.WAIT:
-	pause 0.2
+	pause %command_pause
 	if (%movewait) then
 		{
 		matchre MOVE.DONE ^You reach|you reach|^Just when it seems
@@ -772,7 +774,7 @@ MOVE.RETRY:
 		pause
 		goto MOVE.RETRY
 		}
-	pause 0.5
+	pause %command_pause
 	goto RETURN.CLEAR
 
 MOVE.RETRY.GO:
@@ -786,7 +788,7 @@ MOVE.RETRY.GO:
 		pause
 		goto MOVE.RETRY.GO
 		}
-	pause 0.5
+	pause %command_pause
 	goto MOVE.RT
 
 MOVE.CLOSED:
@@ -863,21 +865,25 @@ CARAVAN:
 
 POWERWALK:
 	var action perceive
+	var typeahead.max 0
 	var success ^\s*Roundtime\s*\:?|^\s*\[Roundtime\s*\:?|^\s*\(Roundtime\s*\:?|^Something in the area is interfering
 	goto ACTION.WALK
 
 SEARCHWALK:
 	var action search
+	var typeahead.max 0
 	var success ^You search around|^After a careful search|^You notice|^Roundtime\:|^You push through bushes|^You scan|^There seems to be|^You walk around the perimeter|^Just under the Bridge
 	goto ACTION.WALK
 
 FORAGEWALK:
 	var action forage $forage
+	var typeahead.max 0
 	var success ^Roundtime|^Something in the area is interfering
 	goto ACTION.WALK
 
 MAPWALK:
 	var action study my map
+	var typeahead.max 0
 	var success ^The map has a large 'X' marked in the middle of it
 	goto ACTION.WALK
 
@@ -885,10 +891,11 @@ MOVE.DONE:
 	if (!$standing) then gosub STAND
 	if ((%cloak_off) && (matchre ("$lefthand|$righthand","%cloaknouns"))) then gosub WEAR.CLOAK
 	if ($caravan) then goto CARAVAN
-	if ($powerwalk) then
+	if ($powerwalk && ($Attunement.LearningRate < 34) && ($Attunement.Ranks < 1750)) then {goto POWERWALK}
+	else
 		{
-		if (($Attunement.LearningRate = 34) || ($Attunement.Ranks = 1750)) then put #var powerwalk 0
-		goto powerwalk
+		put #var powerwalk 0
+		var typeahead.max $automapper.typeahead
 		}
 	if ($searchwalk) then goto SEARCHWALK
 	if ($mapwalk) then goto MAPWALK
@@ -899,10 +906,11 @@ RETURN:
 	pause 0.0001
 	if (!$standing) then gosub STAND
 	if ($caravan) then goto CARAVAN
-	if ($powerwalk) then
+	if ($powerwalk && ($Attunement.LearningRate < 34) && ($Attunement.Ranks < 1750)) then {goto POWERWALK}
+	else
 		{
-		if (($Attunement.LearningRate = 34) || ($Attunement.Ranks = 1750)) then put #var powerwalk 0
-		goto POWERWALK
+		put #var powerwalk 0
+		var typeahead.max $automapper.typeahead
 		}
 	if ($searchwalk) then goto SEARCHWALK
 	if ($mapwalk) then goto MAPWALK
@@ -935,7 +943,7 @@ GEAR.GATE.BYPASS:
 	var wall 0
 
 GEAR.GATE.BYPASS.CHECK:
-     if (!$standing) then gosub STAND
+	if (!$standing) then gosub STAND
 	if matchre ("$roomobjs","a gouged stone wall") then var wall 1
 	if ("$roomid" = "263") then var wall_trigger basin
 	if ("$roomid" = "264") then var wall_trigger torch
@@ -961,7 +969,7 @@ GEAR.GATE.BYPASS.CHECK:
 	goto GEAR.GATE.BYPASS.CHECK
 
 ENTER.DOBEKS:
-	pause 0.001
+	pause %command_pause
 	put kiss scorpion
 	pause
 	echo *** PAUSING FOR STUN
@@ -1011,7 +1019,7 @@ SANDSPIT.TAVERN:
 		var action go other barrel
 		gosub ACTION
 		}
-	pause
+	pause %command_pause
 	action (sandspit) off
 	goto MOVE.SCRIPT.DONE
 
@@ -1027,7 +1035,7 @@ HIB.INTELLIGENCE:
 		var action go other steel door
 		gosub ACTION
 		}
-	pause
+	pause %command_pause
 	action (hibintel) off
 	goto MOVE.SCRIPT.DONE
 
@@ -1051,7 +1059,7 @@ ANDRESHLEW.VINE:
 	var success ^As you attempt to (touch|tap) the vine
 	gosub ACTION
 	waitforre ^Just as you were about to hit, the vine snakes around your waist and sets you gently on the ground
-	pause 0.1
+	pause %command_pause
 	goto MOVE.SCRIPT.DONE
 
 GET.MAP:
@@ -1282,7 +1290,7 @@ ACTION.MAPPER.ON:
 	matchre ACTION.STOW.UNLOAD ^You should unload
 	put %action
 	matchwait 0.5
-	if %waitfor_action = 1 then goto ACTION
+	if (%waitfor_action = 1) then goto ACTION
 	goto ACTION.RETURN
 
 ACTION.FAIL:
@@ -1291,6 +1299,7 @@ ACTION.FAIL:
 	put #echo
 
 ACTION.RETURN:
+  if ($roundtime > 0) then {pause %command_pause}
 	if (%subscript) then return
 	action (mapper) on
 	return
