@@ -1,4 +1,5 @@
 #### DETOUR SCRIPT FOR NAVIGATING SHARD WHEN YOU CAN'T GO THROUGH THE GATE AT NIGHT (Non-Citizens)
+### Added Athletics Check to climb over West Gate wall from Map 69 
 
 locationcheck:
 put #script pause all except %scriptname
@@ -20,10 +21,25 @@ pause 0.2
 exit
 
 outsideshard:
+if ($zoneid = 69) then
+     {
+        if ($Athletics.Ranks > 240) then 
+          {
+               if ($roomid != 10) then gosub automove 10
+               pause 0.01
+               send climb wall
+               pause 0.8
+               pause 0.1
+               send north
+               pause 0.8
+               send climb ladder
+               pause 0.5
+          }
+     }
 if $zoneid = 69 then gosub automove north
 if $zoneid = 68 then gosub automove e gate
-if $zoneid = 67 then gosub automove n gate
-if $zoneid = 66 then gosub automove e gate
+if $zoneid = 67 then gosub automove 1
+if $zoneid = 66 then gosub automove east
 put #script resume all
 pause 0.2
      put #parse YOU HAVE ARRIVED!

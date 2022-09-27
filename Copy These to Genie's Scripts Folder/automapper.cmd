@@ -24,10 +24,6 @@ var ice_collect 0
 # - fixed trigger for dropping your feature hiding cloak
 # - moved a bunch of the pauses to >pause %command_pause
 
-# July 17 2022 - Shroom
-# Fixed bug in Move_Stow
-# Added standing checks before moving wall in gear gate bypass
-
 # June 25, 2022 - TenderVittle's Touches:
 # Added variable action gosub to handle doing commands you really want to make sure are done right. This is a toggle.
 # Added a toggle for collecting rocks on the ice road vs. just waiting.
@@ -58,7 +54,11 @@ var ice_collect 0
 # Increased wait time on Ice as was going too fast in some cases
 # Added Special Support for the Stone Wall in Cragstone Vale 
 # Fixed a bug in the Retry Logic
-#
+
+# July 17 2022 - Shroom
+# Fixed bug in Move_Stow
+# Added standing checks before moving wall in gear gate bypass
+
 # VTCifer -  Changed default debug level at the top to be more useful
 # Fixed whitespace
 # Added match for powerwalk
@@ -153,6 +153,7 @@ ABSOLUTE.TOP:
 	if !def(powerwalk) then put #tvar powerwalk 0
 	if !def(searchwalk) then put #tvar searchwalk 0
 	if !def(drag) then put #tvar drag 0
+     put #var drag 0
 # ---------------
 	action var current_path %0 when ^You go
 	if ($mapwalk) then

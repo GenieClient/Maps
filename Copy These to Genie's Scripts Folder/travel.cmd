@@ -7,7 +7,7 @@ put #class rp on
 # Script to Travel for Genie3 #
 # Originally written by Chris/Achilles
 # Revitalized and Robustified by Shroom
-# version 3.8
+# version 3.9
 # Requires EXP Plugin by VTCifer #
 #
 # USAGE - .travel <destination> <room number>  (room is optional!)
@@ -18,6 +18,7 @@ put #class rp on
 #                                        #
 #       ADJUSTABLE VARIABLES             #
 #                                        #
+##########################################
 ##########################################
 ##   ADJUST THE RANKS BELOW TO YOUR     ##
 ##       PARTICULAR CHARACTER           ##
@@ -73,7 +74,7 @@ if ("$charactername") = ("$char4") then var shardcitizen no
 ####"
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
-# CHANGELOG - Latest Update: 7/25/2022
+# CHANGELOG - Latest Update: 9/22/2022
 #
 # - Fixed bug in setting Guild 
 #
@@ -236,6 +237,7 @@ TOP:
 put #echo >Log #b3b3f9 * Travel Start: $zonename (map $zoneid: $roomid)
 # put #mapper reset
 pause 0.0001
+gosub BAG_CHECK
 gosub PREMIUM_CHECK
 pause 0.0001
 # put #var save
@@ -3631,7 +3633,80 @@ INFO_CHECK:
      action remove Guild\:\s+(.*)$
      action remove Circle\: (\d+)
      return
-    
+
+
+#### THIS AUTO SETS MAIN.BAG / BACKUP.BAG / THIRD.BAG VARIABLES 
+#### FOR STOWING ROUTINE ONLY - BACKUP CONTAINERS IN CASE "STOW" DOESN'T WORK - WILL CATCH ANY COMMON LARGE CONTAINERS
+#### THIS WAS MADE AS HAPPY MEDIUM - TRAVEL SCRIPT IS USED BY MANY PEOPLE AND THIS IS ~MUCH~ BETTER THAN HARDCODED CONTAINERS 
+#### SETTING THE MAIN CONTAINERS AUTOMATICALLY MAKES IT EASY WITHOUT HAVING TO WORRY ABOUT SETTING USER VARIABLES / MULTI-CHARACTERS ETC..
+#### THIS SHOULD CATCH THE ~MAIN~ USED BAGS MOST PEOPLE HAVE AT LEAST ONE OR TWO OF
+BAG_CHECK:
+     var MAIN.BAG NULL
+     var BACKUP.BAG NULL
+     var THIRD.BAG NULL
+     var Backpack 0
+     var Haversack 0
+     var Pack 0
+     var Carryall 0
+     var Rucksack 0
+     var DuffelBag 0
+     var Vortex 0
+     var Eddy 0
+     var Shadows 0
+     action var Backpack 1 when backpack
+     action var Haversack 1 when haversack
+     action var Pack 1 when \bpack
+     action var Carryall 1 when carryall
+     action var Rucksack 1 when rucksack
+     action var DuffelBag 1 when duffel bag
+     action var Vortex 1 when (hollow vortex of water|corrupted vortex of swirling)
+     action var Eddy 1 when swirling eddy of incandescent
+     action var Shadows 1 when encompassing shadows
+     pause 0.00001
+     matchre BAG_PARSE INVENTORY
+     put inv container
+     matchwait 3
+BAG_PARSE:
+     var Bags Backpack|Haversack|Pack|Carryall|Rucksack|DuffelBag|Vortex|Eddy|Shadows
+     var TotalBags 9
+     var BagLoop 0
+     pause 0.00001
+BAG_LOOP:
+     pause 0.0001
+     pause 0.0001
+     var BAG %Bags(%BagLoop)
+     if (%BagLoop > %TotalBags) then
+          {
+               echo
+               echo *** Auto-Setting Container Vars:
+               echo MAIN BAG: %MAIN.BAG
+               echo BACKUP BAG: %BACKUP.BAG
+               echo THIRD BAG: %THIRD.BAG
+               echo
+               return
+          }
+     if ("%%BAG" = 1) then
+          {
+               if matchre("%MAIN.BAG", "NULL") then
+                    {
+                         var MAIN.BAG %BAG
+                         goto BAG_NEXT
+                    }
+               if matchre("%BACKUP.BAG", "NULL") then
+                    {
+                         var BACKUP.BAG %BAG
+                         goto BAG_NEXT
+                    }
+               if matchre("%THIRD.BAG", "NULL") then
+                    {
+                         var THIRD.BAG %BAG
+                         goto BAG_NEXT
+                    }
+          }
+BAG_NEXT:
+     math BagLoop add 1
+     goto BAG_LOOP
+     
 PREMIUM_CHECK:
      matchre PREMIUM_NO ^You are not currently a Premium
      matchre PREMIUM_YES ^Your premium service has been continuous
@@ -4014,7 +4089,6 @@ STOWING:
      if matchre("$lefthandnoun","(block|granite block)") then put drop block
      if matchre("$righthand","(partisan|shield|buckler|lumpy bundle|halberd|staff|longbow|khuj)") then gosub wear my $1
      if matchre("$lefthand","(partisan|shield|buckler|lumpy bundle|halberd|staff|longbow|khuj)") then gosub wear my $1
-     if matchre("$lefthand","(longbow|khuj)") then gosub stow my $1 in my %SHEATH
      if ("$righthand" != "Empty") then GOSUB STOW right
      if ("$lefthand" != "Empty") then GOSUB STOW left
      if ("$righthand" != "Empty") then put sheath
@@ -4041,10 +4115,10 @@ STOW1:
      matchre LOCATION.unload ^You should unload the
      matchre LOCATION.unload ^You need to unload the
      put stow %todo
-     matchwait 15
+     matchwait 7
      put #echo >$Log Crimson $datetime *** MISSING MATCH IN STOW! ***
      put #echo >$Log Crimson $datetime Stow = %todo
-     put #log $datetime MISSING MATCH IN STOW (base.inc)
+     put #log $datetime MISSING MATCH IN STOW (travel.cmd)
 STOW2:
      delay 0.0001
      var LOCATION STOW2
@@ -4054,11 +4128,11 @@ STOW2:
      matchre stow3 any more room|no matter how you arrange|^That's too heavy|too thick|too long|too wide|not designed to carry anything|^But that's closed
      matchre LOCATION.unload ^You should unload the
      matchre LOCATION.unload ^You need to unload the
-     put stow %todo in my pack
-     matchwait 15
+     put put %todo in my %MAIN.BAG
+     matchwait 7
      put #echo >$Log Crimson $datetime *** MISSING MATCH IN STOW2! ***
      put #echo >$Log Crimson $datetime Stow = %todo
-     put #log $datetime MISSING MATCH IN STOW2 (base.inc)
+     put #log $datetime MISSING MATCH IN STOW2 (travel.cmd)
 STOW3:
      delay 0.0001
      var LOCATION STOW3
@@ -4071,11 +4145,11 @@ STOW3:
      matchre STOW4 any more room|no matter how you arrange|^That's too heavy|too thick|too long|too wide|not designed to carry anything|^But that's closed
      matchre LOCATION.unload ^You should unload the
      matchre LOCATION.unload ^You need to unload the
-     put stow %todo in my backpack
-     matchwait 15
+     put put %todo in my %BACKUP.BAG
+     matchwait 7
      put #echo >$Log Crimson $datetime *** MISSING MATCH IN STOW3! ***
      put #echo >$Log Crimson $datetime Stow = %todo
-     put #log $datetime MISSING MATCH IN STOW3 (base.inc)
+     put #log $datetime MISSING MATCH IN STOW3 (travel.cmd)
 STOW4:
      delay 0.0001
      var LOCATION STOW4
@@ -4088,11 +4162,11 @@ STOW4:
      matchre REM.WEAR any more room|no matter how you arrange|^That's too heavy|too thick|too long|too wide
      matchre LOCATION.unload ^You should unload the
      matchre LOCATION.unload ^You need to unload the
-     put stow %todo in my haversack
-     matchwait 15
-     put #echo >$Log Crimson $datetime *** MISSING MATCH IN STOW4! (base.inc) ***
+     put put %todo in my %THIRD.BAG
+     matchwait 7
+     put #echo >$Log Crimson $datetime *** MISSING MATCH IN STOW4! (travel.cmd) ***
      put #echo >$Log Crimson $datetime Stow = %todo
-     put #log $datetime MISSING MATCH IN STOW4 (base.inc)
+     put #log $datetime MISSING MATCH IN STOW4 (travel.cmd)
 OPEN.THING:
      put open back
      put open hav
@@ -4103,7 +4177,7 @@ REM.WEAR:
      put drop bund
      wait
      pause 0.5
-     goto WEAR1
+     RETURN
 ######################################################################
 EHHRSK_ESCAPE:
      if (($roomid >= 734) && ($roomid <= 755)) then goto KRAHEI_ESCAPE_1
