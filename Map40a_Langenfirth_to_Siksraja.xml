@@ -1,0 +1,1390 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<zone name="Siksraja" id="40a">
+  <node id="1" name="Langenfirth, Trail Above the Fens">
+    <description>Like an acrobat walking a tightrope, this small stretch buffers the forest from the bog and balances life on both sides.  Scrubby pine needles dropped on the path await nature's method of movement.  Crushed on the frozen snow or mashed into the moist spring ground, the next rain will sweep them into the bog to become part of the rich silt that will wash up in the next flood to nourish the surrounding lands.</description>
+    <position x="80" y="-80" z="0" />
+    <arc exit="east" move="east" destination="2" />
+    <arc exit="west" move="west" destination="3" />
+  </node>
+  <node id="2" name="Langenfirth, Trail Above the Fens">
+    <description>Almost buried in the fallen pine needles that cover the area between Gwenalion Fens to the east and Seord'telgi Teorn to the north, this narrow path wanders westward towards the distant hills.  Small sounds of a village at sleep -- a baby's hungry cry, a dog barking, a lone door slamming -- are wafted by the wind and populate the forest with echoes.</description>
+    <description>Almost buried in the fallen pine needles that cover the area between Gwenalion Fens to the east and Seord'telgi Teorn to the north, this narrow path wanders westward toward the distant hills.  Small sounds of daily life -- children squealing at play, a dinner call, the cry of a baby -- are wafted by the wind and populate the forest with echoes.</description>
+    <position x="100" y="-80" z="0" />
+    <arc exit="east" move="east" destination="125" />
+    <arc exit="west" move="west" destination="1" />
+  </node>
+  <node id="3" name="Langenfirth, Trail Above the Fens">
+    <description>A large boulder several inches into the fens halts the movement of the murky water.  Its bulk stagnates the detritus of the bog amongst twigs, leaves and drowned bugs.  A few decaying leaves are plastered on its side above the water line, victims of evaporation.</description>
+    <position x="60" y="-80" z="0" />
+    <arc exit="east" move="east" destination="1" />
+    <arc exit="northwest" move="northwest" destination="4" />
+  </node>
+  <node id="4" name="Langenfirth, Trail Above the Fens">
+    <description>Rough planks lay upon the soggy ground making passage possible.  The black and moldy vegetation squishes up from between the boards with every step.  Somewhere overhead, a CAW-Caw-caw sounds in the distance.</description>
+    <position x="40" y="-100" z="0" />
+    <arc exit="southeast" move="southeast" destination="3" />
+    <arc exit="west" move="west" destination="5" />
+  </node>
+  <node id="5" name="Langenfirth, Trail Above the Fens">
+    <description>More of a bank than a path, the trail skirts the fens that slowly seep upward making a sticky muck of the ground here.  Someone has laid down a few planks to ease passage but the area could benefit from the builder returning to extend the construction.  The tall pines keep the light from filtering down enough to banish the growing mold.</description>
+    <position x="20" y="-100" z="0" />
+    <arc exit="east" move="east" destination="4" />
+    <arc exit="northwest" move="northwest" destination="6" />
+  </node>
+  <node id="6" name="Langenfirth, Path Into the Forest">
+    <description>A huge oak grows just far enough away from the fens to be on solid ground but not far enough from the bog for travelers to squeeze between it and the fens.  The path curves to the drier side and exchanges the scent of moist rot for that of the forest.  Overhead, a large pine branch drapes the path and often catches the unaware in an arboreal necklace.</description>
+    <position x="0" y="-120" z="0" />
+    <arc exit="southeast" move="southeast" destination="5" />
+    <arc exit="northwest" move="northwest" destination="7" />
+  </node>
+  <node id="7" name="Forest, Path" color="#008000">
+    <description>Gently climbing away from the moisture-ridden fens, the forest begins to thicken as less pine and more deobar change the texture underfoot.  Precariously hanging from a mediocre oak next to the path is a broken branch, its leaves curling inward as it wobbles on a slender limb in an upside down Y.</description>
+    <position x="-20" y="-140" z="0" />
+    <arc exit="southeast" move="southeast" destination="6" />
+    <arc exit="west" move="west" destination="8" />
+  </node>
+  <node id="8" name="Forest, Path" color="#008000">
+    <description>The forest is constantly repopulating itself and each established tree is surrounded by saplings of varying heights and widths that resemble children gathered around their mother at story time.  A selection of grasses spreads under the trees and across ground that is otherwise bare save for a dark-leaved thorn bush.</description>
+    <position x="-40" y="-140" z="0" />
+    <arc exit="east" move="east" destination="7" />
+    <arc exit="west" move="west" destination="9" />
+  </node>
+  <node id="9" name="Forest, Path" color="#008000">
+    <description>Wide wheel ruts on the west side end in a small mound of forest trash composed of leaves, twigs and assorted grasses and feathers that sit half-flattened in the center of the path.  Various bugs and insects circling the pile might well be considering its value as a food source or a home.</description>
+    <position x="-60" y="-140" z="0" />
+    <arc exit="east" move="east" destination="8" />
+    <arc exit="southwest" move="southwest" destination="10" />
+  </node>
+  <node id="10" name="Forest, Path" color="#008000">
+    <description>A distant, repetitive THWACK reminds that sound carries through the forest even when vision is obscured.  A little off the path, the trunks of five young saplings have been sheared, leaving stumps about a foot off the ground.  In the distance, a few more stumps can be seen, as if someone is trying to clear a path in their spare time.</description>
+    <position x="-80" y="-120" z="0" />
+    <arc exit="northeast" move="northeast" destination="9" />
+    <arc exit="west" move="west" destination="11" />
+  </node>
+  <node id="11" name="Forest, Path" color="#008000">
+    <description>The ground here is solid and provides a firm foundation for the path as it ambles through the forest in a fairly straight line until it disappears into the mass of browns and greens that converge into the horizon.  A glimpse of movement in the underbrush underscores the stealth with which the forest denizens react to visitors.</description>
+    <position x="-100" y="-120" z="0" />
+    <arc exit="east" move="east" destination="10" />
+    <arc exit="west" move="west" destination="12" />
+  </node>
+  <node id="12" name="Forest, Path" color="#008000">
+    <description>The trunk of a half-dead oak appears to be sinking into the ground as live vines creep up it.  Two large limbs positioned like arms stretch outward, draped with dead vines that resemble rotting funeral raiment.  Each passing breeze shifts the long tendrils and tricks the mind into considering the possibility of that the fallen oak is something other than a tree.</description>
+    <description>The trunk of a half-dead oak appears to be sinking into the ground as live vines creep up it.  Two large limbs positioned like arms stretch outward, draped with dead vines that resemble rotting funeral raiment.  Each passing breeze shifts the long tendrils and tricks the mind into considering the possibility that the fallen oak is something other than a tree.</description>
+    <position x="-120" y="-120" z="0" />
+    <arc exit="east" move="east" destination="11" />
+    <arc exit="southwest" move="southwest" destination="13" />
+  </node>
+  <node id="13" name="Forest, Path" color="#008000">
+    <description>The ground on one side of the road dips as if a huge boulder, no longer around, had pressed its weight into the soil.  The depression is partially filled with the remnants of last year's growth -- some of which floated down in the rains and some that blew in on the winds.  The haze of small bodies above it is accompanied by a low drone and, however they arrived, local insects have built their homes between the many layers of leaves.</description>
+    <position x="-140" y="-100" z="0" />
+    <arc exit="northeast" move="northeast" destination="12" />
+    <arc exit="west" move="west" destination="14" />
+  </node>
+  <node id="14" name="Forest, Path" color="#008000">
+    <description>Large deobar trees shade the path and promote the growth of moss in several hues of green on the packed ground.  Blanketing the earth like lacy curtains, an abundance of ferns alongside the road extends into the woods.  The closest tree bears scars inflicted by a woodpecker that ate its fill and destroyed a nest in its crook.</description>
+    <position x="-160" y="-100" z="0" />
+    <arc exit="east" move="east" destination="13" />
+    <arc exit="west" move="west" destination="15" />
+  </node>
+  <node id="15" name="Forest, Path" color="#008000">
+    <description>The road rises slightly and is densely surrounded by trees of all sizes, as the particular stillness of the forest seems to hum with its growth.  A clump of small vines sends tentative tendrils spreading out of the underbrush as if desirous of getting to the other side of the road where a group of heavily thorned bushes guard against any intrusion.</description>
+    <position x="-180" y="-100" z="0" />
+    <arc exit="east" move="east" destination="14" />
+    <arc exit="northwest" move="northwest" destination="16" />
+  </node>
+  <node id="16" name="Forest, Path" color="#008000">
+    <description>The surface of the road is marred by a large rut that ends at a tree pushed off to the side, moved out of necessity by some travelers long gone.  Profuse clumps of lichen and fungi grow in its cracks, and bugs and seedlings alike have found a home beneath the slight arch formed where it rests on the stump of a former branch.</description>
+    <position x="-200" y="-120" z="0" />
+    <arc exit="southeast" move="southeast" destination="15" />
+    <arc exit="west" move="west" destination="17" />
+  </node>
+  <node id="17" name="Forest, Path" color="#008000">
+    <description>Bent grasses on one side of the road draw attention to some tracks that disappear into a hole on the far side of the path.  Overhead, bits and pieces of a bird's nest dangle from the crook of a deobar tree, its construction clearly in need of repair, while on the branch below a bushy-tailed squirrel stands frozen, waiting for solitude.</description>
+    <position x="-220" y="-120" z="0" />
+    <arc exit="east" move="east" destination="16" />
+    <arc exit="west" move="west" destination="18" />
+  </node>
+  <node id="18" name="Forest, Path" color="#008000">
+    <description>Any open space that allows light to shine on the forest floor does not last long in these thick woods.  Signs of an almost obscured trail are all but obliterated by the trees, which reclaim their space with mindless precision.  The thick canopy above arches over dense ground growth and successfully camouflages whatever would remain of the trail, influencing the prudent to remain on the main road.</description>
+    <position x="-240" y="-120" z="0" />
+    <arc exit="east" move="east" destination="17" />
+    <arc exit="west" move="west" destination="19" />
+  </node>
+  <node id="19" name="Forest, Path" color="#008000">
+    <description>Piles of dried leaves, fallen limbs, dead brush and small bushes poke from beneath and between the live vines that crawl up and over anything in their path.  A thicket topped with verdant green leaves stretches far into the distance, a lush carpet sufficiently high off the ground to camouflage any small animal's movement through the wood.</description>
+    <position x="-260" y="-120" z="0" />
+    <arc exit="east" move="east" destination="18" />
+    <arc exit="southwest" move="southwest" destination="20" />
+  </node>
+  <node id="20" name="Forest, Path" color="#008000">
+    <description>The trees here are so covered in dead vines that it is difficult to determine whether the vines began life growing up from the ground or crawling across the forest canopy to drape down from above.  Wherever their beginning, their sheer volume now thoroughly obscures the view into the forest.  This paucity of light encourages small molds and lower ground cover that have encroached on the path, narrowing it even further in the forest's dark confines.</description>
+    <position x="-280" y="-100" z="0" />
+    <arc exit="northeast" move="northeast" destination="19" />
+    <arc exit="northwest" move="northwest" destination="21" />
+  </node>
+  <node id="21" name="Forest, Path" color="#008000">
+    <description>The trees appear to rise in the distance on one side of the road and dip on the other, though the slant of the trail is not readily apparent.  Alongside the higher side of the road, in a shallow rock-lined trench, a streamlet of water capers along -- runoff from the higher terrain.  It appears someone has tried to help nature move the ground water to another locale.</description>
+    <position x="-300" y="-120" z="0" />
+    <arc exit="southeast" move="southeast" destination="20" />
+    <arc exit="northwest" move="northwest" destination="22" />
+  </node>
+  <node id="22" name="Forest, Path" color="#008000">
+    <description>A forest resident makes its feelings known overhead, drowning out the gurgling of the brook as it takes a downhill sweep deeper into the woods.  The trees begin to thin as the land levels off and the path skirts south around a small grove of taffelberry bushes.</description>
+    <position x="-320" y="-140" z="0" />
+    <arc exit="southeast" move="southeast" destination="21" />
+    <arc exit="west" move="west" destination="23" />
+  </node>
+  <node id="23" name="Forest, Path" color="#008000">
+    <description>A scraggly pine, its limbs bare save for a few grey-green needles on the newest growth, tenaciously grips the ground in sad contrast to the vibrant green of the robust trees surrounding it.  Groundcover beneath its stunted limbs is brown and sparse, while that sheltered from the ravages of exposure by the other trees is lush and green.  A tattered nest sagging from a high crook reminds of the harsh realities of forest life.</description>
+    <position x="-340" y="-140" z="0" />
+    <arc exit="east" move="east" destination="22" />
+    <arc exit="west" move="west" destination="24" />
+  </node>
+  <node id="24" name="Forest, Path" color="#008000">
+    <description>Lush vegetation spreads under the trees, as vines and bushes vie with grasses and wild flowers for any available space.  Ivy has begun to climb several trunks and is slowly covering moss and lichen on the lee side of a huge tree a few feet from the path.  More than one spot of the hard-packed ground contains a thin tendril attempting to stake out bare space by planting itself in the road with varying degrees of success.</description>
+    <position x="-360" y="-140" z="0" />
+    <arc exit="east" move="east" destination="23" />
+    <arc exit="west" move="west" destination="25" />
+  </node>
+  <node id="25" name="Forest, Path" color="#008000">
+    <description>The tangle of limbs and leaves that belong to many different trees blots out the sky as the woodlands here rebound from the telltale signs of a past fire.  Ground cover is lush and full and only a few large black sticks poke their heads up through its carpet.  New growth has erupted from the base of a few scorched older trees and appears to be racing towards the diminishing light overhead.</description>
+    <position x="-380" y="-140" z="0" />
+    <arc exit="east" move="east" destination="24" />
+    <arc exit="west" move="west" destination="26" />
+  </node>
+  <node id="26" name="Forest, Path" color="#008000">
+    <description>The overhead canopy thins here, allowing a glimpse of the night sky.  Shadows cast by the charred black remnants of once-mighty trees veil sections of new growth poking its way out of the underbrush.  A bare patch or two remains, so heavily laden with burnt brush and cinders that nothing has penetrated its mantle.  Someone has cleared a small area and mixed several half-burnt logs with other wood in a fashion that suggests a campfire might have been planned.</description>
+    <description>The overhead canopy thins here, allowing a glimpse of the sky.  Charred black remnants of once-mighty trees jut out of the virulent green of new growth vying for the increased sunlight available after a fire.  A bare patch or two remains, so heavily laden with burnt brush and cinders that nothing has penetrated its mantle.  Someone has cleared a small area and mixed several half-burnt logs with other wood in a fashion that suggests a campfire might have been planned.</description>
+    <position x="-400" y="-140" z="0" />
+    <arc exit="east" move="east" destination="25" />
+    <arc exit="southwest" move="southwest" destination="27" />
+  </node>
+  <node id="27" name="Forest, Path" color="#008000">
+    <description>In the distance off the side of the road, felled trunks rest against living trees as if tossed about by some act of nature.  Several rows deep, the downed trees form a natural amphitheatre.  Visible in the center of the felled trees, a huge black rock juts from the ground, point up, as if it had fallen from the sky.  The air in that direction appears hazy, filled with flying denizens of the forest busily scanning for bounty in the shattered stumps.</description>
+    <position x="-420" y="-120" z="0" />
+    <arc exit="northeast" move="northeast" destination="26" />
+    <arc exit="west" move="west" destination="28" />
+  </node>
+  <node id="28" name="Forest, Path" color="#008000">
+    <description>Leafy ferns whose long, split fronds sway in the breeze cover one another to varying degrees and break the dim light into shadowy patterns on the forest floor.  Rocks and pebbles line the road, heaved to the surface as winter frost stresses the packed road.</description>
+    <description>Leafy ferns whose long, split fronds sway in the breeze cover one another to varying degrees and break the daylight into myriad patterns on the forest floor.  Rocks and pebbles line the road, heaved to the surface as winter frost stresses the packed road.</description>
+    <position x="-440" y="-120" z="0" />
+    <arc exit="east" move="east" destination="27" />
+    <arc exit="west" move="west" destination="29" />
+  </node>
+  <node id="29" name="Forest, Path" color="#008000">
+    <description>While most of the forest grows straight up towards the sky, nearby saplings lean inward to take advantage of air space vacated when an older tree with a lightning scarred stump met its blackened end.  Many smaller trees, looking much like ground cover, have also taken root in the same space and a full-tilt race for resources is in progress.</description>
+    <position x="-460" y="-120" z="0" />
+    <arc exit="east" move="east" destination="28" />
+    <arc exit="southwest" move="southwest" destination="30" />
+  </node>
+  <node id="30" name="Forest, Deadfall" color="#008000">
+    <description>An inordinately high tangle of dead growth rests on a fallen branch.  The sizeable construct could serve as an emergency shelter accessed through a low opening.  From the looks of a few bones scattered alongside, it may already have a tenant that might relish uninvited guests.</description>
+    <position x="-480" y="-100" z="0" />
+    <arc exit="northeast" move="northeast" destination="29" />
+    <arc exit="west" move="west" destination="31" />
+  </node>
+  <node id="31" name="Forest, Path" color="#008000">
+    <description>Small shrubbery fills the spaces between the trees, varying the perceived height of the forest floor.  The variety of greens creates a textured carpet spiced by a bright red leaf peeking from beneath a taller plant.  Under a tall oak, a small pile of acorn shells rests on some very fine grains of soil that might indicate an ant colony beneath.</description>
+    <position x="-500" y="-100" z="0" />
+    <arc exit="east" move="east" destination="30" />
+    <arc exit="west" move="west" destination="32" />
+  </node>
+  <node id="32" name="Svesinek Cels, Quiet Forest">
+    <description>Dressed up in a tutu of vines, a large oak gracefully raises its two largest branches skyward as if preparing to pirouette.  A formidable thicket blocks passage off that side of the road but the land behind it becomes visible as it slowly gains in elevation.  Its graceful slope ends abruptly against the base of a rocky overhang.</description>
+    <position x="-520" y="-100" z="0" />
+    <arc exit="east" move="east" destination="31" />
+    <arc exit="northwest" move="northwest" destination="33" />
+    <arc exit="go" move="go gap" destination="106" />
+  </node>
+  <node id="33" name="Svesinek Cels, Quiet Forest">
+    <description>Progress here becomes slightly more difficult as the trail begins a steep incline so pronounced that the road on the horizon almost touches the lower branches of the trees above it.  Ruts and gouges compound traveling difficulty, the result of runoff from inclement weather.</description>
+    <position x="-540" y="-120" z="0" />
+    <arc exit="southeast" move="southeast" destination="32" />
+    <arc exit="northwest" move="northwest" destination="34" />
+  </node>
+  <node id="34" name="Svesinek Cels, Quiet Forest">
+    <description>The road bends here, and boulders line the shoulders, causing it to narrow slightly.  It appears as if someone nearby was clearing land and thought to beautify this road with the fruits of their excavation.  That, or they were staking a claim in the wilds and marking its boundaries.</description>
+    <position x="-560" y="-140" z="0" />
+    <arc exit="southeast" move="southeast" destination="33" />
+    <arc exit="southwest" move="southwest" destination="35" />
+  </node>
+  <node id="35" name="Svesinek Cels, Quiet Forest">
+    <description>Massive old oaks dot the area but the general density of the forest diminishes as the road's steep incline lessens.  Clumps of grass appear between the lower greenery of the forest's groundcover and young saplings have taken the place of older growth.</description>
+    <position x="-580" y="-120" z="0" />
+    <arc exit="northeast" move="northeast" destination="34" />
+    <arc exit="northwest" move="northwest" destination="36" />
+  </node>
+  <node id="36" name="Svesinek Cels, Quiet Forest">
+    <description>From this high point it is possible to see quite a distance out over the grasslands that slope westward, while to the east a mystical quiet radiates from the forest cloaked in its dark finery.  A plume of smoke drifts over a distant hill, possibly from an unseen chimney.</description>
+    <position x="-600" y="-140" z="0" />
+    <arc exit="southeast" move="southeast" destination="35" />
+    <arc exit="west" move="west" destination="37" />
+  </node>
+  <node id="37" name="Svesinek Cels, High Ridge">
+    <description>This cleared trail wends its way along a ridge that abuts the forest, delivering a superb view of the grasslands below.  The broad expanse of grassy hillside is bordered by stands of old conifer that have escaped the dappled confines of the forest.  Though much of the grass is cropped short, some clumps of long high plains grass give the land a lumpy, untidy look.</description>
+    <position x="-620" y="-140" z="0" />
+    <arc exit="east" move="east" destination="36" />
+    <arc exit="southwest" move="southwest" destination="38" />
+  </node>
+  <node id="38" name="Svesinek Cels, Ruined Cabin">
+    <description>This cleared path continues a gentle slope along the exposed hillside, cutting across an old cattle track as it meanders and loops its narrow way beneath a stand of pines and past the remains of an old cabin.  The cabin's roof has completely caved in and what were once its walls are now nothing more than rotted wood.  The entire construction is so overrun with greedy vines that it could easily pass for a natural deadfall.</description>
+    <position x="-640" y="-120" z="0" />
+    <arc exit="northeast" move="northeast" destination="37" />
+    <arc exit="southwest" move="southwest" destination="39" />
+  </node>
+  <node id="39" name="Svesinek Cels, Grasslands">
+    <description>A fair distance from the path, a decrepit picket fence offers little protection to a pair of small graves that are half-smothered beneath tangled stalks of overgrown grass.  A lone taffelberry bush, obviously planted there on purpose, grows behind the fence and now supports that section.</description>
+    <position x="-660" y="-100" z="0" />
+    <arc exit="northeast" move="northeast" destination="38" />
+    <arc exit="west" move="west" destination="40" />
+  </node>
+  <node id="40" name="Svesinek Cels, Grasslands">
+    <description>Fertile ground yields a soft grass that mutes every step along this faint path as it angles through the grasslands.  Soft undulations focus attention on choosing one's next step with care as hidden mole tunnels have tripped many an unwary sojourner.  Here and there a tiny evergreen sprout grows, seeded by the winds or carried from the depths of the forest.</description>
+    <position x="-680" y="-100" z="0" />
+    <arc exit="east" move="east" destination="39" />
+    <arc exit="west" move="west" destination="41" />
+  </node>
+  <node id="41" name="Svesinek Cels, Grasslands">
+    <description>To the east a stand of pines grows in a perfectly straight line, breaking the wind's path.  Countless footfalls have turned the meadow's shallow ruts into a dirt trail whose hard-packed ground resists encroachment by the thick, spongy grasses that stretch to the horizon.  Several varieties of grass vie for the right to grow in this shallow valley.</description>
+    <position x="-700" y="-100" z="0" />
+    <arc exit="east" move="east" destination="40" />
+    <arc exit="southwest" move="southwest" destination="42" />
+  </node>
+  <node id="42" name="Svesinek Cels, Grasslands">
+    <description>The compacted track cuts a switchback and zigzags along, meandering across this small valley.  A spring emerges from its subterranean journey and bubbles gently into a quiet pool that has gradually eroded away the stone of the basin's inner rim.  The water's persistence has created a slow moving semi-circular streamlet that surrounds a weed-infested hummock before continuing its journey.</description>
+    <position x="-720" y="-80" z="0" />
+    <arc exit="northeast" move="northeast" destination="41" />
+    <arc exit="west" move="west" destination="43" />
+  </node>
+  <node id="43" name="Svesinek Cels, Grasslands">
+    <description>A merry companion, the spring babbles alongside this path, bubbling over roots and around stones.  Increasing in speed on the downhill, and expanding as it leisurely pools till it overflows any incline, the stream traverses the hills and dales with aplomb.  Here and there a few smaller streams feed in or out of it, and their narrow paths can be traced through the hay till they are lost to the horizon.</description>
+    <position x="-740" y="-80" z="0" />
+    <arc exit="east" move="east" destination="42" />
+    <arc exit="northwest" move="northwest" destination="44" />
+  </node>
+  <node id="44" name="Svesinek Cels, Grasslands">
+    <description>Slowly, almost unnoticed, the elevation changes as rolling hills on one side meet a small valley on the other.  The growth here is mostly hay mingled with grass and a random bush.  A variety of tracks cross the road headed for the flowing stream as the pair runs side-by-side into the distance.</description>
+    <position x="-760" y="-100" z="0" />
+    <arc exit="southeast" move="southeast" destination="43" />
+    <arc exit="northwest" move="northwest" destination="45" />
+  </node>
+  <node id="45" name="Svesinek Cels, Grasslands">
+    <description>Both trail and stream continue their journey across the open hillside, cutting through willing soil and sedimentary rock.  The stream has grown shallower and wider as it traverses until its stately trek is rudely interrupted, dammed by a landslide of exposed boulders and tree trunks and roots.</description>
+    <position x="-780" y="-120" z="0" />
+    <arc exit="southeast" move="southeast" destination="44" />
+    <arc exit="southwest" move="southwest" destination="46" />
+  </node>
+  <node id="46" name="Svesinek Cels, Sinkhole">
+    <description>Spilling around boulders and debris, the stream splashes over huge rounded rocks alongside the hillside footpath, merrily gurgling and rushing its white foamy way downhill to dive beneath a bridge where the brook drops into a deep sinkhole.  The path turns sharply away from the hole, and continues over the small rope bridge that provides passage over the rocky waterway.</description>
+    <position x="-800" y="-100" z="0" />
+    <arc exit="northeast" move="northeast" destination="45" />
+    <arc exit="go" move="go rope bridge" destination="47" />
+  </node>
+  <node id="47" name="Svesinek Cels, Rope Bridge">
+    <description>Anchored by fist-thick ropes, this bridge spans the swirling water, damp from the spray and foam as its weathered floor planks echo hollowly with each footstep.  The rope handholds are formed from loops knotted in the lines that drop from the overhead cables and meet in visible latticework between the meager planks.  Two large trees on either side are swaddled to their upper limbs in cable, as they stand guard over the land approaches to the bridge.</description>
+    <position x="-820" y="-80" z="0" />
+    <arc exit="west" move="west" destination="48" />
+    <arc exit="go" move="go path" destination="46" />
+  </node>
+  <node id="48" name="Svesinek Cels, Rope Bridge">
+    <description>Though fragile in appearance, this rope bridge provides far safer passage over the crevice than travel below, especially for those not used to rugged terrain.  The steep slope, littered with rocks and scrub, leading into the chasm can be seen through the rope mesh.  Two large trees, slightly shorter than those on the other side, are swaddled to their upper limbs in cable, as they stand guard over the land approaches to the bridge.</description>
+    <position x="-840" y="-80" z="0" />
+    <arc exit="east" move="east" destination="47" />
+    <arc exit="go" move="go path" destination="49" />
+  </node>
+  <node id="49" name="Svesinek Cels, Sinkhole">
+    <description>The ground here is dry, but the grass is greener and a larger variety of plants seem to thrive perhaps due to a plentiful supply of underground water.  The path turns here, angled between two large trees before it ends at a rope bridge suspended over a sinkhole into which a steady flow of water pours from the other side.</description>
+    <position x="-860" y="-80" z="0" />
+    <arc exit="west" move="west" destination="50" />
+    <arc exit="go" move="go rope bridge" destination="48" />
+  </node>
+  <node id="50" name="Svesinek Cels, Quiet Forest">
+    <description>Scraggly pines, their tall trunks ending in a few high branches topped with a pouf of greenery, have covered the ground with a densely fragrant carpet of fallen brown needles.  Long, thin pinecones litter the ground and crunch underfoot releasing their seeds into the cover of the forest floor.</description>
+    <position x="-880" y="-80" z="0" />
+    <arc exit="east" move="east" destination="49" />
+    <arc exit="northwest" move="northwest" destination="51" />
+  </node>
+  <node id="51" name="Svesinek Cels, Quiet Forest">
+    <description>Off to the side of the road, downed trees form an eerie latticework of broken branches and uprooted timber scattered in all directions across the living growth.  The tops of the tall pines filter the available light to a dreary shade as they freely shed needles that cloak everything in the forest with a brown fringe.</description>
+    <position x="-900" y="-100" z="0" />
+    <arc exit="southeast" move="southeast" destination="50" />
+    <arc exit="west" move="west" destination="52" />
+  </node>
+  <node id="52" name="Svesinek Cels, Quiet Forest">
+    <description>Situated a short distance into the woods is a sizeable mass about which tiny insects buzz.  Once the roots and lower trunk of a youngish tree, this unearthed mound is a rich mixture of rotting wood and dirt that resembles tangled worms.  A dark depression underneath leads to a recess that may well be occupied, given the tracks leading up to it.</description>
+    <position x="-920" y="-100" z="0" />
+    <arc exit="east" move="east" destination="51" />
+    <arc exit="west" move="west" destination="53" />
+  </node>
+  <node id="53" name="Svesinek Cels, Quiet Forest">
+    <description>The soaring forest ceiling descends to a lower canopy as smaller trees dominate this area.  Lacey plumes of green fern cluster along the path, supplanting the dark green bushes further off the road.  A loud chittering in the treetops sounds in warning, and the dense underbrush quivers as a small creature makes a hurried escape.</description>
+    <position x="-940" y="-100" z="0" />
+    <arc exit="east" move="east" destination="52" />
+    <arc exit="southwest" move="southwest" destination="54" />
+  </node>
+  <node id="54" name="Svesinek Cels, Quiet Forest">
+    <description>Constructed on an incline, the path curves around a rolling hill that effectively blocks the view ahead or behind.  The forest stands along the northern side of the path while the hillside, devoid of trees, appears to have been planted to clover.  A log fence traces the hill's shape on the southern side of the road creating a definite divide between the two sides.</description>
+    <position x="-960" y="-80" z="0" />
+    <arc exit="northeast" move="northeast" destination="53" />
+    <arc exit="southwest" move="southwest" destination="55" />
+    <arc exit="climb" move="climb log fence" destination="104" />
+  </node>
+  <node id="55" name="Svesinek Cels, Quiet Forest">
+    <description>Deep furrows look as if a wagon that hugged the south side of road during a rainstorm managed to get mired down in the muck several times.  One rut leads head-on beneath the fence to a section of splintered logs on the ground.  A particularly deep gouge disappears around the curve -- perhaps a sign of things to come.</description>
+    <position x="-980" y="-60" z="0" />
+    <arc exit="northeast" move="northeast" destination="54" />
+    <arc exit="west" move="west" destination="56" />
+  </node>
+  <node id="56" name="Svesinek Cels, Quiet Forest" color="#C0C0C0">
+    <description>A large boulder rests on the forest side of the path, diagonally across from what could only be described as a hole, dug in the roadway alongside the split-log fence.  Some vine tendrils that have climbed the fence encircle and sprawl along the wood barrier as far as the eye can see.</description>
+    <position x="-1000" y="-60" z="0" />
+    <arc exit="east" move="east" destination="55" />
+    <arc exit="northwest" move="northwest" destination="57" />
+    <arc exit="climb" move="climb large cavity" destination="175" />
+  </node>
+  <node id="57" name="Svesinek Cels, Quiet Forest">
+    <description>The path continues to curve gracefully, echoing the gentle arch of shadowy branches over the road.  Young growth pokes its head from a gully on the forest side, casting frail shadows on the path.  Intermittent clusters of colorful pebbles enliven the drabness of the earthen road.</description>
+    <description>The path continues to curve gracefully, echoing the gentle arch of branches over the road.  Young growth pokes its head from a gully on the forest side, nourished by runoff and encouraged by the slanting sunlight when the sun sets.  Intermittent clusters of colorful pebbles enliven the drabness of the earthen road.</description>
+    <position x="-1020" y="-80" z="0" />
+    <arc exit="southeast" move="southeast" destination="56" />
+    <arc exit="northwest" move="northwest" destination="58" />
+  </node>
+  <node id="58" name="Svesinek Cels, Quiet Forest">
+    <description>The height of a stand of pine on the northern edge combines with a hillside on the south to create the impression that the roadway lies in a shallow valley.  The hill appears to have been cultivated by someone for use as pastureland since it is cleared, planted and fenced.  Curving like a cat's tail, the highway narrows slightly as it passes between the hillside fencing and the tree trunks.</description>
+    <position x="-1040" y="-100" z="0" />
+    <arc exit="southeast" move="southeast" destination="57" />
+    <arc exit="west" move="west" destination="59" />
+  </node>
+  <node id="59" name="Svesinek Cels, Quiet Forest">
+    <description>Sentinel-like massive oaks shelter the roadbed as their thick trunks, encircled by shrubbery, keep travelers from straying into the forest.  A felled limb encrusted with grey lichen tinged yellow juts from the underbrush and partially protrudes on the path.  Crushed leaves have blended with the soil to create a fine dust that releases a mini cloud with each step.</description>
+    <position x="-1060" y="-100" z="0" />
+    <arc exit="east" move="east" destination="58" />
+    <arc exit="west" move="west" destination="60" />
+  </node>
+  <node id="60" name="Svesinek Cels, Quiet Forest">
+    <description>Acorns crunch underfoot scattering small, hard shards that mingle with the fallen leaves already mulched into the roadway.  The dislodged chunks displace others, exposing small colonies of squiggling black bugs that search frantically for cover.  Deep within the forest to the north, the occasional sound of sharp cracks announce the final passage of a dead branch to the forest floor.</description>
+    <position x="-1080" y="-100" z="0" />
+    <arc exit="east" move="east" destination="59" />
+    <arc exit="west" move="west" destination="61" />
+  </node>
+  <node id="61" name="Svesinek Cels, Quiet Forest">
+    <description>Green moss climbs the north face of the tree trunks as well as laying claim to any ground space not covered with growth or forest detritus.  A flurry of movement is accompanied by noisy chipmunks barking a warning in the distance.  Occasionally, the sudden movement of leaves on the oak overhead precipitates a shower of dust particles that slowly sail to the ground.</description>
+    <position x="-1100" y="-100" z="0" />
+    <arc exit="east" move="east" destination="60" />
+    <arc exit="west" move="west" destination="62" />
+  </node>
+  <node id="62" name="Svesinek Cels, Quiet Forest">
+    <description>The path here is slightly wider, probably the result of attempts to skirt a depression in the center that is filled with stagnant water.  Squirrels scurry down the trees and over the boulders, sniffing the air and flicking their tails before gracefully leaping back up nearby trees.</description>
+    <position x="-1120" y="-100" z="0" />
+    <arc exit="east" move="east" destination="61" />
+    <arc exit="southwest" move="southwest" destination="63" />
+  </node>
+  <node id="63" name="Svesinek Cels, Quiet Forest">
+    <description>The road traces the curve of a hillside that forms a natural divide between the forest and the lake.  Blue waters glisten in the distance, framed by sparse pine trees and a gently sloping grassy terrain.  Small air currents alternately tease the nose with the vague scent of burning wood or fish.</description>
+    <position x="-1140" y="-80" z="0" />
+    <arc exit="northeast" move="northeast" destination="62" />
+    <arc exit="northwest" move="northwest" destination="64" />
+    <arc exit="go" move="go grassy trail" destination="69" />
+  </node>
+  <node id="64" name="Svesinek Cels, Ridge">
+    <description>Gradually following the incline of the hill, the path becomes less distinct from the area surrounding it.  Patches of brown dirt, strewn with small rocks, intersperse the sparse grasses that grow under an occasional pine.</description>
+    <position x="-1160" y="-100" z="0" />
+    <arc exit="southeast" move="southeast" destination="63" />
+    <arc exit="northwest" move="northwest" destination="65" />
+  </node>
+  <node id="65" name="Svesinek Cels, Foothills">
+    <description>The path continues to follow the slope of the hill as it lies on an angle from the larger mountain above.  Brown grass tenaciously grows between rocks that litter the almost barren hillside.  Many large slabs of flattened rock bare their surface to the elements.</description>
+    <position x="-1180" y="-120" z="0" />
+    <arc exit="southeast" move="southeast" destination="64" />
+    <arc exit="northwest" move="northwest" destination="66" />
+  </node>
+  <node id="66" name="Svesinek Cels, Foothills" color="#C0C0C0">
+    <description>To the side of the path, an eroded basin in a large slab is home to some stringy weeds that have tenaciously rooted in a damp crevice.  The sickly green weeds relieve the dung-colored monotony of the roadway as it crosses the almost barren landscape.</description>
+    <position x="-1200" y="-140" z="0" />
+    <arc exit="north" move="north" destination="67" />
+    <arc exit="southeast" move="southeast" destination="65" />
+    <arc exit="climb" move="climb narrow crevice" destination="156" />
+  </node>
+  <node id="67" name="Svesinek Cels, Foothills">
+    <description>The road is hugged by the gentle swelling of a hill on either side and large rock formations loom on the horizon as the grade increases perceptibly.  Loose pebbles cascade with each movement, gathering dust clouds with them as they tumble down the slope.</description>
+    <position x="-1200" y="-160" z="0" />
+    <arc exit="south" move="south" destination="66" />
+    <arc exit="northwest" move="northwest" destination="68" />
+  </node>
+  <node id="68" name="Svesinek Cels, Blocked Canyon" note="wizined ranger|dwarf|Forfedhdar|P5|RTT26|RT-SIK-HAG" color="#C2B280">
+    <description>The distance between the surrounding hills is narrower and the gentleness of the slope disappears, exchanged for high bluffs on either side.  The result of this geographical change is that the pleasant countryside is now a narrow canyon overshadowed by enormous rock formations.  A huge boulder has crashed down on the roadway and blocks access through the canyon at this point.</description>
+    <position x="-1220" y="-180" z="0" />
+    <arc exit="southeast" move="southeast" destination="67" />
+  </node>
+  <node id="69" name="Ezer Cels, Under the Oak">
+    <description>The path arcs, following the hillside into the distance.  This narrow dirt trail, lined with pebbles from the lake, ambles past a large oak whose branches spread so wide only some moss grows in the shade beneath it.  Small tufts of grass encroach upon the lake path that meanders alongside the shore.</description>
+    <position x="-1140" y="40" z="0" />
+    <arc exit="southeast" move="southeast" destination="70" />
+    <arc exit="go" move="go dirt trail" destination="63" />
+  </node>
+  <node id="70" name="Ezer Cels, Shoreline">
+    <description>Clumps of tall grass cluster in the shallows of Life Lake amidst rocks and a few tough old trees whose visible roots snake down into the water.  The hooting of an owl precedes a loud screech that sounds at odds with the serenity of the water that gently laps the shoreline.  The lake curves westward, away from the trail that links the main road with a clearing.</description>
+    <position x="-1120" y="60" z="0" />
+    <arc exit="south" move="south" destination="71" />
+    <arc exit="northwest" move="northwest" destination="69" />
+  </node>
+  <node id="71" name="Ezer Cels, New Growth">
+    <description>To the north, the forest seems to be pruned back from the lake, resulting in a grassy green area with a few trees and low shrubs.  Aside from some very young saplings, only old stumps dot the area.  One rotting stump appears to be the source of food for every nearby insect.</description>
+    <position x="-1120" y="80" z="0" />
+    <arc exit="north" move="north" destination="70" />
+    <arc exit="southeast" move="southeast" destination="72" />
+  </node>
+  <node id="72" name="Ezer Cels, Edge of the Clearing">
+    <description>Stubby grass, devoid of any trees or shrubs, provides a wide swath of space between the road and what lies ahead.  Compared to the cover provided by the forest, this patch of land might as well be a barren desert.  There is nothing that would hide an approach should anyone in the forest to the north or beyond the clearing ahead be watching.</description>
+    <position x="-1100" y="100" z="0" />
+    <arc exit="northwest" move="northwest" destination="71" />
+    <arc exit="go" move="go wide clearing" destination="73" />
+  </node>
+  <node id="73" name="Siksraja, Clearing">
+    <description>A checkerboard of shadowy tree stumps hint that the forest once grew up to the lake's shore.  Now, a dark wide swath of cleared land stretches between the road and the outline of buildings in the distance.</description>
+    <description>A checkerboard of tree stumps reveals that at one time the forest grew right up to the lake's shore.  Now an area close to the width of the lake forms a wide arc of cleared land between the road and some buildings.</description>
+    <position x="-1080" y="120" z="0" />
+    <arc exit="northeast" move="northeast" destination="79" />
+    <arc exit="southwest" move="southwest" destination="103" />
+    <arc exit="west" move="west" destination="74" />
+    <arc exit="go" move="go road" destination="72" />
+  </node>
+  <node id="74" name="Siksraja, Clearing">
+    <description>Tall grass, nourished by its proximity to bountiful water, stretches quite a distance toward the foothills.  Animals have trampled a path through the grass from the forest to the shore.  A few briar bushes appear to have been planted in a circle and have grown to encompass a large space that effectively blocks any view of the lake.</description>
+    <position x="-1100" y="120" z="0" />
+    <arc exit="east" move="east" destination="73" />
+    <arc exit="northwest" move="northwest" destination="75" />
+  </node>
+  <node id="75" name="Siksraja, Clearing">
+    <description>Faint scents mingle with the heady green of the pathway's crushed grass.  Occasional hints of roasted meat or wood smoke blend with a musty lake odor whenever a wind shifts direction.  A large tree with a charred trunk stands in a patch of burnt grass and emits the tang of charcoal into the air.</description>
+    <position x="-1120" y="100" z="0" />
+    <arc exit="southeast" move="southeast" destination="74" />
+    <arc exit="west" move="west" destination="76" />
+  </node>
+  <node id="76" name="Siksraja, Clearing">
+    <description>Echoing softly off the gentle hills, an overhead bird issues a plaintive call to its mate as it heads towards the distant lake.  Grasses, which were once lush and flowed across this area, grow sparser as weeds, their seeds carried by the winds and animals, have taken root and prospered.  On one side of the path, an animal has dug a burrow that could easily trip an unwary traveler.</description>
+    <position x="-1140" y="100" z="0" />
+    <arc exit="east" move="east" destination="75" />
+    <arc exit="northwest" move="northwest" destination="77" />
+  </node>
+  <node id="77" name="Siksraja, Foothills">
+    <description>This, the lowest portion of the foothills, is rolling land, somewhat hilly and only partially green.  A few trees dot the horizon and the waters of Dzive Ezer glisten in the distance.</description>
+    <position x="-1160" y="80" z="0" />
+    <arc exit="southeast" move="southeast" destination="76" />
+    <arc exit="northwest" move="northwest" destination="78" />
+  </node>
+  <node id="78" name="Siksraja, Foothills">
+    <description>The tumbled remains of long ago mountain slides manifest themselves as the path twists and turns around the larger rocks.  Deep, dark pockets created when boulders crashed atop each other contrast sharply with the smooth sun bleached top stones.  Jammed into one of the dark caverns is a sturdy post fitted with a bell and rope.</description>
+    <position x="-1180" y="60" z="0" />
+    <arc exit="southeast" move="southeast" destination="77" />
+    <arc exit="climb" move="climb path" destination="188" />
+  </node>
+  <node id="79" name="Siksraja, Clearing">
+    <description>The blue waters of the lake ripple peacefully, lapping at the brown shoreline whose changing form provides a frame of reference for the distance traveled.  The forest looms beyond this grassy area, its darkness appears foreboding in contrast to the airiness of the lake.  A splashing sound follows the haunting call of a loon to its mate.</description>
+    <position x="-1060" y="100" z="0" />
+    <arc exit="north" move="north" destination="80" />
+    <arc exit="southwest" move="southwest" destination="73" />
+  </node>
+  <node id="80" name="Siksraja, Clearing">
+    <description>The trail passes closer to the forest than the lake and it becomes possible to see a few shacks spread under the protection of some larger trees.  A large field lies between the forest and the buildings of the village.</description>
+    <position x="-1060" y="80" z="0" />
+    <arc exit="north" move="north" destination="81" />
+    <arc exit="northeast" move="northeast" destination="83" />
+    <arc exit="south" move="south" destination="79" />
+  </node>
+  <node id="81" name="Siksraja Outskirts, Kads Raja" color="#00FFFF">
+    <description>While the ground cover here has been thinned, a sizeable stand of old oak guards the space between the forest and the clearing before the lake.  Beneath the oaks, accommodations have been constructed for those who did not wish to reside in the Village proper or for travelers.</description>
+    <position x="-1060" y="60" z="0" />
+    <arc exit="north" move="north" destination="82" />
+    <arc exit="south" move="south" destination="80" />
+  </node>
+  <node id="82" name="Kads Raja, Under the Gnarled Oak" color="#00FFFF">
+    <description>Clustered under a particularly gnarled oak, a group of homes is arranged so that the front doors face the clearing and the lake beyond.  The backs of the homes butt the trunk of the tree.</description>
+    <position x="-1060" y="40" z="0" />
+    <arc exit="east" move="east" destination="92" />
+    <arc exit="south" move="south" destination="81" />
+    <arc exit="climb" move="climb dark gap" destination="169" />
+  </node>
+  <node id="83" name="Siksraja, Clearing">
+    <description>The area between this trail and the village appears to be a field planted with flax and a few buildings block the view of the lake from here.  At the edge of the forest an oak wrested from the ground lies on a severe angle, propped up by its neighbors as its roots dry in the open air.</description>
+    <position x="-1040" y="60" z="0" />
+    <arc exit="northeast" move="northeast" destination="84" />
+    <arc exit="southwest" move="southwest" destination="80" />
+  </node>
+  <node id="84" name="Siksraja, Clearing">
+    <description>Cheery yellow buttercup heads and fuzzy white dandelion puffs seem to flow in a carpet to the lake edge.  No buildings mar the view of the lake's blue waters as they pass beneath a small wood platform on the shore.  Several pairs of ants, each carting one end of a trophy seed, move slowly across the trail unaware and undisturbed by the larger world.</description>
+    <position x="-1020" y="40" z="0" />
+    <arc exit="northeast" move="northeast" destination="85" />
+    <arc exit="southwest" move="southwest" destination="83" />
+  </node>
+  <node id="85" name="Siksraja, Clearing">
+    <description>This path skims the forest's edge as it circles the field around the village.  Clusters of ferns beneath some trees decorate the forest with vibrant shades of green.  Between this path and the lake is a large building flanked by a smaller structure.</description>
+    <position x="-1000" y="20" z="0" />
+    <arc exit="east" move="east" destination="86" />
+    <arc exit="southwest" move="southwest" destination="84" />
+  </node>
+  <node id="86" name="Siksraja, Clearing">
+    <description>Tall pines spread their sharp needles and long, thin cones all over the pathway like a popcorn carpet.  Towards the lake, a few high stumps have been pressed into service as fence posts.  Split rails sit in slots cut into the stumps forming a square that encloses what appears to be a small garden.</description>
+    <position x="-980" y="20" z="0" />
+    <arc exit="northeast" move="northeast" destination="87" />
+    <arc exit="west" move="west" destination="85" />
+  </node>
+  <node id="87" name="Siksraja, Clearing">
+    <description>The blue of the lake can be seen across the field through the spaces between the buildings.  The size of the buildings is difficult to determine since the flat, farmed field leaves little to use as a reference other than the mountains across the lake.  The scent of burning wood carries through the forest and a faint plume rises in the distance.</description>
+    <position x="-960" y="0" z="0" />
+    <arc exit="east" move="east" destination="88" />
+    <arc exit="southwest" move="southwest" destination="86" />
+  </node>
+  <node id="88" name="Siksraja, Clearing">
+    <description>Subtle changes in the composition of the forest are the only indication of progression as the field was entirely planted with a low crop.  No path presents itself to enter the village proper and no sign of life is visible, yet none of the buildings appear in disrepair.  A lone black bird pecks at something on the ground in the middle of the field.</description>
+    <position x="-940" y="0" z="0" />
+    <arc exit="southeast" move="southeast" destination="89" />
+    <arc exit="west" move="west" destination="87" />
+  </node>
+  <node id="89" name="Siksraja, Clearing">
+    <description>The buildings across the clearing appear to flank a fire circle beyond which a wood dock extends into the lake.  A sign over one building moves sluggishly as it creaks in the wind, its rusty protest the only sound at odds with those of nature.  One horse answers another's whinny, though neither is visible from here.</description>
+    <position x="-920" y="20" z="0" />
+    <arc exit="east" move="east" destination="90" />
+    <arc exit="northwest" move="northwest" destination="88" />
+  </node>
+  <node id="90" name="Siksraja, Clearing">
+    <description>A downed tree's exposed roots loom over the pathway, twisted like an intricate tapestry.  Amidst rotting leaves, young ferns grow in the soft earth beneath the root ball that blocks the view into the forest.  The village buildings are close, and the planted field appears small.</description>
+    <position x="-880" y="20" z="0" />
+    <arc exit="southeast" move="southeast" destination="91" />
+    <arc exit="west" move="west" destination="89" />
+  </node>
+  <node id="91" name="Siksraja, Clearing" color="#C0C0C0">
+    <description>The forest halts at a grove of neatly spaced and tended mulberry that covers the land up to the lake, eliminating the cleared expanse that has separated the village.  Two pillars mark the entrance to the village.  Affixed to one of the pillars is an L iron from which hangs a bell and rope.</description>
+    <position x="-860" y="40" z="0" />
+    <arc exit="northwest" move="northwest" destination="90" />
+    <arc exit="go" move="go path" destination="94" />
+    <arc exit="climb" move="climb hole under pile" destination="179" />
+    <arc exit="go" move="go mulberry-lined road" destination="198" />
+  </node>
+  <node id="92" name="Kads Raja, Twin Trees" color="#00FFFF">
+    <description>Two good-sized trees flank a cluster of taffelberry bushes that runs well back into the dark forest.  One limb, a hair's breadth above the reach of a Gor'Tog, arches out from the closest tree casting a long shadow.  A narrow trail of bent grass reveals a route often used by animals traveling back and forth from the forest to the lake.</description>
+    <position x="-1040" y="40" z="0" />
+    <arc exit="northeast" move="northeast" destination="93" />
+    <arc exit="west" move="west" destination="82" />
+    <arc exit="climb" move="climb dark hole" destination="170" />
+  </node>
+  <node id="93" name="Kads Raja, Natural Barrier" color="#00FFFF">
+    <description>The forest forms a thick backdrop with a mixture of new and old growth and various heights of brush.  No visible pathway presents itself instead the trees and bushes appear to have conspired to form a living wall of limbs and branches entwined with grass and vines.  To the southwest, some shacks can be glimpsed through a thin stand of trees.</description>
+    <position x="-1020" y="20" z="0" />
+    <arc exit="southwest" move="southwest" destination="92" />
+    <arc exit="climb" move="climb opening" destination="172" />
+  </node>
+  <node id="94" name="Siksraja, Cawrs Cels">
+    <description>The main street of this village is a dirt path that meanders between structures.  A thin line of smoke escapes the chimney of the closest building.  A sign hangs from the doorway of a nearby shop whose side is lined with several square wood containers, large wood vats, and some wood frames.</description>
+    <position x="-840" y="60" z="0" />
+    <arc exit="southwest" move="southwest" destination="95" />
+    <arc exit="go" move="go path" destination="91" />
+    <arc exit="go" move="go weathered door" destination="126" />
+  </node>
+  <node id="95" name="Siksraja, Cawrs Cels">
+    <description>This dusty path passes between the lake where a small dock extends over the water and a merchant's camp that is backed by a split log fence.  Leaning against the fence is a wagon wheel with a broken spoke that looks as if it belonged to the rundown wagon off to the side.  A blackened stone circle holds the remnants of a small cooking fire.</description>
+    <position x="-860" y="80" z="0" />
+    <arc exit="northeast" move="northeast" destination="94" />
+    <arc exit="west" move="west" destination="96" />
+    <arc exit="go" move="go dock" destination="139" />
+  </node>
+  <node id="96" name="Siksraja, Cawrs Cels">
+    <description>A split rail fence encloses a considerable area to the north and runs westward along the shore.  A few tall plants poke their heads around the posts, and the scent of manure carries on each breeze.  An open archway next to the garden gate frames a hut erected against the fence, leaving most of the land for planting.</description>
+    <position x="-900" y="80" z="0" />
+    <arc exit="north" move="north" destination="97" />
+    <arc exit="east" move="east" destination="95" />
+    <arc exit="go" move="go open archway" destination="127" />
+    <arc exit="go" move="go garden gate" destination="128" />
+  </node>
+  <node id="97" name="Siksraja, Cawrs Cels">
+    <description>The split rail fencing butts the back wall of a sturdy building.  A small shop, with a work shed behind it, sits across the path.  The path turns here, curving toward the clearing and further into the village.</description>
+    <position x="-900" y="60" z="0" />
+    <arc exit="south" move="south" destination="96" />
+    <arc exit="west" move="west" destination="98" />
+    <arc exit="go" move="go reinforced tent" destination="196" />
+    <arc exit="go" move="go red tent" destination="197" />
+    <arc exit="go" move="go aging wagon" destination="194" />
+    <arc exit="go" move="go grey tent" destination="195" />
+  </node>
+  <node id="98" name="Siksraja, Cawrs Cels" color="#C0C0C0">
+    <description>A wood bench, its back to the path, looks out across the clearing.  On one side of the steps leading up to the roofed porch over the General Store is a hitching post.  Affixed to the porch beam above the post is a bell.</description>
+    <position x="-920" y="60" z="0" />
+    <arc exit="east" move="east" destination="97" />
+    <arc exit="southwest" move="southwest" destination="99" />
+    <arc exit="climb" move="climb steps" destination="130" />
+    <arc exit="climb" move="climb wooden trapdoor" destination="184" />
+  </node>
+  <node id="99" name="Siksraja, Cawrs Cels">
+    <description>As the path angles towards the lake, a variety of construction lines both sides.  Looking beyond the buildings to the north, across the large clearing, a small group of homes can be seen clustered around a few trees.  To the south, beyond the growing garden, lies the blue-black jewel Dzive Ezer.</description>
+    <position x="-940" y="80" z="0" />
+    <arc exit="northeast" move="northeast" destination="98" />
+    <arc exit="southwest" move="southwest" destination="100" />
+    <arc exit="go" move="go stone building" destination="133" />
+  </node>
+  <node id="100" name="Siksraja, Cawrs Cels">
+    <description>Surrounded by a considerable quantity of cleared land planted with flax to the north and west, the lake to the south and the village to the east, is a circle of rough logs enclosing an area whose tamped down soil is covered with a fine layer of blackened cinders.  Stacked in a good-sized woodpile outside the circle are both aged wood and some fresh cut logs.  The odor of pinesap mingles with the faint scent of burnt wood.</description>
+    <position x="-960" y="100" z="0" />
+    <arc exit="northeast" move="northeast" destination="99" />
+    <arc exit="south" move="south" destination="102" />
+    <arc exit="west" move="west" destination="101" />
+  </node>
+  <node id="101" name="Siksraja, Dzirta Nars">
+    <description>Tufts of stubborn grass sprout between the smooth stones of a walkway shadowed by a long log building.  Strategically built to monitor approaches, this innocuous building is situated so one bank of windows looks directly at the lake, the far side has an expansive view of the fields, and the entrance faces town while the rear watches over housing in the distance.</description>
+    <description>Tufts of stubborn grass sprout between the smooth stones of a walkway in front of a long log building.  Strategically built to monitor approaches, this innocuous building is situated so one bank of windows looks directly at the lake, the far side has an expansive view of the fields, and the entrance faces town while the rear watches over housing in the distance.</description>
+    <position x="-980" y="100" z="0" />
+    <arc exit="east" move="east" destination="100" />
+    <arc exit="go" move="go door" destination="191" />
+  </node>
+  <node id="102" name="Siksraja, Lake's Edge">
+    <description>This small sloping dock has deliberately been extended over the lake to provide easy access over the rock-strewn shore.  Worn ropes hang slack from support posts and serve more as a cautionary reminder than a safety precaution.  The far end of the dock disappears into the water whose depth varies with the season and fullness of the lake.</description>
+    <position x="-960" y="120" z="0" />
+    <arc exit="north" move="north" destination="100" />
+    <arc exit="climb" move="climb dock" destination="134" />
+  </node>
+  <node id="103" name="Siksraja, Clearing" color="#C0C0C0">
+    <description>Grasses of various types grow rampant at the bottom of posts supporting sturdy wood rails that encircle three sides of a ramshackle shed.  The hind side of the enclosure runs along the lake's edge where taller posts keep the fence height uniform though the ground dips towards the shore.  A bell and rope hang from an L iron above the doorway.</description>
+    <position x="-1100" y="140" z="0" />
+    <arc exit="northeast" move="northeast" destination="73" />
+  </node>
+  <node id="104" name="Clover Fields" note="Young Brocket Deer|1Deer">
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted with a sturdy, stubby grass and clover, the clover's tiny white flowers dot the landscape, giving it an uneven texture.  An occasional tree provides respite from summer storms.</description>
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted to clover and a sturdy, stubby grass, some seeds sprout before others giving the land an uneven texture.  An occasional tree, dressed in green buds that unfold in the warming sun, stands guard over new ground growth beneath its limbs.</description>
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted with a sturdy, stubby grass and clover, the clover's tiny white flowers dot the land giving it an uneven texture.  An occasional tree provides respite from summer storms.</description>
+    <position x="-960" y="-160" z="0" />
+    <arc exit="west" move="west" destination="105" />
+    <arc exit="climb" move="climb log fence" destination="54" />
+  </node>
+  <node id="105" name="Clover Fields">
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted with a sturdy, stubby grass and clover, the clover's tiny white flowers dot the landscape, giving it an uneven texture.  An occasional tree provides respite from summer storms.</description>
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted to clover and a sturdy, stubby grass, some seeds sprout before others giving the land an uneven texture.  An occasional tree, dressed in green buds that unfold in the warming sun, stands guard over new ground growth beneath its limbs.</description>
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted with a sturdy, stubby grass and clover, the clover's tiny white flowers dot the land giving it an uneven texture.  An occasional tree provides respite from summer storms.</description>
+    <position x="-980" y="-160" z="0" />
+    <arc exit="east" move="east" destination="104" />
+    <arc exit="west" move="west" destination="146" />
+  </node>
+  <node id="106" name="Ala Taka, Woodlands">
+    <description>Be it rain or snow melt, the ground is so pitched that rapid runoff creates a quagmire at the base of this hill.  Climbing this slope in foul weather can prove treacherous, as attested to by numerous deep rivulets.  All the water disappears beneath a formidable thicket which blocks further passage down the slope.</description>
+    <position x="-540" y="-80" z="0" />
+    <arc exit="up" move="up" destination="107" />
+    <arc exit="go" move="go gap" destination="32" />
+  </node>
+  <node id="107" name="Ala Taka, Cave Mouth">
+    <description>Several ancient spruce, their roots embedded between the boulders and the sparse soil that hasn't washed down the slope, tower like guardians alongside a dark opening in the rock face.  Stacked boulders topped by a flat slate slab look more man made than accidental, perhaps leftovers from a long abandoned mining operation.  Jutting from a half buried rod, a rusting wheel turns with the wind.</description>
+    <position x="-560" y="-80" z="0" />
+    <arc exit="down" move="down" destination="106" />
+    <arc exit="go" move="go cave" destination="108" />
+  </node>
+  <node id="108" name="Noladet Ala, Entry">
+    <description>This fairly large cavern stretches back a ways, slanting downward as far as the eye can see.  The cave's walls are lightly coated with loose fine dirt that forms irregular swirls on the slate floor when tossed about by drafts.</description>
+    <position x="-580" y="-60" z="0" />
+    <arc exit="down" move="down" destination="109" />
+    <arc exit="go" move="go opening" destination="107" />
+  </node>
+  <node id="109" name="Noladet Ala, Sloping Passage">
+    <description>Further into the cave, there is a dry, dusty odor that scratches at the back of the throat.  Striations in the west wall form a vortex that swirls from ceiling to floor.  A coating of dust masks what would otherwise be a spectacular display of colored rock.</description>
+    <position x="-580" y="-40" z="0" />
+    <arc exit="up" move="up" destination="108" />
+    <arc exit="down" move="down" destination="110" />
+  </node>
+  <node id="110" name="Noladet Ala, Sloping Passage">
+    <description>It is becoming obvious that whatever mining attempts were made in this cavern were abandoned long ago.  A few rusted implements lay ground into the dirt, their original purpose almost unrecognizable.  The result of thousands of chisel marks on the walls creates a very uneven pattern.</description>
+    <position x="-580" y="-20" z="0" />
+    <arc exit="up" move="up" destination="109" />
+    <arc exit="down" move="down" destination="111" />
+  </node>
+  <node id="111" name="Noladet Ala, Fallen Rocks">
+    <description>Sizeable chunks of rock form columns that obstruct direct passage, twisting and turning one around till all sense of direction becomes skewed.  A straight line of pebbles, like crumbs dropped to mark the way, indicate a prior pathway.  Footsteps echo hauntingly, as sound bounces from one hard surface to another.</description>
+    <position x="-580" y="0" z="0" />
+    <arc exit="up" move="up" destination="110" />
+    <arc exit="down" move="down" destination="112" />
+  </node>
+  <node id="112" name="Noladet Ala, Sloping Passage">
+    <description>The flying dust is gone, replaced by a dank chill that emanates from the drab stone ceiling.  From somewhere, the sound of running water seeps into the cavern but there is nothing that appears wet.</description>
+    <position x="-580" y="20" z="0" />
+    <arc exit="up" move="up" destination="111" />
+    <arc exit="down" move="down" destination="113" />
+  </node>
+  <node id="113" name="Noladet Ala, Strait Cavern">
+    <description>The roof and back wall of the cavern close in tightly giving a cramped feel that is unrelieved by the drab dark rock walls.  Low light masks imperfections in the rock and it takes a few moments for the eye to adjust before the room's character comes into focus.  Several cracks in the east wall vary in width and height but one appears large enough to squeeze through.</description>
+    <position x="-580" y="40" z="0" />
+    <arc exit="up" move="up" destination="112" />
+    <arc exit="go" move="go crack" destination="114" />
+  </node>
+  <node id="114" name="Noladet Ala, Moldy Corridors">
+    <description>Dull light comes from a pale mold that covers this cavern's narrow, twisting corridors and drapes from the ceilings in wispy folds.  An eerie luminescence bathes each twist and turn, creating light in the bowels of the cave.  Scratch marks in some spots on the walls have scraped off the mold, leaving the area with a stripped effect.</description>
+    <position x="-580" y="60" z="0" />
+    <arc exit="southeast" move="southeast" destination="115" />
+    <arc exit="go" move="go crack" destination="113" />
+  </node>
+  <node id="115" name="Noladet Ala, Tunnel">
+    <description>The thick stone walls seem to have been hewn in haste as there are huge chunks missing in some spots and sizeable outcroppings in others.  A stale scent seeps into the chamber from a few cracks in its roof.  Chips of shale and pebbles cover the floor making passage through here noisy.</description>
+    <position x="-560" y="80" z="0" />
+    <arc exit="southwest" move="southwest" destination="116" />
+    <arc exit="northwest" move="northwest" destination="114" />
+  </node>
+  <node id="116" name="Noladet Ala, Tunnel">
+    <description>Again the sound of running water sloshes behind the walls or overhead, which is difficult to discern.  Air pressure keeps increasing, gently pushing on eardrums like cotton balls as the pathway descends further into the cavern.</description>
+    <position x="-580" y="100" z="0" />
+    <arc exit="northeast" move="northeast" destination="115" />
+    <arc exit="southeast" move="southeast" destination="117" />
+  </node>
+  <node id="117" name="Noladet Ala, Reinforced Tunnel">
+    <description>The construction of this section of the tunnel resembles a mining operation.  A haphazard tray of timbers holding up the ceiling is supported by two tilted boards and the uneven floor.  Two rusty nails seem to connect the entire construct.</description>
+    <position x="-560" y="120" z="0" />
+    <arc exit="southwest" move="southwest" destination="118" />
+    <arc exit="northwest" move="northwest" destination="116" />
+  </node>
+  <node id="118" name="Noladet Ala, Damp Hollow">
+    <description>A desultory trickle of water runs along the east wall till it puddles in a small hollow on the floor before continuing southward where it disappears beneath the back wall.  A water line mars the stone in this space about eye level to a Human.</description>
+    <position x="-580" y="140" z="0" />
+    <arc exit="northeast" move="northeast" destination="117" />
+    <arc exit="go" move="go dark hole" destination="119" />
+  </node>
+  <node id="119" name="Noladet Ala, Narrow Passage">
+    <description>There is much less room to move about on this level.  Either the mining operation was halted unexpectedly or no ore was found this deep and it was abandoned.  A broken pick axe lies embedded in the floor alongside a dark hole.</description>
+    <position x="-600" y="160" z="0" />
+    <arc exit="down" move="down" destination="120" />
+    <arc exit="go" move="go dark hole" destination="118" />
+  </node>
+  <node id="120" name="Noladet Ala, Sloping Passage">
+    <description>Dirt mingles with the rock here, forming walls that crumble if touched.  Little shoring has been done to the walls, and in one spot a small cave-in poured dirt onto the pathway in a mound that must be climbed over or bypassed single file.</description>
+    <position x="-600" y="180" z="0" />
+    <arc exit="up" move="up" destination="119" />
+    <arc exit="down" move="down" destination="121" />
+  </node>
+  <node id="121" name="Noladet Ala, Sloping Passage">
+    <description>A pile of unused timber stacked neatly against one wall further narrows the passageway.  The air is stale, and what little warmth was on the upper levels is long gone.  All the stone debris that cluttered the floors is gone and the room appears almost antiseptic in its cleanliness.</description>
+    <position x="-600" y="200" z="0" />
+    <arc exit="up" move="up" destination="120" />
+    <arc exit="down" move="down" destination="122" />
+  </node>
+  <node id="122" name="Noladet Ala, Juncture">
+    <description>The floor of the cavern levels off in this dank, chill chamber with twin tunnels that go opposite directions.  Two concave stone seats flank a stone slab on boulders that appears to have been utilized as a table.  Instead of a back wall, a seemingly placid lake stretches into the darkness.</description>
+    <position x="-600" y="220" z="0" />
+    <arc exit="east" move="east" destination="124" />
+    <arc exit="west" move="west" destination="123" />
+    <arc exit="up" move="up" destination="121" />
+  </node>
+  <node id="123" name="Noladet Ala, Terminus">
+    <description>A large sand vein runs through the center of this room making it a wonderful idea to shore up the walls and roof with timbers.  Half the room is shored, though in disrepair, while the rest of the walls slowly dispense a fine dust into the atmosphere when touched.</description>
+    <position x="-620" y="220" z="0" />
+    <arc exit="east" move="east" destination="122" />
+  </node>
+  <node id="124" name="Noladet Ala, Terminus">
+    <description>About half the size of the rest of the areas, this tiny cavern appears to be where digging was abandoned.  Shaped like a cornucopia, this room narrows to a low point near the floor.  Tossed on the ground are some broken axe handles and one chipped and rusted axe head.</description>
+    <position x="-580" y="220" z="0" />
+    <arc exit="west" move="west" destination="122" />
+  </node>
+  <node id="125" name="Langenfirth, Blufe Path" note="Map40_Langenfirth_to_Therenborough.xml|Therenborough|Langenfirth">
+    <description>The rustic town is nestled in the Danduwen Forest, on the shore of a sheltered cove on Gwenalion Lake.  The fir and pine trees grow very tall and in thick stands, with a few birch and oak finding room to spread under the lower limbs of the taller firs.  The streets, more like paths, wind and twist past the huge tree trunks, obviously an effort to avoid cutting down any tree.</description>
+    <position x="120" y="-80" z="0" />
+    <arc exit="north" move="north" />
+    <arc exit="east" move="east" />
+    <arc exit="west" move="west" destination="2" />
+  </node>
+  <node id="126" name="Slafs Riza Rakstit" note="Slafs Riza Rakstit|Paper" color="#FF0000">
+    <description>A damp, musty scent wafts upward from barrels spread around the room's perimeter and drifts from the back room of the shed.  Shelves running around the shop hold containers of powdered and liquid dyes.  A glass cabinet displays information about several types of paper made on the premises.  Amidst the clutter, a clean marble counter holds today's selection of fine handmade paper.</description>
+    <position x="-800" y="60" z="0" />
+    <arc exit="go" move="go door" destination="94" />
+  </node>
+  <node id="127" name="Augs Uda" note="Augs Uda|Herbs" color="#FF0000">
+    <description>This hut's interior is larger than it appears outside the open archway that serves as its entrance.  A few hooks hang from the support posts, and two display cases run along the back wall.  A small cabinet, intricately carved with sunburst patterns, completes the furnishings.</description>
+    <position x="-900" y="100" z="0" />
+    <arc exit="go" move="go wood archway" destination="96" />
+  </node>
+  <node id="128" name="Siksraja, Village Garden">
+    <description>Neatly furrowed and planted with only a small path down the center that leads to a row of taffelberry bushes, this large garden is divided into several sections.  Tilted against the fence and the back of a tiny hut, a small wood cart with a broken wheel holds wood buckets and gardening implements.  A small area has been set aside to ferment mulch, and a dark pile in the far corner buzzes with flies.</description>
+    <position x="-920" y="100" z="0" />
+    <arc exit="southwest" move="southwest" destination="129" />
+    <arc exit="go" move="go gate" destination="96" />
+  </node>
+  <node id="129" name="Siksraja, Village Garden">
+    <description>The garden slopes down toward the lake, and a few plants appear to be thriving in the water.  Rows, neatly tilled for crops, are edged with mounds of carefully blended manure, dirt and garden waste to create rich mulch.  Slightly different pale green spikes fill two plots, and it is hard to tell if the crop is onions or garlic.</description>
+    <position x="-940" y="120" z="0" />
+    <arc exit="northeast" move="northeast" destination="128" />
+  </node>
+  <node id="130" name="Siksraja, Shaded Porch">
+    <description>Thick posts rise from the ground, supporting the floor and roof of this porch.  Split log railings guard against falls into the trough or hitching post below and enclose everything but the steps.  A rocking chair in the crook of the porch creaks with each passing breeze.  A bell hangs from the support above the hitching post.</description>
+    <position x="-960" y="60" z="0" />
+    <arc exit="climb" move="climb steps" destination="98" />
+    <arc exit="go" move="go thick door" destination="131" />
+  </node>
+  <node id="131" name="Visfarej Cehs" note="Visfarej Cehs|General Store" color="#FF0000">
+    <description>Merchandise hangs from every available beam and stocked shelves run along the perimeter of the room.  An empty stool sits next to a high counter as a clerk busily sorts through some items on a table.</description>
+    <position x="-960" y="40" z="0" />
+    <arc exit="east" move="east" destination="132" />
+    <arc exit="go" move="go thick door" destination="130" />
+  </node>
+  <node id="132" name="Garidznawk Cehs" note="Garidznawk Cehs|Cleric Shop" color="#FF0000">
+    <description>Pushed against one wall is a white table decorated with the emblems of various gods rendered in a rainbow of colors.  A braided rug set beneath a small table and two plain wood chairs completes a cozy corner for contemplation or conversation.</description>
+    <position x="-940" y="40" z="0" />
+    <arc exit="west" move="west" destination="131" />
+  </node>
+  <node id="133" name="Cietums, Dim Entrance" note="Jail" color="#00FF00">
+    <description>Built with sturdy walls of smooth river stones, this simple building serves as a jail for this small village.  Near the center of the room is a simple silverwood desk, the only furniture in this sparse office.  A single window looks out into the street, its frame secured with heavy iron bars built straight into the wall.</description>
+    <position x="-960" y="80" z="0" />
+    <arc exit="out" move="out" destination="99" />
+  </node>
+  <node id="134" name="Dzive Ezer" color="#0000FF">
+    <description>A small dock slants down over the rock-strewn shore into the water, providing a safe way out of the lake.  Here water crashes against a submerged rocky outcrop and its return digs holes in the bottom large enough to disrupt the lake's normal currents.</description>
+    <position x="-960" y="140" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="135" />
+    <arc exit="south" move="swim south" destination="143" />
+    <arc exit="climb" move="climb dock" destination="102" />
+  </node>
+  <node id="135" name="Dzive Ezer" color="#0000FF">
+    <description>Blue water ripples gently past, carrying bits of forest debris on its way to the shore.  The village's cultivated garden shows as orderly rows but what type of crops might be growing is not discernible from this distance.  Littered with debris and large rocks, the closest bank is quite a distance above the lake's water level.</description>
+    <position x="-940" y="160" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="136" />
+    <arc exit="northwest" move="swim northwest" destination="134" />
+  </node>
+  <node id="136" name="Dzive Ezer" color="#0000FF">
+    <description>The northerly view from this part of the lake is of the village's main street that runs toward the forest.  To the south, the lake stretches into the distance, appearing to lap at the feet of the looming mountains.  A small whirlpool to the southeast serves to caution swimmers about becoming complacent in the water.</description>
+    <position x="-920" y="180" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="137" />
+    <arc exit="northwest" move="swim northwest" destination="135" />
+  </node>
+  <node id="137" name="Dzive Ezer" color="#0000FF">
+    <description>The bottom of the lake begins to disappear as the water becomes deeper.  Fed by an underground spring and precipice runoff, the lake's temperature is noticeably cooler than expected, which is probably the result of snowmelt from the peaks.  Across the lake, the mountain range rises majestically, casting shadows on the water.</description>
+    <position x="-900" y="200" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="138" />
+    <arc exit="northwest" move="swim northwest" destination="136" />
+  </node>
+  <node id="138" name="Dzive Ezer" color="#0000FF">
+    <description>Multicolored pebbles on the bottom of the lake glisten as the clear water magnifies the light.  Growing in the lake are small plants mixed with several grass species, some sticking their tops above the surface.  A squirming beetle grips a twig as it swirls away from the shore.</description>
+    <description>Small plants mixed with several grass species grow in the lake and some of their tops stretch into the night air above the surface.  Dark leaflets project their shadows upon the surface as some vegetation floats past.</description>
+    <position x="-880" y="220" z="0" />
+    <arc exit="north" move="swim north" destination="142" />
+    <arc exit="northwest" move="northwest" destination="137" />
+    <arc exit="climb" move="climb dock" destination="139" />
+  </node>
+  <node id="139" name="Siksraja, Zivis Feldesant Dock">
+    <description>The lake bank has been deeply gouged from years of water swirling around a rather large boulder.  Constructed utilizing the boulder as a watery base, this wood platform overlooks the lake, providing dry access to the deeper water.  Split pine logs form a fence about the height of a Gnome on the west side of the platform.</description>
+    <position x="-860" y="220" z="0" />
+    <arc exit="up" move="up" destination="95" />
+    <arc exit="down" move="down" destination="142" />
+    <arc exit="go" move="go ramshackle shack" destination="140" />
+    <arc exit="go" move="go lake" destination="138" />
+    <arc exit="go" move="go shack" destination="140" />
+  </node>
+  <node id="140" name="Siksraja, Zivis Cehs" note="Zivis Cehs|Fishing Supply" color="#FF0000">
+    <description>The faint scent of fish tickles your nose in this neat as a pin shack.  A long wood counter, with a rack above it, lines the back wall.  Diagonally suspended between two corners is a hammock fashioned from used fish nets.  A huge glass bowl, filled with dirt and alive with worms, props the door open.</description>
+    <position x="-840" y="220" z="0" />
+    <arc exit="out" move="out" destination="139" />
+    <arc exit="go" move="go net hammock" destination="141" />
+  </node>
+  <node id="141" name="Zivis Cehs, Net Hammock">
+    <description>The scarred lines in the wood plank ceiling seem to swing in time with the hammock as the warmth from your body releases the scent of fish from the netting.</description>
+    <position x="-820" y="220" z="0" />
+    <arc exit="out" move="out" destination="140" />
+  </node>
+  <node id="142" name="Dzive Ezer">
+    <description>Weathered piles support the farthest reaches of the dock above and provide a visible boundary for the shallow water.  The combination of piles and a large boulder upon which the dock rests form gently swirling water that never stops moving.  Protected from the weather by the dock, this spot is a favorite for passing time in knee deep water activities.</description>
+    <position x="-880" y="200" z="0" />
+    <arc exit="south" move="south" destination="138" />
+    <arc exit="up" move="up" destination="139" />
+  </node>
+  <node id="143" name="Dzive Ezer" color="#0000FF">
+    <description>Farther from shore and rescue, the gentle lake begins to exhibit its darker nature.  Beneath the deceptively smooth surface, the water suddenly begins to move swiftly, pulling and pushing in turn.  Care needs to be exercised to keep from being swept off a chosen course.</description>
+    <position x="-960" y="180" z="0" />
+    <arc exit="north" move="swim north" destination="134" />
+    <arc exit="southeast" move="swim southeast" destination="144" />
+    <arc exit="south" move="swim south" destination="143" />
+    <arc exit="west" move="swim west" destination="143" />
+  </node>
+  <node id="144" name="Dzive Ezer" color="#0000FF">
+    <description>Close to the center of the lake, only accomplished swimmers should venture this far offshore.  Water stretches in all directions making it easy to become confused and lose one's bearings.  No sounds from the shore carry this far out, insuring the silence of the water.</description>
+    <position x="-940" y="200" z="0" />
+    <arc exit="north" move="swim north" destination="144" />
+    <arc exit="east" move="swim east" destination="144" />
+    <arc exit="southeast" move="swim southeast" destination="145" />
+    <arc exit="southwest" move="swim southwest" destination="144" />
+    <arc exit="northwest" move="swim northwest" destination="143" />
+  </node>
+  <node id="145" name="Dzive Ezer" color="#0000FF">
+    <description>The once distant mountains loom much larger in this part of the lake.  A school of small fish swims just beneath the surface, zigzagging with amazing oneness and agility considering they are moving against the current.</description>
+    <position x="-920" y="220" z="0" />
+    <arc exit="northwest" move="swim northwest" destination="144" />
+  </node>
+  <node id="146" name="Clover Fields">
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted with a sturdy, stubby grass and clover, the clover's tiny white flowers dot the landscape, giving it an uneven texture.  An occasional tree provides respite from summer storms.</description>
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted to clover and a sturdy, stubby grass, some seeds sprout before others giving the land an uneven texture.  An occasional tree, dressed in green buds that unfold in the warming sun, stands guard over new ground growth beneath its limbs.</description>
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted with a sturdy, stubby grass and clover, the clover's tiny white flowers dot the land giving it an uneven texture.  An occasional tree provides respite from summer storms.</description>
+    <position x="-1000" y="-160" z="0" />
+    <arc exit="west" move="west" destination="147" />
+    <arc exit="east" move="east" destination="105" />
+  </node>
+  <node id="147" name="Clover Fields">
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted with a sturdy, stubby grass and clover, the clover's tiny white flowers dot the landscape, giving it an uneven texture.  An occasional tree provides respite from summer storms.</description>
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted to clover and a sturdy, stubby grass, some seeds sprout before others giving the land an uneven texture.  An occasional tree, dressed in green buds that unfold in the warming sun, stands guard over new ground growth beneath its limbs.</description>
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted with a sturdy, stubby grass and clover, the clover's tiny white flowers dot the land giving it an uneven texture.  An occasional tree provides respite from summer storms.</description>
+    <position x="-1020" y="-160" z="0" />
+    <arc exit="east" move="east" destination="146" />
+    <arc exit="climb" move="climb gentle hill" destination="148" />
+  </node>
+  <node id="148" name="Clover Fields" note="2Deer">
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted with a sturdy, stubby grass and clover, the clover's tiny white flowers dot the landscape, giving it an uneven texture.  An occasional tree provides respite from summer storms.</description>
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted to clover and a sturdy, stubby grass, some seeds sprout before others giving the land an uneven texture.  An occasional tree, dressed in green buds that unfold in the warming sun, stands guard over new ground growth beneath its limbs.</description>
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted with a sturdy, stubby grass and clover, the clover's tiny white flowers dot the land giving it an uneven texture.  An occasional tree provides respite from summer storms.</description>
+    <position x="-1020" y="-180" z="0" />
+    <arc exit="east" move="east" destination="149" />
+    <arc exit="climb" move="climb gentle hill" destination="147" />
+  </node>
+  <node id="149" name="Clover Fields">
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted with a sturdy, stubby grass and clover, the clover's tiny white flowers dot the landscape, giving it an uneven texture.  An occasional tree provides respite from summer storms.</description>
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted with a sturdy, stubby grass and clover, the clover's tiny white flowers dot the land giving it an uneven texture.  An occasional tree provides respite from summer storms.</description>
+    <position x="-1000" y="-180" z="0" />
+    <arc exit="east" move="east" destination="150" />
+    <arc exit="west" move="west" destination="148" />
+  </node>
+  <node id="150" name="Clover Fields">
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted with a sturdy, stubby grass and clover, the clover's tiny white flowers dot the landscape, giving it an uneven texture.  An occasional tree provides respite from summer storms.</description>
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <position x="-980" y="-180" z="0" />
+    <arc exit="east" move="east" destination="151" />
+    <arc exit="west" move="west" destination="149" />
+  </node>
+  <node id="151" name="Clover Fields">
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted with a sturdy, stubby grass and clover, the clover's tiny white flowers dot the landscape, giving it an uneven texture.  An occasional tree provides respite from summer storms.</description>
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted to clover and a sturdy, stubby grass, some seeds sprout before others giving the land an uneven texture.  An occasional tree, dressed in green buds that unfold in the warming sun, stands guard over new ground growth beneath its limbs.</description>
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <position x="-960" y="-180" z="0" />
+    <arc exit="west" move="west" destination="150" />
+    <arc exit="climb" move="climb rolling hill" destination="155" />
+  </node>
+  <node id="152" name="Clover Fields">
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted with a sturdy, stubby grass and clover, the clover's tiny white flowers dot the landscape, giving it an uneven texture.  An occasional tree provides respite from summer storms.</description>
+    <position x="-1020" y="-200" z="0" />
+    <arc exit="east" move="east" destination="153" />
+  </node>
+  <node id="153" name="Clover Fields">
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted with a sturdy, stubby grass and clover, the clover's tiny white flowers dot the landscape, giving it an uneven texture.  An occasional tree provides respite from summer storms.</description>
+    <position x="-1000" y="-200" z="0" />
+    <arc exit="east" move="east" destination="154" />
+    <arc exit="west" move="west" destination="152" />
+  </node>
+  <node id="154" name="Clover Fields">
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted with a sturdy, stubby grass and clover, the clover's tiny white flowers dot the landscape, giving it an uneven texture.  An occasional tree provides respite from summer storms.</description>
+    <position x="-980" y="-200" z="0" />
+    <arc exit="east" move="east" destination="155" />
+    <arc exit="west" move="west" destination="153" />
+  </node>
+  <node id="155" name="Clover Fields" note="3Deer">
+    <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
+    <description>Gentle hills roll up and down as the darkened field blends into the night horizon.  Planted with a sturdy, stubby grass and clover, the clover's tiny white flowers dot the landscape, giving it an uneven texture.  An occasional tree provides respite from summer storms.</description>
+    <position x="-960" y="-200" z="0" />
+    <arc exit="west" move="west" destination="154" />
+    <arc exit="climb" move="climb rolling hill" destination="151" />
+  </node>
+  <node id="156" name="Duvli Rinu">
+    <description>The ceiling in this cramped space indicates it was once a sizeable square but it is filled with rubble that looks like the remnants of an earthslide.  A narrow passage, wide enough for one person, leads down into the earth.</description>
+    <position x="-1180" y="-20" z="1" />
+    <arc exit="southeast" move="southeast" destination="157" />
+    <arc exit="climb" move="climb rope ladder" destination="66" />
+  </node>
+  <node id="157" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  A faint flickering in the distance gives just enough light to avoid banging into the support beams.</description>
+    <position x="-1160" y="0" z="1" />
+    <arc exit="southeast" move="southeast" destination="158" />
+    <arc exit="northwest" move="northwest" destination="156" />
+  </node>
+  <node id="158" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  A thin rivulet trickles away from a small depression at the base of the west wall.</description>
+    <position x="-1140" y="20" z="1" />
+    <arc exit="southeast" move="southeast" destination="159" />
+    <arc exit="northwest" move="northwest" destination="157" />
+  </node>
+  <node id="159" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  Fastened to an upright is a faded scrap of paper containing some smeared writing.</description>
+    <position x="-1100" y="60" z="1" />
+    <arc exit="southeast" move="southeast" destination="160" />
+    <arc exit="northwest" move="northwest" destination="158" />
+  </node>
+  <node id="160" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  The sound of a twig cracking overhead serves as a reminder that the surface is very close in some parts of these tunnels.</description>
+    <position x="-1080" y="80" z="1" />
+    <arc exit="southeast" move="southeast" destination="161" />
+    <arc exit="northwest" move="northwest" destination="159" />
+  </node>
+  <node id="161" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  Protruding from either side of an overhead beam is a bent nail upon which a stubby candle has been impaled.</description>
+    <position x="-1060" y="100" z="1" />
+    <arc exit="north" move="north" destination="162" />
+    <arc exit="south" move="south" destination="163" />
+    <arc exit="northwest" move="northwest" destination="160" />
+  </node>
+  <node id="162" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  The dusty floor is loaded with tracks that lead in all directions.</description>
+    <position x="-1060" y="80" z="1" />
+    <arc exit="north" move="north" destination="169" />
+    <arc exit="northeast" move="northeast" destination="170" />
+    <arc exit="east" move="east" destination="171" />
+    <arc exit="south" move="south" destination="161" />
+  </node>
+  <node id="163" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  A splintered ceiling beam has been repaired by nailing another board over the damaged ends, which has lowered the available clearance height.</description>
+    <position x="-1060" y="120" z="1" />
+    <arc exit="north" move="north" destination="161" />
+    <arc exit="south" move="south" destination="164" />
+  </node>
+  <node id="164" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  Gouged into the dirt itself is the word Dawnastruri.</description>
+    <position x="-1060" y="140" z="1" />
+    <arc exit="north" move="north" destination="163" />
+    <arc exit="southeast" move="southeast" destination="165" />
+  </node>
+  <node id="165" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  A thin rivulet trickles away from a small depression at the base of the west wall.</description>
+    <position x="-980" y="160" z="1" />
+    <arc exit="northeast" move="northeast" destination="183" />
+    <arc exit="southwest" move="southwest" destination="166" />
+    <arc exit="northwest" move="northwest" destination="164" />
+  </node>
+  <node id="166" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  A slight dampness in the tunnel air and some mold climbing the uprights hints at this area's proximity to the lake.</description>
+    <position x="-1020" y="180" z="1" />
+    <arc exit="northeast" move="northeast" destination="165" />
+    <arc exit="southwest" move="southwest" destination="167" />
+  </node>
+  <node id="167" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  The sound of a twig cracking overhead serves as a reminder that the surface is very close in some parts of these tunnels.</description>
+    <position x="-1040" y="200" z="1" />
+    <arc exit="northeast" move="northeast" destination="166" />
+    <arc exit="southwest" move="southwest" destination="168" />
+  </node>
+  <node id="168" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  The tunnel air is freshened by the scent of the lake entering from a hole concealed by the slats of a latticework behind a building.</description>
+    <position x="-1060" y="220" z="1" />
+    <arc exit="north" move="north" destination="187" />
+    <arc exit="northeast" move="northeast" destination="167" />
+    <arc exit="south" move="south" destination="185" />
+  </node>
+  <node id="169" name="Duvli Rinu" color="#C0C0C0">
+    <description>Space is tight here, under the old oak tree.  Tangled roots and moldy leaves mix with the dirt floor of this narrow, sloping pathway that leads deep into the earth.  In one corner is an empty nest, most likely belonging to a mouse.</description>
+    <position x="-1060" y="60" z="1" />
+    <arc exit="south" move="south" destination="162" />
+    <arc exit="climb" move="climb rope ladder" destination="82" />
+  </node>
+  <node id="170" name="Duvli Rinu" color="#C0C0C0">
+    <description>At first this hole appears to simply drop straight down a few feet, enough to allow one to stand.  As one becomes accustomed to the scant light it is obvious that it widens into a cavern that heads southwest.  The rough floor is dry and dusty and covered with dead leaves that will crunch when stepped upon, which would signal anyone in the tunnel of your arrival.</description>
+    <position x="-1040" y="60" z="1" />
+    <arc exit="southwest" move="southwest" destination="162" />
+    <arc exit="climb" move="climb rope ladder" destination="92" />
+  </node>
+  <node id="171" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  Fastened to the wood post with a large nail is a rope sling that holds a burnt-out torch.</description>
+    <position x="-1020" y="80" z="1" />
+    <arc exit="north" move="north" destination="172" />
+    <arc exit="northeast" move="northeast" destination="173" />
+    <arc exit="west" move="west" destination="162" />
+  </node>
+  <node id="172" name="Duvli Rinu" color="#C0C0C0">
+    <description>This angled hole slopes sharply as it descends beneath the forest floor.  The air smells damp probably from the small puddles remaining from the last rainfall.  What appears to be a grey tail feather lies near some otherwise indistinguishable remains.</description>
+    <position x="-1020" y="60" z="1" />
+    <arc exit="south" move="south" destination="171" />
+    <arc exit="climb" move="climb rope ladder" destination="93" />
+  </node>
+  <node id="173" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  A slat meant to hold back the earthen wall has lost some nails and juts into the passageway.</description>
+    <position x="-1000" y="40" z="1" />
+    <arc exit="east" move="east" destination="174" />
+    <arc exit="southwest" move="southwest" destination="171" />
+  </node>
+  <node id="174" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  The tunnel air is noticeably freshened by the scent of the lake that enters through a small hole between the shoring and the ceiling.</description>
+    <position x="-980" y="40" z="1" />
+    <arc exit="northeast" move="northeast" destination="186" />
+    <arc exit="west" move="west" destination="173" />
+  </node>
+  <node id="175" name="Duvli Rinu" color="#C0C0C0">
+    <description>Dank and dusty, this cramped cavity runs the opposite direction from the hole dug in the ground above.  While it may be the lack of sunlight, the walls here look to be a dark brown, seem crumbly in texture and emit the scent of hay and manure.</description>
+    <position x="-960" y="-40" z="1" />
+    <arc exit="south" move="south" destination="186" />
+    <arc exit="climb" move="climb rope ladder" destination="56" />
+  </node>
+  <node id="176" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  The dusty floor is loaded with tracks that lead in all directions.</description>
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  A good-sized tree root runs across the floor of the tunnel, the builders probably having decided to step over it rather than hack it out and have to fill in the resultant hole.</description>
+    <position x="-920" y="20" z="1" />
+    <arc exit="south" move="south" destination="177" />
+    <arc exit="northwest" move="northwest" destination="186" />
+  </node>
+  <node id="177" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  Stretched to the breaking point, the quiet of the tunnel seems to press downward so heavily it is almost tangible.</description>
+    <position x="-920" y="40" z="1" />
+    <arc exit="north" move="north" destination="176" />
+    <arc exit="southeast" move="southeast" destination="178" />
+  </node>
+  <node id="178" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  Fastened to the wood post with a large nail is a rope sling that holds a burnt-out torch.</description>
+    <position x="-880" y="80" z="1" />
+    <arc exit="east" move="east" destination="179" />
+    <arc exit="southeast" move="southeast" destination="180" />
+    <arc exit="northwest" move="northwest" destination="177" />
+  </node>
+  <node id="179" name="Duvli Rinu" color="#C0C0C0">
+    <description>Dark spots in the earthen walls trace the path of a few tree roots that have spread far from their trunks.  Bits of grass mingle with the dirt in the shored up walls and the bottom of one of the posts protrudes far enough from the ceiling that care must be taken to avoid banging into it.</description>
+    <position x="-860" y="80" z="1" />
+    <arc exit="west" move="west" destination="178" />
+    <arc exit="climb" move="climb rope ladder" destination="91" />
+  </node>
+  <node id="180" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  Protruding from either side of an overhead beam is a bent nail upon which a stubby candle has been impaled.</description>
+    <position x="-840" y="120" z="1" />
+    <arc exit="west" move="west" destination="181" />
+    <arc exit="northwest" move="northwest" destination="178" />
+  </node>
+  <node id="181" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  A slight dampness in the tunnel air and some mold climbing the uprights hints at this area's proximity to the lake.</description>
+    <position x="-860" y="120" z="1" />
+    <arc exit="east" move="east" destination="180" />
+    <arc exit="southwest" move="southwest" destination="182" />
+  </node>
+  <node id="182" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  A faint flickering in the distance gives just enough light to avoid banging into the support beams.</description>
+    <position x="-880" y="140" z="1" />
+    <arc exit="northeast" move="northeast" destination="181" />
+    <arc exit="west" move="west" destination="183" />
+  </node>
+  <node id="183" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  A good-sized tree root runs across the floor of the tunnel, the builders probably having decided to step over it rather than hack it out and have to fill in the resultant hole.</description>
+    <position x="-900" y="140" z="1" />
+    <arc exit="northeast" move="northeast" destination="184" />
+    <arc exit="east" move="east" destination="182" />
+    <arc exit="southwest" move="southwest" destination="165" />
+  </node>
+  <node id="184" name="Duvli Rinu" color="#C0C0C0">
+    <description>Muffled voices from above serve as a reminder that silence is golden and any noise made here might well carry overhead.  A damp, cool breeze seems to flow from the southwest, just enough to wonder if the tunnel might be flooded considering its proximity to the lake.</description>
+    <position x="-880" y="120" z="1" />
+    <arc exit="southwest" move="southwest" destination="183" />
+    <arc exit="climb" move="climb rope ladder" destination="98" />
+  </node>
+  <node id="185" name="Duvli Rinu" color="#C0C0C0">
+    <description>Overhead, slats form a latticework that supports the earthen ceiling and constrains dust caused by vibrations from the shed's floorboards.  An odor like fermenting fruit tickles the nose and mingles with the damp-dry scent of the dirt.</description>
+    <position x="-1060" y="240" z="1" />
+    <arc exit="north" move="north" destination="168" />
+    <arc exit="climb" move="climb ladder" destination="103" />
+  </node>
+  <node id="186" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  Someone appears to have been attempting to mark their tracks on the earthen wall.</description>
+    <position x="-960" y="-20" z="1" />
+    <arc exit="north" move="north" destination="175" />
+    <arc exit="southeast" move="southeast" destination="176" />
+    <arc exit="southwest" move="southwest" destination="174" />
+  </node>
+  <node id="187" name="Duvli Rinu">
+    <description>Pine logs, once part of the forest that grew down to the lake's shore, brace the walls and ceiling in a pattern of large X's behind which the earthen walls can be seen.  Dirt floors and walls release no dust when touched, and though firmly packed, absorb most of the sounds of movement.  Fastened to the wood post with a large nail is a rope sling that holds a burnt-out torch.</description>
+    <position x="-1060" y="200" z="1" />
+    <arc exit="south" move="south" destination="168" />
+    <arc exit="northwest" move="northwest" destination="177" />
+  </node>
+  <node id="188" name="Siksraja, Fawaudzi Akren">
+    <description>The stark nature of this mountain area is revealed in the huge chunks of rock, which protrude haphazardly from the soil like toy blocks thrown in a tantrum.  Some of the vegetation that is green provides a little relief from the beige and grey of the stone.  Beneath an assortment of boulders deposited by a mountain slide, the path disappears.</description>
+    <position x="-1200" y="40" z="0" />
+    <arc exit="climb" move="climb path" destination="78" />
+    <arc exit="climb" move="climb boulder" destination="189" />
+  </node>
+  <node id="189" name="Siksraja, Upon the Fawaudzi Akren">
+    <description>Affording a clear view of the mountain range and the lake far below, this boulder juts from the mountainside like a level front porch.  Several possible pathways to continue the climb present themselves but none appear promising from a safety standpoint.  The vegetation on the mountainside is sparse near a narrow crevice.</description>
+    <position x="-1220" y="20" z="0" />
+    <arc exit="go" move="go crevice" destination="190" />
+    <arc exit="climb" move="climb boulder" destination="188" />
+  </node>
+  <node id="190" name="Dzilvawta Ala, Redivawzis Niche" note="Redivawzis Niche|Rakash favors|Mrod|Coshivi|Enelne|pilgrim's badge|altar|shrine-2-17" color="#A6A3D9">
+    <description>Sandstone and earth form a narrow, long cocoon with just enough height to stand upright.  The roughly chiseled ceiling and uneven walls appear deliberately patterned.  Directly in front of a small niche, recessed into the back wall, are remnants of a fire that scorched the earthen floor.</description>
+    <description>The roughly chiseled ceiling and uneven walls appear patterned.  Against the back wall, just beneath a small niche, the earthen floor is littered with the remnants of a fire.</description>
+    <position x="-1240" y="0" z="0" />
+    <arc exit="out" move="out" destination="189" />
+  </node>
+  <node id="191" name="Dzirta Nars, Ieeja Istava" note="Pack House, Entrance Room" color="#00FF00">
+    <description>This large room has been divided by curtains which can be pulled back to allow for large meetings.  The area by the door is guarded by Gazlok, whose sole task is to ensure that only Rakash may enter.  His austere cot and trunk leave plenty of space for passage though his chair is often used by those interested in discussing Rakash history or filled with a crony helping him pass time.</description>
+    <position x="-1000" y="80" z="0" />
+    <arc exit="east" move="east" destination="193" />
+    <arc exit="west" move="west" destination="192" />
+    <arc exit="go" move="go door" destination="101" />
+  </node>
+  <node id="192" name="Dzirta Nars, Fasuteka" note="Pack House, Library" color="#00FF00">
+    <description>Wide floor planks of polished oak run the length of this room and beyond while the walls are rounded fresh-wood blonde logs chinked with mud and straw.  A large painting hangs above a small bookshelf on the far wall.</description>
+    <position x="-1020" y="80" z="0" />
+    <arc exit="east" move="east" destination="191" />
+  </node>
+  <node id="193" name="Dzirta Nars, Parasts Istava" note="Pack House, Common Room" color="#00FF00">
+    <description>A few tables and chairs provide seating for those wishing to socialize, share a drink, or play a game.  Wooden stools, complete with backs and arms to contain those who might overindulge, surround a wide counter.  When Gazlok remembers to wind it, a grandfather orlog tracks the passage of time for those inclined to forget to go home.</description>
+    <position x="-980" y="80" z="0" />
+    <arc exit="west" move="west" destination="191" />
+  </node>
+  <node id="194" name="Cefrit of Odcoru, Showroom" note="Cefrit of Odcoru|Armor" color="#FF0000">
+    <description>Rolled and tied skins that provide insulation are secured to the ceiling, allowing light to sift through the tiny cracks in the joints of the wide sideboards of the wagon.  A curtain across the back wall divides the small showroom from the private areas, while a dark green rug muffles the occasional creak from the floorboards.  Hooks, tables and shelves all display a variety of wares in the cramped area.</description>
+    <description>Rolled and tied skins that provide insulation when secured to the floor line the shop ceiling, allowing light to sift through the tiny cracks in the joints of the wide sideboards of the wagon.  A curtain across the back wall divides the small showroom from the private areas while a dark green rug muffles the creaks underfoot that have developed since the last round of reinforcement.</description>
+    <position x="-920" y="40" z="0" />
+    <arc exit="go" move="go grey door" destination="97" />
+  </node>
+  <node id="195" name="Uz Zinat" note="Uz Zinat|Jewelry" color="#FF0000">
+    <description>This cramped tent bears obvious signs of repair with lighter patches interrupting the heavy soot stains that cover its interior.  A braided carpet provides flooring while, on the table, a sputtering, half-burnt candle in a dull brass candlestick emits both light and a sulfurous scent.</description>
+    <position x="-900" y="40" z="0" />
+    <arc exit="go" move="go tent flap" destination="97" />
+  </node>
+  <node id="196" name="Permutations of Siksraja" note="Permutations of Siksraja|Clothing" color="#FF0000">
+    <description>This small shop is brightened by gaethzen stars set into the top of its central support pole.  A plush rug covers the floor and swathes of colorful fabrics are tacked to the tent walls, their hues matching those of a stack of pillows arranged near the back.  Giving the tent a cluttered feel, wares are displayed upon every available surface, though many of the browsing Rakash customers seem to navigate the space without issue.</description>
+    <position x="-880" y="40" z="0" />
+    <arc exit="go" move="go exit flap" destination="97" />
+  </node>
+  <node id="197" name="Kifa Awrocis, Showroom" note="Kifa Awrocis|Weapons" color="#FF0000">
+    <description>Thick poles in an ingenious formation line the ceiling and provide plenty of angles from which to suspend the merchandise on display.  Carved into one of the wider supports is a small sign.</description>
+    <description>Thick poles in an ingenious formation support the tent roof and provide plenty of angles from which to suspend the merchandise on display.  Carved into one of the wider supports is a small sign.</description>
+    <position x="-880" y="60" z="0" />
+    <arc exit="go" move="go tent flap" destination="97" />
+  </node>
+  <node id="198" name="Siksraja, Koks Laukrajas">
+    <description>Myriad shoots spring from worn stumps, forming branching bushes of deep green leaves.  The bushes are scattered in loose rows here, as if basking in the sunshine.  A small path wanders through a thick clump of the bushes, leading away from the plantation.</description>
+    <description>Myriad shoots spring from worn stumps, forming branching bushes of dark green leaves.  The bushes are scattered in loose rows here, as if basking in the moonlight.  A small path wanders through a shadowy clump of bushes, leading away from the plantation.</description>
+    <position x="-820" y="0" z="0" />
+    <arc exit="northeast" move="northeast" destination="199" />
+    <arc exit="east" move="east" destination="204" />
+    <arc exit="southeast" move="southeast" destination="205" />
+    <arc exit="go" move="go small path" destination="91" />
+  </node>
+  <node id="199" name="Siksraja, Koks Laukrajas">
+    <description>Uneven rows of stumps, the remains of bushes chopped down in their prime, crisscross the ground.  Small shoots grow around the stumps, bravely returning life to the landscape.  Woodchips surround the stumps, testimony to the recent demise of the mulberries.</description>
+    <description>Uneven rows of stumps, the remains of bushes chopped down in their prime, crisscross the ground.  Small shoots grow around the stumps, bravely returning life to the shadowy landscape.  Somewhere in the distance, hoots from a hunting owl drift on the night breeze.</description>
+    <position x="-800" y="-20" z="0" />
+    <arc exit="east" move="east" destination="200" />
+    <arc exit="southeast" move="southeast" destination="203" />
+    <arc exit="south" move="south" destination="204" />
+    <arc exit="southwest" move="southwest" destination="198" />
+  </node>
+  <node id="200" name="Siksraja, Koks Laukrajas">
+    <description>Deer tracks weave amongst the stump rows, congregating in clumps where the new shoots have been mown down ruthlessly.  The beaten bare dirt patches outnumber the sparse grass clumps growing between the stumps.  An occasional insect sound breaks the silence.</description>
+    <description>Stump rows rise out of the shadows, standing amongst bare patches of dirt.  Deer tracks twist between the stumps, dim and indistinct in the dark.  Little sound breaks the silence, only the occasional sound of a bat or insect in the distance.</description>
+    <position x="-780" y="-20" z="0" />
+    <arc exit="southeast" move="southeast" destination="201" />
+    <arc exit="south" move="south" destination="203" />
+    <arc exit="southwest" move="southwest" destination="204" />
+    <arc exit="west" move="west" destination="199" />
+  </node>
+  <node id="201" name="Siksraja, Koks Laukrajas">
+    <description>Green leafy limbs almost obscure a dark hole underneath one of the bushes, concealing its inhabitants from scrutiny.  Uneven lines of paper mulberry bushes cover the ground, growing almost as tall as a Gor'Tog.  Even the slightest breeze sets the foliage rustling, filling the area with soft sounds.</description>
+    <description>Uneven lines of paper mulberry bushes cover the ground, casting dark shadows.  Dusky green leafy limbs conceal a deep hole underneath one of the bushes, hiding the inhabitants from discovery.  Inky pools of darkness lurk beneath the spreading foliage, camouflaging the slender trunks.</description>
+    <position x="-760" y="0" z="0" />
+    <arc exit="southwest" move="southwest" destination="202" />
+    <arc exit="west" move="west" destination="203" />
+    <arc exit="northwest" move="northwest" destination="200" />
+  </node>
+  <node id="202" name="Siksraja, Koks Laukrajas">
+    <description>Tall mulberry trees stretch their branches high overhead, meeting in a delicate tracery of leaves and twigs.  The heavy growth of leaves prevents anything else sprouting.  A network of exposed roots runs across the ground, ready to trip the unwary.</description>
+    <description>Tall mulberry trees stretch their branches high overhead, meeting in a delicate tracery of leaves and twigs.  The leaves block the night sky, throwing the ground into deep shadows.  A network of exposed roots runs across the earth, ready to trip the unwary.</description>
+    <position x="-780" y="20" z="0" />
+    <arc exit="north" move="north" destination="203" />
+    <arc exit="northeast" move="northeast" destination="201" />
+    <arc exit="south" move="south" destination="207" />
+    <arc exit="southwest" move="southwest" destination="206" />
+    <arc exit="west" move="west" destination="205" />
+    <arc exit="northwest" move="northwest" destination="204" />
+  </node>
+  <node id="203" name="Siksraja, Koks Laukrajas">
+    <description>Rising like a sentinel out of the rows of mulberry bushes, the bare trunk of a dead tree towers over the surrounding landscape.  Tall enough to hide a dwarf, the bushes stretch in meandering ranks, leaves barely touching the neighboring bushes.</description>
+    <description>Rising like a sentinel out of the rows of mulberry bushes, the bare trunk of a dead tree towers over the nighttime landscape.  Tall enough to hide a dwarf, the bushes stretch in meandering ranks, leaves barely touching their neighbors.</description>
+    <position x="-780" y="0" z="0" />
+    <arc exit="north" move="north" destination="200" />
+    <arc exit="east" move="east" destination="201" />
+    <arc exit="south" move="south" destination="202" />
+    <arc exit="southwest" move="southwest" destination="205" />
+    <arc exit="west" move="west" destination="204" />
+    <arc exit="northwest" move="northwest" destination="199" />
+  </node>
+  <node id="204" name="Siksraja, Koks Laukrajas">
+    <description>Fuzzy green leaves cover the fresh shoots that spring around chopped-off trunks.  Grass covers most of the ground between the rows of emerging bushes.  The rows stretch off into the distance in most directions, leaves swaying in the least bit of wind.</description>
+    <description>Dark green leaves cover the fresh shoots that spring around chopped-off trunks.  Grass covers most of the ground between the rows of emerging bushes stretching off into the shadows in most directions.</description>
+    <position x="-800" y="0" z="0" />
+    <arc exit="north" move="north" destination="199" />
+    <arc exit="northeast" move="northeast" destination="200" />
+    <arc exit="east" move="east" destination="203" />
+    <arc exit="southeast" move="southeast" destination="202" />
+    <arc exit="south" move="south" destination="205" />
+    <arc exit="west" move="west" destination="198" />
+  </node>
+  <node id="205" name="Siksraja, Koks Laukrajas">
+    <description>Sometime in the past something knocked over one of the trees cultivated here, and the trunk and bare limbs remain.  Other trees still thrive in irregular rows, limbs meeting high above.  The luxuriant growth has choked out any ground cover, leaving the ground bare.</description>
+    <description>Something long ago knocked over one of the trees cultivated here, and only the bare trunk and limbs remain.  Other trees still thrive in irregular rows, limbs meeting high above.  No ground cover grows beneath the trees, leaving the bare ground shrouded in shadows.</description>
+    <position x="-800" y="20" z="0" />
+    <arc exit="north" move="north" destination="204" />
+    <arc exit="northeast" move="northeast" destination="203" />
+    <arc exit="east" move="east" destination="202" />
+    <arc exit="southeast" move="southeast" destination="207" />
+    <arc exit="south" move="south" destination="206" />
+    <arc exit="northwest" move="northwest" destination="198" />
+  </node>
+  <node id="206" name="Siksraja, Koks Laukrajas">
+    <description>Leafy branches from a small grove of white mulberries twine overhead, blocking out the sky.  The least puff of wind sets the linked branches creaking and swaying.  A heavy litter of dead leaves carpets the ground, rustling underfoot</description>
+    <description>Leafy branches from a small grove of white mulberries twine overhead, blocking out the sky.  The least puff of wind sets the linked branches creaking and swaying.  A heavy litter of dead leaves carpets the ground, rustling underfoot.</description>
+    <position x="-800" y="40" z="0" />
+    <arc exit="north" move="north" destination="205" />
+    <arc exit="northeast" move="northeast" destination="202" />
+    <arc exit="east" move="east" destination="207" />
+  </node>
+  <node id="207" name="Siksraja, Koks Laukrajas">
+    <description>Flitting birds dart from branch to branch amongst the mulberry bushes, alighting briefly before once more taking wing.  A ratty skin lies abandoned under one of the bushes, rips and tears marring its surface.  The profuse foliage prevents other vegetation from taking root, leaving just bare dirt underfoot.</description>
+    <description>Abandoned beneath a bush, a ratty skin lies covered with rips and tears.  Deep shadows surround the mulberry bushes, obscuring the foliage and the bare earth alike.  The sound of chirping crickets periodically fills the area, before once more falling silent.</description>
+    <position x="-780" y="40" z="0" />
+    <arc exit="north" move="north" destination="202" />
+    <arc exit="west" move="west" destination="206" />
+    <arc exit="northwest" move="northwest" destination="205" />
+  </node>
+  <label text="Grey Clay Soldiers">
+    <position x="-570" y="-10" z="0" />
+  </label>
+  <label text="Grey Clay Mages">
+    <position x="-550" y="110" z="0" />
+  </label>
+  <label text="Cougar">
+    <position x="-1040" y="-150" z="0" />
+  </label>
+  <label text="Young Brocket Deer">
+    <position x="-1070" y="-140" z="0" />
+  </label>
+  <label text="Rakash favors">
+    <position x="-1255" y="-20" z="0" />
+  </label>
+  <label text="Grey Clay Archer">
+    <position x="-590" y="190" z="0" />
+  </label>
+  <label text="Brocket Deer">
+    <position x="-950" y="-190" z="0" />
+  </label>
+  <label text="Cougar">
+    <position x="-940" y="-180" z="0" />
+  </label>
+  <label text="Elder Brocket Deer">
+    <position x="-1110" y="-220" z="0" />
+  </label>
+  <label text="Cougar">
+    <position x="-1070" y="-210" z="0" />
+  </label>
+  <label text="Tree Snakes">
+    <position x="-820" y="-40" z="0" />
+  </label>
+</zone>
