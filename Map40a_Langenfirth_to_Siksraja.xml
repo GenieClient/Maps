@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-16"?>
+<?xml version="1.0" encoding="utf-16"?>
 <zone name="Siksraja" id="40a">
   <node id="1" name="Langenfirth, Trail Above the Fens">
     <description>Like an acrobat walking a tightrope, this small stretch buffers the forest from the bog and balances life on both sides.  Scrubby pine needles dropped on the path await nature's method of movement.  Crushed on the frozen snow or mashed into the moist spring ground, the next rain will sweep them into the bog to become part of the rich silt that will wash up in the next flood to nourish the surrounding lands.</description>
@@ -774,6 +774,7 @@
     <description>A large sand vein runs through the center of this room making it a wonderful idea to shore up the walls and roof with timbers.  Half the room is shored, though in disrepair, while the rest of the walls slowly dispense a fine dust into the atmosphere when touched.</description>
     <position x="-620" y="220" z="0" />
     <arc exit="east" move="east" destination="122" />
+    <arc exit="go" move="go gap" destination="208" />
   </node>
   <node id="124" name="Noladet Ala, Terminus">
     <description>About half the size of the rest of the areas, this tiny cavern appears to be where digging was abandoned.  Shaped like a cornucopia, this room narrows to a low point near the floor.  Tossed on the ground are some broken axe handles and one chipped and rusted axe head.</description>
@@ -1354,6 +1355,29 @@
     <arc exit="west" move="west" destination="206" />
     <arc exit="northwest" move="northwest" destination="205" />
   </node>
+  <node id="208" name="Noladet Ala, Painted Hallways">
+    <description>Dug through the earth, an expansive hallway curves to the northeast, cutting through a vein of rock and sand.  The excavated tunnel is supported with stone and timber pillars.  Painted along the walls are flowing patterns, a mosaic of hand prints and crude sketches of figures kneeling before a very large multi-limbed being.  The ground is hard packed but rippled, the sand pushed by strong and erratic air currents from the north.</description>
+    <position x="-640" y="220" z="0" />
+    <arc exit="northeast" move="northeast" destination="209" />
+    <arc exit="go" move="go gap" destination="123" />
+  </node>
+  <node id="209" name="Noladet Ala, Painted Hallways">
+    <description>Sinuously curving, a winding painting from the south smoothly blends into an array of carvings which continues to the north, depicting a very large multi-limbed being striding above stylized trees.  The opposing wall is compacted sand, which engulfs several stone pillars and timber braces.</description>
+    <position x="-620" y="200" z="0" />
+    <arc exit="southwest" move="southwest" destination="208" />
+    <arc exit="northwest" move="northwest" destination="210" />
+  </node>
+  <node id="210" name="Noladet Ala, Painted Hallways">
+    <description>A strong breeze comes from the north, fine particulates flowing along the ground and collecting in loose piles against the walls.  The stone wall is covered from floor to ceiling in indecipherable characters which are worn nearly smooth with the passage of sand.  The imagery depicts a very large multi-limbed figure, surrounded by written words and icons.  The figure appears to be grappling with what is either a mountain or a castle.</description>
+    <position x="-640" y="180" z="0" />
+    <arc exit="northeast" move="northeast" destination="211" />
+    <arc exit="southeast" move="southeast" destination="209" />
+  </node>
+  <node id="211" name="Noladet Ala, Painted Hallways">
+    <description>The hallway terminates in a perfectly flat and level wall of sand which continually sheds material, a strong breeze carrying stinging grains to the south.  A muffled cacophony of grinding stone can be heard beyond the barrier and is still quite loud despite the auditory damping of the compacted sand.  Along the stone side wall, a carved mosaic of worn words flows smoothly into the sandy obstruction, which abruptly obscures half of an image of a word-wrapped figure kneeling within a starburst.</description>
+    <position x="-620" y="160" z="0" />
+    <arc exit="southwest" move="southwest" destination="210" />
+  </node>
   <label text="Grey Clay Soldiers">
     <position x="-570" y="-10" z="0" />
   </label>
@@ -1386,5 +1410,8 @@
   </label>
   <label text="Tree Snakes">
     <position x="-820" y="-40" z="0" />
+  </label>
+  <label text="Clay Slayers">
+    <position x="-700" y="190" z="0" />
   </label>
 </zone>
