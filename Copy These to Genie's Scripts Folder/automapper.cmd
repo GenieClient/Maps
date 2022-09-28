@@ -431,7 +431,7 @@ ICE.PAUSE:
 	return
 
 MOVE.KNOCK:
-  if ($roundtime > 0) then {pause %command_pause}
+  if ($roundtime > 0) then pause %command_pause
 	matchre MOVE.KNOCK ^\.\.\.wait|^Sorry,|^You are still stun|^You can't do that while entangled
 	matchre SHARD.FAILED Sorry\, you\'re not a citizen
 	matchre MOVE.DONE %move_OK|All right, welcome back|opens the door just enough to let you slip through|wanted criminal
@@ -891,7 +891,7 @@ MOVE.DONE:
 	if (!$standing) then gosub STAND
 	if ((%cloak_off) && (matchre ("$lefthand|$righthand","%cloaknouns"))) then gosub WEAR.CLOAK
 	if ($caravan) then goto CARAVAN
-	if ($powerwalk && ($Attunement.LearningRate < 34) && ($Attunement.Ranks < 1750)) then {goto POWERWALK}
+	if ($powerwalk && ($Attunement.LearningRate < 34) && ($Attunement.Ranks < 1750)) then goto POWERWALK
 	else
 		{
 		put #var powerwalk 0
@@ -906,7 +906,7 @@ RETURN:
 	pause 0.0001
 	if (!$standing) then gosub STAND
 	if ($caravan) then goto CARAVAN
-	if ($powerwalk && ($Attunement.LearningRate < 34) && ($Attunement.Ranks < 1750)) then {goto POWERWALK}
+	if ($powerwalk && ($Attunement.LearningRate < 34) && ($Attunement.Ranks < 1750)) then goto POWERWALK
 	else
 		{
 		put #var powerwalk 0
@@ -1299,7 +1299,7 @@ ACTION.FAIL:
 	put #echo
 
 ACTION.RETURN:
-  if ($roundtime > 0) then {pause %command_pause}
+  if ($roundtime > 0) then pause %command_pause
 	if (%subscript) then return
 	action (mapper) on
 	return
