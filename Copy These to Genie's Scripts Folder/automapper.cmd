@@ -31,7 +31,8 @@ else var infiniteLoopProtection 0.1
 # fixed trailing white space
 # unified indent to "  " (two spaces)
 # added paren's to lots of if statements
-# infiniteLoopProtection variable
+# infiniteLoopProtection variable based on FE
+# fixed a run condition between being inviso at the shard gate (STOP.INVIS) and (MOVE.INVIS)
 
 #2022-09-22
 # Hanryu - powerwalk smoother/ranger blend
@@ -408,12 +409,14 @@ ICE.PAUSE:
 MOVE.KNOCK:
   if ($roundtime > 0) then pause %command_pause
   if (%depth > 1) then waiteval (1 = %depth)
+  var movement knock gate
   matchre MOVE.KNOCK ^\.\.\.wait|^Sorry,|^You are still stun|^You can't do that while entangled
   matchre SHARD.FAILED Sorry\, you\'re not a citizen
   matchre MOVE.DONE %move_OK|All right, welcome back|opens the door just enough to let you slip through|wanted criminal
   matchre CLOAK.LOGIC ^You turn away, disappointed\.
-  matchre STOP.INVIS ^The gate guard can't see you
-  put knock gate
+# trigger will handle dropping inviso and send `put %movement`
+#  matchre STOP.INVIS ^The gate guard can't see you
+  put %movement
   matchwait 10
 
 SHARD.FAILED:
@@ -424,19 +427,6 @@ SHARD.FAILED:
   put .sharddetour
   matchwait 45
   goto MOVE.DONE
-
-STOP.INVIS:
-  if (%depth > 1) then waiteval (1 = %depth)
-  if ("$guild" = "Thief") then send khri stop silence vanish
-  if ("$guild" = "Necromancer") then send release eotb
-  if ("$guild" = "Moon Mage") then
-    {
-    send release rf
-    send release sov
-    }
-  if ("$guild" = "Ranger") then send release blend
-  pause %command_pause
-  goto MOVE.KNOCK
 
 CLOAK.LOGIC:
   gosub FIND.CLOAK
@@ -637,6 +627,7 @@ FATIGUE.CHECK:
   pause
 
 MOVE.INVIS:
+  if (%depth > 1) then waiteval (1 = %depth)
   if ("$guild" = "Thief") then send khri stop silence vanish
   if ("$guild" = "Necromancer") then send release eotb
   if ("$guild" = "Moon Mage") then
