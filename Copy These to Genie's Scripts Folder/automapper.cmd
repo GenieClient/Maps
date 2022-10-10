@@ -1,5 +1,8 @@
-# automapper.cmd version 8.2022-10-07
-# last changed: October 7, 2022
+# automapper.cmd version 8.2022-10-10
+# last changed: October 10, 2022
+# debug 5 is for outlander; genie debuglevel 10
+#debuglevel 10
+#debug 5
 
 # put #class arrive off
 # put #class combat off
@@ -15,12 +18,11 @@ var waitfor_action 0
 # 1: collect rocks on the ice road when lacking skates; 0; just wait 15 seconds with no RT instead
 var ice_collect 0
 # Decrease at your own risk, increase if you get infinte loop errors
-var infiniteLoopProtection 0.1
+#default is 0.1 for Outlander, 0.01 for Genie
+if def(version) then var var infiniteLoopProtection 0.01
+else var infiniteLoopProtection 0.1
 
-# debug 5 is for outlander == genie debug 10
-#debuglevel 10
-#debug 5
-#2022-10-07
+#2022-10-10
 # Hanryu - integrating Jon's WAVE
 # it's a pretty big refactor that is all @Jon#0664 fault
 # the wave loop is a lot more readable and more compact
