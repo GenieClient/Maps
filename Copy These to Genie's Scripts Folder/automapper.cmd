@@ -33,6 +33,7 @@ else var infiniteLoopProtection 0.1
 # added paren's to lots of if statements
 # infiniteLoopProtection variable based on FE
 # fixed a run condition between being inviso at the shard gate (STOP.INVIS) and (MOVE.INVIS)
+# replaced eval element() since that function is not Outlander supported
 
 #2022-09-22
 # Hanryu - powerwalk smoother/ranger blend
@@ -241,6 +242,7 @@ ACTIONS:
   action (mapper) goto MOVE.KNEEL when maybe if you knelt down first\?
   action (mapper) goto MOVE.LIE when ^The passage is too small to walk that way\.  You'll have to get down and crawl\.|There's just barely enough room here to squeeze through, and no more.
   action (mapper) var footitem $1;goto STOW.FOOT.ITEM when ^You notice (?:an |a )?(.+) at your feet, and do not wish to leave it behind\.
+  action (mapper) goto CLOAK.LOGIC when ^You turn away, disappointed\.
   action (skates) var wearing_skates 1 when ^You slide your ice skates on your feet and tightly tie the laces\.|^Your ice skates help you traverse the frozen terrain\.|^Your movement is hindered .* by your ice skates\.|^You tap some.*\bskates\b.*that you are wearing
   action (skates) var wearing_skates 0 when ^You untie your skates and slip them off of your feet\.
   action var slow_on_ice 1;echo Ice detected! when ^You had better slow down\! The ice is|^At the speed you are traveling
@@ -1107,8 +1109,8 @@ FIND.CLOAK:
   var cloak_worn 0
 
 TAP.CLOAK:
-  eval cloak_noun element ("%cloaknouns","%cloakloop")
-  if (!%cloak_noun) then return
+  var cloak_noun %cloaknouns[%cloakloop]
+  if (%cloak_noun = 0) then return
   var action tap my %cloak_noun
   var success ^You tap|^I could not find
   gosub ACTION
