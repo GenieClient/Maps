@@ -1,5 +1,5 @@
-# automapper.cmd version 8.2022-10-10
-# last changed: October 10, 2022
+# automapper.cmd version 8.2022-10-11
+# last changed: October 11, 2022
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
@@ -12,14 +12,16 @@
 
 #USER VARS:
 # Time to pause before sending a "put x" command
-var command_pause 0.02
+#default is 0.02 for Outlander, 0.001 for Genie
+if def(version) then var command_pause 0.001
+else var command_pause 0.02
 # 1: wait for correct confirmation of sent commands; 0: don't wait
 var waitfor_action 0
 # 1: collect rocks on the ice road when lacking skates; 0; just wait 15 seconds with no RT instead
 var ice_collect 0
 # Decrease at your own risk, increase if you get infinte loop errors
-#default is 0.1 for Outlander, 0.01 for Genie
-if def(version) then var var infiniteLoopProtection 0.01
+#default is 0.1 for Outlander, 0.001 for Genie
+if def(version) then var infiniteLoopProtection 0.001
 else var infiniteLoopProtection 0.1
 
 #2022-10-10
@@ -33,7 +35,6 @@ else var infiniteLoopProtection 0.1
 # added paren's to lots of if statements
 # infiniteLoopProtection variable based on FE
 # fixed a run condition between being inviso at the shard gate (STOP.INVIS) and (MOVE.INVIS)
-# replaced eval element() since that function is not Outlander supported
 
 #2022-09-22
 # Hanryu - powerwalk smoother/ranger blend
@@ -242,7 +243,6 @@ ACTIONS:
   action (mapper) goto MOVE.KNEEL when maybe if you knelt down first\?
   action (mapper) goto MOVE.LIE when ^The passage is too small to walk that way\.  You'll have to get down and crawl\.|There's just barely enough room here to squeeze through, and no more.
   action (mapper) var footitem $1;goto STOW.FOOT.ITEM when ^You notice (?:an |a )?(.+) at your feet, and do not wish to leave it behind\.
-  action (mapper) goto CLOAK.LOGIC when ^You turn away, disappointed\.
   action (skates) var wearing_skates 1 when ^You slide your ice skates on your feet and tightly tie the laces\.|^Your ice skates help you traverse the frozen terrain\.|^Your movement is hindered .* by your ice skates\.|^You tap some.*\bskates\b.*that you are wearing
   action (skates) var wearing_skates 0 when ^You untie your skates and slip them off of your feet\.
   action var slow_on_ice 1;echo Ice detected! when ^You had better slow down\! The ice is|^At the speed you are traveling
@@ -1109,8 +1109,8 @@ FIND.CLOAK:
   var cloak_worn 0
 
 TAP.CLOAK:
-  var cloak_noun %cloaknouns[%cloakloop]
-  if (%cloak_noun = 0) then return
+  eval cloak_noun element ("%cloaknouns","%cloakloop")
+  if (!%cloak_noun) then return
   var action tap my %cloak_noun
   var success ^You tap|^I could not find
   gosub ACTION
