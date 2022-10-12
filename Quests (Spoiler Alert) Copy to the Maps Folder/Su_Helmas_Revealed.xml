@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<zone name="Su Helmas: Revealed!" id="0">
+<zone name="Su Helmas: Revealed!" id="511">
   <node id="1" name="Plaza, Central Area" note="portal" color="#00FF00">
     <description />
     <position x="320" y="240" z="0" />

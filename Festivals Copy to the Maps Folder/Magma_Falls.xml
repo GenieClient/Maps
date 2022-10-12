@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<zone name="Magma Falls" id="0">
+<zone name="Magma Falls" id="603">
   <node id="1" name="Magma Falls, Lava Promenade" note="Lava Promenade">
     <description>Walking here is precarious as the path narrows to reveal liquid pools of brilliant orange far below on either side.  Dripping from the monumentally tall dome overhead, molten rock cascades downward in sporadic streams to border the raised thoroughfare.  Glimpses of the surrounding social areas within the volcano are distorted by the waves of heat radiating upward from the fiery depths.</description>
     <position x="160" y="80" z="0" />
