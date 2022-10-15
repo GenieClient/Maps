@@ -1,5 +1,5 @@
-# automapper.cmd version 8.2022-10-11
-# last changed: October 11, 2022
+# automapper.cmd version 8.2022-10-14
+# last changed: October 14, 2022
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
@@ -13,7 +13,7 @@
 #USER VARS:
 # Time to pause before sending a "put x" command
 #default is 0.02 for Outlander, 0.001 for Genie
-if def(version) then var command_pause 0.001
+if def(version) then var command_pause 0.01
 else var command_pause 0.02
 # 1: wait for correct confirmation of sent commands; 0: don't wait
 var waitfor_action 0
@@ -23,6 +23,12 @@ var ice_collect 0
 #default is 0.1 for Outlander, 0.001 for Genie
 if def(version) then var infiniteLoopProtection 0.001
 else var infiniteLoopProtection 0.1
+
+#2022-10-14
+# Shroom - Increased default genie pause slightly
+# Added additional match for move_OK to fix hangup at Crystalline Gorge (You move effortlessly through the shard/wall!)
+# Cleaned up some bad regex (unnecessary \')
+# Slightly increased matchwait timeout for Action to fix issues with skates 
 
 #2022-10-10
 # Hanryu - integrating Jon's WAVE
@@ -193,11 +199,11 @@ ABSOLUTE.TOP:
   var depth 0
   var movewait 0
   var move_TORCH You push up on the (stone basin|torch)\, and the stone wall closes\.
-  var move_OK ^Obvious (paths|exits)|^It's pitch dark|The shop appears to be closed\, but you catch the attention of a night attendant inside\,
+  var move_OK ^Obvious (paths|exits)|^It's pitch dark|The shop appears to be closed\, but you catch the attention of a night attendant inside\,|^You move effortlessly through the
   var move_FAIL ^You can't swim in that direction|You can't go there|^A powerful blast of wind blows you to the|^What were you referring to|^I could not find what you were referring to\.|^You can't sneak in that direction|^You can't ride your.+(broom|carpet) in that direction|^You can't ride that way\.$
   var move_RETRY_GO ^You can't climb that\.$
   var move_RETRY ^\.\.\.wait|^Sorry, you may only|^Sorry, system is slow|^The weight of all|lose your balance during the effort|^You are still stunned|^You're still recovering from your recent|^The mud gives way beneath your feet as you attempt to climb higher, sending you sliding back down the slope instead\!|You're not sure you can
-  var move_RETREAT ^You are engaged to|^You try to move, but you're engaged|^While in combat|^You can't do that while engaged|^You can't do that\!  You\'re in combat\!
+  var move_RETREAT ^You are engaged to|^You try to move, but you're engaged|^While in combat|^You can't do that while engaged|^You can't do that\!  You're in combat\!
   var move_WEB ^You can't do that while entangled in a web|As you start to move, you find yourself snared
   var move_WAIT ^You continue climbing|^You begin climbing|^You really should concentrate on your journey|^You step onto a massive stairway
   var move_END_DELAY ^You reach|you reach\.\.\.$
@@ -213,7 +219,7 @@ ABSOLUTE.TOP:
   var move_STOW ^You need to empty your hands|^You should empty your hands first\!|^You can't possibly manage to cross|^You'll need to free up your hands|^Not while carrying something in your hands|^You must first free up your hands\.|^The going gets quite difficult and highlights the need to free up your hands|^You must have your hands free
   var move_FATIGUE ^You're too tired to try climbing|^You need to rest
   var move_BOAT ^The galley has just left|^You look around in vain for the galley
-  var move_INVIS ^The .* can\'t see you\!|^But no one can see you\!|^How can you .* can\'t even see you\?
+  var move_INVIS ^The .* can't see you\!|^But no one can see you\!|^How can you .* can't even see you\?
   var climb_mount_FAIL climb what?
 ACTIONS:
   action (mapper) if (%movewait = 0) then shift;if (%movewait = 0) then math depth subtract 1;if (len("%2") > 0) then echo Next move: %2 when %move_OK
@@ -413,7 +419,7 @@ MOVE.KNOCK:
   if (%depth > 1) then waiteval (1 = %depth)
   var movement knock gate
   matchre MOVE.KNOCK ^\.\.\.wait|^Sorry,|^You are still stun|^You can't do that while entangled
-  matchre SHARD.FAILED Sorry\, you\'re not a citizen
+  matchre SHARD.FAILED Sorry\, you're not a citizen
   matchre MOVE.DONE %move_OK|All right, welcome back|opens the door just enough to let you slip through|wanted criminal
   matchre CLOAK.LOGIC ^You turn away, disappointed\.
 # trigger will handle dropping inviso and send `put %movement`
@@ -1233,10 +1239,10 @@ ACTION.MAPPER.ON:
   matchre ACTION.RETURN %success
   matchre ACTION.STOW.HANDS ^You must have at least one hand free to do that|^You need a free hand
   matchre ACTION.WAIT ^You're unconscious|^You are still stunned|^You can't do that while|^You don't seem to be able to
-  matchre ACTION.FAIL ^There isn\'t any more room|^You just can't get the .* to fit
+  matchre ACTION.FAIL ^There isn't any more room|^You just can't get the .* to fit
   matchre ACTION.STOW.UNLOAD ^You should unload
   put %action
-  matchwait 0.5
+  matchwait 2
   if (%waitfor_action = 1) then goto ACTION
   goto ACTION.RETURN
 
