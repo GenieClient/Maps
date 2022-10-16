@@ -1085,6 +1085,7 @@ ILITHI_1:
 if ("$zoneid" = "127") then gosub AUTOMOVE south
 if "$zoneid" = "6"  then gosub AUTOMOVE cross
 if ("$zoneid" = "7a") then gosub AUTOMOVE NTR
+if ("$zoneid" = "1a") then gosub AUTOMOVE cross
 if ("$zoneid" = "2") then gosub AUTOMOVE cross
 if ("$zoneid" = "2a") then gosub AUTOMOVE cross
 if ("$zoneid" = "67a") then gosub AUTOMOVE shard
@@ -1579,6 +1580,7 @@ if (("$zoneid" = "48") && !matchre("%destination", "(oasis|yeehar|haizen)")) the
 if (("$zoneid" = "42") && ("%detour" = "rakash")) then gosub AUTOMOVE lang
 if ("$zoneid" = "7a") then gosub AUTOMOVE NTR
 if ("$zoneid" = "2") then gosub AUTOMOVE cross
+if ("$zoneid" = "1a") then gosub AUTOMOVE cross
 if ("$zoneid" = "2a") then gosub AUTOMOVE cross
 if ("$zoneid" = "6")  then gosub AUTOMOVE cross
 if ("$zoneid" = "67a") then gosub AUTOMOVE shard
