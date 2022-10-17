@@ -12,7 +12,7 @@
 
 #USER VARS:
 # Time to pause before sending a "put x" command
-#default is 0.02 for Outlander, 0.001 for Genie
+#default is 0.02 for Outlander, 0.01 for Genie
 if def(version) then var command_pause 0.01
 else var command_pause 0.02
 # 1: wait for correct confirmation of sent commands; 0: don't wait
@@ -1243,8 +1243,8 @@ ACTION.MAPPER.ON:
   matchre ACTION.STOW.UNLOAD ^You should unload
   put %action
   matchwait 2
-  if (%waitfor_action = 1) then goto ACTION
-  goto ACTION.RETURN
+  if (%waitfor_action) then goto ACTION
+  else goto ACTION.RETURN
 
 ACTION.FAIL:
   put #echo
