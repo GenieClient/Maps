@@ -1,5 +1,5 @@
-# automapper.cmd version 8.2022-10-14
-# last changed: October 14, 2022
+# automapper.cmd version 8.2022-10-24
+# last changed: October 24, 2022
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
@@ -23,6 +23,11 @@ var ice_collect 0
 #default is 0.1 for Outlander, 0.001 for Genie
 if def(version) then var infiniteLoopProtection 0.001
 else var infiniteLoopProtection 0.1
+
+#2022-10-24
+# Hanryu - working on afordances for different system speeds on RT generating moves
+# added a wait in retry if waitfor_action = 1
+# Added inviso drop message on "get skates"
 
 #2022-10-14
 # Shroom - Increased default genie pause slightly
@@ -428,7 +433,7 @@ MOVE.KNOCK:
   matchwait 10
 
 SHARD.FAILED:
-  if ((%cloak_off) && matchre("$lefthand|$righthand", "%cloaknouns")) then gosub WEAR.CLOAK
+  if ((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) then gosub WEAR.CLOAK
   if ((!%cloak_off) && ("%cloak_worn" = "1")) then gosub RAISE.CLOAK
   if !matchre("$zoneid", "(66|67|68|69)") then goto MOVE.FAILED
   matchre MOVE.DONE YOU HAVE ARRIVED\!
@@ -445,11 +450,12 @@ MOVE.SNEAK:
 MOVE.SWIM:
 MOVE.RT:
 ####added this to stop trainer
-  pause %command_pause
-  if (%depth > 1) then waiteval (1 = %depth)
   eval movement replacere("%movement", "script crossingtrainerfix ", "")
   put %movement
-  pause %command_pause
+  wait
+# wait 1 second before checking the $RT variable, if confirmation is set to 1
+  if (%waitfor_action) then pause
+  if ($roundtime > 0) then pause $roundtime
   goto MOVE.DONE
 
 MOVE.TORCH:
@@ -740,6 +746,7 @@ MOVE.RETRY:
     pause
     goto MOVE.RETRY
     }
+  if (%waitfor_action) then wait
   pause %command_pause
   goto RETURN.CLEAR
 
@@ -1074,7 +1081,7 @@ STOW.FOOTWEAR:
 
 GET.SKATES:
   var action get my skates in my %skate.container
-  var success ^You get
+  var success ^You get|^You fade in for a moment as you get
   gosub ACTION
 
 WEAR.SKATES:

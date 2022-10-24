@@ -10,6 +10,8 @@
 # Thanks to @Dantia for helping me Genie-fy this
 # 2022-10-11
 #   initial release
+# 2022-10-24
+#   added a commented section to jump between 2 rooms
 #debug 5
 #debug 10
 
@@ -27,7 +29,10 @@ if matchre("%0", "help|HELP|Help|^$") then {
 var c 10
 top:
 if (%c < 0) then goto done
-  
+
+# if ($roomid = 245) then var destination 233
+# else var destination 245
+ 
 if ($roomid < 200) then {
   evalmath destination ($roomid + 200)
   }
