@@ -30,16 +30,16 @@ var c 10
 top:
 if (%c < 0) then goto done
 
-# if ($roomid = 245) then var destination 233
-# else var destination 245
+ if ($roomid = 363) then var destination 20
+ else var destination 363
  
-if ($roomid < 200) then {
-  evalmath destination ($roomid + 200)
-  }
-  else {
-  evalmath destination ($roomid - 200)
-  if (%destination < 1) then var destination 2
-  }
+#if ($roomid < 200) then {
+#  evalmath destination ($roomid + 200)
+#  }
+#  else {
+#  evalmath destination ($roomid - 200)
+#  if (%destination < 1) then var destination 2
+#  }
 pause 0.5
 if def(version) then var time @unixtime@
 else var time $unixtime

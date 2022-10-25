@@ -452,10 +452,8 @@ MOVE.RT:
 ####added this to stop trainer
   eval movement replacere("%movement", "script crossingtrainerfix ", "")
   put %movement
+  if (%depth > 1) then waiteval (1 = %depth)
   wait
-# wait 1 second before checking the $RT variable, if confirmation is set to 1
-  if (%waitfor_action) then pause
-  if ($roundtime > 0) then pause $roundtime
   goto MOVE.DONE
 
 MOVE.TORCH:
@@ -561,9 +559,8 @@ MOVE.SEARCH:
   if (%depth > 1) then waiteval (1 = %depth)
   put search
   waitfor You
-  pause $roundtime
+  if ($roundtime > 0) then pause %command_pause
   put %movement
-  pause %command_pause
   goto MOVE.DONE
 
 MOVE.OBJSEARCH:
