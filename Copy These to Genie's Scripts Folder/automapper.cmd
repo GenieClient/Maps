@@ -1,4 +1,4 @@
-# automapper.cmd version 8.2022-10-24
+# automapper.cmd version 8.2022-10-25
 # last changed: October 24, 2022
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
@@ -23,11 +23,15 @@ var ice_collect 0
 #default is 0.1 for Outlander, 0.001 for Genie
 if def(version) then var infiniteLoopProtection 0.001
 else var infiniteLoopProtection 0.1
+# echo next move? 1 = YES, 0 = NO
+var verbose 0
 
-#2022-10-24
-# Hanryu - working on afordances for different system speeds on RT generating moves
+#2022-10-22 thru 26
+# Hanryu, with a strong assist from TenderVittles
+#working on afordances for different system speeds on RT generating moves (MOVE.RT: label)
 # added a wait in retry if waitfor_action = 1
 # Added inviso drop message on "get skates"
+# add verbose flag to toggle next move echo
 
 #2022-10-14
 # Shroom - Increased default genie pause slightly
@@ -227,7 +231,7 @@ ABSOLUTE.TOP:
   var move_INVIS ^The .* can't see you\!|^But no one can see you\!|^How can you .* can't even see you\?
   var climb_mount_FAIL climb what?
 ACTIONS:
-  action (mapper) if (%movewait = 0) then shift;if (%movewait = 0) then math depth subtract 1;if (len("%2") > 0) then echo Next move: %2 when %move_OK
+  action (mapper) if (%movewait = 0) then shift;if (%movewait = 0) then math depth subtract 1;if ((len("%2") > 0) && (%verbose)) then echo Next move: %2 when %move_OK
   action (mapper) goto MOVE.TORCH when %move_TORCH
   action (mapper) goto MOVE.FAILED when %move_FAIL
   action (mapper) goto MOVE.RETRY.GO when %move_RETRY_GO
@@ -593,7 +597,7 @@ MOVE.SCRIPT.DONE:
   var subscript 0
   shift
   math depth subtract 1
-  if (len("%2") > 0) then echo Next move: %2
+  if ((len("%2") > 0) && (%verbose)) then echo Next move: %2
   action (mapper) on
   goto MOVE.DONE
 
