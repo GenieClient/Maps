@@ -4,29 +4,7 @@
 #debuglevel 10
 #debug 5
 
-# put #class arrive off
-# put #class combat off
-# put #class joust off
-# put #class racial off
-# put #class rp off
-
-#USER VARS:
-# Time to pause before sending a "put x" command
-#default is 0.02 for Outlander, 0.01 for Genie
-if def(version) then var command_pause 0.01
-else var command_pause 0.02
-# 1: wait for correct confirmation of sent commands; 0: don't wait
-var waitfor_action 0
-# 1: collect rocks on the ice road when lacking skates; 0; just wait 15 seconds with no RT instead
-var ice_collect 0
-# Decrease at your own risk, increase if you get infinte loop errors
-#default is 0.1 for Outlander, 0.001 for Genie
-if def(version) then var infiniteLoopProtection 0.001
-else var infiniteLoopProtection 0.1
-# echo next move? 1 = YES, 0 = NO
-var verbose 0
-
-#2022-10-22 thru 26
+#2022-10-22 thru XX
 # Hanryu, with a strong assist from TenderVittles
 # working on afordances for different system speeds on RT generating moves (MOVE.RT: label)
 # added a wait in retry if waitfor_action = 1
@@ -175,19 +153,76 @@ var verbose 0
 # #alias {map1} {#tvar mapwalk 1}
 #
 
+## use me for if you need an input
+if matchre("%0", "help|HELP|Help|^$") then {
+  put #echo #33CC99 ¤~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~¤
+  put #echo #33CC99 §  Welcome to automapper Setup!                                    §
+  put #echo #33CC99 §  Use the command line to set the following preferences:          §
+  put #echo #33CC99 §    Typeahead                                                     §
+  put #echo #33CC99 §      Standard Account = 1, Premium Account = 2, LTB Premium = 3  §
+  put #echo #33CC99 §      #var automapper.typeahead 1                                 §
+  put #echo #33CC99 §    Pause                                                         §
+  put #echo #33CC99 §      Time to pause before sending a "put x" command              §
+  put #echo #33CC99 §      #var automapper.pause 0.01                                  §
+  put #echo #33CC99 §    Confirmation                                                  §
+  put #echo #33CC99 §      1: wait for correct confirmation of sent commands           §
+  put #echo #33CC99 §      0: don't wait                                               §
+  put #echo #33CC99 §      #var automapper.confirmation 1                              §
+  put #echo #33CC99 §    Infinite Loop Protection                                      §
+  put #echo #33CC99 §      Increase if you get infinte loop errors                     §
+  put #echo #33CC99 §      #var automapper.loop 0.001                                  §
+  put #echo #33CC99 §    Echoes                                                        §
+  put #echo #33CC99 §      how verbose do you want automapper to be?                   §
+  put #echo #33CC99 §      #var automapper.verbose 1                                   §
+  put #echo #33CC99 §    Ice Road Behavior                                             §
+  put #echo #33CC99 §      1: collect rocks on the ice road when lacking skates        §
+  put #echo #33CC99 §      0: just wait 15 seconds with no RT instead                  §
+  put #echo #33CC99 §      #var automapper.iceroadcollect 1                            §
+  put #echo #33CC99 §    Color                                                         §
+  put #echo #33CC99 §      What should the default automapper echo color be?           §
+  put #echo #33CC99 §      #var automapper.color #33CC99                               §
+  put #echo #33CC99 §    Class                                                         §
+  put #echo #33CC99 §      Which classes should automapper turn on and off?            §
+  put #echo #33CC99 §      #var automapper.class -arrive -combat -joust -racial -rp    §
+  put #echo #33CC99 §  Now save! (#save vars for Genie | cmd-s for Outlander)          §
+  put #echo #33CC99 ¤~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~¤
+  exit
+}
 ABSOLUTE.TOP:
-# Type ahead declaration
 # ---------------
+#USER VARS:
+# Type ahead declaration
 # The following will use a global to set it by character.  This helps when you have both premium and standard accounts.
 # Standard Account = 1, Premium Account = 2, LTB Premium = 3
   if !def(automapper.typeahead) then var typeahead.max 1
   else var typeahead.max $automapper.typeahead
+# Time to pause before sending a "put x" command
+  if !def(automapper.pause) then var command_pause 0.01
+  else var command_pause $automapper.pause
+# 1: wait for correct confirmation of sent commands; 0: don't wait
+  if !def(automapper.confirmation) then var waitfor_action 1
+  else var waitfor_action $automapper.confirmation
+# echo next move? 1 = YES, 0 = NO
+  if !def(automapper.verbose) then var verbose 1
+  else var verbose $automapper.verbose
+# Decrease at your own risk, increase if you get infinte loop errors
+#default is 0.1 for Outlander, 0.001 for Genie
+  if !def(automapper.loop) then
+    {
+    if def(version) then var infiniteLoopProtection 0.001
+    else var infiniteLoopProtection 0.1
+    }
+  else var infiniteLoopProtection $automapper.loop
+# 1: collect rocks on the ice road when lacking skates; 0; just wait 15 seconds with no RT instead
+  if !def(automapper.verbose) then var ice_collect 0
+  else var ice_collect $automapper.iceroadcollect
   if !def(caravan) then put #tvar caravan 0
   if !def(mapwalk) then put #tvar mapwalk 0
   if !def(powerwalk) then put #tvar powerwalk 0
   if !def(searchwalk) then put #tvar searchwalk 0
   if !def(drag) then put #tvar drag 0
-     put #var drag 0
+  put #var drag 0
+  if def(automapper.class) then put #class $automapper.class
 # ---------------
   action var current_path %0 when ^You go
   if ($mapwalk) then
@@ -232,7 +267,7 @@ ABSOLUTE.TOP:
   var move_INVIS ^The .* can't see you\!|^But no one can see you\!|^How can you .* can't even see you\?
   var climb_mount_FAIL climb what?
 ACTIONS:
-  action (mapper) if (%movewait = 0) then shift;if (%movewait = 0) then math depth subtract 1;if ((len("%2") > 0) && (%verbose)) then echo Next move: %2 when %move_OK
+  action (mapper) if (%movewait = 0) then shift;if (%movewait = 0) then math depth subtract 1;if ((len("%2") > 0) && (%verbose)) then put #echo %color Next move: %2 when %move_OK
   action (mapper) goto MOVE.TORCH when %move_TORCH
   action (mapper) goto MOVE.FAILED when %move_FAIL
   action (mapper) goto MOVE.RETRY.GO when %move_RETRY_GO
@@ -249,7 +284,7 @@ ACTIONS:
   action (mapper) goto MOVE.MUCK when %move_MUCK
   action (mapper) goto MOVE.STOW when %move_STOW
   action (mapper) goto MOVE.BOAT when %move_BOAT
-  action (mapper) echo Will re-attempt climb in 5 seconds...;send 5 $lastcommand when ^All this climbing back and forth is getting a bit tiresome\.  You need to rest a bit before you continue\.$
+  action (mapper) put #echo %color Will re-attempt climb in 5 seconds...;send 5 $lastcommand when ^All this climbing back and forth is getting a bit tiresome\.  You need to rest a bit before you continue\.$
   action (mapper) goto MOVE.RETRY when %swim_FAIL
   action (mapper) goto MOVE.DRAWBRIDGE when %move_DRAWBRIDGE
   action (mapper) goto MOVE.KNOCK when The gate is closed\.  Try KNOCKing instead
@@ -261,7 +296,7 @@ ACTIONS:
   action (mapper) var footitem $1;goto STOW.FOOT.ITEM when ^You notice (?:an |a )?(.+) at your feet, and do not wish to leave it behind\.
   action (skates) var wearing_skates 1 when ^You slide your ice skates on your feet and tightly tie the laces\.|^Your ice skates help you traverse the frozen terrain\.|^Your movement is hindered .* by your ice skates\.|^You tap some.*\bskates\b.*that you are wearing
   action (skates) var wearing_skates 0 when ^You untie your skates and slip them off of your feet\.
-  action var slow_on_ice 1;echo Ice detected! when ^You had better slow down\! The ice is|^At the speed you are traveling
+  action var slow_on_ice 1;if (%verbose) then put #echo %color Ice detected! when ^You had better slow down\! The ice is|^At the speed you are traveling
   action goto JAILED when a sound not unlike that of a tomb|binds you in chains|firmly off to jail|drag you off to jail|brings you to the jail|the last thing you see before you black out|your possessions have been stripped|You are a wanted criminal, $charactername
   action goto JAILED when your belongings have been stripped|in a jail cell wearing a set of heavy manacles|strip you of all your possessions|binds your hands behind your back|Your silence shall be taken as an indication of your guilt|The eyes of the court are upon you|Your silence can only be taken as evidence of your guilt
   action goto DEAD.DONE when ^You are a ghost\!
@@ -286,7 +321,11 @@ DONE:
 
 DEAD.DONE:
   put #parse YOU HAVE ARRIVED!
-  put #class arrive off
+  if def(automapper.class) then
+    {
+    eval classON replacere("$automapper.class", "-", "+")
+    put #class %classON
+  }
   exit
 
 MOVE:
@@ -397,8 +436,8 @@ MOVE.ICE:
 SKATE.NO:
   var slow_on_ice 1
   var wearing_skates 0
-  put #echo yellow *** Could not find ice skates! ***
-  if (%ice_collect) then echo *** Collecting rocks in every room like the other peasants ***
+  if (%verbose) then gosub echo Could not find ice skates!
+  if ((%ice_collect) && (%verbose)) then gosub echo Collecting rocks in every room like the other peasants
 SKATE.YES:
   return
 
@@ -417,7 +456,7 @@ ICE.COLLECT:
 ICE.PAUSE:
   action (mapper) off
   pause %command_pause
-  echo *** Pausing 15 seconds to regain footing on slippery ice. ***
+  if (%verbose) then gosub echo Pausing 15 seconds to regain footing on slippery ice.
   pause 15
   var slow_on_ice 0
   pause %command_pause
@@ -474,7 +513,7 @@ MOVE.RT:
 MOVE.TORCH:
   action (mapper) off
   pause %command_pause
-  echo *** RESETTING STONE WALL
+  if (%verbose) then gosub echo RESETTING STONE WALL
   pause %command_pause
   if ($roomid = 264) then send turn torch on wall
   if ($roomid = 263) then send turn basin on wall
@@ -500,7 +539,7 @@ MOVE.MUCK:
   matchwait
 
 MOVE.SLOW:
-  put #echo #F8D79A Slow and steady here to avoid mishaps...
+  if (%verbose) then gosub echo Slow and steady here to avoid mishaps...
   pause 3
   goto MOVE.REAL
 
@@ -608,12 +647,12 @@ MOVE.SCRIPT.DONE:
   var subscript 0
   shift
   math depth subtract 1
-  if ((len("%2") > 0) && (%verbose)) then echo Next move: %2
+  if ((len("%2") > 0) && (%verbose)) then put #echo %color Next move: %2
   action (mapper) on
   goto MOVE.DONE
 
 MOVE.FATIGUE:
-  echo *** TOO FATIGUED TO CLIMB! ***
+  if (%verbose) then gosub echo TOO FATIGUED TO CLIMB!
 
 FATIGUE.CHECK:
   pause 0.5
@@ -675,7 +714,7 @@ FATIGUE.WAIT:
     pause %command_pause
     goto move.done
     }
-  echo *** Pausing to recover stamina
+  if (%verbose) then gosub echo Pausing to recover stamina
   pause 10
   goto FATIGUE.WAIT
 
@@ -749,9 +788,7 @@ MOVE.ROPE.BRIDGE:
   goto MOVE.DONE
 
 MOVE.RETRY:
-  echo
-  echo *** Retry movement
-  echo
+  gosub echo Retry movement
   if ($webbed) then waiteval (!$webbed)
   if ($stunned) then
     {
@@ -763,9 +800,7 @@ MOVE.RETRY:
   goto RETURN.CLEAR
 
 MOVE.RETRY.GO:
-  echo
-  echo *** Retry movement
-  echo
+  gosub echo Retry movement
   eval movement replacere("%movement", "climb ", "go ")
   if ($webbed) then waiteval (!$webbed)
   if ($stunned) then
@@ -773,26 +808,18 @@ MOVE.RETRY.GO:
     pause
     goto MOVE.RETRY.GO
     }
+  if (%waitfor_action) then wait
   pause %command_pause
   goto MOVE.RT
 
 MOVE.CLOSED:
-  echo
-  echo *************************************
-  echo **  SHOP IS CLOSED FOR THE NIGHT!  **
-  echo *************************************
-  echo
+  gosub echo SHOP IS CLOSED FOR THE NIGHT!
   put #parse SHOP IS CLOSED
   put #parse SHOP CLOSED
   exit
 
 JAILED:
-  echo
-  echo ***************************
-  echo **  GOT THROWN IN JAIL!  **
-  echo **  ABORTING AUTOMAPPER  **
-  echo ***************************
-  echo
+  gosub echo GOT THROWN IN JAIL!
   put #parse JAILED
   put #parse NAILED AND JAILED!
   put #parse THROWN IN JAIL
@@ -809,32 +836,31 @@ MOVE.FAILED:
     put #flash
     exit
     }
-  echo
-  echo ********************************
-  echo MOVE FAILED - Type: %type | Movement: %movement | Depth: %depth
-  echo Remaining Path: %0
+  put #echo %color ¤~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  put #echo %color §  MOVE FAILED - Type: %type | Movement: %movement | Depth: %depth
+  put #echo %color §   Remaining Path: %0
   var remaining_path %0
   eval remaining_path replacere("%0", " ", "|")
-  echo %remaining_path[1]
-  echo %remaining_path[2]
-  pause %command_pause
+  put #echo %color §   %remaining_path[1]
+  put #echo %color §   %remaining_path[2]
   ### ADDED EXIT HERE ON FAILURE TO LET AUTOMOVE ROUTINES TAKE OVER AND RETRY
   ### AS THE AUTO-RETRY FEATURE IN HERE NO ONE CAN SEEM TO GET TO WORK RIGHT
   put #parse MOVE FAILED
   put #parse AUTOMAPPER MOVEMENT FAILED!
   exit
-  echo RETRYING Movement...%failcounter / 3 Tries.
-  echo ********************************
-  if (%failcounter > 3) then
-    {
-    echo [Trying: go %remaining_path(2) due to possible movement overload]
-    put go %remaining_path(2)
-    }
-  if ("%type" = "search") then put %type
-  pause
-  echo [Moving: %movement]
-  put %movement
-  matchwait 5
+#  pause %command_pause
+#  echo RETRYING Movement...%failcounter / 3 Tries.
+#  echo ********************************
+#  if (%failcounter > 3) then
+#    {
+#    echo [Trying: go %remaining_path(2) due to possible movement overload]
+#    put go %remaining_path(2)
+#    }
+#  if ("%type" = "search") then put %type
+#  pause
+#  if (%verbose) then echo [Moving: %movement]
+#  put %movement
+#  matchwait 5
 
 END.RETRY:
   pause
@@ -951,7 +977,7 @@ ENTER.DOBEKS:
   pause %command_pause
   put kiss scorpion
   pause
-  echo *** PAUSING FOR STUN
+  if (%verbose) then gosub echo PAUSING FOR STUN
   pause 13
   if ($stunned) then waiteval (!$stunned)
   if (!$standing) then gosub STAND
@@ -1048,7 +1074,7 @@ GET.MAP:
 
 FIND.SKATES:
   var checked 1
-  echo *** Checking for ice skates! ***
+  if (%verbose) then gosub echo Checking for ice skates!
   action (skates) var skate.container $1 when ^You tap .*\bskates\b.*inside your (.*)\.$
   action (skates) var skate.container portal when ^In the .* eddy you see.* \bskates\b
   action (skates) var skate.container held when ^You are holding some.*\bskates\b
@@ -1073,10 +1099,10 @@ CHECK.FOOTWEAR:
   if (!%skate.container) then goto SKATE.NO
   if ("%footwear" = "unknown") then
     {
-    put #echo yellow *** ERROR: Unknown noun for your footwear! ***
+    if (%verbose) then gosub echo ERROR: Unknown noun for your footwear!
     goto SKATE.NO
     }
-  echo *** Ice skates found! ***
+  if (%verbose) then gosub echo Ice skates found!
   if ((!%footwear) && ("%skate.container" = "held") then goto WEAR.SKATES
   if (!%footwear) then goto GET.SKATES
 
@@ -1102,7 +1128,7 @@ WEAR.SKATES:
   goto ACTION
 
 REMOVE.SKATES:
-  echo *** Removing ice skates! ***
+  if (%verbose) then gosub echo Removing ice skates!
   var action remove my skates
   var success ^You untie your skates and slip them off of your feet
   gosub ACTION
@@ -1115,7 +1141,7 @@ STOW.SKATES:
 
 GET.FOOTWEAR:
   if (%footwear = 0) then return
-  echo *** Putting your %footwear back on! ***
+  if (%verbose) then gosub echo Putting your %footwear back on!
   var action get my %footwear in my %footwear.container
   var success ^You get
   gosub ACTION
@@ -1266,12 +1292,18 @@ ACTION.MAPPER.ON:
   else goto ACTION.RETURN
 
 ACTION.FAIL:
-  put #echo
-  put #echo yellow *** Unable to perform action: %action ***
-  put #echo
+  gosub echo Unable to perform action: %action
 
 ACTION.RETURN:
   if ($roundtime > 0) then pause %command_pause
   if (%subscript) then return
   action (mapper) on
+  return
+
+echo:
+  var echoVar $0
+  eval border replacere("%echoVar", ".", "~")
+  put #echo %color ¤~~%border~~¤
+  put #echo %color §  %echoVar  §
+  put #echo %color ¤~~%border~~¤
   return
