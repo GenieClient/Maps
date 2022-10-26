@@ -28,10 +28,11 @@ var verbose 0
 
 #2022-10-22 thru 26
 # Hanryu, with a strong assist from TenderVittles
-#working on afordances for different system speeds on RT generating moves (MOVE.RT: label)
+# working on afordances for different system speeds on RT generating moves (MOVE.RT: label)
 # added a wait in retry if waitfor_action = 1
 # Added inviso drop message on "get skates"
 # add verbose flag to toggle next move echo
+# still fighting run conditions at the shard gates at night when powerwalking
 
 #2022-10-14
 # Shroom - Increased default genie pause slightly
@@ -424,15 +425,15 @@ ICE.PAUSE:
   return
 
 MOVE.KNOCK:
+  action (mapper) off
   if ($roundtime > 0) then pause %command_pause
   if (%depth > 1) then waiteval (1 = %depth)
   var movement knock gate
   matchre MOVE.KNOCK ^\.\.\.wait|^Sorry,|^You are still stun|^You can't do that while entangled
   matchre SHARD.FAILED Sorry\, you're not a citizen
-  matchre MOVE.DONE %move_OK|All right, welcome back|opens the door just enough to let you slip through|wanted criminal
+  matchre KNOCK.DONE %move_OK|All right, welcome back|opens the door just enough to let you slip through|wanted criminal
   matchre CLOAK.LOGIC ^You turn away, disappointed\.
-# trigger will handle dropping inviso and send `put %movement`
-#  matchre STOP.INVIS ^The gate guard can't see you
+  matchre KNOCK.INVIS ^The gate guard can't see you
   put %movement
   matchwait 10
 
@@ -440,9 +441,19 @@ SHARD.FAILED:
   if ((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) then gosub WEAR.CLOAK
   if ((!%cloak_off) && ("%cloak_worn" = "1")) then gosub RAISE.CLOAK
   if !matchre("$zoneid", "(66|67|68|69)") then goto MOVE.FAILED
-  matchre MOVE.DONE YOU HAVE ARRIVED\!
+  matchre KNOCK.DONE YOU HAVE ARRIVED\!
   put .sharddetour
   matchwait 45
+  goto MOVE.DONE
+
+KNOCK.INVIS:
+  action (mapper) on
+  goto MOVE.INVIS
+
+KNOCK.DONE:
+  action (mapper) on
+  shift
+  math depth subtract 1
   goto MOVE.DONE
 
 CLOAK.LOGIC:
