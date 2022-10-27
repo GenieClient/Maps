@@ -1,16 +1,20 @@
-# automapper.cmd version 8.2022-10-25
-# last changed: October 24, 2022
+# automapper.cmd
+var autoversion 8.2022-10-27
+# last changed: October 27, 2022
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
 
-#2022-10-22 thru XX
+#2022-10-22 thru 27
 # Hanryu, with a strong assist from TenderVittles
 # working on afordances for different system speeds on RT generating moves (MOVE.RT: label)
 # added a wait in retry if waitfor_action = 1
 # Added inviso drop message on "get skates"
 # add verbose flag to toggle next move echo
 # still fighting run conditions at the shard gates at night when powerwalking
+# changed echo and added globals to make updates preserve prefs
+# commenting out the rope bridge, sorry TF
+# unify move.retry: and move.retry.go:
 
 #2022-10-14
 # Shroom - Increased default genie pause slightly
@@ -156,7 +160,7 @@
 ## use me for if you need an input
 if matchre("%0", "help|HELP|Help|^$") then {
   put #echo #33CC99 ¤~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~¤
-  put #echo #33CC99 §  Welcome to automapper Setup!   (version 8.2022-10-25)           §
+  put #echo #33CC99 §  Welcome to automapper Setup!   (version %autoversion)           §
   put #echo #33CC99 §  Use the command line to set the following preferences:          §
   put #echo #33CC99 §    Typeahead                                                     §
   put #echo #33CC99 §      Standard Account = 1, Premium Account = 2, LTB Premium = 3  §
@@ -224,9 +228,9 @@ ABSOLUTE.TOP:
   if !def(powerwalk) then put #tvar powerwalk 0
   if !def(searchwalk) then put #tvar searchwalk 0
   if !def(drag) then put #tvar drag 0
+# turn off classes to speed movment
   if def(automapper.class) then put #class $automapper.class
 # ---------------
-  action var current_path %0 when ^You go
   if ($mapwalk) then
     {
     if !matchre("$righthand|$lefthand", "\bmap\b") then gosub GET.MAP
@@ -240,15 +244,14 @@ ABSOLUTE.TOP:
   var cloak_off 0
   var cloaknouns cloak|shroud|scarf|0
   var closed 0
-  var movewait 0
   var startingStam $stamina
   var failcounter 0
   var depth 0
   var movewait 0
+  var TryGoInsteadOfClimb 0
   var move_TORCH You push up on the (stone basin|torch)\, and the stone wall closes\.
   var move_OK ^Obvious (paths|exits)|^It's pitch dark|The shop appears to be closed\, but you catch the attention of a night attendant inside\,|^You move effortlessly through the
   var move_FAIL ^You can't swim in that direction|You can't go there|^A powerful blast of wind blows you to the|^What were you referring to|^I could not find what you were referring to\.|^You can't sneak in that direction|^You can't ride your.+(broom|carpet) in that direction|^You can't ride that way\.$
-  var move_RETRY_GO ^You can't climb that\.$
   var move_RETRY ^\.\.\.wait|^Sorry, you may only|^Sorry, system is slow|^The weight of all|lose your balance during the effort|^You are still stunned|^You're still recovering from your recent|^The mud gives way beneath your feet as you attempt to climb higher, sending you sliding back down the slope instead\!|You're not sure you can
   var move_RETREAT ^You are engaged to|^You try to move, but you're engaged|^While in combat|^You can't do that while engaged|^You can't do that\!  You're in combat\!
   var move_WEB ^You can't do that while entangled in a web|As you start to move, you find yourself snared
@@ -262,7 +265,8 @@ ABSOLUTE.TOP:
   var move_CLOSED ^The door is locked up tightly for the night|^You stop as you realize that the|^(?:\w+ )+I'm sorry\, but you need to be a citizen|^BONK\! You smash your nose|^Bonk\! You smash your nose|^(?:\w+ )+I'm sorry\, I can only allow citizens in at night|^(?:\w+ )+shop is closed for the night|^A guard appears and says\, \"I'm sorry\,|The shop appears to be closed\, but you catch the attention of a night attendant inside\, and he says\, \"I'm sorry\, I can only allow citizens in at night\.\""?
   var swim_FAIL ^You struggle (?!to maintain)|^You work(?! your way (?:up|down) the cliff)|^You slap|^You flounder
   var move_DRAWBRIDGE ^The guard yells, "Lower the bridge|^The guard says, "You'll have to wait|^A guard yells, "Hey|^The guard yells, "Hey
-  var move_ROPE.BRIDGE is already on the rope\.|You'll have to wait
+#rope bridge is dead!  Delete me if TF ever gets updated
+#  var move_ROPE.BRIDGE is already on the rope\.|You'll have to wait
   var move_STOW ^You need to empty your hands|^You should empty your hands first\!|^You can't possibly manage to cross|^You'll need to free up your hands|^Not while carrying something in your hands|^You must first free up your hands\.|^The going gets quite difficult and highlights the need to free up your hands|^You must have your hands free
   var move_FATIGUE ^You're too tired to try climbing|^You need to rest
   var move_BOAT ^The galley has just left|^You look around in vain for the galley
@@ -272,8 +276,8 @@ ACTIONS:
   action (mapper) if (%movewait = 0) then shift;if (%movewait = 0) then math depth subtract 1;if ((len("%2") > 0) && (%verbose)) then put #echo %color Next move: %2 when %move_OK
   action (mapper) goto MOVE.TORCH when %move_TORCH
   action (mapper) goto MOVE.FAILED when %move_FAIL
-  action (mapper) goto MOVE.RETRY.GO when %move_RETRY_GO
-  action (mapper) goto MOVE.RETRY when %move_RETRY|%move_WEB
+  action (mapper) var TryGoInsteadOfClimb 1 when ^You can't climb that\.$
+  action (mapper) goto MOVE.RETRY when %move_RETRY|%move_WEB|^You can't climb that\.$
   action (mapper) goto MOVE.STAND when %move_STAND
   action (mapper) var movewait 1;goto MOVE.WAIT when %move_WAIT
   action (mapper) goto MOVE.RETREAT when %move_RETREAT
@@ -299,8 +303,10 @@ ACTIONS:
   action (skates) var wearing_skates 1 when ^You slide your ice skates on your feet and tightly tie the laces\.|^Your ice skates help you traverse the frozen terrain\.|^Your movement is hindered .* by your ice skates\.|^You tap some.*\bskates\b.*that you are wearing
   action (skates) var wearing_skates 0 when ^You untie your skates and slip them off of your feet\.
   action var slow_on_ice 1;if (%verbose) then put #echo %color Ice detected! when ^You had better slow down\! The ice is|^At the speed you are traveling
-  action goto JAILED when a sound not unlike that of a tomb|binds you in chains|firmly off to jail|drag you off to jail|brings you to the jail|the last thing you see before you black out|your possessions have been stripped|You are a wanted criminal, $charactername
-  action goto JAILED when your belongings have been stripped|in a jail cell wearing a set of heavy manacles|strip you of all your possessions|binds your hands behind your back|Your silence shall be taken as an indication of your guilt|The eyes of the court are upon you|Your silence can only be taken as evidence of your guilt
+# All this unanchored regex is not ok, we need to get the actual messages, please DM Hanryu with messages
+  action goto JAILED when ^You slowly wake up again to find that all your belongings have been stripped and you are in a jail cell wearing a set of heavy manacles\.$|^The .+ brings you to the jail, where several companions aid to hold you down and strip you of all your possessions\.  They are placed in a sack under the watchful eye of the jail warden, and then you are ushered to a cell, the door opened just long enough for you to be shoved inside\.$|^The door slams shut, a sound not unlike that of a tomb closing\.$
+#  action goto JAILED when a sound not unlike that of a tomb|binds you in chains|firmly off to jail|drag you off to jail|brings you to the jail|the last thing you see before you black out|your possessions have been stripped|You are a wanted criminal, $charactername
+#  action goto JAILED when your belongings have been stripped|in a jail cell wearing a set of heavy manacles|strip you of all your possessions|binds your hands behind your back|Your silence shall be taken as an indication of your guilt|The eyes of the court are upon you|Your silence can only be taken as evidence of your guilt
   action goto DEAD.DONE when ^You are a ghost\!
 
 MAIN.LOOP.CLEAR:
@@ -782,15 +788,17 @@ MOVE.DRAWBRIDGE:
   put %movement
   goto MOVE.DONE
 
-MOVE.ROPE.BRIDGE:
-  action instant put retreat;put retreat when melee range|pole weapon range
-  waitforre finally arriving|finally reaching
-  action remove melee range|pole weapon range
-  put %movement
-  goto MOVE.DONE
+# ROPE BRIDGE IS DEAD! (well sorry TF)
+#MOVE.ROPE.BRIDGE:
+#  action instant put retreat;put retreat when melee range|pole weapon range
+#  waitforre finally arriving|finally reaching
+#  action remove melee range|pole weapon range
+#  put %movement
+#  goto MOVE.DONE
 
 MOVE.RETRY:
   gosub echo Retry movement
+  if (%TryGoInsteadOfClimb) then eval movement replacere("%movement", "climb ", "go ")
   if ($webbed) then waiteval (!$webbed)
   if ($stunned) then
     {
@@ -799,20 +807,21 @@ MOVE.RETRY:
     }
   if (%waitfor_action) then wait
   pause %command_pause
-  goto RETURN.CLEAR
-
-MOVE.RETRY.GO:
-  gosub echo Retry movement
-  eval movement replacere("%movement", "climb ", "go ")
-  if ($webbed) then waiteval (!$webbed)
-  if ($stunned) then
-    {
-    pause
-    goto MOVE.RETRY.GO
-    }
-  if (%waitfor_action) then wait
-  pause %command_pause
   goto MOVE.RT
+#  goto RETURN.CLEAR
+
+#MOVE.RETRY.GO:
+#  gosub echo Retry movement
+#  eval movement replacere("%movement", "climb ", "go ")
+#  if ($webbed) then waiteval (!$webbed)
+#  if ($stunned) then
+#    {
+#    pause
+#    goto MOVE.RETRY.GO
+#    }
+#  if (%waitfor_action) then wait
+#  pause %command_pause
+#  goto MOVE.RT
 
 MOVE.CLOSED:
   gosub echo SHOP IS CLOSED FOR THE NIGHT!
