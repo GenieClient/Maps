@@ -224,7 +224,6 @@ ABSOLUTE.TOP:
   if !def(powerwalk) then put #tvar powerwalk 0
   if !def(searchwalk) then put #tvar searchwalk 0
   if !def(drag) then put #tvar drag 0
-  put #var drag 0
   if def(automapper.class) then put #class $automapper.class
 # ---------------
   action var current_path %0 when ^You go
