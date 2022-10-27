@@ -156,7 +156,7 @@
 ## use me for if you need an input
 if matchre("%0", "help|HELP|Help|^$") then {
   put #echo #33CC99 ¤~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~¤
-  put #echo #33CC99 §  Welcome to automapper Setup!                                    §
+  put #echo #33CC99 §  Welcome to automapper Setup!   (version 8.2022-10-25)           §
   put #echo #33CC99 §  Use the command line to set the following preferences:          §
   put #echo #33CC99 §    Typeahead                                                     §
   put #echo #33CC99 §      Standard Account = 1, Premium Account = 2, LTB Premium = 3  §
@@ -205,6 +205,9 @@ ABSOLUTE.TOP:
 # echo next move? 1 = YES, 0 = NO
   if !def(automapper.verbose) then var verbose 1
   else var verbose $automapper.verbose
+# what color do you want for echos?
+  if !def(automapper.color) then var color #33CC99
+  else var color $automapper.color
 # Decrease at your own risk, increase if you get infinte loop errors
 #default is 0.1 for Outlander, 0.001 for Genie
   if !def(automapper.loop) then
