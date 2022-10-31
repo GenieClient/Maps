@@ -5,7 +5,7 @@ send search armoire
 pause 0.5
 pause 0.5
 movearmoire:
-match movearmoire \.\.\.wait
+matchre movearmoire \.\.\.wait
 match retreat You are engaged
 match done Obvious
 send go armoire
