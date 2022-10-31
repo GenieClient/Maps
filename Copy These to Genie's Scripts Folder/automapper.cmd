@@ -18,6 +18,7 @@ var autoversion 8.2022-10-30
 # Hanryu - cleaned up echos to use new echo tech
 # Added check for "are you in RT when you start"
 # Added bridge in adanf as a place to wait
+# deleted move_DIVE since it was undefined, commented out the action for move.dive
 
 #2022-10-22 thru 27
 # Hanryu, with a strong assist from TenderVittles
@@ -299,7 +300,7 @@ ACTIONS:
   action (mapper) goto MOVE.NOSNEAK when %move_NO_SNEAK
   action (mapper) goto MOVE.GO when %move_GO
   action (mapper) goto MOVE.INVIS when %move_INVIS
-  action (mapper) goto MOVE.DIVE when %move_DIVE
+#  action (mapper) goto MOVE.DIVE when 
   action (mapper) goto MOVE.MUCK when %move_MUCK
   action (mapper) goto MOVE.STOW when %move_STOW
   action (mapper) goto MOVE.BOAT when %move_BOAT
