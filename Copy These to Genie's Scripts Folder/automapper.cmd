@@ -270,7 +270,7 @@ ABSOLUTE.TOP:
   var move_RETREAT ^You are engaged to|^You try to move, but you're engaged|^While in combat|^You can't do that while engaged|^You can't do that\!  You're in combat\!
   var move_WEB ^You can't do that while entangled in a web|As you start to move, you find yourself snared
   var move_WAIT ^You continue climbing|^You begin climbing|^You really should concentrate on your journey|^You step onto a massive stairway
-  var move_END_DELAY ^You reach|you reach\.\.\.$
+  var move_END_DELAY ^You reach|you reach\.\.\.$|^Finally the bridge comes to an end
   var move_STAND ^You must be standing to do that|^You can't do that while (lying down|kneeling|sitting)|You try to quickly step from root to root, but slip and drop to your knees|you trip over an exposed root|^Stand up first\.|^You must stand first\.|^You'll need to stand up|a particularly sturdy one finally brings you to your knees\.$|You try to roll through the fall but end up on your back\.$|^Perhaps you might accomplish that if you were standing\.$
   var move_NO_SNEAK ^You can't do that here|^In which direction are you trying to sneak|^Sneaking is an inherently stealthy|^You can't sneak that way|^You can't sneak in that direction
   var move_GO ^Please rephrase that command
@@ -745,7 +745,7 @@ MOVE.WAIT:
   pause %command_pause
   if (%movewait) then
     {
-    matchre MOVE.DONE ^You reach|you reach|^Just when it seems
+    matchre MOVE.DONE ^You reach|you reach|^Just when it seems|^Finally the bridge comes to an end
     matchwait
     }
   goto MOVE.DONE
