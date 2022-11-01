@@ -321,7 +321,7 @@ ACTIONS:
   action goto DEAD.DONE when ^You are a ghost\!
 
 # Are you starting the script while in RT?
-  if ($roundtime > 0) then {pause $roundtime}
+  if ($roundtime > 0) then pause $roundtime
 
 MAIN.LOOP.CLEAR:
   gosub clear
