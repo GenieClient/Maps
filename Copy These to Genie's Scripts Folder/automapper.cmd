@@ -1,11 +1,10 @@
 # automapper.cmd
-var autoversion 8.2022-10-30
-# last changed: October 30, 2022
+var autoversion 8.2022-11-01
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
 
-#2022-10-30 
+#2022-10-30 to 11-02
 # Shroom - Fixing several bugs
 # Fixed several no gosubs to return to errors
 # Re-commented rope bridge as still in use in TF for now 
@@ -19,6 +18,7 @@ var autoversion 8.2022-10-30
 # Added check for "are you in RT when you start"
 # Added bridge in adanf as a place to wait
 # deleted move_DIVE since it was undefined, commented out the action for move.dive
+# ^\s*[\[\(]?Roundtime\s*\:? for all RT matches
 
 #2022-10-22 thru 27
 # Hanryu, with a strong assist from TenderVittles
@@ -611,7 +611,7 @@ MOVE.CLIMB.WITH.ROPE:
 MOVE.CLIMB.WITH.APP.AND.ROPE:
   eval climbobject replacere("%movement", "climb ", "")
   put appraise %climbobject quick
-  waitforre ^Roundtime:|^You cannot appraise that when you are in combat
+  waitforre ^\s*[\[\(]?Roundtime\s*\:?|^You cannot appraise that when you are in combat
   if (("$guild" = "Thief") && ($concentration > 50)) then
     {
     pause %command_pause
@@ -760,7 +760,7 @@ MOVE.RETREAT:
   if (!$standing) then gosub STAND
   if ($hidden) then gosub UNHIDE
   pause %command_pause
-  matchre MOVE.RETREAT %move_RETRY|^Roundtime|^You retreat back
+  matchre MOVE.RETREAT %move_RETRY|^\s*[\[\(]?Roundtime\s*\:?|^You retreat back
   matchre RETURN.CLEAR ^You retreat from combat|^You sneak back out of combat|^You are already as far away as you can get
   put retreat
   matchwait
@@ -907,19 +907,19 @@ POWERWALK:
     }
   var action perceive
   var typeahead.max 0
-  var success ^\s*Roundtime\s*\:?|^\s*\[Roundtime\s*\:?|^\s*\(Roundtime\s*\:?|^Something in the area is interfering
+  var success ^\s*[\[\(]?Roundtime\s*\:?|^Something in the area is interfering
   goto ACTION.WALK
 
 SEARCHWALK:
   var action search
   var typeahead.max 0
-  var success ^You search around|^After a careful search|^You notice|^Roundtime\:|^You push through bushes|^You scan|^There seems to be|^You walk around the perimeter|^Just under the Bridge
+  var success ^You search around|^After a careful search|^You notice|^\s*[\[\(]?Roundtime\s*\:?|^You push through bushes|^You scan|^There seems to be|^You walk around the perimeter|^Just under the Bridge
   goto ACTION.WALK
 
 FORAGEWALK:
   var action forage $forage
   var typeahead.max 0
-  var success ^Roundtime|^Something in the area is interfering
+  var success ^\s*[\[\(]?Roundtime\s*\:?|^Something in the area is interfering
   goto ACTION.WALK
 
 MAPWALK:
@@ -1325,7 +1325,7 @@ ACTION.STOW.UNLOAD:
   var successbackup %success
   if matchre("$righthand", "%unloadables") then var action unload my $righthandnoun
   if matchre("$lefthand", "%unloadables") then var action unload my $lefthandnoun
-  var success ^Roundtime\:|^You unload
+  var success ^\s*[\[\(]?Roundtime\s*\:?|^You unload
   gosub ACTION
   gosub STOW.HANDS
   var action %actionbackup
@@ -1347,7 +1347,7 @@ ACTION.WAIT:
   if ($webbed) then waiteval (!$webbed)
 
 ACTION:
-  #matchre ACTION_WAIT ^Roundtime\:?|^\[Roundtime\:?|^\(Roundtime\:?|^\[Roundtime|^Roundtime
+  #matchre ACTION_WAIT ^\s*[\[\(]?Roundtime\s*\:?
   # depending on the action, this could be a retry or a success...
   action (mapper) off
 
