@@ -1,9 +1,24 @@
 # automapper.cmd
-var autoversion 8.2022-10-27
-# last changed: October 27, 2022
+var autoversion 8.2022-11-01
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
+
+#2022-10-30 to 11-02
+# Shroom - Fixing several bugs
+# Fixed several no gosubs to return to errors
+# Re-commented rope bridge as still in use in TF for now 
+# Even though Travel detects whether bridge or rope is up - Automapper still used as a backup method 
+# Added more fail messages to ACTION
+# NEW - Added a STOW.ALT module as a backup to regular STOWING
+# IF "STOW" fails and does not empty hands - will check inv for others bags and try putting in those bags
+# Will attempt up to 4 containers - Auto-Scans inventory for the most common containers
+# Anchored JAILED triggers 
+# Hanryu - cleaned up echos to use new echo tech
+# Added check for "are you in RT when you start"
+# Added bridge in adanf as a place to wait
+# deleted move_DIVE since it was undefined, commented out the action for move.dive
+# ^\s*[\[\(]?Roundtime\s*\:? for all RT matches
 
 #2022-10-22 thru 27
 # Hanryu, with a strong assist from TenderVittles
@@ -256,7 +271,7 @@ ABSOLUTE.TOP:
   var move_RETREAT ^You are engaged to|^You try to move, but you're engaged|^While in combat|^You can't do that while engaged|^You can't do that\!  You're in combat\!
   var move_WEB ^You can't do that while entangled in a web|As you start to move, you find yourself snared
   var move_WAIT ^You continue climbing|^You begin climbing|^You really should concentrate on your journey|^You step onto a massive stairway
-  var move_END_DELAY ^You reach|you reach\.\.\.$
+  var move_END_DELAY ^You reach|you reach\.\.\.$|^Finally the bridge comes to an end
   var move_STAND ^You must be standing to do that|^You can't do that while (lying down|kneeling|sitting)|You try to quickly step from root to root, but slip and drop to your knees|you trip over an exposed root|^Stand up first\.|^You must stand first\.|^You'll need to stand up|a particularly sturdy one finally brings you to your knees\.$|You try to roll through the fall but end up on your back\.$|^Perhaps you might accomplish that if you were standing\.$
   var move_NO_SNEAK ^You can't do that here|^In which direction are you trying to sneak|^Sneaking is an inherently stealthy|^You can't sneak that way|^You can't sneak in that direction
   var move_GO ^Please rephrase that command
@@ -265,8 +280,7 @@ ABSOLUTE.TOP:
   var move_CLOSED ^The door is locked up tightly for the night|^You stop as you realize that the|^(?:\w+ )+I'm sorry\, but you need to be a citizen|^BONK\! You smash your nose|^Bonk\! You smash your nose|^(?:\w+ )+I'm sorry\, I can only allow citizens in at night|^(?:\w+ )+shop is closed for the night|^A guard appears and says\, \"I'm sorry\,|The shop appears to be closed\, but you catch the attention of a night attendant inside\, and he says\, \"I'm sorry\, I can only allow citizens in at night\.\""?
   var swim_FAIL ^You struggle (?!to maintain)|^You work(?! your way (?:up|down) the cliff)|^You slap|^You flounder
   var move_DRAWBRIDGE ^The guard yells, "Lower the bridge|^The guard says, "You'll have to wait|^A guard yells, "Hey|^The guard yells, "Hey
-#rope bridge is dead!  Delete me if TF ever gets updated
-#  var move_ROPE.BRIDGE is already on the rope\.|You'll have to wait
+  var move_ROPE.BRIDGE is already on the rope\.|You'll have to wait
   var move_STOW ^You need to empty your hands|^You should empty your hands first\!|^You can't possibly manage to cross|^You'll need to free up your hands|^Not while carrying something in your hands|^You must first free up your hands\.|^The going gets quite difficult and highlights the need to free up your hands|^You must have your hands free
   var move_FATIGUE ^You're too tired to try climbing|^You need to rest
   var move_BOAT ^The galley has just left|^You look around in vain for the galley
@@ -286,7 +300,7 @@ ACTIONS:
   action (mapper) goto MOVE.NOSNEAK when %move_NO_SNEAK
   action (mapper) goto MOVE.GO when %move_GO
   action (mapper) goto MOVE.INVIS when %move_INVIS
-  action (mapper) goto MOVE.DIVE when %move_DIVE
+#  action (mapper) goto MOVE.DIVE when 
   action (mapper) goto MOVE.MUCK when %move_MUCK
   action (mapper) goto MOVE.STOW when %move_STOW
   action (mapper) goto MOVE.BOAT when %move_BOAT
@@ -303,11 +317,11 @@ ACTIONS:
   action (skates) var wearing_skates 1 when ^You slide your ice skates on your feet and tightly tie the laces\.|^Your ice skates help you traverse the frozen terrain\.|^Your movement is hindered .* by your ice skates\.|^You tap some.*\bskates\b.*that you are wearing
   action (skates) var wearing_skates 0 when ^You untie your skates and slip them off of your feet\.
   action var slow_on_ice 1;if (%verbose) then put #echo %color Ice detected! when ^You had better slow down\! The ice is|^At the speed you are traveling
-# All this unanchored regex is not ok, we need to get the actual messages, please DM Hanryu with messages
-  action goto JAILED when ^You slowly wake up again to find that all your belongings have been stripped and you are in a jail cell wearing a set of heavy manacles\.$|^The .+ brings you to the jail, where several companions aid to hold you down and strip you of all your possessions\.  They are placed in a sack under the watchful eye of the jail warden, and then you are ushered to a cell, the door opened just long enough for you to be shoved inside\.$|^The door slams shut, a sound not unlike that of a tomb closing\.$
-#  action goto JAILED when a sound not unlike that of a tomb|binds you in chains|firmly off to jail|drag you off to jail|brings you to the jail|the last thing you see before you black out|your possessions have been stripped|You are a wanted criminal, $charactername
-#  action goto JAILED when your belongings have been stripped|in a jail cell wearing a set of heavy manacles|strip you of all your possessions|binds your hands behind your back|Your silence shall be taken as an indication of your guilt|The eyes of the court are upon you|Your silence can only be taken as evidence of your guilt
+  action goto JAILED when ^You slowly wake up again to find that all your belongings have been stripped and you are in a jail cell wearing a set of heavy manacles\.|^The \w+ brings you to the jail, where several companions aid to hold you down and strip you of all your possessions\.|^The town guard, with the help of several others, wrestle you to the ground, bind you in chains, and drag you off to jail\.|^When you awake some time later, your possessions have been stripped from you, and you lay in a musty pile of straw\.|^The door slams shut, a sound not unlike that of a tomb closing\.
   action goto DEAD.DONE when ^You are a ghost\!
+
+# Are you starting the script while in RT?
+  if ($roundtime > 0) then pause $roundtime
 
 MAIN.LOOP.CLEAR:
   gosub clear
@@ -414,13 +428,14 @@ MOVE.ROOM:
 
 MOVE.STOW:
   if !matchre("Empty", "$lefthand") then gosub STOW.LEFT
-  if !matchre("Empty", "$righthand") then goto STOW.RIGHT
+  if !matchre("Empty", "$righthand") then gosub STOW.RIGHT
   if matchre("$righthand", "khuj|staff|atapwi") then put wear $righthandnoun
+  if (!matchre("Empty", "$lefthand") || !matchre("Empty", "$righthand")) then gosub STOW.ALT
   pause %command_pause
   put %movement
   pause %command_pause
   goto MOVE.DONE
-
+  
 MOVE.BOAT:
   matchre MOVE.BOAT.ARRIVED ^The galley (\w*) glides into the dock
   matchwait 60
@@ -596,7 +611,7 @@ MOVE.CLIMB.WITH.ROPE:
 MOVE.CLIMB.WITH.APP.AND.ROPE:
   eval climbobject replacere("%movement", "climb ", "")
   put appraise %climbobject quick
-  waitforre ^Roundtime:|^You cannot appraise that when you are in combat
+  waitforre ^\s*[\[\(]?Roundtime\s*\:?|^You cannot appraise that when you are in combat
   if (("$guild" = "Thief") && ($concentration > 50)) then
     {
     pause %command_pause
@@ -731,7 +746,7 @@ MOVE.WAIT:
   pause %command_pause
   if (%movewait) then
     {
-    matchre MOVE.DONE ^You reach|you reach|^Just when it seems
+    matchre MOVE.DONE ^You reach|you reach|^Just when it seems|^Finally the bridge comes to an end
     matchwait
     }
   goto MOVE.DONE
@@ -745,7 +760,7 @@ MOVE.RETREAT:
   if (!$standing) then gosub STAND
   if ($hidden) then gosub UNHIDE
   pause %command_pause
-  matchre MOVE.RETREAT %move_RETRY|^Roundtime|^You retreat back
+  matchre MOVE.RETREAT %move_RETRY|^\s*[\[\(]?Roundtime\s*\:?|^You retreat back
   matchre RETURN.CLEAR ^You retreat from combat|^You sneak back out of combat|^You are already as far away as you can get
   put retreat
   matchwait
@@ -788,13 +803,12 @@ MOVE.DRAWBRIDGE:
   put %movement
   goto MOVE.DONE
 
-# ROPE BRIDGE IS DEAD! (well sorry TF)
-#MOVE.ROPE.BRIDGE:
-#  action instant put retreat;put retreat when melee range|pole weapon range
-#  waitforre finally arriving|finally reaching
-#  action remove melee range|pole weapon range
-#  put %movement
-#  goto MOVE.DONE
+MOVE.ROPE.BRIDGE:
+  action instant put retreat;put retreat when melee range|pole weapon range
+  waitforre finally arriving|finally reaching
+  action remove melee range|pole weapon range
+  put %movement
+  goto MOVE.DONE
 
 MOVE.RETRY:
   gosub echo Retry movement
@@ -893,19 +907,19 @@ POWERWALK:
     }
   var action perceive
   var typeahead.max 0
-  var success ^\s*Roundtime\s*\:?|^\s*\[Roundtime\s*\:?|^\s*\(Roundtime\s*\:?|^Something in the area is interfering
+  var success ^\s*[\[\(]?Roundtime\s*\:?|^Something in the area is interfering
   goto ACTION.WALK
 
 SEARCHWALK:
   var action search
   var typeahead.max 0
-  var success ^You search around|^After a careful search|^You notice|^Roundtime\:|^You push through bushes|^You scan|^There seems to be|^You walk around the perimeter|^Just under the Bridge
+  var success ^You search around|^After a careful search|^You notice|^\s*[\[\(]?Roundtime\s*\:?|^You push through bushes|^You scan|^There seems to be|^You walk around the perimeter|^Just under the Bridge
   goto ACTION.WALK
 
 FORAGEWALK:
   var action forage $forage
   var typeahead.max 0
-  var success ^Roundtime|^Something in the area is interfering
+  var success ^\s*[\[\(]?Roundtime\s*\:?|^Something in the area is interfering
   goto ACTION.WALK
 
 MAPWALK:
@@ -1162,7 +1176,6 @@ WEAR.FOOTWEAR:
   var success ^You (are already|attach|can't|carefully|climb|deftly|drape|fade|fall|get|hang|kneel|lie|loosen|place|pull|put|quickly|rise|set|shift|silently|sit|slide|sling|slip|stand|step|strap|take|tie|toss|untie|work|wrap|yank)
   goto ACTION
 
-
 FIND.CLOAK:
   action (cloak) on
   action (cloak) var cloak_worn 1 when ^You tap.*(%cloaknouns).*that you are wearing\.$
@@ -1214,7 +1227,8 @@ WEAR.CLOAK:
 LOOK.PORTAL:
   var action look in my watery portal
   var success ^In the.*you see|^I could not find
-  goto ACTION
+  gosub ACTION
+  return
 
 STOW.FOOT.ITEM:
   gosub STOW.FEET
@@ -1226,22 +1240,71 @@ STOW.FEET:
   eval footitem replacere("%footitem", "([\w'-]+\s){0,5}", "")
   if matchre("%footitem", "(mat|rug|cloth|tapestry)") then var action roll %footitem
   var success ^You pick up .* lying at your feet|^You carefully gather up the delicate folds|^You start at one end of your|^Stow what\?
-  goto ACTION
+  gosub ACTION
+  return
 
 STOW.HANDS:
   if !matchre("Empty", "$lefthand") then gosub STOW.LEFT
   if !matchre("Empty", "$righthand") then gosub STOW.RIGHT
+  if (!matchre("Empty", "$lefthand") || !matchre("Empty", "$righthand")) then gosub STOW.ALT
   return
 
 STOW.LEFT:
   var action stow my $lefthandnoun
   var success ^You put|^Stow what\?
-  goto ACTION
+  gosub ACTION
+  return
 
 STOW.RIGHT:
   var action stow my $righthandnoun
   var success ^You put|^Stow what\?
-  goto ACTION
+  gosub ACTION
+  return
+
+### BACKUP STOW METHOD IF REGULAR "STOW" FAILS 
+### Will check for other worn containers and attempt stowing item in alternate containers 
+STOW.ALT:
+  var StowLoop 0
+  gosub BAG.CHECK
+  STOW.ALT.1:
+  delay 0.0001
+  math StowLoop add 1
+  if (matchre("Empty", "$lefthand") && matchre("Empty", "$righthand")) then return
+  if (%StowLoop > 3) then
+    {
+    gosub echo STOW ERROR - CANNOT FIND A PLACE TO STORE %item
+    return
+    }
+  if !matchre("Empty", "$righthand") then var item $righthandnoun
+  if !matchre("Empty", "$lefthand") then var item $lefthandnoun
+  if !matchre("%MAIN.BAG", "NULL") then
+    {
+    var action put my %item in my %MAIN.BAG
+    var success ^You (put|slip)|^What were you|^Stow what\?
+    gosub ACTION
+    }
+  if (matchre("Empty", "$lefthand") && matchre("Empty", "$righthand")) then return
+  if !matchre("%BACKUP.BAG", "NULL") then
+    {
+    var action put my %item in my %BACKUP.BAG
+    var success ^You (put|slip)|^What were you|^Stow what\?
+    gosub ACTION
+    }
+  if (matchre("Empty", "$lefthand") && matchre("Empty", "$righthand")) then return
+  if !matchre("%THIRD.BAG", "NULL") then
+    {
+    var action put my %item in my %THIRD.BAG
+    var success ^You (put|slip)|^What were you|^Stow what\?
+    gosub ACTION
+    }
+  if (matchre("Empty", "$lefthand") && matchre("Empty", "$righthand")) then return
+  if !matchre("%FOURTH.BAG", "NULL") then
+    {
+    var action put my %item in my %FOURTH.BAG
+    var success ^You (put|slip)|^What were you|^Stow what\?
+    gosub ACTION
+    }
+  goto STOW.ALT.1
 
 UNHIDE:
   var action unhide
@@ -1262,7 +1325,7 @@ ACTION.STOW.UNLOAD:
   var successbackup %success
   if matchre("$righthand", "%unloadables") then var action unload my $righthandnoun
   if matchre("$lefthand", "%unloadables") then var action unload my $lefthandnoun
-  var success ^Roundtime\:|^You unload
+  var success ^\s*[\[\(]?Roundtime\s*\:?|^You unload
   gosub ACTION
   gosub STOW.HANDS
   var action %actionbackup
@@ -1284,7 +1347,7 @@ ACTION.WAIT:
   if ($webbed) then waiteval (!$webbed)
 
 ACTION:
-  #matchre ACTION_WAIT ^Roundtime\:?|^\[Roundtime\:?|^\(Roundtime\:?|^\[Roundtime|^Roundtime
+  #matchre ACTION_WAIT ^\s*[\[\(]?Roundtime\s*\:?
   # depending on the action, this could be a retry or a success...
   action (mapper) off
 
@@ -1295,7 +1358,7 @@ ACTION.MAPPER.ON:
   matchre ACTION.RETURN %success
   matchre ACTION.STOW.HANDS ^You must have at least one hand free to do that|^You need a free hand
   matchre ACTION.WAIT ^You're unconscious|^You are still stunned|^You can't do that while|^You don't seem to be able to
-  matchre ACTION.FAIL ^There isn't any more room|^You just can't get the .* to fit
+  matchre ACTION.FAIL ^There isn't any more room|^You just can't get the .* to fit|^(That's|The .*) too (heavy|thick|long|wide)|^There's no room|^Weirdly\,|^As you attempt
   matchre ACTION.STOW.UNLOAD ^You should unload
   put %action
   matchwait 2
@@ -1318,3 +1381,88 @@ echo:
   put #echo %color §  %echoVar  §
   put #echo %color ¤~~%border~~¤
   return
+  
+#### THIS AUTO SETS MAIN.BAG / BACKUP.BAG / THIRD.BAG VARIABLES
+#### FOR STOWING ROUTINE ONLY - BACKUP CONTAINERS IN CASE DEFAULT "STOW" FAILS - THIS WILL CATCH ANY COMMON LARGE CONTAINERS
+#### ~ THIS SHOULD ONLY FIRE IF THE MOVE.STOW ROUTINE TRIGGERS AND DEFAULT STOW DOES NOT FULLY CLEAR HANDS ~
+#### THIS WAS MADE AS HAPPY MEDIUM - IS MUCH BETTER THAN USING HARDCODED VARIABLES 
+#### SETTING THE CONTAINERS AUTOMATICALLY MAKES IT EASY WITHOUT HAVING TO WORRY ABOUT USER VARIABLES / MULTI-CHARACTERS ETC..
+#### THIS SHOULD CATCH THE ~MAIN~ BAGS MOST PEOPLE HAVE AT LEAST ONE OR TWO OF
+BAG.CHECK:
+  var MAIN.BAG NULL
+  var BACKUP.BAG NULL
+  var THIRD.BAG NULL
+  var FOURTH.BAG NULL
+  var Backpack 0
+  var Haversack 0
+  var Pack 0
+  var Carryall 0
+  var Rucksack 0
+  var DuffelBag 0
+  var Vortex 0
+  var Eddy 0
+  var Shadows 0
+  var HipPouch 0
+  var ToolBelt 0
+  action var ToolBelt 1 when archeologist's toolbelt
+  action var Hip.Pouch 1 when light spidersilk hip pouch
+  action var Backpack 1 when backpack
+  action var Haversack 1 when haversack
+  action var Pack 1 when \bpack
+  action var Carryall 1 when carryall
+  action var Rucksack 1 when rucksack
+  action var Duffel.Bag 1 when duffel bag
+  action var Vortex 1 when (hollow vortex of water|corrupted vortex of swirling)
+  action var Eddy 1 when swirling eddy of incandescent
+  action var Shadows 1 when encompassing shadows
+  action var Brambles 1 when dense entangling brambles
+  delay %infiniteLoopProtection
+  gosub echo Checking Containers...
+  matchre BAG.PARSE INVENTORY
+  put inv container
+  matchwait 3
+BAG.PARSE:
+  var Bags Toolbelt|Hip.Pouch|Backpack|Haversack|Pack|Carryall|Rucksack|Duffel.Bag|Vortex|Eddy|Shadows|Brambles
+  eval TotalBags count("%Bags", "|")
+  var BagLoop 0
+  delay %infiniteLoopProtection
+BAG.LOOP:
+  delay %infiniteLoopProtection
+  var BAG %Bags[%BagLoop]
+  if (%BagLoop > %TotalBags) then
+    {
+    put #echo %color ¤~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    put #echo %color §  Auto-setting container variables
+    put #echo %color §  Main: %MAIN.BAG
+    put #echo %color §  Backup: %BACKUP.BAG
+    put #echo %color §  Third: %THIRD.BAG
+    put #echo %color §  Fourth: %FOURTH.BAG
+    put #echo %color ¤~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    return
+    }
+    if ("%%BAG" = 1) then
+      {
+      if matchre("%MAIN.BAG", "NULL") then
+        {
+        var MAIN.BAG %BAG
+        goto BAG.NEXT
+        }
+      if matchre("%BACKUP.BAG", "NULL") then
+        {
+        var BACKUP.BAG %BAG
+        goto BAG.NEXT
+        }
+      if matchre("%THIRD.BAG", "NULL") then
+        {
+        var THIRD.BAG %BAG
+        goto BAG.NEXT
+        }
+      if matchre("%FOURTH.BAG", "NULL") then
+        {
+        var FOURTH.BAG %BAG
+        goto BAG.NEXT
+        }
+      }
+BAG.NEXT:
+  math BagLoop add 1
+  goto BAG.LOOP
