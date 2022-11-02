@@ -1,10 +1,15 @@
 # automapper.cmd
-var autoversion 8.2022-11-01
+var autoversion 8.2022-11-02
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
 
-#2022-10-30 to 11-02
+#2022-11-02
+# Hanryu
+#   addressing issue 33 and 32, mono echo and missing fancy characters
+#   working toward a better retry
+
+#2022-10-30 to 11-01
 # Shroom - Fixing several bugs
 # Fixed several no gosubs to return to errors
 # Re-commented rope bridge as still in use in TF for now 
@@ -173,38 +178,41 @@ var autoversion 8.2022-11-01
 #
 
 ## use me for if you need an input
+# checks for outlander v. genie, outlander does not suppor the `mono` flag
+if def(version) then var helpecho #33CC99 mono
+else var helpecho #33CC99
 if matchre("%0", "help|HELP|Help|^$") then {
-  put #echo #33CC99 ¤~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~¤
-  put #echo #33CC99 §  Welcome to automapper Setup!   (version %autoversion)           §
-  put #echo #33CC99 §  Use the command line to set the following preferences:          §
-  put #echo #33CC99 §    Typeahead                                                     §
-  put #echo #33CC99 §      Standard Account = 1, Premium Account = 2, LTB Premium = 3  §
-  put #echo #33CC99 §      #var automapper.typeahead 1                                 §
-  put #echo #33CC99 §    Pause                                                         §
-  put #echo #33CC99 §      Time to pause before sending a "put x" command              §
-  put #echo #33CC99 §      #var automapper.pause 0.01                                  §
-  put #echo #33CC99 §    Confirmation                                                  §
-  put #echo #33CC99 §      1: wait for correct confirmation of sent commands           §
-  put #echo #33CC99 §      0: don't wait                                               §
-  put #echo #33CC99 §      #var automapper.confirmation 1                              §
-  put #echo #33CC99 §    Infinite Loop Protection                                      §
-  put #echo #33CC99 §      Increase if you get infinte loop errors                     §
-  put #echo #33CC99 §      #var automapper.loop 0.001                                  §
-  put #echo #33CC99 §    Echoes                                                        §
-  put #echo #33CC99 §      how verbose do you want automapper to be?                   §
-  put #echo #33CC99 §      #var automapper.verbose 1                                   §
-  put #echo #33CC99 §    Ice Road Behavior                                             §
-  put #echo #33CC99 §      1: collect rocks on the ice road when lacking skates        §
-  put #echo #33CC99 §      0: just wait 15 seconds with no RT instead                  §
-  put #echo #33CC99 §      #var automapper.iceroadcollect 1                            §
-  put #echo #33CC99 §    Color                                                         §
-  put #echo #33CC99 §      What should the default automapper echo color be?           §
-  put #echo #33CC99 §      #var automapper.color #33CC99                               §
-  put #echo #33CC99 §    Class                                                         §
-  put #echo #33CC99 §      Which classes should automapper turn on and off?            §
-  put #echo #33CC99 §      #var automapper.class -arrive -combat -joust -racial -rp    §
-  put #echo #33CC99 §  Now save! (#save vars for Genie | cmd-s for Outlander)          §
-  put #echo #33CC99 ¤~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~¤
+  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+  put #echo %helpecho <<  Welcome to automapper Setup!   (version %autoversion)           >>
+  put #echo %helpecho <<  Use the command line to set the following preferences:          >>
+  put #echo %helpecho <<    Typeahead                                                     >>
+  put #echo %helpecho <<      Standard Account = 1, Premium Account = 2, LTB Premium = 3  >>
+  put #echo %helpecho <<      #var automapper.typeahead 1                                 >>
+  put #echo %helpecho <<    Pause                                                         >>
+  put #echo %helpecho <<      Time to pause before sending a "put x" command              >>
+  put #echo %helpecho <<      #var automapper.pause 0.01                                  >>
+  put #echo %helpecho <<    Confirmation                                                  >>
+  put #echo %helpecho <<      1: wait for correct confirmation of sent commands           >>
+  put #echo %helpecho <<      0: don't wait                                               >>
+  put #echo %helpecho <<      #var automapper.confirmation 1                              >>
+  put #echo %helpecho <<    Infinite Loop Protection                                      >>
+  put #echo %helpecho <<      Increase if you get infinte loop errors                     >>
+  put #echo %helpecho <<      #var automapper.loop 0.001                                  >>
+  put #echo %helpecho <<    Echoes                                                        >>
+  put #echo %helpecho <<      how verbose do you want automapper to be?                   >>
+  put #echo %helpecho <<      #var automapper.verbose 1                                   >>
+  put #echo %helpecho <<    Ice Road Behavior                                             >>
+  put #echo %helpecho <<      1: collect rocks on the ice road when lacking skates        >>
+  put #echo %helpecho <<      0: just wait 15 seconds with no RT instead                  >>
+  put #echo %helpecho <<      #var automapper.iceroadcollect 1                            >>
+  put #echo %helpecho <<    Color                                                         >>
+  put #echo %helpecho <<      What should the default automapper echo color be?           >>
+  put #echo %helpecho <<      #var automapper.color #33CC99                               >>
+  put #echo %helpecho <<    Class                                                         >>
+  put #echo %helpecho <<      Which classes should automapper turn on and off?            >>
+  put #echo %helpecho <<      #var automapper.class -arrive -combat -joust -racial -rp    >>
+  put #echo %helpecho <<  Now save! (#save vars for Genie | cmd-s for Outlander)          >>
+  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
   exit
 }
 ABSOLUTE.TOP:
@@ -270,7 +278,7 @@ ABSOLUTE.TOP:
   var move_RETRY ^\.\.\.wait|^Sorry, you may only|^Sorry, system is slow|^The weight of all|lose your balance during the effort|^You are still stunned|^You're still recovering from your recent|^The mud gives way beneath your feet as you attempt to climb higher, sending you sliding back down the slope instead\!|You're not sure you can
   var move_RETREAT ^You are engaged to|^You try to move, but you're engaged|^While in combat|^You can't do that while engaged|^You can't do that\!  You're in combat\!
   var move_WEB ^You can't do that while entangled in a web|As you start to move, you find yourself snared
-  var move_WAIT ^You continue climbing|^You begin climbing|^You really should concentrate on your journey|^You step onto a massive stairway
+  var move_WAIT ^You continue climbing|^You begin climbing|^You really should concentrate on your journey|^You step onto a massive stairway|^You start the slow journey across the bridge\.$
   var move_END_DELAY ^You reach|you reach\.\.\.$|^Finally the bridge comes to an end
   var move_STAND ^You must be standing to do that|^You can't do that while (lying down|kneeling|sitting)|You try to quickly step from root to root, but slip and drop to your knees|you trip over an exposed root|^Stand up first\.|^You must stand first\.|^You'll need to stand up|a particularly sturdy one finally brings you to your knees\.$|You try to roll through the fall but end up on your back\.$|^Perhaps you might accomplish that if you were standing\.$
   var move_NO_SNEAK ^You can't do that here|^In which direction are you trying to sneak|^Sneaking is an inherently stealthy|^You can't sneak that way|^You can't sneak in that direction
@@ -287,7 +295,7 @@ ABSOLUTE.TOP:
   var move_INVIS ^The .* can't see you\!|^But no one can see you\!|^How can you .* can't even see you\?
   var climb_mount_FAIL climb what?
 ACTIONS:
-  action (mapper) if (%movewait = 0) then shift;if (%movewait = 0) then math depth subtract 1;if ((len("%2") > 0) && (%verbose)) then put #echo %color Next move: %2 when %move_OK
+  action (mapper) if (%movewait = 0) then shift;if (%movewait = 0) then math depth subtract 1;if ((len("%2") > 0) && (%verbose = 1)) then put #echo %color Next move: %2 when %move_OK
   action (mapper) goto MOVE.TORCH when %move_TORCH
   action (mapper) goto MOVE.FAILED when %move_FAIL
   action (mapper) var TryGoInsteadOfClimb 1 when ^You can't climb that\.$
@@ -331,7 +339,6 @@ MAIN.LOOP:
   delay %infiniteLoopProtection
   if_1 goto WAVE_DO
   goto DONE
-
 WAVE_DO:
   evalmath MDepth (%depth + 1)
   if ((%typeahead.max >= %depth) && ("%%MDepth" != "")) then gosub MOVE %%MDepth
@@ -820,22 +827,9 @@ MOVE.RETRY:
     goto MOVE.RETRY
     }
   if (%waitfor_action) then wait
+  delay %infiniteLoopProtection
   pause %command_pause
   goto MOVE.RT
-#  goto RETURN.CLEAR
-
-#MOVE.RETRY.GO:
-#  gosub echo Retry movement
-#  eval movement replacere("%movement", "climb ", "go ")
-#  if ($webbed) then waiteval (!$webbed)
-#  if ($stunned) then
-#    {
-#    pause
-#    goto MOVE.RETRY.GO
-#    }
-#  if (%waitfor_action) then wait
-#  pause %command_pause
-#  goto MOVE.RT
 
 MOVE.CLOSED:
   gosub echo SHOP IS CLOSED FOR THE NIGHT!
@@ -851,7 +845,6 @@ JAILED:
   exit
 
 MOVE.FAILED:
-#  if (("$zonename" = "Misenseor Abbey") && ("$roomid" = "6")) then goto ABBEY.HATCH
   var subscript 0
   evalmath failcounter %failcounter + 1
   if (%failcounter > 4) then
@@ -861,34 +854,12 @@ MOVE.FAILED:
     put #flash
     exit
     }
-  put #echo %color ¤~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  put #echo %color §  MOVE FAILED - Type: %type | Movement: %movement | Depth: %depth
-  put #echo %color §   Remaining Path: %0
-  var remaining_path %0
-  eval remaining_path replacere("%0", " ", "|")
-  put #echo %color §   %remaining_path[1]
-  put #echo %color §   %remaining_path[2]
-  ### ADDED EXIT HERE ON FAILURE TO LET AUTOMOVE ROUTINES TAKE OVER AND RETRY
-  ### AS THE AUTO-RETRY FEATURE IN HERE NO ONE CAN SEEM TO GET TO WORK RIGHT
-  put #parse MOVE FAILED
-  put #parse AUTOMAPPER MOVEMENT FAILED!
-  exit
-#  pause %command_pause
-#  echo RETRYING Movement...%failcounter / 3 Tries.
-#  echo ********************************
-#  if (%failcounter > 3) then
-#    {
-#    echo [Trying: go %remaining_path(2) due to possible movement overload]
-#    put go %remaining_path(2)
-#    }
-#  if ("%type" = "search") then put %type
-#  pause
-#  if (%verbose) then echo [Moving: %movement]
-#  put %movement
-#  matchwait 5
-
-END.RETRY:
+  put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+  put #echo %color <<  MOVE FAILED - Type: %type | Movement: %movement | Depth: %depth
+  put #echo %color <<   Remaining Moves: %argcount
+  put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
   pause
+  gosub echo RETRYING Movement...%failcounter / 3 Tries.
 
 RETURN.CLEAR:
   action (mapper) on
@@ -1377,9 +1348,9 @@ ACTION.RETURN:
 echo:
   var echoVar $0
   eval border replacere("%echoVar", ".", "~")
-  put #echo %color ¤~~%border~~¤
-  put #echo %color §  %echoVar  §
-  put #echo %color ¤~~%border~~¤
+  put #echo %color <~~~%border~~~>
+  put #echo %color <<  %echoVar  >>
+  put #echo %color <~~~%border~~~>
   return
   
 #### THIS AUTO SETS MAIN.BAG / BACKUP.BAG / THIRD.BAG VARIABLES
@@ -1431,13 +1402,13 @@ BAG.LOOP:
   var BAG %Bags[%BagLoop]
   if (%BagLoop > %TotalBags) then
     {
-    put #echo %color ¤~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    put #echo %color §  Auto-setting container variables
-    put #echo %color §  Main: %MAIN.BAG
-    put #echo %color §  Backup: %BACKUP.BAG
-    put #echo %color §  Third: %THIRD.BAG
-    put #echo %color §  Fourth: %FOURTH.BAG
-    put #echo %color ¤~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    put #echo %color <<  Auto-setting container variables
+    put #echo %color <<  Main: %MAIN.BAG
+    put #echo %color <<  Backup: %BACKUP.BAG
+    put #echo %color <<  Third: %THIRD.BAG
+    put #echo %color <<  Fourth: %FOURTH.BAG
+    put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     return
     }
     if ("%%BAG" = 1) then
