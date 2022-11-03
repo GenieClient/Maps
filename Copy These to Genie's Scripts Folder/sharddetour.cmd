@@ -2,72 +2,85 @@
 ### Added Athletics Check to climb over West Gate wall from Map 69 
 
 locationcheck:
+
+debug 5
+
 put #script pause all except %scriptname
-if $zoneid = 67 then goto insideshard
-else goto outsideshard
+waitfor positive attitude
+exit
 
+if ($zoneid != 67) then goto outsideshard
+####
 insideshard:
-if $roomid = 1 then var dest ngate
-if $roomid = 43 then var dest wgate
-if $roomid = 199 then var dest sgate
+  if ($Athletics.Ranks > 250) then goto $roomidClimbOUT
+  if ($roomid = 1) then gosub automove e gate
+  if ($roomid = 43) then gosub automove e gate|w gate
+  if ($roomid = 199) then gosub automove e gate|s gate
+  goto done
+199ClimbOUT:
+  move climb stairway
+  move east
+  move climb embrasure
+  goto done
+1ClimbOUT:
+  move climb ladder
+  move west
+  move climb embrasure
+  goto done
+43ClimbOUT:
+  move climb ladder
+  move south
+  move climb embrasure
+  goto done
+####
 
-if "%dest" = "ngate" then gosub automove e gate
-if "%dest" = "wgate" then gosub automove e gate|w gate
-if "%dest" = "sgate" then gosub automove e gate|s gate
-put #script resume all
-pause 0.2
-     put #parse YOU HAVE ARRIVED!
-     put #class arrive off
-exit
-
+####
 outsideshard:
-if ($zoneid = 69) then
-     {
-        if ($Athletics.Ranks > 240) then 
-          {
-               if ($roomid != 10) then gosub automove 10
-               pause 0.01
-               send climb wall
-               pause 0.8
-               pause 0.1
-               send north
-               pause 0.8
-               send climb ladder
-               pause 0.5
-          }
-     }
-if $zoneid = 69 then gosub automove north
-if $zoneid = 68 then gosub automove e gate
-if $zoneid = 67 then gosub automove 1
-if $zoneid = 66 then gosub automove east
-put #script resume all
-pause 0.2
-     put #parse YOU HAVE ARRIVED!
-     put #class arrive off
-exit
+  if ($Athletics.Ranks > 250) then goto $zoneidClimbIN
+  if ($zoneid = 69) then gosub automove north shard
+  if ($zoneid = 68) then gosub automove e gate|e gate
+  if ($zoneid = 66) then gosub automove e gate
+  goto done
+69ClimbIN:
+  move climb wall
+  move north
+  move climb ladder
+  goto done
+66ClimbIN:
+  move climb wall
+  move east
+  move climb ladder
+  goto done
+68ClimbIN:
+  move climb wall
+  move west
+  move climb stairway
+  goto done
+####
+
+####
+end:
+done:
+  put #script resume all
+  pause 0.2
+  put #parse YOU HAVE ARRIVED!
+  put #class arrive off
+  exit
 
 automove:
-var movement $0
-eval mcount count("%movement", "|")
-var ccount 0
-#if contains("Cleric|Warrior Mage|Moon Mage|Bard|Empath|Paladin", "$Guild") then put #var powerwalk 1
+  var movement $0
+  eval mcount count("%movement", "|")
+  var c 0
 
 automove_1:
-pause 1
-if matchre("%movement(%ccount)", "travel") then goto travelmove
-match automove_1 YOU HAVE FAILED
-match automove_1 You can't go there
-match automove_1 MOVE FAILED
-match autoreturn YOU HAVE ARRIVED
-else put #goto %movement(%ccount)
-matchwait
-
-travelmove:
-put %movement(%ccount)
-waitfor REACHED YOUR DESTINATION
-goto autoreturn
+  match automove_1 YOU HAVE FAILED
+  match automove_1 You can't go there
+  match automove_1 MOVE FAILED
+  match autoreturn YOU HAVE ARRIVED
+  put #goto %movement(%c)
+  matchwait
 
 autoreturn:
-if %ccount = %mcount then return
-math ccount add 1
-goto automove_1
+  if (%c = %mcount) then return
+  math c add 1
+  goto automove_1

@@ -1,8 +1,14 @@
 # automapper.cmd
-var autoversion 8.2022-11-02
+var autoversion 8.2022-11-03
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
+
+#2022-11-03
+# Hanryu
+#   issue with shard a night... yet again! New subscript
+#   fall-thru message for PP walk if you're playing zills
+#   added a timeout to MOVE.RT evalwait depth drops based on VTCifer's code
 
 #2022-11-02
 # Hanryu
@@ -272,8 +278,8 @@ ABSOLUTE.TOP:
   var depth 0
   var movewait 0
   var TryGoInsteadOfClimb 0
-  var move_TORCH You push up on the (stone basin|torch)\, and the stone wall closes\.
-  var move_OK ^Obvious (paths|exits)|^It's pitch dark|The shop appears to be closed\, but you catch the attention of a night attendant inside\,|^You move effortlessly through the
+  var move_TORCH You push up on the (stone basin|torch), and the stone wall closes\.
+  var move_OK ^Obvious (paths|exits)|^It's pitch dark|The shop appears to be closed, but you catch the attention of a night attendant inside,|^You move effortlessly through the
   var move_FAIL ^You can't swim in that direction|You can't go there|^A powerful blast of wind blows you to the|^What were you referring to|^I could not find what you were referring to\.|^You can't sneak in that direction|^You can't ride your.+(broom|carpet) in that direction|^You can't ride that way\.$
   var move_RETRY ^\.\.\.wait|^Sorry, you may only|^Sorry, system is slow|^The weight of all|lose your balance during the effort|^You are still stunned|^You're still recovering from your recent|^The mud gives way beneath your feet as you attempt to climb higher, sending you sliding back down the slope instead\!|You're not sure you can
   var move_RETREAT ^You are engaged to|^You try to move, but you're engaged|^While in combat|^You can't do that while engaged|^You can't do that\!  You're in combat\!
@@ -285,7 +291,7 @@ ABSOLUTE.TOP:
   var move_GO ^Please rephrase that command
   var move_MUCK ^You fall into the .+ with a loud \*SPLUT\*|^You slip in .+ and fall flat on your back\!|^The .+ holds you tightly, preventing you from making much headway\.|^You make no progress in the mud|^You struggle forward, managing a few steps before ultimately falling short of your goal\.|^You find yourself stuck in the mud
   var climb_FAIL ^Trying to judge the climb, you peer over the edge\.  A wave of dizziness hits you, and you back away from .+\.|^You start down .+, but you find it hard going\.  Rather than risking a fall, you make your way back up\.|^You attempt to climb down .+, but you can't seem to find purchase\.|^You pick your way up .+, but reach a point where your footing is questionable\.  Reluctantly, you climb back down\.|^You make your way up .+\.  Partway up, you make the mistake of looking down\.  Struck by vertigo, you cling to .+ for a few moments, then slowly climb back down\.|^You approach .+, but the steepness is intimidating\.|^The ground approaches you at an alarming rate|^You start up .+, but slip after a few feet and fall to the ground\!  You are unharmed but feel foolish\.|^You almost make it to the top|^You start the climb and slip|^You start to climb .+, but then stop to reconsider\.
-  var move_CLOSED ^The door is locked up tightly for the night|^You stop as you realize that the|^(?:\w+ )+I'm sorry\, but you need to be a citizen|^BONK\! You smash your nose|^Bonk\! You smash your nose|^(?:\w+ )+I'm sorry\, I can only allow citizens in at night|^(?:\w+ )+shop is closed for the night|^A guard appears and says\, \"I'm sorry\,|The shop appears to be closed\, but you catch the attention of a night attendant inside\, and he says\, \"I'm sorry\, I can only allow citizens in at night\.\""?
+  var move_CLOSED ^The door is locked up tightly for the night|^You stop as you realize that the|^(?:\w+ )+I'm sorry, but you need to be a citizen|^BONK\! You smash your nose|^Bonk\! You smash your nose|^(?:\w+ )+I'm sorry, I can only allow citizens in at night|^(?:\w+ )+shop is closed for the night|^A guard appears and says, \"I'm sorry,|The shop appears to be closed, but you catch the attention of a night attendant inside, and he says, \"I'm sorry, I can only allow citizens in at night\.\""?
   var swim_FAIL ^You struggle (?!to maintain)|^You work(?! your way (?:up|down) the cliff)|^You slap|^You flounder
   var move_DRAWBRIDGE ^The guard yells, "Lower the bridge|^The guard says, "You'll have to wait|^A guard yells, "Hey|^The guard yells, "Hey
   var move_ROPE.BRIDGE is already on the rope\.|You'll have to wait
@@ -494,12 +500,15 @@ ICE.PAUSE:
   return
 
 MOVE.KNOCK:
+
+debug 5
+
   action (mapper) off
   if ($roundtime > 0) then pause %command_pause
   if (%depth > 1) then waiteval (1 = %depth)
   var movement knock gate
   matchre MOVE.KNOCK ^\.\.\.wait|^Sorry,|^You are still stun|^You can't do that while entangled
-  matchre SHARD.FAILED Sorry\, you're not a citizen
+  matchre SHARD.FAILED Sorry, you're not a citizen
   matchre KNOCK.DONE %move_OK|All right, welcome back|opens the door just enough to let you slip through|wanted criminal
   matchre CLOAK.LOGIC ^You turn away, disappointed\.
   matchre KNOCK.INVIS ^The gate guard can't see you
@@ -507,6 +516,9 @@ MOVE.KNOCK:
   matchwait 10
 
 SHARD.FAILED:
+
+debug 5
+
   if ((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) then gosub WEAR.CLOAK
   if ((!%cloak_off) && ("%cloak_worn" = "1")) then gosub RAISE.CLOAK
   if !matchre("$zoneid", "(66|67|68|69)") then goto MOVE.FAILED
@@ -536,7 +548,10 @@ MOVE.RT:
 ####added this to stop trainer
   eval movement replacere("%movement", "script crossingtrainerfix ", "")
   put %movement
-  if (%depth > 1) then waiteval (1 = %depth)
+  if (%depth > 1) then {
+    eval MoveRTTimeout $gametime + 3
+    waiteval ($gametime > %MoveRTTimeout) || (1 = %depth)
+    }
   wait
   goto MOVE.DONE
 
@@ -867,7 +882,7 @@ RETURN.CLEAR:
   goto MAIN.LOOP.CLEAR
 
 CARAVAN:
-  waitforre ^Your .*\, following you\.
+  waitforre ^Your .*, following you\.
   goto MAIN.LOOP.CLEAR
 
 POWERWALK:
@@ -878,7 +893,7 @@ POWERWALK:
     }
   var action perceive
   var typeahead.max 0
-  var success ^\s*[\[\(]?Roundtime\s*\:?|^Something in the area is interfering
+  var success ^\s*[\[\(]?Roundtime\s*\:?|^Something in the area is interfering|^You are a bit too busy performing
   goto ACTION.WALK
 
 SEARCHWALK:
@@ -996,16 +1011,15 @@ ARMOIRE:
   goto MOVE.REAL
 
 MISTWOOD.CLIFF:
-  var NextRoom ^(?:Obvious (?:paths|exits)|It's pitch dark|You can't go there|You can't sneak in that direction)
-  action var Dir $1 when ^Peering closely at a faint path, you realize you would need to head (\w+)\.
   put peer path
-  waitforre Peering closely at
+  waitforre ^Peering closely at a faint path, you realize you would need to head (\w+)\.
+  var Dir $1
   put down
-  waitforre %NextRoom
+  waitforre %move_OK
   put %Dir
-  waitforre %NextRoom
+  waitforre %move_OK
   put nw
-  waitforre %NextRoom
+  waitforre %move_OK
   goto MOVE.SCRIPT.DONE
 
 SANDSPIT.TAVERN:
@@ -1015,7 +1029,7 @@ SANDSPIT.TAVERN:
   var action go barrel
   var success ^You can't|^You duck
   gosub ACTION
-  if ("%barrel" = "1") then
+  if (%barrel) then
     {
     var action go other barrel
     gosub ACTION
@@ -1031,7 +1045,7 @@ HIB.INTELLIGENCE:
   var action go steel door
   var success ^You can't|Chedik Bridge, Engineer's Tower
   gosub ACTION
-  if ("%steeldoor" = "1") then
+  if (%steeldoor) then
     {
     var action go other steel door
     gosub ACTION
@@ -1099,7 +1113,7 @@ CHECK.FOOTWEAR:
     goto SKATE.NO
     }
   if (%verbose) then gosub echo Ice skates found!
-  if ((!%footwear) && ("%skate.container" = "held") then goto WEAR.SKATES
+  if ((!%footwear) && ("%skate.container" = "held")) then goto WEAR.SKATES
   if (!%footwear) then goto GET.SKATES
 
 REMOVE.FOOTWEAR:
@@ -1238,7 +1252,7 @@ STOW.ALT:
   var StowLoop 0
   gosub BAG.CHECK
   STOW.ALT.1:
-  delay 0.0001
+  delay %infiniteLoopProtection
   math StowLoop add 1
   if (matchre("Empty", "$lefthand") && matchre("Empty", "$righthand")) then return
   if (%StowLoop > 3) then
@@ -1329,7 +1343,7 @@ ACTION.MAPPER.ON:
   matchre ACTION.RETURN %success
   matchre ACTION.STOW.HANDS ^You must have at least one hand free to do that|^You need a free hand
   matchre ACTION.WAIT ^You're unconscious|^You are still stunned|^You can't do that while|^You don't seem to be able to
-  matchre ACTION.FAIL ^There isn't any more room|^You just can't get the .* to fit|^(That's|The .*) too (heavy|thick|long|wide)|^There's no room|^Weirdly\,|^As you attempt
+  matchre ACTION.FAIL ^There isn't any more room|^You just can't get the .* to fit|^(That's|The .*) too (heavy|thick|long|wide)|^There's no room|^Weirdly,|^As you attempt
   matchre ACTION.STOW.UNLOAD ^You should unload
   put %action
   matchwait 2
