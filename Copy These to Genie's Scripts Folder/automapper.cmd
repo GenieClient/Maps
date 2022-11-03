@@ -500,9 +500,6 @@ ICE.PAUSE:
   return
 
 MOVE.KNOCK:
-
-debug 5
-
   action (mapper) off
   if ($roundtime > 0) then pause %command_pause
   if (%depth > 1) then waiteval (1 = %depth)
@@ -516,9 +513,6 @@ debug 5
   matchwait 10
 
 SHARD.FAILED:
-
-debug 5
-
   if ((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) then gosub WEAR.CLOAK
   if ((!%cloak_off) && ("%cloak_worn" = "1")) then gosub RAISE.CLOAK
   if !matchre("$zoneid", "(66|67|68|69)") then goto MOVE.FAILED
