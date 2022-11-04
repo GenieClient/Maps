@@ -1,9 +1,16 @@
 # automapper.cmd
-var autoversion 8.2022-11-03
+var autoversion 8.2022-11-04
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
 
+#2022-11-04
+# Shroom
+# - Added additional FAIL catches to ACTION sub
+# - Added a hard STOW FEET at end of STOW.FEET sub
+# - To fix a endless loop in rare cases where false positives on a "cloth/rug" at feet that CANNOT be rolled
+# - Should not really effect anything in normal stow feet logic other than firing the command twice
+#
 #2022-11-03
 # Hanryu
 #   issue with shard a night... yet again! New subscript
@@ -1220,6 +1227,10 @@ STOW.FEET:
   if matchre("%footitem", "(mat|rug|cloth|tapestry)") then var action roll %footitem
   var success ^You pick up .* lying at your feet|^You carefully gather up the delicate folds|^You start at one end of your|^Stow what\?
   gosub ACTION
+## THIS LINE WAS ADDED TO FIX A RARE CONDITION WHERE THE FOOTITEM IS A "CLOTH/RUG" BUT ~CANNOT~ BE ROLLED THUS GOES INTO AN INFINITE LOOP OF FAILING TO ROLL
+## It should not really effect a normal stow feet other than firing "stow feet" twice which is inconsequential 
+  send stow feet
+  pause 0.4
   return
 
 STOW.HANDS:
@@ -1337,7 +1348,8 @@ ACTION.MAPPER.ON:
   matchre ACTION.RETURN %success
   matchre ACTION.STOW.HANDS ^You must have at least one hand free to do that|^You need a free hand
   matchre ACTION.WAIT ^You're unconscious|^You are still stunned|^You can't do that while|^You don't seem to be able to
-  matchre ACTION.FAIL ^There isn't any more room|^You just can't get the .* to fit|^(That's|The .*) too (heavy|thick|long|wide)|^There's no room|^Weirdly,|^As you attempt
+  matchre ACTION.FAIL ^(That's|The .*) too (heavy|thick|long|wide)|^There's no room|^Weirdly\,|^As you attempt|^That doesn't belong in there\!
+  matchre ACTION.FAIL ^There isn't any more room|^You just can't get the .+ to fit|^Where are you|^What were you|^You can't
   matchre ACTION.STOW.UNLOAD ^You should unload
   put %action
   matchwait 2
