@@ -6,8 +6,6 @@ locationcheck:
 debug 5
 
 put #script pause all except %scriptname
-waitfor positive attitude
-exit
 
 if ($zoneid != 67) then goto outsideshard
 ####
