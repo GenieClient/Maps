@@ -4050,7 +4050,7 @@
     <arc exit="north" move="north" destination="439" />
     <arc exit="east" move="east" destination="432" />
   </node>
-  <node id="441" name="Hilltop, Road" note="Map7_NTR.xml">
+  <node id="441" name="Hilltop, Road" note="Map7_NTR.xml|NTR|Crossing">
     <description>A peaceful valley, sheltered by the surrounding hills, is laid out before you like a patchwork quilt of flowery meadows and neatly arranged farmland.  Centered in this multicolored vista is a small village.  You pause on the hilltop to enjoy this delightful view.  A meadowlark circles overhead for a moment, warbling its song to you, before swooping down toward the village, following the line of a well-traveled road.</description>
     <description>The moonlight reveals a small valley stretched out between the surrounding hills.  You can see a multitude of tiny lamplights twinkling in the darkness below, and faroff sounds of laughter and singing hover in the sweet evening air.  The faint outline of a road descends down into the night-cloaked valley.</description>
     <position x="-10" y="-20" z="0" />
