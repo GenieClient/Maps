@@ -111,8 +111,8 @@ AUTOMOVE:
      var randomloop 0
      var Destination $0
      var automovefailCounter 0
-     if ($standing = 0) then gosub AUTOMOVE_STAND
-     if ($roomid = 0) then gosub moveRandomDirection
+     if (!$standing) then gosub AUTOMOVE_STAND
+     if (!$roomid = 0) then gosub moveRandomDirection
      if ("$roomid" = "%Destination") then return
 AUTOMOVE_GO:
      pause 0.0001
@@ -150,7 +150,7 @@ AUTOMOVE_FAILED:
      put look
      pause 0.5
      pause 0.2
-     if ($roomid = 0) || (%automovefailCounter > 2) then gosub moveRandomDirection
+     if (!$roomid = 0) || (%automovefailCounter > 2) then gosub moveRandomDirection
      goto AUTOMOVE_GO
 AUTOMOVE_FAIL_BAIL:
      action (moving) off
