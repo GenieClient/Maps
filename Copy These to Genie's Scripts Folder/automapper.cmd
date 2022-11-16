@@ -1,10 +1,10 @@
 # automapper.cmd
-var autoversion 8.2022-11-14
+var autoversion 8.2022-11-16
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
 
-#2022-11-14
+#2022-11-16
 # Hanryu
 #   dealing with an outlander bug where 2 "when"s in an action line mess it up
 #   searching xala path
