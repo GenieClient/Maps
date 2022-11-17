@@ -528,6 +528,10 @@ MOVE.KNOCK:
   matchwait
 
 SHARD.FAILED:
+  if ($charactername = Hanryu) then {
+    echo something went wrong again with outlander, debug it!
+
+  }
   if ((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) then gosub WEAR.CLOAK
   if ((!%cloak_off) && (%cloak_worn)) then gosub RAISE.CLOAK
   if !matchre("$zoneid", "(66|67|68|69)") then goto MOVE.FAILED
