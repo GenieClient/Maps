@@ -58,9 +58,9 @@ MOVE_RETREAT:
 goto MOVEP
 
 MOVE_STAND:
-  if ($standing = 0) then send stand
+  if (!$standing) then send stand
   pause 0.1
-  if ($standing = 0) then goto MOVE_STAND
+  if (!$standing) then goto MOVE_STAND
 goto MOVEP
 ####
 

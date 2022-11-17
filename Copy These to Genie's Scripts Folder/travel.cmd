@@ -153,7 +153,7 @@ if ("$charactername") = ("$char4") then var shardcitizen no
 ##########################################
 INIT:
 # debug 5
-# action goto START when ^Just when it seems you will never reach the end of the road
+# action goto START when ^Just \w+ it seems you will never reach the end of the road
 action goto NOPASSPORT when No one proceeds through this checkpoint without a passport
 action goto NOCOIN when You haven't got enough (.+) to pay for your trip\.|You reach your funds, but realize you're short\.|\"Hey,\"\s+he says,\s+\"You haven't got enough Lirums to pay for your trip\.
 ## action goto START when \"What in tarnation
@@ -949,7 +949,7 @@ if ("$zoneid" = "14b") then gosub AUTOMOVE 217
 if ("$zoneid" = "11") then gosub AUTOMOVE 2
 if (("$zoneid" = "1") && matchre("%detour", "(arthe|dirge|kaerna|stone|misen|sorrow|fist|beisswurms|bucca|viper)")) then
      {
-          if ($invisible = 1) then
+          if ($invisible) then
                {
                     gosub AUTOMOVE N gate
                     gosub AUTOMOVE NTR
@@ -1783,7 +1783,7 @@ if (matchre("$game", "(?i)DRX") && (%portal = 1)) then
      }
 if ("$zoneid" = "1") then
      {
-          if ($invisible = 1) then
+          if ($invisible) then
                {
                     gosub AUTOMOVE N gate
                     gosub AUTOMOVE NTR
@@ -3343,7 +3343,7 @@ NOCOIN:
   pause 0.5
   put wealth
   pause
-  if ($invisible = 1) then gosub stopinvis
+  if ($invisible) then gosub stopinvis
   if ("$zoneid" = "1") then
         {
             var currencyneeded kro
@@ -3354,7 +3354,7 @@ NOCOIN:
                }
             if (%kronars >= 120) then goto COIN.CONTINUE
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible) then gosub stopinvis
             put withdraw 120 copper
             wait
         }
@@ -3370,7 +3370,7 @@ NOCOIN:
                }
             if (%kronars >= 120) then goto COIN.CONTINUE
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible) then gosub stopinvis
             put withdraw 120 copper
             wait
         }
@@ -3384,7 +3384,7 @@ NOCOIN:
                }
             if (%lirums >= 140) then goto COIN.CONTINUE
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible) then gosub stopinvis
             put withdraw 140 copper
             wait
         }
@@ -3398,7 +3398,7 @@ NOCOIN:
                }
             if (%lirums >= 140) then goto COIN.CONTINUE
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible) then gosub stopinvis
             put withdraw 140 copper
             wait
         }
@@ -3413,7 +3413,7 @@ NOCOIN:
                }
             if (%lirums >= 200) then goto COIN.CONTINUE
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible) then gosub stopinvis
             put withdraw 200 copper
             wait
             pause 0.2
@@ -3434,7 +3434,7 @@ NOCOIN:
                }
             gosub AUTOMOVE teller
             if (%lirums >= %boarneeded) then goto COIN.CONTINUE
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible) then gosub stopinvis
             if matchre ("%detour", "(mriss|merk|hara)") then
                 {
                     var currencyneeded qi
@@ -3455,7 +3455,7 @@ NOCOIN:
                }
             if (%dokoras > 120) then goto COIN.CONTINUE
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible) then gosub stopinvis
             put withdraw 120 copper
             wait
         }
@@ -3471,7 +3471,7 @@ NOCOIN:
                }
             if (%dokoras > %therencoin) then goto COIN.CONTINUE
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible) then gosub stopinvis
 		  put withdraw %therencoin copper
             wait
         }
@@ -3485,7 +3485,7 @@ NOCOIN:
                }
             if (%dokoras > 120) then goto COIN.CONTINUE
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible) then gosub stopinvis
             put withdraw 120 copper
             wait
         }
@@ -3500,7 +3500,7 @@ NOCOIN:
                }
             if (%dokoras > 120) then goto COIN.CONTINUE
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible) then gosub stopinvis
             put withdraw 120 copper
             wait
         }
@@ -3508,7 +3508,7 @@ NOCOIN:
         {
             var currencyneeded aesry
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible) then gosub stopinvis
             if matchre("$game", "(?i)DR") then put withdraw 10 gold
             if matchre("$game", "(?i)DRF") then
                {
@@ -3526,7 +3526,7 @@ NOCOIN:
             gosub AUTOMOVE exchange
             gosub DOKORAS
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible) then gosub stopinvis
             put withdraw 300 copper
             wait
             gosub AUTOMOVE exchange
@@ -3541,14 +3541,14 @@ NOCOIN:
         {
             var currencyneeded aesryback
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible) then gosub stopinvis
             put withdraw 10 gold
         }
     if ("$zoneid" = "107") then
         {
             var currencyneeded lir
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible) then gosub stopinvis
             put withdraw 140 copper
         }
     if ("$zoneid" = "108") then
@@ -3666,8 +3666,8 @@ TO_SEACAVES:
      pause 0.1
      gosub AUTOMOVE portal
      pause 0.5
-     if ($invisible = 1) then gosub STOP.INVIS
-     if ($invisible = 1) then gosub STOP.INVIS
+     if ($invisible) then gosub STOP.INVIS
+     if ($invisible) then gosub STOP.INVIS
      pause 0.2
      send go meeting portal
      pause 0.5
@@ -4103,7 +4103,7 @@ EOTB:
      var EOTBLoop 0
      var NecroPrep EOTB
 EOTB_1:
-     if (($spellEOTB = 1) && ($invisible = 1)) then goto NECRO.DONE
+     if (($spellEOTB = 1) && ($invisible)) then goto NECRO.DONE
      pause 0.1
      echo  **** Prepping EOTB ****
      if ("$preparedspell" != "None") then send release spell
@@ -4120,7 +4120,7 @@ EOTB_1:
                matchwait 30
                put #echo >log Red *** Error with EOTB not pulsing invis. Attempting to recast.
           }
-     if ($invisible = 1) then return
+     if ($invisible) then return
      ## ** If script made it to this section then EOTB must be recast.
      ## ** This will not cast while inside the bank or any other unapproved rooms.
      if (((matchre("$roomobjs", "exchange rate board")) || (matchre("$roomname", "([T|t]eller|[E|e]xchange|[B|b]ank)")) || (matchre("$roomname", "(%donotcastlist)"))) then return
@@ -4963,7 +4963,7 @@ MOVE_STAND:
      goto MOVE_STAND
 MOVE_RETREAT:
      pause 0.1
-     if ($invisible = 1) then gosub STOP_INVIS
+     if ($invisible) then gosub STOP_INVIS
      matchre MOVE_RETREAT ^\.\.\.wait|^Sorry,|^Please wait\.
      matchre MOVE_RETREAT ^You retreat back to pole range\.
      matchre MOVE_RETREAT ^You stop advancing

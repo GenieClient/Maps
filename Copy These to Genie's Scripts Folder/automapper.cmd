@@ -1,8 +1,14 @@
 # automapper.cmd
-var autoversion 8.2022-11-04
+var autoversion 8.2022-11-16
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
+
+#2022-11-16
+# Hanryu
+#   dealing with an outlander bug where 2 "when"s in an action line mess it up
+#   searching xala path
+#   >= 1750 for exp checks, yea I am undoing something I messed up
 
 #2022-11-04
 # Shroom
@@ -308,7 +314,7 @@ ABSOLUTE.TOP:
   var move_INVIS ^The .* can't see you\!|^But no one can see you\!|^How can you .* can't even see you\?
   var climb_mount_FAIL climb what?
 ACTIONS:
-  action (mapper) if (%movewait = 0) then shift;if (%movewait = 0) then math depth subtract 1;if ((len("%2") > 0) && (%verbose = 1)) then put #echo %color Next move: %2 when %move_OK
+  action (mapper) if (%movewait = 0) then shift;if (%movewait = 0) then math depth subtract 1;if ((%verbose) && (len("%2") > 0)) then put #echo %color Next move: %2 when %move_OK
   action (mapper) goto MOVE.TORCH when %move_TORCH
   action (mapper) goto MOVE.FAILED when %move_FAIL
   action (mapper) var TryGoInsteadOfClimb 1 when ^You can't climb that\.$
@@ -338,7 +344,7 @@ ACTIONS:
   action (skates) var wearing_skates 1 when ^You slide your ice skates on your feet and tightly tie the laces\.|^Your ice skates help you traverse the frozen terrain\.|^Your movement is hindered .* by your ice skates\.|^You tap some.*\bskates\b.*that you are wearing
   action (skates) var wearing_skates 0 when ^You untie your skates and slip them off of your feet\.
   action var slow_on_ice 1;if (%verbose) then put #echo %color Ice detected! when ^You had better slow down\! The ice is|^At the speed you are traveling
-  action goto JAILED when ^You slowly wake up again to find that all your belongings have been stripped and you are in a jail cell wearing a set of heavy manacles\.|^The \w+ brings you to the jail, where several companions aid to hold you down and strip you of all your possessions\.|^The town guard, with the help of several others, wrestle you to the ground, bind you in chains, and drag you off to jail\.|^When you awake some time later, your possessions have been stripped from you, and you lay in a musty pile of straw\.|^The door slams shut, a sound not unlike that of a tomb closing\.
+  action goto JAILED when ^You slowly wake up again to find that all your belongings have been stripped and you are in a jail cell wearing a set of heavy manacles\.|^The \w+ brings you to the jail, where several companions aid to hold you down and strip you of all your possessions\.|^The town guard, with the help of several others, wrestle you to the ground, bind you in chains, and drag you off to jail\.|^\w+ you awake some time later, your possessions have been stripped from you, and you lay in a musty pile of straw\.|^The door slams shut, a sound not unlike that of a tomb closing\.
   action goto DEAD.DONE when ^You are a ghost\!
 
 # Are you starting the script while in RT?
@@ -355,6 +361,8 @@ MAIN.LOOP:
 WAVE_DO:
   evalmath MDepth (%depth + 1)
   if ((%typeahead.max >= %depth) && ("%%MDepth" != "")) then gosub MOVE %%MDepth
+# what if I started having this count up and pop depth after like 3 - 5 rounds?
+# I should only stack up so many goto MAIN.LOOPs if there's a problem...
   if ((%typeahead.max <= %depth) || ("%%MDepth" = "")) then goto MAIN.LOOP
   else goto WAVE_DO
 
@@ -517,11 +525,15 @@ MOVE.KNOCK:
   matchre CLOAK.LOGIC ^You turn away, disappointed\.
   matchre KNOCK.INVIS ^The gate guard can't see you
   put %movement
-  matchwait 10
+  matchwait
 
 SHARD.FAILED:
+  if ($charactername = Hanryu) then {
+    echo something went wrong again with outlander, debug it!
+
+  }
   if ((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) then gosub WEAR.CLOAK
-  if ((!%cloak_off) && ("%cloak_worn" = "1")) then gosub RAISE.CLOAK
+  if ((!%cloak_off) && (%cloak_worn)) then gosub RAISE.CLOAK
   if !matchre("$zoneid", "(66|67|68|69)") then goto MOVE.FAILED
   matchre KNOCK.DONE YOU HAVE ARRIVED\!
   put .sharddetour
@@ -549,11 +561,13 @@ MOVE.RT:
 ####added this to stop trainer
   eval movement replacere("%movement", "script crossingtrainerfix ", "")
   put %movement
-  if (%depth > 1) then {
+  if (%depth > 0) then {
     eval MoveRTTimeout $gametime + 3
-    waiteval ($gametime > %MoveRTTimeout) || (1 = %depth)
+    waiteval ($gametime > %MoveRTTimeout) || (0 = %depth)
     }
-  wait
+#  wait
+#  delay %infiniteLoopProtection
+#  pause %command_pause
   goto MOVE.DONE
 
 MOVE.TORCH:
@@ -593,13 +607,13 @@ MOVE.CLIMB:
   matchre MOVE.DONE %move_OK
   matchre MOVE.CLIMB.MOUNT.FAIL climb what\?
   matchre MOVE.CLIMB.WITH.ROPE %climb_FAIL
-  if ($broom_carpet = 1) then eval movement replacere("%movement", "climb ", "go ")
+  if ($broom_carpet) then eval movement replacere("%movement", "climb ", "go ")
   put %movement
   matchwait
 
 MOVE.CLIMB.MOUNT.FAIL:
   matchre move.done %move_OK
-  if ($broom_carpet = 1) then eval movement replacere("%movement", "climb ", "go ")
+  if ($broom_carpet) then eval movement replacere("%movement", "climb ", "go ")
   put %movement
   matchwait
 
@@ -658,7 +672,7 @@ STOW.ROPE:
 MOVE.SEARCH:
   if (%depth > 1) then waiteval (1 = %depth)
   put search
-  waitfor You
+  waitforre ^You|^After
   if ($roundtime > 0) then pause %command_pause
   put %movement
   goto MOVE.DONE
@@ -666,7 +680,7 @@ MOVE.SEARCH:
 MOVE.OBJSEARCH:
   put search %searchObj
   pause %command_pause
-  if ($broom_carpet = 1) then eval movement replacere("%movement", "climb ", "go ")
+  if ($broom_carpet) then eval movement replacere("%movement", "climb ", "go ")
   put %movement
   pause %command_pause
   goto MOVE.DONE
@@ -787,9 +801,13 @@ MOVE.RETREAT:
   matchre RETURN.CLEAR ^You retreat from combat|^You sneak back out of combat|^You are already as far away as you can get
   put retreat
   matchwait
+#this is for bad code in Outlander, just trust me
+  pause 0.5
+  put #echo >talk [DEBUG:] matchwait fell through with no good reason
+  goto RETURN.CLEAR
 
 MOVE.DIVE:
-  if ($broom_carpet = 1) then
+  if ($broom_carpet) then
     {
     eval movement replacere("%movement", "dive ", "")
     put go %movement
@@ -887,7 +905,7 @@ CARAVAN:
   goto MAIN.LOOP.CLEAR
 
 POWERWALK:
-  if (($Attunement.LearningRate > 33) || ($Attunement.Ranks > 1749)) then {
+  if (($Attunement.LearningRate > 33) || ($Attunement.Ranks >= 1750)) then {
     put #var powerwalk 0
     var typeahead.max $automapper.typeahead
     return
@@ -1170,7 +1188,7 @@ FIND.CLOAK:
   var cloak_worn 0
 
 TAP.CLOAK:
-  eval cloak_noun element ("%cloaknouns","%cloakloop")
+  eval cloak_noun element ("%cloaknouns", "%cloakloop")
   if (!%cloak_noun) then return
   var action tap my %cloak_noun
   var success ^You tap|^I could not find
@@ -1184,7 +1202,7 @@ LOWER.CLOAK:
   var success ^You (attempt to turn|pull down your|wind|unwind)
   gosub ACTION
   var action_retry ^0$
-  if ("%cloak_worn" = "2") then goto REMOVE.CLOAK
+  if (%cloak_worn = 2) then goto REMOVE.CLOAK
   return
 
 RAISE.CLOAK:
@@ -1395,6 +1413,7 @@ BAG.CHECK:
   var Shadows 0
   var HipPouch 0
   var ToolBelt 0
+  var cloak_worn 0
   action var ToolBelt 1 when archeologist's toolbelt
   action var Hip.Pouch 1 when light spidersilk hip pouch
   action var Backpack 1 when backpack
