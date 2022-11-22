@@ -1,8 +1,12 @@
 # automapper.cmd
-var autoversion 8.2022-11-16
+var autoversion 8.2022-11-22
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
+
+#2022-11-22
+# Hanryu
+#   unixtime instead of gametime
 
 #2022-11-16
 # Hanryu
@@ -355,10 +359,10 @@ MAIN.LOOP.CLEAR:
 
 #### JON's MAIN LOOP ####
 MAIN.LOOP:
-  delay %infiniteLoopProtection
   if_1 goto WAVE_DO
   goto DONE
 WAVE_DO:
+  if (%depth > 0) then delay %infiniteLoopProtection
   evalmath MDepth (%depth + 1)
   if ((%typeahead.max >= %depth) && ("%%MDepth" != "")) then gosub MOVE %%MDepth
 # what if I started having this count up and pop depth after like 3 - 5 rounds?
@@ -445,6 +449,7 @@ MOVE.REAL:
       }
     }
 DO.MOVE:
+  if contains("%movement", "city gate") then {debug 5}
   put %movement
   goto RETURN
 
@@ -515,6 +520,9 @@ ICE.PAUSE:
   return
 
 MOVE.KNOCK:
+
+debug 5
+
   action (mapper) off
   if ($roundtime > 0) then pause %command_pause
   if (%depth > 1) then waiteval (1 = %depth)
@@ -527,10 +535,19 @@ MOVE.KNOCK:
   put %movement
   matchwait
 
+#this is here for Hanryu
+    debug 5
+    put #printbox MOVE.KNOCK fell thru
+    put #printbox @@run trace@@
+    waitforre ^RESTART
+
+
 SHARD.FAILED:
   if ($charactername = Hanryu) then {
+    debug 5
     echo something went wrong again with outlander, debug it!
-
+    put #printbox @@run trace@@
+    waitforre ^RESTART
   }
   if ((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) then gosub WEAR.CLOAK
   if ((!%cloak_off) && (%cloak_worn)) then gosub RAISE.CLOAK
@@ -562,12 +579,9 @@ MOVE.RT:
   eval movement replacere("%movement", "script crossingtrainerfix ", "")
   put %movement
   if (%depth > 0) then {
-    eval MoveRTTimeout $gametime + 3
-    waiteval ($gametime > %MoveRTTimeout) || (0 = %depth)
+    eval MoveRTTimeout $unixtime + 3
+    waiteval ($unixtime > %MoveRTTimeout) || (0 = %depth)
     }
-#  wait
-#  delay %infiniteLoopProtection
-#  pause %command_pause
   goto MOVE.DONE
 
 MOVE.TORCH:
