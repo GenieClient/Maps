@@ -7,6 +7,7 @@ var autoversion 8.2022-11-22
 #2022-11-22
 # Hanryu
 #   unixtime instead of gametime
+#   delay iff !first depth
 
 #2022-11-16
 # Hanryu
@@ -331,7 +332,6 @@ ACTIONS:
   action (mapper) goto MOVE.NOSNEAK when %move_NO_SNEAK
   action (mapper) goto MOVE.GO when %move_GO
   action (mapper) goto MOVE.INVIS when %move_INVIS
-#  action (mapper) goto MOVE.DIVE when 
   action (mapper) goto MOVE.MUCK when %move_MUCK
   action (mapper) goto MOVE.STOW when %move_STOW
   action (mapper) goto MOVE.BOAT when %move_BOAT
