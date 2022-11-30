@@ -432,6 +432,13 @@ MOVE:
         }
       }
     }
+# I think we should bug "some rocks" movements in game instead of trying to handle it this way
+#  if matchre("%movement", "rock") && matchre("$roomobjs", "a pile of rocks") then {
+#    var action kick pile
+#    var success ^Now what did the|^You take a step back and run up to the pile|^I could not find
+#    gosub ACTION
+#  }
+#
   eval type toupper(%type)
   goto MOVE.%type
 

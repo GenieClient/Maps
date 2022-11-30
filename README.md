@@ -9,6 +9,8 @@ The previous home for maps is https://sourceforge.net/p/geniemapsfordr/Genie3Map
 
 Questions? Issues? Please join the conversation in the [#automapper Discord channel](https://discord.gg/MtmzE2w)
 
+Instructions for contributing to Genie Maps: 
+  https://github.com/GenieClient/Genie4/wiki/08.-AutoMapper#contribute-to-the-map-repository
 ## Best practices
 
 Follow the color guide
