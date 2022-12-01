@@ -1,8 +1,12 @@
 # automapper.cmd
-var autoversion 8.2022-11-16
+var autoversion 8.2022-11-30
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
+
+#2022-11-30
+# Hanryu
+#   separated out MOVE.WAIT:
 
 #2022-11-16
 # Hanryu
@@ -428,6 +432,13 @@ MOVE:
         }
       }
     }
+# I think we should bug "some rocks" movements in game instead of trying to handle it this way
+#  if matchre("%movement", "rock") && matchre("$roomobjs", "a pile of rocks") then {
+#    var action kick pile
+#    var success ^Now what did the|^You take a step back and run up to the pile|^I could not find
+#    gosub ACTION
+#  }
+#
   eval type toupper(%type)
   goto MOVE.%type
 
@@ -778,8 +789,17 @@ FATIGUE.WAIT:
   pause 10
   goto FATIGUE.WAIT
 
-MOVE.STAIRS:
 MOVE.WAIT:
+  action (mapper) off
+  shift
+  if (%movewait) then waitforre ^You reach|you reach|^Just when it seems|^Finally the bridge comes to an end
+  var depth 0
+  var movewait 0
+  pause %command_pause
+  action (mapper) on
+  goto MOVE.DONE
+
+MOVE.STAIRS:
   pause %command_pause
   if (%movewait) then
     {
