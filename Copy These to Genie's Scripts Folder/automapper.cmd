@@ -4,14 +4,14 @@ var autoversion 8.2022-11-30
 #debuglevel 10
 #debug 5
 
-#2022-11-30
-# Hanryu
-#   separated out MOVE.WAIT:
-
-#2022-11-22
+#2022-12-05
 # Hanryu
 #   unixtime instead of gametime
 #   delay iff !first depth
+
+#2022-11-30
+# Hanryu
+#   separated out MOVE.WAIT:
 
 #2022-11-16
 # Hanryu
@@ -323,6 +323,7 @@ ABSOLUTE.TOP:
   var move_INVIS ^The .* can't see you\!|^But no one can see you\!|^How can you .* can't even see you\?
   var climb_mount_FAIL climb what?
 ACTIONS:
+  action (mapper) goto DRAGGED;action (mapper) off when ^The current drags you
   action (mapper) if (%movewait = 0) then shift;if (%movewait = 0) then math depth subtract 1;if ((%verbose) && (len("%2") > 0)) then put #echo %color Next move: %2 when %move_OK
   action (mapper) goto MOVE.TORCH when %move_TORCH
   action (mapper) goto MOVE.FAILED when %move_FAIL
@@ -358,6 +359,8 @@ ACTIONS:
 # Are you starting the script while in RT?
   if ($roundtime > 0) then pause $roundtime
 
+if ($charactername = Kharybell) then debug 5
+
 MAIN.LOOP.CLEAR:
   gosub clear
 
@@ -366,7 +369,10 @@ MAIN.LOOP:
   if_1 goto WAVE_DO
   goto DONE
 WAVE_DO:
-  if (%depth > 0) then delay %infiniteLoopProtection
+  if (%depth > 0) then {
+    delay %infiniteLoopProtection
+    if ($roundtime > 0) then pause $roundtime
+  }
   evalmath MDepth (%depth + 1)
   if ((%typeahead.max >= %depth) && ("%%MDepth" != "")) then gosub MOVE %%MDepth
 # what if I started having this count up and pop depth after like 3 - 5 rounds?
@@ -1510,3 +1516,13 @@ BAG.LOOP:
 BAG.NEXT:
   math BagLoop add 1
   goto BAG.LOOP
+
+#### Handle current pushing you around ####
+DRAGGED:
+  action (mapper) off
+  delay %infiniteLoopProtection
+  if ($roundtime > 0) then {pause $pauseTime}
+  action (mapper) on
+  var depth 0
+  goto MOVE.DONE
+####
