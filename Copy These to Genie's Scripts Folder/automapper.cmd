@@ -1,5 +1,5 @@
 # automapper.cmd
-var autoversion 8.2022-11-30
+var autoversion 8.2022-12-01
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
@@ -7,7 +7,8 @@ var autoversion 8.2022-11-30
 #2022-12-05
 # Hanryu
 #   unixtime instead of gametime
-#   delay iff !first depth
+#   delay iff !first depth, also check for RT so the loop is not going nuts while RT is ticking down
+#   added drag by current handling for low swimming ranks
 
 #2022-11-30
 # Hanryu
@@ -323,7 +324,7 @@ ABSOLUTE.TOP:
   var move_INVIS ^The .* can't see you\!|^But no one can see you\!|^How can you .* can't even see you\?
   var climb_mount_FAIL climb what?
 ACTIONS:
-  action (mapper) goto DRAGGED;action (mapper) off when ^The current drags you
+  action (mapper) action (mapper) off;goto DRAGGED when ^The current drags you
   action (mapper) if (%movewait = 0) then shift;if (%movewait = 0) then math depth subtract 1;if ((%verbose) && (len("%2") > 0)) then put #echo %color Next move: %2 when %move_OK
   action (mapper) goto MOVE.TORCH when %move_TORCH
   action (mapper) goto MOVE.FAILED when %move_FAIL
@@ -358,8 +359,6 @@ ACTIONS:
 
 # Are you starting the script while in RT?
   if ($roundtime > 0) then pause $roundtime
-
-if ($charactername = Kharybell) then debug 5
 
 MAIN.LOOP.CLEAR:
   gosub clear
@@ -466,7 +465,8 @@ MOVE.REAL:
       }
     }
 DO.MOVE:
-  if contains("%movement", "city gate") then {debug 5}
+#for Han to debug outlander stuff
+  if (matchre("$charactername", "Hanryu|Kharybell") contains("%movement", "city gate")) then debug 5
   put %movement
   goto RETURN
 
@@ -1519,9 +1519,8 @@ BAG.NEXT:
 
 #### Handle current pushing you around ####
 DRAGGED:
-  action (mapper) off
   delay %infiniteLoopProtection
-  if ($roundtime > 0) then {pause $pauseTime}
+  if ($roundtime > 0) then pause $roundtime
   action (mapper) on
   var depth 0
   goto MOVE.DONE
