@@ -1,10 +1,10 @@
 # automapper.cmd
-var autoversion 8.2022-12-01
+var autoversion 8.2022-12-04
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
 
-#2022-12-05
+#2022-12-04
 # Hanryu
 #   unixtime instead of gametime
 #   delay iff !first depth, also check for RT so the loop is not going nuts while RT is ticking down
