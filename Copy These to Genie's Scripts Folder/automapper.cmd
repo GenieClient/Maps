@@ -1057,7 +1057,8 @@ MISTWOOD.CLIFF:
   waitforre %move_OK
   put %Dir
   waitforre %move_OK
-  put nw
+  if matchre("$roomexits", "\b(?:northwest)\b") then put nw
+  else put n
   waitforre %move_OK
   goto MOVE.SCRIPT.DONE
 
