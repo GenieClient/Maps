@@ -460,7 +460,7 @@ MOVE.REAL:
       }
     }
 DO.MOVE:
-  if contains("%movement", "city gate") then {debug 5}
+  if (matchre("$charactername", "Hanryu|Kharybell") && contains("%movement", "city gate")) then debug 5
   put %movement
   goto RETURN
 
@@ -590,8 +590,8 @@ MOVE.RT:
   eval movement replacere("%movement", "script crossingtrainerfix ", "")
   put %movement
   if (%depth > 0) then {
-    eval MoveRTTimeout $unixtime + 3
-    waiteval ($unixtime > %MoveRTTimeout) || (0 = %depth)
+    eval MoveRTTimeout $gametime + 3
+    waiteval ($gametime > %MoveRTTimeout) || (0 = %depth)
     }
   goto MOVE.DONE
 
