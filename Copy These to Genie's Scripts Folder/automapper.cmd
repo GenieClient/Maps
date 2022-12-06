@@ -470,7 +470,7 @@ MOVE.REAL:
     }
 DO.MOVE:
 #for Han to debug outlander stuff
-  if (matchre("$charactername", "Hanryu|Kharybell") contains("%movement", "city gate")) then debug 5
+  if (matchre("$charactername", "Hanryu|Kharybell") && contains("%movement", "city gate")) then debug 5
   put %movement
   goto RETURN
 
