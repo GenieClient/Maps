@@ -600,7 +600,7 @@ MOVE.RT:
   eval movement replacere("%movement", "script crossingtrainerfix ", "")
   put %movement
   if (%depth > 0) then {
-    eval MoveRTTimeout $%systemClock + 3
+    evalmath MoveRTTimeout $%systemClock + 3
     waiteval ($%systemClock > %MoveRTTimeout) || (0 = %depth)
     }
   goto MOVE.DONE
