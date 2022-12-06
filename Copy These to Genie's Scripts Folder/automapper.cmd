@@ -6,9 +6,10 @@ var autoversion 8.2022-12-04
 
 #2022-12-04
 # Hanryu
-#   unixtime instead of gametime
+#   unixtime instead of gametime, checks for genie version
 #   delay iff !first depth, also check for RT so the loop is not going nuts while RT is ticking down
 #   added drag by current handling for low swimming ranks
+#   leaving some notes on USERWALK
 
 #2022-11-30
 # Hanryu
@@ -280,6 +281,9 @@ ABSOLUTE.TOP:
   if !def(powerwalk) then put #tvar powerwalk 0
   if !def(searchwalk) then put #tvar searchwalk 0
   if !def(drag) then put #tvar drag 0
+  if (!def(version) || ($version < 4.0.2.4)) then var systemClock unixtime
+  else var systemClock gametime
+
 # turn off classes to speed movment
   if def(automapper.class) then put #class $automapper.class
 # ---------------
@@ -596,8 +600,8 @@ MOVE.RT:
   eval movement replacere("%movement", "script crossingtrainerfix ", "")
   put %movement
   if (%depth > 0) then {
-    eval MoveRTTimeout $unixtime + 3
-    waiteval ($unixtime > %MoveRTTimeout) || (0 = %depth)
+    eval MoveRTTimeout $%systemClock + 3
+    waiteval ($%systemClock > %MoveRTTimeout) || (0 = %depth)
     }
   goto MOVE.DONE
 
@@ -971,6 +975,14 @@ MAPWALK:
   var action study my map
   var typeahead.max 0
   var success ^The map has a large 'X' marked in the middle of it
+  goto ACTION.WALK
+
+USERWALK:
+  #requested by djordje - 2022-12-06
+  #So I could set up a script to use automapper and have it step into a room, script does its thing then parses the trigger for automapper to take the next step, kinda like the powerwalk/wait for caravan stuff but customizable
+  var action some bullshit the user wants to do
+  var typeahead.max 0
+  var success probably a parse from a script?
   goto ACTION.WALK
 
 MOVE.DONE:
