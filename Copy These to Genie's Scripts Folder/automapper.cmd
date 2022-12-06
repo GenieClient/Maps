@@ -907,6 +907,7 @@ MOVE.RETRY:
   if (%waitfor_action) then wait
   delay %infiniteLoopProtection
   pause %command_pause
+  if ($roundtime > 0) then pause $roundtime
   goto MOVE.RT
 
 MOVE.CLOSED:
