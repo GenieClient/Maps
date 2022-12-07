@@ -10,6 +10,7 @@ var autoversion 8.2022-12-04
 #   delay iff !first depth, also check for RT so the loop is not going nuts while RT is ticking down
 #   added drag by current handling for low swimming ranks
 #   leaving some notes on USERWALK
+#   USERWALK implimentation
 
 #2022-11-30
 # Hanryu
@@ -276,6 +277,7 @@ ABSOLUTE.TOP:
 # 1: collect rocks on the ice road when lacking skates; 0; just wait 15 seconds with no RT instead
   if !def(automapper.verbose) then var ice_collect 0
   else var ice_collect $automapper.iceroadcollect
+  if !def(userwalk) then put #tvar userwalk 0
   if !def(caravan) then put #tvar caravan 0
   if !def(mapwalk) then put #tvar mapwalk 0
   if !def(powerwalk) then put #tvar powerwalk 0
@@ -599,10 +601,13 @@ MOVE.RT:
 ####added this to stop trainer
   eval movement replacere("%movement", "script crossingtrainerfix ", "")
   put %movement
-  if (%depth > 0) then {
-    evalmath MoveRTTimeout $%systemClock + 3
-    waiteval ($%systemClock > %MoveRTTimeout) || (0 = %depth)
-    }
+#trying a different approach
+#  if (%depth > 0) then {
+#    evalmath MoveRTTimeout $%systemClock + 3
+#    waiteval ($%systemClock > %MoveRTTimeout) || (0 = %depth)
+#    }
+  if (%depth > 1) then waiteval (1 = %depth)
+  if ($roundtime > 0) then pause %command_pause
   goto MOVE.DONE
 
 MOVE.TORCH:
@@ -981,14 +986,15 @@ MAPWALK:
 USERWALK:
   #requested by djordje - 2022-12-06
   #So I could set up a script to use automapper and have it step into a room, script does its thing then parses the trigger for automapper to take the next step, kinda like the powerwalk/wait for caravan stuff but customizable
-  var action some bullshit the user wants to do
+  var action $automapper.UserWalkAction
   var typeahead.max 0
-  var success probably a parse from a script?
+  var success $automapper.UserWalkSuccess
   goto ACTION.WALK
 
 MOVE.DONE:
   if (!$standing) then gosub STAND
   if ((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) then gosub WEAR.CLOAK
+  if ($userwalk) then goto USERWALK
   if ($caravan) then goto CARAVAN
   if ($powerwalk) then goto POWERWALK
   if ($searchwalk) then goto SEARCHWALK
@@ -998,6 +1004,7 @@ MOVE.DONE:
 
 RETURN:
   if (!$standing) then gosub STAND
+  if ($userwalk) then goto USERWALK
   if ($caravan) then goto CARAVAN
   if ($powerwalk) then goto POWERWALK
   if ($searchwalk) then goto SEARCHWALK
