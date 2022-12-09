@@ -1284,7 +1284,7 @@ REMOVE.CLOAK:
 WEAR.CLOAK:
   if matchre("$lefthand", "(%cloaknouns)") then var action wear my $lefthandnoun
   if matchre("$righthand", "(%cloaknouns)") then var action wear my $righthandnoun
-  var success ^You (already|attach|can't|carefully|climb|deftly|drape|fade|fall|get|hang|kneel|lie|loosen|place|pull|put|quickly|rise|set|shift|silently|sit|slide|sling|slip|stand|step|strap|take|tie|toss|untie|wear|work|wrap|yank are)
+  var success ^You (are already|attach|can't|carefully|climb|deftly|drape|fade|fall|get|hang|kneel|lie|loosen|place|pull|put|quickly|rise|set|shift|silently|sit|slide|sling|slip|stand|step|strap|take|tie|toss|untie|wear|work|wrap|yank)
   gosub ACTION
   var cloak_off 0
   return
