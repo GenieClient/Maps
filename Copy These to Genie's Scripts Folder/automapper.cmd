@@ -11,6 +11,7 @@ var autoversion 8.2022-12-04
 #   added drag by current handling for low swimming ranks
 #   leaving some notes on USERWALK
 #   USERWALK implimentation
+#   adding feature hiding mask
 
 #2022-11-30
 # Hanryu
