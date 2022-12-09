@@ -300,7 +300,7 @@ ABSOLUTE.TOP:
   var footwear 0
   var action_retry ^0$
   var cloak_off 0
-  var cloaknouns cloak|shroud|scarf|0
+  var cloaknouns cloak|shroud|scarf|aldamdin mask|0
   var closed 0
   var startingStam $stamina
   var failcounter 0
@@ -606,8 +606,8 @@ MOVE.RT:
 #    evalmath MoveRTTimeout $%systemClock + 3
 #    waiteval ($%systemClock > %MoveRTTimeout) || (0 = %depth)
 #    }
-  if (%depth > 1) then waiteval (1 = %depth)
   if ($roundtime > 0) then pause %command_pause
+  if (%depth > 0) then waiteval (1 = %depth)
   goto MOVE.DONE
 
 MOVE.TORCH:
@@ -1283,7 +1283,7 @@ REMOVE.CLOAK:
 WEAR.CLOAK:
   if matchre("$lefthand", "(%cloaknouns)") then var action wear my $lefthandnoun
   if matchre("$righthand", "(%cloaknouns)") then var action wear my $righthandnoun
-  var success ^You (are already|attach|can't|carefully|climb|deftly|drape|fade|fall|get|hang|kneel|lie|loosen|place|pull|put|quickly|rise|set|shift|silently|sit|slide|sling|slip|stand|step|strap|take|tie|toss|untie|work|wrap|yank)
+  var success ^You (already|attach|can't|carefully|climb|deftly|drape|fade|fall|get|hang|kneel|lie|loosen|place|pull|put|quickly|rise|set|shift|silently|sit|slide|sling|slip|stand|step|strap|take|tie|toss|untie|wear|work|wrap|yank are)
   gosub ACTION
   var cloak_off 0
   return
