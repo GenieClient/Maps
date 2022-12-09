@@ -1244,7 +1244,7 @@ WEAR.FOOTWEAR:
 FIND.CLOAK:
   action (cloak) on
   action (cloak) var cloak_worn 1 when ^You tap.*(%cloaknouns).*that you are wearing\.$
-  action (cloak) var cloak_worn 2 when ^You attempt to turn
+  action (cloak) var cloak_worn 2 when ^You attempt to turn|^You adjust the fit
   var cloakloop 0
   var cloak_worn 0
 
