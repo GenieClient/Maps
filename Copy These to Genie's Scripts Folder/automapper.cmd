@@ -1260,7 +1260,7 @@ TAP.CLOAK:
 LOWER.CLOAK:
   var action_retry ^You pull your %cloak_noun
   var action turn my %cloak_noun
-  var success ^You (attempt to turn|pull down your|wind|unwind)
+  var success ^You (adjust the fit|attempt to turn|pull down your|wind|unwind)
   gosub ACTION
   var action_retry ^0$
   if (%cloak_worn = 2) then goto REMOVE.CLOAK
