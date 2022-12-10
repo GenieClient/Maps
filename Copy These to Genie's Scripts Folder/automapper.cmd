@@ -4,7 +4,7 @@ var autoversion 8.2022-12-04
 #debuglevel 10
 #debug 5
 
-#2022-12-04
+#2022-12-10
 # Hanryu
 #   unixtime instead of gametime, checks for genie version
 #   delay iff !first depth, also check for RT so the loop is not going nuts while RT is ticking down
@@ -12,6 +12,7 @@ var autoversion 8.2022-12-04
 #   leaving some notes on USERWALK
 #   USERWALK implimentation
 #   adding feature hiding mask
+#   removed s from rocks
 
 #2022-11-30
 # Hanryu
@@ -472,8 +473,6 @@ MOVE.REAL:
       }
     }
 DO.MOVE:
-#for Han to debug outlander stuff
-  if (matchre("$charactername", "Hanryu|Kharybell") && contains("%movement", "city gate")) then debug 5
   put %movement
   goto RETURN
 
@@ -523,10 +522,10 @@ SKATE.YES:
 
 ICE.COLLECT:
   if (!%ice_collect) then goto ICE.PAUSE
-  var action collect rocks
+  var action collect rock
   var success ^You manage to collect a pile
   gosub ACTION
-  var action kick rocks
+  var action kick rock
   var success ^Now what did the|^You take a step back and run up to the pile|^I could not find
   gosub ACTION
   var slow_on_ice 0
@@ -544,9 +543,6 @@ ICE.PAUSE:
   return
 
 MOVE.KNOCK:
-
-debug 5
-
   action (mapper) off
   if ($roundtime > 0) then pause %command_pause
   if (%depth > 1) then waiteval (1 = %depth)
@@ -559,20 +555,7 @@ debug 5
   put %movement
   matchwait
 
-#this is here for Hanryu
-    debug 5
-    put #printbox MOVE.KNOCK fell thru
-    put #printbox @@run trace@@
-    waitforre ^RESTART
-
-
 SHARD.FAILED:
-  if ($charactername = Hanryu) then {
-    debug 5
-    echo something went wrong again with outlander, debug it!
-    put #printbox @@run trace@@
-    waitforre ^RESTART
-  }
   if ((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) then gosub WEAR.CLOAK
   if ((!%cloak_off) && (%cloak_worn)) then gosub RAISE.CLOAK
   if !matchre("$zoneid", "(66|67|68|69)") then goto MOVE.FAILED
@@ -851,10 +834,6 @@ MOVE.RETREAT:
   matchre RETURN.CLEAR ^You retreat from combat|^You sneak back out of combat|^You are already as far away as you can get
   put retreat
   matchwait
-#this is for bad code in Outlander, just trust me
-  pause 0.5
-  put #echo >talk [DEBUG:] matchwait fell through with no good reason
-  goto RETURN.CLEAR
 
 MOVE.DIVE:
   if ($broom_carpet) then
