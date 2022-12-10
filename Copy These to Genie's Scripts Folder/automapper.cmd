@@ -591,7 +591,7 @@ MOVE.RT:
 #    waiteval ($%systemClock > %MoveRTTimeout) || (0 = %depth)
 #    }
   if ($roundtime > 0) then pause %command_pause
-  if (%depth > 0) then waiteval (1 = %depth)
+  if (%depth > 0) then waiteval (1 = %depth) || (0 = %depth) 
   goto MOVE.DONE
 
 MOVE.TORCH:
