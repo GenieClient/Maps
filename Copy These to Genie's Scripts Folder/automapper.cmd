@@ -1,5 +1,5 @@
 # automapper.cmd
-var autoversion 8.2022-12-04
+var autoversion 8.2022-12-10
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
