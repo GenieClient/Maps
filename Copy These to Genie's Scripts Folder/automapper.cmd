@@ -13,6 +13,8 @@ var autoversion 8.2022-12-10
 #   USERWALK implimentation
 #   adding feature hiding mask
 #   removed s from rocks
+#   ^\s*[\[\(]?[rR]oundtime\s*\:? for all RT matches
+#   retry now zero's everything out and heads back to wave.do
 
 #2022-11-30
 # Hanryu
@@ -594,7 +596,7 @@ MOVE.RT:
 #Jon's block
   if (%depth > 1) then waiteval (1 = %depth)
   put %movement
-#  waitforre ^\s*[\[\(]?Roundtime\s*\:?|^\.\.\.wait|^Sorry, you may only type
+#  waitforre ^\s*[\[\(]?[rR]oundtime\s*\:?|^\.\.\.wait|^Sorry, you may only type
   waitforre ^(?:Obvious|Ship) (?:paths|exits):|^\.\.\.wait|^Sorry, you may only type
   if ($roundtime > 0) then pause %command_pause
   goto MOVE.DONE
@@ -677,7 +679,7 @@ MOVE.CLIMB.WITH.ROPE:
 MOVE.CLIMB.WITH.APP.AND.ROPE:
   eval climbobject replacere("%movement", "climb ", "")
   put appraise %climbobject quick
-  waitforre ^\s*[\[\(]?Roundtime\s*\:?|^You cannot appraise that when you are in combat
+  waitforre ^\s*[\[\(]?[rR]oundtime\s*\:?|^You cannot appraise that when you are in combat
   if (("$guild" = "Thief") && ($concentration > 50)) then
     {
     pause %command_pause
@@ -835,7 +837,7 @@ MOVE.RETREAT:
   if (!$standing) then gosub STAND
   if ($hidden) then gosub UNHIDE
   pause %command_pause
-  matchre MOVE.RETREAT %move_RETRY|^\s*[\[\(]?Roundtime\s*\:?|^You retreat back
+  matchre MOVE.RETREAT %move_RETRY|^\s*[\[\(]?[rR]oundtime\s*\:?|^You retreat back
   matchre RETURN.CLEAR ^You retreat from combat|^You sneak back out of combat|^You are already as far away as you can get
   put retreat
   matchwait
@@ -952,19 +954,19 @@ POWERWALK:
     }
   var action perceive
   var typeahead.max 0
-  var success ^\s*[\[\(]?Roundtime\s*\:?|^Something in the area is interfering|^You are a bit too busy performing
+  var success ^\s*[\[\(]?[rR]oundtime\s*\:?|^Something in the area is interfering|^You are a bit too busy performing
   goto ACTION.WALK
 
 SEARCHWALK:
   var action search
   var typeahead.max 0
-  var success ^You search around|^After a careful search|^You notice|^\s*[\[\(]?Roundtime\s*\:?|^You push through bushes|^You scan|^There seems to be|^You walk around the perimeter|^Just under the Bridge
+  var success ^You search around|^After a careful search|^You notice|^\s*[\[\(]?[rR]oundtime\s*\:?|^You push through bushes|^You scan|^There seems to be|^You walk around the perimeter|^Just under the Bridge
   goto ACTION.WALK
 
 FORAGEWALK:
   var action forage $forage
   var typeahead.max 0
-  var success ^\s*[\[\(]?Roundtime\s*\:?|^Something in the area is interfering
+  var success ^\s*[\[\(]?[rR]oundtime\s*\:?|^Something in the area is interfering
   goto ACTION.WALK
 
 MAPWALK:
@@ -1383,7 +1385,7 @@ ACTION.STOW.UNLOAD:
   var successbackup %success
   if matchre("$righthand", "%unloadables") then var action unload my $righthandnoun
   if matchre("$lefthand", "%unloadables") then var action unload my $lefthandnoun
-  var success ^\s*[\[\(]?Roundtime\s*\:?|^You unload
+  var success ^\s*[\[\(]?[rR]oundtime\s*\:?|^You unload
   gosub ACTION
   gosub STOW.HANDS
   var action %actionbackup
@@ -1405,7 +1407,7 @@ ACTION.WAIT:
   if ($webbed) then waiteval (!$webbed)
 
 ACTION:
-  #matchre ACTION_WAIT ^\s*[\[\(]?Roundtime\s*\:?
+  #matchre ACTION_WAIT ^\s*[\[\(]?[rR]oundtime\s*\:?
   # depending on the action, this could be a retry or a success...
   action (mapper) off
 
