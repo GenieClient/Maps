@@ -60,7 +60,7 @@ var autoversion 8.2022-12-10
 
 #2022-10-22 thru 27
 # Hanryu, with a strong assist from TenderVittles
-# working on afordances for different system speeds on RT generating moves (MOVE.RT: label)
+# working on afordances for different system speeds on RT generating moves (MOVE.RT label)
 # added a wait in retry if waitfor_action = 1
 # Added inviso drop message on "get skates"
 # add verbose flag to toggle next move echo
@@ -594,7 +594,8 @@ MOVE.RT:
 #Jon's block
   if (%depth > 1) then waiteval (1 = %depth)
   put %movement
-  waitforre ^\s*[\[\(]?Roundtime\s*\:?|^\.\.\.wait|^Sorry, you may only type
+#  waitforre ^\s*[\[\(]?Roundtime\s*\:?|^\.\.\.wait|^Sorry, you may only type
+  waitforre ^(?:Obvious|Ship) (?:paths|exits):|^\.\.\.wait|^Sorry, you may only type
   if ($roundtime > 0) then pause %command_pause
   goto MOVE.DONE
 
@@ -898,8 +899,11 @@ MOVE.RETRY:
   if (%waitfor_action) then wait
   delay %infiniteLoopProtection
   pause %command_pause
+  pause
   if ($roundtime > 0) then pause $roundtime
-  goto MOVE.RT
+  var depth 0
+  var movewait 0
+  goto MOVE.DONE
 
 MOVE.CLOSED:
   gosub echo SHOP IS CLOSED FOR THE NIGHT!
