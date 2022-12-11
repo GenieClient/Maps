@@ -554,6 +554,8 @@ MOVE.KNOCK:
   matchre KNOCK.INVIS ^The gate guard can't see you
   put %movement
   matchwait
+# this garbage is here for Outlander inconsistant matchwait bug
+  goto MOVE.DONE
 
 SHARD.FAILED:
   if ((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) then gosub WEAR.CLOAK
@@ -583,13 +585,13 @@ MOVE.SNEAK:
 MOVE.SWIM:
 MOVE.RT:
 ####added this to stop trainer
+  eval movement replacere("%movement", "script crossingtrainerfix ", "")
 #Han's fav
 #  put %movement
 #  if ($roundtime > 0) then pause %command_pause
 #  if (%depth > 0) then waiteval ((1 = %depth) || (0 = %depth))
 #  goto MOVE.DONE
 #Jon's block
-  eval movement replacere("%movement", "script crossingtrainerfix ", "")
   if (%depth > 1) then waiteval (1 = %depth)
   put %movement
   waitforre ^\s*[\[\(]?Roundtime\s*\:?|^\.\.\.wait|^Sorry, you may only type
@@ -836,6 +838,8 @@ MOVE.RETREAT:
   matchre RETURN.CLEAR ^You retreat from combat|^You sneak back out of combat|^You are already as far away as you can get
   put retreat
   matchwait
+# this garbage is here for Outlander inconsistant matchwait bug
+  goto MOVE.RETREAT
 
 MOVE.DIVE:
   if ($broom_carpet) then

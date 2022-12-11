@@ -30,10 +30,10 @@ var c 10
 top:
 if (%c < 0) then goto done
 
- if ($roomid = 363) then var destination 20
- else var destination 363
+ if ($roomid = 234) then var destination 244
+ else var destination 234
  
-#if ($roomid < 200) then {
+# if ($roomid < 200) then {
 #  evalmath destination ($roomid + 200)
 #  }
 #  else {
