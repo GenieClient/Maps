@@ -277,7 +277,7 @@ ABSOLUTE.TOP:
     }
   else var infiniteLoopProtection $automapper.loop
 # 1: collect rocks on the ice road when lacking skates; 0; just wait 15 seconds with no RT instead
-  if !def(automapper.verbose) then var ice_collect 0
+  if !def(automapper.iceroadcollect) then var ice_collect 0
   else var ice_collect $automapper.iceroadcollect
   if !def(userwalk) then put #tvar userwalk 0
   if !def(caravan) then put #tvar caravan 0
@@ -583,15 +583,17 @@ MOVE.SNEAK:
 MOVE.SWIM:
 MOVE.RT:
 ####added this to stop trainer
+#Han's fav
+#  put %movement
+#  if ($roundtime > 0) then pause %command_pause
+#  if (%depth > 0) then waiteval ((1 = %depth) || (0 = %depth))
+#  goto MOVE.DONE
+#Jon's block
   eval movement replacere("%movement", "script crossingtrainerfix ", "")
+  if (%depth > 1) then waiteval (1 = %depth)
   put %movement
-#trying a different approach
-#  if (%depth > 0) then {
-#    evalmath MoveRTTimeout $%systemClock + 3
-#    waiteval ($%systemClock > %MoveRTTimeout) || (0 = %depth)
-#    }
+  waitforre ^\s*[\[\(]?Roundtime\s*\:?|^\.\.\.wait|^Sorry, you may only type
   if ($roundtime > 0) then pause %command_pause
-  if (%depth > 0) then waiteval (1 = %depth) || (0 = %depth) 
   goto MOVE.DONE
 
 MOVE.TORCH:
