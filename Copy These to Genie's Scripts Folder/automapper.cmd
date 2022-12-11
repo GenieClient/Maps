@@ -588,15 +588,8 @@ MOVE.SWIM:
 MOVE.RT:
 ####added this to stop trainer
   eval movement replacere("%movement", "script crossingtrainerfix ", "")
-#Han's fav
-#  put %movement
-#  if ($roundtime > 0) then pause %command_pause
-#  if (%depth > 0) then waiteval ((1 = %depth) || (0 = %depth))
-#  goto MOVE.DONE
-#Jon's block
   if (%depth > 1) then waiteval (1 = %depth)
   put %movement
-#  waitforre ^\s*[\[\(]?[rR]oundtime\s*\:?|^\.\.\.wait|^Sorry, you may only type
   waitforre ^(?:Obvious|Ship) (?:paths|exits):|^\.\.\.wait|^Sorry, you may only type
   if ($roundtime > 0) then pause %command_pause
   goto MOVE.DONE
