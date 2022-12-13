@@ -15,6 +15,8 @@ var autoversion 8.2022-12-10
 #   removed s from rocks
 #   ^\s*[\[\(]?[rR]oundtime\s*\:? for all RT matches
 #   retry now zero's everything out and heads back to wave.do
+#   using Jon's MOVE.RT now with some of my formatting
+#   add negative lookahead to action to account for fast moving scripts
 
 #2022-11-30
 # Hanryu
@@ -1412,7 +1414,7 @@ ACTION.MAPPER.ON:
   matchre ACTION.STOW.HANDS ^You must have at least one hand free to do that|^You need a free hand
   matchre ACTION.WAIT ^You're unconscious|^You are still stunned|^You can't do that while|^You don't seem to be able to
   matchre ACTION.FAIL ^(That's|The .*) too (heavy|thick|long|wide)|^There's no room|^Weirdly\,|^As you attempt|^That doesn't belong in there\!
-  matchre ACTION.FAIL ^There isn't any more room|^You just can't get the .+ to fit|^Where are you|^What were you|^You can't
+  matchre ACTION.FAIL ^There isn't any more room|^You just can't get the .+ to fit|^Where are you|^What were you|^You can't (?>!go)
   matchre ACTION.STOW.UNLOAD ^You should unload
   put %action
   matchwait 2
