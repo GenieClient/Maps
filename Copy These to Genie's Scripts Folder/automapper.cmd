@@ -1,17 +1,26 @@
 # automapper.cmd
-var autoversion 8.2022-11-30
+var autoversion 8.2022-12-10
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
 
+#2022-12-10
+# Hanryu
+#   unixtime instead of gametime, checks for genie version
+#   delay iff !first depth, also check for RT so the loop is not going nuts while RT is ticking down
+#   added drag by current handling for low swimming ranks
+#   leaving some notes on USERWALK
+#   USERWALK implimentation
+#   adding feature hiding mask
+#   removed s from rocks
+#   ^\s*[\[\(]?[rR]oundtime\s*\:? for all RT matches
+#   retry now zero's everything out and heads back to wave.do
+#   using Jon's MOVE.RT now with some of my formatting
+#   add negative lookahead to action to account for fast moving scripts
+
 #2022-11-30
 # Hanryu
 #   separated out MOVE.WAIT:
-
-#2022-11-22
-# Hanryu
-#   unixtime instead of gametime
-#   delay iff !first depth
 
 #2022-11-16
 # Hanryu
@@ -55,7 +64,7 @@ var autoversion 8.2022-11-30
 
 #2022-10-22 thru 27
 # Hanryu, with a strong assist from TenderVittles
-# working on afordances for different system speeds on RT generating moves (MOVE.RT: label)
+# working on afordances for different system speeds on RT generating moves (MOVE.RT label)
 # added a wait in retry if waitfor_action = 1
 # Added inviso drop message on "get skates"
 # add verbose flag to toggle next move echo
@@ -272,13 +281,17 @@ ABSOLUTE.TOP:
     }
   else var infiniteLoopProtection $automapper.loop
 # 1: collect rocks on the ice road when lacking skates; 0; just wait 15 seconds with no RT instead
-  if !def(automapper.verbose) then var ice_collect 0
+  if !def(automapper.iceroadcollect) then var ice_collect 0
   else var ice_collect $automapper.iceroadcollect
+  if !def(userwalk) then put #tvar userwalk 0
   if !def(caravan) then put #tvar caravan 0
   if !def(mapwalk) then put #tvar mapwalk 0
   if !def(powerwalk) then put #tvar powerwalk 0
   if !def(searchwalk) then put #tvar searchwalk 0
   if !def(drag) then put #tvar drag 0
+  if (!def(version) || ($version < 4.0.2.4)) then var systemClock unixtime
+  else var systemClock gametime
+
 # turn off classes to speed movment
   if def(automapper.class) then put #class $automapper.class
 # ---------------
@@ -293,7 +306,7 @@ ABSOLUTE.TOP:
   var footwear 0
   var action_retry ^0$
   var cloak_off 0
-  var cloaknouns cloak|shroud|scarf|0
+  var cloaknouns cloak|shroud|scarf|aldamdin mask|0
   var closed 0
   var startingStam $stamina
   var failcounter 0
@@ -323,6 +336,7 @@ ABSOLUTE.TOP:
   var move_INVIS ^The .* can't see you\!|^But no one can see you\!|^How can you .* can't even see you\?
   var climb_mount_FAIL climb what?
 ACTIONS:
+  action (mapper) action (mapper) off;goto DRAGGED when ^The current drags you
   action (mapper) if (%movewait = 0) then shift;if (%movewait = 0) then math depth subtract 1;if ((%verbose) && (len("%2") > 0)) then put #echo %color Next move: %2 when %move_OK
   action (mapper) goto MOVE.TORCH when %move_TORCH
   action (mapper) goto MOVE.FAILED when %move_FAIL
@@ -366,7 +380,10 @@ MAIN.LOOP:
   if_1 goto WAVE_DO
   goto DONE
 WAVE_DO:
-  if (%depth > 0) then delay %infiniteLoopProtection
+  if (%depth > 0) then {
+    delay %infiniteLoopProtection
+    if ($roundtime > 0) then pause $roundtime
+  }
   evalmath MDepth (%depth + 1)
   if ((%typeahead.max >= %depth) && ("%%MDepth" != "")) then gosub MOVE %%MDepth
 # what if I started having this count up and pop depth after like 3 - 5 rounds?
@@ -460,7 +477,6 @@ MOVE.REAL:
       }
     }
 DO.MOVE:
-  if (matchre("$charactername", "Hanryu|Kharybell") && contains("%movement", "city gate")) then debug 5
   put %movement
   goto RETURN
 
@@ -510,10 +526,10 @@ SKATE.YES:
 
 ICE.COLLECT:
   if (!%ice_collect) then goto ICE.PAUSE
-  var action collect rocks
+  var action collect rock
   var success ^You manage to collect a pile
   gosub ACTION
-  var action kick rocks
+  var action kick rock
   var success ^Now what did the|^You take a step back and run up to the pile|^I could not find
   gosub ACTION
   var slow_on_ice 0
@@ -531,9 +547,6 @@ ICE.PAUSE:
   return
 
 MOVE.KNOCK:
-
-debug 5
-
   action (mapper) off
   if ($roundtime > 0) then pause %command_pause
   if (%depth > 1) then waiteval (1 = %depth)
@@ -545,21 +558,10 @@ debug 5
   matchre KNOCK.INVIS ^The gate guard can't see you
   put %movement
   matchwait
-
-#this is here for Hanryu
-    debug 5
-    put #printbox MOVE.KNOCK fell thru
-    put #printbox @@run trace@@
-    waitforre ^RESTART
-
+# this garbage is here for Outlander inconsistant matchwait bug
+  goto MOVE.DONE
 
 SHARD.FAILED:
-  if ($charactername = Hanryu) then {
-    debug 5
-    echo something went wrong again with outlander, debug it!
-    put #printbox @@run trace@@
-    waitforre ^RESTART
-  }
   if ((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) then gosub WEAR.CLOAK
   if ((!%cloak_off) && (%cloak_worn)) then gosub RAISE.CLOAK
   if !matchre("$zoneid", "(66|67|68|69)") then goto MOVE.FAILED
@@ -588,11 +590,10 @@ MOVE.SWIM:
 MOVE.RT:
 ####added this to stop trainer
   eval movement replacere("%movement", "script crossingtrainerfix ", "")
+  if (%depth > 1) then waiteval (1 = %depth)
   put %movement
-  if (%depth > 0) then {
-    eval MoveRTTimeout $gametime + 3
-    waiteval ($gametime > %MoveRTTimeout) || (0 = %depth)
-    }
+  waitforre ^(?:Obvious|Ship) (?:paths|exits):|^\.\.\.wait|^Sorry, you may only type
+  if ($roundtime > 0) then pause %command_pause
   goto MOVE.DONE
 
 MOVE.TORCH:
@@ -673,7 +674,7 @@ MOVE.CLIMB.WITH.ROPE:
 MOVE.CLIMB.WITH.APP.AND.ROPE:
   eval climbobject replacere("%movement", "climb ", "")
   put appraise %climbobject quick
-  waitforre ^\s*[\[\(]?Roundtime\s*\:?|^You cannot appraise that when you are in combat
+  waitforre ^\s*[\[\(]?[rR]oundtime\s*\:?|^You cannot appraise that when you are in combat
   if (("$guild" = "Thief") && ($concentration > 50)) then
     {
     pause %command_pause
@@ -831,14 +832,12 @@ MOVE.RETREAT:
   if (!$standing) then gosub STAND
   if ($hidden) then gosub UNHIDE
   pause %command_pause
-  matchre MOVE.RETREAT %move_RETRY|^\s*[\[\(]?Roundtime\s*\:?|^You retreat back
+  matchre MOVE.RETREAT %move_RETRY|^\s*[\[\(]?[rR]oundtime\s*\:?|^You retreat back
   matchre RETURN.CLEAR ^You retreat from combat|^You sneak back out of combat|^You are already as far away as you can get
   put retreat
   matchwait
-#this is for bad code in Outlander, just trust me
-  pause 0.5
-  put #echo >talk [DEBUG:] matchwait fell through with no good reason
-  goto RETURN.CLEAR
+# this garbage is here for Outlander inconsistant matchwait bug
+  goto MOVE.RETREAT
 
 MOVE.DIVE:
   if ($broom_carpet) then
@@ -897,7 +896,11 @@ MOVE.RETRY:
   if (%waitfor_action) then wait
   delay %infiniteLoopProtection
   pause %command_pause
-  goto MOVE.RT
+  pause
+  if ($roundtime > 0) then pause $roundtime
+  var depth 0
+  var movewait 0
+  goto MOVE.DONE
 
 MOVE.CLOSED:
   gosub echo SHOP IS CLOSED FOR THE NIGHT!
@@ -946,19 +949,19 @@ POWERWALK:
     }
   var action perceive
   var typeahead.max 0
-  var success ^\s*[\[\(]?Roundtime\s*\:?|^Something in the area is interfering|^You are a bit too busy performing
+  var success ^\s*[\[\(]?[rR]oundtime\s*\:?|^Something in the area is interfering|^You are a bit too busy performing
   goto ACTION.WALK
 
 SEARCHWALK:
   var action search
   var typeahead.max 0
-  var success ^You search around|^After a careful search|^You notice|^\s*[\[\(]?Roundtime\s*\:?|^You push through bushes|^You scan|^There seems to be|^You walk around the perimeter|^Just under the Bridge
+  var success ^You search around|^After a careful search|^You notice|^\s*[\[\(]?[rR]oundtime\s*\:?|^You push through bushes|^You scan|^There seems to be|^You walk around the perimeter|^Just under the Bridge
   goto ACTION.WALK
 
 FORAGEWALK:
   var action forage $forage
   var typeahead.max 0
-  var success ^\s*[\[\(]?Roundtime\s*\:?|^Something in the area is interfering
+  var success ^\s*[\[\(]?[rR]oundtime\s*\:?|^Something in the area is interfering
   goto ACTION.WALK
 
 MAPWALK:
@@ -967,9 +970,18 @@ MAPWALK:
   var success ^The map has a large 'X' marked in the middle of it
   goto ACTION.WALK
 
+USERWALK:
+  #requested by djordje - 2022-12-06
+  #So I could set up a script to use automapper and have it step into a room, script does its thing then parses the trigger for automapper to take the next step, kinda like the powerwalk/wait for caravan stuff but customizable
+  var action $automapper.UserWalkAction
+  var typeahead.max 0
+  var success $automapper.UserWalkSuccess
+  goto ACTION.WALK
+
 MOVE.DONE:
   if (!$standing) then gosub STAND
   if ((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) then gosub WEAR.CLOAK
+  if ($userwalk) then goto USERWALK
   if ($caravan) then goto CARAVAN
   if ($powerwalk) then goto POWERWALK
   if ($searchwalk) then goto SEARCHWALK
@@ -979,6 +991,7 @@ MOVE.DONE:
 
 RETURN:
   if (!$standing) then gosub STAND
+  if ($userwalk) then goto USERWALK
   if ($caravan) then goto CARAVAN
   if ($powerwalk) then goto POWERWALK
   if ($searchwalk) then goto SEARCHWALK
@@ -1218,7 +1231,7 @@ WEAR.FOOTWEAR:
 FIND.CLOAK:
   action (cloak) on
   action (cloak) var cloak_worn 1 when ^You tap.*(%cloaknouns).*that you are wearing\.$
-  action (cloak) var cloak_worn 2 when ^You attempt to turn
+  action (cloak) var cloak_worn 2 when ^You attempt to turn|^You adjust the fit
   var cloakloop 0
   var cloak_worn 0
 
@@ -1234,7 +1247,7 @@ TAP.CLOAK:
 LOWER.CLOAK:
   var action_retry ^You pull your %cloak_noun
   var action turn my %cloak_noun
-  var success ^You (attempt to turn|pull down your|wind|unwind)
+  var success ^You (adjust the fit|attempt to turn|pull down your|wind|unwind)
   gosub ACTION
   var action_retry ^0$
   if (%cloak_worn = 2) then goto REMOVE.CLOAK
@@ -1258,7 +1271,7 @@ REMOVE.CLOAK:
 WEAR.CLOAK:
   if matchre("$lefthand", "(%cloaknouns)") then var action wear my $lefthandnoun
   if matchre("$righthand", "(%cloaknouns)") then var action wear my $righthandnoun
-  var success ^You (are already|attach|can't|carefully|climb|deftly|drape|fade|fall|get|hang|kneel|lie|loosen|place|pull|put|quickly|rise|set|shift|silently|sit|slide|sling|slip|stand|step|strap|take|tie|toss|untie|work|wrap|yank)
+  var success ^You (are already|attach|can't|carefully|climb|deftly|drape|fade|fall|get|hang|kneel|lie|loosen|place|pull|put|quickly|rise|set|shift|silently|sit|slide|sling|slip|stand|step|strap|take|tie|toss|untie|wear|work|wrap|yank)
   gosub ACTION
   var cloak_off 0
   return
@@ -1368,7 +1381,7 @@ ACTION.STOW.UNLOAD:
   var successbackup %success
   if matchre("$righthand", "%unloadables") then var action unload my $righthandnoun
   if matchre("$lefthand", "%unloadables") then var action unload my $lefthandnoun
-  var success ^\s*[\[\(]?Roundtime\s*\:?|^You unload
+  var success ^\s*[\[\(]?[rR]oundtime\s*\:?|^You unload
   gosub ACTION
   gosub STOW.HANDS
   var action %actionbackup
@@ -1390,7 +1403,7 @@ ACTION.WAIT:
   if ($webbed) then waiteval (!$webbed)
 
 ACTION:
-  #matchre ACTION_WAIT ^\s*[\[\(]?Roundtime\s*\:?
+  #matchre ACTION_WAIT ^\s*[\[\(]?[rR]oundtime\s*\:?
   # depending on the action, this could be a retry or a success...
   action (mapper) off
 
@@ -1402,7 +1415,7 @@ ACTION.MAPPER.ON:
   matchre ACTION.STOW.HANDS ^You must have at least one hand free to do that|^You need a free hand
   matchre ACTION.WAIT ^You're unconscious|^You are still stunned|^You can't do that while|^You don't seem to be able to
   matchre ACTION.FAIL ^(That's|The .*) too (heavy|thick|long|wide)|^There's no room|^Weirdly\,|^As you attempt|^That doesn't belong in there\!
-  matchre ACTION.FAIL ^There isn't any more room|^You just can't get the .+ to fit|^Where are you|^What were you|^You can't
+  matchre ACTION.FAIL ^There isn't any more room|^You just can't get the .+ to fit|^Where are you|^What were you|^You can't (?>!go)
   matchre ACTION.STOW.UNLOAD ^You should unload
   put %action
   matchwait 2
@@ -1511,3 +1524,12 @@ BAG.LOOP:
 BAG.NEXT:
   math BagLoop add 1
   goto BAG.LOOP
+
+#### Handle current pushing you around ####
+DRAGGED:
+  delay %infiniteLoopProtection
+  if ($roundtime > 0) then pause $roundtime
+  action (mapper) on
+  var depth 0
+  goto MOVE.DONE
+####
