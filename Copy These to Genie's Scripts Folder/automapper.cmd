@@ -1,8 +1,13 @@
 # automapper.cmd
-var autoversion 8.2022-12-10
+var autoversion 8.2022-12-15
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
+
+#2022-12-15
+# Hanryu
+#   Sigil walking
+#   walk help
 
 #2022-12-10
 # Hanryu
@@ -15,8 +20,7 @@ var autoversion 8.2022-12-10
 #   removed s from rocks
 #   ^\s*[\[\(]?[rR]oundtime\s*\:? for all RT matches
 #   retry now zero's everything out and heads back to wave.do
-#   using Jon's MOVE.RT now with some of my formatting
-#   add negative lookahead to action to account for fast moving scripts
+#   Jon's got a new MOVE.RT for us and I like it
 
 #2022-11-30
 # Hanryu
@@ -249,7 +253,41 @@ if matchre("%0", "help|HELP|Help|^$") then {
   put #echo %helpecho <<      Which classes should automapper turn on and off?            >>
   put #echo %helpecho <<      #var automapper.class -arrive -combat -joust -racial -rp    >>
   put #echo %helpecho <<  Now save! (#save vars for Genie | cmd-s for Outlander)          >>
+  put #echo %helpecho <<                                                                  >>
+  put #echo %helpecho <<  try .automapper walk for help with the various walk types       >>
   put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+  exit
+}
+if matchre("%0", "^walk$") then {
+  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+  put #echo %helpecho <<  Welcome to automapper walk help!                          >>
+  put #echo %helpecho <<    Power Walking                                           >>
+  put #echo %helpecho <<      percieve the mana until locked                        >>
+  put #echo %helpecho <<      #var powerwalk 0/1                                    >>
+  put #echo %helpecho <<    Caravan Walking                                         >>
+  put #echo %helpecho <<      wait for your caravan                                 >>
+  put #echo %helpecho <<      #var caravan 0/1                                      >>
+  put #echo %helpecho <<    Search Walking                                          >>
+  put #echo %helpecho <<      search in every room                                  >>
+  put #echo %helpecho <<      #var searchwalk 0/1                                   >>
+  put #echo %helpecho <<    Map Walking                                             >>
+  put #echo %helpecho <<      study a map for treasure                              >>
+  put #echo %helpecho <<      #var mapwalk 0/1                                      >>
+  put #echo %helpecho <<      search automapper.cmd for "Related macros"            >>
+  put #echo %helpecho <<    Sigil Walking                                           >>
+  put #echo %helpecho <<      find both sigils in each room                         >>
+  put #echo %helpecho <<      trains: Scholarship, Arcana, Outdoorsmanship          >>
+  put #echo %helpecho <<      #var automapper.sigilwalk 0/1                         >>
+  put #echo %helpecho <<      search automapper.cmd for "Related macros"            >>
+  put #echo %helpecho <<    USER Walking                                            >>
+  put #echo %helpecho <<      this can do whatever you'd like!                      >>
+  put #echo %helpecho <<        you MUST define globals automapper.UserWalkAction   >>
+  put #echo %helpecho <<        you MUST define globals automapper.UserWalkSuccess  >>
+  put #echo %helpecho <<        you MAY define globals automapper.UserWalkRetry     >>
+  put #echo %helpecho <<      #var automapper.userwalk 0/1                          >>
+  put #echo %helpecho <<                                                            >>
+  put #echo %helpecho <<  Please search automapper.cmd for "Related macros"         >>
+  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
   exit
 }
 ABSOLUTE.TOP:
@@ -283,15 +321,13 @@ ABSOLUTE.TOP:
 # 1: collect rocks on the ice road when lacking skates; 0; just wait 15 seconds with no RT instead
   if !def(automapper.iceroadcollect) then var ice_collect 0
   else var ice_collect $automapper.iceroadcollect
-  if !def(userwalk) then put #tvar userwalk 0
   if !def(caravan) then put #tvar caravan 0
+  if !def(drag) then put #tvar drag 0
   if !def(mapwalk) then put #tvar mapwalk 0
   if !def(powerwalk) then put #tvar powerwalk 0
+  if !def(automapper.sigilwalk) then put #tvar automapper.sigilwalk 0
   if !def(searchwalk) then put #tvar searchwalk 0
-  if !def(drag) then put #tvar drag 0
-  if (!def(version) || ($version < 4.0.2.4)) then var systemClock unixtime
-  else var systemClock gametime
-
+  if !def(automapper.userwalk) then put #tvar automapper.userwalk 0
 # turn off classes to speed movment
   if def(automapper.class) then put #class $automapper.class
 # ---------------
@@ -385,9 +421,9 @@ WAVE_DO:
     if ($roundtime > 0) then pause $roundtime
   }
   evalmath MDepth (%depth + 1)
+### DEBUG FOR HANRYU, REMOVE BEFORE RELEASE
+  if contains("%%MDepth", "city gate") then debug 5
   if ((%typeahead.max >= %depth) && ("%%MDepth" != "")) then gosub MOVE %%MDepth
-# what if I started having this count up and pop depth after like 3 - 5 rounds?
-# I should only stack up so many goto MAIN.LOOPs if there's a problem...
   if ((%typeahead.max <= %depth) || ("%%MDepth" = "")) then goto MAIN.LOOP
   else goto WAVE_DO
 
@@ -937,9 +973,16 @@ RETURN.CLEAR:
   var depth 0
   goto MAIN.LOOP.CLEAR
 
+#### The various types of walking actions
 CARAVAN:
   waitforre ^Your .*, following you\.
   goto MAIN.LOOP.CLEAR
+
+MAPWALK:
+  var typeahead.max 0
+  var success ^The map has a large 'X' marked in the middle of it
+  var action study my map
+  goto ACTION.WALK
 
 POWERWALK:
   if (($Attunement.LearningRate > 33) || ($Attunement.Ranks >= 1750)) then {
@@ -947,55 +990,62 @@ POWERWALK:
     var typeahead.max $automapper.typeahead
     return
     }
-  var action perceive
   var typeahead.max 0
   var success ^\s*[\[\(]?[rR]oundtime\s*\:?|^Something in the area is interfering|^You are a bit too busy performing
+  var action perceive
   goto ACTION.WALK
+
+SIGILWALK:
+  if ((($Scholarship.LearningRate > 33) || ($Scholarship.Ranks >= 1750)) && (($Arcana.LearningRate > 33) || ($Arcana.Ranks >= 1750)) && (($Outdoorsmanship.LearningRate > 33) || ($Outdoorsmanship.Ranks >= 1750))) then {
+    put #var automapper.sigilwalk 0
+    var typeahead.max $automapper.typeahead
+    return
+    }
+  var typeahead.max 0
+  var action_retry ^Roundtime: \d+ sec\.
+  var success (?:antipode|ascension|clarification|decay|evolution|integration|metamorphosis|nurture|paradox|unity) sigil(?: has revealed itself| before you)?\.$|^Having recently been searched,|^You recall having already identified|^Something in the area is interfering
+  var action perceive sigil
+  gosub ACTION.MAPPER.ON
+  var action_retry ^0$
+  goto MAIN.LOOP.CLEAR
 
 SEARCHWALK:
-  var action search
   var typeahead.max 0
   var success ^You search around|^After a careful search|^You notice|^\s*[\[\(]?[rR]oundtime\s*\:?|^You push through bushes|^You scan|^There seems to be|^You walk around the perimeter|^Just under the Bridge
-  goto ACTION.WALK
-
-FORAGEWALK:
-  var action forage $forage
-  var typeahead.max 0
-  var success ^\s*[\[\(]?[rR]oundtime\s*\:?|^Something in the area is interfering
-  goto ACTION.WALK
-
-MAPWALK:
-  var action study my map
-  var typeahead.max 0
-  var success ^The map has a large 'X' marked in the middle of it
+  var action search
   goto ACTION.WALK
 
 USERWALK:
   #requested by djordje - 2022-12-06
   #So I could set up a script to use automapper and have it step into a room, script does its thing then parses the trigger for automapper to take the next step, kinda like the powerwalk/wait for caravan stuff but customizable
-  var action $automapper.UserWalkAction
   var typeahead.max 0
+  if def(automapper.UserWalkRetry) then var action_retry $automapper.UserWalkRetry
   var success $automapper.UserWalkSuccess
-  goto ACTION.WALK
+  var action $automapper.UserWalkAction
+  gosub ACTION.MAPPER.ON
+  var action_retry ^0$
+  goto MAIN.LOOP.CLEAR
 
 MOVE.DONE:
   if (!$standing) then gosub STAND
   if ((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) then gosub WEAR.CLOAK
-  if ($userwalk) then goto USERWALK
   if ($caravan) then goto CARAVAN
-  if ($powerwalk) then goto POWERWALK
-  if ($searchwalk) then goto SEARCHWALK
   if ($mapwalk) then goto MAPWALK
+  if ($powerwalk) then goto POWERWALK
+  if ($automapper.sigilwalk) then goto SIGILWALK
+  if ($searchwalk) then goto SEARCHWALK
+  if ($automapper.userwalk) then goto USERWALK
   gosub clear
   goto MAIN.LOOP
 
 RETURN:
   if (!$standing) then gosub STAND
-  if ($userwalk) then goto USERWALK
   if ($caravan) then goto CARAVAN
-  if ($powerwalk) then goto POWERWALK
-  if ($searchwalk) then goto SEARCHWALK
   if ($mapwalk) then goto MAPWALK
+  if ($powerwalk) then goto POWERWALK
+  if ($automapper.sigilwalk) then goto SIGILWALK
+  if ($searchwalk) then goto SEARCHWALK
+  if ($automapper.userwalk) then goto USERWALK
   var movewait 0
   return
 
@@ -1084,8 +1134,7 @@ MISTWOOD.CLIFF:
   waitforre %move_OK
   put %Dir
   waitforre %move_OK
-  if matchre("$roomexits", "\b(?:northwest)\b") then put nw
-  else put n
+  put nw
   waitforre %move_OK
   goto MOVE.SCRIPT.DONE
 
@@ -1415,7 +1464,7 @@ ACTION.MAPPER.ON:
   matchre ACTION.STOW.HANDS ^You must have at least one hand free to do that|^You need a free hand
   matchre ACTION.WAIT ^You're unconscious|^You are still stunned|^You can't do that while|^You don't seem to be able to
   matchre ACTION.FAIL ^(That's|The .*) too (heavy|thick|long|wide)|^There's no room|^Weirdly\,|^As you attempt|^That doesn't belong in there\!
-  matchre ACTION.FAIL ^There isn't any more room|^You just can't get the .+ to fit|^Where are you|^What were you|^You can't (?>!go)
+  matchre ACTION.FAIL ^There isn't any more room|^You just can't get the .+ to fit|^Where are you|^What were you|^You can't
   matchre ACTION.STOW.UNLOAD ^You should unload
   put %action
   matchwait 2
