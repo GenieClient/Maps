@@ -1,5 +1,5 @@
 # automapper.cmd
-var autoversion 8.2022-12-15
+var autoversion 8.2022-12-16
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
@@ -8,6 +8,7 @@ var autoversion 8.2022-12-15
 # Hanryu
 #   Sigil walking
 #   walk help
+#   belly crawl room for shard wgate favors
 
 #2022-12-10
 # Hanryu
@@ -357,8 +358,8 @@ ABSOLUTE.TOP:
   var move_RETRY ^\.\.\.wait|^Sorry, you may only|^Sorry, system is slow|^The weight of all|lose your balance during the effort|^You are still stunned|^You're still recovering from your recent|^The mud gives way beneath your feet as you attempt to climb higher, sending you sliding back down the slope instead\!|You're not sure you can
   var move_RETREAT ^You are engaged to|^You try to move, but you're engaged|^While in combat|^You can't do that while engaged|^You can't do that\!  You're in combat\!
   var move_WEB ^You can't do that while entangled in a web|As you start to move, you find yourself snared
-  var move_WAIT ^You continue climbing|^You begin climbing|^You really should concentrate on your journey|^You step onto a massive stairway|^You start the slow journey across the bridge\.$
-  var move_END_DELAY ^You reach|you reach\.\.\.$|^Finally the bridge comes to an end
+  var move_WAIT ^You continue climbing|^You begin climbing|^You really should concentrate on your journey|^You step onto a massive stairway|^You start the slow journey across the bridge\.$|^Wriggling on your stomach, you crawl into a low opening\.$
+  var move_END_DELAY ^You reach|you reach\.\.\.$|^Finally the bridge comes to an end|^After a seemingly interminible length of time, you crawl out of the passage into
   var move_STAND ^You must be standing to do that|^You can't do that while (lying down|kneeling|sitting)|You try to quickly step from root to root, but slip and drop to your knees|you trip over an exposed root|^Stand up first\.|^You must stand first\.|^You'll need to stand up|a particularly sturdy one finally brings you to your knees\.$|You try to roll through the fall but end up on your back\.$|^Perhaps you might accomplish that if you were standing\.$
   var move_NO_SNEAK ^You can't do that here|^In which direction are you trying to sneak|^Sneaking is an inherently stealthy|^You can't sneak that way|^You can't sneak in that direction
   var move_GO ^Please rephrase that command
@@ -399,7 +400,7 @@ ACTIONS:
   action (mapper) goto MOVE.FATIGUE when %move_FATIGUE
   action (mapper) goto MOVE.CLIMB.MOUNT.FAIL when %climb_mount_FAIL
   action (mapper) goto MOVE.KNEEL when maybe if you knelt down first\?
-  action (mapper) goto MOVE.LIE when ^The passage is too small to walk that way\.  You'll have to get down and crawl\.|There's just barely enough room here to squeeze through, and no more.
+  action (mapper) goto MOVE.LIE when ^The passage is too small to walk that way\.  You'll have to get down and crawl\.|^There's just barely enough room here to squeeze through, and no more|^You look down at the low opening, furrowing your brow dubiously
   action (mapper) var footitem $1;goto STOW.FOOT.ITEM when ^You notice (?:an |a )?(.+) at your feet, and do not wish to leave it behind\.
   action (skates) var wearing_skates 1 when ^You slide your ice skates on your feet and tightly tie the laces\.|^Your ice skates help you traverse the frozen terrain\.|^Your movement is hindered .* by your ice skates\.|^You tap some.*\bskates\b.*that you are wearing
   action (skates) var wearing_skates 0 when ^You untie your skates and slip them off of your feet\.
@@ -424,7 +425,7 @@ WAVE_DO:
   }
   evalmath MDepth (%depth + 1)
 ### DEBUG FOR HANRYU, REMOVE BEFORE RELEASE
-  if contains("%%MDepth", "city gate") then debug 5
+#  if contains("%%MDepth", "city gate") then debug 5
   if ((%typeahead.max >= %depth) && ("%%MDepth" != "")) then gosub MOVE %%MDepth
   if ((%typeahead.max <= %depth) || ("%%MDepth" = "")) then goto MAIN.LOOP
   else goto WAVE_DO
@@ -598,7 +599,7 @@ MOVE.KNOCK:
   matchwait
 # this garbage is here for Outlander inconsistant matchwait bug
   pause
-  put #echo >talk MOVE.KNOCK failure
+  put #echo >talk #ffff00,#ff0000 MOVE.KNOCK failure
   pause
   goto KNOCK.DONE
 #### end outlander bug handling
