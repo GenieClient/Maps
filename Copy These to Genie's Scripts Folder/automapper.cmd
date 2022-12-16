@@ -1009,7 +1009,7 @@ SIGILWALK:
     }
   var typeahead.max 0
   var action_retry ^Roundtime: \d+ sec\.
-  var success (?:antipode|ascension|clarification|decay|evolution|integration|metamorphosis|nurture|paradox|unity) sigil(?: has revealed itself| before you)?\.$|^Having recently been searched,|^You recall having already identified|^Something in the area is interfering
+  var success (?:antipode|ascension|clarification|decay|evolution|integration|metamorphosis|nurture|paradox|unity) sigil(?: has revealed itself| before you)?\.$|^Having recently been searched,|^You recall having already identified|^Something in the area is interfering|^You are too distracted
   var action perceive sigil
   gosub ACTION.MAPPER.ON
   var action_retry ^0$
