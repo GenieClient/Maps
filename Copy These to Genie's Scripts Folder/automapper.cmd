@@ -222,7 +222,7 @@ var autoversion 8.2022-12-15
 # checks for outlander v. genie, outlander does not suppor the `mono` flag
 if def(version) then var helpecho #33CC99 mono
 else var helpecho #33CC99
-if matchre("%0", "help|HELP|Help|^$") then {
+if matchre("%1", "help|HELP|Help|^$") then {
   put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
   put #echo %helpecho <<  Welcome to automapper Setup!   (version %autoversion)           >>
   put #echo %helpecho <<  Use the command line to set the following preferences:          >>
@@ -254,31 +254,33 @@ if matchre("%0", "help|HELP|Help|^$") then {
   put #echo %helpecho <<      #var automapper.class -arrive -combat -joust -racial -rp    >>
   put #echo %helpecho <<  Now save! (#save vars for Genie | cmd-s for Outlander)          >>
   put #echo %helpecho <<                                                                  >>
-  put #echo %helpecho <<  try .automapper walk for help with the various walk types       >>
+  put #echo %helpecho <<  try `.automapper walk` for help with the various walk types     >>
   put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
   exit
 }
-if matchre("%0", "^walk$") then {
+if matchre("%1", "^walk$") then {
   put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
   put #echo %helpecho <<  Welcome to automapper walk help!                          >>
-  put #echo %helpecho <<    Power Walking                                           >>
-  put #echo %helpecho <<      percieve the mana until locked                        >>
-  put #echo %helpecho <<      #var powerwalk 0/1                                    >>
   put #echo %helpecho <<    Caravan Walking                                         >>
   put #echo %helpecho <<      wait for your caravan                                 >>
   put #echo %helpecho <<      #var caravan 0/1                                      >>
-  put #echo %helpecho <<    Search Walking                                          >>
-  put #echo %helpecho <<      search in every room                                  >>
-  put #echo %helpecho <<      #var searchwalk 0/1                                   >>
+  put #echo %helpecho <<    Drag                                                    >>
+  put #echo %helpecho <<      drag a target around                                  >>
+  put #echo %helpecho <<      #var drag 0/1                                         >>
+  put #echo %helpecho <<      #var drag.target name/item                            >>
   put #echo %helpecho <<    Map Walking                                             >>
   put #echo %helpecho <<      study a map for treasure                              >>
   put #echo %helpecho <<      #var mapwalk 0/1                                      >>
-  put #echo %helpecho <<      search automapper.cmd for "Related macros"            >>
+  put #echo %helpecho <<    Power Walking                                           >>
+  put #echo %helpecho <<      percieve the mana until locked                        >>
+  put #echo %helpecho <<      #var powerwalk 0/1                                    >>
   put #echo %helpecho <<    Sigil Walking                                           >>
   put #echo %helpecho <<      find both sigils in each room                         >>
   put #echo %helpecho <<      trains: Scholarship, Arcana, Outdoorsmanship          >>
   put #echo %helpecho <<      #var automapper.sigilwalk 0/1                         >>
-  put #echo %helpecho <<      search automapper.cmd for "Related macros"            >>
+  put #echo %helpecho <<    Search Walking                                          >>
+  put #echo %helpecho <<      search in every room                                  >>
+  put #echo %helpecho <<      #var searchwalk 0/1                                   >>
   put #echo %helpecho <<    USER Walking                                            >>
   put #echo %helpecho <<      this can do whatever you'd like!                      >>
   put #echo %helpecho <<        you MUST define globals automapper.UserWalkAction   >>
@@ -595,7 +597,11 @@ MOVE.KNOCK:
   put %movement
   matchwait
 # this garbage is here for Outlander inconsistant matchwait bug
-  goto MOVE.DONE
+  pause
+  put #echo >talk MOVE.KNOCK failure
+  pause
+  goto KNOCK.DONE
+#### end outlander bug handling
 
 SHARD.FAILED:
   if ((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) then gosub WEAR.CLOAK
