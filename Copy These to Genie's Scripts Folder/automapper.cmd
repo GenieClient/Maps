@@ -598,6 +598,7 @@ MOVE.KNOCK:
   put %movement
   matchwait
 # this garbage is here for Outlander inconsistant matchwait bug
+  debug 5
   pause
   put #echo >talk #ffff00,#ff0000 MOVE.KNOCK failure
   pause
