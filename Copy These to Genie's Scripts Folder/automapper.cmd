@@ -353,7 +353,6 @@ ABSOLUTE.TOP:
   var depth 0
   var movewait 0
   var TryGoInsteadOfClimb 0
-  var move_TORCH You push up on the (stone basin|torch), and the stone wall closes\.
   var move_OK ^Obvious (paths|exits)|^It's pitch dark|The shop appears to be closed, but you catch the attention of a night attendant inside,|^You move effortlessly through the
   var move_FAIL ^You can't swim in that direction|You can't go there|^A powerful blast of wind blows you to the|^What were you referring to|^I could not find what you were referring to\.|^You can't sneak in that direction|^You can't ride your.+(broom|carpet) in that direction|^You can't ride that way\.$
   var move_RETRY ^\.\.\.wait|^Sorry, you may only|^Sorry, system is slow|^The weight of all|lose your balance during the effort|^You are still stunned|^You're still recovering from your recent|^The mud gives way beneath your feet as you attempt to climb higher, sending you sliding back down the slope instead\!|You're not sure you can
@@ -378,7 +377,6 @@ ABSOLUTE.TOP:
 ACTIONS:
   action (mapper) action (mapper) off;goto DRAGGED when ^The current drags you
   action (mapper) if (%movewait = 0) then shift;if (%movewait = 0) then math depth subtract 1;if ((%verbose) && (len("%2") > 0)) then put #echo %color Next move: %2 when %move_OK
-  action (mapper) goto MOVE.TORCH when %move_TORCH
   action (mapper) goto MOVE.FAILED when %move_FAIL
   action (mapper) var TryGoInsteadOfClimb 1 when ^You can't climb that\.$
   action (mapper) goto MOVE.RETRY when %move_RETRY|%move_WEB|^You can't climb that\.$
@@ -641,18 +639,6 @@ MOVE.RT:
   if ($roundtime > 0) then pause %command_pause
   goto MOVE.DONE
 
-MOVE.TORCH:
-  action (mapper) off
-  pause %command_pause
-  if (%verbose) then gosub echo RESETTING STONE WALL
-  pause %command_pause
-  if ($roomid = 264) then put turn torch on wall
-  if ($roomid = 263) then put turn basin on wall
-  action (mapper) on
-  pause %command_pause
-  put go wall
-  goto MOVE.DONE
-
 MOVE.WEB:
   if ($webbed) then waiteval (!$webbed)
   pause %command_pause
@@ -784,8 +770,6 @@ MOVE.SCRIPT.DONE:
 
 MOVE.FATIGUE:
   if (%verbose) then gosub echo TOO FATIGUED TO CLIMB!
-
-FATIGUE.CHECK:
   pause 0.5
   if ("$guild" = "Barbarian") then
     {
@@ -821,6 +805,16 @@ FATIGUE.CHECK:
     pause
     }
   pause
+FATIGUE.WAIT:
+  if ($stamina > 55) then
+    {
+    put %movement
+    pause %command_pause
+    goto MOVE.DONE
+    }
+  if (%verbose) then gosub echo Pausing to recover stamina
+  pause 10
+  goto FATIGUE.WAIT
 
 MOVE.INVIS:
   if (%depth > 1) then waiteval (1 = %depth)
@@ -837,17 +831,6 @@ MOVE.INVIS:
   put %movement
   pause %command_pause
   goto MOVE.DONE
-
-FATIGUE.WAIT:
-  if ($stamina > 55) then
-    {
-    put %movement
-    pause %command_pause
-    goto move.done
-    }
-  if (%verbose) then gosub echo Pausing to recover stamina
-  pause 10
-  goto FATIGUE.WAIT
 
 MOVE.WAIT:
   action (mapper) off
@@ -1076,13 +1059,26 @@ ABBEY.HATCH.SUCCESS:
   action (abbey) off
   goto MOVE.SCRIPT.DONE
 
+#conflicting code for gear gate bypass
+#MOVE.TORCH:
+#  action (mapper) goto MOVE.TORCH when You push up on the (stone basin|torch), and the stone wall closes\.
+#  action (mapper) off
+#  pause %command_pause
+#  if (%verbose) then gosub echo RESETTING STONE WALL
+#  pause %command_pause
+#  if ($roomid = 264) then put turn torch on wall
+#  if ($roomid = 263) then put turn basin on wall
+#  action (mapper) on
+#  pause %command_pause
+#  put go wall
+#  goto MOVE.DONE
+
 GEAR.GATE.BYPASS:
   var wall 0
   var wall_trigger torch
   action (ggbypass) var wall 0 when ^The stone wall slowly closes|stone wall closes\.$
   action (ggbypass) var wall 1 when ^A gouged stone wall slowly opens up|and a gouged stone wall opens up\.$
   action (ggbypass) on
-
 GEAR.GATE.BYPASS.CHECK:
   if (!$standing) then gosub STAND
   if matchre("$roomobjs", "a gouged stone wall") then var wall 1
