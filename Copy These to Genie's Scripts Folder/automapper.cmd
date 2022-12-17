@@ -9,6 +9,7 @@ var autoversion 8.2022-12-16
 #   Sigil walking
 #   walk help
 #   belly crawl room for shard wgate favors
+#   changed send to put in MOVE.TORCH
 
 #2022-12-10
 # Hanryu
@@ -645,8 +646,8 @@ MOVE.TORCH:
   pause %command_pause
   if (%verbose) then gosub echo RESETTING STONE WALL
   pause %command_pause
-  if ($roomid = 264) then send turn torch on wall
-  if ($roomid = 263) then send turn basin on wall
+  if ($roomid = 264) then put turn torch on wall
+  if ($roomid = 263) then put turn basin on wall
   action (mapper) on
   pause %command_pause
   put go wall
