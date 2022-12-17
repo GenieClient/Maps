@@ -1,5 +1,5 @@
 # automapper.cmd
-var autoversion 8.2022-12-16
+var autoversion 8.2022-12-17
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
@@ -10,6 +10,9 @@ var autoversion 8.2022-12-16
 #   walk help
 #   belly crawl room for shard wgate favors
 #   changed send to put in MOVE.TORCH
+#   commented out race condition with ggbypass
+#   added a pause at the end of "script" execution
+#   moved move.invis out of the middle of fatigue block (boy that's a mess)
 
 #2022-12-10
 # Hanryu
@@ -423,8 +426,6 @@ WAVE_DO:
     if ($roundtime > 0) then pause $roundtime
   }
   evalmath MDepth (%depth + 1)
-### DEBUG FOR HANRYU, REMOVE BEFORE RELEASE
-#  if contains("%%MDepth", "city gate") then debug 5
   if ((%typeahead.max >= %depth) && ("%%MDepth" != "")) then gosub MOVE %%MDepth
   if ((%typeahead.max <= %depth) || ("%%MDepth" = "")) then goto MAIN.LOOP
   else goto WAVE_DO
