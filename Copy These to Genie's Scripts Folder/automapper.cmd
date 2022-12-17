@@ -999,9 +999,11 @@ SIGILWALK:
   if ((($Scholarship.LearningRate > 33) || ($Scholarship.Ranks >= 1750)) && (($Arcana.LearningRate > 33) || ($Arcana.Ranks >= 1750)) && (($Outdoorsmanship.LearningRate > 33) || ($Outdoorsmanship.Ranks >= 1750))) then {
     put #var automapper.sigilwalk 0
     var typeahead.max $automapper.typeahead
+    var waitfor_action $automapper.confirmation
     return
     }
   var typeahead.max 0
+  var waitfor_action 1
   var action_retry ^Roundtime: \d+ sec\.
   var success (?:antipode|ascension|clarification|decay|evolution|integration|metamorphosis|nurture|paradox|unity) sigil(?: has revealed itself| before you)?\.$|^Having recently been searched,|^You recall having already identified|^Something in the area is interfering|^You are too distracted
   var action perceive sigil
