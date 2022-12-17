@@ -761,6 +761,8 @@ MOVE.SCRIPT:
   matchwait
 
 MOVE.SCRIPT.DONE:
+# lets room load before turning on triggers for genie
+  if def(version) then delay 0.25
   var subscript 0
   shift
   math depth subtract 1
