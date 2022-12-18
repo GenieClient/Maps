@@ -1,13 +1,14 @@
 # automapper.cmd
-var autoversion 8.2022-12-17
+var autoversion 8.2022-12-18
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
-
-#2022-12-17
+#
+#2022-12-18 
 # Shroom
-# Merged Hanryu changes 
-# Added Athletics check for thieves using Khri for climbing - Will skip at high Athletics
+#   Fix in startup for rogue automapper.typeahead var being set - (will auto-set to 1 if NOT set a NUMBER)
+#   Merged Hanryu changes 
+#   Athletics check for Thieves Khri for climbing - Will skip khri at higher Athletics
 
 #2022-12-15
 # Hanryu
@@ -233,39 +234,39 @@ var autoversion 8.2022-12-17
 if def(version) then var helpecho #33CC99 mono
 else var helpecho #33CC99
 if matchre("%1", "help|HELP|Help|^$") then {
-  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
-  put #echo %helpecho <<  Welcome to automapper Setup!   (version %autoversion)             >>
-  put #echo %helpecho <<  Use the command line to set the following preferences:            >>
-  put #echo %helpecho <<    Typeahead                                                       >>
-  put #echo %helpecho <<      Standard Account = 1, Premium Account = 2, LTB Purchase = +1  >>
-  put #echo %helpecho <<      #var automapper.typeahead 1                                   >>
-  put #echo %helpecho <<    Pause                                                           >>
-  put #echo %helpecho <<      Time to pause before sending a "put x" command                >>
-  put #echo %helpecho <<      #var automapper.pause 0.01                                    >>
-  put #echo %helpecho <<    Confirmation                                                    >>
-  put #echo %helpecho <<      1: wait for correct confirmation of sent commands             >>
-  put #echo %helpecho <<      0: don't wait                                                 >>
-  put #echo %helpecho <<      #var automapper.confirmation 1                                >>
-  put #echo %helpecho <<    Infinite Loop Protection                                        >>
-  put #echo %helpecho <<      Increase if you get infinte loop errors                       >>
-  put #echo %helpecho <<      #var automapper.loop 0.001                                    >>
-  put #echo %helpecho <<    Echoes                                                          >>
-  put #echo %helpecho <<      how verbose do you want automapper to be?                     >>
-  put #echo %helpecho <<      #var automapper.verbose 1                                     >>
-  put #echo %helpecho <<    Ice Road Behavior                                               >>
-  put #echo %helpecho <<      1: collect rocks on the ice road when lacking skates          >>
-  put #echo %helpecho <<      0: just wait 15 seconds with no RT instead                    >>
-  put #echo %helpecho <<      #var automapper.iceroadcollect 1                              >>
-  put #echo %helpecho <<    Color                                                           >>
-  put #echo %helpecho <<      What should the default automapper echo color be?             >>
-  put #echo %helpecho <<      #var automapper.color #33CC99                                 >>
-  put #echo %helpecho <<    Class                                                           >>
-  put #echo %helpecho <<      Which classes should automapper turn on and off?              >>
-  put #echo %helpecho <<      #var automapper.class -arrive -combat -joust -racial -rp      >>
-  put #echo %helpecho <<  Now save! (#save vars for Genie | cmd-s for Outlander)            >>
-  put #echo %helpecho <<                                                                    >>
-  put #echo %helpecho <<  try `.automapper walk` for help with the various walk types       >>
-  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+  put #echo %helpecho <<  Welcome to automapper Setup!   (version %autoversion)           >>
+  put #echo %helpecho <<  Use the command line to set the following preferences:          >>
+  put #echo %helpecho <<    Typeahead                                                     >>
+  put #echo %helpecho <<      Standard Account = 1, Premium Account = 2, LTB Premium = 3  >>
+  put #echo %helpecho <<      #var automapper.typeahead 1                                 >>
+  put #echo %helpecho <<    Pause                                                         >>
+  put #echo %helpecho <<      Time to pause before sending a "put x" command              >>
+  put #echo %helpecho <<      #var automapper.pause 0.01                                  >>
+  put #echo %helpecho <<    Confirmation                                                  >>
+  put #echo %helpecho <<      1: wait for correct confirmation of sent commands           >>
+  put #echo %helpecho <<      0: don't wait                                               >>
+  put #echo %helpecho <<      #var automapper.confirmation 1                              >>
+  put #echo %helpecho <<    Infinite Loop Protection                                      >>
+  put #echo %helpecho <<      Increase if you get infinte loop errors                     >>
+  put #echo %helpecho <<      #var automapper.loop 0.001                                  >>
+  put #echo %helpecho <<    Echoes                                                        >>
+  put #echo %helpecho <<      how verbose do you want automapper to be?                   >>
+  put #echo %helpecho <<      #var automapper.verbose 1                                   >>
+  put #echo %helpecho <<    Ice Road Behavior                                             >>
+  put #echo %helpecho <<      1: collect rocks on the ice road when lacking skates        >>
+  put #echo %helpecho <<      0: just wait 15 seconds with no RT instead                  >>
+  put #echo %helpecho <<      #var automapper.iceroadcollect 1                            >>
+  put #echo %helpecho <<    Color                                                         >>
+  put #echo %helpecho <<      What should the default automapper echo color be?           >>
+  put #echo %helpecho <<      #var automapper.color #33CC99                               >>
+  put #echo %helpecho <<    Class                                                         >>
+  put #echo %helpecho <<      Which classes should automapper turn on and off?            >>
+  put #echo %helpecho <<      #var automapper.class -arrive -combat -joust -racial -rp    >>
+  put #echo %helpecho <<  Now save! (#save vars for Genie | cmd-s for Outlander)          >>
+  put #echo %helpecho <<                                                                  >>
+  put #echo %helpecho <<  try `.automapper walk` for help with the various walk types     >>
+  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
   exit
 }
 if matchre("%1", "^walk$") then {
@@ -302,6 +303,13 @@ if matchre("%1", "^walk$") then {
   put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
   exit
 }
+
+# This sets automapper.typeahead to 1 if the variable is NOT present at all
+if !def(automapper.typeahead) then put #var automapper.typeahead 1
+# automapper.typeahead FIX - Some users had a rogue variable set for automapper.typeahead 
+# This will auto reset it back to 1 IF the automapper.typeahead is ~NOT~ set to a number
+if matchre("$automapper.typeahead", "^\D+") then put #var automapper.typeahead 1
+
 ABSOLUTE.TOP:
 # ---------------
 #USER VARS:
@@ -999,11 +1007,9 @@ SIGILWALK:
   if ((($Scholarship.LearningRate > 33) || ($Scholarship.Ranks >= 1750)) && (($Arcana.LearningRate > 33) || ($Arcana.Ranks >= 1750)) && (($Outdoorsmanship.LearningRate > 33) || ($Outdoorsmanship.Ranks >= 1750))) then {
     put #var automapper.sigilwalk 0
     var typeahead.max $automapper.typeahead
-    var waitfor_action $automapper.confirmation
     return
     }
   var typeahead.max 0
-  var waitfor_action 1
   var action_retry ^Roundtime: \d+ sec\.
   var success (?:antipode|ascension|clarification|decay|evolution|integration|metamorphosis|nurture|paradox|unity) sigil(?: has revealed itself| before you)?\.$|^Having recently been searched,|^You recall having already identified|^Something in the area is interfering|^You are too distracted
   var action perceive sigil
