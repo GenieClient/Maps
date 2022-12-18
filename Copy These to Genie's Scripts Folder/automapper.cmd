@@ -304,20 +304,17 @@ if matchre("%1", "^walk$") then {
   exit
 }
 
-# This sets automapper.typeahead to 1 if the variable is NOT present at all
-if !def(automapper.typeahead) then put #var automapper.typeahead 1
-# automapper.typeahead FIX - Some users had a rogue variable set for automapper.typeahead 
-# This will auto reset it back to 1 IF the automapper.typeahead is ~NOT~ set to a number
-if matchre("$automapper.typeahead", "^\D+") then put #var automapper.typeahead 1
-
 ABSOLUTE.TOP:
 # ---------------
 #USER VARS:
 # Type ahead declaration
 # The following will use a global to set it by character.  This helps when you have both premium and standard accounts.
 # Standard Account = 1, Premium Account = 2, LTB Premium = 3
-  if !def(automapper.typeahead) then var typeahead.max 1
-  else var typeahead.max $automapper.typeahead
+# automapper.typeahead FIX - Some users had a rogue variable set for automapper.typeahead 
+# This sets automapper.typeahead to 1 if the variable is NOT present at all
+# This will auto reset it back to 1 IF the automapper.typeahead is ~NOT~ set to a number
+  if ((!def(automapper.typeahead)) || (!matchre("$automapper.typeahead", "^[1-5]$"))) then put #var automapper.typeahead 1
+  var typeahead.max $automapper.typeahead
 # Time to pause before sending a "put x" command
   if !def(automapper.pause) then var command_pause 0.01
   else var command_pause $automapper.pause
