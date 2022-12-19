@@ -959,7 +959,7 @@ JAILED:
 MOVE.FAILED:
   var subscript 0
   evalmath failcounter %failcounter + 1
-  if (%failcounter > 4) then
+  if (%failcounter > 3) then
     {
     put #parse MOVE FAILED
     put #parse AUTOMAPPER MOVEMENT FAILED!
