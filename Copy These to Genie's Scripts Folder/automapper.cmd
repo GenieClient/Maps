@@ -1,9 +1,17 @@
 # automapper.cmd
-var autoversion 8.2022-12-18
+var autoversion 8.2023-1-1
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
 #
+#2022-12-31 
+# Shroom
+#   Added SUBSCRIPTS for movement into / out of Gate of Souls
+#   Default movement was VERY clunky and didn't work properly, now MUCH better - Should not hang up or error
+#   Fixed MOVE.RETRY issue that could cause infinite hang if starting in RT 
+#   waitfor_action updated
+#   Added counter to Action sub as failsafe   
+
 #2022-12-18 
 # Shroom
 #   Fix in startup for rogue automapper.typeahead var being set - (will auto-set to 1 if NOT set a NUMBER)
@@ -422,7 +430,7 @@ ACTIONS:
 
 # Are you starting the script while in RT?
   if ($roundtime > 0) then pause $roundtime
-
+  if (!$standing) then gosub STAND
 MAIN.LOOP.CLEAR:
   gosub clear
 
@@ -758,6 +766,8 @@ MOVE.SCRIPT:
   if (%depth > 1) then waiteval (1 = %depth)
   action (mapper) off
   if ("%movement" = "abbeyhatch") then goto ABBEY.HATCH
+  if ("%movement" = "gateofsouls") then goto GATE.OF.SOULS
+  if ("%movement" = "gateleave") then goto GATE.OF.SOULS.LEAVE
   if ("%movement" = "ggbypass") then goto GEAR.GATE.BYPASS
   if ("%movement" = "autoclimbup") then goto AUTOCLIMB.UP
   if ("%movement" = "autoclimbdown") then goto AUTOCLIMB.DOWN
@@ -874,7 +884,8 @@ MOVE.RETREAT:
   if ($hidden) then gosub UNHIDE
   pause %command_pause
   matchre MOVE.RETREAT %move_RETRY|^\s*[\[\(]?[rR]oundtime\s*\:?|^You retreat back
-  matchre RETURN.CLEAR ^You retreat from combat|^You sneak back out of combat|^You are already as far away as you can get
+  matchre RETURN.CLEAR ^You retreat from combat|^You sneak back out of combat|^You are already as far away as you can get|^You stop
+  matchre RETURN.CLEAR ^You begin to get up and \*\*SMACK\!\*\*
   put retreat
   matchwait
 # this garbage is here for Outlander inconsistant matchwait bug
@@ -928,13 +939,28 @@ MOVE.ROPE.BRIDGE:
 MOVE.RETRY:
   gosub echo Retry movement
   if (%TryGoInsteadOfClimb) then eval movement replacere("%movement", "climb ", "go ")
-  if ($webbed) then waiteval (!$webbed)
-  if ($stunned) then
+  if ($webbed) then
     {
+    if (%verbose) then gosub echo WEBBED - pausing
     pause
+    if ($webbed) then pause 0.5
+    if ($webbed) then waiteval (!$stunned)
     goto MOVE.RETRY
     }
-  if (%waitfor_action) then wait
+  if ($stunned) then
+    {
+    if (%verbose) then gosub echo STUNNED - pausing
+    pause
+    if ($stunned) then pause 0.5
+    if ($stunned) then waiteval (!$stunned)
+    goto MOVE.RETRY
+    }
+  if (%waitfor_action) then
+    {
+    pause 0.001
+    put fatigue
+    pause 0.001
+    }
   delay %infiniteLoopProtection
   pause %command_pause
   pause
@@ -1085,6 +1111,59 @@ ABBEY.HATCH.SUCCESS:
 #  pause %command_pause
 #  put go wall
 #  goto MOVE.DONE
+
+GATE.OF.SOULS:
+  action (souls) on
+  action (souls) var pushing 0 when ^You stop pushing\.
+  action (souls) var boulder 0 when ^The ground trembles slightly, causing a massive granite boulder to rock back and forth
+  action (souls) var boulder 1 when ^At the bottom of the hollow, a low tunnel is revealed\!
+  action (souls) var pushing 1 when ^You lean against the boulder|^You're already pushing 
+  var boulder 0
+  var pushing 0
+GATE.OF.SOULS.1:
+  pause 0.001
+  if (!$standing) then gosub STAND
+  if matchre("$roomobjs", "low tunnel") then goto GATE.OF.SOULS.GO
+  if (%boulder = 1) then goto GATE.OF.SOULS.GO
+  if (%pushing = 0) then
+    {
+     gosub RETREAT
+     put push boulder
+     pause 0.7
+    }
+  goto GATE.OF.SOULS.1
+GATE.OF.SOULS.GO:
+  gosub RETREAT
+  if ($standing) then send lie
+  pause 0.001
+  matchre GATE.OF.SOULS.1 ^What were you
+  matchre GATE.OF.SOULS.GO ^Sorry|^You are engaged|^It's a pretty tight fit
+  matchre GATE.OF.SOULS.WAIT ^Wriggling on your stomach, you crawl into a low tunnel
+  put go tunnel
+  matchwait 5
+  goto GATE.OF.SOULS.1
+GATE.OF.SOULS.WAIT:
+  matchre GATE.OF.SOULS.DONE Coarse black grit blows in swirling eddies|^After a seemingly interminable length of time
+  matchwait
+GATE.OF.SOULS.DONE:
+  if (!$standing) then gosub STAND
+  pause %command_pause
+  action (souls) off
+  goto MOVE.SCRIPT.DONE
+  
+GATE.OF.SOULS.LEAVE:
+  if ($standing) then send lie
+  pause 0.001
+  pause 0.001
+  matchre GATE.OF.SOULS.LEAVE.DONE ^Rising in a snubbed tower|^After a seemingly interminable length of time
+  put go tunnel
+  matchwait 75
+  goto GATE.OF.SOULS.LEAVE
+GATE.OF.SOULS.LEAVE.DONE:
+  if (!$standing) then gosub STAND
+  pause %command_pause
+  action (souls) off
+  goto MOVE.SCRIPT.DONE
 
 GEAR.GATE.BYPASS:
   var wall 0
@@ -1430,6 +1509,18 @@ STOW.ALT:
     }
   goto STOW.ALT.1
 
+# Standalone Retreat
+RETREAT:
+  action (mapper) off
+  if (!$standing) then gosub STAND
+  if ($hidden) then gosub UNHIDE
+  pause %command_pause
+  matchre RETREAT %move_RETRY|^\s*[\[\(]?[rR]oundtime\s*\:?|^You retreat back
+  matchre RETURN ^You retreat from combat|^You sneak back out of combat|^You are already as far away as you can get|^You stop
+  put retreat
+  matchwait 3
+  return
+
 UNHIDE:
   var action unhide
   var success ^But you are not hidden|^You come out of hiding
@@ -1474,8 +1565,10 @@ ACTION:
   #matchre ACTION_WAIT ^\s*[\[\(]?[rR]oundtime\s*\:?
   # depending on the action, this could be a retry or a success...
   action (mapper) off
+  var actionloop 0
 
 ACTION.MAPPER.ON:
+  math actionloop add 1
   pause %command_pause
   matchre ACTION ^\.\.\.wait|^Sorry,|^Please wait\.|^The weight of all your possessions|^You are overburdened and cannot|^You are so unbalanced|%action_retry
   matchre TAP.CLOAK ^Something else is already hiding your features
@@ -1487,7 +1580,8 @@ ACTION.MAPPER.ON:
   matchre ACTION.STOW.UNLOAD ^You should unload
   put %action
   matchwait 2
-  if (%waitfor_action) then goto ACTION
+  if (%actionloop > 2) then goto ACTION.FAIL
+  if (%waitfor_action) then goto ACTION.MAPPER.ON
   else goto ACTION.RETURN
 
 ACTION.FAIL:
