@@ -944,7 +944,7 @@ MOVE.RETRY:
     if (%verbose) then gosub echo WEBBED - pausing
     pause
     if ($webbed) then pause 0.5
-    if ($webbed) then waiteval (!$stunned)
+    if ($webbed) then waiteval (!$webbed)
     goto MOVE.RETRY
     }
   if ($stunned) then
