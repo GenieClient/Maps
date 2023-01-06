@@ -1,9 +1,13 @@
 # automapper.cmd
-var autoversion 8.2023-1-1
+var autoversion 8.2023-1-5
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
-#
+
+#2023-01-05
+# Hanryu
+#   Sigil walking *would* keep plowing on for the 2nd sigil even if you're locked, now fixt
+
 #2022-12-31 
 # Shroom
 #   Added SUBSCRIPTS for movement into / out of Gate of Souls
@@ -1568,6 +1572,13 @@ ACTION:
   var actionloop 0
 
 ACTION.MAPPER.ON:
+  if ($automapper.sigilwalk) then {
+    if ((($Scholarship.LearningRate > 33) || ($Scholarship.Ranks >= 1750)) && (($Arcana.LearningRate > 33) || ($Arcana.Ranks >= 1750)) && (($Outdoorsmanship.LearningRate > 33) || ($Outdoorsmanship.Ranks >= 1750))) then {
+      put #var automapper.sigilwalk 0
+      var typeahead.max $automapper.typeahead
+      goto ACTION.RETURN
+      }
+  }
   math actionloop add 1
   pause %command_pause
   matchre ACTION ^\.\.\.wait|^Sorry,|^Please wait\.|^The weight of all your possessions|^You are overburdened and cannot|^You are so unbalanced|%action_retry
