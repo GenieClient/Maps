@@ -7,9 +7,9 @@ put #class rp on
 # Script to Travel for Genie3 #
 # Originally written by Chris/Achilles
 # Revitalized and Robustified by Shroom 
-# version 4.2
+# version 4.3
 # REQUIRES EXPTRACKER PLUGIN
-# Updated: 12/30/22
+# Updated: 1/7/23
 
 # USAGE - .travel <destination> <room number>  (room is optional!)
 # If you are calling this script via another, use waitforre ^YOU ARRIVED\! to match the end of travel script:
@@ -38,40 +38,52 @@ put #class rp on
      var shardcitizen yes
 ##########################################
 ## RANKS TO USE ROSSMAN'S SHORTCUT      ##
-## SWIM THE JANTSPYRE RIVER             ##
+## TO SWIM THE JANTSPYRE RIVER          ##
+## NORTH IS POSSIBLE ~175 W/ NO ARMOR   ##
+## NORTH IS ~SAFE~ AROUND 200           ##
+## SOUTH IS MUCH EASIER, SAFE AT ~90    ##
 ## NORTH
     var rossmannorth 200
 ## SOUTH
     var rossmansouth 90
-##########################################
-##  RANKS TO SWIM THE FALDESU RIVER     ##
-##  HAVEN TO NTR OR VICA VERSA          ##
+###########################################
+##  RANKS TO SWIM THE FALDESU RIVER      ##
+##  HAVEN TO NTR OR VICA VERSA           ##
+## Default: 190 - Possible ~150 w/ buffs ##
     var faldesu 190
 ##########################################
 ##  RANKS TO SWIM THE SEGOLTHA RIVER    ##
 ##  TIGER CLAN TO STR OR VICA VERSA     ##
+## THIS IS A TOUGH ONE - 550 IS 'SAFE'  ##
     var segoltha 550
 ##########################################
 ## RANKS TO CLIMB UNDERGONDOLA SHORTCUT ##
 ## Some can do ~510 w/ buffs & rope     ##
+## 550 is 'safe' - 530 is average       ##
     var undergondola 530
 ##########################################
 ##########################################
 ## RANKS TO USE UNDER-SEGOLTHA (THIEF)  ##
+## 35 MIN - 50 is the safest level      ##
     var undersegoltha 50
 ##########################################
-##########################################
+#################################################
 ## RANKS FOR VELAKA DESERT SHORTCUT TO MUSPARI ##
+## 700 MIN for this one - 750 IS SAFE          ##
     var muspari.shortcut 750
-##########################################
-## MULTIPLE CHARACTER SUPPORT FOR SHARD CITIZEN VARIABLE
-## YOU MUST CREATE GENIE GLOBAL VARIABLES CHAR1, CHAR2 etc IN GENIE FOR THIS TO WORK
-## type: #var char1 <charactername>
-## in genie to create a global variable
+#################################################
+## MULTIPLE CHARACTER SUPPORT FOR THE SHARD CITIZEN VARIABLE
+## (IF You use the script on multiple characters and want DIFFERENT shardcitizen variables) 
+## YOU MUST CREATE GENIE GLOBAL VARIABLES - char1 / char2 / char3 / char4 etc.. IN GENIE FOR THIS TO WORK
+## type in genie:  #var char1 Bob
+## to create a global variable - then make sure to #var save
 if ("$charactername") = ("$char1") then var shardcitizen yes
-if ("$charactername") = ("$char2") then var shardcitizen no
-if ("$charactername") = ("$char3") then var shardcitizen no
+if ("$charactername") = ("$char2") then var shardcitizen yes
+if ("$charactername") = ("$char3") then var shardcitizen yes
 if ("$charactername") = ("$char4") then var shardcitizen no
+if ("$charactername") = ("$char5") then var shardcitizen no
+if ("$charactername") = ("$char6") then var shardcitizen no
+if ("$charactername") = ("$char7") then var shardcitizen no
 ####"
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
@@ -3480,8 +3492,8 @@ OFFTHERIDE:
 JOINLOGIC:
   pause 0.1
   pause 0.1
-  put look
   matchre ONJOINED ^\[Aboard the Dirigible, Gondola\]|^\[Alongside a Wizened Ranger\]|^An intricate network of silken rope|^\[Aboard the Balloon, Gondola\]|^A veritable spiderweb of ropes secures|^Thick, barnacle-encrusted ropes secure the platform to the|\[Aboard the Mammoth, Platform\]|\[The Bardess' Fete, Deck\]|^Silken rigging suspends the sweeping teak|\[Aboard the Warship, Gondola\]
+  put look
   pause 0.3
   pause 0.2
   if matchre("$roomobjs $roomname", "(^\[Aboard the Dirigible, Gondola\]|^\[Alongside a Wizened Ranger\]|^An intricate network of silken rope|^\[Aboard the Balloon, Gondola\]|^A veritable spiderweb of ropes secures|^Thick, barnacle-encrusted ropes secure the platform to the|\[Aboard the Mammoth, Platform\]|\[The Bardess' Fete, Deck\]|^Silken rigging suspends the sweeping teak|\[Aboard the Warship, Gondola\])") then goto ONJOINED
@@ -3962,11 +3974,12 @@ INFO_CHECK:
      action var lirums $1;eval lirums replacere("%lirums",",","") when \(([0-9,]*) copper Lirums\)\.
      action var dokoras 0 when No Dokoras\.
      action var dokoras $1;eval dokoras replacere("%dokoras",",","") when \(([0-9,]*) copper Dokoras\)\.
-     pause 0.001
+     delay 0.001
+     pause 0.0001
      send info;encumbrance
      waitforre ^\s*Encumbrance\s*\:
-     pause 0.1
-     pause 0.01
+     pause 0.001
+     pause 0.001
      action remove Guild\:\s+(.*)$
      action remove Circle\: (\d+)
      return
@@ -3994,6 +4007,8 @@ BAG_CHECK:
      var Shadows 0
      var HipPouch 0
      var ToolBelt 0
+     var Lootsack 0
+     var Satchel 0
      action var ToolBelt 1 when archeologist's toolbelt
      action var Hip.Pouch 1 when light spidersilk hip pouch
      action var Backpack 1 when backpack
@@ -4005,17 +4020,19 @@ BAG_CHECK:
      action var Vortex 1 when (hollow vortex of water|corrupted vortex of swirling)
      action var Eddy 1 when swirling eddy of incandescent
      action var Shadows 1 when encompassing shadows
+     action var Lootsack 1 when lootsack
+     action var Satchel 1 when satchel
      delay 0.00001
      echo *** Checking Containers..
      matchre BAG_PARSE INVENTORY
      put inv container
      matchwait 3
 BAG_PARSE:
-     var Bags Toolbelt|Hip.Pouch|Backpack|Haversack|Pack|Carryall|Rucksack|Duffel.Bag|Vortex|Eddy|Shadows
+     var Bags Toolbelt|Hip.Pouch|Backpack|Haversack|Pack|Carryall|Rucksack|Duffel.Bag|Vortex|Eddy|Shadows|Lootsack|Satchel
      eval TotalBags count("%Bags", "|")
      var BagLoop 0
-     delay 0.1
-     delay 0.01
+     delay 0.001
+     delay 0.001
 BAG_LOOP:
      delay 0.00001
      delay 0.00001
@@ -4029,7 +4046,7 @@ BAG_LOOP:
                echo * Third: %THIRD.BAG
                echo * Fourth: %FOURTH.BAG
                echo
-               return
+               goto BAG_RETURN
           }
      if ("%%BAG" = 1) then
           {
@@ -4057,10 +4074,23 @@ BAG_LOOP:
 BAG_NEXT:
      math BagLoop add 1
      goto BAG_LOOP
-     
-
+BAG_RETURN:
+     action remove archeologist's toolbelt
+     action remove  light spidersilk hip pouch
+     action remove  backpack
+     action remove  haversack
+     action remove  \bpack
+     action remove  carryall
+     action remove  rucksack
+     action remove  duffel bag
+     action remove  (hollow vortex of water|corrupted vortex of swirling)
+     action remove  swirling eddy of incandescent
+     action remove  encompassing shadows
+     action remove  lootsack
+     action remove  satchel
+     return
 PREMIUM_CHECK:
-     echo *** Checking Premium Status..
+     echo *** Checking Premium..
      matchre PREMIUM_NO ^You are not currently a Premium
      matchre PREMIUM_YES ^Your premium service has been continuous
      matchre PREMIUM_NO ^You need to concentrate
