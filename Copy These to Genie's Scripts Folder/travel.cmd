@@ -282,8 +282,8 @@ if matchre("$roomname", "Asketi's Mount") then gosub ASKETI_ESCAPE
 if matchre("$roomname", "The Fangs of Ushnish") then gosub USHNISH_ESCAPE
 if matchre("$roomname", "Temple of Ushnish") then gosub USHNISH_ESCAPE_2
 if matchre("$roomname", "Beyond the Gate of Souls") then gosub USHNISH_ESCAPE_3
-if matchre("$roomname", "Clover Fields" then gosub BROCKET_ESCAPE
-if matchre("$roomname", "Maelshyve's Fortress, Inner Sanctum" then gosub MAELSHYVE_FORTRESS_ESCAPE
+if matchre("$roomname", "Clover Fields") then gosub BROCKET_ESCAPE
+if matchre("$roomname", "Maelshyve's Fortress, Inner Sanctum") then gosub MAELSHYVE_FORTRESS_ESCAPE
 if matchre("$roomname", "(Maelshyve's Fortress, Hall of Malice|Glutton's Rest|Fallen Altar|Great Dais|Inner Sanctum)") then gosub MAELSHYVE_FORTRESS_ESCAPE
 if matchre("$roomname", "(Charred Caverns|Beneath the Zaulfung|Maelshyve's Threshold)") then gosub BENEATH_ZAULFUNG_ESCAPE
 if matchre("$roomname", "(Zaulfung, Dense Swamp|Kweld Gelvdael|Zaulfung, Urrem'tier's Spire)") then gosub ZAULFUNG_ESCAPE_0
