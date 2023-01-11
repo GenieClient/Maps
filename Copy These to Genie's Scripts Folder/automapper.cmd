@@ -4,6 +4,10 @@ var autoversion 8.2023-1-5
 #debuglevel 10
 #debug 5
 
+#2023-01-08
+# Hanryu
+#   Outlander has $client now, so adjusting for that
+
 #2023-01-05
 # Hanryu
 #   Sigil walking *would* keep plowing on for the 2nd sigil even if you're locked, now fixt
@@ -243,8 +247,12 @@ var autoversion 8.2023-1-5
 
 ## use me for if you need an input
 # checks for outlander v. genie, outlander does not suppor the `mono` flag
-if def(version) then var helpecho #33CC99 mono
-else var helpecho #33CC99
+if matchre("$client", "Genie") then var helpecho #33CC99 mono
+if matchre("$client", "Outlander") then var helpecho #33CC99
+else {
+  echo Unsupported client!
+  exit
+  }
 if matchre("%1", "help|HELP|Help|^$") then {
   put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
   put #echo %helpecho <<  Welcome to automapper Setup!   (version %autoversion)           >>
@@ -343,7 +351,8 @@ ABSOLUTE.TOP:
 #default is 0.1 for Outlander, 0.001 for Genie
   if !def(automapper.loop) then
     {
-    if def(version) then var infiniteLoopProtection 0.001
+    if matchre("$client", "Genie") then var infiniteLoopProtection 0.001
+    if matchre("$client", "Outlander") then var infiniteLoopProtection 0.1
     else var infiniteLoopProtection 0.1
     }
   else var infiniteLoopProtection $automapper.loop
@@ -787,7 +796,7 @@ MOVE.SCRIPT:
 
 MOVE.SCRIPT.DONE:
 # lets room load before turning on triggers for genie
-  if def(version) then delay 0.25
+  if matchre("$client", "Genie") then delay 0.25
   var subscript 0
   shift
   math depth subtract 1
