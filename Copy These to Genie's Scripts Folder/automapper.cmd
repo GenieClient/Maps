@@ -249,10 +249,6 @@ var autoversion 8.2023-1-5
 # checks for outlander v. genie, outlander does not suppor the `mono` flag
 if matchre("$client", "Genie") then var helpecho #33CC99 mono
 if matchre("$client", "Outlander") then var helpecho #33CC99
-else {
-  echo Unsupported client!
-  exit
-  }
 if matchre("%1", "help|HELP|Help|^$") then {
   put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
   put #echo %helpecho <<  Welcome to automapper Setup!   (version %autoversion)           >>
@@ -353,7 +349,6 @@ ABSOLUTE.TOP:
     {
     if matchre("$client", "Genie") then var infiniteLoopProtection 0.001
     if matchre("$client", "Outlander") then var infiniteLoopProtection 0.1
-    else var infiniteLoopProtection 0.1
     }
   else var infiniteLoopProtection $automapper.loop
 # 1: collect rocks on the ice road when lacking skates; 0; just wait 15 seconds with no RT instead
