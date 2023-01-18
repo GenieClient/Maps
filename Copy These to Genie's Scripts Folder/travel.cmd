@@ -7,9 +7,9 @@ put #class rp on
 # Script to Travel for Genie3 #
 # Originally written by Chris/Achilles
 # Revitalized and Robustified by Shroom 
-# version 4.3
+# version 4.4
 # REQUIRES EXPTRACKER PLUGIN
-# Updated: 1/7/23
+# Updated: 1/17/23
 
 # USAGE - .travel <destination> <room number>  (room is optional!)
 # If you are calling this script via another, use waitforre ^YOU ARRIVED\! to match the end of travel script:
@@ -87,7 +87,10 @@ if ("$charactername") = ("$char7") then var shardcitizen no
 ####
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
-# CHANGELOG - Latest Update: 10/23/22
+# CHANGELOG - Latest Update: 1/15/23
+#
+# - Cleaned up STOP_INVIS label - Added several more checks and removed unnecessary labelsS
+# - Speedups in several areas 
 #
 # - FIXED SHORTCUT TO MUSPARI THROUGH THE DESERT
 #
@@ -218,7 +221,7 @@ var destination %1
 if ("%destination" = "") then goto NODESTINATION
 eval destination toupper("%destination")
 TOP:
-put #echo >Log #b3b3f9 * Travel Start: $zonename (map $zoneid: $roomid)
+put #echo >Log #a6ff4d * Travel Start: $zonename (map $zoneid: $roomid)
 echo
 echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 echo * Travel Script Start: $zonename (map $zoneid: $roomid)
@@ -227,11 +230,10 @@ echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 echo
 if !def(guild) then gosub INFO_CHECK
 if !def(circle) then gosub INFO_CHECK
-# put #mapper reset
 gosub BAG_CHECK
 gosub PREMIUM_CHECK
+# put #mapper reset
 # put #var save
-# if matchre("$guild", "(Ranger|Thief)") then var undergondola 520
 if matchre("$guild", "Necromancer") then
      {
           put perceive
@@ -321,7 +323,6 @@ if ("$zoneid" = "2d") then gosub AUTOMOVE temple
 if ("$zoneid" = "1j") then gosub AUTOMOVE cross
 if ("$zoneid" = "1l") then gosub AUTOMOVE cross
 if ("$zoneid" = "2a") then gosub AUTOMOVE cross
-delay 0.00001
 if (matchre("%destination", "\b(ratha|hara?j?a?a?l?|tais?g?a?t?h?)") && matchre("$zoneid", "\b(1|30|42|47|61|66|67|90|99|107|108|116)\b")) then
      {
           if (matchre("$game", "(?i)DRX") && (%portal = 1)) then
@@ -783,7 +784,6 @@ if (matchre("$game", "(?i)DRX") && (%portal = 1)) then
           if (matchre("$zoneid", "\b(1|30|40|47|67|99|107|116)\b") && (%ported = 0)) then gosub PORTAL_TIME
      }
 if (("$zoneid" = "40") && ($Athletics.Ranks >= %rossmansouth)) then gosub AUTOMOVE 213
-delay 0.0001
 if (("$zoneid" = "40") && ($Athletics.Ranks < %rossmansouth)) then
      {
           echo ** Athletics NOT high enough for Jantspyre - Taking Ferry!
@@ -950,7 +950,6 @@ if (("$zoneid" = "60") && ("$guild" = "Thief")) then
                   }
           }
 if (("$zoneid" = "60") && ($Athletics.Ranks >= %segoltha)) then gosub AUTOMOVE 108
-delay 0.0001
 if ("$zoneid" = "50") && matchre("%destination", "\b(knife|wolf|tiger|dirge|arthe|kaerna|haven|theren|lang|rakash|muspari|zaulfung|cross|crossing)") && ($Athletics.Ranks > %segoltha) then gosub SEGOLTHA_NORTH
 if ("$zoneid" = "50") then gosub SEGOLTHA_SOUTH
 if (("$zoneid" = "60") && ($Athletics.Ranks < %segoltha)) then
@@ -3074,7 +3073,7 @@ ARRIVED:
      echo      | \        ' .*) .'*
      echo      |(*\      .*(// .*) .
      echo      |___\       // (. '*
-     echo      ((("'\     // '  * .
+     echo      (((''\     // '  * .
      echo      ((c'7')   /\)
      echo      ((((^))  /  \
      echo    .-')))(((-'   /
@@ -3083,12 +3082,12 @@ ARRIVED:
      echo         (()
      echo          ))
      echo
-     ## 
+     ##
   put #parse YOU ARRIVED!
   put #parse REACHED YOUR DESTINATION
   # put #play Just Arrived.wav
   echo ## WOW! YOU ARRIVED AT YOUR DESTINATION: %destination in %t seconds!  That's FAST! ##
-  put #echo >Log #9cd6a3 * Travel Arrival: $zonename (map $zoneid: room $roomid)
+  put #echo >Log #4ddbff * Travel Arrival: $zonename (map $zoneid: room $roomid)
   put #class arrive off
   exit
 ######################################################################################
@@ -3318,30 +3317,47 @@ GONDOLAOUT:
   return
 #############################################################
 STOP_INVIS:
-     delay 0.001
+     delay 0.0001
      if ("$guild" = "Necromancer") then
           {
-               put release eotb
-               pause 0.3
+               gosub PUT release eotb
+               pause 0.1
           }
      if ("$guild" = "Thief") then
           {
-               put khri stop silence vanish
-               pause 0.3
+               gosub PUT khri stop silence vanish
+               pause 0.1
+          }
+      if ("$guild" = "Ranger") then
+          {
+               gosub PUT release blend
+               pause 0.1
           }
      if matchre("$guild", "(Moon Mage|Moon)") then
           {
-               put release rf
-               pause 0.3
+               gosub PUT release rf
+               pause 0.1
           }
-     pause 0.3
+     pause 0.1
+     if ($invisible = 1) then
+          {
+               if ($SpellTimer.RefractiveField.active = 1) then gosub PUT release RF
+               if ($SpellTimer.StepsofVuan.active = 1) then gosub PUT release SOV
+               if ($SpellTimer.EyesoftheBlind.active = 1) then gosub PUT release EOTB
+               if ($SpellTimer.Blend.active = 1) then gosub PUT release BLEND
+               if ($SpellTimer.KhriSilence.active = 1) then gosub PUT khri stop silence
+               if ($SpellTimer.KhriVanish.active = 1) then gosub PUT khri stop vanish
+               pause 0.0001
+          }
 return
-
+#######################################
+INVIS:
+  gosub STOP_INVIS
 FERRY:
-  pause 0.1
+  pause 0.0001
   var offtransport dock
   if ($invisible) then gosub STOP_INVIS
-  pause 0.1
+  pause 0.001
   matchre ONFERRY \[\"Her Opulence\"\]|\[\"Hodierna\'s Grace\"\]|\[\"Kertigen\'s Honor\"\]|\[\"His Daring Exploit\"\]|\[\"Northern Pride\", Main Deck\]|\[\"Theren\'s Star\", Deck\]|\[The Evening Star\]|\[The Damaris\' Kiss\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[\"The Desert Wind\"\]|\[\"The Suncatcher\"\]|\[\"The Riverhawk\"\]|\[\"Imperial Glory\"\]\"Hodierna\'s Grace\"|\[\"Her Opulence\"\]|\[The Galley Cercorim\]|\[The Jolas, Fore Deck\]|\[Aboard the Warship, Gondola\]|\[The Halasa Selhin, Main Deck\]|\[Aboard the Mammoth, Platform\]
   matchre ONFERRY Secured to the gigantic balloon overhead, the armored ironwood gondola dangles on a convoluted network of hempen rope\.
   matchre ONFERRY ^One of the barge\'s crew members stops you and requests a transportation fee|A row of benches occupies the deck
@@ -3372,9 +3388,9 @@ FERRY:
   matchre ONFERRY ^A few weary travelers lean against a railing at the bow of this ferry
   matchre ONFERRY ^Passengers and cargo crowd the deck of the sleek, black galley\.|^The galley, like its twin, carries passengers and cargo,|^Grease spewed from the galley
   matchre ONFERRY ^The Selhin ties off to the Uaro Dock\!
-  matchre STOP_INVIS ^How do you expect the barge crew to let you onboard if they can't see you\?
+  matchre INVIS ^How do you expect the barge crew to let you onboard if they can't see you\?
   send look
-  pause 0.5
+  pause 0.7
   pause 0.2
   if matchre("$roomobjs", "Gnomish warship") then send join warship
   if matchre("$roomobjs", "Riverhawk") then send go riverhawk
@@ -3868,7 +3884,7 @@ DOKORAS:
 EXCHANGE:
      var Coin $0
 EXCHANGE.CONTINUE:
-     pause 0.1
+     pause 0.01
      matchre EXCHANGE.CONTINUE ^\.\.\.wait\s+\d+\s+sec(?:onds?|s)?\.?|^Sorry,
      matchre EXCHANGE.FINISH ^You hand your money to the money-changer\.\s*After collecting a.* fee, .* hands you .*\.
      matchre EXCHANGE.FINISH Enjoy the holiday, friend\!
@@ -3903,23 +3919,7 @@ EXCHANGE.FINISH:
      RETURN
 EXCH.INVIS:
      delay 0.001
-     echo *** Removing Invis..
-     if ("$guild" = "Necromancer") then
-          {
-               gosub PUT release eotb
-               pause 0.3
-          }
-     if ("$guild" = "Thief") then
-          {
-               gosub PUT khri stop silence vanish
-               pause 0.3
-          }
-     if ("$guild" = "Moon Mage") then
-          {
-               gosub PUT release rf
-               pause 0.3
-          }
-     pause 0.3
+     gosub STOP_INVIS
      goto EXCHANGE.CONTINUE
 
 TO_SEACAVE:
@@ -3935,35 +3935,13 @@ TO_SEACAVES:
      pause 0.1
      gosub AUTOMOVE portal
      pause 0.5
-     if ($invisible = 1) then gosub STOP.INVIS
-     if ($invisible = 1) then gosub STOP.INVIS
+     if ($invisible = 1) then gosub STOP_INVIS
+     if ($invisible = 1) then gosub STOP_INVIS
      pause 0.2
      send go meeting portal
      pause 0.5
      pause 0.2
      return
-
-STOP.INVIS:
-     delay 0.001
-     echo *** Removing Invis..
-     if ("$guild" = "Necromancer") then
-          {
-               gosub PUT release eotb
-               pause 0.3
-          }
-     if ("$guild" = "Thief") then
-          {
-               gosub PUT khri stop silence vanish
-               pause 0.3
-          }
-     if ("$guild" = "Moon Mage") then
-          {
-               gosub PUT release rf
-               pause 0.3
-          }
-     pause 0.3
-     return
-
 
 INFO_CHECK:
      action put #var guild $1 when Guild\:\s+(.*)$
@@ -3975,11 +3953,11 @@ INFO_CHECK:
      action var dokoras 0 when No Dokoras\.
      action var dokoras $1;eval dokoras replacere("%dokoras", ",", "") when \(([0-9,]*) copper Dokoras\)\.
      delay 0.001
-     pause 0.0001
      send info;encumbrance
      waitforre ^\s*Encumbrance\s*\:
      pause 0.001
-     pause 0.001
+     delay 0.001
+     delay 0.001
      action remove Guild\:\s+(.*)$
      action remove Circle\: (\d+)
      return
@@ -4034,7 +4012,6 @@ BAG_PARSE:
      delay 0.001
      delay 0.001
 BAG_LOOP:
-     delay 0.00001
      delay 0.00001
      var BAG %Bags(%BagLoop)
      if (%BagLoop > %TotalBags) then
@@ -4114,7 +4091,7 @@ PREMIUM_TIME:
      return
 PREMIUM_SET:
      var premtime $1
-     pause 0.001
+     pause 0.0001
      if (%premtime >= 6) then
           {
                var portal 1
@@ -4130,7 +4107,7 @@ PORTAL_TIME:
      echo ** USING PLAT PORTALS TO TRAVEL!
      echo ** Starting ZoneID:$zoneid RoomID:$roomid
      echo ========================
-     pause 0.2
+     pause 0.02
 ## CROSS PORTAL ENTRANCE Zone 1 Room 484
 CROSS_PORTAL:
      if ("$zoneid" = "1") then
@@ -5544,6 +5521,16 @@ RANDOMMOVE:
                gosub MOVE go door
                return
           }
+     if matchre("$roomname", "The Crossing, Alfren's Ferry") then
+          {
+               gosub MOVE go square
+               return
+          }
+     if matchre("$roomname", "Southern Trade Route, Segoltha South Bank") then
+          {
+               gosub MOVE south
+               return
+          }
      if matchre("$roomname", "Temple Hill Manor, Grounds") then
           {
                gosub MOVE go gate
@@ -5652,8 +5639,10 @@ RANDOMMOVE_CARDINAL:
      pause 0.001
      var moved 0
      var NPC.count 0
-     math randomloop add 1
-     if (%randomloop > 50) then
+     var truerandom 0
+RANDOMMOVE_CARDINAL_1:
+     math truerandom add 1
+     if (%truerandom > 50) then
           {
                echo *** Cannot find room exit??
                echo *** Reverting back
@@ -5661,7 +5650,7 @@ RANDOMMOVE_CARDINAL:
                pause 0.2
                gosub TRUE_RANDOM_2
                var lastmoved null
-               var randomloop 0
+               var truerandom 0
                return
           }
      if matchre("$roomname", "Deadman's Confide, Beach") || (matchre("$roomobjs", "thick fog") || matchre("$roomexits", "thick fog")) then
@@ -5705,7 +5694,7 @@ RANDOMMOVE_CARDINAL:
      if ((%r = 10) && ($up) && ("%lastmoved" != "up")) then gosub MOVE up
      if ((%r = 11) && ($down) && ("%lastmoved" != "down")) then gosub MOVE down
      if (%moved = 1) then return
-     if (%moved = 0) then goto RANDOMMOVE_CARDINAL
+     if (%moved = 0) then goto RANDOMMOVE_CARDINAL_1
      # if ($roomid = 0) then goto RANDOMMOVE
      # if $roomid == 0 then goto moveRandomDirection_2
      return
@@ -5713,11 +5702,13 @@ RANDOMMOVE_CARDINAL:
 RANDOMMOVE_SOUTH:
      pause 0.0001
      var moved 0
-     math randomloop add 1
-     if (%randomloop > 5) then
+     var truerandom 0
+RANDOMMOVE_SOUTH_1:
+     math truerandom add 1
+     if (%truerandom > 5) then
           {
                var lastmoved null
-               var randomloop 0
+               var truerandom 0
                return
           }
      if $south then
@@ -5777,18 +5768,21 @@ RANDOMMOVE_SOUTH:
                return
           }
      pause 0.01
-     if (%moved = 0) then goto RANDOMMOVE_SOUTH
+     if (%moved = 0) then goto RANDOMMOVE_SOUTH_1
      # if $roomid == 0 then goto moveRandomDirection_2
      return
 
 TRUE_RANDOM:
      pause 0.001
      var moved 0
-     math randomloop add 1
-     if (%randomloop > 12) then
+     var truerandom 0
+TRUE_RANDOM_1:
+     math truerandom add 1
+     if (%truerandom > 12) then
           {
                var lastmoved null
-               var randomloop 0
+               # var randomloop 0
+               return
           }
      random 1 16
      if (%r = 1) then gosub MOVE n
@@ -5807,16 +5801,18 @@ TRUE_RANDOM:
      if (%r = 14) then gosub MOVE climb step
      if (%r = 15) then gosub MOVE go panel
      if (%r = 16) then gosub MOVE go arch
-     if (%moved = 0) then goto TRUE_RANDOM
+     if (%moved = 0) then goto TRUE_RANDOM_1
      return
 TRUE_RANDOM_2:
      pause 0.001
      var moved 0
-     math randomloop add 1
-     if (%randomloop > 12) then
+     var truerandom 0
+TRUE_RANDOM_22:
+     math truerandom add 1
+     if (%truerandom > 12) then
           {
                var lastmoved null
-               var randomloop 0
+               var truerandom 0
                return
           }
      random 1 8
@@ -5845,7 +5841,7 @@ TRUE_RANDOM_2:
      if (%moved = 1) then return
      if matchre("$roomobjs $roomdesc", "\bpanel\b") && ("%lastmoved" != "go panel") then gosub MOVE go panel
      if matchre("$roomobjs $roomdesc", "\bnarrow track\b") && ("%lastmoved" != "go track") then gosub MOVE go track
-     if (%moved = 0) then goto TRUE_RANDOM_2
+     if (%moved = 0) then goto TRUE_RANDOM_22
      return
 
 
@@ -6216,24 +6212,6 @@ CALMED:
      if ($stunned) then waiteval (!$stunned)
      if (!$standing) then gosub STAND
      goto %LOCATION
-STOPINVIS:
-     if ("$guild" = "Necromancer") then
-          {
-               put release eotb
-               pause 0.3
-          }
-     if ("$guild" = "Thief") then
-          {
-               put khri stop silence vanish
-               pause 0.3
-          }
-     if ("$guild" = "Moon Mage") then
-          {
-               put release rf
-               pause 0.3
-          }
-     pause 0.3
-     return
 #### RETURNS
 RETURN_CLEAR:
      delay 0.0001
