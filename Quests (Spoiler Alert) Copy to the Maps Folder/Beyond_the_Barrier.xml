@@ -3,14 +3,14 @@
   <node id="1" name="Wilderness, Path to the Barrier">
     <description>A dense evergreen forest grows tall in the area.  Needles constantly shed from the trees, forming a blanket of prickly debris that litters the forest floor to nearly ankle deep.  Little is visible down the thick forest path, which twists and turns around the larger tree trunks.</description>
     <position x="1060" y="180" z="0" />
-    <arc exit="southwest" destination="2" />
+    <arc exit="southwest" move="southwest" destination="2" />
   </node>
   <node id="2" name="Wilderness, Path to the Barrier">
     <description>Birdsong echoes distantly through the thick forest, the sound carrying through the evergreen trees.  Verdant green undergrowth fills the forest floor, home to numerous insects.  An enormous boulder lies near the path, weathered on all sides and covered in moss. </description>
     <description>Birdsong echoes distantly through the thick forest, the sound carrying through the evergreen trees.  Verdant green undergrowth fills the forest floor, home to numerous insects.  An enormous boulder lies near the path, weathered on all sides and covered in moss.</description>
     <position x="1040" y="200" z="0" />
-    <arc exit="northeast" destination="1" />
-    <arc exit="west" destination="3" />
+    <arc exit="northeast" move="northeast" destination="1" />
+    <arc exit="west" move="west" destination="3" />
   </node>
   <node id="3" name="Wilderness, Path to the Barrier">
     <description>Several runnels of water cut through the forest in a running stream, burbling from a spring at the side of the path.  Insects flit about on its surface, buzzing and making the forest alive with sound.  An oddly bent pine tree leans over the side of the stream, as if wishing to partake in the crystal clear water.</description>

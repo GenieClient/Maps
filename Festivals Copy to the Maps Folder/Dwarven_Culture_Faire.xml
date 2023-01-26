@@ -1374,7 +1374,7 @@
   <node id="203" name="Abandoned Mine, Sloping Tunnel" color="#FFBF00">
     <description>The damp and darkness have taken their toll on the wooden ties below the iron tracks, fostering a home for borers and beetles in the dark, crumbling wood.  Thankfully, the tracks have long ceased to need the ties and continue to mimic the dips and curves of the slope.  Debris of old washouts, roots, rocks and gravel caught between the tracks and sleepers makes the way perilous for the hasty.  The danger for travelers is somewhat alleviated by a rusted handrail loosely bolted into the fragmenting rock wall.</description>
     <position x="-180" y="160" z="0" />
-    <arc exit="southeast" destination="204" />
+    <arc exit="southeast" move="southeast" destination="204" />
     <arc exit="climb" move="climb steep slope" destination="202" />
   </node>
   <node id="204" name="Abandoned Mine, Rock Shelf">

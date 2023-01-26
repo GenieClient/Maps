@@ -4655,7 +4655,7 @@
   <node id="707" name="Liani's Heaven, Cellar Passage">
     <description>Two lanterns provide faint illumination for the tavern's cellar.  A long procession of overstocked wine racks, ale barrels, and crockery cabinets lines the mortised stone corridor, interrupted by a series of heavy wooden doors, presumably leading to more storage areas.</description>
     <position x="160" y="640" z="0" />
-    <arc exit="west" destination="708" />
+    <arc exit="west" move="west" destination="708" />
   </node>
   <node id="708" name="Liani's Heaven, The Back Bar">
     <description>A holdover from a time when wearing the symbol of the Bard's Guild was a death sentence and secrecy was necessary, this quiet wine cellar has once again been cleared out to provide a sanctuary from those hiding from the perils of politics or the hazards of a satirical verse.  Scrolls are laid out on the table, the elegant mark of a skilled calligrapher across their surface.  A polished maple door leads into a private conservatory set aside for the guild.</description>

@@ -43,9 +43,9 @@
   <node id="6" name="Grove of the Sacred Khor'Vela, The Sickness">
     <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the south.  The darkness suffusing the area comes from the coils of khor'vela vine that slink across the floor.  Tumors and sores completely cover the vines, rotting it from within.  The air is thick with the putrid odors of decay.|The rock ceiling ascends towards an opening to the south.  Darkess suffuses the area, seemingly coming from the diseased khor'vela vines creeping across the floor.</description>
     <position x="120" y="0" z="0" />
-    <arc exit="southeast" destination="9" />
-    <arc exit="south" destination="8" />
-    <arc exit="southwest" destination="7" />
+    <arc exit="southeast" move="southeast" destination="9" />
+    <arc exit="south" move="south" destination="8" />
+    <arc exit="southwest" move="southwest" destination="7" />
   </node>
   <node id="7" name="Grove of the Sacred Khor'Vela, The Sickness">
     <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the east.  The darkness suffusing the area comes from the coils of khor'vela vine that slink across the floor.  Tumors and sores completely cover the vines, rotting it from within.  The air is thick with the putrid odors of decay.|The rock ceiling ascends towards an opening to the east.  Darkess permeates the area, seemingly coming from the diseased khor'vela vines creeping across the floor.</description>
@@ -83,9 +83,9 @@
     <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the south.  A soft yellow light suffuses the area from the coils of khor'vela vine that slink across the floor.  Few sores are visible, a sign that the blight is somehow being held at bay here.  The smells of medicines fill the small cavern.</description>
     <description>The rock ceiling ascends towards an opening to the south.  Soft yellow light is emitted from the diseased khor'vela vines creeping across the floor.</description>
     <position x="60" y="80" z="0" />
-    <arc exit="southeast" destination="14" />
-    <arc exit="south" destination="13" />
-    <arc exit="southwest" destination="12" />
+    <arc exit="southeast" move="southeast" destination="14" />
+    <arc exit="south" move="south" destination="13" />
+    <arc exit="southwest" move="southwest" destination="12" />
   </node>
   <node id="12" name="Grove of the Sacred Khor'Vela, The Hope">
     <description>Rock walls extend upwards towards the ceiling which ascends towards an opening to the east.  A soft yellow light suffuses the area from the coils of khor'vela vine that slink across the floor.  Few sores are visible, a sign that the blight is somehow being held at bay here.  The smells of medicines fill the small cavern.</description>

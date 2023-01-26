@@ -2162,13 +2162,13 @@
   <node id="340" name="See the Light, Kermorian Divinity" note="See the Light" color="#FF0000">
     <description>Aurulent curtains are draped along the walls of lifesculpted coral, lending a majestic air to the space, while luxurious rugs muffle the sounds of footsteps and of conversations.  Thirteen gilded lanterns provide ample illumination.</description>
     <position x="165" y="-315" z="0" />
-    <arc exit="northwest" destination="340" />
+    <arc exit="northwest" move="northwest" destination="340" />
     <arc exit="go" move="go gold door" destination="31" />
   </node>
   <node id="341" name="See the Light, Foreign Powers" color="#FF0000">
     <description>Sanguine swathes accentuate the walls of lifesculpted coral, lending bursts of color to the space, while exotic rugs muffle the sounds of footsteps and of conversations.  Several flickering torches illuminate the merchandise.</description>
     <position x="155" y="-325" z="0" />
-    <arc exit="southeast" destination="340" />
+    <arc exit="southeast" move="southeast" destination="340" />
   </node>
   <node id="342" name="Excess Baggage, Salesroom" note="Excess Baggage" color="#FF0000">
     <description>Panels of ethereal white fabric are draped across the ceiling and allowed to fall in waves to the floor, creating a bright, neutral backdrop for the displayed merchandise.  Woven rugs hide the last bit of ground from the existing space as well as muffle the hurried footsteps of busy shoppers.</description>

@@ -3,10 +3,10 @@
   <node id="1" name="Plaza, Central Area" note="portal|Empath" color="#00FF00">
     <description>Most of the encroaching sand has been cleared away, leaving the once-smooth paving stones exposed anew.  The air is heavy with dust and the acrid smell of hot rock and sand.</description>
     <position x="200" y="320" z="0" />
-    <arc exit="west" destination="3" />
-    <arc exit="north" destination="4" />
-    <arc exit="south" destination="5" />
-    <arc exit="east" destination="2" />
+    <arc exit="west" move="west" destination="3" />
+    <arc exit="north" move="north" destination="4" />
+    <arc exit="south" move="south" destination="5" />
+    <arc exit="east" move="east" destination="2" />
     <arc exit="go" move="go portal" destination="82" />
   </node>
   <node id="2" name="Plaza, Eastern Area">
@@ -271,8 +271,8 @@
   <node id="39" name="Ziggurat, Lower Level" note="tower exit" color="#00FF00">
     <description>Tumbled stones litter the platform, refugees from higher on the structure.  A trail has been hacked out of the surrounding vegetation, allowing access further around the edifice.  The middle and upper platforms, covered with tangles of foliage, loom over the crude pathway.</description>
     <position x="100" y="240" z="0" />
-    <arc exit="north" destination="40" />
-    <arc exit="east" destination="54" />
+    <arc exit="north" move="north" destination="40" />
+    <arc exit="east" move="east" destination="54" />
     <arc exit="climb" move="climb staircase" destination="63" />
     <arc exit="go" move="go shimmering portal;go shimmering portal" hidden="True" destination="3" />
   </node>
@@ -542,7 +542,7 @@
     <description>Unlike its western half, this room is lavishly decorated.  Gilded columns reach to the ceiling, framing roundels of the Thirteen.  Each deity's eyes are seemingly focused on a frieze depicting the various constellations that runs along the cornice surrounding the room.  Now dusty and threadbare, once plush chairs and sofas face a pair of buffet tables that stretch from one corner to the next.  Framed in intricately carved wood, a wide marble stairwell ascends into the structure.</description>
     <position x="460" y="300" z="0" />
     <arc exit="east" move="east" destination="79" />
-    <arc exit="none" destination="85" />
+    <arc exit="none" move="none" destination="85" />
   </node>
   <node id="81" name="Alcove" note="alcove">
     <description>A pair of enormous ceramic flower pots rest beside the remains of the curtain, displaying only layers of dust along their rims.  The only other feature is a bench that follows along the back wall.  Surrounded by piles of tattered fabric and matted down, the pitted surface offers precious little comfort.  A series of silver medallions are embedded deeply into the stone.</description>

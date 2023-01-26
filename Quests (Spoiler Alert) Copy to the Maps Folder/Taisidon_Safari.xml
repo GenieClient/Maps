@@ -630,7 +630,7 @@
     <description>Brightly colored wicker lanterns hang from the rafters of this showroom.  Several small children brandish brooms and rags to keep the floor and the weapons on display spotless.  Clerks bustle between the back rooms, a polished bamboo counter, and the weapon rack, ready to aid customers with purchases.</description>
     <position x="880" y="300" z="0" />
     <arc exit="out" move="out" destination="28" />
-    <arc exit="east" destination="385" />
+    <arc exit="east" move="east" destination="385" />
   </node>
   <node id="92" name="Dragon Dreams, Entry">
     <description>The tower is composed of smooth grey stones that have been tightly fitted together.  Wrought iron torch holders, shaped into the form of dragons, grace the walls and illuminate the circular chamber.  Tapestries hang between the torch holders, depicting various scenes of dragons descending upon battles or villages.  A plush, red velvet rug, embroidered in black with a sleeping dragon, covers the floor.  A cushioned black sofa sits opposite the room from a set of stairs leading up.</description>
@@ -1523,7 +1523,7 @@
     <description>Huge chunks of bamboo have been cut and hollowed out, forming small barrels scattered about the room.  The pungent smell of dead fish mixes with less identifiable odors to create a somewhat overpowering stench.  A dog-eared, water-spotted, and odiferous catalog rests on a tall barrel, next to a fish-weighing scale and a badly scrawled blackboard, while additional items are on display upon the nearby racks.</description>
     <position x="1000" y="220" z="0" />
     <arc exit="out" move="out" destination="5" />
-    <arc exit="south" destination="281" />
+    <arc exit="south" move="south" destination="281" />
   </node>
   <node id="233" name="Island Interiors" note="Island Interiors" color="#FF0000">
     <description>Bamboo poles stand upright, close together and bound with reeds to form light but sturdy walls.  A curtained doorway leads to the left, the carved wooden beads of the curtain clicking softly against each other with every movement.  To the right, an open arch has been cut into the wall.  At the back of the room a wide window looks out to a green and flowering garden, the opening covered with ivory gauze curtains.  A neatly dressed clerk stands ready to be of assistance.</description>
@@ -2033,8 +2033,8 @@
     <description>Close by the looming logs of the palisade a three-sided hut crammed with hides, food storage, and tribal crafts is half hidden in the dusky shades of night.</description>
     <position x="560" y="100" z="0" />
     <arc exit="east" move="east" destination="318" />
-    <arc exit="southeast" destination="317" />
-    <arc exit="south" destination="314" />
+    <arc exit="southeast" move="southeast" destination="317" />
+    <arc exit="south" move="south" destination="314" />
     <arc exit="go" move="go hut" destination="336" />
     <arc exit="go" move="go side gate" destination="311" />
   </node>
@@ -2265,7 +2265,7 @@
   <node id="343" name="Rushing River, Eastern Point" color="#0000FF">
     <description>The rushing water flows steadily as it lazily travels through the vegetation, wending its way around trees and other obstacles.  A large arrangement of rocks is piled up in the center of the river, blocking any further progress south, though the rocks are wide enough to let the rushing water past.</description>
     <position x="1180" y="180" z="0" />
-    <arc exit="northeast" destination="344" />
+    <arc exit="northeast" move="northeast" destination="344" />
     <arc exit="go" move="go western bank" destination="342" />
   </node>
   <node id="344" name="Rushing River" color="#0000FF">

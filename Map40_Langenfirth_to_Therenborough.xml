@@ -6,7 +6,7 @@
     <arc exit="north" move="north" destination="2" />
     <arc exit="east" move="east" destination="3" />
     <arc exit="go" move="go deer trail" destination="69" />
-    <arc exit="west" destination="263" />
+    <arc exit="west" move="west" destination="263" />
     <arc exit="climb" move="climb oak tree" destination="344" />
     <arc exit="climb" move="climb pine tree" destination="345" />
   </node>
@@ -2454,7 +2454,7 @@
   <node id="376" name="Ker'Leor, Deep Forest Path" note="Map41_Marauders.xml|Vines|Creepers|Marauders">
     <description>An endless assortment of towering trees and vividly-colored underbrush crowd the base of Ker'Leor.  So dense is the forest that steam rises from its floor, hanging as a still mist which threatens to obscure the faint path.  Eerie wails, moans and hisses echo forth from the deep shadows, bending the imagination toward the hideous and threatening.</description>
     <position x="140" y="-1316" z="0" />
-    <arc exit="east" destination="212" />
+    <arc exit="east" move="east" destination="212" />
     <arc exit="north" />
   </node>
   <node id="377" name="Theren's Star, Deck" note="Map998_Transports.xml">

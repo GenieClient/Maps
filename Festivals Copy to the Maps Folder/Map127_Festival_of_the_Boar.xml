@@ -4243,7 +4243,7 @@
   <node id="619" name="Forest, Amongst the Trees">
     <description>Periodic sounds of rustling branches and snapping twigs issue forth from deep within the trees, far out of sight in the darkness that pervades this area.  The air holds itself thickly still, a bated breath that never seems to be exhaled.</description>
     <position x="560" y="420" z="-1" />
-    <arc exit="north" destination="620" />
+    <arc exit="north" move="north" destination="620" />
   </node>
   <node id="620" name="Forest, Amongst the Trees">
     <description>The surrounding darkness is nigh impenetrable as the overhanging branches all but blot out the sky above.  Gusts of somehow still stagnant-seeming wind rustle the surrounding foliage, causing it to whip about wildly.</description>

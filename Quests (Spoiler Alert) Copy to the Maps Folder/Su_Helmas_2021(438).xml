@@ -3,10 +3,10 @@
   <node id="1" name="Plaza, Central Area" note="portal|Empath" color="#00FF00">
     <description>Most of the encroaching sand has been cleared away, leaving the once-smooth paving stones exposed anew.  The air is heavy with dust and the acrid smell of hot rock and sand.</description>
     <position x="240" y="260" z="0" />
-    <arc exit="west" destination="3" />
-    <arc exit="north" destination="4" />
-    <arc exit="south" destination="5" />
-    <arc exit="east" destination="2" />
+    <arc exit="west" move="west" destination="3" />
+    <arc exit="north" move="north" destination="4" />
+    <arc exit="south" move="south" destination="5" />
+    <arc exit="east" move="east" destination="2" />
     <arc exit="go" move="go portal" destination="82" />
   </node>
   <node id="2" name="Plaza, Eastern Area">
@@ -48,8 +48,8 @@
   <node id="9" name="Desolate Field, Barren Path" note="Field exit" color="#00FF00">
     <description>Made up of dirt and rocks, the surrounding landscape is completely barren and free of life, as if all vegetation had been scoured away by an overwhelming force.  The ground is parched and dry, with spiderweb cracks running through the ground.</description>
     <position x="140" y="420" z="0" />
-    <arc exit="north" destination="11" />
-    <arc exit="east" destination="10" />
+    <arc exit="north" move="north" destination="11" />
+    <arc exit="east" move="east" destination="10" />
     <arc exit="go" move="go crumbling gate" destination="38" />
     <arc exit="go" move="go winding path;go winding path" destination="3" />
   </node>
@@ -271,8 +271,8 @@
   <node id="39" name="Ziggurat, Lower Level" note="tower exit" color="#00FF00">
     <description>Tumbled stones litter the platform, refugees from higher on the structure.  A trail has been hacked out of the surrounding vegetation, allowing access further around the edifice.  The middle and upper platforms, covered with tangles of foliage, loom over the crude pathway.</description>
     <position x="140" y="200" z="0" />
-    <arc exit="north" destination="40" />
-    <arc exit="east" destination="54" />
+    <arc exit="north" move="north" destination="40" />
+    <arc exit="east" move="east" destination="54" />
     <arc exit="climb" move="climb staircase" destination="63" />
     <arc exit="go" move="go shimmering portal;go shimmering portal" hidden="True" destination="3" />
   </node>
