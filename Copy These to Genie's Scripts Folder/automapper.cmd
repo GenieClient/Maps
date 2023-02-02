@@ -757,7 +757,7 @@ STOW.ROPE:
 MOVE.SEARCH:
   if (%depth > 1) then waiteval (1 = %depth)
   put search
-  waitforre ^You|^After
+  waitforre ^You|^After|^Just
   if ($roundtime > 0) then pause %command_pause
   put %movement
   goto MOVE.DONE
