@@ -5,6 +5,10 @@ var autoversion 8.2023-01-08
 #debuglevel 10
 #debug 5
 
+#2023-02-03
+# Hanryu
+#   A better way to retry
+
 #2023-01-08
 # Hanryu
 #   Outlander has $client now, so adjusting for that
@@ -364,6 +368,8 @@ ABSOLUTE.TOP:
   if !def(automapper.userwalk) then put #tvar automapper.userwalk 0
 # turn off classes to speed movment
   if def(automapper.class) then put #class $automapper.class
+# save destination
+  var destination $destination
 # ---------------
   if ($mapwalk) then
     {
@@ -385,7 +391,7 @@ ABSOLUTE.TOP:
   var TryGoInsteadOfClimb 0
   var move_OK ^Obvious (paths|exits)|^It's pitch dark|The shop appears to be closed, but you catch the attention of a night attendant inside,|^You move effortlessly through the
   var move_FAIL ^You can't swim in that direction|You can't go there|^A powerful blast of wind blows you to the|^What were you referring to|^I could not find what you were referring to\.|^You can't sneak in that direction|^You can't ride your.+(broom|carpet) in that direction|^You can't ride that way\.$
-  var move_RETRY ^\.\.\.wait|^Sorry, you may only|^Sorry, system is slow|^The weight of all|lose your balance during the effort|^You are still stunned|^You're still recovering from your recent|^The mud gives way beneath your feet as you attempt to climb higher, sending you sliding back down the slope instead\!|You're not sure you can
+  var move_RETRY ^\.\.\.wait|^Sorry, |^The weight of all|lose your balance during the effort|^You are still stunned|^You're still recovering from your recent|^The mud gives way beneath your feet as you attempt to climb higher, sending you sliding back down the slope instead\!|You're not sure you can
   var move_RETREAT ^You are engaged to|^You try to move, but you're engaged|^While in combat|^You can't do that while engaged|^You can't do that\!  You're in combat\!
   var move_WEB ^You can't do that while entangled in a web|As you start to move, you find yourself snared
   var move_WAIT ^You continue climbing|^You begin climbing|^You really should concentrate on your journey|^You step onto a massive stairway|^You start the slow journey across the bridge\.$|^Wriggling on your stomach, you crawl into a low opening\.$
@@ -945,8 +951,27 @@ MOVE.ROPE.BRIDGE:
   put %movement
   goto MOVE.DONE
 
+MOVE.FAILED:
+  var subscript 0
+  evalmath failcounter %failcounter + 1
+# maybe it's off by one so retry once then shift thru what's left
+  if (%failcounter > 2) then shift
+  if (%failcounter > 3) then
+    {
+    put #parse MOVE FAILED
+    put #parse AUTOMAPPER MOVEMENT FAILED!
+    put #flash
+    exit
+    }
+  put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+  put #echo %color <<  MOVE FAILED - Type: %type | Movement: %movement | Depth: %depth
+  put #echo %color <<   Remaining Moves: %argcount
+  put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+  pause
+  gosub echo RETRYING Movement...%failcounter / 3 Tries.
+
 MOVE.RETRY:
-  gosub echo Retry movement
+  gosub echo Retry movement %1
   if (%TryGoInsteadOfClimb) then eval movement replacere("%movement", "climb ", "go ")
   if ($webbed) then
     {
@@ -974,6 +999,8 @@ MOVE.RETRY:
   pause %command_pause
   pause
   if ($roundtime > 0) then pause $roundtime
+RETURN.CLEAR:
+  action (mapper) on
   var depth 0
   var movewait 0
   goto MOVE.DONE
@@ -990,28 +1017,6 @@ JAILED:
   put #parse NAILED AND JAILED!
   put #parse THROWN IN JAIL
   exit
-
-MOVE.FAILED:
-  var subscript 0
-  evalmath failcounter %failcounter + 1
-  if (%failcounter > 3) then
-    {
-    put #parse MOVE FAILED
-    put #parse AUTOMAPPER MOVEMENT FAILED!
-    put #flash
-    exit
-    }
-  put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
-  put #echo %color <<  MOVE FAILED - Type: %type | Movement: %movement | Depth: %depth
-  put #echo %color <<   Remaining Moves: %argcount
-  put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
-  pause
-  gosub echo RETRYING Movement...%failcounter / 3 Tries.
-
-RETURN.CLEAR:
-  action (mapper) on
-  var depth 0
-  goto MAIN.LOOP.CLEAR
 
 #### The various types of walking actions
 CARAVAN:
