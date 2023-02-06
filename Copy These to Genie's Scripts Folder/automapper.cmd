@@ -391,7 +391,7 @@ ABSOLUTE.TOP:
   var TryGoInsteadOfClimb 0
   var move_OK ^Obvious (paths|exits)|^It's pitch dark|The shop appears to be closed, but you catch the attention of a night attendant inside,|^You move effortlessly through the
   var move_FAIL ^You can't swim in that direction|You can't go there|^A powerful blast of wind blows you to the|^What were you referring to|^I could not find what you were referring to\.|^You can't sneak in that direction|^You can't ride your.+(broom|carpet) in that direction|^You can't ride that way\.$
-  var move_RETRY ^\.\.\.wait|^Sorry, |^The weight of all|lose your balance during the effort|^You are still stunned|^You're still recovering from your recent|^The mud gives way beneath your feet as you attempt to climb higher, sending you sliding back down the slope instead\!|You're not sure you can
+  var move_RETRY ^\.\.\.wait|^Sorry, |^The weight of all|^You quickly step around the exposed roots, but you lose your balance during the effort|^You are still stunned|^You're still recovering from your recent|^The mud gives way beneath your feet as you attempt to climb higher, sending you sliding back down the slope instead\!|You're not sure you can
   var move_RETREAT ^You are engaged to|^You try to move, but you're engaged|^While in combat|^You can't do that while engaged|^You can't do that\!  You're in combat\!
   var move_WEB ^You can't do that while entangled in a web|As you start to move, you find yourself snared
   var move_WAIT ^You continue climbing|^You begin climbing|^You really should concentrate on your journey|^You step onto a massive stairway|^You start the slow journey across the bridge\.$|^Wriggling on your stomach, you crawl into a low opening\.$
@@ -952,6 +952,9 @@ MOVE.ROPE.BRIDGE:
   goto MOVE.DONE
 
 MOVE.FAILED:
+
+debug 5
+
   var subscript 0
   evalmath failcounter %failcounter + 1
 # maybe it's off by one so retry once then shift thru what's left
@@ -970,8 +973,21 @@ MOVE.FAILED:
   pause
   gosub echo RETRYING Movement...%failcounter / 3 Tries.
 
+
+
+#DELETE ME
+  put #echo >talk RETRYING Movement...%failcounter / 3 Tries.
+
 MOVE.RETRY:
   gosub echo Retry movement %1
+
+
+#DELETE ME
+  put #echo >talk Retry movement %1
+
+
+
+
   if (%TryGoInsteadOfClimb) then eval movement replacere("%movement", "climb ", "go ")
   if ($webbed) then
     {
@@ -1003,6 +1019,9 @@ RETURN.CLEAR:
   action (mapper) on
   var depth 0
   var movewait 0
+
+debug 0
+
   goto MOVE.DONE
 
 MOVE.CLOSED:
