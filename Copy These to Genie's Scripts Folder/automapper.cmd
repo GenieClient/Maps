@@ -962,9 +962,10 @@ debug 5
   if (%failcounter > 2) then shift
   if (%failcounter > 3) then
     {
-    put #parse MOVE FAILED
-    put #parse AUTOMAPPER MOVEMENT FAILED!
-    put #flash
+#    put #parse MOVE FAILED
+#    put #parse AUTOMAPPER MOVEMENT FAILED!
+#    put #flash
+    put #goto $destination
     exit
     }
   put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
