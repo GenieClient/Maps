@@ -368,8 +368,6 @@ ABSOLUTE.TOP:
   if !def(automapper.userwalk) then put #tvar automapper.userwalk 0
 # turn off classes to speed movment
   if def(automapper.class) then put #class $automapper.class
-# save destination
-  var destination $destination
 # ---------------
   if ($mapwalk) then
     {
