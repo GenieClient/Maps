@@ -955,6 +955,7 @@ MOVE.FAILED:
 
 debug 5
 
+  action (mapper) off
   var subscript 0
   evalmath failcounter %failcounter + 1
 # maybe it's off by one so retry once then shift thru what's left
