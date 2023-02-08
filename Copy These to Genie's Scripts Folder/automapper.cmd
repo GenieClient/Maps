@@ -963,6 +963,11 @@ debug 5
 #    put #parse MOVE FAILED
 #    put #parse AUTOMAPPER MOVEMENT FAILED!
 #    put #flash
+    pause
+    put #mapper reset
+    pause
+    move look
+    pause
     put #goto $destination
     exit
     }
