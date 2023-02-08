@@ -950,14 +950,11 @@ MOVE.ROPE.BRIDGE:
   goto MOVE.DONE
 
 MOVE.FAILED:
-
-debug 5
-
   action (mapper) off
   var subscript 0
   evalmath failcounter %failcounter + 1
 # maybe it's off by one so retry once then shift thru what's left
-  if (%failcounter > 2) then shift
+  if (%failcounter > 1) then shift
   if (%failcounter > 3) then
     {
 #    put #parse MOVE FAILED
@@ -977,22 +974,8 @@ debug 5
   put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
   pause
   gosub echo RETRYING Movement...%failcounter / 3 Tries.
-
-
-
-#DELETE ME
-  put #echo >talk RETRYING Movement...%failcounter / 3 Tries.
-
 MOVE.RETRY:
   gosub echo Retry movement %1
-
-
-#DELETE ME
-  put #echo >talk Retry movement %1
-
-
-
-
   if (%TryGoInsteadOfClimb) then eval movement replacere("%movement", "climb ", "go ")
   if ($webbed) then
     {
