@@ -1,9 +1,13 @@
 # automapper.cmd
-var autoversion 8.2023-01-08
+var autoversion 8.2023-02-12
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
+
+#2023-02-12
+# Shroom
+#   Fixed a bug with STOW.FEET not properly rolling prayer mats causing it to go in infinite loop
 
 #2023-01-08
 # Hanryu
@@ -1445,8 +1449,8 @@ STOW.FOOT.ITEM:
 
 STOW.FEET:
   var action stow feet
-  eval footitem replacere("%footitem", "([\w'-]+\s){0,5}", "")
-  if matchre("%footitem", "(mat|rug|cloth|tapestry)") then var action roll %footitem
+  #eval footitem replacere("%footitem", "([\w'-]+\s){0,5}", "")
+  if matchre("%footitem", "(mat|rug|cloth|tapestry)") then var action roll $1
   var success ^You pick up .* lying at your feet|^You carefully gather up the delicate folds|^You start at one end of your|^Stow what\?
   gosub ACTION
 ## THIS LINE WAS ADDED TO FIX A RARE CONDITION WHERE THE FOOTITEM IS A "CLOTH/RUG" BUT ~CANNOT~ BE ROLLED THUS GOES INTO AN INFINITE LOOP OF FAILING TO ROLL
