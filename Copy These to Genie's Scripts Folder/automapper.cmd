@@ -1,13 +1,18 @@
 # automapper.cmd
-var autoversion 8.2023-02-12
+var autoversion 8.2023-02-18
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
 
-#2023-02-12
+#2023-02-18
 # Shroom
 #   Fixed a bug with STOW.FEET not properly rolling prayer mats causing it to go in infinite loop
+
+#2023-02-03
+# Hanryu
+#   A better way to retry
+#   swap out . for " for Outlander crap in action/match
 
 #2023-01-08
 # Hanryu
@@ -17,18 +22,18 @@ var autoversion 8.2023-02-12
 # Hanryu
 #   Sigil walking *would* keep plowing on for the 2nd sigil even if you're locked, now fixt
 
-#2022-12-31 
+#2022-12-31
 # Shroom
 #   Added SUBSCRIPTS for movement into / out of Gate of Souls
 #   Default movement was VERY clunky and didn't work properly, now MUCH better - Should not hang up or error
-#   Fixed MOVE.RETRY issue that could cause infinite hang if starting in RT 
+#   Fixed MOVE.RETRY issue that could cause infinite hang if starting in RT
 #   waitfor_action updated
-#   Added counter to Action sub as failsafe   
+#   Added counter to Action sub as failsafe
 
-#2022-12-18 
+#2022-12-18
 # Shroom
 #   Fix in startup for rogue automapper.typeahead var being set - (will auto-set to 1 if NOT set a NUMBER)
-#   Merged Hanryu changes 
+#   Merged Hanryu changes
 #   Athletics check for Thieves Khri for climbing - Will skip khri at higher Athletics
 
 #2022-12-15
@@ -85,13 +90,13 @@ var autoversion 8.2023-02-12
 #2022-10-30 to 11-01
 # Shroom - Fixing several bugs
 # Fixed several no gosubs to return to errors
-# Re-commented rope bridge as still in use in TF for now 
-# Even though Travel detects whether bridge or rope is up - Automapper still used as a backup method 
+# Re-commented rope bridge as still in use in TF for now
+# Even though Travel detects whether bridge or rope is up - Automapper still used as a backup method
 # Added more fail messages to ACTION
 # NEW - Added a STOW.ALT module as a backup to regular STOWING
 # IF "STOW" fails and does not empty hands - will check inv for others bags and try putting in those bags
 # Will attempt up to 4 containers - Auto-Scans inventory for the most common containers
-# Anchored JAILED triggers 
+# Anchored JAILED triggers
 # Hanryu - cleaned up echos to use new echo tech
 # Added check for "are you in RT when you start"
 # Added bridge in adanf as a place to wait
@@ -113,7 +118,7 @@ var autoversion 8.2023-02-12
 # Shroom - Increased default genie pause slightly
 # Added additional match for move_OK to fix hangup at Crystalline Gorge (You move effortlessly through the shard/wall!)
 # Cleaned up some bad regex (unnecessary \')
-# Slightly increased matchwait timeout for Action to fix issues with skates 
+# Slightly increased matchwait timeout for Action to fix issues with skates
 
 #2022-10-10
 # Hanryu - integrating Jon's WAVE
@@ -331,7 +336,7 @@ ABSOLUTE.TOP:
 # Type ahead declaration
 # The following will use a global to set it by character.  This helps when you have both premium and standard accounts.
 # Standard Account = 1, Premium Account = 2, LTB Premium = 3
-# automapper.typeahead FIX - Some users had a rogue variable set for automapper.typeahead 
+# automapper.typeahead FIX - Some users had a rogue variable set for automapper.typeahead
 # This sets automapper.typeahead to 1 if the variable is NOT present at all
 # This will auto reset it back to 1 IF the automapper.typeahead is ~NOT~ set to a number
   if ((!def(automapper.typeahead)) || (!matchre("$automapper.typeahead", "^[1-5]$"))) then put #var automapper.typeahead 1
@@ -389,19 +394,19 @@ ABSOLUTE.TOP:
   var TryGoInsteadOfClimb 0
   var move_OK ^Obvious (paths|exits)|^It's pitch dark|The shop appears to be closed, but you catch the attention of a night attendant inside,|^You move effortlessly through the
   var move_FAIL ^You can't swim in that direction|You can't go there|^A powerful blast of wind blows you to the|^What were you referring to|^I could not find what you were referring to\.|^You can't sneak in that direction|^You can't ride your.+(broom|carpet) in that direction|^You can't ride that way\.$
-  var move_RETRY ^\.\.\.wait|^Sorry, you may only|^Sorry, system is slow|^The weight of all|lose your balance during the effort|^You are still stunned|^You're still recovering from your recent|^The mud gives way beneath your feet as you attempt to climb higher, sending you sliding back down the slope instead\!|You're not sure you can
+  var move_RETRY ^\.\.\.wait|^Sorry, |^The weight of all|^You quickly step around the exposed roots, but you lose your balance during the effort|^You are still stunned|^You're still recovering from your recent|^The mud gives way beneath your feet as you attempt to climb higher, sending you sliding back down the slope instead\!|^You're not sure you can
   var move_RETREAT ^You are engaged to|^You try to move, but you're engaged|^While in combat|^You can't do that while engaged|^You can't do that\!  You're in combat\!
-  var move_WEB ^You can't do that while entangled in a web|As you start to move, you find yourself snared
+  var move_WEB ^You can't do that while entangled in a web|^As you start to move, you find yourself snared
   var move_WAIT ^You continue climbing|^You begin climbing|^You really should concentrate on your journey|^You step onto a massive stairway|^You start the slow journey across the bridge\.$|^Wriggling on your stomach, you crawl into a low opening\.$
   var move_END_DELAY ^You reach|you reach\.\.\.$|^Finally the bridge comes to an end|^After a seemingly interminible length of time, you crawl out of the passage into
-  var move_STAND ^You must be standing to do that|^You can't do that while (lying down|kneeling|sitting)|You try to quickly step from root to root, but slip and drop to your knees|you trip over an exposed root|^Stand up first\.|^You must stand first\.|^You'll need to stand up|a particularly sturdy one finally brings you to your knees\.$|You try to roll through the fall but end up on your back\.$|^Perhaps you might accomplish that if you were standing\.$
+  var move_STAND ^You must be standing to do that|^You can't do that while (lying down|kneeling|sitting)|You try to quickly step from root to root, but slip and drop to your knees|you trip over an exposed root|^Stand up first\.|^You must stand first\.|^You'll need to stand up|^A few exposed roots wrench free from the ground after catching on your feet as you pass, a particularly sturdy one finally brings you to your knees\.$|You try to roll through the fall but end up on your back\.$|^Perhaps you might accomplish that if you were standing\.$
   var move_NO_SNEAK ^You can't do that here|^In which direction are you trying to sneak|^Sneaking is an inherently stealthy|^You can't sneak that way|^You can't sneak in that direction
   var move_GO ^Please rephrase that command
   var move_MUCK ^You fall into the .+ with a loud \*SPLUT\*|^You slip in .+ and fall flat on your back\!|^The .+ holds you tightly, preventing you from making much headway\.|^You make no progress in the mud|^You struggle forward, managing a few steps before ultimately falling short of your goal\.|^You find yourself stuck in the mud
   var climb_FAIL ^Trying to judge the climb, you peer over the edge\.  A wave of dizziness hits you, and you back away from .+\.|^You start down .+, but you find it hard going\.  Rather than risking a fall, you make your way back up\.|^You attempt to climb down .+, but you can't seem to find purchase\.|^You pick your way up .+, but reach a point where your footing is questionable\.  Reluctantly, you climb back down\.|^You make your way up .+\.  Partway up, you make the mistake of looking down\.  Struck by vertigo, you cling to .+ for a few moments, then slowly climb back down\.|^You approach .+, but the steepness is intimidating\.|^The ground approaches you at an alarming rate|^You start up .+, but slip after a few feet and fall to the ground\!  You are unharmed but feel foolish\.|^You almost make it to the top|^You start the climb and slip|^You start to climb .+, but then stop to reconsider\.
-  var move_CLOSED ^The door is locked up tightly for the night|^You stop as you realize that the|^(?:\w+ )+I'm sorry, but you need to be a citizen|^BONK\! You smash your nose|^Bonk\! You smash your nose|^(?:\w+ )+I'm sorry, I can only allow citizens in at night|^(?:\w+ )+shop is closed for the night|^A guard appears and says, \"I'm sorry,|The shop appears to be closed, but you catch the attention of a night attendant inside, and he says, \"I'm sorry, I can only allow citizens in at night\.\""?
+  var move_CLOSED ^The door is locked up tightly for the night|^You stop as you realize that the|^(?:\w+ )+I'm sorry, but you need to be a citizen|^BONK\! You smash your nose|^Bonk\! You smash your nose|^(?:\w+ )+I'm sorry, I can only allow citizens in at night|^(?:\w+ )+shop is closed for the night|^A guard appears and says, .I'm sorry,|The shop appears to be closed, but you catch the attention of a night attendant inside, and he says, .I'm sorry, I can only allow citizens in at night\.."?
   var swim_FAIL ^You struggle (?!to maintain)|^You work(?! your way (?:up|down) the cliff)|^You slap|^You flounder
-  var move_DRAWBRIDGE ^The guard yells, "Lower the bridge|^The guard says, "You'll have to wait|^A guard yells, "Hey|^The guard yells, "Hey
+  var move_DRAWBRIDGE ^The guard yells, .Lower the bridge|^The guard says, .You'll have to wait|^A guard yells, .Hey|^The guard yells, .Hey
   var move_ROPE.BRIDGE is already on the rope\.|You'll have to wait
   var move_STOW ^You need to empty your hands|^You should empty your hands first\!|^You can't possibly manage to cross|^You'll need to free up your hands|^Not while carrying something in your hands|^You must first free up your hands\.|^The going gets quite difficult and highlights the need to free up your hands|^You must have your hands free
   var move_FATIGUE ^You're too tired to try climbing|^You need to rest
@@ -565,7 +570,7 @@ MOVE.STOW:
   put %movement
   pause %command_pause
   goto MOVE.DONE
-  
+
 MOVE.BOAT:
   matchre MOVE.BOAT.ARRIVED ^The galley (\w*) glides into the dock
   matchwait 60
@@ -949,8 +954,33 @@ MOVE.ROPE.BRIDGE:
   put %movement
   goto MOVE.DONE
 
+MOVE.FAILED:
+  action (mapper) off
+  var subscript 0
+  evalmath failcounter %failcounter + 1
+# maybe it's off by one so retry once then shift thru what's left
+  if (%failcounter > 1) then shift
+  if (%failcounter > 3) then
+    {
+#    put #parse MOVE FAILED
+#    put #parse AUTOMAPPER MOVEMENT FAILED!
+#    put #flash
+    pause
+    put #mapper reset
+    pause
+    move look
+    pause
+    put #goto $destination
+    exit
+    }
+  put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+  put #echo %color <<  MOVE FAILED - Type: %type | Movement: %movement | Depth: %depth
+  put #echo %color <<   Remaining Moves: %argcount
+  put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+  pause
+  gosub echo RETRYING Movement...%failcounter / 3 Tries.
 MOVE.RETRY:
-  gosub echo Retry movement
+  gosub echo Retry movement %1
   if (%TryGoInsteadOfClimb) then eval movement replacere("%movement", "climb ", "go ")
   if ($webbed) then
     {
@@ -978,8 +1008,12 @@ MOVE.RETRY:
   pause %command_pause
   pause
   if ($roundtime > 0) then pause $roundtime
+
+RETURN.CLEAR:
+  action (mapper) on
   var depth 0
   var movewait 0
+  debug 0
   goto MOVE.DONE
 
 MOVE.CLOSED:
@@ -994,28 +1028,6 @@ JAILED:
   put #parse NAILED AND JAILED!
   put #parse THROWN IN JAIL
   exit
-
-MOVE.FAILED:
-  var subscript 0
-  evalmath failcounter %failcounter + 1
-  if (%failcounter > 3) then
-    {
-    put #parse MOVE FAILED
-    put #parse AUTOMAPPER MOVEMENT FAILED!
-    put #flash
-    exit
-    }
-  put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
-  put #echo %color <<  MOVE FAILED - Type: %type | Movement: %movement | Depth: %depth
-  put #echo %color <<   Remaining Moves: %argcount
-  put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
-  pause
-  gosub echo RETRYING Movement...%failcounter / 3 Tries.
-
-RETURN.CLEAR:
-  action (mapper) on
-  var depth 0
-  goto MAIN.LOOP.CLEAR
 
 #### The various types of walking actions
 CARAVAN:
@@ -1130,7 +1142,7 @@ GATE.OF.SOULS:
   action (souls) var pushing 0 when ^You stop pushing\.
   action (souls) var boulder 0 when ^The ground trembles slightly, causing a massive granite boulder to rock back and forth
   action (souls) var boulder 1 when ^At the bottom of the hollow, a low tunnel is revealed\!
-  action (souls) var pushing 1 when ^You lean against the boulder|^You're already pushing 
+  action (souls) var pushing 1 when ^You lean against the boulder|^You're already pushing
   var boulder 0
   var pushing 0
 GATE.OF.SOULS.1:
@@ -1163,7 +1175,7 @@ GATE.OF.SOULS.DONE:
   pause %command_pause
   action (souls) off
   goto MOVE.SCRIPT.DONE
-  
+
 GATE.OF.SOULS.LEAVE:
   if ($standing) then send lie
   pause 0.001
@@ -1454,7 +1466,7 @@ STOW.FEET:
   var success ^You pick up .* lying at your feet|^You carefully gather up the delicate folds|^You start at one end of your|^Stow what\?
   gosub ACTION
 ## THIS LINE WAS ADDED TO FIX A RARE CONDITION WHERE THE FOOTITEM IS A "CLOTH/RUG" BUT ~CANNOT~ BE ROLLED THUS GOES INTO AN INFINITE LOOP OF FAILING TO ROLL
-## It should not really effect a normal stow feet other than firing "stow feet" twice which is inconsequential 
+## It should not really effect a normal stow feet other than firing "stow feet" twice which is inconsequential
   send stow feet
   pause 0.4
   return
@@ -1477,8 +1489,8 @@ STOW.RIGHT:
   gosub ACTION
   return
 
-### BACKUP STOW METHOD IF REGULAR "STOW" FAILS 
-### Will check for other worn containers and attempt stowing item in alternate containers 
+### BACKUP STOW METHOD IF REGULAR "STOW" FAILS
+### Will check for other worn containers and attempt stowing item in alternate containers
 STOW.ALT:
   var StowLoop 0
   gosub BAG.CHECK
@@ -1620,11 +1632,11 @@ echo:
   put #echo %color <<  %echoVar  >>
   put #echo %color <~~~%border~~~>
   return
-  
+
 #### THIS AUTO SETS MAIN.BAG / BACKUP.BAG / THIRD.BAG VARIABLES
 #### FOR STOWING ROUTINE ONLY - BACKUP CONTAINERS IN CASE DEFAULT "STOW" FAILS - THIS WILL CATCH ANY COMMON LARGE CONTAINERS
 #### ~ THIS SHOULD ONLY FIRE IF THE MOVE.STOW ROUTINE TRIGGERS AND DEFAULT STOW DOES NOT FULLY CLEAR HANDS ~
-#### THIS WAS MADE AS HAPPY MEDIUM - IS MUCH BETTER THAN USING HARDCODED VARIABLES 
+#### THIS WAS MADE AS HAPPY MEDIUM - IS MUCH BETTER THAN USING HARDCODED VARIABLES
 #### SETTING THE CONTAINERS AUTOMATICALLY MAKES IT EASY WITHOUT HAVING TO WORRY ABOUT USER VARIABLES / MULTI-CHARACTERS ETC..
 #### THIS SHOULD CATCH THE ~MAIN~ BAGS MOST PEOPLE HAVE AT LEAST ONE OR TWO OF
 BAG.CHECK:
