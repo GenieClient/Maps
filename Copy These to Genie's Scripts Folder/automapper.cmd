@@ -7,6 +7,7 @@ var autoversion 8.2023-02-19
 
 #2023-02-19
 # Shroom
+#   Added better logic for Handling the Theren Keep tunnels 
 #   Added SUBSCRIPT for getting in and out of Dragon's Spine ( Fixed clunky ass movements ) 
 #   Added Thires Broom mechanic for traversing Ice road
 #   Fixed clunky climb movement on creeper to/from Beisswurms
@@ -401,13 +402,13 @@ ABSOLUTE.TOP:
   var movewait 0
   var TryGoInsteadOfClimb 0
   var move_OK ^Obvious (paths|exits)|^It's pitch dark|The shop appears to be closed, but you catch the attention of a night attendant inside,|^You move effortlessly through the
-  var move_FAIL ^You can't swim in that direction|You can't go there|^A powerful blast of wind blows you to the|^What were you referring to|^I could not find what you were referring to\.|^You can't sneak in that direction|^You can't ride your.+(broom|carpet) in that direction|^You can't ride that way\.$
+  var move_FAIL ^You can't swim in that direction\.$|^You can't go there\.$|^A powerful blast of wind blows you to the|^What were you referring to\?|^I could not find what you were referring to\.|^You can't sneak in that direction|^You can't ride your.+(broom|carpet) in that direction|^You can't ride that way\.$
   var move_RETRY ^\.\.\.wait|^Sorry, |^The weight of all|^You quickly step around the exposed roots, but you lose your balance during the effort|^You are still stunned|^You're still recovering from your recent|^The mud gives way beneath your feet as you attempt to climb higher, sending you sliding back down the slope instead\!|^You're not sure you can
-  var move_RETREAT ^You are engaged to|^You try to move, but you're engaged|^While in combat|^You can't do that while engaged|^You can't do that\!  You're in combat\!
+  var move_RETREAT ^You are engaged to|^You try to move, but you're engaged|^While in combat|^You can't do that while engaged|^You can't do that\!  You're in combat\!|^Retreat to where\?
   var move_WEB ^You can't do that while entangled in a web|^As you start to move, you find yourself snared
   var move_WAIT ^You continue climbing|^You begin climbing|^You really should concentrate on your journey|^You step onto a massive stairway|^You start the slow journey across the bridge\.$|^Wriggling on your stomach, you crawl into a low opening\.$|^After climbing up the rope ladder for several long moments|^You scamper up and over the rock face\.$
   var move_END_DELAY ^You reach|you reach\.\.\.$|^Finally the bridge comes to an end|^After a seemingly interminible length of time, you crawl out of the passage into
-  var move_STAND ^You must be standing to do that|^You can't do that while (lying down|kneeling|sitting)|You try to quickly step from root to root, but slip and drop to your knees|you trip over an exposed root|^Stand up first\.|^You must stand first\.|^You'll need to stand up|^A few exposed roots wrench free from the ground after catching on your feet as you pass, a particularly sturdy one finally brings you to your knees\.$|You try to roll through the fall but end up on your back\.$|^Perhaps you might accomplish that if you were standing\.$
+  var move_STAND ^You must be standing to do that|^You can't do that while (lying down|kneeling|sitting)|You try to quickly step from root to root, but slip and drop to your knees|you trip over an exposed root|^Stand up first\.|^You must stand first\.|^You'll need to stand up|^A few exposed roots wrench free from the ground after catching on your feet as you pass, a particularly sturdy one finally brings you to your knees\.$|You try to roll through the fall but end up on your back\.$|^Perhaps you might accomplish that if you were standing\.$|^You can't do that while lying down\.$
   var move_NO_SNEAK ^You can't do that here|^In which direction are you trying to sneak|^Sneaking is an inherently stealthy|^You can't sneak that way|^You can't sneak in that direction
   var move_GO ^Please rephrase that command
   var move_MUCK ^You fall into the .+ with a loud \*SPLUT\*|^You slip in .+ and fall flat on your back\!|^The .+ holds you tightly, preventing you from making much headway\.|^You make no progress in the mud|^You struggle forward, managing a few steps before ultimately falling short of your goal\.|^You find yourself stuck in the mud
@@ -905,14 +906,32 @@ MOVE.STAIRS:
   goto MOVE.DONE
 
 MOVE.STAND:
+  var StandCount 0
   gosub STAND
   goto RETURN.CLEAR
 
+ATTACK.RETREAT:
+  pause 0.0001
+  put punch
+  pause 0.8
+  pause 0.1
+  put punch
+  pause 0.8
+  pause 0.1
+  if ($monstercount = 0) then goto RETURN.CLEAR
+  put punch
+  pause 0.8
+  pause 0.1
+  if ($monstercount = 0) then goto RETURN.CLEAR
+  put punch
+  pause 0.8
+  pause 0.1
 MOVE.RETREAT:
   action (mapper) off
   if (!$standing) then gosub STAND
   if ($hidden) then gosub UNHIDE
   pause %command_pause
+  matchre ATTACK.RETREAT ^Retreat to where\?\s+There's no place to retreat to\!
   matchre MOVE.RETREAT %move_RETRY|^\s*[\[\(]?[rR]oundtime\s*\:?|^You retreat back
   matchre RETURN.CLEAR ^You retreat from combat|^You sneak back out of combat|^You are already as far away as you can get|^You stop
   matchre RETURN.CLEAR ^You begin to get up and \*\*SMACK\!\*\*
@@ -1597,7 +1616,9 @@ ACTION.STOW.UNLOAD:
   goto ACTION
 
 STAND:
+  math StandCount add 1
   var action stand
+  if (matchre("$roomname", "The Breech Tunnels") && (%StandCount < 3)) then return
   var success ^You stand up|^You stand back up|^You are already standing|^As you stand
   goto ACTION.MAPPER.ON
 
@@ -1632,7 +1653,7 @@ ACTION.MAPPER.ON:
   matchre ACTION.STOW.HANDS ^You must have at least one hand free to do that|^You need a free hand
   matchre ACTION.WAIT ^You're unconscious|^You are still stunned|^You can't do that while|^You don't seem to be able to
   matchre ACTION.FAIL ^(That's|The .*) too (heavy|thick|long|wide)|^There's no room|^Weirdly\,|^As you attempt|^That doesn't belong in there\!
-  matchre ACTION.FAIL ^There isn't any more room|^You just can't get the .+ to fit|^Where are you|^What were you|^You can't
+  matchre ACTION.FAIL ^There isn't any more room|^You just can't get the .+ to fit|^Where are you|^What were you|^You can't|^You begin to get up and \*\*SMACK\!\*\*
   matchre ACTION.STOW.UNLOAD ^You should unload
   put %action
   matchwait 2
