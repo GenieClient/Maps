@@ -1,9 +1,16 @@
 # automapper.cmd
-var autoversion 8.2023-02-18
+var autoversion 8.2023-02-19
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
+
+#2023-02-19
+# Shroom
+#   Added SUBSCRIPT for getting in and out of Dragon's Spine ( Fixed clunky ass movements ) 
+#   Added Thires Broom mechanic for traversing Ice road
+#   Fixed clunky climb movement on creeper to/from Beisswurms
+#   Added more matches for MOVE_WAIT which was causing hangups in some instances
 
 #2023-02-18
 # Shroom
@@ -364,6 +371,7 @@ ABSOLUTE.TOP:
 # 1: collect rocks on the ice road when lacking skates; 0; just wait 15 seconds with no RT instead
   if !def(automapper.iceroadcollect) then var ice_collect 0
   else var ice_collect $automapper.iceroadcollect
+  if !def(broom_carpet) then put #tvar broom_carpet 0
   if !def(caravan) then put #tvar caravan 0
   if !def(drag) then put #tvar drag 0
   if !def(mapwalk) then put #tvar mapwalk 0
@@ -397,7 +405,7 @@ ABSOLUTE.TOP:
   var move_RETRY ^\.\.\.wait|^Sorry, |^The weight of all|^You quickly step around the exposed roots, but you lose your balance during the effort|^You are still stunned|^You're still recovering from your recent|^The mud gives way beneath your feet as you attempt to climb higher, sending you sliding back down the slope instead\!|^You're not sure you can
   var move_RETREAT ^You are engaged to|^You try to move, but you're engaged|^While in combat|^You can't do that while engaged|^You can't do that\!  You're in combat\!
   var move_WEB ^You can't do that while entangled in a web|^As you start to move, you find yourself snared
-  var move_WAIT ^You continue climbing|^You begin climbing|^You really should concentrate on your journey|^You step onto a massive stairway|^You start the slow journey across the bridge\.$|^Wriggling on your stomach, you crawl into a low opening\.$
+  var move_WAIT ^You continue climbing|^You begin climbing|^You really should concentrate on your journey|^You step onto a massive stairway|^You start the slow journey across the bridge\.$|^Wriggling on your stomach, you crawl into a low opening\.$|^After climbing up the rope ladder for several long moments|^You scamper up and over the rock face\.$
   var move_END_DELAY ^You reach|you reach\.\.\.$|^Finally the bridge comes to an end|^After a seemingly interminible length of time, you crawl out of the passage into
   var move_STAND ^You must be standing to do that|^You can't do that while (lying down|kneeling|sitting)|You try to quickly step from root to root, but slip and drop to your knees|you trip over an exposed root|^Stand up first\.|^You must stand first\.|^You'll need to stand up|^A few exposed roots wrench free from the ground after catching on your feet as you pass, a particularly sturdy one finally brings you to your knees\.$|You try to roll through the fall but end up on your back\.$|^Perhaps you might accomplish that if you were standing\.$
   var move_NO_SNEAK ^You can't do that here|^In which direction are you trying to sneak|^Sneaking is an inherently stealthy|^You can't sneak that way|^You can't sneak in that direction
@@ -583,10 +591,13 @@ MOVE.BOAT.ARRIVED:
   goto MOVE.DONE
 
 MOVE.ICE:
-  action (skates) on
-  if (%depth > 1) then waiteval (1 = %depth)
-  if (!%checked) then gosub FIND.SKATES
-  if (%slow_on_ice) then gosub ICE.COLLECT
+  if (!$broom_carpet) then
+    {
+      action (skates) on
+      if (%depth > 1) then waiteval (1 = %depth)
+      if (!%checked) then gosub FIND.SKATES
+      if (%slow_on_ice) then gosub ICE.COLLECT
+    }
   put %movement
   nextroom
   goto MOVE.DONE
@@ -783,6 +794,7 @@ MOVE.SCRIPT:
   var subscript 1
   if (%depth > 1) then waiteval (1 = %depth)
   action (mapper) off
+  if ("%movement" = "dragonspine") then goto DRAGONSPINE
   if ("%movement" = "abbeyhatch") then goto ABBEY.HATCH
   if ("%movement" = "gateofsouls") then goto GATE.OF.SOULS
   if ("%movement" = "gateleave") then goto GATE.OF.SOULS.LEAVE
@@ -876,7 +888,7 @@ MOVE.INVIS:
 MOVE.WAIT:
   action (mapper) off
   shift
-  if (%movewait) then waitforre ^You reach|you reach|^Just when it seems|^Finally the bridge comes to an end
+  if (%movewait) then waitforre ^You reach|you reach|^Just when it seems|^Finally the bridge comes to an end|^Obvious|^You also see
   var depth 0
   var movewait 0
   pause %command_pause
@@ -1232,7 +1244,19 @@ ENTER.DOBEKS:
   if (!$standing) then gosub STAND
   pause %command_pause
   goto MOVE.SCRIPT.DONE
-
+  
+DRAGONSPINE:
+  pause %command_pause
+  if (%verbose) then gosub echo DRAGON'S SPINE ENTRY/EXIT
+  matchre DRAGONSPINE2 ^A Mountain Elf ranger steps from behind a tree and beckons for you to follow\.
+  put recite Neath the depths of darkness i go\;to 'scape the prying eyes of light\;under dragon's spine i crawl\;to crawl out from under the dragon's shadow
+  matchwait 45
+  goto DRAGONSPINE
+DRAGONSPINE2:
+  action (mapper) on
+  var subscript 0
+  goto MOVE.DONE
+  
 ARMOIRE:
   action (armoire) on
   action (armoire) goto ARMOIRE when ^The armoire's double doors suddenly swing shut of their own accord
@@ -1628,9 +1652,11 @@ ACTION.RETURN:
 echo:
   var echoVar $0
   eval border replacere("%echoVar", ".", "~")
+  put #echo
   put #echo %color <~~~%border~~~>
   put #echo %color <<  %echoVar  >>
   put #echo %color <~~~%border~~~>
+  put #echo
   return
 
 #### THIS AUTO SETS MAIN.BAG / BACKUP.BAG / THIRD.BAG VARIABLES
