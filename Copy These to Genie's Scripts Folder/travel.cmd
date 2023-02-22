@@ -7,13 +7,27 @@ put #class rp on
 # Script to Travel for Genie3 #
 # Originally written by Chris/Achilles
 # Revitalized and Robustified by Shroom 
-var version 4.6
+var version 4.7
 # REQUIRES EXPTRACKER PLUGIN
-# Updated: 2/18/23
+# Updated: 2/22/23
 
-# USAGE - .travel <destination> <room number>  (room is optional!)
-# If you are calling this script via another, use waitforre ^YOU ARRIVED\! to match the end of travel script:
-#  put .travel cross 40
+# USAGE - .travel <location> <room number(optional)>  
+# .travel shard 40 - Travel to Shard then move to room 40
+#
+# VALID FINAL DESTINATIONS YOU CAN CHOOSE ARE AS FOLLOWS:
+#
+# Crossing | Arthe Dale | West Gate | Tiger Clan | Wolf Clan | Dokt | Knife Clan | Kaerna
+# Stone Clan | Caravansary | Dirge | Ushnish | Sorrow's | Beisswurms | Misenseor |Leucros 
+# Vipers | Malodorous Buccas | Alfren's Ferry | Leth Deriel  | Ilaya Taipa | Acenemacra
+# Riverhaven | Rossmans | Langenfirth | El'Bains | Zaulfun | Therenborough
+# Fornsted | Zaulfung |  Throne City | Hvaral | Haizen | Oasis | Yeehar | Muspar'i
+# Shard | Horse Clan | Fayrin's Rest | Steelclaw Clan | Spire |Corik's Wall
+# Ylono | Granite Gargoyles | Gondola | Bone Wolves | Germishdin | Fang Cove | Wyvern Mountain
+# Raven's Point | Ain Ghazal| Outer Hib | Inner Hib | Hibarnhvidar |Boar Clan
+# Aesry Surlaenis'a | Ratha | M'riss | Mer'Kresh | Hara'jaal | Taisgath        
+#
+# If calling this script via another, you can use waitforre ^YOU ARRIVED\! to match the end of travel script ie; 
+#  put .travel cross
 #  waitforre ^YOU ARRIVED\!
 ##########################################
 #                                        #
@@ -26,10 +40,10 @@ var version 4.6
 ##  THESE ARE PRE-SET TO CONSERVATIVE   ##
 ##  NUMBERS TO BE ON THE SAFER SIDE     ##
 ##                                      ##
-## This tells the script you can take   ##
+## These tell the script you can take   ##
 ## Certain shortcuts with enough ranks  ##
 ##                                      ##
-##  If you are joined in a group,       ##
+##  IF you are joined in a GROUP,       ##
 ##  You WILL take public transportation ##
 ##########################################
 ##########################################
@@ -49,12 +63,12 @@ var version 4.6
 ###########################################
 ##  RANKS TO SWIM THE FALDESU RIVER      ##
 ##  HAVEN TO NTR OR VICA VERSA           ##
-## Default: 190 - Possible ~150 w/ buffs ##
+## Safe: 190 - Possible ~150+ w/ buffs   ##
     var faldesu 190
-##########################################
-##  RANKS TO SWIM THE SEGOLTHA RIVER    ##
-##  TIGER CLAN TO STR OR VICA VERSA     ##
-## THIS IS A TOUGH ONE! ~550 IS 'SAFE'  ##
+############################################
+##  RANKS TO SWIM THE SEGOLTHA RIVER      ##
+##  TIGER CLAN TO STR OR VICA VERSA       ##
+## ~TOUGH~ ONE! DONT LOWER! ~550 IS SAFE  ##
     var segoltha 550
 ##########################################
 ## RANKS TO CLIMB UNDERGONDOLA SHORTCUT ##
@@ -69,25 +83,33 @@ var version 4.6
 ##########################################
 #################################################
 ## RANKS FOR VELAKA DESERT SHORTCUT TO MUSPARI ##
-## 700 MIN for this one - 750 IS SAFE          ##
-    var muspari.shortcut 750
+## 700 BARE MIN for this one - 750 IS SAFE     ##
+    var muspari.shortcut 760
 #################################################
 ## MULTIPLE CHARACTER SUPPORT FOR THE SHARD CITIZEN VARIABLE
-## (IF You use the script on multiple characters and want DIFFERENT shardcitizen variables) 
-## YOU MUST CREATE GENIE GLOBAL VARIABLES - char1 / char2 / char3 / char4 etc.. IN GENIE FOR THIS TO WORK
-## type in genie:  #var char1 Bob
-## to create a global variable - then make sure to #var save
+## (IF using this script on multiple characters and want DIFFERENT shardcitizen variables)
 if ("$charactername") = ("$char1") then var shardcitizen yes
 if ("$charactername") = ("$char2") then var shardcitizen yes
 if ("$charactername") = ("$char3") then var shardcitizen yes
-if ("$charactername") = ("$char4") then var shardcitizen no
-if ("$charactername") = ("$char5") then var shardcitizen no
-if ("$charactername") = ("$char6") then var shardcitizen no
+if ("$charactername") = ("$char4") then var shardcitizen yes
+if ("$charactername") = ("$char5") then var shardcitizen yes
+if ("$charactername") = ("$char6") then var shardcitizen yes
 if ("$charactername") = ("$char7") then var shardcitizen no
+if ("$charactername") = ("$char8") then var shardcitizen no
+if ("$charactername") = ("$char9") then var shardcitizen no
+if ("$charactername") = ("$char10") then var shardcitizen no
+## YOU MUST CREATE GENIE GLOBAL VARIABLES - char1 / char2 / char3 / char4 etc.. IN GENIE FOR THIS TO WORK
+## type in genie:  #var char1 Bob  - to create each global variable - then make sure to #var save - when done
+## Then just set the above variables according to what your characters citizen status is
+####
 ####
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
-# CHANGELOG - Latest Update: 2/18/23
+# CHANGELOG - Latest Update: 2/22/23
+#
+# - Fixed issue in taking Thief tunnels into Shard
+# - Speedups in different parts of script
+# - Fixed several different bugs
 #
 # - Robustified Random Movement engine so script can recognize/escape from more obscure exits when first starting script in an unknown room
 # - Fixed bug when starting Travel from inside the Raven's Court 
@@ -229,7 +251,7 @@ var destination %1
 if ("%destination" = "") then goto NODESTINATION
 eval destination toupper("%destination")
 TOP:
-put #echo >Log #a6ff4d * Travel Start: $zonename (map $zoneid: $roomid)
+put #echo >Log #b3ff66 * TRAVEL START: $zonename (map:$zoneid | room:$roomid)
 echo
 echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 echo * Travel Script v.%version
@@ -328,7 +350,6 @@ if ("$zoneid" = "0") then
           ECHO ### You are in a spot not recognized by Genie, please start somewhere else! ###
           exit
      }
-delay 0.00001
 if ("$zoneid" = "2d") then gosub AUTOMOVE temple
 if ("$zoneid" = "1j") then gosub AUTOMOVE cross
 if ("$zoneid" = "1l") then gosub AUTOMOVE cross
@@ -713,7 +734,7 @@ gosub AUTOMOVE 2
 var toratha 1
 gosub JOINLOGIC
 AESRY_LONG_2:
-pause 0.2
+pause 0.1
 gosub AUTOMOVE 234
 gosub FERRYLOGIC
 goto ARRIVED
@@ -742,7 +763,7 @@ if matchre("$zonename", "(Hara'jaal|Mer'Kresh|M'Riss)") then
 if (("$zoneid" = "150") && !matchre("%destination", "\b(rath?a?|acen?e?m?a?c?r?a?|haraj?a?a?l?)")) then
      {
          gosub AUTOMOVE 85
-         pause 0.3
+         pause 0.1
          send go exit portal
          pause 0.5
          pause 0.2
@@ -1550,7 +1571,7 @@ if (("$zoneid" = "66") && matchre("%detour", "(steel|fayrin|ylono|corik|adan'f)"
                               gosub MOVE south
                               gosub MOVE south
                               pause 0.2
-                              gosub MOVE shard
+                              gosub AUTOMOVE shard
                               gosub AUTOMOVE 228
                               pause
                               send climb embrasure
@@ -3098,7 +3119,7 @@ ARRIVED:
   put #parse REACHED YOUR DESTINATION
   # put #play Just Arrived.wav
   echo ## WOW! YOU ARRIVED AT YOUR DESTINATION: %destination in %t seconds!  That's FAST! ##
-  put #echo >Log #4ddbff * Travel Arrival: $zonename (map $zoneid: room $roomid)
+  put #echo >Log #1ad1ff * TRAVEL ARRIVAL: $zonename (map $zoneid: room $roomid)
   put #class arrive off
   exit
 ######################################################################################
@@ -3922,7 +3943,8 @@ NOCOIN:
         }
     if ("$zoneid" = "108") then
         {
-            ECHO ## YOU ARE ON MRISS WITH NO COINS!  YOU NEED TO FIND A FRIEND, OR KILL STUFF TO SELL HIDES OR GEMS!
+            echo ## YOU ARE ON MRISS WITH NO COINS!  YOU NEED TO FIND A FRIEND FOR HELP! 
+            echo ## OR KILL SOME STUFF AND SELL HIDES / GEMS!
             exit
         }
     gosub INFO_CHECK
@@ -3935,19 +3957,19 @@ NOCOIN:
     if (("%currencyneeded" = "aesry") && (%dokoras < 10000)) then goto COINQUIT
     if (("%currencyneeded" = "aesryback") && (%lirums < 10000)) then goto COINQUIT
     if (("%currencyneeded" = "qi") && (%lirums < 10000)) then goto COINQUIT
-    put #echo >Log Green You withdrew some money to ride the ferry from Zone $zonename!
+    put #echo >Log #ffff4d Withdrew ferry money to ride from $zonename
     ECHO YOU HAD MONEY IN THE BANK, LET'S TRY THIS AGAIN!
     pause
     goto %label
 COIN.CONTINUE:
-    put #echo >Log Green You exchanged some money to ride the ferry from Zone $zonename!
+    put #echo >Log #ffff4d Withdrew ferry money to ride from $zonename
     ECHO YOU EXCHANGED SOME MONIES, LET'S TRY THIS AGAIN!
     pause
     goto %label
 COINQUIT:
     echo YOU DIDN'T HAVE ENOUGH MONEY IN THE BANK TO RIDE PUBLIC TRANSPORT.
     echo EITHER GET MORE ATHLETICS, OR MORE MONEY, FKING NOOB!
-    put #echo >Log Red Travel Script Aborted! No money in bank to ride ferry in $zonename!
+    put #echo >Log #ff0000 Travel Script Aborted! No money in bank to ride ferry in $zonename!
     put #parse OUT OF MONEY!
     exit
 LIRUMS:
@@ -4084,8 +4106,7 @@ BAG_CHECK:
      action var Shadows 1 when encompassing shadows
      action var Lootsack 1 when lootsack
      action var Satchel 1 when satchel
-     delay 0.00001
-     echo *** Checking Containers..
+     # echo *** Checking Containers..
      matchre BAG_PARSE INVENTORY
      put inv container
      matchwait 3
@@ -4093,7 +4114,6 @@ BAG_PARSE:
      var Bags Toolbelt|Hip.Pouch|Backpack|Haversack|Pack|Carryall|Rucksack|Duffel.Bag|Vortex|Eddy|Shadows|Lootsack|Satchel
      eval TotalBags count("%Bags", "|")
      var BagLoop 0
-     delay 0.001
      delay 0.001
 BAG_LOOP:
      delay 0.00001
