@@ -36,7 +36,7 @@ insideshard:
 ####
 outsideshard:
   if ($Athletics.Ranks > 250) then goto $zoneidClimbIN
-  if ($zoneid = 69) then gosub automove north shard
+  if ($zoneid = 69) then gosub automove north|shard
   if ($zoneid = 68) then gosub automove e gate|e gate
   if ($zoneid = 66) then gosub automove e gate
   goto done
