@@ -1063,7 +1063,6 @@ RETURN.CLEAR:
   action (mapper) on
   var depth 0
   var movewait 0
-  debug 0
   goto MOVE.DONE
 
 MOVE.CLOSED:
