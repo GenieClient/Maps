@@ -1,14 +1,14 @@
 #### DETOUR SCRIPT FOR NAVIGATING SHARD WHEN YOU CAN'T GO THROUGH THE GATE AT NIGHT (Non-Citizens)
 ### Added Athletics Check to climb over West Gate wall from Map 69 
+debug 5
+debug 10
 
 locationcheck:
+  put #script pause all except %scriptname
+# Are you starting the script while in RT?
+  if ($roundtime > 0) then pause $roundtime
+  if ($zoneid != 67) then goto outsideshard
 
-debug 10
-debug 5
-
-put #script pause all except %scriptname
-
-if ($zoneid != 67) then goto outsideshard
 ####
 insideshard:
   if ($Athletics.Ranks > 250) then goto $roomidClimbOUT
