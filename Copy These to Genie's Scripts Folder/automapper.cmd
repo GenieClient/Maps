@@ -1,9 +1,14 @@
 # automapper.cmd
-var autoversion 8.2023-02-19
+var autoversion 8.2023-02-24
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
+
+#2023-02-24
+# Hanryu
+#   working to address Shard gate error messages that go to the whole rooom
+#   adding $citizen global based on title affiliation list
 
 #2023-02-19
 # Shroom
@@ -380,6 +385,15 @@ ABSOLUTE.TOP:
   if !def(automapper.sigilwalk) then put #tvar automapper.sigilwalk 0
   if !def(searchwalk) then put #tvar searchwalk 0
   if !def(automapper.userwalk) then put #tvar automapper.userwalk 0
+# check citizenship for shard
+  if !def(citizenship) then {
+    put #var citizenship none
+    action (citizenship) put #var citizenship $1 when "^\s*\d\)\s+of (Aesry Surlaenis'a|Forfedhdar|Ilithi|M'Riss|Ratha|Therengia|Velaka|Zoluren|Acenamacra|Arthe Dale|Crossing|Dirge|Ilaya Taipa|Kaerna Village|Leth Deriel|Fornsted|Hvaral|Langenfirth|Riverhaven|Rossman's Landing|Siksraja|Therenborough|Fayrin's Rest|Shard|Steelclaw Clan|Zaldi Taipa|Ain Ghazal|Boar Clan|Hibarnhvidar|Raven's Point|Mer'Kresh|Muspar'i)"
+    put title affiliation list
+    send encumbrance
+    waitfor Encumbrance :
+    action (citizenship) off
+  }
 # turn off classes to speed movment
   if def(automapper.class) then put #class $automapper.class
 # ---------------
@@ -394,6 +408,7 @@ ABSOLUTE.TOP:
   var footwear 0
   var action_retry ^0$
   var cloak_off 0
+  var cloak_worn 0
   var cloaknouns cloak|shroud|scarf|aldamdin mask|0
   var closed 0
   var startingStam $stamina
@@ -637,11 +652,14 @@ MOVE.KNOCK:
   action (mapper) off
   if ($roundtime > 0) then pause %command_pause
   if (%depth > 1) then waiteval (1 = %depth)
+  if !matchre("$citizen", "Ilithi|Fayrin's Rest|Shard|Steelclaw Clan|Zaldi Taipa") then goto SHARD.FAILED
   var movement knock gate
   matchre MOVE.KNOCK ^\.\.\.wait|^Sorry,|^You are still stun|^You can't do that while entangled
-  matchre SHARD.FAILED Sorry, you're not a citizen
-  matchre KNOCK.DONE %move_OK|All right, welcome back|opens the door just enough to let you slip through|wanted criminal
+  matchre KNOCK.DONE %move_OK
+#  matchre SHARD.FAILED Sorry, you're not a citizen
+#^ this message goes to everyone in the room and screws things up
   matchre CLOAK.LOGIC ^You turn away, disappointed\.
+#^ this message is the same for non-citizen error as well as feature hidden error, so need to branch at CLOAK.LOGIC
   matchre KNOCK.INVIS ^The gate guard can't see you
   put %movement
   matchwait
@@ -673,6 +691,7 @@ KNOCK.DONE:
   goto MOVE.DONE
 
 CLOAK.LOGIC:
+  if (((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) || ((!%cloak_off) && (%cloak_worn))) then goto SHARD.FAILED
   gosub FIND.CLOAK
   goto MOVE.KNOCK
 

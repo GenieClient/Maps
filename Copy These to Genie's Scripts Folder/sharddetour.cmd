@@ -3,6 +3,7 @@
 
 locationcheck:
 
+debug 10
 debug 5
 
 put #script pause all except %scriptname
