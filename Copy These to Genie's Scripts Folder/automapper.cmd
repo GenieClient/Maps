@@ -652,7 +652,7 @@ MOVE.KNOCK:
   action (mapper) off
   if ($roundtime > 0) then pause %command_pause
   if (%depth > 1) then waiteval (1 = %depth)
-  if !matchre("$citizen", "Ilithi|Fayrin's Rest|Shard|Steelclaw Clan|Zaldi Taipa") then goto SHARD.FAILED
+  if !matchre("$citizenship", "Ilithi|Fayrin's Rest|Shard|Steelclaw Clan|Zaldi Taipa") then goto SHARD.FAILED
   var movement knock gate
   matchre MOVE.KNOCK ^\.\.\.wait|^Sorry,|^You are still stun|^You can't do that while entangled
   matchre KNOCK.DONE %move_OK
