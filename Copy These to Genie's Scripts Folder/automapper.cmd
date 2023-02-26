@@ -8,7 +8,7 @@ var autoversion 8.2023-02-24
 #2023-02-24
 # Hanryu
 #   working to address Shard gate error messages that go to the whole rooom
-#   adding $citizen global based on title affiliation list
+#   adding $citizenship global based on title affiliation list
 
 #2023-02-19
 # Shroom
