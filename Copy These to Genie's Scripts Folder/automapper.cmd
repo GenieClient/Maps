@@ -1,9 +1,17 @@
 # automapper.cmd
-var autoversion 8.2023-02-19
+var autoversion 8.2023-03-06
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
+send relc
+#2023-03-06
+# Nazaruss
+#	Added cyclic variable to toggle turning off cyclics before moving
+#2023-02-24
+# Hanryu
+#   working to address Shard gate error messages that go to the whole rooom
+#   adding $citizen global based on title affiliation list
 
 #2023-02-19
 # Shroom
@@ -291,6 +299,11 @@ if matchre("%1", "help|HELP|Help|^$") then {
   put #echo %helpecho <<      1: collect rocks on the ice road when lacking skates        >>
   put #echo %helpecho <<      0: just wait 15 seconds with no RT instead                  >>
   put #echo %helpecho <<      #var automapper.iceroadcollect 1                            >>
+  put #echo %helpecho <<	Cyclic Spells
+														   >>
+  put #echo %helpecho <<	  1: Turn off cyclic spells before moving		>>
+  put #echo %helpecho <<	  0: Leave cyclic spells running while moving		>>
+  put #echo %helpecho <<	  #var automapper.cyclic 1		>>
   put #echo %helpecho <<    Color                                                         >>
   put #echo %helpecho <<      What should the default automapper echo color be?           >>
   put #echo %helpecho <<      #var automapper.color #33CC99                               >>
@@ -371,7 +384,9 @@ ABSOLUTE.TOP:
   else var infiniteLoopProtection $automapper.loop
 # 1: collect rocks on the ice road when lacking skates; 0; just wait 15 seconds with no RT instead
   if !def(automapper.iceroadcollect) then var ice_collect 0
-  else var ice_collect $automapper.iceroadcollect
+  else var ice_collect $automapper.iceroadcollect 
+  if !def(automapper.cyclic) then var cyclic 0
+  else var cyclic $automapper.cyclic
   if !def(broom_carpet) then put #tvar broom_carpet 0
   if !def(caravan) then put #tvar caravan 0
   if !def(drag) then put #tvar drag 0
@@ -380,6 +395,18 @@ ABSOLUTE.TOP:
   if !def(automapper.sigilwalk) then put #tvar automapper.sigilwalk 0
   if !def(searchwalk) then put #tvar searchwalk 0
   if !def(automapper.userwalk) then put #tvar automapper.userwalk 0
+# check citizenship for shard
+  if !def(citizenship) then {
+    put #var citizenship none
+    action (citizenship) put #var citizenship $1 when "^\s*\d\)\s+of (Aesry Surlaenis'a|Forfedhdar|Ilithi|M'Riss|Ratha|Therengia|Velaka|Zoluren|Acenamacra|Arthe Dale|Crossing|Dirge|Ilaya Taipa|Kaerna Village|Leth Deriel|Fornsted|Hvaral|Langenfirth|Riverhaven|Rossman's Landing|Siksraja|Therenborough|Fayrin's Rest|Shard|Steelclaw Clan|Zaldi Taipa|Ain Ghazal|Boar Clan|Hibarnhvidar|Raven's Point|Mer'Kresh|Muspar'i)"
+    put title affiliation list
+    send encumbrance
+    waitfor Encumbrance :
+    action (citizenship) off
+  }
+# release cyclics if defined
+  if  $automapper.cyclic=1 then send release cyclic 
+ 
 # turn off classes to speed movment
   if def(automapper.class) then put #class $automapper.class
 # ---------------
@@ -394,6 +421,7 @@ ABSOLUTE.TOP:
   var footwear 0
   var action_retry ^0$
   var cloak_off 0
+  var cloak_worn 0
   var cloaknouns cloak|shroud|scarf|aldamdin mask|0
   var closed 0
   var startingStam $stamina
@@ -637,11 +665,14 @@ MOVE.KNOCK:
   action (mapper) off
   if ($roundtime > 0) then pause %command_pause
   if (%depth > 1) then waiteval (1 = %depth)
+  if !matchre("$citizen", "Ilithi|Fayrin's Rest|Shard|Steelclaw Clan|Zaldi Taipa") then goto SHARD.FAILED
   var movement knock gate
   matchre MOVE.KNOCK ^\.\.\.wait|^Sorry,|^You are still stun|^You can't do that while entangled
-  matchre SHARD.FAILED Sorry, you're not a citizen
-  matchre KNOCK.DONE %move_OK|All right, welcome back|opens the door just enough to let you slip through|wanted criminal
+  matchre KNOCK.DONE %move_OK
+#  matchre SHARD.FAILED Sorry, you're not a citizen
+#^ this message goes to everyone in the room and screws things up
   matchre CLOAK.LOGIC ^You turn away, disappointed\.
+#^ this message is the same for non-citizen error as well as feature hidden error, so need to branch at CLOAK.LOGIC
   matchre KNOCK.INVIS ^The gate guard can't see you
   put %movement
   matchwait
@@ -673,6 +704,7 @@ KNOCK.DONE:
   goto MOVE.DONE
 
 CLOAK.LOGIC:
+  if (((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) || ((!%cloak_off) && (%cloak_worn))) then goto SHARD.FAILED
   gosub FIND.CLOAK
   goto MOVE.KNOCK
 
@@ -1044,7 +1076,6 @@ RETURN.CLEAR:
   action (mapper) on
   var depth 0
   var movewait 0
-  debug 0
   goto MOVE.DONE
 
 MOVE.CLOSED:
