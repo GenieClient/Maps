@@ -4,7 +4,7 @@ var autoversion 8.2023-03-06
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
-send relc
+
 #2023-03-06
 # Nazaruss
 #	Added cyclic variable to toggle turning off cyclics before moving
