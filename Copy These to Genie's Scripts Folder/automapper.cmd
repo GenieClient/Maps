@@ -1,9 +1,18 @@
 # automapper.cmd
-var autoversion 8.2023-02-24
+var autoversion 8.2023-03-06
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 #debuglevel 10
 #debug 5
+
+#2023-03-06
+# Nazaruss
+#	Added cyclic variable to toggle turning off cyclics before moving
+
+#2023-02-24
+# Hanryu
+#   working to address Shard gate error messages that go to the whole rooom
+#   adding $citizen global based on title affiliation list
 
 #2023-02-24
 # Hanryu
@@ -296,6 +305,11 @@ if matchre("%1", "help|HELP|Help|^$") then {
   put #echo %helpecho <<      1: collect rocks on the ice road when lacking skates        >>
   put #echo %helpecho <<      0: just wait 15 seconds with no RT instead                  >>
   put #echo %helpecho <<      #var automapper.iceroadcollect 1                            >>
+  put #echo %helpecho <<	Cyclic Spells
+														   >>
+  put #echo %helpecho <<	  1: Turn off cyclic spells before moving		>>
+  put #echo %helpecho <<	  0: Leave cyclic spells running while moving		>>
+  put #echo %helpecho <<	  #var automapper.cyclic 1		>>
   put #echo %helpecho <<    Color                                                         >>
   put #echo %helpecho <<      What should the default automapper echo color be?           >>
   put #echo %helpecho <<      #var automapper.color #33CC99                               >>
@@ -376,7 +390,9 @@ ABSOLUTE.TOP:
   else var infiniteLoopProtection $automapper.loop
 # 1: collect rocks on the ice road when lacking skates; 0; just wait 15 seconds with no RT instead
   if !def(automapper.iceroadcollect) then var ice_collect 0
-  else var ice_collect $automapper.iceroadcollect
+  else var ice_collect $automapper.iceroadcollect 
+  if !def(automapper.cyclic) then var cyclic 0
+  else var cyclic $automapper.cyclic
   if !def(broom_carpet) then put #tvar broom_carpet 0
   if !def(caravan) then put #tvar caravan 0
   if !def(drag) then put #tvar drag 0
@@ -394,6 +410,8 @@ ABSOLUTE.TOP:
     waitfor Encumbrance :
     action (citizenship) off
   }
+# release cyclics if defined
+  if  $automapper.cyclic=1 then send release cyclic 
 # turn off classes to speed movment
   if def(automapper.class) then put #class $automapper.class
 # ---------------
@@ -652,6 +670,7 @@ MOVE.KNOCK:
   action (mapper) off
   if ($roundtime > 0) then pause %command_pause
   if (%depth > 1) then waiteval (1 = %depth)
+  if !matchre("$citizen", "Ilithi|Fayrin's Rest|Shard|Steelclaw Clan|Zaldi Taipa") then goto SHARD.FAILED
   if !matchre("$citizenship", "Ilithi|Fayrin's Rest|Shard|Steelclaw Clan|Zaldi Taipa") then goto SHARD.FAILED
   var movement knock gate
   matchre MOVE.KNOCK ^\.\.\.wait|^Sorry,|^You are still stun|^You can't do that while entangled
