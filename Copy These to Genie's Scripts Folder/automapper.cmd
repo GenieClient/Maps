@@ -2146,11 +2146,19 @@ REFUEL_IT:
      put GET lamp oil
      pause 0.0001
      pause 0.8
+     if !matchre("$righthand $lefthand", "oil") then
+          {
+               echo * NO OIL FOR LANTERN
+               put #echo >Log #FF3E00 * NO OIL FOR LANTERN
+               gosub stowing
+               goto TORCH_YES
+          }
      put pour oil in lantern
      pause 0.5
      pause 0.0001
      var TriedOil 1
-     gosub STOWIT oil
+     put STOW oil
+     pause 0.4
      goto LANTERN_DROP
 LIT_LANTERN:
      pause 0.0001
