@@ -1,9 +1,17 @@
 # automapper.cmd
-var autoversion 8.2023-03-06
+var autoversion 8.2023-03-12
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
-#debuglevel 10
+# debuglevel 10
 #debug 5
+
+#2023-03-12
+# Shroom
+# Added preliminary LIGHT SOURCE / DARKVISION checks - when in Dark Room should auto check for and try to activate a light source
+# MUCH testing was done to make sure it activates & properly continues on the path - but rarely stalls after activating (can't figure out how)
+# UNCommented Parses after 3 Move Fails (some scripts rely on that to restart Automapper)
+# Added new SUBSCRIPT for escaping from Oshu Manor Embalming Chamber Automatically
+# Fixed Subscript going into Misenseor Abbey 
 
 #2023-03-06
 # Nazaruss
@@ -429,12 +437,14 @@ ABSOLUTE.TOP:
   var cloak_worn 0
   var cloaknouns cloak|shroud|scarf|aldamdin mask|0
   var closed 0
+  var darkroom 0
+  var darkchecked 0
   var startingStam $stamina
   var failcounter 0
   var depth 0
   var movewait 0
   var TryGoInsteadOfClimb 0
-  var move_OK ^Obvious (paths|exits)|^It's pitch dark|The shop appears to be closed, but you catch the attention of a night attendant inside,|^You move effortlessly through the
+  var move_OK ^Obvious (paths|exits)|^It's pitch dark|The shop appears to be closed, but you catch the attention of a night attendant inside,|^You move effortlessly through the|^Your? stare into the shadows and see\.\.\.$
   var move_FAIL ^You can't swim in that direction\.$|^You can't go there\.$|^A powerful blast of wind blows you to the|^What were you referring to\?|^I could not find what you were referring to\.|^You can't sneak in that direction|^You can't ride your.+(broom|carpet) in that direction|^You can't ride that way\.$
   var move_RETRY ^\.\.\.wait|^Sorry, |^The weight of all|^You quickly step around the exposed roots, but you lose your balance during the effort|^You are still stunned|^You're still recovering from your recent|^The mud gives way beneath your feet as you attempt to climb higher, sending you sliding back down the slope instead\!|^You're not sure you can
   var move_RETREAT ^You are engaged to|^You try to move, but you're engaged|^While in combat|^You can't do that while engaged|^You can't do that\!  You're in combat\!|^Retreat to where\?
@@ -446,7 +456,7 @@ ABSOLUTE.TOP:
   var move_GO ^Please rephrase that command
   var move_MUCK ^You fall into the .+ with a loud \*SPLUT\*|^You slip in .+ and fall flat on your back\!|^The .+ holds you tightly, preventing you from making much headway\.|^You make no progress in the mud|^You struggle forward, managing a few steps before ultimately falling short of your goal\.|^You find yourself stuck in the mud
   var climb_FAIL ^Trying to judge the climb, you peer over the edge\.  A wave of dizziness hits you, and you back away from .+\.|^You start down .+, but you find it hard going\.  Rather than risking a fall, you make your way back up\.|^You attempt to climb down .+, but you can't seem to find purchase\.|^You pick your way up .+, but reach a point where your footing is questionable\.  Reluctantly, you climb back down\.|^You make your way up .+\.  Partway up, you make the mistake of looking down\.  Struck by vertigo, you cling to .+ for a few moments, then slowly climb back down\.|^You approach .+, but the steepness is intimidating\.|^The ground approaches you at an alarming rate|^You start up .+, but slip after a few feet and fall to the ground\!  You are unharmed but feel foolish\.|^You almost make it to the top|^You start the climb and slip|^You start to climb .+, but then stop to reconsider\.
-  var move_CLOSED ^The door is locked up tightly for the night|^You stop as you realize that the|^(?:\w+ )+I'm sorry, but you need to be a citizen|^BONK\! You smash your nose|^Bonk\! You smash your nose|^(?:\w+ )+I'm sorry, I can only allow citizens in at night|^(?:\w+ )+shop is closed for the night|^A guard appears and says, .I'm sorry,|The shop appears to be closed, but you catch the attention of a night attendant inside, and he says, .I'm sorry, I can only allow citizens in at night\.."?
+  var move_CLOSED ^The door is locked up tightly for the night|^You stop as you realize that the|^(?:\w+ )+I'm sorry, but you need to be a citizen|^BONK\! You smash your nose|^Bonk\! You smash your nose|^(?:\w+ )+I'm sorry, I can only allow citizens in at night|^(?:\w+ )+shop is closed for the night|^A guard appears and says, .I'm sorry,|The shop appears to be closed, but you catch the attention of a night attendant inside, and he says, .I'm sorry, I can only allow citizens in at night\..?
   var swim_FAIL ^You struggle (?!to maintain)|^You work(?! your way (?:up|down) the cliff)|^You slap|^You flounder
   var move_DRAWBRIDGE ^The guard yells, .Lower the bridge|^The guard says, .You'll have to wait|^A guard yells, .Hey|^The guard yells, .Hey
   var move_ROPE.BRIDGE is already on the rope\.|You'll have to wait
@@ -484,6 +494,7 @@ ACTIONS:
   action (mapper) var footitem $1;goto STOW.FOOT.ITEM when ^You notice (?:an |a )?(.+) at your feet, and do not wish to leave it behind\.
   action (skates) var wearing_skates 1 when ^You slide your ice skates on your feet and tightly tie the laces\.|^Your ice skates help you traverse the frozen terrain\.|^Your movement is hindered .* by your ice skates\.|^You tap some.*\bskates\b.*that you are wearing
   action (skates) var wearing_skates 0 when ^You untie your skates and slip them off of your feet\.
+  action var darkroom 1 when ^It's pitch dark and you can't see a thing\!
   action var slow_on_ice 1;if (%verbose) then put #echo %color Ice detected! when ^You had better slow down\! The ice is|^At the speed you are traveling
   action goto JAILED when ^You slowly wake up again to find that all your belongings have been stripped and you are in a jail cell wearing a set of heavy manacles\.|^The \w+ brings you to the jail, where several companions aid to hold you down and strip you of all your possessions\.|^The town guard, with the help of several others, wrestle you to the ground, bind you in chains, and drag you off to jail\.|^\w+ you awake some time later, your possessions have been stripped from you, and you lay in a musty pile of straw\.|^The door slams shut, a sound not unlike that of a tomb closing\.
   action goto DEAD.DONE when ^You are a ghost\!
@@ -496,6 +507,10 @@ MAIN.LOOP.CLEAR:
 
 #### JON's MAIN LOOP ####
 MAIN.LOOP:
+  # SHROOM - LIGHT SOURCE CHECK - (Needs fine tuning) - CHECKS FOR DARK VISION/ LIGHT ITEM WHEN IN ROOMID = 0 AND DARK ROOM 
+  # ACTIVATES LIGHT SOURCE FINE WHEN IN A DARK ROOM BUT SEEMS TO LOSE THE PATH AFTER ACTIVATING? NOT SURE HOW TO FIX 
+  if ((($roomid = 0) && matchre("$roomobjs $roomdesc","(pitch black|pitch dark)") && (%darkchecked = 0)) || ((%darkroom = 1) && (%darkchecked = 0))) then gosub LIGHT_SOURCE
+  # END LIGHT SOURCE CHECK
   if_1 goto WAVE_DO
   goto DONE
 WAVE_DO:
@@ -833,6 +848,7 @@ MOVE.SCRIPT:
   var subscript 1
   if (%depth > 1) then waiteval (1 = %depth)
   action (mapper) off
+  if ("%movement" = "oshumanor") then goto OSHUMANOR
   if ("%movement" = "dragonspine") then goto DRAGONSPINE
   if ("%movement" = "abbeyhatch") then goto ABBEY.HATCH
   if ("%movement" = "gateofsouls") then goto GATE.OF.SOULS
@@ -1031,9 +1047,10 @@ MOVE.FAILED:
   if (%failcounter > 1) then shift
   if (%failcounter > 3) then
     {
-#    put #parse MOVE FAILED
-#    put #parse AUTOMAPPER MOVEMENT FAILED!
-#    put #flash
+    put #parse MOVE FAILED
+    put #parse AUTOMAPPER MOVEMENT FAILED!
+    # Do not comment out above parses as some scripts use this to restart Automapper
+    #put #flash
     pause
     put #mapper reset
     pause
@@ -1301,6 +1318,23 @@ ENTER.DOBEKS:
   pause %command_pause
   goto MOVE.SCRIPT.DONE
   
+OSHUMANOR:
+  pause %command_pause
+  if (%verbose) then gosub echo EXITING OSHU MANOR CHAMBER
+  put east
+  waitforre %move_OK
+  pause 0.001
+  send turn sconce
+  pause 5
+  pause 0.1
+  put west
+  waitforre %move_OK
+  put go door
+  pause 0.5
+  pause 0.2
+  if ($roomid = 113) then goto OSHUMANOR
+  goto MOVE.SCRIPT.DONE
+  
 DRAGONSPINE:
   pause %command_pause
   if (%verbose) then gosub echo DRAGON'S SPINE ENTRY/EXIT
@@ -1551,7 +1585,13 @@ STOW.FEET:
   pause 0.4
   return
 
+STOWING:
 STOW.HANDS:
+  if matchre("$righthand", "(khuj|staff|atapwi|parry stick)") then
+     {
+          put wear $righthandnoun
+          pause 0.5
+     }
   if !matchre("Empty", "$lefthand") then gosub STOW.LEFT
   if !matchre("Empty", "$righthand") then gosub STOW.RIGHT
   if (!matchre("Empty", "$lefthand") || !matchre("Empty", "$righthand")) then gosub STOW.ALT
@@ -1621,9 +1661,11 @@ RETREAT:
   if ($hidden) then gosub UNHIDE
   pause %command_pause
   matchre RETREAT %move_RETRY|^\s*[\[\(]?[rR]oundtime\s*\:?|^You retreat back
-  matchre RETURN ^You retreat from combat|^You sneak back out of combat|^You are already as far away as you can get|^You stop
+  matchre RETREAT_RETURN ^You retreat from combat|^You sneak back out of combat|^You are already as far away as you can get|^You stop
   put retreat
   matchwait 3
+RETREAT_RETURN:
+  action (mapper) on
   return
 
 UNHIDE:
@@ -1811,3 +1853,416 @@ DRAGGED:
   var depth 0
   goto MOVE.DONE
 ####
+DARK_CHECK:
+     delay 0.0001
+     # gosub DARKCHECK_TIMER
+     # if (%darkLast < 500) then return
+DARK_CHECK_1:
+     var darkroom 1
+     pause 0.0001
+     matchre DARK_CHECK_1 \s*\.\.\.wait|^Sorry,|^Please wait\.|^You are still stunned
+     matchre DARK_YES pitch dark|pitch black
+     matchre LIGHT_YES ^Obvious|^I could|^What
+     put look
+     matchwait 5
+     return
+DARK_YES:
+     var darkroom 1
+     var darkTime $gametime
+     return
+LIGHT_YES:
+     var darkroom 0
+     var darkTime $gametime
+     return
+## FIND A LIGHT SOURCE - FIRST WE CHECK FOR GUILD SKILLS THAT PROVIDE LIGHT
+LIGHT_SOURCE:
+     action (mapper) off
+     var subscript 0
+     var PREP 5
+     var darkchecked 1
+     gosub DARK_CHECK
+     if (%darkroom = 0) then return
+     ### KNOWN ISSUE - AFTER SUCCESSFULLY USING DARKVISION - SOMETIMES LOSES REMAINING PATH AFTER RETURNING
+     ### Have tried many various things but not sure best way to fix 
+     shift
+     math depth subtract 1
+     delay 0.0001
+     gosub echo DARK ROOM - Checking for DARKVISION
+     gosub echo Need a light source!
+     delay 0.0001
+     if ("$preparedspell" != "None") then
+          {
+               put RELEASE spell
+               pause 0.6
+               put RELEASE camb
+               pause 0.7
+               pause 0.1
+          }
+     if (("$guild" = "Ranger") && ($circle > 34)) then
+          {
+               echo * RANGER - Beseeching Dark to Sing
+               put align 30
+               pause 0.5
+               pause
+               put beseech dark to sing
+               pause
+               pause 0.5
+               gosub DARK_DOUBLECHECK
+               if (%darkroom = 0) then goto YES_DARKVISION
+          }
+     if ("$guild" = "Thief") then
+          {
+               echo * THIEF - Khri Sight
+               put khri sight
+               pause 0.5
+               pause 0.5
+               gosub DARK_DOUBLECHECK
+               if (%darkroom = 0) then goto YES_DARKVISION
+          }
+     if (("$guild" = "Bard") && ($circle > 10)) then
+          {
+               put release cyclic
+               pause 0.4
+               put prep EYE 5
+               pause 16
+               put cast
+               pause
+               pause 0.5
+               gosub DARK_DOUBLECHECK
+               if (%darkroom = 0) then goto YES_DARKVISION
+          }
+     if (("$guild" = "Cleric")  && ($circle > 20)) then
+          {
+               if ($Utility.Ranks < 120) then var PREP 2
+               if (($Utility.Ranks >= 120) && ($Utility.Ranks < 200)) then var PREP 5
+               if (($Utility.Ranks >= 200) && ($Utility.Ranks < 300)) then var PREP 9
+               if (($Utility.Ranks >= 300) && ($Utility.Ranks < 500)) then var PREP 12
+               if (($Utility.Ranks >= 500) && ($Utility.Ranks < 600)) then var PREP 15
+               if ($Utility.Ranks >= 600) then var PREP 15
+               gosub echo Using DR!
+               put prep DR %PREP
+               pause 19
+               send cast
+               pause 0.5
+               pause 0.5
+               pause 0.3
+               if ($SpellTimer.DivineRadiance.active = 0) then goto LIGHT_SOURCE_2
+               gosub DARK_DOUBLECHECK
+               if (%darkroom = 0) then goto YES_DARKVISION
+          }
+     if (("$guild" = "Moon Mage") && ($circle > 20)) then
+          {
+               if ($Utility.Ranks < 120) then var PREP 5
+               if (($Utility.Ranks >= 120) && ($Utility.Ranks < 200)) then var PREP 7
+               if (($Utility.Ranks >= 200) && ($Utility.Ranks < 300)) then var PREP 12
+               if (($Utility.Ranks >= 300) && ($Utility.Ranks < 500)) then var PREP 15
+               if (($Utility.Ranks >= 500) && ($Utility.Ranks < 600)) then var PREP 22
+               if ($Utility.Ranks >= 600) then var PREP 33
+               echo * USING TS!
+               put prep TS %PREP
+               pause 20
+               put cast
+               pause 0.5
+               pause 0.5
+               pause 0.2
+               if ($SpellTimer.TenebrousSense.active = 0) then goto LIGHT_SOURCE_3
+               gosub DARK_DOUBLECHECK
+               if (%darkroom = 0) then goto YES_DARKVISION
+          }
+LIGHT_SOURCE_3:
+     if (("$guild" = "Paladin") && ($circle > 15)) then goto GLYPH_LIGHT
+     goto GAETHZEN_YES
+GLYPH_LIGHT:
+     pause 0.0001
+     matchre GLYPH_LIGHT \s*\.\.\.wait|^Sorry,|^Please wait\.|^You are still stunned
+     matchre GAETHZEN_YES ^You try
+     matchre YES_DARKVISION The tiny balls of light swirl|A brief burst of pain
+     put glyph light
+     matchwait 7
+     goto GAETHZEN_YES
+###########################################
+# CHECK HERE FOR ALL DARK VISION ITEMS
+#############
+GAETHZEN_YES:
+     var FullCharge 0
+     # if (%HaveGaethzen = 0) then goto GOGGLE_CHECK
+     put GET my gaethzen lantern
+     pause 0.5
+     pause 0.6
+     if !matchre("$righthand $lefthand", "(?i)lantern") then goto GOGGLE_CHECK
+     gosub echo CHARGING GAEZTHEN
+     action var FullCharge 1 when ^The .+ is already holding as much power as you could possibly charge it with\.
+     # gosub stowing
+     gosub RETREAT
+     pause 0.0001
+     put CHARGE lantern 25
+     pause 2
+     pause 0.5
+     if (%FullCharge = 1) then goto GAETHZEN_2
+     put CHARGE lantern 25
+     pause 2
+     pause 0.5
+     gosub RETREAT
+     if (%FullCharge = 1) then goto GAETHZEN_2
+     put CHARGE lantern 25
+     pause 2
+     pause 0.5
+     if (%FullCharge = 1) then goto GAETHZEN_2
+     put CHARGE lantern 25
+     pause 2
+     pause 0.5
+GAETHZEN_2:
+     pause 0.0001
+     put focus my lantern
+     pause 0.5
+     pause 0.2
+     PUT rub my lantern
+     pause 0.5
+     pause 0.2
+     put wear lantern
+     pause 0.2
+     pause 0.0001
+     action remove ^The .+ is already holding as much power as you could possibly charge it with\.
+     gosub DARK_DOUBLECHECK
+     if (%darkroom = 0) then goto YES_DARKVISION
+GOGGLE_CHECK:
+GOGGLE_YES:
+     # if (%HaveGoggles = 0) then goto STARGLASS_YES
+     delay 0.0001
+     put GET my goggle
+     pause 0.7
+     pause 0.3
+     pause 0.0001
+     pause 0.0001
+     if !matchre("$righthand $lefthand", "goggle") then goto STARGLASS_YES
+     matchre GOGGLE_YES \s*\.\.\.wait|^Sorry,|^Please wait\.|^You are still stunned
+     matchre GOGGLE_2 remains inert
+     matchre GOGGLE_STOW ^Your tactile sense
+     put rub my goggle
+     matchwait 9
+GOGGLE_2:
+     pause 0.0001
+     if matchre("$righthand $lefthand", "goggle") then gosub PUT put goggle in my %Wand1.Container
+     pause 0.1
+     if matchre("$righthand $lefthand", "goggle") then gosub STOWIT goggle
+     gosub GET my other goggle
+     pause 0.1
+     if !matchre("$righthand $lefthand", "goggle") then goto STARGLASS_YES
+     matchre GOGGLE_2 \s*\.\.\.wait|^Sorry,|^Please wait\.|^You are still stunned
+     matchre GOGGLE_NONE remains inert
+     matchre GOGGLE_STOW ^Your tactile sense
+     put rub my goggle
+     matchwait 10
+     goto STARGLASS_YES
+GOGGLE_NONE:
+     pause 0.0001
+     gosub PUT put goggle in my %Wand1.Container
+     pause 0.0001
+     if matchre("$righthand $lefthand", "goggle") then gosub STOWIT goggle
+     goto STARGLASS_YES
+GOGGLE_STOW:
+     pause 0.0001
+     gosub PUT put goggle in my %Wand1.Container
+     pause 0.0001
+     if matchre("$righthand $lefthand", "goggle") then gosub STOWIT goggle
+     gosub DARK_DOUBLECHECK
+     if (%darkroom = 0) then goto YES_DARKVISION
+#########
+STARGLASS_YES:
+     gosub stowing
+     # if (%HaveStarglass = 0) then goto LANTERN_YES
+     pause 0.0001
+     put GET starglass
+     pause 0.8
+     pause 0.1
+     pause 0.1
+     if !matchre("$righthand $lefthand", "(?i)starglass") then goto LANTERN_YES
+     if matchre("$guild", "%MAGICUSER") then
+          {
+               gosub CHARGE starglass 20
+               pause 0.4
+               gosub CHARGE starglass 20
+               pause 0.4
+          }
+     put rub my starglass
+     pause 0.2
+     pause 0.0001
+     gosub WEAR starglass
+     pause 0.3
+     gosub stowing
+     gosub DARK_DOUBLECHECK
+     if (%darkroom = 0) then goto YES_DARKVISION
+############
+LANTERN_YES:
+     var TriedOil 0
+     # if (%HaveLantern = 0) then goto TORCH_YES
+     # if ((%HaveFlint = 0) && (%HaveLighter = 0)) then goto TORCH_YES
+     gosub stowing
+     pause 0.0001
+     put GET my lantern
+     pause 0.5
+     pause 0.6
+     if !matchre("$righthand $lefthand", "(?i)lantern") then goto TORCH_YES
+LANTERN_DROP:
+     PUT drop my lantern
+     pause 0.6
+     pause 0.0001
+     put GET my flint
+     pause 0.5
+     pause 0.1
+     put GET my knife
+     pause 0.7
+     pause 0.1
+     if (!matchre("$righthand $lefthand", "flint") && !matchre("$righthand $lefthand", "knife")) then
+          {
+               echo * FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
+               put #echo >Log #FF3E00 * FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
+               gosub stowing
+               goto TORCH_YES
+          }
+LANTERN_LIGHT:
+     pause 0.0001
+     pause 0.0001
+     pause 0.0001
+     matchre LANTERN_LIGHT \s*\.\.\.wait|^Sorry,|^Please wait\.|^You are still stunned
+     matchre LIT_LANTERN manage to get a flame going
+     matchre REFUEL_IT But the flames fail to catch hold and they sputter out immediately\.
+     put light lantern with my flint
+     matchwait 5
+     goto LANTERN_LIGHT
+REFUEL_IT:
+     if (%TriedOil = 1) then
+          {
+               gosub echo NO LAMP OIL FOR LANTERN!
+               gosub echo RESTOCK ON LAMP OIL
+               gosub stowing
+               goto TORCH_YES
+          }
+     pause 0.1
+     gosub stowing
+     pause 0.0001
+     put GET lantern
+     pause 0.5
+     put GET lamp oil
+     pause 0.0001
+     pause 0.8
+     put pour oil in lantern
+     pause 0.5
+     pause 0.0001
+     var TriedOil 1
+     gosub STOWIT oil
+     goto LANTERN_DROP
+LIT_LANTERN:
+     pause 0.0001
+     gosub echo LANTERN LIT!
+     pause 0.0001
+     pause 0.0001
+     gosub stowing
+     put GET lantern
+     pause 0.0001
+     put wear lantern
+     pause 0.2
+     pause 0.0001
+     gosub DARK_DOUBLECHECK
+     if (%darkroom = 0) then goto YES_DARKVISION
+###############
+TORCH_YES:
+     # if ((%HaveLighter = 0) && (%HaveFlint = 0)) then goto NO_DARKVISION
+     # if (%HaveTorch = 0) then goto NO_DARKVISION
+     gosub stowing
+     gosub echo ATTEMPTING LAST RESORT FOR DARK CHECK - TORCH / FLINT
+     pause 0.1
+     pause 0.0001
+     put GET my torch
+     pause 0.7
+     pause 0.2
+     if !matchre("$righthand $lefthand", "(?i)torch") then goto NO_DARKVISION
+     # if (%HaveLighter = 1) then
+          # {
+               # put GET my %Lighter.Name
+               # pause 0.1
+               # pause 0.0001
+               # if !matchre("$righthand", "(?i)%Lighter.Name") then
+                    # {
+                         # echo * LIGHTER NOT FOUND! - TURNING LIGHTER OFF
+                         # var HaveLighter 0
+                         # goto TORCH_YES_FLINT
+                    # }
+               # PUT point %Lighter.Name at torch
+               # pause 0.0001
+               # pause 0.0001
+               # gosub stowing
+               # gosub DARK_DOUBLECHECK
+               # if (%darkroom = 0) then goto YES_DARKVISION
+          # }
+TORCH_YES_FLINT:
+     #if (%HaveFlint = 0) then goto NO_DARKVISION
+     pause 0.0001
+     if !matchre("$righthand $lefthand", "(?i)torch") then put GET my torch
+     pause 0.2
+     pause 0.0001
+     put drop my torch
+     pause 0.2
+     pause 0.0001
+     put GET my flint
+     pause 0.7
+     put GET my knife
+     pause 0.7
+     pause 0.1
+     pause 0.1
+     if (!matchre("$righthand $lefthand", "flint") && !matchre("$righthand $lefthand", "knife")) then
+          {
+               gosub echo FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
+               put #echo >Log #FF3E00 * FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
+               put STOW torch
+               pause 0.5
+               gosub stowing
+               goto NO_DARKVISION
+          }
+     pause 0.0001
+     PUT light torch with my flint
+     pause 0.5
+     pause 0.0001
+     gosub stowing
+     put GET torch
+     pause 0.5
+     gosub DARK_DOUBLECHECK
+     if (%darkroom = 0) then goto YES_DARKVISION
+     goto NO_DARKVISION
+
+YES_DARKVISION:
+     gosub echo DARKVISION HAS BEEN ACTIVATED!
+     var darkroom 0
+     put look
+     delay 0.0001
+     gosub stowing
+     gosub RETREAT
+     action (mapper) on
+     return
+NO_DARKVISION:
+     gosub echo NO DARK VISION SKILL / ITEM FOUND! STUCK IN THE DARK! Escape Manually!
+     gosub echo GET YOURSELF A TORCH AND FLINT AT THE LEAST!
+     put #echo >Log Red ** NO DARKVISION/TORCH/LIGHTER FOUND!
+     put #echo >Log Red ** CONSIDER ~NOT~ HUNTING IN DARK AREAS
+     var darkroom 1
+     pause 0.0001
+     gosub stowing
+     action (mapper) on
+     return
+
+DARK_DOUBLECHECK:
+     delay 0.0001
+     matchre DARK_DOUBLECHECK \s*\.\.\.wait|^Sorry,|^Please wait\.|^You are still stunned
+     matchre DARK_NOPE pitch dark
+     matchre LIGHT_ROOM Obvious|I|What|You
+     put look
+     matchwait 5
+     return
+DARK_NOPE:
+     var darkroom 1
+     var darkTime $gametime
+     return
+LIGHT_ROOM:
+     var darkroom 0
+     var darkTime $gametime
+     return
