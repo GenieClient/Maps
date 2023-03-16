@@ -313,11 +313,10 @@ if matchre("%1", "help|HELP|Help|^$") then {
   put #echo %helpecho <<      1: collect rocks on the ice road when lacking skates        >>
   put #echo %helpecho <<      0: just wait 15 seconds with no RT instead                  >>
   put #echo %helpecho <<      #var automapper.iceroadcollect 1                            >>
-  put #echo %helpecho <<	Cyclic Spells
-														   >>
-  put #echo %helpecho <<	  1: Turn off cyclic spells before moving		>>
-  put #echo %helpecho <<	  0: Leave cyclic spells running while moving		>>
-  put #echo %helpecho <<	  #var automapper.cyclic 1		>>
+  put #echo %helpecho <<	Cyclic Spells                                                   >>
+  put #echo %helpecho <<	  1: Turn off cyclic spells before moving                       >>
+  put #echo %helpecho <<	  0: Leave cyclic spells running while moving                   >>
+  put #echo %helpecho <<	  #var automapper.cyclic 1                                      >>
   put #echo %helpecho <<    Color                                                         >>
   put #echo %helpecho <<      What should the default automapper echo color be?           >>
   put #echo %helpecho <<      #var automapper.color #33CC99                               >>
