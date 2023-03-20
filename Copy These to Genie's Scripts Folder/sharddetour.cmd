@@ -1,7 +1,8 @@
 #### DETOUR SCRIPT FOR NAVIGATING SHARD WHEN YOU CAN'T GO THROUGH THE GATE AT NIGHT (Non-Citizens)
 ### Added Athletics Check to climb over West Gate wall from Map 69 
-debug 5
-debug 10
+# debug 5 is for outlander; genie debuglevel 10
+# debuglevel 10
+# debug 5
 
 locationcheck:
   put #script pause all except %scriptname

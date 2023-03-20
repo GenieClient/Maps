@@ -3,7 +3,7 @@ var autoversion 8.2023-03-12
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
-#debug 5
+# debug 5
 
 #2023-03-12
 # Shroom
@@ -16,11 +16,6 @@ var autoversion 8.2023-03-12
 #2023-03-06
 # Nazaruss
 #	Added cyclic variable to toggle turning off cyclics before moving
-
-#2023-02-24
-# Hanryu
-#   working to address Shard gate error messages that go to the whole rooom
-#   adding $citizen global based on title affiliation list
 
 #2023-02-24
 # Hanryu
@@ -684,7 +679,6 @@ MOVE.KNOCK:
   action (mapper) off
   if ($roundtime > 0) then pause %command_pause
   if (%depth > 1) then waiteval (1 = %depth)
-  if !matchre("$citizen", "Ilithi|Fayrin's Rest|Shard|Steelclaw Clan|Zaldi Taipa") then goto SHARD.FAILED
   if !matchre("$citizenship", "Ilithi|Fayrin's Rest|Shard|Steelclaw Clan|Zaldi Taipa") then goto SHARD.FAILED
   var movement knock gate
   matchre MOVE.KNOCK ^\.\.\.wait|^Sorry,|^You are still stun|^You can't do that while entangled
