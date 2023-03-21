@@ -1,5 +1,5 @@
 # automapper.cmd
-var autoversion 8.2023-03-12
+var autoversion 8.2023-03-20
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
@@ -501,10 +501,6 @@ MAIN.LOOP.CLEAR:
 
 #### JON's MAIN LOOP ####
 MAIN.LOOP:
-  # SHROOM - LIGHT SOURCE CHECK - (Needs fine tuning) - CHECKS FOR DARK VISION/ LIGHT ITEM WHEN IN ROOMID = 0 AND DARK ROOM 
-  # ACTIVATES LIGHT SOURCE FINE WHEN IN A DARK ROOM BUT SEEMS TO LOSE THE PATH AFTER ACTIVATING? NOT SURE HOW TO FIX 
-  if ((($roomid = 0) && matchre("$roomobjs $roomdesc","(pitch black|pitch dark)") && (%darkchecked = 0)) || ((%darkroom = 1) && (%darkchecked = 0))) then gosub LIGHT_SOURCE
-  # END LIGHT SOURCE CHECK
   if_1 goto WAVE_DO
   goto DONE
 WAVE_DO:
@@ -1061,6 +1057,8 @@ MOVE.FAILED:
 MOVE.RETRY:
   gosub echo Retry movement %1
   if (%TryGoInsteadOfClimb) then eval movement replacere("%movement", "climb ", "go ")
+  # SHROOM - LIGHT SOURCE CHECK - (MAY Need fine tuning) - CHECKS FOR DARK VISION/ LIGHT ITEM WHEN IN ROOMID = 0 AND DARK ROOM 
+  if ((($roomid = 0) && matchre("$roomobjs $roomdesc","(pitch black|pitch dark)") && (%darkchecked = 0)) || ((%darkroom = 1) && (%darkchecked = 0))) then gosub LIGHT_SOURCE
   if ($webbed) then
     {
     if (%verbose) then gosub echo WEBBED - pausing
@@ -1943,6 +1941,7 @@ LIGHT_SOURCE:
                gosub DARK_DOUBLECHECK
                if (%darkroom = 0) then goto YES_DARKVISION
           }
+LIGHT_SOURCE_2:
      if (("$guild" = "Moon Mage") && ($circle > 20)) then
           {
                if ($Utility.Ranks < 120) then var PREP 5
