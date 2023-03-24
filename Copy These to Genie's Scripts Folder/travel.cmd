@@ -7,9 +7,9 @@ put #class rp on
 # Script to Travel for Genie3 #
 # Originally written by Chris/Achilles
 # Revitalized and Robustified by Shroom 
-var version 4.7
+var version 4.8
 # REQUIRES EXPTRACKER PLUGIN
-# Updated: 2/22/23
+# Updated: 3/24/23
 
 # USAGE - .travel <location> <room number(optional)>  
 # .travel shard 40 - Travel to Shard then move to room 40
@@ -4736,11 +4736,11 @@ ZAULFUNG_ESCAPE_2:
      echo ** ESCAPING FROM SWAMP TROLLS
      echo ======================
      if !$standing then put stand
-     gosub TRUE_RANDOM_2
+     gosub TRUE_RANDOM
      if ($up) then gosub MOVE up
      pause 0.1
      if ($roomid != 0) then return
-     gosub TRUE_RANDOM_2
+     gosub TRUE_RANDOM
      if ($up) then gosub MOVE up
      pause 0.1
      if ($roomid != 0) then return
@@ -4753,11 +4753,11 @@ ZAULFUNG_ESCAPE_3:
      echo ** ESCAPING FROM SWAMP TROLLS
      echo ======================
      if !$standing then put stand
-     gosub TRUE_RANDOM_2
+     gosub TRUE_RANDOM
      if ($up) then gosub MOVE up
      pause 0.1
      if ($roomid != 0) then return
-     gosub TRUE_RANDOM_2
+     gosub TRUE_RANDOM
      if ($up) then gosub MOVE up
      pause 0.1
      if ($roomid != 0) then return
@@ -4810,29 +4810,29 @@ DEADMAN_ESCAPE:
      echo ===================
      pause 0.3
      if matchre("$roomdesc", "A cliff wall rises out of sight") then goto DEADMAN_ESCAPE_2
-     gosub TRUE_RANDOM_2
+     gosub TRUE_RANDOM
      if matchre("$roomdesc", "A cliff wall rises out of sight") then goto DEADMAN_ESCAPE_2
-     gosub TRUE_RANDOM_2
+     gosub TRUE_RANDOM
      if matchre("$roomdesc", "A cliff wall rises out of sight") then goto DEADMAN_ESCAPE_2
-     gosub TRUE_RANDOM_2
+     gosub TRUE_RANDOM
      if matchre("$roomdesc", "A cliff wall rises out of sight") then goto DEADMAN_ESCAPE_2
-     gosub TRUE_RANDOM_2
+     gosub TRUE_RANDOM
      if matchre("$roomdesc", "A cliff wall rises out of sight") then goto DEADMAN_ESCAPE_2
-     gosub TRUE_RANDOM_2
+     gosub TRUE_RANDOM
      if matchre("$roomdesc", "A cliff wall rises out of sight") then goto DEADMAN_ESCAPE_2
-     gosub TRUE_RANDOM_2
+     gosub TRUE_RANDOM
      if matchre("$roomdesc", "A cliff wall rises out of sight") then goto DEADMAN_ESCAPE_2
-     gosub TRUE_RANDOM_2
+     gosub TRUE_RANDOM
      if matchre("$roomdesc", "A cliff wall rises out of sight") then goto DEADMAN_ESCAPE_2
-     gosub TRUE_RANDOM_2
+     gosub TRUE_RANDOM
      if matchre("$roomdesc", "A cliff wall rises out of sight") then goto DEADMAN_ESCAPE_2
-     gosub TRUE_RANDOM_2
+     gosub TRUE_RANDOM
      if matchre("$roomdesc", "A cliff wall rises out of sight") then goto DEADMAN_ESCAPE_2
-     gosub TRUE_RANDOM_2
+     gosub TRUE_RANDOM
      if matchre("$roomdesc", "A cliff wall rises out of sight") then goto DEADMAN_ESCAPE_2
-     gosub TRUE_RANDOM_2
+     gosub TRUE_RANDOM
      if matchre("$roomdesc", "A cliff wall rises out of sight") then goto DEADMAN_ESCAPE_2
-     gosub TRUE_RANDOM_2
+     gosub TRUE_RANDOM
      goto DEADMAN_ESCAPE
 DEADMAN_ESCAPE_2:
      gosub RETREAT
@@ -4845,9 +4845,9 @@ DEADMAN_ESCAPE_2:
      pause 0.2
      if matchre("$roomname", "Deadman's Confide, Beach") then
           {
-               gosub TRUE_RANDOM_2
+               gosub TRUE_RANDOM
                pause 0.1
-               gosub TRUE_RANDOM_2
+               gosub TRUE_RANDOM
                pause 0.1
                goto DEADMAN_ESCAPE
           }
@@ -5593,7 +5593,6 @@ USHNISH_GO_ZONE3:
 #####################################################################################################
 #####################################################################################################
 LIGHT_SOURCE:
-LIGHT_SOURCE:
      delay 0.0001
      echo
      echo ~~~~~~~~~~~~~~~~
@@ -6192,76 +6191,6 @@ TRUE_RANDOM:
      if (matchre("$roomobjs $roomdesc","\blava field\b") && ("%lastmoved" != "go lava field")) then gosub MOVE go lava field
      if (%moved = 0) then goto TRUE_RANDOM
      return
-RANDOMWEIGHT:
-     var weight $1
-     var randomweight
-     if $%weight then var randomweight %randomweight|%weight
-     if $north%weight then var randomweight %randomweight|north%weight
-     if $south%weight then var randomweight %randomweight|south%weight
-     eval randomweightcount count("%randomweight", "|")
-RANDOMWEIGHT_2:
-     if ("%randomweight" = "") then return
-     random 1 %randomweightcount
-     gosub MOVE %randomweight(%r)
-     return
-RANDOMNORTH:
-     if (($north) && ("%lastmoved" != "south")) then
-          {
-               gosub MOVE north
-               goto RANDOMSOUTH_RETURN
-          }
-     if (($northeast) && ("%lastmoved" != "southwest")) then
-          {
-               gosub MOVE northeast
-               goto RANDOMSOUTH_RETURN
-          }
-     if (($northwest) && ("%lastmoved" != "southeast")) then
-          {
-               gosub MOVE northwest
-               return
-          }
-     if (($west) && ("%lastmoved" != "east")) then
-          {
-               gosub MOVE west
-               goto RANDOMSOUTH_RETURN
-          }
-     if (($east) && ("%lastmoved" != "west")) then
-          {
-               gosub MOVE east
-               goto RANDOMSOUTH_RETURN
-          }
-     var lastmoved null
-     return
-RANDOMSOUTH:
-     if (($south) && ("%lastmoved" != "north")) then
-          {
-               gosub MOVE south
-               goto RANDOMSOUTH_RETURN
-          }
-     if (($southeast) && ("%lastmoved" != "northwest")) then
-          {
-               gosub MOVE southeast
-               goto RANDOMSOUTH_RETURN
-          }
-     if (($southwest) && ("%lastmoved" != "northeast")) then
-          {
-               gosub MOVE southwest
-               goto RANDOMSOUTH_RETURN
-          }
-     if (($east) && ("%lastmoved" != "west")) then
-          {
-               gosub MOVE east
-               goto RANDOMSOUTH_RETURN
-          }
-     if (($west) && ("%lastmoved" != "east")) then
-          {
-               gosub MOVE west
-               goto RANDOMSOUTH_RETURN
-          }
-     var lastmoved null
-RANDOMSOUTH_RETURN:
-     return
-
 
 RANDOMWEIGHT:
      var weight $1
