@@ -1,9 +1,13 @@
 # automapper.cmd
-var autoversion 8.2023-03-20
+var autoversion 8.2023-04-11
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
+
+#2023-04-11
+# Hanryu
+#   change to mistwood forest handling, if you end up in room 9 will move you to room 8 since that's where mapper wants to put you
 
 #2023-03-12
 # Shroom
@@ -1361,9 +1365,11 @@ MISTWOOD.CLIFF:
   waitforre %move_OK
   put %Dir
   waitforre %move_OK
-  if matchre("$roomexits", "\b(?:northwest)\b") then put nw
-  else put n
-  waitforre %move_OK
+  pause $automapper.pause
+  if matchre("$roomexits", "\bnorthwest\b") then {
+    put northwest
+    waitforre %move_OK
+  }
   goto MOVE.SCRIPT.DONE
 
 SANDSPIT.TAVERN:
