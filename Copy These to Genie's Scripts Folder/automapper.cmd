@@ -1449,12 +1449,14 @@ FIND.SKATES.PORTAL:
   gosub LOOK.PORTAL
 
 CHECK.FOOTWEAR:
-  action (skates) var footwear $1 when ^\s\s.*(skates|boots?|shoes?|moccasins?|sandals?|slippers?|mules|workboots?|footwraps?|footwear|spats?|chopines?|nauda|booties|clogs|buskins?|cothurnes?|galoshes|half-boots?|ankle-boots?|gutalles?|hessians?|brogans?|toe\s?-?rings?|toe\s?-?bells?|loafers?|pumps?)
+#waiting for a fix for outlander then we can re-anchor this and remove the action off
+  action (skates2) var footwear $1 when (skates|boots?|shoes?|moccasins?|sandals?|slippers?|mules|workboots?|footwraps?|footwear|spats?|chopines?|nauda|booties|clogs|buskins?|cothurnes?|galoshes|half-boots?|ankle-boots?|gutalles?|hessians?|brogans?|toe\s?-?rings?|toe\s?-?bells?|loafers?|pumps?)
   action (skates) var footwear 0 when ^You aren't wearing anything like that
   var footwear unknown
   var action inv feet
   var success ^You aren't wearing anything like that|^All of your items worn on the feet
   gosub ACTION
+  action (skates2) off
   if ("%footwear" = "skates") then return
   if (!%skate.container) then goto SKATE.NO
   if ("%footwear" = "unknown") then
@@ -1463,8 +1465,8 @@ CHECK.FOOTWEAR:
     goto SKATE.NO
     }
   if (%verbose) then gosub echo Ice skates found!
-  if ((!%footwear) && ("%skate.container" = "held")) then goto WEAR.SKATES
-  if (!%footwear) then goto GET.SKATES
+  if ((%footwear = 0) && ("%skate.container" = "held")) then goto WEAR.SKATES
+  if (%footwear = 0) then goto GET.SKATES
 
 REMOVE.FOOTWEAR:
   var action remove my %footwear
