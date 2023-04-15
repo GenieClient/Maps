@@ -1529,7 +1529,7 @@ FIND.CLOAK:
 
 TAP.CLOAK:
   eval cloak_noun element ("%cloaknouns", "%cloakloop")
-  if (!%cloak_noun) then return
+  if (%cloak_noun = 0) then return
   var action tap my %cloak_noun
   var success ^You tap|^I could not find
   gosub ACTION
