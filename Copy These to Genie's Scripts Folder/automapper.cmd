@@ -609,7 +609,7 @@ DO.MOVE:
 MOVE.ROOM:
   if (%depth > 1) then waiteval (1 = %depth)
   put %movement
-  nextroom
+  if (%depth > 0) then waiteval (0 = %depth)
   goto MOVE.DONE
 
 MOVE.STOW:
@@ -642,7 +642,7 @@ MOVE.ICE:
       if (%slow_on_ice) then gosub ICE.COLLECT
     }
   put %movement
-  nextroom
+  if (%depth > 0) then waiteval (0 = %depth)
   goto MOVE.DONE
 
 SKATE.NO:
