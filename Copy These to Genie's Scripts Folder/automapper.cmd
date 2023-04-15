@@ -5,6 +5,13 @@ var autoversion 8.2023-04-11
 # debuglevel 10
 # debug 5
 
+#2023-04-15
+# Hanryu
+#   goal was to address hangups on map 123; nextroom was used in ice rooms
+#   Swapped "nextroom" for depth decay because of a genie inconsistancy that Jon found
+#   "checked" var to "skatechecked" for clarity
+#    finding instances of negated vars that might not be booleans and changing them
+
 #2023-04-11
 # Hanryu
 #   change to mistwood forest handling, if you end up in room 9 will move you to room 8 since that's where mapper wants to put you
@@ -425,7 +432,7 @@ ABSOLUTE.TOP:
     {
     if !matchre("$righthand|$lefthand", "\bmap\b") then gosub GET.MAP
     }
-  var checked 0
+  var skatechecked 0
   var slow_on_ice 0
   var wearing_skates 0
   var skate.container 0
@@ -638,7 +645,7 @@ MOVE.ICE:
     {
       action (skates) on
       if (%depth > 1) then waiteval (1 = %depth)
-      if (!%checked) then gosub FIND.SKATES
+      if (!%skatechecked) then gosub FIND.SKATES
       if (%slow_on_ice) then gosub ICE.COLLECT
     }
   put %movement
@@ -1433,7 +1440,7 @@ GET.MAP:
   goto ACTION
 
 FIND.SKATES:
-  var checked 1
+  var skatechecked 1
   if (%verbose) then gosub echo Checking for ice skates!
   action (skates) var skate.container $1 when ^You tap .*\bskates\b.*inside your (.*)\.$
   action (skates) var skate.container portal when ^In the .* eddy you see.* \bskates\b
@@ -1443,7 +1450,7 @@ FIND.SKATES:
   var success ^You tap|^I could not|^What were you
   gosub ACTION
   if (%wearing_skates) then return
-  if ("%skate.container" != "0") then goto CHECK.FOOTWEAR
+  if (%skate.container != 0) then goto CHECK.FOOTWEAR
 
 FIND.SKATES.PORTAL:
   gosub LOOK.PORTAL
@@ -1458,7 +1465,7 @@ CHECK.FOOTWEAR:
   gosub ACTION
   action (skates2) off
   if ("%footwear" = "skates") then return
-  if (!%skate.container) then goto SKATE.NO
+  if (%skate.container = 0) then goto SKATE.NO
   if ("%footwear" = "unknown") then
     {
     if (%verbose) then gosub echo ERROR: Unknown noun for your footwear!
@@ -1496,7 +1503,7 @@ REMOVE.SKATES:
   gosub ACTION
 
 STOW.SKATES:
-  if (!"%skate.container") then var action stow my skates
+  if (%skate.container = 0) then var action stow my skates
   else var action put my skates in my %skate.container
   var success ^You put
   gosub ACTION
