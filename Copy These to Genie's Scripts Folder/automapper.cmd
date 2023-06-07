@@ -579,7 +579,6 @@ MOVE:
           }
         if matchre("%movement", "^(objsearch) (\S+) (.+)") then
           {
-debug 5
           var type objsearch
           var searchObj $2
           var movement $3
