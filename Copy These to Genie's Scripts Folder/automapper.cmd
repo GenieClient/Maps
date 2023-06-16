@@ -294,14 +294,11 @@ if matchre("%1", "help|HELP|Help|^$") then {
   put #echo %helpecho <<  Use the command line to set the following preferences:          >>
   put #echo %helpecho <<    Typeahead                                                     >>
   put #echo %helpecho <<      Standard Account = 1, Premium Account = 2, LTB Premium = 3  >>
+  put #echo %helpecho <<      0: wait for correct confirmation of sent commands           >>
   put #echo %helpecho <<      #var automapper.typeahead 1                                 >>
   put #echo %helpecho <<    Pause                                                         >>
   put #echo %helpecho <<      Time to pause before sending a "put x" command              >>
   put #echo %helpecho <<      #var automapper.pause 0.01                                  >>
-  put #echo %helpecho <<    Confirmation                                                  >>
-  put #echo %helpecho <<      1: wait for correct confirmation of sent commands           >>
-  put #echo %helpecho <<      0: don't wait                                               >>
-  put #echo %helpecho <<      #var automapper.confirmation 1                              >>
   put #echo %helpecho <<    Infinite Loop Protection                                      >>
   put #echo %helpecho <<      Increase if you get infinte loop errors                     >>
   put #echo %helpecho <<      #var automapper.loop 0.001                                  >>
@@ -369,17 +366,15 @@ ABSOLUTE.TOP:
 # Type ahead declaration
 # The following will use a global to set it by character.  This helps when you have both premium and standard accounts.
 # Standard Account = 1, Premium Account = 2, LTB Premium = 3
+# 0: wait for correct confirmation of sent commands
 # automapper.typeahead FIX - Some users had a rogue variable set for automapper.typeahead
 # This sets automapper.typeahead to 1 if the variable is NOT present at all
 # This will auto reset it back to 1 IF the automapper.typeahead is ~NOT~ set to a number
-  if ((!def(automapper.typeahead)) || (!matchre("$automapper.typeahead", "^[1-5]$"))) then put #var automapper.typeahead 1
+  if ((!def(automapper.typeahead)) || (!matchre("$automapper.typeahead", "^\d$"))) then put #var automapper.typeahead 1
   var typeahead.max $automapper.typeahead
-# Time to pause before sending a "put x" command
+  # Time to pause before sending a "put x" command
   if !def(automapper.pause) then var command_pause 0.01
   else var command_pause $automapper.pause
-# 1: wait for correct confirmation of sent commands; 0: don't wait
-  if !def(automapper.confirmation) then var waitfor_action 1
-  else var waitfor_action $automapper.confirmation
 # echo next move? 1 = YES, 0 = NO
   if !def(automapper.verbose) then var verbose 1
   else var verbose $automapper.verbose
@@ -609,7 +604,7 @@ DO.MOVE:
 MOVE.ROOM:
   if (%depth > 1) then waiteval (1 = %depth)
   put %movement
-  nextroom
+  if (%depth > 0) then waiteval (0 = %depth)
   goto MOVE.DONE
 
 MOVE.STOW:
@@ -642,7 +637,7 @@ MOVE.ICE:
       if (%slow_on_ice) then gosub ICE.COLLECT
     }
   put %movement
-  nextroom
+  if (%depth > 0) then waiteval (0 = %depth)
   goto MOVE.DONE
 
 SKATE.NO:
@@ -1079,7 +1074,7 @@ MOVE.RETRY:
     if ($stunned) then waiteval (!$stunned)
     goto MOVE.RETRY
     }
-  if (%waitfor_action) then
+  if (%typeahead.max = 0) then
     {
     pause 0.001
     put fatigue
@@ -1734,7 +1729,7 @@ ACTION.MAPPER.ON:
   put %action
   matchwait 2
   if (%actionloop > 2) then goto ACTION.FAIL
-  if (%waitfor_action) then goto ACTION.MAPPER.ON
+  if (%typeahead.max = 0) then goto ACTION.MAPPER.ON
   else goto ACTION.RETURN
 
 ACTION.FAIL:
