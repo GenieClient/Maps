@@ -1,9 +1,13 @@
 # automapper.cmd
-var autoversion 8.2023-04-11
+var autoversion 8.2023-06-17
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
+
+#2023-06-17
+# Jon
+#   changed confirmation wait variable to typeahead 0
 
 #2023-04-15
 # Hanryu
