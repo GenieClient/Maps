@@ -7,9 +7,9 @@ put #class rp on
 # Script to Travel for Genie3 #
 # Originally written by Chris/Achilles
 # Revitalized and Robustified by Shroom 
-var version 4.8
+var version 5.0
 # REQUIRES EXPTRACKER PLUGIN
-# Updated: 3/24/23
+# Updated: 6/16/23
 
 # USAGE - .travel <location> <room number(optional)>  
 # .travel shard 40 - Travel to Shard then move to room 40
@@ -105,7 +105,9 @@ if ("$charactername") = ("$char10") then var shardcitizen no
 ####
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
-# CHANGELOG - Latest Update: 2/22/23
+# CHANGELOG - Latest Update: 6/14/23
+#
+# - Fixed travel issue from Shard to Stone Clan 
 #
 # - Fixed issue in taking Thief tunnels into Shard
 # - Speedups in different parts of script
@@ -307,6 +309,8 @@ echo
 echo *** LET'S GO!!
 #DESTINATION
 #### SPECIAL ESCAPE SECTION FOR MAZES/HARD TO ESCAPE AREAS BY SHROOM
+#### THIS CHECKS IF WE ARE STARTING FROM A KNOWN MAZE / MESSED UP AREA THAT AUTOMAPPER GETS LOST IN 
+#### THEN USES SPECIAL ESCAPE LOGIC TO GET TO A KNOWN LOCATION THAT AUTOMAPPER CAN USE
 if matchre("$roomname","The Raven's Court") then gosub AUTOMOVE 74
 if (("$zoneid" = "47") && ($Athletics.Ranks >= %muspari.shortcut) && !matchre("%destination", "\b(musp?a?r?i?)")) then gosub VELAKA_SHORTCUT
 if matchre("$roomname", "(Velaka, Slot Canyon|Yeehar's Graveyard|Heru Taipa)") then gosub AUTOMOVE 66
@@ -339,6 +343,7 @@ if matchre("$roomname", "Velaka, Dunes") then gosub VELAKADUNES_ESCAPE
 ###################################################################################
 if matchre("$roomname", "Aboard the Mammoth") then gosub FERRYLOGIC
 if matchre("$roomname", "Gondola") then gosub FERRYLOGIC
+if matchre("$roomname", "\[\"Her Opulence\"\]|\[\"Hodierna's Grace\"\]|\[\"Kertigen's Honor\"\]|\[\"His Daring Exploit\"\]|\[\"Northern Pride\", Main Deck\]|\[\"Theren's Star\", Deck\]|\[The Evening Star\]|\[The Damaris\' Kiss\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[\"The Desert Wind\"\]|\[\"The Suncatcher\"\]|\[\"The Riverhawk\"\]|\[\"Imperial Glory\"\]\"Hodierna's Grace\"|\"Her Opulence\"\]|\[The Galley Cercorim\]|\[The Jolas, Fore Deck\]|\[Aboard the Warship, Gondola\]|\[The Halasa Selhin, Main Deck\]|\[Aboard the Mammoth, Platform\]") then gosub FERRYLOGIC
 if (("$zoneid" = "0") || ("$roomid" = "0")) then
      {
           echo ### Unknown map or room id - Attempting to move in random direction to recover
@@ -354,6 +359,12 @@ if ("$zoneid" = "2d") then gosub AUTOMOVE temple
 if ("$zoneid" = "1j") then gosub AUTOMOVE cross
 if ("$zoneid" = "1l") then gosub AUTOMOVE cross
 if ("$zoneid" = "2a") then gosub AUTOMOVE cross
+#### IF IN FOREST GRYPHONS - TAKE THE EASIEST PATH OUT *Avoids Automapper getting stuck on a hard climb
+     if (("$zoneid" = "34") && ($roomid > 89) && ($roomid < 116)) then
+          {
+               gosub AUTOMOVE 90
+               gosub AUTOMOVE 49
+          }
 if (matchre("%destination", "\b(ratha|hara?j?a?a?l?|tais?g?a?t?h?)") && matchre("$zoneid", "\b(1|30|42|47|61|66|67|90|99|107|108|116)\b")) then
      {
           if (matchre("$game", "(?i)DRX") && (%portal = 1)) then
@@ -961,7 +972,7 @@ if (("$zoneid" = "61") && matchre("%detour", "(leth|acen|taipa|LETH|ACEN|ratha|f
           goto ARRIVED
      }
 if ("$zoneid" = "61") then gosub AUTOMOVE 115
-if ("$zoneid" = "50") && matchre("%destination", "\b(knife?|wolf?|tige?r?|dirg?e?|arth?e?|kaer?n?a?|rive?r?|have?n?|ther?e?n?|lang?|raka?s?h?|musp?a?r?i?|zaul?f?u?n?g?|cross?i?n?g?)") && ($Athletics.Ranks > %segoltha) then gosub SEGOLTHA_NORTH
+if ("$zoneid" = "50") && matchre("%destination", "\b(haizen|yeehar|oasis|hvaral|forns?t?e?d?|elbain|el'bain|alfren|rossm?a?n?|viper|leucro?|misens|beiss|sorrow|ushnish|caravan?s?a?r?y?|dokt|west|stone|knife|wolf|tiger|dirge|arthe|kaerna?|river|haven|riverhaven|theren|lang|throne|zaulfu?n?|rakash|muspar?i?|zaulfung|cross?|crossing)") && ($Athletics.Ranks > %segoltha) then gosub SEGOLTHA_NORTH
 if ("$zoneid" = "50") then gosub SEGOLTHA_SOUTH
 if (("$zoneid" = "60") && ("%detour" = "alfren")) then
           {
@@ -981,7 +992,11 @@ if (("$zoneid" = "60") && ("$guild" = "Thief")) then
                   }
           }
 if (("$zoneid" = "60") && ($Athletics.Ranks >= %segoltha)) then gosub AUTOMOVE 108
-if ("$zoneid" = "50") && matchre("%destination", "\b(knife|wolf|tiger|dirge|arthe|kaerna|haven|theren|lang|rakash|muspari|zaulfung|cross|crossing)") && ($Athletics.Ranks > %segoltha) then gosub SEGOLTHA_NORTH
+# Crossing | Arthe Dale | West Gate | Tiger Clan | Wolf Clan | Dokt | Knife Clan | Kaerna
+# Stone Clan | Caravansary | Dirge | Ushnish | Sorrow's | Beisswurms | Misenseor |Leucros 
+# Vipers | Malodorous Buccas | Alfren's Ferry | Leth Deriel  | Ilaya Taipa | Acenemacra
+# Riverhaven | Rossmans | Langenfirth | El'Bains | Zaulfun | Therenborough
+if ("$zoneid" = "50") && matchre("%destination", "\b(haizen|yeehar|oasis|hvaral|forns?t?e?d?|elbain|el'bain|alfren|rossm?a?n?|viper|leucro?|misens|beiss|sorrow|ushnish|caravan?s?a?r?y?|dokt|west|stone|knife|wolf|tiger|dirge|arthe|kaerna?|river|haven|riverhaven|theren|lang|throne|zaulfu?n?|rakash|muspar?i?|zaulfung|cross?|crossing)") && ($Athletics.Ranks > %segoltha) then gosub SEGOLTHA_NORTH
 if ("$zoneid" = "50") then gosub SEGOLTHA_SOUTH
 if (("$zoneid" = "60") && ($Athletics.Ranks < %segoltha)) then
           {
@@ -1367,7 +1382,7 @@ if ("$zoneid" = "1") then
               wait
               put #mapper reset
           }
-if ("$zoneid" = "50") && matchre("(knife|wolf|tiger|dirge|arthe|kaerna|haven|theren|lang|rakash|muspari|zaulfung|cross|crossing)", "%destination") && ($Athletics.Ranks > %segoltha) then gosub SEGOLTHA_NORTH
+if ("$zoneid" = "50") && matchre("(haizen|yeehar|oasis|hvaral|forns?t?e?d?|elbain|el'bain|alfren|rossm?a?n?|viper|leucro?|misens|beiss|sorrow|ushnish|caravan?s?a?r?y?|dokt|west|stone|knife|wolf|tiger|dirge|arthe|kaerna?|river|haven|riverhaven|theren|lang|throne|zaulfu?n?|rakash|muspar?i?|zaulfung|cross?|crossing)", "%destination") && ($Athletics.Ranks > %segoltha) then gosub SEGOLTHA_NORTH
 if ("$zoneid" = "50") then gosub SEGOLTHA_SOUTH
 if ("$zoneid" = "1a") then gosub AUTOMOVE 23
 if (("$zoneid" = "67") && matchre("alfren", "%detour")) then
@@ -6563,10 +6578,7 @@ CALMED:
 RETURN_CLEAR:
      delay 0.0001
      put #queue clear
-     pause 0.0001
-     pause 0.0001
      return
 RETURN:
      delay 0.0001
-     pause 0.001
      return
