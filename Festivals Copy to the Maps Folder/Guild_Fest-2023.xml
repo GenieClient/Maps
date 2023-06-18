@@ -1,0 +1,1852 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<zone name="Guildfest 445 (2023)" id="6438">
+  <node id="1" name="Fairegrounds Clearing">
+    <description>A clearing of deep green grass with well-manicured paths provides a perfect setting for a day at the faire.  Tents and wagons are visible in the meadowlands to the west, while an inviting deeply shaded vale lies to the east.</description>
+    <position x="490" y="500" z="0" />
+    <arc exit="north" move="north" destination="22" />
+    <arc exit="east" move="east" destination="19" />
+    <arc exit="west" move="west" destination="2" />
+    <arc exit="go" move="go bracken arch" destination="29" />
+    <arc exit="go" move="go wooden wagon" destination="230" />
+    <arc exit="go" move="go linked wagons" destination="231" />
+  </node>
+  <node id="2" name="Fairegrounds Meadow" color="#FF0000">
+    <description>The fragrance of freshly mown hay is prevalent as the deep green grass of the clearing gives way to the fields where the faire is set up and in full swing.</description>
+    <position x="270" y="500" z="0" />
+    <arc exit="east" move="east" destination="1" />
+    <arc exit="northwest" move="northwest" destination="3" />
+    <arc exit="go" move="go cake-shaped tent" destination="48" />
+    <arc exit="go" move="go umber tent" destination="159" />
+  </node>
+  <node id="3" name="Fairegrounds Meadow">
+    <description>The hay is flattened for a nice walking surface here, only slightly marred by the wagon tracks of several merchants.  Dew collected in the ruts left by the wagons allows small bathing spots for the occasional bird.</description>
+    <position x="170" y="400" z="0" />
+    <arc exit="northeast" move="northeast" destination="4" />
+    <arc exit="southeast" move="southeast" destination="2" />
+    <arc exit="go" move="go ticket gate" destination="30" />
+    <arc exit="go" move="go octagonal building" destination="49" />
+  </node>
+  <node id="4" name="Fairegrounds Meadow">
+    <description>The scent of hay is slightly dampened here, as it has been stamped down by the feet of the faire-goers.  A leaning fence festooned with ribbons and garlands provides an elegant boundary to the fields beyond.</description>
+    <position x="310" y="260" z="0" />
+    <arc exit="north" move="north" destination="11" />
+    <arc exit="east" move="east" destination="26" />
+    <arc exit="southwest" move="southwest" destination="3" />
+    <arc exit="west" move="west" destination="5" />
+    <arc exit="go" move="go brick shop" destination="57" />
+    <arc exit="go" move="go painted wagon" destination="156" />
+  </node>
+  <node id="5" name="Fairegrounds, West Field">
+    <description>Decorated with colorful pennants and flower garlands, a large branch arch welcomes faire-goers to the west field.  This expansive tract of land is relatively flat, making it easy for merchants to set up their traveling shops in ways that will lure people into purchasing their wares.</description>
+    <position x="210" y="260" z="0" />
+    <arc exit="east" move="east" destination="4" />
+    <arc exit="southwest" move="southwest" destination="6" />
+    <arc exit="go" move="go large pavilion" destination="127" />
+    <arc exit="go" move="go azure wagon" destination="158" />
+    <arc exit="go" move="go white wagon" destination="260" />
+  </node>
+  <node id="6" name="Fairegrounds, West Field">
+    <description>Waves of excited laughter drift over from the east, almost drowning out the mechanical drone of the Faeries' Wheel as it slowly rotates in place.  Periodically as the distant ride grinds to a stop, sounds of screeching metal are followed by nervous shrieks from people who are stuck in the top carriages swinging back and forth through the air.</description>
+    <position x="190" y="280" z="0" />
+    <arc exit="northeast" move="northeast" destination="5" />
+    <arc exit="west" move="west" destination="7" />
+    <arc exit="go" move="go black tent" destination="130" />
+    <arc exit="go" move="go run-down wagon" destination="133" />
+  </node>
+  <node id="7" name="Fairegrounds, West Field">
+    <description>Hay strewn paths dissect the broad field, encouraging faire-goers to travel in directions that take them past areas set up by visiting merchants as well as other festival points of interest.  Despite all the traffic, a small patch of pink lady's slipper orchids manages to thrive and scent the air with their sweet perfume.</description>
+    <position x="60" y="280" z="0" />
+    <arc exit="east" move="east" destination="6" />
+    <arc exit="southwest" move="southwest" destination="8" />
+    <arc exit="northwest" move="northwest" destination="10" />
+    <arc exit="go" move="go black tent" destination="139" />
+    <arc exit="go" move="go elegant shop" destination="209" />
+    <arc exit="go" move="go cedar wagon" destination="234" />
+  </node>
+  <node id="8" name="Fairegrounds, West Field">
+    <description>Along one side of the path, makeshift stalls stand ready, waiting to safely house the valuable animals of local farmers that will be competing for prizes in the nearby ring.  Across the way, merchants display their wares in an attempt to entice faire-goers into purchasing new treasures from them and away from spending time viewing the well-groomed beasts once they arrive.</description>
+    <position x="0" y="340" z="0" />
+    <arc exit="north" move="north" destination="10" />
+    <arc exit="northeast" move="northeast" destination="7" />
+    <arc exit="northwest" move="northwest" destination="9" />
+    <arc exit="go" move="go purple wagon" destination="149" />
+    <arc exit="go" move="go grey tent" hidden="True" destination="235" />
+  </node>
+  <node id="9" name="Fairegrounds, West Field">
+    <description>A split rail fence decorated with colored ribbons encircles the main exhibition ring, protecting the animals during shows from any over eager spectators and their excitable children.  In between competitions, workers rake pea gravel covering the ground, leveling it and cleaning up any stinky presents left by the beasts.  The shops of traveling merchants border the area's perimeter attempting to lure in people passing by.</description>
+    <position x="-60" y="280" z="0" />
+    <arc exit="northeast" move="northeast" destination="10" />
+    <arc exit="southeast" move="southeast" destination="8" />
+    <arc exit="go" move="go alpaca-felt yurt" destination="147" />
+    <arc exit="go" move="go colorful caravan" destination="182" />
+    <arc exit="go" move="go straw-thatch hut" destination="183" />
+    <arc exit="go" move="go canvas tent" destination="211" />
+    <arc exit="go" move="go oversized shrub" destination="214" />
+  </node>
+  <node id="10" name="Fairegrounds, West Field">
+    <description>Created by an underground spring, a small, tranquil pool feeds the brook that runs northerly through the fairegrounds.  Apparently collected from other areas on the property, large, flat rocks look purposely stacked to form a border around the water's edge, making it easier for travelers to water their animals or just grab a quick drink on a hot day.</description>
+    <position x="0" y="220" z="0" />
+    <arc exit="southeast" move="southeast" destination="7" />
+    <arc exit="south" move="south" destination="8" />
+    <arc exit="southwest" move="southwest" destination="9" />
+    <arc exit="go" move="go canvas tent" destination="140" />
+    <arc exit="go" move="go silverwood shack" destination="143" />
+  </node>
+  <node id="11" name="Fairegrounds Meadow" note="brook">
+    <description>Sounds of laughter drift across a brook from the northwest, enticing to even the most stoic of faire-goers.  Spanning the brook are several large stones that serve as a way to cross the running water easily.</description>
+    <position x="310" y="100" z="0" />
+    <arc exit="east" move="east" destination="12" />
+    <arc exit="south" move="south" destination="4" />
+    <arc exit="go" move="go brook" destination="27" />
+    <arc exit="go" move="go tattered tent" destination="124" />
+    <arc exit="go" move="go silvery tent" destination="125" />
+    <arc exit="go" move="go massive caravan" destination="154" />
+  </node>
+  <node id="12" name="Fairegrounds Clearing">
+    <description>A mown grass clearing merges into a scythed hayfield, providing a level surface for the merchant tents and games.  Grasshoppers flick through the cut stalks, dancing to the rhythm of a distant troupe of merry-makers.</description>
+    <position x="850" y="100" z="0" />
+    <arc exit="east" move="east" destination="13" />
+    <arc exit="south" move="south" destination="14" />
+    <arc exit="west" move="west" destination="11" />
+    <arc exit="go" move="go huge wagon" destination="117" />
+    <arc exit="go" move="go azure tent" destination="118" />
+    <arc exit="go" move="go velvet tent" destination="121" />
+  </node>
+  <node id="13" name="Fairegrounds, Ring Toss Game" note="Ring Toss Game" color="#00FF00">
+    <description>At one corner of the field, a stack of cloth-draped wooden boxes rests atop a sturdy table.  Tiers of glass bottles cover the surface, forming a pyramid.  The barker stands beside the display, juggling wooden rings as he calls out to passers-by, enticing them to try their luck at the ring-toss game.</description>
+    <position x="870" y="100" z="0" />
+    <arc exit="west" move="west" destination="12" />
+  </node>
+  <node id="14" name="Fairegrounds Clearing">
+    <description>A gentle upslope leads from a stream-side willow grove to a rolling meadowland.  The beaten-down grass is strewn with hay, improving traction on the slippery, slanted path.  A cacophony of voices and smells accompany the sound of crunching hay beneath the feet of the revelers.</description>
+    <position x="850" y="260" z="0" />
+    <arc exit="north" move="north" destination="12" />
+    <arc exit="east" move="east" destination="15" />
+    <arc exit="south" move="south" destination="17" />
+    <arc exit="west" move="west" destination="24" />
+    <arc exit="go" move="go crimson yurt" destination="113" />
+  </node>
+  <node id="15" name="Fairegrounds Clearing">
+    <description>Near the brook a small clearing opens to the sky.  The fragrance of damp clover and wild mint mingles with a cornucopia of faire smells drifting through the air.  Shrieks of delight, barking merchants, and the sounds of laughing children travel the distance from the hayfield and speak of some child's mischief or glee.</description>
+    <position x="910" y="260" z="0" />
+    <arc exit="northeast" move="northeast" destination="16" />
+    <arc exit="west" move="west" destination="14" />
+    <arc exit="go" move="go leather tent" destination="115" />
+    <arc exit="go" move="go wooden wagon" destination="242" />
+    <arc exit="go" move="go wrecked caravans" destination="197" />
+  </node>
+  <node id="16" name="Fairegrounds, Near Some Booths" note="Three Frog Monte" color="#00FF00">
+    <description>A series of hastily constructed wooden shacks lean at all angles, supported only by their proximity to each other.  Before them, a barker cries out to passers-by, trying to tempt them into playing his game.</description>
+    <position x="950" y="220" z="0" />
+    <arc exit="southwest" move="southwest" destination="15" />
+  </node>
+  <node id="17" name="A Shaded Willow Copse">
+    <description>A copse of willow trees in this grassy vale provides shelter from the weather for the weary traveler.  Bubbling over smoothly polished rocks, a brook creates a rhythmic rhapsody which harmonizes with the tranquil surroundings.  A boulder with a concave center looks like a nice place to sit alongside the brook.</description>
+    <position x="850" y="440" z="0" />
+    <arc exit="north" move="north" destination="14" />
+    <arc exit="east" move="east" destination="18" />
+    <arc exit="southwest" move="southwest" destination="19" />
+    <arc exit="west" move="west" destination="20" />
+    <arc exit="go" move="go hide tent" destination="95" />
+    <arc exit="go" move="go golden rotunda" destination="188" />
+    <arc exit="go" move="go ironwood wagon" destination="152" />
+  </node>
+  <node id="18" name="Muddy Streambank">
+    <description>A brook fairly bursting from its confines gurgles through the trees.  The banks have been churned into a muddy mess from the meandering faire-goers and from the children weaving around the makeshift gaming tables.  Paper lanterns hang from the branches of the willows just out of reach to provide a soft glow of lighting in the deep shadows.</description>
+    <position x="950" y="440" z="0" />
+    <arc exit="west" move="west" destination="17" />
+    <arc exit="go" move="go orange tent" destination="171" />
+    <arc exit="go" move="go tapestry tent" destination="177" />
+    <arc exit="go" move="go ramshackle booth" destination="179" />
+  </node>
+  <node id="19" name="Fairegrounds Path">
+    <description>The path slopes gently downward from the west toward a shady vale.  Willow trees cluster to shade the lower grounds, but one large specimen stands out alone at the border of the meadow, providing cool relief and quiet.</description>
+    <position x="790" y="500" z="0" />
+    <arc exit="northeast" move="northeast" destination="17" />
+    <arc exit="west" move="west" destination="1" />
+    <arc exit="go" move="go canvas tent" destination="99" />
+    <arc exit="go" move="go purple tent" destination="160" />
+    <arc exit="go" move="go makeshift structure" hidden="True" destination="187" />
+  </node>
+  <node id="20" name="Fairegrounds Clearing">
+    <description>An arrangement of intersecting furrows in the once lush sod seem to be working their way easterly towards a stand of graceful willows.  A babbling brook flowing near the large, arching trees keeps them well fed and growing at a steady rate.</description>
+    <position x="690" y="440" z="0" />
+    <arc exit="north" move="north" destination="24" />
+    <arc exit="east" move="east" destination="17" />
+    <arc exit="west" move="west" destination="21" />
+    <arc exit="go" move="go long caravan" destination="86" />
+    <arc exit="go" move="go colorful wagon" destination="92" />
+    <arc exit="go" move="go white pavilion" destination="94" />
+  </node>
+  <node id="21" name="Fairegrounds Clearing">
+    <description>The neatly manicured grass is showing signs of wear and tear from the occasional shoppers who happen to stroll by.  Increasing blotches of a brownish yellow hue give the once green sod an appearance similar to that of a threadbare carpet that needs to be replaced.</description>
+    <position x="600" y="440" z="0" />
+    <arc exit="east" move="east" destination="20" />
+    <arc exit="west" move="west" destination="22" />
+    <arc exit="go" move="go simple tent" destination="107" />
+    <arc exit="go" move="go driftwood wagon" destination="111" />
+  </node>
+  <node id="22" name="Fairegrounds Clearing">
+    <description>This area of the clearing is a bit off the beaten path providing some quiet apart from the clamor of the milling crowds to the south.  The faint sound of an auctioneer's voice floats on the breeze, chanting of treasures for sale and urging prices even higher.</description>
+    <position x="490" y="440" z="0" />
+    <arc exit="east" move="east" destination="21" />
+    <arc exit="south" move="south" destination="1" />
+    <arc exit="west" move="west" destination="23" />
+    <arc exit="go" move="go canvas pavilion" destination="38" />
+    <arc exit="go" move="go colorful wagon" />
+    <arc exit="go" move="go tarp-covered shop" destination="103" />
+  </node>
+  <node id="23" name="Fairegrounds Clearing">
+    <description>A series of sandalwood caravans, spangled and beribboned, occupies most of the clearing.  Sounds of a large crowd murmuring in awe drifts from inside.</description>
+    <position x="430" y="440" z="0" />
+    <arc exit="east" move="east" destination="22" />
+    <arc exit="go" move="go sandalwood caravans" destination="43" />
+    <arc exit="go" move="go grey tent" destination="185" />
+    <arc exit="go" move="go canvas tent " destination="184" />
+  </node>
+  <node id="24" name="Fairegrounds Clearing">
+    <description>Looking as if it once was attached to a roughly used farm wagon, a weathered buckboard bench now provides a quiet place where people can stop and take a break from the festival.  With faireground seating at a premium, some attendees seem anxious to look over the recent purchases they made while others just want to rest their tired feet.</description>
+    <position x="690" y="260" z="0" />
+    <arc exit="east" move="east" destination="14" />
+    <arc exit="south" move="south" destination="20" />
+    <arc exit="west" move="west" destination="25" />
+    <arc exit="go" move="go glowing portal" destination="76" />
+    <arc exit="go" move="go hide tent" destination="85" />
+    <arc exit="go" move="go brown tent" destination="233" />
+  </node>
+  <node id="25" name="Fairegrounds Clearing">
+    <description>Songbirds chirp their lilting melodies from secret spots hidden amongst the wagons and tents set up for the festival.  Occasionally darting out from the shadows, the tiny winged creatures swoop down to snatch a tasty morsel from the ground that was dropped by someone passing by.  After gobbling down their snack, they fly off to find another spot to safely resume singing for their supper.</description>
+    <position x="590" y="260" z="0" />
+    <arc exit="east" move="east" destination="24" />
+    <arc exit="west" move="west" destination="26" />
+    <arc exit="go" move="go oak caravan" destination="72" />
+    <arc exit="go" move="go stone hut" destination="74" />
+    <arc exit="go" move="go white tent" destination="207" />
+    <arc exit="go" move="go log wagon" destination="208" />
+  </node>
+  <node id="26" name="Fairegrounds Clearing">
+    <description>Foot traffic increases towards the west, compacting the hay laid to protect the soil from erosion.  The straw forms cushioned paths between each merchant's areas, adding traction and assisting in drainage for those times when the weather refuses to cooperate.</description>
+    <position x="470" y="260" z="0" />
+    <arc exit="east" move="east" destination="25" />
+    <arc exit="west" move="west" destination="4" />
+    <arc exit="go" move="go semicircular caravan" destination="63" />
+    <arc exit="go" move="go canvas tent" destination="68" />
+    <arc exit="go" move="go platinum tent" destination="227" />
+  </node>
+  <node id="27" name="A Cleared Field">
+    <description>The mowed hayfield is decorated with ribbons and colorful paper lanterns.  To the north you see another long cleared field that appears to have been marked out with chalk and bright flags.  Large, moss-covered stones cross the brook to lead back to the fairegrounds.</description>
+    <position x="180" y="100" z="0" />
+    <arc exit="north" move="north" destination="28" />
+    <arc exit="go" move="go brook" destination="11" />
+    <arc exit="go" move="go red tent" destination="126" />
+    <arc exit="go" move="go adobe huts" destination="265" />
+  </node>
+  <node id="28" name="A Cleared Field" note="catapult" color="#00FF00">
+    <description>The mowed field has piles of hay stacked all over.  Poles hung with colorful paper lanterns line the edge of the range.  Chalk lines have been put down and marked with numbered flags from one end of the clearing to the other.</description>
+    <position x="180" y="80" z="0" />
+    <arc exit="north" move="north" destination="33" />
+    <arc exit="south" move="south" destination="27" />
+    <arc exit="go" move="go striped tent" destination="237" />
+  </node>
+  <node id="29" name="Fairegrounds Entrance" note="Entrance">
+    <description>A woven bracken arch festooned with ivy and flowering vines serves as the entrance to the fairegrounds.  People are milling about the entrance hawking their wares while small children run to and fro playing games and singing.  An air of frivolity and joy surrounds everyone present at the occasion.</description>
+    <position x="490" y="520" z="0" />
+    <arc exit="go" move="go bracken arch" destination="1" />
+    <arc exit="go" move="go north road" destination="32" />
+  </node>
+  <node id="30" name="Faeries' Wheel" note="Faeries' Wheel" color="#00FF00">
+    <description>The faeries' wheel towers over the faire, definitely one of the tallest structures to be seen.  The view from the top must be spectacular, a good place to see what other attractions await, or to snuggle with your sweetie.</description>
+    <position x="150" y="400" z="0" />
+    <arc exit="go" move="go carriage" destination="31" />
+    <arc exit="go" move="go exit gate" destination="3" />
+  </node>
+  <node id="31" name="Faeries' Wheel, Carriage">
+    <description>Securely fastened in, you lean back, anticipating the trip to the top with some trepidation.  The view promises to be spectacular, and the wheel looks sturdily made, but it is very tall.  The faeries' wheel worker seems quite competent, however, setting you somewhat at ease.</description>
+    <position x="130" y="400" z="0" />
+    <arc exit="out" move="out" destination="30" />
+  </node>
+  <node id="32" name="North Road, Farmlands" note="Map40_Langenfirth_to_Therenborough.xml|Therenborough|Langenfirth|North Road|Road|Mistwood Forest">
+    <description>Row after row of tidily formed haystacks fill the field to one side of the road.  A fenced-in pasture borders the other side, and the hollow clonk of cowbells resounds as grazing cows occasionally amble over to the fence to peer at the stacks with interest.</description>
+    <position x="490" y="560" z="0" />
+    <arc exit="go" move="go field" destination="29" />
+    <arc exit="southwest" />
+    <arc exit="northeast" />
+  </node>
+  <node id="33" name="A Cleared Field">
+    <description>The mowed field has piles of hay stacked all over.  Poles hung with colorful paper lanterns line the edge of the range.  Chalk lines have been put down and marked with numbered flags from one end of the clearing to the other.</description>
+    <position x="180" y="60" z="0" />
+    <arc exit="north" move="north" destination="34" />
+    <arc exit="south" move="south" destination="28" />
+    <arc exit="go" move="go wide tent" destination="205" />
+    <arc exit="go" move="go glass-paneled greenhouse" destination="238" />
+  </node>
+  <node id="34" name="A Cleared Field">
+    <description>The mowed field has piles of hay stacked all over.  Poles hung with colorful paper lanterns line the edge of the range.  Chalk lines have been put down and marked with numbered flags from one end of the clearing to the other.</description>
+    <position x="180" y="40" z="0" />
+    <arc exit="north" move="north" destination="35" />
+    <arc exit="south" move="south" destination="33" />
+    <arc exit="go" move="go wooden wagon" destination="204" />
+  </node>
+  <node id="35" name="A Cleared Field">
+    <description>The mowed field has piles of hay stacked all over.  Poles hung with colorful paper lanterns line the edge of the range.  Chalk lines have been put down and marked with numbered flags from one end of the clearing to the other.</description>
+    <position x="180" y="20" z="0" />
+    <arc exit="north" move="north" destination="36" />
+    <arc exit="south" move="south" destination="34" />
+    <arc exit="go" move="go canvas tent" destination="203" />
+  </node>
+  <node id="36" name="A Cleared Field">
+    <description>The mowed field has piles of hay stacked all over.  Poles hung with colorful paper lanterns line the edge of the range.  Chalk lines have been put down and marked with numbered flags from one end of the clearing to the other.</description>
+    <position x="180" y="0" z="0" />
+    <arc exit="north" move="north" destination="37" />
+    <arc exit="south" move="south" destination="35" />
+  </node>
+  <node id="37" name="A Cleared Field">
+    <description>The mowed field has piles of hay stacked all over.  Poles hung with colorful paper lanterns line the edge of the range.  Chalk lines have been put down and marked with numbered flags from one end of the clearing to the other.</description>
+    <position x="180" y="-20" z="0" />
+    <arc exit="south" move="south" destination="36" />
+  </node>
+  <node id="38" name="Imperial Pavilion, Reception Lounge" note="Imperial Pavilion|alterations|waiting list" color="#00FF00">
+    <description>Lavish, burgundy brocades surround the spacious lounge with elegantly draping swags, each trimmed with golden satin tassels.  A trio of gaethzen orbs in filigreed holders dangle from velvet ribbons at the central peak, bathing the room in a soft glow.  Along the far wall are four curtains, beaded in crystals of vibrant emerald, sapphire, amber and ruby, each leading further into the spacious pavilion.  Clusters of plump cushions placed around the area facilitate a more comfortable wait for visiting patrons.</description>
+    <position x="490" y="420" z="0" />
+    <arc exit="go" move="go canvas flap" destination="22" />
+    <arc exit="go" move="go emerald curtain" destination="39" />
+    <arc exit="go" move="go sapphire curtain" destination="40" />
+    <arc exit="go" move="go amber curtain" destination="41" />
+    <arc exit="go" move="go ruby curtain" destination="42" />
+  </node>
+  <node id="39" name="Imperial Pavilion, Emerald Parlor" note="Emerald Parlor">
+    <description>Swathes of emerald-green satin sweep from corner to corner, the shimmering fabric spiraled with strands of tiny gold beads and iridescent seed pearls.  Placed at the back of the room is an ornately carved workbench of polished mahogany.  Conveniently set near the work area is a pair of brocade upholstered stools.</description>
+    <position x="470" y="420" z="0" />
+    <arc exit="go" move="go emerald curtain" destination="38" />
+  </node>
+  <node id="40" name="Imperial Pavilion, Sapphire Parlor" note="Sapphire Parlor">
+    <description>Swathes of sapphire-hued satin sweep from corner to corner, the shimmering fabric spiraled with strands of tiny gold beads and iridescent seed pearls.  Placed at the back of the room is an ornately carved workbench of polished teakwood.  Conveniently set near the work area is a pair of brocade upholstered stools.</description>
+    <position x="470" y="400" z="0" />
+    <arc exit="go" move="go sapphire curtain" destination="38" />
+  </node>
+  <node id="41" name="Imperial Pavilion, Amber Parlor" note="Amber Parlor">
+    <description>Swathes of honey-amber satin sweep from corner to corner, the shimmering fabric spiraled with strands of tiny gold beads and iridescent seed pearls.  Placed at the back of the room is an ornately carved workbench of polished maple.  Conveniently set near the work area is a pair of brocade upholstered stools.</description>
+    <position x="510" y="400" z="0" />
+    <arc exit="go" move="go amber curtain" destination="38" />
+  </node>
+  <node id="42" name="Imperial Pavilion, Ruby Parlor" note="Ruby Parlor">
+    <description>Swathes of ruby-red satin sweep from corner to corner, the shimmering fabric spiraled with strands of tiny gold beads and iridescent seed pearls.  Placed at the back of the room is an ornately carved workbench of polished rosewood.  Conveniently set near the work area is a pair of brocade upholstered stools.</description>
+    <position x="510" y="420" z="0" />
+    <arc exit="go" move="go ruby curtain" destination="38" />
+  </node>
+  <node id="43" name="Owirvald Auction Company, Display Room" note="Owirvald Auction Company|auction">
+    <description>Rich sandalwood covers the interior walls of this spacious caravan, its high-polished sheen reflecting the light from the various brass lanterns hung about the room.  A pair of glass-topped display tables flank the opal-beaded curtain leading into the main hall.</description>
+    <position x="390" y="440" z="0" />
+    <arc exit="go" move="go sandalwood door" destination="23" />
+    <arc exit="go" move="go opal-beaded curtain" destination="44" />
+  </node>
+  <node id="44" name="Owirvald Auction Company, Auction Floor" note="Auction Floor" color="#FF0000">
+    <description>Rich sandalwood covers the interior walls of this spacious hall, its high-polished sheen reflecting the light from the various brass lanterns hung about the room.  Rows of leather-padded benches face the podium, offering a comfortable place to sit.</description>
+    <position x="350" y="440" z="0" />
+    <arc exit="southeast" move="southeast" destination="45" />
+    <arc exit="south" move="south" destination="47" />
+    <arc exit="southwest" move="southwest" destination="46" />
+    <arc exit="go" move="go opal-beaded curtain" destination="43" />
+  </node>
+  <node id="45" name="Owirvald Auction Company, Auction Floor" color="#FF0000">
+    <description>Rich sandalwood covers the interior walls of this spacious hall, its high-polished sheen reflecting the light from the various brass lanterns hung about the room.  Rows of leather-padded benches face the podium, offering a comfortable place to sit.</description>
+    <position x="370" y="460" z="0" />
+    <arc exit="northwest" move="northwest" destination="44" />
+    <arc exit="go" move="go opal-beaded curtain" destination="43" />
+  </node>
+  <node id="46" name="Owirvald Auction Company, Auction Floor" color="#FF0000">
+    <description>Rich sandalwood covers the interior walls of this spacious hall, its high-polished sheen reflecting the light from the various brass lanterns hung about the room.  Rows of leather-padded benches face the podium, offering a comfortable place to sit.</description>
+    <position x="330" y="460" z="0" />
+    <arc exit="northeast" move="northeast" destination="44" />
+    <arc exit="go" move="go opal-beaded curtain" destination="43" />
+  </node>
+  <node id="47" name="Owirvald Auction Company, Auction Floor" color="#FF0000">
+    <description>Rich sandalwood covers the interior walls of this spacious hall, its high-polished sheen reflecting the light from the various brass lanterns hung about the room.  Rows of leather-padded benches face the podium, offering a comfortable place to sit.</description>
+    <position x="350" y="460" z="0" />
+    <arc exit="north" move="north" destination="44" />
+    <arc exit="go" move="go opal-beaded curtain" destination="43" />
+  </node>
+  <node id="48" name="Hunka's Delights, Pastries" note="Hunka's Delights" color="#FF0000">
+    <description>On several stands rest a variety of mouth-watering baked confections.  The air mixes the rich scents of cinnamon, nutmeg, and cardamon, the tang of citron and lemon peel, a breath of almond paste and just a whiff of something peppery.  Underlying it all is the sweet scent of fresh-baked cakes.</description>
+    <position x="250" y="500" z="0" />
+    <arc exit="go" move="go tent flap" destination="2" />
+  </node>
+  <node id="49" name="The Essential Sects Shop, General Merchandise" note="The Essential Sects Shop|Essential Sects Shop" color="#FF0000">
+    <description>Daylight streams through the domed ceiling above, illuminating the goods on display.</description>
+    <position x="170" y="340" z="0" />
+    <arc exit="north" move="north" destination="53" />
+    <arc exit="northeast" move="northeast" destination="54" />
+    <arc exit="east" move="east" destination="55" />
+    <arc exit="southeast" move="southeast" destination="151" />
+    <arc exit="southwest" move="southwest" destination="50" />
+    <arc exit="west" move="west" destination="51" />
+    <arc exit="northwest" move="northwest" destination="52" />
+    <arc exit="go" move="go elegant doorway" destination="3" />
+  </node>
+  <node id="50" name="The Essential Sects Shop, Discovery" color="#FF0000">
+    <description>Swirls of stars speckle the ceiling, gently caressing the four moons depicted from time immemorial.</description>
+    <position x="150" y="360" z="0" />
+    <arc exit="northeast" move="northeast" destination="49" />
+  </node>
+  <node id="51" name="The Essential Sects Shop, Secrecy" color="#FF0000">
+    <description>A single guttering candle scatters flickering shadows amongst the displays while tiny specs of light shimmer in the myriad of mirrors on the inky walls.</description>
+    <position x="150" y="340" z="0" />
+    <arc exit="east" move="east" destination="49" />
+  </node>
+  <node id="52" name="The Essential Sects Shop, Spiritualism" color="#FF0000">
+    <description>Proudly displayed on the walls are the pelts of several particularly large game animals.</description>
+    <position x="150" y="320" z="0" />
+    <arc exit="southeast" move="southeast" destination="49" />
+  </node>
+  <node id="53" name="The Essential Sects Shop, Uncertainty" color="#FF0000">
+    <description>An assortment of unglazed raku pieces rings the room.  Each is decorated with a unique pattern of swirls and grooves, with no two alike.</description>
+    <position x="170" y="320" z="0" />
+    <arc exit="south" move="south" destination="49" />
+  </node>
+  <node id="54" name="The Essential Sects Shop, Mystery" color="#FF0000">
+    <description>Subdued lighting mutes the otherwise colorful display of silks that decorate this portion of the shop.</description>
+    <position x="190" y="320" z="0" />
+    <arc exit="southwest" move="southwest" destination="49" />
+  </node>
+  <node id="55" name="The Essential Sects Shop, Perfection" color="#FF0000">
+    <description>Everything in this section of the shop is unusually clean and orderly, with every item on display in its proper place.</description>
+    <position x="190" y="340" z="0" />
+    <arc exit="west" move="west" destination="49" />
+  </node>
+  <node id="57" name="Primp My Ride, Front Room" note="Primp My Ride" color="#FF0000">
+    <description>Divans line the walls around a large woven rug centered on the floor.  Crowds easily flow through three arches to other areas of the showroom.  A miniature caravan on a circle of tracks sits in one corner.</description>
+    <position x="337" y="240" z="0" />
+    <arc exit="east" move="east" destination="59" />
+    <arc exit="west" move="west" destination="58" />
+    <arc exit="go" move="go double doors" destination="4" />
+    <arc exit="go" move="go hallway" destination="60" />
+  </node>
+  <node id="58" name="Primp My Ride, West Room" color="#FF0000">
+    <description>Oak stanchions with braided rope provide the guide for a walkway around the room.  The walls are covered with various forms of artwork, showcasing many styles.  Brass-fitted lanterns hang from the ceiling in strategic places to provide proper lighting to appreciate the artistry.</description>
+    <position x="323" y="240" z="0" />
+    <arc exit="east" move="east" destination="57" />
+  </node>
+  <node id="59" name="Primp My Ride, East Room" color="#FF0000">
+    <description>Stanchions with silver chains provide the guide for a walkway around the thickly carpeted room.  The walls are covered with various forms of artwork, showcasing many styles.  A caravan wheel, with a hub of brass and fitted with candles, hangs in the center of the room creating a chandelier that provides enough light to allow appreciation of the merchandise's workmanship.</description>
+    <position x="350" y="240" z="0" />
+    <arc exit="west" move="west" destination="57" />
+  </node>
+  <node id="60" name="Primp My Ride, North Room" color="#FF0000">
+    <description>Gold-plated stanchions with red velvet ropes provide the guide for a walkway around the thickly carpeted rooms.  The walls are covered with various forms of artwork, showcasing many styles.  A crystal chandelier that is tended to by a maid hangs in the center of the room to provide proper lighting to appreciate the artistry.</description>
+    <position x="337" y="227" z="0" />
+    <arc exit="go" move="go hallway" destination="57" />
+    <arc exit="go" move="go heavy curtain" destination="61" />
+  </node>
+  <node id="61" name="Primp My Ride, Behind the Curtain" color="#FF0000">
+    <description>Unlike the rest of the shop, this room is cluttered with various samples of woods, fabrics and paint samples.  A desk with large books of order forms covering it has a chair on either side.  Pencil sketches of caravans have been pinned all over the curtain leading to the outer room.</description>
+    <position x="337" y="213" z="0" />
+    <arc exit="go" move="go heavy curtain" destination="60" />
+  </node>
+  <node id="63" name="Hide and Seek, Entrance" note="Hide and Seek" color="#FF0000">
+    <description>Open hallways branch out in this large circular caravan, not unlike the spokes of a wheel.  Bright candles provide plenty of light to the area, illuminating the numerous and colorful variety of curtains that hang from the walls between the hallways.  The scent of incense hangs faintly in the air, tinged with jasmine and cinnamon.</description>
+    <position x="470" y="220" z="0" />
+    <arc exit="north" move="north" destination="64" />
+    <arc exit="northeast" move="northeast" destination="65" />
+    <arc exit="west" move="west" destination="67" />
+    <arc exit="northwest" move="northwest" destination="66" />
+    <arc exit="go" move="go caravan door" destination="26" />
+    <arc exit="go" move="go wide archway" destination="181" />
+    <arc exit="go" move="go narrow gap" hidden="True" destination="226" />
+  </node>
+  <node id="64" name="Hide and Seek, Hall of Moons" color="#FF0000">
+    <description>Large murals of the triple moons illuminating the night sky decorate this simple room, spanning each wall as one scene melds into the next.  Large gaethzen orbs hanging from the ceiling brightly showcase the wares below, illuminating every portion of the gently curving area.</description>
+    <position x="470" y="200" z="0" />
+    <arc exit="south" move="south" destination="63" />
+  </node>
+  <node id="65" name="Hide and Seek, Hall of the Holy" color="#FF0000">
+    <description>Large murals depicting the aspects of the Immortals decorate this simple room, spanning each wall as one scene melds into the next.  Large gaethzen orbs hanging from the ceiling brightly showcase the wares below, illuminating every portion of the gently curving area.</description>
+    <position x="490" y="200" z="0" />
+    <arc exit="southwest" move="southwest" destination="63" />
+  </node>
+  <node id="66" name="Hide and Seek, Hall of Life" color="#FF0000">
+    <description>Large murals of rolling green hills dotted with healing herbs decorate this simple room, spanning each wall as one scene melds into the next.  Large gaethzen orbs hanging from the ceiling brightly showcase the wares below, illuminating every portion of the gently curving area.</description>
+    <position x="450" y="200" z="0" />
+    <arc exit="southeast" move="southeast" destination="63" />
+  </node>
+  <node id="67" name="Hide and Seek, Hall of Elements" color="#FF0000">
+    <description>Large murals of fire, earth, air and water decorate this simple room, spanning each wall as one scene melds into the next.  Large gaethzen orbs hanging from the ceiling brightly showcase the wares below, illuminating every portion of the gently curving area.</description>
+    <position x="450" y="220" z="0" />
+    <arc exit="east" move="east" destination="63" />
+  </node>
+  <node id="68" name="Delightful Decor, Winter's Wonderland" note="Delightful Decor" color="#FF0000">
+    <description>Glittering glass icicles hang in a spiraling cascade at the center of the tent, amplifying the light cast by a series of candles within the cluster.  Assorted decorations for homes are stacked in neat piles in crates, baskets and barrels, and a counter holds still more of the items for sale.</description>
+    <position x="430" y="300" z="0" />
+    <arc exit="north" move="north" destination="71" />
+    <arc exit="east" move="east" destination="69" />
+    <arc exit="west" move="west" destination="70" />
+    <arc exit="go" move="go tent flap" destination="26" />
+  </node>
+  <node id="69" name="Delightful Decor, Autumn's Array" color="#FF0000">
+    <description>Draped along the walls are vibrant swags of gold, orange, and brown, while a leaf-patterned rug lies in the middle of the small area.  Various decorations overflow from crates, barrels and baskets, while a sturdy oak counter is stacked with additional items for sale.</description>
+    <position x="450" y="300" z="0" />
+    <arc exit="west" move="west" destination="68" />
+  </node>
+  <node id="70" name="Delightful Decor, Spring Fling" color="#FF0000">
+    <description>A melange of sweet floral scents pervades the small room, as cut flowers vie with the mossy aroma of rich loam from bare root plants.  Delicate watercolor paintings of spring blossoms adorn the walls, while a plethora of items are neatly placed in crates, barrels and baskets.</description>
+    <position x="410" y="300" z="0" />
+    <arc exit="east" move="east" destination="68" />
+  </node>
+  <node id="71" name="Delightful Decor, Scenic Summer" color="#FF0000">
+    <description>Brightly painted, canvas panels with scenes of blooming flowers, trees and suns line the interior of the area, while vibrant ribbons cascade and spiral down a central pole supporting the tent.  Assorted decorations are neatly stacked within barrels, crates and baskets along the walls, while a sturdy oak counter holds still more of the items for sale.</description>
+    <position x="430" y="280" z="0" />
+    <arc exit="south" move="south" destination="68" />
+  </node>
+  <node id="72" name="Beppo's, Showroom" note="Beppo's|Beepo" color="#FF0000">
+    <description>Multicolored silks drape the walls throughout the area, with plush golden pard rugs covering the floor.  In the back corner of the tent stand a couple of worktables covered in half-finished badges, some scrap metal and various stamping tools.  A small lantern overhead reveals a narrow path that wends its way past a counter and through the many displays, shelves and tables.</description>
+    <position x="570" y="240" z="0" />
+    <arc exit="north" move="north" destination="73" />
+    <arc exit="go" move="go oak door" destination="25" />
+  </node>
+  <node id="73" name="Beppo's, Back Room" color="#FF0000">
+    <description>Several colorful, wood shelves line the heavy canvas walls amid vibrant silks that drape from each corner of the small room.  Plush, golden pard rugs surround an array of elegant brocade pillows at the center of the room, providing a comfortable spot to rest for weary shoppers.</description>
+    <position x="570" y="220" z="0" />
+    <arc exit="south" move="south" destination="72" />
+  </node>
+  <node id="74" name="Fancybeards, Bearded Fantasy" note="Fancybeards|Beards" color="#FF0000">
+    <description>Seemingly hewn from a solid piece of rock, the inside of the hut is smooth and slightly rounded, showing no hard edges.  Two counters are cut from the stone and draped with fine black velvet that matches the woven rug stretched across the floor.  Small oval windows show off perfectly clear glass panes.  An arched doorway leads back outside.</description>
+    <position x="610" y="240" z="0" />
+    <arc exit="north" move="north" destination="75" />
+    <arc exit="go" move="go arched doorway" destination="25" />
+  </node>
+  <node id="75" name="Fancybeards, Bearded Majesty" color="#FF0000">
+    <description>A wide counter is carved from the back wall, its edges curved inward.  To either side of the counter, also chiseled from the stone of the hut, are two shelves.  Plush white velvet covers all the surfaces, allowing the wares to be displayed without distraction.  Two large, round windows are sculpted into the side walls, their panes propped open to catch any stray breeze.</description>
+    <position x="610" y="220" z="0" />
+    <arc exit="south" move="south" destination="74" />
+  </node>
+  <node id="76" name="Mystical Machinations, Entryway" note="Mystical Machinations" color="#FF0000">
+    <description>Tendrils of ice blue mist swirl in an hypnotic dance around a coruscating orb of dark cerulean light that hovers in the center of this chamber.  Walls of pearlescent white marble encase the strange building like a tomb, lending a feeling of solace and remoteness to this Enchanter's workshop.</description>
+    <position x="710" y="200" z="0" />
+    <arc exit="north" move="north" destination="77" />
+    <arc exit="northeast" move="northeast" destination="79" />
+    <arc exit="east" move="east" destination="78" />
+    <arc exit="southeast" move="southeast" destination="80" />
+    <arc exit="south" move="south" destination="81" />
+    <arc exit="southwest" move="southwest" destination="82" />
+    <arc exit="west" move="west" destination="83" />
+    <arc exit="northwest" move="northwest" destination="84" />
+    <arc exit="out" move="out" destination="24" />
+  </node>
+  <node id="77" name="Mystical Machinations, Merchandiser's Chamber" color="#FF0000">
+    <description>Embedded gems line the gold walls of this chamber, allowing any light that hits the wall, or the gems ensconced within it to sparkle with a blinding luminescence.  A few cushioned redwood chairs have been positioned, allowing visitors a place to sit.  The gentle sounds of coins clinking together drift through the room, creating a sort of background music.</description>
+    <position x="710" y="180" z="0" />
+    <arc exit="south" move="south" destination="76" />
+    <arc exit="go" move="go contract" destination="161" />
+  </node>
+  <node id="78" name="Mystical Machinations, Healer's Chamber" color="#FF0000">
+    <description>A large crystalline pool inlaid with pattern of twining malachite vines dominates the chamber.  Bright gaethzen globes suspended from the sterile white marble ceiling reflect off the walls, illuminating the chamber with a severe glow that eradicates all nearby shadow.</description>
+    <position x="730" y="200" z="0" />
+    <arc exit="west" move="west" destination="76" />
+    <arc exit="go" move="go pool" destination="163" />
+  </node>
+  <node id="79" name="Mystical Machinations, Justicar's Chamber" color="#FF0000">
+    <description>Golden tower shields adorn the cold white marble walls, lending a regal air to this chamber.  A single platinum silk tapestry cascades down from the ceiling, embroidered with the image of a faceless man bedecked in plate mail and holding a broadsword in his right hand and an olive laurel in his left.  Soft black velvet cushions lie strewn in a reverent circle beneath the tapestry.</description>
+    <position x="730" y="180" z="0" />
+    <arc exit="southwest" move="southwest" destination="76" />
+    <arc exit="go" move="go golden arch" destination="162" />
+  </node>
+  <node id="80" name="Mystical Machinations, Hunter's Chamber" color="#FF0000">
+    <description>Verdant tapestries depicting the forest hunt sweep from the ceiling above, lending a semblance of the wilderness to the austere and sterile environment of this chamber.  Plush black velvet cushions are strewn causally around the chamber, offering a moment's rest.</description>
+    <position x="730" y="220" z="0" />
+    <arc exit="northwest" move="northwest" destination="76" />
+    <arc exit="go" move="go vines" destination="164" />
+  </node>
+  <node id="81" name="Mystical Machinations, Minstrel's Chamber" color="#FF0000">
+    <description>Elegant tapestries of blue and gold cover the white marble walls of this chamber, filling it with scenes of minstrels performing for nobles, busking in the streets, or inspiring soldiers in battle.  A few cushioned oak chairs rest between the tapestries, providing visitors with a comfortable place to sit.  Gentle melodies from unseen musicians drift through the chamber, creating a sense of calm and restfulness.</description>
+    <position x="710" y="220" z="0" />
+    <arc exit="north" move="north" destination="76" />
+    <arc exit="go" move="go harpstring" destination="165" />
+  </node>
+  <node id="82" name="Mystical Machinations, Seer's Chamber" color="#FF0000">
+    <description>Gaethzen globes shaded by veils of dusky crystal suffuse the chamber in a moody pall of midnight blue light, muting the severity of the white marble walls.  Strange motes of silver light float freely in the air, forming a chaotic display of the heavens' constellations that cycles in the ever-changing dance of Fate's tide.</description>
+    <position x="690" y="220" z="0" />
+    <arc exit="northeast" move="northeast" destination="76" />
+    <arc exit="go" move="go moongate" destination="166" />
+  </node>
+  <node id="83" name="Mystical Machinations, Elemancer's Chamber" color="#FF0000">
+    <description>A symmetric oval of six silver stands rise from the floor, each one grasping a piece of colored crystal.  Strange motes of light flicker within their depths, stirring with essence of the elements.  Cushions of plush black velvet lie strewn within the circle of crystals, bathed in the ebb and flow of their luminous gaze.</description>
+    <position x="690" y="200" z="0" />
+    <arc exit="east" move="east" destination="76" />
+    <arc exit="go" move="go platform" destination="167" />
+  </node>
+  <node id="84" name="Mystical Machinations, Hierophant's Chamber" color="#FF0000">
+    <description>Austere walls of pearlescent white marble have been draped with somber tapestries depicting the various stages of Life and Death -- the never-ending cycle the gods have bestowed upon mortals.  Pale silver taper candles rise elegantly from sconces in the floor, casting their crystalline glow over intricately woven prayer carpets and velvet cushions that circle a speckled granite altar in the center of the chamber.</description>
+    <position x="690" y="180" z="0" />
+    <arc exit="southeast" move="southeast" destination="76" />
+    <arc exit="go" move="go arch" destination="168" />
+  </node>
+  <node id="85" name="Osgeth's, Entry" note="Osgeth's|Osgeth" color="#FF0000">
+    <description>Colorful mixtures of paint spatter the sturdy leather walls of this square-shaped tent.  Set in the center of the room is a large wooden post that slants the roof, also covered in a variety of smears.  A small hanging lantern illuminates the room, which is fairly empty except for a small wooden table set out on the floor.</description>
+    <position x="730" y="340" z="0" />
+    <arc exit="go" move="go square flap" destination="24" />
+    <arc exit="go" move="go deerhide curtain" destination="255" />
+  </node>
+  <node id="86" name="Flowering Furniture" note="Flowering Furniture" color="#FF0000">
+    <description>Outwardly curving, wooden walls enclose the caravan, helping to give the impression of space despite the scattering of furniture samples taking up most of the floor.  Grass-green paint lavishly coats the entire area.  Sconces set every few feet to make up for the lack of windows, each one molded into the shape of a rose.  An arched exit sits in the middle of one wall.</description>
+    <position x="690" y="460" z="0" />
+    <arc exit="east" move="east" destination="90" />
+    <arc exit="west" move="west" destination="87" />
+    <arc exit="go" move="go arched exit" destination="20" />
+  </node>
+  <node id="87" name="Flowering Furniture" color="#FF0000">
+    <description>Outwardly curving, wooden walls enclose the caravan, helping to give the impression of space despite the scattering of furniture samples taking up most of the floor.  Sunny-yellow paint lavishly coats the entire area, blending with the green that appears to the east.  Sconces set every few feet to make up for the lack of windows, each one molded into the shape of a lily.</description>
+    <position x="670" y="460" z="0" />
+    <arc exit="east" move="east" destination="86" />
+    <arc exit="west" move="west" destination="88" />
+  </node>
+  <node id="88" name="Flowering Furniture" color="#FF0000">
+    <description>Outwardly curving, wooden walls enclose the caravan, helping to give the impression of space despite the scattering of furniture samples taking up most of the floor.  Sunset-orange paint lavishly coats the entire area, blending with the yellow that appears to the east.  Sconces set every few feet to make up for the lack of windows, each one molded into the shape of a peony.</description>
+    <position x="650" y="460" z="0" />
+    <arc exit="east" move="east" destination="87" />
+    <arc exit="west" move="west" destination="89" />
+  </node>
+  <node id="89" name="Flowering Furniture" color="#FF0000">
+    <description>Outwardly curving, wooden walls enclose the caravan, helping to give the impression of space despite the huge tables taking up most of the floor.  Petal-purple paint lavishly coats the entire area, blending with the orange that appears to the east.  Sconces set every few feet to make up for the lack of windows, each one molded into the shape of a violet.</description>
+    <position x="630" y="460" z="0" />
+    <arc exit="east" move="east" destination="88" />
+  </node>
+  <node id="90" name="Flowering Furniture" color="#FF0000">
+    <description>Outwardly curving, wooden walls enclose the caravan, helping to give the impression of space despite the scattering of furniture samples taking up most of the floor.  Sky-blue paint lavishly coats the entire area, blending with the green that appears to the west.  Sconces set every few feet to make up for the lack of windows, each one molded into the shape of a daisy.</description>
+    <position x="710" y="460" z="0" />
+    <arc exit="east" move="east" destination="91" />
+    <arc exit="west" move="west" destination="86" />
+  </node>
+  <node id="91" name="Flowering Furniture, Waiting Area" color="#FF0000">
+    <description>Outwardly curving, wooden walls enclose the caravan, helping to give the impression of space despite the huge couch and table taking up most of the floor.  Rose-red paint lavishly coats the entire area, blending with the blue that appears to the west.  Sconces set every few feet to make up for the lack of windows, each one molded into the shape of a crocus.</description>
+    <position x="730" y="460" z="0" />
+    <arc exit="west" move="west" destination="90" />
+  </node>
+  <node id="92" name="Auntie Phanie's Phancies, Sales Floor" note="Auntie Phanie's Phancies|Phanie's|Phanie" color="#FF0000">
+    <description>This area of the wagon's interior has been painted a cheery pink on the ceiling and walls interrupted only by a meringue-white door, while the floor has been covered in a vibrant carpet woven with a tart motif.  Streamers of ribbon, punctuated by bows at even intervals, hang from the crossbeams just above a long display counter and decorate all three of the tables that dominate the space.  Attendant Rosaya bustles about excitedly, making sure everything runs smoothly.</description>
+    <position x="670" y="420" z="0" />
+    <arc exit="west" move="west" destination="93" />
+    <arc exit="go" move="go meringue-white door" destination="20" />
+  </node>
+  <node id="93" name="Auntie Phanie's Phancies, Sitting Room" color="#FF0000">
+    <description>Framed simply and hung low on the blue walls are several paintings of baked goods.  Several plush couches are arranged around a low table decorated with several small bouquets of snowdrops.  Off to the side is a thick black curtain fringed with golden tassels.</description>
+    <position x="650" y="420" z="0" />
+    <arc exit="east" move="east" destination="92" />
+  </node>
+  <node id="94" name="The Foraging Emporium" note="The Foraging Emporium|Foraging Emporium" color="#FF0000">
+    <description>Lightweight wooden trellises hung with a multitude of drying herbs line the walls of this high-ceilinged pavilion.  Large mirrors make the most of the available light, creating the illusion of a much larger space.  The pungent, woody smell of drying herbs pervades the area, along with the occasional sharp whiff of powerful alchemical reagents.  A portable stove littered with beakers, pots and pans is partially concealed by a folding screen.</description>
+    <position x="710" y="420" z="0" />
+    <arc exit="go" move="go exit flap" destination="20" />
+  </node>
+  <node id="95" name="The Wandering Woodsman" note="The Wandering Woodsman|Wandering Woodsman" color="#FF0000">
+    <description>Made of only the best quality hides which have been tanned and oiled to near transparency, the resulting effect is a light and airy, though not especially warm, tent.  Several tables, racks and a burlap-padded mannequin are set up in a semicircle along the walls.  All of the furniture surrounds a coffee pot that is simmering on a warm brazier set up near the center.</description>
+    <position x="850" y="480" z="0" />
+    <arc exit="west" move="west" destination="96" />
+    <arc exit="go" move="go tent flap" destination="17" />
+    <arc exit="go" move="go door" destination="97" />
+  </node>
+  <node id="96" name="The Wandering Woodsman, Wardens Quarters" color="#FF0000">
+    <description>This portion of the tent is a bit darker with hides of a thicker, heavier variety.  Stone tables display some of the larger items beneath the more congruous racks and shelves that line the walls of the modestly-sized interior.  A large granite statue of a wolf stands guard at the flap.</description>
+    <position x="830" y="480" z="0" />
+    <arc exit="east" move="east" destination="95" />
+  </node>
+  <node id="97" name="The Wandering Woodsman, Back Room" color="#FF0000">
+    <description>More for work than show, the room features benches stationed on either side of a large, well-worn table.  A large basket rests atop the gouged and notched surface, next to a standalone sign.  The notice's elegant writing seems slightly out of place in the otherwise utilitarian room.</description>
+    <position x="870" y="480" z="0" />
+    <arc exit="go" move="go door" destination="95" />
+  </node>
+  <node id="99" name="Empath Emporium, Entry" note="Empath Emporium" color="#FF0000">
+    <description>Heavy canvas drapes from poles firmly planted in the dirt, and the tent is sectioned off by rolled gauze curtains.  Despite the thick material, the space seems airy and open.  A table to the left of the entrance holds several colorful pouches, while a cot full of aprons rests against a side wall.  Woven rugs in various blue hues are scattered across the ground.</description>
+    <position x="790" y="520" z="0" />
+    <arc exit="east" move="east" destination="101" />
+    <arc exit="go" move="go tent flap" destination="19" />
+  </node>
+  <node id="100" name="Empath Emporium, Armory" color="#FF0000">
+    <description>Cut and cured hides hang from the walls, adding substance to support the wares displayed here.  A large shield rack holding both metal shields and arm-worn leather shields stands in the far corner, its shadow dominating the rest of the area.  Nearby, leather mannequins wear assorted garments suitable for both on and off the hunting field.</description>
+    <position x="830" y="520" z="0" />
+    <arc exit="west" move="west" destination="101" />
+  </node>
+  <node id="101" name="Empath Emporium, Guildhalls" color="#FF0000">
+    <description>This section of the tent features a wardrobe, jewelry case, and shelf that border a sapphire blue rug woven with the crest of the Empaths' Guild.  A sling-backed blue canvas chair nestles into a corner, its matching footrest dominated by a very large grey cat.  Against an inner canvas wall, a free-standing oval mirror in a frame of rosewood stands ready for customers to view the effects of their purchases.</description>
+    <position x="810" y="520" z="0" />
+    <arc exit="east" move="east" destination="100" />
+    <arc exit="west" move="west" destination="99" />
+  </node>
+  <node id="103" name="Pyromaniacs' Corner, Salesroom" note="Pyromaniacs' Corner" color="#FF0000">
+    <description>Disheveled apprentices with soot-caked fingers and hotheaded robe-clad customers elbow one another to make their way in this cramped stall.  In spite of the fact that there are plenty of openings in the tarp for the air to circulate, it is thoroughly choked with a pungent smoke that hangs over the wares.</description>
+    <position x="510" y="460" z="0" />
+    <arc exit="go" move="go exit" destination="22" />
+  </node>
+  <node id="107" name="Ties for Things, Singles" note="Ties for Things" color="#FF0000">
+    <description>Supported by wide arches, the interior of the tent appears to be broken into several rooms.  A thin rug covers the floor, providing an uneven footing.  Several of the sales surfaces appear to be propped by bits of thin wood to keep them level.</description>
+    <position x="600" y="460" z="0" />
+    <arc exit="southwest" move="southwest" destination="110" />
+    <arc exit="west" move="west" destination="108" />
+    <arc exit="go" move="go tent flap" destination="21" />
+  </node>
+  <node id="108" name="Ties for Things, Doubles" color="#FF0000">
+    <description>Supported by wide arches, the interior of the tent appears to be broken into several rooms.  A thin rug covers the floor, providing an uneven footing.  Several of the sales surfaces appear to be propped by bits of thin wood to keep them level.</description>
+    <position x="580" y="460" z="0" />
+    <arc exit="east" move="east" destination="107" />
+    <arc exit="west" move="west" destination="109" />
+  </node>
+  <node id="109" name="Ties for Things, Specialty" color="#FF0000">
+    <description>Supported by wide arches, the interior of the tent appears to be broken into several rooms.  A thin rug covers the floor, providing an uneven footing.  Several of the sales surfaces appear to be propped by bits of thin wood to keep them level.</description>
+    <position x="560" y="460" z="0" />
+    <arc exit="east" move="east" destination="108" />
+    <arc exit="southeast" move="southeast" destination="110" />
+  </node>
+  <node id="110" name="Ties for Things, Kaldaran Specialties" color="#FF0000">
+    <description>Supported by wide arches, the interior of the tent appears to be broken into several rooms.  A thin rug covers the floor, providing an uneven footing.  Several of the sales surfaces appear to be propped by bits of thin wood to keep them level.</description>
+    <position x="580" y="480" z="0" />
+    <arc exit="northeast" move="northeast" destination="107" />
+    <arc exit="northwest" move="northwest" destination="109" />
+  </node>
+  <node id="111" name="Perpetual Blossoms of Mer'Kresh, Annex" note="Perpetual Blossoms of Mer'Kresh" color="#FF0000">
+    <description>Perpetual Blossoms is like an endless spring in Mer'Kresh.  Flowers bloom all about the room, and a gablefruit vine climbs across the walls, flourishing in the illumination of gaethzen orbs set in the ceiling above.  Large displays hold freshly cut blossoms and bouquets that fill the air with intoxicating scents.  Floral clerks discretely watch over the domain, gently tending flowers and customers alike with gracious smiles.</description>
+    <position x="600" y="420" z="0" />
+    <arc exit="north" move="north" destination="112" />
+    <arc exit="go" move="go driftwood door" destination="21" />
+  </node>
+  <node id="112" name="Perpetual Blossoms of Mer'Kresh, Annex Showroom" color="#FF0000">
+    <description>Flowering vines of all color and size flourish under the light of the gaethzen orbs, creating a surrounding kaleidoscope of color punctuated with a variety of redolent scents.  Patrons browse through the various displays, cradling their purchases carefully as they wander throughout the small shop.</description>
+    <position x="600" y="400" z="0" />
+    <arc exit="south" move="south" destination="111" />
+  </node>
+  <node id="113" name="Gersvinda's Natural Studies, Studio" note="Gersvinda's Natural Studies|Natural Studies" color="#FF0000">
+    <description>The lightweight golden-hued wood of the lattice roof is clearly visible, despite the dim lighting cast by several aromatic hanging lamps dangling from the ceiling.  Numerous stacks of paints, chalks and pastels are scattered atop most of the workspaces, along with half-finished charts and sketches of creatures.  The plank floor is muffled by several colorful rugs worked in botanical patterns, while a lacquered screen painted with vivid pink waterfowl blocks access to the living area.  Hung along the lattice walls, four silken ropes -- one red, one orange, one black and one golden -- display vibrantly colored anatomy charts.</description>
+    <position x="830" y="280" z="0" />
+    <arc exit="go" move="go exit flap" destination="14" />
+  </node>
+  <node id="115" name="Nahja's Knickknacks, Front Room" note="Nahja's Knickknacks|Knickknacks" color="#FF0000">
+    <description>The smell of leather permeates the air within the windowless confines of the long tent walls.  The front area features a polished oak table adjacent to a velvet-draped counter.  Brightly burning lanterns manage to chase away the shadows and illuminate the merchandise.  Mossy green carpet runners lead the way further back into the tent while to the left hangs a dark brown curtain.</description>
+    <position x="870" y="290" z="0" />
+    <arc exit="north" move="north" destination="116" />
+    <arc exit="go" move="go tent flap" destination="15" />
+    <arc exit="go" move="go brown curtain" destination="246" />
+  </node>
+  <node id="116" name="Nahja's Knickknacks, Back Room" color="#FF0000">
+    <description>At the back of the tent, all available surfaces have been drafted into use as displays.  A makeshift shelf rests above an oak table, each one housing carefully arranged merchandise.  Even a rickety pine bench has been put to use with items for sale upon it rather than room for sitting.  A russet curtain blocks any attempts at further exploration.</description>
+    <position x="870" y="270" z="0" />
+    <arc exit="south" move="south" destination="115" />
+  </node>
+  <node id="117" name="Gemfire Mountains Leathercrafters, Sales Floor" note="Gemfire Mountains Leathercrafters|leathercrafters" color="#FF0000">
+    <description>Bright, colorful lanterns hang from the ceiling beams of this sturdy wagon, illuminating the carefully displayed merchandise arranged around the sales area.  A short maple work table fills one end of the wagon while a large shelf runs down one side.  Opposite the work table, an extravagantly carved doorway leads out of the wagon.</description>
+    <position x="870" y="80" z="0" />
+    <arc exit="go" move="go doorway" destination="12" />
+  </node>
+  <node id="118" name="Inner Vision, Showroom" note="Inner Vision" color="#FF0000">
+    <description>Elegantly draped, golden silks create a decorative valance that surrounds the interior of the heavy canvas tent.  A small chandelier encircled with gaethzen orbs hangs overhead, their multicolored hues casting rich tones across the large potted palms that line the area.  An ornately carved counter rests along one wall, displaying several trays of wares.</description>
+    <position x="830" y="80" z="0" />
+    <arc exit="north" move="north" destination="120" />
+    <arc exit="west" move="west" destination="119" />
+    <arc exit="go" move="go tent flap" destination="12" />
+  </node>
+  <node id="119" name="Inner Vision, Parlor" color="#FF0000">
+    <description>Luxurious silks of gold and burgundy drape the surrounding walls, showcasing a large vibrant tapestry.  Soft, alabaster-white snowbeast pelts scattered upon the floor soften the steps of the many shoppers who stop to enjoy a leisurely rest and a cool drink.  Hammered brass lanterns hang in each corner, emanating a muted golden hue through their amber glass panes.  Surrounded by a pair of comfortable armchairs, a thick, clay brazier burns warmly at the center of the room, its small wisps of smoke trailing up through a small hole in the peak of the canvas ceiling.</description>
+    <position x="810" y="80" z="0" />
+    <arc exit="east" move="east" destination="118" />
+    <arc exit="go" move="go narrow stairwell" hidden="True" destination="122" />
+    <arc exit="go" move="go canvas archway" destination="259" />
+  </node>
+  <node id="120" name="Inner Vision, Back Room" color="#FF0000">
+    <description>Hammered brass lanterns hung in each corner cast a soft, muted plum hue over the artistically painted, canvas panels of the small room.  A soft, woolen rug covers the floor in a woven pattern of crisscrossing ivy vines while a slender marble pedestal at the center of the room holds a small, brass incense burner.  Set against a far wall, a polished oak counter displays several trays of wares.</description>
+    <position x="830" y="60" z="0" />
+    <arc exit="south" move="south" destination="118" />
+  </node>
+  <node id="121" name="Marine Marvels, Showroom" note="Marine Marvels" color="#FF0000">
+    <description>Velvet drapes the tent's walls, replicating the ocean's hues, which show off the jewels displayed to their natural advantage.  Gaezthen spheres line the ceiling, each exuding a soft glow, while a bench placed near a mirror allows customers to rest and admire their new treasures.</description>
+    <position x="810" y="140" z="0" />
+    <arc exit="north" move="north" destination="122" />
+    <arc exit="east" move="east" destination="123" />
+    <arc exit="go" move="go tent flap" destination="12" />
+  </node>
+  <node id="122" name="Marine Marvels, Back Room" color="#FF0000">
+    <description>Dazzling displays of colorful coral decorate the surrounding walls amid swathes of vibrant ocean-hued silks.  Gaethzen starfish hang overhead, highlighting the many wares available for purchase.</description>
+    <position x="810" y="120" z="0" />
+    <arc exit="south" move="south" destination="121" />
+  </node>
+  <node id="123" name="Marine Marvels, Fine Gems" color="#FF0000">
+    <description>The underwater theme is carried further throughout the shop with swathes of ocean-hued velvets draping the walls, mingled with clusters of tall iridescent taffeta sea fronds that rise from floor displays.  A large, dried pale-blue sea fan stands at the center of the small area, displaying a glistening array of ear jewelry, while a large dangling silver starfish and small gold chest overflow with additional pieces for purchase.</description>
+    <position x="830" y="140" z="0" />
+    <arc exit="west" move="west" destination="121" />
+  </node>
+  <node id="124" name="The Web of Fate" note="The Web of Fate|Web of Fate" color="#FF0000">
+    <description>Various sized bottles bound with fraying strips of leather dangle haphazardly from the ceiling of the shack, their contents illuminated by a multitude of candles placed on every available surface.  The heat in the room is palpable, heavy in the air along with a strange scent of decay.  Bizarre artifacts, scrolls and bones fight for space with the candles on creaky wooden shelves.</description>
+    <position x="290" y="80" z="0" />
+    <arc exit="go" move="go flap" destination="11" />
+  </node>
+  <node id="125" name="The Bardic Journey, Foyer" note="The Bardic Journey|Bardic Journey" color="#FF0000">
+    <description>The tent's ceiling comprises dark silks, scarlet ones rippling down to form the walls.  Scattered metallic threads and tiny red crystals, glistening in the lamplight, give the impression of fiery sparks wavering in the air.  A fountain in the center of the room adds the sound of falling water, the contrast only enhancing the effect.</description>
+    <position x="330" y="80" z="0" />
+    <arc exit="go" move="go tent flap" destination="11" />
+    <arc exit="go" move="go beribboned archway" destination="247" />
+    <arc exit="go" move="go draped doorway" destination="248" />
+    <arc exit="go" move="go dark curtain" destination="249" />
+  </node>
+  <node id="126" name="A Bright Red Tent, Gerkin's Apple Show" color="#00FF00">
+    <description>The fresh scent of fruit blossoms fills the tent's interior.  Wood carvings, depicting every type of apple in all different sizes, hang from every pole that supports the cloth roof.  A long table, displaying various types of apple-based culinary delights, is pushed off to one side.</description>
+    <position x="160" y="100" z="0" />
+    <arc exit="go" move="go tent flap" destination="27" />
+  </node>
+  <node id="127" name="The Book Wyrm, Punny Presents" note="The Book Wyrm|Book Wyrm" color="#FF0000">
+    <description>Bright pink paper lanterns are strung across the ceiling on cords of steelsilk, their bright hue contrasting with the pale grey walls and adding a pop of color to the busy space.  Tall piles of tote bags are spread out across a pair of tables at the center of the room, while a colorful arrangement of greeting cards are displayed on an iron stand.  Precariously stacked books frame the exit door, each chosen to balance the next and form a perfect arch.</description>
+    <position x="230" y="240" z="0" />
+    <arc exit="north" move="north" destination="128" />
+    <arc exit="go" move="go door" destination="5" />
+  </node>
+  <node id="128" name="The Book Wyrm, Draw It Out" color="#FF0000">
+    <description>White paper lanterns dangle in the corners of this room, glowing slightly from the candles hidden within them.  More candles illuminate a long counter that runs along one of the room's pale green walls, its surface covered in heaps of paper.  A writing desk in the center of the room is arranged with colorful drawing and writing utensils, while a tall iron stand in the back corner is strewn with coveralls, overalls, and smocks.</description>
+    <position x="230" y="220" z="0" />
+    <arc exit="north" move="north" destination="129" />
+    <arc exit="south" move="south" destination="127" />
+  </node>
+  <node id="129" name="The Book Wyrm, Pencil Me In" color="#FF0000">
+    <description>Paper lanterns strung across the ceiling cast light across the small room, illuminating everything with a soft glow.  Colorful bookcases line the walls, their shelves overladen with a disorganized assortment of books, journals, and folios.  In the back corner is a winding staircase that leads up to a recessed space above.</description>
+    <position x="230" y="200" z="0" />
+    <arc exit="south" move="south" destination="128" />
+  </node>
+  <node id="130" name="Arcayne Attyre, Clothiers" note="Arcayne Attyre" color="#FF0000">
+    <description>Patrons move about the shop, dressed in all manner of mystical attire, each browsing the selection of wares on display.  Four mannequins are placed around the area, each posed with a variety of items.</description>
+    <position x="190" y="240" z="0" />
+    <arc exit="east" move="east" destination="132" />
+    <arc exit="west" move="west" destination="131" />
+    <arc exit="go" move="go tent flap" destination="6" />
+  </node>
+  <node id="131" name="Arcayne Attire, West Wing" color="#FF0000">
+    <description>Vibrant silks drape the walls of the small area, while several gaethzen stars illuminate the wares below.  An ornate candelabra displays a variety of hats and a nearby wardrobe holds additional garments for sale.</description>
+    <position x="170" y="240" z="0" />
+    <arc exit="east" move="east" destination="130" />
+  </node>
+  <node id="132" name="Arcayne Attire, East Wing" color="#FF0000">
+    <description>Dark silks drape the canvas walls of the area, while a variety of gaethzen ravens provide a bit of illumination to the four pillar busts on display.  Several patrons amble about, each trying on their purchases and admiring themselves in a nearby mirror.</description>
+    <position x="210" y="240" z="0" />
+    <arc exit="west" move="west" destination="130" />
+  </node>
+  <node id="133" name="Just In Case, Case Room" note="Just In Case" color="#FF0000">
+    <description>Simple wooden walls lean together, looking as if the merest breeze will send them toppling over.  Stretched across the ground is a dirty rug that might have been blue once, while two lopsided tables vie for room in the cramped area.  Dangling haphazardly are two shelves, one is cracked down the middle and inexpertly pieced back together.</description>
+    <position x="130" y="240" z="0" />
+    <arc exit="south" move="south" destination="134" />
+    <arc exit="go" move="go sloping door" destination="6" />
+  </node>
+  <node id="134" name="Just In Case, Case Corner" color="#FF0000">
+    <description>Simple wooden walls lean together, looking as if the merest breeze will send them toppling over.  Stretched across the ground is a faded rug that might have been green once, while two lopsided tables vie for room in the cramped area.  Dangling haphazardly are two shelves, one appears to have been glued together from scrap woods.</description>
+    <position x="130" y="260" z="0" />
+    <arc exit="north" move="north" destination="133" />
+  </node>
+  <node id="139" name="Abu Hassan Ali ibn Bekar's Fineries" note="Abu Hassan Ali ibn Bekar's Fineries" color="#FF0000">
+    <description>A swirl of translucent fabrics, a hint of distant aromatic spices serve notice of the exotic goods in this tent.  Large stuffed pillows lie scattered about the floor.  They seem to animate in the flickering dance of a single torch, suspended in an iron brazier from above.  Abu Hassan sits immersed in his own finery, watching his clerks transact business.</description>
+    <position x="60" y="300" z="0" />
+    <arc exit="go" move="go tent flap" destination="7" />
+  </node>
+  <node id="140" name="Merit Badges, Sales Floor" note="Merit Badges" color="#FF0000">
+    <description>Neatly pressed, the folds of the tent appear to fall in exact lines creating an octagon shape on the inside of this neatly kept tent.  Two plain maple tables sit on a swept wool rug of river blue.  A tent flap stands open between them, held by a simple blue cord.  Across from the flap, a heavy curtain with a blue and gold compass rose stitched on it hangs across an opening.</description>
+    <position x="-40" y="180" z="0" />
+    <arc exit="east" move="east" destination="142" />
+    <arc exit="west" move="west" destination="141" />
+    <arc exit="go" move="go tent flap" destination="10" />
+  </node>
+  <node id="141" name="Merit Badges, Sales Floor" color="#FF0000">
+    <description>Neatly pressed, the folds of the tent appear to fall in exact lines creating an octagon shape on the inside of this neatly kept tent.  Two plain oak tables sit on a soft silk rug of dark gold.</description>
+    <position x="-60" y="180" z="0" />
+    <arc exit="east" move="east" destination="140" />
+  </node>
+  <node id="142" name="Merit Badges, Sales Floor" color="#FF0000">
+    <description>Neatly pressed, the folds of the tent appear to fall in exact lines creating an octagon shape on the inside of this neatly kept tent.  Two plain applewood tables sit on a heavy cotton rug of pale silver.</description>
+    <position x="-20" y="180" z="0" />
+    <arc exit="west" move="west" destination="140" />
+  </node>
+  <node id="143" name="Getting Back to Basics, Carry It" note="Getting Back to Basics|Back to Basics" color="#FF0000">
+    <description>Glossy walls are covered with a light polish to bring out the soft tones of the wood, while round windows are set evenly to catch any bit of light from outside.  A fringed burgundy rug extends across the floor ending just before the silverwood door that leads back out to the festival grounds.  Two racks are set up in the middle of the room to best display their wares.</description>
+    <position x="40" y="180" z="0" />
+    <arc exit="north" move="north" destination="144" />
+    <arc exit="east" move="east" destination="146" />
+    <arc exit="west" move="west" destination="145" />
+    <arc exit="go" move="go silverwood door" destination="10" />
+  </node>
+  <node id="144" name="Getting Back to Basics, Skin It" color="#FF0000">
+    <description>Glossy walls are covered with a light polish to bring out the soft tones of the wood, while round windows are set evenly to catch any bit of light from outside.  A lush green carpet extends across the floor and under some counters that are set side by side in the center of the area.</description>
+    <position x="40" y="160" z="0" />
+    <arc exit="south" move="south" destination="143" />
+  </node>
+  <node id="145" name="Getting Back to Basics, Additional Accessories" color="#FF0000">
+    <description>Glossy walls are covered with a light polish to bring out the soft tones of the wood, while round windows are set evenly to catch any bit of light from outside.  A soft orange carpet extends across the floor and under a pair of stands that are set in the middle of the area.</description>
+    <position x="20" y="180" z="0" />
+    <arc exit="east" move="east" destination="143" />
+  </node>
+  <node id="146" name="Getting Back to Basics, Magic It" color="#FF0000">
+    <description>Glossy walls are covered with a light polish to bring out the soft tones of the wood, while round windows are set evenly to catch any bit of light from outside.  A bright yellow carpet extends across the floor and under a set of gleaming tables that are placed in the center of the room.</description>
+    <position x="60" y="180" z="0" />
+    <arc exit="west" move="west" destination="143" />
+  </node>
+  <node id="147" name="Akaterina's Cassocks, First Floor" note="Akaterina's Cassocks|Cassocks" color="#FF0000">
+    <description>In contrast to the exterior of the yurt, the interior is painted mostly in muted shades of cream and beige.  The understated colors serve to rivet the customers' attention on the dozens of clerical robes for sale -- some of which are displayed on mannequins and hangers, while others are folded tidily in a chest and a cabinet sitting together.  Ropes are visible among the felt covers, holding together the sturdy lattice walls with elaborate knots.</description>
+    <position x="-60" y="320" z="0" />
+    <arc exit="up" move="up" destination="148" />
+    <arc exit="go" move="go felted door" destination="9" />
+  </node>
+  <node id="148" name="Akaterina's Cassocks, Second Floor" color="#FF0000">
+    <description>In this attic-like room, bent roof poles converge overhead to form a shallow crown.  The ceiling is decorated livelily with depictions of gold-yellow pandas capering across a snowy landscape of white felt.  A pair of polished wood closets face each other, and a lone armoire stands at a farther corner.</description>
+    <position x="-60" y="340" z="0" />
+    <arc exit="down" move="down" destination="147" />
+  </node>
+  <node id="149" name="Weather Beaters, Sunny Day Showroom" note="Weather Beaters" color="#FF0000">
+    <description>Sheared wool carpet in hues of pale beige gives the floor the appearance of a sandy beach, making it the perfect background for the colorful merchandise displayed throughout the wagon.  Large gaethzen spheres dangle from the ceiling like fiery suns blazing on a summer's day, washing the area in bright light.  Sago palms planted in embossed earthenware pots provide living sculptures, their graceful fronds freshening the air.</description>
+    <position x="20" y="360" z="0" />
+    <arc exit="east" move="east" destination="150" />
+    <arc exit="go" move="go arched door" destination="8" />
+  </node>
+  <node id="150" name="Weather Beaters, Rainy Day Showroom" color="#FF0000">
+    <description>Glass panels built into the wagon's roof, allow light to filter through multi-hued blue gossamer, which drapes the room.  Tiny crystals stitched to the gauzy fabric sparkle like raindrops on a stormy day.  Darkened paper-mache clouds sway from wires bolted in the ceiling, as customers move about perusing merchandise for sale.  In the corner stands a fountain, surrounded by potted ferns that fill the air with the scent of dampened foliage.</description>
+    <position x="40" y="360" z="0" />
+    <arc exit="west" move="west" destination="149" />
+  </node>
+  <node id="151" name="The Essential Sects Shop, Unity" color="#FF0000">
+    <description>A tortoiseshell pattern covering the ceiling and walls clearly delineates this area of the shop.  A faint aroma of coffee and sizzling meat wafts through the air, though there is no readily apparent source.</description>
+    <position x="190" y="360" z="0" />
+    <arc exit="northwest" move="northwest" destination="49" />
+  </node>
+  <node id="152" name="The Crystal Pilgrim, Interior" note="Crystal Pilgrim" color="#FF0000">
+    <description>A stained-glass window at the front of this large wagon reflects the bright light of lanterns and the soft glow of dozens of candles.  A thick ironwood counter fills one end of the room, while two carved pedestals and a rack rests in the center with shelving running along both side walls.  Opposite the works of glass art at the front of the wagon, a carved ironwood door is set into the heavy rear wall, with a stand and table carved from the same in either corner beside the door.</description>
+    <position x="870" y="420" z="0" />
+    <arc exit="go" move="go door" destination="17" />
+  </node>
+  <node id="154" name="Natural Magic, Sales Floor" note="Natural Magic" color="#FF0000">
+    <description>A braided rag carpet dyed a rich verdant green covers much of the dusty plank floor, and lush flowering swags haphazardly climb the knotty pine walls, lending the cramped interior a heady floral motif.  Several birch tables and a carved sandalwood rack are clustered opposite a whitewashed sideboard positioned within easy reach of a cushioned wicker sofa.  A tall bamboo screen separates one corner from the rest of the caravan.</description>
+    <position x="330" y="120" z="0" />
+    <arc exit="go" move="go round door" destination="11" />
+    <arc exit="go" move="go bamboo screen" destination="155" />
+  </node>
+  <node id="155" name="Natural Magic, Corner Nook" color="#FF0000">
+    <description>Sheer green fabric shot with vines of gold thread hangs in swags around the room, gleaming slightly under light shed from large, suspended lanterns.  Spanning one wall is a wide shelf, a birch table centered directly beneath it.  Nestled next to the table's left front leg, a ceramic urn is nearly overshadowed.  A carved willow display stand on the opposite side of the nook holds charms on a shallow top shelf and a jewelry case on the lower shelf.</description>
+    <position x="330" y="140" z="0" />
+    <arc exit="go" move="go bamboo screen" destination="154" />
+  </node>
+  <node id="156" name="Tisk's Wagon, Front Room" note="Tisk's Wagon" color="#FF0000">
+    <description>The low ceiling of this room might cause trouble for tall folk, but for shorter Elanthians the effect is merely cozy. Scraps of leather, bits of metal and dust bunnies the size of largish weasels compete for space on the floor, the last sent into a swirling romp whenever anyone moves about. Busy figures can be seen moving energetically behind a gauzy blue curtain that divides the wagon into two halves.</description>
+    <position x="310" y="280" z="0" />
+    <arc exit="go" move="go blue curtain" destination="157" />
+    <arc exit="go" move="go small door" destination="4" />
+  </node>
+  <node id="157" name="Tisk's Wagon, Back Room" color="#FF0000">
+    <description>The back room of the wagon is even more crowded and chaotic than the front. This is somewhat surprising, since there is less furniture here and fewer items for sale. Taking up the space which merchandise does not, several Gnomish shop attendants rush about in a continual frenzy, checking on customers, going out to check stock, removing fingerprints left behind by curious customers and bumping into just about everything that crosses their path. A gauzy blue curtain leads back to the front room.</description>
+    <position x="310" y="300" z="0" />
+    <arc exit="go" move="go blue curtain" destination="156" />
+  </node>
+  <node id="158" name="Inner Illuminations, Sales Floor" note="Inner Illuminations" color="#FF0000">
+    <description>The interior of the wagon is surprisingly spacious, with enough room at the center for a large silverwillow carving of a regal lion.  Eerie green light emanates from wall sconces in each corner of the room, bright enough to illuminate the items on the table or stand.</description>
+    <position x="210" y="280" z="0" />
+    <arc exit="go" move="go red door" destination="5" />
+  </node>
+  <node id="159" name="Sound the Hunt, Shop Floor" note="Sound the Hunt" color="#FF0000">
+    <description>Forked oak support poles barely carry the weight from shaggy mammoth hides draped about the tent.  Towards the tent's center, a smoldering firepit surrounded by wet shale rock fills the air with an earthy steam.  Tables made from bone and steel surround the fire, displaying many items for sale.  In the corner, an alabaster stand exhibits simpler wares.  A leather flap embroidered with an orange flame leads deeper into the tent.</description>
+    <position x="270" y="480" z="0" />
+    <arc exit="go" move="go opening" destination="2" />
+    <arc exit="go" move="go leather flap" destination="229" />
+  </node>
+  <node id="160" name="The Mind's Eye" note="The Mind's Eye|Mind's Eye" color="#FF0000">
+    <description>Lengths of rich purple velvet line the walls, draping out and away from the gaethzen lamp at the tent's apex to pool on the floor with careless abandon.</description>
+    <position x="770" y="480" z="0" />
+    <arc exit="go" move="go flap" destination="19" />
+  </node>
+  <node id="161" name="The Silver Mists" color="#FF0000">
+    <description>Silver mist flows all around, obscuring everything but a luminous ethereal orb floating eerily before you.</description>
+    <position x="710" y="160" z="0" />
+    <arc exit="out" move="out" destination="77" />
+  </node>
+  <node id="162" name="The Silver Mists" color="#FF0000">
+    <description>Silver mist flows all around, obscuring everything but a luminous ethereal orb floating eerily before you.</description>
+    <position x="750" y="180" z="0" />
+    <arc exit="out" move="out" destination="79" />
+  </node>
+  <node id="163" name="The Silver Mists" color="#FF0000">
+    <description>Silver mist flows all around, obscuring everything but a luminous ethereal orb floating eerily before you.</description>
+    <position x="750" y="200" z="0" />
+    <arc exit="out" move="out" destination="78" />
+  </node>
+  <node id="164" name="The Silver Mists" color="#FF0000">
+    <description>Silver mist flows all around, obscuring everything but a luminous ethereal orb floating eerily before you.</description>
+    <position x="750" y="220" z="0" />
+    <arc exit="out" move="out" />
+  </node>
+  <node id="165" name="The Silver Mists" color="#FF0000">
+    <description>Silver mist flows all around, obscuring everything but a luminous ethereal orb floating eerily before you.</description>
+    <position x="710" y="240" z="0" />
+    <arc exit="out" move="out" destination="81" />
+  </node>
+  <node id="166" name="The Silver Mists" color="#FF0000">
+    <description>Silver mist flows all around, obscuring everything but a luminous ethereal orb floating eerily before you.</description>
+    <position x="670" y="220" z="0" />
+    <arc exit="out" move="out" destination="82" />
+  </node>
+  <node id="167" name="The Silver Mists" color="#FF0000">
+    <description>Silver mist flows all around, obscuring everything but a luminous ethereal orb floating eerily before you.</description>
+    <position x="670" y="200" z="0" />
+    <arc exit="out" move="out" destination="83" />
+  </node>
+  <node id="168" name="The Silver Mists" color="#FF0000">
+    <description>Silver mist flows all around, obscuring everything but a luminous ethereal orb floating eerily before you.</description>
+    <position x="670" y="180" z="0" />
+    <arc exit="out" move="out" destination="84" />
+  </node>
+  <node id="171" name="Bunglefoot's Tent, Entryway" note="Bunglefoot" color="#FF0000">
+    <description>The dirt floor has been trampled smooth by the many feet of Bungles's previous customers.  Lopsided cabinets hug the walls near the tent flap, while mismatched tables of various sizes are scattered randomly about.  A beaded curtain covers an entryway to the north.  Several lanterns carelessly hung from the ceiling cast dancing shadows on the merchandise.</description>
+    <position x="950" y="420" z="0" />
+    <arc exit="east" move="east" destination="175" />
+    <arc exit="west" move="west" destination="176" />
+    <arc exit="go" move="go tent flap" destination="18" />
+    <arc exit="go" move="go beaded curtain" destination="172" />
+    <arc exit="go" move="go flap" destination="18" />
+  </node>
+  <node id="172" name="Bunglefoot's Tent, Weapon Racks" color="#FF0000">
+    <description>Elaborate wall sconces with long-tapered candles burning merrily are carefully secured to the tent's walls.  Prisms of color reflect from the curtain beads and cast dancing shadows on the merchandise.  Several intricately carved weapon racks are discreetly exhibited in one corner, displaying the artistic craftsmanship of the artisan.</description>
+    <position x="950" y="400" z="0" />
+    <arc exit="east" move="east" destination="173" />
+    <arc exit="west" move="west" destination="174" />
+    <arc exit="go" move="go beaded curtain" destination="171" />
+  </node>
+  <node id="173" name="Bunglefoot's Tent, Boxes" color="#FF0000">
+    <description>Miniature boxes of all shapes and sizes grace a long table along the north wall of the tent.  An opened wardrobe holds small replicas of chests and footlockers carefully detailed in various kinds of woods.  A huge wooden candelabrum hangs from the center of the ceiling with elaborately carved mahogany wax catchers that encircle the base of each lit candle.</description>
+    <position x="970" y="400" z="0" />
+    <arc exit="west" move="west" destination="172" />
+  </node>
+  <node id="174" name="Bunglefoot's Tent, Wall Hangings" color="#FF0000">
+    <description>Colorful pictures in beautiful handcrafted wooden frames are hung meticulously from brass hooks fastened to the walls.  Tall freestanding ebony candleholders holding fat candles sit in each of the four corners, lighting the room warmly.</description>
+    <position x="930" y="400" z="0" />
+    <arc exit="east" move="east" destination="172" />
+  </node>
+  <node id="175" name="Bunglefoot's Tent, More Stuff" color="#FF0000">
+    <description>A crude piece of burlap fastened with gnarled pieces of rope creates a makeshift wall, which cuts this room in half.  Numerous crates, boxes and old trunks stacked randomly in a seemingly helter-skelter fashion almost obscure a small flap carelessly ripped in the crude divider.  Dripping candles casting multifarious shadows lean precariously atop several containers stacked in the corner.</description>
+    <position x="970" y="420" z="0" />
+    <arc exit="west" move="west" destination="171" />
+    <arc exit="go" move="go flap" destination="180" />
+  </node>
+  <node id="176" name="Bunglefoot's Tent, Stuff" color="#FF0000">
+    <description>Overflowing shelves of all sizes are attached crookedly to the walls.  Thick pieces of rope secured haphazardly to flimsy hooks in the ceiling hold two baskets, one of reed and one of wicker, each filled to the brim with Bunglefoot's wares.  Burning torches sputter dangerously nearby, spewing puffs of dark smoke that lazily dance around the shadowy corners.</description>
+    <position x="930" y="420" z="0" />
+    <arc exit="east" move="east" destination="171" />
+    <arc exit="go" move="go shadowy corner" destination="254" />
+  </node>
+  <node id="177" name="Altared Visions, Pilgrims' Tent" note="Altared Visions" color="#FF0000">
+    <description>Brightly lit candles in heavy brass holders cast wavering shadows over a glass slab, a wooden chest and an opened crate filled with many types of clerical merchandise.  Hanging over the exit, secured with a pair of twined jute cords, is a silken flap bordered with golden fringe.</description>
+    <position x="970" y="460" z="0" />
+    <arc exit="southeast" move="southeast" destination="178" />
+    <arc exit="go" move="go flap" destination="18" />
+  </node>
+  <node id="178" name="Altared Visions, Backtent" color="#FF0000">
+    <description>This corner of the itinerant shop is largely barren except for the wares for sale, only illuminated by the vestiges of candlelight seeping from the main area.  A few pilgrims mill about, polishing their badges or clicking their prayer beads.</description>
+    <position x="990" y="480" z="0" />
+    <arc exit="northwest" move="northwest" destination="177" />
+  </node>
+  <node id="179" name="Sister Seendra's Salvation Station" note="Sister Seendra's|Seendra's" color="#FF0000">
+    <description>A pathetic tin roof suspended from four lengths of misshapen sandalwood provides limited respite from the elements.  Trampled yellowed grass spans the entire perimeter of the booth, providing a subtle indication of where the walls would be were this a classier establishment.  From a stuffed bird nailed to one of the posts hangs a string of sloppily-made meerschaum beads.</description>
+    <position x="930" y="460" z="0" />
+    <arc exit="go" move="go fairegrounds" destination="18" />
+  </node>
+  <node id="180" name="Bunglefoot's Tent, Hidey-Hole" color="#FF0000">
+    <description>The crude divider with its torn flap has been gaily decorated with colorfully stitched appliques in various hues. Tiny racks with hanging merchandise are neatly aligned between open chests storing additional wares. A beautiful mahogany wardrobe sits in one corner next to an elaborate glass case with an intricately carved oak countertop. Hand carved wooden candelabras holding brightly burning candles are carefully placed among the vendible items.</description>
+    <position x="990" y="420" z="0" />
+    <arc exit="go" move="go small flap" destination="175" />
+  </node>
+  <node id="181" name="Hide and Seek, Hall of Trade" color="#FF0000">
+    <description>Large murals depicting traders leading caravans through long trade routes decorate this simple room, spanning each wall as one scene melds into the next. Large gaethzen orbs hanging from the ceiling brightly showcase the wares below, illuminating every portion of the gently curving area.</description>
+    <position x="490" y="220" z="0" />
+    <arc exit="go" move="go wide archway" destination="63" />
+  </node>
+  <node id="182" name="All Tressed Up, Beautifully Basic" note="All Tressed Up" color="#FF0000">
+    <description>A braided wool rug stretches across the polished oak floor, its muted blue hue adding a touch of softness to the room.  Warm light cast from flickering oil lanterns reflects off the ebony-framed mirrors lining the otherwise bare walls, highlighting a small stand and pair of tables arranged around the center of the room.</description>
+    <position x="-60" y="240" z="0" />
+    <arc exit="go" move="go oak door" destination="9" />
+  </node>
+  <node id="183" name="Vocational Grace, Atelier of the Apprentice" note="Vocational Grace" color="#FF0000">
+    <description>The air is faintly kissed with the sugary smell of vanilla shortbread baking. Despite the ubiquity of the raw material piles constantly being moved about by workers, there is a sense of tidiness to this hut. Directing all the activity from atop her tall stool is the shop's apprentice, carefully positioned to block access to another room -- possibly that of the craftsmaster.</description>
+    <position x="-40" y="280" z="0" />
+    <arc exit="go" move="go straw door" destination="9" />
+  </node>
+  <node id="184" name="Sebastien's Fine Print, Showroom" note="Sebastien's Fine Print" color="#FF0000">
+    <description>Well-crafted canvas has been carefully stretched and securely tied to strong poles that rise overhead and stretch to the center of the tent. Indirect light from shielded lanterns casts a cheerful glow about the curtained area. Everything within the room has been arranged to precision.</description>
+    <position x="430" y="460" z="0" />
+    <arc exit="go" move="go tent flap" destination="23" />
+  </node>
+  <node id="185" name="As the Caravan Turns, Inside the Tent" note="As the Caravan Turns|Caravan Turns" color="#FF0000">
+    <description>A simple wooden framework supports the heavy canvas covering that shelters this small space from the elements.  A rich carpet has been unrolled for customers to stand upon while browsing the few wares offered, but the tent otherwise lacks any sort of decoration.</description>
+    <position x="430" y="420" z="0" />
+    <arc exit="go" move="go canvas flap" destination="23" />
+  </node>
+  <node id="187" name="King Fade's Back Alley Bazaar" note="King Fade's Back Alley Bazaar|King Fade" color="#FF0000">
+    <description>Wind from outside wallops the stiff canvas, causing it to creak and complain against the wooden supports holding the heavy fabric taut and upright.  Broken cobble masquerades as the shop floor underfoot and just barely serves its purpose without accumulating too much unfavorable debris.  A few weapon racks display wares for purchase, and a stenciled notice sways near the exit flap to ensure all customers read the proprietor's caveat before they leave.</description>
+    <position x="750" y="520" z="1" />
+    <arc exit="go" move="go exit flap" destination="19" />
+  </node>
+  <node id="188" name="Besieged, Atrium" note="Besieged|Siegery" color="#FF0000">
+    <description>Suspended between jewel-toned pennants overhead, gaethzen siegery figurines illuminate the grand entry hall.  Eager contestants and spectators crowd around the silversteel directory at the center of the chamber, while colorful hallways lead to separate competition galleries.</description>
+    <position x="790" y="400" z="0" />
+    <arc exit="go" move="go golden doors" destination="17" />
+    <arc exit="north" move="north" destination="189" />
+    <arc exit="northeast" move="northeast" destination="190" />
+    <arc exit="east" move="east" destination="191" />
+    <arc exit="southeast" move="southeast" destination="192" />
+    <arc exit="south" move="south" destination="193" />
+    <arc exit="southwest" move="southwest" destination="194" />
+    <arc exit="west" move="west" destination="195" />
+    <arc exit="northwest" move="northwest" destination="196" />
+    <arc exit="go" move="go doors" destination="17" />
+  </node>
+  <node id="189" name="Besieged, Sapphire Gallery" note="Sapphire Gallery" color="#FF0000">
+    <description>Suspended between jewel-toned pennants overhead, gaethzen siegery figurines illuminate the competition hall.  A large circle of intricately woven rush matting is partially buried into a low sapphire-embedded glaes platform at the center of the spacious arena.</description>
+    <position x="790" y="380" z="0" />
+    <arc exit="south" move="south" destination="188" />
+  </node>
+  <node id="190" name="Besieged, Topaz Gallery" note="Topaz Gallery" color="#FF0000">
+    <description>Suspended between jewel-toned pennants overhead, gaethzen siegery figurines illuminate the competition hall.  A large circle of intricately woven rush matting is partially buried into a low topaz-embedded gold platform at the center of the spacious arena.</description>
+    <position x="810" y="380" z="0" />
+    <arc exit="southwest" move="southwest" destination="188" />
+  </node>
+  <node id="191" name="Besieged, Amethyst Gallery" note="Amethyst Gallery" color="#FF0000">
+    <description>Suspended between jewel-toned pennants overhead, gaethzen siegery figurines illuminate the competition hall.  A large circle of intricately woven rush matting is partially buried into a low amethyst-embedded tyrium platform at the center of the spacious arena.</description>
+    <position x="810" y="400" z="0" />
+    <arc exit="west" move="west" destination="188" />
+  </node>
+  <node id="192" name="Besieged, Pearl Gallery" note="Pearl Gallery" color="#FF0000">
+    <description>Suspended between jewel-toned pennants overhead, gaethzen siegery figurines illuminate the competition hall.  A large circle of intricately woven rush matting is partially buried into a low pearl-embedded kiralan platform at the center of the spacious arena.</description>
+    <position x="811" y="421" z="0" />
+    <arc exit="northwest" move="northwest" destination="188" />
+  </node>
+  <node id="193" name="Besieged, Competition Supplies" color="#FF0000">
+    <description>Suspended between jewel-toned pennants overhead, gaethzen siegery figurines illuminate the spacious showroom.  Attentive shop clerks discreetly stand next to gold, silver, and bronze display tables of neatly organized merchandise.</description>
+    <position x="790" y="421" z="0" />
+    <arc exit="north" move="north" destination="188" />
+  </node>
+  <node id="194" name="Besieged, Diamond Gallery" note="Diamond Gallery" color="#FF0000">
+    <description>Suspended between jewel-toned pennants overhead, gaethzen siegery figurines illuminate the competition hall.  A large circle of intricately woven rush matting is partially buried into a low diamond-embedded uthamar platform at the center of the spacious arena.</description>
+    <position x="770" y="420" z="0" />
+    <arc exit="northeast" move="northeast" destination="188" />
+  </node>
+  <node id="195" name="Besieged, Emerald Gallery" note="Emerald Gallery" color="#FF0000">
+    <description>Suspended between jewel-toned pennants overhead, gaethzen siegery figurines illuminate the competition hall.  A large circle of intricately woven rush matting is partially buried into a low emerald-embedded tel'athi platform at the center of the spacious arena.</description>
+    <position x="770" y="400" z="0" />
+    <arc exit="east" move="east" destination="188" />
+  </node>
+  <node id="196" name="Besieged, Ruby Gallery" note="Ruby Gallery" color="#FF0000">
+    <description>Suspended between jewel-toned pennants overhead, gaethzen siegery figurines illuminate the competition hall.  A large circle of intricately woven rush matting is partially buried into a low ruby-embedded asini platform at the center of the spacious arena.</description>
+    <position x="770" y="380" z="0" />
+    <arc exit="southeast" move="southeast" destination="188" />
+  </node>
+  <node id="197" name="Illwind &amp; Sons Lucky Disaster Salvage Co., Crushed Caravan" note="Illwind and Sons" color="#FF0000">
+    <description>This caravan appears to have been smashed nearly in half by an enormous falling tree.  Its deck is bowed toward the center, and its roof would have been quite open to the air were it not for a canvas tarp covering the missing third.  Broad oval cross sections show concentric rings where an embedded trunk and branches were cut away sheer to the wooden walls in order to make room in the caravan's interior.  Some whimsical -- or cruel -- merchandiser has set up tree-shaped wooden displays artfully painted in tones of precious metals, including a spiraling gold tree, a sinuous silver tree, a bowed copper tree, a curly platinum tree, and a wavy palladium tree.  A small, framed piece of embroidery hangs upon a section of undamaged wall.</description>
+    <position x="910" y="220" z="0" />
+    <arc exit="go" move="go narrow door" destination="15" />
+    <arc exit="northeast" move="northeast" destination="198" />
+    <arc exit="northwest" move="northwest" destination="199" />
+  </node>
+  <node id="198" name="Illwind &amp; Sons Lucky Disaster Salvage Co., Burnt Caravan" color="#FF0000">
+    <description>A heavy scent of charred wood and smoked meat fills the air, and the walls of this caravan are blackened and scorched.  Above, the wooden roof is entirely burned away, the opening covered by a canvas tarp that flaps and snaps whenever a wind comes up.</description>
+    <position x="930" y="200" z="0" />
+    <arc exit="west" move="west" destination="199" />
+    <arc exit="southwest" move="southwest" destination="197" />
+  </node>
+  <node id="199" name="Illwind &amp; Sons Lucky Disaster Salvage Co., Flooded Caravan" color="#FF0000">
+    <description>The floor and walls of this unfortunate caravan are horribly warped, the planking twisted and swelled into contorted shapes by extensive water damage.  Above, the ceiling and upper walls support a fantastic garden of molds and fungi.  A gap between this caravan and the next leads to a protected inner triangle between the three, but a chain is strung up to block the gap.</description>
+    <position x="890" y="200" z="0" />
+    <arc exit="east" move="east" destination="198" />
+    <arc exit="southeast" move="southeast" destination="197" />
+  </node>
+  <node id="200" name="Discreet Deceptions" note="Discreet Deceptions" color="#FF0000">
+    <description>Jewel-encrusted oil lamps glow brightly along the interior of this cramped tent, where every available space is full of mismatched finery.  Behind a large ebonwood counter sits Jaymiane, an Elothean merchant whose eyes continually scan her merchandise, a row of wooden shelves standing behind her.  The thick perfume of incense fills the room, rising on a thin wisp of smoke coming from the mouth of a carved obsidian panther supporting a display table.</description>
+    <position x="850" y="240" z="1" />
+    <arc exit="go" move="go tent flap" destination="14" />
+  </node>
+  <node id="201" name="A Darker Shade of Night" note="A Darker Shade of Night|Darker Shade of Night" color="#FF0000">
+    <description>A tall ebony wardrobe sits in this small hollow across from some pillars draped in a dark, silky material.  Faceted crystal sconces hold dimly glowing candles that give enough steady shine so that one can comfortably view the merchandise.  All of the lights have been positioned on one side of the room, casting the opposite corner in shadow.</description>
+    <position x="810" y="240" z="1" />
+    <arc exit="go" move="go pillars" destination="14" />
+    <arc exit="go" move="go alcove" destination="202" />
+  </node>
+  <node id="202" name="A Darker Shade of Night, Shadows" color="#FF0000">
+    <description>Only the faintest candlelight filters through the hollow to this darkened corner.  Leaning at an angle against the wall, a broad ebony wardrobe houses several items for sale.  Iridescent chalk on the floor has been smudged by foot traffic but still adds an underlying glimmer to the shadows.</description>
+    <position x="790" y="220" z="1" />
+    <arc exit="go" move="go main floor" destination="201" />
+  </node>
+  <node id="203" name="Loot N Flee, Main Room" note="Loot N Flee" color="#FF0000">
+    <description>Canvas walls enclosing the rough plank floors billow lightly in the wind, moving slightly in tune with the exterior weather.  Scattered around the cavernous tent are a number of wooden racks, each carved in a stylized representation of an object.  Hanging from the tentpoles overhead are polished lanterns that provide lighting to better see the wares displayed.</description>
+    <position x="200" y="20" z="0" />
+    <arc exit="go" move="go tent flap" destination="35" />
+    <arc exit="north" move="north" destination="206" />
+  </node>
+  <node id="204" name="Affair Of The Art Annex, Salesfloor" note="Affair Of The Art Annex|Art Annex" color="#FF0000">
+    <description>Hanging from the wooden sides are numerous tapestries and other wall hangings.  A line of lamps dangle from the center of the wagon, illuminating the wares for the crowds of shoppers.</description>
+    <position x="160" y="40" z="0" />
+    <arc exit="go" move="go wooden door" destination="34" />
+  </node>
+  <node id="205" name="Two Doors Guild Fest, Main Room" note="Two Doors Guild Fest" color="#FF0000">
+    <description>Wide aisles allow the customers to see all sides of the merchandise on display.  Doors in all shapes and sizes hang from the ceiling, each one lit with elaborate lighting to allow any imperfections to be seen by the discriminating clientele.</description>
+    <position x="160" y="60" z="0" />
+    <arc exit="go" move="go tent flap" destination="33" />
+  </node>
+  <node id="206" name="Loot N Flee, Back Room" color="#FF0000">
+    <description>Tucked into this rear alcove are a few polished wood shelves, each displaying more refined merchandise than that set forth in the main room.  Elegant lamps shine from the tent poles, letting the customers peruse the wares at their leisure.</description>
+    <position x="200" y="0" z="0" />
+    <arc exit="south" move="south" destination="203" />
+  </node>
+  <node id="207" name="Skyward Bound, Showroom" note="Skyward Bound" color="#FF0000">
+    <description>Feathers painted all over the inside of the stall mimic the same feathers reproduced in silk that adorn the oversized wings on display.  Perched atop a puffy white cloud made of wool in the center of the room is a S'Kra maiden dressed in a dragon costume.</description>
+    <position x="610" y="280" z="0" />
+    <arc exit="go" move="go feathery flap" destination="25" />
+  </node>
+  <node id="208" name="Slice and Dice, Showroom" note="Slice and Dice" color="#FF0000">
+    <description>Stacked, tongue and grooved logs form the wagon's solid walls, adding a faint pine scent that lingers in the air.  Hidden within the rafters of the pitched roof are gaethzen spheres, keeping the displayed merchandise well lit no matter the time of day outside.  Braided rugs add a homey touch to the space while muffling any creaks that emanate from the wide-planked floor as customers walk though the aisles perusing the items for sale.</description>
+    <position x="570" y="280" z="0" />
+    <arc exit="go" move="go pine door" destination="25" />
+  </node>
+  <node id="209" name="Sheer Beauty,  Minerals of the Mines Room" note="Sheer Beauty" color="#FF0000">
+    <description>Clean and inviting, this spacious beauty shop reflects a magical merging of nature's beauty and versatility.  Silverwillow wood flooring and gleaming pale white walls encompass the vast room.  The large mirror affixed to the wall allows the shoppers a place to admire their beauty.  A sizeable handmade tapestry on one wall depicts a beautiful garden, while white willow furniture pieces fill the room displaying a wide variety of cosmetics and supplies.  An intricately carved door leads outside while a flame-shaped arch leads to another room.</description>
+    <position x="60" y="260" z="0" />
+    <arc exit="go" move="go willow door" destination="7" />
+    <arc exit="go" move="go flame-shaped arch" destination="262" />
+  </node>
+  <node id="210" name="Pirate Hideaway" note="Pirate Hideaway" color="#FF0000">
+    <description>Strung from netting that covers the roof, precisely placed tzgaa orbs provide a dim lighting to this underground area.  Dirt walls secured by boards surround the stuffy area that is littered with several surfaces.  A grimy-looking Rakash pirate keeps a close watch over the scattered wares.</description>
+    <position x="-20" y="360" z="1" />
+    <arc exit="climb" move="climb tall ladder" destination="8" />
+  </node>
+  <node id="211" name="A Faded Tent, Somka's Skin Stylings" note="Somka's Skin Stylings|Tattoos" color="#FF0000">
+    <description>Where once grass grew in abundance, the ground has been trampled into a muddy mess with withered stalks remaining.  A curved table carries the many tools, inks, dirty rags and other supplies used in the crafting of tattoos.  A pair of chairs sits next to the table, one reclined, while a trio of gaethzen globes hang directly above.</description>
+    <position x="-80" y="280" z="0" />
+    <arc exit="go" move="go stitched curtain" destination="212" />
+    <arc exit="go" move="go flap" destination="9" />
+  </node>
+  <node id="212" name="A Faded Tent, Somka's Special Stylings" color="#FF0000">
+    <description>Wooden planks provide minimal coverage from the soggy ground beneath, and the overhead lighting thankfully illuminates the places where the boards have sunk into the mud.  From time to time, an exclamation fo pain or the clatter of dropped tools filters through the thick curtain.  Functional chairs sit next to a table with the tools of the trade.</description>
+    <position x="-100" y="280" z="0" />
+    <arc exit="go" move="go stitched curtain" destination="211" />
+  </node>
+  <node id="214" name="Behind the Fairegrounds, Clearing" note="Behind the Fairegrounds" color="#FF0000">
+    <description>Though removed from the primary grounds, this small clearing is still close enough to hear the sounds of excited visitors making their way from one tent to another and barkers calling out wares for sale.  The trees surrounding the clearing are slightly wilted, whether from the heat or blight is unknowable at this distance.  A collection of drab structures and seedier patrons populates this secluded area.  Some of them periodically cock their head as if listening to something in the distance.</description>
+    <position x="-130" y="200" z="1" />
+    <arc exit="go" move="go stone tunnel" destination="215" />
+    <arc exit="go" move="go leaning structure" destination="216" />
+    <arc exit="go" move="go cedar doorway" destination="217" />
+    <arc exit="go" move="go darkened entryway" destination="218" />
+    <arc exit="go" move="go oversized shrub" destination="9" />
+  </node>
+  <node id="215" name="In Plain Sight" note="In Plain Sight" color="#FF0000">
+    <description>Painted in pale beige, the rough-hewn stone walls have a mix of anatomical charts and tailoring patterns framed upon them.  The floor is covered in a deep taupe rug marred with darker spots surrounding a garish display flanked by two mannequins.</description>
+    <position x="-130" y="140" z="1" />
+    <arc exit="go" move="go exit tunnel" destination="214" />
+    <arc exit="go" move="go trapdoor" destination="219" />
+  </node>
+  <node id="216" name="Monastery, Repurposed Shipments" note="Repurposed Shipments" color="#FF0000">
+    <description>Stacks of crates labeled 'Hide and Seek' are packed against the walls of this area, which is little more than a windowless storage room.  Wares are set out in a rather haphazard fashion, without much rhyme or reason to their organization.  A few torches illuminate the room, flickering and casting reddish light and shadows over the clutter.</description>
+    <position x="-110" y="180" z="1" />
+    <arc exit="go" move="go small archway" destination="214" />
+  </node>
+  <node id="217" name="The Knife's Edge, Front Room" note="The Knife's Edge|Knife's Edge" color="#FF0000">
+    <description>Crafted from burnished cedar, this small room has a just-built smell to it, and the plain boards making up the walls look as if they were freshly nailed.  Four standing braziers light the room, one placed in each corner and lit with a pale orange glow.  Crafted more for function than appearance, a narrow door leads into another area, while an alcove off to the side is blocked off by a simple white curtain.</description>
+    <position x="-160" y="220" z="1" />
+    <arc exit="go" move="go open archway" destination="214" />
+    <arc exit="go" move="go white curtain" destination="220" />
+    <arc exit="go" move="go door" destination="221" />
+  </node>
+  <node id="218" name="Visage of Obfuscation" note="Visage of Obfuscation" color="#FF0000">
+    <description>The only decoration in this small, understated room are four columns that rise in each corner and meet in the center to form an arch at their apex.  Torches burn brightly on each column, facing inward and emitting plenty of light to display the wares below.</description>
+    <position x="-180" y="200" z="1" />
+    <arc exit="go" move="go narrow door" destination="214" />
+  </node>
+  <node id="219" name="In Plain Sight" color="#FF0000">
+    <description>An uneven stone floor and crumbling stone walls suggest the recent addition of this extension.  A single gaethzen orb hangs from a steelsilk cord, providing a modicum of illumination.  The smell of damp masonry fills the air, and the cramped room is largely taken over by the wares for sale.</description>
+    <position x="-110" y="140" z="1" />
+    <arc exit="go" move="go trapdoor" destination="215" />
+  </node>
+  <node id="220" name="The Knife's Edge, Alcove" color="#FF0000">
+    <description>Cramped and with barely enough room for shoppers to move, this small alcove is packed full of boxes and crates.  Wares are spread out underneath a single lantern, which flickers in the windowless alcove.  A half-unrolled red carpet lines the floor, looking like it was accidentally placed, stopping just before a plain white curtain.</description>
+    <position x="-160" y="240" z="1" />
+    <arc exit="go" move="go white curtain" destination="217" />
+  </node>
+  <node id="221" name="The Knife's Edge, Back Room" color="#FF0000">
+    <description>Set up with deliberate care, this storage area is carefully lined from wall to wall in lush red carpeting.  Several paintings cover the walls, each of them depicting a very abstract and random pattern of brushstrokes.  Gaethzen orbs decorate the ceiling in short rows, providing plenty of light, and a small door leads back to the front room.</description>
+    <position x="-140" y="220" z="1" />
+    <arc exit="go" move="go door" destination="217" />
+  </node>
+  <node id="222" name="Inner Vision, Dusty Cellar" color="#FF0000">
+    <description>The faint light from a rusted lantern upon a dusty, carved mahogany counter reveals the rough, crumbling walls that give the darkened room the appearance of having been dug in a hurry, with no regard for integrity.  The corpse of some creature lies upon the floor in a nearby corner as several insects scuttle away from the dessicated remains.</description>
+    <position x="790" y="80" z="0" />
+    <arc exit="go" move="go narrow stairwell" destination="119" />
+  </node>
+  <node id="223" name="A Dirty Shack, Tattoos" note="A Dirty Shack|Dirty Shack" color="#FF0000">
+    <description>A broken window periodically slams against the wall of the decrepit hut, which looks like it was firmly abandoned until very recently.  Shining light down into the center of the one-room house is a dim and smudged gaethzen orb, which dangles from a chain.  Pinned up haphazardly on the walls, several stained sheets depicting tattoo artwork showcase symbols on otherwise plain paper.</description>
+    <position x="-130" y="90" z="1" />
+    <arc exit="go" move="go decrepit door" destination="224" />
+  </node>
+  <node id="224" name="Jeihrem's Barrow, Entrance" note="Map90f_Basalt_Isle.xml|Jeihrem's Barrow">
+    <description>The still of night blankets the quiet fishing village, and the fishy scent of smoke from burning oil lanterns drifts through the air.  Most of the wooden buildings stand completely dark and abandoned, although a few are lit from the interior with the muted sound of conversation coming from within.  Racks of half-preserved fish stand drying on hooks, the cloying odor mingling with the smell from the lanterns.</description>
+    <position x="-130" y="110" z="1" />
+    <arc exit="go" move="go decrepit hut" destination="223" />
+  </node>
+  <node id="226" name="Hide and Seek, Hall of Stealth" color="#FF0000">
+    <description>Large murals depicting city streets and shadowed alleys decorate the walls of this simple room, spanning each wall as one scene melds into the next.  Dim lanterns hanging from the ceiling subtly showcase the wares below, barely lighting the gently curving area.</description>
+    <position x="490" y="240" z="0" />
+    <arc exit="go" move="go wooden door" destination="63" />
+  </node>
+  <node id="227" name="All the Gilded Loot, Containers Aplenty" note="All the Gilded Loot|Gilded Loot" color="#FF0000">
+    <description>The silk tent walls are covered in shiny painted copper, bronze, silver, gold, and platinum coins of all denominations.  In the center of the room, perfectly round tables with gleaming milled edges display a variety of wares.</description>
+    <position x="490" y="280" z="0" />
+    <arc exit="go" move="go platinum flap" destination="26" />
+  </node>
+  <node id="228" name="Frieden's Fabulous Frivolities" note="Frieden's Fabulous Frivolities" color="#FF0000">
+    <description>Understated black velvet forms the walls of this small tent, the color matching the clothing of most of its customers.  Purple glowstone spheres are placed around the wares for sale, emitting a sickly yellow light.  Dominating the majority of one wall is a sign penned in a fanciful, scrolling hand.</description>
+    <position x="-20" y="200" z="1" />
+    <arc exit="go" move="go exit flap" destination="10" />
+  </node>
+  <node id="229" name="Sound the Hunt, Inner Shop Floor" color="#FF0000">
+    <description>The air grows warmer in this compact and more intimate part of the tent.  Small wisps of steam from the larger room cling to the still air.  An impressive battle scene adorns a large hide draped on the back wall, above a table draped with pelts offering several items for sale.  A leather flap embroidered with a warhorn leads back to the main tent.</description>
+    <position x="290" y="480" z="0" />
+    <arc exit="go" move="go leather flap" destination="159" />
+  </node>
+  <node id="230" name="Wagon Interior, Jisi's Raffles" note="raffle|Jisi" color="#00FF00">
+    <description>The curving walls of the wagon are painted with an elaborate pattern of blue and green waves, swirling in bright hues that easily reflect the light of the hanging lanterns.  A wide granite counter sits upon this side of a pure white curtain dividing the cabin's interior space into two rooms, preventing the casual peruser from seeing the cache of prizes beyond.</description>
+    <position x="470" y="520" z="0" />
+    <arc exit="go" move="go door" destination="1" />
+  </node>
+  <node id="231" name="Bank of Therenborough, Festival Branch" color="#00FF00">
+    <description>Though lacking the usual protections commonly found in other banks -- metal bars separating the tellers from visitors in particular, the imposing guardsmen crowded around the entrance leave little doubt that any business conducted here is secure and that any mischief would be dealt with quickly and harshly.  A small plank crosses the gap leading into the next wagon, and a notice tacked near the opening reads Exchanges this way.  Laughter, barkers and more sounds of the festival continue outside but are somewhat muted within the banking space.</description>
+    <position x="510" y="520" z="0" />
+    <arc exit="east" move="east" destination="232" />
+    <arc exit="go" move="go exit" destination="1" />
+  </node>
+  <node id="232" name="Bank of Therenborough, Festival Exchange" color="#00FF00">
+    <description>A lone attendant sits behind a desk and is flanked by a trio of sentries on either side.  Atop the desk is a single, three-wicked candle that amply illuminates the cramped space.  The walls are bare wood save for a length of thick, dark hide that covers the wagon's only window.</description>
+    <position x="530" y="520" z="0" />
+    <arc exit="west" move="west" destination="231" />
+  </node>
+  <node id="233" name="Stamped!" note="Stamped" color="#FF0000">
+    <description>The inside of this tent is just large enough for the wooden counter that holds racks of wooden stamps for sale. A stool is stuck in one corner, the ground around it covered with wood chips and shavings.</description>
+    <position x="670" y="280" z="0" />
+  </node>
+  <node id="234" name="Crimson Crane Couriers, Traveling Showroom" note="Crimson Crane Couriers" color="#FF0000">
+    <description>Plush carmine carpeting, oiled cedar wall panels, and elegant gaethzen lanterns create an inviting atmosphere around the long display counter that runs the length of the wagon's showroom.  An apron-clad Elothean clerk attends to the sales floor, occasionally taking up work at printing presses and paper cutters behind the service counter when called upon to fill an order.</description>
+    <position x="80" y="300" z="0" />
+    <arc exit="go" move="go wagon door" destination="7" />
+  </node>
+  <node id="235" name="The Kindled Spirit" note="The Kindled Spirit|Kindled Spirit" color="#FF0000">
+    <description>The interior of this austere tent consists solely of the furnishings necessary to display the merchant's wares.  The rich scent of tobacco permeates the area, giving hint to what lies within.</description>
+    <position x="-20" y="360" z="0" />
+    <arc exit="go" move="go open flap" destination="8" />
+    <arc exit="go" move="go wooden screen" destination="264" />
+  </node>
+  <node id="237" name="Guildly Floors For Thought, Simple Pleasures" note="Guildly Floors for Thought" color="#FF0000">
+    <description>Plain canvas walls enclose the salesfloor, which displays a number of different floors set out on the trampled ground.  Shoppers mill about, inspecting the various offerings before purchasing.</description>
+    <position x="200" y="80" z="0" />
+    <arc exit="go" move="go striped flap" destination="28" />
+  </node>
+  <node id="238" name="Juicy Loot, Fruit Hoops" note="Juicy Loot" color="#FF0000">
+    <description>Ornate leaded glass surrounds the area with decorative floral motifs, allowing the outside light to completely immerse the shop's interior.  A raised wooden path wends its way through landscaped gardens that display a variety of colorful mosses and exotic plants, each seaming to highlight the many items available for purchase.</description>
+    <position x="200" y="60" z="0" />
+    <arc exit="go" move="go glass door" destination="33" />
+  </node>
+  <node id="242" name="The Great Outdoors, Front Room" note="Great Outdoors" color="#FF0000">
+    <description>Tanned furs, trophy antlers and partially completed longbows dangle from the ceiling of this small shop, giving off the potent aroma of the wilderness.  Across one wall is stretched the trophy pelt of a large white hiro bear, its head expertly mounted on a brass pole nearby.  A weathered Dwarven man sits behind the rough wooden counter, seemingly ignoring you as he peruses his hunting guide through his spectacles.</description>
+    <position x="940" y="290" z="0" />
+    <arc exit="north" move="north" destination="244" />
+    <arc exit="east" move="east" destination="245" />
+    <arc exit="west" move="west" destination="243" />
+    <arc exit="go" move="go oak door" destination="15" />
+  </node>
+  <node id="243" name="The Great Outdoors, Accessories" color="#FF0000">
+    <description>Light blue walls feature a rustic mural of painted flowers, trees, and animals in various sizes, colors, and shapes.  The smell of wildflowers and trees permeates the air within the windowless confines of the room.  Mossy green rugs cover the wooden floor.</description>
+    <position x="920" y="290" z="0" />
+    <arc exit="east" move="east" destination="242" />
+  </node>
+  <node id="244" name="The Great Outdoors, Attire" color="#FF0000">
+    <description>Large trees of various green hues painted onto the walls create an illusion of being in a dense forest, while birch, oak, willow, and greenheart mannequins display the vast array of outdoorsy fashions.  The smell of evergreen trees permeates the air within the windowless confines of the room.</description>
+    <position x="940" y="270" z="0" />
+    <arc exit="south" move="south" destination="242" />
+  </node>
+  <node id="245" name="The Great Outdoors, Tools and Supplies" color="#FF0000">
+    <description>Tanned furs, trophy antlers, and maps adorn the walls of this small room, giving off the potent aroma of the wilderness.  Carved oak furniture polished to accentuate the grain of the wood is used to display multiple crafting tools.</description>
+    <position x="960" y="290" z="0" />
+    <arc exit="west" move="west" destination="242" />
+  </node>
+  <node id="246" name="Nahja's Knickknacks, Alcove" color="#FF0000">
+    <description>Shadows dance upon the walls thanks to the single lantern providing flickering illumination.  A small square table takes up the majority of space in these cramped quarters.</description>
+    <position x="890" y="290" z="0" />
+    <arc exit="go" move="go curtain" destination="115" />
+  </node>
+  <node id="247" name="The Bardic Journey, Lorekeepers' Luggage" color="#FF0000">
+    <description>The same dark silk ceiling and scarlet walls as in the foyer continue the overall fiery theme, though the lamps here are brighter, allowing a better view of the items on display. Adding to the overall effect, the set of bookshelves against the far wall appears as sheltered niches within a rock face, carefully crafted to fit the room's atmosphere.</description>
+    <position x="330" y="60" z="0" />
+    <arc exit="go" move="go beribboned archway" destination="125" />
+  </node>
+  <node id="248" name="The Bardic Journey, Songsworn's Supplies" color="#FF0000">
+    <description>The same dark silk ceiling and scarlet walls as in the foyer continue the overall firey theme, though the lamps here are brighter, allowing a better view of the weapons and armor on display.</description>
+    <position x="350" y="80" z="0" />
+    <arc exit="go" move="go draped doorway" destination="125" />
+  </node>
+  <node id="249" name="The Bardic Journey, Performers' Provisions" color="#FF0000">
+    <description>The same dark silk ceiling and scarlet walls as in the foyer continue the overall fiery theme, though the lamps here are brighter, allowing a better view of the items on display. Adding to the overall effect, the set of bookshelves against the far wall appears as sheltered niches within a rock face, carefully crafted to fit the room's atmosphere.</description>
+    <position x="350" y="60" z="0" />
+    <arc exit="go" move="go dark curtain" destination="125" />
+  </node>
+  <node id="254" name="Bunglefoot's Tent, Shadowy Corner" color="#FF0000">
+    <description>This quiet, dark corner is all but consumed by rows of shelves attached precariously to the wall, heavy with their wares. Underfoot lies a neat woven rug, while overhead hangs a sign that spins slowly on a length of twine. Voices from buyers wandering around the rest of the tent seem muffled in this cozy nook.</description>
+    <position x="910" y="420" z="0" />
+    <arc exit="go" move="go shopping area" destination="176" />
+  </node>
+  <node id="255" name="Osgeth's, Basic Paints" color="#FF0000">
+    <description>Scattered across the floor in a haphazard fashion, makeshift rugs made from various animal furs covers the floor of this large tent. Large bamboo posts form a crude framework for leather hide walls, and spatters of dried paint have been ground into almost every surface. Sitting near the center of the room is a bamboo table with a paint-spattered sign posted by it.</description>
+    <position x="730" y="320" z="0" />
+    <arc exit="go" move="go deerhide curtain" destination="85" />
+    <arc exit="northwest" destination="256" />
+    <arc exit="northeast" destination="258" />
+  </node>
+  <node id="256" name="Osgeth's, Savage Paints" color="#FF0000">
+    <description>Smoldering with fire within its shallow bowl, a brazier set up near the corner of the room illuminates everything in a reddish hue. Thick paints spread over the rawhide walls crudely form the image of a Barbarian warrior, his arm raised to hurl a heavy wooden spear. In front of the painting is a small table, set out with a variety of paints.</description>
+    <position x="710" y="300" z="0" />
+    <arc exit="southeast" destination="255" />
+    <arc exit="northeast" destination="257" />
+  </node>
+  <node id="257" name="Osgeth's, Berserker Paints" color="#FF0000">
+    <description>A solid framework of lashed bamboo poles supports the hide walls of the large circular tent, each tightly stretched skin sewn crudely to the others. Several small lanterns set into cunningly carved cast-iron frames throw madly dancing silhouettes on the wall, reminiscent of a raging battle. Sitting in the center of the room is a large crate spattered with muted colors.</description>
+    <position x="730" y="280" z="0" />
+    <arc exit="southwest" destination="256" />
+    <arc exit="southeast" destination="258" />
+  </node>
+  <node id="258" name="Osgeth's, Plunderer Paints" color="#FF0000">
+    <description>The thick tent walls slope sharply downward from the ceiling, draped heavily over bamboo posts. Oil lamps hang on large cast-iron hooks over a large crate, eliminating most of the shadows from the room. Set up near the wall is a large table full of paintsticks.</description>
+    <position x="750" y="300" z="0" />
+    <arc exit="northwest" destination="257" />
+    <arc exit="southwest" destination="255" />
+  </node>
+  <node id="259" name="Inner Vision, Dark Alcove" color="#FF0000">
+    <description>Several stacks of rough-hewn crates, barrels and chests provide little more than a narrow passage through this part of the shop, seemingly where supplies are stored. A soft, golden glow radiates from a brass oil lamp upon an ornately carved counter in a far corner.</description>
+    <position x="810" y="60" z="0" />
+  </node>
+  <node id="260" name="The Mighty Mage, Showroom" note="The Mighty Mage|Mighty Mage" color="#FF0000">
+    <description>An intricately detailed fanciful mural of two Warrior Mages casting spells and a scholarly-looking Moon Mage gazing at the moons through a polished telescope covers the entire wall of the wagon. Each mage is dressed in finely crafted robes stitched with etchings and symbols that represent the elements and heavens. A short shelf, rosewood wardrobe, and tall stand sit against one wall, while a blue curtain leads to a small alcove.</description>
+    <position x="250" y="240" z="0" />
+    <arc exit="go" move="go blue curtain" destination="261" />
+    <arc exit="go" move="go white door" destination="5" />
+  </node>
+  <node id="261" name="The Mighty Mage, Alcove" color="#FF0000">
+    <description>An intricately detailed fanciful mural of two Warrior Mages casting spells and a scholarly-looking Moon Mage gazing at the moons through a polished telescope covers the entire wall of the wagon. Each mage is dressed in finely crafted robes stitched with etchings and symbols that represent the elements and heavens. A large shelf and a sapphire-blue counter with a jewelry box and ring tree on it have been attached to the back wall of the small alcove, each holding their respective wares for sale.</description>
+    <position x="270" y="240" z="0" />
+    <arc exit="go" move="go blue curtain" destination="260" />
+  </node>
+  <node id="262" name="Sheer Beauty, Fire and Ice Room" color="#FF0000">
+    <description>Small and inviting, this tiny room of the shop reflects a magical merging of nature's fire and ice.  Silverwillow wood flooring and gleaming pale white walls encompass the vast space.  The large mirror affixed to the wall allows shoppers a place to admire their beauty.  A sizeable tapestry on one wall depicts majestic volcanos and frozen mountaintops rising from a vast green landscape.  At the same time, white willow furniture pieces fill the room with a large display of cosmetics and beauty supplies.  A smooth arch leads back to the shop's main room, while a dark green screen with a forest design leads into another room.</description>
+    <position x="60" y="240" z="0" />
+    <arc exit="go" move="go flame-shaped arch" destination="209" />
+    <arc exit="go" move="go forest-green screen" destination="263" />
+  </node>
+  <node id="263" name="Sheer Beauty,  Into the Woods Room" color="#FF0000">
+    <description>Quiet and relaxing, this tiny room of the shop reflects the magical stillness of a deep forest.  Silverwillow wood flooring and gleaming pale white walls encompass the room.  A large mirror affixed to the wall allows the shoppers a place to admire their beauty.  A sizeable tapestry on one wall depicts a peaceful and quiet forest, while willow furniture pieces fill the room with a display of cosmetics and beauty supplies.  A forest-green screen with a forest design leads into another room.</description>
+    <position x="60" y="220" z="0" />
+    <arc exit="go" move="go forest-green screen" destination="262" />
+  </node>
+  <node id="264" name="The Kindled Spirit, Lounge">
+    <description>A haze of smoke permeates the still air of the covered space.  Camel hair rugs blanket the ground surrounding a portable potbellied stove placed within a circle of high-backed leather chairs.  Off in the corner of the room is a narrow sideboard covered in whiskey bottles.</description>
+    <position x="-40" y="360" z="0" />
+    <arc exit="go" move="go wooden screen" destination="235" />
+  </node>
+  <node id="265" name="Risty Business, Long-term Investments" note="Risty Business" color="#FF0000">
+    <description>Windowless walls of adobe are adorned with tapestries depicting warriors in ritual combat, their vibrant colors bringing the scenes to life.  Dominating the room is a gnarled khor'vela altar that showcases an impressive array of ceremonial weapons, each one meticulously crafted and ornately decorated.</description>
+    <position x="180" y="120" z="0" />
+    <arc exit="south" move="south" destination="266" />
+    <arc exit="go" move="go jaguar hide" destination="27" />
+  </node>
+  <node id="266" name="Risty Business, Short-term Investments" color="#FF0000">
+    <description>The subtle aroma of incense pervades this small annex.  Shelves lining the adobe walls display a variety of artifacts, such as obsidian-tipped arrowheads and intricately designed stone knives.  Torches illuminate an altar of pale driftwood, their flickering light seeming to animate the seaglass mosaic that adorns its surface.</description>
+    <position x="180" y="140" z="0" />
+    <arc exit="north" move="north" destination="265" />
+  </node>
+  <label text="">
+    <position x="90" y="-30" z="0" />
+  </label>
+  <label text="">
+    <position x="210" y="510" z="0" />
+  </label>
+  <label text="to North Road">
+    <position x="450" y="570" z="0" />
+  </label>
+  <label text="Ring Toss">
+    <position x="875" y="90" z="0" />
+  </label>
+  <label text="Three Frog">
+    <position x="953" y="207" z="0" />
+  </label>
+  <label text="Faeries' Wheel">
+    <position x="80" y="403" z="0" />
+  </label>
+  <label text="go brook">
+    <position x="220" y="100" z="0" />
+  </label>
+  <label text="Catapult">
+    <position x="125" y="71" z="0" />
+  </label>
+  <label text="Alterations">
+    <position x="458" y="380" z="0" />
+  </label>
+  <label text="Auction">
+    <position x="328" y="420" z="0" />
+  </label>
+  <label text="Ties for Things">
+    <position x="540" y="480" z="0" />
+  </label>
+  <label text="Essential Sects">
+    <position x="130" y="360" z="0" />
+  </label>
+  <label text="Back to Basics">
+    <position x="0" y="140" z="0" />
+  </label>
+  <label text="Book">
+    <position x="212" y="170" z="0" />
+  </label>
+  <label text="Primp">
+    <position x="320" y="180" z="0" />
+  </label>
+  <label text="Bardic">
+    <position x="322" y="30" z="0" />
+  </label>
+  <label text="Web of">
+    <position x="270" y="50" z="0" />
+  </label>
+  <label text="Inner Vision">
+    <position x="780" y="40" z="0" />
+  </label>
+  <label text="">
+    <position x="667" y="59" z="1" />
+  </label>
+  <label text="Leathercrafters">
+    <position x="860" y="60" z="0" />
+  </label>
+  <label text="Wandering">
+    <position x="820" y="480" z="0" />
+  </label>
+  <label text="Flowering Furniture">
+    <position x="626" y="462" z="0" />
+  </label>
+  <label text="Hunka's">
+    <position x="197" y="485" z="0" />
+  </label>
+  <label text="Couriers">
+    <position x="85" y="290" z="0" />
+  </label>
+  <label text="Empath">
+    <position x="788" y="520" z="0" />
+  </label>
+  <label text="Weather">
+    <position x="10" y="360" z="0" />
+  </label>
+  <label text="Cassocks">
+    <position x="-90" y="340" z="0" />
+  </label>
+  <label text="Badges">
+    <position x="-60" y="160" z="0" />
+  </label>
+  <label text="Arcayne">
+    <position x="165" y="210" z="0" />
+  </label>
+  <label text="Abu">
+    <position x="49" y="300" z="0" />
+  </label>
+  <label text="Just in">
+    <position x="110" y="210" z="0" />
+  </label>
+  <label text="Mystical Machinations">
+    <position x="648" y="140" z="0" />
+  </label>
+  <label text="Marine">
+    <position x="800" y="140" z="0" />
+  </label>
+  <label text="Nahja's">
+    <position x="850" y="290" z="0" />
+  </label>
+  <label text="Osgeth's">
+    <position x="705" y="340" z="0" />
+  </label>
+  <label text="Hide and Seek">
+    <position x="430" y="180" z="0" />
+  </label>
+  <label text="Delightful">
+    <position x="400" y="303" z="0" />
+  </label>
+  <label text="Beppo's">
+    <position x="540" y="200" z="0" />
+  </label>
+  <label text="Beards">
+    <position x="600" y="200" z="0" />
+  </label>
+  <label text="Crystal">
+    <position x="860" y="387" z="0" />
+  </label>
+  <label text="Great">
+    <position x="930" y="290" z="0" />
+  </label>
+  <label text="Natural">
+    <position x="310" y="140" z="0" />
+  </label>
+  <label text="Tisk's">
+    <position x="293" y="302" z="0" />
+  </label>
+  <label text="Inner">
+    <position x="200" y="280" z="0" />
+  </label>
+  <label text="Sound">
+    <position x="257" y="450" z="0" />
+  </label>
+  <label text="Attyre">
+    <position x="170" y="220" z="0" />
+  </label>
+  <label text="Hassan">
+    <position x="40" y="310" z="0" />
+  </label>
+  <label text="Bunglefoot's">
+    <position x="920" y="380" z="0" />
+  </label>
+  <label text="Sister">
+    <position x="912" y="462" z="0" />
+  </label>
+  <label text="Altared">
+    <position x="970" y="480" z="0" />
+  </label>
+  <label text="All Tressed Up">
+    <position x="-100" y="220" z="0" />
+  </label>
+  <label text="">
+    <position x="580" y="540" z="0" />
+  </label>
+  <label text="">
+    <position x="-50" y="-20" z="0" />
+  </label>
+  <label text="Pilgrim">
+    <position x="860" y="400" z="0" />
+  </label>
+  <label text="Emporium">
+    <position x="782" y="530" z="0" />
+  </label>
+  <label text="Mind's Eye">
+    <position x="740" y="460" z="0" />
+  </label>
+  <label text="Foraging">
+    <position x="696" y="400" z="0" />
+  </label>
+  <label text="">
+    <position x="793" y="439" z="0" />
+  </label>
+  <label text="Perpetual">
+    <position x="572" y="369" z="0" />
+  </label>
+  <label text="Blossoms">
+    <position x="572" y="380" z="0" />
+  </label>
+  <label text="Phanie's">
+    <position x="634" y="400" z="0" />
+  </label>
+  <label text="Woodsman">
+    <position x="820" y="490" z="0" />
+  </label>
+  <label text="Visions">
+    <position x="971" y="493" z="0" />
+  </label>
+  <label text="Seendra's">
+    <position x="902" y="474" z="0" />
+  </label>
+  <label text="Gersvinda's ">
+    <position x="780" y="280" z="0" />
+  </label>
+  <label text="Kindled">
+    <position x="-50" y="360" z="0" />
+  </label>
+  <label text="Sebastien's">
+    <position x="400" y="460" z="0" />
+  </label>
+  <label text="Caravan">
+    <position x="405" y="389" z="0" />
+  </label>
+  <label text="Vocational">
+    <position x="-33" y="267" z="0" />
+  </label>
+  <label text="King Fade's">
+    <position x="710" y="520" z="1" />
+  </label>
+  <label text="Back Alley Bazaar">
+    <position x="710" y="530" z="1" />
+  </label>
+  <label text="Besieged">
+    <position x="763" y="360" z="0" />
+  </label>
+  <label text="Knickknacks">
+    <position x="840" y="300" z="0" />
+  </label>
+  <label text="Outdoors">
+    <position x="920" y="300" z="0" />
+  </label>
+  <label text="Monte">
+    <position x="953" y="220" z="0" />
+  </label>
+  <label text="Illwind &amp; Sons">
+    <position x="870" y="180" z="0" />
+  </label>
+  <label text="Discreet">
+    <position x="820" y="210" z="1" />
+  </label>
+  <label text="Deceptions">
+    <position x="820" y="220" z="1" />
+  </label>
+  <label text="Darker Shade">
+    <position x="750" y="190" z="1" />
+  </label>
+  <label text="of Night">
+    <position x="750" y="200" z="1" />
+  </label>
+  <label text="Art">
+    <position x="134" y="30" z="0" />
+  </label>
+  <label text="Two Doors">
+    <position x="93" y="50" z="0" />
+  </label>
+  <label text="Loot N Flee">
+    <position x="203" y="11" z="0" />
+  </label>
+  <label text="Apple Bobbing">
+    <position x="70" y="90" z="0" />
+  </label>
+  <label text="Skyward">
+    <position x="585" y="280" z="0" />
+  </label>
+  <label text="Slice and">
+    <position x="530" y="280" z="0" />
+  </label>
+  <label text="Pyromaniacs'">
+    <position x="470" y="460" z="0" />
+  </label>
+  <label text="Sheer">
+    <position x="40" y="190" z="0" />
+  </label>
+  <label text="Beauty">
+    <position x="40" y="200" z="0" />
+  </label>
+  <label text="Grace">
+    <position x="-33" y="280" z="0" />
+  </label>
+  <label text="Pirate Hideaway">
+    <position x="-60" y="370" z="1" />
+  </label>
+  <label text="Tattoos">
+    <position x="-110" y="280" z="0" />
+  </label>
+  <label text="">
+    <position x="-30" y="510" z="0" />
+  </label>
+  <label text="">
+    <position x="420" y="60" z="0" />
+  </label>
+  <label text="Knife's Edge">
+    <position x="-210" y="240" z="1" />
+  </label>
+  <label text="Repurposed">
+    <position x="-130" y="150" z="1" />
+  </label>
+  <label text="Shipments">
+    <position x="-130" y="160" z="1" />
+  </label>
+  <label text="In Plain Sight">
+    <position x="-160" y="120" z="1" />
+  </label>
+  <label text="Visage">
+    <position x="-200" y="180" z="1" />
+  </label>
+  <label text="">
+    <position x="-210" y="180" z="0" />
+  </label>
+  <label text="My Ride">
+    <position x="315" y="190" z="0" />
+  </label>
+  <label text="">
+    <position x="-30" y="530" z="0" />
+  </label>
+  <label text="A Dirty Shack">
+    <position x="-120" y="80" z="1" />
+  </label>
+  <label text="">
+    <position x="410" y="80" z="0" />
+  </label>
+  <label text="">
+    <position x="390" y="180" z="0" />
+  </label>
+  <label text="Guilded">
+    <position x="470" y="280" z="0" />
+  </label>
+  <label text="Frieden's Fabulous Frivolities">
+    <position x="-110" y="180" z="1" />
+  </label>
+  <label text="Raffles">
+    <position x="440" y="523" z="0" />
+  </label>
+  <label text="Bank">
+    <position x="504" y="523" z="0" />
+  </label>
+  <label text="The Hunt">
+    <position x="250" y="460" z="0" />
+  </label>
+  <label text="Delights">
+    <position x="197" y="497" z="0" />
+  </label>
+  <label text="Turns">
+    <position x="412" y="400" z="0" />
+  </label>
+  <label text="Bound">
+    <position x="590" y="290" z="0" />
+  </label>
+  <label text="Dice">
+    <position x="544" y="290" z="0" />
+  </label>
+  <label text="Loot">
+    <position x="480" y="290" z="0" />
+  </label>
+  <label text="Decor">
+    <position x="410" y="313" z="0" />
+  </label>
+  <label text="Illuminations">
+    <position x="180" y="290" z="0" />
+  </label>
+  <label text="Case">
+    <position x="113" y="220" z="0" />
+  </label>
+  <label text="Spirit">
+    <position x="-44" y="370" z="0" />
+  </label>
+  <label text="Beaters">
+    <position x="13" y="370" z="0" />
+  </label>
+  <label text="Magic">
+    <position x="313" y="150" z="0" />
+  </label>
+  <label text="Floors">
+    <position x="204" y="71" z="0" />
+  </label>
+  <label text="Juicy Loot">
+    <position x="205" y="50" z="0" />
+  </label>
+  <label text="Marvals">
+    <position x="800" y="150" z="0" />
+  </label>
+  <label text="Stamped">
+    <position x="640" y="280" z="0" />
+  </label>
+  <label text="Wyrm">
+    <position x="210" y="180" z="0" />
+  </label>
+  <label text="Mighty">
+    <position x="240" y="210" z="0" />
+  </label>
+  <label text="Mage">
+    <position x="244" y="220" z="0" />
+  </label>
+  <label text="Risty Business">
+    <position x="140" y="140" z="0" />
+  </label>
+  <label text="Fate">
+    <position x="277" y="60" z="0" />
+  </label>
+  <label text="Journey">
+    <position x="318" y="40" z="0" />
+  </label>
+</zone>
