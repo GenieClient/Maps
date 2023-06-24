@@ -9,7 +9,7 @@ put #class rp on
 # Revitalized and Robustified by Shroom 
 var version 5.0
 # REQUIRES EXPTRACKER PLUGIN
-# Updated: 6/16/23
+# Updated: 6/24/23
 
 # USAGE - .travel <location> <room number(optional)>  
 # .travel shard 40 - Travel to Shard then move to room 40
@@ -1966,7 +1966,7 @@ if (("$zoneid" = "34") && matchre("%detour", "(lang|theren|rakash|muspari|oasis|
           }
           gosub AUTOMOVE 137
      }
-if (("$zoneid" = "34") && matchre("%detour", "(haven|zaulfung)")) then
+if (("$zoneid" = "34") && matchre("%detour", "(haven|zaulfung|throne)")) then
           {
               if (($roomid > 120) && ($roomid < 153)) then
                     {
@@ -2176,7 +2176,7 @@ if (("$zoneid" = "40") && matchre("%detour", "(?i)(lang|rakash|el'bain|mriss|mer
                       goto QITRAVEL
                   }
           }
-if (("$zoneid" = "40") && matchre("(haven|zaulfung|throne)", "%detour")) then
+if (("$zoneid" = "40") && matchre("%detour", "(?i)(haven|zaulfung|throne)")) then
           {
               if ($Athletics.Ranks >= %rossmansouth) then
                   {
@@ -3363,6 +3363,7 @@ GONDOLAOUT:
   pause 0.2
   return
 #############################################################
+STOPINVIS:
 STOP_INVIS:
      delay 0.0001
      if ("$guild" = "Necromancer") then
@@ -3748,7 +3749,7 @@ NOCOIN:
   pause 0.4
   put wealth
   pause
-  if ($invisible = 1) then gosub stopinvis
+  if ($invisible = 1) then gosub STOP_INVIS
   if ("$zoneid" = "1") then
         {
             var currencyneeded kro
@@ -3759,7 +3760,7 @@ NOCOIN:
                }
             if (%kronars >= 120) then goto COIN.CONTINUE
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible = 1) then gosub STOP_INVIS
             put withdraw 120 copper
             wait
         }
@@ -3775,7 +3776,7 @@ NOCOIN:
                }
             if (%kronars >= 120) then goto COIN.CONTINUE
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible = 1) then gosub STOP_INVIS
             put withdraw 120 copper
             wait
         }
@@ -3789,7 +3790,7 @@ NOCOIN:
                }
             if (%lirums >= 140) then goto COIN.CONTINUE
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible = 1) then gosub STOP_INVIS
             put withdraw 140 copper
             wait
         }
@@ -3803,7 +3804,7 @@ NOCOIN:
                }
             if (%lirums >= 140) then goto COIN.CONTINUE
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible = 1) then gosub STOP_INVIS
             put withdraw 140 copper
             wait
         }
@@ -3818,7 +3819,7 @@ NOCOIN:
                }
             if (%lirums >= 200) then goto COIN.CONTINUE
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible = 1) then gosub STOP_INVIS
             put withdraw 200 copper
             wait
             pause 0.2
@@ -3839,7 +3840,7 @@ NOCOIN:
                }
             gosub AUTOMOVE teller
             if (%lirums >= %boarneeded) then goto COIN.CONTINUE
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible = 1) then gosub STOP_INVIS
             if matchre("%detour", "(mriss|merk|hara)") then
                 {
                     var currencyneeded qi
@@ -3860,7 +3861,7 @@ NOCOIN:
                }
             if (%dokoras > 120) then goto COIN.CONTINUE
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible = 1) then gosub STOP_INVIS
             put withdraw 120 copper
             wait
         }
@@ -3876,7 +3877,7 @@ NOCOIN:
                }
             if (%dokoras > %therencoin) then goto COIN.CONTINUE
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible = 1) then gosub STOP_INVIS
 		  put withdraw %therencoin copper
             wait
         }
@@ -3890,7 +3891,7 @@ NOCOIN:
                }
             if (%dokoras > 120) then goto COIN.CONTINUE
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible = 1) then gosub STOP_INVIS
             put withdraw 120 copper
             wait
         }
@@ -3905,7 +3906,7 @@ NOCOIN:
                }
             if (%dokoras > 120) then goto COIN.CONTINUE
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible = 1) then gosub STOP_INVIS
             put withdraw 120 copper
             wait
         }
@@ -3913,7 +3914,7 @@ NOCOIN:
         {
             var currencyneeded aesry
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible = 1) then gosub STOP_INVIS
             if matchre("$game", "(?i)DR") then put withdraw 10 gold
             if matchre("$game", "(?i)DRF") then
                {
@@ -3931,7 +3932,7 @@ NOCOIN:
             gosub AUTOMOVE exchange
             gosub DOKORAS
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible = 1) then gosub STOP_INVIS
             put withdraw 300 copper
             wait
             gosub AUTOMOVE exchange
@@ -3946,14 +3947,14 @@ NOCOIN:
         {
             var currencyneeded aesryback
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible = 1) then gosub STOP_INVIS
             put withdraw 10 gold
         }
     if ("$zoneid" = "107") then
         {
             var currencyneeded lir
             gosub AUTOMOVE teller
-            if ($invisible = 1) then gosub stopinvis
+            if ($invisible = 1) then gosub STOP_INVIS
             put withdraw 140 copper
         }
     if ("$zoneid" = "108") then
