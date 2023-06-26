@@ -394,12 +394,16 @@ ABSOLUTE.TOP:
   else var color $automapper.color
 # Decrease at your own risk, increase if you get infinte loop errors
 #default is 0.1 for Outlander, 0.001 for Genie
-  if !def(automapper.loop) then
+if !def(automapper.loop) then
+  {
+    if def(client) then 
     {
-    if matchre("$client", "Genie") then var infiniteLoopProtection 0.001
-    if matchre("$client", "Outlander") then var infiniteLoopProtection 0.1
-    }
-  else var infiniteLoopProtection $automapper.loop
+      if matchre("$client", "Genie") then var infiniteLoopProtection 0.001
+      if matchre("$client", "Outlander") then var infiniteLoopProtection 0.1
+    } 
+    else var infiniteLoopProtection 0.1
+  }
+else var infiniteLoopProtection $automapper.loop
 # 1: collect rocks on the ice road when lacking skates; 0; just wait 15 seconds with no RT instead
   if !def(automapper.iceroadcollect) then var ice_collect 0
   else var ice_collect $automapper.iceroadcollect 
