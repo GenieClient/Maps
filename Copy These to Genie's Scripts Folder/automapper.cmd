@@ -1,5 +1,5 @@
 # automapper.cmd
-var autoversion 8.2023-06-17
+var autoversion 8.2023-07-01
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
@@ -396,8 +396,12 @@ ABSOLUTE.TOP:
 #default is 0.1 for Outlander, 0.001 for Genie
   if !def(automapper.loop) then
     {
-    if matchre("$client", "Genie") then var infiniteLoopProtection 0.001
-    if matchre("$client", "Outlander") then var infiniteLoopProtection 0.1
+      if def(client) then 
+      {
+        if matchre("$client", "Genie") then var infiniteLoopProtection 0.001
+        if matchre("$client", "Outlander") then var infiniteLoopProtection 0.1
+      } 
+      else var infiniteLoopProtection 0.1
     }
   else var infiniteLoopProtection $automapper.loop
 # 1: collect rocks on the ice road when lacking skates; 0; just wait 15 seconds with no RT instead
