@@ -1,9 +1,13 @@
 # automapper.cmd
-var autoversion 8.2023-07-01
+var autoversion 8.2023-07-03
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
+
+#2023-07-03
+# Hanryu
+#   added match for entering shard at night with a warrant
 
 #2023-06-17
 # Jon
@@ -693,6 +697,7 @@ MOVE.KNOCK:
   var movement knock gate
   matchre MOVE.KNOCK ^\.\.\.wait|^Sorry,|^You are still stun|^You can't do that while entangled
   matchre KNOCK.DONE %move_OK
+  matchre SHARD.FAILED Hey, you're $charactername, a wanted criminal
 #  matchre SHARD.FAILED Sorry, you're not a citizen
 #^ this message goes to everyone in the room and screws things up
   matchre CLOAK.LOGIC ^You turn away, disappointed\.
