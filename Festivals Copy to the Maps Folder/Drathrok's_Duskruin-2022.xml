@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<zone name="Drathrok's Duskruin 442 (2023)" id="601">
+  <node id="1" name="Duskruin, Western Walk">
+    <description>Stone walls rise on both sides of the western walkway, which spans a massive width large enough to accomodate large crowds -- or perhaps an army.  Blazing torches burn in iron sconces that are placed at even intervals, lighting up the wide walkway and the people traveling it.  Noise from the central parade carries upward to the walkway, filling the air with a cacophany of sound.</description>
+    <description>Stone walls rise on both sides of the western walkway, which spans a massive width large enough to accomodate large crowds -- or perhaps an army.  Closely fitted granite stones make up the floor of the walkway, sturdily built to withstand both the elements and damage from outside forces.  The central parade is easily visible just below and to the east, its courtyard a blur of activity and its sounds carrying through the air.</description>
+    <position x="110" y="250" z="0" />
+    <arc exit="east" move="east" destination="2" />
+    <arc exit="northwest" move="northwest" destination="4" />
+    <arc exit="climb" move="climb stone stairwell" destination="15" />
+    <arc exit="go" move="go sandalwood caravans" />
+  </node>
+  <node id="2" name="Duskruin, Central Parade" note="Central Parade|Parade">
+    <description>The large central parade seems to have all the accoutrements of a fortified location, but instead of soldiers marching in formation, the courtyard is a blur of revelry.  Small carts laden with food and drink line the battlement wall to the south, and more can be seen along upward sloped walkways to the east and west.  High on the north side of the public walk, a plateau has been cut out of the mountainside, while directly below, a sweeping archway reveals a broad ramp attended by the only guard in sight.</description>
+    <position x="210" y="250" z="0" />
+    <arc exit="east" move="east" destination="3" />
+    <arc exit="west" move="west" destination="1" />
+    <arc exit="go" move="go palisade gate" destination="24" />
+    <arc exit="go" move="go sloping ramp" destination="12" />
+  </node>
+  <node id="3" name="Duskruin, Eastern Walk">
+    <description>Heavily fortified walls rise up on both sides of the eastern walkway, the exterior adorned with arrow slits and gaps designed to allow for siege equipment.  Torches rest in tall iron sconces, burning brightly and illuminating the area as the night traffic flows slowly through the area.  A faint din of noise constantly echoes from the central parade to the west, and additional sounds drift from the arenas high overhead to the north.</description>
+    <description>Heavily fortified walls rise up on both sides of the eastern walkway, the exterior adorned with arrow slits and gaps designed to allow for siege equipment.  The space between the fortifications is wider than a busy city street, and just as crowded.  Despite the traffic the area is clean and well kept, and constant noise drifts through from the central parade to the west.</description>
+    <position x="310" y="250" z="0" />
+    <arc exit="northeast" move="northeast" destination="8" />
+    <arc exit="west" move="west" destination="2" />
+    <arc exit="go" move="go canvas tent" destination="67" />
+  </node>
+  <node id="4" name="Duskruin, Western Walk">
+    <description>Sloping rather gently to follow the exterior curve of the massive fortress, the western walkway follows the natural slope of the mountainside.  Bustling people move back and forth, moving along the wide walkway in a constant stream.  Arranged against the southwestern wall are several stockpiles of neatly stacked crates, each one stamped and labeled.</description>
+    <position x="70" y="210" z="0" />
+    <arc exit="southeast" move="southeast" destination="1" />
+    <arc exit="northwest" move="northwest" destination="5" />
+  </node>
+  <node id="5" name="Duskruin, Western Walk">
+    <description>The massive sloping ramp curves gradually around the exterior of the Duskruin fortress, its walls incredibly thick and some of them crafted from the same stone that makes up the mountainside.  Small platforms are built into the defensive wall along the outer portion of the ramparts, allowing for extra defenses to be added if needed.  Sconces line both sides of the western walk, each one blazing brightly with torchlight.</description>
+    <description>The massive sloping ramp curves gradually around the exterior of the Duskruin fortress, its walls incredibly thick and some of them crafted from the same stone that makes up the mountainside.  Small platforms are built into the defensive wall along the outer portion of the ramparts, allowing for extra defenses to be added if needed.  Cast iron sconces hold torches along both sides of the western walk, though unlit during the daytime.</description>
+    <position x="50" y="190" z="0" />
+    <arc exit="north" move="north" destination="6" />
+    <arc exit="southeast" move="southeast" destination="4" />
+  </node>
+  <node id="6" name="Duskruin, Western Walk">
+    <description>Silhouettes of pennants dance across the stone of the broad western walk, their source mounted on flagpoles planted around the inner edge of the walkway that faces the arena.  Each flag flutters occasionally in the mountain breeze, though it is difficult to see them in the darkness.  The walls of the walkway rise high on either side, shepherding the sparse nighttime crowds between them.</description>
+    <description>Brightly colored pennants fly on flagpoles planted around the inner edge of the walkway that faces the arena.  Each flag flutters occasionally in the mountain breeze, revealing crests and symbols embroidered on them.  The walls of the walkway rise high on either side, shepherding the busy crowds between them.</description>
+    <position x="50" y="150" z="0" />
+    <arc exit="north" move="north" destination="7" />
+    <arc exit="south" move="south" destination="5" />
+    <arc exit="climb" move="climb stone stairwell" destination="17" />
+  </node>
+  <node id="7" name="Duskruin, Western Walk">
+    <description>The wide walkway melds into the side of the mountain, with the last section coarsely cut into the dark granite.  The walls rise high on either side, enclosing the sparse nighttime crowds between them.  Ornate sconces line the area, each one blazing brightly with torchlight between green plants and a small potted tree.</description>
+    <description>The wide walkway melds into the side of the mountain, with the last section coarsely cut into the dark granite.  The walls rise high on either side, enclosing the steady line of people that stream back and forth.  Ornate sconces line the area between green plants and a small potted tree.</description>
+    <position x="50" y="110" z="0" />
+    <arc exit="south" move="south" destination="6" />
+    <arc exit="go" move="go raggedy tent" />
+  </node>
+  <node id="8" name="Duskruin, Eastern Walk">
+    <description>Illuminated by gently flickering torchlight from nearby sconces, suits of polished steel armor line the interior side of the walkway, standing at attention and each grasping a sword in their hands with its point resting lightly on the ground at their feet.  The walkway slopes upward at a gradual incline, wrapping around the mountainside with its exterior wall providing a solid defense.  Occasionally, people make their way back and forth through the area, passing quickly through the dimly lit area.</description>
+    <description>Suits of polished steel armor line the interior side of the walkway, standing at attention and each grasping a sword in their hands, its point resting lightly on the ground at their feet.  The walkway slopes upward at a gradual incline, wrapping around the mountainside with its exterior wall providing a solid defense.  Throngs of people make their way back and forth through the area, flowing in a two stream kind of organized chaos.</description>
+    <position x="350" y="210" z="0" />
+    <arc exit="northeast" move="northeast" destination="9" />
+    <arc exit="southwest" move="southwest" destination="3" />
+  </node>
+  <node id="9" name="Duskruin, Eastern Walk">
+    <description>Highlighted by the flickering torchlight of the nearby sconces, green plants and small trees in neat pots ine the rampart, which curves upward slowly to wrap the fortress in its protective walls.  The foliage adds a bit of color to the otherwise grey area, while sparse traffic passes back and forth in the night.  Dominating a portion of the walkway is a rather large apple tree heavy with fruit, though most of the lower branches are bare from passersby picking them.</description>
+    <description>A few green plants and a small potted tree line the rampart, which curves upward slowly to wrap the fortress in its protective walls.  The foliage adds a bit of color to the otherwise grey area, while steady traffic passes back and forth.  Dominating a portion of the walkway is a rather large apple tree heavy with fruit, though most of the lower branches are bare from frequent passersby picking them.</description>
+    <description>Highlighted by the flickering torchlight of the nearby sconces, green plants and small trees in neat pots line the rampart, which curves upward slowly to wrap the fortress in its protective walls.  The foliage adds a bit of color to the otherwise grey area, while sparse traffic passes back and forth in the night.  Dominating a portion of the walkway is a rather large apple tree heavy with fruit, though most of the lower branches are bare from passersby picking them.</description>
+    <position x="370" y="190" z="0" />
+    <arc exit="north" move="north" destination="10" />
+    <arc exit="southwest" move="southwest" destination="8" />
+    <arc exit="go" move="go narrow archway" destination="19" />
+  </node>
+  <node id="10" name="Duskruin, Eastern Walk">
+    <description>A line of flagpoles runs the length of the tall stone wall, each bearing a vague pennant at its top that flutters occasionally in the evening breeze.  Handkerchiefs of similar colors decorate the poles near their bases, neatly tied to them by those that visit the area.  In the torchlight of the nearby sconces, elongated shadows appear to shuffle along with the occasional passing of visitors in the evening anlasaen.</description>
+    <description>A line of flagpoles runs the length of the tall stone wall, each bearing a colorful pennant at its top that flutters occasionally in the mountain breeze.  Handkerchiefs of similar colors decorate the poles near their bases, neatly tied to them by those that visit the area.  Throngs of people pass back and forth, following the gently curving ramp that wraps the mountainside.</description>
+    <position x="370" y="150" z="0" />
+    <arc exit="north" move="north" destination="11" />
+    <arc exit="south" move="south" destination="9" />
+    <arc exit="climb" move="climb stone stairwell" destination="22" />
+  </node>
+  <node id="11" name="Duskruin, Eastern Walk">
+    <description>In the muted crimson light of the nearby sconces, the wide granite walk bends to the east, leading to the Bank of Duskruin.  A series of deadly spikes along the outer wall prevent any attempt by invaders to scale the imposing fortress, while crowds steadily move back and forth through the area, creating a near constant din of noise that blankets the area.  Despite the throngs of visitors, the area is meticulously maintained and well kept.</description>
+    <description>The wide granite walk bends to the east, leading to the Bank of Duskruin.  A series of deadly spikes along the outer wall prevent any attempt by invaders to scale the imposing fortress, while crowds steadily move back and forth through the area, creating a near constant din of noise that blankets the area.  Despite the throngs of visitors, the area is meticulously maintained and well kept.</description>
+    <position x="370" y="110" z="0" />
+    <arc exit="south" move="south" destination="10" />
+    <arc exit="east" move="east" destination="54" />
+  </node>
+  <node id="12" name="Duskruin, Antechamber" note="Antechamber|Arena portcullis" color="#00FF00">
+    <description>Long marble benches line the walls of the perfectly round room, placed between ornately carved pillars that rise to a domed ceiling.  A large crystal chandelier dangles from the center of the ceiling, throwing rays of light in all directions.  Cedar panels grace the walls, each carved with a detailed scene of a fierce battle with the minions of Sorrow's Reach.</description>
+    <position x="210" y="230" z="0" />
+    <arc exit="northeast" move="northeast" destination="14" />
+    <arc exit="northwest" move="northwest" destination="13" />
+    <arc exit="go" move="go sloping ramp" destination="2" />
+  </node>
+  <node id="13" name="Duskruin, Victor Lounge" note="Victor Lounge">
+    <description>Brightly colored banners hang on all the walls, each one emblazoned with a proudly displayed guild crest.  Comfortable leather couches line the walls, flanked on either side by potted ferns.  A long marble banquet table is set up with food and refreshments along the back wall, curved lightly to fit the circular shape of the room.</description>
+    <position x="190" y="210" z="0" />
+    <arc exit="southeast" move="southeast" destination="12" />
+  </node>
+  <node id="14" name="Duskruin, Recovery Area" note="Recovery Area">
+    <description>Dozens of neatly made beds line the walls of the long and narrow room, which is quite a lot larger than most triage sites.  Large porcelain pots filled with fresh flowers stand in between each bed, and ornate decorations on the walls give the room a very formal atmosphere.  Several marble benches provide a place to wait, just in front of a large mahogany desk.</description>
+    <position x="230" y="210" z="0" />
+    <arc exit="southwest" move="southwest" destination="12" />
+  </node>
+  <node id="15" name="Duskruin, Central Observation Tower" note="Central Observation Tower|central tower">
+    <description>Draped in sumptuous silks and velvets, the richly-colored fabrics on the walls bring a warmth to the lavishly appointed area that is not found in the arenas below.  A pair of plush, silk-covered benches are arranged in an arc around a central firepit, while a nearby table plays host to an array of refreshments.  A large glass viewing window opens across the northern wall and partially across each side, affording a view to the arenas below.</description>
+    <position x="110" y="210" z="0" />
+    <arc exit="climb" move="climb stone stairwell" destination="1" />
+    <arc exit="go" move="go granite archway" destination="16" />
+  </node>
+  <node id="16" name="Duskruin, Central Observation Seating">
+    <description>Liberal use of silks and velvets adorn nearly every surface in the room along with touches of masterfully sculpted gold accents and a generous amount of seating options.  Each arranged to provide the viewer with an unparalleled view of the arenas below, plush benches with tufted backrests are carefully arranged to facilitate conversation among patrons as well.  A central table rests within reach of each of the seats, awash with a bounty of refreshments.</description>
+    <position x="110" y="188" z="0" />
+    <arc exit="go" move="go granite archway" destination="15" />
+  </node>
+  <node id="17" name="Duskruin, Western Observation Tower" note="Western Observation Tower|western tower|west tower">
+    <description>Making up a portion of the vast stone fortress, the elegantly decorated observation room is shaped into a perfectly curved half moon.  Large purple satin curtains cover the walls in gracefully draping folds, somewhat muting both the sound and the light that comes from the areas outside.  Rows of plush, velvet benches with tufted backrests are carefully arranged around a blackened steel firepit, all facing a large window that makes up most of the eastern wall, overlooking the arenas below.</description>
+    <position x="90" y="150" z="0" />
+    <arc exit="climb" move="climb stone stairwell" destination="6" />
+    <arc exit="go" move="go granite archway" destination="18" />
+  </node>
+  <node id="18" name="Duskruin, Western Observation Seating">
+    <description>The western half of the circular tower has a slightly staggered floor, with tiers of tufted velvet benches that slope down toward the arenas.  Dark purple curtains made from flowing satin surround the walls, drawing attention to the large glass windows that face the arena.  A large portrait hangs on the tower's dividing wall, showcasing a scene of fierce battle.</description>
+    <position x="90" y="130" z="0" />
+    <arc exit="go" move="go granite archway" destination="17" />
+  </node>
+  <node id="19" name="Duskruin, Darkened Tunnel">
+    <description>Smoothed and polished, dark granite walls enclose the dimly lit tunnel as it descends sharply into the heart of the mountain, while a stone archway provides a way back to the Duskruin central parade.  Baroque reliefs adorn the walls with scenes of epic battles, their exquisite details barely discernible in the dwindling flames of the pitch covered torches that hang nearby.</description>
+    <position x="390" y="210" z="0" />
+    <arc exit="down" move="down" destination="20" />
+    <arc exit="go" move="go stone archway" destination="9" />
+  </node>
+  <node id="20" name="Duskruin, Darkened Tunnel">
+    <description>Skewed racks of gleaming halberds stand at the ready, secured by heavy chains along the sharply angled walls that provide passage to and from the heart of the vast granite fortress.  Smoldering torches hung nearby do little to accentuate the roughly chiseled crest along a portion of the granite walk underfoot.</description>
+    <position x="390" y="230" z="0" />
+    <arc exit="up" move="up" destination="19" />
+    <arc exit="down" move="down" destination="21" />
+  </node>
+  <node id="21" name="Duskruin, Darkened Antechamber" note="Labyrinth entrance" color="#00FF00">
+    <description>Rich veins of emerald and amethyst spider throughout the dark granite walls of the rounded antichamber, their deep hues occasionally reflected by the light of the surrounding torches.  Several upholstered benches line the area, overlooking a central statue of a valiant warrior.  A stoic Dwarven soldier stands before a blackened steel portcullis, guarding the entrance to the dark labyrinth of catacombs beyond.</description>
+    <description>Upholstered benches line the antichamber, while light from the surrounding torches highlights a central statue.  A Dwarven soldier guards the entrance to the labyrinth of catacombs beyond a steel portcullis.</description>
+    <position x="390" y="250" z="0" />
+    <arc exit="up" move="up" destination="20" />
+  </node>
+  <node id="22" name="Duskruin, Eastern Observation Tower" note="Eastern Observation Tower|eastern tower|east tower">
+    <description>Simple and understated, the observation room holds the faint scents of clove and cedar.  Framed by potted miniature cedar trees, a polished and thickly lacquered bar provides several refreshments to those who frequent the area.  Several tufted leather benches are carefully arranged around a blackened steel firepit that creates a glowing ambience to the area, while a spacious window along the far wall overlooks the arenas beyond.</description>
+    <position x="330" y="150" z="0" />
+    <arc exit="climb" move="climb stone stairwell" destination="10" />
+    <arc exit="go" move="go granite archway" destination="23" />
+  </node>
+  <node id="23" name="Duskruin, Eastern Observation Seating">
+    <description>Miniature potted cedar trees are set into the corners of the room, filling the air with their redolent scent.  Tucked into a nearby corner, a lacquered bar offers a host of refreshments, while tiers of overstuffed, tufted leather benches face a large window along the western wall, offering an ample view of the arenas below.</description>
+    <position x="330" y="130" z="0" />
+    <arc exit="go" move="go granite archway" destination="22" />
+  </node>
+  <node id="24" name="The Strand, Sandy Path" note="Map7_NTR.xml|entrance|exit|Northern Trade Road|NTR">
+    <description>You can hear the Oxenwaithe lapping gently at its bank, creating a soothing sound not unlike a lullaby.  The light reflected from the moons provide shimmery paths along the sandy embankments at water's edge.</description>
+    <position x="190" y="290" z="0" />
+    <arc exit="southeast" move="up" />
+    <arc exit="northwest" move="down" />
+  </node>
+  <node id="54" name="Duskruin, Outside the Bank" note="Chrematistic Investor battlemaster|battlemaster" color="#00FF00">
+    <description>Iron sconces blanket the wide granite walk and the many visitors in a soft crimson hue.  Thick iron bars fortify the tall windows of the bank building, its towering stone walls blending seamlessly into the adjacent mountainside.  Closing off a narrow entryway are two vigilant guards dressed in yellow and black uniforms with their tasseled pikes resolute.  A nearby ramp leads down a side street and away from the bustle surrounding the guarded structure.</description>
+    <description>Thick iron bars fortify the tall windows of the bank building, its towering stone walls blending seamlessly into the adjacent mountainside.  Closing off a narrow entryway are two vigilant guards dressed in yellow and black uniforms with their tasseled pikes resolute.  A nearby ramp leads down a side street and away from the bustle surrounding the guarded structure.</description>
+    <position x="390" y="110" z="0" />
+    <arc exit="east" move="east" destination="55" />
+    <arc exit="west" move="west" destination="11" />
+    <arc exit="down" move="down" destination="56" />
+  </node>
+  <node id="55" name="Duskruin, Dark Alley" note="Perfidious Renegade enforcer|enforcer" color="#00FF00">
+    <description>In the darkness, the dark alley works its way between the towering walls of the bank and a row of shuttered buildings, ending ubruptly at the outer wall of the fortress.  Barely visible amid trash bins and stacks of weathered crates is a shadowed tunnel entrance, the surrounding area littered with chunks of granite and gravel.</description>
+    <description>The dark alley works its way between the towering walls of the bank and a row of shuttered buildings, ending ubruptly at the outer wall of the fortress.  Barely visible amid trash bins and stacks of weathered crates is a darkened tunnel entrance, the surrounding area littered with chunks of granite and gravel.</description>
+    <position x="410" y="110" z="0" />
+    <arc exit="west" move="west" destination="54" />
+  </node>
+  <node id="56" name="Duskruin, Side Street" note="Unscrupulous Ringleader brigand|brigand" color="#00FF00">
+    <description>The narrow street traverses between the towering walls of the bank and a row of homes along the opposing side, lit only by the muted candlelight from the curtained windows.  Rounded stone archways stretch between the two-story homes, shading the cobblestone pavement and disguising lines of drying laundry that crisscross overhead.  A discarded bucket and hearth broom lean against the steps leading to one of the numerous unmarked doorways, while a ramp at one end of the street rises up to the commotion surrounding the bank above.</description>
+    <description>The narrow street traverses between the towering walls of the bank and a row of homes along the opposing side.  Rounded stone archways stretch between the two-story homes, shading the cobblestone pavement and disguising lines of drying laundry that crisscross overhead.  A discarded bucket and hearth broom lean against the steps leading to one of the numerous unmarked doorways, while a ramp at one end of the street rises up to the commotion surrounding the bank above.</description>
+    <position x="390" y="130" z="0" />
+    <arc exit="up" move="up" destination="54" />
+  </node>
+  <node id="57" name="Duskruin, Tuulpon'u Arena">
+    <description>Sinuous pillars erupt from the ground in all directions, obscuring the combat field.  Betwixt the pillars, creamy white sand shifts as barely visible grates move, the creatures beyond them straining for release into the arena.  Suspended from cross-section wires, heavy tzgaa orbs provide lighting across the area.</description>
+    <position x="190" y="130" z="0" />
+  </node>
+  <node id="58" name="Duskruin, Owirvald Arena">
+    <description>Lapis lazuli marbles the smoothed stone walls that surround the dirt-floored arena and massive chunks of ore and rock dot the terrain, providing ideal hiding spots while also partially obscuring the grates along the floor.  Flashes of color burst from the ores as torchlight strikes them, refracting vibrantly toned lights across the area.</description>
+    <position x="210" y="150" z="0" />
+  </node>
+  <node id="59" name="Duskruin, Mysandanuva'r Arena">
+    <description>Stone reliefs of sprawling trees and forested scenes encircle the vast arena, several inlaid with precious gems that glint as they catch the surrounding torchlight.  Dirt, hay and bits of decayed bone litter the floor, its center revealing a battered steel grate with dark figures that rustle beyond.  A pair of cages interrupts portions of the surrounding walls, the crisscrossed bars splattered with dried blood.</description>
+    <position x="230" y="110" z="0" />
+  </node>
+  <node id="60" name="Duskruin, Drensyld Arena">
+    <description>Between ornate blind arcades that otherwise showcase detailed reliefs of valiant warriors battling various blood-thirsty beasts, flickering torches cast shifting shadows over several portcullis-like cages set into the arena walls.  Strewn with bits of stone and splatters of dried blood, the rough granite floor is imbedded with a battered steel grate, its meshed bars straining under the pressure of dark figures, yearning for their release.</description>
+    <position x="230" y="150" z="0" />
+  </node>
+  <node id="61" name="Duskruin, Verdegti Arena">
+    <description>Littered with refuse, hay, and dirt, the arena ground is disrupted by several stone pillars that erupt from the ground haphazardly.  Broken and chipped away in various spots, the pillars obscure the battlefield, while also providing advantageous spots to briefly hide.  Flickering torches protected by steel cages encircle the arena, casting shifting shadows throughout the area.</description>
+    <position x="230" y="130" z="0" />
+  </node>
+  <node id="62" name="Duskruin, Stolnor Arena">
+    <description>Nearly ostentatious in design, elaborate and meticulously detailed sculptures appear along the edifice of the arena walls, each showcasing a golden-bearded Dwarf.  Shadows flicker across the ground, cast from sconces holding burning torches that illuminate the dirt-packed ground and partially reveals several scratched and dented heavy steel grates that hide away various unknown dangers.</description>
+    <position x="190" y="110" z="0" />
+  </node>
+  <node id="63" name="Duskruin, Olgievi Arena">
+    <description>Deep pits and gouges appear along the walls of the arena, combining with firepits along the edge, give the area a haunting, ominous feel.  Peppered with golden flecks, the marbled walls display veins of white stone marbled with grey and black veins.  Disrupting the hay-strewn ground, several grates rustle as dark shapes push against the bars, yearning for their release into the arena.</description>
+    <position x="190" y="150" z="0" />
+  </node>
+  <node id="64" name="Duskruin, Sel'hevor Arena">
+    <description>Carved into the walls of the arena are images of tsunamis and great waves crashing in a stormy sea that overlooks the mess of an arena.  Wood chips and broken bits of salt-stained wood litter the ground of the arena beneath a tilted mast that crosses over the area, its tattered red sail shifting listlessly.  Dust stirs as an errant breeze disrupts space, revealing grates along the floor.</description>
+    <position x="210" y="110" z="0" />
+  </node>
+  <node id="65" name="Duskruin, Waldegrave Arena">
+    <description>Encircling the arena, pristine, snow white walls are adorned with carved coral renditions of fishermen and sea creatures.  Garnet and platinum accents pair with several star-shaped rubies that appear set into some of the carvings.  Shifting white and coral-littered sand reveals grates set into the floor.</description>
+    <position x="210" y="130" z="0" />
+  </node>
+  <node id="66" name="Duskruin, Tanglefoot Arena">
+    <description>Formed from a myriad of faceted and cabochon gemstones, a variety of foodstuffs appear set into the walls.  Gigantic renditions of berries and tarts overlook creaky hay-strewn floorboards set with scratched steel gratings.  The sound of something large moving beneath the arena stirs the stale air.</description>
+    <position x="210" y="170" z="0" />
+  </node>
+  <node id="67" name="Drathrok's Assemblage, Entry" note="Drathrok's Assemblage|Assemblage|prize rooms|rat chalk|rat pomade|rat serum|giant mount|Pentathar mount|yeehar mount|mounts" color="#FF0000">
+    <description>Hanging gaethzen globes cast an even glow along the tent walls.  Prizes fill a series of differently-shaped displays, attractively laid out to tempt passers-by into becoming buyers.  A large banner reads, READ each surface to be sure you understand the nature of the item you're purchasing before you GET it.  No refunds!</description>
+    <position x="300" y="280" z="0" />
+    <arc exit="south" move="south" destination="68" />
+    <arc exit="go" move="go canvas flap" destination="3" />
+  </node>
+  <node id="68" name="Drathrok's Assemblage, Silver Showroom" note="Silver Showroom|material grab bags|mechanical mice materials|rare gems" color="#FF0000">
+    <description>Hanging gaethzen globes cast an even glow along the tent walls.  Prizes fill a series of differently-shaped displays, attractively laid out to tempt passers-by into becoming buyers.  A large banner reads, READ each surface to be sure you understand the nature of the item you're purchasing before you GET it.  No refunds!</description>
+    <position x="300" y="300" z="0" />
+    <arc exit="north" move="north" destination="67" />
+    <arc exit="east" move="east" destination="75" />
+    <arc exit="south" move="south" destination="76" />
+    <arc exit="west" move="west" destination="69" />
+  </node>
+  <node id="69" name="Drathrok's Assemblage, Violet Showroom" note="Violet Showroom|Rundmolen lease|urchin runners|armor instructions|weapon instructions" color="#FF0000">
+    <description>Hanging gaethzen globes cast an even glow along the tent walls.  Prizes fill a series of differently-shaped displays, attractively laid out to tempt passers-by into becoming buyers.  A large banner reads, READ each surface to be sure you understand the nature of the item you're purchasing before you GET it.  No refunds!</description>
+    <position x="280" y="300" z="0" />
+    <arc exit="east" move="east" destination="68" />
+    <arc exit="south" move="south" destination="70" />
+    <arc exit="go" move="go velvet curtain" destination="77" />
+  </node>
+  <node id="70" name="Drathrok's Assemblage, Orange Showroom" note="Orange Showroom|feature mirrors" color="#FF0000">
+    <description>Hanging gaethzen globes cast an even glow along the tent walls.  Prizes fill a series of differently-shaped displays, attractively laid out to tempt passers-by into becoming buyers.  A large banner reads, READ each surface to be sure you understand the nature of the item you're purchasing before you GET it.  No refunds!</description>
+    <position x="280" y="320" z="0" />
+    <arc exit="north" move="north" destination="69" />
+    <arc exit="east" move="east" destination="76" />
+    <arc exit="south" move="south" destination="71" />
+  </node>
+  <node id="71" name="Drathrok's Assemblage, Blue Showroom" note="Blue Showroom|scroll grab bag|ritual foci|runestone holder|mana tuners|runic tattoos|inkpots|spellcasting devices" color="#FF0000">
+    <description>Hanging gaethzen globes cast an even glow along the tent walls.  Prizes fill a series of differently-shaped displays, attractively laid out to tempt passers-by into becoming buyers.  A large banner reads, READ each surface to be sure you understand the nature of the item you're purchasing before you GET it.  No refunds!</description>
+    <position x="280" y="340" z="0" />
+    <arc exit="north" move="north" destination="70" />
+    <arc exit="east" move="east" destination="72" />
+  </node>
+  <node id="72" name="Drathrok's Assemblage, Yellow Showroom" note="Yellow Showroom|lighters|food bracelet|drink bracelet|windboards|moneybelt|home storage furniture|skinning trainer" color="#FF0000">
+    <description>Hanging gaethzen globes cast an even glow along the tent walls.  Prizes fill a series of differently-shaped displays, attractively laid out to tempt passers-by into becoming buyers.  A large banner reads, READ each surface to be sure you understand the nature of the item you're purchasing before you GET it.  No refunds!</description>
+    <position x="300" y="340" z="0" />
+    <arc exit="north" move="north" destination="76" />
+    <arc exit="east" move="east" destination="73" />
+    <arc exit="west" move="west" destination="71" />
+  </node>
+  <node id="73" name="Drathrok's Assemblage, Green Showroom" note="Green Showroom|chakrel|embiggening gadgets|potency crystal|infuser stone|herb stacker|disease ring|favor savers|inner fire regen|teleportation cloak fatigue regen" color="#FF0000">
+    <description>Hanging gaethzen globes cast an even glow along the tent walls.  Prizes fill a series of differently-shaped displays, attractively laid out to tempt passers-by into becoming buyers.  A large banner reads, READ each surface to be sure you understand the nature of the item you're purchasing before you GET it.  No refunds!</description>
+    <position x="320" y="340" z="0" />
+    <arc exit="north" move="north" destination="74" />
+    <arc exit="west" move="west" destination="73" />
+  </node>
+  <node id="74" name="Drathrok's Assemblage, Red Showroom" note="Red Showroom|blowgun|blowgun darts|mechanical mice weapons|Aldauth scythe-blade|dragonwood standard|weapon jewelry|estoc|zweihander|officer's staff|staff|Imperial spear|spear|scutum|shield" color="#FF0000">
+    <description>Hanging gaethzen globes cast an even glow along the tent walls.  Prizes fill a series of differently-shaped displays, attractively laid out to tempt passers-by into becoming buyers.  A large banner reads, READ each surface to be sure you understand the nature of the item you're purchasing before you GET it.  No refunds!</description>
+    <position x="320" y="320" z="0" />
+    <arc exit="north" move="north" destination="75" />
+    <arc exit="south" move="south" destination="73" />
+    <arc exit="west" move="west" destination="76" />
+  </node>
+  <node id="75" name="Drathrok's Assemblage, Gold Showroom" note="Gold Showroom|post strings|fighting clothes|titles|outfits" color="#FF0000">
+    <description>Hanging gaethzen globes cast an even glow along the tent walls.  Prizes fill a series of differently-shaped displays, attractively laid out to tempt passers-by into becoming buyers.  A large banner reads, READ each surface to be sure you understand the nature of the item you're purchasing before you GET it.  No refunds!</description>
+    <position x="320" y="300" z="0" />
+    <arc exit="south" move="south" destination="74" />
+    <arc exit="west" move="west" destination="68" />
+  </node>
+  <node id="76" name="Drathrok's Assemblage, Dispenser Central" note="Dispenser Central|raffle dispensers" color="#00FF00">
+    <description>Hanging gaethzen globes cast an even glow along the bright canvas walls.  The nearby bustle stands out against the calmness within the center area of the tent.</description>
+    <position x="300" y="320" z="0" />
+    <arc exit="north" move="north" destination="68" />
+    <arc exit="east" move="east" destination="74" />
+    <arc exit="south" move="south" destination="72" />
+    <arc exit="west" move="west" destination="70" />
+  </node>
+  <node id="77" name="Drathrok's Assemblage, A Quiet Corner" note="Quiet Corner|Necromancers|vault runners|TM focus" color="#FF0000">
+    <description>Much less cluttered than other areas within the sales floor, this section is unlit save for gaethzen orbs hung over a few displays.  A simple portrait on one wall depicts a hand loosely clasping a slender but elegant rapier against a murky backdrop.</description>
+    <position x="260" y="280" z="0" />
+    <arc exit="southeast" move="southeast" destination="69" />
+  </node>
+  <label text="Labyrinth">
+    <position x="370" y="260" z="0" />
+  </label>
+  <label text="Arena">
+    <position x="195" y="80" z="0" />
+  </label>
+  <label text="Exit">
+    <position x="178" y="295" z="0" />
+  </label>
+  <label text="Drathrok's Assemblage">
+    <position x="250" y="350" z="0" />
+  </label>
+  <label text="Bank Heist">
+    <position x="380" y="60" z="0" />
+  </label>
+  <label text="Battlemaster">
+    <position x="380" y="85" z="0" />
+  </label>
+  <label text="Enforcer">
+    <position x="420" y="100" z="0" />
+  </label>
+  <label text="Brigand">
+    <position x="400" y="122" z="0" />
+  </label>
+  <label text="West Tower">
+    <position x="60" y="155" z="0" />
+  </label>
+  <label text="East Tower">
+    <position x="310" y="155" z="0" />
+  </label>
+  <label text="Central Tower">
+    <position x="80" y="190" z="0" />
+  </label>
+  <label text="Victor">
+    <position x="160" y="178" z="0" />
+  </label>
+  <label text="Recovery">
+    <position x="230" y="180" z="0" />
+  </label>
+  <label text=" Lounge">
+    <position x="160" y="188" z="0" />
+  </label>
+  <label text="Area">
+    <position x="230" y="190" z="0" />
+  </label>
+</zone>
