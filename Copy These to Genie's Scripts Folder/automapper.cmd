@@ -1,9 +1,13 @@
 # automapper.cmd
-var autoversion 8.2023-07-03
+var autoversion 8.2023-07-25
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
+
+#2023-07-25
+# Hanryu
+#   added variable automapper.seekhealing, will stop at vela'thor plants and fully heal
 
 #2023-07-03
 # Hanryu
@@ -369,6 +373,8 @@ if matchre("%1", "^walk$") then {
   put #echo %helpecho <<        you MUST define globals automapper.UserWalkSuccess  >>
   put #echo %helpecho <<        you MAY define globals automapper.UserWalkRetry     >>
   put #echo %helpecho <<      #var automapper.userwalk 0/1                          >>
+  put #echo %helpecho <<    Stop and heal at vela'thor plants                       >>
+  put #echo %helpecho <<      #var automapper.seekhealing 1                         >>
   put #echo %helpecho <<                                                            >>
   put #echo %helpecho <<  Please search automapper.cmd for "Related macros"         >>
   put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
@@ -421,6 +427,7 @@ ABSOLUTE.TOP:
   if !def(automapper.sigilwalk) then put #tvar automapper.sigilwalk 0
   if !def(searchwalk) then put #tvar searchwalk 0
   if !def(automapper.userwalk) then put #tvar automapper.userwalk 0
+  if !def(automapper.seekhealing) then put #tvar automapper.seekhealing 0
 # check citizenship for shard
   if !def(citizenship) then {
     put #var citizenship none
@@ -506,6 +513,9 @@ ACTIONS:
   action (mapper) var footitem $1;goto STOW.FOOT.ITEM when ^You notice (?:an |a )?(.+) at your feet, and do not wish to leave it behind\.
   action (skates) var wearing_skates 1 when ^You slide your ice skates on your feet and tightly tie the laces\.|^Your ice skates help you traverse the frozen terrain\.|^Your movement is hindered .* by your ice skates\.|^You tap some.*\bskates\b.*that you are wearing
   action (skates) var wearing_skates 0 when ^You untie your skates and slip them off of your feet\.
+  action (healing) var plant $1;goto HEALING when an ethereal (vela'tohr thicket|vela'tohr plant)
+  action (healing) off
+  if ($automapper.seekhealing = 1) then action (healing) on
   action var darkroom 1 when ^It's pitch dark and you can't see a thing\!
   action var slow_on_ice 1;if (%verbose) then put #echo %color Ice detected! when ^You had better slow down\! The ice is|^At the speed you are traveling
   action goto JAILED when ^You slowly wake up again to find that all your belongings have been stripped and you are in a jail cell wearing a set of heavy manacles\.|^The \w+ brings you to the jail, where several companions aid to hold you down and strip you of all your possessions\.|^The town guard, with the help of several others, wrestle you to the ground, bind you in chains, and drag you off to jail\.|^\w+ you awake some time later, your possessions have been stripped from you, and you lay in a musty pile of straw\.|^The door slams shut, a sound not unlike that of a tomb closing\.
@@ -2289,3 +2299,15 @@ LIGHT_ROOM:
      var darkroom 0
      var darkTime $gametime
      return
+
+#### Stop and get healed
+HEALING:
+  delay %infiniteLoopProtection
+  if ($roundtime > 0) then pause $roundtime
+  if (%depth > 1) then waiteval (1 = %depth)
+  var action touch %plant
+  var success ^The last of your wounds knit shut|
+  gosub ACTION
+  action (healing) off
+  put #var automapper.seekhealing 0
+  goto MOVE.DONE
