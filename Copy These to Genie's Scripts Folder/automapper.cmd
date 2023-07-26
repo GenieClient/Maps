@@ -2306,8 +2306,18 @@ HEALING:
   if ($roundtime > 0) then pause $roundtime
   if (%depth > 1) then waiteval (1 = %depth)
   var action touch %plant
-  var success ^The last of your wounds knit shut|
+  var success ^The last of your wounds knit shut|^The vela'tohr plant recoils from you
   gosub ACTION
   action (healing) off
   put #var automapper.seekhealing 0
   goto MOVE.DONE
+HEALTHCHECK:
+  var wounded 0
+  matchre wounded ^You have an?
+  matchre return ^You have no
+  put health
+  matchwait
+WOUNDED:
+  var wounded 1
+  return
+####
