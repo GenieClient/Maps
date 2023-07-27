@@ -515,6 +515,7 @@ ACTIONS:
   action (skates) var wearing_skates 0 when ^You untie your skates and slip them off of your feet\.
   action (healing) var plant $1;goto HEALING when an ethereal (vela'tohr thicket|vela'tohr plant)
   action (healing) off
+#  if (($automapper.seekhealing = 1) && ($guild != Necromancer)) then action (healing) on
   if ($automapper.seekhealing = 1) then action (healing) on
   action var darkroom 1 when ^It's pitch dark and you can't see a thing\!
   action var slow_on_ice 1;if (%verbose) then put #echo %color Ice detected! when ^You had better slow down\! The ice is|^At the speed you are traveling
@@ -2306,7 +2307,7 @@ HEALING:
   if ($roundtime > 0) then pause $roundtime
   if (%depth > 1) then waiteval (1 = %depth)
   var action touch %plant
-  var success ^The last of your wounds knit shut|^The vela'tohr plant recoils from you
+  var success ^The last of your wounds knit shut|^The vela'tohr plant recoils from you|^You reach out to touch an ethereal vela'tohr plant, but it shudders its leaves rustling angrily and bristling with sharp edges and thorns|^You feel a brief flare of warmth where your skin previously
   gosub ACTION
   action (healing) off
   put #var automapper.seekhealing 0
