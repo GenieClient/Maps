@@ -2314,7 +2314,7 @@ HEALING:
   goto MOVE.DONE
 HEALTHCHECK:
   var wounded 0
-  matchre wounded ^You have an?
+  matchre wounded ^You have (?:an?|some)
   matchre return ^You have no
   put health
   matchwait
