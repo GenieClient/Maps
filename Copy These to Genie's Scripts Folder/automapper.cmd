@@ -1,9 +1,14 @@
 # automapper.cmd
-var autoversion 8.2023-07-25
+var autoversion 8.2023-09-10
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
+
+#2023-09-10
+# Shroom
+#   added missing match for Moving while invisible 
+#   robustified dropping INVIS logic
 
 #2023-07-25
 # Hanryu
@@ -482,7 +487,7 @@ ABSOLUTE.TOP:
   var move_STOW ^You need to empty your hands|^You should empty your hands first\!|^You can't possibly manage to cross|^You'll need to free up your hands|^Not while carrying something in your hands|^You must first free up your hands\.|^The going gets quite difficult and highlights the need to free up your hands|^You must have your hands free
   var move_FATIGUE ^You're too tired to try climbing|^You need to rest
   var move_BOAT ^The galley has just left|^You look around in vain for the galley
-  var move_INVIS ^The .* can't see you\!|^But no one can see you\!|^How can you .* can't even see you\?
+  var move_INVIS ^The .* can't see you\!|^But no one can see you\!|^How can you .* can't even see you\?|^You can't move in that direction while unseen\.
   var climb_mount_FAIL climb what?
 ACTIONS:
   action (mapper) action (mapper) off;goto DRAGGED when ^The current drags you
@@ -945,14 +950,39 @@ FATIGUE.WAIT:
 
 MOVE.INVIS:
   if (%depth > 1) then waiteval (1 = %depth)
-  if ("$guild" = "Thief") then send khri stop silence vanish
-  if ("$guild" = "Necromancer") then send release eotb
-  if ("$guild" = "Moon Mage") then
-    {
-    send release rf
-    send release sov
-    }
-  if ("$guild" = "Ranger") then send release blend
+  if ("$guild" = "Necromancer") then
+     {
+          put release EOTB
+          pause 0.1
+     }
+  if ("$guild" = "Thief") then
+     {
+          put khri stop silence vanish
+          pause 0.1
+     }
+  if ("$guild" = "Ranger") then
+     {
+          put release BLEND
+          pause 0.1
+     }
+  if matchre("$guild", "(Moon Mage|Moon)") then
+     {
+          put release RF
+          pause 0.2
+          put release SOV
+          pause 0.1
+     }
+  pause 0.01
+  if ($invisible = 1) then
+     {
+          if ($SpellTimer.RefractiveField.active = 1) then put release RF
+          if ($SpellTimer.StepsofVuan.active = 1) then put release SOV
+          if ($SpellTimer.EyesoftheBlind.active = 1) then put release EOTB
+          if ($SpellTimer.Blend.active = 1) then put release BLEND
+          if ($SpellTimer.KhriSilence.active = 1) then put khri stop silence
+          if ($SpellTimer.KhriVanish.active = 1) then put khri stop vanish
+          pause 0.0001
+     }
   if ($hidden) then send unhide
   pause %command_pause
   put %movement
