@@ -7,9 +7,9 @@ put #class rp on
 # Script to Travel for Genie4 #
 # Originally written by Achilles
 # Revitalized and Robustified by Shroom 
-var version 5.1
+var version 5.1.2
 # REQUIRES EXPTRACKER PLUGIN
-# Updated: 8/20/23
+# Updated: 9/13/23
 #
 # USAGE - .travel <location>
 #  OR   - .travel <location <room number>  
@@ -115,7 +115,9 @@ if ("$charactername") = ("$char10") then var shardcitizen no
 ####
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
-# CHANGELOG - Latest Update: 8/20/23
+# CHANGELOG - Latest Update: 9/13/23
+#
+# - Robustified Travel to Rossman / Swimming Faldesu River
 #
 # - Added check for Athletics.Ranks at start of script
 #   - If not present should attempt to reset it and throw a message 
@@ -303,12 +305,12 @@ gosub BAG_CHECK
 gosub PREMIUM_CHECK
 # put #mapper reset
 # put #var save
-if matchre("$guild", "Necromancer") then
-     {
-          put perceive
-          pause 0.1
-          pause 0.2
-     }
+# if matchre("$guild", "Necromancer") then
+     # {
+          # put perceive
+          # pause 0.1
+          # pause 0.2
+     # }
 if ($hidden) then send unhide
 timer clear
 timer start
@@ -1093,10 +1095,9 @@ if (("$zoneid" = "7") && matchre("%detour", "(arthe|dirge|kaerna|stone|misen|sor
              }
          if ("%detour" = "arthe") then gosub AUTOMOVE 535
          if ("%detour" = "kaerna") then gosub AUTOMOVE 352
-         if ("%detour" = "stone") then gosub AUTOMOVE 396
          if (("%detour" = "stone") && ("$zoneid" = "7")) then gosub AUTOMOVE 396
          if (("%detour" = "stone") && ("$zoneid" = "7")) then gosub AUTOMOVE 396
-         if ("%detour" = "beisswurms") then gosub AUTOMOVE 396
+         if (("%detour" = "beisswurms") && ("$zoneid" = "7")) then gosub AUTOMOVE 396
          if (("%detour" = "beisswurms") && ("$zoneid" = "7")) then gosub AUTOMOVE 396
          if ("%detour" = "fist") then gosub AUTOMOVE 253
          if ("%detour" = "misen") then gosub AUTOMOVE 437
@@ -1965,8 +1966,22 @@ if (("$zoneid" = "7") && ("%detour" = "caravansary")) then
               gosub AUTOMOVE caravan
               goto ARRIVED
           }
-if (("$zoneid" = "7") && ($Athletics.Ranks >= %faldesu)) then gosub AUTOMOVE 197
-if (("$zoneid" = "7") && ($Athletics.Ranks >= %faldesu)) then gosub AUTOMOVE 197
+if (("$zoneid" = "7") && ($Athletics.Ranks >= %faldesu)) then
+     {
+         gosub AUTOMOVE 197
+         pause 0.1
+         send #mapper reset
+         pause 0.001
+         pause 0.001
+     }
+if (("$zoneid" = "7") && ($Athletics.Ranks >= %faldesu)) then
+     {
+         gosub AUTOMOVE 197
+         pause 0.1
+         send #mapper reset
+         pause 0.001
+         pause 0.001
+     }
 if (("$zoneid" = "7") && ($Athletics.Ranks < %faldesu)) then
           {
               echo ** Athletics too low for Faldesu - Taking Ferry
@@ -1979,7 +1994,13 @@ if ("$zoneid" = "14c") then gosub FALDESU_NORTH
 if ("$zoneid" = "33a") then gosub AUTOMOVE 46
 if ("$zoneid" = "33") then gosub AUTOMOVE 1
 if (("$zoneid" = "31") && ("%detour" = "zaulfung")) then gosub AUTOMOVE 100
-if ("$zoneid" = "31") then gosub AUTOMOVE 1
+if ("$zoneid" = "31") then
+     {
+          gosub AUTOMOVE 1
+          pause 0.1
+          send #mapper reset
+          pause 0.0001
+     }
 if (("$zoneid" = "34a") && !matchre("%detour", "rossman")) then gosub AUTOMOVE forest
 if (("$zoneid" = "34") && matchre("%detour", "rossman")) then
           {
@@ -2031,7 +2052,9 @@ if (("$zoneid" = "47") && (matchre("$game", "(?i)DRX") && (%portal = 1) && (%por
 if (("$zoneid" = "47") && ($Athletics.Ranks >= %muspari.shortcut)) then gosub VELAKA_SHORTCUT
 if ("$zoneid" = "47") then
           {
-              echo ** Athletics too low for Muspari Shortcut - Taking Long Route
+              echo
+              echo ** Athletics too LOW for Muspari Shortcut - Taking Long Route
+              echo
               gosub AUTOMOVE 117
               gosub FERRYLOGIC
           }
@@ -2064,7 +2087,9 @@ if (("$zoneid" = "41") && matchre("%detour", "(muspari|fornsted|oasis)")) then
                }
               if matchre("%detour", "(muspari|oasis)") then
                   {
+                    echo
                     echo ** Athletics too low for Muspari Shortcut - Taking Long Route
+                    echo
                     gosub AUTOMOVE 91
                     gosub PASSPORT
                     gosub AUTOMOVE 160
@@ -2109,7 +2134,9 @@ if (("$zoneid" = "30") && matchre("%detour", "(rossman|lang|theren|rakash|muspar
           {
               if $Athletics.Ranks < %rossmannorth then
                   {
+                      echo
                       echo ** Athletics too low for Rossman Shortcut - Taking Ferry
+                      echo
                       gosub INFO_CHECK
                       if (%lirums < 140) then goto NOCOIN
                       gosub AUTOMOVE 99
@@ -2117,7 +2144,9 @@ if (("$zoneid" = "30") && matchre("%detour", "(rossman|lang|theren|rakash|muspar
                   }
               if $Athletics.Ranks >= %rossmannorth then
                   {
+                      echo
                       echo ** Athletics high enough for Jantspyre River - Taking Rossman's Shortcut!
+                      echo
                       gosub AUTOMOVE 174
                       gosub AUTOMOVE 29
                       gosub AUTOMOVE 48
@@ -2217,7 +2246,9 @@ if (("$zoneid" = "40") && matchre("%detour", "(?i)(haven|zaulfung|throne)")) the
           {
               if ($Athletics.Ranks >= %rossmansouth) then
                   {
+                      echo
                       echo ** Athletics high enough for Jantspyre River - Taking Rossman's Shortcut!
+                      echo
                       gosub AUTOMOVE 213
                       gosub AUTOMOVE 121
                       if matchre("$roomdesc", "pair of ropes tied to trees") then
@@ -3235,7 +3266,7 @@ SEGOLTHA_SOUTH:
     goto SEGOLTHA_SOUTH
 FALDESU_NORTH:
     echo *** Swimming the Faldesu - Heading NORTH
-    gosub MoveAllTheWay north
+    gosub MoveAllTheWay northeast
     if ($northwest) then
          {
              gosub MOVE northwest
@@ -3244,6 +3275,9 @@ FALDESU_NORTH:
     if ((!$northwest) && (!$northeast) && (!$north)) then
          {
               gosub Move climb stone bridge
+              pause 0.01
+              put #mapper reset
+              pause 0.001
               return
          }
     goto FALDESU_NORTH
@@ -3251,7 +3285,7 @@ FALDESU_SOUTH:
     echo *** Swimming the Faldesu - Heading SOUTH
     if ($south) then
          {
-             gosub MOVE south
+             gosub MOVE southeast
              pause 0.1
              goto FALDESU_SOUTH
          }
@@ -3265,6 +3299,9 @@ FALDESU_SOUTH:
          {
               pause 0.1
               gosub Move climb stone bridge
+              pause 0.01
+              put #mapper reset
+              pause 0.001
               return
          }
     goto FALDESU_SOUTH
@@ -3635,10 +3672,10 @@ OFFTHERIDE:
           put unhide
           pause 0.4
      }
-  if ("$guild" = "Necromancer") then
-     {
-          if (($spellROC = 0) || ($spellEOTB = 0)) then gosub NECRO_PREP
-     }
+  # if ("$guild" = "Necromancer") then
+     # {
+          # if (($spellROC = 0) || ($spellEOTB = 0)) then gosub NECRO_PREP
+     # }
   pause 0.1
   pause 0.1
   if matchre("$roomname", "Rocky Path") then
@@ -6335,6 +6372,7 @@ RANDOMMOVE_1:
      if (matchre("$roomname", "Deadman's Confide, Beach") || matchre("$roomobjs","thick fog") || matchre("$roomexits","thick fog")) then gosub TRUE_RANDOM
      if matchre("$roomname","Smavold's Toggery") then gosub MOVE go door
      if matchre("$roomname","Temple Hill Manor, Grounds") then gosub MOVE go gate
+     if matchre("$roomname","(Ylono's Repairs|Catrox's Forge|Unspiek's Repair Shop|Kamze's Repair|Storage Shed)") then gosub MOVE out
      if matchre("$roomname","Darkling Wood, Ironwood Tree") then gosub MOVE climb pine branches
      if matchre("$roomname","Darkling Wood, Pine Tree") then gosub MOVE climb white pine
      if (%moved = 1) then return
@@ -6465,6 +6503,7 @@ RANDOMMOVE_1:
                if (matchre("$roomobjs $roomdesc","\bpanel\b") && ("%lastmoved" != "go panel")) then gosub MOVE go panel
                if (matchre("$roomobjs $roomdesc","\btent flap\b") && ("%lastmoved" != "go flap")) then gosub MOVE go flap
                if (%moved = 1) then return
+               if matchre("$roomname","(Ylono's Repairs|Catrox's Forge|Unspiek's Repair Shop|Kamze's Repair|Storage Shed)") then gosub MOVE out
                if (matchre("$roomobjs $roomdesc","\bdoor") && ("%lastmoved" != "go door")) then gosub MOVE go door
                if (matchre("$roomobjs $roomdesc","double door") && ("%lastmoved" != "go door")) then gosub MOVE go door
                if (matchre("$roomobjs $roomdesc","\btrapdoor\b") && ("%lastmoved" != "go trapdoor")) then gosub MOVE go trapdoor
