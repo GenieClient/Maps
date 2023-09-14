@@ -3266,7 +3266,7 @@ SEGOLTHA_SOUTH:
     goto SEGOLTHA_SOUTH
 FALDESU_NORTH:
     echo *** Swimming the Faldesu - Heading NORTH
-    gosub MoveAllTheWay northeast
+    gosub MoveAllTheWay north
     if ($northwest) then
          {
              gosub MOVE northwest
@@ -3285,7 +3285,7 @@ FALDESU_SOUTH:
     echo *** Swimming the Faldesu - Heading SOUTH
     if ($south) then
          {
-             gosub MOVE southeast
+             gosub MOVE south
              pause 0.1
              goto FALDESU_SOUTH
          }
