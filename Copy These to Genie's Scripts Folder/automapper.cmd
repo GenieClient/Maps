@@ -1,9 +1,14 @@
 # automapper.cmd
-var autoversion 8.2023-09-10
+var autoversion 8.2023-10-06
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
+
+#2023-10-6
+# Shroom
+# Removed RETURN: label and changed usage for it to Move.Done
+# Fixed bug in Dark Room Checks / Light Usage 
 
 #2023-09-10
 # Shroom
@@ -629,12 +634,12 @@ MOVE.REAL:
       move southwest
       move south
       math depth subtract 2
-      goto RETURN
+      goto MOVE.DONE
       }
     }
 DO.MOVE:
   put %movement
-  goto RETURN
+  goto MOVE.DONE
 
 MOVE.ROOM:
   if (%depth > 1) then waiteval (1 = %depth)
@@ -1228,18 +1233,8 @@ MOVE.DONE:
   if ($searchwalk) then goto SEARCHWALK
   if ($automapper.userwalk) then goto USERWALK
   gosub clear
-  goto MAIN.LOOP
-
-RETURN:
-  if (!$standing) then gosub STAND
-  if ($caravan) then goto CARAVAN
-  if ($mapwalk) then goto MAPWALK
-  if ($powerwalk) then goto POWERWALK
-  if ($automapper.sigilwalk) then goto SIGILWALK
-  if ($searchwalk) then goto SEARCHWALK
-  if ($automapper.userwalk) then goto USERWALK
   var movewait 0
-  return
+  goto MAIN.LOOP
 
 ABBEY.HATCH:
   action (abbey) on
@@ -1916,7 +1911,7 @@ DARK_CHECK_1:
      var darkroom 1
      pause 0.0001
      matchre DARK_CHECK_1 \s*\.\.\.wait|^Sorry,|^Please wait\.|^You are still stunned
-     matchre DARK_YES pitch dark|pitch black
+     matchre DARK_YES ^It's pitch dark and you can't see a thing\!|pitch black in here
      matchre LIGHT_YES ^Obvious|^I could|^What
      put look
      matchwait 5
@@ -1929,7 +1924,7 @@ LIGHT_YES:
      var darkroom 0
      var darkTime $gametime
      return
-## FIND A LIGHT SOURCE - FIRST WE CHECK FOR GUILD SKILLS THAT PROVIDE LIGHT
+## FIND A LIGHT SOURCE - FIRST WE CHECK FOR ANY DARKVISION GUILD SKILLS 
 LIGHT_SOURCE:
      action (mapper) off
      var subscript 0
@@ -1938,7 +1933,7 @@ LIGHT_SOURCE:
      gosub DARK_CHECK
      if (%darkroom = 0) then return
      ### KNOWN ISSUE - AFTER SUCCESSFULLY USING DARKVISION - SOMETIMES LOSES REMAINING PATH AFTER RETURNING
-     ### Have tried many various things but not sure best way to fix 
+     ### Have tried many various things but not sure best way to fix - This may work most of the time
      shift
      math depth subtract 1
      delay 0.0001
@@ -2260,37 +2255,44 @@ TORCH_YES:
                # if (%darkroom = 0) then goto YES_DARKVISION
           # }
 TORCH_YES_FLINT:
-     #if (%HaveFlint = 0) then goto NO_DARKVISION
+     if !matchre("$righthand $lefthand", "(?i)torch") then gosub PUT GET my torch
+     pause 0.5
+     pause 0.3
+     if !matchre("$righthand $lefthand", "(?i)torch") then goto NO_DARKVISION
+     gosub PUT drop my torch
      pause 0.0001
-     if !matchre("$righthand $lefthand", "(?i)torch") then put GET my torch
-     pause 0.2
-     pause 0.0001
-     put drop my torch
-     pause 0.2
-     pause 0.0001
-     put GET my flint
+     gosub PUT GET my flint
+     gosub PUT GET my carving knife
      pause 0.7
-     put GET my knife
-     pause 0.7
-     pause 0.1
-     pause 0.1
-     if (!matchre("$righthand $lefthand", "flint") && !matchre("$righthand $lefthand", "knife")) then
+     pause 0.2
+     if !matchre("$righthand $lefthand", "(?i)knife") then
           {
-               gosub echo FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
-               put #echo >Log #FF3E00 * FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
-               put STOW torch
+               gosub PUT GET my knife
+               pause 0.7
                pause 0.5
+               if !matchre("$righthand $lefthand", "(?i)knife") then gosub PUT remove my knife
+               pause 0.5
+          }
+     if !matchre("$righthand $lefthand", "(?i)knife") then
+          {
+               gosub PUT GET my blade
+               pause 0.7
+               pause 0.5
+          }
+     if (!matchre("$righthand $lefthand", "flint") && !matchre("$righthand $lefthand", "(knife|blade)")) then
+          {
+               echo * FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
+               put #echo >Log #FF3E00 * FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
                gosub stowing
                goto NO_DARKVISION
           }
      pause 0.0001
-     PUT light torch with my flint
-     pause 0.5
+     gosub PUT light torch with my flint
      pause 0.0001
      gosub stowing
-     put GET torch
-     pause 0.5
-     gosub DARK_DOUBLECHECK
+     gosub PUT GET torch
+     pause 0.1
+     gosub DARK_CHECK
      if (%darkroom = 0) then goto YES_DARKVISION
      goto NO_DARKVISION
 
@@ -2317,7 +2319,7 @@ NO_DARKVISION:
 DARK_DOUBLECHECK:
      delay 0.0001
      matchre DARK_DOUBLECHECK \s*\.\.\.wait|^Sorry,|^Please wait\.|^You are still stunned
-     matchre DARK_NOPE pitch dark
+     matchre DARK_NOPE ^It's pitch dark and you can't see a thing\!|pitch black in here
      matchre LIGHT_ROOM Obvious|I|What|You
      put look
      matchwait 5
