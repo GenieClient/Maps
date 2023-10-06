@@ -7,9 +7,9 @@ put #class rp on
 # Script to Travel for Genie4 #
 # Originally written by Achilles
 # Revitalized and Robustified by Shroom 
-var version 5.1.2
+var version 5.1.3
 # REQUIRES EXPTRACKER PLUGIN
-# Updated: 9/13/23
+# Updated: 10/6/23
 #
 # USAGE - .travel <location>
 #  OR   - .travel <location <room number>  
@@ -5669,12 +5669,11 @@ LIGHT_SOURCE_3:
      gosub DARK_CHECK
      if (%darkroom = 0) then goto YES_DARKVISION
      ### ADDITIONAL CHECKS HERE FOR GOGGLES / GAEZTHEN 
-     goto NO_DARKVISION
+     goto GOGGLE_CHECK
      return
 
 ### WE REACH THIS SUB IF WE HAVE NO GUILD SKILL FOR DARK VISION
 ### NOW WE CHECK FOR ITEMS THAT GIVE DARK VISION
-NO_DARKVISION:
 ### CHECK FOR NIGHTVISION GOGGLES
 GOGGLE_CHECK:
 GOGGLE_YES:
@@ -5859,10 +5858,24 @@ TORCH_FLINT:
      gosub PUT drop my torch
      pause 0.0001
      gosub PUT GET my flint
-     gosub PUT GET my knife
+     gosub PUT GET my carving knife
      pause 0.7
      pause 0.2
-     if (!matchre("$righthand $lefthand", "flint") && !matchre("$righthand $lefthand", "knife")) then
+     if !matchre("$righthand $lefthand", "(?i)knife") then
+          {
+               gosub PUT GET my knife
+               pause 0.7
+               pause 0.5
+               if !matchre("$righthand $lefthand", "(?i)knife") then gosub PUT remove my knife
+               pause 0.5
+          }
+     if !matchre("$righthand $lefthand", "(?i)knife") then
+          {
+               gosub PUT GET my blade
+               pause 0.7
+               pause 0.5
+          }
+     if (!matchre("$righthand $lefthand", "flint") && !matchre("$righthand $lefthand", "(knife|blade)")) then
           {
                echo * FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
                put #echo >Log #FF3E00 * FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
@@ -5906,7 +5919,7 @@ DARK_CHECK:
 DARK_CHECK_1:
      var darkroom 1
      matchre DARK_CHECK_1 \s*\.\.\.wait|^Sorry,|^Please wait\.|^You are still stunned
-     matchre DARK_YES pitch dark|pitch black
+     matchre DARK_YES ^It's pitch dark and you can't see a thing\!|pitch black in here
      matchre LIGHT_YES Obvious|I|What|You
      put look
      matchwait 5
