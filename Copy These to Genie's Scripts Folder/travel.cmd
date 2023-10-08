@@ -9,7 +9,7 @@ put #class rp on
 # Revitalized and Robustified by Shroom 
 var version 5.1.3
 # REQUIRES EXPTRACKER PLUGIN
-# Updated: 10/6/23
+# Updated: 10/7/23
 #
 # USAGE - .travel <location>
 #  OR   - .travel <location <room number>  
@@ -4204,9 +4204,9 @@ BAG_PARSE:
      var Bags Backpack|Haversack|Pack|Carryall|Rucksack|Duffel.Bag|Vortex|Eddy|Shadows|Toolbelt|Hip.Pouch|Lootsack|Satchel
      eval TotalBags count("%Bags", "|")
      var BagLoop 0
-     delay 0.0001
-BAG_LOOP:
      delay 0.00001
+BAG_LOOP:
+     delay 0.000001
      var BAG %Bags(%BagLoop)
      if (%BagLoop > %TotalBags) then
           {
@@ -6000,10 +6000,10 @@ AUTOMOVE_FAIL_BAIL:
      put #echo Crimson Destination: %Destination
      put #echo
 AUTOMOVE_RETURN:
-     action (moving) off
-     var automovefailCounter 0
+     pause 0.00001
      var randomloop 0
-     delay 0.00001
+     var automovefailCounter 0
+     action (moving) off
      return
 ABYSS_ESCAPE:
      echo * OH SHIT
