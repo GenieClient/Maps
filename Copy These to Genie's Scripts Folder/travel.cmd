@@ -6,30 +6,30 @@ put #class rp on
 #put #class joust off
 # Script to Travel for Genie4 #
 # Originally written by Achilles
-# Revitalized and Robustified by Shroom 
-var version 5.1.3
+# Revitalized and Robustified by Shroom
+var version 5.1.4
 # REQUIRES EXPTRACKER PLUGIN
-# Updated: 10/7/23
+# Updated: 10/15/23
 #
 # USAGE - .travel <location>
-#  OR   - .travel <location <room number>  
+#  OR   - .travel <location <room number>
 # .travel shard - Travel to Shard
 # .travel shard 40 - Travel to Shard - then move to ROOM 40.
 #
-# POWER TRAVEL SCRIPT - TRAVELS TO/FROM ALMOST ANYWHERE IN DR 
+# POWER TRAVEL SCRIPT - TRAVELS TO/FROM ALMOST ANYWHERE IN DR
 # THIS SCRIPT USES PLAT PORTALS TO TRAVEL BETWEEN CITIES IF YOU ARE PLATINUM
 #
 # VALID FINAL DESTINATIONS YOU CAN CHOOSE ARE AS FOLLOWS:
 #
 # Crossing | Arthe Dale | West Gate | Tiger Clan | Wolf Clan | Dokt | Knife Clan | Kaerna
-# Stone Clan | Caravansary | Dirge | Ushnish | Sorrow's | Beisswurms | Misenseor | Leucros 
+# Stone Clan | Caravansary | Dirge | Ushnish | Sorrow's | Beisswurms | Misenseor | Leucros
 # Vipers | Malodorous Buccas | Alfren's Ferry | Leth Deriel  | Ilaya Taipa | Acenemacra
 # Riverhaven | Rossmans | Langenfirth | El'Bains | Zaulfun | Therenborough
 # Fornsted | Zaulfung |  Throne City | Hvaral | Haizen | Oasis | Yeehar | Muspar'i
 # Shard | Horse Clan | Fayrin's Rest | Steelclaw Clan | Spire | Corik's Wall
 # Ylono | Granite Gargoyles | Gondola | Bone Wolves | Germishdin | Fang Cove | Wyvern Mountain
 # Raven's Point | Ain Ghazal| Outer Hib | Inner Hib | Hibarnhvidar | Boar Clan
-# Aesry Surlaenis'a | Ratha | M'riss | Mer'Kresh | Hara'jaal | Taisgath        
+# Aesry Surlaenis'a | Ratha | M'riss | Mer'Kresh | Hara'jaal | Taisgath
 #
 # THIS SCRIPT PARSES " YOU ARRIVED! " (Without the quotes) when it's done
 # If calling this script via another, you can use: waitforre ^YOU ARRIVED\!
@@ -115,38 +115,43 @@ if ("$charactername") = ("$char10") then var shardcitizen no
 ####
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
-# CHANGELOG - Latest Update: 9/13/23
+# CHANGELOG - Latest Update: 10/15/23
+#
+# - Added micro pauses to AUTOMOVE_RETURN - In attempt to fix intermittent problematic issue
+# - In some cases, AUTOMOVE would return TOO FAST after moving into a NEW MAP and automapper would still be registering the OLD zone id
+# - The script would think it was still on the OLD map and try firing a roomid for the old map, then automove would get confused by an invalid roomid
+# - So far this fix seems to be working well. But maybe a #mapper reset could be used in some instances
 #
 # - Robustified Travel to Rossman / Swimming Faldesu River
 #
 # - Added check for Athletics.Ranks at start of script
-#   - If not present should attempt to reset it and throw a message 
+#   - If not present should attempt to reset it and throw a message
 # - HEAVILY Robustified Random Movement Engine
-# - Added item checks for dark vision Sub (items that produce light) 
+# - Added item checks for dark vision Sub (items that produce light)
 # - Speedups across many subs - Script should run a bit faster overall
 #
-# - Fixed travel issue from Shard to Stone Clan 
+# - Fixed travel issue from Shard to Stone Clan
 #
 # - Fixed issue in taking Thief tunnels into Shard
 # - Speedups in different parts of script
 # - Fixed several different bugs
 #
 # - Robustified Random Movement engine so script can recognize/escape from more obscure exits when first starting script in an unknown room
-# - Fixed bug when starting Travel from inside the Raven's Court 
+# - Fixed bug when starting Travel from inside the Raven's Court
 #
-# - Fixed several issues with PLAT PORTAL travel 
+# - Fixed several issues with PLAT PORTAL travel
 # - Specifically when travelling to Rossman and Mriss - that could cause an infinite portal loop
 # - Cleaned up echoes in several areas
 # - Fixed bugs in Random Movement engine
 #
 # - Cleaned up STOP_INVIS label - Added several more checks and removed unnecessary labelsS
-# - Speedups in several areas 
+# - Speedups in several areas
 #
 # - FIXED SHORTCUT TO MUSPARI THROUGH THE DESERT
 #
-# - ADDED LOGIC FOR ROSSMAN'S ROPE / BRIDGE 
-# - WILL NOW AUTO-DETECT WHETHER THE BRIDGE OR ROPE IS UP AND TAKE EITHER ONE 
-# ( SINCE THERE ARE STILL MAP DIFFERENCES BETWEEN TF / PRIME ) 
+# - ADDED LOGIC FOR ROSSMAN'S ROPE / BRIDGE
+# - WILL NOW AUTO-DETECT WHETHER THE BRIDGE OR ROPE IS UP AND TAKE EITHER ONE
+# ( SINCE THERE ARE STILL MAP DIFFERENCES BETWEEN TF / PRIME )
 #
 # - Overall Speedups to Script
 # - Better auto recovery from automapper fuckups
@@ -279,8 +284,8 @@ echo * Start: $zonename (Map: $zoneid | Room: $roomid)
 echo * Destination: %destination
 echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 echo
-if !def(Athletics.Ranks) then 
-     { 
+if !def(Athletics.Ranks) then
+     {
           echo
           echo * Athletics.Ranks not set! Attempting to Auto-Fix...
           echo * Do you have the EXPTracker Plugin installed??
@@ -288,12 +293,12 @@ if !def(Athletics.Ranks) then
           pause 0.5
           put #tvar Athletics.Ranks 0
           put exp 0
-          waitforre EXP HELP|Overall state 
+          waitforre EXP HELP|Overall state
           pause 0.1
           pause 0.1
      }
-if (!def(Athletics.Ranks) || ($Athletics.Ranks < 1)) then 
-     { 
+if (!def(Athletics.Ranks) || ($Athletics.Ranks < 1)) then
+     {
           echo
           echo * Still not registering Athletics.Ranks!!! Make sure you have the EXPTracker Plugin!!
           echo * Going for it anyway - But this will cause you to skip Athletics Shortcuts!
@@ -347,7 +352,7 @@ echo
 echo *** LET'S GO!!
 #DESTINATION
 #### SPECIAL ESCAPE SECTION FOR MAZES/HARD TO ESCAPE AREAS BY SHROOM
-#### THIS CHECKS IF WE ARE STARTING FROM A KNOWN MAZE / MESSED UP AREA THAT AUTOMAPPER GETS LOST IN 
+#### THIS CHECKS IF WE ARE STARTING FROM A KNOWN MAZE / MESSED UP AREA THAT AUTOMAPPER GETS LOST IN
 #### THEN USES SPECIAL ESCAPE LOGIC TO GET TO A KNOWN LOCATION THAT AUTOMAPPER CAN USE
 if matchre("$roomname","The Raven's Court") then gosub AUTOMOVE 74
 if (("$zoneid" = "47") && ($Athletics.Ranks >= %muspari.shortcut) && !matchre("%destination", "\b(musp?a?r?i?)")) then gosub VELAKA_SHORTCUT
@@ -1032,7 +1037,7 @@ if (("$zoneid" = "60") && ("$guild" = "Thief")) then
           }
 if (("$zoneid" = "60") && ($Athletics.Ranks >= %segoltha)) then gosub AUTOMOVE 108
 # Crossing | Arthe Dale | West Gate | Tiger Clan | Wolf Clan | Dokt | Knife Clan | Kaerna
-# Stone Clan | Caravansary | Dirge | Ushnish | Sorrow's | Beisswurms | Misenseor |Leucros 
+# Stone Clan | Caravansary | Dirge | Ushnish | Sorrow's | Beisswurms | Misenseor |Leucros
 # Vipers | Malodorous Buccas | Alfren's Ferry | Leth Deriel  | Ilaya Taipa | Acenemacra
 # Riverhaven | Rossmans | Langenfirth | El'Bains | Zaulfun | Therenborough
 if ("$zoneid" = "50") && matchre("%destination", "\b(haizen|yeehar|oasis|hvaral|forns?t?e?d?|elbain|el'bain|alfren|rossm?a?n?|viper|leucro?|misens|beiss|sorrow|ushnish|caravan?s?a?r?y?|dokt|west|stone|knife|wolf|tiger|dirge|arthe|kaerna?|river|haven|riverhaven|theren|lang|throne|zaulfu?n?|rakash|muspar?i?|zaulfung|cross?|crossing)") && ($Athletics.Ranks > %segoltha) then gosub SEGOLTHA_NORTH
@@ -1923,7 +1928,7 @@ if (("$zoneid" = "60") && ("$guild" = "Thief")) then
 if (("$zoneid" = "60") && ($Athletics.Ranks >= %segoltha)) then gosub AUTOMOVE 108
 if (("$zoneid" = "60") && ($Athletics.Ranks < %segoltha)) then
           {
-              echo ** Athletics too low for Segoltha - Taking Ferry 
+              echo ** Athletics too low for Segoltha - Taking Ferry
               gosub INFO_CHECK
               if %kronars < 100 then goto NOCOIN
               gosub AUTOMOVE 42
@@ -2527,8 +2532,8 @@ HAIZEN_SHORTCUT_22:
      put go stone
      pause
 HAIZEN_SHORTCUT_4:
-     echo **** Trying to Navigate the stupid Velaka Desert... 
-     echo **** Looking for the "rocky trail" 
+     echo **** Trying to Navigate the stupid Velaka Desert...
+     echo **** Looking for the "rocky trail"
      if matchre("$roomobjs", "rocky trail") then goto HAIZEN_SHORTCUT_5
      gosub RANDOMWEIGHT west
      if matchre("$roomobjs", "rocky trail") then goto HAIZEN_SHORTCUT_5
@@ -3473,7 +3478,7 @@ STOP_INVIS:
           }
 return
 #######################################
-### STANDALONE CHECK TO MAKE SURE WE AREN'T IN A FERRY (USED FOR RANDOMMOVE SUB IF SCRIPT GETS LOST IN A ROOMID = 0) 
+### STANDALONE CHECK TO MAKE SURE WE AREN'T IN A FERRY (USED FOR RANDOMMOVE SUB IF SCRIPT GETS LOST IN A ROOMID = 0)
 FERRY_CHECK:
   delay 0.00001
   action var offtransport platform when a barge platform
@@ -3816,7 +3821,7 @@ NOCOIN:
   put #parse NO COINS!
   echo
   echo #####################################
-  echo ### You don't have enough coins to travel - you vagrant!  
+  echo ### You don't have enough coins to travel - you vagrant!
   echo ### Trying to get some coins from the nearest bank!!!
   echo #####################################
   echo
@@ -4033,7 +4038,7 @@ NOCOIN:
         }
     if ("$zoneid" = "108") then
         {
-            echo ## YOU ARE ON MRISS WITH NO COINS!  YOU NEED TO FIND A FRIEND FOR HELP! 
+            echo ## YOU ARE ON MRISS WITH NO COINS!  YOU NEED TO FIND A FRIEND FOR HELP!
             echo ## OR KILL SOME STUFF AND SELL HIDES / GEMS!
             exit
         }
@@ -4162,7 +4167,7 @@ INFO_CHECK:
 #### THIS AUTO SETS MAIN.BAG / BACKUP.BAG / THIRD.BAG VARIABLES
 #### FOR STOWING ROUTINE ONLY - BACKUP CONTAINERS IN CASE DEFAULT "STOW" FAILS - THIS WILL CATCH ANY COMMON LARGE CONTAINERS
 #### ~ THIS SHOULD ONLY FIRE IF THE MOVE.STOW ROUTINE TRIGGERS AND DEFAULT STOW DOES NOT FULLY CLEAR HANDS ~
-#### THIS WAS MADE AS HAPPY MEDIUM - IS MUCH BETTER THAN USING HARDCODED VARIABLES 
+#### THIS WAS MADE AS HAPPY MEDIUM - IS MUCH BETTER THAN USING HARDCODED VARIABLES
 #### SETTING THE CONTAINERS AUTOMATICALLY MAKES IT EASY WITHOUT HAVING TO WORRY ABOUT USER VARIABLES / MULTI-CHARACTERS ETC..
 #### THIS SHOULD CATCH THE ~MAIN~ BAGS MOST PEOPLE HAVE AT LEAST ONE OR TWO OF
 BAG_CHECK:
@@ -5581,7 +5586,7 @@ USHNISH_GO_ZONE3:
 #####################################################################################################
 # PREMIERE LIGHT SOURCE CHECK BY SHROOM
 # USES ANY KNOWN GUILD SKILLS/SPELLS TO ATTEMPT TO ACTIVATE DARK VISION
-# IF STILL NOT ACTIVE - WILL CHECK FOR ITEMS THAT GIVE LIGHT (STARGLASS/LANTERN/GOGGLES) etc. 
+# IF STILL NOT ACTIVE - WILL CHECK FOR ITEMS THAT GIVE LIGHT (STARGLASS/LANTERN/GOGGLES) etc.
 #####################################################################################################
 LIGHT_SOURCE:
      delay 0.0001
@@ -5668,7 +5673,7 @@ LIGHT_SOURCE_3:
           }
      gosub DARK_CHECK
      if (%darkroom = 0) then goto YES_DARKVISION
-     ### ADDITIONAL CHECKS HERE FOR GOGGLES / GAEZTHEN 
+     ### ADDITIONAL CHECKS HERE FOR GOGGLES / GAEZTHEN
      goto GOGGLE_CHECK
      return
 
@@ -6004,6 +6009,14 @@ AUTOMOVE_RETURN:
      var randomloop 0
      var automovefailCounter 0
      action (moving) off
+     ### MICRO PAUSES ADDED HERE - TO AVOID TRIPUPS WITH MAP/ZONEID CHANGES 
+     ### SOMETIMES IT WOULD RETURN TOO FAST AND AUTOMAPPER WOULD STILL REGISTER THE OLD MAP
+     ### PERHAPS #MAPPER RESET COULD WORK, BUT COULD NOT THINK OF A FLUID WAY TO ADD THAT WASN'T SPAMMING CONSTANTLY
+     ### THIS JUST ADDS A *SLIGHT* PAUSE AFTER EVERY "GOSUB AUTOMOVE" WHICH SHOULD GIVE ENOUGH TIME 
+     ### FOR AUTOMAPPER TO REGISTER ANY ZONE ID CHANGES - BUT NOT REALLY INTERFERE WITH THE SPEED MUCH 
+     pause 0.001
+     pause 0.01
+     pause 0.01
      return
 ABYSS_ESCAPE:
      echo * OH SHIT
