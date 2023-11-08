@@ -7,9 +7,9 @@ put #class rp on
 # Script to Travel for Genie4 #
 # Originally written by Achilles
 # Revitalized and Robustified by Shroom
-var version 5.1.4
+var version 5.1.5
 # REQUIRES EXPTRACKER PLUGIN
-# Updated: 10/15/23
+# Updated: 11/5/23
 #
 # USAGE - .travel <location>
 #  OR   - .travel <location <room number>
@@ -44,21 +44,39 @@ var version 5.1.4
 #                                        #
 ##########################################
 ##########################################
-##   ADJUST THE RANKS BELOW TO YOUR     ##
-##       PARTICULAR CHARACTER           ##
-##  THESE ARE PRE-SET TO CONSERVATIVE   ##
-##  NUMBERS TO BE ON THE SAFER SIDE     ##
-##                                      ##
-## These tell the script you can take   ##
-## Certain shortcuts with enough ranks  ##
-##                                      ##
-##  IF you are joined in a GROUP,       ##
-##  You WILL take public transportation ##
-##########################################
-##########################################
 ##    ARE YOU A CITIZEN OF SHARD?       ##
 ##        CHOOSE yes or no              ##
      var shardcitizen yes
+##########################################
+## MULTIPLE CHARACTER SUPPORT FOR THE SHARD CITIZEN VARIABLE
+## (IF using this script on multiple characters and want DIFFERENT shardcitizen variables for each)
+## YOU MUST CREATE GENIE GLOBAL VARIABLES - char1 / char2 / char3 / char4 etc.. IN GENIE FOR THIS TO WORK
+## EX. type into genie:  #var char1 Bob  - to create global variable for char1 - then repeat for each character
+## type: #var save - when finished to SAVE all your variables (so it persists)
+## Then just set the variables below according to what each characters citizen status should be
+if ("$charactername") = ("$char1") then var shardcitizen yes
+if ("$charactername") = ("$char2") then var shardcitizen yes
+if ("$charactername") = ("$char3") then var shardcitizen yes
+if ("$charactername") = ("$char4") then var shardcitizen yes
+if ("$charactername") = ("$char5") then var shardcitizen yes
+if ("$charactername") = ("$char6") then var shardcitizen yes
+if ("$charactername") = ("$char7") then var shardcitizen no
+if ("$charactername") = ("$char8") then var shardcitizen no
+if ("$charactername") = ("$char9") then var shardcitizen no
+if ("$charactername") = ("$char10") then var shardcitizen no
+##########################################
+##  ADJUST THE ATHLETICS RANKS BELOW    ##
+##      TO USE CERTAIN SHORTCUTS        ##
+##  THESE ARE PRE-SET TO CONSERVATIVE   ##
+##   NUMBERS TO BE ON THE SAFER SIDE    ##
+##   TO ACCOUNT FOR BURDEN/STRENGTH     ##
+##                                      ##
+## TELLS THE SCRIPT WHAT SHORTCUTS      ##
+## YOU CAN TAKE AT CERTAIN ATHLETICS    ##
+##                                      ##
+##  IF you are joined in a ~GROUP~,     ##
+##  You WILL take public transportation ##
+##########################################
 ##########################################
 ## RANKS TO USE ROSSMAN'S SHORTCUT      ##
 ## TO SWIM THE JANTSPYRE RIVER          ##
@@ -72,18 +90,19 @@ var version 5.1.4
 ###########################################
 ##  RANKS TO SWIM THE FALDESU RIVER      ##
 ##  HAVEN TO NTR OR VICA VERSA           ##
-## Safe: 190 - Possible ~150+ w/ buffs   ##
+##  SAFE: 180 - 200                      ##
+##  POSSIBLE @ 160+ w/ buffs/no burden   ##
     var faldesu 190
 ############################################
 ##  RANKS TO SWIM THE SEGOLTHA RIVER      ##
 ##  TIGER CLAN TO STR OR VICA VERSA       ##
-## ~TOUGH ONE!~ DONT LOWER UNLESS SURE!!  ##
-## SAFE: 550 | BUFFED/STRONG: ~525        ##
+## ~TOUGH~ ONE!~ DONT LOWER UNLESS SURE!! ##
+## SAFE: 550+ | BUFFED/STRONG: ~530       ##
     var segoltha 550
 ##########################################
 ## RANKS TO CLIMB UNDERGONDOLA SHORTCUT ##
 ## Some can do ~510 w/ buffs & rope     ##
-## 550 is 'safe' - 530 is average       ##
+## 550 is 'super safe' - 530 is safe    ##
     var undergondola 530
 ##########################################
 ##########################################
@@ -93,29 +112,20 @@ var version 5.1.4
 ##########################################
 #################################################
 ## RANKS FOR VELAKA DESERT SHORTCUT TO MUSPARI ##
-## 700 BARE MIN for this one - 750 IS SAFE     ##
+## ~740 BARE MIN for this one! - 760 IS 'SAFE' ##
     var muspari.shortcut 760
 #################################################
-## MULTIPLE CHARACTER SUPPORT FOR THE SHARD CITIZEN VARIABLE
-## (IF using this script on multiple characters and want DIFFERENT shardcitizen variables)
-if ("$charactername") = ("$char1") then var shardcitizen yes
-if ("$charactername") = ("$char2") then var shardcitizen yes
-if ("$charactername") = ("$char3") then var shardcitizen yes
-if ("$charactername") = ("$char4") then var shardcitizen yes
-if ("$charactername") = ("$char5") then var shardcitizen yes
-if ("$charactername") = ("$char6") then var shardcitizen yes
-if ("$charactername") = ("$char7") then var shardcitizen no
-if ("$charactername") = ("$char8") then var shardcitizen no
-if ("$charactername") = ("$char9") then var shardcitizen no
-if ("$charactername") = ("$char10") then var shardcitizen no
-## YOU MUST CREATE GENIE GLOBAL VARIABLES - char1 / char2 / char3 / char4 etc.. IN GENIE FOR THIS TO WORK
-## type in genie:  #var char1 Bob  - to create each global variable - then make sure to #var save - when done
-## Then just set the above variables according to what your characters citizen status is
-####
-####
+#### END OF VARIABLES!!!
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
-# CHANGELOG - Latest Update: 10/15/23
+###########################################
+# CHANGELOG - Latest Update: 11/5/23
+#
+# - Added Escape from Shard Favor Area detection (if script is started in there)
+# - Added Burden check to beginning info check (sets your current Burden level 0 - 11)
+# - Added Burden check for FALDESU RIVER
+# - If BURDEN IS TOO HIGH at lower ranks (<200) - will auto TAKE FERRY (Even if you set the Faldesu var low)
+# - Will probably expand on this in future updates - mainly for SEGOLTHA RIVER
 #
 # - Added micro pauses to AUTOMOVE_RETURN - In attempt to fix intermittent problematic issue
 # - In some cases, AUTOMOVE would return TOO FAST after moving into a NEW MAP and automapper would still be registering the OLD zone id
@@ -259,6 +269,21 @@ action put #tvar spellROG 0 when eval ($SpellTimer.RiteofGrace.active = 0)
 put #tvar spellROG 0
 put #tvar spellROC 0
 put #tvar spellEOTB 0
+
+action var burden 0 when ^\s*Encumbrance\s*\:\s*None
+action var burden 1 when ^\s*Encumbrance\s*\:\s*Light Burden
+action var burden 2 when ^\s*Encumbrance\s*\:\s*Somewhat Burdened
+action var burden 3 when ^\s*Encumbrance\s*\:\s*Burdened
+action var burden 4 when ^\s*Encumbrance\s*\:\s*Heavy Burden
+action var burden 5 when ^\s*Encumbrance\s*\:\s*Very Heavy Burden
+action var burden 6 when ^\s*Encumbrance\s*\:\s*Overburdened
+action var burden 7 when ^\s*Encumbrance\s*\:\s*Very Overburdened
+action var burden 8 when ^\s*Encumbrance\s*\:\s*Extremely Overburdened
+action var burden 9 when ^\s*Encumbrance\s*\:\s*Tottering Under Burden
+action var burden 10 when ^\s*Encumbrance\s*\:\s*Are you even able to move\?
+action var burden 11 when ^\s*Encumbrance\s*\:\s*It's amazing you aren't squashed\!
+
+var burden 0
 var passport 0
 var premium 0
 var kronars 0
@@ -304,8 +329,8 @@ if (!def(Athletics.Ranks) || ($Athletics.Ranks < 1)) then
           echo * Going for it anyway - But this will cause you to skip Athletics Shortcuts!
           echo
      }
-if !def(guild) then gosub INFO_CHECK
-if !def(circle) then gosub INFO_CHECK
+gosub INFO_CHECK
+#if !def(circle) then gosub INFO_CHECK
 gosub BAG_CHECK
 gosub PREMIUM_CHECK
 # put #mapper reset
@@ -357,6 +382,7 @@ echo *** LET'S GO!!
 if matchre("$roomname","The Raven's Court") then gosub AUTOMOVE 74
 if (("$zoneid" = "47") && ($Athletics.Ranks >= %muspari.shortcut) && !matchre("%destination", "\b(musp?a?r?i?)")) then gosub VELAKA_SHORTCUT
 if matchre("$roomname", "(Velaka, Slot Canyon|Yeehar's Graveyard|Heru Taipa)") then gosub AUTOMOVE 66
+if matchre("$roomname", "(Wyvern Mountain, Cavern|Wyvern Mountain, Dragon Shrine|Wyvern Mountain, Raised Dais)") then gosub SHARD_FAVOR_ESCAPE
 if matchre("$roomname", "(Cavern of Glass|Aldauth's Lair)") then gosub ALDAUTH_ESCAPE
 if matchre("$roomname", "Ehhrsk Highway") then gosub EHHRSK_ESCAPE
 if (matchre("$roomname", "Zaulfung, Swamp") && matchre("$roomdesc", "Rancid mire")) then gosub ZAULFUNG_ESCAPE
@@ -902,18 +928,34 @@ if (matchre("$game", "(?i)DRX") && (%portal = 1)) then
      {
           if (matchre("$zoneid", "\b(1|30|40|47|67|99|107|116)\b") && (%ported = 0)) then gosub PORTAL_TIME
      }
-if (("$zoneid" = "30") && ($Athletics.Ranks < %faldesu)) then
+if (("$zoneid" = "30") then
      {
-          echo ** Athletics NOT high enough for Faldesu - Taking Ferry!
+          ### CHECK HERE TO MAKE SURE BURDEN IS NOT TOO HIGH AT LOWER RANKS
+          if ((($Athletics.Ranks < 170) && (%burden > 2)) || (($Athletics.Ranks < 190) && (%burden > 3))) then
+               {
+                    echo * BURDEN TOO HIGH FOR FALDESU RIVER @ CURRENT RANKS!
+                    goto FALDESU_FERRY
+               }
+          if ($Athletics.Ranks >= %faldesu) then goto CROSSING_1
+     }
+if ("$zoneid" != "30") then goto CROSSING_1
+if ($Athletics.Ranks >= %faldesu) then goto CROSSING_1
+FALDESU_FERRY:
+     {
+          if ("$zoneid" != "30") then goto CROSSING_1
+          echo
+          echo ** Athletics (+burden) NOT high enough for Faldesu River - Taking Ferry!
+          echo
           gosub INFO_CHECK
           if (%lirums < 140) then goto NOCOIN
           gosub AUTOMOVE 103
           pause
           gosub FERRYLOGIC
      }
+CROSSING_1:
 if (("$zoneid" = "30") && ($Athletics.Ranks >= %faldesu)) then
      {
-          echo ** Athletics high enough for Faldesu - Taking shortcut!
+          echo ** Athletics high enough for Faldesu - Taking River!
           gosub AUTOMOVE 203
           gosub AUTOMOVE 79
      }
@@ -1156,7 +1198,7 @@ if (("$zoneid" = "1") && matchre("%detour", "(leth|acen|taipa|ratha)")) then
              }
          if (($Athletics.Ranks >= %segoltha) && ("$zoneid" = "1")) then
              {
-                echo ** Athletics high enough for Segoltha - Taking shortcut!
+                echo ** Athletics high enough for Segoltha - Taking River!
                  gosub AUTOMOVE 476
                  gosub SEGOLTHA_SOUTH
              }
@@ -1359,7 +1401,20 @@ if (matchre("$game", "(?i)DRX") && (%portal = 1)) then
           if (("$zoneid" = "1") && matchre("%detour", "(alfren|leth|bone)")) then goto ILLITHI_2
           if (matchre("$zoneid", "\b(1|30|40|47|67|99|107|116)\b") && (%ported = 0)) then gosub PORTAL_TIME
      }
-if (("$zoneid" = "30") && ($Athletics.Ranks < %faldesu)) then
+if (("$zoneid" = "30") then
+     {
+          ### CHECK HERE TO MAKE SURE BURDEN IS NOT TOO HIGH AT LOWER RANKS
+          if ((($Athletics.Ranks < 170) && (%burden > 2)) || (($Athletics.Ranks < 190) && (%burden > 3))) then
+               {
+                    echo * BURDEN TOO HIGH FOR FALDESU RIVER @ CURRENT RANKS!
+                    goto ILLITHI_FERRY
+               }
+          if ($Athletics.Ranks >= %faldesu) then goto ILLITHI_11
+     }
+if ("$zoneid" != "30") then goto ILLITHI_11
+if ($Athletics.Ranks >= %faldesu) then goto ILLITHI_11
+ILLITHI_FERRY:
+if ("$zoneid" = "30") then
           {
               echo ** Athletics NOT high enough for Faldesu - Taking Ferry!
               gosub INFO_CHECK
@@ -1368,9 +1423,10 @@ if (("$zoneid" = "30") && ($Athletics.Ranks < %faldesu)) then
               pause
               gosub FERRYLOGIC
           }
+ILLITHI_11:
 if (("$zoneid" = "30") && ($Athletics.Ranks >= %faldesu)) then
           {
-              echo ** Athletics high enough for Faldesu - Taking shortcut!
+              echo ** Athletics high enough for Faldesu - Taking River!
               gosub AUTOMOVE 203
               gosub AUTOMOVE 79
           }
@@ -1971,23 +2027,20 @@ if (("$zoneid" = "7") && ("%detour" = "caravansary")) then
               gosub AUTOMOVE caravan
               goto ARRIVED
           }
-if (("$zoneid" = "7") && ($Athletics.Ranks >= %faldesu)) then
+### CHECK HERE TO MAKE SURE BURDEN IS NOT TOO HIGH AT LOWER RANKS
+if (("$zoneid" = "7") then
      {
-         gosub AUTOMOVE 197
-         pause 0.1
-         send #mapper reset
-         pause 0.001
-         pause 0.001
+          if ((($Athletics.Ranks < 170) && (%burden > 2)) || (($Athletics.Ranks < 190) && (%burden > 3))) then
+               {
+                    echo * BURDEN TOO HIGH FOR FALDESU RIVER @ CURRENT RANKS!
+                    goto THERENGIA_FERRY
+               }
+          if ($Athletics.Ranks >= %faldesu) then goto THERENGIA_2
      }
-if (("$zoneid" = "7") && ($Athletics.Ranks >= %faldesu)) then
-     {
-         gosub AUTOMOVE 197
-         pause 0.1
-         send #mapper reset
-         pause 0.001
-         pause 0.001
-     }
-if (("$zoneid" = "7") && ($Athletics.Ranks < %faldesu)) then
+if ("$zoneid" != "7") then goto THERENGIA_2
+if ($Athletics.Ranks >= %faldesu) then goto THERENGIA_2
+THERENGIA_FERRY:
+if ("$zoneid" = "7") then
           {
               echo ** Athletics too low for Faldesu - Taking Ferry
               gosub INFO_CHECK
@@ -1995,6 +2048,24 @@ if (("$zoneid" = "7") && ($Athletics.Ranks < %faldesu)) then
               gosub AUTOMOVE 81
               gosub FERRYLOGIC
           }
+THERENGIA_2:
+if (("$zoneid" = "7") && ($Athletics.Ranks >= %faldesu)) then
+     {
+         gosub AUTOMOVE 197
+         pause 0.1
+         send #mapper reset
+         pause 0.5
+         pause 0.2
+         if ("$zoneid" = "14c") then gosub FALDESU_NORTH
+     }
+if (("$zoneid" = "7") && ($Athletics.Ranks >= %faldesu)) then
+     {
+         gosub AUTOMOVE 197
+         pause 0.1
+         send #mapper reset
+         pause 0.5
+         pause 0.2
+     }
 if ("$zoneid" = "14c") then gosub FALDESU_NORTH
 if ("$zoneid" = "33a") then gosub AUTOMOVE 46
 if ("$zoneid" = "33") then gosub AUTOMOVE 1
@@ -3488,7 +3559,6 @@ FERRY_CHECK:
   action var offtransport wharf when the Langenfirth wharf
   action var offtransport dock when \[\"Her Opulence\"\]|\[\"Hodierna's Grace\"\]|\[\"Kertigen's Honor\"\]|\[\"His Daring Exploit\"\]|\[The Evening Star\]|\[The Damaris\' Kiss\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[\"Imperial Glory\"\]|\[\"The Riverhawk\"\]|Baso Docks|a dry dock|the salt yard dock|covered stone dock|\[The Galley Sanegazat\]|\[The Galley Cercorim\]|\[Aboard the Warship, Gondola\]|\[The Halasa Selhin, Main Deck\]|the south bank docks\.
   var offtransport dock
-  if ($invisible) then goto STOP_INVIS
   delay 0.001
   matchre ONFERRY \[\"Her Opulence\"\]|\[\"Hodierna's Grace\"\]|\[\"Kertigen's Honor\"\]|\[\"His Daring Exploit\"\]|\[\"Northern Pride\", Main Deck\]|\[\"Theren's Star\", Deck\]|\[The Evening Star\]|\[The Damaris\' Kiss\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[\"The Desert Wind\"\]|\[\"The Suncatcher\"\]|\[\"The Riverhawk\"\]|\[\"Imperial Glory\"\]\"Hodierna's Grace\"|\"Her Opulence\"\]|\[The Galley Cercorim\]|\[The Jolas, Fore Deck\]|\[Aboard the Warship, Gondola\]|\[The Halasa Selhin, Main Deck\]|\[Aboard the Mammoth, Platform\]
   matchre ONFERRY Secured to the gigantic balloon overhead, the armored ironwood gondola dangles on a convoluted network of hempen rope\.
@@ -4530,9 +4600,9 @@ HIB_PORTAL:
 NECRO_PREP:
      if ("$guild" != "Necromancer") then return
      var donotcastlist The Crossing, Western Gate|Northeast Wilds, Outside Northeast Gate
-     pause 0.1
+     pause 0.01
      if ($spellEOTB = 0) then gosub EOTB
-     if ($SpellTimer.EyesoftheBlind.active = 0) then gosub EOTB
+     #if ($SpellTimer.EyesoftheBlind.active = 0) then gosub EOTB
      if ($SpellTimer.RiteofContrition.active = 0) then gosub ROC
      return
 JUSTICE_CHECK:
@@ -4557,6 +4627,7 @@ ROC_1:
      math ROCLoop add 1
      # if matchre("%spelltimer", "Liturgy") && ($Utility.Ranks >= 800) then var NecroPrep ROG
      if (%ROCLoop > 1) then var NecroPrep ROC
+     if ($Utility.Ranks < 60) then return
      if (($spellROC = 1) && ("%NecroPrep" = "ROC")) then goto NECRO.DONE
      # if (($spellROG = 1) && ("%NecroPrep" = "ROG")) then goto NECRO.DONE
      echo **** Prepping %NecroPrep ****
@@ -4569,13 +4640,13 @@ ROC_1:
                return
           }
      # gosub NECRO.CHECKROOM
-     if ($Utility.Ranks < 40) then var NecroMana 2
-     if ($Utility.Ranks >= 40) && ($Utility.Ranks < 120) then var NecroMana 5
-     if ($Utility.Ranks >= 120) && ($Utility.Ranks < 240) then var NecroMana 7
-     if ($Utility.Ranks >= 240) && ($Utility.Ranks < 400) then var NecroMana 8
-     if ($Utility.Ranks >= 400) && ($Utility.Ranks < 550) then var NecroMana 10
-     if ($Utility.Ranks >= 550) && ($Utility.Ranks < 800) then var NecroMana 15
-     if ($Utility.Ranks >= 800) then var NecroMana 20
+     if ($Utility.Ranks < 350) then var NecroMana 5
+     if (($Utility.Ranks >= 350) && ($Utility.Ranks < 450)) then var NecroMana 7
+     if (($Utility.Ranks >= 450) && ($Utility.Ranks < 600)) then var NecroMana 9
+     if (($Utility.Ranks >= 600) && ($Utility.Ranks < 800)) then var NecroMana 10
+     if (($Utility.Ranks >= 800) && ($Utility.Ranks < 900)) then var NecroMana 12
+     if (($Utility.Ranks >= 900) && ($Utility.Ranks < 1000)) then var NecroMana 15
+     if ($Utility.Ranks >= 1000) then var NecroMana 20
      pause 0.2
      put prep %NecroPrep %NecroMana
      pause 17
@@ -4588,21 +4659,22 @@ ROC_1:
      put look $charactername
      matchwait 2
 ROC_RETURN:
-     if (($spellROC = 0) && ($spellROG = 0) && (ROCLoop < 3)) then goto ROC_1
+     if (($spellROC = 0) && ($spellROG = 0) && (ROCLoop < 2)) then goto ROC_1
      var ROCLoop 0
      return
 EOTB:
      var EOTBLoop 0
      var NecroPrep EOTB
 EOTB_1:
-     if (($spellEOTB = 1) && ($invisible = 1)) then goto NECRO.DONE
+     if ($invisible = 1) then goto NECRO.DONE
+     if ($Utility.Ranks < 30) then return
      pause 0.1
      echo  **** Prepping EOTB ****
      if ("$preparedspell" != "None") then send release spell
      pause 0.3
      ## ** Waits for invis pulse or casts the spell if invisible is off..
      pause 0.1
-     if (($spellEOTB = 1) && ($invisible = 0)) then
+     if (($SpellTimer.EyesoftheBlind.active = 1) && ($invisible = 0)) then
           {
                ## ** This return is slightly different, it will not wait for pulse inside the exchange.
                ## ** It will also not wait for a pulse if destination = exchange, account or any teller trips to the exchange when moving areas.
@@ -4610,7 +4682,7 @@ EOTB_1:
                if (((matchre("$roomobjs", "exchange rate board")) || (matchre("$roomname", "([T|t]eller|[E|e]xchange|[B|b]ank)")) || (matchre("$roomname", "(%donotcastlist)"))) && ((matchre("$roomname", "([T|t]eller|[E|e]xchange|[B|b]ank)")) && (matchre("%Destination", "(teller|exchange)")))) then return
                matchre EOTB_1 ^Your spell subtly|^Your corruptive mutation fades
                matchwait 30
-               put #echo >log Red *** Error with EOTB not pulsing invis. Attempting to recast.
+               # put #echo >log Red *** Error with EOTB not pulsing invis. Attempting to recast.
           }
      if ($invisible = 1) then return
      ## ** If script made it to this section then EOTB must be recast.
@@ -4618,19 +4690,18 @@ EOTB_1:
      if ((matchre("$roomobjs", "exchange rate board")) || (matchre("$roomname", "([T|t]eller|[E|e]xchange|[B|b]ank)")) || (matchre("$roomname", "(%donotcastlist)"))) then return
      if ($stamina < 30) then return
      # gosub NECRO.CHECKROOM
-     if ($Utility.Ranks < 40) then var NecroMana 2
-     if ($Utility.Ranks >= 40) && ($Utility.Ranks < 120) then var NecroMana 5
+     if ($Utility.Ranks < 120) then var NecroMana 5
      if ($Utility.Ranks >= 120) && ($Utility.Ranks < 240) then var NecroMana 7
-     if ($Utility.Ranks >= 240) && ($Utility.Ranks < 400) then var NecroMana 8
-     if ($Utility.Ranks >= 400) && ($Utility.Ranks < 500) then var NecroMana 10
-     if ($Utility.Ranks >= 500) && ($Utility.Ranks < 700) then var NecroMana 12
-     if ($Utility.Ranks >= 700) then var NecroMana 20
+     if ($Utility.Ranks >= 240) && ($Utility.Ranks < 400) then var NecroMana 10
+     if ($Utility.Ranks >= 400) && ($Utility.Ranks < 500) then var NecroMana 12
+     if ($Utility.Ranks >= 500) && ($Utility.Ranks < 700) then var NecroMana 15
+     if ($Utility.Ranks >= 700) then var NecroMana 25
      pause 0.4
      put prep EOTB %NecroMana
      pause 16
      put cast
      pause 0.5
-     if (($spellEOTB = 0) && (EOTBLoop < 3)) then goto EOTB_1
+     # if (($invisible = 0) && (EOTBLoop < 1)) then goto EOTB_1
      var EOTBLoop 0
      return
 NECRO.DONE:
@@ -4785,6 +4856,35 @@ KRAHEI_ESCAPE_3:
      wait
      pause 0.1
      return
+
+SHARD_FAVOR_ESCAPE:
+     echo
+     echo *** ESCAPING SHARD FAVOR AREA
+     echo
+     if ($standing = 0) then gosub STAND
+     if matchre("$roomname", "Wyvern Mountain, Raised Dais") then gosub MOVE down
+     pause 0.1
+     if matchre("$roomname", "Wyvern Mountain, Dragon Shrine") then gosub MOVE up
+     if matchre("$roomobjs", "low opening") then goto SHARD_FAVORE_ESCAPE_2
+     if matchre("$roomobjs", "black arch") then
+          {
+               put go black arch
+               pause 0.3
+          }
+     pause 0.1
+     goto SHARD_FAVOR_ESCAPE
+SHARD_FAVORE_ESCAPE_2:
+     pause 0.001
+     if ($prone = 0) then send lie
+     pause 0.2
+     pause 0.1
+     if ($prone = 0) then send lie
+     pause 0.1
+     send go opening
+     waitforre ^Tangled brush|\[Wyvern Trail, Clearing\]
+     if ($standing = 0) then gosub STAND
+     return
+
 MAELSHYVE_FORTRESS_ESCAPE:
      echo ===========================
      echo ** ESCAPING FROM MAELSHYVE'S FORTRESS
@@ -6009,11 +6109,11 @@ AUTOMOVE_RETURN:
      var randomloop 0
      var automovefailCounter 0
      action (moving) off
-     ### MICRO PAUSES ADDED HERE - TO AVOID TRIPUPS WITH MAP/ZONEID CHANGES 
+     ### MICRO PAUSES ADDED HERE - TO AVOID TRIPUPS WITH MAP/ZONEID CHANGES
      ### SOMETIMES IT WOULD RETURN TOO FAST AND AUTOMAPPER WOULD STILL REGISTER THE OLD MAP
      ### PERHAPS #MAPPER RESET COULD WORK, BUT COULD NOT THINK OF A FLUID WAY TO ADD THAT WASN'T SPAMMING CONSTANTLY
-     ### THIS JUST ADDS A *SLIGHT* PAUSE AFTER EVERY "GOSUB AUTOMOVE" WHICH SHOULD GIVE ENOUGH TIME 
-     ### FOR AUTOMAPPER TO REGISTER ANY ZONE ID CHANGES - BUT NOT REALLY INTERFERE WITH THE SPEED MUCH 
+     ### THIS JUST ADDS A *SLIGHT* PAUSE AFTER EVERY "GOSUB AUTOMOVE" WHICH SHOULD GIVE ENOUGH TIME
+     ### FOR AUTOMAPPER TO REGISTER ANY ZONE ID CHANGES - BUT NOT REALLY INTERFERE WITH THE SPEED MUCH
      pause 0.001
      pause 0.01
      pause 0.01
