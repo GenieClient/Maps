@@ -1,9 +1,12 @@
 # automapper.cmd
-var autoversion 8.2023-10-06
+var autoversion 8.2023-12-03
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
+
+#2023-12-3
+# Shroom - Fixed bug in Bag Check
 
 #2023-10-6
 # Shroom
@@ -1853,10 +1856,10 @@ BAG.PARSE:
   var Bags Toolbelt|Hip.Pouch|Backpack|Haversack|Pack|Carryall|Rucksack|Duffel.Bag|Vortex|Eddy|Shadows|Brambles
   eval TotalBags count("%Bags", "|")
   var BagLoop 0
-  delay %infiniteLoopProtection
+  delay 0.000001
 BAG.LOOP:
-  delay %infiniteLoopProtection
-  var BAG %Bags[%BagLoop]
+  delay 0.000001
+  var BAG %Bags(%BagLoop)
   if (%BagLoop > %TotalBags) then
     {
     put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
