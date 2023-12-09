@@ -1,39 +1,52 @@
 #debug 5
-put #class racial on
-put #class rp on
-#put #class arrive off
-#put #class combat off
-#put #class joust off
-# Script to Travel for Genie4 #
+# put #class racial on
+# put #class rp on
+# put #class arrive off
+# put #class combat off
+# put #class joust off
+#
+# POWER TRAVEL SCRIPT FOR GENIE 4 ~ TRAVELS TO/FROM ALMOST ANYWHERE IN DRAGONREALMS
+# USES PLAT PORTALS TO TRAVEL BETWEEN CITIES IF PLATINUM
+# CAN START SCRIPT FROM ANYWHERE IN THE GAME - IT KNOWS HOW TO NAVIGATE MAZES/FERRIES ETC
+#
+# (Inspired by the OG Wizard Travel Script - But made 1000x better with the power of Genie)
 # Originally written by Achilles
 # Revitalized and Robustified by Shroom
-var version 5.1.5
-# REQUIRES EXPTRACKER PLUGIN
-# Updated: 11/5/23
+var version 5.1.6
+# Updated: 12/9/23
 #
-# USAGE - .travel <location>
-#  OR   - .travel <location <room number>
-# .travel shard - Travel to Shard
-# .travel shard 40 - Travel to Shard - then move to ROOM 40.
+# REQUIRES EXPTRACKER PLUGIN! MANDATORY!
 #
-# POWER TRAVEL SCRIPT - TRAVELS TO/FROM ALMOST ANYWHERE IN DR
-# THIS SCRIPT USES PLAT PORTALS TO TRAVEL BETWEEN CITIES IF YOU ARE PLATINUM
+# USAGE: 
+# .travel <location>
+# OR
+# .travel <location> <room number>
 #
-# VALID FINAL DESTINATIONS YOU CAN CHOOSE ARE AS FOLLOWS:
+# EXAMPLES:
+# .travel shard - Travels to Shard
+# .travel shard 40 - Travel to SHARD - THEN moves to ROOM 40
+# .travel boar 25 - Travels to BOAR CLAN - THEN moves to ROOM 25
+#
+# TO MOVE TO AN EXACT ROOM NUMBER IN A CERTAIN MAP 
+# YOU MUST KNOW THE "DESTINATION" MAP LOCATION THEN CHOOSE A ROOM NUMBER/LABEL IN THAT MAP
+# OR SIMPLY CHOOSE A FINAL CITY / DESTINATION AND SCRIPT WILL TAKE YOU THERE 
+#
+# VALID DESTINATIONS YOU CAN CHOOSE ARE:
 #
 # Crossing | Arthe Dale | West Gate | Tiger Clan | Wolf Clan | Dokt | Knife Clan | Kaerna
 # Stone Clan | Caravansary | Dirge | Ushnish | Sorrow's | Beisswurms | Misenseor | Leucros
 # Vipers | Malodorous Buccas | Alfren's Ferry | Leth Deriel  | Ilaya Taipa | Acenemacra
-# Riverhaven | Rossmans | Langenfirth | El'Bains | Zaulfun | Therenborough
-# Fornsted | Zaulfung |  Throne City | Hvaral | Haizen | Oasis | Yeehar | Muspar'i
+# Riverhaven | Rossmans | Langenfirth | El'Bains | Therenborough | Rakash | Fornsted
+# Zaulfung |  Throne City | Hvaral | Haizen | Oasis | Yeehar | Muspar'i
 # Shard | Horse Clan | Fayrin's Rest | Steelclaw Clan | Spire | Corik's Wall
 # Ylono | Granite Gargoyles | Gondola | Bone Wolves | Germishdin | Fang Cove | Wyvern Mountain
 # Raven's Point | Ain Ghazal| Outer Hib | Inner Hib | Hibarnhvidar | Boar Clan
 # Aesry Surlaenis'a | Ratha | M'riss | Mer'Kresh | Hara'jaal | Taisgath
 #
 # THIS SCRIPT PARSES " YOU ARRIVED! " (Without the quotes) when it's done
-# If calling this script via another, you can use: waitforre ^YOU ARRIVED\!
-# to match the end of travel script ie;
+# If calling this script via another, you can match off of:
+# ^YOU ARRIVED\!
+# ie;
 #
 #  put .travel cross
 #  waitforre ^YOU ARRIVED\!
@@ -50,10 +63,10 @@ var version 5.1.5
 ##########################################
 ## MULTIPLE CHARACTER SUPPORT FOR THE SHARD CITIZEN VARIABLE
 ## (IF using this script on multiple characters and want DIFFERENT shardcitizen variables for each)
-## YOU MUST CREATE GENIE GLOBAL VARIABLES - char1 / char2 / char3 / char4 etc.. IN GENIE FOR THIS TO WORK
+## YOU MUST CREATE GENIE GLOBAL VARIABLES NAMED - char1 / char2 / char3 / char4 etc.. IN GENIE FOR THIS TO WORK
 ## EX. type into genie:  #var char1 Bob  - to create global variable for char1 - then repeat for each character
 ## type: #var save - when finished to SAVE all your variables (so it persists)
-## Then just set the variables below according to what each characters citizen status should be
+## Then just set the variables below according to what each character's status should be
 if ("$charactername") = ("$char1") then var shardcitizen yes
 if ("$charactername") = ("$char2") then var shardcitizen yes
 if ("$charactername") = ("$char3") then var shardcitizen yes
@@ -96,8 +109,8 @@ if ("$charactername") = ("$char10") then var shardcitizen no
 ############################################
 ##  RANKS TO SWIM THE SEGOLTHA RIVER      ##
 ##  TIGER CLAN TO STR OR VICA VERSA       ##
-## ~TOUGH~ ONE!~ DONT LOWER UNLESS SURE!! ##
-## SAFE: 550+ | BUFFED/STRONG: ~530       ##
+##  VERY TOUGH ONE! BE CAREFUL LOWERING!  ##
+##  SAFE: 550+ | BUFFED & STRONG: ~530    ##
     var segoltha 550
 ##########################################
 ## RANKS TO CLIMB UNDERGONDOLA SHORTCUT ##
@@ -112,14 +125,15 @@ if ("$charactername") = ("$char10") then var shardcitizen no
 ##########################################
 #################################################
 ## RANKS FOR VELAKA DESERT SHORTCUT TO MUSPARI ##
-## ~740 BARE MIN for this one! - 760 IS 'SAFE' ##
-    var muspari.shortcut 760
+## THIS IS THE HARDEST SHORTCUT IN THE SCRIPT  ##
+## ~750 BARE MIN for this one! - 780 IS 'SAFE' ##
+    var muspari.shortcut 770
 #################################################
 #### END OF VARIABLES!!!
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
 ###########################################
-# CHANGELOG - Latest Update: 11/5/23
+# CHANGELOG - Latest Update: 12/9/23
 #
 # - Added Escape from Shard Favor Area detection (if script is started in there)
 # - Added Burden check to beginning info check (sets your current Burden level 0 - 11)
@@ -283,6 +297,7 @@ action var burden 9 when ^\s*Encumbrance\s*\:\s*Tottering Under Burden
 action var burden 10 when ^\s*Encumbrance\s*\:\s*Are you even able to move\?
 action var burden 11 when ^\s*Encumbrance\s*\:\s*It's amazing you aren't squashed\!
 
+var destination %1
 var burden 0
 var passport 0
 var premium 0
@@ -293,19 +308,19 @@ var portal 0
 var moved 0
 var randomloop 0
 var ported 0
-var lastmoved null
-var detour null
+var lastmoved NULL
+var detour NULL
 var therencoin 300
 var boarneeded 300
-var destination %1
+
 if ("%destination" = "") then goto NODESTINATION
 eval destination toupper("%destination")
 TOP:
-put #echo >Log #b3ff66 * TRAVEL START: $zonename (map:$zoneid | room:$roomid)
+put #echo >Log #b3ff66 * TRAVEL START: $zonename (Map:$zoneid | Room:$roomid)
 echo
 echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-echo * Travel Script v.%version
-echo * Start: $zonename (Map: $zoneid | Room: $roomid)
+echo * Travel Script v%version
+echo * Start: $zonename (Map:$zoneid | Room:$roomid)
 echo * Destination: %destination
 echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 echo
@@ -1758,14 +1773,27 @@ if matchre("aesry", "%detour") then
           }
 if (("$zoneid" = "69") && matchre("%detour", "ye{2,}t")) then
           {
-              echo ############################
-              echo *** CONGRATULATIONS!!!!
-              echo *** SECRET YOLO OPTION SELECTED!
-              echo ############################
+              echo
+              echo ######################
+              echo * CONGRATULATIONS!
+              echo * SECRET YOLO OPTION SELECTED!
+              echo * YOU FOUND THE TOP SECRET MISSION
+              echo * ABORT NOW IF YE ARE SCARED
+              echo ######################
+              echo
+              pause
               gosub AUTOMOVE 530
-              echo ############
-              echo *** YEEEEET!!!
-              echo ############
+              echo
+              echo ######################
+              echo * ABORT NOW IF YE ARE SCARED
+              echo ######################
+              echo
+              pause 2
+              echo
+              echo #########
+              echo * YEEEEET!!!
+              echo #########
+              echo
               goto ARRIVED
           }
 goto ARRIVED
@@ -3275,17 +3303,24 @@ ARRIVED:
      echo
      ##
   put #parse YOU ARRIVED!
+  put #parse YOU ARRIVED!
+  put #parse REACHED YOUR DESTINATION
+  delay 0.000001
+  put #parse YOU ARRIVED!
   put #parse REACHED YOUR DESTINATION
   # put #play Just Arrived.wav
+  eval destination toupper("%destination")
   echo ## WOW! YOU ARRIVED AT YOUR DESTINATION: %destination in %t seconds!  That's FAST! ##
-  put #echo >Log #1ad1ff * TRAVEL ARRIVAL: $zonename (map $zoneid: room $roomid)
+  put #echo >Log #1ad1ff * TRAVEL ARRIVAL: $zonename (Map: $zoneid | Room: $roomid)
   put #class arrive off
   exit
 ######################################################################################
 SEGOLTHA_NORTH:
      pause 0.1
      if matchre("$roomid", "\b(24|25|26|27|28|29|31|42|43|44|45|46)\b") then gosub AUTOMOVE 23
+     echo
      echo *** Swimming the Segoltha - Heading NORTH
+     echo
      if matchre("$roomid", "\b(7|6|5)\b") then
           {
                gosub MOVE east
@@ -3319,7 +3354,9 @@ SEGOLTHA_SOUTH:
                gosub AUTOMOVE south
                return
           }
+     echo
      echo *** Swimming the Segoltha - Heading SOUTH
+     echo
      if matchre("$roomid", "\b(1|2|3|4|5|6)\b") then
           {
                gosub AUTOMOVE 7
@@ -3341,7 +3378,9 @@ SEGOLTHA_SOUTH:
           }
     goto SEGOLTHA_SOUTH
 FALDESU_NORTH:
+    echo
     echo *** Swimming the Faldesu - Heading NORTH
+    echo
     gosub MoveAllTheWay north
     if ($northwest) then
          {
@@ -3358,7 +3397,9 @@ FALDESU_NORTH:
          }
     goto FALDESU_NORTH
 FALDESU_SOUTH:
+    echo
     echo *** Swimming the Faldesu - Heading SOUTH
+    echo
     if ($south) then
          {
              gosub MOVE south
@@ -3404,19 +3445,23 @@ PASSPORTCHECK:
   return
 FERRYLOGIC:
   gosub INFO_CHECK
-  if contains("(1|7|30|35|60|40|41|47|48|90|113|106|107|108|150)", "$zoneid") then goto FERRY
+  if matchre("$zoneid", "\b(1|7|30|35|60|40|41|47|48|90|113|106|107|108|150)\b") then goto FERRY
   if matchre("$roomname", "Aboard the Mammoth") then goto FERRY
   if matchre("$roomname", "Gondola") then
      {
          if matchre("%destination", "\b(acen?e?m?a?c?r?a?|cros?s?i?n?g?s?|xing?|knif?e?c?l?a?n?|tige?r?c?l?a?n?|dirg?e?|arth?e?d?a?l?e?|haiz?e?n?|oasis?|kaer?n?a?|ilay?a?t?a?i?p?|illa?y?a?t?a?i?p?a?|taipa|leth?d?e?r?i?e?l?|acen?a?m?a?c?r?a?|vipe?r?s?|guar?d?i?a?n?s?|leuc?r?o?s?|malod?o?r?o?u?s?|bucc?a?|dokt?|sorr?o?w?s?|misens?e?o?r?|beis?s?w?u?r?m?s?|ston?e?c?l?a?n?|bone?w?o?l?f?|germ?i?s?h?d?i?n?|alfr?e?n?s?|cara?v?a?n?s?a?r?y?|rive?r?h?a?v?e?n?|have?n?|ross?m?a?n?s?|ther?e?n?b?o?r?o?u?g?h?|lang?e?n?f?i?r?t?h?|el\'?b?a?i?n?s?|elb?a?i?n?s?|raka?s?h?|thro?n?e?|musp?a?r?i?|forn?s?t?e?d?|hvar?a?l?|zaul?f?u?n?g?|mri?s?s?|merk?r?e?s?h?|kre?s?h?|har?a?j?a?a?l?|rath?a?)\b") then
           {
+               echo
                echo *** ON GONDOLA! - HEADING NORTH
+               echo
                var direction north
                goto ONGONDOLA
           }
          if matchre("%destination", "\b(shar?d?|grani?t?e?|garg?o?y?l?e?|spir?e?|horse?c?l?a?n?|fayr?i?n?s?|steel?c?l?a?w?|cori?k?s?|ada?n?f?|ylo?n?o?|wyve?r?n?|aing?h?a?z?a?l?|rave?n?s?|hib?a?r?n?h?v?i?d?a?r?|out?e?r?|inne?r?|boar?c?l?a?n?|aes?r?y?|sur?l?a?e?n?i?s?|fan?g?|cov?e?)\b") then
           {
+               echo
                echo *** ON GONDOLA! - HEADING SOUTH
+               echo
                var direction south
                goto ONGONDOLA
           }
@@ -3440,7 +3485,7 @@ GONDOLA:
   pause 0.5
   if matchre("$roomname", "Gondola") then goto ONGONDOLA
   matchre ONGONDOLA \[Gondola, Cab (North|South)\]
-  matchwait 2
+  matchwait 3
   echo
   echo *** Waiting for Gondola to arrive
   echo
@@ -3551,7 +3596,7 @@ return
 #######################################
 ### STANDALONE CHECK TO MAKE SURE WE AREN'T IN A FERRY (USED FOR RANDOMMOVE SUB IF SCRIPT GETS LOST IN A ROOMID = 0)
 FERRY_CHECK:
-  delay 0.00001
+  delay 0.000001
   action var offtransport platform when a barge platform
   action var offtransport pier when the Riverhaven pier
   action var offtransport beach when You also see the beach|mammoth and the beach
@@ -3559,7 +3604,7 @@ FERRY_CHECK:
   action var offtransport wharf when the Langenfirth wharf
   action var offtransport dock when \[\"Her Opulence\"\]|\[\"Hodierna's Grace\"\]|\[\"Kertigen's Honor\"\]|\[\"His Daring Exploit\"\]|\[The Evening Star\]|\[The Damaris\' Kiss\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[\"Imperial Glory\"\]|\[\"The Riverhawk\"\]|Baso Docks|a dry dock|the salt yard dock|covered stone dock|\[The Galley Sanegazat\]|\[The Galley Cercorim\]|\[Aboard the Warship, Gondola\]|\[The Halasa Selhin, Main Deck\]|the south bank docks\.
   var offtransport dock
-  delay 0.001
+  delay 0.0001
   matchre ONFERRY \[\"Her Opulence\"\]|\[\"Hodierna's Grace\"\]|\[\"Kertigen's Honor\"\]|\[\"His Daring Exploit\"\]|\[\"Northern Pride\", Main Deck\]|\[\"Theren's Star\", Deck\]|\[The Evening Star\]|\[The Damaris\' Kiss\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[\"The Desert Wind\"\]|\[\"The Suncatcher\"\]|\[\"The Riverhawk\"\]|\[\"Imperial Glory\"\]\"Hodierna's Grace\"|\"Her Opulence\"\]|\[The Galley Cercorim\]|\[The Jolas, Fore Deck\]|\[Aboard the Warship, Gondola\]|\[The Halasa Selhin, Main Deck\]|\[Aboard the Mammoth, Platform\]
   matchre ONFERRY Secured to the gigantic balloon overhead, the armored ironwood gondola dangles on a convoluted network of hempen rope\.
   matchre ONFERRY ^One of the barge's crew members stops you and requests a transportation fee|A row of benches occupies the deck
@@ -3624,10 +3669,11 @@ NOFERRY:
 INVIS:
   gosub STOP_INVIS
 FERRY:
-  pause 0.0001
+  delay 0.0001
   var offtransport dock
   if ($invisible) then gosub STOP_INVIS
-  pause 0.001
+  delay 0.0001
+  echo ** Checking for Transport...
   matchre ONFERRY \[\"Her Opulence\"\]|\[\"Hodierna\'s Grace\"\]|\[\"Kertigen\'s Honor\"\]|\[\"His Daring Exploit\"\]|\[\"Northern Pride\", Main Deck\]|\[\"Theren\'s Star\", Deck\]|\[The Evening Star\]|\[The Damaris\' Kiss\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[\"The Desert Wind\"\]|\[\"The Suncatcher\"\]|\[\"The Riverhawk\"\]|\[\"Imperial Glory\"\]\"Hodierna\'s Grace\"|\[\"Her Opulence\"\]|\[The Galley Cercorim\]|\[The Jolas, Fore Deck\]|\[Aboard the Warship, Gondola\]|\[The Halasa Selhin, Main Deck\]|\[Aboard the Mammoth, Platform\]
   matchre ONFERRY Secured to the gigantic balloon overhead, the armored ironwood gondola dangles on a convoluted network of hempen rope\.
   matchre ONFERRY ^One of the barge\'s crew members stops you and requests a transportation fee|A row of benches occupies the deck
@@ -3704,7 +3750,7 @@ ONFERRY:
   pause 0.1
   pause 0.1
   echo
-  echo ### Riding on public transport.
+  echo ### Riding on public transport!
   echo
   if ($hidden = 0) then send hide
   pause
@@ -3716,7 +3762,9 @@ ONFERRY:
      }
   if matchre("$roomname", "(Jolas|Selhin)") then goto shiploop
   matchre OASIS_CHECK ^The sand barge pulls up to a desert oasis and stops\.
-  matchre OFFTHERIDE dock and its crew ties the (ferry|barge) off\.|^You come to a very soft stop|^The skiff lightly taps|^The sand barge pulls into dock|^The barge pulls into dock|The crew ties it off and runs out the gangplank\.|^The captain barks the order to tie off the Selhin to the docks\.|^The captain barks the order to tie off the Jolas to the docks\.
+  matchre OFFTHERIDE dock and its crew ties the (ferry|barge) off\.|^You come to a very soft stop|^The skiff lightly taps|^The sand barge pulls into dock
+  matchre OFFTHERIDE ^The barge pulls into dock|The crew ties it off and runs out the gangplank\.
+  matchre OFFTHERIDE ^The captain barks the order to tie off the Selhin to the docks\.|^The captain barks the order to tie off the Jolas to the docks\.
   matchre OFFTHERIDE ^The warship lands with a creaky lurch|^The captain barks the order to tie off .+ to the docks\.|returning to Fang Cove|returning to Ratha
   matchwait 60
   goto ONFERRY
@@ -3741,43 +3789,48 @@ SHIPLOOP:
 
 OFFTHERIDE:
   put look
-  pause 0.5
+  pause 0.3
   if ($hidden = 1) then
      {
-          put unhide
-          pause 0.4
+          send unhide
+          pause 0.2
      }
   # if ("$guild" = "Necromancer") then
      # {
           # if (($spellROC = 0) || ($spellEOTB = 0)) then gosub NECRO_PREP
      # }
-  pause 0.1
-  pause 0.1
+  pause 0.001
+  if ($standing = 0) then gosub STAND
   if matchre("$roomname", "Rocky Path") then
      {
-          put go beach
-          pause 0.1
+          pause 0.001
+          send go beach
+          pause 0.5
+          pause 0.5
+          put #mapper reset
           return
      }
-  pause 0.2
+  pause 0.001
   if matchre("$roomname", "Jolas") then
     {
-        pause 0.1
+        pause 0.001
         if matchre("$roomobjs", "Sumilo") then put go dock
         if matchre("$roomobjs", "Wharf") then put go end
-        pause
+        pause 0.5
+        pause 0.5
         put #mapper reset
         return
     }
   if ($standing = 0) then gosub STAND
   put go %offtransport
-  pause
+  pause 0.5
+  pause 0.7
   put #mapper reset
   return
 
 JOINLOGIC:
-  pause 0.1
-  pause 0.1
+  delay 0.001
+  delay 0.001
   matchre ONJOINED ^\[Aboard the Dirigible, Gondola\]|^\[Alongside a Wizened Ranger\]|^An intricate network of silken rope|^\[Aboard the Balloon, Gondola\]|^A veritable spiderweb of ropes secures|^Thick, barnacle-encrusted ropes secure the platform to the|\[Aboard the Mammoth, Platform\]|\[The Bardess' Fete, Deck\]|^Silken rigging suspends the sweeping teak|\[Aboard the Warship, Gondola\]
   put look
   pause 0.3
@@ -3811,16 +3864,23 @@ JOINLOGIC:
             if "%detour" = "hara" && matchre("$roomobjs", "warship") then put join warship
         }
   matchwait 3
+  echo
   echo ### Waiting for a transport..
-  pause 15
+  echo
+  pause 8
   goto joinlogic
 
 ONJOINED:
   pause 0.1
-  pause 0.1
+ONJOINED1:
+  echo
   echo ### Riding on Transport!
-  pause 0.1
-  matchre OFFJOINED ^The grasses of this wide clearing|^From its northwest-facing position|^A deep firepit has been hacked into the frozen earth|^The distance between the surrounding hills is narrower|^The ironwood platform has withstood|^A rickety platform in the top of this huge,|^Beyond the harbor, spray is thrown|^Giant boulders are scattered|^Crudely assembled yet sturdy just the|\[Fang Cove, Dock\]|\[Smuggler's Wharf\]|\[Outside Muspar\'i\]|\[Northeast Wilds, Grimsage Way\]|^The once pristine tower of the Warrior Mages|returning to Fang Cove|returning to Ratha
+  echo
+  matchre OFFJOINED ^The grasses of this wide clearing|^From its northwest-facing position|^A deep firepit has been hacked into the frozen earth
+  matchre OFFJOINED ^The distance between the surrounding hills is narrower|^The ironwood platform has withstood|^A rickety platform in the top of this huge
+  matchre OFFJOINED ^Beyond the harbor, spray is thrown|^Giant boulders are scattered|^Crudely assembled yet sturdy just the
+  matchre OFFJOINED \[Fang Cove, Dock\]|\[Smuggler's Wharf\]|\[Outside Muspar\'i\]|\[Northeast Wilds, Grimsage Way\]
+  matchre OFFJOINED ^The once pristine tower of the Warrior Mages|returning to Fang Cove|returning to Ratha
   matchwait
 OFFJOINED:
   put look
@@ -3831,12 +3891,14 @@ OFFJOINED:
   return
 
 PASSPORT_CHECK:
-  pause 0.3
+  pause 0.2
   matchre YES_PASSPORT ^You tap
   matchre PASSPORT_CHECK2 ^What were you|^I could not
   send tap my passport
   matchwait 5
 PASSPORT_CHECK2:
+  pause 0.1
+  send look in my portal
   pause 0.3
   matchre YES_PASSPORT ^You tap
   matchre NO_PASSPORT ^What were you|^I could not
@@ -3844,16 +3906,20 @@ PASSPORT_CHECK2:
   matchwait 5
 NO_PASSPORT:
   var passport 0
+  echo * NO MUSPARI PASSPORT
   return
 YES_PASSPORT:
   var passport 1
+  echo * MUSPARI PASSPORT FOUND!
   return
 
 GET_PASSPORT:
+    echo
     echo ===============
     echo ** NO PASSPORT FOUND
     echo ** GOING TO GET ONE
     echo ===============
+    echo
     if ("$zoneid" = "40") then gosub AUTOMOVE theren
     pause 0.2
     gosub AUTOMOVE passport
@@ -3877,7 +3943,9 @@ PASSPORT:
 PASSPORT2:
   pause 0.1
   gosub STOWING
-  pause 0.3
+  pause 0.2
+  send look in my portal
+  pause 0.5
   matchre RETURN ^You get|^You are already
   matchre NOPASSPORT ^What were you|^I could not
   send get my passport from my portal
@@ -3890,10 +3958,10 @@ NOPASSPORT:
 NOCOIN:
   put #parse NO COINS!
   echo
-  echo #####################################
-  echo ### You don't have enough coins to travel - you vagrant!
-  echo ### Trying to get some coins from the nearest bank!!!
-  echo #####################################
+  echo ###################################
+  echo # You don't have enough coins to travel - you vagrant!
+  echo # Trying to get some coins from the nearest bank!!!
+  echo ###################################
   echo
   pause 0.4
   put wealth
@@ -4267,7 +4335,7 @@ BAG_CHECK:
      action var Rucksack 1 when rucksack
      action var Duffel.Bag 1 when duffel bag
      action var Vortex 1 when (hollow vortex of water|corrupted vortex of swirling)
-     action var Eddy 1 when swirling eddy of incandescent
+     action var Eddy 1 when (swirling eddy of incandescent|effervescent eddy of honey-hued light)
      action var Shadows 1 when encompassing shadows
      action var Lootsack 1 when lootsack
      action var Satchel 1 when satchel
@@ -4330,7 +4398,7 @@ BAG_RETURN:
      action remove  rucksack
      action remove  duffel bag
      action remove  (hollow vortex of water|corrupted vortex of swirling)
-     action remove  swirling eddy of incandescent
+     action remove  (swirling eddy of incandescent|effervescent eddy of honey-hued light)
      action remove  encompassing shadows
      action remove  lootsack
      action remove  satchel
@@ -4374,9 +4442,9 @@ PREMIUM_SET:
 EKKO:
      echo
      echo ========================
-     echo ** USING PLAT PORTALS TO TRAVEL!
-     echo ** Starting ZoneID:$zoneid RoomID:$roomid
-     echo ** Final Destination: %destination
+     echo * USING PLAT PORTALS TO TRAVEL!
+     echo * Starting ZoneID:$zoneid RoomID:$roomid
+     echo * Final Destination: %destination
      echo ========================
      echo
      pause 0.02
@@ -7041,6 +7109,23 @@ FLEE_NOW:
      pause 0.001
      matchre RETURN ^Obvious|^.?Roundtime\:?|^A master|^Your?
      put flee
+     matchwait 5
+     return
+UNHIDE:
+     delay 0.00001
+     if ($standing = 0) then gosub STAND
+     if ($hidden = 0) then return
+     UNHIDE_1:
+     pause 0.0001
+     matchre UNHIDE ^\.\.\.wait|^Sorry,|^You are still stunned\.
+     matchre STUNNED ^You are still stunned
+     matchre WEBBED ^You can't do that while entangled in a web
+     matchre IMMOBILE ^You don't seem to be able to move to do that
+     matchre RETURN ^But you are not hidden\!
+     matchre RETURN ^You come out of hiding\.
+     matchre RETURN ^Please rephrase that command\.|^I could not find|^Perhaps you should|^I don't|^Weirdly,
+     matchre RETURN (You'?r?e?|As|With) (?:accept|add|adjust|allow|already|are|aren't|ask|attach|attempt|.+ to|.+ fan|bash|begin|bend|blow|breathe|briefly|bundle|cannot|can't|chop|circle|close|corruption|count|combine|come|carefully|dance|decide|dodge|don't|drum|draw|effortlessly|gracefully|deftly|desire|detach|drop|drape|exhale|fade|fail|fall|fake|feel(?! fully rested)|feint|fill|find|filter|form|fumble|gesture|gingerly|get|glance|grab|hand|hang|have|icesteel|insert|kiss|kneel|knock|leap|lean|let|lose|lift|loosen|lob|load|move|must|mind|not|now|need|offer|open|parry|place|pick|push|pout|pour|put|pull|press|quietly|quickly|raise|read|reach|ready|realize|recall|remain|release|remove|retreat|reverently|roll|rub|scan|search|secure|sense|set|sheathe|shield|shouldn't|shove|silently|sit|slide|sling|slip|slowly|spin|spread|sprinkle|stop|strap|struggle|swiftly|swing|switch|tap|take|the|though|tie|tilt|toss|trace|try|tug|turn|twist|unload|untie|vigorously|wave|wear|weave|whisper|will|wink|wring|work|yank|you|zills) .*(?:\.|\!|\?)?
+     send unhide
      matchwait 5
      return
 ### NO VALID DESTINATION SET OR FOUND ERROR
