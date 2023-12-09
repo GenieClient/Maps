@@ -1,15 +1,15 @@
 #debug 5
+# POWER TRAVEL SCRIPT FOR GENIE 4 ~ TRAVELS TO/FROM ALMOST ANYWHERE IN DRAGONREALMS
+# USES PLAT PORTALS TO TRAVEL BETWEEN CITIES IF PLATINUM
+# CAN START SCRIPT FROM ANYWHERE IN THE GAME - IT KNOWS HOW TO NAVIGATE MAZES/FERRIES ETC
+#
 # put #class racial on
 # put #class rp on
 # put #class arrive off
 # put #class combat off
 # put #class joust off
 #
-# POWER TRAVEL SCRIPT FOR GENIE 4 ~ TRAVELS TO/FROM ALMOST ANYWHERE IN DRAGONREALMS
-# USES PLAT PORTALS TO TRAVEL BETWEEN CITIES IF PLATINUM
-# CAN START SCRIPT FROM ANYWHERE IN THE GAME - IT KNOWS HOW TO NAVIGATE MAZES/FERRIES ETC
-#
-# (Inspired by the OG Wizard Travel Script - But made 1000x better with the power of Genie)
+# Inspired by the OG Wizard Travel Script - But made 1000x better with the power of Genie
 # Originally written by Achilles
 # Revitalized and Robustified by Shroom
 var version 5.1.6
@@ -17,7 +17,7 @@ var version 5.1.6
 #
 # REQUIRES EXPTRACKER PLUGIN! MANDATORY!
 #
-# USAGE: 
+# USAGE:
 # .travel <location>
 # OR
 # .travel <location> <room number>
@@ -27,9 +27,9 @@ var version 5.1.6
 # .travel shard 40 - Travel to SHARD - THEN moves to ROOM 40
 # .travel boar 25 - Travels to BOAR CLAN - THEN moves to ROOM 25
 #
-# TO MOVE TO AN EXACT ROOM NUMBER IN A CERTAIN MAP 
+# TO MOVE TO AN EXACT ROOM NUMBER IN A CERTAIN MAP
 # YOU MUST KNOW THE "DESTINATION" MAP LOCATION THEN CHOOSE A ROOM NUMBER/LABEL IN THAT MAP
-# OR SIMPLY CHOOSE A FINAL CITY / DESTINATION AND SCRIPT WILL TAKE YOU THERE 
+# OR SIMPLY CHOOSE A FINAL CITY / DESTINATION AND SCRIPT WILL TAKE YOU THERE
 #
 # VALID DESTINATIONS YOU CAN CHOOSE ARE:
 #
