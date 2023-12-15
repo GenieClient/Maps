@@ -1,9 +1,14 @@
 # automapper.cmd
-var autoversion 8.2023-12-03
+var autoversion 8.2023-12-15
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
+
+#2023-12-15
+# Hanryu
+#   added handling to ACTION.MAPPER.ON for running a script in each room
+#   essentially removes the fall-thru matchwait timeout if $automapper.UserWalkAction contains a .
 
 #2023-12-3
 # Shroom - Fixed bug in Bag Check
@@ -1788,7 +1793,8 @@ ACTION.MAPPER.ON:
   matchre ACTION.FAIL ^There isn't any more room|^You just can't get the .+ to fit|^Where are you|^What were you|^You can't|^You begin to get up and \*\*SMACK\!\*\*
   matchre ACTION.STOW.UNLOAD ^You should unload
   put %action
-  matchwait 2
+  if matchre("$automapper.UserWalkAction", "^\.") then matchwait
+  else matchwait 2
   if (%actionloop > 2) then goto ACTION.FAIL
   if (%typeahead.max = 0) then goto ACTION.MAPPER.ON
   else goto ACTION.RETURN
