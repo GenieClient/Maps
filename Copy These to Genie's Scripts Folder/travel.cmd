@@ -1,7 +1,9 @@
 #debug 5
-# POWER TRAVEL SCRIPT FOR GENIE 4 ~ TRAVELS TO/FROM ALMOST ANYWHERE IN DRAGONREALMS
+# POWER TRAVEL SCRIPT FOR GENIE 4 ~ TRAVELS TO/FROM ALMOST ~ANYWHERE~ IN DRAGONREALMS
 # USES PLAT PORTALS TO TRAVEL BETWEEN CITIES IF PLATINUM
-# CAN START SCRIPT FROM ANYWHERE IN THE GAME - IT KNOWS HOW TO NAVIGATE MAZES/FERRIES ETC
+# CAN START SCRIPT FROM ANYWHERE IN THE GAME 
+# IT SHOULD KNOWS HOW TO NAVIGATE IN/OUT ALMOST ANY MAZE / PUZZLE AREA / FERRIES ETC
+# IT TAKES CERTAIN SHORTCUTS IF YOU HAVE THE NECESSARY RANKS (Athletics)
 #
 # put #class racial on
 # put #class rp on
@@ -12,8 +14,8 @@
 # Inspired by the OG Wizard Travel Script - But made 1000x better with the power of Genie
 # Originally written by Achilles
 # Revitalized and Robustified by Shroom
-var version 5.1.6
-# Updated: 12/9/23
+# Updated: 12/19/23
+var version 5.1.7
 #
 # REQUIRES EXPTRACKER PLUGIN! MANDATORY!
 #
@@ -133,7 +135,10 @@ if ("$charactername") = ("$char10") then var shardcitizen no
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
 ###########################################
-# CHANGELOG - Latest Update: 12/9/23
+# CHANGELOG - Latest Update: 12/19/23
+#
+# - Fixed intermittent bug in travel when moving from Map 69 to 123 
+# - Should now micro pause and mapper reset to fix issues with sometimes showing Map = 0
 #
 # - Added Escape from Shard Favor Area detection (if script is started in there)
 # - Added Burden check to beginning info check (sets your current Burden level 0 - 11)
@@ -3158,8 +3163,21 @@ delay 0.0001
 if ("$zoneid" = "67a") then gosub AUTOMOVE STR
 if ("$zoneid" = "67") then gosub AUTOMOVE West
 if ("$zoneid" = "66") then gosub AUTOMOVE 217
-if ("$zoneid" = "69") then gosub AUTOMOVE 283
+if ("$zoneid" = "69") then
+     {
+          gosub AUTOMOVE 283
+          pause 0.2
+          put #mapper reset
+          pause 0.2
+     }
 FORD_3:
+if ("$zoneid" = "69") then
+     {
+          gosub AUTOMOVE 283
+          pause 0.2
+          put #mapper reset
+          pause 0.2
+     }
 if (("$zoneid" = "127") && matchre("%detour", "(raven|outer|inner|ain)")) then gosub AUTOMOVE 510
 if (("$zoneid" = "126") && matchre("%detour", "(raven|outer|inner|ain)")) then gosub AUTOMOVE 49
 if (("$zoneid" = "116") && matchre("%detour", "(raven|ain)")) then gosub AUTOMOVE 3
@@ -7131,10 +7149,17 @@ UNHIDE:
 ### NO VALID DESTINATION SET OR FOUND ERROR
 NODESTINATION:
   Echo ---------------------------------------------------------------------------------------------------------
-  Echo ## Either you did not enter a destination, or your destination is not recognized.  Please try again! ##
+  Echo ## *** TRAVEL ERROR! ***
+  Echo ## Either you did not enter a destination
+  Echo ## Or your destination is not recognized.  Please try again!
   Echo ##
-  Echo ## SYNTAX IS: .travel CITY or .travel CITY roomnumber/label
-  Echo ## e.g - .travel CROSS 144  - travel to crossing and move to room 144
+  Echo ## SYNTAX IS: 
+  Echo ## .travel CITYNAME or .travel CITYNAME ROOMNUMBER/LABEL
+  Echo ## 
+  Echo ## EXAMPLES:
+  Echo ## .travel cross - Travel to Crossing
+  Echo ## .travel cross 144 - Travel to crossing THEN move to room 144
+  Echo ## .travel cross teller - Travel to Crossing THEN move to bank teller
   Echo ##
   Echo ## Valid Destinations are:               ##
   Echo -------------------------------------------
@@ -7150,7 +7175,7 @@ NODESTINATION:
   Echo -------------------------------------------
   Echo ## Therengia:
   Echo ## Riverhaven | Rossmans | Langenfirth   ##
-  Echo ## El'Bains | Zaulfun | Therenborough    ##
+  Echo ## El'Bains | Therenborough | Rakash     ##
   Echo ## Fornsted | Zaulfung |  Throne City    ##
   Echo ## Hvaral | Haizen | Oasis | Yeehar      ##
   Echo ## Muspar'i                              ##
@@ -7166,10 +7191,15 @@ NODESTINATION:
   Echo ## Raven's Point | Ain Ghazal| Outer Hib ##
   Echo ## Inner Hib | Hibarnhvidar |Boar Clan   ##
   Echo -------------------------------------------
-  Echo ## Qi:
-  Echo ## Aesry Surlaenis'a | Ratha | M'riss     ##
-  Echo ## Mer'Kresh | Hara'jaal (TF only)       ##
+  Echo ## Qi:                                         
+  Echo ## Aesry Surlaenis'a | Ratha | M'riss    ##
+  Echo ## Mer'Kresh | Hara'jaal (TF ONLY)       ##
   Echo ## Taisgath                              ##
+  Echo -------------------------------------------
+  Echo -------------------------------------------
+  Echo ## SPECIAL:                                         
+  Echo ## YEET (TOP SECRET - DO NOT USE :P)     ##
+  ECHO ## *UNLESS YOU LIKE SURPRISES ;)         ##
   Echo -------------------------------------------
   exit
 #### CATCH AND RETRY SUBS
