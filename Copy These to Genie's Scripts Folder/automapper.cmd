@@ -1793,7 +1793,7 @@ ACTION.MAPPER.ON:
   matchre ACTION.FAIL ^There isn't any more room|^You just can't get the .+ to fit|^Where are you|^What were you|^You can't|^You begin to get up and \*\*SMACK\!\*\*
   matchre ACTION.STOW.UNLOAD ^You should unload
   put %action
-  if matchre("$automapper.UserWalkAction", "^\.") then matchwait
+  if matchre("%action", "^\.") then matchwait
   else matchwait 2
   if (%actionloop > 2) then goto ACTION.FAIL
   if (%typeahead.max = 0) then goto ACTION.MAPPER.ON
