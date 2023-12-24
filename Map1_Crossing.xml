@@ -6560,7 +6560,7 @@
     <position x="230" y="-70" z="0" />
     <arc exit="go" move="go narrow door" destination="311" />
   </node>
-  <node id="1023" name="Crossing, Rundmolen Post Office" note="1023">
+  <node id="1023" name="Crossing, Rundmolen Post Office" note="Post Office|mail|1023">
     <description>Tucked away in a corner of the square is a wide stone counter set into the conical carousel beneath an angled metal awning.  Vast, countless rows of differently sized shelves are visible within, and the intricate Dwarven mechanisms that shuffle the vaults also rearrange the package-covered storage.  Clerks shuffle endlessly back and forth between the counters and shelving as they assist patrons with their packaging and mailing needs.</description>
     <position x="145" y="-45" z="0" />
     <arc exit="southeast" move="southeast" destination="184" />
