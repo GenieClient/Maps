@@ -3524,7 +3524,7 @@
     <position x="411" y="356" z="0" />
     <arc exit="go" move="go stone archway" destination="449" />
   </node>
-  <node id="556" name="Riverhaven, Rundmolen Post Office" note="Post Office|mail">
+  <node id="556" name="Riverhaven, Rundmolen Post Office" note="Post Office|mail" color="#FF0000">
     <description>Tucked away in a corner of the square is a wide stone counter set into the conical carousel beneath an angled metal awning.  Vast, countless rows of differently sized shelves are visible within, and the intricate Dwarven mechanisms that shuffle the vaults also rearrange the package-covered storage.  Clerks shuffle endlessly back and forth between the counters and shelving as they assist patrons with their packaging and mailing needs.</description>
     <position x="580" y="740" z="0" />
     <arc exit="southeast" move="southeast" destination="360" />

@@ -2,7 +2,7 @@ Please use the HEX CODES to ensure maximum compatibility.
 Color order indicates priority.
 
 Fuchsia     (#FF00FF)    throughpoint, portal, or transport
-Lime        (#00FF00)    other room of economic interest (bank teller, exchange, loot buyers, services, etc.)
+Lime        (#00FF00)    other room of economic interest (bank teller, exchange, loot buyers, post office, services, etc.)
 Orange      (#FF8000)    guildleader
 Mint        (#00BF80)    auto-healer
 Red         (#FF0000)    room where you can purchase an item
