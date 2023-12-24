@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="utf-16"?>
+<zone name="Chris's Mass 447 (2023)" id="600">
+  <node id="1" name="The Crossing, Town Green South" note="Map1_Crossing.xml|Crossing|Town Green South|TGS">
+    <description>A gap in the stand of lunat trees leads south into Lunat Shade Road.  In that general direction lie Berolt's Dry Goods, the Town Hall, the soaring presence of the Temple, the Provincial Bank and other key structures.  A few loafers loll on the grass, watching those entering and leaving the Green.  Sparrows, jays and other birds call to one another from the treetops, flitting back and forth between their nests and roosts in the dense hedges bordering the park.</description>
+    <position x="87" y="271" z="0" />
+    <arc exit="north" move="north" />
+    <arc exit="northeast" move="northeast" />
+    <arc exit="east" move="east" />
+    <arc exit="south" move="south" />
+    <arc exit="west" move="west" />
+    <arc exit="northwest" move="northwest" />
+    <arc exit="go" move="go wintery portal" destination="2" />
+  </node>
+  <node id="2" name="Chris' Mass, Entrance" note="Entrance">
+    <description>Piles of snow are scattered along a wide cobblestone path that runs between two low hills, the area blanketed in an eternal winter.  Ice is compacted into the spaces between the stones, the area's foot traffic only barely keeps up with the accumulation of fresh snow.  Evergreen trees mark the beginning of a small forest, their branches blanketed in mounds of powdery white snow with the smoothness of sugar-white frosting.</description>
+    <position x="87" y="231" z="0" />
+    <arc exit="north" move="north" destination="3" />
+    <arc exit="go" move="go wintery portal" destination="1" />
+  </node>
+  <node id="3" name="Chris' Mass, Icy Snowdrifts" note="Elven peddler|peddler|gift wrapping" color="#00FF00">
+    <description>Fields of freshly fallen snow blanket the somewhat hilly ground, ending to the north at a large frozen lake.  Wooden picket fences line the cobblestone pathway in even intervals, the boards heavy with numerous icicles.  Evergreen bushes dot the landscape, providing hints of green peeking through the powdery white snow.</description>
+    <position x="87" y="171" z="0" />
+    <arc exit="east" move="east" destination="4" />
+    <arc exit="south" move="south" destination="2" />
+    <arc exit="northwest" move="northwest" destination="21" />
+    <arc exit="go" move="go box-shaped tent" destination="146" />
+    <arc exit="go" move="go fenced pasture" destination="147" />
+  </node>
+  <node id="4" name="Chris' Mass, Icy Snowdrifts">
+    <description>An abandoned mitten hangs on a nearby fencepost, tattered and half unraveled by the winter wind to stream colorful trails of yarn into the drifting snow.  A few loose strands of the tangled cotton drift on the empty air, as if waving in celebration of the wintery season.  The rest of the landscape is a stark white, giving a background to the small splash of color.</description>
+    <position x="142" y="171" z="0" />
+    <arc exit="southeast" move="southeast" destination="5" />
+    <arc exit="west" move="west" destination="3" />
+    <arc exit="go" move="go pine shack" destination="107" />
+  </node>
+  <node id="5" name="Chris' Mass, Bridge" note="Bridge">
+    <description>A narrow bridge crosses a small creek, runoff from the lake to the northwest.  Though most of its surface is frozen over, a thin line in the middle is still fluid, filling the air with the serene sound of trickling water.  Bushes line the winter stream, the winter berries on their branches coated with a layer of frost.</description>
+    <description>A narrow bridge crosses a small creek, runoff from the lake to the northwest.  The serene sound of trickling water comes from below, the landscape too dark to see much further.  Bushes line the winter stream, the red winter berries on their branches standing out against the darkness.</description>
+    <position x="167" y="196" z="0" />
+    <arc exit="south" move="south" destination="6" />
+    <arc exit="northwest" move="northwest" destination="4" />
+    <arc exit="go" move="go colorful tent" destination="108" />
+  </node>
+  <node id="6" name="Chris' Mass, Evergreen Forest" note="plump snowman|snowman" color="#00FF00">
+    <description>Fresh snow blankets the ground in mounds, piling up between the trees and leaving the areas of the branches as havens mostly free from the snow.  Iron lamp posts mark both sides of the trail, the path underneath long hidden by the wind-frozen ice.  Occasionally the warble of a winter bird sounds through the air, breaking the season's muffled silence.</description>
+    <description>Fresh snow blankets the ground in mounds, piling up between the trees and leaving the areas of the branches as havens mostly free from the snow.  Iron lamp posts mark both sides of the trail, the path underneath long hidden by the wind-frozen ice.  Each lantern casts a steady glow of yellow light in a circle around it, illuminating the snow and the pathway in even intervals.</description>
+    <position x="167" y="251" z="0" />
+    <arc exit="north" move="north" destination="5" />
+    <arc exit="east" move="east" destination="7" />
+    <arc exit="southwest" move="southwest" destination="25" />
+    <arc exit="go" move="go silk tent" destination="110" />
+  </node>
+  <node id="7" name="Chris' Mass, Evergreen Forest" note="Evergreen Forest">
+    <description>Clumps of mistletoe hang from the branches of a nearby evergreen tree, growing wild and displaying bright red berries.  Numerous footprints in the snow show the plant as quite popular, and there are numerous bare spots on the branches where sprigs have been taken.  Still, the plant seems strong and hardy, the frequent pruning likely spurring it to an even more rapid growth.</description>
+    <position x="263" y="251" z="0" />
+    <arc exit="northeast" move="northeast" destination="8" />
+    <arc exit="west" move="west" destination="6" />
+    <arc exit="go" move="go green tent" destination="121" />
+    <arc exit="go" move="go small shop" destination="150" />
+  </node>
+  <node id="8" name="Chris' Mass, Evergreen Forest">
+    <description>Large banks on either side of the pathway mark where some adventurous person tried in vain to shovel the snow away down to the path.  Long since covered up again by fresh snowfall, the mounded drifts have been molded into walkways, with tunnels dug out here and there.  Pine trees covered in snow stand tall just beyond the snowdrifts, framing the makeshift sculptures.</description>
+    <position x="302" y="212" z="0" />
+    <arc exit="east" move="east" destination="9" />
+    <arc exit="southwest" move="southwest" destination="7" />
+    <arc exit="go" move="go canvas tent" destination="122" />
+  </node>
+  <node id="9" name="Chris' Mass, Evergreen Forest" note="peddler's wagon" color="#FF0000">
+    <description>Numerous deer tracks are scattered in the white snow, crossing the pathway and marking deer trails zigzagging through the forest.  The tracks seem to crowd around several of the barer trees, the bark stripped away and eaten to reveal the sapwood underneath.  The cloying smell of pinewood hangs in the cold air.</description>
+    <position x="379" y="212" z="0" />
+    <arc exit="north" move="north" destination="10" />
+    <arc exit="west" move="west" destination="8" />
+    <arc exit="go" move="go swirling light" destination="124" />
+    <arc exit="go" move="go silk tent" destination="123" />
+  </node>
+  <node id="10" name="Chris' Mass, Foot of the Hill">
+    <description>Thick snow blankets a large hill at the edge of the forest, the large mound sloping at a steep angle.  Numerous tracks mark a path upward, following the edge of a long area of snow packed tightly by the passing of numerous sleds.  Sheets of ice dot the ground in several places, making the hillside even more treacherous -- or more fun, depending on the point of view.</description>
+    <position x="379" y="145" z="0" />
+    <arc exit="east" move="east" destination="11" />
+    <arc exit="south" move="south" destination="9" />
+    <arc exit="up" move="up" destination="12" />
+    <arc exit="go" move="go wagon" destination="135" />
+  </node>
+  <node id="11" name="Chris' Mass, Forest Clearing" note="Clearing|Ice Sculpting" color="#00FF00">
+    <description>Evergreen trees surround the large clearing, which is remarkably smooth and flat, the snow packed to be almost icy.  Large blocks of ice are cut clean and arranged in neat piles in various sizes.  Tall iron lamp posts line the edge of the clearing near the trees, dimmed by the daylight.</description>
+    <description>Evergreen trees surround the large clearing, which is remarkably smooth and flat, the snow packed to be almost icy.  Large blocks of ice are cut clean and arranged in neat piles in various sizes.  Tall iron lamp posts line the edge of the clearing near the trees, casting a cheery yellow light over the sparkling snow.</description>
+    <position x="419" y="145" z="0" />
+    <arc exit="west" move="west" destination="10" />
+    <arc exit="go" move="go silk tent" destination="136" />
+  </node>
+  <node id="12" name="Chris' Mass, Snow Covered Hill" note="Snow Covered Hill|hill">
+    <description>The snow is packed firm on the eastern side of the hill, numerous sled marks dug into the ground.  Numerous footprints mar the western side of the hill, although most of them are half filled again with fresh snowfall.  Motes of light sparkle from the numerous drifts, while small dimples in the snow's surface show where the ground beneath is uneven.</description>
+    <position x="379" y="105" z="0" />
+    <arc exit="northwest" move="northwest" destination="13" />
+    <arc exit="down" move="down" destination="10" />
+    <arc exit="go" move="go spiraling vortex" destination="85" />
+    <arc exit="go" move="go wooden wagon" destination="140" />
+  </node>
+  <node id="13" name="Chris' Mass, Snow Covered Hill">
+    <description>Wooden slats laid onto the ground form crude stairs, helping passersby on their way up the large hillside.  Bare tree trunks dot the side of the hill, their trunks standing out nearly black against the stark whiteness of the snow.  Halfway up, a small bench offers a bit of respite from the climb.  A single iron lantern stands post behind the bench, hung from an evergreen tree branch.</description>
+    <description>Wooden slats laid onto the ground form crude stairs, helping passersby on their way up the large hillside.  Bare tree trunks dot the side of the hill, their trunks standing out nearly black against the stark whiteness of the snow.  Halfway up, a small bench offers a bit of respite from the climb.  A single iron lantern stands post behind the bench, casting its yellow glow over the chilly resting place.</description>
+    <position x="339" y="65" z="0" />
+    <arc exit="east" move="east" destination="14" />
+    <arc exit="southeast" move="southeast" destination="12" />
+    <arc exit="go" move="go pane of glass" destination="141" />
+    <arc exit="go" move="go silk tent" destination="143" />
+  </node>
+  <node id="14" name="Chris' Mass, Snowy Path">
+    <description>A plain wooden fence lines the edge of an evergreen forest nearby, mounded with powdery snow on its posts and numerous icicles hanging underneath.  Covered in snow, a large hill rises to the west, with several steps aiding the steep climb.  The air is crisp and cold, and the road is lined with iron lamp posts that stand sentinel in the snowy land.</description>
+    <description>A plain wooden fence lines the edge of an evergreen forest nearby, mounded with powdery snow on its posts and numerous icicles hanging underneath.  Covered in snow, a large hill rises to the west, with several steps aiding the steep climb.  The air is crisp and cold, and the road is lined with iron lamp posts that cast their bright glow over the snowy land.</description>
+    <position x="379" y="65" z="0" />
+    <arc exit="west" move="west" destination="13" />
+    <arc exit="northwest" move="northwest" destination="15" />
+    <arc exit="go" move="go small hut" destination="55" />
+  </node>
+  <node id="15" name="Chris' Mass, Snowy Path">
+    <description>Festive red and gold streamers decorate a row of bushes that lines the pathway, the colorful tinsel contrasting the snow in a celebration of the winter season.  Hints of a large frozen lake can be seen through the bushes, its surface smooth and glassy.  Long strands of green holly wrap around a series of lamp posts that follow the pathway.</description>
+    <description>Festive red and gold streamers decorate a row of bushes that lines the pathway, the colorful tinsel contrasting the snow in a celebration of the winter season.  Hints of a large frozen lake can be seen through the bushes, its surface smooth and glassy.  Long strands of green holly wrap around a series of lamp posts, their bright light illuminating the cobblestone pathway.</description>
+    <position x="345" y="31" z="0" />
+    <arc exit="southeast" move="southeast" destination="14" />
+    <arc exit="west" move="west" destination="16" />
+    <arc exit="go" move="go flower gazebo" destination="139" />
+  </node>
+  <node id="16" name="Chris' Mass, Cabin">
+    <description>The winding path passes by a small cabin, its cheery windows hung with forest green curtains and coated with intricate patterns of frost.  Made almost entirely from thick logs, the exterior is rather rustic, although brightly decorated for the season with tinsel and bunches of holly.  A few wooden benches line the front porch, their tops dusted with fine powdery snow.</description>
+    <description>The winding path passes by a small cabin, its cheery windows illuminated with small candles that cast a glow over the frozen snow.  Made almost entirely from thick logs, the exterior is rather rustic, although brightly decorated for the season with tinsel and bunches of holly.  A few wooden benches line the front porch, their tops dusted with fine powdery snow.</description>
+    <position x="300" y="31" z="0" />
+    <arc exit="east" move="east" destination="15" />
+    <arc exit="west" move="west" destination="17" />
+    <arc exit="go" move="go cabin door" destination="50" />
+  </node>
+  <node id="17" name="Chris' Mass, Snowy Path">
+    <description>Nearly buried under the drifting snow, several bushes line the edge of a large lake to the south, with the stark whiteness broken only by hints of festive color decorating the evergreen branches.  Ripples in the snow form waves across the white drifts, contrasting the lake's perfectly smooth surface.  Small bells hang from iron lamp posts on either side of the pathway, and several are wrapped with red and green ribbons.</description>
+    <description>Nearly buried under the drifting snow, several bushes line the edge of a large lake to the south, with the stark whiteness broken only by the yellow glow of the iron lanterns.  Ripples in the snow form waves across the white drifts, contrasting the lake's perfectly smooth surface.  Small bells hang from the iron lamp posts on either side of the pathway, shining brightly in the light of their lantern.</description>
+    <position x="107" y="31" z="0" />
+    <arc exit="east" move="east" destination="16" />
+    <arc exit="northwest" move="northwest" destination="18" />
+    <arc exit="go" move="go white tent" destination="138" />
+  </node>
+  <node id="18" name="Chris' Mass, Snowy Path">
+    <description>A sharp bend in the path is decorated with a large statue of a swan, formed entirely of ice.  Crystal clear and shining to resemble glass, the bird's wings are spread upward as if swimming, taking on a serene appearance.  Piles of snow litter the ground all around the swan, which seems curiously untouched by the winter weather.</description>
+    <description>A sharp bend in the path is decorated with a large statue of a swan, formed entirely of ice.  Crystal clear and shining to resemble glass, the bird's wings are spread upward as if swimming, taking on a serene appearance.  A gaethzen orb in the statue's pedestal illuminates the statue from within, lighting it with a golden glow that gives it a nearly ethereal quality.</description>
+    <position x="87" y="11" z="0" />
+    <arc exit="southeast" move="southeast" destination="17" />
+    <arc exit="southwest" move="southwest" destination="19" />
+    <arc exit="go" move="go bamboo-framed portal" destination="95" />
+  </node>
+  <node id="19" name="Chris' Mass, Snowy Path">
+    <description>A dark wooden fence lines the edge of the nearby lake, powdery snow forming lumps on its posts and icicles filling in the spaces between its slats.  Cold and crisp, the air occasionally sparkles with snow stirred up from the ground that showers back to the ground in motes of light.  Iron lamp posts stand tall along the edges of the snowy path, dimmed by the daylight.</description>
+    <description>A dark wooden fence lines the edge of the nearby lake, powdery snow forming lumps on its posts and icicles filling in the spaces between its slats.  Cold and crisp, the air occasionally sparkles with snow stirred up from the ground that showers back to the ground in motes of light.  Iron lamp posts stand tall along the edges of the snowy path, casting a bright golden glow over the winter landscape.</description>
+    <position x="47" y="51" z="0" />
+    <arc exit="northeast" move="northeast" destination="18" />
+    <arc exit="south" move="south" destination="20" />
+    <arc exit="go" move="go gap" destination="137" />
+  </node>
+  <node id="20" name="Chris' Mass, Lake's Edge">
+    <description>A large sled is parked on the side of the wide pathway, with narrow golden runners holding up its sleek red carriage.  Large leather straps attach to a harness and are heavy with silver bells, although the vehicle's horse is currently missing.  A wide lake is clearly visible to the east, spreading out in a glassy surface marred only by the occasional tracks of skates.</description>
+    <position x="47" y="77" z="0" />
+    <arc exit="north" move="north" destination="19" />
+    <arc exit="south" move="south" destination="21" />
+    <arc exit="go" move="go small hut" destination="49" />
+    <arc exit="go" move="go crumbling library" destination="153" />
+  </node>
+  <node id="21" name="Chris' Mass, Lake's Edge" note="Lake's Edge">
+    <description>A large trellis arcs overhead and on either side of the wide path, decorated in festive colors and laced with purple snow crocuses, the hardy plants easily withstanding the harsh cold.  Wooden slats line the steep banks that lead down to the frozen lake, a small railing along the side set up to aid those wearing skates.  Strands of bright ribbon decorate the fences lining the path, each one edged in silver or gold.</description>
+    <position x="47" y="131" z="0" />
+    <arc exit="north" move="north" destination="20" />
+    <arc exit="southeast" move="southeast" destination="3" />
+    <arc exit="go" move="go wide bank" destination="22" />
+    <arc exit="go" move="go quartrefoil mirror" hidden="True" destination="116" />
+  </node>
+  <node id="22" name="Chris' Mass, Frozen Lake" note="Frozen Lake">
+    <description>Golden glitter is scattered over the surface of this portion of the lake, frozen into its surface to lend extra sparkle to the already bright ice.  Numerous skate tracks and spin circles are etched into the frozen water, crossed numerous times by fresher lines.  Birdsong fills the chill air, with bright red winter cardinals warbling from nearby trees.</description>
+    <position x="87" y="111" z="0" />
+    <arc exit="east" move="east" destination="23" />
+    <arc exit="go" move="go wide bank" destination="21" />
+  </node>
+  <node id="23" name="Chris' Mass, Frozen Lake">
+    <description>The glassy surface of the frozen lake stretches out, lined on each side by wooden fence posts and etched with the numerous narrow lines left behind by ice skates.  Fish swim far down below the ice's smooth surface, the glass clear enough to see their hazy outlines.  Crisp air forms small clouds with every breath, the cold winter land muffled by the ever-present snow.</description>
+    <position x="127" y="111" z="0" />
+    <arc exit="southeast" move="southeast" destination="24" />
+    <arc exit="west" move="west" destination="22" />
+  </node>
+  <node id="24" name="Chris' Mass, Frozen Lake">
+    <description>The eastern edge of the frozen lake funnels into a small river, blocked off from exploration by a narrow bridge.  Snow drifts against the banks in pure white waves, although the ice itself is kept quite clear.  Lanterns on iron lamp posts line the entire skating area, most decorated by colorful holly or ribbon.</description>
+    <description>The eastern edge of the frozen lake funnels into a small river, blocked off from exploration by a narrow bridge.  Snow drifts against the banks in pure white waves, although the ice itself is kept quite clear.  Lanterns on iron lamp posts line the entire skating area, casting a bright golden glow that easily drives away the chill of night.</description>
+    <position x="149" y="133" z="0" />
+    <arc exit="northwest" move="northwest" destination="23" />
+    <arc exit="go" move="go verdant portal" destination="102" />
+    <arc exit="go" move="go mechanical portal" destination="155" />
+  </node>
+  <node id="25" name="Chris' Mass, Deep Forest" note="Deep Forest">
+    <description>The branches of the evergreen trees nearly touch overhead, though the path winding through them has enough space to walk comfortably.  Though snow heavily lines the trees, the path is nearly clear of it, with only a few piles of powder here and there where they managed to filter through the trees.  Small pinecones are piled around the bases of the trees along the path, each one dusted with a bit of sparkling snow.</description>
+    <position x="145" y="273" z="0" />
+    <arc exit="northeast" move="northeast" destination="6" />
+    <arc exit="southeast" move="southeast" destination="26" />
+    <arc exit="go" move="go aethereal portal" />
+    <arc exit="go" move="go shadowed gap" destination="111" />
+  </node>
+  <node id="26" name="Chris' Mass, Deep Forest">
+    <description>Old pine trees line either side of the path winding through the forest, their lower branches mostly clear and their upper branches heavy with fallen snow.  Small snowdrifts are piled up on both sides of the thoroughfare, the tops of them crusted over with thin layers of ice.  A pair of small lamp posts mark the pathway, though both of them are currently unlit.</description>
+    <description>Old pine trees line either side of the path winding through the forest, their lower branches mostly clear and their upper branches heavy with fallen snow.  Small snowdrifts are piled up on both sides of the thoroughfare, the tops of them crusted over with thin layers of ice.  A pair of small lamp posts mark the pathway, both of them glowing brightly with a steady yellow light.</description>
+    <position x="180" y="308" z="0" />
+    <arc exit="south" move="south" destination="27" />
+    <arc exit="northwest" move="northwest" destination="25" />
+  </node>
+  <node id="27" name="Chris' Mass, Deep Forest">
+    <description>Numerous evergreen trees fill the forest, all quite tall with thick trunks, and the path widens in the area.  Several boulders block off further exploration to the south and west, forcing the path to bend sharply to the north and east.  Snowdrifts blanket the ground, drifting into frozen waves away from the trodden path.</description>
+    <position x="180" y="397" z="0" />
+    <arc exit="north" move="north" destination="26" />
+    <arc exit="east" move="east" destination="28" />
+    <arc exit="go" move="go stepping stones" destination="112" />
+  </node>
+  <node id="28" name="Chris' Mass, Deep Forest">
+    <description>The branches of evergreen trees sag heavily with the weight of the snow that covers them, and a slow but steady shower drips from them as the snow slowly slides off the branches in tiny chunks.  Patches of snow cover many of the tree trunks as well, most of it appearing to have been there for a very long time.  The path along the ground is clear, however, lined with narrow cobblestones that lead to a merry glade to the southeast.</description>
+    <position x="226" y="397" z="0" />
+    <arc exit="southeast" move="southeast" destination="29" />
+    <arc exit="west" move="west" destination="27" />
+    <arc exit="go" move="go cobblestone road" destination="92" />
+  </node>
+  <node id="29" name="Chris' Mass, Merry Glade">
+    <description>Opening up into a relatively clear area within the deep forest, the glade is decorated with numerous silver streamers and colorful ornaments.  Holly and mistletoe hang from several of the trees, providing splashes of color in the white backdrop.  A large number of snowmen occupy the center of the clearing, each one dressed in a different winter outfit.</description>
+    <description>Opening up into a relatively clear area within the deep forest, the glade is brightly aglow with thousands of points of light that hang from the trees in colorful streams.  Holly and mistletoe hang from several of the trees, providing splashes of color in the white backdrop.  A large number of snowmen occupy the center of the clearing, each one dressed in a different winter outfit.</description>
+    <position x="265" y="436" z="0" />
+    <arc exit="north" move="north" destination="30" />
+    <arc exit="east" move="east" destination="33" />
+    <arc exit="northwest" move="northwest" destination="28" />
+  </node>
+  <node id="30" name="Chris' Mass, Merry Glade" note="Merry Glade|Glade" color="#00FF00">
+    <description>Several benches line this section of the glade, making a ring around a cheery campfire.  Nearby, a large table is spread out with frozen winter treats along with a large carafe of steaming hot chocolate.  In contrast to the rest of the area, the ground is relatively free of snow, having melted from the fire's heat.</description>
+    <position x="265" y="416" z="0" />
+    <arc exit="northeast" move="northeast" destination="31" />
+    <arc exit="south" move="south" destination="29" />
+  </node>
+  <node id="31" name="Chris' Mass, Merry Glade" note="inventor's worktable|worktable" color="#00FF00">
+    <description>A large red sleigh is parked at the northern end of the glade, decorated with large glass snowflakes and wrapped around the railings with tinsel.  In the driver's seat is a large snowman, with several snowman passengers riding behind him.  Hooked up to the front of the sleigh are several horses sculpted from ice, each crafted to look like it's about to start running.</description>
+    <position x="285" y="396" z="0" />
+    <arc exit="southeast" move="southeast" destination="32" />
+    <arc exit="southwest" move="southwest" destination="30" />
+  </node>
+  <node id="32" name="Chris' Mass, Merry Glade">
+    <description>Numerous bootprints in the compacted snow on the ground indicate heavy traffic through the area.  Bright metallic streamers decorate the trees and the lamp posts that pepper the clearing, giving an air of lively cheer to the forest.  A large snowman stands at the eastern edge of the glade, tipping a black top hat in its stick hand.</description>
+    <position x="305" y="416" z="0" />
+    <arc exit="northeast" move="northeast" destination="34" />
+    <arc exit="southwest" move="southwest" destination="33" />
+    <arc exit="northwest" move="northwest" destination="31" />
+  </node>
+  <node id="33" name="Chris' Mass, Merry Glade">
+    <description>Numerous streamers cover the trees and zigzag across the sky to attach to lamp posts that line the pathway, coloring the landscape with bright reds, silvers, yellows, and blues.  Glass spheres hang on the nearby trees in elaborate arrangements, livening up the area.  The snowmen in the center of the glade are lined up to resemble a marching band, most holding silver instruments.</description>
+    <description>Streamers covered with brightly colored lights decorate the trees and zigzag across the sky to attach to merrily burning lamp posts that line the pathway, coloring the landscape with bright reds, silvers, yellows, and blues.  Glass spheres hang on the nearby trees in elaborate arrangements, livening up the area.  The snowmen in the center of the glade are lined up to resemble a marching band, most holding silver instruments.</description>
+    <position x="285" y="436" z="0" />
+    <arc exit="northeast" move="northeast" destination="32" />
+    <arc exit="west" move="west" destination="29" />
+    <arc exit="go" move="go translucent door" destination="99" />
+  </node>
+  <node id="34" name="Chris' Mass, Mountain's Base" note="Mountain's Base">
+    <description>Twin lamp posts line the beginning of the steep mountain path, which climbs steadily to snake upward along the mountainside.  Several thin streamers decorate the posts of the lanterns, which are unlit during the daylight hours.  Tiny rabbit tracks are visible in the snow, indicating that the area is often frequented by them.</description>
+    <description>Twin lamp posts line the beginning of the steep mountain path, which climbs steadily to snake upward along the mountainside.  Several thin streamers decorate the posts of the lanterns, which are are brightly lit to illuminate the nighttime path.  Tiny rabbit tracks are visible in the snow, indicating that the area is often frequented by them.</description>
+    <position x="325" y="396" z="0" />
+    <arc exit="east" move="east" destination="35" />
+    <arc exit="southwest" move="southwest" destination="32" />
+  </node>
+  <node id="35" name="Chris' Mass, Mountain Path" note="Mountain Path">
+    <description>The mountainous path slopes sharply upward as it continues eastward, piercing the tops of the trees and continuing to a winding mountain path.  Toward the west, a merry glade can be seen past the tops of the trees, a band of snowmen in the center of it and colorful streamers decorating it throughout.</description>
+    <position x="345" y="396" z="0" />
+    <arc exit="west" move="west" destination="34" />
+    <arc exit="up" move="up" destination="36" />
+  </node>
+  <node id="36" name="Chris' Mass, Mountain Path">
+    <description>Elaborate ice crystal patterns cover the rock surfaces of the mountain, creating strange designs crafted purely by the forces of nature.  Snow-frosted evergreen trees are clearly visible far below, appearing to be in minature because of the distance.  Streams of snow blow around in tiny flurries, picked up by the lazy wind.</description>
+    <description>Elaborate ice crystal patterns cover the rock surfaces of the mountain, creating strange designs crafted purely by the forces of nature.  Dim silhouettes of evergreen trees break the night far below, the landscape beyond a pitch black.  Streams of snow blow around in tiny flurries, picked up by the lazy wind.</description>
+    <position x="345" y="376" z="0" />
+    <arc exit="up" move="up" destination="37" />
+    <arc exit="down" move="down" destination="35" />
+  </node>
+  <node id="37" name="Chris' Mass, Mountain Path">
+    <description>Fine, powdery snow piles in sparkling drifts that hug the mountain path, creating giant pillows for the thick white blanket that envelops the mountainside.  Thousands of points of brightly colored light glimmer softly through the thick ice, making the white snow crystals beneath shine in the thin mountain air.  Snowflakes carried on the wind constantly tumble down the mountain, adding to the thick piles already present.</description>
+    <position x="345" y="356" z="0" />
+    <arc exit="up" move="up" destination="38" />
+    <arc exit="down" move="down" destination="36" />
+  </node>
+  <node id="38" name="Chris' Mass, Mountain Path">
+    <description>Dark boulders lay broken on either side of the narrow mountain path, their granite faces rimed with a sparkling cloak of frost.  Thick blankets of ice-covered snow cover each side of the narrow trail.  The sheets of ice are perfectly smooth and have a pale blue tinge to them, resembling frozen waves vainly trying to climb to the peak.</description>
+    <position x="345" y="336" z="0" />
+    <arc exit="up" move="up" destination="39" />
+    <arc exit="down" move="down" destination="37" />
+  </node>
+  <node id="39" name="Chris' Mass, Mountain Peak" note="Mountain Peak|Peak">
+    <description>The peak of the mountain looks down over the snowy landscape, unfolding like a giant map in all directions.  The merry Chris' Mass area is visible far below to the west, the pathways and skating lake blanketed with snow but still giving off a cheerful vibe.  Snow and mountainous regions spread out to the west, while the evergreen forest blankets the rest of the landscape.</description>
+    <description>The peak of the mountain looks down over the snowy landscape, unfolding like a giant map to the west.  The merry Chris' Mass area is visible far below to the west, the pathways and skating lake brightly lit with torches and lamp posts to give off a cheerful vibe.  Darkness spreads itself like a cloak in the other areas, only the Chris' Mass area brightly illuminated in the pale wintery night.</description>
+    <position x="345" y="316" z="0" />
+    <arc exit="down" move="down" destination="38" />
+    <arc exit="go" move="go narrow fogbank" destination="79" />
+  </node>
+  <node id="49" name="Chris' Mass, Shop" note="Shop west|small hut 2|ice skates" color="#FF0000">
+    <description>Polished oak walls surround the interior of the warm but small hut.  Gusts of snow cling to the frost-covered windows, each one decorated with dark red curtains printed in festive designs.  Wares are laid out throughout the floor space, containing a variety of goods for the winter season.</description>
+    <position x="26" y="77" z="0" />
+    <arc exit="out" move="out" destination="20" />
+  </node>
+  <node id="50" name="Chris' Mass, Log Cabin" note="Log Cabin">
+    <description>Dark green couches line the interior of the cabin, the walls made of honey-colored wood slats and decorated at the edges with festive holly patterns.  A large poinsettia plant rests on a stand in the corner of the room, lending the warm room a bit of bright red color.  Several curtained windows show the snowy landscape outside.</description>
+    <position x="300" y="11" z="0" />
+    <arc exit="north" move="north" destination="51" />
+    <arc exit="east" move="east" destination="53" />
+    <arc exit="go" move="go cabin door" destination="16" />
+    <arc exit="go" move="go wooden arch" destination="54" />
+  </node>
+  <node id="51" name="Chris' Mass, Cozy Den">
+    <description>Numerous overstuffed couches of dark red corduroy surround a low coffee table, and thick carpeting keeps the room warm and cozy.  Standing tall in one corner of the room is a high evergreen tree, decorated with motes of light from miniature gaethzen orbs and numerous glass spheres peeking out among ribbons and tinsel.  Large curtains are half drawn back from the frost-covered windows.</description>
+    <position x="300" y="1" z="0" />
+    <arc exit="east" move="east" destination="52" />
+    <arc exit="south" move="south" destination="50" />
+  </node>
+  <node id="52" name="Chris' Mass, Winter Banquet">
+    <description>A large banquet table lines the northern side of the room, covered in a snow-white cloth that holds a large spread of food.  Nearby, an elegantly carved bar holds numerous bottles of fine liqueurs and other drinks.  Paper cutouts of snowflakes are fastened to the cabin's honey-colored walls, varying from childish renditions to delicate works of art.</description>
+    <position x="310" y="1" z="0" />
+    <arc exit="south" move="south" destination="53" />
+    <arc exit="west" move="west" destination="51" />
+  </node>
+  <node id="53" name="Chris' Mass, Cabin Dance Floor" note="Dance Floor" color="#FF0000">
+    <description>Wooden honey-colored slats create an elegant dance floor that takes up this corner of the rustic cabin, polished to a bright gleam and well trodden by numerous feet.  Quiet music wafts from by a small box on a silver stand, sending out out tinny but festive notes throughout the room.  Small benches edge the dance floor, offering a spot for the weary to rest.</description>
+    <position x="310" y="11" z="0" />
+    <arc exit="north" move="north" destination="52" />
+    <arc exit="west" move="west" destination="50" />
+  </node>
+  <node id="54" name="Chris' Mass, Cabin Side Room">
+    <description>Built partially into the side of a hill, the spacious room's lower half is reinforced with loamy brick walls, separating at a slight angle and rising into warm wooden paneling.  Honey-colored benches line the walls, giving plenty of room for seating while a wide rug covers the center.  Light comes in from high windows, the snow piled up high to cover most of them.</description>
+    <description>Built partially into the side of a hill, the spacious room's lower half is reinforced with loamy brick walls, separating at a slight angle and rising into warm wooden paneling.  Honey-colored benches line the walls, giving plenty of room for seating while a wide rug covers the center.  Twilight can be seen through high windows, the snow piled up high to cover most of them.</description>
+    <position x="290" y="11" z="0" />
+    <arc exit="go" move="go wooden arch" destination="50" />
+  </node>
+  <node id="55" name="Chris' Mass, Shop" note="Shop east|small hut 1" color="#FF0000">
+    <description>Pools of melted snow mar the floor in places, and a heavily used mop rests in a corner of the room.  Sleds for sale hang on the walls, while tables spread out hold other winter wares for sale.  Large frost-coated windows look out on the evergreen forest outside.</description>
+    <position x="399" y="65" z="0" />
+    <arc exit="out" move="out" destination="14" />
+  </node>
+  <node id="79" name="Iocanthe's Sanctuary, The Leafless Tree Room" note="Iocanthe's Sanctuary">
+    <description>Pale grey walls contain wide windows overlooking a misty field scattered with leafless trees.  No furniture distracts the mind from its contemplations of grey.</description>
+    <position x="367" y="316" z="0" />
+    <arc exit="go" move="go narrow fogbank" destination="39" />
+    <arc exit="go" move="go foggy mist" destination="80" />
+  </node>
+  <node id="80" name="Iocanthe's Sanctuary, A Bland Void">
+    <description>Plenty of floor space offers seating.  Each wall is as bland and boring as the next.  There's nothing in here to look at except an unusually solid cloud that floats from one corner to the next in ceaseless flight.</description>
+    <position x="367" y="300" z="0" />
+    <arc exit="go" move="go foggy mist" destination="79" />
+  </node>
+  <node id="84" name="Winna's Homestead, Tiny House Loft">
+    <description>A huge skylight above the loft brings the outside world into this elevated sleeping space, accessible only by a set of narrow and steep stairs.  Guarded by low bookshelves built into the pale gold pine walls, a luxuriously thick moss green silk futon rests on top of the straight-grained wooden floor.</description>
+    <position x="161" y="436" z="0" />
+    <arc exit="climb" move="climb stairs" destination="118" />
+  </node>
+  <node id="85" name="Zadraes's Island, Fountain">
+    <description>Yet another architectural quirk of the island, a grand fountain sits upon the ever-shifting sands of the beach.  An aged tree sings mournfully of times past as a steady breeze from the sea blows through its leafy canopy.  The steady roll of the waves upon the sandy beach has enticed many a weary traveler into a peaceful afternoon nap upon a nearby bench.</description>
+    <description>The imposing silhouette of a fountain often startles those unfamiliar with the island and its architect's quirks.  A nippy breeze eerily whistles through a nearby tree as the steady roll of the sea upon the beach echoes well into the night.  A few well-placed benches provide the local lunar mage, or any of his stargazing friends, an adequate resting place to gaze upon the heavens during a clear summer's night.</description>
+    <position x="339" y="105" z="0" />
+    <arc exit="west" move="west" destination="86" />
+    <arc exit="go" move="go spiraling vortex" destination="12" />
+    <arc exit="go" move="go modest hangout" destination="88" />
+  </node>
+  <node id="86" name="Zadraes's Island, Beach">
+    <description>Piles of lumber are scattered haphazardly all about this portion of the beach.  Some stacks are pieces of driftwood while others are freshly cut from trees on the eastern side of the island.  Leaned against the sole tree on this portion of the beach is the start of yet another fishing boat.  The hull already is badly warped beyond repair, another candidate for the junk pile behind the house.  </description>
+    <description>Dangerous obstacles are scattered all about the beach.  A bruised knee or even a broken toe isn't entirely out of the question here for those not gifted with keen sight at night.  A gentle breeze sometimes tousles the few remaining leaves in the treetop, and other times finds a hole in one of the older branches to howl through.</description>
+    <position x="324" y="105" z="0" />
+    <arc exit="east" move="east" destination="85" />
+    <arc exit="northwest" move="northwest" destination="87" />
+  </node>
+  <node id="87" name="Zadraes's Island, Beach">
+    <description>A massive window spans the length of the nearby house, forever providing a grand view of both the unspoiled beauty of this region of the island and the vibrant settings of the sun over the sea's warm waters.  A small groove in the sand and a pile of partially carved timbers are the only evidence of movement on this part of the beach -- likely a much-traveled path by the mage dragging his latest failure of a boat.</description>
+    <description>Were it not for the eccentricities and paranoia of the mage, this would be a prime spot to toss out a blanket and gaze up at the heavens on a clear night.  The beach is largely undisturbed, the chill wind is blocked by the house and the incessant glow of Ratha's nearby shores are blocked as well.  Closer inspection reveals small threads crisscrossing the entirety of the nearby beach, most cleverly hidden just beneath the sands -- likely traps and alarms to put the mage at ease.</description>
+    <position x="314" y="95" z="0" />
+    <arc exit="southeast" move="southeast" destination="86" />
+  </node>
+  <node id="88" name="Zadraes's Hangout, Entry">
+    <description>A chime just outside the entry arch hums melodically at the slightest whisper of the wind.  The confined space of this small room could serve little purpose other than greeting visitors and wishing them safe travels.  The only furnishings, if they could be called that, are a tattered floor mat and two small potted almagarus plants -- one on either side of a large steel door that leads to an office area.</description>
+    <position x="339" y="95" z="0" />
+    <arc exit="east" move="east" destination="90" />
+    <arc exit="west" move="west" destination="89" />
+    <arc exit="out" move="out" destination="85" />
+    <arc exit="go" move="go steel door" destination="106" />
+  </node>
+  <node id="89" name="Zadraes's Hangout, Meditation Room">
+    <description>Hardwood floors reflect the delicate light of hundreds of candles strewn about the room.  Several colored pillows are stacked neatly in a corner in addition to the two centered in the room.  A massive window spanning most of the western wall gives an excellent view of the wide open ocean throughout the day and a scene worthy of being an artist's prized painting during sunset.</description>
+    <description>The flickering light from hundreds of candles strewn about the room dances playfully upon the hardwood floors as it is reflected from a massive window along the western wall.  Colored pillows lie scattered about the room.</description>
+    <position x="329" y="95" z="0" />
+    <arc exit="east" move="east" destination="88" />
+  </node>
+  <node id="90" name="Zadraes's Hangout, Kitchen">
+    <description>The clanking of crashing pots and pans mixed with frequent curses that should never be repeated alert visitors that a meal is being prepared.  The stench of an often ruined main dish aside, the aromas of exotic herbs and spices permeate nearby rooms when a particularly strong breeze blows through.  For all the disasters this kitchen sees on a daily basis, the stove, counters, and cabinets appear remarkably clean and well maintained.</description>
+    <position x="349" y="95" z="0" />
+    <arc exit="north" move="north" destination="91" />
+    <arc exit="west" move="west" destination="88" />
+  </node>
+  <node id="91" name="Zadraes's Hangout, Private Study">
+    <description>Countless cabinets of wicker shelves line every wall of the small study from floor to ceiling.  Though many contain an excess of tomes and scrolls, others contain small trinkets from the owner's travels.  Unlike most others that have been cluttered with the various baubles, one cabinet has several glass bottles lying upon their sides neatly stacked one to a shelf.  Aside from a large fur rug, several colored pillows, and the shelves upon the walls, this room is completely unfurnished.</description>
+    <position x="349" y="85" z="0" />
+    <arc exit="south" move="south" destination="90" />
+  </node>
+  <node id="92" name="Ynami's Office, Front Gate">
+    <description>Just outside of town, a cobblestone road traces its way through hills covered in wildflowers leading up to an estate surrounded by a tall stone fence.  A wrought iron gate set into the fence offers a glimpse of a small torch-lit pagoda to the north.  Light escapes the opening of a nearby mine shaft.</description>
+    <description>Just outside of town, a cobblestone road traces its way through hills covered in wildflowers leading up to an estate surrounded by a tall stone fence.  A wrought iron gate set into the fence offers a glimpse of a small pagoda to the north.  Heavy wooden beams mark the entrance to an open mine shaft dug nearby.</description>
+    <position x="207" y="426" z="0" />
+    <arc exit="go" move="go cobblestone road" destination="28" />
+    <arc exit="go" move="go iron gate" destination="93" />
+    <arc exit="climb" move="climb mine shaft" destination="92" />
+  </node>
+  <node id="93" name="Ynami's Office, Koi Pond">
+    <description>Square granite stepping stones create a straight path across the waist-deep pond dotted with lily pads.  The still surface provides a crisp reflection of a small pagoda across the pond to the north.  A number of colorful and spotted fish swim idly beneath the reflection.  A wrought iron gate leads back to a cobblestone road.</description>
+    <description>Reflections of lit torches dance across the still water's surface coming from a small pagoda across the pond to the north.  Square granite stepping stones create a straight path across the water dotted with lily pads.  A wrought iron gate leads back to a cobblestone road.</description>
+    <position x="221" y="426" z="0" />
+    <arc exit="go" move="go iron gate" destination="92" />
+    <arc exit="go" move="go small pagoda" destination="94" />
+  </node>
+  <node id="94" name="Ynami's Office, Workshop">
+    <description>Pegboard lining the west wall displays a well-organized collection of mallets, pliers, tongs, and other tools.  Lit sconces hanging from iron chains illuminate the open space.  Wood chips and traces of sawdust litter the rustic stone floor next to a pine board workbench standing in the center of the room.  Next to the workbench is a four-legged stool covered in goat skin.</description>
+    <position x="234" y="426" z="0" />
+    <arc exit="out" move="out" destination="93" />
+  </node>
+  <node id="95" name="Sarhanna's Beach Bungalow, Office">
+    <description>Majestic and picturesque, this spacious beach house reflects a magical merging of a tropical beach and the sea.  Hickory wood flooring and gleaming pale walls encompass the vast room.  The large window near a beautifully built stone firepit allows for an abundance of warm sunlight to enter the room.  A sizeable handmade tapestry on one wall depicts a beautiful sunset over the sparkling waves, while a whimsical bamboo desk sits in the corner.  An intricately carved door leads to a beautiful lagoon while a trio of sand covered hickory steps go down to the beach.</description>
+    <description>A small fire glows brightly in a beautifully built senci firepit.  It allows soft light to infiltrate the darkened room, casting long shadows on a whimsical bamboo desk.  The sheen of the wooden floors and clean walls reflect the soft light.  Dim light illuminates the elegant tapestry on the far wall.  An intricately carved door leads to a beautiful lagoon while a trio of sand covered hickory steps go down to the beach.</description>
+    <position x="46" y="11" z="0" />
+    <arc exit="go" move="go bamboo-framed portal" destination="18" />
+    <arc exit="go" move="go carved door" destination="96" />
+    <arc exit="climb" move="climb hickory steps" destination="97" />
+  </node>
+  <node id="96" name="Sarhanna's Lagoon and Bar">
+    <description>Breathtaking views of dunes and mangrove trees surround this sparking freshwater lagoon with a swim-up bar.  Multiple underwater stools create a relaxing place to sit in the warm sun's rays.  The polished driftwood bar top offers a tray of strawberry tarts and a platter of chocolate cupcakes.  Behind the bar on open driftwood shelves, neat rows of cocktail, highball, and long-stemmed wine glasses made of colorful sea glass stand alongside half-empty bottles of all shapes and sizes.  A driftwood door to the south leads back inside the bungalow.  </description>
+    <description>Lit tiki torches create a soft glow around the driftwood bar, illuminating open shelves with neat rows of cocktail, highball, and long-stemmed wine glasses made of colorful sea glass among half-empty liquor bottles.  Multiple underwater stools create a relaxing place to sit next to the polished driftwood bar offering a tray of strawberry tarts and a platter of chocolate cupcakes.  A driftwood door leads back inside the bungalow.</description>
+    <position x="32" y="-3" z="0" />
+    <arc exit="go" move="go driftwood door" destination="95" />
+  </node>
+  <node id="97" name="Sarhanna's Private Beach, Hangout">
+    <description>Large blue-green waves crash along this spacious beach, as dazzling sand glistens like a thousand tiny jewels in the sunlight.  Soft dunes surround a trio of brightly colored, oversized beach chairs, and small tables.  Beach towels, sandcastles, and sand toys litter the beach near the chairs.  A whitewashed gate leads into a lush garden to the north, and a set of sand covered hickory steps head up into the bungalow.  </description>
+    <description>Cool soft sand surrounds some oversized chairs and a small table as large waves crash along the beach.  Sand pails, beach towels, and shovels are neatly piled near the tables. Abandoned sandcastles stand out against the darkened beach in the soft moonlight.  A garden gate stands open and a set of sand covered hickory steps head up into the bungalow.</description>
+    <position x="59" y="-4" z="0" />
+    <arc exit="go" move="go whitewashed gate" destination="98" />
+    <arc exit="climb" move="climb sand steps" destination="95" />
+  </node>
+  <node id="98" name="Sarhanna's Garden Hideaway, Workshop">
+    <description>Butterflies flutter around neatly trimmed hedges, climbing plants, and flowers surrounding the lush field of grass.  A glistening waterfall empties into a babbling brook off to one side the garden, offering an element of tranquility.  Winding around the garden is a polished stone path that leads to a secluded bamboo bench overlooking the brook.  Off to the south is a bright whitewashed gate that leads to the beach.  </description>
+    <description>Silhouettes of hedges, climbing plants, and flowers surround an open field of grass.  The sounds of a waterfall come from one side of the garden, as soft moonlight dances on the ripples of the winding brook.  A soft creaking sound from the south can be heard from the gate blowing in the cool night breeze, as tiny night creatures scurry around searching for a tasty meal.</description>
+    <position x="75" y="-4" z="0" />
+    <arc exit="go" move="go whitewashed gate" destination="97" />
+  </node>
+  <node id="99" name="Paklin's Dive, Taproom">
+    <description>A blackened, smoke-tinged window occupies the upper reaches of the southern wall of this dive bar.  Sawdust covers most of the oaken floor, and bronze sconces adorn the paneled walls.  Strange music wafts its way through the room, originating from several unusually dressed people atop the low-rise stage.  A horseshoe-shaped bar is positioned prominently in the center of the taproom.  Serving women race around the room delivering delicious drinks, while the bartender mixes up the next batch of intoxicants.</description>
+    <position x="285" y="456" z="0" />
+    <arc exit="west" move="west" destination="100" />
+    <arc exit="go" move="go translucent door" destination="33" />
+  </node>
+  <node id="100" name="Paklin's Dive, Dim Storeroom">
+    <description>Dingy, crushed boxes are stacked precariously atop kegs scattered throughout this storeroom.  A single torch is affixed to the middle of one of the deep, black walls.  The flickering of the torch reveals a door and several different dice games taking place in the corners of the storeroom.  Loud cries arise from the individuals who have lost one too many throws of the dice.  A stray breeze from an unknown source meanders across the loose floorboards, carrying with it voices from the adjoining bar.  A spiral staircase in the corner ascends into the shadows.</description>
+    <position x="267" y="456" z="0" />
+    <arc exit="east" move="east" destination="99" />
+    <arc exit="climb" move="climb spiral staircase" destination="119" />
+    <arc exit="go" move="go door" destination="120" />
+  </node>
+  <node id="102" name="Cordulia's Bayou, Low Hummock">
+	<description>Here the land manages to gain a foothold, although its highest point is only a foot or two above the water.  A boardwalk surrounds a whimsical wooden shanty of dubious stability.  It has a decidedly unplanned look, as if extra rooms had been added here and there until it was several stories high.  Its eastern side features a waterwheel that serves no obvious purpose in such stagnant water.  A muddy bank leads into the cypress swamp, while a dubious-looking raft moored to a floating dock allows egress.</description>
+    <description>A low mist snakes its way around the pilings supporting a whimsical shanty.  The torches at its entrance provide an oasis of light amidst the suffocating darkness of the swamp.  Occasionally, this light is reflected by the eyes of an alligator lurking in the water nearby.  A muddy bank leads into the cypress swamp, while a dubious-looking raft moored to a floating dock allows egress.</description>
+    <position x="179" y="133" z="0" />
+    <arc exit="go" move="go wooden shanty" destination="103" />
+    <arc exit="climb" move="climb muddy bank" destination="105" />
+    <arc exit="go" move="go floating dock" destination="24" />
+  </node>
+  <node id="103" name="Cordulia's Bayou, Shanty">
+	<description>The interior looks about as well planned as the exterior, with a hodgepodge of mismatched furniture.  A desk in one corner houses a bogbirch calendar and a collection of pinned dragonflies arranged by color.  Above the desk is an enchanted orlog with reminders instead of numbers.  Round windows provide additional light and views of the swamp.  Leading to the front porch is a sturdy cypress door, while a whimsically carved door in the back opens onto the boardwalk.</description>
+    <description>The interior looks about as well planned as the exterior, with a hodgepodge of mismatched furniture.  A desk in one corner houses a bogbirch calendar and a collection of pinned dragonflies arranged by color.  Above the desk is an enchanted orlog with reminders instead of numbers.  A clever spider has built its web outside of the nearest window in order to capture flying insects drawn to the light within.  Leading to the front porch is a sturdy cypress door, while a whimsically carved door in the back opens onto the boardwalk.</description>
+    <position x="179" y="153" z="0" />
+    <arc exit="go" move="go cypress door" destination="102" />
+    <arc exit="go" move="go carved door" destination="104" />
+  </node>
+  <node id="104" name="Cordulia's Bayou, Swamp Garden">
+	<description>The boardwalk that surrounds the shanty loops out into the swamp, enclosing a small area within a dry viewing platform.  At its center is an ancient cypress tree whose buttressed base is ringed by knobby knees protruding from the water.  Duckweed blankets the water, breached only by the occasional turtle surfacing for air.  Nearby, two iridescent blue dragonflies flit among some water lilies, seemingly oblivious to the fishing spider waiting below.  A whimsically carved door leads back into the shanty.</description>
+    <description>Here, the boardwalk that surrounds the shanty loops into the swamp.  In the darkness, there is more to hear than see.  The songs of frogs and crickets provide a constant backdrop of sound, punctuated by occasional hoots or splashes.  A whimsically carved door leads back into the shanty.</description>
+    <position x="199" y="153" z="0" />
+    <arc exit="go" move="go carved door" destination="103" />
+  </node>
+  <node id="105" name="Cordulia's Bayou, Cypress Swamp">
+	<description>Festooned with silver moss, majestic cypress trees rise from indolent waters.  What little sunlight that manages to filter through the canopy is too feeble to penetrate the murky water.  In the distance, a low hummock is the only promise of dry land in sight.</description>
+    <description>A heavy darkness hangs over the swamp, intensifying the songs of the countless insects and frogs that dwell within.  Lurid green will-o'-wisps flicker in the distance, perhaps suggesting the presence of a hummock of dry land.</description>
+    <position x="199" y="133" z="0" />
+    <arc exit="climb" move="climb low hummock" destination="102" />
+  </node>
+  <node id="106" name="Zadraes's Hangout, Office">
+    <description>In stark contrast to the rest of the home, the office raises many questions about the mage who created it.  Elegant walls of blue-veined black marble eerily reflect the dim glow of an unseen magical light.  A scent of sea spray lingers in the air from the occasional breeze that squeezes under the oft-closed door.  Isolated in one corner is a well preserved wooden desk.  A heavy obsidian table, perfectly placed to function as a footrest, sits near a cushiony three-seated couch.</description>
+    <position x="339" y="85" z="0" />
+    <arc exit="go" move="go steel door" destination="88" />
+  </node>
+  <node id="107" name="Sleigh It!, Salesroom" note="Sleigh It" color="#FF0000">
+    <description>Dingy brownish grey walls enclose the simple shack, the gaps between the planks letting occasional gusts of wind and snow into the supposed shelter of the interior.  Laid out on a simple pine table are the wares of this austere shop.</description>
+    <position x="154" y="171" z="0" />
+    <arc exit="go" move="go pine door" destination="4" />
+  </node>
+  <node id="108" name="House of Dolls Annex, Salesroom" note="House of Dolls|Dollhouse" color="#FF0000">
+    <description>The tent walls have been painted with a variety of bright scenes designed to attract the attention of children, while colorful rugs cover the dirt floor.  A wide table and a tall display case face the center tent pole, which is lined with a series of brass hooks, supporting a collection of sturdy doll cases and satchels.  Several Halfling clerks stand ready to assist customers with any purchases, often pausing to gently guide small children away from the fragile dolls in the glass display case.</description>
+    <position x="180" y="196" z="0" />
+    <arc exit="east" move="east" destination="109" />
+    <arc exit="go" move="go tent flap" destination="5" />
+  </node>
+  <node id="109" name="House of Dolls Annex, Backroom" color="#FF0000">
+    <description>Dyed the pale blue of a summer sky, the walls in this corner of the tent are painted with puffy white clouds.  A small playpen occupies the center of the room, flanked by a pair of lace-trimmed cradles.  A large toy box filled with cuddly stuffed animals rests against the far wall.</description>
+    <position x="193" y="196" z="0" />
+    <arc exit="west" move="west" destination="108" />
+  </node>
+  <node id="110" name="Ontralwyn Gemsmiths Winter Outlet, Salesroom" note="Ontralwyn Gemsmiths Winter Outlet|Gemsmiths" color="#FF0000">
+    <description>Silken fabric draped over a lightweight frame forms the walls and roof of this small tent.  A soft carpet covers the bare ground, cushioning the steps of those within.</description>
+    <position x="137" y="251" z="0" />
+    <arc exit="go" move="go tent flap" destination="6" />
+  </node>
+  <node id="111" name="Kharsaan's Tent" note="Kharsaan's" color="#FF0000">
+    <description>Dark musty silk hangs suspended from the tents smooth center pole which is festooned with strange mystical amulets in silver and gold.  A thick layer of pungent incense smoke flows from a charcoal brazier on the ground, covering the floor like a low-lying fog and filling the air with a rich earthy scent.  A solitary lantern hanging overhead throws scant light into the gloomy interior.</description>
+    <position x="171" y="273" z="0" />
+    <arc exit="go" move="go flap" destination="25" />
+  </node>
+  <node id="112" name="Tullie's Playground, Tidal Flats">
+    <description>Seabirds call gently to each other in the sky above as waves roll into the shallow tide pool filling the room, the excess water spilling out across a sandy shoreline.  Broken crates and scattered belongings leading towards an abandoned ship are strewn down the beach in a haphazard fashion, mixed in with the broken logs and empty shells washed up by the sea.  A narrow trail leads eastwards up into the sand dunes and disappears into the seagrass.</description>
+    <position x="117" y="397" z="0" />
+    <arc exit="go" move="go stepping stones" destination="27" />
+    <arc exit="climb" move="climb narrow trail" destination="113" />
+  </node>
+  <node id="113" name="Tullie's Playground, Small Clearing">
+    <description>Waist-high seagrass breaks open at the trail's end to reveal a manicured clearing ringed in majestic copperwood trees and decorated with whimsical topiaries.  The soft sound of burbling water fills the room, originating from an opalescent rainbow sapphire fountain sitting in its center.  On the north side of the clearing, a campfire smolders in front of a small house painted in garish shades of scarlet and gold.  The house's door is thrown open to reveal a soft inviting glow coming from within.</description>
+    <position x="117" y="417" z="0" />
+    <arc exit="east" move="east" destination="115" />
+    <arc exit="go" move="go door" destination="114" />
+    <arc exit="climb" move="climb narrow trail" destination="112" />
+  </node>
+  <node id="114" name="Tullie's Playground, Parlor">
+    <description>Clusters of golden starglass orbs dangle from each corner of the small parlor, filling the room with a soft rosy glow and highlighting the swathes of amber and persimmon hued fabric draped across the ceiling.  Matching firesilk draperies hang down the walls and frame a large picture window, creating an inviting atmosphere filled with color.  Tucked in the corner is a polished mahogany tea cart flanked by a pair of mismatched armchairs.</description>
+    <position x="117" y="437" z="0" />
+    <arc exit="go" move="go door" destination="113" />
+  </node>
+  <node id="115" name="Tullie's Playground, Friendship Garden">
+    <description>Delicate unicorn lilies poke their way through the lush foliage lining the small clearing, intermixed with various other flowers ranging in hue from cheery yellows to merry pinks.  A wondrous phoenix carved out of marble sits near a storybook bridge that leads east over a small stream, its wings unfurled as if it was about to take flight.</description>
+    <position x="143" y="417" z="0" />
+    <arc exit="west" move="west" destination="113" />
+    <arc exit="go" move="go storybook bridge" destination="116" />
+  </node>
+  <node id="116" name="Winna's Homestead, Friendship Garden">
+    <description>Fruit trees gaily strung with spun rainbow ribbons and moonsilver windchimes haphazardly border a roundabout path that winds its way through this overgrown garden.  Filling the area with their riotous display, a glorious cacophony of peonies in all shades of pink, white, purple, and green grow amongst the wildflowers that dot the landscape.  A pudgy little troll made of carved stone stands watch near a storybook bridge that leads west over a small stream.</description>
+    <position x="143" y="456" z="0" />
+    <arc exit="south" move="south" destination="117" />
+    <arc exit="go" move="go storybook bridge" destination="115" />
+    <arc exit="go" move="go tiny house" destination="118" />
+    <arc exit="go" move="go quartrefoil mirror" hidden="True" destination="21" />
+  </node>
+  <node id="117" name="Winna's Homestead, Estuary">
+    <description>The freshwater stream from the north feeds into the sea, meeting and mixing into a peaceful clear blue bay.  A lengthy sandspit partially encloses the waters, protecting the area from open ocean swells to create the perfect sanctuary for birds and marine life.</description>
+    <position x="143" y="476" z="0" />
+    <arc exit="north" move="north" destination="116" />
+  </node>
+  <node id="118" name="Winna's Homestead, Tiny House Main">
+    <description>Pale gold pine boards run across the cathedral ceiling and down the length of the walls, punctuated only by casement windows on both sides of this cozy rectangular home.  The tiny house can almost be completely captured within a single glance from the door at the entryway, starting with a great room at the front and a kitchen at the back.  Shelves and shelves of books line every open wall space available and also form stairs that lead up to a loft.</description>
+    <position x="161" y="456" z="0" />
+    <arc exit="climb" move="climb stairs" destination="84" />
+    <arc exit="go" move="go white door" destination="116" />
+  </node>
+  <node id="119" name="Paklin's Dive, Manager's Office">
+    <description>A large, ornately-edged window dominates the entire northern wall of this sparse office, overlooking a smoke-filled taproom.  The remaining walls are painted a deep black and lack any adornments.  A lone, smoky lantern resides upon a rosewood table.  An opening in the floor accesses a spiral staircase that leads downward.</description>
+    <position x="267" y="477" z="0" />
+    <arc exit="climb" move="climb spiral staircase" destination="100" />
+  </node>
+  <node id="120" name="Paklin's Dive, Flooded Alleyway">
+    <description>The slick alleyway is continuously overrun by a constant sludge of water and muck.  Trash and debris flow down the dank street, making finding a stable purchase difficult.  The walls along the opposite entryway are high and show signs of low upkeep and graffiti, while this wall contains a single wooden door.</description>
+    <position x="247" y="456" z="0" />
+    <arc exit="go" move="go door" destination="100" />
+  </node>
+  <node id="121" name="Stomper's Winter Corner, Showroom" note="Stomper's" color="#FF0000">
+    <description>Other than its vivid green hue and a rather generous overhead clearance, this tent is unremarkable.  In an attempt to celebrate the season, someone has strung some tinsel across the tentpoles where it dangles overhead.  Although available to all comers, the goods for sale here clearly reflect Toggish enthusiasms.</description>
+    <position x="282" y="272" z="0" />
+    <arc exit="go" move="go tent flap" destination="7" />
+  </node>
+  <node id="122" name="Graimairo's Winter Wares, Showroom" note="Graimairo's" color="#FF0000">
+    <description>Striped red and white canvas walls enclose an austere space that has a few racks and shelves displaying merchandise.  Thick woolen carpets blanket the ground, helping to insulate the shoppers from the frozen ground.</description>
+    <position x="302" y="236" z="0" />
+    <arc exit="go" move="go tent flap" destination="8" />
+  </node>
+  <node id="123" name="Head to Snow-covered Toes, Salesroom" note="Head to Snow-covered Toes|Snow-covered Toes|Snow Toes" color="#FF0000">
+    <description>Grey and silver silk panels frame the walls of this shop.  Stands are arranged in front of a mahogany counter polished to a high sheen that is bare except for a silver tray in one corner.  Racks behind the counter are draped with different fabrics.  Clerks talk in muted voices pointing out the mannequins and then step back to wait quietly.</description>
+    <position x="394" y="195" z="0" />
+    <arc exit="go" move="go tent flap" destination="9" />
+  </node>
+  <node id="124" name="Lawlite's Home, Temperate Fork">
+    <description>Tall grasses dominate the fertile soil between a nearby stand of tall Ilithian cedar trees.  A circle of stumps surrounding a freshly smoldering fire pit offers an inviting place to stay awhile and listen.  The path eastward leads down to a valley of palm trees while the land to the west rises steeply to a rocky plateau.</description>
+    <position x="379" y="248" z="0" />
+    <arc exit="east" move="east" destination="125" />
+    <arc exit="west" move="west" destination="126" />
+    <arc exit="go" move="go swirling darkness" destination="9" />
+  </node>
+  <node id="125" name="Lawlite's Home, Sea of Palms">
+    <description>Enormous deep green fronds explode out in all directions from high atop the closely packed palm trees, swaying gently in response to a pleasant saltwater breeze.  Rapidly cycling glimmers manage to escape the confines of the natural canopy above in hypnotic plays of light.  Long, crawling vines drape from the treetops while an abundance of flowers spring forth from between lush grass below.</description>
+    <position x="399" y="248" z="0" />
+    <arc exit="southeast" move="southeast" destination="127" />
+    <arc exit="west" move="west" destination="124" />
+  </node>
+  <node id="126" name="Lawlite's Home, Boreal Plateau">
+    <description>Local wildlife scatters at the slightest noise, causing a cacophony of rustling grass and snapping twigs as they escape into the surrounding cedars.  Pyramidal arrangements of rocks, some crudely painted or carved with symbols, dot the landscape and represent clear evidence of an intelligent influence in the area.  Rising conspicuously at the northern edge of the otherwise unchanging horizon, a sharp incline leads to a glass edifice atop a prominent bluff.</description>
+    <position x="359" y="248" z="0" />
+    <arc exit="north" move="north" destination="129" />
+    <arc exit="east" move="east" destination="124" />
+  </node>
+  <node id="127" name="Lawlite's Home, Secluded Beach">
+    <description>A path emerging from the jungle palms leads directly to a weathered chair which is strategically placed to allow some water to flow beneath it as waves lap upon the shore.  Holding assorted refreshments, a gnarled driftwood log finished with a smooth top rests beside the chair that looks out across a vast expanse of crystal blue water.  A lone shelter blends naturally into the surroundings just beyond the tree line.</description>
+    <position x="419" y="268" z="0" />
+    <arc exit="south" move="south" destination="128" />
+    <arc exit="northwest" move="northwest" destination="125" />
+    <arc exit="go" move="go lone shelter" destination="133" />
+  </node>
+  <node id="128" name="Lawlite's Home, Crystal Waters">
+    <description>Pristine white sands beneath the water cast off a brilliant glare that is periodically interrupted by rocky shelves teeming with aquatic plants and tidal creatures.  A series of errant palm fronds undulates slowly along the surface, floating lazily in uniform procession as they are swept along on the gentle current.</description>
+    <position x="419" y="288" z="0" />
+    <arc exit="north" move="north" destination="127" />
+  </node>
+  <node id="129" name="Lawlite's Home, Overseer Station">
+    <description>Constructed from massive panes of perpetually unclouded enchanted glass, this large chamber offers unfettered surveillance of the heavens from a vast domed ceiling.  Natural light pours in from every angle to create an outdoor ambiance.  An ornate iroko chair rests at the head of a cluttered table in the center of the room.  Although it could accommodate several more, only two additional chairs are placed around the table.  A faint draft comes from a loosely secured silverwood door leading out to a back yard garden.</description>
+    <position x="359" y="228" z="0" />
+    <arc exit="south" move="south" destination="126" />
+    <arc exit="go" move="go silverwood door" destination="130" />
+  </node>
+  <node id="130" name="Lawlite's Home, Snow Garden">
+    <description>Thin layers of snow blanket the ground where cloudberry blossoms and moonlight gardenias vie for dominance, surrounded by religiously manicured hedges partially obscuring a mountainous ridge.  Hollow, methodical echoes resonate throughout the area in response to the steady movements of an elaborately lifesculpted bamboo fountain.  A silverwood door carved with the prominent image of a single blazing star leads back into the building, while a trail cut into the snow leads eastward to disappear into a crevice in the rock face.</description>
+    <position x="340" y="262" z="0" />
+    <arc exit="east" move="east" destination="131" />
+    <arc exit="go" move="go silverwood door" destination="129" />
+  </node>
+  <node id="131" name="Lawlite's Home, Frozen Grotto">
+    <description>The rocks form natural seating surrounding a large raised spring that casts off a haze of steam, warming the cave to a pleasant temperature compared to the snowy conditions outside to the west.  A short ramp leads into a spring.</description>
+    <position x="360" y="262" z="0" />
+    <arc exit="west" move="west" destination="130" />
+    <arc exit="climb" move="climb short ramp" destination="132" />
+  </node>
+  <node id="132" name="Lawlite's Home, Warm Spring">
+    <description>Rippling in response to every movement, a phosphorescence of unknown origin creates a soft blue glow emanating from the heart of this private oasis.  Droplets of condensation fall from the pointed tips of overhead stalactites, echoing in rhythmic intervals of light and sound.</description>
+    <position x="380" y="262" z="0" />
+    <arc exit="climb" move="climb short ramp" destination="131" />
+  </node>
+  <node id="133" name="Lawlite's Home, Ascetic's Retreat">
+    <description>Light white sand, possibly carried in on the feet of weary travelers looking for respite from the elements, peppers the salt-stained wooden flooring and is recycled back to the beach through myriad cracks and spaces between the aging boards.  Mounds of bleached burlap are placed around a low table at the center of the room beneath a single strand of rope threaded with a multitude of freshly cut geshiloira flowers hanging from the ceiling.  An open-walled design allows easy egress back to the beach to the south.</description>
+    <position x="419" y="248" z="0" />
+    <arc exit="south" move="south" destination="127" />
+    <arc exit="up" move="up" destination="134" />
+  </node>
+  <node id="134" name="Lawlite's Home, Room of Blades">
+    <description>One of the walls of this loft is covered with a vast assortment of precisely aligned katanas, each forged from a collection of rare and exotic materials.  A series of low bookshelves runs the length of the wall beneath the blades.  Light coils of smoke rise from a small stove and escape through a window that overlooks the beach.  Tucked away in one corner, a large woven reed basket holding several stones of varying size and color rests beside a patterned ceramic bowl filled with water.</description>
+    <position x="419" y="236" z="0" />
+    <arc exit="down" move="down" destination="133" />
+  </node>
+  <node id="135" name="Snow Good, Sales" note="Snow Good" color="#FF0000">
+    <description>Red and green stripes run vertically along the walls, the bright colors almost causing eyestrain with their contrast.  Cheerful clerks bustle around, humming catchy tunes under their breath as they help the customers find that perfect gift.  A wide variety of wares is spread out on the brightly painted tables that fill the shop.</description>
+    <position x="359" y="145" z="0" />
+    <arc exit="go" move="go wagon door" destination="10" />
+  </node>
+  <node id="136" name="Yyvonna's Tent, All That Glitters" note="Yyvonna's Ten" color="#FF0000">
+    <description>Customers to this tent are greeted by sparkles and shimmers from all the objects for sale.  Prisms hang cheerily from multi-colored ribbons all across the tent's ceiling.  Pedestals and shelves are arranged in a circular shape in the middle of the tent, each covered in an array of exquisite jeweled items.</description>
+    <position x="439" y="145" z="0" />
+    <arc exit="go" move="go tent flap" destination="11" />
+  </node>
+  <node id="137" name="Twilight Treasures" note="Twilight Treasures" color="#FF0000">
+    <description>Rough hewn wooden slabs form this small stall, barely allowing room for both merchandise and customers.  Ragged rugs lay on the floor in a poor attempt at decoration, their faint floral designs barely visible in the low light from candles placed around the room.</description>
+    <position x="65" y="51" z="0" />
+    <arc exit="go" move="go loose board" destination="19" />
+  </node>
+  <node id="138" name="Ophyr's Tent, Salesroom" note="Ophyr's Tent" color="#FF0000">
+    <description>Decorated in colors of the sea, ranging from soft greens and blues to storm-tossed greys, the interior of the tent is filled with a soothing aura of peace and safety.  A large scroll is tied to one wall, and several patrons scan it before looking over Ophyr's wares.</description>
+    <position x="127" y="11" z="0" />
+    <arc exit="go" move="go tent flap" destination="17" />
+  </node>
+  <node id="139" name="Flower Gazebo" color="#FF0000">
+    <description>The small gazebo's simple exterior belies the colorful extravagance that lies within.  One wall displays a skillfully painted mural of cheerful daffodils and irises growing on a grassy field.  The remaining walls are inlaid with panels of an iridescent material that looks a little like oyster shells.  Floor and wall vases hold bouquets of fresh blossoms that are lit by tiny twinkling crystals.</description>
+    <position x="365" y="31" z="0" />
+    <arc exit="go" move="go door" destination="15" />
+  </node>
+  <node id="140" name="Functional Fashions, Front Room" note="Functional Fashions" color="#FF0000">
+    <description>A decorative set of shelving is displayed in the center of the room.  Most of the interior light seems pointed in this direction, offering an excellent view of the merchandise.  You can't help but notice however, that this has left most of the corners and edges of the room in shadow.  A squat table leans against the left hand wall, while an archway to the right leads to the back room of the wagon.</description>
+    <position x="397" y="105" z="0" />
+    <arc exit="go" move="go exit door" destination="12" />
+    <arc exit="go" move="go archway" destination="144" />
+  </node>
+  <node id="141" name="Lyneya's Hideaway, By the River">
+    <description>Large tangerine trees stand along the river's edge, their boughs providing a sheltered place to rest by the water.  Yellow and green flowers grow around the base of the trees.  In the distance, a fountain sits near a stone bridge that spans the river.  A small cottage with a wide wooden door is situated just past the bridge, surrounded by some flowers that have grown incredibly high.</description>
+    <position x="337" y="49" z="0" />
+    <arc exit="go" move="go pane of glass" destination="13" />
+    <arc exit="go" move="go small cottage" destination="142" />
+  </node>
+  <node id="142" name="Lyneya's Hideaway, A Small Cottage">
+    <description>A well-worn desk piled high with notes and folders is set in front of glass windows that provide a breathtaking view of the river.  Two wooden chairs, offering a place to sit for a discussion, face a small square table.  Some shelves decorate the wall, displaying various mementos and souvenirs.</description>
+    <position x="321" y="49" z="0" />
+    <arc exit="go" move="go door" destination="141" />
+  </node>
+  <node id="143" name="Utazi Ngonga's Knit Apparel" note="Utazi Ngonga's Knit Apparel|Knit Apparel" color="#FF0000">
+    <description>Light shines through the white silk roof of the tent, casting a soft glow over the racks and tables of goods.  Festive wall hangings cover the walls of the tent, depicting the processes Utazi uses to create her wares.</description>
+    <position x="319" y="65" z="0" />
+    <arc exit="go" move="go tent flap" destination="13" />
+  </node>
+  <node id="144" name="Functional Fashions, Back Room" color="#FF0000">
+    <description>This room, while much smaller than the outer one, retains an air of coziness.  Hooks are nailed in a staggered pattern along the back wall, and crates form a makeshift display that draw the eye to the center of the room.</description>
+    <position x="416" y="105" z="0" />
+    <arc exit="go" move="go crude archway" destination="140" />
+    <arc exit="climb" move="climb ladder" destination="145" />
+  </node>
+  <node id="145" name="Functional Fashions, Storage" color="#FF0000">
+    <description>This area is small, dark and dusty.  There's not a great deal of light to showcase the items displayed upon the short table and the wall rack.</description>
+    <position x="434" y="105" z="0" />
+    <arc exit="climb" move="climb ladder" destination="144" />
+  </node>
+  <node id="146" name="That's A Wrap, Salesroom" color="#FF0000">
+    <description>Green and red stripes decorate the walls, running diagonally across the thick canvas.  The same stripes spiral around the peaked roof that soars overhead.  A few clear squares in the tent walls mimic windows, with long satin ribbons dividing them into fake glass panes while ribbons outline the window and resemble small wrapped packages.</description>
+    <position x="87" y="151" z="0" />
+    <arc exit="go" move="go tent flap" destination="3" />
+  </node>
+  <node id="147" name="Ulerith's Office Zone, Sheep Meadow" note="Ulerith">
+    <description>Fluffy white sheep graze peacefully on the other side of a plank fence, nibbling daintily at the fresh green grass beside the six horses munching a bit further out.  One buckskin mare lurks near the fenceline, keeping an eye out for any opportunities for treat begging.  Inside the fence, a small painted wagon is drawn up to a campfire ring.  An awning swings out from the wagon, shading the wagon door.  Looking at the top of the wagon, you notice a black and white spotted goat standing on top, looking like he thinks he owns the world, while three other goats stand around the wagon's wheels.</description>
+    <position x="100" y="196" z="0" />
+    <arc exit="go" move="go swirling portal" destination="3" />
+    <arc exit="go" move="go wagon door" destination="148" />
+  </node>
+  <node id="148" name="Ulerith's Office Zone, Wagon">
+    <description>Cluttered shelves ring the walls, spilling books and papers onto the floor.  A battered leather armchair sits close to an overflowing desk.  A stool, carved to resemble a lamb, serves as a footrest and a spare seat.  Buried in the corner, a small wooden table displays various snacks.</description>
+    <position x="120" y="196" z="0" />
+    <arc exit="go" move="go wagon door" destination="147" />
+  </node>
+  <node id="149" name="Ynami's Office, Mine Shaft">
+    <description>Dim light from a mining lamp hanging above accentuates distinct marks from pickaxes that can be seen on the walls and floor of this long, narrow corridor.  Discarded tools are piled next to one of the thick wooden support beams.  At the end of the corridor, a wooden ladder leads up.</description>
+    <position x="193" y="426" z="0" />
+    <arc exit="climb" move="climb wooden ladder" destination="92" />
+  </node>
+  <node id="150" name="Tis the Seasonings, A Latte Breakfast" color="#FF0000">
+    <description>Lifesculpted trees surround the room, their spindly branches radiating across the walls and ceiling in a complex network of sweeping boughs that sprout redolent blossoms amid the canopy overhead.  Melding harmoniously with the saplings are muraled walls depicting a brilliant sun cresting a distant horizon between forested hills and craggy, snow-topped mountains.  Hung amid the overhead limbs are oversized gaethzen doves that cast a warm glow over the various delectable treats on display.</description>
+    <position x="263" y="228" z="0" />
+    <arc exit="west" move="west" destination="151" />
+    <arc exit="go" move="go narrow door" destination="7" />
+  </node>
+  <node id="151" name="Tis the Seasonings, Lettuce Eat" color="#FF0000">
+    <description>Vibrantly muraled walls surround the area, the sum of which create a vivid panorama of a forested scene. Along with reliefs of a majestic stag and soaring hawks are a plethora of smaller creatures, all of them having their place amid the many lifesculpted spruce, jambu, and rockwood saplings that radiate from the walls to sprawling canopies overhead. An array of small lanterns dangle from the limbs overhead, creating an inviting hue to those shopping the wares within.</description>
+    <position x="243" y="228" z="0" />
+    <arc exit="east" move="east" destination="150" />
+    <arc exit="west" move="west" destination="152" />
+  </node>
+  <node id="152" name="Tis the Seasonings, Dinner Thyme" color="#FF0000">
+    <description>Darkly striped bocote trees surround the room, their shadowed canopies displaying tufts of sharply-pointed leaves while the branches dangle oversized gaethzen fireflies.  Brightly painted walls in rich hues of twilight-blue coalesce into shades of purple, fuchsia, and gold, the colors creating the fading eventide sky as the sun appears to dip below the forested mountains detailing the surrounding facade.</description>
+    <position x="223" y="228" z="0" />
+    <arc exit="east" move="east" destination="151" />
+  </node>
+  <node id="153" name="Irenos' Office, Library" note="Irenos">
+    <description>From floor to ceiling, the library is filled with mahogany shelving that carries countless voluminous tomes.  A single armchair rests next to a small table atop a fading rug at the center of this octagonal room, facing a door that appears to lead outward.  A window set into each wall looks out over fantastical views that appear to be in drastically different places.</description>
+    <position x="65" y="77" z="0" />
+    <arc exit="go" move="go oak door" destination="20" />
+    <arc exit="go" move="pull folio" destination="154" />
+  </node>
+  <node id="154" name="Irenos' Office, Secret Cave">
+    <description>Trickles of water slowly flow across slick mineral deposits bearing ribbons of visible lime-colored discoloration.  The brackish, dank scent of a nearby bog still permeates this area.  Lichen coats what limited floor is level here.  A cave mouth offers the only light available in the area, revealing a ladder that leads upward to the library.</description>
+    <position x="65" y="94" z="0" />
+    <arc exit="up" move="up" destination="153" />
+  </node>
+  <node id="155" name="Gates to the City, The City" note="Koror">
+    <description>To the north, the towering stone and steel palisades of the City cut a clean line against the sky stretching endlessly to the east and west, interrupted periodically by crossbow-wielding soldiers.  To the north, the massive gates are open, and tense looking customs agents scan new arrivals.  Caravans and beasts of burden transport all manner of wares, a symphony of odors and languages rising to a cacophony of stimuli.  A weathered message board stands to one side of the road.</description>
+    <position x="149" y="116" z="0" />
+    <arc exit="go" move="go massive gate" destination="156" />
+    <arc exit="go" move="go mechanical portal" destination="24" />
+  </node>
+  <node id="156" name="The City, Intersection">
+    <description>The main thoroughfare splits in several directions dividing the City districts.  A number of blockades have been established preventing traffic from moving down most roads.  A fountain sits in the center of the crossroads, its multitude of underlit monstrous forms spraying water at a central figure that resembles a friendly looking dog.  A large sinkhole appears to have opened, jagged pavement crumbling away to reveal the sewer beneath. To the northwest, the enormous glass and steel Conservatory gleams, and to the east, an open Trading Temple seems to attract most of the foot traffic.</description>
+    <position x="180" y="116" z="0" />
+    <arc exit="east" move="east" destination="157" />
+    <arc exit="go" move="go conservatory" destination="158" />
+    <arc exit="go" move="go massive gate" destination="155" />
+  </node>
+  <node id="157" name="The City, Trading Temple">
+    <description>The din of the market ebbs and flows like a tide, as countless market stalls display goods and wares for sale. Suspended from the ceiling, crisscrossing chains loft a network of idols, presiding over every coin earned and lost. The delicious smell of burnt fat wafts from somewhere nearby.</description>
+    <position x="200" y="116" z="0" />
+    <arc exit="west" move="west" destination="156" />
+  </node>
+  <node id="158" name="Conservatory, Entrance">
+    <description>Warm and humid air carries a veritable menagerie of scents, while distant bird calls can be heard echoing along the open space.  A split cobblestone walkway bends deeper into the building, both paths disappearing behind a bank of thick foliage.  Along either side of the walkway, rich mulched soil is packed with creeping vines, staghorn, maidenhair, and holly ferns.  Running water can be heard in the distance, and a welcome kiosk stands near the entryway.</description>
+    <position x="180" y="95" z="0" />
+    <arc exit="northeast" move="northeast" destination="160" />
+    <arc exit="northwest" move="northwest" destination="159" />
+    <arc exit="go" move="go some doors" destination="156" />
+  </node>
+  <node id="159" name="Conservatory, Alpine Heights">
+    <description>The air is cold and thin, and scattered pine, spruce, ash, and elm trees reach towards the vaulted ceiling high above, where steel beams frame enormous glass panes.  The walkway winds through a large meadow of flowering glory-of-the-snow, monkshood, and a rainbow of snapdragons.  A white-furred mountain goat surveys the region, standing adjacent a robed figure.  A stream burbles between lichen covered rocks, large spores bobbing gently along the banks.</description>
+    <position x="165" y="80" z="0" />
+    <arc exit="east" move="east" destination="160" />
+    <arc exit="southeast" move="southeast" destination="158" />
+  </node>
+  <node id="160" name="Conservatory, Low Desert">
+    <description>Burnt dry air wafts across enormous sand dunes and weathered boulders dragged from ancient floods, shimmering in the heat.  Occasional dust twisters sweep rich red and yellow grains of silt and dance chaotically before dissipating.  The sharp scent of chaparral, juniper and sage mark the survival of rugged flora, and scraggly yucca trees hunker low to the ground.  The walkway curves around itself, a gentle loop encircling an open shelter to provide shade.  Six-toed animal tracks crisscross over the walkway, the footprints apparently gathering around a sun-bleached warning sign.</description>
+    <position x="195" y="80" z="0" />
+    <arc exit="southwest" move="southwest" destination="158" />
+    <arc exit="west" move="west" destination="159" />
+    <arc exit="go" move="go doorway" destination="161" />
+  </node>
+  <node id="161" name="Conservatory, Koror's Office">
+    <description>More an excuse to house a bunch of plants than an office space, it is fairly obvious nothing much happens in here.  Tucked into a corner sits an old desk made of warped wood, atop which sits a positively massive sheet of curved crystal connected to a black cube.  A comfortable looking couch is nestled under an arbor of creeping ivy, and some super huge weights sit in a corner, very clearly used all the time.</description>
+    <position x="195" y="95" z="0" />
+    <arc exit="go" move="go doorway" destination="160" />
+  </node>
+  <label text="Frozen Lake">
+    <position x="75" y="91" z="0" />
+  </label>
+  <label text="Entrance">
+    <position x="32" y="223" z="0" />
+  </label>
+  <label text="Crossing TGS">
+    <position x="46" y="286" z="0" />
+  </label>
+  <label text="Plump">
+    <position x="170" y="224" z="0" />
+  </label>
+  <label text="Ice Sculpting">
+    <position x="388" y="153" z="0" />
+  </label>
+  <label text="Log Cabin">
+    <position x="274" y="-20" z="0" />
+  </label>
+  <label text="Lawlite">
+    <position x="433" y="234" z="0" />
+  </label>
+  <label text="Iocanthe">
+    <position x="375" y="299" z="0" />
+  </label>
+  <label text="Ynami">
+    <position x="198" y="432" z="0" />
+  </label>
+  <label text="Zadraes">
+    <position x="289" y="75" z="0" />
+  </label>
+  <label text="Winna">
+    <position x="153" y="463" z="0" />
+  </label>
+  <label text="Paklin">
+    <position x="276" y="465" z="0" />
+  </label>
+  <label text="Sarhanna">
+    <position x="23" y="-26" z="0" />
+  </label>
+  <label text="Cordulia">
+    <position x="210" y="136" z="0" />
+  </label>
+  <label text="Sleigh It">
+    <position x="117" y="151" z="0" />
+  </label>
+  <label text="House of Dolls">
+    <position x="160" y="176" z="0" />
+  </label>
+  <label text="Gemsmiths">
+    <position x="102" y="232" z="0" />
+  </label>
+  <label text="Kharsaan's Tent">
+    <position x="179" y="266" z="0" />
+  </label>
+  <label text="(Thieves only)">
+    <position x="177" y="280" z="0" />
+  </label>
+  <label text="Tullie">
+    <position x="77" y="412" z="0" />
+  </label>
+  <label text="Inventor's">
+    <position x="258" y="367" z="0" />
+  </label>
+  <label text="Worktable">
+    <position x="256" y="377" z="0" />
+  </label>
+  <label text="Stomper's">
+    <position x="265" y="279" z="0" />
+  </label>
+  <label text="Graimairo's">
+    <position x="276" y="240" z="0" />
+  </label>
+  <label text="Peddler's Wagon">
+    <position x="386" y="204" z="0" />
+  </label>
+  <label text="Head to Snow-covered Toes">
+    <position x="402" y="186" z="0" />
+  </label>
+  <label text="Snow Good">
+    <position x="292" y="137" z="0" />
+  </label>
+  <label text="Yyvonna's Tent">
+    <position x="450" y="136" z="0" />
+  </label>
+  <label text="Gift">
+    <position x="44" y="164" z="0" />
+  </label>
+  <label text="Wrapping">
+    <position x="28" y="176" z="0" />
+  </label>
+  <label text="Glade">
+    <position x="267" y="409" z="0" />
+  </label>
+  <label text="Shop West">
+    <position x="-20" y="56" z="0" />
+  </label>
+  <label text="Twilight Treasures">
+    <position x="70" y="36" z="0" />
+  </label>
+  <label text="(Thieves only)">
+    <position x="70" y="46" z="0" />
+  </label>
+  <label text="Ophyr's">
+    <position x="107" y="-11" z="0" />
+  </label>
+  <label text="Flower Gazebo">
+    <position x="372" y="23" z="0" />
+  </label>
+  <label text="Shop East">
+    <position x="407" y="58" z="0" />
+  </label>
+  <label text="(chisels and picks for ice sculpting)">
+    <position x="392" y="72" z="0" />
+  </label>
+  <label text="(ice skates)">
+    <position x="-20" y="76" z="0" />
+  </label>
+  <label text="Functional Fashions">
+    <position x="387" y="111" z="0" />
+  </label>
+  <label text="Lyneya">
+    <position x="275" y="40" z="0" />
+  </label>
+  <label text="Knit Apparel">
+    <position x="249" y="58" z="0" />
+  </label>
+  <label text="That's a Wrap">
+    <position x="60" y="130" z="0" />
+  </label>
+  <label text="Ulerith">
+    <position x="93" y="198" z="0" />
+  </label>
+  <label text="Tis the Seasonings">
+    <position x="180" y="206" z="0" />
+  </label>
+  <label text="Snowman">
+    <position x="170" y="233" z="0" />
+  </label>
+  <label text="Irenos">
+    <position x="72" y="67" z="0" />
+  </label>
+  <label text="Koror">
+    <position x="162" y="60" z="0" />
+  </label>
+</zone>
