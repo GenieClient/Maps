@@ -477,6 +477,7 @@
     <arc exit="northeast" move="northeast" destination="88" />
     <arc exit="southeast" move="southeast" destination="62" />
     <arc exit="northwest" move="northwest" destination="60" />
+    <arc exit="go" move="go little shop" destination="801" />
   </node>
   <node id="62" name="Shard, Crystal Lane">
     <description>Decay has clawed away at many of the old buildings to the south, the ravaged remnants of one war of fire and destruction, and another of time and neglect.  Surprisingly, the buildings to the north have all been either refurbished or rebuilt entirely.  The line of construction here is more than just conjecture, it can be traced with the eye right down to the palpable discrepancy in the street's state of repair from one side to the next.</description>
@@ -5193,6 +5194,17 @@ You also see a chair and a table with a pitcher of iced strawberry lemonade on i
     <position x="400" y="860" z="0" />
     <arc exit="west" move="west" destination="658" />
   </node>
+  <node id="801" name="Crimson Crane Couriers, Printing Room" color="#FF0000">
+    <description>Precious little floor space exists in this cramped but well-kept showroom.  Heavily laden supply shelves line each wall, and various presses, cutters, and paper milling machines dominate the crowded area behind the service counter, where an apron-clad Elothean clerk waits to consult with potential customers.</description>
+    <position x="492" y="560" z="0" />
+    <arc exit="out" move="out" destination="61" />
+    <arc exit="go" move="go curtained doorway" destination="802" />
+  </node>
+  <node id="802" name="Crimson Crane Couriers, Special Collections" color="#FF0000">
+    <description>Appointed with comfortable brocade sofas and highly polished display cabinetry, the print shop's rear salon serves as quiet consultation space.  Two large ink-and-watercolor paintings complement the fine furnishings from prominent positions on the wainscoted wall that faces the doorway.</description>
+    <position x="504" y="560" z="0" />
+    <arc exit="out" move="out" destination="801" />
+  </node>
   <label text="Curio Tent">
     <position x="252" y="181" z="0" />
   </label>
@@ -5326,7 +5338,7 @@ You also see a chair and a table with a pitcher of iced strawberry lemonade on i
     <position x="619" y="806" z="0" />
   </label>
   <label text="Strength">
-    <position x="539" y="559" z="0" />
+    <position x="564" y="571" z="0" />
   </label>
   <label text="Candy">
     <position x="464" y="500" z="0" />
@@ -5516,5 +5528,11 @@ You also see a chair and a table with a pitcher of iced strawberry lemonade on i
   </label>
   <label text="Tables">
     <position x="485" y="1070" z="0" />
+  </label>
+  <label text="Crimson Crane">
+    <position x="508" y="541" z="0" />
+  </label>
+  <label text="Couriers">
+    <position x="508" y="551" z="0" />
   </label>
 </zone>
