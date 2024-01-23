@@ -704,7 +704,7 @@
     <position x="660" y="460" z="0" />
     <arc exit="east" move="east" destination="91" />
     <arc exit="west" move="west" destination="89" />
-    <arc exit="go" move="go carousel" destination="137" />
+    <arc exit="go" move="go carousel" destination="803" />
   </node>
   <node id="91" name="Shard, Sunstone Street">
     <description>A small shop adorned with hanging baskets outside its door is the only remarkable landmark on the street.  A cold breeze, sweeping up off the lake, clamps chilly fingers around everything with a viselike grip that is only shaken with plenty of coats and blankets.</description>
@@ -991,27 +991,27 @@
   </node>
   <node id="137" name="Shard, The Carousel" note="Carousel|Vault" color="#00FF00">
     <description>Exotic tapestries of every possible description drape the wall ringing the Carousel's core.  A circular roof supports a vast framework of iron and timbers rising to the building's apex.  Countless gears, pulleys and weights within the structure form the strikingly complex and beautiful mechanism which drives the Carousel.</description>
-    <position x="680" y="420" z="0" />
-    <arc exit="out" move="out" destination="90" />
+    <position x="675" y="415" z="0" />
+    <arc exit="out" move="out" destination="803" />
     <arc exit="go" move="go registration desk" destination="138" />
     <arc exit="go" move="go arch" destination="139" />
     <arc exit="south" move="south" destination="784" />
   </node>
   <node id="138" name="Shard, Carousel Desk" note="Lost and Found" color="#00FF00">
     <description>A long wooden desk spans the width of the western wall.  Brass lanterns hang from the ceiling, and the floor behind the desk is covered in spotless red tile.</description>
-    <position x="670" y="420" z="0" />
+    <position x="665" y="415" z="0" />
     <arc exit="out" move="out" destination="137" />
     <arc exit="go" move="go registrar's office" destination="782" />
   </node>
   <node id="139" name="Shard, Carousel Booth">
     <description>A polished steel lever protrudes from the eastern wall of the small, ebony-panelled room, flanking a steel door to the north.</description>
-    <position x="680" y="410" z="0" />
+    <position x="675" y="405" z="0" />
     <arc exit="go" move="go door" destination="140" />
     <arc exit="go" move="go arch" destination="137" />
   </node>
   <node id="140" name="Shard, Carousel Chamber">
     <description>A sturdy vault, set in the back wall, stands ready for your use.  The floor is covered by a soft thick carpet of deep red, and the walls are paneled in polished golden pine.  Looking at the back wall, you notice a tiny gap between it and the rest of the room.</description>
-    <position x="680" y="400" z="0" />
+    <position x="675" y="395" z="0" />
     <arc exit="go" move="go door" destination="139" />
   </node>
   <node id="141" name="Meek's Stitchery" note="Meek's Stitchery|Stitchery" color="#FF0000">
@@ -5111,18 +5111,18 @@ You also see a chair and a table with a pitcher of iced strawberry lemonade on i
   </node>
   <node id="782" name="Shard, Item Registration Office">
     <description>Different paintings depicting the Great Tower in different styles adorn almost every inch of open wall space.  Rows of large metal cabinets line the wall behind a high counter that separates the clerks from the general public.  The spotless red tile floor shines as if it had been polished just moments ago.</description>
-    <position x="660" y="420" z="0" />
+    <position x="655" y="415" z="0" />
     <arc exit="out" move="out" destination="138" />
     <arc exit="go" move="go simple curtain" destination="783" />
   </node>
   <node id="783" name="Shard, Registrar's Office" note="Item Registration Office|Registration Office" color="#00FF00">
     <description>A large metal desk sits in the exact center of the office.  Lined up around the walls are more large metal cabinets, half of them open with hundreds of papers hanging out as if in middle of processing.</description>
-    <position x="660" y="410" z="0" />
+    <position x="655" y="405" z="0" />
     <arc exit="go" move="go simple curtain" destination="782" />
   </node>
   <node id="784" name="Shard, Carousel Family Services" color="#00FF00">
     <description>A series of guarded arches line the southern wall.  The complicated framework of iron and timbers spans across the ceiling.  Countless gears, pulleys and weights form the strikingly complex mechanism which drives the Carousel.</description>
-    <position x="680" y="430" z="0" />
+    <position x="675" y="425" z="0" />
     <arc exit="north" move="north" destination="137" />
   </node>
   <node id="785" name="Serene Surfaces" note="Serene Surfaces" color="#FF0000">
@@ -5204,6 +5204,18 @@ You also see a chair and a table with a pitcher of iced strawberry lemonade on i
     <description>Appointed with comfortable brocade sofas and highly polished display cabinetry, the print shop's rear salon serves as quiet consultation space.  Two large ink-and-watercolor paintings complement the fine furnishings from prominent positions on the wainscoted wall that faces the doorway.</description>
     <position x="504" y="560" z="0" />
     <arc exit="out" move="out" destination="801" />
+  </node>
+  <node id="803" name="Shard, Carousel Square">
+    <description>A massive conical building rises from the cobbles at the square's center, its snowy alabaster surfaces gleaming brilliantly against the drab backdrop of the surrounding stone and wood.  A bejeweled mosaic set above an oval doorway reads "THE CAROUSEL."</description>
+    <position x="665" y="425" z="0" />
+    <arc exit="out" move="out" destination="90" />
+    <arc exit="south" move="south" destination="804" />
+    <arc exit="go" move="go oval doorway" destination="137" />
+  </node>
+  <node id="804" name="Shard, Rundmolen Post Office" note="mail|post office" color="#00FF00">
+    <description>Tucked away in a corner of the square is a long alabaster counter set into the conical carousel beneath a colorful striped awning.  Wide yellow stripes contrast with deep crimson alternating bands across the sturdy canvas while bright blue tassels hang from the corners.  Vast, countless rows of differently sized shelves are behind the counter, and complex Dwarven mechanisms can be heard as they rearrange the package-covered storage.  Clerks shuffle endlessly back and forth between the counters and shelving as they assist patrons with their packaging and mailing needs.</description>
+    <position x="665" y="435" z="0" />
+    <arc exit="north" move="north" destination="803" />
   </node>
   <label text="Curio Tent">
     <position x="252" y="181" z="0" />
@@ -5347,7 +5359,7 @@ You also see a chair and a table with a pitcher of iced strawberry lemonade on i
     <position x="569" y="412" z="0" />
   </label>
   <label text="Vaults">
-    <position x="655" y="380" z="0" />
+    <position x="650" y="375" z="0" />
   </label>
   <label text="Museum">
     <position x="425" y="594" z="0" />
@@ -5534,5 +5546,8 @@ You also see a chair and a table with a pitcher of iced strawberry lemonade on i
   </label>
   <label text="Couriers">
     <position x="508" y="551" z="0" />
+  </label>
+  <label text="Post Office">
+    <position x="670" y="430" z="0" />
   </label>
 </zone>
