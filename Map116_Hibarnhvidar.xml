@@ -1966,14 +1966,15 @@
     <arc exit="go" move="go curtained archway" destination="284" />
   </node>
   <node id="286" name="Hibarnhvidar, Carousel Central">
-    <description>In the center of this small cavern, a circular staircase leads further into the mountain below.  A small plaque bearing the words Rundmolen Carousel hangs above the staircase and points into the darkness.  Shouts, whistles and clicks constantly emerge from the hole in the ground -- occasionally, the entire cavern rumbles as a vault is maneuvered into place.</description>
+    <description>In the center of this small cavern, a circular staircase leads further into the mountain below.  A small plaque bearing the words "Rundmolen Carousel" hangs above the staircase and points into the darkness.  Shouts, whistles and clicks constantly emerge from the hole in the ground -- occasionally, the entire cavern rumbles as a vault is maneuvered into place.</description>
     <position x="80" y="130" z="0" />
+    <arc exit="east" move="east" destination="491" />
     <arc exit="go" move="go ornate door" destination="102" />
     <arc exit="climb" move="climb circular staircase" destination="287" />
   </node>
   <node id="287" name="Hibarnhvidar, The Carousel" note="Carousel|Vault">
     <description>Being so far underground, the only light this cavern receives comes from thirty gaethzen spheres set into the ceiling of the room.  The spiral staircase from the main cavern enters through a hole in the ceiling and deposits its travelers in the center of the room.  Frequent rumblings betray the presence of the Carousel machinery behind the solid stone walls.</description>
-    <position x="100" y="130" z="0" />
+    <position x="120" y="150" z="0" />
     <arc exit="out" move="out" destination="286" />
     <arc exit="climb" move="climb circular staircase" destination="286" />
     <arc exit="go" move="go registration desk" destination="288" />
@@ -1982,13 +1983,13 @@
   </node>
   <node id="288" name="Hibarnhvidar, Carousel Desk" note="Lost and Found" color="#00FF00">
     <description>The distinct rumbling of Rundmolen machinery pulses behind the walls in this tiny alcove.  A tall Dwarven clerk sits behind the small stone pillar that serves as his desk and the repository of all money collected by the company.</description>
-    <position x="120" y="150" z="0" />
+    <position x="140" y="170" z="0" />
     <arc exit="out" move="out" destination="287" />
     <arc exit="go" move="go registrar's office" destination="484" />
   </node>
   <node id="289" name="Hibarnhvidar, Carousel Booth">
     <description>A polished steel lever protrudes from the eastern wall of the small, granite-surfaced room, flanking a steel door to the north.</description>
-    <position x="120" y="130" z="0" />
+    <position x="140" y="150" z="0" />
     <arc exit="go" move="go arch" destination="287" />
     <arc exit="go" move="pull lever;go door" destination="290" />
   </node>
@@ -1997,7 +1998,7 @@
     <description>A sturdy vault, set in the back wall, stands ready for your use.  A soft thick carpet of deep red covers the floor, and the walls are streaked with traces of alexandrite.  Looking at the back wall, you notice a tiny gap between it and the rest of the room.  Against the wall to the left of the door sits an elegant urn on an almhara pedestal.</description>
     <description>A sturdy vault, set in the back wall, stands ready for your use.  A soft thick carpet of deep red covers the floor, and the walls are streaked with traces of alexandrite.  Looking at the back wall, you notice a tiny gap between it and the rest of the room.  Resting on a tsavorite stand is a tiny porcelain figure.</description>
     <description>A sturdy vault, set in the back wall, stands ready for your use.  A soft thick carpet of deep red covers the floor, and the walls are streaked with traces of alexandrite.  Looking at the back wall, you notice a tiny gap between it and the rest of the room.  On the wall to the left of the door hangs an oil painting.</description>
-    <position x="140" y="130" z="0" />
+    <position x="160" y="150" z="0" />
     <arc exit="go" move="close vault;go door" destination="289" />
   </node>
   <node id="291" name="The Fashion Firmament" note="Fashion Firmament|Hilda|Clothing" color="#FF0000">
@@ -3206,7 +3207,6 @@
     <arc exit="south" move="south" destination="480" />
     <arc exit="west" move="west" destination="481" />
     <arc exit="northwest" move="northwest" destination="482" />
-    <arc exit="northwest" move="northwest" destination="482" />
   </node>
   <node id="478" name="Hibarnhvidar Engineering Society, Workspace">
     <description>Roughly in the center of the room stands a work bench covered with tools.  Gouges and scratches mar the thick planks of the worktable's surface.  Wood shavings and stone bits dot the polished stone floor.</description>
@@ -3235,18 +3235,18 @@
   </node>
   <node id="483" name="Hibarnhvidar, Carousel Family Services" note="Family Services|family vaults">
     <description>A series of guarded arches line the southern wall.  The complicated framework of iron and timbers spans across the ceiling.  Countless gears, pulleys and weights form the strikingly complex mechanism which drives the Carousel.</description>
-    <position x="100" y="150" z="0" />
+    <position x="120" y="170" z="0" />
     <arc exit="north" move="north" destination="287" />
   </node>
   <node id="484" name="Hibarnhvidar, Item Registration Office">
     <description>A few gaethzen spheres on the ceiling provide a dim light to the underground office.  Damp walls surround the office which has a few cabinets and a low counter with a content looking Dwarven clerk behind it.</description>
-    <position x="140" y="150" z="0" />
+    <position x="160" y="170" z="0" />
     <arc exit="out" move="out" />
     <arc exit="go" move="go simple curtain" destination="485" />
   </node>
   <node id="485" name="Hibarnhvidar, Registrar's Office" note="Item Registration Office|Registrar's Office" color="#00FF00">
     <description>An even smaller portion of the cave is portioned off for the registrar.  A single gaethzen sphere is set into a carved stone desk providing just enough light to get the necessary paperwork accomplished.  A few cabinets can be made out, hiding amongst the shadowy walls.</description>
-    <position x="160" y="150" z="0" />
+    <position x="180" y="170" z="0" />
     <arc exit="go" move="go simple curtain" destination="484" />
   </node>
   <node id="486" name="Hibarnhvidar Outfitting Society, A Private Outfitting Room" note="Private Outfitting">
@@ -3273,6 +3273,11 @@
     <description>Pieced together by a seemingly blind worker, the walls are covered with scraps of rugs, blankets, and carpets in a kaleidoscope of colors.  A burly, light pink feldspar table is stashed in a corner of the room, providing plenty of room to work.</description>
     <position x="85" y="260" z="1" />
     <arc exit="go" move="go recessed alcove" destination="430" />
+  </node>
+  <node id="491" name="Hibarnhvidar, Rundmolen Post Office" note="post office|mail" color="#00FF00">
+    <description>Tucked away in a corner of the cavern is a long stone counter set out from the wall.  A colorful mural covers the wall behind the counter, depicting brawny dwarves at work at a variety of tasks.  Vast, countless rows of differently sized shelves are behind the counter, and complex Dwarven mechanisms can be heard as they rearrange the package-covered storage.  Clerks shuffle endlessly back and forth between the counters and shelving as they assist patrons with their packaging and mailing needs.</description>
+    <position x="100" y="130" z="0" />
+    <arc exit="west" move="west" destination="286" />
   </node>
   <label text="Inner Hibarnhvidar">
     <position x="40" y="210" z="0" />
@@ -3335,7 +3340,7 @@
     <position x="63" y="183" z="0" />
   </label>
   <label text="Vaults">
-    <position x="160" y="160" z="0" />
+    <position x="190" y="160" z="0" />
   </label>
   <label text="Thirteenth Passage">
     <position x="143" y="92" z="0" />
@@ -3413,7 +3418,7 @@
     <position x="59" y="110" z="0" />
   </label>
   <label text="Clothing">
-    <position x="58" y="156" z="0" />
+    <position x="50" y="150" z="0" />
   </label>
   <label text="Lamps">
     <position x="-150" y="50" z="0" />
@@ -3447,5 +3452,8 @@
   </label>
   <label text="Engineering">
     <position x="-10" y="210" z="1" />
+  </label>
+  <label text="Post Office">
+    <position x="104" y="120" z="0" />
   </label>
 </zone>
