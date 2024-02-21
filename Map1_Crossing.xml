@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <zone name="The Crossing" id="1">
   <node id="1" name="The Crossing, Magen Road">
     <description>The whitewashed building before you is stark and functional.  A sign mounted on it is hand painted and carved with cunning skill.  White-robed figures and all manner of injured and infirm people stream in and out of a double door, leaving thin trails of blood on the spotless pavement.</description>
@@ -220,6 +221,8 @@
     <arc exit="south" move="south" destination="28" />
     <arc exit="west" move="west" destination="30" />
     <arc exit="go" move="go small building" destination="468" />
+    <arc exit="go" move="go gate" destination="1029" />
+    <arc exit="go" move="go bui" destination="468" />
   </node>
   <node id="30" name="The Crossing, Clanthew Boulevard">
     <description>The meandering course of the River Oxenwaithe lies dead ahead.  Wooden carts, powered by all manner of two- and four-legged beasts, rumble past, headed west towards the broad, well-worn planks of the Oxenwaithe Bridge and east into the heart of the Crossing.  Groups of armed adventurers, mystics, merchants and rogues weave in and out of the wheeled and hoofed mobs.</description>
@@ -1384,13 +1387,13 @@
   </node>
   <node id="195" name="Asemath Academy, Entrance" note="Asemath Academy">
     <description>The magnificent and renowned grey granite edifice of the Asemath Academy stands here before you.  Solid and impressive, the buildings surround a wooded courtyard.  Though severe in decor, there is no denying the high Elvish heritage in the design and execution of this learned establishment.  Famed far and wide for its scholarship and teaching, many come here but few are allowed to enroll in its varied courses.</description>
-    <position x="50" y="-292" z="0" />
+    <position x="47" y="-286" z="0" />
     <arc exit="out" move="out" destination="234" />
     <arc exit="go" move="go memorial arch" destination="196" />
   </node>
   <node id="196" name="Asemath Academy, Porte-cochere">
     <description>A flagstone pavement and a covered porte-cochere lead into the grounds of the Academy.  West of you the campus opens out into a series of lovely wooded gardens with the buildings arranged in a quadrangle all around it.  Students and professors stroll about, engaged in deep discussions or forming small study groups under the trees.  To either side of the entrance are the administration offices and the admissions center.</description>
-    <position x="40" y="-292" z="0" />
+    <position x="37" y="-286" z="0" />
     <arc exit="north" move="north" destination="197" />
     <arc exit="south" move="south" destination="198" />
     <arc exit="west" move="west" destination="199" />
@@ -1399,17 +1402,17 @@
   </node>
   <node id="197" name="Asemath Academy, Administration Office">
     <description>The administration office is staffed mostly with students working off their rather steep tuition fees.  Rows of plain desks covered with stacks of papers and untidy piles of scrolls are crammed in everywhere.  The elegant stonework of the walls still delights the eye, but the necessity of paperwork and the burden of success make the atmosphere a trifle less than stimulating here.  A senior clerk perches on a high stool with a desk to match and oversees the chaos.</description>
-    <position x="40" y="-302" z="0" />
+    <position x="37" y="-296" z="0" />
     <arc exit="south" move="south" destination="196" />
   </node>
   <node id="198" name="Asemath Academy, Admissions Center" note="Admissions Center">
     <description>This large room is busy at all hours of the day with hopeful people wishing to be admitted to this prestigious academy.  Harried clerks hand out application packets and explain rules and procedures to applicants.  Promising students are interviewed quietly at one side of the room and those who pass will be brought back for testing and more interviews.  The air is full of the smell of fresh parchment and nervous people.</description>
-    <position x="40" y="-282" z="0" />
+    <position x="37" y="-276" z="0" />
     <arc exit="north" move="north" destination="196" />
   </node>
   <node id="199" name="Asemath Academy, Eastern Walkway" note="Ozursus">
     <description>A walkway paved with crushed stone in a soft blue-green hue runs between tastefully arranged copses of trees in a large central open area.  The trees show signs of Elvish life-sculpting and form harmonious groupings that display their dense foliage to perfect advantage.  Here and there, groups of flowering bushes or plantings of bright blossoms lend a serene touch of color to the scene.  Groups of students wander about or study quietly.</description>
-    <position x="30" y="-292" z="0" />
+    <position x="27" y="-286" z="0" />
     <arc exit="north" move="north" destination="207" />
     <arc exit="east" move="east" destination="196" />
     <arc exit="south" move="south" destination="206" />
@@ -1418,7 +1421,7 @@
   <node id="200" name="Asemath Academy, Central Fountain">
     <description>Here in the center, at the very heart of the Academy, a fountain stands.  Carved with cunning and skill, it represents Knowledge pouring out her wisdom to a thirsty world and the academy's founder stooping to drink deeply of her gift.  Coins glitter in the pool, tossed there by superstitious students hoping for luck on an exam.  Walkways lead from here in several directions to other parts of the institution.</description>
     <description>A fountain gurgles cheerfully somewhere nearby and the scent of plants and flowers fills the night air.  You stand in a large open space but you can sense the presence of buildings nearby.</description>
-    <position x="10" y="-292" z="0" />
+    <position x="7" y="-286" z="0" />
     <arc exit="north" move="north" destination="210" />
     <arc exit="east" move="east" destination="199" />
     <arc exit="south" move="south" destination="214" />
@@ -1427,13 +1430,13 @@
   <node id="201" name="Asemath Academy, Western Walkway">
     <description>This walkway, shaded by trees, leads back to the kitchen and dining areas for the students and staff.  Believing that a full stomach aids the mind in learning, the founder provided that every student shall be well fed.  The cooks take this dictum to heart and there is always the smell of fresh pies or a good roast drifting on the breeze.  Several students sit nearby, working their way through their lessons and a large pile of fresh lemon cream tarts.</description>
     <description>Trees block even the starlight and you see almost nothing.  Somewhere, someone is baking something wonderful to judge by the scent.</description>
-    <position x="0" y="-292" z="0" />
+    <position x="-3" y="-286" z="0" />
     <arc exit="east" move="east" destination="200" />
     <arc exit="west" move="west" destination="202" />
   </node>
   <node id="202" name="Asemath Academy, Western Hallway">
     <description>This hallway divides the refectories from the kitchens.  There is a bustling of servants as they clear out the remains of the last meal and prepare for the next.  Students everywhere are perpetually hungry it seems. </description>
-    <position x="-10" y="-292" z="0" />
+    <position x="-13" y="-286" z="0" />
     <arc exit="north" move="north" destination="217" />
     <arc exit="east" move="east" destination="201" />
     <arc exit="south" move="south" destination="216" />
@@ -1441,48 +1444,48 @@
   </node>
   <node id="203" name="Asemath Academy, Western Hallway">
     <description>The hallway ends here with the school kitchen's pantries and staff dining area.</description>
-    <position x="-20" y="-292" z="0" />
+    <position x="-23" y="-286" z="0" />
     <arc exit="north" move="north" destination="204" />
     <arc exit="east" move="east" destination="202" />
     <arc exit="south" move="south" destination="205" />
   </node>
   <node id="204" name="Asemath Academy, Pantries">
     <description>This room is crowded with barrels and crates and sacks of food of all kinds.  Bins full of flour, ice-boxes with cold meats and perishables and all the other things needed to keep a large assembly of very hungry people fed are in here.</description>
-    <position x="-20" y="-302" z="0" />
+    <position x="-23" y="-296" z="0" />
     <arc exit="south" move="south" destination="203" />
   </node>
   <node id="205" name="Asemath Academy, Staff Refectory">
     <description>This compact and elegant room serves the teaching staff as their dining room.  Small tables seat either two or four and softly padded chairs covered with fine leather are placed at each.  Crystal globes hold candles on each table that shed a soft golden light.  Crisp white cloths cover the tables.  The walls are painted with scenes of legend with themes of education and learning predominating.</description>
-    <position x="-20" y="-282" z="0" />
+    <position x="-23" y="-276" z="0" />
     <arc exit="north" move="north" destination="203" />
   </node>
   <node id="206" name="Asemath Academy, Path of Wisdom">
     <description>The path here goes from the library entrance out to the quadrangle.  Low bushes line the walk and the path is smooth and well-paved.  The doors of the library gleam almost mystically here in the shaded light.</description>
-    <position x="30" y="-282" z="0" />
+    <position x="27" y="-276" z="0" />
     <arc exit="north" move="north" destination="199" />
     <arc exit="go" move="go polished doors" destination="759" />
   </node>
   <node id="207" name="Asemath Academy, Freshman Walk">
     <description>This path leads to the classroom used by the beginning students and has come by tradition to be called 'Freshman Walk'.  Scrupulously avoided by upperclassmen, it is an item of humor if a senior student has to go this way.  The path itself is laid out in soft green paving stones and the border is lined with benches for outdoor studying.</description>
-    <position x="30" y="-312" z="0" />
+    <position x="27" y="-306" z="0" />
     <arc exit="north" move="north" destination="208" />
     <arc exit="east" move="east" destination="209" />
     <arc exit="south" move="south" destination="199" />
   </node>
   <node id="208" name="Asemath Academy, Freshman Classroom" note="Freshman Classroom">
     <description>Long tables in neat rows face a lectern made of ebony wood.  Straight-backed chairs with no padding sit closely together at the tables.  The walls are a dusty rose colored marble and high windows allow a pure light in for clarity of seeing.  A large sign hangs on the wall above the lectern.</description>
-    <position x="30" y="-322" z="0" />
+    <position x="27" y="-316" z="0" />
     <arc exit="out" move="out" destination="207" />
   </node>
   <node id="209" name="Asemath Academy, Freshman Library" note="Freshman Library">
     <description>Books lie piled, sometimes waist high, in irregular stacks along the walls, in corners, and on a few cluttered desks.  Multicolored pillows scattered across the floor provide students with a comfortable seat and add to the tiny library's casual atmosphere.  A shelf along the wall houses dozens of volumes, the works of the Crossing's own talented writers.</description>
-    <position x="40" y="-312" z="0" />
+    <position x="37" y="-306" z="0" />
     <arc exit="west" move="west" destination="207" />
   </node>
   <node id="210" name="Asemath Academy, Northern Walkway">
     <description>This walkway leads to some of the classrooms of the Academy.  Lined with sweet-scented flowers, it is a pleasant place to be almost any day of the year.</description>
     <description>You stand on some sort of stone walkway.  There are pleasantly scented flowers nearby and in the distance, you can hear a fountain splashing.</description>
-    <position x="10" y="-302" z="0" />
+    <position x="7" y="-296" z="0" />
     <arc exit="north" move="north" destination="212" />
     <arc exit="northeast" move="northeast" destination="213" />
     <arc exit="south" move="south" destination="200" />
@@ -1490,41 +1493,41 @@
   </node>
   <node id="211" name="Asemath Academy, Auditorium" note="Auditorium">
     <description>This hall, used for lectures and other presentations, can hold the entire student body and faculty of the Academy.  Rows of benches for the students and chairs for the professors are arranged before a low platform for the speakers or guests.  The room is done in polished rosewood walls enlivened with woven hangings in abstract patterns.  Brass and crystal lightglobes hold candles for evening presentations.</description>
-    <position x="0" y="-312" z="0" />
+    <position x="-3" y="-306" z="0" />
     <arc exit="out" move="out" destination="210" />
   </node>
   <node id="212" name="Asemath Academy, Classroom" note="Wisdom" color="#FFFF00">
     <description>This large classroom is used at various times for general instruction and the more specialized classes.  Worktables with chairs sit in rows facing a larger table and lectern.  The walls are painted a cheerful powder blue with cream accents, and the tables are painted a soft grey.  In one corner, a group of anatomical skeletons are grouped for comparison.  The students have nicknamed them The Board of Regents.</description>
-    <position x="10" y="-312" z="0" />
+    <position x="7" y="-306" z="0" />
     <arc exit="out" move="out" destination="210" />
   </node>
   <node id="213" name="Asemath Academy, Classroom" note="Intelligence" color="#FFFF00">
     <description>This classroom is done in tones of golden yellow and a gentle aqua.  Brightly varnished desks and chairs form neat rows facing the instructor's desk.  A large map of the world is hung from the front wall and a smaller map of some region unknown to you hangs next to it.</description>
-    <position x="20" y="-312" z="0" />
+    <position x="17" y="-306" z="0" />
     <arc exit="out" move="out" destination="210" />
   </node>
   <node id="214" name="Asemath Academy, Southern Walkway">
     <description>This path leads to the Performance and Arts wing.  Lined with low shrubs, alternating with small statues showing actors and other performers, the path is set with crushed white stone.  Many performances are held here to which the public is welcome and the art gallery is often open to the public for a small fee.</description>
     <description>Dim humanoid shapes seem to rise up on both sides.  You tense for attack but realize with a start that they are but statues arrayed along a walkway.</description>
-    <position x="10" y="-282" z="0" />
+    <position x="7" y="-276" z="0" />
     <arc exit="north" move="north" destination="200" />
     <arc exit="south" move="south" destination="215" />
   </node>
   <node id="215" name="Asemath Academy, Artists' Hallway">
     <description>This hallway is wide and high-ceilinged.  Often crowded before a performance, it is heavily carpeted, with upholstered benches scattered about.</description>
-    <position x="10" y="-272" z="0" />
+    <position x="7" y="-266" z="0" />
     <arc exit="north" move="north" destination="214" />
     <arc exit="go" move="go stone door" destination="760" />
     <arc exit="go" move="go wooden door" destination="761" />
   </node>
   <node id="216" name="Asemath Academy, Student Dining Hall">
     <description>This is the dining room for the students.  Plain trestle tables and long benches are racked up against the wall so the staff can scrub the flagstone flooring.  At meal times this place gets very crowded and noisy as the students relax from their studies and fill themselves with the fine food served here.  The walls are an off-white, scrubbed till it gleams and the tables are made from a light-colored wood, bleached almost white as part of their cleaning.</description>
-    <position x="-10" y="-282" z="0" />
+    <position x="-13" y="-276" z="0" />
     <arc exit="out" move="out" destination="202" />
   </node>
   <node id="217" name="Asemath Academy, Kitchens">
     <description>These are the kitchens of the Academy.  Full of hustle and bustle most days, the cooks and scullery maids work long hours keeping the students and staff well-fed as the rules of the Founder dictate.  There is a large fireplace with several roasting spits and a huge cauldron for making soups and stews.  Heavy tables hold trays of fresh fruits and vegetables.  Racks of trays stand ready to hold their loads of breakfasts, lunches and dinners.</description>
-    <position x="-10" y="-302" z="0" />
+    <position x="-13" y="-296" z="0" />
     <arc exit="south" move="south" destination="202" />
   </node>
   <node id="218" name="Ragge's Locksmithing, Salesroom" note="Ragge's Locksmithing|Locksmith" color="#FF0000">
@@ -3162,49 +3165,49 @@
   </node>
   <node id="468" name="Bards' Guild, Commons" note="Bard|GL Bard|Silvyrfrost|RS Bard" color="#FF8000">
     <description>Always a flurry of activity, the guild commons is a place where bards young and old meet to trade tips, tales, and motifs.  Thick, ruby-colored carpeting lines the floor while gold-laced red velvet curtains decorate the walls.  Padded benches surround the area, a few already in use by travelling musicians resting their tired legs.</description>
-    <position x="-70" y="-398" z="0" />
+    <position x="-64" y="-346" z="0" />
     <arc exit="east" move="east" destination="469" />
     <arc exit="out" move="out" hidden="True" destination="29" />
     <arc exit="go" move="go mirrorlike portal" destination="470" />
   </node>
   <node id="469" name="Bards' Guild, Repair Room">
     <description>Shelves upon shelves of half-built mandolins, violins, lutes, flutes, and a slew of other unidentifiable parts cover the walls.  The scent of rosin and glue wafts in the air.  In the corner, a long sturdy workbench holds a plethora of specialized tools to aid in the crafting of the finest musical instruments.</description>
-    <position x="-60" y="-398" z="0" />
+    <position x="-54" y="-346" z="0" />
     <arc exit="west" move="west" destination="468" />
   </node>
   <node id="470" name="Bards' Guild, Performance Hall">
     <description>Plush seats lined up in rows face a hardwood stage raised four feet from the ground.  Red velvet curtains draped from the high vaulted ceiling cover the walls.  The acoustics create a warm echo which lends an air of nobility to the place.  A podium in the corner hints that the hall must be used for formal meetings as well as performances.</description>
-    <position x="-80" y="-398" z="0" />
+    <position x="-74" y="-346" z="0" />
     <arc exit="east" move="east" destination="468" />
     <arc exit="go" move="go draped archway" destination="471" />
   </node>
   <node id="471" name="Bards' Guild, Backstage Stairwell">
     <description>The base of a steep sweeping staircase faces the archway that leads to the performance hall.  However the railing that rises with the stairs appears to be rather shaky, despite the polished surface imposed by years of rapid descents by Bards.</description>
-    <position x="-90" y="-398" z="0" />
+    <position x="-84" y="-346" z="0" />
     <arc exit="east" move="east" destination="470" />
     <arc exit="go" move="go door" destination="472" />
     <arc exit="climb" move="climb sweeping staircase" destination="473" />
   </node>
   <node id="472" name="Bards' Guild, Prop Room">
     <description>Set apart and removed from the guild proper by a sturdy door, this room serves as a waystation for traveling Bards to find a quiet place to put down for the night.  Several cots are set up around the room.</description>
-    <position x="-100" y="-398" z="0" />
+    <position x="-94" y="-346" z="0" />
     <arc exit="go" move="go narrow door" destination="471" />
   </node>
   <node id="473" name="Bards' Guild, Conservatory">
     <description>Several smokeless candles flicker from behind cut-glass sconces, bathing the room in a soft and even light that refracts off the countertop of the wraparound bar.  The centerpiece of the conservatory is a beautiful ebonwood clavichord, framed by the top of a staircase and a sliding glass door.</description>
-    <position x="-90" y="-388" z="0" />
+    <position x="-84" y="-336" z="0" />
     <arc exit="go" move="go small alcove" destination="474" />
     <arc exit="go" move="go glass door" destination="475" />
     <arc exit="climb" move="climb sweeping staircase" destination="471" />
   </node>
   <node id="474" name="Bards' Guild, Keg Alcove">
     <description>Three oversized oak kegs fill the alcove, leaving barely enough room to reach a curious-looking cupboard on the back wall.  Broken tankards lie carelessly discarded in the corners, and damp stains spot the carpet around each keg, mute reproach to the housekeeping skills of the residents.</description>
-    <position x="-80" y="-388" z="0" />
+    <position x="-74" y="-336" z="0" />
     <arc exit="go" move="go conservatory" destination="473" />
   </node>
   <node id="475" name="Bards' Guild, Balcony">
     <description>Sweet fragrances of bright perennials fill the air of the covered balcony that overlooks the boulevard below.  Several outdoor chairs are surrounded by potted lilac, lavender, and gardenia, aiding in the air of relaxation supported by the clear view of the sky above.</description>
-    <position x="-100" y="-388" z="0" />
+    <position x="-94" y="-336" z="0" />
     <arc exit="go" move="go glass door" destination="473" />
   </node>
   <node id="476" name="Riverbank Trail" note="Map50_Segoltha_River.xml|Segoltha River">
@@ -4997,17 +5000,17 @@
   </node>
   <node id="759" name="Asemath Academy, Library Hall" note="Dictionaries|Languages">
     <description>The library of the Academy is famed far and wide for its large collection of printed works on the Arts and Sciences.  A wall-long shelf holds this treasure securely against time and wearing.  Many comfortable chairs and low tables are scattered about for the ease of readers and several desks are available for the more serious scholar.  Several students are sprawled out in chairs reading and one is at a desk, crouched over a parchment, scribbling away on a notepad.</description>
-    <position x="30" y="-272" z="0" />
+    <position x="27" y="-266" z="0" />
     <arc exit="go" move="go polished doors" destination="206" />
   </node>
   <node id="760" name="Asemath Academy, Gallery of Fine Arts">
     <description>This room is a gallery for all manner of art.  Paintings adorn the walls and niches hold statues of many sorts.  Large skylights bring in a flattering light and the north end of the room is set aside for use as a studio for painting and sculpting.</description>
-    <position x="0" y="-262" z="0" />
+    <position x="-3" y="-256" z="0" />
     <arc exit="go" move="go stone door" destination="215" />
   </node>
   <node id="761" name="Asemath Academy, Founder's Theatre">
     <description>This theatre is large enough to hold the entire staff and student body as well as at least a hundred more.  Comfortable seating slopes down to a raised stage so that all have an excellent view.  Dedicated to Asemath the Founder, one seat in the front row is always left vacant as a tribute to his efforts in building the Academy named after him.</description>
-    <position x="20" y="-262" z="0" />
+    <position x="17" y="-256" z="0" />
     <arc exit="go" move="go wooden door" destination="215" />
   </node>
   <node id="762" name="Ragge's Locksmithing, Back Room">
@@ -6124,12 +6127,12 @@
   </node>
   <node id="945" name="Bards' Guild, Wine Cellar">
     <description>Strong support beams crisscross the ceiling above, converging towards wide brick columns that stoically maintain the foundation of the guild.  Shallow grooves worn into the floor attest to the memory of several absent storage racks.</description>
-    <position x="-100" y="-408" z="0" />
+    <position x="-94" y="-356" z="0" />
     <arc exit="east" move="east" destination="946" />
   </node>
   <node id="946" name="Bards' Guild, Old Library">
     <description>Time has not been kind to the cornerstone room of the old Bards' Guild, as is evident by the vein-like cracks and discolorations to the aged brick foundation.  Several long black streaks scar the floor at the west wall where a door might have stood -- a visible reminder and striking mystery as to the demise of the missing portal.</description>
-    <position x="-90" y="-408" z="0" />
+    <position x="-84" y="-356" z="0" />
     <arc exit="west" move="west" destination="945" />
   </node>
   <node id="947" name="Raven's Court, Hallway" color="#00FFFF">
@@ -6595,6 +6598,43 @@
     <position x="-30" y="26" z="0" />
     <arc exit="go" move="go wooden door" destination="874" />
   </node>
+  <node id="1029" name="Siryn's Courtyard, Intro Terrace" note="Siryn's Courtyard" color="Aqua">
+    <description>Named in tribute to famed Bard Siryn Mistbringer, this welcoming courtyard is an oasis of peace from the hustle and bustle of Clanthew Boulevard.  Sounds of music and laughter filter in from the Bard's Guild next door, drifting across the thick stone walls that enclose the neighborhood.  A flock of wrens perches under the protection of maple trees that provide shade and shelter with their widespread branches.</description>
+    <position x="-26" y="-355" z="0" />
+    <arc exit="east" move="east" destination="1032" />
+    <arc exit="southeast" move="southeast" destination="1033" />
+    <arc exit="south" move="south" destination="1030" />
+    <arc exit="go" move="go gate" destination="29" />
+  </node>
+  <node id="1030" name="Siryn's Courtyard, Chorus Terrace" color="Aqua">
+    <description>Positioned underneath an enormous cedar tree, a well-stocked bar of polished mahogany is set out to entice visitors to sit and stay.  A collection of wrought-iron tables and chairs are thoughtfully placed around the terrace, perfect for those who wish to linger and enjoy a drink or two either alone or in the company of friends.</description>
+    <position x="-26" y="-336" z="0" />
+    <arc exit="north" move="north" destination="1029" />
+    <arc exit="northeast" move="northeast" destination="1033" />
+    <arc exit="east" move="east" destination="1031" />
+  </node>
+  <node id="1031" name="Siryn's Courtyard, Outro Terrace" color="Aqua">
+    <description>Tucked away in the southeast corner of the terrace, a lone nightingale perched upon the branch of a basswood tree whistles and trills a sweet song to those passing by.  Charmingly low wrought-iron fencing, crafted into a five-line staff with musical notes, separates each courtyard resident's yard from another.</description>
+    <position x="-7" y="-336" z="0" />
+    <arc exit="north" move="north" destination="1032" />
+    <arc exit="west" move="west" destination="1030" />
+    <arc exit="northwest" move="northwest" destination="1033" />
+  </node>
+  <node id="1032" name="Siryn's Courtyard, Verse Terrace" color="Aqua">
+    <description>Rosewood trees strung with creamy white seashells and silvery windchimes border the walkway that winds through the various residences in this spacious terrace.  In contrast to the simple austerity of the border, brightly colored tulips and buttercups are planted at each bend of the path, providing splashes of colors to please the eyes.</description>
+    <position x="-7" y="-355" z="0" />
+    <arc exit="south" move="south" destination="1031" />
+    <arc exit="southwest" move="southwest" destination="1033" />
+    <arc exit="west" move="west" destination="1029" />
+  </node>
+  <node id="1033" name="Siryn's Courtyard, Encore Fountain">
+    <description>Spruce trees stand guard alongside several benches around a dramatic Bardic Spirit Knot water fountain.  The sounds of leaves rustling in the wind and water splashing blend together into a restful sonata to nature.  A sturdy outdoor stage facing the fountain is well suited for entertainment purposes throughout the year, ready and waiting for the next song and dance.</description>
+    <position x="-17" y="-346" z="0" />
+    <arc exit="northeast" move="northeast" destination="1032" />
+    <arc exit="southeast" move="southeast" destination="1031" />
+    <arc exit="southwest" move="southwest" destination="1030" />
+    <arc exit="northwest" move="northwest" destination="1029" />
+  </node>
   <label text="Shipyard">
     <position x="-20" y="314" z="0" />
   </label>
@@ -6629,7 +6669,7 @@
     <position x="-184" y="94" z="0" />
   </label>
   <label text="Bard">
-    <position x="-81" y="-416" z="0" />
+    <position x="-87" y="-330" z="0" />
   </label>
   <label text="Goldstone">
     <position x="24" y="-434" z="0" />
@@ -6644,7 +6684,7 @@
     <position x="250" y="-424" z="0" />
   </label>
   <label text="Asemath">
-    <position x="-20" y="-332" z="0" />
+    <position x="-32" y="-327" z="0" />
   </label>
   <label text="Crofton Walk">
     <position x="80" y="-299" z="0" />
@@ -6785,7 +6825,7 @@
     <position x="250" y="-356" z="0" />
   </label>
   <label text="Taelbert's">
-    <position x="-87" y="-435" z="0" />
+    <position x="-93" y="-436" z="0" />
   </label>
   <label text="Herbs">
     <position x="165" y="-425" z="0" />
@@ -6900,5 +6940,8 @@
   </label>
   <label text="Office">
     <position x="134" y="-64" z="0" />
+  </label>
+  <label text="Siryn's Courtyard">
+    <position x="1" y="-356" z="0" />
   </label>
 </zone>
