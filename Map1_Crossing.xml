@@ -3168,7 +3168,6 @@
     <arc exit="east" move="east" destination="469" />
     <arc exit="out" move="out" hidden="True" destination="29" />
     <arc exit="go" move="go mirrorlike portal" destination="470" />
-    <arc exit="go" move="go porta" destination="470" />
   </node>
   <node id="469" name="Bards' Guild, Repair Room">
     <description>Shelves upon shelves of half-built mandolins, violins, lutes, flutes, and a slew of other unidentifiable parts cover the walls.  The scent of rosin and glue wafts in the air.  In the corner, a long sturdy workbench holds a plethora of specialized tools to aid in the crafting of the finest musical instruments.</description>
