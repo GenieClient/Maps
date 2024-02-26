@@ -14,8 +14,8 @@
 # Inspired by the OG Wizard Travel Script - But made 1000x better with the power of Genie
 # Originally written by Achilles
 # Revitalized and Robustified by Shroom
-# Updated: 12/19/23
-var version 5.1.7
+# Updated: 2/3/24
+var version 5.1.8
 #
 # REQUIRES EXPTRACKER PLUGIN! MANDATORY!
 #
@@ -4320,12 +4320,12 @@ INFO_CHECK:
      return
 
 
-#### THIS AUTO SETS MAIN.BAG / BACKUP.BAG / THIRD.BAG VARIABLES
-#### FOR STOWING ROUTINE ONLY - BACKUP CONTAINERS IN CASE DEFAULT "STOW" FAILS - THIS WILL CATCH ANY COMMON LARGE CONTAINERS
-#### ~ THIS SHOULD ONLY FIRE IF THE MOVE.STOW ROUTINE TRIGGERS AND DEFAULT STOW DOES NOT FULLY CLEAR HANDS ~
-#### THIS WAS MADE AS HAPPY MEDIUM - IS MUCH BETTER THAN USING HARDCODED VARIABLES
-#### SETTING THE CONTAINERS AUTOMATICALLY MAKES IT EASY WITHOUT HAVING TO WORRY ABOUT USER VARIABLES / MULTI-CHARACTERS ETC..
-#### THIS SHOULD CATCH THE ~MAIN~ BAGS MOST PEOPLE HAVE AT LEAST ONE OR TWO OF
+## THIS AUTO SETS MAIN.BAG / BACKUP.BAG / THIRD.BAG VARIABLES
+## FOR STOWING ROUTINE ONLY - BACKUP CONTAINERS IN CASE DEFAULT "STOW" FAILS - THIS WILL CATCH ANY COMMON LARGE CONTAINERS
+## THIS SHOULD ONLY FIRE IF THE MOVE.STOW ROUTINE TRIGGERS AND DEFAULT STOW DOES NOT FULLY CLEAR HANDS ~
+## THIS WAS MADE AS HAPPY MEDIUM - IS MUCH BETTER THAN USING HARDCODED VARIABLES
+## SETTING CONTAINERS AUTOMATICALLY MAKES IT EASY WITHOUT HAVING TO WORRY ABOUT USER VARIABLES / MULTI-CHARACTERS ETC..
+## THIS SHOULD CATCH THE ~MAIN~ BAGS ALMOST EVERY CHARACTER HAS AT LEAST ONE OR TWO OF
 BAG_CHECK:
      var MAIN.BAG NULL
      var BACKUP.BAG NULL
@@ -4357,7 +4357,7 @@ BAG_CHECK:
      action var Shadows 1 when encompassing shadows
      action var Lootsack 1 when lootsack
      action var Satchel 1 when satchel
-     echo * Quickly Checking Containers
+     echo * Scanning for Containers..
      matchre BAG_PARSE INVENTORY
      put inv container
      matchwait 4
@@ -4372,11 +4372,11 @@ BAG_LOOP:
      if (%BagLoop > %TotalBags) then
           {
                echo
-               echo * Auto-setting container variables ~
+               echo * Auto-set container variables ~
                echo * Main: %MAIN.BAG
-               echo * Backup: %BACKUP.BAG
-               echo * Third: %THIRD.BAG
-               echo * Fourth: %FOURTH.BAG
+               if !matchre("%BACKUP.BAG", "NULL") then echo * Backup: %BACKUP.BAG
+               if !matchre("%THIRD.BAG", "NULL") then echo * Third: %THIRD.BAG
+               if !matchre("%FOURTH.BAG", "NULL") then echo * Fourth: %FOURTH.BAG
                echo
                goto BAG_RETURN
           }
