@@ -1,9 +1,13 @@
 # automapper.cmd
-var autoversion 8.2023-12-27
+var autoversion 8.2024-04-02
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
+
+#2024-04-02
+# Hanryu
+#   added a check for that edge case for those time when someone closes the wall before your slow internet lets the command through
 
 #2023-12-15
 # Hanryu
@@ -1334,6 +1338,7 @@ GEAR.GATE.BYPASS:
   var wall_trigger torch
   action (ggbypass) var wall 0 when ^The stone wall slowly closes|stone wall closes\.$
   action (ggbypass) var wall 1 when ^A gouged stone wall slowly opens up|and a gouged stone wall opens up\.$
+  action (ggbypass) goto GEAR.GATE.BYPASS when ^I could not find what you were referring to\.$
   action (ggbypass) on
 GEAR.GATE.BYPASS.CHECK:
   if (!$standing) then gosub STAND
