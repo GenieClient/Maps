@@ -6,7 +6,7 @@ var autoversion 8.2024-04-27
 # debug 5
 
 #2024-04-27
-#   Robustified Light Source checks 
+#   Robustified Light Source checks
 #
 #2024-04-02
 # Hanryu
