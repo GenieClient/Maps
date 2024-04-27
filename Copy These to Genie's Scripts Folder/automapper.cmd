@@ -1,10 +1,13 @@
 # automapper.cmd
-var autoversion 8.2024-04-02
+var autoversion 8.2024-04-27
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
 
+#2024-04-27
+#   Robustified Light Source checks 
+#
 #2024-04-02
 # Hanryu
 #   added a check for that edge case for those time when someone closes the wall before your slow internet lets the command through
@@ -1938,6 +1941,7 @@ LIGHT_YES:
      var darkroom 0
      var darkTime $gametime
      return
+
 ## FIND A LIGHT SOURCE - FIRST WE CHECK FOR ANY DARKVISION GUILD SKILLS 
 LIGHT_SOURCE:
      action (mapper) off
@@ -1970,9 +1974,6 @@ LIGHT_SOURCE:
                pause
                put beseech dark to sing
                pause
-               pause 0.5
-               gosub DARK_DOUBLECHECK
-               if (%darkroom = 0) then goto YES_DARKVISION
           }
      if ("$guild" = "Thief") then
           {
@@ -1980,8 +1981,6 @@ LIGHT_SOURCE:
                put khri sight
                pause 0.5
                pause 0.5
-               gosub DARK_DOUBLECHECK
-               if (%darkroom = 0) then goto YES_DARKVISION
           }
      if (("$guild" = "Bard") && ($circle > 10)) then
           {
@@ -1990,10 +1989,7 @@ LIGHT_SOURCE:
                put prep EYE 5
                pause 16
                put cast
-               pause
                pause 0.5
-               gosub DARK_DOUBLECHECK
-               if (%darkroom = 0) then goto YES_DARKVISION
           }
      if (("$guild" = "Cleric")  && ($circle > 20)) then
           {
@@ -2011,8 +2007,6 @@ LIGHT_SOURCE:
                pause 0.5
                pause 0.3
                if ($SpellTimer.DivineRadiance.active = 0) then goto LIGHT_SOURCE_2
-               gosub DARK_DOUBLECHECK
-               if (%darkroom = 0) then goto YES_DARKVISION
           }
 LIGHT_SOURCE_2:
      if (("$guild" = "Moon Mage") && ($circle > 20)) then
@@ -2031,159 +2025,143 @@ LIGHT_SOURCE_2:
                pause 0.5
                pause 0.2
                if ($SpellTimer.TenebrousSense.active = 0) then goto LIGHT_SOURCE_3
-               gosub DARK_DOUBLECHECK
-               if (%darkroom = 0) then goto YES_DARKVISION
           }
 LIGHT_SOURCE_3:
-     if (("$guild" = "Paladin") && ($circle > 15)) then goto GLYPH_LIGHT
-     goto GAETHZEN_YES
-GLYPH_LIGHT:
-     pause 0.0001
-     matchre GLYPH_LIGHT \s*\.\.\.wait|^Sorry,|^Please wait\.|^You are still stunned
-     matchre GAETHZEN_YES ^You try
-     matchre YES_DARKVISION The tiny balls of light swirl|A brief burst of pain
-     put glyph light
-     matchwait 7
-     goto GAETHZEN_YES
-###########################################
-# CHECK HERE FOR ALL DARK VISION ITEMS
-#############
-GAETHZEN_YES:
-     var FullCharge 0
-     # if (%HaveGaethzen = 0) then goto GOGGLE_CHECK
-     put GET my gaethzen lantern
-     pause 0.5
-     pause 0.6
-     if !matchre("$righthand $lefthand", "(?i)lantern") then goto GOGGLE_CHECK
-     gosub echo CHARGING GAEZTHEN
-     action var FullCharge 1 when ^The .+ is already holding as much power as you could possibly charge it with\.
-     # gosub stowing
-     gosub RETREAT
-     pause 0.0001
-     put CHARGE lantern 25
-     pause 2
-     pause 0.5
-     if (%FullCharge = 1) then goto GAETHZEN_2
-     put CHARGE lantern 25
-     pause 2
-     pause 0.5
-     gosub RETREAT
-     if (%FullCharge = 1) then goto GAETHZEN_2
-     put CHARGE lantern 25
-     pause 2
-     pause 0.5
-     if (%FullCharge = 1) then goto GAETHZEN_2
-     put CHARGE lantern 25
-     pause 2
-     pause 0.5
-GAETHZEN_2:
-     pause 0.0001
-     put focus my lantern
-     pause 0.5
-     pause 0.2
-     PUT rub my lantern
-     pause 0.5
-     pause 0.2
-     put wear lantern
-     pause 0.2
-     pause 0.0001
-     action remove ^The .+ is already holding as much power as you could possibly charge it with\.
-     gosub DARK_DOUBLECHECK
+     if (("$guild" = "Paladin") && ($circle > 15)) then
+          {
+               send glyph light
+               pause 0.8
+               pause 0.2
+          }
+LIGHT_SOURCE_4:
+     gosub DARK_CHECK
      if (%darkroom = 0) then goto YES_DARKVISION
+### ADDITIONAL CHECKS HERE FOR GOGGLES / GAEZTHEN
+# WE REACH THIS SUB IF WE HAVE ~NO GUILD SKILL FOR DARK VISION~
+# NOW WE CHECK FOR ITEMS THAT GIVE DARK VISION
+# CHECK FOR NIGHTVISION GOGGLES
 GOGGLE_CHECK:
 GOGGLE_YES:
-     # if (%HaveGoggles = 0) then goto STARGLASS_YES
      delay 0.0001
-     put GET my goggle
-     pause 0.7
+     gosub PUT GET my goggle
+     pause 0.8
      pause 0.3
-     pause 0.0001
-     pause 0.0001
-     if !matchre("$righthand $lefthand", "goggle") then goto STARGLASS_YES
+     if !matchre("$righthand $lefthand", "goggle") then goto STARGLASS_CHECK
      matchre GOGGLE_YES \s*\.\.\.wait|^Sorry,|^Please wait\.|^You are still stunned
-     matchre GOGGLE_2 remains inert
+     matchre GOGGLE_STOW remains inert|^You rub|^What
      matchre GOGGLE_STOW ^Your tactile sense
      put rub my goggle
-     matchwait 9
-GOGGLE_2:
-     pause 0.0001
-     if matchre("$righthand $lefthand", "goggle") then gosub PUT put goggle in my %Wand1.Container
-     pause 0.1
-     if matchre("$righthand $lefthand", "goggle") then gosub STOWIT goggle
-     gosub GET my other goggle
-     pause 0.1
-     if !matchre("$righthand $lefthand", "goggle") then goto STARGLASS_YES
-     matchre GOGGLE_2 \s*\.\.\.wait|^Sorry,|^Please wait\.|^You are still stunned
-     matchre GOGGLE_NONE remains inert
-     matchre GOGGLE_STOW ^Your tactile sense
-     put rub my goggle
-     matchwait 10
-     goto STARGLASS_YES
-GOGGLE_NONE:
-     pause 0.0001
-     gosub PUT put goggle in my %Wand1.Container
-     pause 0.0001
-     if matchre("$righthand $lefthand", "goggle") then gosub STOWIT goggle
-     goto STARGLASS_YES
+     matchwait 5
 GOGGLE_STOW:
      pause 0.0001
-     gosub PUT put goggle in my %Wand1.Container
-     pause 0.0001
-     if matchre("$righthand $lefthand", "goggle") then gosub STOWIT goggle
-     gosub DARK_DOUBLECHECK
-     if (%darkroom = 0) then goto YES_DARKVISION
-#########
-STARGLASS_YES:
      gosub stowing
-     # if (%HaveStarglass = 0) then goto LANTERN_YES
      pause 0.0001
-     put GET starglass
+     if matchre("$righthand $lefthand", "goggle") then gosub stowing
+     gosub DARK_CHECK
+     if (%darkroom = 0) then goto YES_DARKVISION
+### CHECK FOR A STARGLASS
+STARGLASS_CHECK:
+     gosub stowing
+     pause 0.0001
+     gosub PUT GET my starglass
+     pause 0.5
+     pause 0.3
+     if !matchre("$righthand $lefthand", "(?i)starglass") then goto GAETHZEN_CHECK
+     gosub PUT CHARGE starglass 20
      pause 0.8
-     pause 0.1
-     pause 0.1
-     if !matchre("$righthand $lefthand", "(?i)starglass") then goto LANTERN_YES
-     if matchre("$guild", "%MAGICUSER") then
-          {
-               gosub CHARGE starglass 20
-               pause 0.4
-               gosub CHARGE starglass 20
-               pause 0.4
-          }
+     pause 0.5
+     gosub PUT CHARGE starglass 20
+     pause 0.8
+     pause 0.5
      put rub my starglass
      pause 0.2
      pause 0.0001
-     gosub WEAR starglass
+     gosub PUT WEAR my starglass
      pause 0.3
      gosub stowing
-     gosub DARK_DOUBLECHECK
+     gosub DARK_CHECK
      if (%darkroom = 0) then goto YES_DARKVISION
-############
-LANTERN_YES:
+### CHECK FOR A GAETHZEN LANTERN
+GAETHZEN_CHECK:
+     var Lantern.Types skull|sphere|wyvern|statuette|sunburst|star|lantern|firefly|salamander
+     var Lantern.Check 0
+     var Lantern.Count 0
+     eval Lantern.Count count("%Lantern.Types", "|")
+     if (%Lantern.Check > %Lantern.Count) then goto LANTERN_CHECK
+     pause 0.0001
+GAETHZEN_GET:
+     gosub GET my gaethzen %Lantern.Types(%Lantern.Check)
+     pause 0.1
+     pause 0.2
+     if matchre("$righthand $lefthand", "(?i)%Lantern.Types(%Lantern.Check)") then goto GAETHZEN_SUCCESS
+GAETHZAN_FAIL:
+     math Lantern.Check add 1
+     if (%Lantern.Check > %Lantern.Count) then goto LANTERN_CHECK
+     goto GAETHZEN_GET
+
+GAETHZEN_SUCCESS:
+     var Gaethzen %Lantern.Types(%Lantern.Check)
+     var FullCharge 0
+     echo
+     echo *** FOUND A GAETHZEN! TYPE: %Gaethzen
+     echo
+     gosub stowing
+     gosub RETREAT
+     pause 0.0001
+     gosub PUT GET my gaethzen %Gaethzen
+     pause 0.7
+     pause 0.2
+     if !matchre("$righthand $lefthand", "(?i)%Gaethzen") then goto LANTERN_CHECK
+     echo
+     echo ~~~~~~~~~~~~~~
+     echo * CHARGING GAETHZEN
+     echo ~~~~~~~~~~~~~~
+     echo
+     action var FullCharge 1 when ^The .+ is already holding as much power as you could possibly charge it with\.
+     gosub PUT CHARGE %Gaethzen 25
+     pause 2
+     if (%FullCharge = 1) then goto GAETHZEN_2
+     gosub PUT CHARGE %Gaethzen 25
+     pause 2
+     if (%FullCharge = 1) then goto GAETHZEN_2
+     gosub PUT CHARGE %Gaethzen 15
+     pause 2
+     if (%FullCharge = 1) then goto GAETHZEN_2
+     gosub PUT CHARGE %Gaethzen 10
+     pause 2
+GAETHZEN_2:
+     gosub PUT focus my %Gaethzen
+     pause 0.2
+     gosub PUT rub my %Gaethzen
+     pause 0.5
+     put wear my %Gaethzen
+     pause 0.2
+     pause 0.0001
+     action remove ^The .+ is already holding as much power as you could possibly charge it with\.
+     gosub stowing
+     gosub DARK_CHECK
+     if (%darkroom = 0) then goto YES_DARKVISION
+### CHECK HERE FOR A NORMAL OIL LANTERN
+LANTERN_CHECK:
      var TriedOil 0
-     # if (%HaveLantern = 0) then goto TORCH_YES
-     # if ((%HaveFlint = 0) && (%HaveLighter = 0)) then goto TORCH_YES
      gosub stowing
      pause 0.0001
-     put GET my lantern
-     pause 0.5
-     pause 0.6
-     if !matchre("$righthand $lefthand", "(?i)lantern") then goto TORCH_YES
-LANTERN_DROP:
-     PUT drop my lantern
-     pause 0.6
-     pause 0.0001
-     put GET my flint
-     pause 0.5
-     pause 0.1
-     put GET my knife
+     gosub PUT GET my lantern
      pause 0.7
+     pause 0.3
+     if !matchre("$righthand $lefthand", "(?i)lantern") then goto TORCH_CHECK
+LANTERN_DROP:
+     gosub PUT drop my lantern
+     pause 0.0001
+     gosub PUT GET my flint
+     gosub PUT GET my knife
      pause 0.1
      if (!matchre("$righthand $lefthand", "flint") && !matchre("$righthand $lefthand", "knife")) then
           {
                echo * FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
                put #echo >Log #FF3E00 * FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
                gosub stowing
-               goto TORCH_YES
+               goto GAETHZEN_YES
           }
 LANTERN_LIGHT:
      pause 0.0001
@@ -2196,79 +2174,69 @@ LANTERN_LIGHT:
      matchwait 5
      goto LANTERN_LIGHT
 REFUEL_IT:
-     if (%TriedOil = 1) then
-          {
-               gosub echo NO LAMP OIL FOR LANTERN!
-               gosub echo RESTOCK ON LAMP OIL
-               gosub stowing
-               goto TORCH_YES
-          }
+     if (%TriedOil = 1) then goto LANTERN_DONE
      pause 0.1
      gosub stowing
      pause 0.0001
-     put GET lantern
-     pause 0.5
-     put GET lamp oil
+     gosub PUT GET lantern
+     gosub PUT GET lamp oil
      pause 0.0001
-     pause 0.8
-     if !matchre("$righthand $lefthand", "oil") then
-          {
-               echo * NO OIL FOR LANTERN
-               put #echo >Log #FF3E00 * NO OIL FOR LANTERN
-               gosub stowing
-               goto TORCH_YES
-          }
      put pour oil in lantern
-     pause 0.5
+     pause 0.3
      pause 0.0001
      var TriedOil 1
-     put STOW oil
-     pause 0.4
      goto LANTERN_DROP
 LIT_LANTERN:
      pause 0.0001
-     gosub echo LANTERN LIT!
+     echo * LANTERN LIT!
      pause 0.0001
      pause 0.0001
      gosub stowing
-     put GET lantern
+     gosub PUT GET lantern
      pause 0.0001
      put wear lantern
      pause 0.2
-     pause 0.0001
-     gosub DARK_DOUBLECHECK
-     if (%darkroom = 0) then goto YES_DARKVISION
-###############
-TORCH_YES:
-     # if ((%HaveLighter = 0) && (%HaveFlint = 0)) then goto NO_DARKVISION
-     # if (%HaveTorch = 0) then goto NO_DARKVISION
+LANTERN_DONE:
      gosub stowing
-     gosub echo ATTEMPTING LAST RESORT FOR DARK CHECK - TORCH / FLINT
-     pause 0.1
      pause 0.0001
-     put GET my torch
-     pause 0.7
-     pause 0.2
-     if !matchre("$righthand $lefthand", "(?i)torch") then goto NO_DARKVISION
+     gosub DARK_CHECK
+     if (%darkroom = 0) then goto YES_DARKVISION
+### CHECK FOR A TORCH
+TORCH_CHECK:
+     gosub stowing
+     echo
+     echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     echo * ATTEMPTING LAST RESORT FOR LIGHT CHECK!
+     echo * FLINT / TORCH / KNIFE
+     echo * CONSIDER ~NOT~ HUNTING IN A DARK AREA...
+     echo * THE FUCK FUCKERY OF ALL DR....
+     echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     echo
+     pause 0.5
+     pause 0.0001
      # if (%HaveLighter = 1) then
           # {
-               # put GET my %Lighter.Name
+               # gosub PUT GET my %Lighter.Name
                # pause 0.1
                # pause 0.0001
                # if !matchre("$righthand", "(?i)%Lighter.Name") then
                     # {
                          # echo * LIGHTER NOT FOUND! - TURNING LIGHTER OFF
                          # var HaveLighter 0
-                         # goto TORCH_YES_FLINT
+                         # goto TORCH_FLINT
                     # }
-               # PUT point %Lighter.Name at torch
+               # gosub PUT GET my torch
                # pause 0.0001
                # pause 0.0001
-               # gosub stowing
-               # gosub DARK_DOUBLECHECK
+               # if !matchre("$righthand $lefthand", "(?i)torch") then goto NO_DARKVISION
+               # gosub PUT point %Lighter.Name at torch
+               # pause 0.0001
+               # pause 0.0001
+               # gosub STOWIT %Lighter.Name
+               # gosub DARK_CHECK
                # if (%darkroom = 0) then goto YES_DARKVISION
           # }
-TORCH_YES_FLINT:
+TORCH_FLINT:
      if !matchre("$righthand $lefthand", "(?i)torch") then gosub PUT GET my torch
      pause 0.5
      pause 0.3
@@ -2322,7 +2290,8 @@ YES_DARKVISION:
 NO_DARKVISION:
      gosub echo NO DARK VISION SKILL / ITEM FOUND! STUCK IN THE DARK! Escape Manually!
      gosub echo GET YOURSELF A TORCH AND FLINT AT THE LEAST!
-     put #echo >Log Red ** NO DARKVISION/TORCH/LIGHTER FOUND!
+     gsub echo OR A STARGLASS/GAEZTHEN/LANTERN
+     put #echo >Log Red ** NO DARKVISION/TORCH/LIGHTER/GAEZTHEN FOUND!
      put #echo >Log Red ** CONSIDER ~NOT~ HUNTING IN DARK AREAS
      var darkroom 1
      pause 0.0001
