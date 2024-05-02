@@ -325,7 +325,6 @@ var detour NULL
 var therencoin 300
 var boarneeded 300
 var starting MAP:$zoneid | ROOM:$roomid
-var starting MAP:$zoneid | ROOM:$roomid
 if ("%destination" = "") then goto NODESTINATION
 eval destination toupper("%destination")
 TOP:
@@ -409,12 +408,6 @@ echo * MAP: $zoneid | ROOM: $roomid
 echo
 echo * DESTINATION: %destination
 echo 
-echo 
-echo * STARTING ROOM: $roomname 
-echo * MAP: $zoneid | ROOM: $roomid
-echo
-echo * DESTINATION: %destination
-echo 
 #DESTINATION
 #### SPECIAL ESCAPE SECTION FOR MAZES/HARD TO ESCAPE AREAS BY SHROOM
 #### THIS CHECKS IF WE ARE STARTING FROM A KNOWN MAZE / MESSED UP AREA THAT AUTOMAPPER GETS LOST IN
@@ -446,7 +439,6 @@ if matchre("$roomname", "Clover Fields") then gosub BROCKET_ESCAPE
 if matchre("$roomname", "Maelshyve's Fortress, Inner Sanctum") then gosub MAELSHYVE_FORTRESS_ESCAPE
 if matchre("$roomname", "(Maelshyve's Fortress, Hall of Malice|Glutton's Rest|Fallen Altar|Great Dais|Inner Sanctum)") then gosub MAELSHYVE_FORTRESS_ESCAPE
 if matchre("$roomname", "(Charred Caverns|Beneath the Zaulfung|Maelshyve's Threshold)") then gosub BENEATH_ZAULFUNG_ESCAPE
-if matchre("$roomname", "(Zaulfung, Dense Swamp|Kweld Gelvdael|Zaulfung, Urrem'tier's Spire|Zaulfung, Crooked Treetop)") then gosub ZAULFUNG_ESCAPE_0
 if matchre("$roomname", "(Zaulfung, Dense Swamp|Kweld Gelvdael|Zaulfung, Urrem'tier's Spire|Zaulfung, Crooked Treetop)") then gosub ZAULFUNG_ESCAPE_0
 if matchre("$roomname", "Zaulfung, Swamp") && matchre("$roomdesc", "Rancid mire") then gosub ZAULFUNG_ESCAPE
 if matchre("$roomname", "Zaulfung, Trackless Swamp") then gosub ZAULFUNG_ESCAPE_2
@@ -2131,14 +2123,6 @@ if (("$zoneid" = "31") && ("%detour" = "zaulfung")) then
           pause 0.5
           gosub SICKLY_TREE
      }    
-if (("$zoneid" = "31") && ("%detour" = "zaulfung")) then
-     {
-          gosub AUTOMOVE 89
-          pause 0.1
-          put go curving path
-          pause 0.5
-          gosub SICKLY_TREE
-     }    
 if ("$zoneid" = "31") then
      {
           gosub AUTOMOVE 1
@@ -2550,31 +2534,6 @@ SHUFFLE_NORTH:
           }
      goto SHUFFLE_NORTH
 #######################################################################
-SICKLY_TREE:
-     pause 0.001
-     echo *** LOOKING FOR THE SICKLY TREE
-     if matchre("$roomobjs", "sickly tree") then goto SICKLY_TREE_2
-     gosub RANDOMWEIGHT east
-     if matchre("$roomobjs", "sickly tree") then goto SICKLY_TREE_2
-     gosub RANDOMWEIGHT east
-     if matchre("$roomobjs", "sickly tree") then goto SICKLY_TREE_2
-     gosub RANDOMWEIGHT northeast
-     if matchre("$roomobjs", "sickly tree") then goto SICKLY_TREE_2
-     gosub RANDOMMOVE
-     if matchre("$roomobjs", "sickly tree") then goto SICKLY_TREE_2
-     gosub RANDOMMOVE
-     if matchre("$roomobjs", "sickly tree") then goto SICKLY_TREE_2
-     gosub RANDOMWEIGHT west
-     if matchre("$roomobjs", "sickly tree") then goto SICKLY_TREE_2
-     gosub RANDOMWEIGHT west
-     goto SICKLY_TREE
-SICKLY_TREE_2:
-     pause 0.001
-     put climb sickly tree
-     pause 0.5
-     pause 0.3
-     if ("$zoneid" = "31") then goto SICKLY_TREE
-     return
 SICKLY_TREE:
      pause 0.001
      echo *** LOOKING FOR THE SICKLY TREE
@@ -3308,8 +3267,6 @@ goto ARRIVED
 AESRYBACK:
   pause 0.01
   pause 0.01
-  pause 0.01
-  pause 0.01
   var label AESRYBACK
   if ("$zoneid" = "98") then gosub AUTOMOVE 86
   if (matchre("$game", "(?i)DRX") && (%portal = 1) && (%ported = 0)) then gosub PORTAL_TIME
@@ -3319,7 +3276,6 @@ AESRYBACK:
   return
 
 QITRAVEL:
-  pause 0.01
   pause 0.01
   var label QITRAVEL
   if (matchre("$game", "(?i)DRX") && (%portal = 1)) then
@@ -3394,7 +3350,6 @@ ARRIVED:
      if (matchre("%destination", "\b(boar?c?l?a?n?)") && ("$zoneid" != "127")) then goto START
      echo
      echo ** AMAZING!!
-     echo ** AMAZING!!
      echo
      echo      |\          .(' *) ' .
      echo      | \        ' .*) .'*
@@ -3419,7 +3374,6 @@ ARRIVED:
   # put #play Just Arrived.wav
   eval destination toupper("%destination")
   echo ## WOW! YOU ARRIVED AT YOUR DESTINATION: %destination in %t seconds!  That's FAST! ##
-  echo ## STARTED FROM: %starting
   echo ## STARTED FROM: %starting
   put #echo >Log #1ad1ff * TRAVEL ARRIVAL: $zonename (Map: $zoneid | Room: $roomid)
   put #class arrive off
@@ -4986,9 +4940,6 @@ REM.WEAR:
      echo *** ERROR IN STOWING - MAKE SURE YOU HAVE ROOM IN CONTAINERS
      echo *** ABORTING SCRIPT!!!
      exit
-     echo *** ERROR IN STOWING - MAKE SURE YOU HAVE ROOM IN CONTAINERS
-     echo *** ABORTING SCRIPT!!!
-     exit
 #############################################################################################
 #############################################################################################
 ### ESCAPING MODULES (For Escaping from Areas where Automapper doesn't work/path properly)
@@ -6003,7 +5954,7 @@ GAETHZEN_CHECK:
      if (%Lantern.Check > %Lantern.Count) then goto LANTERN_CHECK
      pause 0.0001
 GAETHZEN_GET:
-     gosub GET my gaethzen %Lantern.Types(%Lantern.Check)
+     gosub PUT GET my gaethzen %Lantern.Types(%Lantern.Check)
      pause 0.1
      pause 0.2
      if matchre("$righthand $lefthand", "(?i)%Lantern.Types(%Lantern.Check)") then goto GAETHZEN_SUCCESS
@@ -6638,7 +6589,6 @@ RANDOMMOVE_1:
      if (%randomloop = 1) then gosub DARK_CHECK_1
      if !($standing) then gosub STAND
 ## IF WE'VE DONE 20/40 LOOPS, DO A QUICK LOOK AND MAKE SURE NOT ON A FERRY
-     if matchre("%moveloop", "\b(40)\b") then
      if matchre("%moveloop", "\b(40)\b") then
           {
                echo * CANNOT FIND A ROOM EXIT??!
