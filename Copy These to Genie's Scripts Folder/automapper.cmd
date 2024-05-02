@@ -2090,7 +2090,7 @@ GAETHZEN_CHECK:
      if (%Lantern.Check > %Lantern.Count) then goto LANTERN_CHECK
      pause 0.0001
 GAETHZEN_GET:
-     gosub GET my gaethzen %Lantern.Types(%Lantern.Check)
+     gosub PUT GET my gaethzen %Lantern.Types(%Lantern.Check)
      pause 0.1
      pause 0.2
      if matchre("$righthand $lefthand", "(?i)%Lantern.Types(%Lantern.Check)") then goto GAETHZEN_SUCCESS
