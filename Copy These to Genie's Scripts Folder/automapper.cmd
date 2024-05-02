@@ -1,5 +1,5 @@
 # automapper.cmd
-var autoversion 8.2024-04-27
+var autoversion 8.2024-05-02
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
@@ -2337,3 +2337,155 @@ WOUNDED:
   var wounded 1
   return
 ####
+PUT:
+     delay 0.0001
+     var putaction $0
+     var LOCATION PUT_1
+     PUT_1:
+     pause 0.001
+     matchre WAIT ^\.\.\.wait|^Sorry,|^Please wait\.
+     matchre IMMOBILE ^You don't seem to be able to move to do that
+     matchre WEBBED ^You can't do that while entangled in a web
+     matchre STUNNED ^You are still stunned
+     matchre PUT_UNTIE ^You should untie
+     matchre PUT_STOW ^You need a free hand|^Free one of your hands|^That will be hard with both your hands full\!
+     matchre PUT_STAND ^You should stand up first\.|^Maybe you should stand up\.
+     matchre WAIT ^\[Enter your command again if you want to\.\]
+    matchre RETURN (You'?r?e?|As|With|Using) (?:accept|adeptly|add|adjust|allow|already|are|aren't|ask|cut|attach|attempt|.+ to|.+ fan|bash|begin|bend|blow|breathe|briefly|bring|bundle|cannot|can't|carefully|cautiously|chop|circle|clasp|close|collect|collector's|concentrate|corruption|count|combine|come|dance|decide|deduce|dodge|don't|drum|draw|effortlessly|eyes|gracefully|deftly|desire|detach|drop|drape|exhale|fade|fail|fake|feel(?! fully rested)|feint|fill|find|filter|focus|form|fumble|gaze|gesture|giggle|gingerly|get|glance|grab|hand|hang|have|icesteel|inhale|insert|kiss|kneel|knock|leap|lean|let|lose|lift|loosen|lob|load|measure|move|must|mutter|mind|not|now|need|offer|open|parry|place|pick|push|pout|pour|put|pull|prepare|press|quietly|quickly|raise|read|reach|ready|realize|recall|remain|release|remove|retreat|reverently|rock|roll|rub|scan|search|secure|sense|set|sheathe|shield|should|shouldn't|shove|silently|sit|skin|slide|sling|slip|slow|slowly|spin|spread|sprinkle|start|stick|stop|strap|struggle|swap|swiftly|swing|switch|tap|take|the|though|touch|tie|tilt|toss|trace|try|tug|turn|twist|unload|untie|vigorously|wave|wear|weave|whisper|whistle|will|wink|wring|work|yank|yell|you|zills) .*(?:\.|\!|\?)?
+     matchre RETURN ^Brother Durantine|^Durantine|^Mags|^Ylono|^Malik|^Kilam|^Ragge|^Randal|^Catrox|^Kamze|^Unspiek|^Wyla|^Ladar|^Dagul|^Granzer|^Gemsmith|^Fekoeti|^Diwitt|(?:An|The|A) attendant|^The clerk|A Dwarven|^.*He says,
+     matchre RETURN ^The(.*)?(clerk|teller|attendant|mortar|pestle|tongs|bowl|riffler|hammer|gem|book|page|lockpick|sconce|voice|waters|contours|person|is|has|are|slides|fades|hinges|spell|not)
+     matchre RETURN ^It('s)?(?:'s|a|and|the)?\s+?(?:would|will|is|a|already|dead|keen|practiced|graceful|stealthy|resounding|full|has)
+     matchre RETURN ^Roundtime\:?|^\[Roundtime\:?|^\(Roundtime\:?|^\[Roundtime|^Roundtime|\[Roundtime
+     matchre RETURN ^That('s)?\s+?(?:is|has|was|a|cannot|area|can't|won't|would|already|tool|will|cost|too)
+     matchre RETURN ^With(?: (a|and|the))?\s+?(?:keen|practiced|graceful|stealthy|resounding)
+     matchre RETURN ^This (is a .+ spell|is an exclusive|spell|ritual)
+     matchre RETURN ^The .*(is|has|are|slides|fades|hinges|spell|not|vines|antique|(.+) spider|pattern)
+     matchre RETURN ^There('s)?\s+?(?:is(n't)?|does(n't)?|already|no|not)
+     matchre RETURN ^But (?:that|you|you're|you've|the)
+     matchre RETURN ^Obvious (?:exits|paths)
+     matchre RETURN ^There's no room|any more room|no matter how you arrange|have all been used\.
+     matchre RETURN ^That's too heavy|too thick|too long|too wide|not designed to carry|cannot hold any more
+     matchre RETURN ^(You|I) can't|^Tie what\?|^You just can't|As you attempt to place your
+     matchre RETURN suddenly leaps toward you|and flies towards you|with a flick
+     matchre RETURN ^Brushing your fingers|^Sensing your intent|^Quietly touching your lips
+     matchre RETURN Lucky for you\!\s*That isn't damaged\!|I will not repair something that isn't broken\.
+     matchre RETURN I'm sorry, but I don't work on those|There isn't a scratch on that, and I'm not one to rob you\.
+     matchre RETURN I don't work on those here\.|I don't repair those here|Please don't lose this ticket\!
+     matchre RETURN ^Please rephrase that command\.|^I could not find|^Perhaps you should|^I don't|^Weirdly,|That can't
+     matchre RETURN \[You're|\[This is|too injured
+     matchre RETURN ^Moving|Brushing|Recalling|Unaware
+     matchre RETURN ^.*\[Praying for \d+ sec\.\]
+     matchre RETURN ^.+ is not in need|^That is closed\.
+     matchre RETURN ^What (?:were you|is it)
+     matchre RETURN ^In the name of love\?|^Play on|^(.+) what\?
+     matchre RETURN ^It's kind of wet out here\.
+     matchre RETURN ^Some (?:polished|people|tarnished|.* zills)
+     matchre RETURN ^(\S+) has accepted
+     matchre RETURN ^Subservient type|^The shadows|^Close examination|^Try though
+     matchre RETURN ^USAGE\:|^Using your|^You.*analyze
+     matchre RETURN ^Allows a Moon Mage|^Smoking commands are
+     matchre RETURN ^A (?:slit|pair|shadow) .*(?:\.|\!|\?)?
+     matchre RETURN ^Your (?:actions|dance|nerves) .*(?:\.|\!|\?)?
+     matchre RETURN ^Having no further use for .*, you discard it\.
+     matchre RETURN ^After a moment, .*\.
+     matchre RETURN ^.* (?:is|are) not in need of cleaning\.
+     matchre RETURN \[Type INVENTORY HELP for more options\]|\[Use INVENTORY HELP for more options\.\]
+     matchre RETURN ^A vortex|^A chance for|^In a flash|^It is locked|^An aftershock
+     matchre RETURN ^In the .* you see .*\.
+     matchre RETURN .* (?:Dokoras|Kronars|Lirums)
+     matchre RETURN ^You will now store .* in your .*\.
+     matchre RETURN ^\[Ingredients can be added by using ASSEMBLE Ingredient1 WITH Ingredient2\]
+     matchre RETURN ^\s\*LINK ALL CANCEL\s\*- Breaks all links
+     matchre RETURN ^Stalking is an inherently stealthy endeavor, try being out of sight\.
+     matchre RETURN ^You're already stalking|^There aren't any
+     matchre RETURN ^An offer|shakes (his|her) head
+     matchre RETURN ^Tie it off when it's empty\?
+     matchre RETURN ^But the merchant can't see you|are invisible
+     matchre RETURN Page|^As the world|^Obvious|^A ravenous energy
+     matchre RETURN ^In the|^The attendant|^That is already open\.|^Your inner
+     matchre RETURN ^(.+) hands you|^Searching methodically|^But you haven't prepared a symbiosis\!
+     matchre RETURN ^Illustrations of complex,|^It is labeled|^Your nerves
+     matchre RETURN ^The lockpick|^Doing that|is not required to continue crafting
+     matchre RETURN ^Without (any|a|the)|^Wouldn't (it|that|you)
+     matchre RETURN ^Weirdly, you can't manage
+     matchre RETURN ^Hold hands with whom\?
+     matchre RETURN ^Something in the area interferes
+     matchre RETURN ^With a .+ to your voice,
+     matchre RETURN ^Turning your focus solemnly inward
+     matchre RETURN ^Slow, rich tones form a somber introduction
+     matchre RETURN ^Images of streaking stars falling from the heavens
+     matchre RETURN ^With .* movements you prepare your body for the .* spell\.
+     matchre RETURN ^A strong wind swirls around you as you prepare the .* spell\.
+     matchre RETURN ^Roundtime\:?|^\[Roundtime\:?|^\(Roundtime\:?|^\[Roundtime|^Roundtime
+     matchre RETURN ^Shadow and light collide wildly around you as you prepare the .* spell\.
+     matchre RETURN ^The wailing of lost souls accompanies your preparations of the .* spell\.
+     matchre RETURN ^A soft breeze surrounds your body as you confidently prepare the .* spell\.
+     matchre RETURN ^Light withdraws from around you as you speak arcane words for the .* spell\.
+     matchre RETURN ^Tiny tendrils of lightning jolt between your hands as you prepare the .* spell\.
+     matchre RETURN ^Low, hummed tones form a soft backdrop for the opening notes of the .* enchante\.
+     matchre RETURN ^Heatless orange flames blaze between your fingertips as you prepare the .* spell\.
+     matchre RETURN ^Throwing your head back, you release a savage roar and growl words for the .* spell\.
+     matchre RETURN ^Entering a trance-like state, your hands begin to tremble as you prepare the .* spell\.
+     matchre RETURN ^Glowing geometric patterns arc between your upturned palms as you prepare the .* spell\.
+     matchre RETURN ^Focusing intently, you slice seven straight lines through the air as you invoke the .* spell.\.
+     matchre RETURN ^Accompanied with a flash of light, you clap your hands sharply together in preparation of the .* spell\.
+     matchre RETURN ^Icy blue frost crackles up your arms with the ferocity of a blizzard as you begin to prepare the .* spell\!
+     matchre RETURN ^A radiant glow wreathes your hands as you weave lines of light into the complicated pattern of the .* spell\.
+     matchre RETURN ^Kaleidoscopic ribbons of light swirl between your outstretched hands, coalescing into a spectral wildling spider\.
+     matchre RETURN ^Darkly gleaming motes of sanguine light swirl briefly about your fingertips as you gesture while uttering the .* spell\.
+     matchre RETURN ^As you begin to solemnly intone the .* spell a blue glow swirls about forming a nimbus that surrounds your entire being\.
+     matchre RETURN ^As you slam your fists together and inhale sharply, a glowing outline begins to form and a matrix of blue and white motes surround you\.
+     matchre RETURN ^In one fluid motion, you bring your palms close together and a fiery crimson mist begins to burn within them as you prepare the .* spell\.
+     matchre RETURN ^The first gentle notes of .* waft from you with delicate ease, riddled with low tones that gradually give way to a higher\-pitched theme\.
+     matchre RETURN ^Droplets of water coalesce around your fingertips as your arms undulate like gracefully flowing river currents to form the pattern of the .* spell\.
+     matchre RETURN ^Inhaling deeply, you adopt a cyclical rhythm in your breaths to reflect the ebb and flow of the natural world and steel yourself to prepare the .* spell\.
+     matchre RETURN ^Calmly reaching out with one hand, a silvery-blue beam of light descends from the sky to fill your upturned palm with radiance as you prepare the .* spell\.
+     matchre RETURN ^Turning your head slightly and gazing directly ahead with a calculating stare, tiny sparks of crystalline light flash around your eyes as you prepare the .* spell\.
+     matchre RETURN ^You take up a handful of dirt in your palm to prepare the .* spell\.  As you whisper arcane words, you gently blow the dust away and watch as it becomes swirling motes of glittering light that veil your hands in a pale aura\.
+     send %putaction
+     matchwait 20
+     put #echo >Log Crimson *** MISSING MATCH IN PUT! (%scriptname.cmd) ***
+     put #echo >Log Crimson Command = %putaction
+     put #log $datetime MISSING MATCH IN PUT! Command = %putaction (%scriptname.cmd)
+     return
+
+PUT_UNTIE:
+     pause 0.1
+     eval putaction replacere("%putaction", "\bget\b", "")
+     eval putaction replacere("%putaction", "\bmy\b", "")
+     put untie %putaction
+     pause 0.4
+     return
+PUT_STOW:
+     gosub stowing
+     goto PUT_1
+PUT_STAND:
+     gosub stand
+     goto PUT_1
+     
+#### CATCH AND RETRY SUBS
+WAIT:
+     delay 0.0001
+     pause 0.1
+     if (!$standing) then gosub STAND
+     goto %LOCATION
+WEBBED:
+     delay 0.0001
+     if ($webbed) then waiteval (!$webbed)
+     if (!$standing) then gosub STAND
+     goto %LOCATION
+IMMOBILE:
+     delay 0.0001
+     if contains("$prompt" , "I") then pause 20
+     if (!$standing) then gosub STAND
+     goto %LOCATION
+STUNNED:
+     delay 0.0001
+     if ($stunned) then waiteval (!$stunned)
+     if (!$standing) then gosub STAND
+     goto %LOCATION
+CALMED:
+     delay 5
+     if ($stunned) then waiteval (!$stunned)
+     if (!$standing) then gosub STAND
+     goto %LOCATION
