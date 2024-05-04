@@ -14,8 +14,8 @@
 # Inspired by the OG Wizard Travel Script - But made 1000x better with the power of Genie
 # Originally written by Achilles
 # Revitalized and Robustified by Shroom
-# Updated: 4/27/24
-var version 5.2
+# Updated: 5/3/24
+var version 5.2.1
 #
 # REQUIRES EXPTRACKER PLUGIN! MANDATORY!
 #
@@ -5629,7 +5629,7 @@ PUT:
      matchre RETURN ^Your (?:actions|dance|nerves) .*(?:\.|\!|\?)?
      matchre RETURN ^Having no further use for .*, you discard it\.
      matchre RETURN ^After a moment, .*\.
-     matchre RETURN ^.* (?:is|are) not in need of cleaning\.
+     matchre RETURN ^.* (?:is|are) (not in need of cleaning|already activated)\.
      matchre RETURN \[Type INVENTORY HELP for more options\]|\[Use INVENTORY HELP for more options\.\]
      matchre RETURN ^A vortex|^A chance for|^In a flash|^It is locked|^An aftershock
      matchre RETURN ^In the .* you see .*\.
@@ -5643,6 +5643,7 @@ PUT:
      matchre RETURN ^Tie it off when it's empty\?
      matchre RETURN ^But the merchant can't see you|are invisible
      matchre RETURN Page|^As the world|^Obvious|^A ravenous energy
+     matchre RETURN ^A .* is currently
      matchre RETURN ^In the|^The attendant|^That is already open\.|^Your inner
      matchre RETURN ^(.+) hands you|^Searching methodically|^But you haven't prepared a symbiosis\!
      matchre RETURN ^Illustrations of complex,|^It is labeled|^Your nerves
@@ -5651,7 +5652,7 @@ PUT:
      matchre RETURN ^Weirdly, you can't manage
      matchre RETURN ^Hold hands with whom\?
      matchre RETURN ^Something in the area interferes
-     matchre RETURN ^With a .+ to your voice,
+     matchre RETURN ^With a .+
      matchre RETURN ^Turning your focus solemnly inward
      matchre RETURN ^Slow, rich tones form a somber introduction
      matchre RETURN ^Images of streaking stars falling from the heavens
@@ -5947,7 +5948,8 @@ STARGLASS_CHECK:
      if (%darkroom = 0) then goto YES_DARKVISION
 ### CHECK FOR A GAETHZEN LANTERN
 GAETHZEN_CHECK:
-     var Lantern.Types skull|sphere|wyvern|statuette|sunburst|star|lantern|firefly|salamander
+     echo ** CHECKING FOR A GATHZEN **
+     var Lantern.Types skull|salamander|sphere|wyvern|statuette|sunburst|star|lantern|firefly|rose|orchid|turnip
      var Lantern.Check 0
      var Lantern.Count 0
      eval Lantern.Count count("%Lantern.Types", "|")
@@ -5966,14 +5968,12 @@ GAETHZAN_FAIL:
 GAETHZEN_SUCCESS:
      var Gaethzen %Lantern.Types(%Lantern.Check)
      var FullCharge 0
+     var Activated 0
      echo
      echo *** FOUND A GAETHZEN! TYPE: %Gaethzen
      echo
-     gosub stowing
-     gosub RETREAT
+     if ($monstercount > 1) then gosub RETREAT
      pause 0.0001
-     gosub PUT GET my gaethzen %Gaethzen
-     pause 0.7
      pause 0.2
      if !matchre("$righthand $lefthand", "(?i)%Gaethzen") then goto LANTERN_CHECK
      echo
@@ -5982,27 +5982,30 @@ GAETHZEN_SUCCESS:
      echo ~~~~~~~~~~~~~~
      echo
      action var FullCharge 1 when ^The .+ is already holding as much power as you could possibly charge it with\.
-     gosub PUT CHARGE %Gaethzen 25
-     pause 2
-     if (%FullCharge = 1) then goto GAETHZEN_2
-     gosub PUT CHARGE %Gaethzen 25
-     pause 2
-     if (%FullCharge = 1) then goto GAETHZEN_2
+     action var Activated 1 when ^.* is currently activated\.
      gosub PUT CHARGE %Gaethzen 15
      pause 2
+     if (%FullCharge = 1) then goto GAETHZEN_2
+     if (%Activated = 1) then goto GAETHZEN_3
+     gosub PUT CHARGE %Gaethzen 15
+     pause 2
+     if (%Activated = 1) then goto GAETHZEN_3
      if (%FullCharge = 1) then goto GAETHZEN_2
      gosub PUT CHARGE %Gaethzen 10
      pause 2
 GAETHZEN_2:
      gosub PUT focus my %Gaethzen
-     pause 0.2
+     pause 0.5
+     pause 0.3
      gosub PUT rub my %Gaethzen
      pause 0.5
+     pause 0.3
+GAETHZEN_3:
      put wear my %Gaethzen
      pause 0.2
      pause 0.0001
      action remove ^The .+ is already holding as much power as you could possibly charge it with\.
-     gosub stowing
+     action remove ^.* is currently activated\.
      gosub DARK_CHECK
      if (%darkroom = 0) then goto YES_DARKVISION
 ### CHECK HERE FOR A NORMAL OIL LANTERN
@@ -6061,7 +6064,6 @@ LIT_LANTERN:
      put wear lantern
      pause 0.2
 LANTERN_DONE:
-     gosub stowing
      pause 0.0001
      gosub DARK_CHECK
      if (%darkroom = 0) then goto YES_DARKVISION
@@ -6179,7 +6181,6 @@ DARK_CHECK_1:
 DARK_YES:
      var darkroom 1
      var darkTime $gametime
-     gosub LIGHT_SOURCE
      return
 LIGHT_YES:
      var darkroom 0
@@ -6587,6 +6588,7 @@ RANDOMMOVE_1:
      math moveloop add 1
      math randomloop add 1
      if (%randomloop = 1) then gosub DARK_CHECK_1
+     if (%darkroom = 1) then gosub LIGHT_SOURCE
      if !($standing) then gosub STAND
 ## IF WE'VE DONE 20/40 LOOPS, DO A QUICK LOOK AND MAKE SURE NOT ON A FERRY
      if matchre("%moveloop", "\b(40)\b") then
@@ -6597,7 +6599,7 @@ RANDOMMOVE_1:
                gosub FERRY_CHECK
           }
 ### TRY A LIGHT SOURCE IF ROOM IS PITCH BLACK AND THEN TRY TRUE RANDOM DIRECTIONS
-     if (%moveloop > 25) then
+     if (%moveloop > 20) then
           {
                if matchre("$roomobjs $roomdesc","pitch black") then gosub LIGHT_SOURCE
                var lastmoved null
