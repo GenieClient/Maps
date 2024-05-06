@@ -1,9 +1,13 @@
 # automapper.cmd
-var autoversion 8.2024-05-02
+var autoversion 8.2024-05-06
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
+
+#2023-12-15
+# Hanryu
+#   added message anchors for the slow crawl room to access shard west gate favor area
 
 #2024-04-27
 #   Robustified Light Source checks
