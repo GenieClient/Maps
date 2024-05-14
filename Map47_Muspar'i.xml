@@ -1820,7 +1820,7 @@
   </node>
   <node id="272" name="Muspar'i, Carousel Entryway" note="Carousel|Vault">
     <description>The dim lighting does little to eclipse a gem-studded frieze impressed into thick clay and limestone walls of this sheltered relief.  The air is frigid with chill, warm lanterns offering little reprieve from the merciless desert night.  An impressive mosaic of miniature tiles forms the cool floor, arrayed into the menacing image of a king cobra.  Suspended overhead, countless gears, pulleys and weights form the strikingly complex and beautiful mechanism that drives the Carousel.</description>
-    <position x="530" y="580" z="0" />
+    <position x="530" y="570" z="0" />
     <arc exit="go" move="go tiled steps" destination="273" />
     <arc exit="go" move="go arched opening" destination="2" />
     <arc exit="go" move="go sapphire arch" destination="275" />
@@ -1828,43 +1828,44 @@
     <arc exit="go" move="go ruby arch" destination="278" />
     <arc exit="go" move="go emerald arch" destination="279" />
     <arc exit="south" move="south" destination="553" />
+    <arc exit="north" move="north" destination="561" />												   
   </node>
   <node id="273" name="Muspar'i, Carousel Desk" note="Lost and Found" color="#00FF00">
     <description>Based down a short flight of steps lies a small, sparsely decorated administrative office.  A worn blackwood desk occupies the center of this room, stacked with the bureaucratic paperwork and thick ledgers of the establishment, behind which sits a shrewd-looking Dwarven clerk.  A small plaque hangs from the wall, directly above a large bin that is labeled Lost &amp; Found.</description>
-    <position x="530" y="570" z="0" />
+    <position x="520" y="580" z="0" />
     <arc exit="go" move="go tiled steps" destination="272" />
   </node>
   <node id="274" name="Muspar'i, Carousel Booth">
     <description>Cool and calm, this narrow chamber is insulated from the harsh environment and commotion of the lively streets through the thick limestone walls.  Rows of slow-burning oil lamps suspended along the wall illuminate the booth, the light from their small flames dancing along the intricate patterns of an ornate golden door, adjacent to a polished silver lever that protrudes from the wall.</description>
-    <position x="520" y="560" z="0" />
+    <position x="540" y="580" z="0" />
     <arc exit="go" move="go door" destination="277" />
     <arc exit="go" move="go arch" destination="272" />
   </node>
   <node id="275" name="Muspar'i, Carousel Booth">
     <description>Cool and calm, this narrow chamber is insulated from the harsh environment and commotion of the lively streets through the thick limestone walls.  Rows of slow-burning oil lamps suspended along the wall illuminate the booth, the light from their small flames dancing along the intricate patterns of an ornate brass door, adjacent to a polished steel lever that protrudes from the wall.</description>
-    <position x="540" y="570" z="0" />
+    <position x="540" y="560" z="0" />
     <arc exit="go" move="go door" destination="276" />
     <arc exit="go" move="go arch" destination="272" />
   </node>
   <node id="276" name="Muspar'i, Carousel Chamber">
     <description>A small jeweled chandelier suspended from the ceiling and populated with sweet, slow-burning wax candles highlights the neatly arranged highly wrought furniture in this cozy, comfortably furnished chamber.  Spread across the center of the room is a fine Velakan rug woven through with elaborate patterns, upon which an antique ironwood table rests.  A sturdy iron vault is securely fastened into the back wall, ready for your use.</description>
-    <position x="550" y="580" z="0" />
+    <position x="550" y="563" z="0" />
     <arc exit="go" move="go door" destination="275" />
   </node>
   <node id="277" name="Muspar'i, Carousel Chamber">
     <description>A large jeweled chandelier suspended from the ceiling and populated with sweet, slow-burning wax candles highlights the neatly arranged antique furniture in this sumptuous, lavishly furnished chamber.  Spread across the center of the room is a rare, luxurious Velakan rug woven through with elaborate patterns, upon which an ornamental gold table rests.  A robust steel vault is securely fastened into the back wall, ready for your use.</description>
-    <position x="530" y="560" z="0" />
+    <position x="550" y="580" z="0" />
     <arc exit="go" move="go door" destination="274" />
   </node>
   <node id="278" name="Muspar'i, Carousel Booth">
     <description>Cool and calm, this narrow chamber is insulated from the harsh environment and commotion of the lively streets through the thick limestone walls.  Rows of slow-burning oil lamps suspended along the wall illuminate the booth, the light from their small flames dancing along the intricate patterns of an ornate copper door, adjacent to a polished steel lever that protrudes from the wall.</description>
-    <position x="540" y="590" z="0" />
+    <position x="540" y="550" z="0" />
     <arc exit="go" move="go door" destination="276" />
     <arc exit="go" move="go arch" destination="272" />
   </node>
   <node id="279" name="Muspar'i, Carousel Booth">
     <description>Cool and calm, this narrow chamber is insulated from the harsh environment and commotion of the lively streets through the thick limestone walls.  Rows of slow-burning oil lamps suspended along the wall illuminate the booth, the light from their small flames dancing along the intricate patterns of an ornate bronze door, adjacent to a polished steel lever that protrudes from the wall.</description>
-    <position x="540" y="580" z="0" />
+    <position x="540" y="570" z="0" />
     <arc exit="go" move="go door" destination="276" />
     <arc exit="go" move="go arch" destination="272" />
   </node>
@@ -3704,19 +3705,19 @@
   <node id="553" name="Muspar'i, Carousel Family Services">
     <description>A series of guarded arches line the southern wall.  The complicated framework of iron and timbers spans across the ceiling.  Countless gears, pulleys and weights form the strikingly complex mechanism which drives the Carousel.</description>
     <description>Guarded arches line the southern wall.  The complicated framework spans the ceiling and supports the gears, pulleys and weights that drive the Carousel's mechanisms.</description>
-    <position x="530" y="590" z="0" />
+    <position x="530" y="580" z="0" />
     <arc exit="go" move="go metal arch" destination="554" />
     <arc exit="go" move="go stone arch" destination="555" />
     <arc exit="north" move="north" destination="272" />
   </node>
   <node id="554" name="Muspar'i, Family Vault">
     <description>A Dwarven attendant stands near the entry, doing his best to ignore you but seeming anxious.  A wooden platform sits in the middle of the room, and a complicated series of gears, rope and other mechanisms are focused around it.</description>
-    <position x="530" y="600" z="0" />
+    <position x="530" y="590" z="0" />
     <arc exit="go" move="go metal arch" destination="553" />
   </node>
   <node id="555" name="Muspar'i, Family Vault">
     <description>A Dwarven attendant stands near the entry, doing his best to ignore you but seeming anxious.  A wooden platform sits in the middle of the room, and a complicated series of gears, rope and other mechanisms are focused around it.</description>
-    <position x="540" y="600" z="0" />
+    <position x="540" y="590" z="0" />
     <arc exit="go" move="go stone arch" destination="553" />
   </node>
   <node id="556" name="Muspar'i Outfitting Society, A Private Outfitting Room" note="Private Outfitting">
@@ -3744,6 +3745,11 @@
     <position x="590" y="310" z="0" />
     <arc exit="go" move="go glass doors" destination="524" />
   </node>
+  <node id="561" name="Muspar'i, Rundmolen Post Office" note="Post Office|mail" color="#00FF00">
+    <description>Tucked up against the limestone building is a low stone counter made from pale tan sandstone.  Carved sandalwood screens section off the area from the bustling square beyond.  Vast, countless rows of differently sized shelves are behind the counter, and complex Dwarven mechanisms can be heard as they rearrange the package-covered storage.  Clerks shuffle endlessly back and forth between the counters and shelving as they assist patrons with their packaging and mailing needs.</description>
+    <position x="530" y="560" z="0" />
+    <arc exit="south" move="south" destination="272" />
+  </node>																								
   <label text="Barge to Hvaral, Theren">
     <position x="850" y="1030" z="0" />
   </label>
@@ -3775,7 +3781,7 @@
     <position x="520" y="352" z="0" />
   </label>
   <label text="Vaults">
-    <position x="490" y="540" z="0" />
+    <position x="515" y="595" z="0" />
   </label>
   <label text="Warrior Mage">
     <position x="563" y="635" z="0" />
@@ -3996,4 +4002,10 @@
   <label text="Enchanting Society">
     <position x="790" y="285" z="0" />
   </label>
+  <label text="Post">
+    <position x="505" y="540" z="0" />
+  </label>
+  <label text="Office">
+    <position x="490" y="550" z="0" />
+  </label>						    
 </zone>
