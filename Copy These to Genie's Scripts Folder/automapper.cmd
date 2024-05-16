@@ -521,7 +521,7 @@ ACTIONS:
   action (mapper) goto MOVE.RETRY when %move_RETRY|%move_WEB|^You can't climb that\.$
   action (mapper) goto MOVE.STAND when %move_STAND
   action (mapper) var movewait 1;goto MOVE.WAIT when %move_WAIT
-  action (mapper) goto MOVE.RETREAT when %move_RETREAT
+  action (mapper) var retreat.count 0;goto MOVE.RETREAT when %move_RETREAT
   action (mapper) var movewait 0 when %move_END_DELAY
   action (mapper) var closed 1;goto MOVE.CLOSED when %move_CLOSED
   action (mapper) goto MOVE.NOSNEAK when %move_NO_SNEAK
@@ -1038,21 +1038,29 @@ MOVE.STAND:
   goto RETURN.CLEAR
 
 ATTACK.RETREAT:
+  if (%retreat.count > 2) then 
+  {
+  echo unable to retreat script exiting
+  put #flash
+  echo unable to retreat script exiting
+  exit
+  }
   pause 0.0001
-  put punch
+  put bob
   pause 0.8
   pause 0.1
-  put punch
-  pause 0.8
-  pause 0.1
-  if ($monstercount = 0) then goto RETURN.CLEAR
-  put punch
+  put bob
   pause 0.8
   pause 0.1
   if ($monstercount = 0) then goto RETURN.CLEAR
-  put punch
+  put bob
   pause 0.8
   pause 0.1
+  if ($monstercount = 0) then goto RETURN.CLEAR
+  put bob
+  pause 0.8
+  pause 0.1
+  math retreat.count add 1
 MOVE.RETREAT:
   action (mapper) off
   if (!$standing) then gosub STAND
