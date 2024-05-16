@@ -1828,7 +1828,7 @@
     <arc exit="go" move="go ruby arch" destination="278" />
     <arc exit="go" move="go emerald arch" destination="279" />
     <arc exit="south" move="south" destination="553" />
-    <arc exit="north" move="north" destination="561" />												   
+    <arc exit="north" move="north" destination="561" />
   </node>
   <node id="273" name="Muspar'i, Carousel Desk" note="Lost and Found" color="#00FF00">
     <description>Based down a short flight of steps lies a small, sparsely decorated administrative office.  A worn blackwood desk occupies the center of this room, stacked with the bureaucratic paperwork and thick ledgers of the establishment, behind which sits a shrewd-looking Dwarven clerk.  A small plaque hangs from the wall, directly above a large bin that is labeled Lost &amp; Found.</description>
@@ -3749,7 +3749,7 @@
     <description>Tucked up against the limestone building is a low stone counter made from pale tan sandstone.  Carved sandalwood screens section off the area from the bustling square beyond.  Vast, countless rows of differently sized shelves are behind the counter, and complex Dwarven mechanisms can be heard as they rearrange the package-covered storage.  Clerks shuffle endlessly back and forth between the counters and shelving as they assist patrons with their packaging and mailing needs.</description>
     <position x="530" y="560" z="0" />
     <arc exit="south" move="south" destination="272" />
-  </node>																								
+  </node>
   <label text="Barge to Hvaral, Theren">
     <position x="850" y="1030" z="0" />
   </label>
@@ -4007,5 +4007,5 @@
   </label>
   <label text="Office">
     <position x="490" y="550" z="0" />
-  </label>						    
+  </label>
 </zone>
