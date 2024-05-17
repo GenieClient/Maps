@@ -12,6 +12,7 @@ var autoversion 8.2024-05-17
 #   standardize prase by always reporting "AUTOMAPPER: message"
 #   fixing echos that are not using GOSUB ECHO
 #   fixing micropauses, let's not do that shit anymore please
+#   robustify MOVE.RT
 
 #2023-12-15
 # Hanryu
