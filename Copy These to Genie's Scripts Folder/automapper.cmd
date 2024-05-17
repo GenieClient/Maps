@@ -782,8 +782,12 @@ MOVE.RT:
 ####added this to stop trainer
   eval movement replacere("%movement", "script crossingtrainerfix ", "")
   if (%depth > 1) then waiteval (1 = %depth)
+  matchre MOVE.RT.SUCCESS ^(?:Obvious|Ship) (?:paths|exits):
   put %movement
-  waitforre ^(?:Obvious|Ship) (?:paths|exits):|^\.\.\.wait|^Sorry, you may only type
+  matchwait 15
+  goto MOVE.RT
+MOVE.RT.SUCCESS:
+  pause %command_pause
   if ($roundtime > 0) then pause %command_pause
   goto MOVE.DONE
 
