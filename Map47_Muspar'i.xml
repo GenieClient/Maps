@@ -4008,4 +4008,10 @@
   <label text="Office">
     <position x="490" y="550" z="0" />
   </label>
+  <label text="Great Gate">
+    <position x="630" y="790" z="0" />
+  </label>
+  <label text="Square">
+    <position x="640" y="800" z="0" />
+  </label>
 </zone>
