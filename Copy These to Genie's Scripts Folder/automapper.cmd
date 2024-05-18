@@ -9,7 +9,7 @@ var autoversion 8.2024-05-17
 # Hanryu
 #   no more punching, bob instead to build balance on retreat, if you still fail, graceful abort
 #   END: use this for graceful exits that turn on classes
-#   standardize prase by always reporting "AUTOMAPPER: message"
+#   standardize parse by always reporting "AUTOMAPPER: message"
 #   fixing echos that are not using GOSUB ECHO
 #   fixing micropauses, let's not do that shit anymore please
 #   robustify MOVE.RT
@@ -1009,7 +1009,7 @@ ATTACK.RETREAT:
   if (%retreat.count > 2) then {
     gosub echo Unable to retreat, script exiting.
     put #flash
-    put #prase unable to retreat script exiting
+    put #parse unable to retreat script exiting
     goto END
   }
   var action bob
@@ -2347,4 +2347,4 @@ return:
 RETURN:
 returner:
   return
-####
+#####
