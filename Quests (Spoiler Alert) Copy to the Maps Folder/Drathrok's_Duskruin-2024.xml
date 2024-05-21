@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-16"?>
-<zone name="Drathrok's Duskruin 448 (2024)" id="601">
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Drathrok's Duskruin 448 (2024)" id="505">
   <node id="1" name="Duskruin, Western Walk">
     <description>Stone walls rise on both sides of the western walkway, which spans a massive width large enough to accomodate large crowds -- or perhaps an army.  Blazing torches burn in iron sconces that are placed at even intervals, lighting up the wide walkway and the people traveling it.  Noise from the central parade carries upward to the walkway, filling the air with a cacophany of sound.</description>
     <description>Stone walls rise on both sides of the western walkway, which spans a massive width large enough to accomodate large crowds -- or perhaps an army.  Closely fitted granite stones make up the floor of the walkway, sturdily built to withstand both the elements and damage from outside forces.  The central parade is easily visible just below and to the east, its courtyard a blur of activity and its sounds carrying through the air.</description>
@@ -23,7 +23,7 @@
     <position x="310" y="250" z="0" />
     <arc exit="northeast" move="northeast" destination="8" />
     <arc exit="west" move="west" destination="2" />
-    <arc exit="go" move="go colorful portal" destination="81" />
+    <arc exit="go" move="go colorful portal" destination="38" />
   </node>
   <node id="4" name="Duskruin, Western Walk">
     <description>Sloping rather gently to follow the exterior curve of the massive fortress, the western walkway follows the natural slope of the mountainside.  Bustling people move back and forth, moving along the wide walkway in a constant stream.  Arranged against the southwestern wall are several stockpiles of neatly stacked crates, each one stamped and labeled.</description>
@@ -82,7 +82,7 @@
     <description>The wide granite walk bends to the east, leading to the Bank of Duskruin.  A series of deadly spikes along the outer wall prevent any attempt by invaders to scale the imposing fortress, while crowds steadily move back and forth through the area, creating a near constant din of noise that blankets the area.  Despite the throngs of visitors, the area is meticulously maintained and well kept.</description>
     <position x="370" y="110" z="0" />
     <arc exit="south" move="south" destination="10" />
-    <arc exit="east" move="east" destination="54" />
+    <arc exit="east" move="east" destination="25" />
   </node>
   <node id="12" name="Duskruin, Antechamber" note="Antechamber|Arena portcullis" color="#00FF00">
     <description>Long marble benches line the walls of the perfectly round room, placed between ornately carved pillars that rise to a domed ceiling.  A large crystal chandelier dangles from the center of the ceiling, throwing rays of light in all directions.  Cedar panels grace the walls, each carved with a detailed scene of a fierce battle with the minions of Sorrow's Reach.</description>
@@ -158,184 +158,70 @@
     <arc exit="southeast" move="up" />
     <arc exit="northwest" move="down" />
   </node>
-  <node id="54" name="Duskruin, Outside the Bank" note="Chrematistic Investor battlemaster|battlemaster" color="#00FF00">
+  <node id="25" name="Duskruin, Outside the Bank" note="Chrematistic Investor battlemaster|battlemaster" color="#00FF00">
     <description>Iron sconces blanket the wide granite walk and the many visitors in a soft crimson hue.  Thick iron bars fortify the tall windows of the bank building, its towering stone walls blending seamlessly into the adjacent mountainside.  Closing off a narrow entryway are two vigilant guards dressed in yellow and black uniforms with their tasseled pikes resolute.  A nearby ramp leads down a side street and away from the bustle surrounding the guarded structure.</description>
     <description>Thick iron bars fortify the tall windows of the bank building, its towering stone walls blending seamlessly into the adjacent mountainside.  Closing off a narrow entryway are two vigilant guards dressed in yellow and black uniforms with their tasseled pikes resolute.  A nearby ramp leads down a side street and away from the bustle surrounding the guarded structure.</description>
     <position x="390" y="110" z="0" />
-    <arc exit="east" move="east" destination="55" />
+    <arc exit="east" move="east" destination="26" />
     <arc exit="west" move="west" destination="11" />
-    <arc exit="down" move="down" destination="56" />
+    <arc exit="down" move="down" destination="27" />
   </node>
-  <node id="55" name="Duskruin, Dark Alley" note="Perfidious Renegade enforcer|enforcer" color="#00FF00">
+  <node id="26" name="Duskruin, Dark Alley" note="Perfidious Renegade enforcer|enforcer" color="#00FF00">
     <description>In the darkness, the dark alley works its way between the towering walls of the bank and a row of shuttered buildings, ending ubruptly at the outer wall of the fortress.  Barely visible amid trash bins and stacks of weathered crates is a shadowed tunnel entrance, the surrounding area littered with chunks of granite and gravel.</description>
     <description>The dark alley works its way between the towering walls of the bank and a row of shuttered buildings, ending ubruptly at the outer wall of the fortress.  Barely visible amid trash bins and stacks of weathered crates is a darkened tunnel entrance, the surrounding area littered with chunks of granite and gravel.</description>
     <position x="410" y="110" z="0" />
-    <arc exit="west" move="west" destination="54" />
+    <arc exit="west" move="west" destination="25" />
   </node>
-  <node id="56" name="Duskruin, Side Street" note="Unscrupulous Ringleader brigand|brigand" color="#00FF00">
+  <node id="27" name="Duskruin, Side Street" note="Unscrupulous Ringleader brigand|brigand" color="#00FF00">
     <description>The narrow street traverses between the towering walls of the bank and a row of homes along the opposing side, lit only by the muted candlelight from the curtained windows.  Rounded stone archways stretch between the two-story homes, shading the cobblestone pavement and disguising lines of drying laundry that crisscross overhead.  A discarded bucket and hearth broom lean against the steps leading to one of the numerous unmarked doorways, while a ramp at one end of the street rises up to the commotion surrounding the bank above.</description>
     <description>The narrow street traverses between the towering walls of the bank and a row of homes along the opposing side.  Rounded stone archways stretch between the two-story homes, shading the cobblestone pavement and disguising lines of drying laundry that crisscross overhead.  A discarded bucket and hearth broom lean against the steps leading to one of the numerous unmarked doorways, while a ramp at one end of the street rises up to the commotion surrounding the bank above.</description>
     <position x="390" y="130" z="0" />
-    <arc exit="up" move="up" destination="54" />
+    <arc exit="up" move="up" destination="25" />
   </node>
-  <node id="57" name="Duskruin, Tuulpon'u Arena">
+  <node id="28" name="Duskruin, Tuulpon'u Arena">
     <description>Sinuous pillars erupt from the ground in all directions, obscuring the combat field.  Betwixt the pillars, creamy white sand shifts as barely visible grates move, the creatures beyond them straining for release into the arena.  Suspended from cross-section wires, heavy tzgaa orbs provide lighting across the area.</description>
     <position x="190" y="130" z="0" />
   </node>
-  <node id="58" name="Duskruin, Owirvald Arena">
+  <node id="29" name="Duskruin, Owirvald Arena">
     <description>Lapis lazuli marbles the smoothed stone walls that surround the dirt-floored arena and massive chunks of ore and rock dot the terrain, providing ideal hiding spots while also partially obscuring the grates along the floor.  Flashes of color burst from the ores as torchlight strikes them, refracting vibrantly toned lights across the area.</description>
     <position x="210" y="150" z="0" />
   </node>
-  <node id="59" name="Duskruin, Mysandanuva'r Arena">
+  <node id="30" name="Duskruin, Mysandanuva'r Arena">
     <description>Stone reliefs of sprawling trees and forested scenes encircle the vast arena, several inlaid with precious gems that glint as they catch the surrounding torchlight.  Dirt, hay and bits of decayed bone litter the floor, its center revealing a battered steel grate with dark figures that rustle beyond.  A pair of cages interrupts portions of the surrounding walls, the crisscrossed bars splattered with dried blood.</description>
     <position x="230" y="110" z="0" />
   </node>
-  <node id="60" name="Duskruin, Drensyld Arena">
+  <node id="31" name="Duskruin, Drensyld Arena">
     <description>Between ornate blind arcades that otherwise showcase detailed reliefs of valiant warriors battling various blood-thirsty beasts, flickering torches cast shifting shadows over several portcullis-like cages set into the arena walls.  Strewn with bits of stone and splatters of dried blood, the rough granite floor is imbedded with a battered steel grate, its meshed bars straining under the pressure of dark figures, yearning for their release.</description>
     <position x="230" y="150" z="0" />
   </node>
-  <node id="61" name="Duskruin, Verdegti Arena">
+  <node id="32" name="Duskruin, Verdegti Arena">
     <description>Littered with refuse, hay, and dirt, the arena ground is disrupted by several stone pillars that erupt from the ground haphazardly.  Broken and chipped away in various spots, the pillars obscure the battlefield, while also providing advantageous spots to briefly hide.  Flickering torches protected by steel cages encircle the arena, casting shifting shadows throughout the area.</description>
     <position x="230" y="130" z="0" />
   </node>
-  <node id="62" name="Duskruin, Stolnor Arena">
+  <node id="33" name="Duskruin, Stolnor Arena">
     <description>Nearly ostentatious in design, elaborate and meticulously detailed sculptures appear along the edifice of the arena walls, each showcasing a golden-bearded Dwarf.  Shadows flicker across the ground, cast from sconces holding burning torches that illuminate the dirt-packed ground and partially reveals several scratched and dented heavy steel grates that hide away various unknown dangers.</description>
     <position x="190" y="110" z="0" />
   </node>
-  <node id="63" name="Duskruin, Olgievi Arena">
+  <node id="34" name="Duskruin, Olgievi Arena">
     <description>Deep pits and gouges appear along the walls of the arena, combining with firepits along the edge, give the area a haunting, ominous feel.  Peppered with golden flecks, the marbled walls display veins of white stone marbled with grey and black veins.  Disrupting the hay-strewn ground, several grates rustle as dark shapes push against the bars, yearning for their release into the arena.</description>
     <position x="190" y="150" z="0" />
   </node>
-  <node id="64" name="Duskruin, Sel'hevor Arena">
+  <node id="35" name="Duskruin, Sel'hevor Arena">
     <description>Carved into the walls of the arena are images of tsunamis and great waves crashing in a stormy sea that overlooks the mess of an arena.  Wood chips and broken bits of salt-stained wood litter the ground of the arena beneath a tilted mast that crosses over the area, its tattered red sail shifting listlessly.  Dust stirs as an errant breeze disrupts space, revealing grates along the floor.</description>
     <position x="210" y="110" z="0" />
   </node>
-  <node id="65" name="Duskruin, Waldegrave Arena">
+  <node id="36" name="Duskruin, Waldegrave Arena">
     <description>Encircling the arena, pristine, snow white walls are adorned with carved coral renditions of fishermen and sea creatures.  Garnet and platinum accents pair with several star-shaped rubies that appear set into some of the carvings.  Shifting white and coral-littered sand reveals grates set into the floor.</description>
     <position x="210" y="130" z="0" />
   </node>
-  <node id="66" name="Duskruin, Tanglefoot Arena">
+  <node id="37" name="Duskruin, Tanglefoot Arena">
     <description>Formed from a myriad of faceted and cabochon gemstones, a variety of foodstuffs appear set into the walls.  Gigantic renditions of berries and tarts overlook creaky hay-strewn floorboards set with scratched steel gratings.  The sound of something large moving beneath the arena stirs the stale air.</description>
     <position x="210" y="170" z="0" />
   </node>
-  <node id="81" name="Foyer" color="White">
-    <description>Subdued lighting illuminates the tasteful wooden paneling of the room while a bevy of overstuffed furniture provides comfortable seating for those contemplating weighty choices.  Thick plush carpets in a myriad of hues cover the floor, almost totally obscuring the pale wooden planks of the flooring.  Around the walls, a number of colored archways contain magical portals that, when open, allow access to the prize rooms beyond.  A large set of double doors allows access to rooms devoted to dispenser activities.</description>
+  <node id="38" name="Foyer" note="MT_Prize_Wings.xml|prizes|raffles|alterations">
+    <description>Subdued lighting illuminates the tasteful wooden paneling of the room while a bevy of overstuffed furniture provides comfortable seating for those contemplating weighty choices.  Thick plush carpets in a myriad of hues cover the floor, almost totally obscuring the pale wooden planks of the flooring.  Around the walls, a number of colored archways contain magical portals that, when open, allow access to the prize rooms beyond.  A large set of double doors allows access to rooms devoted to dispenser activities while a round opening leads to the area devoted to workshops for alterations.</description>
+    <description>Lighting illuminates the room which has carpets covering the floors.  A number of colored archways contain magic portals that, when open, allow access to the prize rooms beyond.  A set of double doors allows access to the dispensers while a round opening leads to the alteration area.</description>
     <position x="300" y="280" z="0" />
-    <arc exit="go" move="go yellow portal" destination="82" />
-    <arc exit="go" move="go double doors" destination="100" />
-    <arc exit="go" move="go return portal" destination="3" />
-  </node>
-  <node id="82" name="Yellow Suite, Amber Hall" note="Amber Hall" color="#FF0000">
-    <description>Plaster walls painted a rich amber hue enclose a spacious area designed to showcase the items on display.  Overhead lighting allows for the proper inspection of the various prizes on offer.</description>
-    <position x="300" y="300" z="0" />
-    <arc exit="east" move="east" destination="84" />
-    <arc exit="south" move="south" destination="85" />
-    <arc exit="west" move="west" destination="83" />
-    <arc exit="go" move="go yellow portal" destination="81" />
-  </node>
-  <node id="83" name="Yellow Suite, Saffron Niche" note="Saffron Niche" color="#FF0000">
-    <description>High overhead a gaezthen globe dangles from the ceiling and provides enough light to highlight the prize selections available.  The cozy niche is enclosed with plastered walls painted a vibrant saffron shade.</description>
-    <position x="280" y="300" z="0" />
-    <arc exit="east" move="east" destination="82" />
-  </node>
-  <node id="84" name="Yellow Suite, Honey Alcove" note="Honey Alcove" color="#FF0000">
-    <description>Walls plastered and painted the shade of honey enclose the small space set off from the main hallway.  Some gaezthen globes set onto sconces cast their light on the prizes displayed around the room.</description>
-    <position x="320" y="300" z="0" />
-    <arc exit="west" move="west" destination="82" />
-  </node>
-  <node id="85" name="Yellow Suite, Buttercup Hall" note="Buttercup Hall" color="#FF0000">
-    <description>Plaster walls painted a luscious buttercup hue enclose a spacious area designed to showcase the items on display.  Overhead lighting allows for the proper inspection of the various prizes on offer.</description>
-    <position x="300" y="320" z="0" />
-    <arc exit="north" move="north" destination="82" />
-    <arc exit="east" move="east" destination="87" />
-    <arc exit="south" move="south" destination="88" />
-    <arc exit="west" move="west" destination="86" />
-  </node>
-  <node id="86" name="Yellow Suite, Golden Niche" note="Golden Niche" color="#FF0000">
-    <description>High overhead a gaezthen globe dangles from the ceiling and provides enough light to highlight the prize selections available.  The cozy niche is enclosed with plastered walls painted a rich golden shade.</description>
-    <position x="280" y="320" z="0" />
-    <arc exit="east" move="east" destination="85" />
-  </node>
-  <node id="87" name="Yellow Suite, Jonquil Alcove" note="Jonquil Alcove" color="#FF0000">
-    <description>Walls plastered and painted the shade of jonquils enclose the small space set off from the main hallway.  Some gaezthen globes set onto sconces cast their light on the prizes displayed around the room.</description>
-    <position x="320" y="320" z="0" />
-    <arc exit="west" move="west" destination="85" />
-  </node>
-  <node id="88" name="Yellow Suite, Jasmine Hall" note="Jasmine Hall" color="#FF0000">
-    <description>Plaster walls painted a pale jasmine hue enclose a spacious area designed to showcase the items on display.  Overhead lighting allows for the proper inspection of the various prizes on offer.</description>
-    <position x="300" y="340" z="0" />
-    <arc exit="north" move="north" destination="85" />
-    <arc exit="east" move="east" destination="90" />
-    <arc exit="south" move="south" destination="91" />
-    <arc exit="west" move="west" destination="89" />
-  </node>
-  <node id="89" name="Yellow Suite, Sunny Niche" note="Sunny NIche" color="#FF0000">
-    <description>High overhead a gaezthen globe dangles from the ceiling and provides enough light to highlight the prize selections available.  The cozy niche is enclosed with plastered walls painted a sunny-yellow shade.</description>
-    <position x="280" y="340" z="0" />
-    <arc exit="east" move="east" destination="88" />
-  </node>
-  <node id="90" name="Yellow Suite, Maize Alcove" note="Maize Alcove" color="#FF0000">
-    <description>Walls plastered and painted the shade of maize enclose the small space set off from the main hallway.  Some gaezthen globes set onto sconces cast their light on the prizes displayed around the room.</description>
-    <position x="320" y="340" z="0" />
-    <arc exit="west" move="west" destination="88" />
-  </node>
-  <node id="91" name="Yellow Suite, Straw Hall" note="Straw Hall" color="#FF0000">
-    <description>Plaster walls painted a faint straw hue enclose a spacious area designed to showcase the items on display.  Overhead lighting allows for the proper inspection of the various prizes on offer.</description>
-    <position x="300" y="360" z="0" />
-    <arc exit="north" move="north" destination="88" />
-    <arc exit="east" move="east" destination="93" />
-    <arc exit="south" move="south" destination="94" />
-    <arc exit="west" move="west" destination="92" />
-  </node>
-  <node id="92" name="Yellow Suite, Daffodil Niche" note="Daffodil NIche" color="#FF0000">
-    <description>High overhead a gaezthen globe dangles from the ceiling and provides enough light to highlight the prize selections available.  The cozy niche is enclosed with plastered walls painted a pale daffodil-yellow shade.</description>
-    <position x="280" y="360" z="0" />
-    <arc exit="east" move="east" destination="91" />
-  </node>
-  <node id="93" name="Yellow Suite, Citrine Alcove" note="Citrine Alcove" color="#FF0000">
-    <description>Walls plastered and painted the shade of citrine enclose the small space set off from the main hallway.  Some gaezthen globes set onto sconces cast their light on the prizes displayed around the room.</description>
-    <position x="320" y="360" z="0" />
-    <arc exit="west" move="west" destination="91" />
-  </node>
-  <node id="94" name="Yellow Suite, Lemon Hall" note="Lemon Hall" color="#FF0000">
-    <description>Plaster walls painted a bright lemon hue enclose a spacious area designed to showcase the items on display.  Overhead lighting allows for the proper inspection of the various prizes on offer.</description>
-    <position x="300" y="380" z="0" />
-    <arc exit="north" move="north" destination="91" />
-    <arc exit="east" move="east" destination="96" />
-    <arc exit="south" move="south" destination="97" />
-    <arc exit="west" move="west" destination="95" />
-  </node>
-  <node id="95" name="Yellow Suite, Canary Niche" note="Canary Niche" color="#FF0000">
-    <description>High overhead a gaezthen globe dangles from the ceiling and provides enough light to highlight the prize selections available.  The cozy niche is enclosed with plastered walls painted a bright canary-yellow shade.</description>
-    <position x="280" y="380" z="0" />
-    <arc exit="east" move="east" destination="94" />
-  </node>
-  <node id="96" name="Yellow Suite, Butter Alcove" note="Butter Alcove" color="#FF0000">
-    <description>Walls plastered and painted the shade of butter enclose the small space set off from the main hallway.  Some gaezthen globes set onto sconces cast their light on the prizes displayed around the room.</description>
-    <position x="320" y="380" z="0" />
-    <arc exit="west" move="west" destination="94" />
-  </node>
-  <node id="97" name="Yellow Suite, Mustard Hall" note="Mustard Hall" color="#FF0000">
-    <description>Plaster walls painted a muddy mustard hue enclose a spacious area designed to showcase the items on display.  Overhead lighting allows for the proper inspection of the various prizes on offer.</description>
-    <position x="300" y="400" z="0" />
-    <arc exit="north" move="north" destination="94" />
-    <arc exit="east" move="east" destination="99" />
-    <arc exit="west" move="west" destination="98" />
-  </node>
-  <node id="98" name="Yellow Suite, Banana Niche" note="Banana Niche" color="#FF0000">
-    <description>High overhead a gaezthen globe dangles from the ceiling and provides enough light to highlight the prize selections available.  The cozy niche is enclosed with plastered walls painted an intense banana-yellow shade.</description>
-    <position x="280" y="400" z="0" />
-    <arc exit="east" move="east" destination="97" />
-  </node>
-  <node id="99" name="Yellow Suite, Wheat Alcove" note="Wheat Alcove" color="#FF0000">
-    <description>Walls plastered and painted the shade of wheat enclose the small space set off from the main hallway.  Some gaezthen globes set onto sconces cast their light on the prizes displayed around the room.</description>
-    <position x="320" y="400" z="0" />
-    <arc exit="west" move="west" destination="97" />
-  </node>
-  <node id="100" name="Dispenser Hall" note="Dispenser Hall|raffle dispensers" color="#00FF00">
-    <description>Centered in the middle of the floor, a luxurious carpet covers the polished wooden floor underneath a cut-crystal chandelier.  Oak paneling covers the walls while pale ecru plaster coats the spaces between the coffered ceiling.  A few leather armchairs provide seating for those needing time to contemplate their choices.</description>
-    <position x="320" y="280" z="0" />
-    <arc exit="go" move="go double doors" destination="81" />
   </node>
   <label text="Labyrinth">
     <position x="370" y="260" z="0" />
@@ -345,9 +231,6 @@
   </label>
   <label text="Exit">
     <position x="178" y="295" z="0" />
-  </label>
-  <label text="Yellow Suite">
-    <position x="270" y="410" z="0" />
   </label>
   <label text="Bank Heist">
     <position x="380" y="60" z="0" />
