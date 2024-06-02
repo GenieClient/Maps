@@ -6,9 +6,9 @@
     <position x="120" y="100" z="0" />
     <arc exit="go" move="go double doors" destination="2" />
     <arc exit="go" move="go round opening" destination="3" />
-    <arc exit="go" move="go blue portal" destination="4" />
-    <arc exit="go" move="go yellow portal" destination="7" />
-    <arc exit="go" move="go green portal" destination="25" />
+    <arc exit="go" move="go blue portal" destination="7" />
+    <arc exit="go" move="go yellow portal" destination="10" />
+    <arc exit="go" move="go green portal" destination="28" />
   </node>
   <node id="2" name="Dispenser Hall" note="Dispenser Hall|raffles" color="#00FF00">
     <description>Centered in the middle of the floor, a luxurious carpet covers the polished wooden floor underneath a cut-crystal chandelier.  Oak paneling covers the walls while pale ecru plaster coats the spaces between the coffered ceiling.  A few leather armchairs provide seating for those needing time to contemplate their choices.</description>
@@ -21,265 +21,286 @@
     <description>A diamondwood buffet sets out snacks while chairs and sofas provide seating for the waiting patrons.</description>
     <position x="120" y="60" z="0" />
     <arc exit="go" move="go round opening" destination="1" />
+    <arc exit="go" move="go glittery curtain" destination="4" />
+    <arc exit="go" move="go ivy-colored curtain" destination="5" />
+    <arc exit="go" move="go shadowy curtain" destination="6" />
   </node>
-  <node id="4" name="Blue Suite, Royal-Blue Hall" note="Blue Suite|Royal-Blue Hall" color="#FF0000">
+  <node id="4" name="Alteration suite, Garish Workroom" note="Garish Workroom">
+    <description>Pale pastel pink walls provide a light contrast with the dark purple-tinged floor of gloomwood planks.  Against one wall, a purple-painted table provides ample working space for any project.</description>
+    <description>Pale pink walls contrast with the gloomwood planks of the floor.  A purple-painted table provides working space.</description>
+    <position x="100" y="60" z="0" />
+    <arc exit="go" move="go glittery curtain" destination="3" />
+  </node>
+  <node id="5" name="Alteration Suite, Nemorous Workroom" note="Nemorous Workroom">
+    <description>Painted murals depicting a forest scene cover the walls while a deeply plush carpet designed like fallen leaves covers the floor.  A worktable crafted with logs and rough-hewn planks provides a working surface.</description>
+    <description>Murals of woodland scenes cover the walls while a table provides working space.</description>
+    <position x="100" y="40" z="0" />
+    <arc exit="go" move="go ivy-colored curtain" destination="3" />
+  </node>
+  <node id="6" name="Alteration Suite, Tenebrous Workroom" note="Tenebrous Workroom">
+    <description>Swathes of dark grey fabric cover the walls, mostly hiding the somber black paint and matching trim.  Wrought iron standing candleholders rest near the black table that serves as a working surface for projects.</description>
+    <description>Swathes of somber fabric cover the walls and a black table serves as a work surface.</description>
+    <position x="120" y="40" z="0" />
+    <arc exit="go" move="go shadowy curtain" destination="3" />
+  </node>
+  <node id="7" name="Blue Suite, Royal-Blue Hall" note="Blue Suite|Royal-Blue Hall" color="#FF0000">
     <description>Plain plastered walls have been painted a deep royal-blue hue and trimmed with narrow white baseboards.  Subtle indirect lighting of the displayed prizes is provided by gaezthen globes dangling from the coffered ceiling.</description>
     <description>Royal-blue walls trimmed with white baseboards surround the displayed prizes in the room.</description>
     <position x="40" y="100" z="0" />
     <arc exit="go" move="go blue portal" destination="1" />
-    <arc exit="southeast" move="southeast" destination="5" />
+    <arc exit="southeast" move="southeast" destination="8" />
   </node>
-  <node id="5" name="Blue Suite, Ocean-Blue Hall" note="Ocean-Blue Hall" color="#FF0000">
+  <node id="8" name="Blue Suite, Ocean-Blue Hall" note="Ocean-Blue Hall" color="#FF0000">
     <description>Plain plastered walls have been painted a pale ocean-blue hue and trimmed with narrow white baseboards.  Subtle indirect lighting of the displayed prizes is provided by gaezthen globes dangling from the coffered ceiling.</description>
     <description>Ocean-blue walls trimmed with white baseboards surround the displayed prizes in the room.</description>
     <position x="60" y="120" z="0" />
-    <arc exit="southeast" move="southeast" destination="6" />
-    <arc exit="northwest" move="northwest" destination="4" />
+    <arc exit="southeast" move="southeast" destination="9" />
+    <arc exit="northwest" move="northwest" destination="7" />
   </node>
-  <node id="6" name="Blue Suite, Turquoise Hall" note="Turquoise Hall" color="#FF0000">
+  <node id="9" name="Blue Suite, Turquoise Hall" note="Turquoise Hall" color="#FF0000">
     <description>Plain plastered walls have been painted a bright turquoise hue and trimmed with narrow white baseboards.  Subtle indirect lighting of the displayed prizes is provided by gaezthen globes dangling from the coffered ceiling.</description>
     <description>Turquoise-hued walls trimmed with white baseboards surround the displayed prizes in the room.</description>
     <position x="80" y="140" z="0" />
-    <arc exit="northwest" move="northwest" destination="5" />
+    <arc exit="northwest" move="northwest" destination="8" />
   </node>
-  <node id="7" name="Yellow Suite, Amber Hall" note="Yellow Suite|Amber Hall" color="#FF0000">
+  <node id="10" name="Yellow Suite, Amber Hall" note="Yellow Suite|Amber Hall" color="#FF0000">
     <description>Plaster walls painted a rich amber hue enclose a spacious area designed to showcase the items on display.  Overhead lighting allows for the proper inspection of the various prizes on offer.</description>
     <description>Plaster walls painted amber enclose the area while lighting allows inspection of the prizes on offer.</description>
     <position x="120" y="180" z="0" />
     <arc exit="go" move="go yellow portal" destination="1" />
-    <arc exit="east" move="east" destination="19" />
-    <arc exit="south" move="south" destination="8" />
-    <arc exit="west" move="west" destination="13" />
-  </node>
-  <node id="8" name="Yellow Suite, Buttercup Hall" note="Buttercup Hall" color="#FF0000">
-    <description>Plaster walls painted a luscious buttercup hue enclose a spacious area designed to showcase the items on display.  Overhead lighting allows for the proper inspection of the various prizes on offer.</description>
-    <description>Plaster walls painted buttercup-yellow enclose the area while lighting allows inspection of the prizes on offer.</description>
-    <position x="120" y="200" z="0" />
-    <arc exit="north" move="north" destination="7" />
-    <arc exit="east" move="east" destination="20" />
-    <arc exit="south" move="south" destination="9" />
-    <arc exit="west" move="west" destination="14" />
-  </node>
-  <node id="9" name="Yellow Suite, Jasmine Hall" note="Jasmine Hall" color="#FF0000">
-    <description>Plaster walls painted a pale jasmine hue enclose a spacious area designed to showcase the items on display.  Overhead lighting allows for the proper inspection of the various prizes on offer.</description>
-    <description>Plaster walls painted jasmine-yellow enclose the area while lighting allows inspection of the prizes on offer.</description>
-    <position x="120" y="220" z="0" />
-    <arc exit="north" move="north" destination="8" />
-    <arc exit="east" move="east" destination="21" />
-    <arc exit="south" move="south" destination="10" />
-    <arc exit="west" move="west" destination="15" />
-  </node>
-  <node id="10" name="Yellow Suite, Straw Hall" note="Straw Hall" color="#FF0000">
-    <description>Plaster walls painted a faint straw hue enclose a spacious area designed to showcase the items on display.  Overhead lighting allows for the proper inspection of the various prizes on offer.</description>
-    <description>Plaster walls painted straw-yellow enclose the area while lighting allows inspection of the prizes on offer.</description>
-    <position x="120" y="240" z="0" />
-    <arc exit="north" move="north" destination="9" />
     <arc exit="east" move="east" destination="22" />
     <arc exit="south" move="south" destination="11" />
     <arc exit="west" move="west" destination="16" />
   </node>
-  <node id="11" name="Yellow Suite, Lemon Hall" note="Lemon Hall" color="#FF0000">
-    <description>Plaster walls painted a bright lemon hue enclose a spacious area designed to showcase the items on display.  Overhead lighting allows for the proper inspection of the various prizes on offer.</description>
-    <description>Plaster walls painted lemon-yellow enclose the area while lighting allows inspection of the prizes on offer.</description>
-    <position x="120" y="260" z="0" />
+  <node id="11" name="Yellow Suite, Buttercup Hall" note="Buttercup Hall" color="#FF0000">
+    <description>Plaster walls painted a luscious buttercup hue enclose a spacious area designed to showcase the items on display.  Overhead lighting allows for the proper inspection of the various prizes on offer.</description>
+    <description>Plaster walls painted buttercup-yellow enclose the area while lighting allows inspection of the prizes on offer.</description>
+    <position x="120" y="200" z="0" />
     <arc exit="north" move="north" destination="10" />
     <arc exit="east" move="east" destination="23" />
     <arc exit="south" move="south" destination="12" />
     <arc exit="west" move="west" destination="17" />
   </node>
-  <node id="12" name="Yellow Suite, Mustard Hall" note="Mustard Hall" color="#FF0000">
+  <node id="12" name="Yellow Suite, Jasmine Hall" note="Jasmine Hall" color="#FF0000">
+    <description>Plaster walls painted a pale jasmine hue enclose a spacious area designed to showcase the items on display.  Overhead lighting allows for the proper inspection of the various prizes on offer.</description>
+    <description>Plaster walls painted jasmine-yellow enclose the area while lighting allows inspection of the prizes on offer.</description>
+    <position x="120" y="220" z="0" />
+    <arc exit="north" move="north" destination="11" />
+    <arc exit="east" move="east" destination="24" />
+    <arc exit="south" move="south" destination="13" />
+    <arc exit="west" move="west" destination="18" />
+  </node>
+  <node id="13" name="Yellow Suite, Straw Hall" note="Straw Hall" color="#FF0000">
+    <description>Plaster walls painted a faint straw hue enclose a spacious area designed to showcase the items on display.  Overhead lighting allows for the proper inspection of the various prizes on offer.</description>
+    <description>Plaster walls painted straw-yellow enclose the area while lighting allows inspection of the prizes on offer.</description>
+    <position x="120" y="240" z="0" />
+    <arc exit="north" move="north" destination="12" />
+    <arc exit="east" move="east" destination="25" />
+    <arc exit="south" move="south" destination="14" />
+    <arc exit="west" move="west" destination="19" />
+  </node>
+  <node id="14" name="Yellow Suite, Lemon Hall" note="Lemon Hall" color="#FF0000">
+    <description>Plaster walls painted a bright lemon hue enclose a spacious area designed to showcase the items on display.  Overhead lighting allows for the proper inspection of the various prizes on offer.</description>
+    <description>Plaster walls painted lemon-yellow enclose the area while lighting allows inspection of the prizes on offer.</description>
+    <position x="120" y="260" z="0" />
+    <arc exit="north" move="north" destination="13" />
+    <arc exit="east" move="east" destination="26" />
+    <arc exit="south" move="south" destination="15" />
+    <arc exit="west" move="west" destination="20" />
+  </node>
+  <node id="15" name="Yellow Suite, Mustard Hall" note="Mustard Hall" color="#FF0000">
     <description>Plaster walls painted a muddy mustard hue enclose a spacious area designed to showcase the items on display.  Overhead lighting allows for the proper inspection of the various prizes on offer.</description>
     <description>Plaster walls painted mustard-yellow enclose the area while lighting allows inspection of the prizes on offer.</description>
     <position x="120" y="280" z="0" />
-    <arc exit="north" move="north" destination="11" />
-    <arc exit="east" move="east" destination="24" />
-    <arc exit="west" move="west" destination="18" />
+    <arc exit="north" move="north" destination="14" />
+    <arc exit="east" move="east" destination="27" />
+    <arc exit="west" move="west" destination="21" />
   </node>
-  <node id="13" name="Yellow Suite, Saffron Niche" note="Saffron Niche" color="#FF0000">
+  <node id="16" name="Yellow Suite, Saffron Niche" note="Saffron Niche" color="#FF0000">
     <description>High overhead a gaezthen globe dangles from the ceiling and provides enough light to highlight the prize selections available.  The cozy niche is enclosed with plastered walls painted a vibrant saffron shade.</description>
     <description>A gaezthen globe provides lighting for the prizes set out in the saffron-painted niche.</description>
     <position x="100" y="180" z="0" />
-    <arc exit="east" move="east" destination="7" />
+    <arc exit="east" move="east" destination="10" />
   </node>
-  <node id="14" name="Yellow Suite, Golden Niche" note="Golden Niche" color="#FF0000">
+  <node id="17" name="Yellow Suite, Golden Niche" note="Golden Niche" color="#FF0000">
     <description>High overhead a gaezthen globe dangles from the ceiling and provides enough light to highlight the prize selections available.  The cozy niche is enclosed with plastered walls painted a rich golden shade.</description>
     <description>A gaezthen globe provides lighting for the prizes set out in the golden-painted niche.</description>
     <position x="100" y="200" z="0" />
-    <arc exit="east" move="east" destination="8" />
+    <arc exit="east" move="east" destination="11" />
   </node>
-  <node id="15" name="Yellow Suite, Sunny Niche" note="Sunny Niche" color="#FF0000">
+  <node id="18" name="Yellow Suite, Sunny Niche" note="Sunny Niche" color="#FF0000">
     <description>High overhead a gaezthen globe dangles from the ceiling and provides enough light to highlight the prize selections available.  The cozy niche is enclosed with plastered walls painted a sunny-yellow shade.</description>
     <description>A gaezthen globe provides lighting for the prizes set out in the sunny-yellow painted niche.</description>
     <position x="100" y="220" z="0" />
-    <arc exit="east" move="east" destination="9" />
+    <arc exit="east" move="east" destination="12" />
   </node>
-  <node id="16" name="Yellow Suite, Daffodil Niche" note="Daffodil Niche" color="#FF0000">
+  <node id="19" name="Yellow Suite, Daffodil Niche" note="Daffodil Niche" color="#FF0000">
     <description>High overhead a gaezthen globe dangles from the ceiling and provides enough light to highlight the prize selections available.  The cozy niche is enclosed with plastered walls painted a pale daffodil-yellow shade.</description>
     <description>A gaezthen globe provides lighting for the prizes set out in the daffodil-yellow painted niche.</description>
     <position x="100" y="240" z="0" />
-    <arc exit="east" move="east" destination="10" />
+    <arc exit="east" move="east" destination="13" />
   </node>
-  <node id="17" name="Yellow Suite, Canary Niche" note="Canary Niche" color="#FF0000">
+  <node id="20" name="Yellow Suite, Canary Niche" note="Canary Niche" color="#FF0000">
     <description>High overhead a gaezthen globe dangles from the ceiling and provides enough light to highlight the prize selections available.  The cozy niche is enclosed with plastered walls painted a bright canary-yellow shade.</description>
     <description>A gaezthen globe provides lighting for the prizes set out in the canary-yellow painted niche.</description>
     <position x="100" y="260" z="0" />
-    <arc exit="east" move="east" destination="11" />
+    <arc exit="east" move="east" destination="14" />
   </node>
-  <node id="18" name="Yellow Suite, Banana Niche" note="Banana Niche" color="#FF0000">
+  <node id="21" name="Yellow Suite, Banana Niche" note="Banana Niche" color="#FF0000">
     <description>High overhead a gaezthen globe dangles from the ceiling and provides enough light to highlight the prize selections available.  The cozy niche is enclosed with plastered walls painted an intense banana-yellow shade.</description>
     <description>A gaezthen globe provides lighting for the prizes set out in the banana-yellow painted niche.</description>
     <position x="100" y="280" z="0" />
-    <arc exit="east" move="east" destination="12" />
+    <arc exit="east" move="east" destination="15" />
   </node>
-  <node id="19" name="Yellow Suite, Honey Alcove" note="Honey Alcove" color="#FF0000">
+  <node id="22" name="Yellow Suite, Honey Alcove" note="Honey Alcove" color="#FF0000">
     <description>Walls plastered and painted the shade of honey enclose the small space set off from the main hallway.  Some gaezthen globes set onto sconces cast their light on the prizes displayed around the room.</description>
     <description>Walls the shade of honey enclose the space displaying prizes.</description>
     <position x="140" y="180" z="0" />
-    <arc exit="west" move="west" destination="7" />
+    <arc exit="west" move="west" destination="10" />
   </node>
-  <node id="20" name="Yellow Suite, Jonquil Alcove" note="Jonquil Alcove" color="#FF0000">
+  <node id="23" name="Yellow Suite, Jonquil Alcove" note="Jonquil Alcove" color="#FF0000">
     <description>Walls plastered and painted the shade of jonquils enclose the small space set off from the main hallway.  Some gaezthen globes set onto sconces cast their light on the prizes displayed around the room.</description>
     <description>Walls the shade of jonquils enclose the space displaying prizes.</description>
     <position x="140" y="200" z="0" />
-    <arc exit="west" move="west" destination="8" />
+    <arc exit="west" move="west" destination="11" />
   </node>
-  <node id="21" name="Yellow Suite, Maize Alcove" note="Maize Alcove" color="#FF0000">
+  <node id="24" name="Yellow Suite, Maize Alcove" note="Maize Alcove" color="#FF0000">
     <description>Walls plastered and painted the shade of maize enclose the small space set off from the main hallway.  Some gaezthen globes set onto sconces cast their light on the prizes displayed around the room.</description>
     <description>Walls the shade of maize enclose the space displaying prizes.</description>
     <position x="140" y="220" z="0" />
-    <arc exit="west" move="west" destination="9" />
+    <arc exit="west" move="west" destination="12" />
   </node>
-  <node id="22" name="Yellow Suite, Citrine Alcove" note="Citrine Alcove" color="#FF0000">
+  <node id="25" name="Yellow Suite, Citrine Alcove" note="Citrine Alcove" color="#FF0000">
     <description>Walls plastered and painted the shade of citrine enclose the small space set off from the main hallway.  Some gaezthen globes set onto sconces cast their light on the prizes displayed around the room.</description>
     <description>Walls the shade of citrine enclose the space displaying prizes.</description>
     <position x="140" y="240" z="0" />
-    <arc exit="west" move="west" destination="10" />
+    <arc exit="west" move="west" destination="13" />
   </node>
-  <node id="23" name="Yellow Suite, Butter Alcove" note="Butter Alcove" color="#FF0000">
+  <node id="26" name="Yellow Suite, Butter Alcove" note="Butter Alcove" color="#FF0000">
     <description>Walls plastered and painted the shade of butter enclose the small space set off from the main hallway.  Some gaezthen globes set onto sconces cast their light on the prizes displayed around the room.</description>
     <description>Walls the shade of butter enclose the space displaying prizes.</description>
     <position x="140" y="260" z="0" />
-    <arc exit="west" move="west" destination="11" />
+    <arc exit="west" move="west" destination="14" />
   </node>
-  <node id="24" name="Yellow Suite, Wheat Alcove" note="Wheat Alcove" color="#FF0000">
+  <node id="27" name="Yellow Suite, Wheat Alcove" note="Wheat Alcove" color="#FF0000">
     <description>Walls plastered and painted the shade of wheat enclose the small space set off from the main hallway.  Some gaezthen globes set onto sconces cast their light on the prizes displayed around the room.</description>
     <description>Walls the shade of wheat enclose the space displaying prizes.</description>
     <position x="140" y="280" z="0" />
-    <arc exit="west" move="west" destination="12" />
+    <arc exit="west" move="west" destination="15" />
   </node>
-  <node id="25" name="Green Suite, Olive Hall" note="Green Suite|Olive Hall" color="#FF0000">
+  <node id="28" name="Green Suite, Olive Hall" note="Green Suite|Olive Hall" color="#FF0000">
     <description>Coats of olive paint cover the plaster walls of this well-lit room, giving a muted, calm feel to the area.  The hanging light fixtures allow for ample illumination of the prizes spread out for consideration.</description>
     <description>Olive-colored plastered walls surround the prizes spread out for consideration in this area.</description>
     <position x="200" y="100" z="0" />
     <arc exit="go" move="go green portal" destination="1" />
-    <arc exit="east" move="east" destination="26" />
+    <arc exit="east" move="east" destination="29" />
   </node>
-  <node id="26" name="Green Suite, Sea-Green Hall" note="Sea-Green Hall" color="#FF0000">
+  <node id="29" name="Green Suite, Sea-Green Hall" note="Sea-Green Hall" color="#FF0000">
     <description>Coats of pale sea-green paint cover the plaster walls of this well-lit room, giving a muted, calm feel to the area.  The hanging light fixtures allow for ample illumination of the prizes spread out for consideration.</description>
     <description>Sea-colored plastered walls surround the prizes spread out for consideration in this area.</description>
     <position x="220" y="100" z="0" />
-    <arc exit="north" move="north" destination="30" />
-    <arc exit="east" move="east" destination="27" />
-    <arc exit="west" move="west" destination="25" />
+    <arc exit="north" move="north" destination="33" />
+    <arc exit="east" move="east" destination="30" />
+    <arc exit="west" move="west" destination="28" />
   </node>
-  <node id="27" name="Green Suite, Grass-Green Hall" note="Grass-Green Hall" color="#FF0000">
+  <node id="30" name="Green Suite, Grass-Green Hall" note="Grass-Green Hall" color="#FF0000">
     <description>Coats of vibrant grass-green paint cover the plaster walls of this well-lit room, giving a muted, calm feel to the area.  The hanging light fixtures allow for ample illumination of the prizes spread out for consideration.</description>
     <description>Grass-colored plastered walls surround the prizes spread out for consideration in this area.</description>
     <position x="240" y="100" z="0" />
-    <arc exit="east" move="east" destination="28" />
-    <arc exit="south" move="south" destination="33" />
-    <arc exit="west" move="west" destination="26" />
+    <arc exit="east" move="east" destination="31" />
+    <arc exit="south" move="south" destination="36" />
+    <arc exit="west" move="west" destination="29" />
   </node>
-  <node id="28" name="Green Suite, Viridian Hall" note="Viridian Hall" color="#FF0000">
+  <node id="31" name="Green Suite, Viridian Hall" note="Viridian Hall" color="#FF0000">
     <description>Coats of deep viridian paint cover the plaster walls of this well-lit room, giving a muted, calm feel to the area.  The hanging light fixtures allow for ample illumination of the prizes spread out for consideration.</description>
     <description>Viridian-colored plastered walls surround the prizes spread out for consideration in this area.</description>
     <position x="280" y="100" z="0" />
-    <arc exit="north" move="north" destination="36" />
-    <arc exit="east" move="east" destination="29" />
-    <arc exit="west" move="west" destination="27" />
+    <arc exit="north" move="north" destination="39" />
+    <arc exit="east" move="east" destination="32" />
+    <arc exit="west" move="west" destination="30" />
   </node>
-  <node id="29" name="Green Suite, Lime Hall" note="Lime Hall" color="#FF0000">
+  <node id="32" name="Green Suite, Lime Hall" note="Lime Hall" color="#FF0000">
     <description>Coats of bright lime-green paint cover the plaster walls of this well-lit room, giving an upbeat feel to the area.  The hanging light fixtures allow for ample illumination of the prizes spread out for consideration.</description>
     <description>Lime-colored plastered walls surround the prizes spread out for consideration in this area.</description>
     <position x="300" y="100" z="0" />
-    <arc exit="south" move="south" destination="39" />
-    <arc exit="west" move="west" destination="28" />
+    <arc exit="south" move="south" destination="42" />
+    <arc exit="west" move="west" destination="31" />
   </node>
-  <node id="30" name="Green Suite, Avocado Chamber" note="Avocado Chamber" color="#FF0000">
+  <node id="33" name="Green Suite, Avocado Chamber" note="Avocado Chamber" color="#FF0000">
     <description>Gaethzen spheres suspended overhead cast a warm light across the rich avocado-hued plaster walls.  The abundance of light spotlights the many prizes available for selection.</description>
     <description>Gaethzen spheres overhead cast warm light on the avocado-hued walls and the prizes available for selection.</description>
     <position x="220" y="80" z="0" />
-    <arc exit="northeast" move="northeast" destination="32" />
-    <arc exit="south" move="south" destination="26" />
-    <arc exit="northwest" move="northwest" destination="31" />
+    <arc exit="northeast" move="northeast" destination="35" />
+    <arc exit="south" move="south" destination="29" />
+    <arc exit="northwest" move="northwest" destination="34" />
   </node>
-  <node id="31" name="Green Suite, Malachite Niche" note="Malachite Niche" color="#FF0000">
+  <node id="34" name="Green Suite, Malachite Niche" note="Malachite Niche" color="#FF0000">
     <description>Painted white trim accents the rich malachite-hued plastered walls that form this secluded alcove.  Spread out under the overhead lights are all the prizes awaiting consideration.</description>
     <description>White trim accents the malachite-hued walls while overhead lights illuminate the prizes awaiting consideration.</description>
     <position x="200" y="60" z="0" />
-    <arc exit="southeast" move="southeast" destination="30" />
+    <arc exit="southeast" move="southeast" destination="33" />
   </node>
-  <node id="32" name="Green Suite, Pickle-Green Cubicle" note="Pickle-Green Cubicle" color="#FF0000">
+  <node id="35" name="Green Suite, Pickle-Green Cubicle" note="Pickle-Green Cubicle" color="#FF0000">
     <description>Except for the pickle-hued walls, the room is bare of adornment.  Simple gaethzen globes hanging from the ceiling provide light.  The lack of ornamentation focuses attention on the prizes on display.</description>
     <description>Unadorned except for the pickled-hued walls, the lack of ornamentation highlights the prizes on display.</description>
     <position x="240" y="60" z="0" />
-    <arc exit="southwest" move="southwest" destination="30" />
+    <arc exit="southwest" move="southwest" destination="33" />
   </node>
-  <node id="33" name="Green Suite, Sage Chamber" note="Sage Chamber" color="#FF0000">
+  <node id="36" name="Green Suite, Sage Chamber" note="Sage Chamber" color="#FF0000">
     <description>Gaethzen spheres suspended overhead cast a warm light across the muted sage-hued plaster walls.  The abundance of light spotlights the many prizes available for selection.</description>
     <description>Gaethzen spheres overhead cast warm light on the sage-hued walls and the prizes available for selection.</description>
     <position x="240" y="120" z="0" />
-    <arc exit="north" move="north" destination="27" />
-    <arc exit="southeast" move="southeast" destination="35" />
-    <arc exit="southwest" move="southwest" destination="34" />
+    <arc exit="north" move="north" destination="30" />
+    <arc exit="southeast" move="southeast" destination="38" />
+    <arc exit="southwest" move="southwest" destination="37" />
   </node>
-  <node id="34" name="Green Suite, Chartreuse Niche" note="Chartreuse Niche" color="#FF0000">
+  <node id="37" name="Green Suite, Chartreuse Niche" note="Chartreuse Niche" color="#FF0000">
     <description>Painted white trim accents the eye-searing chartreuse plastered walls that form this secluded alcove.  Spread out under the overhead lights are all the prizes awaiting consideration.</description>
     <description>White trim accents the chartreuse-hued walls while overhead lights illuminate the prizes awaiting consideration.</description>
     <position x="220" y="140" z="0" />
-    <arc exit="northeast" move="northeast" destination="33" />
+    <arc exit="northeast" move="northeast" destination="36" />
   </node>
-  <node id="35" name="Green Suite, Moss Cubicle" note="Moss Cubicle" color="#FF0000">
+  <node id="38" name="Green Suite, Moss Cubicle" note="Moss Cubicle" color="#FF0000">
     <description>Except for the moss-colored walls, the room is bare of adornment.  Simple gaethzen globes hanging from the ceiling provide light.  The lack of ornamentation focuses attention on the prizes on display.</description>
     <description>Unadorned except for the moss-hued walls, the lack of ornamentation highlights the prizes on display.</description>
     <position x="260" y="140" z="0" />
-    <arc exit="northwest" move="northwest" destination="33" />
+    <arc exit="northwest" move="northwest" destination="36" />
   </node>
-  <node id="36" name="Green Suite, Emerald Chamber" note="Emerald Chamber" color="#FF0000">
+  <node id="39" name="Green Suite, Emerald Chamber" note="Emerald Chamber" color="#FF0000">
     <description>Gaethzen spheres suspended overhead cast a warm light across the brilliant emerald-hued plaster walls.  The abundance of light spotlights the many prizes available for selection.</description>
     <description>Gaethzen spheres overhead cast warm light on the emerald-hued walls and the prizes available for selection.</description>
     <position x="280" y="80" z="0" />
-    <arc exit="northeast" move="northeast" destination="38" />
-    <arc exit="south" move="south" destination="28" />
-    <arc exit="northwest" move="northwest" destination="37" />
+    <arc exit="northeast" move="northeast" destination="41" />
+    <arc exit="south" move="south" destination="31" />
+    <arc exit="northwest" move="northwest" destination="40" />
   </node>
-  <node id="37" name="Green Suite, Pear Niche" note="Pear Niche" color="#FF0000">
+  <node id="40" name="Green Suite, Pear Niche" note="Pear Niche" color="#FF0000">
     <description>Painted white trim accents the pale pear-green plastered walls that form this secluded alcove.  Spread out under the overhead lights are all the prizes awaiting consideration.</description>
     <description>White trim accents the pear-hued walls while overhead lights illuminate the prizes awaiting consideration.</description>
     <position x="260" y="60" z="0" />
-    <arc exit="southeast" move="southeast" destination="36" />
+    <arc exit="southeast" move="southeast" destination="39" />
   </node>
-  <node id="38" name="Green Suite, Pine-Green Cubicle" note="Pine-Green Cubicle" color="#FF0000">
+  <node id="41" name="Green Suite, Pine-Green Cubicle" note="Pine-Green Cubicle" color="#FF0000">
     <description>Except for the pine-colored walls, the room is bare of adornment.  Simple gaethzen globes hanging from the ceiling provide light.  The lack of ornamentation focuses attention on the prizes on display.</description>
     <description>Unadorned except for the pine-hued walls, the lack of ornamentation highlights the prizes on display.</description>
     <position x="300" y="60" z="0" />
-    <arc exit="southwest" move="southwest" destination="36" />
+    <arc exit="southwest" move="southwest" destination="39" />
   </node>
-  <node id="39" name="Green Suite, Pistachio Chamber" note="Pistachio Chamber" color="#FF0000">
+  <node id="42" name="Green Suite, Pistachio Chamber" note="Pistachio Chamber" color="#FF0000">
     <description>Gaethzen spheres suspended overhead cast a warm light across the pastel pistachio-hued plaster walls.  The abundance of light spotlights the many prizes available for selection.</description>
     <description>Gaethzen spheres overhead cast warm light on the pistachio-hued walls and the prizes available for selection.</description>
     <position x="300" y="120" z="0" />
-    <arc exit="north" move="north" destination="29" />
-    <arc exit="southwest" move="southwest" destination="40" />
+    <arc exit="north" move="north" destination="32" />
+    <arc exit="southwest" move="southwest" destination="43" />
   </node>
-  <node id="40" name="Green Suite, Verdigris Niche" note="Verdigris Niche" color="#FF0000">
+  <node id="43" name="Green Suite, Verdigris Niche" note="Verdigris Niche" color="#FF0000">
     <description>Painted white trim accents the verdigris-colored plastered walls that form this secluded alcove.  Spread out under the overhead lights are all the prizes awaiting consideration.</description>
     <description>White trim accents the verdigris-hued walls while overhead lights illuminate the prizes awaiting consideration.</description>
     <position x="280" y="140" z="0" />
-    <arc exit="northeast" move="northeast" destination="39" />
+    <arc exit="northeast" move="northeast" destination="42" />
   </node>
   <label text="alterations">
-    <position x="84" y="38" z="0" />
+    <position x="84" y="8" z="0" />
   </label>
   <label text="raffles">
     <position x="10" y="48" z="0" />
