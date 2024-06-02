@@ -2607,6 +2607,7 @@
     <position x="100" y="510" z="0" />
     <arc exit="north" move="north" destination="399" />
     <arc exit="south" move="south" destination="401" />
+    <arc exit="west" move="west" destination="561" />
     <arc exit="go" move="go willow arch" destination="410" />
   </node>
   <node id="401" name="Riverhaven Forging Society, Office">
@@ -2650,13 +2651,13 @@
   </node>
   <node id="408" name="Riverhaven Forging Society, Crucible">
     <description>A large granite crucible hanging over a glowing fire rests in the center of the room.  The fire pit beneath the crucible forms a star pattern from the way in which its stones arrange.</description>
-    <position x="90" y="510" z="0" />
+    <position x="90" y="500" z="0" />
     <arc exit="west" move="west" destination="409" />
     <arc exit="go" move="go pine door" destination="399" />
   </node>
   <node id="409" name="Riverhaven Forging Society, Forge">
     <description>Dents and chips line the walls as though someone once became careless with a forging hammer.  Placed diagonal to the wall is an iron anvil and a slack tub filled with water.</description>
-    <position x="80" y="510" z="0" />
+    <position x="80" y="500" z="0" />
     <arc exit="east" move="east" destination="408" />
   </node>
   <node id="410" name="Riverhaven Forging Society, Crucible">
@@ -3535,7 +3536,7 @@
   </node>
   <node id="557" name="Riverhaven Forging Society, A Private Forge" note="Private Forge">
     <description>Thick walls struggle to contain the blistering heat of the workshop where the fires blaze endlessly night and day.  The flickering flames give a reddish glow to the racks and shelves of tools and equipment, all neatly placed and ready for use.  Workers enter in their protective gear from time to time, checking the equipment and reporting back to a sentry at the entry.</description>
-    <position x="90" y="500" z="0" />
+    <position x="80" y="510" z="0" />
     <arc exit="go" move="go narrow alcove" destination="398" />
   </node>
   <node id="558" name="Riverhaven Enchanting Society, A Private Enchanting Room" note="Private Enchanting">
@@ -3552,6 +3553,11 @@
     <description>A fine layer of wood and stone shavings covers most of the well-worn granite floor.  The white walls have seen better days, and black and grey scuff marks adorn much of the open space.  A large workstation along one wall is unnaturally free of clutter and holds several organized tools and implements.  Grunts, curses, and labored breathing from other patrons echo throughout the large workroom.</description>
     <position x="520" y="170" z="0" />
     <arc exit="go" move="go stone entryway" destination="461" />
+  </node>
+  <node id="561" name="Riverhaven Forging Society, Bulk Metals" note="Bulk Forging Supplies|Bulk Forging Materials" color="#FF0000">
+    <description>A small counter and clerk sit beneath a tarp strung across the alley of Silvermoon Road.  Carts and wagons trickle through at a relaxed but steady pace.  The drivers hand over paperwork which the clerks quickly review, stamp and pass along to teams of workers.  With practiced efficiency, the workers navigate rows of pre-assembled pallets to retrieve and load the proper materials.  Two quick raps on the wagon signal that the order is complete, and the driver prods his beasts into motion to make way for the next in line.</description>
+    <position x="90" y="510" z="0" />
+    <arc exit="east" move="east" destination="400" />
   </node>
   <label text="Underwharf">
     <position x="110" y="832" z="0" />
