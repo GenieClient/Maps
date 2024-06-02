@@ -750,6 +750,8 @@ MOVE.KNOCK:
   put %movement
   matchwait
 # this garbage is here for Outlander inconsistant matchwait bug
+put #echo >talk MATCHWAIT FAILED RUN TRACE
+waitfor A good positive
   goto MOVE.KNOCK
 
 SHARD.FAILED:
@@ -1029,6 +1031,8 @@ MOVE.RETREAT:
   put retreat
   matchwait
 # this garbage is here for Outlander inconsistant matchwait bug
+put #echo >talk MATCHWAIT FAILED RUN TRACE
+waitfor A good positive
   goto MOVE.RETREAT
 
 MOVE.DIVE:

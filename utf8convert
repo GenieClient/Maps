@@ -1,0 +1,22 @@
+#!/bin/bash
+# this is the script that was used to UTF-8 everything
+# it's all Hanryu's fault
+
+# Function to check and convert file encoding
+convert_to_utf8() {
+  local file="$1"
+  local encoding=$(file "$file" | grep -Eo "(ASCII|UTF-16|UTF-8)")
+  if [[ "$encoding" == *"ASCII"* ]] || [[ "$encoding" == *"UTF-8"* ]]; then
+    echo "'$file' is already UTF-8."
+  else
+    iconv -f "$encoding" -t UTF-8 "$file" > "$file.bak" && mv "$file.bak" "$file"
+    echo "Converted '$file' to UTF-8."
+  fi
+}
+
+# Loop through all .xml files
+for file in *.xml; do
+  convert_to_utf8 "$file"
+done
+
+echo "Finished processing XML files."
