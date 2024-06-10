@@ -3552,7 +3552,7 @@
   <node id="560" name="Riverhaven Engineering Society, A Private Engineering Room" note="Private Engineering">
     <description>A fine layer of wood and stone shavings covers most of the well-worn granite floor.  The white walls have seen better days, and black and grey scuff marks adorn much of the open space.  A large workstation along one wall is unnaturally free of clutter and holds several organized tools and implements.  Grunts, curses, and labored breathing from other patrons echo throughout the large workroom.</description>
     <position x="520" y="170" z="0" />
-    <arc exit="go" move="go stone entryway" destination="461" />
+    <arc exit="go" move="go banded doors" destination="461" />
   </node>
   <node id="561" name="Riverhaven Forging Society, Bulk Metals" note="Bulk Forging Supplies|Bulk Forging Materials" color="#FF0000">
     <description>A small counter and clerk sit beneath a tarp strung across the alley of Silvermoon Road.  Carts and wagons trickle through at a relaxed but steady pace.  The drivers hand over paperwork which the clerks quickly review, stamp and pass along to teams of workers.  With practiced efficiency, the workers navigate rows of pre-assembled pallets to retrieve and load the proper materials.  Two quick raps on the wagon signal that the order is complete, and the driver prods his beasts into motion to make way for the next in line.</description>
