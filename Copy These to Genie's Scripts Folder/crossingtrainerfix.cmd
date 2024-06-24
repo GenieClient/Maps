@@ -9,6 +9,8 @@
 ### variables are populated from before moving you along the
 ### rest of the auto-mapped path.
 
+put #echo >talk ***%scriptname***
+
 if contains("$roomdesc","Many people stand about, watching others engaged in a bizarre ritual") then goto Agility
 if contains("$roomdesc","A smattering of applause greets you when you enter the cottage") then goto Charisma
 if contains("$roomdesc","The tiny windowless hovel feels cramped despite its minimal furnishings") then goto Discipline

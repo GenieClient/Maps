@@ -1,9 +1,14 @@
 # automapper.cmd
-var autoversion 8.2024-05-17
+var autoversion 8.2024-06-24
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
+
+#2024-06-24
+# Hanryu
+#   new variable controlled waiteval timeout
+#   so you don't get hung up forever waiting for wave to collapse
 
 #2023-12-17
 # Hanryu
@@ -166,7 +171,7 @@ var autoversion 8.2024-05-17
 # Hanryu
 #   issue with shard a night... yet again! New subscript
 #   fall-thru message for PP walk if you're playing zills
-#   added a timeout to MOVE.RT evalwait depth drops based on VTCifer's code
+#   added a timeout to MOVE.RT waiteval depth drops based on VTCifer's code
 
 #2022-11-02
 # Hanryu
@@ -359,6 +364,9 @@ if matchre("%1", "help|HELP|Help|^$") then {
   put #echo %helpecho <<    Infinite Loop Protection                                      >>
   put #echo %helpecho <<      Increase if you get infinte loop errors                     >>
   put #echo %helpecho <<      #var automapper.loop 0.001                                  >>
+  put #echo %helpecho <<    Waiteval Time Out                                             >>
+  put #echo %helpecho <<      prevents waiting forever for wave to collapse               >>
+  put #echo %helpecho <<      #var automapper.wavetimeout 15                              >>
   put #echo %helpecho <<    Echoes                                                        >>
   put #echo %helpecho <<      how verbose do you want automapper to be?                   >>
   put #echo %helpecho <<      #var automapper.verbose 1                                   >>
@@ -448,6 +456,8 @@ ABSOLUTE.TOP:
     if matchre("$client", "Outlander") then var infiniteLoopProtection 0.1
   }
   if def(automapper.loop) then var infiniteLoopProtection $automapper.loop
+  if def(automapper.wavetimeout) then var waitevalTimeOut $automapper.wavetimeout
+  else var waitevalTimeOut 300
 # 1: collect rocks on the ice road when lacking skates; 0; just wait 15 seconds with no RT instead
   if !def(automapper.iceroadcollect) then var ice_collect 0
   else var ice_collect $automapper.iceroadcollect
@@ -666,9 +676,11 @@ DO.MOVE:
   goto MOVE.DONE
 
 MOVE.ROOM:
-  if (%depth > 1) then waiteval (1 = %depth)
+  eval depthtimeout $unixtime + %waitevalTimeOut
+  if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
   put %movement
-  if (%depth > 0) then waiteval (0 = %depth)
+  eval depthtimeout $unixtime + %waitevalTimeOut
+  if (%depth > 0) then waiteval ((0 = %depth) || ($unixtime >= %depthtimeout))
   goto MOVE.DONE
 
 MOVE.STOW:
@@ -695,12 +707,14 @@ MOVE.BOAT.ARRIVED:
 MOVE.ICE:
   if (!$broom_carpet) then {
     action (skates) on
-    if (%depth > 1) then waiteval (1 = %depth)
+    eval depthtimeout $unixtime + %waitevalTimeOut
+    if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
     if (!%skatechecked) then gosub FIND.SKATES
     if (%slow_on_ice) then gosub ICE.COLLECT
   }
   put %movement
-  if (%depth > 0) then waiteval (0 = %depth)
+  eval depthtimeout $unixtime + %waitevalTimeOut
+  if (%depth > 0) then waiteval ((0 = %depth) || ($unixtime >= %depthtimeout))
   goto MOVE.DONE
 
 SKATE.NO:
@@ -736,7 +750,8 @@ ICE.PAUSE:
 MOVE.KNOCK:
   action (mapper) off
   if ($roundtime > 0) then pause %command_pause
-  if (%depth > 1) then waiteval (1 = %depth)
+  eval depthtimeout $unixtime + %waitevalTimeOut
+  if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
   if !matchre("$citizenship", "Ilithi|Fayrin's Rest|Shard|Steelclaw Clan|Zaldi Taipa") then goto SHARD.FAILED
   var movement knock gate
   matchre MOVE.KNOCK ^\.\.\.wait|^Sorry,|^You are still stun|^You can't do that while entangled
@@ -782,9 +797,13 @@ MOVE.DRAG:
 MOVE.SNEAK:
 MOVE.SWIM:
 MOVE.RT:
+
+debug 5
+
 ####added this to stop trainer
   eval movement replacere("%movement", "script crossingtrainerfix ", "")
-  if (%depth > 1) then waiteval (1 = %depth)
+  eval depthtimeout $unixtime + %waitevalTimeOut
+  if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
   matchre MOVE.RT.SUCCESS ^(?:Obvious|Ship) (?:paths|exits):
   put %movement
   matchwait 15
@@ -792,6 +811,9 @@ MOVE.RT:
 MOVE.RT.SUCCESS:
   pause %command_pause
   if ($roundtime > 0) then pause %command_pause
+
+debug 0
+
   goto MOVE.DONE
 
 MOVE.WEB:
@@ -860,7 +882,8 @@ STOW.ROPE:
   goto MOVE.DONE
 
 MOVE.SEARCH:
-  if (%depth > 1) then waiteval (1 = %depth)
+  eval depthtimeout $unixtime + %waitevalTimeOut
+  if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
   put search
   waitforre ^You|^After|^Just
   if ($roundtime > 0) then pause %command_pause
@@ -877,7 +900,8 @@ MOVE.OBJSEARCH:
 
 MOVE.SCRIPT:
   var subscript 1
-  if (%depth > 1) then waiteval (1 = %depth)
+  eval depthtimeout $unixtime + %waitevalTimeOut
+  if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
   action (mapper) off
   if ("%movement" = "oshumanor") then goto OSHUMANOR
   if ("%movement" = "dragonspine") then goto DRAGONSPINE
@@ -950,7 +974,8 @@ FATIGUE.WAIT:
   goto FATIGUE.WAIT
 
 MOVE.INVIS:
-  if (%depth > 1) then waiteval (1 = %depth)
+  eval depthtimeout $unixtime + %waitevalTimeOut
+  if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
   if ("$guild" = "Necromancer") then {
     gosub PUT release EOTB
     pause %command_pause
@@ -2174,7 +2199,8 @@ LIGHT_ROOM:
 HEALING:
   delay %infiniteLoopProtection
   if ($roundtime > 0) then pause $roundtime
-  if (%depth > 1) then waiteval (1 = %depth)
+  eval depthtimeout $unixtime + %waitevalTimeOut
+  if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
   var action touch %plant
   var success ^The last of your wounds knit shut|^The vela'tohr plant recoils from you|^You reach out to touch an ethereal vela'tohr plant, but it shudders its leaves rustling angrily and bristling with sharp edges and thorns|^You feel a brief flare of warmth where your skin previously
   gosub ACTION
