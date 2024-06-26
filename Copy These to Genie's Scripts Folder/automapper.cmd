@@ -926,7 +926,7 @@ MOVE.SCRIPT.DONE:
   if matchre("$client", "Genie") then delay 0.25
   var subscript 0
   shift
-  math depth subtract 1
+  var depth 0
   if ((len("%2") > 0) && (%verbose)) then put #echo %color Next move: %2
   action (mapper) on
   goto MOVE.DONE
