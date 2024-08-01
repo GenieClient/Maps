@@ -1,11 +1,11 @@
 # automapper.cmd
-var autoversion 8.2024-06-24
+var autoversion 8.2024-08-01
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
 
-#2024-06-24
+#2024-08-01
 # Hanryu
 #   new variable controlled waiteval timeout
 #   so you don't get hung up forever waiting for wave to collapse
@@ -764,9 +764,6 @@ MOVE.KNOCK:
   matchre KNOCK.INVIS ^The gate guard can't see you
   put %movement
   matchwait
-# this garbage is here for Outlander inconsistant matchwait bug
-put #echo >talk MATCHWAIT FAILED RUN TRACE
-waitfor A good positive
   goto MOVE.KNOCK
 
 SHARD.FAILED:
@@ -1049,9 +1046,6 @@ MOVE.RETREAT:
   matchre RETURN.CLEAR ^You begin to get up and \*\*SMACK\!\*\*
   put retreat
   matchwait
-# this garbage is here for Outlander inconsistant matchwait bug
-put #echo >talk MATCHWAIT FAILED RUN TRACE
-waitfor A good positive
   goto MOVE.RETREAT
 
 MOVE.DIVE:
