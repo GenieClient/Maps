@@ -797,9 +797,6 @@ MOVE.DRAG:
 MOVE.SNEAK:
 MOVE.SWIM:
 MOVE.RT:
-
-debug 5
-
 ####added this to stop trainer
   eval movement replacere("%movement", "script crossingtrainerfix ", "")
   eval depthtimeout $unixtime + %waitevalTimeOut
@@ -811,9 +808,6 @@ debug 5
 MOVE.RT.SUCCESS:
   pause %command_pause
   if ($roundtime > 0) then pause %command_pause
-
-debug 0
-
   goto MOVE.DONE
 
 MOVE.WEB:
