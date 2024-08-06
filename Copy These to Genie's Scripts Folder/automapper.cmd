@@ -1,9 +1,14 @@
 # automapper.cmd
-var autoversion 8.2024-06-25
+var autoversion 8.2024-08-01
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
+
+#2024-08-01
+# Hanryu
+#   new variable controlled waiteval timeout
+#   so you don't get hung up forever waiting for wave to collapse
 
 #2024-6-25
 # Shroom
