@@ -139,6 +139,7 @@
     <position x="80" y="120" z="0" />
     <arc exit="northeast" move="northeast" destination="20" />
     <arc exit="climb" move="climb ladder" destination="27" />
+    <arc exit="go" move="go building" destination="135" />
   </node>
   <node id="22" name="Rossman's Landing, Foregate Bridge" note="Foregate Bridge|bridge">
     <description>A steep-sided ditch runs the length of the village, separating the town from Rossgallan Keep.  The western side of the earthwork is higher than the eastern and topped by a spiked wooden palisade wall.  Anyone wishing to enter the keep must cross a narrow drawbridge, no wider than a single cart, flanked by wooden guard towers on either end.</description>
@@ -982,6 +983,18 @@
     <position x="280" y="20" z="0" />
     <arc exit="east" move="east" />
     <arc exit="go" move="go gate" destination="2" />
+  </node>
+  <node id="135" name="Rossman's Landing, Carousel" note="Carousel|Vault">
+    <description>Thick brick walls give way to a whitewashed plaster foyer.  Little effort was spent on furnishing the building, which contains only a platinum arch guarded by a Dwarven attendant and a small office off to one side.</description>
+    <position x="70" y="120" z="0" />
+    <arc exit="south" move="south" destination="136" />
+    <arc exit="out" move="out" destination="21" />
+    <arc exit="go" move="go platinum arch" />
+  </node>
+  <node id="136" name="Rossman's Landing, Rundmolen Post Office" note="Post Office|mail" color="#00FF00">
+    <description>Standing in the plain whitewashed room is a low stone counter made from cut stone blocks.  Vast, countless rows of differently sized shelves are behind the counter, and complex Dwarven mechanisms can be heard as they rearrange the package-covered storage.  Clerks shuffle endlessly back and forth between the counters and shelving as they assist patrons with their packaging and mailing needs.</description>
+    <position x="70" y="130" z="0" />
+    <arc exit="north" move="north" destination="135" />
   </node>
   <label text="Bristleback Peccaries">
     <position x="140" y="-75" z="0" />
