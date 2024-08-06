@@ -4594,41 +4594,48 @@
     <position x="-610" y="-480" z="0" />
     <arc exit="east" move="east" destination="671" />
     <arc exit="west" move="west" destination="673" />
+    <arc exit="go" move="go iron gate" destination="749" />
   </node>
   <node id="673" name="Almalne Alolan, Grassy Road" color="#00FFFF">
     <description>Saplings give way to older apple trees, some of their branches gnarled and entwined with those of the tree next to them.  The grass is sparser but still holding onto a rich green hue as it follows the track through the orchard.  A faint pathway leads away from an elaborately carved wooden gate.</description>
     <position x="-620" y="-480" z="0" />
     <arc exit="east" move="east" destination="672" />
     <arc exit="west" move="west" destination="674" />
+    <arc exit="go" move="go wooden gate" destination="750" />
   </node>
   <node id="674" name="Almalne Alolan, Grassy Road" color="#00FFFF">
     <description>Mature Ilithic apple trees form stately lines along each side of the road, their branches thick with age.  Making their home near the base of one tree is a patch of forest violets showing off their bright hues.  Lavishly carved, a wooden gate stands at the end of a path.</description>
     <position x="-630" y="-480" z="0" />
     <arc exit="east" move="east" destination="673" />
     <arc exit="west" move="west" destination="675" />
+    <arc exit="go" move="go wooden gate" destination="751" />
   </node>
   <node id="675" name="Almalne Alolan, Grassy Road" color="#00FFFF">
     <description>Ancient and twisted, the trees along this part of the road all seem to have different personalities due to their varied shapes.  One hunches over to the side, while another sends branches to sweep the ground almost blocking the lane.  Placed between two of these monoliths is a delicately carved wooden gate.</description>
     <position x="-640" y="-480" z="0" />
     <arc exit="east" move="east" destination="674" />
     <arc exit="west" move="west" destination="676" />
+    <arc exit="go" move="go carved gate" destination="752" />
   </node>
   <node id="676" name="Almalne Alolan, Grassy Road" color="#00FFFF">
     <description>The lines of Ilithic apple trees thin out and are smaller than their towering neighbors to the east allowing patches of monkshood to grow among the grasses.  They bloom in a multitude of colors, one patch showing white, another purple and a third yellow.  Set to one side of the roadway is a gracefully carved wooden gate.</description>
     <position x="-650" y="-480" z="0" />
     <arc exit="east" move="east" destination="675" />
     <arc exit="west" move="west" destination="677" />
+    <arc exit="go" move="go wooden gate" destination="753" />
   </node>
   <node id="677" name="Almalne Alolan, Grassy Road" color="#00FFFF">
     <description>Giving way to fields again, the orchard's edge is planted with wood roses that display petals a shade of pink that is tipped with lavender.  Dense grasses threaten to hide the road itself, their shades of green richly hued.  A gate of artfully wrought iron stands between two of the bushes.</description>
     <position x="-660" y="-480" z="0" />
     <arc exit="east" move="east" destination="676" />
     <arc exit="west" move="west" destination="678" />
+    <arc exit="go" move="go gate" destination="754" />
   </node>
   <node id="678" name="Almalne Alolan, Grassy Road" color="#00FFFF">
     <description>Nestled under the shade of a lone Ilithic apple tree is an arrangement of beehives, their denizens roly-poly bumblebees.  A constant parade of buzzing creatures travel seemingly aimless paths to and from their artificial homes.  Located nearby is a finely wrought iron gate.</description>
     <position x="-670" y="-480" z="0" />
     <arc exit="east" move="east" destination="677" />
+    <arc exit="go" move="go iron gate" destination="755" />
   </node>
   <node id="679" name="Almalne Alolan, Behind the Branches">
     <description>Tangled into what appears to be an impenetrable maze, the branches of the giant Ilithic apple trees seem to block the way west.  A layer of twigs and dead leaves are scattered upon the ground, save for where an animal of some sort must have been digging, leaving a small hole near the roots of one tree.</description>
@@ -5082,6 +5089,41 @@
     <arc exit="west" move="west" />
     <arc exit="northwest" move="northwest" />
     <arc exit="go" move="touch orb;go egress" />
+  </node>
+  <node id="749" name="Almalne Alolan, Sapling Orchard" color="#00FFFF">
+    <description>Delicate trunks and slender branches stretch out from the multitude of Ilithic apple saplings that are planted in neat rows.  Soft, green grasses grow unchecked around their roots as if competing with the small trees.  Separating the orchard from the road is a fancy wrought iron gate.</description>
+    <position x="-610" y="-492" z="0" />
+    <arc exit="go" move="go iron gate" destination="672" />
+  </node>
+  <node id="750" name="Almalne Alolan, Small Clearing" color="#00FFFF">
+    <description>Gnarled and yet somehow still graceful, the mature Ilithic apple trees circle a small clearing full of bright blue cornflowers.  Soft grasses grow across the open space and back into the roots of the trees.  Leading away from the glade is a faint pathway that ends in an elaborately carved wooden gate.</description>
+    <position x="-620" y="-492" z="0" />
+    <arc exit="go" move="go wooden gate" destination="673" />
+  </node>
+  <node id="751" name="Almalne Alolan, Amid the Trees" color="#00FFFF">
+    <description>Branches stretch and wind together overhead, the old trees having long ago grown together despite the spaces between their large trunks.  Patches of grass and pink-spotted white foxgloves sprout forth from the detritus between the roots.  Standing guard at the end of a short path is a wooden gate.</description>
+    <position x="-630" y="-492" z="0" />
+    <arc exit="go" move="go wooden gate" destination="674" />
+  </node>
+  <node id="752" name="Almalne Alolan, Under an Ancient Ilithic Apple Tree" color="#00FFFF">
+    <description>A colossus even against the ancient trees around it, the venerable tree's trunk is contorted by hundreds of years of weather.  Huge branches stretch out as if to shelter the space below it, a single branch curves down to rest against the ground and is covered by soft mosses.  Set between two nearby trees is a delicately carved wooden gate.</description>
+    <position x="-640" y="-492" z="0" />
+    <arc exit="go" move="go carved gate" destination="675" />
+  </node>
+  <node id="753" name="Almalne Alolan, By the Stream" color="#00FFFF">
+    <description>Meandering through the trees is a stream of crystal clear water that trickles away from a small pond.  Growing along one edge are pale pink lotus flowers streaked with white while deeper in the hidden spring a few waterlilies show off dark pink petals.  Lush moss flourishes upon the bark of the adjacent trees.  A gracefully carved wooden gate leads back to the lane.</description>
+    <position x="-650" y="-492" z="0" />
+    <arc exit="go" move="go wooden gate" destination="676" />
+  </node>
+  <node id="754" name="Almalne Alolan, Flowering Fields" color="#00FFFF">
+    <description>Neatly furrowed rows of dirt run in north to south lines around a squared patch of ankle-high grass.  Planted along the top of each mound are a rainbow of irises, their colors ranging from deep reds and brilliant oranges to soft blues and intense purples.  At the edge of a grassy pathway stands a gate of artfully wrought iron.</description>
+    <position x="-660" y="-492" z="0" />
+    <arc exit="go" move="go gate" destination="677" />
+  </node>
+  <node id="755" name="Almalne Alolan, Among the Blooms" color="#00FFFF">
+    <description>The farmland here has been allowed to become a field of wildflowers.  Blue forget-me-nots, brilliant orange poppies, white larkspurs, and miniature sunflowers blend together in a riot of hues amidst the backdrop of dark green grasses.  Flitting from flower to flower, rotund bumblebees create a humming buzz.  Placed at the edge of the myriad of blooms is a finely wrought iron gate.</description>
+    <position x="-670" y="-492" z="0" />
+    <arc exit="go" move="go iron gate" destination="678" />
   </node>
   <label text="Jackals, Kobolds">
     <position x="670" y="190" z="0" />
