@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <zone name="Dirge" id="13">
   <node id="1" name="Lava Fields, Narrow Trace">
     <description>The barest hint of a path undulates along the irregular crests of frozen rills of lava.  Here and there, the stump of a tree, burned and dead, pokes above the bleak landscape but does little to break the monotony of the lifeless scene.  The eerie desolation eats into your spirit and fills your mind with visions of death, while endless chill shadows and unnamed fears caper and dance at the edge of your senses.</description>
@@ -80,7 +80,7 @@
   </node>
   <node id="13" name="Dirge, Hangman's Road" note="RTZ13|RT-D-XNE" color="#C2B280">
     <description>A narrow path of relatively smooth cinders and crushed stone ambles aimlessly among dead grey ash-heaps and piles of stone that once were houses.  To the west and a bit north, a small hill rises, bleached white by the sun and the foul air until it resembles an exposed skull left unburied among the ruins.</description>
-    <position x="-240" y="-120" z="0" />
+    <position x="-160" y="-120" z="0" />
     <arc exit="east" move="east" destination="12" />
     <arc exit="west" move="west" destination="14" />
     <arc exit="go" move="go gate" destination="227" />
@@ -263,7 +263,7 @@
   </node>
   <node id="41" name="Dirge, Gateway Road North">
     <description>Leading away from the gate and into the center of town, this stretch of road passes between a shop and one side of the Town Hall.  The bleak stone walls reflect the sound of your footsteps making you feel as if you were being followed with every move you make.</description>
-    <position x="100" y="-260" z="0" />
+    <position x="113" y="-253" z="0" />
     <arc exit="north" move="north" destination="44" />
     <arc exit="northeast" move="northeast" destination="45" />
     <arc exit="southeast" move="southeast" destination="227" />
@@ -273,7 +273,7 @@
   </node>
   <node id="42" name="Dirge, Town Square South" color="#00FFFF">
     <description>The road here passes a row of worn but still-neat houses.  Small but with some attempt at keeping them tidy, they look less bleak than other parts of town.  One house has even managed to keep some flowers growing despite the dust and dryness.</description>
-    <position x="80" y="-280" z="0" />
+    <position x="93" y="-273" z="0" />
     <arc exit="northeast" move="northeast" destination="48" />
     <arc exit="east" move="east" destination="44" />
     <arc exit="southeast" move="southeast" destination="41" />
@@ -282,7 +282,7 @@
   </node>
   <node id="43" name="Dirge, Town Square West" color="#00FFFF">
     <description>The road runs northeast here, following the narrowing line of the mountain as it hems in the town.  A few houses are scattered here facing the central Square, but room is left for a large cave entrance cut into the rock face.</description>
-    <position x="60" y="-300" z="0" />
+    <position x="73" y="-293" z="0" />
     <arc exit="northeast" move="northeast" destination="46" />
     <arc exit="east" move="east" destination="42" />
     <arc exit="go" move="go cave entrance" destination="88" />
@@ -290,7 +290,7 @@
   </node>
   <node id="44" name="Dirge, Town Square South" color="#00FFFF">
     <description>Gateway Road widens out here into the small Town Square.  The few houses the town boasts front along it as does Town Hall.  A tired fountain juts up from the center of the dusty square and a curiously shaped pyramidal structure rises north of it.  A pair of unwashed boys play a dispirited game of catch among the weeds and dirt of the once green Common.</description>
-    <position x="100" y="-280" z="0" />
+    <position x="113" y="-273" z="0" />
     <arc exit="east" move="east" destination="45" />
     <arc exit="south" move="south" destination="41" />
     <arc exit="west" move="west" destination="42" />
@@ -298,7 +298,7 @@
   </node>
   <node id="45" name="Dirge, Town Square East">
     <description>A low, squat building containing the Town Hall fronts on this side of the square.  The narrowing valley hems in the town to the northeast with almost sheer walls rising steeply to unclimbable heights.  Faded greenery from the town's small park merges into the black dust of the road with no perceptible margin.</description>
-    <position x="120" y="-280" z="0" />
+    <position x="133" y="-273" z="0" />
     <arc exit="southwest" move="southwest" destination="41" />
     <arc exit="west" move="west" destination="44" />
     <arc exit="northwest" move="northwest" destination="46" />
@@ -308,7 +308,7 @@
   </node>
   <node id="46" name="Dirge, Town Square North">
     <description>The entire town narrows here, almost to a point.  This gives an odd emphasis to the peculiar pyramid shape that stands at the northern end of the town.  The building is not all that tall but it commands attention nonetheless.</description>
-    <position x="100" y="-320" z="0" />
+    <position x="113" y="-313" z="0" />
     <arc exit="north" move="north" destination="47" />
     <arc exit="southeast" move="southeast" destination="45" />
     <arc exit="southwest" move="southwest" destination="43" />
@@ -316,13 +316,13 @@
   </node>
   <node id="47" name="Dirge, Temple of the Volcano" note="Temple of the Volcano">
     <description>You are standing before the outer gate of the town's only temple.  The entire building, walls, paving and roof, is formed from dull black rock.  Built in a rough pyramid form, it was created when the former Temple on this spot was incinerated by one of the larger eruptions in the recent past.  Few in this town come here except when the fire mountains are troubled and the earth trembles.</description>
-    <position x="100" y="-340" z="0" />
+    <position x="113" y="-333" z="0" />
     <arc exit="south" move="south" destination="46" />
     <arc exit="go" move="go temple gates" destination="116" />
   </node>
   <node id="48" name="Dirge, Town Square" note="Town Square">
     <description>The remains of a once-green central square are now sere and burned.  Here and there, paths of grass struggle to grow among the ashes and cinders that crunch underfoot.  In the center of the square, a small fountain still produces a trickle of water and offers a small spot of greenery from some bushes that have somehow survived.</description>
-    <position x="100" y="-300" z="0" />
+    <position x="113" y="-293" z="0" />
     <arc exit="north" move="north" destination="46" />
     <arc exit="southeast" move="southeast" destination="45" />
     <arc exit="south" move="south" destination="44" />
@@ -559,12 +559,12 @@
   </node>
   <node id="86" name="Dirge, Garn the Grocer" note="Garn the Grocer|Grocer" color="#FF0000">
     <description>This shabby little shop, tucked across from Town Hall, represents the only source of groceries and foodstuffs for the entire town.  A few bins hold dispirited greens that are wilting.  A few joints of unpleasant looking meat hang from the rafters.  A dirty counter offers a selection of moldy cheeses and less identifiable comestibles.  The proprietor, a fat and greasy looking Elf of uncertain ancestry, glowers at you as if you were more a disturbance than a source of profit.</description>
-    <position x="120" y="-260" z="0" />
+    <position x="133" y="-253" z="0" />
     <arc exit="out" move="out" destination="41" />
   </node>
   <node id="87" name="Scorched Earth" note="Scorched Earth|Fireplaces" color="#FF0000">
     <description>A series of crude firepits, dilapidated braziers and cracked kilns line the walls of this dimly lit tent.  Lumpy piles of grey ash serve as a floor, though whether they originate from the nearby volcano or scrapings from the dingy merchandise is anyone's guess.</description>
-    <position x="150" y="-280" z="0" />
+    <position x="163" y="-273" z="0" />
     <arc exit="out" move="out" destination="45" />
   </node>
   <node id="88" name="Dirge, House of Dying" note="House of Dying">
@@ -745,25 +745,25 @@
   </node>
   <node id="116" name="Dirge, Temple Courtyard">
     <description>The Temple's courtyard is flat and paved with dull black basalt blocks.  There is no decor and the place echoes emptily.  A dried-out tumbleweed skitters about in the uncertain winds that reach past the high walls.  The Temple itself stands in the midst of this bleak scene.</description>
-    <position x="100" y="-360" z="0" />
+    <position x="113" y="-353" z="0" />
     <arc exit="go" move="go old tent" destination="117" />
     <arc exit="go" move="go temple" destination="118" />
     <arc exit="go" move="go outer gates" destination="47" />
   </node>
   <node id="117" name="A Musty Tent" note="Blade|Divorce|Rose" color="#FF0000">
     <description>Stale dusty air mixes with the smell of rotting canvas to create a stifling atmosphere within the tent.  However, the Halfling acolyte does not seem to mind at all.  He sits leaning against several crates packed with mildewed straw.</description>
-    <position x="90" y="-360" z="0" />
+    <position x="103" y="-353" z="0" />
     <arc exit="out" move="out" destination="116" />
   </node>
   <node id="118" name="Dirge, Temple Interior">
     <description>The rough basalt blocks have been piled up so that they meet overhead to form a crude pyramidal shape.  The walls are sparsely decorated, mostly with scenes showing sacrifices being made to the volcanoes.  As these seem to involve unwilling participants being thrown in, you hope they are of historical interest rather than current events.</description>
-    <position x="100" y="-380" z="0" />
+    <position x="113" y="-373" z="0" />
     <arc exit="out" move="out" destination="116" />
     <arc exit="go" move="go conical altar" destination="119" />
   </node>
   <node id="119" name="Dirge, Temple Altar" note="Temple Altar|Depart" color="#400040">
     <description>Less an altar than a dormant volcanic caldera, the central feature of this dark temple rises before you.  Some six feet high, it spews a thin stream of smoke.  Heat washes from it, hot enough to bring the sweat to your brow.  Trickles of lava have worked their way down the sides and out onto the stone floor, cracking and splitting the rock.  Rows of skulls of many races are set into the cone near the rim where the sulfurous fumes have stained them a sickly yellow.</description>
-    <position x="100" y="-400" z="0" />
+    <position x="113" y="-393" z="0" />
     <arc exit="south" move="south" destination="118" />
   </node>
   <node id="120" name="Dirge, Oak Grove">
@@ -1084,38 +1084,39 @@
   </node>
   <node id="174" name="Dirge, Town Hall Interior" note="Town Hall">
     <description>The interior of Town Hall is as drab and dull as the exterior.  The walls were once painted with some attempt at bright colors but the paint has long since chipped and peeled, leaving only a fleck or two to show what once was there.  An old door propped up on two saw-horses seems to be the current habitat of the town clerk.  The rest of the room is bare of furnishings save for one old and very battered safe in one corner.</description>
-    <position x="140" y="-300" z="0" />
+    <position x="153" y="-293" z="0" />
     <arc exit="out" move="out" destination="45" />
     <arc exit="go" move="go mayor's office" destination="175" />
     <arc exit="go" move="go hidden doorway" destination="176" />
   </node>
   <node id="175" name="Dirge, Mayor's Office">
     <description>This is the office of the Mayor.  Most of the paint remains yet on the walls so the room is almost bright and cheerful compared to much of the town.  A good-sized desk takes up most of the floor and there are several chairs scattered about, indicating this place also serves as an occasional meeting hall.</description>
-    <position x="150" y="-300" z="0" />
+    <position x="163" y="-293" z="0" />
     <arc exit="out" move="out" destination="174" />
   </node>
   <node id="176" name="Dirge, Storeroom">
     <description>Tucked behind the safe, this room was obviously meant to be overlooked by the casual passerby.  Ruined and charred file cabinets have been carelessly shoved into a corner.  The rest of the room appears to be in use as a gathering spot.  Several tables are pushed together in the middle and there are many empty bottles set on them with spilled puddles of ale or wine to judge by the smell.  You surmise this may be where the local ruffians hang out who have replaced the town militia.</description>
-    <position x="140" y="-310" z="0" />
+    <position x="153" y="-303" z="0" />
     <arc exit="out" move="out" destination="174" />
   </node>
   <node id="177" name="Dirge, Carousel Square">
     <description>A massive building dominates the square, rising in an impenatrably black cone to its pinnacle far above.  Scarred by wind-driven pebbles and sand, the structure stands as a monument to the imminent power of nature and time.  A weatherbeaten wooden sign set above an oval doorway reads THE CAROUSEL.</description>
-    <position x="80" y="-270" z="0" />
+    <position x="93" y="-263" z="0" />
     <arc exit="out" move="out" destination="42" />
     <arc exit="go" move="go oval doorway" destination="178" />
     <arc exit="go" move="go door" destination="178" />
+    <arc exit="south" destination="310" />
   </node>
   <node id="178" name="Dirge, The Carousel" note="Vault" color="#00FF00">
     <description>A thin scattering of grit spreads across the drab floor, collecting in packed deposits at the base of the curved wall ringing the building's center.  A flat circular roof supports a vast framework of iron and timbers rising to the building's distant pinnacle.  Countless gears, pulleys and weights within the structure form the strikingly complex and beautiful mechanism which drives the Carousel.</description>
-    <position x="70" y="-270" z="0" />
+    <position x="83" y="-263" z="0" />
     <arc exit="out" move="out" destination="177" />
     <arc exit="go" move="go slate desk" destination="179" />
     <arc exit="south" move="south" destination="309" />
   </node>
   <node id="179" name="Dirge, Carousel Desk" note="Lost and Found" color="#00FF00">
     <description>A long wooden desk spans the width of the western wall.  Brass lanterns hang from the ceiling, and the floor behind the desk is covered in spotless red tile.</description>
-    <position x="60" y="-270" z="0" />
+    <position x="73" y="-263" z="0" />
     <arc exit="out" move="out" destination="178" />
   </node>
   <node id="180" name="Arthelun Flats, Cambrigweld">
@@ -1428,7 +1429,7 @@
     <position x="100" y="20" z="0" />
     <arc exit="northeast" move="northeast" destination="222" />
     <arc exit="east" move="east" destination="223" />
-    <arc exit="southeast" move="southeast" />
+    <arc exit="southeast" move="southeast" destination="224" />
     <arc exit="southwest" move="southwest" destination="220" />
     <arc exit="west" move="west" destination="226" />
     <arc exit="northwest" move="northwest" destination="225" />
@@ -1471,62 +1472,62 @@
   <node id="227" name="Dirge, Hawthorn Lane" note="Hawthorn Lane" color="#00FFFF">
     <description>In the darkness, gnarled hawthorn trees arch over the broken cobblestone road like the tentacles of a great sea creature, creating a shadowed tunnel above this once-thriving community.  A shingled road sign dangles from a single remaining chain amid large, white limestone markers and dried up plants that line the roadway.  Pitched at an odd angle to one side is a burnt out caravan, its missing front wheel lies in splintered pieces scattered about the area.</description>
     <description>Gnarled hawthorn trees arch over the broken cobblestone road, the charred branches attempting to create a shadowed tunnel over this once-thriving community.  A shingled road sign dangles from a single remaining chain amid large, white limestone markers and dried out plants that line the roadway, now covered in a heavy layer of soot.  Pitched at an odd angle to one side is a burned out caravan, its missing front wheel lies in splintered pieces, scattered about the area.</description>
-    <position x="-200" y="-140" z="0" />
+    <position x="-120" y="-140" z="0" />
     <arc exit="northeast" move="northeast" destination="228" />
     <arc exit="go" move="go gate" destination="13" />
   </node>
   <node id="228" name="Dirge, Hawthorn Lane" color="#00FFFF">
     <description>The gnarled tentacles of the sprawling trees rise out of the darkness that surrounds the neighborhood homes, the area's deteriorated state lit only by the occasional light through a nearby window.  Rotted and decayed rail carts lie overturned near the roadside tracks, their ash-covered stony contents littering the area and making travel difficult.  Rusted ironwork attempts to fence in a nearby weed-choked garden, while across the lane, a frayed rope dangles a broken swing from twisted branch overhead.</description>
     <description>The neighborhood shows clear signs of neglect, having succumbed to the ravages of time and apparent disaster.  Rotted and decayed rail carts lie overturned near the roadside tracks, their ash-covered stony contents littering the area and making travel difficult.  Rusted ironwork attempts to fence in a nearby weed-choked garden, while across the lane, a frayed rope dangles a broken swing from the gnarled branch of one of the surrounding hawthorn trees.</description>
-    <position x="-180" y="-160" z="0" />
+    <position x="-100" y="-160" z="0" />
     <arc exit="northeast" move="northeast" destination="229" />
     <arc exit="southwest" move="southwest" destination="227" />
   </node>
   <node id="229" name="Dirge, Hawthorn Lane" color="#00FFFF">
     <description>Cracked and worn, grey cobblestones pave the debris-riddled lane as it makes a sharp bend, wending its way amid the meager homes and partially collapsed buildings.  In the dim light of a single lantern, a haggard-looking wooden sluice system teeters on weathered stilts as it extends into the area from the small lake nearby.  Making a series of angled drops, the trough empties into a large sun-bleached tub, its current flow reduced to nothing more than a mere trickle.  Across the lane, several yards are cluttered with rusted mining tools and broken toys, a surreal contrast to life within the working neighborhood.</description>
     <description>Cracked and worn, grey cobblestones pave the debris-riddled lane as it makes a sharp bend, wending its way amid the meager homes and partially collapsed buildings.  A haggard-looking wooden sluice system teeters on weathered stilts as it extends into the area from the small lake nearby.  Making a series of angled drops, the trough empties into a large sun-bleached tub, its current flow reduced to nothing more than a mere trickle.  Across the lane, several yards are cluttered with rusted mining tools and broken toys, a surreal contrast to life within the working neighborhood.</description>
-    <position x="-160" y="-180" z="0" />
+    <position x="-80" y="-180" z="0" />
     <arc exit="southwest" move="southwest" destination="228" />
     <arc exit="west" move="west" destination="230" />
   </node>
   <node id="230" name="Dirge, Hawthorn Lane" color="#00FFFF">
     <description>The ash-laden air chokes the village green with its pallid dwellings, each in desperate need of repair.  Guttering lanterns cast strange, shifting patterns of light and shadow over the small sward as their light is cast over the gnarled, barren trees and splintered wooden benches at its center.  Tattered curtains flutter in a broken window nearby, while weathered kegs litter the landing of a crumbling mining depot.  Some mossy stone steps collapse downward into the darkness towards small lake nearby, a distant towering shadow barely visible between the homes.</description>
     <description>The ash-laden air chokes the village green with its pallid dwellings, each in desperate need of repair.  Barren trees with thorny branches hunker over a pair of splintered wooden benches, the broken cobblestones encircling the small sward.  Tattered curtains flutter in a broken window nearby, while weathered kegs litter the landing of a crumbling mining depot.  Some mossy stone steps collapse downward towards small lake nearby, a distant stone windmill barely visible between the homes.</description>
-    <position x="-180" y="-180" z="0" />
+    <position x="-100" y="-180" z="0" />
     <arc exit="east" move="east" destination="229" />
     <arc exit="west" move="west" destination="231" />
   </node>
   <node id="231" name="Dirge, Hawthorn Lane" color="#00FFFF">
     <description>Entombed by tall weeds, the decomposing skeleton of a termite-riddled gazebo serves as a haunting reminder of the forsaken neighborhood's lost splendor.  Along with the ruins of the local stables, several homes line the dark cobblestone lane, lit only by the light from an occasional window.  Iron-banded kegs are stacked along many of the sagging porches, while a withering pumpkin patch divides several of the buildings.  A trio of collapsed mining carts teeters upon the iron rails that run throughout the community.</description>
     <description>Entombed by tall weeds, the decomposing skeleton of a termite-riddled gazebo serves as a haunting reminder of the forsaken neighborhood's lost splendor.  Along with the ruins of the local stables, several homes line the worn cobblestone lane.  Iron-banded kegs are stacked along many of the sagging porches, while a withering pumpkin patch divides several of the buildings.  A trio of collapsed mining carts teeters upon the iron rails that run throughout the community.</description>
-    <position x="-200" y="-180" z="0" />
+    <position x="-120" y="-180" z="0" />
     <arc exit="north" move="north" destination="232" />
     <arc exit="east" move="east" destination="230" />
   </node>
   <node id="232" name="Dirge, Hawthorn Lane" color="#00FFFF">
     <description>A scant few lanterns reveal the dilapidated homes that crowd one side of the narrow lane, a stained and broken doll peeking out from beneath the overgrown shrubbery.  Across the road, a considerable amount of trees have been cleared, providing several cords of firewood and unorganized stacks of cumbrous shoring beams.  Near a broad stump pierced by a long-handled axe, a small wooden cart lies toppled to one side, one of its wheels collapsed beneath it.</description>
     <description>Dilapidated homes crowd one side of the narrow lane, a stained and broken doll peeking out from beneath the overgrown shrubbery.  Across the road, a considerable amount of trees have been cleared, providing several cords of firewood and unorganized stacks of cumbrous shoring beams.  Near a broad stump pierced by a long-handled axe, a small wooden cart lies toppled to one side, one of its wheels collapsed beneath it.</description>
-    <position x="-200" y="-200" z="0" />
+    <position x="-120" y="-200" z="0" />
     <arc exit="north" move="north" destination="233" />
     <arc exit="south" move="south" destination="231" />
   </node>
   <node id="233" name="Dirge, Hawthorn Lane" color="#00FFFF">
     <description>Rising out of the surrounding darkness, several surviving blackberry bushes threaten to choke off the short bend in the roadway, their redolent scents sweetening the evening air.  Stacked stone piles rise amid dried weeds, placed like markers among the many homes that line the narrow cobblestone lane.  A weathered butter churn rests in one yard, while splintered shutters dangle precariously from the candlelit window of another nearby residence.</description>
     <description>Several surviving blackberry bushes threaten to choke off the short bend in the roadway, their redolent scents filling the area in the summer months.  Stacked stone piles rise amid dried weeds, placed like markers among the many homes that line the narrow cobblestone lane.  A weathered butter churn rests in one yard, while splintered shutters dangle precariously from the window of another nearby residence.</description>
-    <position x="-200" y="-220" z="0" />
+    <position x="-120" y="-220" z="0" />
     <arc exit="south" move="south" destination="232" />
     <arc exit="northwest" move="northwest" destination="234" />
   </node>
   <node id="234" name="Dirge, Hawthorn Lane" color="#00FFFF">
     <description>The gnarled branches of the surrounding hawthorn trees overhang the area, creating a weblike canopy that shadows the end of the worn cobblestone lane.  Bordering a partially collapsed riverstone barrier that once enclosed the nearby cemetary, a crude rack is hung with rusted shovels caked with dried mud.  The bedraggled homes huddle together as if guarding from what lies beyond, their decayed fences missing a majority of the pickets which lie buried amid the tall, surrounding weeds.  A single lamp post supports a battered lantern, providing minimal lighting in the dead of night.</description>
-    <position x="-220" y="-240" z="0" />
+    <position x="-140" y="-240" z="0" />
     <arc exit="southeast" move="southeast" destination="233" />
     <arc exit="southwest" move="southwest" destination="235" />
   </node>
   <node id="235" name="Hawthorn Lane, Cemetery" color="#00FFFF">
     <description>An unsettling pall hangs over the desecrated cemetery at the end of the road.  Fringed by a dense foreboding forest, freshly opened graves and defiled crypts have left their pilfered remains scattered about the area.  Broken headstones and weather-worn bones are strewn across the dried, ash-covered scrub that grows sparsely over the area.  A few discolored monuments still stand amid the depredation, looming in the darkness like malevolent guardians.</description>
     <description>An unsettling pall hangs over the desecrated cemetery at the end of the road.  Fringed by a dense foreboding forest, freshly opened graves and defiled crypts have left their pilfered remains scattered about the area.  Broken headstones and weather-worn bones are strewn across the dried, ash-covered scrub that grows sparsely over the area.  A few discolored monuments still stand amid the depredation.</description>
-    <position x="-240" y="-220" z="0" />
+    <position x="-160" y="-220" z="0" />
     <arc exit="northeast" move="northeast" destination="234" />
   </node>
   <node id="236" name="Lava Fields, Ruined Farmhouse">
@@ -1592,8 +1593,13 @@
   </node>
   <node id="309" name="Dirge, Carousel Family Services" note="Family Vault" color="#00FF00">
     <description>A series of guarded arches line the southern wall.  The complicated framework of iron and timbers spans across the ceiling.  Countless gears, pulleys and weights form the strikingly complex mechanism which drives the Carousel.</description>
-    <position x="70" y="-260" z="0" />
-    <arc exit="north" move="north" />
+    <position x="83" y="-253" z="0" />
+    <arc exit="north" move="north" destination="178" />
+  </node>
+  <node id="310" name="Dirge, Rundmolen Post Office" note="Post Office|mail" color="#00FF00">
+    <description>Tucked up against the looming building is a low stone counter made from cut stone blocks.  Vast, countless rows of differently sized shelves are behind the counter, and complex Dwarven mechanisms can be heard as they rearrange the package-covered storage.  Clerks shuffle endlessly back and forth between the counters and shelving as they assist patrons with their packaging and mailing needs.</description>
+    <position x="93" y="-253" z="0" />
+    <arc exit="north" move="north" destination="177" />
   </node>
   <label text="crazed madmen">
     <position x="-270" y="-50" z="0" />
@@ -1617,10 +1623,10 @@
     <position x="155" y="110" z="0" />
   </label>
   <label text="Town Square">
-    <position x="20" y="-330" z="0" />
+    <position x="33" y="-323" z="0" />
   </label>
   <label text="Temple">
-    <position x="110" y="-380" z="0" />
+    <position x="123" y="-373" z="0" />
   </label>
   <label text="Darkstone Inn">
     <position x="-821" y="-160" z="0" />

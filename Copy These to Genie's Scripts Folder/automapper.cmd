@@ -1,14 +1,13 @@
 # automapper.cmd
-var autoversion 8.2024-08-01
+var autoversion 8.2024-06-25
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
 
-#2024-08-01
-# Hanryu
-#   new variable controlled waiteval timeout
-#   so you don't get hung up forever waiting for wave to collapse
+#2024-6-25
+# Shroom
+# Robustified Light Source/Dark Room checks
 
 #2023-12-17
 # Hanryu
@@ -1979,6 +1978,11 @@ GOGGLE_YES:
   delay %infiniteLoopProtection
   gosub PUT get my goggle
   delay %infiniteLoopProtection
+  if !matchre("$righthand $lefthand", "(?i)\bgoggle\b") then {
+    gosub PUT remove my goggle
+    pause %command_pause
+    if ($roundtime > 0) then pause $roundtime
+  }
   if !matchre("$righthand $lefthand", "\bgoggle\b") then goto STARGLASS_CHECK
   matchre GOGGLE_YES \s*\.\.\.wait|^Sorry,|^Please wait\.|^You are still stunned
   matchre GOGGLE_STOW remains inert|^You rub|^What
@@ -1987,7 +1991,9 @@ GOGGLE_YES:
   matchwait 5
 GOGGLE_STOW:
   pause %command_pause
-  gosub stowing
+  gosub PUT wear my goggle
+  delay %infiniteLoopProtection
+  gosub PUT rub my goggle
   delay %infiniteLoopProtection
   if matchre("$righthand $lefthand", "\bgoggle\b") then gosub stowing
   gosub DARK_CHECK
@@ -1996,6 +2002,12 @@ GOGGLE_STOW:
 STARGLASS_CHECK:
   gosub stowing
   gosub PUT GET my starglass
+  delay %infiniteLoopProtection
+  if !matchre("$righthand $lefthand", "(?i)\bstarglass\b") then {
+    gosub PUT remove my starglass
+    pause %command_pause
+    if ($roundtime > 0) then pause $roundtime
+  }
   if !matchre("$righthand $lefthand", "(?i)starglass") then goto GAETHZEN_CHECK
   gosub PUT CHARGE starglass 20
   pause %command_pause
@@ -2008,12 +2020,12 @@ STARGLASS_CHECK:
   if ($roundtime > 0) then pause $roundtime
   gosub PUT WEAR my starglass
   pause %command_pause
-  gosub stowing
   gosub DARK_CHECK
   if (%darkroom = 0) then goto YES_DARKVISION
 ### CHECK FOR A GAETHZEN LANTERN
 GAETHZEN_CHECK:
-  var Lantern.Types skull|sphere|wyvern|statuette|sunburst|star|lantern|firefly|salamander|rose
+  gosub stowing
+  var Lantern.Types skull|salamander|sphere|wyvern|statuette|sunburst|star|lantern|firefly|rose|orchid|turnip
   var Lantern.Check 0
   var Lantern.Count 0
   eval Lantern.Count count("%Lantern.Types", "|")
@@ -2022,7 +2034,11 @@ GAETHZEN_GET:
   gosub PUT GET my gaethzen %Lantern.Types(%Lantern.Check)
   delay %infiniteLoopProtection
   pause %command_pause
-  pause 0.2
+  pause 0.1
+  if !matchre("$righthand $lefthand", "%Lantern.Types(%Lantern.Check)") then {
+    gosub PUT remove my gaethzen %Lantern.Types(%Lantern.Check)
+    pause %command_pause
+  }
   if matchre("$righthand $lefthand", "(?i)%Lantern.Types(%Lantern.Check)") then goto GAETHZEN_SUCCESS
 GAETHZAN_FAIL:
   math Lantern.Check add 1
@@ -2056,6 +2072,10 @@ LANTERN_CHECK:
   var TriedOil 0
   gosub stowing
   gosub PUT GET my lantern
+  if !matchre("$righthand $lefthand", "lantern") then {
+    gosub PUT remove my lantern
+    pause %command_pause
+  }
   if !matchre("$righthand $lefthand", "(?i)lantern") then goto TORCH_CHECK
 LANTERN_DROP:
   gosub PUT drop my lantern
