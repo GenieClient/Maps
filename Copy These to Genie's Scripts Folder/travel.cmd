@@ -112,7 +112,7 @@ if ("$charactername") = ("$char10") then var shardcitizen no
 ##  VERY TOUGH ONE! CAREFUL LOWERING!    ##
 ##  MAY GET STUCK IF YOU SET TOO LOW!    ##
 ##  SAFE= 550+ | BUFFED & STRONG= ~530   ##
-    var segoltha 5500
+    var segoltha 550
 ##########################################
 ## RANKS TO CLIMB UNDERGONDOLA SHORTCUT ##
 ## Some can do ~510 w/ buffs & rope     ##
@@ -122,7 +122,7 @@ if ("$charactername") = ("$char10") then var shardcitizen no
 ##########################################
 ## RANKS TO USE UNDER-SEGOLTHA (THIEF)  ##
 ## 35 MIN w/ NO BURDEN - 50 is "SAFE"   ##
-    var undersegoltha 5000
+    var undersegoltha 50
 ##########################################
 #################################################
 ## RANKS FOR VELAKA DESERT SHORTCUT TO MUSPARI ##
