@@ -7,8 +7,8 @@
 # Inspired by the OG Wizard Travel Script - But made 1000x better w/ the power of GENIE
 # Originally written by Achilles - Revitalized and Robustified by Shroom
 #
-# Updated: 7/10/24
-var version 5.2.3
+# Updated: 7/12/24
+var version 5.2.4
 #
 # USES PLAT PORTALS TO TRAVEL BETWEEN CITIES IF PLATINUM
 # KNOWS HOW TO NAVIGATE OUT OF ANY MAZE / PUZZLE AREAS / FERRIES ETC
@@ -3774,26 +3774,27 @@ FERRY:
   action var TransportName Skirr'lolasu when Skirr'lolasu
   action var TransportName Sanegazat when Sanegazat
   action var TransportName Degan when Degan
-  action var OnFerry 1 when \"Imperial Glory\"
-  action var OnFerry 1 when \"Kertigen's Honor\"
-  action var OnFerry 1 when \"Hodierna's Grace\"
-  action var OnFerry 1 when \"Her Opulence\"
-  action var OnFerry 1 when \"His Daring Exploit\"
-  action var OnFerry 1 when \"Theren's Star\"
-  action var OnFerry 1 when \"The Damaris\"
-  action var OnFerry 1 when \"Evening Star\"
-  action var OnFerry 1 when \"Birch Skiff\"
-  action var OnFerry 1 when \"Desert Wind\"
-  action var OnFerry 1 when \"Suncatcher\"
-  action var OnFerry 1 when \"Riverhawk\"
-  action var OnFerry 1 when \"Galley Cercorim\"
-  action var OnFerry 1 when \"Jolas\"
-  action var OnFerry 1 when \"Aboard the Warship\"
-  action var OnFerry 1 when \"Halasa Selhin\"
-  action var OnFerry 1 when \"Night Sky\"
-  action var OnFerry 1 when \"Skirr'lolasu\"
-  action var OnFerry 1 when \"Sanegazat\"
-  action var OnFerry 1 when \"Degan\"
+  action var OnFerry 1 when \[\"?Imperial Glory\"?
+  action var OnFerry 1 when \[\"?Kertigen's Honor\"?
+  action var OnFerry 1 when \[\"?Hodierna's Grace\"?
+  action var OnFerry 1 when \[\"?Her Opulence\"?
+  action var OnFerry 1 when \[\"?His Daring Exploit\"?
+  action var OnFerry 1 when \[\"?Theren's Star\"?
+  action var OnFerry 1 when \[\"?A Birch Skiff\"?
+  action var OnFerry 1 when \[\"?A Highly Polished Skiff\"?
+  action var OnFerry 1 when \[\"?Aboard the Warship\"?
+  action var OnFerry 1 when \[\"?(The )?Desert Wind\"?
+  action var OnFerry 1 when \[\"?(The )?Suncatcher\"?
+  action var OnFerry 1 when \[\"?(The )?Damaris' Kiss\"?
+  action var OnFerry 1 when \[\"?(The )?Evening Star\"?
+  action var OnFerry 1 when \[\"?(The )?Riverhawk\"?
+  action var OnFerry 1 when \[\"?(The )?Galley Cercorim\"?
+  action var OnFerry 1 when \[\"?(The )?Jolas\"?
+  action var OnFerry 1 when \[\"?(The )?Halasa Selhin\"?
+  action var OnFerry 1 when \[\"?(The )?Night Sky\"?
+  action var OnFerry 1 when \[\"?(The )?Skirr'lolasu\"?
+  action var OnFerry 1 when \[\"?(The )?Galley Sanegazat\"?
+  action var OnFerry 1 when \[\"?Degan\"?
   if ($invisible) then gosub STOP_INVIS
   delay 0.0001
   if (%OnFerry = 1) then goto ONFERRY
