@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <zone name="Fang Cove" id="150">
   <node id="1" name="Aboard the Mammoth, Platform" note="Sea Mammoth|Ratha">
     <description>Thick, barnacle-encrusted ropes secure the platform to the mammoth's back.  The wooden planks follow the curve of the beast's neck, allowing the driver an elevated vantage point as he does his best to lead the sea creature to and fro across the vast ocean.  Birds' nests can be seen all around the platform and are woven intricately into the fur.</description>
@@ -622,31 +622,31 @@
   </node>
   <node id="91" name="Fang Cove, Beneath Fang's Peak">
     <description>Rocks and boulders big and small lie strewn across the floor of the tunnel.  The clatter of falling rock from nearby resounds sharply in the tight passage.  Cracks in the walls and ceiling creak ominously, releasing small puffs of dust and pebbles.</description>
-    <position x="460" y="220" z="0" />
+    <position x="480" y="200" z="0" />
     <arc exit="southeast" move="southeast" destination="92" />
     <arc exit="go" move="go crack" destination="59" />
   </node>
   <node id="92" name="Fang Cove, Beneath Fang's Peak">
     <description>Large roots from above have grown through the ceiling, cracking the surrounding rock.  They trail along the surface before disappearing into one wall that has collapsed below them.  The constant groan of stone grating against stone fills the air.</description>
-    <position x="480" y="240" z="0" />
+    <position x="500" y="220" z="0" />
     <arc exit="south" move="south" destination="93" />
     <arc exit="northwest" move="northwest" destination="91" />
   </node>
   <node id="93" name="Fang Cove, Beneath Fang's Peak">
     <description>The threat of collapse disappears through this section of intact tunnel.  A straight, solid passage has been hewn through a vein of hard granite.  The sound of dripping water echoes in the tight space.</description>
-    <position x="480" y="260" z="0" />
+    <position x="500" y="240" z="0" />
     <arc exit="north" move="north" destination="92" />
     <arc exit="southeast" move="southeast" destination="94" />
   </node>
   <node id="94" name="Fang Cove, Beneath Fang's Peak">
     <description>Water has eroded a section of wall and drips into a stagnant mineral pool below.  Pale moss grows on the wet surfaces.  Smelling faintly of iron and sulfur, the air is damp and cloying.  The creaking of unstable rock can be heard faintly from above.</description>
-    <position x="500" y="280" z="0" />
+    <position x="527" y="267" z="0" />
     <arc exit="south" move="south" destination="95" />
     <arc exit="northwest" move="northwest" destination="93" />
   </node>
   <node id="95" name="Fang Cove, Beneath Fang's Peak">
     <description>An old collapse fills most of the tunnel, and the rubble turns the passage into an obstacle course.  An occasional rumble of shifting rock warns that the tunnel is far from safe.  The sound of dripping water comes from somewhere nearby.</description>
-    <position x="500" y="300" z="0" />
+    <position x="527" y="300" z="0" />
     <arc exit="north" move="north" destination="94" />
     <arc exit="out" move="out" destination="96" />
   </node>
@@ -708,6 +708,7 @@
     <position x="440" y="320" z="0" />
     <arc exit="southwest" move="southwest" destination="102" />
     <arc exit="go" move="go pool" destination="118" />
+    <arc exit="climb" move="climb low-hanging tree" destination="261" />
   </node>
   <node id="104" name="Fang's Rise, Western Embankment">
     <description>Though steeper than the opposing embankment to the east, the climb is made easier by some jutting pieces of rock that provide steps leading from the deep, blue water below.  Mosses of various hues of green cover the ground and some of the nearby rocks.</description>
@@ -805,40 +806,41 @@
   </node>
   <node id="118" name="Fang's Rise, Pool">
     <description>The loud, thunder-like roar of the waterfall blocks out virtually all other noise, exerting its dominance over Fang's Peak.  Waves of white water erupt from the percussion point, rippling across the pool.  A light mist rises from the surface partly concealing a steep embankment.</description>
-    <position x="440" y="300" z="0" />
+    <position x="440" y="280" z="0" />
     <arc exit="southwest" move="southwest" destination="119" />
     <arc exit="northwest" move="northwest" destination="120" />
     <arc exit="climb" move="climb embankment" destination="103" />
   </node>
   <node id="119" name="Fang's Rise, Pool">
     <description>The current causes the deep, blue water to swirl gently in lazy, irregular circles, almost concealing the pebbles and rocks beneath its surface.  The air is filled with a heady scent from the nearby trees that shelter sections of the pool with their large, overhanging branches.</description>
-    <position x="420" y="320" z="0" />
+    <position x="420" y="300" z="0" />
     <arc exit="northeast" move="northeast" destination="118" />
     <arc exit="northwest" move="northwest" destination="121" />
+    <arc exit="climb" move="climb low-hanging branch" destination="261" />
   </node>
   <node id="120" name="Fang's Rise, Pool">
     <description>Clear blue water hurtles down from the waterfall, freefalling into the deeper blue of the pool to create a liquid turmoil.  Mist rises from where the two meet, and beneath the surface, a deep fissure is visible.  An opening can just be made out behind the tall wall of water.</description>
-    <position x="420" y="280" z="0" />
+    <position x="420" y="260" z="0" />
     <arc exit="southeast" move="southeast" destination="118" />
     <arc exit="southwest" move="southwest" destination="121" />
     <arc exit="go" move="go opening" destination="122" />
   </node>
   <node id="121" name="Fang's Rise, Pool">
     <description>Away from the turmoil of the nearby waterfall, the pool takes on a calmer, almost serene appearance.  Tall branches covered in large leaves hang protectively over the water like a parasol against the elements.  A nearby embankment offers passage to dry land.</description>
-    <position x="400" y="300" z="0" />
+    <position x="400" y="280" z="0" />
     <arc exit="northeast" move="northeast" destination="120" />
     <arc exit="southeast" move="southeast" destination="119" />
     <arc exit="climb" move="climb embankment" destination="104" />
   </node>
   <node id="122" name="Fang's Rise, Behind the Waterfall">
     <description>Water drips through narrow cracks in the rock, wetting the floor which slopes towards the opening covered by the waterfall.  A short passage leads away from the loud roar of the tumbling water and rises up toward a large open cavern.</description>
-    <position x="420" y="260" z="0" />
+    <position x="420" y="245" z="0" />
     <arc exit="north" move="north" destination="123" />
     <arc exit="out" move="out" destination="120" />
   </node>
   <node id="123" name="Fang's Rise, Hidden Cave" note="Depart|Eluned|Lemicus|Drogor|shrine" color="#400040">
     <description>This cave's concave stone walls are heavily carved with sea scenes that run the gamut from the tiniest minnow to several sea monsters.  Some large, rough rocks surround an unusual assortment of boulders.  The air hangs heavily, almost as if pressing downward.</description>
-    <position x="420" y="240" z="0" />
+    <position x="420" y="230" z="0" />
     <arc exit="south" move="south" destination="122" />
   </node>
   <node id="124" name="Fang's Rise, Peak's Base">
@@ -1507,7 +1509,7 @@
   <node id="229" name="Fang Cove, Community Gazebo" note="gazebo">
     <description>Several tethered bamboo tables surrounded by cane chairs are scattered about the large area, softly lit by elongated brass lanterns that hang overhead.  A makeshift speaker's podium stands at one end, while at the opposing end, a stacked riverstone fireplace crackles with the warmth of an inviting fire.  Groups of local residents mill about the area, each quietly discussing the day's events and enjoying a refreshing drink at a small provisional bar nearby.</description>
     <position x="280" y="320" z="0" />
-    <arc exit="out" move="out" />
+    <arc exit="out" move="out" destination="86" />
   </node>
   <node id="230" name="Aboard the Mammoth, Platform]" note="Tall Mammoth|Leth Deriel">
     <description>Thick, barnacle-encrusted ropes secure the platform to the mammoth's back.  The wooden planks follow the curve of the beast's neck, allowing the driver an elevated vantage point as he does his best to lead the sea creature to and fro across the vast ocean.  Birds' nests can be seen all around the platform and are woven intricately into the fur.</description>
@@ -1583,7 +1585,7 @@
   <node id="242" name="Jungle Outpost, Encampment" note=" Encampment" color="#00FFFF">
     <description>Efforts have been taken to provide comforts for those who maintain a protective watch over the area's water source and nearby shrine amid the dark encampment.  Imposing shadows are cast over the area by the towering durian trees, broken only by the occasional candlelight from a distant window.  Hulking masses lurk in the darkness of the underbrush that crowds the narrow footpath, leading further east.</description>
     <description>Efforts have been taken to provide comforts for those who maintain a protective watch over the area's water source and nearby shrine amid the small encampment.  Towering durian trees overrun with clinging strangler figs form the soaring emergent layer of the tropical area, while lianas vines drape the many palms that afford a pleasant covering over crudely carved benches.  Bamboo, ferns and a vast array of herbs mingle with the many indigenous plants that crowd the narrow footpath that heads further east.</description>
-    <position x="477" y="300" z="0" />
+    <position x="487" y="287" z="0" />
     <arc exit="southwest" move="southwest" destination="245" />
     <arc exit="west" move="west" destination="246" />
     <arc exit="northwest" move="northwest" destination="243" />
@@ -1592,14 +1594,14 @@
   <node id="243" name="Jungle Outpost, Encampment" color="#00FFFF">
     <description>Scents of wild orchids waft through the encampment from blooms that hide amid the dark underbrush and grasp at the shadowed trunks that rise into the overhead canopy.  Native, nocturnal creatures flit and scramble about in the murky perimeter, their incessant buzz filling the evening air.  From a nearby branch, a brilliant scarlet macaw observes the area with curiosity, startled by the sudden activity.</description>
     <description>Scents of wild orchids waft through the area from the many vibrant blooms that vine through the underbrush and along the trunks of the surrounding trees.  Colorful birds flit overhead in the upper jungle canopy, their melodious song filling the air.  Making its home on a nearby branch, a brilliant scarlet macaw observes the area with curiosity, often appearing to heckle those that pass amid the many homes.</description>
-    <position x="467" y="290" z="0" />
+    <position x="477" y="277" z="0" />
     <arc exit="southeast" move="southeast" destination="242" />
     <arc exit="southwest" move="southwest" destination="244" />
   </node>
   <node id="244" name="Jungle Outpost, Encampment" color="#00FFFF">
     <description>Subtle breezes dance amid the gently swaying palms that overhang the many homes, their curtained windows aglow with some soft, indeterminable light within.  A group of weathered chairs is gathered in the darkness among the trunks of several shadowed fruit trees, while crude, bamboo wind chimes clatter faintly from their branches, a modest deterrent to the local wildlife that scurries about the draping, woody network during nightfall.</description>
     <description>Subtle breezes dance amid the gently swaying palms that overhang the many homes, where children giggle and dart about, engaged in a game of tag.  A group of weathered chairs is gathered among the trunks of several surrounding fruit trees, while crude, bamboo wind chimes clatter softly from their branches, a modest deterrent to the local wildlife.</description>
-    <position x="457" y="300" z="0" />
+    <position x="467" y="287" z="0" />
     <arc exit="northeast" move="northeast" destination="243" />
     <arc exit="east" move="east" destination="246" />
     <arc exit="southeast" move="southeast" destination="245" />
@@ -1607,14 +1609,14 @@
   <node id="245" name="Jungle Outpost, Encampment" color="#00FFFF">
     <description>Dark forms hasten along the vast woody network and purple passion vines that drape throughout the area, one particular vine hanging loosely against a hulking, shadowed tree like a snake slithering down from its lofty vantage point to feed.  Several of the surrounding trees hold a variety of ripened fruit, when in season, their sweet aroma mingling with the nocturnal sounds of the enclosing jungle.  Some ship's netting, strung between two trunks and forming a hammock, makes for a comfortable rest in the evening air.</description>
     <description>A multitude of creatures travel the vast network of lianas vines and climbing purple passion flowers that drape through the area, one particular vine hangs loosely against a wide tree that towers amid the homes.  Several of the surrounding trees hold a variety of ripened fruit, when in season, making them a familiar visit for many.  Some ship's netting is strung between two of the larger trunks, making for a comfortable hammock in the overlying shade.</description>
-    <position x="467" y="310" z="0" />
+    <position x="477" y="297" z="0" />
     <arc exit="northeast" move="northeast" destination="242" />
     <arc exit="northwest" move="northwest" destination="244" />
   </node>
   <node id="246" name="Jungle Outpost, Encampment">
     <description>Make-shift benches surround a large bamboo table, where several residents occasionally gather to share a meal roasted over the stone firepit and tell tales of their day's adventure.  Amid the surrounding darkness, a looming banyan tree is strung with heavy braided vines and a driftwood swing that sways gently in the evening breeze.</description>
     <description>Make-shift benches surround a large bamboo table, where several residents occasionally gather to share a meal roasted over the stone firepit and tell tales of their day's adventure.  Amid the many palms and durians that shade the area, a nearby banyan tree is strung with heavy braided vines that hold a driftwood swing.</description>
-    <position x="467" y="300" z="0" />
+    <position x="477" y="287" z="0" />
     <arc exit="east" move="east" destination="242" />
     <arc exit="west" move="west" destination="244" />
   </node>
@@ -1686,10 +1688,15 @@
     <position x="300" y="320" z="0" />
     <arc exit="go" move="go double doors" destination="87" />
   </node>
-  <node id="260" name="Fang Cove, Rundmolen Post Office" color="#00FF00">
+  <node id="260" name="Fang Cove, Rundmolen Post Office" note="Post Office|mail" color="#00FF00">
     <description>Tucked up against the stone wall is an expansive stone counter decorated with low relief carvings.  Screens of bamboo surround the counter, partitioning it off from the bustle of the carousel traffic.  Vast, countless rows of differently sized shelves are behind the counter, and complex Dwarven mechanisms can be heard as they rearrange the package-covered storage.  Clerks shuffle endlessly back and forth between the counters and shelving as they assist patrons with their packaging and mailing needs.</description>
     <position x="315" y="320" z="0" />
     <arc exit="east" move="east" destination="222" />
+  </node>
+  <node id="261" name="Fang's Rise, Secluded Island" color="White">
+    <description>Low hanging trees, branches and dense vegetation make this little island seem to be like its own secluded world.  The sounds of the nearby waterfall are nearly drowned out by the abundant insects, birds and other creatures hiding within the profuse foliage.  A well-worn tree stump, smooth with age, sits before a large flat rock that appears to have been used as a table.</description>
+    <position x="420" y="320" z="0" />
+    <arc exit="climb" move="climb low-hanging branch" destination="119" />
   </node>
   <label text="quartz">
     <position x="505" y="40" z="0" />
@@ -1710,13 +1717,13 @@
     <position x="350" y="20" z="0" />
   </label>
   <label text="spotted">
-    <position x="490" y="220" z="0" />
+    <position x="510" y="200" z="0" />
   </label>
   <label text="yellow-bristled">
     <position x="480" y="405" z="0" />
   </label>
   <label text="random">
-    <position x="505" y="270" z="0" />
+    <position x="530" y="250" z="0" />
   </label>
   <label text="(under water - need air bubble)">
     <position x="20" y="85" z="0" />
@@ -1815,16 +1822,16 @@
     <position x="287" y="542" z="0" />
   </label>
   <label text="Encampment">
-    <position x="420" y="270" z="0" />
+    <position x="440" y="258" z="0" />
   </label>
   <label text="kashika">
-    <position x="490" y="230" z="0" />
+    <position x="510" y="210" z="0" />
   </label>
   <label text="serpent">
-    <position x="490" y="240" z="0" />
+    <position x="510" y="220" z="0" />
   </label>
   <label text="webbing">
-    <position x="505" y="280" z="0" />
+    <position x="530" y="260" z="0" />
   </label>
   <label text="gremlin">
     <position x="500" y="415" z="0" />

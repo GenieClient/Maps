@@ -951,11 +951,12 @@
     <arc exit="northwest" move="northwest" destination="137" />
   </node>
   <node id="139" name="Fayrin's Rest, Jarrowkin Path">
-    <description>The path beneath your feet is a dusty haze.  It gets in the lungs, in the joints of your skin, in your eyes.  It also seems to conceal every pointed stone in the kingdoms, judging by the soles of your feet.  To proceed further southeast is impossible: a large tangle of brambles lies across the path in that direction.  When the wind stirs the brambles rub together, producing a clacking noise that seems like small, mocking laughter.</description>
+    <description>Rows of spruce trees border the paved road that leads downhill to an outpost, a stable and a large stone inn.  A carved marble fountain rests in the center of the road, helping to separate the incoming and departing caravans.  On a nearby hillside, a flock of sheep grazes, oblivious to the industrious traffic.</description>
     <position x="-280" y="-780" z="0" />
     <arc exit="northwest" move="northwest" destination="127" />
     <arc exit="go" move="go trader outpost" destination="524" />
     <arc exit="go" move="go stable" destination="526" />
+    <arc exit="go" move="go stone inn" destination="756" />
   </node>
   <node id="140" name="Dragon's Breath Forest, A Dark Path" color="#008000">
     <description>The outline of a small dwelling manages to break through the dense forest before being swallowed back up by a screen of leaves and branches.  Motes of light drift softly through the air, glinting with the promise of a sun so rarely seen here.</description>
@@ -3655,18 +3656,19 @@
   </node>
   <node id="524" name="Marachek's Oak, Trader Outpost" note="Trader Outpost|commerce minister|shipment clerk" color="#00FF00">
     <description>Boxes, crates, sacks, packages and baskets float effortlessly in and out of the room.  Only upon disposal are their small, sturdy, efficient Halfling porters revealed, slightly winded but grinning broadly.  The room itself is a transit point for the rapid purchase and sale of bulk goods by Guild members.  A coolly efficient Halfling trade minister expedites member transactions with a wave of his quill pen and a click of his abacus mind, charting all fees owed, all monies paid.</description>
-    <position x="-290" y="-770" z="0" />
+    <position x="-300" y="-760" z="0" />
     <arc exit="south" move="south" destination="525" />
     <arc exit="out" move="out" destination="139" />
   </node>
   <node id="525" name="Fayrin's Rest, Trader Pit">
-    <description>On this sunken, earth-packed floor, Halfling clerks scramble and collide, shout and wave freshly inked receipts.  They seek to keep on top of commodities futures and trading opportunities, catering to the demands of merchants who line the arena like frenzied spectators at a bear baiting.</description>
-    <position x="-290" y="-760" z="0" />
+    <description>On this sunken, earth-packed floor, shouting Halfling clerks scramble and collide, waving freshly inked receipts before throwing them down on the pine desk.  They cater to the demands of merchants staring at the boards like frenzied spectators at a bear baiting.</description>
+    <position x="-300" y="-750" z="0" />
     <arc exit="north" move="north" destination="524" />
   </node>
   <node id="526" name="Marachek's Oak, Trader Caravan Stables" note="Caravan Stables" color="#00FF00">
     <description>In this large, pleasantly airy room, industrious Halflings muck out straw-lined stables, fill water troughs and towel down sturdy pack animals around the clock.  Their overseer glances in occasionally to make certain everything is going along nicely, then pops out for his nonstop cardgame of tableen down at Marachek's Oak.</description>
-    <position x="-270" y="-770" z="0" />
+    <position x="-280" y="-760" z="0" />
+    <arc exit="east" move="east" destination="767" />
     <arc exit="out" move="out" destination="139" />
   </node>
   <node id="527" name="Marachek's Oak, Secluded Booth">
@@ -4594,41 +4596,48 @@
     <position x="-610" y="-480" z="0" />
     <arc exit="east" move="east" destination="671" />
     <arc exit="west" move="west" destination="673" />
+    <arc exit="go" move="go iron gate" destination="749" />
   </node>
   <node id="673" name="Almalne Alolan, Grassy Road" color="#00FFFF">
     <description>Saplings give way to older apple trees, some of their branches gnarled and entwined with those of the tree next to them.  The grass is sparser but still holding onto a rich green hue as it follows the track through the orchard.  A faint pathway leads away from an elaborately carved wooden gate.</description>
     <position x="-620" y="-480" z="0" />
     <arc exit="east" move="east" destination="672" />
     <arc exit="west" move="west" destination="674" />
+    <arc exit="go" move="go wooden gate" destination="750" />
   </node>
   <node id="674" name="Almalne Alolan, Grassy Road" color="#00FFFF">
     <description>Mature Ilithic apple trees form stately lines along each side of the road, their branches thick with age.  Making their home near the base of one tree is a patch of forest violets showing off their bright hues.  Lavishly carved, a wooden gate stands at the end of a path.</description>
     <position x="-630" y="-480" z="0" />
     <arc exit="east" move="east" destination="673" />
     <arc exit="west" move="west" destination="675" />
+    <arc exit="go" move="go wooden gate" destination="751" />
   </node>
   <node id="675" name="Almalne Alolan, Grassy Road" color="#00FFFF">
     <description>Ancient and twisted, the trees along this part of the road all seem to have different personalities due to their varied shapes.  One hunches over to the side, while another sends branches to sweep the ground almost blocking the lane.  Placed between two of these monoliths is a delicately carved wooden gate.</description>
     <position x="-640" y="-480" z="0" />
     <arc exit="east" move="east" destination="674" />
     <arc exit="west" move="west" destination="676" />
+    <arc exit="go" move="go carved gate" destination="752" />
   </node>
   <node id="676" name="Almalne Alolan, Grassy Road" color="#00FFFF">
     <description>The lines of Ilithic apple trees thin out and are smaller than their towering neighbors to the east allowing patches of monkshood to grow among the grasses.  They bloom in a multitude of colors, one patch showing white, another purple and a third yellow.  Set to one side of the roadway is a gracefully carved wooden gate.</description>
     <position x="-650" y="-480" z="0" />
     <arc exit="east" move="east" destination="675" />
     <arc exit="west" move="west" destination="677" />
+    <arc exit="go" move="go wooden gate" destination="753" />
   </node>
   <node id="677" name="Almalne Alolan, Grassy Road" color="#00FFFF">
     <description>Giving way to fields again, the orchard's edge is planted with wood roses that display petals a shade of pink that is tipped with lavender.  Dense grasses threaten to hide the road itself, their shades of green richly hued.  A gate of artfully wrought iron stands between two of the bushes.</description>
     <position x="-660" y="-480" z="0" />
     <arc exit="east" move="east" destination="676" />
     <arc exit="west" move="west" destination="678" />
+    <arc exit="go" move="go gate" destination="754" />
   </node>
   <node id="678" name="Almalne Alolan, Grassy Road" color="#00FFFF">
     <description>Nestled under the shade of a lone Ilithic apple tree is an arrangement of beehives, their denizens roly-poly bumblebees.  A constant parade of buzzing creatures travel seemingly aimless paths to and from their artificial homes.  Located nearby is a finely wrought iron gate.</description>
     <position x="-670" y="-480" z="0" />
     <arc exit="east" move="east" destination="677" />
+    <arc exit="go" move="go iron gate" destination="755" />
   </node>
   <node id="679" name="Almalne Alolan, Behind the Branches">
     <description>Tangled into what appears to be an impenetrable maze, the branches of the giant Ilithic apple trees seem to block the way west.  A layer of twigs and dead leaves are scattered upon the ground, save for where an animal of some sort must have been digging, leaving a small hole near the roots of one tree.</description>
@@ -5083,6 +5092,119 @@
     <arc exit="northwest" move="northwest" />
     <arc exit="go" move="touch orb;go egress" />
   </node>
+  <node id="749" name="Almalne Alolan, Sapling Orchard" color="#00FFFF">
+    <description>Delicate trunks and slender branches stretch out from the multitude of Ilithic apple saplings that are planted in neat rows.  Soft, green grasses grow unchecked around their roots as if competing with the small trees.  Separating the orchard from the road is a fancy wrought iron gate.</description>
+    <position x="-610" y="-492" z="0" />
+    <arc exit="go" move="go iron gate" destination="672" />
+  </node>
+  <node id="750" name="Almalne Alolan, Small Clearing" color="#00FFFF">
+    <description>Gnarled and yet somehow still graceful, the mature Ilithic apple trees circle a small clearing full of bright blue cornflowers.  Soft grasses grow across the open space and back into the roots of the trees.  Leading away from the glade is a faint pathway that ends in an elaborately carved wooden gate.</description>
+    <position x="-620" y="-492" z="0" />
+    <arc exit="go" move="go wooden gate" destination="673" />
+  </node>
+  <node id="751" name="Almalne Alolan, Amid the Trees" color="#00FFFF">
+    <description>Branches stretch and wind together overhead, the old trees having long ago grown together despite the spaces between their large trunks.  Patches of grass and pink-spotted white foxgloves sprout forth from the detritus between the roots.  Standing guard at the end of a short path is a wooden gate.</description>
+    <position x="-630" y="-492" z="0" />
+    <arc exit="go" move="go wooden gate" destination="674" />
+  </node>
+  <node id="752" name="Almalne Alolan, Under an Ancient Ilithic Apple Tree" color="#00FFFF">
+    <description>A colossus even against the ancient trees around it, the venerable tree's trunk is contorted by hundreds of years of weather.  Huge branches stretch out as if to shelter the space below it, a single branch curves down to rest against the ground and is covered by soft mosses.  Set between two nearby trees is a delicately carved wooden gate.</description>
+    <position x="-640" y="-492" z="0" />
+    <arc exit="go" move="go carved gate" destination="675" />
+  </node>
+  <node id="753" name="Almalne Alolan, By the Stream" color="#00FFFF">
+    <description>Meandering through the trees is a stream of crystal clear water that trickles away from a small pond.  Growing along one edge are pale pink lotus flowers streaked with white while deeper in the hidden spring a few waterlilies show off dark pink petals.  Lush moss flourishes upon the bark of the adjacent trees.  A gracefully carved wooden gate leads back to the lane.</description>
+    <position x="-650" y="-492" z="0" />
+    <arc exit="go" move="go wooden gate" destination="676" />
+  </node>
+  <node id="754" name="Almalne Alolan, Flowering Fields" color="#00FFFF">
+    <description>Neatly furrowed rows of dirt run in north to south lines around a squared patch of ankle-high grass.  Planted along the top of each mound are a rainbow of irises, their colors ranging from deep reds and brilliant oranges to soft blues and intense purples.  At the edge of a grassy pathway stands a gate of artfully wrought iron.</description>
+    <position x="-660" y="-492" z="0" />
+    <arc exit="go" move="go gate" destination="677" />
+  </node>
+  <node id="755" name="Almalne Alolan, Among the Blooms" color="#00FFFF">
+    <description>The farmland here has been allowed to become a field of wildflowers.  Blue forget-me-nots, brilliant orange poppies, white larkspurs, and miniature sunflowers blend together in a riot of hues amidst the backdrop of dark green grasses.  Flitting from flower to flower, rotund bumblebees create a humming buzz.  Placed at the edge of the myriad of blooms is a finely wrought iron gate.</description>
+    <position x="-670" y="-492" z="0" />
+    <arc exit="go" move="go iron gate" destination="678" />
+  </node>
+  <node id="756" name="Stone Inn, Central Room" color="#FF0000">
+    <description>Wagon-wheel chandeliers, fitted with gaethzen lights, hang from the high, arched ceiling beams.  A glass counter containing hand-held foods faces the entrance while displays of other merchandise are placed nearby.  Stairs along the west wall climb upwards, and a small opening along the northeast wall leads deeper into the building.</description>
+    <position x="-250" y="-760" z="0" />
+    <arc exit="out" move="out" destination="139" />
+    <arc exit="climb" move="climb wooden staircase" destination="757" />
+    <arc exit="go" move="go opening" destination="761" />
+  </node>
+  <node id="757" name="Stone Inn, Upper Hallway">
+    <description>The north side of the carpeted hallway consists of large panes of glass that provide a breathtaking view of the Dragon Spine Mountains in the distance while a series of doors on either side lead to guest rooms for the inn's weary patrons.</description>
+    <position x="-250" y="-750" z="0" />
+    <arc exit="climb" move="climb wooden staircase" destination="756" />
+    <arc exit="go" move="go ironwood door" destination="758" />
+    <arc exit="go" move="go silverwillow door" destination="759" />
+    <arc exit="go" move="go goldenoak door" destination="760" />
+  </node>
+  <node id="758" name="Stone Inn, Ironwood Room" color="#00FFFF">
+    <description>A grand tapestry hangs over the mantle along the dark grain of the polished wood walls, while rich burgundy curtains, draped with gold satin cords, hang across a nearby window.  The massive ironwood sleigh bed, with ornately carved accents, is covered with opulent damask bedding and adorned with several matching, tasseled pillows providing comfort to any weary traveler.  A sweet, intoxicating scent fills the room from the lotus blossom bouquet, arranged in a clay vase, on a nightstand near the bed.</description>
+    <position x="-260" y="-740" z="0" />
+    <arc exit="go" move="go ironwood door" destination="757" />
+  </node>
+  <node id="759" name="Stone Inn, Silverwillow Room" color="#00FFFF">
+    <description>Vibrant teal silk lines the walls, combining with the plush ivory carpet that covers the polished wood floors of the spacious room.  An oversized, canopied silverwillow bed stands against one wall, covered with a floral comforter and plump pillows, both edged with ivory eyelet lace.  On the other side of the room, a satin settee invites a comfortable rest next to an ornate pedestal holding a wing-swept raven statue.</description>
+    <position x="-250" y="-740" z="0" />
+    <arc exit="go" move="go silverwillow door" destination="757" />
+  </node>
+  <node id="760" name="Stone Inn, Goldenoak Room" color="#00FFFF">
+    <description>Rich tones of gold, russet orange, and brown envelop the room with a warm ambiance.  Sweeping gilded brocades drape a large, half-round window beside a broad, potted palm.  Across the room, an oil painting overlooks a small nightstand tucked next to an ornately carved four-poster bed that is swathed in an opulent silk comforter and an array of plump pillows.</description>
+    <position x="-240" y="-740" z="0" />
+    <arc exit="go" move="go goldenoak door" destination="757" />
+  </node>
+  <node id="761" name="Stone Inn, Northeast Hallway">
+    <description>A large stuffed snowbeast is positioned between the two doors at the end of this hallway, as if guarding them from unwanted intruders.  The ferocious specimen appears to be lunging forward with claws extended, making it difficult to discern the image on each door.  A thick rug extends along the length of the hallway, but the lack of illumination makes it hard to tell if anyone has used this area recently.</description>
+    <position x="-240" y="-760" z="0" />
+    <arc exit="go" move="go wooden door" destination="762" />
+    <arc exit="go" move="go wood-framed opening" destination="763" />
+    <arc exit="go" move="go shop" destination="756" />
+  </node>
+  <node id="762" name="Stone Inn, Dappled Camel Locker Room">
+    <description>Bamboo poles line the perimeter of this room, creating the appearance of a hut.  Polished pea gravel covers the floor, and a thatched roof completes the scene.  Two doors sit opposite each other while a row of open lockers have been attached to one wall.</description>
+    <position x="-230" y="-770" z="0" />
+    <arc exit="go" move="go bamboo door" destination="764" />
+    <arc exit="go" move="go wooden door" destination="761" />
+  </node>
+  <node id="763" name="Stone Inn, Shaggy Dromedary Locker Room">
+    <description>Bamboo poles line the perimeter of this room, creating the appearance of a hut.  Polished pea gravel covers the floor, and a thatched roof completes the scene.  Two exits sit opposite each other while a row of open lockers have been attached to one wall.</description>
+    <position x="-230" y="-750" z="0" />
+    <arc exit="go" move="go bamboo door" destination="764" />
+    <arc exit="go" move="go wood-framed opening" destination="761" />
+  </node>
+  <node id="764" name="Stone Inn, Lounge">
+    <description>An elaborately detailed mosaic surrounds the area with a vibrant backdrop of folks basking beneath a golden sun, while others appear to picnic under broad, multi-colored umbrellas.  Several bamboo lounge chairs rest beside a rattan serving cart, and the natural sandstone floors emulate a sandy beach that slopes towards a refreshing pool.</description>
+    <position x="-220" y="-760" z="0" />
+    <arc exit="go" move="go second bamboo hut" destination="762" />
+    <arc exit="go" move="go bamboo hut" destination="763" />
+    <arc exit="go" move="go sauna" destination="765" />
+    <arc exit="go" move="go pool" destination="766" />
+  </node>
+  <node id="765" name="Stone Inn, Sauna" color="#FF0000">
+    <description>A column of steam rises from a large wrought-iron brazier that dominates the center of this octagonal room of white stone.  Slatted ironwood benches have been placed around the brazier to provide seating for clients wishing to relax or converse.  Occasionally, an attendant can be seen through the steam, making sure that everything is in its proper place.</description>
+    <position x="-210" y="-770" z="0" />
+    <arc exit="go" move="go ironwood door" destination="764" />
+  </node>
+  <node id="766" name="Stone Inn, Pool">
+    <description>Snow-white marble encloses the pool of crystal-clear water, while the surrounding walls are detailed with an intricate mosaic of the open sea.  Opposite the shore, tiny vibrant tiles meld into a picturesque scene of rolling, azure blue waves capped in frothy white.  Along the far wall, a majestic galleon set with full sails journeys across the rippled waters, beneath a gleaming sunset of crimson hues on a distant horizon.</description>
+    <position x="-210" y="-750" z="0" />
+    <arc exit="go" move="go lounge" destination="764" />
+  </node>
+  <node id="767" name="Marachek's Oak, Caravan Warehouse" color="#FF0000">
+    <description>The length of the warehouse has been roped off, preventing visitors from wandering into the nearby workspace.  Carpenters and blacksmiths move about the warehouse, applying their trades amongst several unfinished caravans.  Multiple displays of caravan customization adorn the eastern and western partition of this area.</description>
+    <position x="-270" y="-760" z="0" />
+    <arc exit="west" move="west" destination="526" />
+    <arc exit="go" move="go dark curtain" destination="768" />
+  </node>
+  <node id="768" name="Caravan Warehouse, Curtained Corner" color="#FF0000">
+    <description>This curtained area contains only two easels resting against the walls and a leather sign.  The distant sounds from the rest of the warehouse are muffled by the thick curtain.</description>
+    <position x="-270" y="-750" z="0" />
+    <arc exit="out" move="out" destination="767" />
+  </node>
   <label text="Jackals, Kobolds">
     <position x="670" y="190" z="0" />
   </label>
@@ -5231,10 +5353,10 @@
     <position x="-377" y="-727" z="0" />
   </label>
   <label text="Herbs">
-    <position x="-335" y="-747" z="0" />
+    <position x="-355" y="-747" z="0" />
   </label>
   <label text="Trader Outpost">
-    <position x="-285" y="-765" z="0" />
+    <position x="-310" y="-735" z="0" />
   </label>
   <label text="Modren Daelfa">
     <position x="-280" y="-880" z="0" />
