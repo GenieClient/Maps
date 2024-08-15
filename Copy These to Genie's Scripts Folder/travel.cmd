@@ -4028,8 +4028,8 @@ JOINLOGIC:
   if ("$zoneid" = "150") then
         {
             if ("%detour" = "fang") then goto ARRIVED
-            if ((%toratha = 1) && matchre("$roomobjs", "massive sea mammoth") then put join sea mammoth
-            if ((%toratha = 0) && matchre("$roomobjs", "tall sea mammoth") then put join tall mammoth
+            if ((%toratha = 1) && matchre("$roomobjs", "massive sea mammoth")) then put join sea mammoth
+            if ((%toratha = 0) && matchre("$roomobjs", "tall sea mammoth")) then put join tall mammoth
             if (("%detour" = "hara") && matchre("$roomobjs", "warship")) then put join warship
         }
   matchwait 3
@@ -4062,8 +4062,8 @@ JOINLOGIC:
   if ("$zoneid" = "150") then
         {
             if ("%detour" = "fang") then goto ARRIVED
-            if ((%toratha = 1) && matchre("$roomobjs", "massive sea mammoth") then put join sea mammoth
-            if ((%toratha = 0) && matchre("$roomobjs", "tall sea mammoth") then put join tall mammoth
+            if ((%toratha = 1) && matchre("$roomobjs", "massive sea mammoth")) then put join sea mammoth
+            if ((%toratha = 0) && matchre("$roomobjs", "tall sea mammoth")) then put join tall mammoth
             if (("%detour" = "hara") && matchre("$roomobjs", "warship")) then put join warship
         }
   matchwait 3
