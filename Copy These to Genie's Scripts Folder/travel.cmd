@@ -969,7 +969,7 @@ if (matchre("$game", "(?i)DRX") && (%portal = 1)) then
      {
           if (matchre("$zoneid", "\b(1|30|40|47|67|99|107|116)\b") && (%ported = 0)) then gosub PORTAL_TIME
      }
-if (("$zoneid" = "30") then
+if ("$zoneid" = "30") then
      {
           ### CHECK HERE TO MAKE SURE BURDEN IS NOT TOO HIGH AT LOWER RANKS
           if ((($Athletics.Ranks < 170) && (%burden > 2)) || (($Athletics.Ranks < 190) && (%burden > 3))) then
@@ -1442,7 +1442,7 @@ if (matchre("$game", "(?i)DRX") && (%portal = 1)) then
           if (("$zoneid" = "1") && matchre("%detour", "(alfren|leth|bone)")) then goto ILLITHI_2
           if (matchre("$zoneid", "\b(1|30|40|47|67|99|107|116)\b") && (%ported = 0)) then gosub PORTAL_TIME
      }
-if (("$zoneid" = "30") then
+if ("$zoneid" = "30") then
      {
           ### CHECK HERE TO MAKE SURE BURDEN IS NOT TOO HIGH AT LOWER RANKS
           if ((($Athletics.Ranks < 170) && (%burden > 2)) || (($Athletics.Ranks < 190) && (%burden > 3))) then
@@ -2082,7 +2082,7 @@ if (("$zoneid" = "7") && ("%detour" = "caravansary")) then
               goto ARRIVED
           }
 ### CHECK HERE TO MAKE SURE BURDEN IS NOT TOO HIGH AT LOWER RANKS
-if (("$zoneid" = "7") then
+if ("$zoneid" = "7") then
      {
           if ((($Athletics.Ranks < 170) && (%burden > 2)) || (($Athletics.Ranks < 190) && (%burden > 3))) then
                {
@@ -3659,7 +3659,7 @@ FERRYLOGIC:
             var direction south
             goto GONDOLA
         }
-  if matchre("$roomname", ("\[\"Her Opulence\"\]|\[\"Hodierna's Grace\"\]|\[\"Kertigen's Honor\"\]|\[\"His Daring Exploit\"\]|\[\"Northern Pride\", Main Deck\]|\[\"Theren's Star\", Deck\]|\[The Evening Star\]|\[The Damaris' Kiss\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[\"The Desert Wind\"\]|\[\"The Suncatcher\"\]|\[\"The Riverhawk\"\]|\[\"Imperial Glory\"\]\"Hodierna's Grace\"|\"Her Opulence\"\]|\[The Galley Cercorim\]|\[The Jolas, Fore Deck\]|\[Aboard the Warship, Gondola\]|\[The Halasa Selhin, Main Deck\]|\[Aboard the Mammoth, Platform\]") then goto FERRY
+  if matchre("$roomname", ("\[\"Her Opulence\"\]|\[\"Hodierna's Grace\"\]|\[\"Kertigen's Honor\"\]|\[\"His Daring Exploit\"\]|\[\"Northern Pride\", Main Deck\]|\[\"Theren's Star\", Deck\]|\[The Evening Star\]|\[The Damaris' Kiss\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[\"The Desert Wind\"\]|\[\"The Suncatcher\"\]|\[\"The Riverhawk\"\]|\[\"Imperial Glory\"\]\"Hodierna's Grace\"|\"Her Opulence\"\]|\[The Galley Cercorim\]|\[The Jolas, Fore Deck\]|\[Aboard the Warship, Gondola\]|\[The Halasa Selhin, Main Deck\]|\[Aboard the Mammoth, Platform\]")) then goto FERRY
   else goto NODESTINATION
 GONDOLA:
   pause 0.1
