@@ -7,8 +7,8 @@
 # Inspired by the OG Wizard Travel Script - But made 1000x better w/ the power of GENIE
 # Originally written by Achilles - Revitalized and Robustified by Shroom
 #
-# Updated: 8/14/24
-var version 5.2.5
+# Updated: 8/16/24
+var version 5.2.6
 #
 # USES PLAT PORTALS TO TRAVEL BETWEEN CITIES IF PLATINUM
 # KNOWS HOW TO NAVIGATE OUT OF ANY MAZE / PUZZLE AREAS / FERRIES ETC
@@ -134,7 +134,7 @@ if ("$charactername") = ("$char10") then var shardcitizen no
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
 ###########################################
-# CHANGELOG - Latest Update: 8/14/24
+# CHANGELOG - Latest Update: 8/16/24
 #
 # - Heavily Robustified Ferry (NPC Transportation) Travel
 # - SHOULD now support starting Travel when ~already on a ferry~
@@ -3732,9 +3732,7 @@ GONDOLAOUT:
   if ("%direction" = "south") && ($south = 1) then gosub MOVE south
   put look
   pause 0.8
-  if ($out = 0) then goto GONDOLAWAIT
   send out
-  pause
   pause
   # put #mapper reset
   pause 0.2
