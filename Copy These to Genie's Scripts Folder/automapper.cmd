@@ -1,9 +1,14 @@
 # automapper.cmd
-var autoversion 8.2024-08-01
+var autoversion 8.2024-08-17
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
+
+#2024-08-17
+# Hanryu
+#   there's an intermittent bug with outlander, I'm trying to code around it while Joe works on a fix
+#   also Jon helped me get all the LABELS, goto/gosub/matchre LABEL fixed to the correct caps
 
 #2024-08-01
 # Hanryu
@@ -724,8 +729,8 @@ MOVE.ICE:
 SKATE.NO:
   var slow_on_ice 1
   var wearing_skates 0
-  if (%verbose) then gosub echo Could not find ice skates!
-  if ((%ice_collect) && (%verbose)) then gosub echo Collecting rocks in every room like the other peasants
+  if (%verbose) then gosub ECHO Could not find ice skates!
+  if ((%ice_collect) && (%verbose)) then gosub ECHO Collecting rocks in every room like the other peasants
 SKATE.YES:
   return
 
@@ -744,7 +749,7 @@ ICE.COLLECT:
 ICE.PAUSE:
   action (mapper) off
   pause %command_pause
-  if (%verbose) then gosub echo Pausing 15 seconds to regain footing on slippery ice.
+  if (%verbose) then gosub ECHO Pausing 15 seconds to regain footing on slippery ice.
   pause 15
   var slow_on_ice 0
   pause %command_pause
@@ -768,7 +773,8 @@ MOVE.KNOCK:
   matchre KNOCK.INVIS ^The gate guard can't see you
   put %movement
   matchwait
-  goto MOVE.KNOCK
+#this is here to account for an outlander bug
+  goto KNOCK.DONE
 
 SHARD.FAILED:
   if ((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) then gosub WEAR.CLOAK
@@ -828,7 +834,7 @@ MOVE.MUCK:
   matchwait
 
 MOVE.SLOW:
-  if (%verbose) then gosub echo Slow and steady here to avoid mishaps...
+  if (%verbose) then gosub ECHO Slow and steady here to avoid mishaps...
   pause 3
   goto MOVE.REAL
 
@@ -843,7 +849,7 @@ MOVE.CLIMB:
 
 MOVE.CLIMB.MOUNT.FAIL:
   matchre MOVE.CLIMB.MOUNT.FAIL %move_RETRY
-  matchre move.done %move_OK
+  matchre MOVE.DONE %move_OK
   if ($broom_carpet) then eval movement replacere("%movement", "climb ", "go ")
   put %movement
   matchwait
@@ -927,7 +933,7 @@ MOVE.SCRIPT.DONE:
   goto MOVE.DONE
 
 MOVE.FATIGUE:
-  if (%verbose) then gosub echo TOO FATIGUED TO CLIMB!
+  if (%verbose) then gosub ECHO TOO FATIGUED TO CLIMB!
   pause 0.5
   if ("$guild" = "Barbarian") then {
     gosub PUT berserk avalanche
@@ -964,7 +970,7 @@ FATIGUE.WAIT:
     put %movement
     goto MOVE.DONE
   }
-  if (%verbose) then gosub echo Pausing to recover stamina
+  if (%verbose) then gosub ECHO Pausing to recover stamina
   pause 10
   goto FATIGUE.WAIT
 
@@ -1029,7 +1035,7 @@ MOVE.STAND:
 
 ATTACK.RETREAT:
   if (%retreat.count > 2) then {
-    gosub echo Unable to retreat, script exiting.
+    gosub ECHO Unable to retreat, script exiting.
     put #flash
     put #parse unable to retreat script exiting
     goto END
@@ -1117,21 +1123,21 @@ MOVE.FAILED:
   put #echo %color <<   Remaining Moves: %argcount
   put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
   pause
-  gosub echo RETRYING Movement...%failcounter / 3 Tries.
+  gosub ECHO RETRYING Movement...%failcounter / 3 Tries.
 MOVE.RETRY:
-  gosub echo Retry movement %1
+  gosub ECHO Retry movement %1
   if (%TryGoInsteadOfClimb) then eval movement replacere("%movement", "climb ", "go ")
   # SHROOM - LIGHT SOURCE CHECK - (MAY Need fine tuning) - CHECKS FOR DARK VISION/ LIGHT ITEM WHEN IN ROOMID = 0 AND DARK ROOM
   if ((($roomid = 0) && matchre("$roomobjs $roomdesc","(pitch black|pitch dark)") && (%darkchecked = 0)) || ((%darkroom = 1) && (%darkchecked = 0))) then gosub LIGHT_SOURCE
   if ($webbed) then {
-    if (%verbose) then gosub echo WEBBED - pausing
+    if (%verbose) then gosub ECHO WEBBED - pausing
     pause
     if ($webbed) then pause 0.5
     if ($webbed) then waiteval (!$webbed)
     goto MOVE.RETRY
   }
   if ($stunned) then {
-    if (%verbose) then gosub echo STUNNED - pausing
+    if (%verbose) then gosub ECHO STUNNED - pausing
     pause
     if ($stunned) then pause 0.5
     if ($stunned) then waiteval (!$stunned)
@@ -1152,14 +1158,14 @@ RETURN.CLEAR:
   goto MOVE.DONE
 
 MOVE.CLOSED:
-  gosub echo SHOP IS CLOSED FOR THE NIGHT!
+  gosub ECHO SHOP IS CLOSED FOR THE NIGHT!
   put #parse SHOP CLOSED
   put #parse SHOP IS CLOSED
   put #parse AUTOMAPPER: SHOP IS CLOSED
   goto END
 
 JAILED:
-  gosub echo GOT THROWN IN JAIL!
+  gosub ECHO GOT THROWN IN JAIL!
   put #parse JAILED
   put #parse THROWN IN JAIL
   put #parse NAILED AND JAILED!
@@ -1337,7 +1343,7 @@ ENTER.DOBEKS:
   pause %command_pause
   put kiss scorpion
   pause
-  if (%verbose) then gosub echo PAUSING FOR STUN
+  if (%verbose) then gosub ECHO PAUSING FOR STUN
   pause 13
   if ($stunned) then waiteval (!$stunned)
   if (!$standing) then gosub STAND
@@ -1345,7 +1351,7 @@ ENTER.DOBEKS:
 
 OSHUMANOR:
   pause %command_pause
-  if (%verbose) then gosub echo EXITING OSHU MANOR CHAMBER
+  if (%verbose) then gosub ECHO EXITING OSHU MANOR CHAMBER
   put east
   waitforre %move_OK
   pause %command_pause
@@ -1361,7 +1367,7 @@ OSHUMANOR:
 
 DRAGONSPINE:
   pause %command_pause
-  if (%verbose) then gosub echo DRAGON'S SPINE ENTRY/EXIT
+  if (%verbose) then gosub ECHO DRAGON'S SPINE ENTRY/EXIT
   matchre DRAGONSPINE2 ^A Mountain Elf ranger steps from behind a tree and beckons for you to follow\.
   put recite Neath the depths of darkness i go\;to 'scape the prying eyes of light\;under dragon's spine i crawl\;to crawl out from under the dragon's shadow
   matchwait 45
@@ -1461,7 +1467,7 @@ GET.MAP:
 
 FIND.SKATES:
   var skatechecked 1
-  if (%verbose) then gosub echo Checking for ice skates!
+  if (%verbose) then gosub ECHO Checking for ice skates!
   action (skates) var skate.container $1 when ^You tap .*\bskates\b.*inside your (.*)\.$
   action (skates) var skate.container portal when ^In the .* eddy you see.* \bskates\b
   action (skates) var skate.container held when ^You are holding some.*\bskates\b
@@ -1487,10 +1493,10 @@ CHECK.FOOTWEAR:
   if ("%footwear" = "skates") then return
   if (%skate.container = 0) then goto SKATE.NO
   if ("%footwear" = "unknown") then {
-    if (%verbose) then gosub echo ERROR: Unknown noun for your footwear!
+    if (%verbose) then gosub ECHO ERROR: Unknown noun for your footwear!
     goto SKATE.NO
   }
-  if (%verbose) then gosub echo Ice skates found!
+  if (%verbose) then gosub ECHO Ice skates found!
   if ((%footwear = 0) && ("%skate.container" = "held")) then goto WEAR.SKATES
   if (%footwear = 0) then goto GET.SKATES
 
@@ -1516,7 +1522,7 @@ WEAR.SKATES:
   goto ACTION
 
 REMOVE.SKATES:
-  if (%verbose) then gosub echo Removing ice skates!
+  if (%verbose) then gosub ECHO Removing ice skates!
   var action remove my skates
   var success ^You untie your skates and slip them off of your feet
   gosub ACTION
@@ -1529,7 +1535,7 @@ STOW.SKATES:
 
 GET.FOOTWEAR:
   if (%footwear = 0) then return
-  if (%verbose) then gosub echo Putting your %footwear back on!
+  if (%verbose) then gosub ECHO Putting your %footwear back on!
   var action get my %footwear in my %footwear.container
   var success ^You get
   gosub ACTION
@@ -1639,7 +1645,7 @@ STOW.ALT:
   math StowLoop add 1
   if (matchre("Empty", "$lefthand") && matchre("Empty", "$righthand")) then return
   if (%StowLoop > 3) then {
-    gosub echo STOW ERROR - CANNOT FIND A PLACE TO STORE %item
+    gosub ECHO STOW ERROR - CANNOT FIND A PLACE TO STORE %item
     return
   }
   if !matchre("Empty", "$righthand") then var item $righthandnoun
@@ -1758,7 +1764,7 @@ ACTION.MAPPER.ON:
   else goto ACTION.RETURN
 
 ACTION.FAIL:
-  gosub echo Unable to perform action: %action
+  gosub ECHO Unable to perform action: %action
 
 ACTION.RETURN:
   if ($roundtime > 0) then pause %command_pause
@@ -1766,7 +1772,7 @@ ACTION.RETURN:
   action (mapper) on
   return
 
-echo:
+ECHO:
   var echoVar $0
   eval border replacere("%echoVar", ".", "~")
   put #echo
@@ -1812,7 +1818,7 @@ BAG.CHECK:
   action var Shadows 1 when encompassing shadows
   action var Brambles 1 when dense entangling brambles
   delay %infiniteLoopProtection
-  gosub echo Checking Containers...
+  gosub ECHO Checking Containers...
   matchre BAG.PARSE INVENTORY
   put inv container
   matchwait 3
@@ -1903,15 +1909,15 @@ LIGHT_SOURCE:
   shift
   math depth subtract 1
   delay %infiniteLoopProtection
-  gosub echo DARK ROOM - Checking for DARKVISION
-  gosub echo Need a light source!
+  gosub ECHO DARK ROOM - Checking for DARKVISION
+  gosub ECHO Need a light source!
   delay %infiniteLoopProtection
   if ("$preparedspell" != "None") then {
     gosub PUT RELEASE spell
     gosub PUT RELEASE camb
   }
   if (("$guild" = "Ranger") && ($circle > 39)) then {
-    gosub echo RANGER - Beseeching Dark to Sing
+    gosub ECHO RANGER - Beseeching Dark to Sing
     gosub PUT align 30
     var action beseech dark to sing
     var success ^Roundtime:
@@ -1920,13 +1926,13 @@ LIGHT_SOURCE:
     if ($roundtime > 0) then pause $roundtime
   }
   if ("$guild" = "Thief") then {
-    gosub echo THIEF - Khri Sight
+    gosub ECHO THIEF - Khri Sight
     gosub PUT khri sight
     pause %command_pause
     if ($roundtime > 0) then pause $roundtime
   }
   if (("$guild" = "Bard") && ($circle > 10)) then {
-    gosub echo BARD - Eye of Kertigen
+    gosub ECHO BARD - Eye of Kertigen
     gosub PUT release cyclic
     gosub PUT prep EYE 5
     pause 16
@@ -1942,7 +1948,7 @@ LIGHT_SOURCE:
     if (($Utility.Ranks >= 300) && ($Utility.Ranks < 500)) then var PREP 12
     if (($Utility.Ranks >= 500) && ($Utility.Ranks < 600)) then var PREP 15
     if ($Utility.Ranks >= 600) then var PREP 15
-    gosub echo CLERIC - Divine Radiance
+    gosub ECHO CLERIC - Divine Radiance
     gosub PUT prep DR %PREP
     pause 19
     gosub PUT cast
@@ -1957,7 +1963,7 @@ LIGHT_SOURCE:
     if (($Utility.Ranks >= 300) && ($Utility.Ranks < 500)) then var PREP 15
     if (($Utility.Ranks >= 500) && ($Utility.Ranks < 600)) then var PREP 22
     if ($Utility.Ranks >= 600) then var PREP 33
-    gosub echo MOON MAGE - Tenebrous Sense
+    gosub ECHO MOON MAGE - Tenebrous Sense
     gosub PUT prep TS %PREP
     pause 19
     gosub PUT cast
@@ -1965,7 +1971,7 @@ LIGHT_SOURCE:
     if ($roundtime > 0) then pause $roundtime
   }
   if (("$guild" = "Paladin") && ($circle > 15)) then {
-    gosub echo PALADIN - Glyph of Light
+    gosub ECHO PALADIN - Glyph of Light
     gosub PUT glyph light
     pause %command_pause
     if ($roundtime > 0) then pause $roundtime
@@ -2000,12 +2006,12 @@ GOGGLE_STOW:
   delay %infiniteLoopProtection
   gosub PUT rub my goggle
   delay %infiniteLoopProtection
-  if matchre("$righthand $lefthand", "\bgoggle\b") then gosub stowing
+  if matchre("$righthand $lefthand", "\bgoggle\b") then gosub STOWING
   gosub DARK_CHECK
   if (%darkroom = 0) then goto YES_DARKVISION
 ### CHECK FOR A STARGLASS
 STARGLASS_CHECK:
-  gosub stowing
+  gosub STOWING
   gosub PUT GET my starglass
   delay %infiniteLoopProtection
   if !matchre("$righthand $lefthand", "(?i)\bstarglass\b") then {
@@ -2029,7 +2035,7 @@ STARGLASS_CHECK:
   if (%darkroom = 0) then goto YES_DARKVISION
 ### CHECK FOR A GAETHZEN LANTERN
 GAETHZEN_CHECK:
-  gosub stowing
+  gosub STOWING
   var Lantern.Types skull|salamander|sphere|wyvern|statuette|sunburst|star|lantern|firefly|rose|orchid|turnip
   var Lantern.Check 0
   var Lantern.Count 0
@@ -2053,14 +2059,14 @@ GAETHZAN_FAIL:
 GAETHZEN_SUCCESS:
   var Gaethzen %Lantern.Types(%Lantern.Check)
   var FullCharge 0
-  gosub echo FOUND A GAETHZEN! TYPE: %Gaethzen
-  gosub stowing
+  gosub ECHO FOUND A GAETHZEN! TYPE: %Gaethzen
+  gosub STOWING
   gosub RETREAT
   gosub PUT GET my gaethzen %Gaethzen
   delay %infiniteLoopProtection
   pause %command_pause
   if !matchre("$righthand $lefthand", "(?i)%Gaethzen") then goto LANTERN_CHECK
-  gosub echo CHARGING GAETHZEN
+  gosub ECHO CHARGING GAETHZEN
   var action_retry ^Roundtime: \d+ sec\.
   var success ^The .+ is already holding as much power as you could possibly charge it with\.
   var action CHARGE %Gaethzen 15
@@ -2069,13 +2075,13 @@ GAETHZEN_2:
   gosub PUT focus my %Gaethzen
   gosub PUT rub my %Gaethzen
   gosub PUT wear my %Gaethzen
-  gosub stowing
+  gosub STOWING
   gosub DARK_CHECK
   if (%darkroom = 0) then goto YES_DARKVISION
 ### CHECK HERE FOR A NORMAL OIL LANTERN
 LANTERN_CHECK:
   var TriedOil 0
-  gosub stowing
+  gosub STOWING
   gosub PUT GET my lantern
   if !matchre("$righthand $lefthand", "lantern") then {
     gosub PUT remove my lantern
@@ -2087,9 +2093,9 @@ LANTERN_DROP:
   gosub PUT GET my flint
   gosub PUT GET my knife
   if (!matchre("$righthand $lefthand", "flint") && !matchre("$righthand $lefthand", "knife")) then {
-    gosub echo FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
+    gosub ECHO FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
     put #echo >Log #FF3E00 * FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
-    gosub stowing
+    gosub STOWING
     goto GAETHZEN_YES
   }
 LANTERN_LIGHT:
@@ -2101,24 +2107,24 @@ LANTERN_LIGHT:
   goto LANTERN_LIGHT
 REFUEL_IT:
   if (%TriedOil = 1) then goto LANTERN_DONE
-  gosub stowing
+  gosub STOWING
   gosub PUT GET lantern
   gosub PUT GET lamp oil
   gosub PUT pour oil in lantern
   var TriedOil 1
   goto LANTERN_DROP
 LIT_LANTERN:
-  gosub echo LANTERN LIT!
-  gosub stowing
+  gosub ECHO LANTERN LIT!
+  gosub STOWING
   gosub PUT GET lantern
   gosub PUT wear lantern
 LANTERN_DONE:
-  gosub stowing
+  gosub STOWING
   gosub DARK_CHECK
   if (%darkroom = 0) then goto YES_DARKVISION
 ### CHECK FOR A TORCH
 TORCH_CHECK:
-  gosub stowing
+  gosub STOWING
   put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
   put #echo %color <<  ATTEMPTING LAST RESORT FOR LIGHT CHECK!   >>
   put #echo %color <<  FLINT / TORCH / KNIFE                     >>
@@ -2160,34 +2166,34 @@ TORCH_FLINT:
     gosub PUT GET my blade
   }
   if (!matchre("$righthand $lefthand", "flint") && !matchre("$righthand $lefthand", "(knife|blade)")) then {
-    gosub echoecho * FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
+    gosub ECHOecho * FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
     put #echo >Log #FF3E00 * FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
-    gosub stowing
+    gosub STOWING
     goto NO_DARKVISION
   }
   gosub PUT light torch with my flint
-  gosub stowing
+  gosub STOWING
   gosub PUT GET torch
   gosub DARK_CHECK
   if (%darkroom = 0) then goto YES_DARKVISION
   goto NO_DARKVISION
 
 YES_DARKVISION:
-  gosub echo DARKVISION HAS BEEN ACTIVATED!
+  gosub ECHO DARKVISION HAS BEEN ACTIVATED!
   var darkroom 0
   put look
-  gosub stowing
+  gosub STOWING
   gosub RETREAT
   action (mapper) on
   return
 NO_DARKVISION:
-  gosub echo NO DARK VISION SKILL / ITEM FOUND! STUCK IN THE DARK! Escape Manually!
-  gosub echo GET YOURSELF A TORCH AND FLINT AT THE LEAST!
-  gosub echo OR A STARGLASS/GAEZTHEN/LANTERN
+  gosub ECHO NO DARK VISION SKILL / ITEM FOUND! STUCK IN THE DARK! Escape Manually!
+  gosub ECHO GET YOURSELF A TORCH AND FLINT AT THE LEAST!
+  gosub ECHO OR A STARGLASS/GAEZTHEN/LANTERN
   put #echo >Log Red ** NO DARKVISION/TORCH/LIGHTER/GAEZTHEN FOUND!
   put #echo >Log Red ** CONSIDER ~NOT~ HUNTING IN DARK AREAS
   var darkroom 1
-  gosub stowing
+  gosub STOWING
   action (mapper) on
   return
 
@@ -2222,8 +2228,8 @@ HEALING:
   goto MOVE.DONE
 HEALTHCHECK:
   var wounded 0
-  matchre wounded ^You have (?:an?|some)
-  matchre return ^You have no
+  matchre WOUNDED ^You have (?:an?|some)
+  matchre RETURN ^You have no
   put health
   matchwait
 WOUNDED:
@@ -2350,10 +2356,10 @@ PUT_UNTIE:
   pause 0.4
   return
 PUT_STOW:
-  gosub stowing
+  gosub STOWING
   goto PUT_1
 PUT_STAND:
-  gosub stand
+  gosub STAND
   goto PUT_1
 #### END PUT ####
 
@@ -2386,8 +2392,6 @@ CALMED:
 ####
 
 #### RETURN ####
-return:
 RETURN:
-returner:
   return
 #####
