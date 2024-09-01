@@ -49,7 +49,7 @@
     <position x="200" y="-408" z="0" />
     <arc exit="north" move="north" destination="136" />
     <arc exit="east" move="east" destination="1" />
-    <arc exit="go" move="go shop" destination="219" />
+    <arc exit="go" move="go herbalist's shop" destination="219" />
   </node>
   <node id="8" name="The Crossing, Clanthew Boulevard">
     <description>Intimidatingly large passersby crowd around you, and you gulp as you notice most of the men and women here of all races tower above their average counterparts.  They also tend to dress differently - fully equipped, even in the midst of the city - in leathers, hide and armor, weapons drawn or at the ready over shoulders or at their sides.  Carefully you make your way through the throng, since something tells you this would not be a good spot to step on anyone's toes.</description>
@@ -131,8 +131,8 @@
     <arc exit="south" move="south" destination="15" />
     <arc exit="southwest" move="southwest" destination="16" />
     <arc exit="west" move="west" destination="14" />
-    <arc exit="go" move="go walkway" destination="264" />
-    <arc exit="go" move="go path" destination="379" />
+    <arc exit="go" move="go cobblestone walkway" destination="264" />
+    <arc exit="go" move="go dirt path" destination="379" />
     <arc exit="none" move="go shadowed gap" destination="853" />
   </node>
   <node id="18" name="The Crossing, Clanthew Boulevard">
@@ -220,8 +220,7 @@
     <arc exit="south" move="south" destination="28" />
     <arc exit="west" move="west" destination="30" />
     <arc exit="go" move="go small building" destination="468" />
-    <arc exit="go" move="go gate" destination="1029" />
-    <arc exit="go" move="go bui" destination="468" />
+    <arc exit="go" move="go wrought gate" destination="1029" />0
   </node>
   <node id="30" name="The Crossing, Clanthew Boulevard">
     <description>The meandering course of the River Oxenwaithe lies dead ahead.  Wooden carts, powered by all manner of two- and four-legged beasts, rumble past, headed west towards the broad, well-worn planks of the Oxenwaithe Bridge and east into the heart of the Crossing.  Groups of armed adventurers, mystics, merchants and rogues weave in and out of the wheeled and hoofed mobs.</description>
@@ -374,6 +373,7 @@
     <arc exit="southeast" move="southeast" destination="50" />
     <arc exit="northwest" move="northwest" destination="46" />
     <arc exit="go" move="go rickety wagon" destination="653" />
+    <arc exit="go" move="go whitewashed gate" destination="1034" />
   </node>
   <node id="50" name="The Strand, Sandy Path" note="Premium Portal|Portal|banyan tree|Kintalia" color="#FF00FF">
     <description>Following the roadside along the Oxenwaithe's bank, you are struck by the quiet beauty of the place.  Taking pause to breathe in the crisp, clean air, you reflect on your surroundings.  Sand, sparkling as if mixed with diamond dust, pours into deep blue undulating waters.  A lush copse of trees spreads to the north, while to the southeast, a series of delightful small buildings is set back from the river's edge.</description>
@@ -698,7 +698,7 @@
     <arc exit="north" move="north" destination="94" />
     <arc exit="southeast" move="southeast" destination="92" />
     <arc exit="west" move="west" destination="115" />
-    <arc exit="go" move="go shop" destination="433" />
+    <arc exit="go" move="go dimly-lit shop" destination="433" />
   </node>
   <node id="94" name="The Crossing, Oxenwaithe Bridge" note="Oxenwaithe Bridge">
     <description>This bridge is wide and sturdy, its strong oaken planks weathered but in good repair.  Across this span must stream all the traffic directly proceeding to or coming from the Northern and Western Tiers.  Oxcarts laden with imports and exports rumble past.</description>
@@ -926,7 +926,7 @@
     <description>The town wall here is overgrown with flowering vines and herbs, making it appear to be a barrier of intertwining branches and blossoms.  A small path leads north through an ivy-covered gateway in the wall.  Though the trail may have been a temporary one at first, long years of use by visitors to and from the Rangers' Guild at its end have assured its permanent existence.</description>
     <position x="-70" y="-448" z="0" />
     <arc exit="east" move="east" destination="126" />
-    <arc exit="go" move="go path" destination="336" />
+    <arc exit="go" move="go ivy-covered gateway" destination="336" />
   </node>
   <node id="128" name="The Crossing, Covered Alleyway">
     <description>This alleyway runs between Gildleaf Circle and Truffenyi Place.  It is covered with a makeshift tin canopy supported by iron nails in the closely-spaced buildings.  Although narrow and unpaved, it is free of debris and appears to be frequented for deliveries and shortcuts.  An archway on one side leads between the buildings.</description>
@@ -1015,7 +1015,7 @@
     <position x="210" y="-488" z="0" />
     <arc exit="north" move="north" destination="138" />
     <arc exit="east" move="east" destination="140" />
-    <arc exit="go" move="go hall" destination="994" />
+    <arc exit="go" move="go Society hall" destination="994" />
   </node>
   <node id="140" name="The Crossing, Firulf Vista">
     <description>Firulf Vista is a broad thoroughfare leading to the northeastern town gate.  Farther to the east, beyond the crenellated tops of the town walls, is the tall, thin spire of the Warrior Mages' Guild, and the dark, swelling hills of the wilderness that lies outside the safety of the confines of civilization.</description>
@@ -1256,7 +1256,7 @@
     <description>Plunging into the woods, the road deteriorates still further into a track of loose stones and cobbles.  Brambles, spike bushes, and poison fern line the edges of the turnpike, forming an impassable barrier to anyone who wished to explore the depths of the forest.</description>
     <position x="80" y="-558" z="0" />
     <arc exit="north" move="north" />
-    <arc exit="go" move="go arch" destination="134" />
+    <arc exit="go" move="go crumbling arch" destination="134" />
   </node>
   <node id="174" name="The Crossing, Riverpine Way" color="#00FFFF">
     <description>Fragrant cedars and majestic pine trees line a narrow dirt path that ambles eastward along the north bank of the Segoltha, its swift waters churning with the silt and bustle of nearby Landfall Dock.  Small cabins and fishermens' crofts dot the landscape between the trees, the peaceful riverside community blending seamlessly into its idyllic setting.</description>
@@ -1377,7 +1377,7 @@
     <description>This room, dark and crowded with iron-working tools, is where Tembeg and his assistants perform repairs and simple manufacturing of the armors and weapons sold here.  A massive set of bellows in the next room awaits the sweat and labor of someone sturdy enough to waken the forge fire into life.  A massive anvil takes up much of the rest of the floor space.</description>
     <position x="130" y="-210" z="0" />
     <arc exit="out" move="out" destination="192" />
-    <arc exit="go" move="go room" destination="194" />
+    <arc exit="go" move="go bellows room" destination="194" />
   </node>
   <node id="194" name="Tembeg's Armory, Bellows Room" note="Strength" color="#FFFF00">
     <description>A sweating Dwarf grunts at you and gestures towards a line of equally perspiring beings laboring to haul an enormous set of bellows up and down.  Somewhere nearby, a forge fire roars and hisses in time to the rush of air from the effort and someone beats a deep-voiced drum to call the cadence of work.  You keep muttering to yourself the old mantra "That which does not kill you, makes you stronger" as you grimly ready yourself.</description>
@@ -1577,7 +1577,7 @@
     <arc exit="southeast" move="southeast" destination="16" />
     <arc exit="south" move="south" destination="23" />
     <arc exit="northwest" move="northwest" destination="24" />
-    <arc exit="go" move="go shop" destination="192" />
+    <arc exit="go" move="go Armory" destination="192" />
   </node>
   <node id="226" name="Chizili's Alchemical Goods, Salesroom" note="Chizili's Alchemical Goods|Alchemy" color="#FF0000">
     <description>An almost overwhelming array of scents attacks your nose the moment you enter this place.  While strikingly clean, the room is also filled with jars and barrels and pots and carboys of every size and description.  Bundles of dried herbs hang from racks overhead and glass amphorae are filled with strange animal parts being pickled.  Lore and Science, superstition and practicality meet in this place where alchemists can re-stock almost all their bizarre needs in one place.</description>
@@ -1697,7 +1697,7 @@
     <position x="70" y="340" z="0" />
     <arc exit="west" move="west" destination="243" />
     <arc exit="northwest" move="northwest" destination="240" />
-    <arc exit="go" move="go lumber" destination="441" />
+    <arc exit="go" move="go stacks lumber" destination="441" />
     <arc exit="go" move="go low entrance" destination="765" />
   </node>
   <node id="245" name="Barana's Shipyard, Lumber Storage">
@@ -2111,7 +2111,7 @@
     <description>Framed by four colossal statues that serve to bear the weight of the ceiling, this area houses artifacts of the guild.  Preserved for eternity, pelts of vanquished creatures alternate with beastial trophy heads, framing a large steel sheet embossed with the maker's marks of guild weaponsmiths.  On one wall, portraits of leading guild members hang beneath mounted weapons.  A round padded leather bench provides a place to sit while examining the exhibits.</description>
     <position x="330" y="-378" z="0" />
     <arc exit="west" move="west" destination="302" />
-    <arc exit="go" move="go door" destination="305" />
+    <arc exit="go" move="go iron door" destination="305" />
   </node>
   <node id="304" name="Barbarian Guild, Armory">
     <description>Dark and solemn, the confines of this expansive chamber are lit only by several lone wicker torches.  Their dim glow flickers and dances along the lengths of wood and steel, a destructive arsenal of weaponry that has been amassed over many ages into the guild Armory.  Row upon row of devastating armaments crowds the area, evoking images of brutal conflicts and violent battles of the past.</description>
@@ -2122,9 +2122,9 @@
     <description>Dark and dank, the musty pits are set into the ground and offer little room for comfort.  The acrid tang of sweat drifts through the hot and humid air, assaulting the senses.  Narrow shafts of light from the well-lit arena pierce through the steel prongs of a massive portcullis, fracturing the gloom like glowing spears.  Through the foreboding gate, the imposing battle arena takes shape, beckoning all who dare.</description>
     <position x="320" y="-398" z="0" />
     <arc exit="southeast" move="southeast" destination="306" />
-    <arc exit="go" move="go door" destination="303" />
-    <arc exit="go" move="go portcullis" destination="769" />
-    <arc exit="climb" move="climb staircase" destination="770" />
+    <arc exit="go" move="go iron door" destination="303" />
+    <arc exit="go" move="go steel portcullis" destination="769" />
+    <arc exit="climb" move="climb spiral staircase" destination="770" />
   </node>
   <node id="306" name="Barbarian Guild, Recovery Room">
     <description>The moans of the recently fallen would echo against the stark stone walls of this room.  Several iron cots line the walls, ready to bear the weight of the next bloodied combatant.  An enameled steel cabinet in the corner holds herbs and salves, while on the cold, hard floor, a braided red-brown rug provides a matching accent to the random splatters of dried blood.</description>
@@ -2163,7 +2163,7 @@
     <arc exit="go" move="go registration office" destination="312" />
     <arc exit="go" move="go collection office" destination="314" />
     <arc exit="climb" move="climb stairs" destination="316" />
-    <arc exit="go" move="go door" destination="1022" />
+    <arc exit="go" move="go narrow door" destination="1022" />
   </node>
   <node id="312" name="Town Hall, Citizenship Registration Office" note="Citizenship Registration Office" color="#00FF00">
     <description>Several oval paintings line the off-white walls of this office, and a faint scent of old paper fills the air.  A bored clerk sits behind a semi-polished desk occasionally glancing at a book entitled, Rules and Regulations.  A couple of plush wine velvet couches provide seating for those waiting, while a colorful fringed rug entertains a kitten that seems to have found its way through the doors.</description>
@@ -2260,7 +2260,7 @@
     <arc exit="go" move="go cold pool" destination="328" />
     <arc exit="go" move="go tepid pool" destination="329" />
     <arc exit="go" move="go hot pool" destination="330" />
-    <arc exit="go" move="go hall" destination="331" />
+    <arc exit="go" move="go blue-tiled hallway" destination="331" />
   </node>
   <node id="328" name="Orem's Bathhouse, Cold Water Pool">
     <description>This large pool is filled with very cold water.  It provides a jolt to the system and invigorates your heart and circulation.  Or so you have been told.  Maybe it does, but right now you feel your lips are turning blue and large goosebumps cover your overly exposed skin.  Others nearby seem to be enjoying it, and you wonder which polar region they are from.</description>
@@ -2282,8 +2282,8 @@
     <position x="10" y="-50" z="0" />
     <arc exit="out" move="out" destination="327" />
     <arc exit="go" move="go heavy door" destination="332" />
-    <arc exit="go" move="go room" destination="333" />
-    <arc exit="go" move="go fros door" destination="334" />
+    <arc exit="go" move="go shower room" destination="333" />
+    <arc exit="go" move="go frosted door" destination="334" />
   </node>
   <node id="332" name="Orem's Bathhouse, Sauna">
     <description>This room is fully lined in slatted pine wood, unpainted and sanded smooth.  The temperature is staggering, the air is bone dry and you break into an intense sweat just standing.  Breathing is an interesting exercise as it feels a bit like leaning over a forge fire and inhaling.  After you sweat for a bit, it begins to feel good.  The dirt of city dwelling and of the road is washing itself from your pores and cleansing you.</description>
@@ -2313,7 +2313,7 @@
     <description>A well-trod path leads from a small open gateway in the town wall and heads into a grove of whispering pine.  Lean, muscular figures stride by briskly, some carrying longbows, others staves, and all garbed in muted tones of earth and forest.</description>
     <position x="-110" y="-448" z="0" />
     <arc exit="north" move="north" destination="337" />
-    <arc exit="go" move="go path" destination="127" />
+    <arc exit="go" move="go open gateway" destination="127" />
   </node>
   <node id="337" name="Wilds, Pine Needle Path" note="Rangers|Pine Needle Path">
     <description>Birds dart in and out of the dense shrubbery here, calling to one another in cadences that are almost comprehendible.  Responses seem to emanate from the wooden structure ahead, a timber building with ornately carved double doors, and seemingly without a roof.</description>
@@ -2364,9 +2364,8 @@
     <position x="10" y="-558" z="0" />
     <arc exit="east" move="east" destination="346" />
     <arc exit="out" move="out" destination="125" />
-    <arc exit="go" move="go study" destination="345" />
+    <arc exit="go" move="go guildleader's study" destination="345" />
     <arc exit="go" move="go arched door" destination="348" />
-    <arc exit="go" move="go building" destination="348" />
   </node>
   <node id="345" name="Clerics' Guild, Esuin's Study" note="GL Cleric|Esuin" color="#FF8000">
     <description>The plaster walls of this small chamber are smooth and white as shadowy snow.  A high circular window on the western wall filters light to softly illumine the sparsely furnished room.  Heavy drapes over the door mute the noise from the sanctorum outside, and a dark wooden desk and two primitively-made chairs provide a place for those who have business with Esuin to contemplate his words and advice.</description>
@@ -2378,18 +2377,18 @@
     <description>The shelf that lines the walls of this small private library holds many worn volumes and tomes devoted to scriptures, records, and religious lore.  Several robed clerics recline on cushioned seats near the windows, straining over thick texts in the dim light.</description>
     <position x="20" y="-558" z="0" />
     <arc exit="west" move="west" destination="344" />
-    <arc exit="go" move="go doorway" destination="347" />
+    <arc exit="go" move="go curtained doorway" destination="347" />
   </node>
   <node id="347" name="Clerics' Guild, Contemplation Cloister">
     <description>A slanting ceiling of timber and plaster shelters this small room in the interior section of the guild.  The stone floor is covered with thick tapestry rugs to create a cozy niche apart from the rest of the library.  An arching window looks out on an interior courtyard garden, and a heavy round table with numerous chairs sits in the center of the area.  A fireplace warms the room on chilly days, and though not a place of luxury, this is a comfortable site for self-reflection.</description>
     <position x="20" y="-568" z="0" />
-    <arc exit="go" move="go doorway" destination="346" />
+    <arc exit="go" move="go curtained doorway" destination="346" />
   </node>
   <node id="348" name="Clerics' Guild, Courtyard">
     <description>Several wooden benches face the center area of this large courtyard.  An older monk is demonstrating the art of the mace to a young acolyte, reminding you of the lesson of diligence from your youth.  At the far end of the courtyard, a sicle tree grove is being tended by a withered old monk with a serene look on his face.  Opposite the grove, a row of large lunat vats lend an unusual scent to the air.</description>
     <position x="0" y="-558" z="0" />
-    <arc exit="go" move="go building" destination="349" />
-    <arc exit="go" move="go arch" destination="351" />
+    <arc exit="go" move="go low building" destination="349" />
+    <arc exit="go" move="go deobar archway" destination="351" />
     <arc exit="go" move="go arched door" destination="344" />
     <arc exit="go" move="go recessed cellar" destination="773" />
   </node>
@@ -2417,7 +2416,7 @@
     <arc exit="north" move="north" destination="354" />
     <arc exit="west" move="west" destination="353" />
     <arc exit="down" move="down" destination="339" />
-    <arc exit="go" move="go door" destination="364" />
+    <arc exit="go" move="go mahogany door" destination="364" />
   </node>
   <node id="353" name="Traders' Guild, Gathering Room">
     <description>This room serves as a social hub for the cherished members of the guild to gather and share their adventures and exploits with one another.  Highly polished mahogany walls open up to a large bay window overlooking the River Oxenwaithe.  The guild staff keeps fresh treats available on the serving cart.</description>
@@ -2484,7 +2483,7 @@
     <description>Immaculate partitions with carefully hung works of art are interspersed throughout the stark gallery.  Crushed velvet roping imposes several feet of distance from these treasured pieces.  Hand-carved sconces are discreetly positioned to cast soft ambient light to accentuate each masterpiece.</description>
     <position x="-170" y="-20" z="0" />
     <arc exit="east" move="east" destination="361" />
-    <arc exit="go" move="go hallway" destination="363" />
+    <arc exit="go" move="go narrow hallway" destination="363" />
   </node>
   <node id="363" name="Traders' Guild, Hall of Awards" note="RS Trader2">
     <description>The sheen of polished mahogany floors vanishes into dimness at the far end of the long hall.  As your eyes follow the length of the flooring, you notice a series of niches set into the walls.  Nearby, a delicate rope of fine silk stretches across the hallway.</description>
@@ -2494,7 +2493,7 @@
   <node id="364" name="Traders' Guild, Conference Room">
     <description>An air of formality can be felt throughout this stately room where conclaves are welcome to gather and collaborate on various guild matters.  The Crossing Traders' Guild crest is proudly displayed on the rear wall and next to it, in the corner, is a superbly stitched flag bearing the emblem of the Traders' Guild.  A large oval mahogany conference table dominates the room and is surrounded on all sides by finely crafted leather wingback chairs.</description>
     <position x="-140" y="0" z="0" />
-    <arc exit="go" move="go door" destination="352" />
+    <arc exit="go" move="go mahogany door" destination="352" />
   </node>
   <node id="365" name="Traders' Guild, Office of the Guildleader" note="GL Trader|Ansprahv|RS Trader1" color="#FF8000">
     <description>Long imported silk drapes extend from ceiling to floor and are gathered on either side of a large area window that spans several paces in length.  From this vantage point the bank, gates and various guilds and merchants can be seen throughout Crossing.  An exceptional hand-spun silk carpet nearly covers the entire floor.  Positioned directly opposite the guildleader's desk is a large map of the province mounted high up on the wall.</description>
@@ -2515,11 +2514,7 @@
     <description>In anticipation of the sudden influx of passengers, makeshift benches have been hastily constructed from kegs, driftwood, and nets stretched tight between boards, then have been cleverly placed so that they are as out of the way as possible.  Some coiled ropes and other rigging lie scattered around, pushed out of the way so no one will trip over them.</description>
     <position x="-50" y="220" z="0" />
     <arc exit="up" move="up" />
-    <arc exit="go" move="go door" />
     <arc exit="go" move="go dock" destination="169" />
-    <arc exit="climb" move="climb split staircase" />
-    <arc exit="go" move="forward" />
-    <arc exit="go" move="go narrow door" />
   </node>
   <node id="369" name="Grisgonda's Gems and Jewels" note="Grisgonda's Gems and Jewels|Jewelry" color="#FF0000">
     <description>As you step into the room, your feet sink into plush carpets.  The walls are set with numerous locked display cases.  A well-dressed guard gives you a polite visual once over and steps aside so you may enter.  Gems of every sort and size, from slivers of plain looking crystal to a massive heart-shaped gem the size of a Gor'Tog's fist are displayed.  Grisgonda herself sits at a plain black marble desk with a bright lamp upon it inspecting gems that have been brought in for sale by other adventurers.</description>
@@ -2536,7 +2531,7 @@
     <description>Trampled grass and a pair of lingering mud puddles mar the once lush lawn surrounding the amphitheater.  Pickaxes and shovels lean against tables full of supplies, behind which sits a surly-looking Dwarf.</description>
     <position x="210" y="-120" z="0" />
     <arc exit="east" move="east" destination="372" />
-    <arc exit="go" move="go path" destination="15" />
+    <arc exit="go" move="go grass path" destination="15" />
   </node>
   <node id="372" name="Behind the Amphitheater, Excavation Site">
     <description>This section of the site has had the top layer of soil removed.  Several shallow trenches have been roped off to preserve the integrity of the dig.</description>
@@ -2597,9 +2592,9 @@
   <node id="380" name="The Crossing, Mongers' Square" note="Gnomish workman|workman" color="#00FF00">
     <description>Set into the center of the bazaar's main square is a bronzed fountain depicting the fatherly figure of Divyaush, his long chiseled beard covering the top of his robes and his painted azure eyes gazing into the water below.  Children and shoppers stop on their way past, often wetting their hands or their faces in the cool clear water.  To the southwest, brightly covered pennants sail above the sea of canvas that is the Traders' Market tent.</description>
     <position x="280" y="-190" z="0" />
-    <arc exit="go" move="go arch" destination="379" />
-    <arc exit="go" move="go ramp" destination="384" />
-    <arc exit="go" move="go tent" destination="391" />
+    <arc exit="go" move="stone arch" destination="379" />
+    <arc exit="go" move="go walkway ramp" destination="384" />
+    <arc exit="go" move="go market tent" destination="391" />
     <arc exit="go" move="go market plaza" destination="850" />
   </node>
   <node id="381" name="Rartan's Collegium of Inner Juggling and Reflexology" note="Reflex" color="#FFFF00">
@@ -2611,7 +2606,7 @@
     <description>Gently sloping above the shops along the eastern side of town, this elegant acanth walkway connects the bustling bazaar to the Hodierna Way, providing merchants and shoppers a quick and guarded way to reach the local bank.  Gilded rails and posts protect the pedestrians from misstepping off the bridge, while adding an element of beauty that complements the rich acanth wood.</description>
     <position x="320" y="-90" z="0" />
     <arc exit="north" move="north" destination="383" />
-    <arc exit="go" move="go ramp" destination="160" />
+    <arc exit="go" move="go Hodierna ramp" destination="160" />
   </node>
   <node id="383" name="The Crossing, Bazaar Walkway">
     <description>Bowing gracefully above the Town Green and the shops along Albreda Boulevard, the raised walkway leaps across the skyline, connecting the bazaar to Hodierna Way.  Merchants heavy with coin bustle quickly towards the bank, while more leisurely shoppers wander across the gilded walkway, pausing sometimes to admire the view of Crossing -- the spherical shape of the Temple majestically rising above the city proper.</description>
@@ -2643,8 +2638,8 @@
     <position x="450" y="-458" z="0" />
     <arc exit="north" move="north" destination="386" />
     <arc exit="climb" move="climb break" destination="389" />
-    <arc exit="climb" move="climb embrasure" destination="171" />
-    <arc exit="go" move="go guardhouse" destination="390" />
+    <arc exit="climb" move="climb small embrasure" destination="171" />
+    <arc exit="go" move="go stone guardhouse" destination="390" />
   </node>
   <node id="388" name="Crossing, North Wall Battlements">
     <description>Although the defensive wall itself is sturdy and serviceable as it stretches toward the North Gate, the cobbled walkway atop the town wall crumbles to incompletion.  The chisel marks in the wall's stones are still fresh and raw, as if the rocks were set into place just recently.  From here, the most notable landmark is the Paladin guild and the homes near it.  On the inner side of the walkway, a low wooden barrier prevents anyone from stumbling backwards and dropping to the ground below.</description>
@@ -2669,7 +2664,7 @@
     <arc exit="north" move="north" destination="392" />
     <arc exit="northeast" move="northeast" destination="393" />
     <arc exit="east" move="east" destination="394" />
-    <arc exit="go" move="go flap" destination="380" />
+    <arc exit="go" move="go tent flap" destination="380" />
   </node>
   <node id="392" name="Mongers' Bazaar, Traders' Market" color="#FF0000">
     <description>The large open tent billows with every caress of wind from above, pressing against the taut lines and wooden frame that hold the structure in place.  Tables line the center of the tent, ready to be set full of wares in hopes of attracting an eager eye and a heavy pouch.</description>
@@ -2698,8 +2693,8 @@
     <position x="430" y="40" z="0" />
     <arc exit="north" move="north" destination="396" />
     <arc exit="southwest" move="southwest" destination="397" />
-    <arc exit="go" move="go stair" destination="162" />
-    <arc exit="climb" move="climb embrasure" destination="170" />
+    <arc exit="go" move="go stone stair" destination="162" />
+    <arc exit="climb" move="climb jagged embrasure" destination="170" />
   </node>
   <node id="396" name="Crossing, East Wall Battlements">
     <description>The roof of a tall oak tower abuts the town wall's inner side, just feet below the cobbled walkway.  Scattered stones and feathers among the droppings dappling the roof suggest that a favorite pastime of the soldiers stationed here is chucking rocks at roosting birds.  From the crenellated outer wall the view is uninspiring: broken hovels and barren land marking the biting poverty of the Middens.  Northward, the cobbled walkway abruptly ends at the jagged rock of the unfinished wall.</description>
@@ -2719,7 +2714,7 @@
     <position x="-361" y="-408" z="0" />
     <arc exit="east" move="east" destination="400" />
     <arc exit="south" move="south" destination="399" />
-    <arc exit="go" move="go stairs" destination="121" />
+    <arc exit="go" move="go stone stairs" destination="121" />
     <arc exit="climb" move="climb narrow embrasure" destination="172" />
   </node>
   <node id="399" name="Crossing, West Wall Battlements">
@@ -2903,9 +2898,9 @@
     <position x="300" y="-448" z="0" />
     <arc exit="go" move="go swinging doors" destination="427" />
     <arc exit="go" move="go walnut ramp" destination="432" />
-    <arc exit="go" move="go arch" destination="431" />
+    <arc exit="go" move="go stone arch" destination="431" />
     <arc exit="go" move="go stone portal" destination="1007" />
-    <arc exit="go" move="go stairs" destination="307" />
+    <arc exit="go" move="go some stairs" destination="307" />
   </node>
   <node id="427" name="The Healerie, The Blue Area" note="Blue Area|triage">
     <description>Thick blue moss and lichen covering the floor absorb the water that falls from the ceiling of this enormous chamber as well as the blood from the many wounded who come here.  A vast forest of stone stalactites stretches from the ceiling above, the largest as big as great trees and bearing strange crystal orbs like fruit.  The orbs shed a strong bluish light that provides adequate illumination for healing.  A silver plaque has been set into the floor near the middle of this area.</description>
@@ -2939,7 +2934,7 @@
   <node id="431" name="The Healerie, Dim Corridor">
     <description>The dim light coming through the arch at the end of the corridor delineates the long shadows of those moving about considerably more than it does the features of the people themselves.  The small amount of additional light coming through the doorway halfway down the corridor further accentuates and twists the shadows of those present, playing them across the floor, walls, and ceiling of smoothly polished black stone.  Cool moist air flows over the stone leaving it slick to the touch.</description>
     <position x="310" y="-448" z="0" />
-    <arc exit="go" move="go arch" destination="426" />
+    <arc exit="go" move="go stone arch" destination="426" />
     <arc exit="go" move="go stone door" destination="847" />
     <arc exit="east" move="east" destination="1018" />
   </node>
@@ -4370,7 +4365,7 @@
   </node>
   <node id="652" name="Fang Cove, Fate's Fortune Lane" note="Map150_Fang_Cove.xml">
     <description>A towering marble archway opens a gap in the wall to the north and separates the ongoing construction and somewhat more refined completed structures of Fate's Fortune Lane from the crude structures and makeshift walkway along the beach.  The entrance to a squat, wide bungalow sits in opposition to the arch, and the sheltering cliffs of Fang's Peak rise up from behind it.  To either side of the arch, cobblestones of different shapes and sizes have been laid out to form the wide Fate's Fortune Lane.</description>
-    <position x="179" y="206" z="0" />
+    <position x="155" y="235" z="0" />
     <arc exit="north" move="north" />
     <arc exit="east" move="east" />
     <arc exit="west" move="west" />
@@ -5972,42 +5967,42 @@
   <node id="917" name="Crossing Outfitting Society, Workroom">
     <description>Hooks and shelves line the light blue walls, holding various tools and spools of thread that are currently not in use.  Next to the painted door is a simple table and chair, a place to take a load off and enjoy a cool drink.</description>
     <position x="15" y="-164" z="0" />
-    <arc exit="go" move="go door" destination="916" />
+    <arc exit="go" move="go painted door" destination="916" />
   </node>
   <node id="918" name="Crossing Outfitting Society, Workroom">
     <description>Hooks and shelves line the deep red walls, holding various tools and spools of thread that are currently not in use.  Next to the carved cedar door is a simple table and chair, a place to take a load off and enjoy a cool drink.</description>
     <position x="25" y="-164" z="0" />
-    <arc exit="go" move="go door" destination="916" />
+    <arc exit="go" move="go cedar door" destination="916" />
   </node>
   <node id="919" name="Crossing Outfitting Society, Weaving Room" note="Weaving1">
     <description>Set in the back of the large workroom is a hefty loom.  Hooks and shelves line the deep purple walls, holding various tools and spools of thread that are currently not in use.  Next to the gold door is a simple table and chair, a place to take a load off and enjoy a cool drink.</description>
     <position x="15" y="-174" z="0" />
-    <arc exit="go" move="go door" destination="915" />
+    <arc exit="go" move="go gold door" destination="915" />
   </node>
   <node id="920" name="Crossing Outfitting Society, Weaving Room" note="Weaving2">
     <description>Set in the back of the large workroom is a hefty loom.  Hooks and shelves line the bright orange walls, holding various tools and spools of thread that are currently not in use.  Next to the maple door is a simple table and chair, a place to take a load off and enjoy a cool drink.</description>
     <position x="25" y="-174" z="0" />
-    <arc exit="go" move="go door" destination="915" />
+    <arc exit="go" move="go maple door" destination="915" />
   </node>
   <node id="921" name="Crossing Outfitting Society, Weaving Room" note="Weaving3">
     <description>Set in the back of the large workroom is a hefty loom.  Hooks and shelves line the dark green walls, holding various tools and spools of thread that are currently not in use.  Next to the carved oak door is a simple table and chair, a place to take a load off and enjoy a cool drink.</description>
     <position x="35" y="-174" z="0" />
-    <arc exit="go" move="go door" destination="915" />
+    <arc exit="go" move="go oak door" destination="915" />
   </node>
   <node id="922" name="Crossing Outfitting Society, Spinning Room" note="Spinning1">
     <description>Fanciful paintings of birds in flight flow across the bright yellow walls.  Beneath a large spinning wheel is a soft white rug trimmed with black fur.  Pressed against the back of the room is a large workbench and chair, a place to relax or work on a project that requires more attention to detail.  A stained oak door leads back out into the hallway.</description>
     <position x="15" y="-184" z="0" />
-    <arc exit="go" move="go door" destination="911" />
+    <arc exit="go" move="go oak door" destination="911" />
   </node>
   <node id="923" name="Crossing Outfitting Society, Spinning Room" note="Spinning2">
     <description>Fanciful paintings of birds in flight flow across the dark green walls.  Beneath a large spinning wheel is a soft white rug trimmed with black fur.  Pressed against the back of the room is a large workbench and chair, a place to relax or work on a project that requires more attention to detail.  A polished marble door leads back out into the hallway.</description>
     <position x="25" y="-184" z="0" />
-    <arc exit="go" move="go door" destination="911" />
+    <arc exit="go" move="go marble door" destination="911" />
   </node>
   <node id="924" name="Crossing Outfitting Society, Spinning Room" note="Spinning3">
     <description>Fanciful paintings of birds in flight flow across the light blue walls.  Beneath a large spinning wheel is a soft white rug trimmed with black fur.  Pressed against the back of the room is a large workbench and chair, a place to relax or work on a project that requires more attention to detail.  A carved ivory door leads back out into the hallway.</description>
     <position x="35" y="-184" z="0" />
-    <arc exit="go" move="go door" destination="911" />
+    <arc exit="go" move="go ivory door" destination="911" />
   </node>
   <node id="925" name="Crossing Engineering Society, Rangu's Repair Shop and Bookstore" note="Engineering clerk|Rangu's Repair Shop|Repair Tools|Engineering Books" color="#00FF00">
     <description>A small forge in the corner of this room basks everything in its warmth.  Adjacent to it, a long counter sits cluttered with numerous tools and devices for repairing things.  Bundles of repaired goods rest against the far wall waiting for pickup.</description>
@@ -6030,17 +6025,17 @@
   <node id="928" name="Crossing Engineering Society, Workshop" note="Engineering Workshop1">
     <description>This workshop contains several orderly crafting areas established with eye-level oak partitions.  The alabaster walls appear recently washed, and the floor is even lacking in dust buildup.  A pair of attendants waits quietly at the door, moving occasionally to clean a work area or empty the waste bucket.</description>
     <position x="-51" y="6" z="0" />
-    <arc exit="go" move="go door" destination="926" />
+    <arc exit="go" move="go maple door" destination="926" />
   </node>
   <node id="929" name="Crossing Engineering Society, Workshop" note="Engineering Workshop2">
     <description>Unfinished stone furniture, statues and more lie spread out across dozens of reinforced tables.  Crafters hurry to finish designs as attendants haul away pieces too large to carry, storing them for later retrieval.</description>
     <position x="-41" y="6" z="0" />
-    <arc exit="go" move="go door" destination="926" />
+    <arc exit="go" move="go oak door" destination="926" />
   </node>
   <node id="930" name="Crossing Engineering Society, Workshop" note="Engineering Workshop3">
     <description>Tall alabaster walls encompass rows of tables covered with unfinished stone pieces.  A massive iron gate and a large chain hanging from a system of pulleys and winches dominate the north end of the room.  Attendants stand at the ready to collect and store crafters' furniture that would otherwise be too large to carry.</description>
     <position x="-31" y="6" z="0" />
-    <arc exit="go" move="go door" destination="926" />
+    <arc exit="go" move="go birch door" destination="926" />
   </node>
   <node id="931" name="Crossing Alchemy Society, Tool Shop" note="Alchemy tools|Alchemy clerk|press1|grinder1" color="#00FF00">
     <description>Tall oak supply crates flank an extended counter displaying various alchemical tools for sale.  A pair of robed individuals rush about helping customers restock.  You notice the overwhelming combination of smells is somewhat reduced here.</description>
@@ -6634,6 +6629,84 @@
     <arc exit="southwest" move="southwest" destination="1030" />
     <arc exit="northwest" move="northwest" destination="1029" />
   </node>
+  <node id="1034" name="Two Rivers Boarding House, Front Garden">
+    <description>Standing an august three stories tall, a charming old boarding house with rounded gables looms over the boxwood-hemmed lawn laid out before it.  Despite needing a fresh coat of teal paint, it still manages to present a warm and attractive facade to the adjoining Strand.  Ivy climbs the drain pipes and dangles capriciously from the house's gutters and eaves, while a shingled wraparound porch converges on its front steps, welcoming residents and visitors alike through the wide front door.</description>
+	<description>Standing an august three stories tall, a charming old boarding house with rounded gables looms over the boxwood-hemmed lawn laid out before it.  Dense ivy clings to its darkened facade, climbing up the drain pipes and porch balusters to dangle from the uppermost eaves.  The first-floor windows are all aglow, and colorful light streams through a stained glass window set into the house's wide front door.</description>
+    <position x="145" y="180" z="0" />
+    <arc exit="go" move="go whitewashed gate" destination="49" />
+    <arc exit="go" move="go boarding house" destination="1035" />
+  </node>
+  <node id="1035" name="Two Rivers Boarding House, Entry Hall">
+    <description>A foyer full of whimsical knick-knacks greets visitors to the Two Rivers Boarding House, widely reputed as a cozy haven for sojourning Estate Holders.  The appointments are lived-in but tidy, the colorful drapes and upholstery showing more quirk and character than meaningful wear.  Enticing newcomers further into the house, the aromas of a freshly cooked meal waft down one end of the hall while a gentle glow and warmth emanate from the other.</description>
+    <position x="209" y="216" z="0" />
+    <arc exit="southeast" move="southeast" destination="1038" />
+    <arc exit="northwest" move="northwest" destination="1036" />
+    <arc exit="up" move="up" destination="1039" />
+    <arc exit="out" move="out" destination="1034" />
+  </node>
+  <node id="1036" name="Two Rivers Boarding House, Dining Room">
+    <description>Flanked by two long benches and piled high with hearty fare, an oaken table dominates this cheery communal dining room.  A fire crackles in the stacked flagstone hearth, and faint chatter from the nearby scullery drifts through the warm air along with the smell of baking bread.</description>
+    <position x="179" y="186" z="0" />
+    <arc exit="northeast" move="northeast" destination="1037" />
+    <arc exit="southeast" move="southeast" destination="1035" />
+  </node>
+  <node id="1037" name="Two Rivers Boarding House, Scullery" color="#00FFFF">
+    <description>Crowded but orderly, the scullery is astir with the bustle of constant meal preparations.  Stooped over a sudsy sink in the corner, an apron-clad Gor'Tog hums to himself as he washes a stack of dirty dishes that never seems to diminish thanks to a steady stream of new arrivals from the dining room.</description>
+    <position x="189" y="176" z="0" />
+    <arc exit="southwest" move="southwest" destination="1036" />
+    <arc exit="down" move="down" destination="1045" />
+  </node>
+  <node id="1038" name="Two Rivers Boarding House, Parlor" color="#00FFFF">
+    <description>Beside a low tea table draped in homespun lace, a worn-in pair of mismatched sofas provides visitors a homey fireside spot to sit and socialize.  Opposite the massive slate fireplace, a rosewood clavichord stands against the parlor wall near a corner alcove serving as the doorstep for several boarders' suites.</description>
+    <position x="219" y="226" z="0" />
+    <arc exit="northwest" move="northwest" destination="1035" />
+  </node>
+  <node id="1039" name="Two Rivers Boarding House, Second Floor" color="#00FFFF">
+    <description>A beige rug tapestried with twining ivy skirts along the well-trod hardwood, passing beneath a quaint painting of the Siergelde Mountains on display by the landing.  Coated in road dust, an elegant three-piece set of luggage is stacked against the opposite wall a little further down, its owner's whereabouts uncertain.</description>
+    <position x="219" y="206" z="0" />
+    <arc exit="southeast" move="southeast" destination="1041" />
+    <arc exit="northwest" move="northwest" destination="1040" />
+    <arc exit="up" move="up" destination="1042" />
+    <arc exit="down" move="down" destination="1035" />
+  </node>
+  <node id="1040" name="Two Rivers Boarding House, Second Floor" color="#00FFFF">
+    <description>Heavy broadcloth curtains are drawn across the windows at this end of the hall, suffusing the area with eerie gloom.  An oil lantern sputters weakly atop a shallow side table in the corner and casts oozing shadows over a raggedy doll and some wooden blocks scattered across the floor, apparent leftovers from a forgetful child's playtime.</description>
+    <position x="209" y="196" z="0" />
+    <arc exit="southeast" move="southeast" destination="1039" />
+  </node>
+  <node id="1041" name="Two Rivers Boarding House, Second Floor" color="#00FFFF">
+    <description>Sage-green wallpaper patterned with gladioli complements the fine walnut wainscoting that runs along this quiet corridor.  A quilt-draped rocking chair rests at the edge of the tapestry runner, its window-facing position affording it a picturesque view of the Strand below.</description>
+    <position x="229" y="216" z="0" />
+    <arc exit="northwest" move="northwest" destination="1039" />
+  </node>
+  <node id="1042" name="Two Rivers Boarding House, Third Floor" color="#00FFFF">
+    <description>Boarders occasionally stop to engage in polite small talk as they meet in passing at this upstairs juncture.  Complementing the floral wallpaper, some potted geraniums sit atop a little round side table by the stairwell landing, a ceramic tabby cat nearly concealed beneath their red-orange blooms.</description>
+    <position x="219" y="196" z="0" />
+    <arc exit="southeast" move="southeast" destination="1044" />
+    <arc exit="northwest" move="northwest" destination="1043" />
+    <arc exit="down" move="down" destination="1039" />
+  </node>
+  <node id="1043" name="Two Rivers Boarding House, Third Floor" color="#00FFFF">
+    <description>Muffled conversation is just barely audible through the walnut-wainscoted walls here.  Propped open with a large book, a wide window at the end of the hall invites a draft that flutters its broadcloth curtains and stirs the heady scent of pipe tobacco lingering in the corridor.</description>
+    <position x="209" y="186" z="0" />
+    <arc exit="southeast" move="southeast" destination="1042" />
+  </node>
+  <node id="1044" name="Two Rivers Boarding House, Third Floor" color="#00FFFF">
+    <description>Soft daylight illuminates this tidy stretch of corridor.  The window at the end of the hall affords a clear view of the Segoltha below, and one can see the ferries going back and forth toward Leth Deriel, dauntlessly fighting the strong river currents with each persistent crossing.</description>
+    <position x="229" y="206" z="0" />
+    <arc exit="northwest" move="northwest" destination="1042" />
+  </node>
+  <node id="1045" name="Two Rivers Boarding House, Cellar" color="#00FFFF">
+    <description>Muted through the floorboards above, footsteps and the occasional snippet of conversation carry down from the dining hall and scullery.  A sooty oil lantern dangles from the rafters at the base of the cellar's wood plank stairs, its feeble flame tasked with illuminating the entire stone-walled chamber.</description>
+    <position x="189" y="186" z="0" />
+    <arc exit="southeast" move="southeast" destination="1046" />
+    <arc exit="up" move="up" destination="1037" />
+  </node>
+  <node id="1046" name="Two Rivers Boarding House, Cellar" color="#00FFFF">
+    <description>Meager lamplight barely reaches this end of the cold, damp cellar.  Tucked away in the shadows against the far wall, a collection of dusty mead casks rests beside several long shelves laden with provisions for the house.</description>
+    <position x="199" y="196" z="0" />
+    <arc exit="northwest" move="northwest" destination="1045" />
+  </node>
   <label text="Shipyard">
     <position x="-20" y="314" z="0" />
   </label>
@@ -6746,7 +6819,7 @@
     <position x="-281" y="-224" z="0" />
   </label>
   <label text="Silverfish">
-    <position x="140" y="160" z="0" />
+    <position x="134" y="151" z="0" />
   </label>
   <label text="Paladin">
     <position x="280" y="-530" z="0" />
@@ -6942,5 +7015,11 @@
   </label>
   <label text="Siryn's Courtyard">
     <position x="1" y="-356" z="0" />
+  </label>
+  <label text="Two Rivers">
+    <position x="236" y="200" z="0" />
+  </label>
+  <label text="Boarding House">
+    <position x="235" y="210" z="0" />
   </label>
 </zone>
