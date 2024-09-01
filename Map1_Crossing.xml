@@ -6638,6 +6638,7 @@
   </node>
   <node id="1034" name="Two Rivers Boarding House, Front Garden">
     <description>Standing an august three stories tall, a charming old boarding house with rounded gables looms over the boxwood-hemmed lawn laid out before it.  Despite needing a fresh coat of teal paint, it still manages to present a warm and attractive facade to the adjoining Strand.  Ivy climbs the drain pipes and dangles capriciously from the house's gutters and eaves, while a shingled wraparound porch converges on its front steps, welcoming residents and visitors alike through the wide front door.</description>
+	<description>Standing an august three stories tall, a charming old boarding house with rounded gables looms over the boxwood-hemmed lawn laid out before it.  Dense ivy clings to its darkened facade, climbing up the drain pipes and porch balusters to dangle from the uppermost eaves.  The first-floor windows are all aglow, and colorful light streams through a stained glass window set into the house's wide front door.</description>
     <position x="145" y="180" z="0" />
     <arc exit="go" move="go whitewashed gate" destination="49" />
     <arc exit="go" move="go boarding house" destination="1035" />
