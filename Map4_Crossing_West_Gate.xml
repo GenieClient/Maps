@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-16"?>
 <zone name="Crossing West Gate" id="4">
   <node id="1" name="Mycthengelde, Flatlands">
     <description>Well-worn paths lead through a grove of trees to a gate in The Crossing's western wall.  Now and again you hear birds calling to one another in the branches, or the bustling of a merchant's cart as it makes its way past.  A handful of adventurers nod at you in greeting as they make their way into town.  An aromatic mix of wildflowers mingles with wyndwood, oak and juniper trees as the grove stretches north and south, while to the west, you can see grassy flatlands through a small clearing.</description>
@@ -2755,7 +2755,7 @@
     <arc exit="northeast" move="northeast" destination="426" />
     <arc exit="south" move="south" destination="424" />
   </node>
-  <node id="426" name="Wilderness, Forest" color="White">
+  <node id="426" name="Wilderness, Forest">
     <description>The trees line both sides of the path, arching together to form a mottled green canopy overhead that looks more like the ceiling of an elaborate temple.  Flowers and ferns carpet the area beneath the trees.</description>
     <position x="-620" y="-260" z="0" />
     <arc exit="northeast" move="northeast" destination="427" />
@@ -2865,27 +2865,26 @@
   </node>
   <node id="444" name="Wilderness, Sparse Forest">
     <description>The path crosses a large grassy clearing with a few scattered fire pits.  Off to one side, the bed of a wagon lies abandoned on the ground.  A broken axle and a couple of wheels are half-hidden in the taller grass nearby.</description>
-    <position x="-660" y="-480" z="0" />
+    <position x="-680" y="-440" z="0" />
     <arc exit="west" move="west" destination="445" />
     <arc exit="go" move="go half-open gate" destination="443" />
   </node>
   <node id="445" name="Wilderness, Sparse Forest">
     <description>Crickets and katydids fill the air with a hushed drone.  Occasionally, the muted hoots of owls and the flapping of wings break the sleepy peace of the forest night.  </description>
     <description>The chirping and chattering of hundreds of sparrows in the trees above is almost deafening.  Startled by something making noise in the bushes below, they suddenly take wing.  In several large groups, they fly in and around the trees before settling back down.</description>
-    <position x="-680" y="-480" z="0" />
+    <position x="-700" y="-440" z="0" />
     <arc exit="east" move="east" destination="444" />
     <arc exit="northwest" move="northwest" destination="446" />
   </node>
   <node id="446" name="Wilderness, Sparse Forest">
     <description>The trees and undergrowth are so thick that little can be seen beyond the faint path.  Ivy has grown at least part way up most of the trees, and sometimes between them, forming living veils.</description>
-    <position x="-700" y="-500" z="0" />
-    <arc exit="north" move="north" destination="447" />
+    <position x="-720" y="-460" z="0" />
+    <arc exit="north" move="north" destination="532" />
     <arc exit="southeast" move="southeast" destination="445" />
   </node>
   <node id="447" name="Wilderness, Gully" note="RTZ14|RT-KC-XW" color="#C2B280">
     <description>An occasional glimpse of distant peaks can be caught through the leafy canopy to the north.  The sounds of birdsong are muted, with only a faint melody breaking the silence.  A dry streambed cuts across the forest floor, spanned by an old rope bridge that sways gently in the breeze.</description>
     <position x="-700" y="-520" z="0" />
-    <arc exit="south" move="south" destination="446" />
     <arc exit="go" move="go rope bridge" destination="448" />
   </node>
   <node id="448" name="Wilderness, Rope Bridge">
@@ -3432,6 +3431,23 @@
     <arc exit="southwest" move="southwest" destination="530" />
     <arc exit="northwest" move="northwest" destination="526" />
   </node>
+  <node id="532" name="Wilderness, Edge of the Primal Encasement">
+    <description>An abrupt line slashes across the forest here, the tree line ending with a stark immediacy and with the ground cleared.  To the north, a crater descends gently downward, encased in a veritable wall of snapping and writhing thorny vines that constantly churn the land and create an impassable barrier.  Extending upward into a vague teardrop pinnacle from which erupts a golden beam of light, the lifesculpted spire occupies the same space Knife Clan previously occupied.</description>
+    <position x="-720" y="-480" z="0" />
+    <arc exit="south" move="south" destination="446" />
+    <arc exit="northeast" move="northeast" destination="534" />
+    <arc exit="northwest" move="northwest" destination="533" />
+  </node>
+  <node id="533" name="Wilderness, Edge of the Primal Encasement">
+    <description>The forest is neatly cleared, though patches of shattered stone marr the lip and curve of the crater.  From here, a slightly different vantage of the maelstrom is afforded, and several gaps in the writhing vines reveal an encasement of malleable stone, which grows and crumbles as the living barrier continues its constant movement.  The pinnacle of the encasement terminates in a vaguely teardrop shape, and a beam of golden light shines upward.  Chunks of vine-encased stone are flung from the encasement, though they sink into the ground wherever they land, leaving little more than some gravel.</description>
+    <position x="-740" y="-500" z="0" />
+    <arc exit="southeast" move="southeast" destination="532" />
+  </node>
+  <node id="534" name="Wilderness, Edge of the Primal Encasement">
+    <description>The forest is neatly cleared, a dry streambed terminating at the edge of the crater.  A broken rope ladder trails down the curve of the crater, frayed edges occasionally battered by the churning chaos of the wall of writhing vines.  Dangerously close to the encasement, the sound of grinding stone and creaking vine echoes all around.</description>
+    <position x="-700" y="-500" z="0" />
+    <arc exit="southwest" move="southwest" destination="532" />
+  </node>
   <label text="Bobcats">
     <position x="-50" y="400" z="0" />
   </label>
@@ -3454,7 +3470,7 @@
     <position x="-450" y="10" z="0" />
   </label>
   <label text="Knife Clan">
-    <position x="-760" y="-630" z="0" />
+    <position x="-790" y="-550" z="0" />
   </label>
   <label text="Wolf Clan">
     <position x="-800" y="230" z="0" />
@@ -3596,5 +3612,11 @@
   </label>
   <label text="Spiders">
     <position x="-245" y="215" z="0" />
+  </label>
+  <label text="Is Temporarily">
+    <position x="-790" y="-540" z="0" />
+  </label>
+  <label text="Inaccessible">
+    <position x="-790" y="-530" z="0" />
   </label>
 </zone>
