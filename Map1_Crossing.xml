@@ -220,7 +220,7 @@
     <arc exit="south" move="south" destination="28" />
     <arc exit="west" move="west" destination="30" />
     <arc exit="go" move="go small building" destination="468" />
-    <arc exit="go" move="go wrought gate" destination="1029" />0
+    <arc exit="go" move="go wrought gate" destination="1029" />
   </node>
   <node id="30" name="The Crossing, Clanthew Boulevard">
     <description>The meandering course of the River Oxenwaithe lies dead ahead.  Wooden carts, powered by all manner of two- and four-legged beasts, rumble past, headed west towards the broad, well-worn planks of the Oxenwaithe Bridge and east into the heart of the Crossing.  Groups of armed adventurers, mystics, merchants and rogues weave in and out of the wheeled and hoofed mobs.</description>
@@ -1015,7 +1015,7 @@
     <position x="210" y="-488" z="0" />
     <arc exit="north" move="north" destination="138" />
     <arc exit="east" move="east" destination="140" />
-    <arc exit="go" move="go Society hall" destination="994" />
+    <arc exit="go" move="go society hall" destination="994" />
   </node>
   <node id="140" name="The Crossing, Firulf Vista">
     <description>Firulf Vista is a broad thoroughfare leading to the northeastern town gate.  Farther to the east, beyond the crenellated tops of the town walls, is the tall, thin spire of the Warrior Mages' Guild, and the dark, swelling hills of the wilderness that lies outside the safety of the confines of civilization.</description>
@@ -1577,7 +1577,7 @@
     <arc exit="southeast" move="southeast" destination="16" />
     <arc exit="south" move="south" destination="23" />
     <arc exit="northwest" move="northwest" destination="24" />
-    <arc exit="go" move="go Armory" destination="192" />
+    <arc exit="go" move="go armory" destination="192" />
   </node>
   <node id="226" name="Chizili's Alchemical Goods, Salesroom" note="Chizili's Alchemical Goods|Alchemy" color="#FF0000">
     <description>An almost overwhelming array of scents attacks your nose the moment you enter this place.  While strikingly clean, the room is also filled with jars and barrels and pots and carboys of every size and description.  Bundles of dried herbs hang from racks overhead and glass amphorae are filled with strange animal parts being pickled.  Lore and Science, superstition and practicality meet in this place where alchemists can re-stock almost all their bizarre needs in one place.</description>
@@ -2606,7 +2606,7 @@
     <description>Gently sloping above the shops along the eastern side of town, this elegant acanth walkway connects the bustling bazaar to the Hodierna Way, providing merchants and shoppers a quick and guarded way to reach the local bank.  Gilded rails and posts protect the pedestrians from misstepping off the bridge, while adding an element of beauty that complements the rich acanth wood.</description>
     <position x="320" y="-90" z="0" />
     <arc exit="north" move="north" destination="383" />
-    <arc exit="go" move="go Hodierna ramp" destination="160" />
+    <arc exit="go" move="go hodierna ramp" destination="160" />
   </node>
   <node id="383" name="The Crossing, Bazaar Walkway">
     <description>Bowing gracefully above the Town Green and the shops along Albreda Boulevard, the raised walkway leaps across the skyline, connecting the bazaar to Hodierna Way.  Merchants heavy with coin bustle quickly towards the bank, while more leisurely shoppers wander across the gilded walkway, pausing sometimes to admire the view of Crossing -- the spherical shape of the Temple majestically rising above the city proper.</description>
@@ -6631,14 +6631,15 @@
   </node>
   <node id="1034" name="Two Rivers Boarding House, Front Garden">
     <description>Standing an august three stories tall, a charming old boarding house with rounded gables looms over the boxwood-hemmed lawn laid out before it.  Despite needing a fresh coat of teal paint, it still manages to present a warm and attractive facade to the adjoining Strand.  Ivy climbs the drain pipes and dangles capriciously from the house's gutters and eaves, while a shingled wraparound porch converges on its front steps, welcoming residents and visitors alike through the wide front door.</description>
-	<description>Standing an august three stories tall, a charming old boarding house with rounded gables looms over the boxwood-hemmed lawn laid out before it.  Dense ivy clings to its darkened facade, climbing up the drain pipes and porch balusters to dangle from the uppermost eaves.  The first-floor windows are all aglow, and colorful light streams through a stained glass window set into the house's wide front door.</description>
+    <description>Standing an august three stories tall, a charming old boarding house with rounded gables looms over the boxwood-hemmed lawn laid out before it.  Dense ivy clings to its darkened facade, climbing up the drain pipes and porch balusters to dangle from the uppermost eaves.  The first-floor windows are all aglow, and colorful light streams through a stained glass window set into the house's wide front door.</description>
     <position x="145" y="180" z="0" />
     <arc exit="go" move="go whitewashed gate" destination="49" />
     <arc exit="go" move="go boarding house" destination="1035" />
+    <arc exit="climb" move="climb drain pipe" destination="1043" />
   </node>
   <node id="1035" name="Two Rivers Boarding House, Entry Hall">
     <description>A foyer full of whimsical knick-knacks greets visitors to the Two Rivers Boarding House, widely reputed as a cozy haven for sojourning Estate Holders.  The appointments are lived-in but tidy, the colorful drapes and upholstery showing more quirk and character than meaningful wear.  Enticing newcomers further into the house, the aromas of a freshly cooked meal waft down one end of the hall while a gentle glow and warmth emanate from the other.</description>
-    <position x="209" y="216" z="0" />
+    <position x="219" y="226" z="0" />
     <arc exit="southeast" move="southeast" destination="1038" />
     <arc exit="northwest" move="northwest" destination="1036" />
     <arc exit="up" move="up" destination="1039" />
@@ -6646,24 +6647,24 @@
   </node>
   <node id="1036" name="Two Rivers Boarding House, Dining Room">
     <description>Flanked by two long benches and piled high with hearty fare, an oaken table dominates this cheery communal dining room.  A fire crackles in the stacked flagstone hearth, and faint chatter from the nearby scullery drifts through the warm air along with the smell of baking bread.</description>
-    <position x="179" y="186" z="0" />
+    <position x="189" y="196" z="0" />
     <arc exit="northeast" move="northeast" destination="1037" />
     <arc exit="southeast" move="southeast" destination="1035" />
   </node>
   <node id="1037" name="Two Rivers Boarding House, Scullery" color="#00FFFF">
     <description>Crowded but orderly, the scullery is astir with the bustle of constant meal preparations.  Stooped over a sudsy sink in the corner, an apron-clad Gor'Tog hums to himself as he washes a stack of dirty dishes that never seems to diminish thanks to a steady stream of new arrivals from the dining room.</description>
-    <position x="189" y="176" z="0" />
+    <position x="199" y="186" z="0" />
     <arc exit="southwest" move="southwest" destination="1036" />
     <arc exit="down" move="down" destination="1045" />
   </node>
   <node id="1038" name="Two Rivers Boarding House, Parlor" color="#00FFFF">
     <description>Beside a low tea table draped in homespun lace, a worn-in pair of mismatched sofas provides visitors a homey fireside spot to sit and socialize.  Opposite the massive slate fireplace, a rosewood clavichord stands against the parlor wall near a corner alcove serving as the doorstep for several boarders' suites.</description>
-    <position x="219" y="226" z="0" />
+    <position x="229" y="236" z="0" />
     <arc exit="northwest" move="northwest" destination="1035" />
   </node>
   <node id="1039" name="Two Rivers Boarding House, Second Floor" color="#00FFFF">
     <description>A beige rug tapestried with twining ivy skirts along the well-trod hardwood, passing beneath a quaint painting of the Siergelde Mountains on display by the landing.  Coated in road dust, an elegant three-piece set of luggage is stacked against the opposite wall a little further down, its owner's whereabouts uncertain.</description>
-    <position x="219" y="206" z="0" />
+    <position x="229" y="216" z="0" />
     <arc exit="southeast" move="southeast" destination="1041" />
     <arc exit="northwest" move="northwest" destination="1040" />
     <arc exit="up" move="up" destination="1042" />
@@ -6671,41 +6672,48 @@
   </node>
   <node id="1040" name="Two Rivers Boarding House, Second Floor" color="#00FFFF">
     <description>Heavy broadcloth curtains are drawn across the windows at this end of the hall, suffusing the area with eerie gloom.  An oil lantern sputters weakly atop a shallow side table in the corner and casts oozing shadows over a raggedy doll and some wooden blocks scattered across the floor, apparent leftovers from a forgetful child's playtime.</description>
-    <position x="209" y="196" z="0" />
+    <position x="219" y="206" z="0" />
     <arc exit="southeast" move="southeast" destination="1039" />
   </node>
   <node id="1041" name="Two Rivers Boarding House, Second Floor" color="#00FFFF">
     <description>Sage-green wallpaper patterned with gladioli complements the fine walnut wainscoting that runs along this quiet corridor.  A quilt-draped rocking chair rests at the edge of the tapestry runner, its window-facing position affording it a picturesque view of the Strand below.</description>
-    <position x="229" y="216" z="0" />
+    <position x="239" y="226" z="0" />
     <arc exit="northwest" move="northwest" destination="1039" />
   </node>
   <node id="1042" name="Two Rivers Boarding House, Third Floor" color="#00FFFF">
     <description>Boarders occasionally stop to engage in polite small talk as they meet in passing at this upstairs juncture.  Complementing the floral wallpaper, some potted geraniums sit atop a little round side table by the stairwell landing, a ceramic tabby cat nearly concealed beneath their red-orange blooms.</description>
-    <position x="219" y="196" z="0" />
+    <position x="229" y="200" z="0" />
     <arc exit="southeast" move="southeast" destination="1044" />
     <arc exit="northwest" move="northwest" destination="1043" />
     <arc exit="down" move="down" destination="1039" />
+    <arc exit="climb" move="climb attic stairs" destination="1047" />
   </node>
   <node id="1043" name="Two Rivers Boarding House, Third Floor" color="#00FFFF">
     <description>Muffled conversation is just barely audible through the walnut-wainscoted walls here.  Propped open with a large book, a wide window at the end of the hall invites a draft that flutters its broadcloth curtains and stirs the heady scent of pipe tobacco lingering in the corridor.</description>
-    <position x="209" y="186" z="0" />
+    <position x="209" y="180" z="0" />
     <arc exit="southeast" move="southeast" destination="1042" />
+    <arc exit="climb" move="climb drain pipe" destination="1034" />
   </node>
   <node id="1044" name="Two Rivers Boarding House, Third Floor" color="#00FFFF">
     <description>Soft daylight illuminates this tidy stretch of corridor.  The window at the end of the hall affords a clear view of the Segoltha below, and one can see the ferries going back and forth toward Leth Deriel, dauntlessly fighting the strong river currents with each persistent crossing.</description>
-    <position x="229" y="206" z="0" />
+    <position x="239" y="211" z="0" />
     <arc exit="northwest" move="northwest" destination="1042" />
   </node>
   <node id="1045" name="Two Rivers Boarding House, Cellar" color="#00FFFF">
     <description>Muted through the floorboards above, footsteps and the occasional snippet of conversation carry down from the dining hall and scullery.  A sooty oil lantern dangles from the rafters at the base of the cellar's wood plank stairs, its feeble flame tasked with illuminating the entire stone-walled chamber.</description>
-    <position x="189" y="186" z="0" />
+    <position x="199" y="196" z="0" />
     <arc exit="southeast" move="southeast" destination="1046" />
     <arc exit="up" move="up" destination="1037" />
   </node>
   <node id="1046" name="Two Rivers Boarding House, Cellar" color="#00FFFF">
     <description>Meager lamplight barely reaches this end of the cold, damp cellar.  Tucked away in the shadows against the far wall, a collection of dusty mead casks rests beside several long shelves laden with provisions for the house.</description>
-    <position x="199" y="196" z="0" />
+    <position x="209" y="206" z="0" />
     <arc exit="northwest" move="northwest" destination="1045" />
+  </node>
+  <node id="1047" name="Two Rivers Boarding House, Attic" color="#00FFFF">
+    <description>The meticulous cleaning standards of the boarding house's other levels do not seem to apply to its uppermost floor.  Cobwebs dangle from the rafters and bits of rubbish are accumulated in each dim corner of this stuffy attic, though the entryways to the modest valet apartments allotted here are relatively clear and tidy.  Motes of dust drift languidly through sunbeams cast by a small stained glass window serving as the only light source for the dingy room.</description>
+    <position x="229" y="180" z="0" />
+    <arc exit="climb" move="climb stairs" destination="1042" />
   </node>
   <label text="Shipyard">
     <position x="-20" y="314" z="0" />
@@ -7017,9 +7025,9 @@
     <position x="1" y="-356" z="0" />
   </label>
   <label text="Two Rivers">
-    <position x="236" y="200" z="0" />
+    <position x="246" y="210" z="0" />
   </label>
   <label text="Boarding House">
-    <position x="235" y="210" z="0" />
+    <position x="245" y="220" z="0" />
   </label>
 </zone>
