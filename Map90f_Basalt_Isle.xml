@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <zone name="Basalt Isle and Jeihrem's Barrow" id="90f">
-  <node id="1" name="Basalt Isle, Cliffs of Ruin" note="Cliffs of Ruin">
+  <node id="1" name="Basalt Isle, Cliffs of Ruin">
     <description>The harsh sound of the ocean waves breaking on bare rock echoes through the chasm, and the towering basalt makes strange geometric shapes that look ready to give way at any moment.  Huge basalt boulders are scattered here and there, indicating that a few chunks have already fallen.  A few stubborn scrubby bushes cling to either side of the cavern walls, their thin branches parched and bleached by the salty sea air.</description>
     <position x="20" y="29" z="0" />
     <arc exit="northwest" move="northwest" destination="3" />
     <arc exit="go" move="go stone dock" destination="2" />
   </node>
-  <node id="2" name="Basalt Isle, Stone Dock" note="Stone Dock" color="#FF00FF">
+  <node id="2" name="Basalt Isle, Stone Dock" color="#FF00FF">
     <description>The roar of the ocean waves constantly fills the air, and the foamy saltwater coats everything with a tangible dampness.  Evenly spaced stone pillars offer a crude place to tie a boat, their metal hooks badly rusted from the salt-filled air.  Sheer cliffs made from thousands of basalt columns rise tall at the water's edge, their outlines shrouded by the darkness of the night.</description>
     <description>Waves constantly whip at the edges of the desolate stone dock, occasionally sending splashes of foamy saltwater high into the air.  Evenly spaced stone pillars offer a crude place to tie a boat, their metal hooks badly rusted from the salt-filled air.  Sheer cliffs made from thousands of basalt columns rise tall at the water's edge, their jagged shapes standing tall against the battering waves.</description>
     <position x="0" y="29" z="0" />
@@ -18,7 +18,7 @@
     <arc exit="east" move="east" destination="4" />
     <arc exit="southeast" move="southeast" destination="1" />
   </node>
-  <node id="4" name="Basalt Isle, Steep Approach" note="Steep Approach">
+  <node id="4" name="Basalt Isle, Steep Approach">
     <description>Enormous basalt columns hang toothlike at this incline, worn away at the bottom by erosion and leaving the bottoms of the geometrical pillars exposed and jagged.  Small clumps of moss and grass cling to the sides and underside of the basalt columns, somewhat sheltered here from the harsh wind and salty air.  The cracked path is quite steep, wending its way between the jagged cliffs.</description>
     <position x="20" y="9" z="0" />
     <arc exit="northeast" move="northeast" destination="5" />
@@ -32,7 +32,7 @@
     <arc exit="southwest" move="southwest" destination="4" />
     <arc exit="go" move="go dark cave" destination="76" />
   </node>
-  <node id="6" name="Basalt Isle, Harrowed Chasm" note="Harrowed Chasm">
+  <node id="6" name="Basalt Isle, Harrowed Chasm">
     <description>Basalt columns bend and fold at odd angles, molded at a diagonal by some enormous geological pressure so that the top-most layer has become nearly horizontal.  Bits of rough crab grass grow here and there between the harsh grey stones, tiny oases in between the dry and lifeless desolation.</description>
     <position x="60" y="9" z="0" />
     <arc exit="northeast" move="northeast" destination="7" />
@@ -66,12 +66,12 @@
     <arc exit="southeast" move="southeast" destination="12" />
     <arc exit="southwest" move="southwest" destination="9" />
   </node>
-  <node id="11" name="Basalt Isle, Overlook" note="Overlook">
+  <node id="11" name="Basalt Isle, Overlook">
     <description>The entire island is visible from this small overlook, the jagged basalt spines jutting from the sea to the east while huge cracks run through the island's center to create dark, gaping chasms.  An ominous-looking castle can be seen far to the west at the top of a towering cliff, while a small fishing village huddles far below it.  Very little greenery pierces the flat grey landscape, and the sea appears harsh and unforgiving at every horizon.</description>
     <position x="120" y="9" z="0" />
     <arc exit="south" move="south" destination="10" />
   </node>
-  <node id="12" name="Basalt Isle, Towering Pillars" note="Towering Pillars">
+  <node id="12" name="Basalt Isle, Towering Pillars">
     <description>Dark grey spines frame the eastern edge of the steep cliffside path, following the edge of the plateau and forming a measure of protection against falling.  Jagged rocks jut from the ocean below, splitting the roiling waves and creating a calmer area.  The silhouette of a rocky reef rises out in the far distance, with two visible shipwrecks jutting their ruined masts at odd angles against the dark sea.</description>
     <description>Dark grey spines frame the eastern edge of the steep cliffside path, following the edge of the plateau and forming a measure of protection against falling.  Jagged rocks jut from the ocean below, coated thick with red algae and splitting the roiling waves.  A rocky reef rises out in the far distance, two distinct shipwrecks splintered apart on their treacherous edge.</description>
     <position x="140" y="49" z="0" />
@@ -115,7 +115,7 @@
     <arc exit="east" move="east" destination="17" />
     <arc exit="go" move="go cave" destination="49" />
   </node>
-  <node id="19" name="Basalt Isle, Salt Deposits" note="Salt Deposits|salt golems">
+  <node id="19" name="Basalt Isle, Salt Deposits" note="salt golems">
     <description>This portion of the island has sloped into a vague bowl-like shape, framed with spiked points to the east while huge basalt columns rise tall to the west.  Harsh white deposits of salt cover the area almost completely, contrasting the dark grey rocks with large rectangular crystals.  Jagged points rise here and there among the scattered stones, though the majority have broken free and cover the ground in a relatively even layer of rubble.</description>
     <position x="100" y="-31" z="0" />
     <arc exit="east" move="east" destination="24" />
@@ -143,7 +143,7 @@
     <arc exit="north" move="north" destination="21" />
     <arc exit="east" move="east" destination="23" />
   </node>
-  <node id="23" name="Basalt Isle, Needle Passage" note="Needle Passage">
+  <node id="23" name="Basalt Isle, Needle Passage">
     <description>Runnels of salty water have formed shallow pools, fresh water mingling with the salt deposits and becoming trapped between the jagged rocks.  A few plants and beds of moss tenuously make their home in the patches of soil, speckling the ground here and there.  Several of the grey needle-like pillars have been forcefully toppled and shattered, forming a makeshift way through the treacherous terrain.</description>
     <position x="120" y="-51" z="0" />
     <arc exit="south" move="south" destination="24" />
@@ -161,7 +161,7 @@
     <position x="140" y="-31" z="0" />
     <arc exit="west" move="west" destination="24" />
   </node>
-  <node id="26" name="Basalt Isle, Field of Rubble" note="Field of Rubble">
+  <node id="26" name="Basalt Isle, Field of Rubble">
     <description>Crumbled stones worn somewhat smooth lie in scattered piles, indicating the vague outlines of what used to be stone buildings.  A few are stripped bare down to their foundations, revealing shallow basements and storm cellars.  A small number of hardy trees edge the field, and the occasional bit of foliage pokes up through the grey stones.</description>
     <position x="380" y="-71" z="0" />
     <arc exit="southwest" move="southwest" destination="27" />
@@ -185,7 +185,7 @@
     <arc exit="northeast" move="northeast" destination="28" />
     <arc exit="go" move="go wooden gate" destination="30" />
   </node>
-  <node id="30" name="Jeihrem's Barrow, Entrance" note="Jeihrem's Barrow">
+  <node id="30" name="Jeihrem's Barrow, Entrance">
     <description>The muddy path into the town is seldom used, as if few ever leave this small fishing village.  Wooden buildings line the streets, haphazardly nailed together without much care or concern, and over half of them looking quite abandoned.  Racks of half-preserved fish stand drying on hooks, the cloying odor ever pervasive in the air.</description>
     <description>The still of night blankets the quiet fishing village, and the fishy scent of smoke from burning oil lanterns drifts through the air.  Most of the wooden buildings stand completely dark and abandoned, although a few are lit from the interior with the muted sound of conversation coming from within.  Racks of half-preserved fish stand drying on hooks, the cloying odor mingling with the smell from the lanterns.</description>
     <position x="260" y="-11" z="0" />
@@ -193,7 +193,7 @@
     <arc exit="northwest" move="northwest" destination="31" />
     <arc exit="go" move="go wooden gate" destination="29" />
   </node>
-  <node id="31" name="Jeihrem's Barrow, Communion Circle" note="Communion Circle|Stairway of Bone">
+  <node id="31" name="Jeihrem's Barrow, Communion Circle" note="stairway of bone">
     <description>Barely functional and long past their prime, several haphazard shanties crowd each side of the street.  Simple burlap clothes hang out to slowly dry on fishing lines strung between several of the shanties, clearly repurposed for the task.  The smell of cooking fish fills the air, wafting on the salty ocean breeze.</description>
     <position x="240" y="-31" z="0" />
     <arc exit="east" move="east" destination="32" />
@@ -202,7 +202,7 @@
     <arc exit="go" move="go round hut" destination="46" />
     <arc exit="climb" move="climb stairway" hidden="True" destination="50" />
   </node>
-  <node id="32" name="Jeihrem's Barrow, Cobblestone Way" note="Cobblestone Way" color="#00FFFF">
+  <node id="32" name="Jeihrem's Barrow, Cobblestone Way" color="#00FFFF">
     <description>Cobblestone made from flat pieces of hexagonal basalt lines the modest path, giving this part of town a slightly more upscale look than the dirt path of the main village.  Mostly bare trees line both sides of the path, vying for what sunlight they can get, and wide patches of crag grass dot the landscape.  A wooden post driven into the ground marks the crossroads, indicating the path as Cobblestone Way.</description>
     <position x="260" y="-31" z="0" />
     <arc exit="northeast" move="northeast" destination="33" />
@@ -234,7 +234,7 @@
     <arc exit="go" move="go basalt hut" destination="40" />
     <arc exit="go" move="go stone building" destination="41" />
   </node>
-  <node id="37" name="Jeihrem's Barrow, Communion Circle" note="Zenriel">
+  <node id="37" name="Jeihrem's Barrow, Communion Circle" note="zenriel">
     <description>The dirt road abruptly ends at a long wooden dock, built out over the ocean in a sturdy manner uncharacteristic to the rest of the village.  Long fishing lines drag out into the sea from poles anchored to the dock, left mostly unattended and uncared for.  The vast ocean stretches out to the horizon, broken only by the occasional rock jutting from the island's reef.</description>
     <position x="220" y="9" z="0" />
     <arc exit="east" move="east" destination="38" />
@@ -248,33 +248,33 @@
     <arc exit="west" move="west" destination="37" />
     <arc exit="go" move="go general store" destination="44" />
   </node>
-  <node id="39" name="Jeihrem's Barrow, Repair" note="Repair|Falistenal" color="#00FF00">
+  <node id="39" name="Jeihrem's Barrow, Repair" note="repair|falistenal" color="#00FF00">
     <description>Standing in the center of this small wooden hut is a stone ironworking furnace, with a tapered chimney leading up through a hole in the roof.  Nearby a wooden table and stone counter lie ready, while several mostly repaired goods hang from pegs on the walls.  The tools spread out in the small shop are repurposed or crude, though together they are sufficient enough for the task.</description>
     <position x="200" y="-51" z="0" />
     <arc exit="out" move="out" destination="35" />
   </node>
-  <node id="40" name="Jeihrem's Barrow, Gem Shop" note="Gem Shop|gems" color="#00FF00">
+  <node id="40" name="Jeihrem's Barrow, Gem Shop" note="gem shop|gems" color="#00FF00">
     <description>Made entirely from the flat grey stone that gives the island its name, this small hut appears much older and sturdier than the rest of the town.  A small glass window in the western wall looks out toward the sea, and a long stone counter takes up most of the northern half of the room.  Built into the back wall is a tiny safe, clearly inadequate for the task of storing precious gems.</description>
     <position x="180" y="-11" z="0" />
     <arc exit="out" move="out" destination="36" />
   </node>
-  <node id="41" name="Jeihrem's Barrow, Furrier" note="Furrier|bundles|Arakand" color="#00FF00">
+  <node id="41" name="Jeihrem's Barrow, Furrier" note="furrier|bundles|arakand" color="#00FF00">
     <description>The long stone walls and floor appear to all be carved from a single piece of flat grey rock, making the building quite sturdy and able to withstand the ravages of time.  Several round porthole windows look out onto both the village and the sea.  In the center of the room is a large stone counter, piled up high with furs and leathers of varying quality.</description>
     <position x="200" y="9" z="0" />
     <arc exit="out" move="out" destination="36" />
   </node>
-  <node id="42" name="Jeihrem's Barrow, Bank" note="Bank|teller" color="#00FF00">
+  <node id="42" name="Jeihrem's Barrow, Bank" note="bank|teller" color="#00FF00">
     <description>Made mostly from squarish rocks spackled together and covered with a slanted wooden roof, the interior of this building is a bit larger than most of the others in the village.  Several iron boxes are set out on a wooden table along with several hand-written lists, indicating who has deposited or withdrawn what.  The building's interior exudes the faint smell of fish, coming from some unknown source.</description>
     <position x="220" y="29" z="0" />
     <arc exit="east" move="east" destination="43" />
     <arc exit="out" move="out" destination="37" />
   </node>
-  <node id="43" name="Jeihrem's Barrow, Exchange" note="Exchange" color="#00FF00">
+  <node id="43" name="Jeihrem's Barrow, Exchange" note="exchange" color="#00FF00">
     <description>Tucked into this corner of the bank is the Exchange, consisting of three separate iron boxes laid out on a table for making change.  No light penetrates the roof of this windowless building, most of the illumiation coming from greasy oil lanterns hanging on the walls.  A small painting hangs on the eastern wall, depicting an enormous otherworldly monstrosity in the middle of devouring a ship.</description>
     <position x="230" y="29" z="0" />
     <arc exit="west" move="west" destination="42" />
   </node>
-  <node id="44" name="Jeihrem's Barrow, General Store" note="General Store" color="#FF0000">
+  <node id="44" name="Jeihrem's Barrow, General Store" note="general" color="#FF0000">
     <description>Several round makeshift tables are set out on the plain dirt floor of this modestly-sized building, selling both basic goods and slightly fancier items.  Hooks hanging from the walls display both simple and somewhat more elaborate clothing, both appearing imported.  Small windows let in light from outside, and a lantern of fish oil hanging from a rafter provides some extra illumination.</description>
     <position x="280" y="9" z="0" />
     <arc exit="east" move="east" destination="45" />
@@ -286,18 +286,19 @@
     <position x="290" y="9" z="0" />
     <arc exit="west" move="west" destination="44" />
   </node>
-  <node id="46" name="Jeihrem's Barrow, Carousel" note="Carousel|vaults">
+  <node id="46" name="Jeihrem's Barrow, Carousel" note="carousel|vaults">
     <description>The interior of this oddly round hut is cut neatly in half with a large wooden wall, dividing the Carousel's booths from the main entrance.  Gears, pulleys, and weights hang from the ceiling, forming the mechanism that drives the carousel.  An air of tension lingers in the air, as if no one in the building actually wants to be there.</description>
     <position x="240" y="-51" z="0" />
     <arc exit="out" move="out" destination="31" />
+    <arc exit="west" move="west" destination="85" />
     <arc exit="go" move="go registration desk" destination="47" />
   </node>
-  <node id="47" name="Jeihrem's Barrow, Carousel Desk" note="Lost and Found" color="#00FF00">
+  <node id="47" name="Jeihrem's Barrow, Carousel Desk" note="lost and found" color="#00FF00">
     <description>A long wooden desk spans the width of the western wall.  Crude oil lanterns hang from the ceiling, and the floor behind the desk is covered in an ornate carpet that looks rather out of place.</description>
     <position x="240" y="-61" z="0" />
     <arc exit="out" move="out" destination="46" />
   </node>
-  <node id="48" name="Basalt Isle, Decaying Dock" note="Decaying Dock" color="#FF00FF">
+  <node id="48" name="Basalt Isle, Decaying Dock" note="dock" color="#FF00FF">
     <description>Originally made from sturdy wood, the dock here is splintered and ruined in places, and a large boulder has smashed through most of it near the bank.  Despite this, some of the structure appears somewhat useable, with a few sturdy pillars holding fast between the splintered boardwalk.  The water is relatively calm around the dock, providing a respite from the churning waves that plague the rest of the island.</description>
     <position x="140" y="109" z="0" />
     <arc exit="go" move="go desolate beach" destination="16" />
@@ -377,34 +378,34 @@
     <arc exit="west" move="west" destination="58" />
     <arc exit="go" move="go archway" destination="60" />
   </node>
-  <node id="60" name="Jeihrem's Manor, Serene Garden" note="Serene Garden">
+  <node id="60" name="Jeihrem's Manor, Serene Garden">
     <description>Pallid night blooming flowers seem to almost glow in juxtaposition with the darkened foliage, their ghostly shapes visible in the dim light.  Crystalline panes form the ceiling overhead, letting in dim light from the night sky.  Lush and low groudcover carpets the floor, while the muted smell of flowers comes from raised beds of smooth rock.</description>
     <description>Entirely obscured by climbing vines, the walls here have become a living tapestry of clematis and honeysuckle.  Crystalline panes form the ceiling above, held fast within wrought iron frames.  Lush and low growing groundcover carpets the floor, leaving visible only a circular path of marble shot through with intersecting stony lines.  Raised beds carved from smooth, virid rock allow for a tiered series of plantings with exquisitely large blossoms overhanging their edges to form a cascade of color.</description>
     <position x="200" y="-82" z="1" />
     <arc exit="go" move="go archway" destination="59" />
   </node>
-  <node id="61" name="Jeihrem's Manor, Chapel of Bone" note="Chapel of Bone">
+  <node id="61" name="Jeihrem's Manor, Chapel of Bone">
     <description>Hundreds of bleached white skulls strung into intricate designs rise up from each corner in fleshless grins.  Strands of skulls follow the vaulted arches of this small chapel and culminate at an enormous bone chandelier hanging from the ceiling.  The arrangement is lit with twelve skulls topped with a burning candles, illuminating the rows of understated pews below.  Carefully aligned arm bones on the front of a dark altar form an enormous and nearly solid crest, the mawlike double hex of the necromancer Jeihrem.</description>
     <position x="160" y="-82" z="1" />
     <arc exit="go" move="go door " destination="58" />
   </node>
-  <node id="62" name="Jeihrem's Throne" note="Jeihrem's Throne|GL Necromancer" color="#FF8000">
+  <node id="62" name="Jeihrem's Throne" note="gl necromancer" color="#FF8000">
     <description>Rising at the end of this long arched hallway is a dais, set with a throne made from pure obsidian and carved at sharp angles.  A huge circular window stained in murky tinges of purple and black rises behind the dais, allowing filtered daylight light to stream in from outside and shroud the throne in strange and eerie patterns.  Black iron-clad figures armed with halberds stand at attention on each side of the hall, silently guarding their master with the unmoving stillness that death brings.</description>
     <position x="140" y="-122" z="1" />
     <arc exit="go" move="go door" destination="57" />
   </node>
-  <node id="63" name="Jeihrem's Manor, West Laboratory" note="West Laboratory|W Laboratory">
+  <node id="63" name="Jeihrem's Manor, West Laboratory" note="w laboratory">
     <description>Brightly lit with mulitple gaethzen orbs set in each corner of the room, the laboratory is fully stocked with several metallic tables and counters.  Numerous tools are set out neatly and ready for use, while a glass cabinet is filled with powders, liquids, washcloths and other supplies.  A small stove rests against the northern wall, set up with glassware and ready to use for mixing chemicals.</description>
     <position x="160" y="-162" z="1" />
     <arc exit="go" move="go steel door" destination="56" />
     <arc exit="go" move="go frost door" destination="68" />
   </node>
-  <node id="64" name="Jeihrem's Manor, Secluded Library" note="Necromancer Library|Necro Library">
+  <node id="64" name="Jeihrem's Manor, Secluded Library" note="necromancer library|necro library">
     <description>Very little light enters the dusty library, the only source a dim lantern that sits on a narrow return desk.  Silhouettes of bookcases are visible in the darkness, each one lined with dark leather books.  It's quite apparent that the library is mostly neglected, although a few chairs and tables in the center of the room seem like they get at least some use.</description>
     <position x="180" y="-162" z="1" />
     <arc exit="go" move="go ironwood door" destination="55" />
   </node>
-  <node id="65" name="Jeihrem's Manor, East Laboratory" note="East Laboratory|E Laboratory">
+  <node id="65" name="Jeihrem's Manor, East Laboratory" note="e laboratory">
     <description>Harshly lit with mulitple gaethzen orbs set in each corner of the room, the laboratory is fully stocked with several metallic tables and counters.  Numerous tools are set out neatly and ready for use, while a glass cabinet is filled with powders, liquids, washcloths and other supplies.  A small stove rests against the northern wall, set up with glassware and ready to use for mixing chemicals.</description>
     <position x="200" y="-162" z="1" />
     <arc exit="go" move="go steel door" destination="55" />
@@ -418,7 +419,7 @@
     <arc exit="go" move="open steel door" destination="69" />
     <arc exit="go" move="open iron door" destination="70" />
   </node>
-  <node id="67" name="Cold Laboratory, Hallway" note="Kaitsen|Risen Supplies" color="#FF0000">
+  <node id="67" name="Cold Laboratory, Hallway" note="kaitsen|risen supplies" color="#FF0000">
     <description>Cold and clinical, the hallway is lit with harsh gaethzen lights and is painted a plain, almost blinding white.  Not a speck of dust remains in the area, which is clean to the point of being sterile.  The air is extremely cold, though dry, and narrow vents in the walls constantly circulate it around.</description>
     <position x="180" y="-202" z="1" />
     <arc exit="east" move="east" destination="66" />
@@ -464,7 +465,7 @@
    <position x="150" y="-217" z="1" />
    <arc exit="go" move="open door" destination="68" />
   </node>
-  <node id="75" name="Jeihrem's Manor, Hidden Glade" note="CRE|Necromancer Depart" color="#400040">
+  <node id="75" name="Jeihrem's Manor, Hidden Glade" note="cre|necromancer depart" color="#400040">
     <description>Wire trellises arch upward to meet overhead and are twined with numerous climbing vines, creating a small patch of garden completely surrounded by foliage.  The ground is carpeted with a thick layer of grass, peppered with tiny yellow flowers that give off a strong and heady smell.  A small obsidian statue stands in the back of the tiny glade, stylized to resemble pitch black flames.</description>
     <position x="220" y="-82" z="1" />
     <arc exit="out" move="out" destination="60" />
@@ -525,10 +526,15 @@
     <arc exit="northwest" move="northwest" destination="82" />
     <arc exit="northeast" move="northeast" destination="84" />
   </node>
-  <node id="84" name="Watcher's Cave, Shattered Altar" note="Shattered Altar">
+  <node id="84" name="Watcher's Cave, Shattered Altar">
     <description>The ground seems to fall away in all directions save the southwest, and a heavy gloom blankets the area.  Disorienting threats and promises echo from every direction, and in the darkness, regular slits of red slowly open to reveal eyes with distorted pupils which linger a moment before blinking shut and vanishing.  A shattered altar rests at the center of the end of the pathway, gaethzen shards placed in a ring illuminating the centerpiece of the this space.</description>
     <position x="180" y="-111" z="0" />
     <arc exit="southwest" move="southwest" destination="83" />
+  </node>
+  <node id="85" name="Jeihrem's Barrow, Rundmolen Post Office" note="mail|post office" color="#00FF00">
+    <description>Standing in the corner of this hut is a low stone counter made from cut stone blocks.  Vast, countless rows of differently sized shelves are behind the counter, and complex Dwarven mechanisms can be heard as they rearrange the package-covered storage.  Clerks shuffle endlessly back and forth between the counters and shelving as they assist patrons with their packaging and mailing needs.</description>
+    <position x="220" y="-51" z="0" />
+    <arc exit="east" move="east" destination="46" />
   </node>
   <label text="salt golems">
     <position x="100" y="-21" z="0" />
