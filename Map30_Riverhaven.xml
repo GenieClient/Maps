@@ -3574,6 +3574,7 @@
   </node>
   <node id="564" name="Knight's Hall, Skyward Atrium" note="Skyward Atrium">
     <description>Whimsically designed, this wide-open space provides much of the natural lighting for the entire plaza with its open roof above and numerous windows set between the shopfronts.  A small fountain with crossed stone lightning bolts is perfectly positioned to catch any precipitation with funneling assistance from cleverly located, colorful canopies above.  The shop entries here are similarly themed with rainbows, glitter-covered raindrops, clouds of cotton and more.</description>
+	<description>Fancifully designed sconces brighten the nights with a mix of flickering flames and steady gaethzen globes.  A small fountain with crossed stone lightning bolts is perfectly positioned beneath the opened roof to catch any precipitation with funneling assistance from cleverly located, colorful canopies above.  The shop entries here are similarly themed with rainbows, glitter-covered raindrops, clouds of cotton and more.</description
     <position x="380" y="550" z="0" />
     <arc exit="south" move="south" destination="563" />
   </node>
