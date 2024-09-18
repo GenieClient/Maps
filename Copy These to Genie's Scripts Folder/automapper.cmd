@@ -886,7 +886,7 @@ MOVE.SEARCH:
   eval depthtimeout $unixtime + %waitevalTimeOut
   if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
   put search
-  waitforre ^You|^After|^Just
+  waitforre ^You|^After|^Just|^There seems to be some sort of path leading to the east\.
   if ($roundtime > 0) then pause %command_pause
   put %movement
   goto MOVE.DONE
