@@ -1065,7 +1065,6 @@
     <arc exit="north" move="north" destination="115" />
     <arc exit="southeast" move="southeast" destination="130" />
     <arc exit="northwest" move="northwest" destination="117" />
-    <!--<arc exit="go" move="go narrow track" destination="147" />-->
     <arc exit="northeast" move="northeast" destination="840" />
   </node>
   <node id="117" name="North Roads Caravansary">
@@ -1284,7 +1283,6 @@
     <description>Close by, a primitive pathway has been scratched out of the hard rock and basalt to the east, where it wanders into grey shadows of dust and floating ash.  A narrow road lies between high boulders in the other direction.  Faint marks etched into the coarse dark stone point towards the path and away from the caravan road.</description>
     <position x="600" y="870" z="0" />
     <arc exit="east" move="east" />
-    <!--<arc exit="go" move="go road" destination="116" />-->
   </node>
   <node id="148" name="Sicle Grove, Gateway">
     <description>Tall untrimmed hedges of bramble and myrtle grow on either side of an oak-bough gateway.  A neatly carved sign is mounted near the top of the gate's arch.  Tufts of dried brownish grasses poke out in random clumps along the otherwise barren ground.</description>
@@ -5535,6 +5533,7 @@
     <position x="400" y="450" z="0" />
     <arc exit="northeast" move="northeast" destination="832" />
     <arc exit="east" move="east" destination="830" />
+    <arc exit="go" move="go twisting trail" destination="841" />
   </node>
   <node id="832" name="Ashen Valley, Stumpy Field">
     <description>What was once a sheltered forest snuggled up against a hillside is now a barren expanse of ash with just a few decomposing stumps sticking above the leaden-colored debris.  The once-verdant hillsides are likewise carpeted with volcanic detritus, although one trail leading around a hill is free of rubble and could provide a way to scramble up the hill.</description>
@@ -5588,6 +5587,49 @@
     <description>The air is choked with ash, but despite the suffocating wind and shattered basalt, a writhing mass of vines and flowing stone is visible, emerging from the once lifeless waste. Carving a neat circular crater and forming a massive teardrop around the space the city of Dirge once occupied, the vines trail ash and dust as they sweep across the land and flutter against the sky. The large structure stretches high, crowned by a beam of golden light.</description>
     <position x="600" y="850" z="0" />
     <arc exit="southwest" move="southwest" destination="116" />
+  </node>
+  <node id="841" name="Ashen Valley, Trail">
+    <description>The atmosphere is heavy with the scents of smoldering wood and sulfur, as the desolate landscape is shrouded in a colorless layer of ash.  Once trees thrived in the valley, but now they stand lifeless and scorched, victims of the nearby volcanoes.  The game trail twists among the stumps as if it was a serpent chasing prey.</description>
+    <position x="380" y="450" z="0" />
+    <arc exit="go" move="go twisting trail" destination="831" />
+    <arc exit="southwest" move="southwest" destination="845" />
+    <arc exit="northwest" move="northwest" destination="842" />
+  </node>
+  <node id="842" name="Ashen Valley, Trail">
+    <description>Here and there, a handful of decaying stumps rise above the volcanic detritus that litters the ground, their silent forms mute testimony to the destructive power of the nearby Fists of Heaven.  Every breath of breeze causes small puffs of ash to rise listlessly from the ground, but the ash soon settles back as if the effort to break free was too much.</description>
+    <position x="360" y="430" z="0" />
+    <arc exit="southeast" move="southeast" destination="841" />
+    <arc exit="southwest" move="southwest" destination="843" />
+  </node>
+  <node id="843" name="Ashen Valley, Trail">
+    <description>A once-thriving grove of trees has transformed into a chaotic maze of fallen logs, decomposing stumps, and heaps of ash that engulfed the region in the aftermath of a volcanic eruption.  The trail splits here, branching in many directions as if unsure of which is the best exit from this desolate landscape.  Now and then, a faint hint of sulfur drifts on the breeze, a distant reminder of the active volcanoes in the vicinity.</description>
+    <position x="340" y="450" z="0" />
+    <arc exit="northeast" move="northeast" destination="842" />
+    <arc exit="east" move="east" destination="844" />
+    <arc exit="west" move="west" destination="846" />
+  </node>
+  <node id="844" name="Ashen Valley, Trail">
+    <description>Once, a sheltered forest thrived here, but now, it lies transformed into a desolate stretch of ash, with only a handful of decaying stumps protruding from the leaden-hued wreckage.  Occasionally something drops from the bare branches, sending a small puff of ash up from the ground where it lands.</description>
+    <position x="360" y="450" z="0" />
+    <arc exit="south" move="south" destination="845" />
+    <arc exit="west" move="west" destination="843" />
+  </node>
+  <node id="845" name="Ashen Valley, Cliff">
+    <description>Ash and debris from the nearby volcanoes blankets the ground, choking the vegetation and muffling sound.  A short cliff rises above the dead trees, its sheer face sporting a few handholds that could allow a daring adventurer to ascend the cliff.</description>
+    <position x="360" y="470" z="0" />
+    <arc exit="north" move="north" destination="844" />
+    <arc exit="northeast" move="northeast" destination="841" />
+  </node>
+  <node id="846" name="Ashen Valley, Trail">
+    <description>A pervasive odor of putrid eggs saturates the vicinity, emanating from the western mountains and the towering volcanic peaks known as the Fists of Heaven that command the horizon.  Cloven hoofprints on the game trail give evidence of some life still clinging to this ashen desert.</description>
+    <position x="320" y="450" z="0" />
+    <arc exit="northeast" move="northeast" destination="847" />
+    <arc exit="east" move="east" destination="843" />
+  </node>
+  <node id="847" name="Ashen Valley, Deadfall">
+    <description>Heaped in large stacks, decaying logs and limbs block the trail.  The hoofprints mill about in the ash, indicating the confusion of the area's denizens when faced with the obstacle.  The odor of decay has driven out the sulfur scents that normally permeate this desolate valley.</description>
+    <position x="340" y="430" z="0" />
+    <arc exit="southwest" move="southwest" destination="846" />
   </node>
   <label text="Warrior Mage">
     <position x="460" y="2440" z="0" />
@@ -5783,5 +5825,8 @@
   </label>
   <label text="Ember Bulls">
     <position x="400" y="370" z="0" />
+  </label>
+  <label text="Magma Bulls">
+    <position x="310" y="410" z="0" />
   </label>
 </zone>
