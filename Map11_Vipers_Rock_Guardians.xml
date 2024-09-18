@@ -1216,11 +1216,11 @@
     <arc exit="southwest" move="southwest" destination="159" />
     <arc exit="northwest" move="northwest" destination="149" />
   </node>
-  <node id="161" name="Northern Trade Road, Wooded Valley" note="Map7_NTR.xml|NTR">
+  <node id="161" name="Northern Trade Road, Wooded Valley">
     <description>You come upon a small clearing in the heavy woods that allows a view of the sky.  A faint path can be made out that wanders into the trees, but it fades off before you can wonder about where it might lead.  There is an unnerving quiet here, even the wind seems to have died.  You feel a stranger in this wild place, perhaps an unwelcome stranger.</description>
     <position x="360" y="60" z="0" />
   </node>
-  <node id="162" name="Northern Trade Road, Wooded Valley" note="Map7_NTR.xml|NTR">
+  <node id="162" name="Northern Trade Road, Wooded Valley">
     <description>You come upon a small clearing in the heavy woods that allows a view of the sky.  A faint path can be made out that wanders into the trees, but it fades off before you can wonder about where it might lead.  There is an unnerving quiet here, even the wind seems to have died.  You feel a stranger in this wild place, perhaps an unwelcome stranger.</description>
     <position x="500" y="340" z="0" />
   </node>
