@@ -1,0 +1,1845 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Taisidon Mystery" id="0">
+  <node id="6" name="Jalren'rae'Taisidon, Beach">
+    <description>A small grove of trees grows alongside the lagoon, their broad sweeping branches reaching low and laden with the deep purple phofe flowers.  These perfumed blossoms are so rare that they can only be found in this one location.  The dampness that hovers over this island clings to the petals, filling the air with an intoxicating haze.</description>
+    <position x="800" y="280" z="0" />
+    <arc exit="northeast" move="northeast" destination="7" />
+    <arc exit="south" move="south" destination="401" />
+    <arc exit="go" move="go makeshift shelter" />
+  </node>
+  <node id="7" name="Jalren'rae'Taisidon, Beach">
+    <description>Freed from the protective circle of the lagoon, the surface of the sea is deceptively tranquil.  A fallen palm tree lies in the surf, battered by the incessant lapping of the waves, while nearby, where the jungle creeps up to the beach, a small pile of oyster shells draws flies under a durian tree.</description>
+    <position x="820" y="260" z="0" />
+    <arc exit="northeast" move="northeast" destination="8" />
+    <arc exit="southwest" move="southwest" destination="6" />
+    <arc exit="go" move="go thin path" destination="403" />
+  </node>
+  <node id="8" name="Jalren'rae'Taisidon, Rocky Beach">
+    <description>Tropical brush and vines creep over the rocky divide between beach and jungle, seeking light and room to put down roots.  As the beach curves towards some rocky cliffs to the north, the sea works at eroding the narrowing expanse, stealing a bit of sand with each gentle wave.</description>
+    <position x="840" y="240" z="0" />
+    <arc exit="southwest" move="southwest" destination="7" />
+    <arc exit="northwest" move="northwest" destination="9" />
+    <arc exit="go" move="go sea" destination="65" />
+  </node>
+  <node id="9" name="Jalren'rae'Taisidon, Rocky Beach">
+    <description>As each wave washes up on the shore it slowly erodes the face of the beach, exposing more and more of the underlying rocky feet of the cliffs to the north.  Black volcanic rocks and pink coral fragments clutter the sandy expanse between the jungle and the surf.</description>
+    <position x="820" y="220" z="0" />
+    <arc exit="northeast" move="northeast" destination="10" />
+    <arc exit="southeast" move="southeast" destination="8" />
+  </node>
+  <node id="10" name="Jalren'rae'Taisidon, Rocky Beach">
+    <description>Rock formations rising out of the sand make the path from the lagoon to the cliffs circuitous.  Two large stones lean against each other in mute harmony, framing the sea in a natural arch.  At the edge of the jungle, spiny fruits litter the ground under durian trees, swelling and cracking in the heat, sending a cloying rot to mix with the scent of the sea.</description>
+    <position x="840" y="200" z="0" />
+    <arc exit="north" move="north" destination="11" />
+    <arc exit="southwest" move="southwest" destination="9" />
+  </node>
+  <node id="11" name="Jalren'rae'Taisidon, Rocky Beach">
+    <description>Waves surge forcefully across the narrowing beach crashing against the foot of the volcanic rock cliffs rising overhead before being sucked back into the sea.  The jungle edges forward in what little sand remains, exposed roots recoiling from the salty water while quickly tacking in place any soil blown by the wind.  A felled durian tree, serving as a home for a few industrious sand crabs, lies across the path to a rocky point that extends into the churning surf.</description>
+    <position x="840" y="180" z="0" />
+    <arc exit="northeast" move="northeast" destination="12" />
+    <arc exit="south" move="south" destination="10" />
+    <arc exit="climb" move="climb cliffs" destination="114" />
+  </node>
+  <node id="12" name="Jalren'rae'Taisidon, Rocky Point" note="rocky point">
+    <description>The rocky point serves to break the force of the waves and halt complete erosion of the beach to the south.  Angry water churns and thrashes against the craggy foundation of this stolid bastion, intermittently filling the air with salty spray.  A semi-circular ring of cliffs to the north and volcanic rock formations rising from the bottom of the sea provide a turbulent residence for beds of oysters, as well as a challenging dive into the surf for those in search of pearls.</description>
+    <position x="860" y="160" z="0" />
+    <arc exit="southwest" move="southwest" destination="11" />
+    <arc exit="go" move="go lined path" />
+  </node>
+  <node id="39" name="Jalren'rae'Taisidon, Wilds" note="wilds">
+    <description>A towering gate looms at a break in a sturdy bamboo wall, guarding entry into the village of Teil-Minavsel.  The jungle lies not far away, closing in to the north and east and blocking off passage except to the west, where a thin trail tracks into the tangled embrace of the forest.</description>
+    <position x="760" y="300" z="0" />
+    <arc exit="west" move="west" destination="40" />
+    <arc exit="go" move="go bamboo gate" />
+    <arc exit="go" move="go shack" destination="282" />
+    <arc exit="east" destination="400" />
+  </node>
+  <node id="40" name="Jalren'rae'Taisidon, Wilds">
+    <description>An almost imperceptible trail winds between the tropical trees and thick underbrush.  The bamboo gates of a village can be seen not far to the east, while a group of low, but steep mountains looms out of the jungle to the northeast.</description>
+    <position x="740" y="300" z="0" />
+    <arc exit="east" move="east" destination="39" />
+    <arc exit="northwest" move="northwest" destination="41" />
+    <arc exit="go" move="go building" destination="284" />
+  </node>
+  <node id="41" name="Jalren'rae'Taisidon, Wilds">
+    <description>The route bends sharply here, curving around a copse of thick, thorny bushes.  The air is alive with the screeching of rainbow-colored birds and the biting sting of tropical insects.</description>
+    <position x="720" y="280" z="0" />
+    <arc exit="southeast" move="southeast" destination="40" />
+    <arc exit="southwest" move="southwest" destination="42" />
+  </node>
+  <node id="42" name="Jalren'rae'Taisidon, Wilds">
+    <description>The path to the west becomes more difficult to traverse as clinging vines drape from the tree limbs overhead, meshing with the undergrowth.  Ruts in the loamy soil indicate someone has used a wagon to transport, or at least attempt to transport, items to and from the depths of the forest.</description>
+    <position x="700" y="300" z="0" />
+    <arc exit="northeast" move="northeast" destination="41" />
+    <arc exit="west" move="west" destination="43" />
+    <arc exit="go" move="go faint track" destination="80" />
+  </node>
+  <node id="43" name="Jalren'rae'Taisidon, Wilds">
+    <description>The ground is steep and slippery, a rugged climb upward to the northwest.  At the crescent of the slope lies the edge of a jungle.  No sight or sound of civilization pierces the humid silence of the advancing forest.</description>
+    <position x="680" y="300" z="0" />
+    <arc exit="east" move="east" destination="42" />
+    <arc exit="northwest" move="northwest" destination="44" />
+  </node>
+  <node id="44" name="Jalren'rae'Taisidon, Wilds">
+    <description>Gaps in the foliage allow entry into the depths of the lush tropical forest to the west.  The jungle is dark, shady and foreboding, the mingled scents of swamp water and sweet nectar breathing from deep within.</description>
+    <position x="660" y="280" z="0" />
+    <arc exit="southeast" move="southeast" destination="43" />
+    <arc exit="go" move="go tendril-choked thicket" destination="45" />
+  </node>
+  <node id="45" name="Jalren'rae'Taisidon, Thicket" note="thicket" color="#008000">
+    <description>A forbidding fortress of winding tendrils wraps about tree trunks and locks them in a continuous mesh, defying all but the sharpest machetes.  Not a clue exists to direct one's course.  Danger lurks behind every bush for the weary traveler.</description>
+    <position x="620" y="320" z="0" />
+    <arc exit="west" move="west" destination="46" />
+    <arc exit="go" move="go gap" destination="44" />
+  </node>
+  <node id="46" name="Jalren'rae'Taisidon, Thicket" color="#008000">
+    <description>A forbidding fortress of winding tendrils wraps about tree trunks and locks them in a continuous mesh, defying all but the sharpest machetes.  Even now, the twisting vines have begun the work of reclosing the gap just created.</description>
+    <position x="600" y="320" z="0" />
+    <arc exit="east" move="east" destination="45" />
+    <arc exit="west" move="west" destination="47" />
+  </node>
+  <node id="47" name="Jalren'rae'Taisidon, Thicket" color="#008000">
+    <description>A forbidding fortress of winding tendrils wraps about tree trunks and locks them in a continuous mesh, defying all but the sharpest machetes.  Even now, the twisting vines have begun the work of reclosing the gap just created.</description>
+    <position x="580" y="320" z="0" />
+    <arc exit="east" move="east" destination="46" />
+    <arc exit="northwest" move="northwest" destination="48" />
+  </node>
+  <node id="48" name="Jalren'rae'Taisidon, Thicket" color="#008000">
+    <description>A forbidding fortress of winding tendrils wraps about tree trunks and locks them in a continuous mesh, defying all but the sharpest machetes.  Even now, the twisting vines have begun the work of reclosing the gap just created.</description>
+    <position x="560" y="300" z="0" />
+    <arc exit="southeast" move="southeast" destination="47" />
+    <arc exit="west" move="west" destination="49" />
+  </node>
+  <node id="49" name="Jalren'rae'Taisidon, Thicket" color="#008000">
+    <description>A forbidding fortress of winding tendrils wraps about tree trunks and locks them in a continuous mesh, defying all but the sharpest machetes.  Even now, the twisting vines have begun the work of reclosing the gap just created.</description>
+    <position x="540" y="300" z="0" />
+    <arc exit="east" move="east" destination="48" />
+    <arc exit="southwest" move="southwest" destination="50" />
+  </node>
+  <node id="50" name="Jalren'rae'Taisidon, Thicket" color="#008000">
+    <description>A forbidding fortress of winding tendrils wraps about tree trunks and locks them in a continuous mesh, defying all but the sharpest machetes.  Even now, the twisting vines have begun the work of reclosing the gap just created.</description>
+    <position x="520" y="320" z="0" />
+    <arc exit="northeast" move="northeast" destination="49" />
+    <arc exit="south" move="south" destination="51" />
+    <arc exit="go" move="go winding trail" destination="298" />
+  </node>
+  <node id="51" name="Jalren'rae'Taisidon, Thicket" color="#008000">
+    <description>A forbidding fortress of winding tendrils wraps about tree trunks and locks them in a continuous mesh, defying all but the sharpest machetes.  Even now, the twisting vines have begun the work of reclosing the gap just created.</description>
+    <position x="520" y="340" z="0" />
+    <arc exit="north" move="north" destination="50" />
+    <arc exit="west" move="west" destination="52" />
+  </node>
+  <node id="52" name="Jalren'rae'Taisidon, Thicket" color="#008000">
+    <description>A forbidding fortress of winding tendrils wraps about tree trunks and locks them in a continuous mesh, defying all but the sharpest machetes.  Even now, the twisting vines have begun the work of reclosing the gap just created.</description>
+    <position x="500" y="340" z="0" />
+    <arc exit="east" move="east" destination="51" />
+    <arc exit="west" move="west" destination="53" />
+  </node>
+  <node id="53" name="Jalren'rae'Taisidon, Thicket" color="#008000">
+    <description>A forbidding fortress of winding tendrils wraps about tree trunks and locks them in a continuous mesh, defying all but the sharpest machetes.  Even now, the twisting vines have begun the work of reclosing the gap just created.</description>
+    <position x="480" y="340" z="0" />
+    <arc exit="east" move="east" destination="52" />
+    <arc exit="west" move="west" destination="54" />
+  </node>
+  <node id="54" name="Jalren'rae'Taisidon, Thicket" color="#008000">
+    <description>A forbidding fortress of winding tendrils wraps about tree trunks and locks them in a continuous mesh, defying all but the sharpest machetes.  Even now, the twisting vines have begun the work of reclosing the gap just created.</description>
+    <position x="460" y="340" z="0" />
+    <arc exit="east" move="east" destination="53" />
+    <arc exit="go" move="go heavy undergrowth" destination="55" />
+  </node>
+  <node id="55" name="Jalren'rae'Taisidon, Wilds" color="#FFBF00">
+    <description>Foliage rustles and sways on every side, the constant movement obviously caused by more than merely the breeze.  Ropy vines swag from tree to tree, their origin somewhere high in the canopy.  Thick underbrush impedes movement, except to the west where a huge, deep pit plunges down into the ground.</description>
+    <position x="440" y="340" z="0" />
+    <arc exit="go" move="go dense thicket" destination="54" />
+    <arc exit="go" move="swing north" destination="123" />
+    <arc exit="go" move="swing south" destination="129" />
+  </node>
+  <node id="65" name="Saendalen Sea, Near Shore" note="saendalen sea|sea">
+    <description>The water splashes playfully on the rocky beach, each ebb and flow grinding the stones against each other with a rasping sound.  A glint of a fish flashes in the wake of the waves, but quickly darts out of sight.  The small rocks shift underfoot as the water continues its constant advance and retreat upon the shore.</description>
+    <position x="880" y="240" z="0" />
+    <arc exit="east" move="east" destination="66" />
+    <arc exit="go" move="go rocky shore" destination="8" />
+  </node>
+  <node id="66" name="Saendalen Sea, Rocky Shelf" color="#0000FF">
+    <description>The depth of the water suddenly increases where the rock-littered shelf underfoot ends at a sharp demarcation, and the waves swell and dip before they break to the west.  To the east, the deep water is rougher.</description>
+    <position x="900" y="240" z="0" />
+    <arc exit="north" move="north" destination="67" />
+    <arc exit="northeast" move="northeast" destination="68" />
+    <arc exit="east" move="east" destination="69" />
+    <arc exit="west" move="west" destination="65" />
+  </node>
+  <node id="67" name="Saendalen Sea, Near Cliff" color="#0000FF">
+    <description>The water is deep and cold, the currents swift.  A dangerous rock cliff cuts the inlet off from the rest of the open sea, but does little to shelter it from the rough seas.</description>
+    <position x="900" y="220" z="0" />
+    <arc exit="east" move="east" destination="68" />
+    <arc exit="southeast" move="southeast" destination="69" />
+    <arc exit="south" move="south" destination="66" />
+  </node>
+  <node id="68" name="Saendalen Sea, Deep Water" color="#0000FF">
+    <description>The farther from shore, the rougher the surf.  Huge swells of saltwater sweep any flotsam great distances in a flash, all adrift in ceaseless motion.  The size of the waves prevents further progress out to sea.</description>
+    <position x="920" y="220" z="0" />
+    <arc exit="south" move="south" destination="69" />
+    <arc exit="southwest" move="southwest" destination="66" />
+    <arc exit="west" move="west" destination="67" />
+  </node>
+  <node id="69" name="Saendalen Sea, Deep Water" color="#0000FF">
+    <description>The farther from shore, the rougher the surf.  Huge swells of saltwater sweep any flotsam great distances in a flash, all adrift in ceaseless motion.  The size of the waves prevents further progress out to sea.</description>
+    <position x="920" y="240" z="0" />
+    <arc exit="north" move="north" destination="68" />
+    <arc exit="west" move="west" destination="66" />
+    <arc exit="northwest" move="northwest" destination="67" />
+  </node>
+  <node id="80" name="Jalren'rae'Taisidon, Seord Telga" color="#008000">
+    <description>Cleared of most of the debris that litters the rest of the area, the forest floor is devoid of rubble.  Mosses, herbs and fungi grow in random patches upon the ground.  Large bromeliads and creepers spiral up the massive tree trunks, hugging the bark of the tightly on their way up into the canopy above.</description>
+    <position x="640" y="380" z="0" />
+    <arc exit="south" move="south" destination="81" />
+    <arc exit="southwest" move="southwest" destination="84" />
+    <arc exit="west" move="west" destination="82" />
+    <arc exit="go" move="go faint track" destination="42" />
+  </node>
+  <node id="81" name="Jalren'rae'Taisidon, Seord Telga" color="#008000">
+    <description>Immense trees of various shapes give way to a small clearing.  Bits of paving stones are strewn about the ground, more thickly around the large obsidian pillar leaning dangerously towards collapse.</description>
+    <position x="640" y="420" z="0" />
+    <arc exit="north" move="north" destination="80" />
+    <arc exit="west" move="west" destination="83" />
+    <arc exit="northwest" move="northwest" destination="84" />
+  </node>
+  <node id="82" name="Jalren'rae'Taisidon, Seord Telga" color="#008000">
+    <description>Dense foliage crowds close around a narrow opening, concealing it under lush greens.  The area is very difficult to navigate with rubble neatly hidden under the epiphytes and massive indigenous ferns obscuring the ground, causing a potential hazard to anyone passing through.</description>
+    <position x="600" y="380" z="0" />
+    <arc exit="east" move="east" destination="80" />
+    <arc exit="southeast" move="southeast" destination="84" />
+    <arc exit="south" move="south" destination="83" />
+  </node>
+  <node id="83" name="Jalren'rae'Taisidon, Seord Telga" color="#008000">
+    <description>The smell of damp earth hangs heavy upon the air in this ancient forest.  Massive trees tower high above, seemingly standing guard over the flora and fauna that consider this rainforest home.  The dense foliage of the immense trees that flourish in this wilderness creates a massive canopy high above.</description>
+    <position x="600" y="420" z="0" />
+    <arc exit="north" move="north" destination="82" />
+    <arc exit="northeast" move="northeast" destination="84" />
+    <arc exit="east" move="east" destination="81" />
+    <arc exit="climb" move="climb gap" destination="85" />
+  </node>
+  <node id="84" name="Jalren'rae'Taisidon, Seord Telga" note="seord telga" color="#008000">
+    <description>Brambles and lianas entwine about an enormous, collapsed tree.  The surface of this once proud giant has become a home for an abundance of mosses and lichens that coat its surface.  Sporadic hoots and calls echo from high above in the canopy.</description>
+    <position x="620" y="400" z="0" />
+    <arc exit="northeast" move="northeast" destination="80" />
+    <arc exit="southeast" move="southeast" destination="81" />
+    <arc exit="southwest" move="southwest" destination="83" />
+    <arc exit="northwest" move="northwest" destination="82" />
+  </node>
+  <node id="85" name="Jalren'rae'Taisidon, Gam Telga" color="#008000">
+    <description>The trees crowd closely here, blocking passage to the north and east.  A narrow gap -- nearly obstructed by roots and bracken -- leads northeast, its destination lost in the dim and damp.  The ferns here grow nearly as tall as a Gor'Tog, sheltering dark pools of standing water.</description>
+    <position x="560" y="420" z="0" />
+    <arc exit="south" move="south" destination="86" />
+    <arc exit="southwest" move="southwest" destination="89" />
+    <arc exit="west" move="west" destination="88" />
+    <arc exit="climb" move="climb gap" destination="83" />
+  </node>
+  <node id="86" name="Jalren'rae'Taisidon, Gam Telga" color="#008000">
+    <description>Numerous inexplicable sounds trickle through this area of the woods.  A tangle of dreary trees marks the end of the dense forest, constructing a natural barrier barring any further passage southward.</description>
+    <position x="560" y="460" z="0" />
+    <arc exit="north" move="north" destination="85" />
+    <arc exit="west" move="west" destination="87" />
+    <arc exit="northwest" move="northwest" destination="89" />
+  </node>
+  <node id="87" name="Jalren'rae'Taisidon, Gam Telga" color="#008000">
+    <description>The collapsing ruins of a massive stone wall mars the forest here, blocking passage to the west and south.  Vines and creepers besiege the once-proud edifice, their roots and tendrils slowly bringing the structure to the ground.  The trees beyond the wall are darker and denser than those here, their branches splayed high above like skeletal fingers.</description>
+    <position x="520" y="460" z="0" />
+    <arc exit="north" move="north" destination="88" />
+    <arc exit="northeast" move="northeast" destination="89" />
+    <arc exit="east" move="east" destination="86" />
+  </node>
+  <node id="88" name="Jalren'rae'Taisidon, Gam Telga" color="#008000">
+    <description>The collapsed remains of a once glorious pillar lie in ruins, knocked over by some unknown force.  Fruit-bearing plants have flourished here amongst the rubble, growing from within any crack or crevice upon the surface of the weatherworn stone.</description>
+    <position x="520" y="420" z="0" />
+    <arc exit="east" move="east" destination="85" />
+    <arc exit="southeast" move="southeast" destination="89" />
+    <arc exit="south" move="south" destination="87" />
+  </node>
+  <node id="89" name="Jalren'rae'Taisidon, Gam Telga" color="#008000">
+    <description>Set into the forest floor is an enormous circular slab of stone.  Four large pillars, each carved of different gemstone, have been placed in the cardinal directions.  Towering high above, they seem to push the canopy asunder, allowing for a break in the dense foliage.</description>
+    <position x="540" y="440" z="0" />
+    <arc exit="northeast" move="northeast" destination="85" />
+    <arc exit="southeast" move="southeast" destination="86" />
+    <arc exit="southwest" move="southwest" destination="87" />
+    <arc exit="northwest" move="northwest" destination="88" />
+  </node>
+  <node id="114" name="Jalren'rae'Taisidon, Atop the Cliff">
+    <description>Just back from the ledge, jungle brush and swampbay trees quickly become a solid wall beyond which distant mountains tower in the haze.  To the east an open ring of cliffs rises over the churning water of the sea, while the way down the cliffs to the south descends to the beach.  Birds swoop and glide through the air.  Their cries echo off the rocky walls below and mingle with the sound of the crashing waves.</description>
+    <position x="820" y="160" z="0" />
+    <arc exit="northwest" move="northwest" destination="115" />
+    <arc exit="climb" move="climb cliffs" destination="11" />
+  </node>
+  <node id="115" name="Jalren'rae'Taisidon, Atop the Cliff">
+    <description>The cliffs preside over the churning waters far below.  Insistent jungle vegetation struggles to overgrow the narrow path, and a salty tang fills the air as the wind sweeps clear the scent of rotting durian fruit.</description>
+    <position x="800" y="140" z="0" />
+    <arc exit="northeast" move="northeast" destination="116" />
+    <arc exit="southeast" move="southeast" destination="114" />
+  </node>
+  <node id="116" name="Jalren'rae'Taisidon, Atop the Cliff" note="pearl dive">
+    <description>Cool wind blows in off the sea only to be stifled by the impenetrable heat of the jungle.  A ledge arches out over the water far below, forming a well-suited perch from which to attempt a perilous dive into the churning surf.  Beneath the roiling waves large rock formations serve as a home to colonies of oysters.</description>
+    <position x="820" y="120" z="0" />
+    <arc exit="north" move="north" destination="117" />
+    <arc exit="southwest" move="southwest" destination="115" />
+    <arc exit="go" move="go ledge" hidden="True" destination="120" />
+  </node>
+  <node id="117" name="Jalren'rae'Taisidon, Atop the Cliff">
+    <description>The thick growth of the jungle prevents further progress to the north.  Off to the east, a column of rock has cracked and split away from the rest of the cliffs, forming a solitary natural tower looming over the churning water.</description>
+    <position x="820" y="100" z="0" />
+    <arc exit="south" move="south" destination="116" />
+    <arc exit="go" move="go rope bridge" destination="118" />
+  </node>
+  <node id="118" name="Jalren'rae'Taisidon, Atop the Cliff">
+    <description>Separated from the main cliff by a wide crack, this lonely pillar of rock faces the sea.  Neither time nor distance has slowed the jungle from advancement, and seeds carried on the wind have taken root, filling almost every surface with vines and trees.  Discarded, empty oysters shells litter the ground.</description>
+    <position x="820" y="80" z="0" />
+    <arc exit="go" move="go rope bridge" destination="117" />
+    <arc exit="climb" move="climb ledge" destination="119" />
+  </node>
+  <node id="119" name="Saendalan Sea, Below the Cliffs">
+    <description>Jagged rock formations pierce the churning water, appearing and vanishing again beneath the swelling waves as they crash violently against the cliffs.  Below the surface, the craggy stone sentinels spread into wide columns upon which beds of oysters have formed.</description>
+    <position x="840" y="80" z="0" />
+    <arc exit="down" move="down" />
+    <arc exit="climb" move="climb towering cliffs" destination="118" />
+  </node>
+  <node id="120" name="Saendalaen Sea, Oyster Bed" note="oyster bed">
+    <description>Pitted and jagged rocks are twisted and contorted into surreal shapes, creating a haven for creatures of the sea, including a hearty colony of oysters which cling to the craggy surfaces.  Overhead, the depth of the water creates a deep blue ceiling that contrasts with the shell-speckled sand floor.</description>
+    <position x="840" y="120" z="0" />
+    <arc exit="up" move="up" destination="121" />
+  </node>
+  <node id="121" name="Saendalan Sea, Beneath the Waves">
+    <description>Brownish-green sea kelp writhes towards the surface as it dances in the turbulent water among rock formations that rise from the bottom.  A current so strong it carries everything upward prevents exploring the oyster ledges below without a deeper dive.</description>
+    <position x="840" y="100" z="0" />
+    <arc exit="up" move="up" destination="119" />
+    <arc exit="down" move="down" />
+  </node>
+  <node id="123" name="Jalren'rae'Taisidon, Wilds" color="#FFBF00">
+    <description>A family of monkeys has claimed this territory for their own.  Chitters and chatters and screeches fill the air as they go about their business high in the branches.  The monkeys are not always visible, but the swaying of the branches and vines, to say nothing of the constant din, attest to their very active presence.</description>
+    <position x="440" y="320" z="0" />
+    <arc exit="none" move="swing south" destination="55" />
+    <arc exit="none" move="swing west" destination="124" />
+  </node>
+  <node id="124" name="Jalren'rae'Taisidon, Wilds" color="#FFBF00">
+    <description>One of the younger trees, its trunk not quite shoulder width, succumbed to some disease and fell over a number of years ago.  Saplings have sprung up all around the large hollow log, bushes have nestled up against it, and vines have overgrown it.  The small clearing created by its demise will probably be completely gone within another generation.</description>
+    <position x="420" y="320" z="0" />
+    <arc exit="none" move="swing east" destination="123" />
+    <arc exit="none" move="swing west" destination="124" />
+    <arc exit="go" move="go large log" destination="130" />
+  </node>
+  <node id="125" name="Jalren'rae'Taisidon, Wilds" color="#FFBF00">
+    <description>Dozens of tall trees stand sentinel at the edge of an immense pit, although whether they are set to mark it or to hide it is difficult to say.  Twining vines carry bright flowers up the trunks and across from branch to branch, splashes of red and yellow and orange against the deep emerald green of the foliage.</description>
+    <position x="400" y="320" z="0" />
+    <arc exit="none" move="swing east" destination="124" />
+    <arc exit="none" move="swing south" destination="126" />
+  </node>
+  <node id="126" name="Jalren'rae'Taisidon, Wilds" color="#FFBF00">
+    <description>An enormous carved rock squats here in the jungle, overgrown with vines and creepers.  The vegetation has encroached upon it from all sides, except to the east of it where a colossal pit plunges into the ground.</description>
+    <position x="400" y="340" z="0" />
+    <arc exit="none" move="swing north" destination="125" />
+    <arc exit="none" move="swing south" destination="127" />
+  </node>
+  <node id="127" name="Jalren'rae'Taisidon, Wilds" color="#FFBF00">
+    <description>Huge trees draped with vines soar up to the sky, their massive trunks as wide as two caravans standing side by side.  Younger trees and sprawling bushes hide the unevenness of the ground, filling in ruts and perching on hummocks, the leaves and branches blending into each other to form a dense mass.</description>
+    <position x="400" y="360" z="0" />
+    <arc exit="none" move="swing north" destination="126" />
+    <arc exit="none" move="swing east" destination="128" />
+  </node>
+  <node id="128" name="Jalren'rae'Taisidon, Wilds" color="#FFBF00">
+    <description>Birds call back and forth from their nests high in the canopy and their perches on vines and branches.  Tiny little dark birds flitter from place to place, always ready to dart away if a predator appears.  Larger birds, gaudy in their plumage of blue and orange and yellow, and huge bills of black and yellow stripes, flap more leisurely from one perch to another, their caws and screeches ringing through the jungle.</description>
+    <position x="420" y="360" z="0" />
+    <arc exit="none" move="swing west" destination="127" />
+    <arc exit="none" move="swing east" destination="129" />
+  </node>
+  <node id="129" name="Jalren'rae'Taisidon, Wilds" color="#FFBF00">
+    <description>Centuries of fallen leaves, vines, branches and flowers have formed a spongy mat underfoot, a decaying record of the life of the trees and plants.  A dense, earthy scent fills the air, the ghost of the ever-dying jungle lingering to haunt, for the jungle is ever-living as well, the cycle of growing and dying rolling on into the past and future.</description>
+    <position x="440" y="360" z="0" />
+    <arc exit="none" move="swing west" destination="128" />
+    <arc exit="none" move="swing north" destination="55" />
+  </node>
+  <node id="130" name="Jalren'rae'Taisidon, Swamp" color="#008000">
+    <description>Towering trees, draped with eerie shrouds of moss and protruding from the surface of shallow turbid water, creates an environment of treacherous verdant beauty.  A powerful stench from a rotting tangle of grass, plants and vines pervades the air.  This watery mire continues to the north.</description>
+    <position x="420" y="300" z="0" />
+    <arc exit="north" move="north" destination="131" />
+    <arc exit="go" move="go large log" destination="124" />
+  </node>
+  <node id="131" name="Jalren'rae'Taisidon, Swamp" color="#008000">
+    <description>Traveling deeper into the quagmire, the water-logged maze of old trees teem with life.  Stinging swarms of mosquitos abound and powerful snapping turtles lie partially buried in the mud.  Poisonous snakes glide along the water searching for prey while stately egrets fly over the vegetation.</description>
+    <position x="420" y="280" z="0" />
+    <arc exit="northeast" move="northeast" destination="132" />
+    <arc exit="south" move="south" destination="130" />
+  </node>
+  <node id="132" name="Jalren'rae'Taisidon, Swamp" color="#008000">
+    <description>Rotting tree trunks alive with creepy, crawling, stinging insects jut out of the muck making travel even more difficult.  Just ahead, an impassable pool of quicksand bars any further progress.  Beyond it, a rock slab rises from the water.</description>
+    <position x="440" y="260" z="0" />
+    <arc exit="southwest" move="southwest" destination="131" />
+    <arc exit="go" move="go bridge" destination="133" />
+  </node>
+  <node id="133" name="Jalren'rae'Taisidon, Rock Slab" color="#008000">
+    <description>A jagged rock slab rises high above the brackish water.  From this vantage point, the entire swamp can be surveyed.  Far to the west, the outline of a steep mountain can be seen through the forest of trees.</description>
+    <position x="440" y="220" z="0" />
+    <arc exit="west" move="west" destination="134" />
+    <arc exit="go" move="go bridge" destination="132" />
+  </node>
+  <node id="134" name="Jalren'rae'Taisidon, Swamp" color="#008000">
+    <description>A copse of majestic mangrove trees stands above the swamp on tangled roots.  Rippling water, stained by the red of the tree bark, laps at its base.  Staring down at you from a high perch on a long leafy branch is a vivid green iguana.  Just to the north the high humpbacked outline of a hummock can be seen.</description>
+    <position x="420" y="220" z="0" />
+    <arc exit="north" move="north" destination="135" />
+    <arc exit="east" move="east" destination="133" />
+    <arc exit="west" move="west" destination="136" />
+  </node>
+  <node id="135" name="Jalren'rae'Taisidon, Hummock" color="#008000">
+    <description>Towering trees and vines create a jungle canopy above this small patch of dry land surrounded by murky water, while flowers and plants create a lush oasis in the midst of gloom.  A graveyard hush and stillness pervade this tiny sanctuary.  A primitive statue, remarkably free of mold and dirt, stands in a small clearing.</description>
+    <position x="420" y="200" z="0" />
+    <arc exit="south" move="south" destination="134" />
+  </node>
+  <node id="136" name="Jalren'rae'Taisidon, Swamp" color="#008000">
+    <description>The sickening odor of death and decay pervades the air from a rotting, ravaged body floating in the foul water.  Its face is frozen in a grisly grimace of astonishment and agony.  Buzzards circle slowly overhead waiting patiently for their prize.</description>
+    <position x="400" y="220" z="0" />
+    <arc exit="east" move="east" destination="134" />
+    <arc exit="southeast" move="southeast" destination="137" />
+  </node>
+  <node id="137" name="Jalren'rae'Taisidon, Swamp" color="#008000">
+    <description>In sharp contrast to the horror found to the northwest, an open watery area filled with riotous colors from a floating garden in bloom are a delight for the senses.  Ghost orchids, swamp lilies, and water hyacinths float on the surface and fill the air with their sweet perfume.  A beautiful zebra butterfly drifts over the flowers on its long, thin wings of gold and velvet black.</description>
+    <position x="420" y="240" z="0" />
+    <arc exit="southwest" move="southwest" destination="138" />
+    <arc exit="northwest" move="northwest" destination="136" />
+  </node>
+  <node id="138" name="Jalren'rae'Taisidon, Swamp" color="#008000">
+    <description>As the floating garden thins out, sunlight streaming through the leaves of the trees reflects on the black water.  A large bullfrog sits on a floating lily pad, croaking its song.  On a nearby mudflat, an alligator guards her nest from smaller predators.  Scavenger picked bones stick out of the mire.</description>
+    <position x="400" y="260" z="0" />
+    <arc exit="northeast" move="northeast" destination="137" />
+    <arc exit="south" move="south" destination="139" />
+  </node>
+  <node id="139" name="Jalren'rae'Taisidon, Swamp" color="#008000">
+    <description>Noxious water laps against stalks of sharp-bladed saw grass causing it to be brown, dry and brittle.  In the distance, as the water freshens, it shades to a lush emerald green.  The ground gently slopes upward as the dense growth begins to thin out.  Further south, the fetid ordor of the swamp begins to improve.</description>
+    <position x="400" y="280" z="0" />
+    <arc exit="north" move="north" destination="138" />
+    <arc exit="go" move="go river's edge" destination="140" />
+  </node>
+  <node id="140" name="Jalren'rae'Taisidon, River's Edge" color="#008000">
+    <description>The swamp opens to a lush forest of poplar trees crowded with ravishing blooms of purple lupine.  A gentle grassy slope ends in a high embankment overlooking a winding river cutting through the green woodland.  To the north, a seemingly endless marshland stretches to the horizon.</description>
+    <position x="334" y="280" z="0" />
+    <arc exit="southeast" move="southeast" destination="141" />
+    <arc exit="go" move="go swamp" destination="139" />
+  </node>
+  <node id="141" name="Jalren'rae'Taisidon, River's Edge" note="guava tree" color="#008000">
+    <description>A clean refreshing breeze causes the leaves of the smooth, silvery aspen trees to tremble forebodingly.  Eerie silence envelopes the surrounding area broken only by the occasional sound of gurgling water or a rustling shrub.  In the distance, far to the west, a mist-shrouded, imposing mountain peak can be seen.</description>
+    <position x="354" y="300" z="0" />
+    <arc exit="southwest" move="southwest" destination="142" />
+    <arc exit="northwest" move="northwest" destination="140" />
+  </node>
+  <node id="142" name="Jalren'rae'Taisidon, River's Edge" color="#008000">
+    <description>The ground gently rises to a rounded hill ending in a steep cliff overlooking the water just ahead.  Thick, sturdy grapevines entwine the trees from the forest floor to the canopy of these highland woods.  A brilliantly colored humming bird forages among the vines, its tiny wings whirring as it hovers over a flower and dips its long, slender bill into the nectar.</description>
+    <position x="334" y="320" z="0" />
+    <arc exit="northeast" move="northeast" destination="141" />
+    <arc exit="southeast" move="southeast" destination="143" />
+  </node>
+  <node id="143" name="Jalren'rae'Taisidon, River's Edge" color="#008000">
+    <description>Overlooking the water, the steep cliff offers a panoramic view of the sinuously curving river and surrounding wooded hills.  The edge is loose and unstable from constant exposure to wind and rain.  Below the churning water is littered with large razor-sharp rocks.</description>
+    <position x="354" y="340" z="0" />
+    <arc exit="southwest" move="southwest" destination="144" />
+    <arc exit="northwest" move="northwest" destination="142" />
+  </node>
+  <node id="144" name="Jalren'rae'Taisidon, River's Edge" color="#008000">
+    <description>The knoll gradually descends, creating a small valley filled with vine-covered weeping willows.  Luxuriant branches drape over the murmuring river, and to the south, sunlight dapples the water around the big sandbar that has formed in a cove at the foot of the knoll.</description>
+    <description>The knoll gradually descends, creating a small valley filled with vine-covered weeping willows.  Luxuriant branches drape over the murmuring river, and to the south, moonlight dapples the water around the big sandbar that has formed in a cove at the foot of the knoll.</description>
+    <position x="334" y="360" z="0" />
+    <arc exit="northeast" move="northeast" destination="143" />
+    <arc exit="southeast" move="southeast" destination="145" />
+    <arc exit="south" move="south" destination="146" />
+  </node>
+  <node id="145" name="Jalren'rae'Taisidon, River's Edge" color="#008000">
+    <description>Pointed stumps of aspens, with tooth marks in them, intermingle here and there with tall poplar trees.  Wild raspberries grow in the brush near their trunks.  A splash of color is visible on the facade of an immense boulder.</description>
+    <position x="354" y="380" z="0" />
+    <arc exit="south" move="south" destination="147" />
+    <arc exit="northwest" move="northwest" destination="144" />
+    <arc exit="go" move="go clearing" destination="150" />
+  </node>
+  <node id="146" name="Jalren'rae'Taisidon, Sandbar" note="sandbar" color="#008000">
+    <description>Sturdy trees covered with tough, supple vines ring this sheltered cove where the river has laid down a big sandbar.  The stumps that stand here and there are unmistakeable signs that this is the best place to make and launch a raft.  The surging waters of the river race by the cove, sweeping away anything or anyone unlucky enough to be caught in the current.</description>
+    <position x="334" y="380" z="0" />
+    <arc exit="north" move="north" destination="144" />
+  </node>
+  <node id="147" name="Jalren'rae'Taisidon, River's Edge" color="#008000">
+    <description>An industrious beaver gnaws through trunk of an aspen tree with its sharp front teeth.  Pointed stumps can be seen in every direction.  Downed poplars litter the ground.  The end of a log can just be seen being dragged down the clear sliding pathway to the southwest.</description>
+    <position x="354" y="400" z="0" />
+    <arc exit="north" move="north" destination="145" />
+    <arc exit="southwest" move="southwest" destination="148" />
+  </node>
+  <node id="148" name="Jalren'rae'Taisidon, River's Edge" color="#008000">
+    <description>The forest opens to a strand of shimmering quartz sand and fragmented shells ending in the gurgling water of the shallow, gravel-bottomed shoreline.  The remnants of a wrecked raft lie slowly bleaching in the sand.  The pathway continues to the southwest.</description>
+    <position x="334" y="420" z="0" />
+    <arc exit="northeast" move="northeast" destination="147" />
+    <arc exit="southwest" move="southwest" destination="149" />
+  </node>
+  <node id="149" name="Jalren'rae'Taisidon, River's Edge" color="#008000">
+    <description>Dropped logs and saplings clutter the pristine white sand of this small beach.  In a sheltered cove, just off shore, a tireless beaver makes repairs to its lodge.</description>
+    <position x="314" y="440" z="0" />
+    <arc exit="northeast" move="northeast" destination="148" />
+    <arc exit="go" move="go narrow path" destination="152" />
+  </node>
+  <node id="150" name="Jalren'rae'Taisidon, Clearing">
+    <description>The thick jungle vegetation suddenly gives way to a small clearing.  Someone has swept the ground clean of even the smallest pebble, and placed several fist-sized stones to form a path to a primitive hut made from branches, sticks, and fronds, and topped with a roof of broad, waxy leaves of the indigenous plants.</description>
+    <position x="414" y="420" z="0" />
+    <arc exit="go" move="go opening" destination="145" />
+    <arc exit="go" move="go primitive hut" destination="151" />
+    <arc exit="go" move="go dense overgrowth" destination="176" />
+  </node>
+  <node id="151" name="Jalren'rae'Taisidon, Hermit's Home" note="hermit's home">
+    <description>Only the bare essentials are present in the hut.  A sleeping mat, a simple table, and a small cooking pot are the only major furnishings in the one-room dwelling.  A light breeze passes through the gaps in the make-shift walls and an occasional gust curls the corner of a woven grass sleeping mat.</description>
+    <position x="414" y="400" z="0" />
+    <arc exit="out" move="out" destination="150" />
+  </node>
+  <node id="152" name="Jalren'rae'Taisidon, River Bank">
+    <description>A narrow strip along the edge of the river extends to the northwest, but away from the river bank, a tangled green wall of vines and creepers blocks any penetration into the jungle itself.  Even the jungle dwellers must find the paths few and difficult.</description>
+    <position x="194" y="440" z="0" />
+    <arc exit="northwest" move="northwest" destination="153" />
+    <arc exit="go" move="go small beach" destination="149" />
+  </node>
+  <node id="153" name="Jalren'rae'Taisidon, River Bank">
+    <description>The living green wall of jungle stands back a ways from the river here and to the southeast.  It guards its territory like a single giant creature forbidding all entrance, yet even so, animals coming to drink have worn a path down the bankside to the river.</description>
+    <position x="174" y="420" z="0" />
+    <arc exit="north" move="north" destination="154" />
+    <arc exit="southeast" move="southeast" destination="152" />
+    <arc exit="northwest" move="northwest" destination="155" />
+  </node>
+  <node id="154" name="Corsair Lagoon, The South Beach" note="corsair lagoon">
+    <description>This small beach, like the one to the north of the gate, offers little more than a view of the lagoon and its enclosing walls.  But from this angle, it looks like some kind of trail runs along the top of the north crater wall.</description>
+    <position x="174" y="400" z="0" />
+    <arc exit="south" move="south" destination="153" />
+    <arc exit="go" move="go lagoon" destination="264" />
+  </node>
+  <node id="155" name="Jalren'rae'Taisidon, Esplanade">
+    <description>Several pilings have been sunk in the muck at the edge of the lagoon and the natives have constructed a walkway using them as support.  Depending on whether the pilings found solid ground or quicksand, this walkway overhangs the water at varying heights as it continues along the rim of the lagoon.</description>
+    <position x="154" y="400" z="0" />
+    <arc exit="southeast" move="southeast" destination="153" />
+    <arc exit="northwest" move="northwest" destination="156" />
+  </node>
+  <node id="156" name="Jalren'rae'Taisidon, Esplanade">
+    <description>Bleached-white split logs, some cracked and peeling bark from their undersides, extend into the distance with only a rope rail between a dry passage and the wet lagoon.  Every so often the walkway emits a loud creak, as if it were loosing its battle to remain above the muck.</description>
+    <position x="134" y="380" z="0" />
+    <arc exit="north" move="north" destination="157" />
+    <arc exit="southeast" move="southeast" destination="155" />
+  </node>
+  <node id="157" name="Jalren'rae'Taisidon, Esplanade">
+    <description>Sucked into the muck below, the pilings supporting this section of the Esplanade have sunk causing it to slant downward until it is only a few inches above the waves.  Every so often a good wave smacks the pilings and sends enough spray shooting over the walkway to drench the feet of anyone unwary enough to be caught in this spot.</description>
+    <position x="134" y="360" z="0" />
+    <arc exit="north" move="north" destination="158" />
+    <arc exit="south" move="south" destination="156" />
+  </node>
+  <node id="158" name="Jalren'rae'Taisidon, Esplanade">
+    <description>As the walkway begins to slant upwards, the rim of the lagoon reveals several scraggly bushes clinging to the rocky side despite the heat.  Perched out of reach at the top of the ledge is a grelkhur bush loaded with dark green seed pods.</description>
+    <position x="134" y="340" z="0" />
+    <arc exit="northeast" move="northeast" destination="159" />
+    <arc exit="south" move="south" destination="157" />
+  </node>
+  <node id="159" name="Jalren'rae'Taisidon, Esplanade">
+    <description>The scent of the Lagoon grows strong here, as its water bakes in the tropical heat causing it to release the perfume particular to a jungle watering hole.  A few monkeys screech in the surrounding trees as they cavort around swinging through the few branches that overhang the lagoon.  A loud splash caused by a coconut hitting the water imposes a sudden but brief silence.</description>
+    <position x="154" y="320" z="0" />
+    <arc exit="northeast" move="northeast" destination="160" />
+    <arc exit="southwest" move="southwest" destination="158" />
+  </node>
+  <node id="160" name="Jalren'rae'Taisidon, Esplanade">
+    <description>A huge pile of rocks jut quite a distance into the lagoon but the pilings supporting this walkway have been set on either side of the fall allowing passage above it.  From up here, it is almost possible to grab a branch extending over the lagoon from a tree on shore.</description>
+    <position x="174" y="300" z="0" />
+    <arc exit="east" move="east" destination="161" />
+    <arc exit="southwest" move="southwest" destination="159" />
+  </node>
+  <node id="161" name="Jalren'rae'Taisidon, Esplanade" color="#FFBF00">
+    <description>Slowly the esplanade begins to slant upwards, as if retreating from the waters beneath.  A sharp angle ahead hides the direction the walkway takes.  The sheer wall that forms this part of the rim looms over small beach where a few birds splash in shallow bowls in the sand.</description>
+    <position x="194" y="300" z="0" />
+    <arc exit="west" move="west" destination="160" />
+    <arc exit="climb" move="climb rim" destination="162" />
+  </node>
+  <node id="162" name="The Lagoon, Rim of the Crater" color="#FFBF00">
+    <description>The rocky rim of the crater wall rises a few feet above the crashing waves.  A crude step leading down into the lagoon makes it clear that someone comes to the water's edge here, down a trail that ascends the rim of the lagoon and wends up into the jungle.</description>
+    <position x="194" y="240" z="0" />
+    <arc exit="east" move="east" destination="163" />
+    <arc exit="climb" move="climb wooden esplanade" destination="161" />
+    <arc exit="go" move="go crude step" destination="268" />
+  </node>
+  <node id="163" name="The Lagoon, Rim of the Crater">
+    <description>The rocky trail descends from the jungle's vines and undergrowth onto the rim of a volcanic crater, now cooled.  The ocean has filled the crater, broken at the western end, and formed a large circular lagoon.</description>
+    <position x="214" y="240" z="0" />
+    <arc exit="east" move="east" destination="164" />
+    <arc exit="west" move="west" destination="162" />
+  </node>
+  <node id="164" name="The Lagoon, Rim of the Crater">
+    <description>The dense jungle growth appears to thin here at the beginning of a trail leading west.  The sound of surf can be heard from that direction, and an occasional breeze brings the smell of the ocean.</description>
+    <position x="234" y="240" z="0" />
+    <arc exit="west" move="west" destination="163" />
+    <arc exit="climb" move="climb rocky trail" destination="165" />
+  </node>
+  <node id="165" name="Jalren'rae'Taisidon, Mountain Trail" color="#993300">
+    <description>A rocky trail leads toward a small range of mountains in the west.  The gleaming water of the lagoon ripples softly in the distance as the fickle ocean breeze dances over its surface.</description>
+    <position x="254" y="220" z="0" />
+    <arc exit="west" move="west" destination="166" />
+    <arc exit="climb" move="climb lagoon's edge" destination="164" />
+  </node>
+  <node id="166" name="Jalren'rae'Taisidon, Mountain Trail" color="#993300">
+    <description>Small rocks line a pathway that curves slightly to the northwest, leading to a jagged mountain cliff.  In the distance towards the eastern horizon, a faint shimmer of reflected light reveals the presence of the ocean's enduring waves.</description>
+    <position x="234" y="220" z="0" />
+    <arc exit="east" move="east" destination="165" />
+    <arc exit="northwest" move="northwest" destination="167" />
+  </node>
+  <node id="167" name="Jalren'rae'Taisidon, Mountain Trail" color="#993300">
+    <description>A large wall of rock rises to the west, looming imposingly over the faint uneven trail.  Valiantly struggling to thrive in the poor soil, a small tree stands beside the path.  The sapling's roots twine about a large boulder, trying to draw what nourishment it can from the poor soil.</description>
+    <position x="214" y="200" z="0" />
+    <arc exit="southeast" move="southeast" destination="166" />
+    <arc exit="west" move="west" destination="168" />
+  </node>
+  <node id="168" name="Jalren'rae'Taisidon, Mountain Trail" color="#993300">
+    <description>To the west, the base of the jagged cliff is covered by an intricate web of cracks and small ledges, adequate holds for a skilled climber.</description>
+    <position x="194" y="200" z="0" />
+    <arc exit="east" move="east" destination="167" />
+    <arc exit="northwest" move="northwest" destination="169" />
+    <arc exit="go" move="go mountain pass" destination="170" />
+  </node>
+  <node id="169" name="Jalren'ra'Taisidon, Cliff Base" color="#993300">
+    <description>The dark earth of the path ends abruptly at the bottom of a sheer stone cliff.  Clouds of dust rise from the face as fickle breezes dislodge loose bits of rock.</description>
+    <position x="174" y="180" z="0" />
+    <arc exit="southeast" move="southeast" destination="168" />
+    <arc exit="climb" move="climb cliff" destination="177" />
+  </node>
+  <node id="170" name="Jalren'rai'Taisidon, Pass" color="#993300">
+    <description>The trail wends its way through this gap between two snow-covered mountain peaks.  Faint patches of grassland can be seen to the southeast.  Littered with huge boulders, the trail begins to slope downward.</description>
+    <position x="74" y="200" z="0" />
+    <arc exit="southeast" move="southeast" destination="171" />
+    <arc exit="go" move="go narrow trail" destination="168" />
+  </node>
+  <node id="171" name="Jalren'rae'Taisidon, Mountain Passage" color="#993300">
+    <description>A narrow trail littered with scree threads its way between several large boulders.  The loose gravel makes the footing very unstable, and the jagged-edged rocks surrounding the path would make a fall less than comfortable.</description>
+    <position x="94" y="220" z="0" />
+    <arc exit="northwest" move="northwest" destination="170" />
+    <arc exit="down" move="down" destination="172" />
+  </node>
+  <node id="172" name="Jalren'rae'Taisidon, Mountain Passage" color="#993300">
+    <description>A leathery rustling sound can be heard below.  The trail becomes steeper and the footing more tenuous.</description>
+    <position x="94" y="240" z="0" />
+    <arc exit="southwest" move="southwest" destination="173" />
+    <arc exit="up" move="up" destination="171" />
+  </node>
+  <node id="173" name="Jalren'rae'Taisidon, Mountain Passage" color="#993300">
+    <description>Gaps and holes in the rocks create lonely moaning sounds as the wind rushes through.  Unfamiliar sounds can be heard in the distance.</description>
+    <position x="74" y="260" z="0" />
+    <arc exit="northeast" move="northeast" destination="172" />
+    <arc exit="down" move="down" destination="174" />
+  </node>
+  <node id="174" name="Jalren'rae'Taisidon, Overlook" color="#993300">
+    <description>A wide opening in the rocks offers a spectacular view of a lush valley.  Thick ebongrass tall enough to hide a halfling grows as far as the eye can see.  Tall, knobby khor'vela trees dot the landscape, some growing to astonishing heights.  The savannah is teeming with life.  Several groups of heitaks graze peacefully, seemingly unaware of nearby menacing shapes weaving intricate patterns in the grass.</description>
+    <position x="74" y="280" z="0" />
+    <arc exit="up" move="up" destination="173" />
+    <arc exit="down" move="down" destination="175" />
+  </node>
+  <node id="175" name="Jalren'rae'Taisidon, Rock Ledge" note="rock ledge" color="#993300">
+    <description>The steep trail ends on a wide ledge allowing a panoramic view of the entire valley.  From this vantage point, the size of the savannah is clear.  Sheer cliffs stretching into the sky border the grassy plain on all sides.  On the horizon, barely visible, a thin trail snakes up to a large, sunny plateau.</description>
+    <position x="74" y="300" z="0" />
+    <arc exit="up" move="up" destination="174" />
+    <arc exit="climb" move="climb rock ledge" destination="180" />
+  </node>
+  <node id="176" name="Jalren'rae'Taisidon, Jungle Overgrowth">
+    <description>The jungle, once teeming with activity and overflowing with a cacophony of sound, is still and silent.  The moist, dank air wraps itself around everything like a smothering blanket, and muffles the sounds of creaking leather and clanking metal.  Only one direction of travel offers a convenient path and the strikingly similar foliage only serves to confuse and hinder judgement.</description>
+    <position x="374" y="420" z="0" />
+    <arc exit="north" move="north" />
+    <arc exit="northeast" move="northeast" />
+    <arc exit="east" move="east" destination="150" />
+    <arc exit="southeast" move="southeast" />
+    <arc exit="south" move="south" />
+    <arc exit="southwest" move="southwest" />
+    <arc exit="west" move="west" />
+    <arc exit="northwest" move="northwest" />
+    <arc exit="go" move="go path" destination="150" />
+  </node>
+  <node id="177" name="Cliff Face" color="#FFBF00">
+    <description>Blotting out the light, the broken face of the cliff rises imposingly into the sky.  A fine web of cracks and ledges creates a pathway for an experienced climber to use.</description>
+    <position x="174" y="160" z="0" />
+    <arc exit="climb" move="climb down" destination="169" />
+    <arc exit="climb" move="climb up" destination="178" />
+  </node>
+  <node id="178" name="Jalren'rae'Taisidon, Cliff Top" color="#993300">
+    <description>From this vantage point, the shimmering depths of the ocean lie spread out to the east.  Snow-capped mountain peaks jut high into the sky as the mountain range blocks all passage westward.  A faint path leads northward, running perilously close to the jagged edge of a steep cliff.</description>
+    <position x="154" y="160" z="0" />
+    <arc exit="northeast" move="northeast" destination="179" />
+    <arc exit="climb" move="climb cliff" destination="177" />
+  </node>
+  <node id="179" name="Jalren'rae'Taisidon, Mountain Path" color="#993300">
+    <description>The rocky trail twists and turns like a snake molting its skin, rising northward to a gap between two mountain peaks.  Tall trees rise beside the path, blanketing the mountain stone with a thick cushion of brown needles.  A haunting stillness fills the air, out of place in woods which normally should be teeming with wildlife.</description>
+    <position x="174" y="140" z="0" />
+    <arc exit="northeast" move="northeast" destination="256" />
+    <arc exit="southwest" move="southwest" destination="178" />
+  </node>
+  <node id="180" name="Jalren'rae'Taisidon, Savannah" note="savannah" color="#008000">
+    <description>Steady winds buffet the tall black grass, sending ripples along the fields like waves in an ocean of pitch.  Several young khor'vela trees protrude from the inky grass, waving to and fro in the wind.</description>
+    <position x="74" y="620" z="0" />
+    <arc exit="northeast" move="northeast" destination="182" />
+    <arc exit="east" move="east" destination="183" />
+    <arc exit="southeast" move="southeast" destination="181" />
+    <arc exit="climb" move="climb rock ledge" destination="175" />
+  </node>
+  <node id="181" name="Jalren'rae'Taisidon, Trickling Stream" note="stream" color="#008000">
+    <description>Rivulets of sparkling water cascade down the steep, cracked rock wall enclosing the valley.  The waters collect at the base of the cliff to form a small stream flowing to the east.</description>
+    <position x="94" y="640" z="0" />
+    <arc exit="north" move="north" destination="183" />
+    <arc exit="northeast" move="northeast" destination="185" />
+    <arc exit="east" move="east" destination="184" />
+    <arc exit="northwest" move="northwest" destination="180" />
+  </node>
+  <node id="182" name="Jalren'rae'Taisidon, Savannah" color="#008000">
+    <description>Progress through the thick grass is difficult.  The wind whistles through a small, dark opening in the canyon wall to the northeast.  The plateau looms above the fog in the distance.  Gnarled trees and bushes can be discerned, barely visible in the fog.</description>
+    <position x="94" y="600" z="0" />
+    <arc exit="north" move="north" destination="187" />
+    <arc exit="northeast" move="northeast" destination="188" />
+    <arc exit="east" move="east" destination="186" />
+    <arc exit="southeast" move="southeast" destination="185" />
+    <arc exit="south" move="south" destination="183" />
+    <arc exit="southwest" move="southwest" destination="180" />
+  </node>
+  <node id="183" name="Jalren'rae'Taisidon, Savannah" note="savannah bulls" color="#008000">
+    <description>The largest khor'vela in this clump is half again as thick and nearly twice as tall as the rest of the trees.  It waves ponderously in the wind, too tall and too thin to put up much of a fight.</description>
+    <position x="94" y="620" z="0" />
+    <arc exit="north" move="north" destination="182" />
+    <arc exit="northeast" move="northeast" destination="186" />
+    <arc exit="east" move="east" destination="185" />
+    <arc exit="southeast" move="southeast" destination="184" />
+    <arc exit="south" move="south" destination="181" />
+    <arc exit="west" move="west" destination="180" />
+  </node>
+  <node id="184" name="Jalren'rae'Taisidon, Watering Hole" note="watering hole">
+    <description>A small clearing in the dark grass opens to reveal a clear pool.  Protected from the winds by the surrounding grass, the water is serene and glassy.  Countless sets of tracks in the soggy soil surrounding the water indicate this is a popular watering hole.  A sun-bleached ribcage laying nearby indicates this is a popular dining spot as well.</description>
+    <position x="114" y="640" z="0" />
+    <arc exit="north" move="north" destination="185" />
+    <arc exit="west" move="west" destination="181" />
+    <arc exit="northwest" move="northwest" destination="183" />
+    <arc exit="go" move="go rocky trail" destination="200" />
+  </node>
+  <node id="185" name="Jalren'rae'Taisidon, Savannah">
+    <description>The khor'vela trees tower high in the sky, swaying in the constant breeze.  Scraps of bark, shed like a snake's skin, lie strewn about the base of the trees which grow clumped together in clusters of three or four.</description>
+    <position x="114" y="620" z="0" />
+    <arc exit="north" move="north" destination="186" />
+    <arc exit="south" move="south" destination="184" />
+    <arc exit="southwest" move="southwest" destination="181" />
+    <arc exit="west" move="west" destination="183" />
+    <arc exit="northwest" move="northwest" destination="182" />
+  </node>
+  <node id="186" name="Jalren'rae'Taisidon, Savannah">
+    <description>In the center of the wind-swept field of thick ebongrass, the leathery swishing of the blades combines with the whistling wind to mask all but the loudest of sounds.</description>
+    <position x="114" y="600" z="0" />
+    <arc exit="north" move="north" destination="188" />
+    <arc exit="south" move="south" destination="185" />
+    <arc exit="southwest" move="southwest" destination="183" />
+    <arc exit="west" move="west" destination="182" />
+    <arc exit="northwest" move="northwest" destination="187" />
+  </node>
+  <node id="187" name="Jalren'rae'Taisidon, Savannah" color="#008000">
+    <description>A recent rockslide has deposited a large amount of rock and debris in a huge pile.  Unfortunately, from the look of the half-chewed leg poking out of the pile, a heitak was caught unaware by the avalanche and was crushed.</description>
+    <position x="94" y="580" z="0" />
+    <arc exit="east" move="east" destination="188" />
+    <arc exit="southeast" move="southeast" destination="186" />
+    <arc exit="south" move="south" destination="182" />
+  </node>
+  <node id="188" name="Jalren'rae'Taisidon, Cave Opening" note="desumos pride" color="#993300">
+    <description>A dark cave mars the otherwise unblemished surface of the cliffs.  Packs of flies settle and feed on the deep, blood-stained gouges in the dirt where carcasses have been dragged into the depths of the lair.  The foul stench of death permeates the area.</description>
+    <position x="114" y="580" z="0" />
+    <arc exit="south" move="south" destination="186" />
+    <arc exit="southwest" move="southwest" destination="182" />
+    <arc exit="west" move="west" destination="187" />
+    <arc exit="go" move="go dark cave" destination="189" />
+  </node>
+  <node id="189" name="Jalren'rae'Taisidon, Cave" note="cave|skulls" color="#993300">
+    <description>Scattered with bones and ravaged carcasses, this is obviously the home of a predator.  The cave reeks of decaying meat, fresh blood, and a powerful mixture of dung and urine.  A low buzzing from the wings of hundreds of flies permeates the lair, pulsing as if the sound itself were alive.</description>
+    <position x="154" y="560" z="0" />
+    <arc exit="northwest" move="northwest" destination="190" />
+    <arc exit="go" move="go cave's mouth" destination="188" />
+    <arc exit="go" move="go crooked door" destination="195" />
+  </node>
+  <node id="190" name="Jalren'rae'Taisidon, Cave" note="cinnamon bears">
+    <description>Continuing along uneven, rocky footing, the cave narrows somewhat from the area immediately inside the entrance.  Although still not at all pleasant, the air here has more of a stale scent, with only a hint of the filth preceding it.  The walls are lined with an intricate network of cobwebs so dense that they almost seem to glow a dim grey.</description>
+    <position x="134" y="540" z="0" />
+    <arc exit="southeast" move="southeast" destination="189" />
+    <arc exit="northwest" move="northwest" destination="191" />
+  </node>
+  <node id="191" name="Jalren'rae'Taisidon, Cave">
+    <description>Making the path seem an even tighter squeeze than it actually is, pointy stone projections jut from both sides.  A tiny pool of water fills a rut in the ground, presenting a fine opportunity for the unwary to turn an ankle.  An occasional drop from somewhere above splashes into it, but the source is not visible.</description>
+    <position x="114" y="520" z="0" />
+    <arc exit="north" move="north" destination="192" />
+    <arc exit="southeast" move="southeast" destination="190" />
+  </node>
+  <node id="192" name="Jalren'rae'Taisidon, Cave">
+    <description>The floor dips into a shallow bowl shape.  It isn't too steep to negotiate easily, but the center is uneven due to a pile of pebbles, sticks, and bones collected there.  A faint rustling can be heard, but the acoustics of the confined area make it difficult to pinpoint the direction it comes from.</description>
+    <position x="114" y="500" z="0" />
+    <arc exit="north" move="north" destination="193" />
+    <arc exit="south" move="south" destination="191" />
+  </node>
+  <node id="193" name="Jalren'rae'Taisidon, Cave">
+    <description>The ground is deeply scored in two parallel tracks with splotches of a brown substance between them.  Seemingly, something heavy was dragged through here.  A shiny object glints from within a pile of rubble.</description>
+    <position x="114" y="480" z="0" />
+    <arc exit="south" move="south" destination="192" />
+    <arc exit="northwest" move="northwest" destination="194" />
+  </node>
+  <node id="194" name="Jalren'rae'Taisidon, Cave">
+    <description>The cave dead-ends here, going no farther to the north.  Off to one side is a badly mangled breastplate amidst the remains of a warrior who clearly lost this battle.  A few flies buzz around, although there isn't much of the body left other than the bones.</description>
+    <position x="94" y="460" z="0" />
+    <arc exit="southeast" move="southeast" destination="193" />
+    <arc exit="go" move="go dark opening" destination="286" />
+  </node>
+  <node id="195" name="Jalren'rae'Taisidon, Cave" note="giant blade spiders">
+    <description>Based on several gouges in the walls and faint traces of ore visible within them, it looks like this place was mined sometime in past.  No substantial veins can be seen now, so perhaps there is nothing left worth extracting.  There are a few lengths of rotting timber near the opening leading off to the northeast, probably the remains of braces used to prevent cave-ins.</description>
+    <position x="154" y="540" z="0" />
+    <arc exit="northeast" move="northeast" destination="196" />
+    <arc exit="go" move="go crooked door" destination="189" />
+  </node>
+  <node id="196" name="Jalren'rae'Taisidon, Cave">
+    <description>Treading through here disturbs a thick layer of dust, making breathing difficult.  Deep furrows lined with tiny stone chips mar the rock to the sides.  A broken pick-axe leans abandoned against one wall.</description>
+    <position x="174" y="520" z="0" />
+    <arc exit="north" move="north" destination="197" />
+    <arc exit="southwest" move="southwest" destination="195" />
+  </node>
+  <node id="197" name="Jalren'rae'Taisidon, Cave">
+    <description>An old wheelbarrow lies overturned beside a hole in the ground.  It's not clear whether the digger found what he was looking for or just gave up, but there isn't anything in there now except dirt.  Now and then, a bit of something can be heard falling to the ground, perhaps implying that this place isn't quite stable.</description>
+    <position x="174" y="500" z="0" />
+    <arc exit="north" move="north" destination="198" />
+    <arc exit="south" move="south" destination="196" />
+  </node>
+  <node id="198" name="Jalren'rae'Taisidon, Cave">
+    <description>From this point northward, it no longer resembles a mining area.  The passage appears to have been burrowed rather than carefully excavated.  Although it is fairly level, the ground feels slightly unsteady and seems to be vibrating slightly.</description>
+    <position x="174" y="480" z="0" />
+    <arc exit="north" move="north" destination="199" />
+    <arc exit="south" move="south" destination="197" />
+  </node>
+  <node id="199" name="Jalren'rae'Taisidon, Cave">
+    <description>Hard-packed mounds of dirt close off any possible progress farther north.  Aside from that, everything here looks completely natural.  A faint rustling can be heard, but what is doing it and precisely where it's coming from are not obvious.</description>
+    <position x="174" y="460" z="0" />
+    <arc exit="south" move="south" destination="198" />
+  </node>
+  <node id="200" name="Jalren'rae'Taisidon, Narrow Canyon">
+    <description>The canyon is relatively wide here, boasting a pleasant lawn of close-cropped grass on each side of a stream narrow enough to jump across.  A few sturdy trees along the slick rock walls yearn upward toward the sky, their widespread limbs sheltering dense bramble thickets.</description>
+    <position x="134" y="600" z="0" />
+    <arc exit="south" move="south" destination="201" />
+    <arc exit="go" move="go trail" destination="184" />
+  </node>
+  <node id="201" name="Jalren'rae'Taisidon, Narrow Canyon" note="par'i heitak">
+    <description>Shady and cool, a stream meanders its way along the bottom of this sheltered place.  The footing here is somewhat treacherous, the haphazardly mounded rocks, rubble and scree further slickened by algae and damp.  A few hardy plants cling to the margins of the stream, while mosses and lichens paint the rock walls with extravagant greens and greys of every hue.</description>
+    <position x="134" y="620" z="0" />
+    <arc exit="north" move="north" destination="200" />
+    <arc exit="go" move="go rocky trail" destination="202" />
+  </node>
+  <node id="202" name="Jalren'rae'Taisidon, Savannah" note="mapha arzumos">
+    <description>The remains of a medium-sized par'i heitak lie in the center of a matted circle of gore-stained grass.  Large blue-backed flies swarm overhead, as if their meal has been disturbed by the sudden presence of intruders.  To the east, a wide break in the continuous sea of grass is visible.</description>
+    <position x="154" y="580" z="0" />
+    <arc exit="east" move="east" destination="203" />
+    <arc exit="southeast" move="southeast" destination="204" />
+    <arc exit="south" move="south" destination="205" />
+    <arc exit="go" move="go trail" destination="201" />
+  </node>
+  <node id="203" name="Jalren'rae'Taisidon, Chasm Edge">
+    <description>The fissure narrows slightly here to a half-dozen paces across.  Traces of a wispy fog can be seen drifting within the dark depths of the chasm.  Across the gap a khor'vela tree grows, twisted and deformed.</description>
+    <position x="174" y="580" z="0" />
+    <arc exit="south" move="south" destination="204" />
+    <arc exit="southwest" move="southwest" destination="205" />
+    <arc exit="west" move="west" destination="202" />
+    <arc exit="go" move="go rope bridge" destination="210" />
+  </node>
+  <node id="204" name="Jalren'rae'Taisidon, Chasm Edge">
+    <description>A gaping chasm yawns mockingly at your feet.  The steeply sloping sides are studded profusely with jagged-edged outcroppings, several stained darkly with what appears to be dried blood.  Tendrils of mist caress the bloody rocks.</description>
+    <position x="174" y="600" z="0" />
+    <arc exit="north" move="north" destination="203" />
+    <arc exit="south" move="south" destination="206" />
+    <arc exit="southwest" move="southwest" destination="207" />
+    <arc exit="west" move="west" destination="205" />
+    <arc exit="northwest" move="northwest" destination="202" />
+  </node>
+  <node id="205" name="Jalren'rae'Taisidon, Savannah">
+    <description>The distant plateau looms high above you, jutting out of a thick layer of fog.  The sides of the rocky mesa are steep and cluttered with craggy outcroppings.  The top of the plateau appears to be grass covered.</description>
+    <position x="154" y="600" z="0" />
+    <arc exit="north" move="north" destination="202" />
+    <arc exit="northeast" move="northeast" destination="203" />
+    <arc exit="east" move="east" destination="204" />
+    <arc exit="southeast" move="southeast" destination="206" />
+    <arc exit="south" move="south" destination="207" />
+  </node>
+  <node id="206" name="Jalren'rae'Taisidon, Chasm Edge">
+    <description>Two sets of four evenly-spaced furrows are visible in the soil.  Beginning near the edge, the claw marks end rather abruptly at the lip of the chasm.  Bloody streaks on the rocks below contrast glaringly with a bleached white heitak skull lying on a flat outcrop nearby.</description>
+    <position x="174" y="620" z="0" />
+    <arc exit="north" move="north" destination="204" />
+    <arc exit="south" move="south" destination="208" />
+    <arc exit="southwest" move="southwest" destination="209" />
+    <arc exit="west" move="west" destination="207" />
+    <arc exit="northwest" move="northwest" destination="205" />
+  </node>
+  <node id="207" name="Jalren'rae'Taisidon, Savannah">
+    <description>A cluster of several tiny khor'vela saplings surround a group of dead khor'vela trees.  A scorched and blackened stump at the center of the clump marks the site of a powerful lightning strike.  Bits and pieces of what was once a majestic khor'vela litter the ground.</description>
+    <position x="154" y="620" z="0" />
+    <arc exit="north" move="north" destination="205" />
+    <arc exit="northeast" move="northeast" destination="204" />
+    <arc exit="east" move="east" destination="206" />
+    <arc exit="southeast" move="southeast" destination="208" />
+    <arc exit="south" move="south" destination="209" />
+  </node>
+  <node id="208" name="Jalren'rae'Taisidon, Pit Edge" note="desumos pride">
+    <description>The fissure opens into a massive pit filled to the rim with a viscous grey-green fog.  A steady howl echoes from the unseen depths, despite the air's deathly stillness.  Wispy tendrils of fog emerge from the chasm, dragging along the edge of the gaping sinkhole like unseeing hands reaching out to explore their surroundings before sinking back into the frothing mist.</description>
+    <position x="174" y="640" z="0" />
+    <arc exit="north" move="north" destination="206" />
+    <arc exit="west" move="west" destination="209" />
+    <arc exit="northwest" move="northwest" destination="207" />
+  </node>
+  <node id="209" name="Jalren'rae'Taisidon, Savannah">
+    <description>The high walls of the canyon block the strong winds and offer temporary relief from the constant gusts.  High, craggy cliffs leap skyward, pushing out of the flat ground in a knife-sharp line.</description>
+    <position x="154" y="640" z="0" />
+    <arc exit="north" move="north" destination="207" />
+    <arc exit="northeast" move="northeast" destination="206" />
+    <arc exit="east" move="east" destination="208" />
+  </node>
+  <node id="210" name="Jalren'rae'Taisidon, Mist" color="#FFBF00">
+    <description>The trees and grasses of the savannah give way to a blank, lifeless wasteland of fog.  The only remaining khor'vela tree on this side of the chasm has been mutated and warped into a gnarled shadow of its former glory.  A foreboding hill rises from the mist-covered ground, a path to its summit visible in the distance.</description>
+    <position x="194" y="560" z="0" />
+    <arc exit="south" move="south" destination="211" />
+    <arc exit="go" move="go rope bridge" destination="203" />
+  </node>
+  <node id="211" name="Jalren'rae'Taisidon, Mist" color="#FFBF00">
+    <description>The mist from the pit seeps slowly over the recessed lip of the canyon, covering the ground in a sickly pallor.  Almost spongy in consistency, the fog preserves your footsteps momentarily before they are slowly devoured by the crawling mist as it obliterates any trace of passage.</description>
+    <position x="194" y="580" z="0" />
+    <arc exit="north" move="north" destination="210" />
+    <arc exit="south" move="south" destination="212" />
+  </node>
+  <node id="212" name="Jalren'rae'Taisidon, Mist" color="#FFBF00">
+    <description>The mist completely obscures the ground and has totally eliminated the plant life on this side of the chasm.  Emanating from the giant pit to the west, the fog seems to be creeping slowly towards the towering plateau, ominously overlooking the valley floor.</description>
+    <position x="194" y="600" z="0" />
+    <arc exit="north" move="north" destination="211" />
+    <arc exit="southeast" move="southeast" destination="213" />
+  </node>
+  <node id="213" name="Jalren'rae'Taisidon, Mist" color="#FFBF00">
+    <description>Glowing blue stones flank a winding path as it twists and turns up the hillside.  The mist collects in a swirling puddle at the base of the trail and sinuous tendrils snake slowly upwards, drawn by some unknown force.</description>
+    <position x="214" y="620" z="0" />
+    <arc exit="northwest" move="northwest" destination="212" />
+    <arc exit="go" move="go winding path" destination="214" />
+  </node>
+  <node id="214" name="Jalren'rae'Taisidon, Path" color="#FFBF00">
+    <description>Treacherous and winding, the path is dangerously obscured by the dense vapor oozing its way toward the summit.  The stones lining the trail shine with an eerie light, adding a sickly blue tint to the pale grey-green color of the fog.</description>
+    <position x="234" y="640" z="0" />
+    <arc exit="up" move="up" destination="215" />
+    <arc exit="go" move="go winding path" destination="213" />
+  </node>
+  <node id="215" name="Jalren'rae'Taisidon, Path">
+    <description>From this vantage point, the savannah is once again visible.  The vibrant and living grasslands contrast sharply with the desolate, fog-shrouded plain on the east side of the fissure.  The true scope and size of the gaping pit that covers the southern portion of the valley can finally be seen from this altitude.  The center of the hole is filled with churning and swirling mist illuminated from deep within by a faint glow.</description>
+    <position x="234" y="620" z="0" />
+    <arc exit="northeast" move="northeast" destination="216" />
+    <arc exit="down" move="down" destination="214" />
+  </node>
+  <node id="216" name="Jalren'rae'Taisidon, Path">
+    <description>Traversing the plateau once again, the path narrows sharply as it passes through a large gap in the stone of the mountain itself.  The gummy vapor clings to the slick interior walls of the passage, leaving wispy traces that slowly evaporate into nothingness.</description>
+    <position x="254" y="600" z="0" />
+    <arc exit="southwest" move="southwest" destination="215" />
+    <arc exit="northwest" move="northwest" destination="217" />
+  </node>
+  <node id="217" name="Jalren'rae'Taisidon, Summit" note="crude altar">
+    <description>Turning sharply, the path climbs to the top of the plateau and rises suddenly out of a sea of fog.  Thick mists give way grudgingly to scraggly greyish grass, which, in turn, gives way to healthy green grass.  Bright sunlight is visible to the east.</description>
+    <position x="234" y="580" z="0" />
+    <arc exit="southeast" move="southeast" destination="216" />
+    <arc exit="climb" move="climb grassy plateau" destination="218" />
+  </node>
+  <node id="218" name="Jalren'rae'Taisidon, Grassy Plateau">
+    <description>A grassy plateau expands eastward from the summit of the gently sloping path.  Waves of green and golden grass bend softly in the wind and lend a slightly sweet aroma to the air.  In the distance, the pale meadow yields again to dark forms that rise against the sky.</description>
+    <position x="214" y="560" z="0" />
+    <arc exit="east" move="east" destination="219" />
+    <arc exit="climb" move="climb misty path" destination="217" />
+  </node>
+  <node id="219" name="Jalren'rae'Taisidon, Grassy Plateau">
+    <description>A buzzard perched atop a silver-flecked rock that juts from the rippling grass pecks at the fleshy remains of a small meal.  It looks up occasionally to plaintively survey the broad plateau for intruders in its domain.  Flies and tiny insects hover just above the grass humming almost inaudibly.</description>
+    <position x="234" y="560" z="0" />
+    <arc exit="east" move="east" destination="220" />
+    <arc exit="west" move="west" destination="218" />
+  </node>
+  <node id="220" name="Jalren'rae'Taisidon, Grassy Plateau">
+    <description>Dry witchgrass crackles with every movement, and insects hum in the pollen-thick air.  A low stone hut stands to the northeast, its weather-bleached thatch a pale cap to the mushroom-like structure.  The hut's plank door stands slightly ajar.  </description>
+    <position x="254" y="560" z="0" />
+    <arc exit="east" move="east" destination="221" />
+    <arc exit="west" move="west" destination="219" />
+    <arc exit="go" move="go plank door" destination="222" />
+  </node>
+  <node id="221" name="Jalren'rae'Taisidon, Grassy Plateau">
+    <description>A tall arch ornately carved with totems of the Immortals stands before a neatly pruned cemetery to the east.  A low granite wall embraces the clearing, diminishing behind a weed-choked hill that rises in the center of the enclosure.  Flowering hedges line the cobbled walkway leading to the entrance.</description>
+    <position x="274" y="560" z="0" />
+    <arc exit="west" move="west" destination="220" />
+    <arc exit="go" move="go tall arch" destination="223" />
+  </node>
+  <node id="222" name="Jalren'rae'Taisidon, Stone Hut" note="stone hut|bertoldt">
+    <description>The small hut is cool and dry, the air scented with sweet and musty smells.  Mice and insects chitter in the thatching above the sparsely furnished room.  The desiccated corpse of an elderly Elothean man slumps over a book atop a desk beside the plank door, an ivory scribing quill still in his shriveled hand.  On the wall hang several crumbling parchments.</description>
+    <position x="254" y="540" z="0" />
+    <arc exit="go" move="go plank door" destination="220" />
+  </node>
+  <node id="223" name="Jalren'rae'Taisidon, Kerwaith'lyba Burial Grounds">
+    <description>Monuments and crypts of polished marble line a neatly raked gravel trail that spirals inward toward the center of the clearing, where it vanishes into the tangled overgrowth that blankets the hill.  Raevelthorn wreaths and potted oleander surround a gilded mausoleum near the trail.</description>
+    <position x="294" y="560" z="0" />
+    <arc exit="south" move="south" destination="224" />
+    <arc exit="go" move="go tall arch" destination="221" />
+  </node>
+  <node id="224" name="Jalren'rae'Taisidon, Kerwaith'lyba Burial Grounds">
+    <description>Lead urns neatly spaced between three headstones spill over with fragrant blossoms that frame the epitaphs carved in the smooth stone.  The green lawn dotted with stones slopes toward the hill where the grass yields to a dark tangle of vines.</description>
+    <position x="294" y="600" z="0" />
+    <arc exit="north" move="north" destination="223" />
+    <arc exit="east" move="east" destination="225" />
+  </node>
+  <node id="225" name="Jalren'rae'Taisidon, Kerwaith'lyba Burial Grounds">
+    <description>The edge of the gravel path feathers at the grassline, where violets grow beyond their once carefully kept beds.  To the north, the trail fades further into taller grass.  Larger headstones lining the trail dwarf a small bronze marker sheltered by a blooming sjarta bush and spotted with creeping lichen.</description>
+    <position x="334" y="600" z="0" />
+    <arc exit="north" move="north" destination="226" />
+    <arc exit="west" move="west" destination="224" />
+  </node>
+  <node id="226" name="Jalren'rae'Taisidon, Kerwaith'lyba Burial Grounds">
+    <description>Weather-smoothed headstones poke through the tall grass, some leaning toward each other like bent old men having quiet conversations.  Thorny vines grow around the stones and press against the thinning trail.  A loamy scent rises from the dark patches of soil dappled with green moss.  An iron gate lies rusted open on its side in the thick overgrowth, leaving little clue as to whether it was to keep visitors out or something else inside.</description>
+    <position x="334" y="560" z="0" />
+    <arc exit="south" move="south" destination="225" />
+    <arc exit="west" move="west" destination="227" />
+  </node>
+  <node id="227" name="Jalren'rae'Taisidon, Kerwaith'lyba Burial Grounds">
+    <description>The ground slopes sharply beneath the tangled mesh of vines and weeds arching across the trail.  Rocks jut from the broken trail that ascends to the peak, where the shrubs and vines border a circular clearing.  A ring of tall grey stones at the top of the hill rises sharply against the wide sky.</description>
+    <position x="314" y="560" z="0" />
+    <arc exit="east" move="east" destination="226" />
+    <arc exit="go" move="go campsite" destination="228" />
+  </node>
+  <node id="228" name="Campsite" note="campsite">
+    <description>Rocks and foliage have been cleared to make room for the large tent that someone has set up in this area.  The heavy canvas tarps, held in place by branches, are silvery from long exposure to the elements.  Near the tent, a firepit holds scattered bits of charred wood and scorched rocks as evidence that others have passed here before.</description>
+    <position x="314" y="540" z="0" />
+    <arc exit="out" move="out" destination="227" />
+    <arc exit="go" move="go tent" destination="229" />
+  </node>
+  <node id="229" name="Campsite, Tent" note="tent">
+    <description>The main area of the shelter is spare but comfortable.  Gear is stacked neatly around its perimeter -- personal items and food requiring protection from the constant threat of mildew and marauding insects take up much of the space here.  The odors of canvas and tired adventurers blend with the overriding deep green scent of the tropics.</description>
+    <position x="334" y="520" z="0" />
+    <arc exit="go" move="go threadbare tarp" destination="230" />
+    <arc exit="go" move="go tent flap" destination="228" />
+    <arc exit="go" move="go red blanket" destination="231" />
+  </node>
+  <node id="230" name="Tent, Sleeping Quarters">
+    <description>Layers of palm fronds line the hard packed earthen floors, while bed-rolls are placed haphazardly about the room.  The cloying scent of citrus candles and moldering canvas hangs heavy in the oppressive heat of this small and dimly lit space.</description>
+    <position x="334" y="540" z="0" />
+    <arc exit="go" move="go threadbare tarp" destination="229" />
+  </node>
+  <node id="231" name="Tent, Sleeping Quarters">
+    <description>Undefinable shapes move in slithery patterns over the dank canvas walls, while the distinctive *thwap* of large insects hitting the ceiling of the tent keep up a steady staccato rhythm.  Tidy cots, each hung with its own mosquito netting, line either side of the room.  Flickering candlelight from the many insect-repelling candles set about the room give off meager light and fill the air with their pungent aroma.</description>
+    <position x="314" y="520" z="0" />
+    <arc exit="go" move="go hanging blanket" destination="229" />
+  </node>
+  <node id="256" name="Jalren'rae'Taisidon, Gash" color="#993300">
+    <description>A deep chasm breaks the rocky surface of the path in two.  The remains of a rope bridge hang forlornly against the far side of the gash, the connecting planks reaching nearly to the bottom of the chasm.  Several trees grow at haphazard angles over the chasm, some reaching almost to the other side.</description>
+    <position x="194" y="120" z="0" />
+    <arc exit="southwest" move="southwest" destination="179" />
+  </node>
+  <node id="256" name="Jalren'rae'Taisidon, Gash" color="#993300">
+    <description>A deep chasm breaks the rocky surface of the path in two.  The remains of a rope bridge hang forlornly against the far side of the gash, the connecting planks reaching nearly to the bottom of the chasm.  Several trees grow at haphazard angles over the chasm, some reaching almost to the other side.</description>
+    <position x="194" y="120" z="0" />
+    <arc exit="southwest" move="southwest" destination="179" />
+    <arc exit="go" move="go fallen tree" destination="257" />
+  </node>
+  <node id="257" name="Gash, Tree Trunk" color="#FFBF00">
+    <description>The bottom of the gash is cloaked in smoky shadows that occasionally belch forth noxious fumes.  The length of the tree trunk stretches across the gash to the north.  The southern edge of the chasm is within easy reach.</description>
+    <position x="194" y="100" z="0" />
+    <arc exit="north" move="north" destination="258" />
+    <arc exit="south" move="south" destination="256" />
+  </node>
+  <node id="258" name="Gash, Tree Trunk" color="#FFBF00">
+    <description>The bottom of the gash is cloaked in smoky shadows that occasionally belch forth noxious fumes.  The midway point of the tree trunk lies to the north.</description>
+    <position x="194" y="80" z="0" />
+    <arc exit="south" move="south" destination="257" />
+    <arc exit="north" move="north" destination="259" />
+  </node>
+  <node id="259" name="Gash, Tree Trunk" color="#FFBF00">
+    <description>The bottom of the gash is cloaked in smoky shadows that occasionally belch forth noxious fumes.  The trunk of the tree sways slightly at the midway point, unsettled by the slightest gust of wind.</description>
+    <position x="194" y="60" z="0" />
+    <arc exit="south" move="south" destination="258" />
+    <arc exit="north" move="north" destination="260" />
+  </node>
+  <node id="260" name="Gash, Tree Trunk" color="#FFBF00">
+    <description>The bottom of the gash is cloaked in smoky shadows that occasionally belch forth noxious fumes.  The midway point of the tree trunk lies to the south.</description>
+    <position x="194" y="40" z="0" />
+    <arc exit="south" move="south" destination="259" />
+    <arc exit="north" move="north" destination="261" />
+  </node>
+  <node id="261" name="Gash, Tree Trunk" color="#008000">
+    <description>The bottom of the gash is cloaked in smoky shadows that occasionally belch forth noxious fumes.  The length of the tree trunk stretches across the gash to the south.  The northern edge of the chasm is within easy reach.</description>
+    <position x="193" y="20" z="0" />
+    <arc exit="north" move="north" destination="460" />
+  </node>
+  <node id="263" name="Gash" note="gash">
+    <description>The sheer walls of the gash rise to either side, several hundred feet high.  Scores of dead bodies litter the ground, their armor and weapons rusted with age.  The remains of the rope bridge stretch up the side of stone walls.</description>
+    <position x="213" y="0" z="0" />
+    <arc exit="climb" move="climb rope bridge" />
+    <arc exit="climb" move="climb bridge" destination="460" />
+  </node>
+  <node id="264" name="Corsair Lagoon, In the Lagoon" note="lagoon|zombie piranhas" color="#0000FF">
+    <description>A small beach nearby offers a place to rest and regroup at the foot of the South Tower, which rises from the narrow strip to the crater rim far, far overhead.  The wall of the lagoon curves smoothly southward and westward, declining as it approaches the open western side, like the rim of a bowl tilted toward the west.</description>
+    <position x="294" y="300" z="0" />
+    <arc exit="north" move="north" destination="265" />
+    <arc exit="west" move="west" destination="271" />
+    <arc exit="northwest" move="northwest" destination="272" />
+    <arc exit="go" move="go beach" destination="154" />
+  </node>
+  <node id="265" name="Corsair Lagoon, In the Lagoon" color="#0000FF">
+    <description>Although you are directly west of the water gate, the strong outflow from the river makes swimming up to the gate itself impossible.  The same currents that aided your passage into the lagoon bar that exit.</description>
+    <position x="294" y="280" z="0" />
+    <arc exit="north" move="north" destination="266" />
+    <arc exit="south" move="south" destination="264" />
+    <arc exit="southwest" move="southwest" destination="271" />
+    <arc exit="west" move="west" destination="272" />
+    <arc exit="northwest" move="northwest" destination="267" />
+    <arc exit="down" move="down" destination="275" />
+  </node>
+  <node id="266" name="Corsair Lagoon, In the Lagoon" color="#0000FF">
+    <description>A small strip of land lies at the base of the North Tower, which looms over the little beach like the upraised arm of a giant.  The wall of the lagoon curves smoothly northward and westward at the level of the giant's forearm, sloping down toward the open western side.</description>
+    <position x="294" y="260" z="0" />
+    <arc exit="south" move="south" destination="265" />
+    <arc exit="southwest" move="southwest" destination="272" />
+    <arc exit="west" move="west" destination="267" />
+  </node>
+  <node id="267" name="Corsair Lagoon, In the Lagoon" color="#0000FF">
+    <description>The high crater wall stretches east and west, shielding the lagoon against northerly storms.  The faintest ribbon of green lies upon the rim high above.</description>
+    <position x="274" y="260" z="0" />
+    <arc exit="east" move="east" destination="266" />
+    <arc exit="southeast" move="southeast" destination="265" />
+    <arc exit="south" move="south" destination="272" />
+    <arc exit="southwest" move="southwest" destination="269" />
+    <arc exit="west" move="west" destination="268" />
+    <arc exit="down" move="down" destination="274" />
+  </node>
+  <node id="268" name="Corsair Lagoon, In the Lagoon" color="#0000FF">
+    <description>Here at the lowest part of the crater wall, foam washes a slim crevice just above the waterline.  Scarring on the sides of the crevice shows that something was once wedged within, perhaps as a handhold or a step to help mount to the crater's rim.</description>
+    <position x="254" y="260" z="0" />
+    <arc exit="east" move="east" destination="267" />
+    <arc exit="southeast" move="southeast" destination="272" />
+    <arc exit="south" move="south" destination="269" />
+    <arc exit="go" move="go small crevice" destination="162" />
+  </node>
+  <node id="269" name="Corsair Lagoon, In the Lagoon" color="#0000FF">
+    <description>The water at the western end of the lagoon roils like the wrath of Drogor.  The waves crash through the gap, thrown through the narrow breach in the crater wall.  Foam spins high into the air as the surf roars against the rock to either side.  Maybe a shark or dolphin could make headway against that tide, but nothing with legs could do it.</description>
+    <position x="254" y="280" z="0" />
+    <arc exit="north" move="north" destination="268" />
+    <arc exit="northeast" move="northeast" destination="267" />
+    <arc exit="east" move="east" destination="272" />
+    <arc exit="southeast" move="southeast" destination="271" />
+    <arc exit="south" move="south" destination="270" />
+    <arc exit="down" move="down" destination="277" />
+  </node>
+  <node id="270" name="Corsair Lagoon, In the Lagoon" color="#0000FF">
+    <description>The crater wall rises high and straight from the water, curving to the north.  It may not be smooth as glass, but it is sheer enough to defeat any attempt, no matter how skillful, aided only by bare hands.</description>
+    <position x="254" y="300" z="0" />
+    <arc exit="north" move="north" destination="269" />
+    <arc exit="northeast" move="northeast" destination="272" />
+    <arc exit="east" move="east" destination="271" />
+  </node>
+  <node id="271" name="Corsair Lagoon, In the Lagoon" color="#0000FF">
+    <description>The forbiddingly high crater wall stretches east and west, a bastion that protects the lagoon against southerly storms.  Hardly a seam or crack mars the black surface, which looks almost polished, reflecting light deep into the water.</description>
+    <position x="274" y="300" z="0" />
+    <arc exit="north" move="north" destination="272" />
+    <arc exit="northeast" move="northeast" destination="265" />
+    <arc exit="east" move="east" destination="264" />
+    <arc exit="west" move="west" destination="270" />
+    <arc exit="northwest" move="northwest" destination="269" />
+    <arc exit="down" move="down" destination="276" />
+  </node>
+  <node id="272" name="Corsair Lagoon, In the Lagoon" color="#0000FF">
+    <description>Here in the center of the lagoon, shoved back and forth by wayward currents, one could appreciate the exactness of nature's architecture, if the waves left any time for contemplation.  These waves that exhaust and defeat the swimmer would scarcely bother a ship sheltered from the ocean storm in this generous harbor.</description>
+    <position x="274" y="280" z="0" />
+    <arc exit="north" move="north" destination="267" />
+    <arc exit="northeast" move="northeast" destination="266" />
+    <arc exit="east" move="east" destination="265" />
+    <arc exit="southeast" move="southeast" destination="264" />
+    <arc exit="south" move="south" destination="271" />
+    <arc exit="southwest" move="southwest" destination="270" />
+    <arc exit="west" move="west" destination="269" />
+    <arc exit="northwest" move="northwest" destination="268" />
+    <arc exit="down" move="down" destination="273" />
+  </node>
+  <node id="273" name="Corsair Lagoon, In the Lagoon" color="#0000FF">
+    <description>Currents sweep and swirl from every direction here at the heart of the lagoon.  A bird in a storm must feel the same helplessness before vast and impersonal powers that take no more notice of a man than of a minnow.</description>
+    <position x="274" y="360" z="0" />
+    <arc exit="north" move="north" destination="274" />
+    <arc exit="east" move="east" destination="275" />
+    <arc exit="south" move="south" destination="276" />
+    <arc exit="west" move="west" destination="277" />
+    <arc exit="up" move="up" destination="272" />
+  </node>
+  <node id="274" name="Corsair Lagoon, In the Lagoon" color="#0000FF">
+    <description>Oysters have colonized a crease or wrinkle in the bottom of the crater, patiently opening and closing in a unison of mindless feeding.  No doubt they hold their own mysteries within their unknown purpose, like a lustrous pearl inside a dark shell.</description>
+    <position x="274" y="340" z="0" />
+    <arc exit="southeast" move="southeast" destination="275" />
+    <arc exit="south" move="south" destination="273" />
+    <arc exit="southwest" move="southwest" destination="277" />
+    <arc exit="up" move="up" destination="267" />
+  </node>
+  <node id="275" name="Corsair Lagoon, In the Lagoon" color="#0000FF">
+    <description>The base of the towers and the lower grill waver dimly through the water to the east.  A few plants on the floor of the lagoon find an insecure hold in pockets of silt caught within the rubble.</description>
+    <position x="294" y="360" z="0" />
+    <arc exit="southwest" move="southwest" destination="276" />
+    <arc exit="west" move="west" destination="273" />
+    <arc exit="northwest" move="northwest" destination="274" />
+    <arc exit="up" move="up" destination="265" />
+    <arc exit="down" move="down" destination="278" />
+  </node>
+  <node id="276" name="Corsair Lagoon, In the Lagoon" color="#0000FF">
+    <description>Far below in the blue-green waters of the lagoon, some curious objects are just visible: a series of perfectly round boulders.  These frozen bubbles are a mute witness to the long-forgotten birth of the island in fire and smoke when it rose from the sea in layer upon layer of ash and lava.</description>
+    <position x="274" y="380" z="0" />
+    <arc exit="north" move="north" destination="273" />
+    <arc exit="northeast" move="northeast" destination="275" />
+    <arc exit="south" move="south" destination="277" />
+    <arc exit="northwest" move="northwest" destination="277" />
+    <arc exit="up" move="up" destination="271" />
+  </node>
+  <node id="277" name="Corsair Lagoon, In the Lagoon" color="#0000FF">
+    <description>Sea water surges through the gap in the crater rim, making any further westward movement impossible.  A swimmer beyond that gap would risk being battered to death against the crater walls by wave after crashing wave.  The salt water is cleaner, though, and the rubble on the bottom is clearly visible.</description>
+    <position x="254" y="360" z="0" />
+    <arc exit="northeast" move="northeast" destination="274" />
+    <arc exit="east" move="east" destination="273" />
+    <arc exit="southeast" move="southeast" destination="276" />
+    <arc exit="up" move="up" destination="269" />
+  </node>
+  <node id="278" name="Corsair Lagoon, In the Lagoon" color="#0000FF">
+    <description>Outside the grill, the strong flow of the river has scoured the bottom clean, and rocks fallen from the crater walls cover the basin floor.  Silt in the water makes it hard to see in any direction, and the current flows powerfully westward.</description>
+    <position x="294" y="420" z="0" />
+    <arc exit="west" move="west" destination="279" />
+    <arc exit="up" move="up" destination="275" />
+  </node>
+  <node id="279" name="Corsair Lagoon, In the Lagoon" color="#0000FF">
+    <description>The force of the current is checked dramatically as tide and stream strive for mastery.  The ocean pushes its way toward shore one moment only to be pushed back by the river in the next.  The muddy flow from the river still clouds the water, obscuring vision in every direction.</description>
+    <position x="274" y="420" z="0" />
+    <arc exit="east" move="east" destination="278" />
+    <arc exit="up" move="up" destination="273" />
+  </node>
+  <node id="282" name="Once Fine Cutlery, Front Room">
+    <description>Surrounded by walls covered with gouges and nicks, the dusty sales floor stretches across the room and is littered with broken cutlery and shattered flatware.  A few cabinets that likely once displayed the wares stand bare and empty, their doors either broken or left ajar.</description>
+    <position x="760" y="270" z="0" />
+    <arc exit="go" move="go door" destination="39" />
+    <arc exit="go" move="go hatch" destination="283" />
+  </node>
+  <node id="283" name="Once Fine Cutlery, Storage">
+    <description>A minefield of glass and ceramic litters the floor as far as the eye can see.  A thin layer of dust rests atop the majority of the broken furniture, as though nothing has been disturbed for some time.  The faint smell of sulfur fills the room, drawing the eye towards several large scorch marks along the walls.</description>
+    <position x="770" y="270" z="0" />
+    <arc exit="go" move="go hatch" destination="282" />
+  </node>
+  <node id="284" name="The Painted Barn, Tools and Trade">
+    <description>Pervaded with atrophy, the burned walls barely form any real barrier to keep out the elements.  As a result, mold has begun to grow along edges of the room, and a noxious odor wafts through the air.  Bits of metal and wood litter the floor, waiting to be claimed by the growing mold.</description>
+    <position x="740" y="270" z="0" />
+    <arc exit="go" move="go door" destination="40" />
+    <arc exit="go" move="go hatch" destination="285" />
+  </node>
+  <node id="285" name="The Painted Barn, Tack and Gear">
+    <description>Mold spreads along the charred walls, giving the blackened wood a rotten, white and green hue in several spots.  Clearly once meant for the displaying of tools, empty and rusted hooks line the walls and overlook the littered floor.</description>
+    <position x="750" y="270" z="0" />
+    <arc exit="go" move="go hatch" destination="284" />
+  </node>
+  <node id="286" name="Under the Mountain, Entrance Cave" color="#993300">
+    <description>Jumbled rocks and boulders block most of the light entering the narrow mouth of this cave.  A worn path threads between the obstructions further into the gloom.</description>
+    <position x="94" y="440" z="0" />
+    <arc exit="northeast" move="northeast" destination="287" />
+    <arc exit="southeast" move="southeast" destination="291" />
+    <arc exit="go" move="go dark opening" destination="194" />
+  </node>
+  <node id="287" name="Under the Mountain, Passage" color="#993300">
+    <description>The passage widens slightly as it delves deeper into the mountain.  Jagged limestone stalactites loom above, like gnawed finger bones waiting for someone to snatch.</description>
+    <position x="114" y="420" z="0" />
+    <arc exit="east" move="east" destination="288" />
+    <arc exit="southwest" move="southwest" destination="286" />
+  </node>
+  <node id="288" name="Under the Mountain, Passage" color="#993300">
+    <description>Twisting between some enormous boulders, the faint path winds its way deeper under ground.  Gaping voids in the ceiling show where the slabs originated from.</description>
+    <position x="134" y="420" z="0" />
+    <arc exit="southeast" move="southeast" destination="289" />
+    <arc exit="west" move="west" destination="287" />
+  </node>
+  <node id="289" name="Under the Mountain, Passage" color="#993300">
+    <description>Long and narrow, this passage continues into the darkness leaving only glowing moss as the light source.  The sound of dripping water echoes against the granite walls and pebbles groan under foot.  Rank odors waft in the air and assail the senses.</description>
+    <position x="154" y="440" z="0" />
+    <arc exit="south" move="south" destination="290" />
+    <arc exit="northwest" move="northwest" destination="288" />
+  </node>
+  <node id="290" name="Under the Mountain, Passage" color="#993300">
+    <description>The passage opens into a round, spacious room.  Sharp, glinting rock walls make an impenetrable cage were it not for the continuing passage.</description>
+    <position x="154" y="500" z="0" />
+    <arc exit="north" move="north" destination="289" />
+    <arc exit="northwest" move="northwest" destination="291" />
+  </node>
+  <node id="291" name="Under the Mountain, Passage" color="#993300">
+    <description>Twisting like a snake, the corridor of rock leads further into the heart of the mountain.  The path is hardly wide enough for a gnome to tread and pointed rocks lie silently in wait of a flailing arm or leg.  Pebbles from the ceiling bounce against the rocks and land loudly on the ground.</description>
+    <position x="114" y="460" z="0" />
+    <arc exit="southeast" move="southeast" destination="290" />
+    <arc exit="northwest" move="northwest" destination="286" />
+  </node>
+  <node id="298" name="Jalren'rae'Taisidon, Winding Path" note="s'kra kor">
+    <description>Well hidden among the thickets and thistles of the island, the nearly invisible trail is a barely traveled place between the heavy trees and foliage.  Walls made from trees and dense vines rise up on either side of the narrow cleared area.  The path has the feel of a shortcut, and appears to have been forged recently, with fresh cuts of sharp instruments still visible in the local flora.</description>
+    <description>Well hidden among the thickets and thistles of the island, the nearly invisible trail is a barely traveled place between the heavy trees and foliage.  Walls made from trees and dense vines rise up on either side of the narrow cleared area.  The path has the feel of a shortcut and appears to have been forged recently, with fresh cuts of sharp instruments still visible in the local flora.</description>
+    <position x="520" y="280" z="0" />
+    <arc exit="northeast" move="northeast" destination="299" />
+    <arc exit="go" move="go winding trail" destination="50" />
+  </node>
+  <node id="299" name="Jalren'rae'Taisidon, Winding Path">
+    <description>Well hidden among the thickets and thistles of the island, the nearly invisible trail is a barely traveled place between the heavy trees and foliage.  Walls made from trees and dense vines rise up on either side of the narrow cleared area.  The path has the feel of a shortcut, and appears to have been forged recently, with fresh cuts of sharp instruments still visible in the local flora.</description>
+    <description>Well hidden among the thickets and thistles of the island, the nearly invisible trail is a barely traveled place between the heavy trees and foliage.  Walls made from trees and dense vines rise up on either side of the narrow cleared area.  The path has the feel of a shortcut and appears to have been forged recently, with fresh cuts of sharp instruments still visible in the local flora.</description>
+    <position x="540" y="260" z="0" />
+    <arc exit="north" move="north" destination="300" />
+    <arc exit="southwest" move="southwest" destination="298" />
+  </node>
+  <node id="300" name="Jalren'rae'Taisidon, Winding Path">
+    <description>Well hidden among the thickets and thistles of the island, the nearly invisible trail is a barely traveled place between the heavy trees and foliage.  Walls made from trees and dense vines rise up on either side of the narrow cleared area.  The path has the feel of a shortcut, and appears to have been forged recently, with fresh cuts of sharp instruments still visible in the local flora.</description>
+    <description>Well hidden among the thickets and thistles of the island, the nearly invisible trail is a barely traveled place between the heavy trees and foliage.  Walls made from trees and dense vines rise up on either side of the narrow cleared area.  The path has the feel of a shortcut and appears to have been forged recently, with fresh cuts of sharp instruments still visible in the local flora.</description>
+    <position x="540" y="240" z="0" />
+    <arc exit="northeast" move="northeast" destination="301" />
+    <arc exit="south" move="south" destination="299" />
+  </node>
+  <node id="301" name="Jalren'rae'Taisidon, Winding Path">
+    <description>Well hidden among the thickets and thistles of the island, the nearly invisible trail is a barely traveled place between the heavy trees and foliage.  Walls made from trees and dense vines rise up on either side of the narrow cleared area.  The path has the feel of a shortcut, and appears to have been forged recently, with fresh cuts of sharp instruments still visible in the local flora.</description>
+    <description>Well hidden among the thickets and thistles of the island, the nearly invisible trail is a barely traveled place between the heavy trees and foliage.  Walls made from trees and dense vines rise up on either side of the narrow cleared area.  The path has the feel of a shortcut and appears to have been forged recently, with fresh cuts of sharp instruments still visible in the local flora.</description>
+    <position x="560" y="220" z="0" />
+    <arc exit="southwest" move="southwest" destination="300" />
+    <arc exit="northwest" move="northwest" destination="302" />
+  </node>
+  <node id="302" name="Gai'y'rak'saar'adu, Palisade Gates">
+    <description>Thick slabs of roughly hewn wood securely fastened by stout diagonal battens of a darker wood make up the double massive entry gates.  Centered in the line of logs spearing imposingly into the sky, the gates resemble a dark squared gem set in the thick band of the defensive palisade circle.</description>
+    <description>The orange light of the guttering torches casts a sooty, wavering light up the smooth barricade of the immense double doors of the entrance gates set centrally in the thick band of the log palisade spearing imposingly into the sky.</description>
+    <description>The orange light of the guttering torches casts a sooty, wavering light up the smooth barricade of the immense double doors of the entrance gates, which are set centrally in the thick band of the log palisade spearing imposingly into the sky.</description>
+    <position x="540" y="200" z="0" />
+    <arc exit="southeast" move="southeast" destination="301" />
+    <arc exit="west" move="west" destination="303" />
+    <arc exit="go" move="go massive gate" destination="320" />
+  </node>
+  <node id="303" name="Gai'y'rak'saar'adu, Palisade Path">
+    <description>Spearing imposingly into the sky, the thick logs of the palisade forbid any intrusion into the compound.  The faint trail patrols the length of the wall, apparently beaten into the lush grasses by the inhabitants' feet as they scrutinize any possible breach in the security of the logs.</description>
+    <description>Spearing imposingly into the night, the thick logs of the palisade forbid any intrusion into the compound.  The faint trail patrols the length of the wall, apparently beaten into the lush grasses by the inhabitants' feet as they scrutinize any possible breach in the security of the logs.</description>
+    <position x="520" y="200" z="0" />
+    <arc exit="east" move="east" destination="302" />
+    <arc exit="northwest" move="northwest" destination="304" />
+  </node>
+  <node id="304" name="Gai'y'rak'saar'adu, Palisade Path">
+    <description>Spearing imposingly into the sky, the thick logs of the palisade forbid any intrusion into the compound.  The faint trail patrols the length of the wall, apparently beaten into the lush grasses by the inhabitants' feet as they scrutinize any possible breach in the security of the logs.</description>
+    <description>Spearing imposingly into the night, the thick logs of the palisade forbid any intrusion into the compound.  The faint trail patrols the length of the wall, apparently beaten into the lush grasses by the inhabitants' feet as they scrutinize any possible breach in the security of the logs.</description>
+    <position x="500" y="180" z="0" />
+    <arc exit="southeast" move="southeast" destination="303" />
+    <arc exit="west" move="west" destination="305" />
+  </node>
+  <node id="305" name="Gai'y'rak'saar'adu, Palisade Path">
+    <description>Spearing imposingly into the night, the thick logs of the palisade forbid any intrusion into the compound.  The faint trail patrols the length of the wall, apparently beaten into the lush grasses by the inhabitants' feet as they scrutinize any possible breach in the security of the logs.</description>
+    <position x="480" y="180" z="0" />
+    <arc exit="northwest" move="northwest" destination="306" />
+    <arc exit="east" move="east" destination="304" />
+  </node>
+  <node id="306" name="Gai'y'rak'saar'adu, Palisade Path">
+    <description>Spearing imposingly into the night, the thick logs of the palisade forbid any intrusion into the compound.  The faint trail patrols the length of the wall, apparently beaten into the lush grasses by the inhabitants' feet as they scrutinize any possible breach in the security of the logs.</description>
+    <position x="460" y="160" z="0" />
+    <arc exit="north" move="north" destination="307" />
+    <arc exit="southeast" move="southeast" destination="305" />
+  </node>
+  <node id="307" name="Gai'y'rak'saar'adu, Palisade Path">
+    <description>Spearing imposingly into the night, the thick logs of the palisade forbid any intrusion into the compound.  The faint trail patrols the length of the wall, apparently beaten into the lush grasses by the inhabitants' feet as they scrutinize any possible breach in the security of the logs.</description>
+    <position x="460" y="140" z="0" />
+    <arc exit="north" move="north" destination="308" />
+    <arc exit="south" move="south" destination="306" />
+  </node>
+  <node id="308" name="Gai'y'rak'saar'adu, Palisade Path">
+    <description>Spearing imposingly into the night, the thick logs of the palisade forbid any intrusion into the compound.  The faint trail patrols the length of the wall, apparently beaten into the lush grasses by the inhabitants' feet as they scrutinize any possible breach in the security of the logs.</description>
+    <position x="460" y="120" z="0" />
+    <arc exit="north" move="north" destination="309" />
+    <arc exit="south" move="south" destination="307" />
+  </node>
+  <node id="309" name="Gai'y'rak'saar'adu, Palisade Path">
+    <description>Spearing imposingly into the night, the thick logs of the palisade forbid any intrusion into the compound.  The faint trail patrols the length of the wall, apparently beaten into the lush grasses by the inhabitants' feet as they scrutinize any possible breach in the security of the logs.</description>
+    <position x="460" y="100" z="0" />
+    <arc exit="northeast" move="northeast" destination="310" />
+    <arc exit="south" move="south" destination="308" />
+  </node>
+  <node id="310" name="Gai'y'rak'saar'adu, Palisade Path">
+    <description>Spearing imposingly into the night, the thick logs of the palisade forbid any intrusion into the compound.  The faint trail patrols the length of the wall, apparently beaten into the lush grasses by the inhabitants' feet as they scrutinize any possible breach in the security of the logs.</description>
+    <position x="480" y="80" z="0" />
+    <arc exit="northeast" move="northeast" destination="311" />
+    <arc exit="southwest" move="southwest" destination="309" />
+  </node>
+  <node id="311" name="Gai'y'rak'saar'adu, Palisade Path">
+    <description>Spearing imposingly into the night, the thick logs of the palisade forbid any intrusion into the compound.  The faint trail patrols the length of the wall, apparently beaten into the lush grasses by the inhabitants' feet as they scrutinize any possible breach in the security of the logs.</description>
+    <position x="500" y="60" z="0" />
+    <arc exit="northeast" move="northeast" destination="312" />
+    <arc exit="southwest" move="southwest" destination="310" />
+    <arc exit="go" move="go side gate" destination="313" />
+  </node>
+  <node id="312" name="Gai'y'rak'saar'adu, Palisade End">
+    <description>Spearing imposingly into the sky, the thick logs of the palisade forbid any intrusion into the compound.  The faint trail patrols the length of the wall, apparently beaten into the lush grasses by the inhabitants' feet as they scrutinize any possible breach in the security of the logs.</description>
+    <position x="520" y="40" z="0" />
+    <arc exit="southwest" move="southwest" destination="311" />
+  </node>
+  <node id="313" name="Gai'y'rak'saar'adu, Storage Hut">
+    <description>Constructed near the looming logs of the palisade, a three-sided hut crammed with hides, food storage, and tribal crafts is shaded from the heat of the day by the softly waving fronds of a gum tree.  The area before the hut has been paved with broad flat stones, forming a patio holding the heat of the sun in the rock.</description>
+    <description>Close by the looming logs of the palisade a three-sided hut crammed with hides, food storage, and tribal crafts is half hidden in the dusky shades of night.</description>
+    <position x="560" y="100" z="0" />
+    <arc exit="east" move="east" destination="318" />
+    <arc exit="south" move="south" destination="314" />
+    <arc exit="southeast" move="southeast" destination="317" />
+    <arc exit="go" move="go hut" destination="336" />
+    <arc exit="go" move="go side gate" destination="311" />
+  </node>
+  <node id="314" name="Gai'y'rak'saar'adu, Swamp Bay Commons">
+    <description>Centered at an angle across this corner of the commons, a long grass hut lounges amid the almost painful neatness of the area.  Crossing diagonal traces in the swept dirt suggest this area may be used in the training of warriors, as do the grass-stuffed forms of training dummies leaning against the hut.  The sharp spice from the swamp bay at the center of the commons does little to allay the mingled ancient smells of sweat and blood that have permeated the ground.</description>
+    <description>The scent of a thick savory stew spills from the large pot briskly simmering on the large cooking fire blazing near a long grass hut angled across the clearing, combining with the sharp tang of spice emanating from the large swamp bay centered in the commons.  The light from the blazing fire throws the painful neatness of the clearing before the hut into sharp relief, giving enough light to pick out swirls in the neatly swept dirt and easily see the stern neatness surrounding this corner.</description>
+    <position x="560" y="120" z="0" />
+    <arc exit="north" move="north" destination="313" />
+    <arc exit="northeast" move="northeast" destination="318" />
+    <arc exit="east" move="east" destination="317" />
+    <arc exit="southeast" move="southeast" destination="316" />
+    <arc exit="south" move="south" destination="315" />
+  </node>
+  <node id="315" name="Gai'y'rak'saar'adu, Swamp Bay Commons">
+    <description>An ill-tended grass hut slouches in the far corner of a scruffy clearing, scatters of wood chips and carving curls littering the area before the entrance.  The shaggy reddish bark of the swamp bay in the center of the clearing scents the air with a sharp spice aroma as welcome shade flutters under the broad leaves moving restlessly in the slightest breeze from the gnarled branches tangling overhead.</description>
+    <description>A rejected carving of a small owl smolders dejectedly in the tiny night fire.  Surrounded by the sharp tang of spice drifting from the huge swamp willow in the center of the commons, an ill-tended grass hut slouches in the darkest corner.  The only evidence of habitation is the scatter of wood chips and carving curls liberally littering the area before the entrance of the hut.</description>
+    <position x="560" y="140" z="0" />
+    <arc exit="north" move="north" destination="314" />
+    <arc exit="northeast" move="northeast" destination="317" />
+    <arc exit="east" move="east" destination="316" />
+  </node>
+  <node id="316" name="Gai'y'rak'saar'adu, Swamp Bay Commons">
+    <description>A spartan grass hut boldly claims this corner of the commons.  The ground is fastidiously cleared of every weed, the remaining vegetation militarily neat under the spreading boughs of the swamp bay.  The clean spice scent of the tree anoints the air as the welcome shade flutters from the broad leaves moving restlessly in the slightest breeze from the gnarled branches tangling overhead.</description>
+    <description>A spartan grass hut boldly claims this corner of the commons.  The ground is fastidiously cleared, the remaining vegetation militarily neat.  A clean spice scent anoints the air as an evening breeze flutters restlessly through the broad leaves of the gnarled swamp bay.  The embers of a small cooking fire glow in the darkness, painting this corner of the clearing in a weak illumination.</description>
+    <position x="580" y="140" z="0" />
+    <arc exit="north" move="north" destination="317" />
+    <arc exit="southeast" move="southeast" destination="319" />
+    <arc exit="west" move="west" destination="315" />
+    <arc exit="northwest" move="northwest" destination="314" />
+    <arc exit="go" move="go hut" destination="337" />
+  </node>
+  <node id="317" name="Gai'y'rak'saar'adu, Swamp Bay Commons">
+    <description>The plump rotund grass hut squats in cheerful squalor surrounded by a neglected rock garden, the scent of the minute purple and white violets peeking up from the vine-twined rocks competing with the sharp spiciness of the swamp bay holding court from the center of the clearing.  Welcome shade flutters from the broad leaves moving restlessly in the slightest breeze from the gnarled branches tangling overhead.</description>
+    <position x="580" y="120" z="0" />
+    <arc exit="north" move="north" destination="318" />
+    <arc exit="south" move="south" destination="316" />
+    <arc exit="southwest" move="southwest" destination="315" />
+    <arc exit="west" move="west" destination="314" />
+    <arc exit="northwest" move="northwest" destination="313" />
+  </node>
+  <node id="318" name="Gai'y'rak'saar'adu, Abandoned Hut">
+    <description>The relentless humidity and heat have taken their toll on the dilapidated hut sagging dispiritedly in the overgrown clearing at the end of the path.  Shunned by its neighbors, the structure is prevented from total collapse only by the sturdy trunks of the palisade against which it now leans.</description>
+    <position x="580" y="100" z="0" />
+    <arc exit="south" move="south" destination="317" />
+    <arc exit="southwest" move="southwest" destination="314" />
+    <arc exit="west" move="west" destination="313" />
+    <arc exit="go" move="go weed-choked path" destination="329" />
+    <arc exit="go" move="go hut" destination="335" />
+  </node>
+  <node id="319" name="Gai'y'rak'saar'adu, West Ward">
+    <description>The barren ground continues to the bend of the stockade before curving in on itself, bearing evidence of the vigilant guards who have worn the ground down to bare earth.  Beyond the barren ground a cluster of grass huts can be seen to the north.</description>
+    <description>The barren ground continues to the bend of the stockade before curving in on itself, bearing evidence of the vigilant guards who have worn the ground down to bare earth.  Beyond the barren ground small flickering night fires are visible from the north.</description>
+    <position x="600" y="160" z="0" />
+    <arc exit="east" move="east" destination="321" />
+    <arc exit="southeast" move="southeast" destination="320" />
+    <arc exit="northwest" move="northwest" destination="316" />
+  </node>
+  <node id="320" name="Gai'y'rak'saar'adu, Interior Gates">
+    <description>Just within the gates a broad expanse of hard-beaten earth runs in either direction along the stockade wall.  The faint chatter of village life drifts sporadically from the north.</description>
+    <description>Two massive torches flare brilliantly on either side of the gate, washing the barren area in a flickering orange hue.  In the dim light, night fires are visible clustering to the north on either side.</description>
+    <position x="620" y="180" z="0" />
+    <arc exit="north" move="north" destination="321" />
+    <arc exit="northeast" move="northeast" destination="322" />
+    <arc exit="northwest" move="northwest" destination="319" />
+    <arc exit="go" move="go massive gate" destination="302" />
+  </node>
+  <node id="321" name="Gai'y'rak'saar'adu, Central Ward">
+    <description>Hard-packed ground barren of any vegetation forms a protective necklace separating the sprawl of vulnerable huts and gardens from the defensive stockade.  Below, the massive gates mark the main entrance into this haven from the wilderness.</description>
+    <description>A defensive band of hard-packed earth curls around the southern end of the vulnerable village, leaving sufficient room for guards to patrol the stockade or warriors to mass if danger threatens.  On the far side of the beaten ground, the flicker of small night fires strives to ward away the evils that stalk the night.</description>
+    <position x="620" y="160" z="0" />
+    <arc exit="east" move="east" destination="322" />
+    <arc exit="south" move="south" destination="320" />
+    <arc exit="west" move="west" destination="319" />
+  </node>
+  <node id="322" name="Gai'y'rak'saar'adu, East Ward">
+    <description>The barren ground continues to the bend of the stockade before curving in on itself, bearing evidence of vigilant guards who have worn the ground down to bare earth.  Beyond the barren ground, a cluster of grass huts can be seen to the north.</description>
+    <description>The barren ground continues to the bend of the stockade before curving in on itself, bearing evidence of the vigilant guards who have worn the ground down to bare earth.  Beyond the barren ground, night fires flicker from the north.</description>
+    <position x="640" y="160" z="0" />
+    <arc exit="northeast" move="northeast" destination="323" />
+    <arc exit="southwest" move="southwest" destination="320" />
+    <arc exit="west" move="west" destination="321" />
+    <arc exit="go" move="go path" destination="338" />
+    <arc exit="go" move="go dirt path" destination="338" />
+  </node>
+  <node id="323" name="Gai'y'rak'saar'adu, Sweet Bay Commons">
+    <description>Sharp shards of broken crockery lie in an untidy pile behind the stout conical hut surrounded by heaped piles of colored dirt.  Dappled shade washes over all from the broad branches the bay tree spreads in a protective parasol from the hub of the clearing, bringing the illusion of relief from the oppressive heat.</description>
+    <description>The embers of a small cooking fire glow in the darkness, throwing a weak illumination over the stout conical hut.  The heaps of clay and dirt surrounding the hut take on fantastical shapes that seem to slink just out of clear vision in the uneven light.</description>
+    <position x="660" y="140" z="0" />
+    <arc exit="north" move="north" destination="325" />
+    <arc exit="northeast" move="northeast" destination="334" />
+    <arc exit="east" move="east" destination="324" />
+    <arc exit="southwest" move="southwest" destination="322" />
+    <arc exit="go" move="go conical hut" destination="339" />
+  </node>
+  <node id="324" name="Gai'y'rak'saar'adu, Sweet Bay Commons">
+    <description>A pile of neatly trimmed branches is stacked by the curved wall of a well-tended conical hut.  The sweet scent of bay wafting from the thick gnarled tree commanding the center of the commons competes with the astringent odor of rendering dye slowly simmering over the cooking fire.</description>
+    <description>A small cooking fire casts a wavering illumination over the well tended ground and prosperous hut in this corner of the clearing.  Stacked neatly at the rear of the hut, a pile of neatly trimmed branches waits in readiness to feed the flickering flames.</description>
+    <position x="680" y="140" z="0" />
+    <arc exit="north" move="north" destination="334" />
+    <arc exit="west" move="west" destination="323" />
+    <arc exit="northwest" move="northwest" destination="325" />
+  </node>
+  <node id="325" name="Gai'y'rak'saar'adu, Sweet Bay Commons">
+    <description>Halved logs have been set as a base to hold a complicated arrangement of woven reeds and branches being used as a drying rack.  Rows of halved coconut shells, each neatly hollowed out, are inverted on the rack to cure.  Following a rough arc, a wide fire blazes busily under a pot of furiously boiling water by a narrow conical hut.</description>
+    <description>The cooking fire burns brightly in this corner of the commons, brilliantly illuminating the narrow shaft of the conical hut and the wide drying rack flanking it on either side.  The smell of simmering herbs strongly permeates the shadows from the velvet darkness within the hut.</description>
+    <position x="660" y="120" z="0" />
+    <arc exit="north" move="north" destination="326" />
+    <arc exit="east" move="east" destination="334" />
+    <arc exit="southeast" move="southeast" destination="324" />
+    <arc exit="south" move="south" destination="323" />
+  </node>
+  <node id="326" name="Gai'y'rak'saar'adu, Sweet Bay Drums">
+    <description>Spread under the shady branches, several large bamboo segments are in varying stages of being hollowed out.  A few wood-handled implements that appear to be used for scooping the pulp from the bamboo lie on the ground in front of an oval hut.  As quiet as the area is now, the entire jungle will know when these drums are finished.</description>
+    <description>Sweetbay branches dispel a bit of the omniscient heat of the jungle as they sway in the night breeze.  Their lazy movement creates silent shadows that chase each other around large, partially hollowed, bamboo segments in front of the oval hut.  As darkness caused the day's labor to cease, the tools used to fashion the drums were dropped and scattered on the ground where they wait to trip the unwary.</description>
+    <description>Spread under the shady branches, several large bamboo segments are in varying stages of being hollowed out.  A few wood-handled implements that appear to be used for scooping the pulp from the bamboo lie on the ground in front of an oval hut.  As quiet as the area is now, the entire jungle will know when these drums are finished.</description>
+    <position x="660" y="100" z="0" />
+    <arc exit="south" move="south" destination="325" />
+    <arc exit="west" move="west" destination="327" />
+  </node>
+  <node id="327" name="Gai'y'rak'saar'adu, Ring Commons">
+    <description>Lush myrtle surrounds the central plaza in a broad collar, offering a natural cushion for the comfort of any observer of the rituals performed at the hub.  The feet of ecstatic dancers have tramped a trio of paths around the ring, forming a strangely pleasing braided pattern of brown embossed among the glossy green leaves.</description>
+    <description>Light thrown from the sooty torches blazing about the hub wavers over the lush myrtle of the commons ringing the central area, creating an illusion that the trampled braided paths made by the feet of ecstatic dancers are black snakes undulating through the glossy green leaves.</description>
+    <description>Lush myrtle surrounds the central plaza in a broad collar, offering a natural cushion for the comfort of any observer of the rituals performed at the hub.  The feet of vibrant dancers have tramped a trio of paths around the ring, forming a strangely pleasing braided pattern of brown embossed among the glossy green leaves.</description>
+    <position x="640" y="100" z="0" />
+    <arc exit="north" move="north" destination="333" />
+    <arc exit="east" move="east" destination="326" />
+    <arc exit="west" move="west" destination="328" />
+  </node>
+  <node id="328" name="Gai'y'rak'saar'adu, Feasting Hub">
+    <description>Hexagonal pieces of slate have been selected and tiled over the ground at the hub to form a radiating mantra of color that draws the eye inexorably from the pale beige slate of the rim to the deep ebony of the center.</description>
+    <description>Massive torches placed at each cardinal point send a sooty light flickering over the slate mosaic tiling over the ground of the hub, drawing all attention to the deep ebony of the center.</description>
+    <position x="620" y="100" z="0" />
+    <arc exit="north" move="north" destination="331" />
+    <arc exit="east" move="east" destination="327" />
+    <arc exit="west" move="west" destination="329" />
+  </node>
+  <node id="329" name="Gai'y'rak'saar'adu, Ring Commons">
+    <description>Lush myrtle surrounds the central plaza in a broad collar, offering a natural cushion for the comfort of any observer of the rituals performed at the hub.  The feet of ecstatic dancers have tramped a trio of paths around the ring, forming a strangely pleasing braided pattern of brown embossed among the glossy green leaves.</description>
+    <description>Light thrown from the sooty torches blazing about the hub wavers over the lush myrtle of the commons ringing the central area, creating an illusion that the trampled braided paths made by the feet of ecstatic dancers are black snakes undulating through the glossy green leaves.</description>
+    <position x="600" y="100" z="0" />
+    <arc exit="north" move="north" destination="330" />
+    <arc exit="east" move="east" destination="328" />
+    <arc exit="go" move="go weed-choked path" destination="318" />
+  </node>
+  <node id="330" name="Gai'y'rak'saar'adu, Ring Commons">
+    <description>Lush myrtle surrounds the central plaza in a broad collar, offering a natural cushion for the comfort of any observer of the rituals performed at the hub.  The feet of ecstatic dancers have tramped a trio of paths around the ring, forming a strangely pleasing braided pattern of brown embossed among the glossy green leaves.</description>
+    <description>Light thrown from the sooty torches blazing about the hub wavers over the lush myrtle of the commons ringing the central area, creating an illusion that the trampled braided paths made by the feet of ecstatic dancers are black snakes undulating through the glossy green leaves.</description>
+    <position x="600" y="80" z="0" />
+    <arc exit="northeast" move="northeast" destination="332" />
+    <arc exit="south" move="south" destination="329" />
+  </node>
+  <node id="331" name="Gai'y'rak'saar'adu, Ring Commons">
+    <description>Lush myrtle surrounds the central plaza in a broad collar, offering a natural cushion for the comfort of any observer of the rituals performed at the hub.  The feet of ecstatic dancers have tramped a trio of paths around the ring, forming a strangely pleasing braided pattern of brown embossed among the glossy green leaves.</description>
+    <description>Light thrown from the sooty torches blazing about the hub wavers over the lush myrtle of the commons ringing the central area, creating an illusion that the trampled braided paths made by the feet of ecstatic dancers are black snakes undulating through the glossy green leaves.</description>
+    <description>Lush myrtle surrounds the central plaza in a broad collar, offering a natural cushion for the comfort of any observer of the rituals performed at the hub.  The feet of energetic dancers have tramped a trio of paths around the ring, forming a strangely pleasing braided pattern of brown embossed among the glossy green leaves.</description>
+    <position x="620" y="80" z="0" />
+    <arc exit="north" move="north" destination="332" />
+    <arc exit="east" move="east" destination="333" />
+    <arc exit="south" move="south" destination="328" />
+  </node>
+  <node id="332" name="Gai'y'rak'saar'adu, Cloud Ascent">
+    <description>An imposing broad stair rises into the scanty mist, the arch of each sun-bleached basalt step shaped to the contour of the steep mountain.  Crouched to one side of the base of the steps, a sturdy stone lodge tucks neatly into the mountain, appearing more a natural fall of the native rock than a planned structure.</description>
+    <description>A broad stair arches into the contour of the steep mountain, ascending like an apparition into the blackness above.  Crouched to one side of the base of the steps, a sturdy stone lodge tucks neatly into the mountain, appearing more a natural fall of the native rock than a planned structure.</description>
+    <position x="620" y="60" z="0" />
+    <arc exit="southeast" move="southeast" destination="333" />
+    <arc exit="south" move="south" destination="331" />
+    <arc exit="southwest" move="southwest" destination="330" />
+    <arc exit="go" move="go stone lodge" destination="389" />
+  </node>
+  <node id="333" name="Gai'y'rak'saar'adu, Ring Commons">
+    <description>Lush myrtle surrounds the central plaza in a broad collar, offering a natural cushion for the comfort of any observer of the rituals performed at the hub.  The feet of ecstatic dancers have tramped a trio of paths around the ring, forming a strangely pleasing braided pattern of brown embossed among the glossy green leaves.</description>
+    <description>Light thrown from the sooty torches blazing about the hub wavers over the lush myrtle of the commons ringing the central area, creating an illusion that the trampled braided paths made by the feet of ecstatic dancers are black snakes undulating through the glossy green leaves.</description>
+    <description>Lush myrtle surrounds the central plaza in a broad collar, offering a natural cushion for the comfort of any observer of the rituals performed at the hub.  The feet of spirited dancers have tramped a trio of paths around the ring, forming a strangely pleasing braided pattern of brown embossed among the glossy green leaves.</description>
+    <position x="640" y="80" z="0" />
+    <arc exit="south" move="south" destination="327" />
+    <arc exit="west" move="west" destination="331" />
+    <arc exit="northwest" move="northwest" destination="332" />
+  </node>
+  <node id="334" name="Gai'y'rak'saar'adu, Sweet Bay Commons">
+    <description>The conical grass hut claiming this corner of the clearing broods with a smug odiousness, holding its secrets to itself.  The barren ground surrounding the hut is in sharp contrast to the rich spicy scent wafting from the shady branches of the bay tree.</description>
+    <description>In this dark corner of the clearing, the conical grass hut claiming ownership broods with a smug odiousness, holding its secrets to itself.  The smoldering embers in the fire pit paint the barren surroundings in a weak illumination as the rich spice of the bay tree drifts poignantly through the dim light.</description>
+    <position x="680" y="120" z="0" />
+    <arc exit="south" move="south" destination="324" />
+    <arc exit="southwest" move="southwest" destination="323" />
+    <arc exit="west" move="west" destination="325" />
+  </node>
+  <node id="335" name="Abandoned Hut">
+    <description>Dark and nearly empty, the hut has patches of both old and new wood, as if it has gone through extensive repairs in the recent past.  Thick boards are lashed to the back wall, closing what must have been a gaping hole in the back wall.  The reed walls are reinforced with braided vines and planks of wood, covering up any gaps and peepholes that may have once existed.</description>
+    <position x="580" y="80" z="0" />
+    <arc exit="out" move="out" destination="318" />
+  </node>
+  <node id="336" name="Storage Hut">
+    <description>Sharp and with a coppery scent, the air in here seems to have coagulated in the heat.  Bowls full of blood stand under animal bodies as they hang from pole racks in various stages of being dressed.  A small knife, its grip maroon with dried blood, lies thrown on the floor.  Pelts lie stacked in a huge basket in the corner and another basket holds entrails.</description>
+    <position x="560" y="80" z="0" />
+    <arc exit="out" move="out" destination="313" />
+  </node>
+  <node id="337" name="Villager's Hut">
+    <description>Order and purpose are evident here, created by habits refined during a lifetime of leading men in battle.  Sleeping mats, tied in a bundle, have been stacked against the back wall.  A large chest and an empty wall rack provide storage for weapons and armor when the residents are home.</description>
+    <position x="600" y="140" z="0" />
+    <arc exit="out" move="out" destination="316" />
+  </node>
+  <node id="338" name="Gai'y'rak'saar'adu, Ruins of the Heggarangi">
+    <description>Screened by the towering blackthorn bush, the smoldering ruins of a log lodge lie in the clearing, and the only thing left standing is a forbidding totem carved from an oiled black wood.  The broken remains of a beaded doorway tied with feathers lie scattered underneath the splayed logs, which block all passage eastward.  Hasty fires started inside the destroyed lodge have hidden the secrets of the place forever, reduced to mere ashes.</description>
+    <position x="660" y="160" z="0" />
+    <arc exit="go" move="go dirt path" destination="322" />
+  </node>
+  <node id="339" name="Villager's Hut">
+    <description>Half this hut is filled with piles of pelts, baskets of beads, fluttering feathers and assorted clay pottery cordoned off behind a thick vine net.  A rumpled plaited palm sleeping pad disturbs the neat pattern left in the dirt by a besom of sweetbay leaves leaning against the netting.  Far against the back wall, a hastily covered bowl reveals a silvery glint.</description>
+    <position x="640" y="140" z="0" />
+    <arc exit="out" move="out" destination="323" />
+  </node>
+  <node id="389" name="Chieftain's House">
+    <description>The sensual aroma of smoky incense lingers in this spacious area, notable for its lack of furnishings.  The bold motif of the beaded curtain that covers the exit continues, spanning the walls in a continuous mural formed from the skillful placement and manipulation of the thousands of teeth of sacrificial creatures.  At the rear of the room, a locked and barred door blocks off entrance to the rest of the house.</description>
+    <position x="600" y="60" z="0" />
+    <arc exit="out" move="out" destination="332" />
+  </node>
+  <node id="400" name="Jalren'rae'Taisidon, Pathway">
+    <description>A simple walkway skirts around sturdy stalks of bamboo that have been lashed together into walls, built to protect a seaside village.  To the east, the meandering path leads towards the beach, while shadowy trees lie to the west.</description>
+    <position x="780" y="300" z="0" />
+    <arc exit="east" move="east" destination="401" />
+    <arc exit="west" move="west" destination="39" />
+  </node>
+  <node id="401" name="Jalren'rae'Taisidon, Beach" color="#A6A3D9">
+    <description>A stone launching ramp disrupts the wide sweep of silvery sand edging the crystal lagoon.  A village sprawls over the graceful slopes of the hills to the west, nestled against a backdrop of dense jungle.  The boards of its buildings are bleached and weathered from the constant battering of the sea winds.</description>
+    <position x="800" y="300" z="0" />
+    <arc exit="north" move="north" destination="6" />
+    <arc exit="west" move="west" destination="400" />
+  </node>
+  <node id="402" name="A'baya Esplanade, Central Walkway">
+    <description>At the center of the busy shopping walkway, a beautiful ocean mosaic is pieced together with bits of shell and seaglass.  Festive gaethzen globes are hung from tall poles that are placed at even intervals along the macawood boardwalk.</description>
+    <position x="880" y="340" z="0" />
+    <arc exit="west" move="west" destination="403" />
+    <arc exit="east" move="east" destination="404" />
+    <arc exit="go" move="go ocean-blue moongate" destination="405" />
+  </node>
+  <node id="403" name="A'baya Esplanade, Entrance">
+    <description>Criss-crossed above a macawood boardwalk, festive banners flutter against a gentle sea breeze.  Throngs of visitors amble towards the colorful stalls and pushcarts that gather along the pathway.</description>
+    <position x="820" y="340" z="0" />
+    <arc exit="east" move="east" destination="402" />
+  </node>
+  <node id="404" name="The Morada, Gangway" note="morada">
+    <description>Bridging the gap over a deep blue sea, a polished ilomba ramp gently slopes upwards from the sandy shore to the Morada.  Opulent diamondwood railings with silver-gilt palm tree balusters protect passengers from unexpected routes of departure.</description>
+    <position x="950" y="340" z="0" />
+    <arc exit="west" move="west" destination="402" />
+  </node>
+  <node id="405" name="The Strand, Sandy Path" note="Map1_Crossing.xml|exit">
+    <description>Following the roadside along the Oxenwaithe's bank, you are struck by the quiet beauty of the place.  Taking pause to breathe in the crisp, clean air, you reflect on your surroundings.  Sand, sparkling as if mixed with diamond dust, pours into deep blue undulating waters.  A lush copse of trees spreads to the north, while to the southeast, a series of delightful small buildings is set back from the river's edge.</description>
+    <description>You can hear the Oxenwaithe lapping gently at its bank, creating a soothing sound not unlike a lullaby.  The light reflected from the moons provide shimmery paths along the sandy embankments at water's edge.</description>
+    <position x="880" y="360" z="0" />
+  </node>
+  <node id="460" name="Jalren'rae'Taisidon, Gash" color="#993300">
+    <description>The resinous scent of crushed pine needles fills the air.  Fuzzy green branches, part of a tree which spans the large chasm to the south, partially block the rocky mountain path as it wends its way northward.  A small nest lies crumpled beneath one branch.</description>
+    <position x="193" y="0" z="0" />
+    <arc exit="south" move="south" destination="261" />
+    <arc exit="climb" move="climb bridge" destination="263" />
+    <arc exit="go" move="go fallen tree" destination="260" />
+  </node>
+  <node id="461" name="The Morada, Morgue">
+    <description>Cold air circles the room and a thin layer of frost covers the steel cabinets that are lined up against the walls.  Placed in the upper corners of the room, large gaethzen lanterns emit a bright and steady light for optimal visibility.</description>
+    <position x="1008" y="250" z="0" />
+    <arc exit="up" move="up" destination="462" />
+  </node>
+  <node id="462" name="The Morada, Foredeck">
+    <description>Separating the polished ilomba deck from the sea, opulent diamondwood railings are decorated with miniature silver-gilt palm trees.  A tall mast rises up from the deck, standing with bast sails neatly furled.</description>
+    <position x="1068" y="250" z="0" />
+    <arc exit="down" move="down" destination="461" />
+    <arc exit="south" move="aft" destination="463" />
+  </node>
+  <node id="463" name="The Morada, Promenade">
+    <description>Opulent diamondwood railings decorated with miniature silver-gilt palm trees line the expansive deck.  Draped elegantly overhead, a crisp white awning provides shade for guests to stroll comfortably underneath.</description>
+    <position x="1068" y="290" z="0" />
+    <arc exit="none" move="forward" destination="462" />
+    <arc exit="none" move="port" destination="465" />
+    <arc exit="none" move="starboard" destination="466" />
+    <arc exit="up" move="up" destination="464" />
+  </node>
+  <node id="464" name="The Morada, Quarterdeck">
+    <description>An enormous main-mast towers above the polished ilomba decking at its forward edge.  Crafted into the shape of miniature palm trees, gaethzen lights are gaily strung about the raised deck.</description>
+    <position x="1068" y="330" z="0" />
+    <arc exit="down" destination="463" />
+  </node>
+  <node id="465" name="The Morada, Buffet">
+    <description>Flanking an ornate chef's carving station, two large diamondwood sideboards are heavily laden with platters of beautifully displayed food.  A crisp white awning protects any guests seated at the scattered silver-gilt tables from possible inclement weather.</description>
+    <position x="1008" y="290" z="0" />
+    <arc exit="none" move="starboard" destination="463" />
+  </node>
+  <node id="466" name="The Morada, Lounge">
+    <description>Opulent diamondwood railings transition into raised half-walls that serve to protect relaxing guests from potential wind gusts.  Providing ample seating, plush cerulean couches are scattered about the area and paired with silver-gilt side tables.</description>
+    <position x="1128" y="290" z="0" />
+    <arc exit="none" move="port" destination="463" />
+    <arc exit="none" move="aft" destination="467" />
+  </node>
+  <node id="467" name="The Morada, Bar">
+    <description>Placed in the center as a magnificent focal point, a large curving diamondwood bar is fully stocked with tiers of strong and exotic liqueurs.  Plush cerulean sofas are placed in cozy nooks that are discreetly attended to by sharply dressed waiters.</description>
+    <position x="1128" y="330" z="0" />
+    <arc exit="none" move="forward" destination="466" />
+  </node>
+  <label text="Thicket">
+    <position x="530" y="280" z="0" />
+  </label>
+  <label text="Saendalen Sea">
+    <position x="850" y="250" z="0" />
+  </label>
+  <label text="Seord Telga">
+    <position x="585" y="361" z="0" />
+  </label>
+  <label text="Gam Telga">
+    <position x="510" y="401" z="0" />
+  </label>
+  <label text="giant thicket vipers">
+    <position x="525" y="331" z="0" />
+  </label>
+  <label text="wood trolls">
+    <position x="730" y="309" z="0" />
+  </label>
+  <label text="durian beltunumshis">
+    <position x="570" y="424" z="0" />
+  </label>
+  <label text="forest drakes">
+    <position x="507" y="464" z="0" />
+  </label>
+  <label text="andesite gargoyles">
+    <position x="730" y="170" z="0" />
+  </label>
+  <label text="Saendalen sharks">
+    <position x="840" y="260" z="0" />
+  </label>
+  <label text="Oyster Bed">
+    <position x="810" y="124" z="0" />
+  </label>
+  <label text="swinging vines">
+    <position x="390" y="370" z="0" />
+  </label>
+  <label text="swamp trolls">
+    <position x="429" y="271" z="0" />
+  </label>
+  <label text="shh'oi paguur">
+    <position x="314" y="260" z="0" />
+  </label>
+  <label text="pirate zombies">
+    <position x="120" y="281" z="0" />
+  </label>
+  <label text="mimics">
+    <position x="234" y="190" z="0" />
+  </label>
+  <label text="golden pard maze">
+    <position x="344" y="430" z="0" />
+  </label>
+  <label text="revenant zombies">
+    <position x="181" y="644" z="0" />
+  </label>
+  <label text="haunts">
+    <position x="295" y="581" z="0" />
+  </label>
+  <label text="haunts">
+    <position x="14350" y="13570" z="0" />
+  </label>
+  <label text="Savannah">
+    <position x="75" y="560" z="0" />
+  </label>
+  <label text="Cave">
+    <position x="124" y="510" z="0" />
+  </label>
+  <label text="Mist">
+    <position x="200" y="584" z="0" />
+  </label>
+  <label text="Burial Grounds">
+    <position x="290" y="499" z="0" />
+  </label>
+  <label text="long climb">
+    <position x="178" y="153" z="0" />
+  </label>
+  <label text="pit">
+    <position x="410" y="330" z="0" />
+  </label>
+  <label text="savannah bulls">
+    <position x="57" y="644" z="0" />
+  </label>
+  <label text="giant blade spiders">
+    <position x="177" y="481" z="0" />
+  </label>
+  <label text="desumos">
+    <position x="30" y="620" z="0" />
+  </label>
+  <label text="cinnamon">
+    <position x="74" y="529" z="0" />
+  </label>
+  <label text="banshees">
+    <position x="239" y="612" z="0" />
+  </label>
+  <label text="heggarangi boars">
+    <position x="290" y="604" z="0" />
+  </label>
+  <label text="zombie piranhas">
+    <position x="236" y="240" z="0" />
+  </label>
+  <label text="oysters">
+    <position x="221" y="364" z="0" />
+  </label>
+  <label text="Tent">
+    <position x="338" y="522" z="0" />
+  </label>
+  <label text="Swamp">
+    <position x="401" y="174" z="0" />
+  </label>
+  <label text="River">
+    <position x="343" y="313" z="0" />
+  </label>
+  <label text="Mountain Passage">
+    <position x="66" y="181" z="0" />
+  </label>
+  <label text="animated items">
+    <position x="710" y="250" z="0" />
+  </label>
+  <label text="bears">
+    <position x="98" y="542" z="0" />
+  </label>
+  <label text="void midges">
+    <position x="74" y="400" z="0" />
+  </label>
+  <label text="S'Kra Kor">
+    <position x="480" y="110" z="0" />
+  </label>
+  <label text="Hut">
+    <position x="670" y="160" z="0" />
+  </label>
+  <label text="Huts">
+    <position x="608" y="130" z="0" />
+  </label>
+  <label text="Huts">
+    <position x="555" y="60" z="0" />
+  </label>
+  <label text="Morada">
+    <position x="1048" y="210" z="0" />
+  </label>
+  <label text="Morgue">
+    <position x="983" y="250" z="0" />
+  </label>
+  <label text="Foredeck">
+    <position x="1040" y="250" z="0" />
+  </label>
+  <label text="Lounge">
+    <position x="1108" y="290" z="0" />
+  </label>
+  <label text="Bar">
+    <position x="1118" y="330" z="0" />
+  </label>
+  <label text="Quarterdeck">
+    <position x="1038" y="330" z="0" />
+  </label>
+  <label text="Buffet">
+    <position x="988" y="290" z="0" />
+  </label>
+  <label text="Promenade">
+    <position x="1038" y="290" z="0" />
+  </label>
+  <label text="Tour Director">
+    <position x="780" y="340" z="0" />
+  </label>
+  <label text="Cruise Coordinator">
+    <position x="900" y="340" z="0" />
+  </label>
+  <label text="Gash (white rats)">
+    <position x="217" y="-7" z="0" />
+  </label>
+  <label text="long climb">
+    <position x="178" y="153" z="0" />
+  </label>
+  <label text="crawl or risk falling">
+    <position x="201" y="62" z="0" />
+  </label>
+  <label text="Exit">
+    <position x="867" y="367" z="0" />
+  </label>
+</zone>
