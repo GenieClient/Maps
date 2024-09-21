@@ -18,7 +18,7 @@ RETREAT:
      match RETREAT You retreat
      match RETREAT You stop advancing
      match RETREAT You sneak back out of combat.
-	match RETREAT You can't do that while
+     match RETREAT You can't do that while
      match RETREAT You retreat from combat
      match RETREAT Roundtime
      match RETREAT pole range

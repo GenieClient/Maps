@@ -1324,7 +1324,7 @@
   </node>
   <node id="215" name="Kruar Li Dael, Circular Valley">
     <description>Picked clean of all flora and fauna, a smooth trabe crystal mosiac lines the ground, delineating a series of whorls and forms in a clean arc.  The pattern continues in a broad arc around the clearing.  Despite the proximity to the forest, there is no sound of wildlife, and no birds seem to fly nearby or overhead.</description>
-	<description>Picked clean of all flora and fauna, a smooth trabe crystal mosiac lines the ground, glowing with a soft, periodic pulsation, delineating a series of whorls and forms in a clean arc.  The pattern continues in a broad arc around the clearing, gently illuminating the area.  Despite the proximity to the forest, there is no sound of wildlife, and no bats seem to fly nearby or overhead.</description>
+  <description>Picked clean of all flora and fauna, a smooth trabe crystal mosiac lines the ground, glowing with a soft, periodic pulsation, delineating a series of whorls and forms in a clean arc.  The pattern continues in a broad arc around the clearing, gently illuminating the area.  Despite the proximity to the forest, there is no sound of wildlife, and no bats seem to fly nearby or overhead.</description>
     <position x="360" y="500" z="0" />
     <arc exit="northeast" move="northeast" destination="216" />
     <arc exit="east" move="east" destination="219" />
@@ -1333,7 +1333,7 @@
   </node>
   <node id="216" name="Kruar Li Dael, Circular Valley">
     <description>Picked clean of all flora and fauna, a smooth trabe crystal mosiac lines the ground, delineating a series of whorls and forms in a clean arc.  The pattern continues in a broad arc around the clearing.  To the north rises a squat rocky hill, a smooth semi-circle demarking the clearing carved cleanly into the rock face.</description>
-	<description>Picked clean of all flora and fauna, a smooth trabe crystal mosiac lines the ground, glowing with a soft, periodic pulsation, delineating a series of whorls and forms in a clean arc.  The pattern continues in a broad arc around the clearing, gently illuminating the area.  To the north rises a squat rocky hill, a smooth, glowing, semi-circle demarking the clearing carved cleanly into the rock face.</description>
+  <description>Picked clean of all flora and fauna, a smooth trabe crystal mosiac lines the ground, glowing with a soft, periodic pulsation, delineating a series of whorls and forms in a clean arc.  The pattern continues in a broad arc around the clearing, gently illuminating the area.  To the north rises a squat rocky hill, a smooth, glowing, semi-circle demarking the clearing carved cleanly into the rock face.</description>
     <position x="380" y="480" z="0" />
     <arc exit="southeast" move="southeast" destination="217" />
     <arc exit="south" move="south" destination="219" />
@@ -1341,7 +1341,7 @@
   </node>
   <node id="217" name="Kruar Li Dael, Circular Valley">
     <description>Picked clean of all flora and fauna, a smooth trabe crystal mosiac lines the ground, delineating a series of whorls and forms in a clean arc.  The pattern continues in a broad arc around the clearing.  The view east is blocked by a wall of neatly stacked boulders, fit together with stunning precision.</description>
-	<description>Picked clean of all flora and fauna, a smooth trabe crystal mosiac lines the ground, glowing with a soft, periodic pulsation, delineating a series of whorls and forms in a clean arc.  The pattern continues in a broad arc around the clearing, gently illuminating the area.  The view east is blocked by a wall of neatly stacked boulders, fit together with stunning precision.</description>
+  <description>Picked clean of all flora and fauna, a smooth trabe crystal mosiac lines the ground, glowing with a soft, periodic pulsation, delineating a series of whorls and forms in a clean arc.  The pattern continues in a broad arc around the clearing, gently illuminating the area.  The view east is blocked by a wall of neatly stacked boulders, fit together with stunning precision.</description>
     <position x="400" y="500" z="0" />
     <arc exit="southwest" move="southwest" destination="218" />
     <arc exit="west" move="west" destination="219" />
@@ -1349,7 +1349,7 @@
   </node>
   <node id="218" name="Kruar Li Dael, Circular Valley">
     <description>Picked clean of all flora and fauna, a smooth trabe crystal mosiac lines the ground, delineating a series of whorls and forms in a clean arc.  The pattern continues in a broad arc around the clearing.  A particularly convoluted and concentrated portion of the mosiac extends from the north, appearing to point south.</description>
-	<description>Picked clean of all flora and fauna, a smooth trabe crystal mosiac lines the ground, glowing with a soft, periodic pulsation, delineating a series of whorls and forms in a clean arc.  The pattern continues in a broad arc around the clearing, gently illuminating the area.  A particularly convoluted and concentrated portion of the glowing mosiac extends from the north, appearing to point south.</description>
+    <description>Picked clean of all flora and fauna, a smooth trabe crystal mosiac lines the ground, glowing with a soft, periodic pulsation, delineating a series of whorls and forms in a clean arc.  The pattern continues in a broad arc around the clearing, gently illuminating the area.  A particularly convoluted and concentrated portion of the glowing mosiac extends from the north, appearing to point south.</description>
     <position x="380" y="520" z="0" />
     <arc exit="north" move="north" destination="219" />
     <arc exit="northeast" move="northeast" destination="217" />
@@ -1357,7 +1357,7 @@
   </node>
   <node id="219" name="Kruar Li Dael, Center of the Mosaic">
     <description>Centered over the crystal mosaic, the full pattern is easier to view.  Nested and overlapping geometric forms radiate outward, strung along a fractal spiral.  Lacking any identifiable symmetry, the mosiac blends smooth organic whorls with exacting circles and triangles, and bears several large features that point south.  A chill wafts upward, and the air feels thin.</description>
-	<description>Centered over the glowing crystal mosaic, the full pattern is easier to view.  Nested and overlapping geometric forms radiate outward, strung along a fractal spiral.  Lacking any identifiable symmetry, the mosiac blends smooth organic whorls with exacting circles and triangles, and bears several large features that point south.  Light pulses from the center of the mosaic and radiates outward along the diagrams in a mesmerizing sequence.  A chill wafts upward, and the air feels thin.</description>
+    <description>Centered over the glowing crystal mosaic, the full pattern is easier to view.  Nested and overlapping geometric forms radiate outward, strung along a fractal spiral.  Lacking any identifiable symmetry, the mosiac blends smooth organic whorls with exacting circles and triangles, and bears several large features that point south.  Light pulses from the center of the mosaic and radiates outward along the diagrams in a mesmerizing sequence.  A chill wafts upward, and the air feels thin.</description>
     <position x="380" y="500" z="0" />
     <arc exit="north" move="north" destination="216" />
     <arc exit="east" move="east" destination="217" />

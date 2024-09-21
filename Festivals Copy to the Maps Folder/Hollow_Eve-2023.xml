@@ -1945,7 +1945,7 @@
   </node>
   <node id="304" name="Wedding Belles, Artful Accouterments" color="#FF0000">
     <description>Lit chandeliers provide light now that night has descended, illuminating the cream-colored walls and pale pine floor planking.  Mannequins stand in various poses in one corner.  Large floor to ceiling mirrors allow for the trying on of the merchandise before purchasing.</description>
-	<description>Skylights admit light that pours over the cream-colored walls and pale pine planking on the floor.  Mannequins stand in various poses in one corner of the room.  Large floor to ceiling mirrors allow for the trying on of the merchandise before purchasing.</description>
+    <description>Skylights admit light that pours over the cream-colored walls and pale pine planking on the floor.  Mannequins stand in various poses in one corner of the room.  Large floor to ceiling mirrors allow for the trying on of the merchandise before purchasing.</description>
     <position x="-140" y="-180" z="0" />
     <arc exit="northeast" move="northeast" destination="303" />
     <arc exit="southeast" move="southeast" destination="301" />

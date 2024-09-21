@@ -90,7 +90,7 @@ var autoversion 8.2024-08-17
 
 #2023-03-06
 # Nazaruss
-#	Added cyclic variable to toggle turning off cyclics before moving
+#   Added cyclic variable to toggle turning off cyclics before moving
 
 #2023-02-24
 # Hanryu

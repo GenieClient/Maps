@@ -5185,8 +5185,7 @@ You also see a chair and a table with a pitcher of iced strawberry lemonade on i
     <arc exit="climb" move="climb narrow steps" destination="796" />
   </node>
   <node id="799" name="Moon Mage Guild, Seers' Study">
-    <description>The skylights above curve down to form the exterior wall of this wedge-shaped chamber, offering a breathtaking view of the western half of the city and Wyvern Mountain beyond.  One interior wall is lined with sturdy bookcases, while the other features a large cork board next to a desk stocked with paper and writing implements.  A complicated web-patterned mosaic on the floor converges on a black marble lectern near the crystal wall.
-	</description>
+    <description>The skylights above curve down to form the exterior wall of this wedge-shaped chamber, offering a breathtaking view of the western half of the city and Wyvern Mountain beyond.  One interior wall is lined with sturdy bookcases, while the other features a large cork board next to a desk stocked with paper and writing implements.  A complicated web-patterned mosaic on the floor converges on a black marble lectern near the crystal wall.</description>
     <position x="1050" y="310" z="0" />
     <arc exit="southwest" move="southwest" destination="543" />
   </node>

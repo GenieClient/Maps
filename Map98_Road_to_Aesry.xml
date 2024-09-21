@@ -493,8 +493,6 @@
   </node>
   <node id="76" name="Aesry Surlaenis'a, Shadaer Jama">
     <description>The chirring of hidden insects vibrates within the tall wild grasses and low shrubs that border the road.  Dark rocks emerge above the heath and jut out erratically from the steeply sloping ground.  An occasional black-brown rabbit streaks over the gabbro boulders before diving safely out of sight into the rough terrain.</description>
-    <description>The chirring of hidden insects vibrates within the tall wild grasses and low shrubs that border the road.  Dark shapes emerge above the heath and jut out erratically from the steeply sloping ground.
-	</description>
     <description>The chirring of hidden insects vibrates within the tall wild grasses and low shrubs that border the road.  Dark shapes emerge above the heath and jut out erratically from the steeply sloping ground.</description>
     <position x="565" y="-72" z="0" />
     <arc exit="west" move="west" destination="75" />
