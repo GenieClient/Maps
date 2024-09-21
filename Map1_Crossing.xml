@@ -4603,7 +4603,7 @@
     <position x="-330" y="160" z="0" />
     <arc exit="out" move="out" destination="63" />
   </node>
-  <node id="693" name="Dintacui Apartments, First Floor"color="#00FFFF">
+  <node id="693" name="Dintacui Apartments, First Floor" color="#00FFFF">
     <description>The spare sandstone corridor is cool and quiet, its walls unsanded and rugged.  Running diagonally through one wall from ceiling to floor is a broad, glittering vein of golden feldspar.  Several lines of poetry, written in the Common tongue but using the flowing, elusive S'Kra script, have been incised across it.</description>
     <position x="-330" y="180" z="0" />
     <arc exit="south" move="south" destination="694" />
