@@ -1619,7 +1619,7 @@
     <description>You can hear the Oxenwaithe lapping gently at its bank, creating a soothing sound not unlike a lullaby.  The light reflected from the moons provide shimmery paths along the sandy embankments at water's edge.</description>
     <position x="880" y="360" z="0" />
   </node>
-  <node id="406" name="Foyer" note="MT_Prize_Wings|loot|endloot|end loot">
+  <node id="406" name="Foyer" note="MT_Prize_Wings.xml|loot|endloot|end loot">
     <description>Subdued lighting illuminates the tasteful wooden paneling of the room while a bevy of overstuffed furniture provides comfortable seating for those contemplating weighty choices.  Thick plush carpets in a myriad of hues cover the floor, almost totally obscuring the pale wooden planks of the flooring.  Around the walls, a number of colored archways contain magical portals that, when open, allow access to the prize rooms beyond.  A large set of double doors allows access to rooms devoted to dispenser activities while a round opening leads to the area devoted to workshops for alterations.</description>
     <description>Lighting illuminates the room which has carpets covering the floors.  A number of colored archways contain magic portals that, when open, allow access to the prize rooms beyond.  A set of double doors allows access to the dispensers while a round opening leads to the alteration area.</description>
     <position x="900" y="360" z="0" />
