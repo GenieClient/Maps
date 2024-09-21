@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<zone name="MT Prize Wings (2024)" id="599">
+<zone name="MT Prize Wings" id="599">
   <node id="1" name="Foyer" color="#FF00FF">
     <description>Subdued lighting illuminates the tasteful wooden paneling of the room while a bevy of overstuffed furniture provides comfortable seating for those contemplating weighty choices.  Thick plush carpets in a myriad of hues cover the floor, almost totally obscuring the pale wooden planks of the flooring.  Around the walls, a number of colored archways contain magical portals that, when open, allow access to the prize rooms beyond.  A large set of double doors allows access to rooms devoted to dispenser activities while a round opening leads to the area devoted to workshops for alterations.</description>
     <description>Lighting illuminates the room which has carpets covering the floors.  A number of colored archways contain magic portals that, when open, allow access to the prize rooms beyond.  A set of double doors allows access to the dispensers while a round opening leads to the alteration area.</description>
@@ -10,7 +10,7 @@
     <arc exit="go" move="go yellow portal" destination="10" />
     <arc exit="go" move="go green portal" destination="28" />
     <arc exit="go" move="go blue-tiled entrance" destination="7" />
-    <arc exit="go" move="go return portal" />
+    <arc exit="go" move="go return portal" destination="999" />
     <arc exit="go" move="go purple archway" destination="49" />
   </node>
   <node id="2" name="Dispenser Hall" note="raffles" color="#00FF00">
@@ -461,6 +461,10 @@
     <position x="280" y="180" z="0" />
     <arc exit="south" move="south" destination="67" />
     <arc exit="southwest" move="southwest" destination="50" />
+  </node>
+  <node id="999" name="A'baya Esplanade, Central Walkway" note="Taisidon_Mystery.xml|exit">
+    <description>At the center of the busy shopping walkway, a beautiful ocean mosaic is pieced together with bits of shell and seaglass.  Festive gaethzen globes are hung from tall poles that are placed at even intervals along the macawood boardwalk.</description>
+    <position x="140" y="80" z="0" />
   </node>
   <label text="alterations">
     <position x="82" y="18" z="0" />
