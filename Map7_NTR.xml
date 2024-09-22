@@ -1065,7 +1065,7 @@
     <arc exit="north" move="north" destination="115" />
     <arc exit="southeast" move="southeast" destination="130" />
     <arc exit="northwest" move="northwest" destination="117" />
-    <arc exit="northeast" move="northeast" destination="840" />
+    <arc exit="go" move="go narrow track" destination="147" />
   </node>
   <node id="117" name="North Roads Caravansary">
     <description>You stand amidst a small oasis among the rocks and gullies and blackened hills of this dead land.  A large building to one side has all the earmarks of an Inn.  Across from it are several outbuildings and what smells like a stable.  Behind the stable, a herd of goats bleats dispiritedly in a pen and a few sheep graze inside a small fenced area among some scrawny grass tussocks.</description>
@@ -1282,6 +1282,7 @@
   <node id="147" name="Lava Fields, Narrow Trace" note="Map13_Dirge.xml|Dirge">
     <description>Close by, a primitive pathway has been scratched out of the hard rock and basalt to the east, where it wanders into grey shadows of dust and floating ash.  A narrow road lies between high boulders in the other direction.  Faint marks etched into the coarse dark stone point towards the path and away from the caravan road.</description>
     <position x="600" y="870" z="0" />
+    <arc exit="go" move="go faint roadway" destination="116" />
     <arc exit="east" move="east" />
   </node>
   <node id="148" name="Sicle Grove, Gateway">
@@ -5583,11 +5584,6 @@
     <position x="600" y="290" z="0" />
     <arc exit="down" move="down" destination="838" />
   </node>
-  <node id="840" name="Lava Fields, Edge of the Primal Encasement">
-    <description>The air is choked with ash, but despite the suffocating wind and shattered basalt, a writhing mass of vines and flowing stone is visible, emerging from the once lifeless waste. Carving a neat circular crater and forming a massive teardrop around the space the city of Dirge once occupied, the vines trail ash and dust as they sweep across the land and flutter against the sky. The large structure stretches high, crowned by a beam of golden light.</description>
-    <position x="600" y="850" z="0" />
-    <arc exit="southwest" move="southwest" destination="116" />
-  </node>
   <node id="841" name="Ashen Valley, Trail">
     <description>The atmosphere is heavy with the scents of smoldering wood and sulfur, as the desolate landscape is shrouded in a colorless layer of ash.  Once trees thrived in the valley, but now they stand lifeless and scorched, victims of the nearby volcanoes.  The game trail twists among the stumps as if it was a serpent chasing prey.</description>
     <position x="380" y="450" z="0" />
@@ -5795,12 +5791,6 @@
   </label>
   <label text="Zoluren">
     <position x="670" y="863" z="0" />
-  </label>
-  <label text="Temporarily">
-    <position x="610" y="880" z="0" />
-  </label>
-  <label text="Inaccessible">
-    <position x="610" y="890" z="0" />
   </label>
   <label text="Trail to Dirge">
     <position x="-640" y="60" z="0" />
