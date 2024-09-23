@@ -6,7 +6,6 @@
     <position x="120" y="100" z="0" />
     <arc exit="go" move="go double doors" destination="2" />
     <arc exit="go" move="go round opening" destination="3" />
-    <arc exit="go" move="go blue portal" destination="7" />
     <arc exit="go" move="go yellow portal" destination="10" />
     <arc exit="go" move="go green portal" destination="28" />
     <arc exit="go" move="go blue-tiled entrance" destination="7" />
@@ -50,7 +49,6 @@
     <description>Plain plastered walls have been painted a deep royal-blue hue and trimmed with narrow white baseboards.  Subtle indirect lighting of the displayed prizes is provided by gaezthen globes dangling from the coffered ceiling.</description>
     <description>Royal-blue walls trimmed with white baseboards surround the displayed prizes in the room.</description>
     <position x="-20" y="100" z="0" />
-    <arc exit="go" move="go blue portal" destination="1" />
     <arc exit="southeast" move="southeast" destination="8" />
     <arc exit="go" move="go blue-tiled entrance" destination="1" />
   </node>
