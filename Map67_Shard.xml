@@ -63,13 +63,13 @@
   </node>
   <node id="9" name="Shard, Diamond Street">
     <description>The homes of the privileged of Shard are muted down to sober grays and blacks, their crystal windows dimmed and their gardens the color of dust.  The chuckle of a fountain splashing on through the night ripples through the streets, and the occasional reflection of candlelight glances over the road's dark blue stones.  A gate of ivory and brass divides the street to the north, its construction not daunting enough to keep the shadows at bay.</description>
-    <description>A splash o    <arc exit="go" move="go squat building" destination="805" />
-f green from flourishing gardens and the glint of light off crystal windows offers a tantalizing view of the homes of the privileged of Shard.  Houses alternately built with the Elven mind for arches and spindly, steeple-like points take up residence with the Elothean touch of round buildings with faceted domes.  Groups of citizens trod down the lapis-hued street, entering or exiting to the north via an ivory and brass gate that divides the inner city from its outer, more common sister.</description>
+    <description>A splash of green from flourishing gardens and the glint of light off crystal windows offers a tantalizing view of the homes of the privileged of Shard.  Houses alternately built with the Elven mind for arches and spindly, steeple-like points take up residence with the Elothean touch of round buildings with faceted domes.  Groups of citizens trod down the lapis-hued street, entering or exiting to the north via an ivory and brass gate that divides the inner city from its outer, more common sister.</description>
     <position x="420" y="360" z="0" />
     <arc exit="south" move="south" destination="10" />
     <arc exit="go" move="go brass gate" destination="8" />
     <arc exit="go" move="go elven home" destination="455" />
     <arc exit="go" move="go garden door" destination="455" />
+	<arc exit="go" move="go squat building" destination="805" />
   </node>
   <node id="10" name="Shard, North Entrance of The Great Tower">
     <description>A high plaster wall marks the end of Diamond Street, the road narrowing down until it splits into three parts.  One leads up to a sweeping marble archway, while the other two paths circumvent the barrier.  The night reflects off the tower's polished surface, blurring its outline until it seems to melt into the stars.</description>
