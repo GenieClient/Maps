@@ -2762,7 +2762,7 @@
     <description>A dark portal has forced itself upon the wall at the end of this alcove, the edges pulling at the black marble and drawing it close in a swirling embrace of greys and obsidians.  To the west, fleeting, sickly illumination attempts to break through the eternal night of the temple.</description>
     <position x="940" y="1040" z="0" />
     <arc exit="west" move="west" destination="392" />
-    <arc exit="go" move="go dark portal" destination="" />
+    <arc exit="" move="go dark portal" />
   </node>
   <node id="395" name="Temple of Darkness, Glassus' Shop" note="Glassus' Shop" color="#FF0000">
     <description>The walls and floor of this sparsely furnished but clean room are of gold-veined white marble.  A series of immaculate countertops displays a variety of god-related artwork.  The proprietor of the shop, a smiling grey-cloaked monk by the name of Glassus, can often be found at his desk casually plucking the feathers from a dead and bloody pigeon.</description>
