@@ -2762,7 +2762,7 @@
     <description>A dark portal has forced itself upon the wall at the end of this alcove, the edges pulling at the black marble and drawing it close in a swirling embrace of greys and obsidians.  To the west, fleeting, sickly illumination attempts to break through the eternal night of the temple.</description>
     <position x="940" y="1040" z="0" />
     <arc exit="west" move="west" destination="392" />
-    <arc exit="go" move="go dark portal" destination="551" />
+    <arc exit="go" move="go dark portal" destination="" />
   </node>
   <node id="395" name="Temple of Darkness, Glassus' Shop" note="Glassus' Shop" color="#FF0000">
     <description>The walls and floor of this sparsely furnished but clean room are of gold-veined white marble.  A series of immaculate countertops displays a variety of god-related artwork.  The proprietor of the shop, a smiling grey-cloaked monk by the name of Glassus, can often be found at his desk casually plucking the feathers from a dead and bloody pigeon.</description>
@@ -2802,7 +2802,7 @@
     <position x="880" y="920" z="0" />
     <arc exit="east" move="east" destination="398" />
   </node>
-  <node id="401" name="Temple of Darkness, Aldauth's Alcove" note="Aldauth|shrine" color="#A6A3D9">
+  <node id="401" name="Temple of Darkness, Aldauth's Alcove" note="Aldauth" color="#A6A3D9">
     <description>Larger than the other alcoves in deference to the god of dark endings, most of the space is wasted since the only permanent fixture is a small black altar in the center of the rectangular room.  The air is neither hot nor cold, and there is no discernable fragrance.  Stripped down to the bare black marble floor, walls and altar, this is a quiet statement of just what we take with us when Aldauth pays his final visit.</description>
     <position x="900" y="940" z="0" />
     <arc exit="north" move="north" destination="398" />
@@ -4655,7 +4655,7 @@
     <position x="70" y="640" z="0" />
     <arc exit="out" move="out" destination="702" />
   </node>
-  <node id="705" name="Shard Alchemy Society, Work Room" note="Alchemy Dryer|Alchemy Dryer">
+  <node id="705" name="Shard Alchemy Society, Work Room" note="Alchemy Dryer|Plant Dryer">
     <description>A fresh breeze flows through two high-cut windows and removes the musty smell of prepared herbs.  Three large stone wheels capable of grinding alchemical herbs and plants dominate one side of the room.  Along the other side several stoves equipped with flat-iron tops wait for crafters to dry things with them.</description>
     <position x="90" y="640" z="0" />
     <arc exit="go" move="go door" destination="702" />

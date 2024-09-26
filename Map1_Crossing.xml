@@ -375,7 +375,7 @@
     <arc exit="go" move="go rickety wagon" destination="653" />
     <arc exit="go" move="go whitewashed gate" destination="1034" />
   </node>
-  <node id="50" name="The Strand, Sandy Path" note="Premium Portal|Portal|banyan tree|Kintalia" color="#FF00FF">
+  <node id="50" name="The Strand, Sandy Path" note="Premium Portal|Portal|banyan tree" color="#FF00FF">
     <description>Following the roadside along the Oxenwaithe's bank, you are struck by the quiet beauty of the place.  Taking pause to breathe in the crisp, clean air, you reflect on your surroundings.  Sand, sparkling as if mixed with diamond dust, pours into deep blue undulating waters.  A lush copse of trees spreads to the north, while to the southeast, a series of delightful small buildings is set back from the river's edge.</description>
     <description>You can hear the Oxenwaithe lapping gently at its bank, creating a soothing sound not unlike a lullaby.  The light reflected from the moons provide shimmery paths along the sandy embankments at water's edge.</description>
     <position x="155" y="205" z="0" />
@@ -1358,7 +1358,7 @@
     <arc exit="out" move="out" destination="40" />
     <arc exit="go" move="go scarred doorway" destination="190" />
   </node>
-  <node id="190" name="Berolt's Dry Goods, Storage" note="Dry Goods Storage|foot brush|scale brush|weapon strap" color="#FF0000">
+  <node id="190" name="Berolt's Dry Goods, Storage" note="Dry Goods Storage|weapon strap" color="#FF0000">
     <description>Except for a few dusty old crates and splintering barrels shoved up against one wall, this small, close room is bare.  On top of one barrel, someone's lunch of cheese and bread is awaiting their return, provided it survives the obvious interest of a tiny mouse, who is now snuffling among some of the larger crumbs.</description>
     <position x="159" y="-90" z="0" />
     <arc exit="go" move="go scarred doorway" destination="189" />
@@ -1591,7 +1591,7 @@
     <position x="110" y="-478" z="0" />
     <arc exit="out" move="out" destination="226" />
   </node>
-  <node id="228" name="Catrox's Forge, Entryway" note="Catrox's Forge|Repair Metal" color="#00FF00">
+  <node id="228" name="Catrox's Forge, Entryway" note="Catrox's Forge|Repair Metal|repair leather" color="#00FF00">
     <description>The forge of Catrox the Dwarf is known throughout the lands.  Here mundane metal is transformed into tools, and weapons, damaged armor and shields are made whole again.  This entryway is covered by a tin roof, with no walls, in the hope of letting some air into the smoky, noisy and sweltering compound.  The ringing of metal on metal, the sputtering of cinders and slag, the hissing of steel meeting water, all are audible from within.</description>
     <position x="290" y="40" z="0" />
     <arc exit="out" move="out" hidden="True" destination="159" />
