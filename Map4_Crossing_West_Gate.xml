@@ -507,17 +507,19 @@
     <description>A thick rock wall angles from the west around to the south beyond which can be heard the soft lapping and gurgling sounds of what can only be the Segoltha River.</description>
     <position x="-420" y="-20" z="0" />
     <arc exit="southeast" move="southeast" destination="77" />
-    <arc exit="west" move="west" destination="536" />
+    <arc exit="west" move="west" destination="79" />
   </node>
   <node id="79" name="Grassland Path, Village Gate">
     <description>A long rock wall extends east and west bordered by the grassland path.  Beyond the wall you can make out the thatched rooftops of the village homesteads.  The massive village gate stands open, its wooden beams painted with colorful gold and black stripes.</description>
-    <position x="-440" y="-10" z="0" />
+    <position x="-440" y="-20" z="0" />
+    <arc exit="east" move="east" destination="78" />
+    <arc exit="west" move="west" destination="80" />
     <arc exit="go" move="go village gate" destination="87" />
   </node>
   <node id="80" name="Grassland Path, Meadow">
     <description>The river rock wall of the Tiger Clan Home bends around from the east to the south.  Thick growths of wild oats and wood meadow grasses spread out from either side of the path.  Several small seed-eating birds cling to the tall stalks, swaying in the breeze as they delicately pick at the oats.  The dirt path leads into a forest a short distance to the northwest.</description>
     <position x="-460" y="-20" z="0" />
-    <arc exit="east" move="east" destination="536" />
+    <arc exit="east" move="east" destination="79" />
     <arc exit="northwest" move="northwest" destination="81" />
   </node>
   <node id="81" name="Woodland Path, Forest's Edge" color="#008000">
@@ -560,7 +562,7 @@
   </node>
   <node id="87" name="Tiger Clan Home, Dirt Pathway" note="Map4a_Tiger_Clan.xml|Tiger Clan">
     <description>A river-rock wall extends east to west, protecting the northern end of a rambling village.  The open village gate looks out across a vast stretch of the fields worked by the villagers.  A dirt pathway winds southward through a collection of cottages, shops and huts standing at odd angles, most with a fence or ditch fronting the path.  Farmers, returning from a day in the fields, find fellowship and food in the conveniently-located pub, The Pig's Pannage, its open doors just a short walk from the gate.</description>
-    <position x="-440" y="10" z="0" />
+    <position x="-440" y="0" z="0" />
     <arc exit="south" move="south" />
     <arc exit="go" move="go village gate" destination="79" />
     <arc exit="go" move="go pig's pannage" />
@@ -766,30 +768,31 @@
   <node id="115" name="Wildulf Woods, Needlenose Creek" color="#008000">
     <description>A shallow creek cuts through the forest, lazily rippling and undulating over a bed of rocks and sunken logs.  Hundreds of gnats hover and buzz in a cloud along the creek bank, where the ground is hard and smooth, as if trampled by many feet over a long period of time.  The brush and trees have been cleared to form a pathway to the south, and a thin column of smoke emanates from somewhere in that direction.</description>
     <position x="-640" y="60" z="0" />
-    <arc exit="south" move="south" destination="535" />
+    <arc exit="south" move="south" destination="116" />
     <arc exit="go" move="go dense bushes" destination="112" />
   </node>
   <node id="116" name="Wildulf Woods, Dirt Road" color="#008000">
     <description>A dense tangle of thorns and creepers has been carefully cut back to allow easy passage along this well-worn pathway.  The silence of the forest is suddenly broken by the frantic flapping of wings, followed by a low howl that rapidly builds in intensity and power, echoing through the trees.  A second wailing voice joins it in eerie harmony.</description>
-    <position x="-660" y="80" z="0" />
+    <position x="-640" y="80" z="0" />
+    <arc exit="north" move="north" destination="115" />
     <arc exit="southwest" move="southwest" destination="117" />
   </node>
   <node id="117" name="Wildulf Woods, Dirt Road" note="RTZ18|RT-WC-XW" color="#008000">
     <description>A wide dirt road cuts through impenetrable walls of timber and dense brush.  A sudden movement in the trees catches your eye, but when you turn to look, the forest stands still and silent.  You cannot shake the uncomfortable feeling that you are being watched and judged.  Several rough buildings stand at the southern end of the road.</description>
-    <position x="-680" y="100" z="0" />
+    <position x="-660" y="100" z="0" />
     <arc exit="northeast" move="northeast" destination="116" />
     <arc exit="south" move="south" destination="118" />
   </node>
   <node id="118" name="Wolf Clan Home, Dirt Road" note="Wolf Clan Home">
     <description>A small community of wooden buildings stands in a clearing, sheltered by the dense, towering trees of Wildulf Woods.  The timber dwellings are of primitive construction, but on closer inspection, you can see that they are clean and well-maintained.  Several tall, stern-looking Human men, dressed in deer-skin leggings, stride purposefully down a dirt road, heading west toward a large lodge in the distance.</description>
-    <position x="-680" y="120" z="0" />
+    <position x="-660" y="120" z="0" />
     <arc exit="north" move="north" destination="117" />
     <arc exit="west" move="west" destination="119" />
     <arc exit="go" move="go outpost" destination="227" />
   </node>
   <node id="119" name="Wolf Clan Home, Dirt Road">
     <description>A sooty cloud billows out of the smoke hole in the top of one of the wooden cabins that line the road.  The building is fairly large but crudely constructed out of raw timber.  Windows with hinged shutters and a rough plank door are the only features on this rustic dwelling.  A small bed of blue forget-me-nots has been planted next to the door, providing an oddly colorful contrast to the starkness of its surroundings.  An old shed stands off to one side.</description>
-    <position x="-720" y="120" z="0" />
+    <position x="-700" y="120" z="0" />
     <arc exit="east" move="east" destination="118" />
     <arc exit="south" move="south" destination="123" />
     <arc exit="west" move="west" destination="122" />
@@ -800,33 +803,33 @@
   </node>
   <node id="120" name="Wolf Clan Home, Ironbeard Dwelling">
     <description>A large sleeping pallet covered with soft animal hides takes up most of the small room.  Above the pallet a short shelf has been mounted to proudly display a massive jawbone.  A deadly looking lance leans on the wall, resting against the shelf.  In the corner of the room sits a small carved wooden chest with two bronze handles. Its polished sheen seems out of place in this rustic setting.  A battered metal mirror has been hung on the wall above the chest.</description>
-    <position x="-700" y="100" z="0" />
+    <position x="-680" y="100" z="0" />
     <arc exit="west" move="west" destination="121" />
     <arc exit="go" move="go window" destination="119" />
   </node>
   <node id="121" name="Wolf Clan Home, Ironbeard Dwelling" note="Ironbeard Dwelling">
     <description>The interior of this primitive abode is sparsely furnished with a floor of compacted dried mud.  A small fire glows in a stone pit in the center of the earth floor, and a pile of sawn logs and broken twigs lays beside it.  A shelf of unfinished lunat wood, containing a number of earthenware pots, cups and dishes, has been mounted on one wall.  The corner of the room is occupied by a large metal tub with a wooden crate placed next to it.</description>
-    <position x="-720" y="100" z="0" />
+    <position x="-700" y="100" z="0" />
     <arc exit="east" move="east" destination="120" />
     <arc exit="go" move="go plank door" destination="119" />
   </node>
   <node id="122" name="Wolf Clan Home, Dirt Road">
     <description>Ornamental lances, topped with white feathers and shells, border the road leading up to a large ceremonial lodge.  The shells clatter against each other in the breeze, creating a ghostly percussive melody.  A carved stone plaque is the only notable feature on the windowless lodge.  The doorway is covered by a hanging flap of bear hide.</description>
-    <position x="-740" y="120" z="0" />
+    <position x="-720" y="120" z="0" />
     <arc exit="east" move="east" destination="119" />
     <arc exit="go" move="go ceremonial lodge" destination="131" />
   </node>
   <node id="123" name="Wolf Clan Home, Dirt Road">
     <description>The road gets thinner and less worn here, with only a few small wooden houses at its side.  Children play on the lots in front of homes, running and laughing, making the whole area have a relaxed atmosphere.  Curls of smoke rise from homes carrying with them the smell of meals being prepared.</description>
     <description>Only small wooden houses occupy this area of the village.  Candles lighting windows give faint light to the road, the only thing making it possible to see at all.  Sometimes drifts of conversation can be heard from the otherwise silent houses.</description>
-    <position x="-720" y="140" z="0" />
+    <position x="-700" y="140" z="0" />
     <arc exit="north" move="north" destination="119" />
     <arc exit="west" move="west" destination="124" />
   </node>
   <node id="124" name="Wolf Clan Home, Square">
     <description>The road circles around a cleared area that has been planted with grass.  In the middle a man sized statue stands, so life like it would seem that at any moment it will leap down and run away.  As ominous as the statue looks, when people pass by they look at it with a warm smile and raise their head with pride.</description>
     <description>The road circles around a cleared area that has been planted with grass.  In the middle a man-sized statue stands, so lifelike it would seem that at any moment it will leap down and run away.  As ominous as the statue looks, when people pass by they look at it with a warm smile and raise their head with pride.</description>
-    <position x="-760" y="140" z="0" />
+    <position x="-740" y="140" z="0" />
     <arc exit="east" move="east" destination="123" />
     <arc exit="south" move="south" destination="125" />
     <arc exit="go" move="go path" destination="520" />
@@ -834,61 +837,61 @@
   <node id="125" name="Wolf Clan Home, Dirt Road">
     <description>Buildings thicken this area of the village, making it seem larger than it really is, but the forest still looms at the edges as a reminder that this is still nature's part of the world.  Hammers banging and the smell of tanning oils penetrate the air giving the feel of work and little leisure.  The occasional trader or inhabitant walk down the road, intent on their destination.</description>
     <description>Dark buildings clutter the side of the street, all silent and no sign of the constant work of day.  Lanterns hanging from posts along the road give a faint wavering light, throwing shadows that make the area look nearly as alive as during the working hours.</description>
-    <position x="-760" y="180" z="0" />
+    <position x="-740" y="180" z="0" />
     <arc exit="north" move="north" destination="124" />
     <arc exit="south" move="south" destination="126" />
     <arc exit="go" move="go worn path" destination="132" />
   </node>
   <node id="126" name="Wolf Clan Home, Dirt Road">
     <description>A small building, structured from logs and mud, stands on the side of the road.  Skins hanging from the windows, and the smell of curing hides rolling out could almost dizzy the weak.  Here and to the west the road looks a bit more trodden indicating that this is the business area of the village.</description>
-    <position x="-760" y="200" z="0" />
+    <position x="-740" y="200" z="0" />
     <arc exit="north" move="north" destination="125" />
     <arc exit="west" move="west" destination="127" />
     <arc exit="go" move="go small building" destination="134" />
   </node>
   <node id="127" name="Wolf Clan Home, Dirt Road">
     <description>People begin to crowd the road here, roaming in and out of various buildings.  A small cottage adorned with herbs hanging from the door sits down a small path.  The sounds of laughing and sporadic music begin to touch the air.</description>
-    <position x="-780" y="200" z="0" />
+    <position x="-760" y="200" z="0" />
     <arc exit="east" move="east" destination="126" />
     <arc exit="west" move="west" destination="128" />
   </node>
   <node id="128" name="Wolf Clan Home, Dirt Road">
     <description>Happy sounds come from a building that seems to be the center of this area.  Decorated more than any other building here it has been painted a dark green with a red door.  People coming out look happy and content while people going in look anxious and excited.  A sign hanging over the doorway is welcoming and colorful, the sight as a whole could put a smile on the hardest of adventurers.</description>
-    <position x="-800" y="200" z="0" />
+    <position x="-780" y="200" z="0" />
     <arc exit="east" move="east" destination="127" />
     <arc exit="go" move="go red door" destination="477" />
   </node>
   <node id="129" name="Wolf Clan Home, Old Shed">
     <description>Although the shed has been kept scrupulously clean, you detect the faint, unpleasant odor of chemicals and decayed flesh.  Several cured hides hang on the otherwise bare walls, and a large empty vat occupies the center of the small room.</description>
-    <position x="-740" y="100" z="0" />
+    <position x="-720" y="100" z="0" />
     <arc exit="out" move="out" destination="119" />
   </node>
   <node id="130" name="Wolf Clan Home, Caravan Barn" note="Caravan Stable" color="#00FF00">
     <description>Crudely constructed of rough-hewn planks, the stable appears as if it would fall over if pushed by a good wind.  An ancient pitchfork stands in the corner and leaning over it is an even more ancient Human, his body covered with old scars and puckered flesh.  The animals stabled here, contentedly munching their grain, seem untroubled by the disreputable state of the building.</description>
-    <position x="-700" y="140" z="0" />
+    <position x="-680" y="140" z="0" />
     <arc exit="out" move="out" destination="119" />
   </node>
   <node id="131" name="Wolf Clan Home, Lodge Alcove" note="Lodge Alcove">
     <description>Heavy curtains block off the rest of the lodge from this small alcove.  A stern-looking clan guard stands alert, carefully scrutinizing each visitor before waving them through the curtains.  A young Barbarian boy, trying to sneak into the lodge, is caught by the guard, who lifts him up by the back of his shirt and gently sets him down outside.</description>
-    <position x="-760" y="100" z="0" />
+    <position x="-740" y="100" z="0" />
     <arc exit="out" move="out" destination="122" />
     <arc exit="go" move="go curtains" destination="515" />
   </node>
   <node id="132" name="Wolf Clan Home, Worn Path" note="RTZ19|RT-WC-HF" color="#C2B280">
     <description>As the path meanders from the road forest dense with undergrowth begins to take over.  Animals scurry in the brush cracking leaves and small limbs, making an orchestra of sound more complex than any town.</description>
-    <position x="-780" y="180" z="0" />
+    <position x="-760" y="180" z="0" />
     <arc exit="go" move="go clearing" destination="133" />
     <arc exit="go" move="go road" destination="125" />
     <arc exit="go" move="go small clearing" destination="133" />
   </node>
   <node id="133" name="Wolf Clan Home, Small Clearing">
     <description>A beautiful clearing has seemingly been formed naturally in the middle of dense trees and brush.  The edges of the clearing look to be a barrier as sturdy as a wall yet unseen.  Lush grass bends softly with any stirring of the wind, and the occasional blue or red flower pop up giving splashing color to the green carpet.  In the middle a small stone pool has been built giving various birds of the area a water source for bathing and ridding of thirst.</description>
-    <position x="-780" y="160" z="0" />
+    <position x="-760" y="160" z="0" />
     <arc exit="go" move="go worn path" destination="132" />
   </node>
   <node id="134" name="Crolin's Skins, Main Room" note="Crolin's Skins|Bundles" color="#00FF00">
     <description>Crolin's purchasing room smells and looks like a disorganized slaughter-house.  The tanner, Crolin, inspects bundles of newly arrived skins, nodding or shaking his head after carefully working them with his hands. His rough, shrewd appearance seems to fit into the atmosphere perfectly.  Strong smells of dead animals and substances of the tanning trade drift through a door behind a stained and battered counter.</description>
-    <position x="-760" y="220" z="0" />
+    <position x="-740" y="220" z="0" />
     <arc exit="east" move="east" destination="135" />
     <arc exit="west" move="west" destination="136" />
     <arc exit="out" move="out" destination="126" />
@@ -896,17 +899,17 @@
   </node>
   <node id="135" name="Randal's Repairs, Work Room" note="Randal's Repairs|Repairs" color="#00FF00">
     <description>Mounds of leather and hides find themselves stacked in almost every corner of this small work area.  Wooden boxes of metal rings, studs and rivets claim the remaining space, prompting Randal to use two rolls of padding as a make-shift seat because there is no further room for them.  Behind a wood counter Randal sits smiling to himself as he works on a leather breastplate.  A large hide tacked to the wall has something written on it.</description>
-    <position x="-740" y="220" z="0" />
+    <position x="-720" y="220" z="0" />
     <arc exit="west" move="west" destination="134" />
   </node>
   <node id="136" name="Brigetta's Tanned Goods, Order Counter" note="Brigetta's Tanned Goods|Armor" color="#FF0000">
     <description>A gated order counter blocks passage into a large work room.  Behind the counter can be seen a worktable and a series of shelves holding a large assortment of tanned dry goods.  A half open window provides a welcome breath of relief from the stench that permeates the rest of Crolin's shop.  Crolin's wife Brigetta, an attractive, strong looking woman with slender calloused fingers, greets potential customers with a pleasant nod as they enter her domain.</description>
-    <position x="-780" y="220" z="0" />
+    <position x="-760" y="220" z="0" />
     <arc exit="east" move="east" destination="134" />
   </node>
   <node id="137" name="Crolin's Skins, Work Room">
     <description>Work tables covered with different skins and tools take up most of the small room.  Small pools of sticky brown liquid gather at the edges of vats sitting against the wall.  Trapping equipment hangs from pegs on the wall, rusted and worn with years of use.  A window stands open offering the only ventilation against the stout fumes.</description>
-    <position x="-760" y="240" z="0" />
+    <position x="-740" y="240" z="0" />
     <arc exit="out" move="out" destination="134" />
   </node>
   <node id="138" name="Hunting Preserve, Main Road" color="#008000">
@@ -1481,7 +1484,7 @@
   </node>
   <node id="227" name="Wolf Clan Trader Outpost" note="Trading Outpost" color="#00FF00">
     <description>This outpost is a miniature replica of one of the great Trader Guild buildings in the larger towns.  Designed for rapid buying and selling of bulk goods by Guild members, it is crammed and jammed with crates, boxes and packages of all sizes and shapes.  A harried Guild trade minister is at hand to expedite members' transactions and to make sure none of the goods leave under their own power or without the proper fees and monies being exchanged.</description>
-    <position x="-680" y="140" z="0" />
+    <position x="-660" y="140" z="0" />
     <arc exit="out" move="out" destination="118" />
   </node>
   <node id="228" name="Applebrandy River, Eastern Riverbed">
@@ -3075,13 +3078,13 @@
   </node>
   <node id="477" name="Arnack's Tavern, Bar Room" note="Arnack's Tavern" color="#FF0000">
     <description>At first glimpse the tavern offers all the sign outside promises.  In one corner a pair of aged men play instruments and sing the occasional tune, while the other side of the room holds a number of tables and chairs for comfort and conversation.  A barkeep bustles around, behind a bar in the back of the room, barking at servers to hustle and at the same time keeping a welcoming smile for all the customers.</description>
-    <position x="-800" y="220" z="0" />
+    <position x="-780" y="220" z="0" />
     <arc exit="out" move="out" destination="128" />
     <arc exit="go" move="go private room" destination="478" />
   </node>
   <node id="478" name="Arnack's Tavern, Private Room">
     <description>A table sits in the middle of this small room, surrounded by cushioned chairs.  A window in the back wall looks into the forest, limbs occasionally knocking against the glass with the sway of the wind.  The bustle of the main room is mostly muffled here allowing quiet and privacy if needed.</description>
-    <position x="-820" y="220" z="0" />
+    <position x="-800" y="220" z="0" />
     <arc exit="out" move="out" destination="477" />
   </node>
   <node id="479" name="Rocky Outcrop, Chasm">
@@ -3327,67 +3330,67 @@
   </node>
   <node id="515" name="Wolf Clan Home, Lodge Interior">
     <description>The walls of the lodge are covered with the hides and skins of many different animals.  You recognize the pelts of otter, fox, deer and wolf.  Despite the spacious size of the lodge, the air in the windowless building is thick and hazy.  You can smell the residue of an aromatic, heavy smoke.  A large firepit in the center of the room is placed below the ceiling's smoke hole.  A massive rack attached to one wall holds enough weapons for a small army.</description>
-    <position x="-780" y="100" z="0" />
+    <position x="-760" y="100" z="0" />
     <arc exit="go" move="go alcove" destination="131" />
     <arc exit="go" move="go firepit" destination="516" />
     <arc exit="go" move="go small doorway" destination="517" />
   </node>
   <node id="516" name="Wolf Clan Home, Firepit">
     <description>The air around the firepit is heavy with a sweet-smelling smoke.  A hole in the ceiling, directly above the pit, provides some relief with an occasional breeze.  Carved pipes and rattles made from gourds have been left on the dirt floor.  A tall barbarian warrior sits next to the fire, carefully attaching some eagle feathers to the end of a lance.</description>
-    <position x="-780" y="120" z="0" />
+    <position x="-760" y="120" z="0" />
     <arc exit="out" move="out" destination="515" />
   </node>
   <node id="517" name="Wolf Clan Home, Hidden Path">
     <description>A narrow path has been cleared through the clumps of sage bushes, tall grasses, untended wildflowers that grow abundantly here.  The tall somber trees of Wildulf Woods form a wall beyond a clearing to the north.  A small, cramped doorway leads back into the lodge.</description>
-    <position x="-800" y="100" z="0" />
+    <position x="-780" y="100" z="0" />
     <arc exit="north" move="north" destination="519" />
     <arc exit="west" move="west" destination="518" />
     <arc exit="go" move="go small doorway" destination="515" />
   </node>
   <node id="518" name="Wolf Clan Home, Seer's Circle" note="Mopeliar" color="#00FF00">
     <description>Within the densely-packed timberland sits a round, flat arena hemmed by a circle of hewn logs.  Two additional logs have been set at opposite sides of this circle, each adorned with talismans of feathers and beads affixed to the skulls of wolves.  Beneath them, leather strips dyed in bright colors dance and flutter in the soft breeze.  The arena itself is composed of hard-packed dirt which bears the scars of innumerable steps, slides and turns executed in some kind of precise, battle-inspired dance.</description>
-    <position x="-820" y="100" z="0" />
+    <position x="-800" y="100" z="0" />
     <arc exit="east" move="east" destination="517" />
   </node>
   <node id="519" name="Wolf Clan Home, Secluded Clearing">
     <description>A single aged willow tree stands in the center of this wide clearing, its drooping boughs sway and creak, reaching for the ground.  This ancient symbol of death and rebirth shelters an open-air shrine that has been erected at the base of the tree's gnarled trunk.  Small tufts of broad-leafed hosta plants surround the shrine.  Impenetrable walls of densely-packed trees and brush cut off any exit except to the south.</description>
-    <position x="-800" y="80" z="0" />
+    <position x="-780" y="80" z="0" />
     <arc exit="south" move="south" destination="517" />
   </node>
   <node id="520" name="Wolf Clan, Wolverine Ward" note="Wolverine Ward" color="#00FFFF">
     <description>Scratched into the dirt of the pathway is the remains of a circle with most of its line scuffed out.  Taken together with the disturbed area within the bounds, the purpose of the improvised wrestling ground is clear.  This open space between houses must often be used for such purposes, as there are a number of logs set upright near the edge of the road, ready to serve as seats for spectators.</description>
-    <position x="-740" y="160" z="0" />
+    <position x="-720" y="160" z="0" />
     <arc exit="east" move="east" destination="521" />
     <arc exit="southeast" move="southeast" destination="525" />
     <arc exit="go" move="go winding path" destination="124" />
   </node>
   <node id="521" name="Wolf Clan, Wolverine Ward" color="#00FFFF">
     <description>A few boulders, left in place when the area was set up for housing, stand beside the road.  A few passersby have crudely hacked their names into the surface of the stones, sometimes with dates or other messages.  The houses stand well back from the roadway, most without fencing to separate them from their fellows.</description>
-    <position x="-700" y="160" z="0" />
+    <position x="-680" y="160" z="0" />
     <arc exit="south" move="south" destination="522" />
     <arc exit="west" move="west" destination="520" />
   </node>
   <node id="522" name="Wolf Clan, Wolverine Ward" color="#00FFFF">
     <description>Sounds of metal being pounded come from within a shed attached to the side of a nearby house.  Wisps of smoke drift from the stovepipe jutting from the shed's roof, further evidence of metalwork being performed within.  Other homes nearby lack such sheds, but all are well-maintained.</description>
-    <position x="-700" y="180" z="0" />
+    <position x="-680" y="180" z="0" />
     <arc exit="north" move="north" destination="521" />
     <arc exit="south" move="south" destination="523" />
   </node>
   <node id="523" name="Wolf Clan, Wolverine Ward" color="#00FFFF">
     <description>Hanging from a tree in the middle of the road is a colorful archery target, its surface much pierced from heavy use.  A number of scuffed-out lines show where the residents have used the roadway as an improvised archery range.</description>
-    <position x="-700" y="200" z="0" />
+    <position x="-680" y="200" z="0" />
     <arc exit="north" move="north" destination="522" />
     <arc exit="west" move="west" destination="524" />
   </node>
   <node id="524" name="Wolf Clan, Wolverine Ward" color="#00FFFF">
     <description>Some of the nearby houses are surrounded by expanses of lawn but others have more working-class yards with small workbenches set up under the trees where residents can repair things while enjoying the open air.  All the homes, however, are sturdy and well-maintained against the weather.</description>
-    <position x="-720" y="200" z="0" />
+    <position x="-700" y="200" z="0" />
     <arc exit="north" move="north" destination="525" />
     <arc exit="east" move="east" destination="523" />
   </node>
   <node id="525" name="Wolf Clan, Wolverine Ward" color="#00FFFF">
     <description>Children's bows and wooden weapons are strewn about one yard, obviously where an impromptu battle took place.  The cries of the children can be discerned in the distance, where they have run off to continue their play.</description>
-    <position x="-720" y="180" z="0" />
+    <position x="-700" y="180" z="0" />
     <arc exit="south" move="south" destination="524" />
     <arc exit="northwest" move="northwest" destination="520" />
   </node>
@@ -3445,17 +3448,6 @@
     <position x="-700" y="-500" z="0" />
     <arc exit="southwest" move="southwest" destination="532" />
   </node>
-  <node id="535" name="Wildulf Woods, Edge of the Primal Encasement">
-    <description>The forest is neatly cleared, revealing a wide crater littered with torn soil and tumbling rocks.  A shallow creek neatly terminates into a sloping waterfall, pouring down the crater walls.  To the south, a massive encasement of malleable stone and snarled vines writhes in a growing teardrop where Wolf Clan previously stood.  Atop the teardrop, a pinnacle of golden light shines upward.</description>
-    <position x="-640" y="80" z="0" />
-    <arc exit="north" move="north" destination="115" />
-  </node>
-  <node id="536" name="Grassland Path, Edge of the Primal Encasement">
-    <description>To the south, the forest is neatly cleared, revealing a clean crater littered with torn soil and tumbling rocks.  The forest pathway neatly skirts the northern edge of the crater, the village gate torn in half, the sign nowhere to be seen.  A churning wall of writhing vines and flowing stone now occupies the space where Tiger Clan once stood, forming a large teardrop atop which erupts a beam of golden light.</description>
-    <position x="-440" y="-20" z="0" />
-    <arc exit="east" move="east" destination="78" />
-    <arc exit="west" move="west" destination="80" />
-  </node>
   <label text="Bobcats">
     <position x="-50" y="400" z="0" />
   </label>
@@ -3475,13 +3467,13 @@
     <position x="-130" y="-130" z="0" />
   </label>
   <label text="Tiger Clan">
-    <position x="-460" y="10" z="0" />
+    <position x="-450" y="10" z="0" />
   </label>
   <label text="Knife Clan">
     <position x="-790" y="-550" z="0" />
   </label>
   <label text="Wolf Clan">
-    <position x="-830" y="230" z="0" />
+    <position x="-800" y="230" z="0" />
   </label>
   <label text="Forager Goblins">
     <position x="-400" y="-100" z="0" />
@@ -3626,14 +3618,5 @@
   </label>
   <label text="Inaccessible">
     <position x="-790" y="-530" z="0" />
-  </label>
-  <label text="Temporarily">
-    <position x="-830" y="240" z="0" />
-  </label>
-  <label text="Inaccessible">
-    <position x="-830" y="250" z="0" />
-  </label>
-  <label text="Temp Inaccessable">
-    <position x="-480" y="20" z="0" />
   </label>
 </zone>
