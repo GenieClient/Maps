@@ -302,12 +302,13 @@
     <arc exit="south" move="swim south" destination="32" />
     <arc exit="southwest" move="swim southwest" destination="32" />
     <arc exit="west" move="swim west" destination="33" />
-    <arc exit="climb" move="climb riverbank" destination="47" />
+    <arc exit="climb" move="climb riverbank" destination="34" />
   </node>
   <node id="34" name="Tiger Clan, Riverbank">
     <description>The trees in this area give way to a gently sloping riverbank.  Tufts of grass bravely peek through the sand in thick brownish clumps, adding a bit of traction on the perpetually muddy slope.  A slightly worn trail leads down the bank towards the murky river below.</description>
     <position x="140" y="60" z="0" />
     <arc exit="northwest" move="northwest" destination="35" />
+    <arc exit="climb" move="climb riverbank" destination="33" />
   </node>
   <node id="35" name="Tiger Clan, Grassy Trail">
     <description>Along a trail lined with willows, the smells of soggy grass, dead fish and peat moss permeate the atmosphere.  The bubbling and splashing of the nearby river overpower the usual sounds of the night, the looming trees giving cover to all manner of creatures within the depths of their shadows.</description>
@@ -384,16 +385,11 @@
     <position x="100" y="440" z="0" />
     <arc exit="climb" move="climb wooden mast" destination="42" />
   </node>
-  <node id="47" name="Tiger Clan, Edge of the Primal Encasement">
-    <description>To the northeast, a neatly cleared crater occupies the space Tiger Clan once occupied, and a small break in the riverbank allows the Segoltha to pour inward.  A churning wall of writhing vines and flowing stone emerges from the pooled water at the bottom of the crater, forming a large teardrop atop, which erupts a beam of golden light.  </description>
-    <position x="160" y="60" z="0" />
-    <arc exit="climb" move="climb riverbank" destination="33" />
-  </node>
   <label text="Crossing">
     <position x="240" y="80" z="0" />
   </label>
   <label text="Tiger Clan">
-    <position x="50" y="30" z="0" />
+    <position x="40" y="10" z="0" />
   </label>
   <label text="STR1">
     <position x="250" y="415" z="0" />
@@ -415,11 +411,5 @@
   </label>
   <label text="Leth">
     <position x="250" y="430" z="0" />
-  </label>
-  <label text="Temporarily">
-    <position x="50" y="40" z="0" />
-  </label>
-  <label text="Inaccessible">
-    <position x="50" y="50" z="0" />
   </label>
 </zone>
