@@ -3734,7 +3734,7 @@
     <position x="1060" y="1040" z="0" />
     <arc exit="northeast" move="northeast" destination="552" />
     <arc exit="go" move="go silver portal" hidden="True" destination="418" />
-    <arc exit="go" move="go dark portal" hidden="True" destination="394" />
+    <arc exit="go" move="go dark portal"/>
   </node>
   <node id="552" name="Shard, Hall of Enlightenment" note="Hall of Enlightenment">
     <description>This hall is wide, plastered stone, and roofed by an arched ceiling.  Heavy wooden beams form arches every few feet.  Clerics can be seen walking the hall, stopping every few feet to recite prayers, before moving on.</description>
