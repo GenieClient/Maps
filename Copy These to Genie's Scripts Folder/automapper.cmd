@@ -1,9 +1,13 @@
 # automapper.cmd
-var autoversion 8.2024-08-17
+var autoversion 8.2024-09-29
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
+
+#2024-09-29
+# Hanryu
+#   torch on wall and stone basin for ggbypass
 
 #2024-08-17
 # Hanryu
@@ -1318,8 +1322,8 @@ GEAR.GATE.BYPASS:
 GEAR.GATE.BYPASS.CHECK:
   if (!$standing) then gosub STAND
   if matchre("$roomobjs", "a gouged stone wall") then var wall 1
-  if ("$roomid" = "263") then var wall_trigger basin
-  if ("$roomid" = "264") then var wall_trigger torch
+  if ("$roomid" = "263") then var wall_trigger stone basin
+  if ("$roomid" = "264") then var wall_trigger torch on wall
   if (!%wall) then {
     var action turn %wall_trigger
     var success ^As you pull down on
