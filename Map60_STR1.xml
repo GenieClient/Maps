@@ -11,6 +11,7 @@
     <position x="20" y="20" z="0" />
     <arc exit="southeast" move="southeast" destination="57" />
     <arc exit="northwest" move="northwest" destination="1" />
+    <arc exit="go" move="go meandering path" destination="159" />
   </node>
   <node id="3" name="Southern Trade Route, Bosque Deriel">
     <description>Handcarts, porters, and caravans laden with trade goods and commodities bound for Leth Deriel pass through here heading south, while heading north are soldiers, mages, and savants of one kind or another, fighters and other less prosperous figures.  A ranger is bent over the side of the path, inspecting some curious flowering plant.</description>
@@ -1080,6 +1081,49 @@
     <position x="200" y="-520" z="0" />
     <arc exit="climb" move="climb tree trunk" destination="155" />
   </node>
+  <node id="159" name="The Grove, Arched Pathway" color="#00FFFF">
+    <description>Majestic trees line a wide gravel path, their thick branches arching high to mingle with one another and create a tunnel that leads deeper into the wooded copse.  Soft moss covers the ground, interspersed with clusters of delicate ferns and vibrant wildflowers.</description>
+    <position x="40" y="0" z="0" />
+    <arc exit="go" move="go meandering path" destination="2" />
+    <arc exit="north" move="north" destination="160" />
+  </node>
+  <node id="160" name="The Grove, Shaded Pathway" color="#00FFFF">
+    <description>The gravel path meanders over the moss-covered ground and giant oaks grow along its borders, their thick branches stretching to form a dense canopy overhead.  Vibrant wildflowers peek out here and there, adding color to the verdant space.</description>
+    <position x="40" y="-20" z="0" />
+    <arc exit="northeast" move="northeast" destination="165" />
+    <arc exit="south" move="south" destination="159" />
+    <arc exit="northwest" move="northwest" destination="161" />
+  </node>
+  <node id="161" name="The Grove, Shaded Pathway" color="#00FFFF">
+    <description>Tall trees reach up towards the sky, their thick branches covered in clumps of spongy moss.  Tiny pink and purple fairy slipper orchids sprout from the forest floor along a gravel path, their blooms adding a subtle, sweet aroma to the area.</description>
+    <position x="20" y="-40" z="0" />
+    <arc exit="northeast" move="northeast" destination="162" />
+    <arc exit="southeast" move="southeast" destination="160" />
+  </node>
+  <node id="162" name="The Grove, Shaded Pathway" color="#00FFFF">
+    <description>The wide path winds through densely populated trees, its route mimicking the twisted limbs reaching toward the sky and forming a lush canopy overhead.  Slender vines drape down from the branches to brush the ground.  A cozy bench swing hangs between two large birch trees, tiny flowers sprouting to each side of it.</description>
+    <position x="40" y="-60" z="0" />
+    <arc exit="north" move="north" destination="163" />
+    <arc exit="southeast" move="southeast" destination="165" />
+    <arc exit="southwest" move="southwest" destination="161" />
+  </node>
+  <node id="163" name="The Grove, Shaded Pathway" color="#00FFFF">
+    <description>The dense canopy above blocks the sky, making it difficult to tell if it's night or day amongst the trees crowding the forest floor.  Snaking through the thick underbrush, the gravel path narrows considerably as its route is disrupted by rotting logs and protruding roots.  An unsettling silence hangs in the air, broken only by the occasional creak of the branches or the rustle of unseen creatures.</description>
+    <position x="40" y="-80" z="0" />
+    <arc exit="northeast" move="northeast" destination="164" />
+    <arc exit="south" move="south" destination="162" />
+  </node>
+  <node id="164" name="The Grove, Shaded Pathway" color="#00FFFF">
+    <description>Lofty trees stand proudly along the gravel path, thick moss hanging from their branches and forming long, wispy curtains that brush the spongy ground.  Fiddlehead ferns sprout beneath the sturdy trunks, along with patches of grass and small shrubs.</description>
+    <position x="60" y="-100" z="0" />
+    <arc exit="southwest" move="southwest" destination="163" />
+  </node>
+  <node id="165" name="The Grove, Shaded Pathway" color="#00FFFF">
+    <description>Clusters of tiny mushrooms grow around the trunks of the enormous trees comprising this portion of the grove, their red caps standing out against the lush greenery.  The gentle rustle of leaves in the breeze mixes with the soft chirping of birds and the chattering of chipmunks, creating a subtle symphony.</description>
+    <position x="60" y="-40" z="0" />
+    <arc exit="southwest" move="southwest" destination="160" />
+    <arc exit="northwest" move="northwest" destination="162" />
+  </node>
   <label text="Leth Deriel">
     <position x="50" y="40" z="0" />
   </label>
@@ -1136,5 +1180,8 @@
   </label>
   <label text="Endrus serpents">
     <position x="120" y="-475" z="0" />
+  </label>
+  <label text="The Grove">
+    <position x="50" y="-70" z="0" />
   </label>
 </zone>

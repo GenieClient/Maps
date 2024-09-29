@@ -736,6 +736,7 @@
     <position x="-40" y="-360" z="0" />
     <arc exit="northeast" move="northeast" destination="107" />
     <arc exit="southwest" move="southwest" destination="109" />
+    <arc exit="go" move="go brush-choked pathway" destination="260" />
   </node>
   <node id="109" name="Bosque Deriel, Northern Reaches" note="RTZ23|RT-LNW-LF" color="#C2B280">
     <description>The trees thin out a bit to the southeast, where the path leads to some kind of junction.  The sounds of crowds and carts along the way echo from that direction, an uneasy interruption of the deep silent reverie that pervades Bosque Deriel.</description>
@@ -1645,6 +1646,53 @@
     <description>Tucked up against the conic building is a low stone counter made from green and white marble.  Potted plants ring the area, their lush foliage sectioning off the area from the bustling square beyond.  Vast, countless rows of differently sized shelves are behind the counter, and complex Dwarven mechanisms can be heard as they rearrange the package-covered storage.  Clerks shuffle endlessly back and forth between the counters and shelving as they assist patrons with their packaging and mailing needs.</description>
     <position x="153" y="-30" z="0" />
     <arc exit="west" move="west" destination="167" />
+  </node>
+  <node id="260" name="Forest Clearing, Pathway">
+    <description>The sounds of Bosque Deriel and Leth Deriel further on are muted by the suddenly dense woods.  The brush-choked pathway makes its way further east, eventually opening up into a wide clearing.  Wooden bridges link some of the trees here, likely for the town's scouting guardsmen and hunters alike.  Crates of tools and supplies are nestled amongst the creeping vines and other undergrowth of the forest.</description>
+    <position x="-40" y="-340" z="0" />
+    <arc exit="go" move="go brush-choked pathway" destination="108" />
+    <arc exit="east" move="east" destination="261" />
+  </node>
+  <node id="261" name="Forest Clearing, Gathering Pit" color="#00FFFF">
+    <description>From time to time, the sounds of a team of woodsmen can be heard as they carefully choose and fell another of the forest's elder trees.  The pruning serves dual purposes -- to supply the needs of nearby Leth Deriel as well as to renew the woods with younger, stouter growth.  The small clearing here allows travelers and workers alike a brief respite from the day's duties while the stone-encircled firepit provides food, light, and warmth during the colder months.</description>
+    <position x="-20" y="-340" z="0" />
+    <arc exit="north" move="north" destination="262" />
+    <arc exit="northeast" move="northeast" destination="263" />
+    <arc exit="southeast" move="southeast" destination="264" />
+    <arc exit="south" move="south" destination="265" />
+    <arc exit="southwest" move="southwest" destination="266" />
+    <arc exit="west" move="west" destination="260" />
+  </node>
+  <node id="262" name="Forest Clearing, Old Growth" color="#00FFFF">
+    <description>Elder trees, some native and others clearly transported, dot the clearing at irregular intervals.  A mix of trees including spruce, pines, oaks and more are evident, as well as stumps of other, now unidentifiable ones.  An abundance of wildlife including raccoons, rabbits, birds, wolves and more are frequently seen or heard moving through without care for the woodsmen nearby.</description>
+    <position x="-20" y="-360" z="0" />
+    <arc exit="east" move="east" destination="263" />
+    <arc exit="south" move="south" destination="261" />
+  </node>
+  <node id="263" name="Forest Clearing, Old Growth" color="#00FFFF">
+    <description>A handful of cabins, each constructed from wood found nearby, provide shelter for those of the small encampment.  The trees encircling the broader clearing draw up against the backs of these dwellings, their intertwined canopies draping protectively over the roofs.  As the breeze shifts, both smells and smoke periodically fill the air from the nearby firepit.</description>
+    <position x="0" y="-360" z="0" />
+    <arc exit="southwest" move="southwest" destination="261" />
+    <arc exit="west" move="west" destination="262" />
+  </node>
+  <node id="264" name="Forest Clearing, Old Growth" color="#00FFFF">
+    <description>Melodies that would make even members of the Bards' Guild jealous rise and fall in intensity, pacing, and volume as birds of all shapes, sizes and colors fill the clearing with their songs.  The cabins nearby blend into the trees along the edges of the small outpost.  Covered with creeping vines and flowering plants that weave throughout them, the foliage provides ample nesting space for the varied species bringing life to the space.</description>
+    <position x="0" y="-320" z="0" />
+    <arc exit="west" move="west" destination="265" />
+    <arc exit="northwest" move="northwest" destination="261" />
+  </node>
+  <node id="265" name="Forest Clearing, Old Growth" color="#00FFFF">
+    <description>Aimlessly in trios and pairs, dragonflies of shimmering opalescent rainbow colors hover and dart from one lichen-covered trunk to the next in an endless dance.  Up above, a series of simple rope and wood bridges weave amongst the nearby trees and disappear into the denser woods beyond the clearing.  From time to time, the smells of charring meat accompany the sizzling sounds of a meal being prepared via the firepit at the heart of the clearing.</description>
+    <position x="-20" y="-320" z="0" />
+    <arc exit="north" move="north" destination="261" />
+    <arc exit="east" move="east" destination="264" />
+    <arc exit="west" move="west" destination="266" />
+  </node>
+  <node id="266" name="Forest Clearing, Rocky Mound" color="#00FFFF">
+    <description>In this small corner of the clearing, a giant mound of boulders and rocks dominates the setting.  A majestic weave of different vines has been coaxed into covering most to soften their surfaces.  The weaving doesn't appear entirely natural, even for delicate Elven hands, but rather as if enhanced by a Nature Binder's skilled magical training.  One of the flat, rocky surfaces was left exposed, and small tools and trinkets are frequently left for others in need.</description>
+    <position x="-40" y="-320" z="0" />
+    <arc exit="northeast" move="northeast" destination="261" />
+    <arc exit="east" move="east" destination="265" />
   </node>
   <label text="to Shard">
     <position x="-90" y="160" z="0" />
