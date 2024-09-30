@@ -2879,47 +2879,48 @@
   <node id="446" name="Wilderness, Sparse Forest">
     <description>The trees and undergrowth are so thick that little can be seen beyond the faint path.  Ivy has grown at least part way up most of the trees, and sometimes between them, forming living veils.</description>
     <position x="-720" y="-460" z="0" />
-    <arc exit="north" move="north" destination="532" />
+    <arc exit="north" move="north" destination="447" />
     <arc exit="southeast" move="southeast" destination="445" />
   </node>
   <node id="447" name="Wilderness, Gully" note="RTZ14|RT-KC-XW" color="#C2B280">
     <description>An occasional glimpse of distant peaks can be caught through the leafy canopy to the north.  The sounds of birdsong are muted, with only a faint melody breaking the silence.  A dry streambed cuts across the forest floor, spanned by an old rope bridge that sways gently in the breeze.</description>
-    <position x="-700" y="-520" z="0" />
+    <position x="-720" y="-520" z="0" />
     <arc exit="go" move="go rope bridge" destination="448" />
+    <arc exit="south" move="south" destination="446" />
   </node>
   <node id="448" name="Wilderness, Rope Bridge">
     <description>The bridge creaks ominously underfoot.  Jagged rocks fill the gully below, waiting for anyone foolish enough to tempt fate.  Rolling hills are evident to the north, while a wall of trees presents itself south of the bridge.</description>
-    <position x="-700" y="-540" z="0" />
+    <position x="-720" y="-540" z="0" />
     <arc exit="north" move="north" destination="449" />
     <arc exit="south" move="south" destination="447" />
   </node>
   <node id="449" name="Knife Clan, Sentry" note="Knife Clan|Kraelyst start point|travel start point" color="#808000">
     <description>A lone Gor'Tog stands motionless, his dark leathers rendering him almost indistinguishable from the surrounding underbrush.  The sentry's eyes scan constantly for signs of danger, the slightest movement instantly drawing his attention.  A low wooden building can be glimpsed off to the west, while to the north the thinning forest gives way to hills.  A rope bridge spans a dry gully south of here.</description>
-    <position x="-700" y="-560" z="0" />
+    <position x="-720" y="-560" z="0" />
     <arc exit="north" move="north" destination="452" />
     <arc exit="west" move="west" destination="450" />
     <arc exit="go" move="go rope bridge" destination="448" />
   </node>
   <node id="450" name="Knife Clan, Wooden Shack">
     <description>An array of weaponry, mostly clubs and spears, lean against the side of a dilapidated shack.  Muffled thumps from inside betray the presence of at least one occupant.</description>
-    <position x="-720" y="-560" z="0" />
+    <position x="-740" y="-560" z="0" />
     <arc exit="east" move="east" destination="449" />
     <arc exit="go" move="go dilapidated shack" destination="451" />
   </node>
   <node id="451" name="Knife Clan, Old Shack">
     <description>Sagging cots are strewn about this tiny shack.  Off duty sentries catch a few precious moments of sleep while they await their shifts.  Only a few of the mattresses are presently occupied, but the sheer bulk of the slumbering guards is impressive.</description>
-    <position x="-720" y="-580" z="0" />
+    <position x="-740" y="-580" z="0" />
     <arc exit="out" move="out" destination="450" />
   </node>
   <node id="452" name="Knife Clan, Rolling Hills" note="Ranger Cache|Cache|RTZCache|RT-KC-KCCR" color="#C2B280">
     <description>This beaten dirt path threads its way over lightly wooded hills.  Outskirts of a small settlement can barely be made out to the north, against the backdrop of jagged peaks.</description>
-    <position x="-700" y="-580" z="0" />
+    <position x="-720" y="-580" z="0" />
     <arc exit="north" move="north" destination="453" />
     <arc exit="south" move="south" destination="449" />
   </node>
   <node id="453" name="Knife Clan, Rolling Hills">
     <description>Several fierce-looking Gor'Togs loiter about the entrance to a small cave.  Dressed in brightly dyed leathers and carrying an impressive amount of weaponry, the Gor'Togs appear ready for battle at a moment's notice.  The crackling of an open fire to the east fills the air.</description>
-    <position x="-700" y="-600" z="0" />
+    <position x="-720" y="-600" z="0" />
     <arc exit="northeast" move="northeast" destination="458" />
     <arc exit="east" move="east" destination="459" />
     <arc exit="southeast" move="southeast" destination="456" />
@@ -2928,18 +2929,18 @@
   </node>
   <node id="454" name="Knife Clan, Bukor's Leatherworks" note="Bukor's Leatherworks" color="#FF0000">
     <description>Low tables are pushed up against bare rock walls in this natural cavern.  Carefully tanned furs and leathers are arranged haphazardly about the area, no thought having been given to a proper display.  Bukor, a Gor'Tog of great skill but suspect taste, is well known in the Clan for his temper.  He knows his work is excellent, and expects to be compensated accordingly.</description>
-    <position x="-720" y="-600" z="0" />
+    <position x="-740" y="-600" z="0" />
     <arc exit="northeast" move="northeast" destination="455" />
     <arc exit="out" move="out" destination="453" />
   </node>
   <node id="455" name="Knife Clan, Back Room" note="Dyer|Klurge" color="#FF0000">
     <description>A pine counter liberally spattered with a muddied rainbow of colors blocks passage deeper into the room.  Near a dark curtain at the back of the shop can be seen several barrels of pigmented metallic powders stacked carelessly next to a large bucket of half-dried paint.  Klurge, the proprieter of the operation, stands behind the counter, watching incoming customers with suspicious eyes.  A color menu list is nailed to the wall to the left of the exit.</description>
-    <position x="-700" y="-620" z="0" />
+    <position x="-720" y="-620" z="0" />
     <arc exit="southwest" move="southwest" destination="454" />
   </node>
   <node id="456" name="Knife Clan, Woodland's Edge">
     <description>Rolling hills give way to wooded plains, the sounds of the forest a welcome relief from the bustle of the Gor'Tog settlement to the north.  A beaten dirt path, worn from years of heavy use, leads deeper into the primeval wood.</description>
-    <position x="-680" y="-580" z="0" />
+    <position x="-700" y="-580" z="0" />
     <arc exit="north" move="north" destination="459" />
     <arc exit="northeast" move="northeast" destination="457" />
     <arc exit="northwest" move="northwest" destination="453" />
@@ -2947,7 +2948,7 @@
   </node>
   <node id="457" name="Knife Clan, Woodland's Edge">
     <description>Wooden buildings, a rare sight among the many cave dwellings, huddle about a clear pond.  Though unadorned, their construction seems sound enough.  Fingers of grey smoke curl into the air from the top of an unobtrusive shop.</description>
-    <position x="-660" y="-600" z="0" />
+    <position x="-680" y="-600" z="0" />
     <arc exit="northeast" move="northeast" destination="460" />
     <arc exit="southwest" move="southwest" destination="456" />
     <arc exit="west" move="west" destination="459" />
@@ -2957,7 +2958,7 @@
   </node>
   <node id="458" name="Knife Clan, Rolling Hills">
     <description>Caves honeycomb the rocky hills, providing shelter from the elements for the many warriors who inhabit the area.  Gor'Togs cluster about, yelling to one another in booming shouts.  Boisterous laughter splits the air, its origin impossible to determine.  One particularly large cave entrance draws the eye.</description>
-    <position x="-680" y="-620" z="0" />
+    <position x="-700" y="-620" z="0" />
     <arc exit="southeast" move="southeast" destination="457" />
     <arc exit="south" move="south" destination="459" />
     <arc exit="southwest" move="southwest" destination="453" />
@@ -2965,7 +2966,7 @@
   </node>
   <node id="459" name="Knife Clan, Firepit" note="Firepit">
     <description>Scorching heat rises from a roaring bonfire at the center of this sandy pit.  A huge boar slowly rotates over the fire, sending the scent of burnt flesh wafting into the air.  An elderly Gor'Tog, immensely strong despite his years, turns the spit with a steady rhythm.</description>
-    <position x="-680" y="-600" z="0" />
+    <position x="-700" y="-600" z="0" />
     <arc exit="north" move="north" destination="458" />
     <arc exit="east" move="east" destination="457" />
     <arc exit="south" move="south" destination="456" />
@@ -2973,12 +2974,12 @@
   </node>
   <node id="460" name="Knife Clan, Rolling Hills">
     <description>Towering mountains block out the sky and create a natural barrier protecting the Clan's flank.  A wrought-iron gate, undoubtedly imposing in any other setting, pales in comparison.  The portal seems oddly out of place amidst the rocky crags.</description>
-    <position x="-640" y="-620" z="0" />
+    <position x="-660" y="-620" z="0" />
     <arc exit="southwest" move="southwest" destination="457" />
   </node>
   <node id="461" name="Knife Clan, Cavern">
     <description>By far the largest cavern in Trefan Iltesh, this vast cave serves as both a central meeting place and, more frequently, as a giant arena.  Opponents square off in the middle of a roughly circular pit carved into the rocky floor while onlookers gather about the edge and hurl insults or cheers as their champions' fortunes change.  Smaller caverns breaking off from the main cave lead in several directions.</description>
-    <position x="-680" y="-640" z="0" />
+    <position x="-700" y="-640" z="0" />
     <arc exit="north" move="north" destination="463" />
     <arc exit="east" move="east" destination="462" />
     <arc exit="out" move="out" destination="458" />
@@ -2986,33 +2987,33 @@
   </node>
   <node id="462" name="Knife Clan, Cavern">
     <description>The sharp CRACK! of clashing weaponry echoes madly through this rocky chamber.  Almost palpable waves of heat roll off grim-faced Gor'Togs as they flail at one another in preparation for their trials in the arena.  Despite their bulk, opponents dance nimbly through the natural obstacles formed by thrusting stalagmites.  A few heavy boulders have been pushed into one corner of the cavern.</description>
-    <position x="-660" y="-640" z="0" />
+    <position x="-680" y="-640" z="0" />
     <arc exit="west" move="west" destination="461" />
   </node>
   <node id="463" name="Knife Clan, Shrine" note="Shrine|Huldah" color="#A6A3D9">
     <description>The dim light from a few flickering torches is not enough to cut through the gloom that pervades this cramped alcove.  The cold stone walls seem to close in on all sides.  Against the far wall leans a carved granite statue of a fierce weasel, its small size oddly out of place among the giant Gor'Togs that inhabit these caves.</description>
-    <position x="-680" y="-660" z="0" />
+    <position x="-700" y="-660" z="0" />
     <arc exit="south" move="south" destination="461" />
   </node>
   <node id="464" name="Knife Clan, Triage" note="Triage|Healer|Dokt" color="#00BF80">
     <description>Low groans rising from the injured fill the cramped alcove as wounded hunters and warriors receive aid.  Mattresses line the walls, about half occupied by recovering patients.  The floor is almost entirely covered by a dark red stain, paying testament to the enthusiasm of the field surgeons.  An ominous bone saw leans against the wall, obviously a favorite method of treatment.</description>
-    <position x="-700" y="-640" z="0" />
+    <position x="-720" y="-640" z="0" />
     <arc exit="east" move="east" destination="461" />
   </node>
   <node id="465" name="Knife Clan, Tobb's Smithy" note="Tobb's Smithy" color="#FF0000">
     <description>Knives of all shapes, sizes, and descriptions occupy every available surface in this tiny shop.  Care must be taken to avoid any sudden movement, or painful consequences may result.  But despite the eccentricity of his establishment, Tobb the smith is almost revered by his patrons for the detailed craftsmanship with which he goes about his work.</description>
-    <position x="-640" y="-600" z="0" />
+    <position x="-660" y="-600" z="0" />
     <arc exit="out" move="out" destination="457" />
   </node>
   <node id="466" name="Knife Clan, Woodland Trail">
     <description>Gnarled branches claw at the air, and tangled roots seem intent on tripping the unwary.  The fresh spoor of large game is apparent, a sure sign of plentiful hunting.  A beaten dirt path leads back to the settlement.</description>
-    <position x="-680" y="-540" z="0" />
+    <position x="-700" y="-540" z="0" />
     <arc exit="southeast" move="southeast" destination="467" />
     <arc exit="go" move="go dirt path" destination="456" />
   </node>
   <node id="467" name="Knife Clan, Primeval Glade" note="Primeval Glade">
     <description>A circular clearing has been carved out of the dense wood, the lumber apparently used to construct the cabin that fills most of this break in the forest.  Constant battle is obviously waged to prevent the surrounding underbrush from encroaching into the area.</description>
-    <position x="-660" y="-520" z="0" />
+    <position x="-680" y="-520" z="0" />
     <arc exit="east" move="east" destination="471" />
     <arc exit="southeast" move="southeast" destination="470" />
     <arc exit="south" move="south" destination="469" />
@@ -3021,13 +3022,13 @@
   </node>
   <node id="468" name="Knife Clan, Woodlands">
     <description>The wind lends a biting chill to the air as it whips through the trees.  An eerie whistling originates from some oddly-shaped reeds.  Perhaps because of the sound, wildlife seems to avoid this area.</description>
-    <position x="-680" y="-520" z="0" />
+    <position x="-700" y="-520" z="0" />
     <arc exit="east" move="east" destination="467" />
     <arc exit="southeast" move="southeast" destination="469" />
   </node>
   <node id="469" name="Knife Clan, Woodlands" note="RTZ16|RT-KC-HF" color="#C2B280">
     <description>Ancient trees soar skyward here in the heart of the primeval forest.  The mammoth trunks dwarf even the Gor'Tog hunters that frequent the glade in search of game.  One blackened stump pays testament to the violent storms that sometimes frequent these lands.</description>
-    <position x="-660" y="-500" z="0" />
+    <position x="-680" y="-500" z="0" />
     <arc exit="north" move="north" destination="467" />
     <arc exit="northeast" move="northeast" destination="471" />
     <arc exit="east" move="east" destination="470" />
@@ -3035,14 +3036,14 @@
   </node>
   <node id="470" name="Knife Clan, Deep Forest's Edge">
     <description>Pale grey mosses grow in curtains among clustered trees.  A black squirrel chirrs happily to himself as he scampers across an overhead limb.  With a heroic leap, the squirrel hurls himself through the air, only to land triumphantly moments later on a distant branch.</description>
-    <position x="-640" y="-500" z="0" />
+    <position x="-660" y="-500" z="0" />
     <arc exit="north" move="north" destination="471" />
     <arc exit="west" move="west" destination="469" />
     <arc exit="northwest" move="northwest" destination="467" />
   </node>
   <node id="471" name="Knife Clan, Deep Forest's Edge">
     <description>A few taffelberry bushes have managed to find a niche here in the shadow of looming trees.  From the bushes' rather barren appearance, the local wildlife has acquired quite a taste for the sweet berries.</description>
-    <position x="-640" y="-520" z="0" />
+    <position x="-680" y="-520" z="0" />
     <arc exit="south" move="south" destination="470" />
     <arc exit="southwest" move="southwest" destination="469" />
     <arc exit="west" move="west" destination="467" />
@@ -3431,23 +3432,6 @@
     <arc exit="southwest" move="southwest" destination="530" />
     <arc exit="northwest" move="northwest" destination="526" />
   </node>
-  <node id="532" name="Wilderness, Edge of the Primal Encasement">
-    <description>An abrupt line slashes across the forest here, the tree line ending with a stark immediacy and with the ground cleared.  To the north, a crater descends gently downward, encased in a veritable wall of snapping and writhing thorny vines that constantly churn the land and create an impassable barrier.  Extending upward into a vague teardrop pinnacle from which erupts a golden beam of light, the lifesculpted spire occupies the same space Knife Clan previously occupied.</description>
-    <position x="-720" y="-480" z="0" />
-    <arc exit="south" move="south" destination="446" />
-    <arc exit="northeast" move="northeast" destination="534" />
-    <arc exit="northwest" move="northwest" destination="533" />
-  </node>
-  <node id="533" name="Wilderness, Edge of the Primal Encasement">
-    <description>The forest is neatly cleared, though patches of shattered stone marr the lip and curve of the crater.  From here, a slightly different vantage of the maelstrom is afforded, and several gaps in the writhing vines reveal an encasement of malleable stone, which grows and crumbles as the living barrier continues its constant movement.  The pinnacle of the encasement terminates in a vaguely teardrop shape, and a beam of golden light shines upward.  Chunks of vine-encased stone are flung from the encasement, though they sink into the ground wherever they land, leaving little more than some gravel.</description>
-    <position x="-740" y="-500" z="0" />
-    <arc exit="southeast" move="southeast" destination="532" />
-  </node>
-  <node id="534" name="Wilderness, Edge of the Primal Encasement">
-    <description>The forest is neatly cleared, a dry streambed terminating at the edge of the crater.  A broken rope ladder trails down the curve of the crater, frayed edges occasionally battered by the churning chaos of the wall of writhing vines.  Dangerously close to the encasement, the sound of grinding stone and creaking vine echoes all around.</description>
-    <position x="-700" y="-500" z="0" />
-    <arc exit="southwest" move="southwest" destination="532" />
-  </node>
   <label text="Bobcats">
     <position x="-50" y="400" z="0" />
   </label>
@@ -3612,11 +3596,5 @@
   </label>
   <label text="Spiders">
     <position x="-245" y="215" z="0" />
-  </label>
-  <label text="Is Temporarily">
-    <position x="-790" y="-540" z="0" />
-  </label>
-  <label text="Inaccessible">
-    <position x="-790" y="-530" z="0" />
   </label>
 </zone>
