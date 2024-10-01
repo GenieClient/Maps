@@ -4,6 +4,6 @@ Barrel:
 
 	send go barrel
 	waitforre You can't|You duck
-	if "%barrel" = "1" then send go other barrel
+	if "%barrel" == "1" then send go other barrel
 	pause
 	send #parse MOVE SUCCESSFUL

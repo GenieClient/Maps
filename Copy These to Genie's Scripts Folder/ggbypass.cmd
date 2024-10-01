@@ -16,7 +16,7 @@ action var status 1 when ^As you pull down on the (?:torch|stone basin) you hear
 action var status 0 when ^A gouged stone wall slowly closes
 
 MAINLOOP:
-     if (%status = 0) then 
+     if (%status == 0) then 
           {
                if matchre("$roomdesc", "^Rising steeply from a rough-hewn opening") then gosub TURN torch on wall
                if matchre("$roomdesc", "^The interior of the small cavern") then gosub TURN basin on wall

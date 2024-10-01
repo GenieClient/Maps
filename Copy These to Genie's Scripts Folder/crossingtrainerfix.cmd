@@ -27,7 +27,7 @@ Trainer:
 	
 	send %0
 	waitforre ^You can't|^What were|^Obvious paths:|^Obvious exits:
-	if "%trainer" = "1" then
+	if "%trainer" == "1" then
 	{
 		send out
 		pause 0.1
@@ -42,7 +42,7 @@ Agility:
 	
 	send %0
 	waitforre The Academy of Agility|The Crossing, Damaris Lane
-	if "%trainer" = "1" then
+	if "%trainer" == "1" then
 	{
 		send out
 		pause 0.1
@@ -59,7 +59,7 @@ Charisma:
 	
 	send %0
 	waitforre The Crossing, Water Sprite Way|Woodruff's Recitation Room
-	if "%trainer" = "1" then
+	if "%trainer" == "1" then
 	{
 		send out
 		pause 0.1
@@ -76,7 +76,7 @@ Discipline:
 	
 	send %0
 	waitforre A Mud Hovel|The Crossing, Fostra Square
-	if "%trainer" = "1" then
+	if "%trainer" == "1" then
 	{
 		send out
 		pause 0.1
@@ -93,7 +93,7 @@ Intelligence:
 	
 	send %0
 	waitforre Asemath Academy, Classroom|This classroom is done in tones of golden yellow and a gentle aqua
-	if "%trainer" = "1" then
+	if "%trainer" == "1" then
 	{
 		send out
 		pause 0.1
@@ -110,7 +110,7 @@ Reflex:
 	
 	send %0
 	waitforre Rartan's Collegium of Inner Juggling and Reflexology|The Crossing, Mongers' Bazaar
-	if "%trainer" = "1" then
+	if "%trainer" == "1" then
 	{
 		send out
 		pause 0.1
@@ -127,7 +127,7 @@ Stamina:
 	
 	send %0
 	waitforre Barbarian Guild, Stamina Training Room|The Crossing, Champions' Square
-	if "%trainer" = "1" then
+	if "%trainer" == "1" then
 	{
 		send out
 		pause 0.1
@@ -144,7 +144,7 @@ Strength:
 	
 	send %0
 	waitforre Tembeg's Armory, Workroom|Tembeg's Armory, Salesroom|Town Green Northwest
-	if "%trainer" = "1" then
+	if "%trainer" == "1" then
 	{
 		send out
 		pause 0.1
@@ -161,7 +161,7 @@ Wisdom:
 	
 	send %0
 	waitforre Asemath Academy, Northern Walkway|TThis large classroom is used at various times for general instruction and the more specialized classes
-	if "%trainer" = "1" then
+	if "%trainer" == "1" then
 	{
 		send out
 		pause 0.1

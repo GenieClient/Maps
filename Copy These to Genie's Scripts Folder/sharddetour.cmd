@@ -13,9 +13,9 @@ locationcheck:
 ####
 insideshard:
   if ($Athletics.Ranks > 250) then goto $roomidClimbOUT
-  if ($roomid = 1) then gosub automove e gate
-  if ($roomid = 43) then gosub automove e gate|w gate
-  if ($roomid = 199) then gosub automove e gate|s gate
+  if ($roomid == 1) then gosub automove e gate
+  if ($roomid == 43) then gosub automove e gate|w gate
+  if ($roomid == 199) then gosub automove e gate|s gate
   goto done
 199ClimbOUT:
   move climb stairway
@@ -37,9 +37,9 @@ insideshard:
 ####
 outsideshard:
   if ($Athletics.Ranks > 250) then goto $zoneidClimbIN
-  if ($zoneid = 69) then gosub automove north|shard
-  if ($zoneid = 68) then gosub automove e gate|e gate
-  if ($zoneid = 66) then gosub automove e gate
+  if ($zoneid == 69) then gosub automove north|shard
+  if ($zoneid == 68) then gosub automove e gate|e gate
+  if ($zoneid == 66) then gosub automove e gate
   goto done
 69ClimbIN:
   move climb wall
@@ -81,6 +81,6 @@ automove_1:
   matchwait
 
 autoreturn:
-  if (%c = %mcount) then return
+  if (%c == %mcount) then return
   math c add 1
   goto automove_1

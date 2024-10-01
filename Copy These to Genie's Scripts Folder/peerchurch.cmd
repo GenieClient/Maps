@@ -26,32 +26,32 @@ exit
 MOVE_RANDOM:
      delay 0.0001
      random 1 8
-     if (%r = 1) && (!$north) then goto MOVE_RANDOM
-     if (%r = 2) && (!$northeast) then goto MOVE_RANDOM
-     if (%r = 3) && (!$east) then goto MOVE_RANDOM
-     if (%r = 4) && (!$southeast) then goto MOVE_RANDOM
-     if (%r = 5) && (!$south) then goto MOVE_RANDOM
-     if (%r = 6) && (!$southwest) then goto MOVE_RANDOM
-     if (%r = 7) && (!$west) then goto MOVE_RANDOM
-     if (%r = 8) && (!$northwest) then goto MOVE_RANDOM
+     if (%r == 1) && (!$north) then goto MOVE_RANDOM
+     if (%r == 2) && (!$northeast) then goto MOVE_RANDOM
+     if (%r == 3) && (!$east) then goto MOVE_RANDOM
+     if (%r == 4) && (!$southeast) then goto MOVE_RANDOM
+     if (%r == 5) && (!$south) then goto MOVE_RANDOM
+     if (%r == 6) && (!$southwest) then goto MOVE_RANDOM
+     if (%r == 7) && (!$west) then goto MOVE_RANDOM
+     if (%r == 8) && (!$northwest) then goto MOVE_RANDOM
      #
-     if (%r = 1) then var Direction north
-     if (%r = 2) then var Direction northeast
-     if (%r = 3) then var Direction east
-     if (%r = 4) then var Direction southeast
-     if (%r = 5) then var Direction south
-     if (%r = 6) then var Direction southwest
-     if (%r = 7) then var Direction west
-     if (%r = 8) then var Direction northwest
+     if (%r == 1) then var Direction north
+     if (%r == 2) then var Direction northeast
+     if (%r == 3) then var Direction east
+     if (%r == 4) then var Direction southeast
+     if (%r == 5) then var Direction south
+     if (%r == 6) then var Direction southwest
+     if (%r == 7) then var Direction west
+     if (%r == 8) then var Direction northwest
      #
-     if (%r = 1) then var Reverse.Direction south
-     if (%r = 2) then var Reverse.Direction southwest
-     if (%r = 3) then var Reverse.Direction west
-     if (%r = 4) then var Reverse.Direction northwest
-     if (%r = 5) then var Reverse.Direction north
-     if (%r = 6) then var Reverse.Direction northeast
-     if (%r = 7) then var Reverse.Direction east
-     if (%r = 8) then var Reverse.Direction southeast
+     if (%r == 1) then var Reverse.Direction south
+     if (%r == 2) then var Reverse.Direction southwest
+     if (%r == 3) then var Reverse.Direction west
+     if (%r == 4) then var Reverse.Direction northwest
+     if (%r == 5) then var Reverse.Direction north
+     if (%r == 6) then var Reverse.Direction northeast
+     if (%r == 7) then var Reverse.Direction east
+     if (%r == 8) then var Reverse.Direction southeast
      #
      var Exits 0
      if ($north) then math Exits add 1
@@ -64,7 +64,7 @@ MOVE_RANDOM:
      if ($northwest) then math Exits add 1
      #
      # don't move "back" on a path unless we hit a dead end
-     if (%Exits > 1) && ("%Last.Direction" = "%Reverse.Direction") then goto MOVE_RANDOM
+     if (%Exits > 1) && ("%Last.Direction" == "%Reverse.Direction") then goto MOVE_RANDOM
      #
      var Last.Direction %Direction
      # Trigger to set variable for occupied room, when roaming.
@@ -169,7 +169,7 @@ AUTOMOVE:
      var Destination $0
      var automovefailCounter 0
      if (!$standing) then gosub AUTOMOVE_STAND
-     if ("$roomid" = "%Destination") then return
+     if ("$roomid" == "%Destination") then return
 AUTOMOVE_GO:
      matchre AUTOMOVE_FAILED ^(?:AUTOMAPPER )?MOVE(?:MENT)? FAILED
      matchre AUTOMOVE_RETURN ^YOU HAVE ARRIVED(?:\!)?

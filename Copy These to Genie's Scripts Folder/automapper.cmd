@@ -210,7 +210,7 @@ var autoversion 8.2024-09-29
 #2022-10-22 thru 27
 # Hanryu, with a strong assist from TenderVittles
 # working on afordances for different system speeds on RT generating moves (MOVE.RT label)
-# added a wait in retry if waitfor_action = 1
+# added a wait in retry if waitfor_action == 1
 # Added inviso drop message on "get skates"
 # add verbose flag to toggle next move echo
 # still fighting run conditions at the shard gates at night when powerwalking
@@ -344,10 +344,10 @@ var autoversion 8.2024-09-29
 # Related macros
 # ---------------
 # Add the following macro for toggling powerwalking:
-# #macro {P, Control} {#if {$powerwalk = 1}{#tvar powerwalk 0;#echo *** Powerwalking off}{#tvar powerwalk 1;#echo *** Powerwalking on}}
+# #macro {P, Control} {#if {$powerwalk == 1}{#tvar powerwalk 0;#echo *** Powerwalking off}{#tvar powerwalk 1;#echo *** Powerwalking on}}
 #
 # Add the following macro for toggling Caravans:
-# #macro {C, Control} {#if {$caravan = 1}{#tvar caravan 0;#echo *** Caravan Following off}{#tvar caravan 1;#echo *** Caravan Following on}}
+# #macro {C, Control} {#if {$caravan == 1}{#tvar caravan 0;#echo *** Caravan Following off}{#tvar caravan 1;#echo *** Caravan Following on}}
 #
 # Related aliases
 # ---------------
@@ -368,7 +368,7 @@ if matchre("%1", "help|HELP|Help|^$") then {
   put #echo %helpecho <<  Welcome to automapper Setup!   (version %autoversion)           >>
   put #echo %helpecho <<  Use the command line to set the following preferences:          >>
   put #echo %helpecho <<    Typeahead                                                     >>
-  put #echo %helpecho <<      Standard Account = 1, Premium Account = 2, LTB Premium = 3  >>
+  put #echo %helpecho <<      Standard Account == 1, Premium Account == 2, LTB Premium == 3  >>
   put #echo %helpecho <<      0: wait for correct confirmation of sent commands           >>
   put #echo %helpecho <<      #var automapper.typeahead 1                                 >>
   put #echo %helpecho <<    Pause                                                         >>
@@ -445,7 +445,7 @@ ABSOLUTE.TOP:
 #USER VARS:
 # Type ahead declaration
 # The following will use a global to set it by character.  This helps when you have both premium and standard accounts.
-# Standard Account = 1, Premium Account = 2, LTB Premium = 3
+# Standard Account == 1, Premium Account == 2, LTB Premium == 3
 # 0: wait for correct confirmation of sent commands
 # automapper.typeahead FIX - Some users had a rogue variable set for automapper.typeahead
 # This sets automapper.typeahead to 1 if the variable is NOT present at all
@@ -455,7 +455,7 @@ ABSOLUTE.TOP:
   # Time to pause before sending a "put x" command
   if !def(automapper.pause) then var command_pause 0.01
   else var command_pause $automapper.pause
-# echo next move? 1 = YES, 0 = NO
+# echo next move? 1 == YES, 0 == NO
   if !def(automapper.verbose) then var verbose 1
   else var verbose $automapper.verbose
 # what color do you want for echos?
@@ -495,7 +495,7 @@ ABSOLUTE.TOP:
     action (citizenship) off
   }
 # release cyclics if defined
-  if  $automapper.cyclic=1 then send release cyclic
+  if ($automapper.cyclic == 1) then send release cyclic
 # turn off classes to speed movment
   if def(automapper.class) then put #class $automapper.class
 # ---------------
@@ -542,7 +542,7 @@ ABSOLUTE.TOP:
   var climb_mount_FAIL climb what?
 ACTIONS:
   action (mapper) action (mapper) off;goto DRAGGED when ^The current drags you
-  action (mapper) if (%movewait = 0) then shift;if (%movewait = 0) then math depth subtract 1;if ((%verbose) && (len("%2") > 0)) then put #echo %color Next move: %2 when %move_OK
+  action (mapper) if (%movewait == 0) then shift;if (%movewait == 0) then math depth subtract 1;if ((%verbose) && (len("%2") > 0)) then put #echo %color Next move: %2 when %move_OK
   action (mapper) goto MOVE.FAILED when %move_FAIL
   action (mapper) var TryGoInsteadOfClimb 1 when ^You can't climb that\.$
   action (mapper) goto MOVE.RETRY when %move_RETRY|%move_WEB|^You can't climb that\.$
@@ -571,8 +571,8 @@ ACTIONS:
   action (skates) var wearing_skates 0 when ^You untie your skates and slip them off of your feet\.
   action (healing) var plant $1;goto HEALING when an ethereal (vela'tohr thicket|vela'tohr plant)
   action (healing) off
-#  if (($automapper.seekhealing = 1) && ($guild != Necromancer)) then action (healing) on
-  if ($automapper.seekhealing = 1) then action (healing) on
+#  if (($automapper.seekhealing == 1) && ($guild != Necromancer)) then action (healing) on
+  if ($automapper.seekhealing == 1) then action (healing) on
   action var darkroom 1 when ^It's pitch dark and you can't see a thing\!
   action var slow_on_ice 1;if (%verbose) then put #echo %color Ice detected! when ^You had better slow down\! The ice is|^At the speed you are traveling
   action goto JAILED when ^You slowly wake up again to find that all your belongings have been stripped and you are in a jail cell wearing a set of heavy manacles\.|^The \w+ brings you to the jail, where several companions aid to hold you down and strip you of all your possessions\.|^The town guard, with the help of several others, wrestle you to the ground, bind you in chains, and drag you off to jail\.|^\w+ you awake some time later, your possessions have been stripped from you, and you lay in a musty pile of straw\.|^The door slams shut, a sound not unlike that of a tomb closing\.
@@ -595,7 +595,7 @@ WAVE_DO:
   }
   evalmath MDepth (%depth + 1)
   if ((%typeahead.max >= %depth) && ("%%MDepth" != "")) then gosub MOVE %%MDepth
-  if ((%typeahead.max <= %depth) || ("%%MDepth" = "")) then goto MAIN.LOOP
+  if ((%typeahead.max <= %depth) || ("%%MDepth" == "")) then goto MAIN.LOOP
   else goto WAVE_DO
 
 DONE:
@@ -647,7 +647,7 @@ MOVE:
       }
     else
       {
-      if ("%type" = "real") then
+      if ("%type" == "real") then
         {
         if matchre("%movement", "^(search|swim|climb|web|muck|rt|wait|slow|drag|script|room|ice|dive) ") then
           {
@@ -675,8 +675,8 @@ MOVE:
 
 MOVE.REAL:
   if (%wearing_skates) then gosub REMOVE.SKATES
-  if (("$zoneid" = "62") && ("$game" = "DRF")) then {
-    if (("$roomid" = "41") && ("%movement" = "southwest")) then {
+  if (("$zoneid" == "62") && ("$game" == "DRF")) then {
+    if (("$roomid" == "41") && ("%movement" == "southwest")) then {
       pause %command_pause
       move southwest
       move south
@@ -693,7 +693,7 @@ MOVE.ROOM:
   if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
   put %movement
   eval depthtimeout $unixtime + %waitevalTimeOut
-  if (%depth > 0) then waiteval ((0 = %depth) || ($unixtime >= %depthtimeout))
+  if (%depth > 0) then waiteval ((0 == %depth) || ($unixtime >= %depthtimeout))
   goto MOVE.DONE
 
 MOVE.STOW:
@@ -727,7 +727,7 @@ MOVE.ICE:
   }
   put %movement
   eval depthtimeout $unixtime + %waitevalTimeOut
-  if (%depth > 0) then waiteval ((0 = %depth) || ($unixtime >= %depthtimeout))
+  if (%depth > 0) then waiteval ((0 == %depth) || ($unixtime >= %depthtimeout))
   goto MOVE.DONE
 
 SKATE.NO:
@@ -863,7 +863,7 @@ MOVE.CLIMB.WITH.ROPE:
   if !matchre("$righthand $lefthand", "\brope\b") then gosub PUT get my braided rope
   if !matchre("$righthand $lefthand", "\brope\b") then gosub PUT get my heavy rope
   action (mapper) on
-  if (("$guild" = "Thief") && ($concentration > 50) && ($Athletics.Ranks < 600)) then gosub PUT khri flight focus
+  if (("$guild" == "Thief") && ($concentration > 50) && ($Athletics.Ranks < 600)) then gosub PUT khri flight focus
   if matchre("$righthand $lefthand", "\brope\b") then goto MOVE.CLIMB.WITH.APP.AND.ROPE
   matchre MOVE.CLIMB.WITH.ROPE %move_RETRY
   matchre STOW.ROPE %move_OK
@@ -875,7 +875,7 @@ MOVE.CLIMB.WITH.APP.AND.ROPE:
   eval climbobject replacere("%movement", "climb ", "")
   put appraise %climbobject quick
   waitforre ^\s*[\[\(]?Roundtime\s*\:?|^You cannot appraise that when you are in combat
-  if (("$guild" = "Thief") && ($concentration > 50) && ($Athletics.Ranks < 600)) then gosub PUT khri flight focus
+  if (("$guild" == "Thief") && ($concentration > 50) && ($Athletics.Ranks < 600)) then gosub PUT khri flight focus
   matchre MOVE.CLIMB.WITH.APP.AND.ROPE %move_RETRY
   matchre STOW.ROPE %move_OK
   matchre MOVE.CLIMB.WITH.APP.AND.ROPE %climb_FAIL
@@ -908,19 +908,19 @@ MOVE.SCRIPT:
   eval depthtimeout $unixtime + %waitevalTimeOut
   if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
   action (mapper) off
-  if ("%movement" = "oshumanor") then goto OSHUMANOR
-  if ("%movement" = "dragonspine") then goto DRAGONSPINE
-  if ("%movement" = "abbeyhatch") then goto ABBEY.HATCH
-  if ("%movement" = "gateofsouls") then goto GATE.OF.SOULS
-  if ("%movement" = "gateleave") then goto GATE.OF.SOULS.LEAVE
-  if ("%movement" = "ggbypass") then goto GEAR.GATE.BYPASS
-  if ("%movement" = "autoclimbup") then goto AUTOCLIMB.UP
-  if ("%movement" = "autoclimbdown") then goto AUTOCLIMB.DOWN
-  if ("%movement" = "armoire") then goto ARMOIRE
-  if ("%movement" = "mistwoodcliff") then goto MISTWOOD.CLIFF
-  if ("%movement" = "sandspit") then goto SANDSPIT.TAVERN
-  if ("%movement" = "hibintelligence") then goto HIB.INTELLIGENCE
-  if ("%movement" = "automoveenterdobeks") then goto ENTER.DOBEKS
+  if ("%movement" == "oshumanor") then goto OSHUMANOR
+  if ("%movement" == "dragonspine") then goto DRAGONSPINE
+  if ("%movement" == "abbeyhatch") then goto ABBEY.HATCH
+  if ("%movement" == "gateofsouls") then goto GATE.OF.SOULS
+  if ("%movement" == "gateleave") then goto GATE.OF.SOULS.LEAVE
+  if ("%movement" == "ggbypass") then goto GEAR.GATE.BYPASS
+  if ("%movement" == "autoclimbup") then goto AUTOCLIMB.UP
+  if ("%movement" == "autoclimbdown") then goto AUTOCLIMB.DOWN
+  if ("%movement" == "armoire") then goto ARMOIRE
+  if ("%movement" == "mistwoodcliff") then goto MISTWOOD.CLIFF
+  if ("%movement" == "sandspit") then goto SANDSPIT.TAVERN
+  if ("%movement" == "hibintelligence") then goto HIB.INTELLIGENCE
+  if ("%movement" == "automoveenterdobeks") then goto ENTER.DOBEKS
   matchre MOVE.SCRIPT.DONE ^MOVE SUCCESSFUL
   matchre MOVE.FAILED ^MOVE FAILED
   put .%movement
@@ -939,29 +939,29 @@ MOVE.SCRIPT.DONE:
 MOVE.FATIGUE:
   if (%verbose) then gosub ECHO TOO FATIGUED TO CLIMB!
   pause 0.5
-  if ("$guild" = "Barbarian") then {
+  if ("$guild" == "Barbarian") then {
     gosub PUT berserk avalanche
     pause 2
   }
-  if ("$guild" = "Bard") then {
+  if ("$guild" == "Bard") then {
     gosub PUT prep hodi 20
     pause 18
     gosub PUT cast
     pause
   }
-  if ("$guild" = "Empath") then {
+  if ("$guild" == "Empath") then {
     gosub PUT prep refresh 20
     pause 18
     gosub PUT cast
     pause
   }
-  if ("$guild" = "Warrior Mage") then {
+  if ("$guild" == "Warrior Mage") then {
     gosub PUT prep zephyr 20
     pause 18
     gosub PUT cast
     pause
   }
-  if ("$guild" = "Cleric") then {
+  if ("$guild" == "Cleric") then {
     gosub PUT prep EF 20
     pause 18
     gosub PUT cast
@@ -981,15 +981,15 @@ FATIGUE.WAIT:
 MOVE.INVIS:
   eval depthtimeout $unixtime + %waitevalTimeOut
   if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
-  if ("$guild" = "Necromancer") then {
+  if ("$guild" == "Necromancer") then {
     gosub PUT release EOTB
     pause %command_pause
   }
-  if ("$guild" = "Thief") then {
+  if ("$guild" == "Thief") then {
     gosub PUT khri stop silence vanish
     pause %command_pause
   }
-  if ("$guild" = "Ranger") then {
+  if ("$guild" == "Ranger") then {
     gosub PUT release BLEND
     pause %command_pause
   }
@@ -1000,13 +1000,13 @@ MOVE.INVIS:
     pause %command_pause
   }
   pause %command_pause
-  if ($invisible = 1) then {
-    if ($SpellTimer.RefractiveField.active = 1) then gosub PUT release RF
-    if ($SpellTimer.StepsofVuan.active = 1) then gosub PUT release SOV
-    if ($SpellTimer.EyesoftheBlind.active = 1) then gosub PUT release EOTB
-    if ($SpellTimer.Blend.active = 1) then gosub PUT release BLEND
-    if ($SpellTimer.KhriSilence.active = 1) then gosub PUT khri stop silence
-    if ($SpellTimer.KhriVanish.active = 1) then gosub PUT khri stop vanish
+  if ($invisible == 1) then {
+    if ($SpellTimer.RefractiveField.active == 1) then gosub PUT release RF
+    if ($SpellTimer.StepsofVuan.active == 1) then gosub PUT release SOV
+    if ($SpellTimer.EyesoftheBlind.active == 1) then gosub PUT release EOTB
+    if ($SpellTimer.Blend.active == 1) then gosub PUT release BLEND
+    if ($SpellTimer.KhriSilence.active == 1) then gosub PUT khri stop silence
+    if ($SpellTimer.KhriVanish.active == 1) then gosub PUT khri stop vanish
     pause %command_pause
   }
   if ($hidden) then send unhide
@@ -1047,7 +1047,7 @@ ATTACK.RETREAT:
   var action bob
   var success ^There is nothing else to face!|^What are you trying to attack\?|^Roundtime:
   gosub ACTION
-  if ($monstercount = 0) then goto RETURN.CLEAR
+  if ($monstercount == 0) then goto RETURN.CLEAR
   math retreat.count add 1
 MOVE.RETREAT:
   action (mapper) off
@@ -1131,8 +1131,8 @@ MOVE.FAILED:
 MOVE.RETRY:
   gosub ECHO Retry movement %1
   if (%TryGoInsteadOfClimb) then eval movement replacere("%movement", "climb ", "go ")
-  # SHROOM - LIGHT SOURCE CHECK - (MAY Need fine tuning) - CHECKS FOR DARK VISION/ LIGHT ITEM WHEN IN ROOMID = 0 AND DARK ROOM
-  if ((($roomid = 0) && matchre("$roomobjs $roomdesc","(pitch black|pitch dark)") && (%darkchecked = 0)) || ((%darkroom = 1) && (%darkchecked = 0))) then gosub LIGHT_SOURCE
+  # SHROOM - LIGHT SOURCE CHECK - (MAY Need fine tuning) - CHECKS FOR DARK VISION/ LIGHT ITEM WHEN IN ROOMID == 0 AND DARK ROOM
+  if ((($roomid == 0) && matchre("$roomobjs $roomdesc", "(pitch black|pitch dark)") && (%darkchecked == 0)) || ((%darkroom == 1) && (%darkchecked == 0))) then gosub LIGHT_SOURCE
   if ($webbed) then {
     if (%verbose) then gosub ECHO WEBBED - pausing
     pause
@@ -1147,7 +1147,7 @@ MOVE.RETRY:
     if ($stunned) then waiteval (!$stunned)
     goto MOVE.RETRY
   }
-  if (%typeahead.max = 0) then {
+  if (%typeahead.max == 0) then {
     pause %command_pause
     put fatigue
   }
@@ -1272,8 +1272,8 @@ GATE.OF.SOULS.1:
   pause %command_pause
   if (!$standing) then gosub STAND
   if matchre("$roomobjs", "low tunnel") then goto GATE.OF.SOULS.GO
-  if (%boulder = 1) then goto GATE.OF.SOULS.GO
-  if (%pushing = 0) then {
+  if (%boulder == 1) then goto GATE.OF.SOULS.GO
+  if (%pushing == 0) then {
     gosub RETREAT
     put push boulder
     if ($roundtime > 0) then pause $roundtime
@@ -1322,8 +1322,8 @@ GEAR.GATE.BYPASS:
 GEAR.GATE.BYPASS.CHECK:
   if (!$standing) then gosub STAND
   if matchre("$roomobjs", "a gouged stone wall") then var wall 1
-  if ("$roomid" = "263") then var wall_trigger stone basin
-  if ("$roomid" = "264") then var wall_trigger torch on wall
+  if ("$roomid" == "263") then var wall_trigger stone basin
+  if ("$roomid" == "264") then var wall_trigger torch on wall
   if (!%wall) then {
     var action turn %wall_trigger
     var success ^As you pull down on
@@ -1366,7 +1366,7 @@ OSHUMANOR:
   waitforre %move_OK
   put go door
   pause %command_pause
-  if ($roomid = 113) then goto OSHUMANOR
+  if ($roomid == 113) then goto OSHUMANOR
   goto MOVE.SCRIPT.DONE
 
 DRAGONSPINE:
@@ -1494,15 +1494,15 @@ CHECK.FOOTWEAR:
   var success ^You aren't wearing anything like that|^All of your items worn on the feet
   gosub ACTION
   action (skates2) off
-  if ("%footwear" = "skates") then return
-  if (%skate.container = 0) then goto SKATE.NO
-  if ("%footwear" = "unknown") then {
+  if ("%footwear" == "skates") then return
+  if (%skate.container == 0) then goto SKATE.NO
+  if ("%footwear" == "unknown") then {
     if (%verbose) then gosub ECHO ERROR: Unknown noun for your footwear!
     goto SKATE.NO
   }
   if (%verbose) then gosub ECHO Ice skates found!
-  if ((%footwear = 0) && ("%skate.container" = "held")) then goto WEAR.SKATES
-  if (%footwear = 0) then goto GET.SKATES
+  if ((%footwear == 0) && ("%skate.container" == "held")) then goto WEAR.SKATES
+  if (%footwear == 0) then goto GET.SKATES
 
 REMOVE.FOOTWEAR:
   var action remove my %footwear
@@ -1532,13 +1532,13 @@ REMOVE.SKATES:
   gosub ACTION
 
 STOW.SKATES:
-  if (%skate.container = 0) then var action stow my skates
+  if (%skate.container == 0) then var action stow my skates
   else var action put my skates in my %skate.container
   var success ^You put
   gosub ACTION
 
 GET.FOOTWEAR:
-  if (%footwear = 0) then return
+  if (%footwear == 0) then return
   if (%verbose) then gosub ECHO Putting your %footwear back on!
   var action get my %footwear in my %footwear.container
   var success ^You get
@@ -1558,7 +1558,7 @@ FIND.CLOAK:
 
 TAP.CLOAK:
   eval cloak_noun element ("%cloaknouns", "%cloakloop")
-  if (%cloak_noun = 0) then return
+  if (%cloak_noun == 0) then return
   var action tap my %cloak_noun
   var success ^You tap|^I could not find
   gosub ACTION
@@ -1571,7 +1571,7 @@ LOWER.CLOAK:
   var success ^You (adjust the fit|attempt to turn|pull down your|wind|unwind)
   gosub ACTION
   var action_retry ^0$
-  if (%cloak_worn = 2) then goto REMOVE.CLOAK
+  if (%cloak_worn == 2) then goto REMOVE.CLOAK
   return
 
 RAISE.CLOAK:
@@ -1764,7 +1764,7 @@ ACTION.MAPPER.ON:
   if matchre("%action", "^\.|#") then matchwait
   else matchwait 2
   if (%actionloop > 2) then goto ACTION.FAIL
-  if (%typeahead.max = 0) then goto ACTION.MAPPER.ON
+  if (%typeahead.max == 0) then goto ACTION.MAPPER.ON
   else goto ACTION.RETURN
 
 ACTION.FAIL:
@@ -1844,7 +1844,7 @@ BAG.LOOP:
     put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     return
   }
-    if ("%%BAG" = 1) then
+    if ("%%BAG" == 1) then
       {
       if matchre("%MAIN.BAG", "NULL") then
         {
@@ -1907,7 +1907,7 @@ LIGHT_SOURCE:
   var PREP 5
   var darkchecked 1
   gosub DARK_CHECK
-  if (%darkroom = 0) then return
+  if (%darkroom == 0) then return
   ### KNOWN ISSUE - AFTER SUCCESSFULLY USING DARKVISION - SOMETIMES LOSES REMAINING PATH AFTER RETURNING
   ### Have tried many various things but not sure best way to fix - This may work most of the time
   shift
@@ -1920,7 +1920,7 @@ LIGHT_SOURCE:
     gosub PUT RELEASE spell
     gosub PUT RELEASE camb
   }
-  if (("$guild" = "Ranger") && ($circle > 39)) then {
+  if (("$guild" == "Ranger") && ($circle > 39)) then {
     gosub ECHO RANGER - Beseeching Dark to Sing
     gosub PUT align 30
     var action beseech dark to sing
@@ -1929,13 +1929,13 @@ LIGHT_SOURCE:
     pause %command_pause
     if ($roundtime > 0) then pause $roundtime
   }
-  if ("$guild" = "Thief") then {
+  if ("$guild" == "Thief") then {
     gosub ECHO THIEF - Khri Sight
     gosub PUT khri sight
     pause %command_pause
     if ($roundtime > 0) then pause $roundtime
   }
-  if (("$guild" = "Bard") && ($circle > 10)) then {
+  if (("$guild" == "Bard") && ($circle > 10)) then {
     gosub ECHO BARD - Eye of Kertigen
     gosub PUT release cyclic
     gosub PUT prep EYE 5
@@ -1945,7 +1945,7 @@ LIGHT_SOURCE:
     if ($roundtime > 0) then pause $roundtime
     gosub PUT perceive self
   }
-  if (("$guild" = "Cleric")  && ($circle > 20)) then {
+  if (("$guild" == "Cleric")  && ($circle > 20)) then {
     if ($Utility.Ranks < 120) then var PREP 2
     if (($Utility.Ranks >= 120) && ($Utility.Ranks < 200)) then var PREP 5
     if (($Utility.Ranks >= 200) && ($Utility.Ranks < 300)) then var PREP 9
@@ -1960,7 +1960,7 @@ LIGHT_SOURCE:
     pause %command_pause
     if ($roundtime > 0) then pause $roundtime
   }
-  if (("$guild" = "Moon Mage") && ($circle > 20)) then {
+  if (("$guild" == "Moon Mage") && ($circle > 20)) then {
     if ($Utility.Ranks < 120) then var PREP 5
     if (($Utility.Ranks >= 120) && ($Utility.Ranks < 200)) then var PREP 7
     if (($Utility.Ranks >= 200) && ($Utility.Ranks < 300)) then var PREP 12
@@ -1974,7 +1974,7 @@ LIGHT_SOURCE:
     pause %command_pause
     if ($roundtime > 0) then pause $roundtime
   }
-  if (("$guild" = "Paladin") && ($circle > 15)) then {
+  if (("$guild" == "Paladin") && ($circle > 15)) then {
     gosub ECHO PALADIN - Glyph of Light
     gosub PUT glyph light
     pause %command_pause
@@ -1983,7 +1983,7 @@ LIGHT_SOURCE:
   delay %infiniteLoopProtection
   pause %command_pause
   gosub DARK_CHECK
-  if (%darkroom = 0) then goto YES_DARKVISION
+  if (%darkroom == 0) then goto YES_DARKVISION
 ### ADDITIONAL CHECKS HERE FOR GOGGLES / GAEZTHEN
 # WE REACH THIS SUB IF WE HAVE ~NO GUILD SKILL FOR DARK VISION~
 # NOW WE CHECK FOR ITEMS THAT GIVE DARK VISION
@@ -2012,7 +2012,7 @@ GOGGLE_STOW:
   delay %infiniteLoopProtection
   if matchre("$righthand $lefthand", "\bgoggle\b") then gosub STOWING
   gosub DARK_CHECK
-  if (%darkroom = 0) then goto YES_DARKVISION
+  if (%darkroom == 0) then goto YES_DARKVISION
 ### CHECK FOR A STARGLASS
 STARGLASS_CHECK:
   gosub STOWING
@@ -2036,7 +2036,7 @@ STARGLASS_CHECK:
   gosub PUT WEAR my starglass
   pause %command_pause
   gosub DARK_CHECK
-  if (%darkroom = 0) then goto YES_DARKVISION
+  if (%darkroom == 0) then goto YES_DARKVISION
 ### CHECK FOR A GAETHZEN LANTERN
 GAETHZEN_CHECK:
   gosub STOWING
@@ -2081,7 +2081,7 @@ GAETHZEN_2:
   gosub PUT wear my %Gaethzen
   gosub STOWING
   gosub DARK_CHECK
-  if (%darkroom = 0) then goto YES_DARKVISION
+  if (%darkroom == 0) then goto YES_DARKVISION
 ### CHECK HERE FOR A NORMAL OIL LANTERN
 LANTERN_CHECK:
   var TriedOil 0
@@ -2110,7 +2110,7 @@ LANTERN_LIGHT:
   matchwait 5
   goto LANTERN_LIGHT
 REFUEL_IT:
-  if (%TriedOil = 1) then goto LANTERN_DONE
+  if (%TriedOil == 1) then goto LANTERN_DONE
   gosub STOWING
   gosub PUT GET lantern
   gosub PUT GET lamp oil
@@ -2125,7 +2125,7 @@ LIT_LANTERN:
 LANTERN_DONE:
   gosub STOWING
   gosub DARK_CHECK
-  if (%darkroom = 0) then goto YES_DARKVISION
+  if (%darkroom == 0) then goto YES_DARKVISION
 ### CHECK FOR A TORCH
 TORCH_CHECK:
   gosub STOWING
@@ -2134,7 +2134,7 @@ TORCH_CHECK:
   put #echo %color <<  FLINT / TORCH / KNIFE                     >>
   put #echo %color <<  CONSIDER ~NOT~ HUNTING IN A DARK AREA...  >>
   put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
-  # if (%HaveLighter = 1) then
+  # if (%HaveLighter == 1) then
       # {
             # gosub PUT GET my %Lighter.Name
             # pause 0.1
@@ -2154,7 +2154,7 @@ TORCH_CHECK:
             # pause 0.0001
             # gosub STOWIT %Lighter.Name
             # gosub DARK_CHECK
-            # if (%darkroom = 0) then goto YES_DARKVISION
+            # if (%darkroom == 0) then goto YES_DARKVISION
       # }
 TORCH_FLINT:
   if !matchre("$righthand $lefthand", "(?i)torch") then gosub PUT GET my torch
@@ -2179,7 +2179,7 @@ TORCH_FLINT:
   gosub STOWING
   gosub PUT GET torch
   gosub DARK_CHECK
-  if (%darkroom = 0) then goto YES_DARKVISION
+  if (%darkroom == 0) then goto YES_DARKVISION
   goto NO_DARKVISION
 
 YES_DARKVISION:
@@ -2348,8 +2348,8 @@ PUT:
   send %putaction
   matchwait 20
   put #echo >Log Crimson *** MISSING MATCH IN PUT! (%scriptname.cmd) ***
-  put #echo >Log Crimson Command = %putaction
-  put #log $datetime MISSING MATCH IN PUT! Command = %putaction (%scriptname.cmd)
+  put #echo >Log Crimson Command == %putaction
+  put #log $datetime MISSING MATCH IN PUT! Command == %putaction (%scriptname.cmd)
   return
 
 PUT_UNTIE:
