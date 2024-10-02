@@ -1244,7 +1244,6 @@ MOVE.DONE:
 
 ABBEY.HATCH:
   action (abbey) on
-  debug 5
   action (abbey) var abbey_sconce 1 when ^What were you referring to?
   var abbey_sconce 0
   var action go secret hatchway
