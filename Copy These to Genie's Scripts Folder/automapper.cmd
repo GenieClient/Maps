@@ -916,7 +916,7 @@ MOVE.SEARCH2:
 #Roundtime: 2 sec.
 #You don't find anything of interest here.
   var action_retry ^You find some interesting signs something is here\.$
-  var success ^You (?:find|notice|push|scan|walk) .+? (?:alcove|crevice|gap|path|spot|tracks|trail)|^After a careful search of the area|^As you search, the air shimmers|^Just under the Bridge of Sparrows|^There seems to be some
+  var success ^You (?:find|notice|push|scan|walk) .+? (?:alcove|crevice|gap|path|spot|tracks|trail|trapdoor)|^After a careful search of the area|^As you search, the air shimmers|^Just under the Bridge of Sparrows|^There seems to be some
   #4-408 After a careful search of the area, you discover a trampled path!
   #7-373 You notice a path hidden in the brush that leads under the stone bridge.
   #7-395 There seems to be some sort of path leading to the east.
@@ -940,6 +940,9 @@ MOVE.SEARCH2:
   #66-319 As you search, the air shimmers and a dark onyx arch appears!
   #67-29 Just under the Bridge of Sparrows you notice a partially concealed channel bank.
   #69-6 You find a narrow path.
+  #92-92 You find a narrow gap.|You find that the narrow gap is right where you found it before.
+  #92-201 You find a trapdoor.
+
   var action search
   gosub ACTION.MAPPER.ON
   var action_retry ^0$
