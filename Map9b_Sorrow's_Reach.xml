@@ -159,6 +159,7 @@
   <node id="26" name="Foothills, Wooded Slope">
     <description>Dark silhouettes of pine trees line the slope to the north, dropping downhill along a trail through the trees.  The dim shades of night reveal a wide field, coloring everything below in subtle shades of grey.  Soft grasses sway with the breezes rushing over the open plain, a path pressed into the ground leading from the tree line to a meadow in the distance.</description>
     <description>Pine trees line the slope to the north, heading downhill along a trail to the dry road barely discernable through the trees.  A wide field opens under the daytime sky, where soft grasses sway with the breezes rushing over the open plain.  Soft grasses sway with the breezes rushing over the open plain, a path pressed into the ground leading from the tree line to a meadow in the distance.</description>
+    <description>Pine trees line the slope to the north, heading downhill along a trail to the dry road barely discernable through the trees.  A wide field opens under the daytime sky, where soft grasses sway with the breezes rushing over the open plain.  A path pressed into the ground leads from the tree line to a meadow in the distance.</description>
     <position x="260" y="-80" z="0" />
     <arc exit="south" move="south" destination="27" />
     <arc exit="down" move="down" destination="25" />
@@ -773,7 +774,7 @@
     <position x="300" y="-60" z="0" />
     <arc exit="east" move="east" destination="125" />
     <arc exit="southeast" move="southeast" destination="126" />
-    <arc exit="go" move="go trail" destination="25" />
+    <arc exit="go" move="go the trail" destination="25" />
   </node>
   <node id="125" name="High Mountains, Waterfall" note="Waterfall">
     <description>Seeming to end here, the trail runs directly toward a waterfall that crashes down from a cave high up.  Plummeting down forcefully with gouts of water, the trail washes away as a river flows from the falls and off another cliff toward the east.</description>
