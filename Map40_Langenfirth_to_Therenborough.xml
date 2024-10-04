@@ -2504,7 +2504,7 @@
     <arc exit="south" move="south" destination="382" />
     <arc exit="west" move="west" destination="378" />
   </node>
-  <node id="384" name="Langenfirth, The Carousel">
+  <node id="384" name="Langenfirth, The Carousel" note="Carousel|Vault">
     <description>In stark contrast to its humble exterior, the cabin opens out into a spacious waiting area.  Exquisitely polished oak lines the walls.  Wooden shutters stand open, allowing the breeze to carry the woody fragrance of the forest into the room.  A flagstoned chimney lights the surroundings with a gentle blaze, just enough to discourage a chill.  Along the far wall stands an oak registration desk.</description>
     <position x="-120" y="-636" z="0" />
     <arc exit="out" move="out" destination="253" />
