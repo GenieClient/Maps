@@ -2419,7 +2419,7 @@
     <description>This room, the largest by far, has the feeling of a long-abandoned campsite about it, one left in a hurry.  On the upward sloping floor lie rusted buckles, cooking pots, a lantern -- even a good-luck charm perhaps cast off in disgust.  Time and sediment have frozen them all where they fell.  Some effort was made to pile the gear near the walls, leaving the center clear of the worst of the clutter.</description>
     <position x="-140" y="160" z="1" />
     <arc exit="southwest" move="southwest" destination="353" />
-    <arc exit="none" move="search; climb footholds" destination="355" />
+    <arc exit="go" move="search climb footholds" destination="355" />
   </node>
   <node id="355" name="Forlorn Hope, Alcove" color="#000000">
     <description>A niche, a little above the level of the main chamber, is the driest spot in the cave, and from its vantage the whole room below is visible.  It sits empty, silent, almost waiting.  Some nameless bygone visitor left only one trace: from one of the walls, a bundle of papers juts out, wedged tightly into a crack.</description>

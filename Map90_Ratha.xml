@@ -5184,7 +5184,7 @@
   <node id="798" name="Old Rat's Tavern, Attic Crawlspace">
     <description>The stench of foul liquors and decaying wood is heavy, trapped and condensed in this cramped area as it wafts up from the bar rooms below.  Sprawled on one precarious-looking support beam are the bones of a dead rat, almost comedically flayed as if it had succumbed to the odor.</description>
     <position x="138" y="371" z="0" />
-    <arc exit="none" move="search go wall panel" destination="799" />
+    <arc exit="go" move="search go wall panel" destination="799" />
     <arc exit="climb" move="climb rotting ladder" destination="249" />
   </node>
   <node id="799" name="Old Rat's Tavern, Attic Crawlspace">

@@ -79,7 +79,7 @@
     <description>An old mill looks over the shoreline of the Segoltha River, its massive waterwheel splashing and churning the river's deep water.  Tall grasses and willows grow abundantly around the mill grounds.  Village women stand in groups collecting bundles of willow wands and grass.</description>
     <position x="160" y="260" z="0" />
     <arc exit="northeast" move="northeast" destination="7" />
-    <arc exit="none" move="search go faint trail" destination="73" />
+    <arc exit="go" move="search go faint trail" destination="73" />
     <arc exit="go" move="go muddy path" destination="75" />
   </node>
   <node id="12" name="Tiger Clan Home, Cottage Toft">

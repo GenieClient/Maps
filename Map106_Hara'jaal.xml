@@ -32,7 +32,7 @@
     <arc exit="north" move="north" destination="1" />
     <arc exit="northeast" move="northeast" destination="2" />
     <arc exit="northwest" move="northwest" destination="6" />
-    <arc exit="none" move="search;#send 4 go shadowed opening" destination="9" />
+    <arc exit="go" move="search;#send 4 go shadowed opening" destination="9" />
   </node>
   <node id="6" name="Hara'jaal, Beach">
     <description>Thick bushes, sun-scorched a dark brown, edge a steep cliff hiding the foot of the stone barrier.  The surf beats hard against the obsidian grit beach.</description>
