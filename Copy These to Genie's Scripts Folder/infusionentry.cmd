@@ -36,7 +36,7 @@ action remove (dolphin|panther|cat|ram|cobra|wolf|boar|raven|lion|wren)
 pause 0.5
 put look bier
 pause 1
-if %aspect = %coffin.ready then goto coffinready
+if %aspect == %coffin.ready then goto coffinready
 pause 0.5
 put turn crank
 pause 0.5
@@ -53,20 +53,20 @@ put pull lev
 pause 0.5
 pause 0.5
 put look bier
-if %aspect = %coffin.ready then goto coffinready
+if %aspect == %coffin.ready then goto coffinready
 goto infusion
 
 aspect.light.look:
 	put look wheel
 	pause 1
-	if %aspect = %aspect.light then goto return
+	if %aspect == %aspect.light then goto return
 	gosub pull.rope 
 	goto aspect.light.look
 
 aspect.dark.look:
 	put look wheel
 	pause 1
-	if %aspect = %aspect.dark then goto return
+	if %aspect == %aspect.dark then goto return
 	gosub pull.rope
 	goto aspect.dark.look
 
@@ -112,8 +112,8 @@ AUTOMOVE:
      var Destination $0
      var automovefailCounter 0
      if (!$standing) then gosub AUTOMOVE_STAND
-     if (!$roomid = 0) then gosub moveRandomDirection
-     if ("$roomid" = "%Destination") then return
+     if (!$roomid == 0) then gosub moveRandomDirection
+     if ("$roomid" == "%Destination") then return
 AUTOMOVE_GO:
      pause 0.0001
      matchre AUTOMOVE_FAILED ^(?:AUTOMAPPER )?MOVE(?:MENT)? FAILED
@@ -122,7 +122,7 @@ AUTOMOVE_GO:
      matchre AUTOMOVE_FAIL_BAIL ^DESTINATION NOT FOUND
      put #goto %Destination
      matchwait 4
-     if (%Moving = 0) then goto AUTOMOVE_FAILED
+     if (%Moving == 0) then goto AUTOMOVE_FAILED
      matchre AUTOMOVE_FAILED ^(?:AUTOMAPPER )?MOVE(?:MENT)? FAILED
      matchre AUTOMOVE_RETURN ^YOU HAVE ARRIVED(?:\!)?
      matchre AUTOMOVE_RETURN ^SHOP CLOSED(?:\!)?
@@ -150,7 +150,7 @@ AUTOMOVE_FAILED:
      put look
      pause 0.5
      pause 0.2
-     if (!$roomid = 0) || (%automovefailCounter > 2) then gosub moveRandomDirection
+     if (!$roomid == 0) || (%automovefailCounter > 2) then gosub moveRandomDirection
      goto AUTOMOVE_GO
 AUTOMOVE_FAIL_BAIL:
      action (moving) off
