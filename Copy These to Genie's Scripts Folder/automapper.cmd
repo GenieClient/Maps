@@ -5,6 +5,10 @@ var autoversion 8.2024-09-29
 # debuglevel 10
 # debug 5
 
+#2024-10-04
+# Hanryu
+#   torch on wall and stone basin for ggbypass
+
 #2024-09-29
 # Hanryu
 #   torch on wall and stone basin for ggbypass
@@ -930,9 +934,8 @@ MOVE.SCRIPT.DONE:
 # lets room load before turning on triggers for genie
   if matchre("$client", "Genie") then delay 0.25
   var subscript 0
-  shift
   var depth 0
-  if ((len("%2") > 0) && (%verbose)) then put #echo %color Next move: %2
+  if ((%verbose) && (len("%2") > 0)) then put #echo %color Next move: %2
   action (mapper) on
   goto MOVE.DONE
 
@@ -1397,6 +1400,10 @@ ARMOIRE:
   goto MOVE.REAL
 
 MISTWOOD.CLIFF:
+#shift away if room load trigger got turned off before it loaded
+  if matchre("%1", "objsearch rocky.ledge climb shrub") then shift
+  eval depthtimeout $unixtime + %waitevalTimeOut
+  if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
   put peer path
   waitforre ^Peering closely at a faint path, you realize you would need to head (\w+)\.
   var Dir $1
@@ -1404,7 +1411,9 @@ MISTWOOD.CLIFF:
   waitforre %move_OK
   put %Dir
   waitforre %move_OK
+#shift away if room load trigger got turned off before it loaded
   pause %command_pause
+  if matchre("%1", "script") then shift
   if matchre("$roomexits", "\bnorthwest\b") then {
     put northwest
     waitforre %move_OK
