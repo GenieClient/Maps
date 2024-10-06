@@ -1591,7 +1591,7 @@
     <position x="110" y="-478" z="0" />
     <arc exit="out" move="out" destination="226" />
   </node>
-  <node id="228" name="Catrox's Forge, Entryway" note="Catrox's Forge|Repair Metal|repair leather" color="#00FF00">
+  <node id="228" name="Catrox's Forge, Entryway" note="Catrox's Forge|Repair Metal|repair leather|repair armor|repair weapons" color="#00FF00">
     <description>The forge of Catrox the Dwarf is known throughout the lands.  Here mundane metal is transformed into tools, and weapons, damaged armor and shields are made whole again.  This entryway is covered by a tin roof, with no walls, in the hope of letting some air into the smoky, noisy and sweltering compound.  The ringing of metal on metal, the sputtering of cinders and slag, the hissing of steel meeting water, all are audible from within.</description>
     <position x="290" y="40" z="0" />
     <arc exit="out" move="out" hidden="True" destination="159" />
@@ -2385,7 +2385,7 @@
     <position x="20" y="-568" z="0" />
     <arc exit="go" move="go curtained doorway" destination="346" />
   </node>
-  <node id="348" name="Clerics' Guild, Courtyard">
+  <node id="348" name="Clerics' Guild, Courtyard" note="Cleric">
     <description>Several wooden benches face the center area of this large courtyard.  An older monk is demonstrating the art of the mace to a young acolyte, reminding you of the lesson of diligence from your youth.  At the far end of the courtyard, a sicle tree grove is being tended by a withered old monk with a serene look on his face.  Opposite the grove, a row of large lunat vats lend an unusual scent to the air.</description>
     <position x="0" y="-558" z="0" />
     <arc exit="go" move="go low building" destination="349" />
@@ -2393,7 +2393,7 @@
     <arc exit="go" move="go arched door" destination="344" />
     <arc exit="go" move="go recessed cellar" destination="773" />
   </node>
-  <node id="349" name="Clerics' Guild, Gathering Hall" note="Cleric|Gathering Hall">
+  <node id="349" name="Clerics' Guild, Gathering Hall" note="Gathering Hall">
     <description>Pallets of clean rush-filled linens lie about the perimeter of the long hall, available for the bodies of fallen souls in need of healing or new spirit.  The open beam ceiling admits light from frosted glass gable windows -- a soothing light spills over the dark stone floor.  Although bloodstains upon the floor attest to both death defeated and souls lost, this is a place of gathering to celebrate life and respect death, where clerics come together to work and to exchange information and inspiration.</description>
     <description>Pallets of clean rush-filled linens lie about the perimeter of the long hall, available for the bodies of fallen souls in need of healing or new spirit.  Lamps holding lit beeswax candles hang from the open beam ceiling, shadows spilling over the dark stone floor.  Although bloodstains upon the floor attest to both death defeated and souls lost, this is a place of gathering to celebrate life and respect death, where clerics come together to work and to exchange information and inspiration.</description>
     <position x="0" y="-568" z="0" />
@@ -6006,7 +6006,7 @@
     <position x="35" y="-184" z="0" />
     <arc exit="go" move="go ivory door" destination="911" />
   </node>
-  <node id="925" name="Crossing Engineering Society, Rangu's Repair Shop and Bookstore" note="Engineering clerk|Rangu's Repair Shop|Repair Tools|Engineering Books" color="#00FF00">
+  <node id="925" name="Crossing Engineering Society, Rangu's Repair Shop and Bookstore" note="Engineering clerk|Rangu's|Engineering Books" color="#00FF00">
     <description>A small forge in the corner of this room basks everything in its warmth.  Adjacent to it, a long counter sits cluttered with numerous tools and devices for repairing things.  Bundles of repaired goods rest against the far wall waiting for pickup.</description>
     <position x="-61" y="26" z="0" />
     <arc exit="east" move="east" destination="851" />
