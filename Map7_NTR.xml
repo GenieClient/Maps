@@ -4965,7 +4965,7 @@
     <position x="360" y="960" z="0" />
     <arc exit="south" move="south" destination="736" />
     <arc exit="northwest" move="rt northwest" destination="738" />
-    <arc exit="go" move="search go alcove" destination="745" />
+    <arc exit="go" move="search go small alcove" destination="745" />
   </node>
   <node id="738" name="Silverwater Mines, Tunnel">
     <description>Large chunks of rocks lie thrown about here, natural born ruins of Hodierna's heart.  The tunnel twists at a right angle ahead, moving with the sharp grace of the World Dragon itself.</description>
@@ -4990,7 +4990,7 @@
     <position x="300" y="960" z="0" />
     <arc exit="northeast" move="northeast" destination="740" />
     <arc exit="west" move="west" destination="742" />
-    <arc exit="go" move="search go alcove" destination="745" />
+    <arc exit="go" move="search go hidden alcove" destination="745" />
   </node>
   <node id="742" name="Silverwater Mines, Desolate Cavern">
     <description>A massive cavern yawns open about you, endlessly huge.  The ceiling and floors are lined in jagged stumps that were once whole stalactites and stalagmites, and shattered skeletal remains lie strewn about.  A deathly silence hangs heavy in the air, like a palpable curtain waiting to be drawn back.  The walls are scratched by claw marks, and the whole panorama hearkens to a raging tempest that whirlwinded through, tearing all within its path to shreds.</description>

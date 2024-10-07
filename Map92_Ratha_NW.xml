@@ -1338,7 +1338,6 @@
     <position x="400" y="160" z="0" />
     <arc exit="north" move="north" destination="200" />
     <arc exit="go" move="search go trapdoor" destination="211" />
-    <arc exit="go" move="go trapdoor" destination="211" />
   </node>
   <node id="202" name="Lighthouse, Sitting Room">
     <description>This room was once homey and comfortable.  A decayed basket of knitting lies forgotten beside a light blue divan and upon the wall hangs a family portrait and a rack of hand-carved pipes.  A woman's touch is evident in the lacey curtains decorating a long window overlooking the sea.  That touch is long past, as dust lies heavily over the entire room.</description>

@@ -1,9 +1,15 @@
 # automapper.cmd
-var autoversion 8.2024-09-29
+var autoversion 8.2024-10-03
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
+
+
+#2024-10-03
+# Hanryu
+#   changed the way search - go works to better handle errors
+#   will just _go_ first in case the path is open (faster this way)
 
 #2024-10-04
 # Hanryu
@@ -660,7 +666,7 @@ MOVE:
           }
         if matchre("%movement", "^(objsearch) (\S+) (.+)") then
           {
-          var type objsearch
+          var type $1
           var searchObj $2
           var movement $3
           }
@@ -891,21 +897,78 @@ STOW.ROPE:
   goto MOVE.DONE
 
 MOVE.SEARCH:
+#maybe the path is already open, let's try that first, then waste time searching
+  if ($broom_carpet) then eval movement replacere("%movement", "climb ", "go ")
   eval depthtimeout $unixtime + %waitevalTimeOut
   if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
-  put search
-  waitforre ^You|^After|^Just|^There seems to be some sort of path leading to the east\.
-  if ($roundtime > 0) then pause %command_pause
+  action (mapper) off
+  matchre MOVE.SEARCH2 %move_FAIL
+  matchre MOVE.SEARCH.PATHOPEN %move_OK
   put %movement
+  matchwait
+MOVE.SEARCH.PATHOPEN:
+  shift
+  math depth subtract 1
+  if ((%verbose) && (len("%2") > 0)) then put #echo %color Next move: %2
+  action (mapper) on
   goto MOVE.DONE
+MOVE.SEARCH2:
+# so here's some bullshit, if some paths are already open you "fail" to find them
+#>sear
+#There seems to be some sort of path leading to the east.
+#>sear
+#You search around for a moment.
+#Roundtime: 2 sec.
+#You don't find anything of interest here.
+  var action_retry ^You find some interesting signs something is here\.$
+  var success ^You (?:find|notice|push|scan|walk) .+? (?:alcove|crevice|door|gap|log|opening|path|spot|tracks|trail|trapdoor|wall)|^After a careful search of the area|^As you search, the air shimmers|^Just under the Bridge of Sparrows|^There seems to be some
+  #4-408 After a careful search of the area, you discover a trampled path!
+  #4a-11 You find a very faint trail through the grass.
+  #7-373 You notice a path hidden in the brush that leads under the stone bridge.
+  #7-395 There seems to be some sort of path leading to the east.
+  #7-737 You scan the cave's shadows and find a small alcove!
+  #7-741 You walk around the perimeter of the cave and discover a hidden alcove!
+  #9b-25 I NEVER GOT THIS TO BE HIDDEN.
+  #11-1 You find faint traces of an animal trail and a faint path.
+  #11-3 You find very faint traces of an animal trail.
+  #11-4 You find a faint animal trail.
+  #11-5 You find that the faint animal tracks are right where you found them before.|You find some faint animal tracks.|You find a bare spot that leads southeast into the deep wilderness and some faint animal tracks.|You find a bare spot that leads southeast into the deep wilderness and the faint animal tracks are right where you found them before.
+  #11-36 You find some animal tracks.|You find that the animal tracks are right where you found them before.
+  #11-67 You find a narrow gap.
+  #11-68 You find a narrow gap.
+  #11-69 You find a narrow crevice.
+  #11-70 You find a narrow crevice.
+  #11-103 You find a faint trail.|You find that the faint trail is right where you found it before.
+  #11-105 You find a faint trail.
+  #11-119 You find a faint trail.|You find that the faint trail is right where you found it before.
+  #30-391 THIEF WILL HAVE TO FIX THIS ONE.
+  #40-136 You push through bushes and around shrubbery and discover a faint forest trail!
+  #48-2 I'M NOT BOTHERING TO DO THIS ONE.
+  #66-199 You find a dirt path!
+  #66-319 As you search, the air shimmers and a dark onyx arch appears!
+  #67-29 Just under the Bridge of Sparrows you notice a partially concealed channel bank.
+  #69-6 You find a narrow path.
+  #90-798 You find an open wall panel between two support beams.
+  #92-92 You find a narrow gap.|You find that the narrow gap is right where you found it before.
+  #92-201 You find a trapdoor.
+  #98-33 You find a dark opening in the fissure.
+  #98-167 You find a fallen log.
+  #98-313 You find a hidden door.|You find that the hidden door is right where you found it before.
+  #106-5 I'M NOT BOTHERING TO DO THIS ONE.
+  #108-354 You find some footholds leading up the rock wall.
+
+  var action search
+  gosub ACTION.MAPPER.ON
+  var action_retry ^0$
+  if ($roundtime > 0) then pause %command_pause
+  goto DO.MOVE
 
 MOVE.OBJSEARCH:
   put search %searchObj
   pause %command_pause
+  if ($roundtime > 0) then pause %command_pause
   if ($broom_carpet) then eval movement replacere("%movement", "climb ", "go ")
-  put %movement
-  pause %command_pause
-  goto MOVE.DONE
+  goto DO.MOVE
 
 MOVE.SCRIPT:
   var subscript 1
@@ -1780,6 +1843,8 @@ ACTION.FAIL:
   gosub ECHO Unable to perform action: %action
 
 ACTION.RETURN:
+  var action_retry ^0$
+  var success ^0$
   if ($roundtime > 0) then pause %command_pause
   if (%subscript) then return
   action (mapper) on

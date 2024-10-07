@@ -225,7 +225,7 @@
     <arc exit="southeast" move="southeast" destination="30" />
     <arc exit="northwest" move="northwest" destination="28" />
     <arc exit="go" move="go bridge" destination="49" />
-    <arc exit="go" move="search go bank" hidden="True" destination="378" />
+    <arc exit="go" move="search go channel bank" hidden="True" destination="378" />
     <arc exit="go" move="go brickwell tower" destination="502" />
     <arc exit="go" move="go bank" destination="378" />
   </node>

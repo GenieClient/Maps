@@ -229,7 +229,7 @@
     <position x="65" y="-132" z="0" />
     <arc exit="south" move="south" destination="32" />
     <arc exit="up" move="up" destination="34" />
-    <arc exit="go" move="rt search;-2 go dark opening" destination="36" />
+    <arc exit="go" move="search go dark opening" destination="36" />
   </node>
   <node id="34" name="Aesry Surlaenis'a, Cliff Path">
     <description>The winding trail, after one last twist and turn, abruptly ends its sojourn at the edge of an outcrop.  Small stunted bushes huddle together around the edge of the formation and rattle their branches at each intrusion of the wind.  Far below, a wave-swept cove lies in the lee of the surrounding promontories and a thin switchback trail hacked into the stone leads downwards.</description>
@@ -1094,7 +1094,7 @@
     <description>The path ends here at a ravine -- like a crack in a glacier, or a deep cleft scar, the ground falls far, far away to a distant bottom.  Trees border the path and grow along the gap in a line.  The width of the gash is too far to jump, but... perhaps a way can be discovered across it.</description>
     <position x="85" y="228" z="0" />
     <arc exit="north" move="north" destination="166" />
-    <arc exit="none" move="rt search;go fallen log" destination="168" />
+    <arc exit="go" move="search go fallen log" destination="168" />
   </node>
   <node id="168" name="Aesry Surlaenis'a, Wooded Path">
     <description>The trees grow tall here south of the ravine that divides the forest into two halves.  Deeper into the woods, large rowans grow along the sloping ground and shade the plentiful shrubs and herbs thriving on the damp leaf-strewn floor.</description>
@@ -2057,7 +2057,7 @@
     <description>The cellar is packed with beer barrels, wine casks, tuns, and crates of staples and foodstuffs.  Narrow aisles pass between the high stacks.  A rack supports several tapped barrels and kegs for the lesser ordered beverages carried by the pub.  Bags of flour, sugar, and other dry ingredients are piled on shelves and atop tuns to prevent the damp floor from damaging them.  It is a wonder Denison or his staff can find anything in the clutter.</description>
     <position x="85" y="48" z="0" />
     <arc exit="go" move="go wooden steps" destination="300" />
-    <arc exit="none" move="rt search;go door" destination="336" />
+    <arc exit="go" move="search go hidden door" destination="336" />
   </node>
   <node id="314" name="Aesry Surlaenis'a, Willowbee's Pelts and Spinners" note="Tanner" color="#00FF00">
     <description>Crates of furs and piles of tightly wrapped spinnerets are stacked in the room, many of them tagged with the names of far away places -- the destinations where the furs are bound.  A spindly male elf, Willowbee himself, is often seen bustling around the shop and preparing orders while keeping an eye on the door for hunters, trappers, and traders to bring him business.</description>
