@@ -562,7 +562,6 @@
   <node id="83" name="Gwenalion Fens, On the Shore">
     <description>Clusters of catkins sway to and fro with a faint whisper as the velvety heads brush against each other.  Beyond, dried reeds carried by the currents drift together to be bound by thick ropy strands of moss.  While not overly stable, the resulting hummocks are big enough to support several people as they bob gently in the water, some close to the shore, others further out.</description>
     <position x="20" y="224" z="0" />
-    <arc exit="east" move="east" destination="85" />
     <arc exit="southwest" move="southwest" destination="84" />
     <arc exit="northwest" move="northwest" destination="82" />
   </node>
@@ -577,7 +576,6 @@
     <position x="40" y="224" z="0" />
     <arc exit="northeast" move="northeast" destination="87" />
     <arc exit="southeast" move="southeast" destination="86" />
-    <arc exit="west" move="west" destination="83" />
   </node>
   <node id="86" name="Gwenalion Fens, Dried Reed Hummock">
     <description>The hummock rocks gently underfoot as the current carries it on its stately progression around the fens.  Unstable at best, the floating islands shift in the wake left by the passage of the creatures who dwell in the depths of the lake.  In the distance, the doleful cries of marsh birds echo across the water.</description>
@@ -602,6 +600,7 @@
   </node>
   <node id="89" name="Gwenalion Fens, On the Shore">
     <description>Hunters plodding along the muddy shoreline find that the fens cling to paws, feet and boots with an impartial affection.  The air is filled with the dank scent of rotting vegetation and the sickly sweet stench of decaying fish, their bellies raked by claws or fangs.  A dried reed hummock, one of many that bob in the still water of the lake, is probably close enough to reach to the southeast.</description>
+    <description>Hunters plodding along the muddy shoreline find that the fens cling to paws, feet and boots with an impartial affection.  The air is filled with the dank scent of rotting vegetation and the sickly sweet stench of decaying fish, their bellies raked by claws or fangs.</description>
     <position x="20" y="164" z="0" />
     <arc exit="go" move="go animal trail" destination="88" />
     <arc exit="southwest" move="southwest" destination="81" />
@@ -631,7 +630,6 @@
   <node id="93" name="Gwenalion Fens, On the Shore">
     <description>The ground is wetter and the watery patches seem deeper as the land rolls down to the nearby lake.  Dried reeds carried by the lake's currents wash in near the shore to be bound together by tangled masses of water-weed, forming mounded hummocks that bob precariously on the surface of the water.  The floating mats are home to beavers, herons and other animals, and are probably sturdy enough to support your weight, assuming you can manage to leap over the gap between shore and hummock.</description>
     <position x="60" y="124" z="0" />
-    <arc exit="southeast" move="southeast" destination="94" />
     <arc exit="west" move="west" destination="92" />
     <arc exit="northwest" move="northwest" destination="95" />
   </node>
@@ -714,7 +712,6 @@
     <description>The hummock creaks and crackles underfoot, but the tangle of moss which binds the reeds seems to be holding.  In the water, fish rise to the surface.  Birds swirl overhead.  And in the fens, life goes on, nature looking neither ahead nor behind, but simply living for the moment.</description>
     <position x="100" y="184" z="0" />
     <arc exit="east" move="east" destination="104" />
-    <arc exit="south" move="south" destination="111" />
     <arc exit="northwest" move="northwest" destination="106" />
   </node>
   <node id="106" name="Gwenalion Fens, Dried Reed Hummock">
@@ -759,7 +756,6 @@
   <node id="111" name="Gwenalion Fens, Dried Reed Hummock">
     <description>A sour smell reminiscent of spoiled milk lingers near a patch of oily black mud.  Closer examination reveals claw marks on the surrounding reeds, as if something had tried to tear the hummock apart beneath its feet.</description>
     <position x="100" y="204" z="0" />
-    <arc exit="north" move="north" destination="105" />
     <arc exit="southeast" move="southeast" destination="112" />
     <arc exit="southwest" move="southwest" destination="107" />
   </node>
@@ -1625,86 +1621,96 @@
   <node id="249" name="The Beech Cordon, Inner Circle" note="Beech Cordon">
     <description>Two ironwood trees frame the entrance to a circle of fourteen evenly-spaced towering beech trees.  The branches arch high overhead and entangle to form a natural canopy that shelters the area from harsh weather.  A fire burns at the center of the grove, the source of the tempting aroma of roasted meats and vegetables.</description>
     <description>Two ironwood trees frame the entrance to a circle of towering silhouetted beech trees.  The branches arch high overhead and entangle to form a natural canopy.  On clear nights, the stars peek through the leafy boughs like gems woven in a goddess' tresses.  A fire burns low in the center of the grove, the source of inviting aromas of roasted meats and vegetables.</description>
-    <position x="-40" y="-556" z="0" />
+    <position x="-80" y="-576" z="0" />
     <arc exit="north" move="north" destination="250" />
     <arc exit="south" move="south" destination="251" />
     <arc exit="west" move="west" destination="252" />
-    <arc exit="go" move="go path" destination="253" />
+    <arc exit="go" move="go narrow path" destination="253" />
     <arc exit="go" move="go ironwood trees" destination="141" />
   </node>
   <node id="250" name="Beech Glade, Sleeping Bower">
     <description>Sheltering branches surround a small glade and shield this area from the forest to the north.  Weary travelers may rest in one of the many hammocks strung through the trees.  A large chest stores blankets for those who prefer to sleep on the ground.  The rustle of the branches and the song of distant larks lure sweet dreams to the drowsy.</description>
-    <position x="-40" y="-576" z="0" />
+    <description>Sheltering branches surround a small glade and shield this area from the forest to the north.  Weary travelers may rest in one of the many hammocks strung through the trees.  A large chest stores blankets for those who prefer to sleep on the ground.  Fireflies wink from their homes in the forest floor to dance in a warding ring of light around the trees, while the sounds of rustling branches and lullaby of a nightingale float soothingly through the dense woods.</description>
+    <position x="-80" y="-596" z="0" />
     <arc exit="south" move="south" destination="249" />
+    <arc exit="go" move="go low hammock" destination="386" />
+    <arc exit="go" move="go green hammock" destination="387" />
+    <arc exit="go" move="go white hammock" destination="388" />
   </node>
   <node id="251" name="Beech Glade, Butternut Tree" note="Butternut Tree">
     <description>A huge spreading butternut tree stands just outside the circle of trees.  A large hole with earthen stairs leads to a space amongst its roots.  A nearby willow table is laden with sweet snacks.</description>
-    <position x="-40" y="-536" z="0" />
+    <position x="-80" y="-556" z="0" />
     <arc exit="north" move="north" destination="249" />
     <arc exit="south" move="south" destination="254" />
-    <arc exit="climb" move="climb stairs" destination="261" />
+    <arc exit="climb" move="climb earthen stairs" destination="261" />
   </node>
   <node id="252" name="Beech Glade, Spring Chancel">
     <description>A natural spring bubbles up over a carved stone spillway into a basin of polished rose quartz.  Light collects around the water, radiating from within the quartz.  A lattice of leaves shelters this area, making it quiet enough to commune with Kuniyo, or whichever deity speaks to the devoted's heart.</description>
-    <position x="-60" y="-556" z="0" />
+    <description>A natural spring bubbles up over a carved stone spillway into a basin of polished rose quartz.  A soft light sparkles in the surfaces of the basin, and the water glints as it catches the reflection of the home fire inside the circle of beech trees.  A lattice of leaves shelters this area from the dark beyond, making this spot quiet and peaceful enough to commune with Kuniyo, or whichever deity speaks to the devoted's heart.</description>
+    <position x="-100" y="-576" z="0" />
     <arc exit="east" move="east" destination="249" />
   </node>
   <node id="253" name="The Beech Cordon, Inner Circle">
     <description>Nearly hidden within the massive groves of towering ironwood and beech trees, a small log cabin stands like a silent sentinel.  With its oval doorway carefully propped open by a hand-carved wooden statue, one wonders if this is a standing invitation to those who travel here.</description>
-    <position x="-20" y="-536" z="0" />
+    <position x="-120" y="-616" z="0" />
     <arc exit="out" move="out" destination="249" />
+    <arc exit="go" move="go oval doorway" destination="384" />
   </node>
   <node id="254" name="Beech Glade, Trail">
     <description>A narrow trail leads a short distance away from the cordon and ends at the entrance to a weathered hide tent.</description>
-    <position x="-40" y="-516" z="0" />
+    <position x="-80" y="-516" z="0" />
     <arc exit="north" move="north" destination="251" />
     <arc exit="east" move="east" destination="255" />
+    <arc exit="go" move="go deer-hide tent" destination="389" />
   </node>
   <node id="255" name="Horse's Haven">
     <description>A narrow pathway leads into an open area filled with the comings and goings of horses and their owners.  Fresh bales of hay are stacked up against the wall of a well-made stable and the whinnies of horses come from its wide-open doors.</description>
-    <position x="0" y="-516" z="0" />
+    <position x="-40" y="-516" z="0" />
     <arc exit="north" move="north" destination="256" />
     <arc exit="west" move="west" destination="254" />
-    <arc exit="go" move="go shop" destination="259" />
+    <arc exit="go" move="go barding shop" destination="259" />
+    <arc exit="go" move="go well-made stable" destination="390" />
+    <arc exit="go" move="go grassy track" destination="391" />
   </node>
   <node id="256" name="Beech Grove, Paddock">
     <description>Surrounded by trees, a workout area has been set up for horses and their riders.  A white-edged fence and a vine-covered wall are set up to practice jumping techniques, along with barrels to aid in mastering turns.</description>
-    <position x="0" y="-536" z="0" />
+    <position x="-40" y="-536" z="0" />
     <arc exit="north" move="north" destination="257" />
     <arc exit="south" move="south" destination="255" />
   </node>
   <node id="257" name="Horse's Haven, Training Field">
     <description>Warning signs are painted on surrounding trees giving notice to spectators that jousters have the right of way.  A quintain is set up in the middle of the field painted in the colors of forest green and brown.</description>
-    <position x="0" y="-556" z="0" />
+    <position x="-40" y="-556" z="0" />
     <arc exit="south" move="south" destination="256" />
     <arc exit="west" move="west" destination="258" />
   </node>
   <node id="258" name="Horse's Haven, Training Field">
     <description>Freshly cleared, this area is laid out with a list for jousting.  Hard packed dirt is covered with the stamp of hoofs and dead foliage.</description>
-    <position x="-20" y="-556" z="0" />
+    <position x="-60" y="-556" z="0" />
     <arc exit="east" move="east" destination="257" />
   </node>
   <node id="259" name="Standish's, Tack and Gear" note="Standish's|Tack" color="#FF0000">
     <description>This small open-air room holds all that is needed for the care of horses or ponies.  The scent of fresh oats permeates the air with a hint of apple from a nearby barrel.  From baskets and trunks to boxes of feed this shop caters to the every need of horses and their owners.</description>
-    <position x="0" y="-496" z="0" />
+    <position x="-40" y="-496" z="0" />
     <arc exit="west" move="west" destination="260" />
     <arc exit="out" move="out" destination="255" />
   </node>
   <node id="260" name="Standish's, Barding" note="Barding" color="#FF0000">
     <description>Sturdy oaken racks display a variety of plate, chain, and leather barding, each set carefully polished and shined or oiled to entice you to buy.  A young girl sits in a corner embroidering a scarlet caparison, her feet tucked primly beneath her stool.  Lining the walls are colorful pictures of proud steeds outfitted in full battle regalia.</description>
-    <position x="-20" y="-496" z="0" />
+    <description>Sturdy oaken racks display a variety of plate, chain, and leather barding, each set carefully polished and shined or oiled to entice you to buy.  Lining the walls are colorful pictures of proud steeds outfitted in full battle regalia.</description>
+    <position x="-60" y="-496" z="0" />
     <arc exit="east" move="east" destination="259" />
   </node>
   <node id="261" name="Beech Cordon, Bank Under the Roots" note="Premium Teller" color="#00FF00">
     <description>Damp dirt held in place by a network of butternut tree roots forms the walls of a rounded underground chamber, rich with the scents of cool sweet earth.  A large rough-hewn thick plank serves as a counter, and a pale-haired Elothean teller with tiny mole-like eyes stares behind thin wired glasses in the dim light, waiting to do your bidding. The faint glow of a moongate in another chamber beyond dances within the shadows of a dimly lit earthen tunnel.</description>
-    <position x="-60" y="-536" z="0" />
-    <arc exit="go" move="go tunnel" destination="262" />
-    <arc exit="climb" move="climb stairs" destination="251" />
+    <position x="-100" y="-556" z="0" />
+    <arc exit="go" move="go earthen tunnel" destination="262" />
+    <arc exit="climb" move="climb earthen stairs" destination="251" />
   </node>
   <node id="262" name="Beech Cordon, Foreign Exchange" note="Premium Exchange" color="#00FF00">
     <description>A hole open to the the sky pierces the tangle of roots and earth overhead.  Although underground, a faint moonbeam pushes through the opening in the ceiling and a glimmering moon gate stands wavering in the dimness.  An ever vigilant moon mage, employed by the bank, hovers near the gate to ensure contact with other banks remains steady.  A pair of unusual wolf-like creatures, black as twilight, and fierce as wolverines, watch every move you make.</description>
-    <position x="-60" y="-516" z="0" />
-    <arc exit="go" move="go tunnel" destination="261" />
+    <position x="-100" y="-536" z="0" />
+    <arc exit="go" move="go earthen tunnel" destination="261" />
   </node>
   <node id="263" name="Langenfirth, Trail Above the Fens" note="Map40a_Langenfirth_to_Siksraja.xml|Siksraja|Rakash">
     <description>Almost buried in the fallen pine needles that cover the area between Gwenalion Fens to the east and Seord'telgi Teorn to the north, this narrow path wanders westward toward the distant hills.  Small sounds of daily life -- children squealing at play, a dinner call, the cry of a baby -- are wafted by the wind and populate the forest with echoes.</description>
@@ -2498,6 +2504,59 @@
     <arc exit="south" move="south" destination="382" />
     <arc exit="west" move="west" destination="378" />
   </node>
+  <node id="384" name="Langenfirth, The Carousel" note="Carousel|Vault">
+    <description>In stark contrast to its humble exterior, the cabin opens out into a spacious waiting area.  Exquisitely polished oak lines the walls.  Wooden shutters stand open, allowing the breeze to carry the woody fragrance of the forest into the room.  A flagstoned chimney lights the surroundings with a gentle blaze, just enough to discourage a chill.  Along the far wall stands an oak registration desk.</description>
+    <position x="-120" y="-636" z="0" />
+    <arc exit="out" move="out" destination="253" />
+    <arc exit="east" move="east" destination="385" />
+  </node>
+  <node id="385" name="Langenfirth, Rundmolen Post Office" note="mail|post office" color="#00FF00">
+    <description>Tucked into a corner of the cabin is a low stone counter.  Vast, countless rows of differently sized shelves are behind the counter, and complex Dwarven mechanisms can be heard as they rearrange the package-covered storage.  Clerks shuffle endlessly back and forth between the counters and shelving as they assist patrons with their packaging and mailing needs.</description>
+    <position x="-100" y="-636" z="0" />
+    <arc exit="west" move="west" destination="384" />
+  </node>
+  <node id="386" name="Beech Glade, Low Hammock">
+    <description>Just above the ground, the hammock sways gently with each movement.  The quiet spot is pleasantly shaded.</description>
+    <position x="-100" y="-616" z="0" />
+    <arc exit="out" move="out" destination="250" />
+  </node>
+  <node id="387" name="Beech Glade, Forest Green Hammock">
+    <description>The branches hang low to almost completely conceal this spot, nestled among the restful rustling of the trees.</description>
+    <position x="-80" y="-616" z="0" />
+    <arc exit="out" move="out" destination="250" />
+  </node>
+  <node id="388" name="Beech Glade, White Hammock">
+    <description>The hammock is strung high in the trees, and sways gently in the breeze.  Suspended between earth and sky, rest is easy to find.</description>
+    <position x="-60" y="-616" z="0" />
+    <arc exit="out" move="out" destination="250" />
+  </node>
+  <node id="389" name="Beech Glade, Snusk's Tent" color="#00FF00">
+    <description>A narrow corridor stretches off from the lobby area, along a row of tiny heat-warped stalls.  The echoing clang of metal on metal rings out from behind the curtained openings like peals of tiny thunder.</description>
+    <position x="-100" y="-516" z="0" />
+    <arc exit="out" move="out" destination="254" />
+  </node>
+  <node id="390" name="Horse's Haven, Stables" note="stables" color="#00FF00">
+    <description>Freshly cut wooden beams hold up a roof made of braided vines and thick ironwood branches.  Each stall is spaciously built with plenty of room for grooming and feeding of the spectacular horseflesh that makes its home here.</description>
+    <position x="-20" y="-516" z="0" />
+    <arc exit="out" move="out" destination="255" />
+  </node>
+  <node id="391" name="Horse's Haven, Trading and Training" note="Stablemaster Nobbra" color="#00FF00">
+    <description>A grassy track leads to and from this training area, which also houses the trader's brokering office.  Horses are led about by young and old alike as their teacher sternly instructs them on the proper care of their charges.</description>
+    <position x="-20" y="-496" z="0" />
+    <arc exit="go" move="go wooden building" destination="392" />
+    <arc exit="go" move="go brokering office" destination="393" />
+    <arc exit="go" move="go grassy track" destination="255" />
+  </node>
+  <node id="392" name="Stablemaster's Office" note="Stablemaster Quastiel">
+    <description>Charts, shelves of books and pictures cover the walls of this office, all featuring horses as their main theme.  A small desk holds papers belonging to the Stablemaster whose job it is to make sure riders treat their horses with care.  A couple of plain chairs offer a place to sit while waiting for her instructions.</description>
+    <position x="-20" y="-476" z="0" />
+    <arc exit="out" move="out" destination="391" />
+  </node>
+  <node id="393" name="Horse Brokerage, Office">
+    <description>The walls of this room rise chest-height on a human, allowing a gentle breeze to blow under the vine and branch braided roof.  Benches surround a huge table carved from a single block of ironwood that dominates the otherwise sparse area.  Designs of wild horses prance across the surface of the table, as scattered parchments block their way.</description>
+    <position x="0" y="-496" z="0" />
+    <arc exit="out" move="out" destination="391" />
+  </node>
   <label text="Therenborough">
     <position x="155" y="-1380" z="0" />
   </label>
@@ -2544,7 +2603,7 @@
     <position x="140" y="-176" z="0" />
   </label>
   <label text="Premium Clubhouse">
-    <position x="-140" y="-506" z="0" />
+    <position x="-180" y="-506" z="0" />
   </label>
   <label text="to Rakash Village">
     <position x="-160" y="-30" z="0" />
@@ -2608,5 +2667,8 @@
   </label>
   <label text="Fruitstand">
     <position x="20" y="-1106" z="0" />
+  </label>
+  <label text="Post Office">
+    <position x="-130" y="-661" z="0" />
   </label>
 </zone>

@@ -4,6 +4,6 @@ SteelDoor:
 
 	send go steel door
 	waitforre You can't|Engineer's Tower
-	if "%steeldoor" = "1" then send go other steel door
+	if "%steeldoor" == "1" then send go other steel door
 	pause
 	send #parse MOVE SUCCESSFUL

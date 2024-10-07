@@ -41,7 +41,7 @@
     <arc exit="out" move="out" destination="5" />
     <arc exit="go" move="go iron grate" destination="9" />
     <arc exit="go" move="go ironbound door" destination="10" />
-    <arc exit="go" move="abbeyhatch" destination="18" />
+    <arc exit="go" move="script abbeyhatch" destination="18" />
   </node>
   <node id="7" name="Misenseor Abbey, Refectory" note="Refectory">
     <description>Years of accumulated dust rise slowly into the air, lending an unnatural quality to this neglected room.  Spanning the length of the chamber, a large wooden table stained with age and worn smooth still remains mostly intact.  Draped in a ghostly shroud of cobwebs, a chandelier hangs suspended over the center of the room, its light and warmth long ago extinguished.  The conversations and meals once held in this place are themselves spirits of the past, buried with the dead, never to be replayed again.</description>

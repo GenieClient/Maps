@@ -1294,12 +1294,12 @@
     <arc exit="west" move="west" destination="198" />
     <arc exit="go" move="go arch" destination="195" />
   </node>
-  <node id="198" name="Reach Forge, Western Foundry" note="foundry1|west foundry">
+  <node id="198" name="Reach Forge, Western Foundry" note="foundry1|crucible1|west foundry">
     <description>Searing heat floods the cavern from the foundry fires, quickly warming whatever cool air enters from several airshafts drilled into the soot-blackened stone walls.  Raging flames dance below a large stone crucible hanging from a wooden beam so it can be moved on or off the fire.  At the far end of the room, a large pile of fuel waits to feed the flames.</description>
     <position x="77" y="540" z="0" />
     <arc exit="east" move="east" destination="196" />
   </node>
-  <node id="199" name="Reach Forge, Northern Smithy" note="forge2|north forge">
+  <node id="199" name="Reach Forge, Northern Smithy" note="foundry2|crucible2|north forge">
     <description>A blackened iron anvil is bolted to a rise in the stone floor and dominates the cavern.  Red-orange firelight glows from the forge built into a natural shelf and recreates the anvil's shape in heroic size on the opposite wall.</description>
     <position x="100" y="527" z="0" />
     <arc exit="west" move="west" destination="200" />
@@ -1311,7 +1311,7 @@
     <position x="90" y="527" z="0" />
     <arc exit="east" move="east" destination="199" />
   </node>
-  <node id="202" name="Reach Forge, Eastern Smithy" note="forge3|east forge">
+  <node id="202" name="Reach Forge, Eastern Smithy" note="foundry3|crucible3|east forge">
     <description>Brilliant red-orange light glows from a side-vented forge crafted from a natural shelf on the northern wall.  Above it, an assortment of fire-blackened tools hangs just out of arm's reach and a few steps away the large, iron anvil waits patiently to help shape metal into the form of men's dreams.</description>
     <position x="113" y="540" z="0" />
     <arc exit="east" move="east" destination="203" />
