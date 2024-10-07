@@ -1,9 +1,14 @@
 # automapper.cmd
-var autoversion 8.2024-10-03
+var autoversion 8.2024-10-07
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
+
+#2024-10-07
+# Hanryu
+#   recovering lost mistwoodShift changes
+#   will delay long enough to shift out `script` if there's a collision in when the actions get processed
 
 #2024-10-03
 # Hanryu
@@ -992,9 +997,10 @@ MOVE.SCRIPT.DONE:
 # lets room load before turning on triggers for genie
   if matchre("$client", "Genie") then delay 0.25
   var subscript 0
-  shift
+#shift away script if room load trigger got turned off before it loaded
+  if matchre("%1", "script") then shift
   var depth 0
-  if ((len("%2") > 0) && (%verbose)) then put #echo %color Next move: %2
+  if ((%verbose) && (len("%2") > 0)) then put #echo %color Next move: %2
   action (mapper) on
   goto MOVE.DONE
 
@@ -1459,6 +1465,10 @@ ARMOIRE:
   goto MOVE.REAL
 
 MISTWOOD.CLIFF:
+#shift away if room load trigger got turned off before it loaded
+  if matchre("%1", "objsearch rocky.ledge climb shrub") then shift
+  eval depthtimeout $unixtime + %waitevalTimeOut
+  if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
   put peer path
   waitforre ^Peering closely at a faint path, you realize you would need to head (\w+)\.
   var Dir $1
