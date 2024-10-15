@@ -1286,6 +1286,7 @@
     <arc exit="go" move="go east arch" destination="202" />
     <arc exit="go" move="go curtain" destination="194" />
     <arc exit="southeast" move="southeast" destination="226" />
+    <arc exit="south" move="south" destination="197" />
   </node>
   <node id="196" name="Reach Forge, Western Smithy" note="forge1|west forge">
     <description>The forge's builders took advantage of natural ledges in the cavern, hewing the unforgiving stone only to create the necessary chimneys.  A side-vented forge set on a natural shelf glows along the northern perimeter, throwing red-orange light across the massive steel anvil that dominates the center of the room.</description>
@@ -1322,7 +1323,7 @@
     <arc exit="east" move="east" destination="203" />
     <arc exit="go" move="go arch" destination="195" />
   </node>
-  <node id="203" name="Reach Forge, Eastern Foundry" note="foundry3|east foundry">
+  <node id="203" name="Reach Forge, Eastern Foundry" note="foundry3|crucible3|east foundry">
     <description>Waves of intense heat pour from the white-hot flames that flicker madly beneath the massive polished granite crucible that hangs from a wooden swing-arm above.  As if overcome by the superheated air, a crackled leather bellows and a heap of glossy black coal lean tiredly against the soot-darkened stone walls.</description>
     <description>Waves of intense heat pour from the white-hot flames that flicker madly beneath the massive, polished granite crucible that hangs from a wooden swing-arm above.  Ready to be fed into the crucible, a healthy pile of fuel is shoved into the corner of the soot-darkened stone walls.</description>
     <position x="123" y="540" z="0" />
