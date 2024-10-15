@@ -1,9 +1,14 @@
 # automapper.cmd
-var autoversion 8.2024-10-07
+var autoversion 8.2024-10-10
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
+
+#2024-10-10
+# Hanryu
+#   check if you're even in the right room on ggbypass
+#   adding messages for "travel rooms" to move_wait
 
 #2024-10-07
 # Hanryu
@@ -534,7 +539,7 @@ ABSOLUTE.TOP:
   var move_RETRY ^\.\.\.wait|^Sorry, |^The weight of all|^You quickly step around the exposed roots, but you lose your balance during the effort|^You are still stunned|^You're still recovering from your recent|^The mud gives way beneath your feet as you attempt to climb higher, sending you sliding back down the slope instead\!|^You're not sure you can
   var move_RETREAT ^You are engaged to|^You try to move, but you're engaged|^While in combat|^You can't do that while engaged|^You can't do that\!  You're in combat\!
   var move_WEB ^You can't do that while entangled in a web|^As you start to move, you find yourself snared
-  var move_WAIT ^You try, but in the cramped confines of the tunnel, there's just no room to do that\.$|^Wriggling on your stomach, you crawl into a low opening\.$|^You continue climbing|^You begin climbing|^You really should concentrate on your journey|^You step onto a massive stairway|^You step onto some stairs, beginning your ascent\.$|^You start the slow journey across the bridge\.$|^Wriggling on your stomach, you crawl into a low opening\.$|^After climbing up the rope ladder for several long moments|^You scamper up and over the rock face\.$
+  var move_WAIT ^As you approach the patch of rough dirt, the ground gives way, you lose your balance, and go tumbling wildly down the ravine!$|^You try, but in the cramped confines of the tunnel, there's just no room to do that\.$|^Wriggling on your stomach, you crawl into a low opening\.$|^You continue climbing|^You begin climbing|^You really should concentrate on your journey|^You step onto a massive stairway|^You step onto some stairs, beginning your ascent\.$|^You start the slow journey across the bridge\.$|^Wriggling on your stomach, you crawl into a low opening\.$|^After climbing up the rope ladder for several long moments|^You scamper up and over the rock face\.$
   var move_END_DELAY ^You reach|you reach\.\.\.$|^Finally the bridge comes to an end|^After a seemingly interminible length of time, you crawl out of the passage into
   var move_STAND ^You must be standing to do that|^You can't do that while (lying down|kneeling|sitting)|You try to quickly step from root to root, but slip and drop to your knees|you trip over an exposed root|^Stand up first\.|^You must stand first\.|^You'll need to stand up|^A few exposed roots wrench free from the ground after catching on your feet as you pass, a particularly sturdy one finally brings you to your knees\.$|You try to roll through the fall but end up on your back\.$|^Perhaps you might accomplish that if you were standing\.$|^You can't do that while lying down\.$
   var move_NO_SNEAK ^You can't do that here|^In which direction are you trying to sneak|^Sneaking is an inherently stealthy|^You can't sneak that way|^You can't sneak in that direction
@@ -1392,6 +1397,7 @@ GEAR.GATE.BYPASS.CHECK:
   if matchre("$roomobjs", "a gouged stone wall") then var wall 1
   if ("$roomid" = "263") then var wall_trigger stone basin
   if ("$roomid" = "264") then var wall_trigger torch on wall
+  if (("$roomid" != "264") && ("$roomid" != "263")) then goto MOVE.FAILED
   if (!%wall) then {
     var action turn %wall_trigger
     var success ^As you pull down on
