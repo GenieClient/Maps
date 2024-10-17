@@ -1,14 +1,17 @@
-#debug 5
+#travel.cmd
+var version 6.2024-10-17
+# debug 5 is for outlander; genie debuglevel 10
+# debuglevel 10
+# debug 5
+
+# use '.travel help' from the command line for variables and more
 # POWER TRAVEL SCRIPT FOR GENIE 4 ~ TRAVELS TO/FROM ALMOST ~ANYWHERE~ IN DRAGONREALMS
 # CAN START SCRIPT FROM ANYWHERE IN THE GAME
-#
+
 # REQUIRES EXPTRACKER PLUGIN! MANDATORY!
-#
+
 # Inspired by the OG Wizard Travel Script - But made 1000x better w/ the power of GENIE
 # Originally written by Achilles - Revitalized and Robustified by Shroom
-#
-# Updated: 10/6/24
-var version 5.2.9
 #
 # USES PLAT PORTALS TO TRAVEL BETWEEN CITIES IF PLATINUM
 # KNOWS HOW TO NAVIGATE OUT OF ANY MAZE / PUZZLE AREAS / FERRIES ETC

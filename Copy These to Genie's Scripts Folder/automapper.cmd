@@ -374,7 +374,7 @@ var autoversion 8.2024-10-10
 # #alias {map1} {#tvar mapwalk 1}
 #
 
-## use me for if you need an input
+include mapperINC
 # checks for outlander v. genie, outlander does not suppor the `mono` flag
 if matchre("$client", "Genie") then var helpecho #33CC99 mono
 if matchre("$client", "Outlander") then var helpecho #33CC99
@@ -500,15 +500,7 @@ ABSOLUTE.TOP:
   if !def(searchwalk) then put #tvar searchwalk 0
   if !def(automapper.userwalk) then put #tvar automapper.userwalk 0
   if !def(automapper.seekhealing) then put #tvar automapper.seekhealing 0
-# check citizenship for shard
-  if !def(citizenship) then {
-    put #var citizenship none
-    action (citizenship) put #var citizenship $1 when "^\s*\d\)\s+of (Aesry Surlaenis'a|Forfedhdar|Ilithi|M'Riss|Ratha|Therengia|Velaka|Zoluren|Acenamacra|Arthe Dale|Crossing|Dirge|Ilaya Taipa|Kaerna Village|Leth Deriel|Fornsted|Hvaral|Langenfirth|Riverhaven|Rossman's Landing|Siksraja|Therenborough|Fayrin's Rest|Shard|Steelclaw Clan|Zaldi Taipa|Ain Ghazal|Boar Clan|Hibarnhvidar|Raven's Point|Mer'Kresh|Muspar'i)"
-    put title affiliation list
-    send encumbrance
-    waitfor Encumbrance :
-    action (citizenship) off
-  }
+  gosub CITIZENSHIP
 # release cyclics if defined
   if  $automapper.cyclic=1 then send release cyclic
 # turn off classes to speed movment
@@ -2474,8 +2466,3 @@ CALMED:
   if (!$standing) then gosub STAND
   goto %LOCATION
 ####
-
-#### RETURN ####
-RETURN:
-  return
-#####
