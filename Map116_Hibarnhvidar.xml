@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <zone name="Hibarnhvidar" id="116">
   <node id="1" name="Haalikshal Highway, The Sky Road">
     <description>The lights of a distant settlement dot the darkness to the southwest.  To the northeast, flickering torches flank a gate in a wall at the crest of the hill.  Behind the wall, a tower is dimly visible.</description>
@@ -749,6 +749,7 @@
     <arc exit="northwest" move="northwest" destination="100" />
     <arc exit="climb" move="climb spiral stairway" destination="108" />
     <arc exit="go" move="go recessed doorway" destination="284" />
+    <arc exit="go" move="go steel archway" destination="492" />
   </node>
   <node id="102" name="Inner Hibarnhvidar, The East Colonnade">
     <description>The granite ceiling is carved into large squares that depict banners and flags carried by Dwarven clans.  The floor tiles show the same subjects, but are inlaid with gold, silver, jet, lapis, jade and bloodstone, bringing the banners to colorful life.  An ornate but extremely substantial door provides entrance to the Carousel.</description>
@@ -3278,6 +3279,11 @@
     <description>Tucked away in a corner of the cavern is a long stone counter set out from the wall.  A colorful mural covers the wall behind the counter, depicting brawny dwarves at work at a variety of tasks.  Vast, countless rows of differently sized shelves are behind the counter, and complex Dwarven mechanisms can be heard as they rearrange the package-covered storage.  Clerks shuffle endlessly back and forth between the counters and shelving as they assist patrons with their packaging and mailing needs.</description>
     <position x="100" y="130" z="0" />
     <arc exit="west" move="west" destination="286" />
+  </node>
+  <node id="492" name="Dabrush Brawn, Inside" note="Dabrush Brawn" color="#FF0000">
+    <description>Haphazardly placed into crevices within the surrounding craggy stone walls, oil lanterns provide a steady light with no flickering.  A pair of displays are placed side by side at the center of the cavern, showcasing the fine wares of the shop.</description>
+    <position x="60" y="100" z="0" />
+    <arc exit="go" move="go steel archway" destination="101" />
   </node>
   <label text="Inner Hibarnhvidar">
     <position x="40" y="210" z="0" />
