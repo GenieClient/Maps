@@ -45,7 +45,7 @@ var autoversion 8.2024-10-10
 #   standardize parse by always reporting "AUTOMAPPER: message"
 #   fixing echos that are not using GOSUB ECHO
 #   fixing micropauses, let's not do that shit anymore please
-#   robustify MOVE.RT
+#   robustify MOVE_RT
 
 #2023-12-15
 # Hanryu
@@ -60,7 +60,7 @@ var autoversion 8.2024-10-10
 
 #2023-12-15
 # Hanryu
-#   added handling to ACTION.MAPPER.ON for running a script in each room
+#   added handling to ACTION_MAPPER_ON for running a script in each room
 #   essentially removes the fall-thru matchwait timeout if $automapper.UserWalkAction contains a . or a #
 
 #2023-12-3
@@ -126,7 +126,7 @@ var autoversion 8.2024-10-10
 
 #2023-02-18
 # Shroom
-#   Fixed a bug with STOW.FEET not properly rolling prayer mats causing it to go in infinite loop
+#   Fixed a bug with STOW_FEET not properly rolling prayer mats causing it to go in infinite loop
 
 #2023-02-03
 # Hanryu
@@ -145,7 +145,7 @@ var autoversion 8.2024-10-10
 # Shroom
 #   Added SUBSCRIPTS for movement into / out of Gate of Souls
 #   Default movement was VERY clunky and didn't work properly, now MUCH better - Should not hang up or error
-#   Fixed MOVE.RETRY issue that could cause infinite hang if starting in RT
+#   Fixed MOVE_RETRY issue that could cause infinite hang if starting in RT
 #   waitfor_action updated
 #   Added counter to Action sub as failsafe
 
@@ -160,7 +160,7 @@ var autoversion 8.2024-10-10
 #   Sigil walking
 #   walk help
 #   belly crawl room for shard wgate favors
-#   changed send to put in MOVE.TORCH
+#   changed send to put in MOVE_TORCH
 #   commented out race condition with ggbypass
 #   added a pause at the end of "script" execution
 #   moved move.invis out of the middle of fatigue block (boy that's a mess)
@@ -176,11 +176,11 @@ var autoversion 8.2024-10-10
 #   removed s from rocks
 #   ^\s*[\[\(]?[rR]oundtime\s*\:? for all RT matches
 #   retry now zero's everything out and heads back to wave.do
-#   Jon's got a new MOVE.RT for us and I like it
+#   Jon's got a new MOVE_RT for us and I like it
 
 #2022-11-30
 # Hanryu
-#   separated out MOVE.WAIT:
+#   separated out MOVE_WAIT:
 
 #2022-11-16
 # Hanryu
@@ -191,7 +191,7 @@ var autoversion 8.2024-10-10
 #2022-11-04
 # Shroom
 # - Added additional FAIL catches to ACTION sub
-# - Added a hard STOW FEET at end of STOW.FEET sub
+# - Added a hard STOW FEET at end of STOW_FEET sub
 # - To fix a endless loop in rare cases where false positives on a "cloth/rug" at feet that CANNOT be rolled
 # - Should not really effect anything in normal stow feet logic other than firing the command twice
 #
@@ -199,7 +199,7 @@ var autoversion 8.2024-10-10
 # Hanryu
 #   issue with shard a night... yet again! New subscript
 #   fall-thru message for PP walk if you're playing zills
-#   added a timeout to MOVE.RT waiteval depth drops based on VTCifer's code
+#   added a timeout to MOVE_RT waiteval depth drops based on VTCifer's code
 
 #2022-11-02
 # Hanryu
@@ -212,7 +212,7 @@ var autoversion 8.2024-10-10
 # Re-commented rope bridge as still in use in TF for now
 # Even though Travel detects whether bridge or rope is up - Automapper still used as a backup method
 # Added more fail messages to ACTION
-# NEW - Added a STOW.ALT module as a backup to regular STOWING
+# NEW - Added a STOW_ALT module as a backup to regular STOWING
 # IF "STOW" fails and does not empty hands - will check inv for others bags and try putting in those bags
 # Will attempt up to 4 containers - Auto-Scans inventory for the most common containers
 # Anchored JAILED triggers
@@ -224,7 +224,7 @@ var autoversion 8.2024-10-10
 
 #2022-10-22 thru 27
 # Hanryu, with a strong assist from TenderVittles
-# working on afordances for different system speeds on RT generating moves (MOVE.RT label)
+# working on afordances for different system speeds on RT generating moves (MOVE_RT label)
 # added a wait in retry if waitfor_action = 1
 # Added inviso drop message on "get skates"
 # add verbose flag to toggle next move echo
@@ -249,7 +249,7 @@ var autoversion 8.2024-10-10
 # unified indent to "  " (two spaces)
 # added paren's to lots of if statements
 # infiniteLoopProtection variable based on FE
-# fixed a run condition between being inviso at the shard gate (STOP.INVIS) and (MOVE.INVIS)
+# fixed a run condition between being inviso at the shard gate (STOP_INVIS) and (MOVE_INVIS)
 
 #2022-09-22
 # Hanryu - powerwalk smoother/ranger blend
@@ -264,12 +264,12 @@ var autoversion 8.2024-10-10
 # Added a toggle for collecting rocks on the ice road vs. just waiting.
 # Redid skate/footwear logic from scratch. Tested a lot. Does not take skates off if you stop at room 45 (going north) or only move one room (so don't do that.)
 # Removed broom/carpet messaging from retry action, and removed double from fail action. Now its only a fail action. Not sure if that breaks things for broom/carpet users, sorry.
-# Removed unused MOVE.POWER routine.
-# Removed unused MOVE.PAUSE routine and action.
+# Removed unused MOVE_POWER routine.
+# Removed unused MOVE_PAUSE routine and action.
 # Adjusted tab spacing throughout the whole script.
 # Set all labels to caps for half-blind people like me to tell them apart. Also added spacing between labels.
 # Compressed single-line code blocks { } where it seemed safe to do so.
-# Made MOVE.RETRY.GO's stunned check return to MOVE.RETRY.GO instead of MOVE.RETRY
+# Made MOVE_RETRY_GO's stunned check return to MOVE_RETRY_GO instead of MOVE_RETRY
 # Moved some labels around for flow.
 # Added Steps of Vuan to Moon Mage spell release for invisibility movement
 # Redid feature-hiding cloak logic for Shard gates. Now supports multiple nouns and will attempt to re-hide your face and such after passing through/before detouring.
@@ -379,83 +379,86 @@ include mapperINC
 if matchre("$client", "Genie") then var helpecho #33CC99 mono
 if matchre("$client", "Outlander") then var helpecho #33CC99
 if matchre("%1", "help|HELP|Help|^$") then {
-  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
-  put #echo %helpecho <<  Welcome to automapper Setup!   (version %autoversion)           >>
-  put #echo %helpecho <<  Use the command line to set the following preferences:          >>
-  put #echo %helpecho <<    Typeahead                                                     >>
-  put #echo %helpecho <<      Standard Account = 1, Premium Account = 2, LTB Premium = 3  >>
-  put #echo %helpecho <<      0: wait for correct confirmation of sent commands           >>
-  put #echo %helpecho <<      #var automapper.typeahead 1                                 >>
-  put #echo %helpecho <<    Pause                                                         >>
-  put #echo %helpecho <<      Time to pause before sending a "put x" command              >>
-  put #echo %helpecho <<      #var automapper.pause 0.01                                  >>
-  put #echo %helpecho <<    Infinite Loop Protection                                      >>
-  put #echo %helpecho <<      Increase if you get infinte loop errors                     >>
-  put #echo %helpecho <<      #var automapper.loop 0.001                                  >>
-  put #echo %helpecho <<    Waiteval Time Out                                             >>
-  put #echo %helpecho <<      prevents waiting forever for wave to collapse               >>
-  put #echo %helpecho <<      #var automapper.wavetimeout 15                              >>
-  put #echo %helpecho <<    Echoes                                                        >>
-  put #echo %helpecho <<      how verbose do you want automapper to be?                   >>
-  put #echo %helpecho <<      #var automapper.verbose 1                                   >>
-  put #echo %helpecho <<    Ice Road Behavior                                             >>
-  put #echo %helpecho <<      1: collect rocks on the ice road when lacking skates        >>
-  put #echo %helpecho <<      0: just wait 15 seconds with no RT instead                  >>
-  put #echo %helpecho <<      #var automapper.iceroadcollect 1                            >>
-  put #echo %helpecho <<    Cyclic Spells                                                 >>
-  put #echo %helpecho <<      1: Turn off cyclic spells before moving                     >>
-  put #echo %helpecho <<      0: Leave cyclic spells running while moving                 >>
-  put #echo %helpecho <<      #var automapper.cyclic 1                                    >>
-  put #echo %helpecho <<    Color                                                         >>
-  put #echo %helpecho <<      What should the default automapper echo color be?           >>
-  put #echo %helpecho <<      #var automapper.color #33CC99                               >>
-  put #echo %helpecho <<    Class                                                         >>
-  put #echo %helpecho <<      Which classes should automapper turn on and off?            >>
-  put #echo %helpecho <<      #var automapper.class -arrive -combat -joust -racial -rp    >>
-  put #echo %helpecho <<  Now save! (#save vars for Genie | cmd-s for Outlander)          >>
-  put #echo %helpecho <<                                                                  >>
-  put #echo %helpecho <<  try `.automapper walk` for help with the various walk types     >>
-  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+  put #echo %helpecho {  Welcome to automapper Setup!   (version %autoversion)           }
+  put #echo %helpecho {  Use the command line to set the following preferences:          }
+  put #echo %helpecho {    Typeahead                                                     }
+  put #echo %helpecho {      Standard Account = 1, Premium Account = 2, LTB Premium = 3  }
+  put #echo %helpecho {      0: wait for correct confirmation of sent commands           }
+  put #echo %helpecho {      #var automapper.typeahead 1                                 }
+  put #echo %helpecho {    Pause                                                         }
+  put #echo %helpecho {      Time to pause before sending a "put x" command              }
+  put #echo %helpecho {      #var automapper.pause 0.01                                  }
+  put #echo %helpecho {    Infinite Loop Protection                                      }
+  put #echo %helpecho {      Increase if you get infinte loop errors                     }
+  put #echo %helpecho {      #var automapper.loop 0.001                                  }
+  put #echo %helpecho {    Waiteval Time Out                                             }
+  put #echo %helpecho {      prevents waiting forever for wave to collapse               }
+  put #echo %helpecho {      #var automapper.wavetimeout 15                              }
+  put #echo %helpecho {    Echoes                                                        }
+  put #echo %helpecho {      how verbose do you want automapper to be?                   }
+  put #echo %helpecho {      #var automapper.verbose 1                                   }
+  put #echo %helpecho {    Ice Road Behavior                                             }
+  put #echo %helpecho {      1: collect rocks on the ice road when lacking skates        }
+  put #echo %helpecho {      0: just wait 15 seconds with no RT instead                  }
+  put #echo %helpecho {      #var automapper.iceroadcollect 1                            }
+  put #echo %helpecho {    Cyclic Spells                                                 }
+  put #echo %helpecho {      1: Turn off cyclic spells before moving                     }
+  put #echo %helpecho {      0: Leave cyclic spells running while moving                 }
+  put #echo %helpecho {      #var automapper.cyclic 1                                    }
+  put #echo %helpecho {    Color                                                         }
+  put #echo %helpecho {      What should the default automapper echo color be?           }
+  put #echo %helpecho {      #var automapper.color #33CC99                               }
+  put #echo %helpecho {    Class                                                         }
+  put #echo %helpecho {      Which classes should automapper turn on and off?            }
+  put #echo %helpecho {      #var automapper.class -arrive -combat -joust -racial -rp    }
+  put #echo %helpecho {    Brooms, Carpets, and Clouds, OH MY!                           }
+  put #echo %helpecho {      Do you have a special movement item you want to use?        }
+  put #echo %helpecho {      #var automapper.broom_carpet                                }
+  put #echo %helpecho {  Now save! (#save vars for Genie | cmd-s for Outlander)          }
+  put #echo %helpecho {                                                                  }
+  put #echo %helpecho {  try `.automapper walk` for help with the various walk types     }
+  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
   exit
 }
 if matchre("%1", "^walk$") then {
-  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
-  put #echo %helpecho <<  Welcome to automapper walk help!                          >>
-  put #echo %helpecho <<    Caravan Walking                                         >>
-  put #echo %helpecho <<      wait for your caravan                                 >>
-  put #echo %helpecho <<      #var caravan 0/1                                      >>
-  put #echo %helpecho <<    Drag                                                    >>
-  put #echo %helpecho <<      drag a target around                                  >>
-  put #echo %helpecho <<      #var drag 0/1                                         >>
-  put #echo %helpecho <<      #var drag.target name/item                            >>
-  put #echo %helpecho <<    Map Walking                                             >>
-  put #echo %helpecho <<      study a map for treasure                              >>
-  put #echo %helpecho <<      #var mapwalk 0/1                                      >>
-  put #echo %helpecho <<    Power Walking                                           >>
-  put #echo %helpecho <<      percieve the mana until locked                        >>
-  put #echo %helpecho <<      #var powerwalk 0/1                                    >>
-  put #echo %helpecho <<    Sigil Walking                                           >>
-  put #echo %helpecho <<      find both sigils in each room                         >>
-  put #echo %helpecho <<      trains: Scholarship, Arcana, Outdoorsmanship          >>
-  put #echo %helpecho <<      #var automapper.sigilwalk 0/1                         >>
-  put #echo %helpecho <<    Search Walking                                          >>
-  put #echo %helpecho <<      search in every room                                  >>
-  put #echo %helpecho <<      #var searchwalk 0/1                                   >>
-  put #echo %helpecho <<    USER Walking                                            >>
-  put #echo %helpecho <<      this can do whatever you'd like!                      >>
-  put #echo %helpecho <<        you MUST define globals automapper.UserWalkAction   >>
-  put #echo %helpecho <<        you MUST define globals automapper.UserWalkSuccess  >>
-  put #echo %helpecho <<        you MAY define globals automapper.UserWalkRetry     >>
-  put #echo %helpecho <<      #var automapper.userwalk 0/1                          >>
-  put #echo %helpecho <<    Stop and heal at vela'thor plants                       >>
-  put #echo %helpecho <<      #var automapper.seekhealing 1                         >>
-  put #echo %helpecho <<                                                            >>
-  put #echo %helpecho <<  Please search automapper.cmd for "Related macros"         >>
-  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+  put #echo %helpecho {  Welcome to automapper walk help!                          }
+  put #echo %helpecho {    Caravan Walking                                         }
+  put #echo %helpecho {      wait for your caravan                                 }
+  put #echo %helpecho {      #var caravan 0/1                                      }
+  put #echo %helpecho {    Drag                                                    }
+  put #echo %helpecho {      drag a target around                                  }
+  put #echo %helpecho {      #var drag 0/1                                         }
+  put #echo %helpecho {      #var drag.target name/item                            }
+  put #echo %helpecho {    Map Walking                                             }
+  put #echo %helpecho {      study a map for treasure                              }
+  put #echo %helpecho {      #var mapwalk 0/1                                      }
+  put #echo %helpecho {    Power Walking                                           }
+  put #echo %helpecho {      percieve the mana until locked                        }
+  put #echo %helpecho {      #var powerwalk 0/1                                    }
+  put #echo %helpecho {    Sigil Walking                                           }
+  put #echo %helpecho {      find both sigils in each room                         }
+  put #echo %helpecho {      trains: Scholarship, Arcana, Outdoorsmanship          }
+  put #echo %helpecho {      #var automapper.sigilwalk 0/1                         }
+  put #echo %helpecho {    Search Walking                                          }
+  put #echo %helpecho {      search in every room                                  }
+  put #echo %helpecho {      #var searchwalk 0/1                                   }
+  put #echo %helpecho {    USER Walking                                            }
+  put #echo %helpecho {      this can do whatever you'd like!                      }
+  put #echo %helpecho {        you MUST define globals automapper.UserWalkAction   }
+  put #echo %helpecho {        you MUST define globals automapper.UserWalkSuccess  }
+  put #echo %helpecho {        you MAY define globals automapper.UserWalkRetry     }
+  put #echo %helpecho {      #var automapper.userwalk 0/1                          }
+  put #echo %helpecho {    Stop and heal at vela'thor plants                       }
+  put #echo %helpecho {      #var automapper.seekhealing 1                         }
+  put #echo %helpecho {                                                            }
+  put #echo %helpecho {  Please search automapper.cmd for "Related macros"         }
+  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
   exit
 }
 
-ABSOLUTE.TOP:
+ABSOLUTE_TOP:
 # ---------------
 #USER VARS:
 # Type ahead declaration
@@ -476,6 +479,7 @@ ABSOLUTE.TOP:
 # what color do you want for echos?
   if !def(automapper.color) then var color #33CC99
   else var color $automapper.color
+  if matchre("$client", "Genie") then var color %color mono
 # Decrease at your own risk, increase if you get infinte loop errors
 #default is 0.1 for Outlander, 0.001 for Genie
   var infiniteLoopProtection 0.1
@@ -507,7 +511,7 @@ ABSOLUTE.TOP:
   if def(automapper.class) then put #class $automapper.class
 # ---------------
   if ($mapwalk) then {
-    if !matchre("$righthand|$lefthand", "\bmap\b") then gosub GET.MAP
+    if !matchre("$righthand|$lefthand", "\bmap\b") then gosub GET_MAP
   }
   var skatechecked 0
   var slow_on_ice 0
@@ -541,7 +545,7 @@ ABSOLUTE.TOP:
   var move_CLOSED ^The door is locked up tightly for the night|^You stop as you realize that the|^(?:\w+ )+I'm sorry, but you need to be a citizen|^BONK\! You smash your nose|^Bonk\! You smash your nose|^(?:\w+ )+I'm sorry, I can only allow citizens in at night|^(?:\w+ )+shop is closed for the night|^A guard appears and says, .I'm sorry,|The shop appears to be closed, but you catch the attention of a night attendant inside, and he says, .I'm sorry, I can only allow citizens in at night\..?
   var swim_FAIL ^You struggle (?!to maintain)|^You work(?! your way (?:up|down) the cliff)|^You slap|^You flounder
   var move_DRAWBRIDGE ^The guard yells, .Lower the bridge|^The guard says, .You'll have to wait|^A guard yells, .Hey|^The guard yells, .Hey
-  var move_ROPE.BRIDGE is already on the rope\.|You'll have to wait
+  var move_ROPE_BRIDGE is already on the rope\.|You'll have to wait
   var move_STOW ^You need to empty your hands|^You should empty your hands first\!|^You can't possibly manage to cross|^You'll need to free up your hands|^Not while carrying something in your hands|^You must first free up your hands\.|^The going gets quite difficult and highlights the need to free up your hands|^You must have your hands free
   var move_FATIGUE ^You're too tired to try climbing|^You need to rest
   var move_BOAT ^The galley has just left|^You look around in vain for the galley
@@ -549,50 +553,50 @@ ABSOLUTE.TOP:
   var climb_mount_FAIL climb what?
 ACTIONS:
   action (mapper) action (mapper) off;goto DRAGGED when ^The current drags you
-  action (mapper) if (%movewait = 0) then shift;if (%movewait = 0) then math depth subtract 1;if ((%verbose) && (len("%2") > 0)) then put #echo %color Next move: %2 when %move_OK
-  action (mapper) goto MOVE.FAILED when %move_FAIL
+  action (mapper) if (%movewait == 0) then shift;if (%movewait == 0) then math depth subtract 1;if ((%verbose) && (len("%2") > 0)) then put #echo %color Next move: %2 when %move_OK
+  action (mapper) goto MOVE_FAILED when %move_FAIL
   action (mapper) var TryGoInsteadOfClimb 1 when ^You can't climb that\.$
-  action (mapper) goto MOVE.RETRY when %move_RETRY|%move_WEB|^You can't climb that\.$
-  action (mapper) goto MOVE.STAND when %move_STAND
-  action (mapper) var movewait 1;goto MOVE.WAIT when %move_WAIT
-  action (mapper) var retreat.count 0;goto MOVE.RETREAT when %move_RETREAT
+  action (mapper) goto MOVE_RETRY when %move_RETRY|%move_WEB|^You can't climb that\.$
+  action (mapper) goto MOVE_STAND when %move_STAND
+  action (mapper) var movewait 1;goto MOVE_WAIT when %move_WAIT
+  action (mapper) var retreat.count 0;goto MOVE_RETREAT when %move_RETREAT
   action (mapper) var movewait 0 when %move_END_DELAY
-  action (mapper) var closed 1;goto MOVE.CLOSED when %move_CLOSED
-  action (mapper) goto MOVE.NOSNEAK when %move_NO_SNEAK
-  action (mapper) goto MOVE.GO when %move_GO
-  action (mapper) goto MOVE.INVIS when %move_INVIS
-  action (mapper) goto MOVE.MUCK when %move_MUCK
-  action (mapper) goto MOVE.STOW when %move_STOW
-  action (mapper) goto MOVE.BOAT when %move_BOAT
+  action (mapper) var closed 1;goto MOVE_CLOSED when %move_CLOSED
+  action (mapper) goto MOVE_NOSNEAK when %move_NO_SNEAK
+  action (mapper) goto MOVE_GO when %move_GO
+  action (mapper) goto MOVE_INVIS when %move_INVIS
+  action (mapper) goto MOVE_MUCK when %move_MUCK
+  action (mapper) goto MOVE_STOW when %move_STOW
+  action (mapper) goto MOVE_BOAT when %move_BOAT
   action (mapper) put #echo %color Will re-attempt climb in 5 seconds...;send 5 $lastcommand when ^All this climbing back and forth is getting a bit tiresome\.  You need to rest a bit before you continue\.$
-  action (mapper) goto MOVE.RETRY when %swim_FAIL
-  action (mapper) goto MOVE.DRAWBRIDGE when %move_DRAWBRIDGE
-  action (mapper) goto MOVE.KNOCK when The gate is closed\.  Try KNOCKing instead
-  action (mapper) goto MOVE.ROPE.BRIDGE when %move_ROPE.BRIDGE
-  action (mapper) goto MOVE.FATIGUE when %move_FATIGUE
-  action (mapper) goto MOVE.CLIMB.MOUNT.FAIL when %climb_mount_FAIL
-  action (mapper) goto MOVE.KNEEL when maybe if you knelt down first\?
-  action (mapper) goto MOVE.LIE when ^The passage is too small to walk that way\.  You'll have to get down and crawl\.|^There's just barely enough room here to squeeze through, and no more|^You look down at the low opening, furrowing your brow dubiously
-  action (mapper) var footitem $1;goto STOW.FOOT.ITEM when ^You notice (?:an |a )?(.+) at your feet, and do not wish to leave it behind\.
+  action (mapper) goto MOVE_RETRY when %swim_FAIL
+  action (mapper) goto MOVE_DRAWBRIDGE when %move_DRAWBRIDGE
+  action (mapper) goto MOVE_KNOCK when The gate is closed\.  Try KNOCKing instead
+  action (mapper) goto MOVE_ROPE_BRIDGE when %move_ROPE_BRIDGE
+  action (mapper) goto MOVE_FATIGUE when %move_FATIGUE
+  action (mapper) goto MOVE_CLIMB_MOUNT_FAIL when %climb_mount_FAIL
+  action (mapper) goto MOVE_KNEEL when maybe if you knelt down first\?
+  action (mapper) goto MOVE_LIE when ^The passage is too small to walk that way\.  You'll have to get down and crawl\.|^There's just barely enough room here to squeeze through, and no more|^You look down at the low opening, furrowing your brow dubiously
+  action (mapper) var footitem $1;goto STOW_FOOT_ITEM when ^You notice (?:an |a )?(.+) at your feet, and do not wish to leave it behind\.
   action (skates) var wearing_skates 1 when ^You slide your ice skates on your feet and tightly tie the laces\.|^Your ice skates help you traverse the frozen terrain\.|^Your movement is hindered .* by your ice skates\.|^You tap some.*\bskates\b.*that you are wearing
   action (skates) var wearing_skates 0 when ^You untie your skates and slip them off of your feet\.
   action (healing) var plant $1;goto HEALING when an ethereal (vela'tohr thicket|vela'tohr plant)
   action (healing) off
-#  if (($automapper.seekhealing = 1) && ($guild != Necromancer)) then action (healing) on
-  if ($automapper.seekhealing = 1) then action (healing) on
+#  if (($automapper.seekhealing == 1) && ($guild != Necromancer)) then action (healing) on
+  if ($automapper.seekhealing == 1) then action (healing) on
   action var darkroom 1 when ^It's pitch dark and you can't see a thing\!
   action var slow_on_ice 1;if (%verbose) then put #echo %color Ice detected! when ^You had better slow down\! The ice is|^At the speed you are traveling
   action goto JAILED when ^You slowly wake up again to find that all your belongings have been stripped and you are in a jail cell wearing a set of heavy manacles\.|^The \w+ brings you to the jail, where several companions aid to hold you down and strip you of all your possessions\.|^The town guard, with the help of several others, wrestle you to the ground, bind you in chains, and drag you off to jail\.|^\w+ you awake some time later, your possessions have been stripped from you, and you lay in a musty pile of straw\.|^The door slams shut, a sound not unlike that of a tomb closing\.
-  action goto DEAD.DONE when ^You are a ghost\!
+  action goto DEAD_DONE when ^You are a ghost\!
 
 # Are you starting the script while in RT?
   if ($roundtime > 0) then pause $roundtime
   if (!$standing) then gosub STAND
-MAIN.LOOP.CLEAR:
+MAIN_LOOP_CLEAR:
   gosub clear
 
 #### JON's MAIN LOOP ####
-MAIN.LOOP:
+MAIN_LOOP:
   if_1 goto WAVE_DO
   goto DONE
 WAVE_DO:
@@ -602,13 +606,13 @@ WAVE_DO:
   }
   evalmath MDepth (%depth + 1)
   if ((%typeahead.max >= %depth) && ("%%MDepth" != "")) then gosub MOVE %%MDepth
-  if ((%typeahead.max <= %depth) || ("%%MDepth" = "")) then goto MAIN.LOOP
+  if ((%typeahead.max <= %depth) || ("%%MDepth" == "")) then goto MAIN_LOOP
   else goto WAVE_DO
 
 DONE:
   if (!$standing) then gosub STAND
 
-DEAD.DONE:
+DEAD_DONE:
   put #parse YOU HAVE ARRIVED!
   put #parse AUTOMAPPER: YOU HAVE ARRIVED!
 #use END for graceful exit that turns on classes again
@@ -654,7 +658,7 @@ MOVE:
       }
     else
       {
-      if ("%type" = "real") then
+      if ("%type" == "real") then
         {
         if matchre("%movement", "^(search|swim|climb|web|muck|rt|wait|slow|drag|script|room|ice|dive) ") then
           {
@@ -680,73 +684,73 @@ MOVE:
   eval type toupper(%type)
   goto MOVE.%type
 
-MOVE.REAL:
-  if (%wearing_skates) then gosub REMOVE.SKATES
-  if (("$zoneid" = "62") && ("$game" = "DRF")) then {
-    if (("$roomid" = "41") && ("%movement" = "southwest")) then {
+MOVE_REAL:
+  if (%wearing_skates) then gosub REMOVE_SKATES
+  if (("$zoneid" == "62") && ("$game" == "DRF")) then {
+    if (("$roomid" == "41") && ("%movement" == "southwest")) then {
       pause %command_pause
       move southwest
       move south
       math depth subtract 2
-      goto MOVE.DONE
+      goto MOVE_DONE
     }
   }
-DO.MOVE:
+DO_MOVE:
   put %movement
-  goto MOVE.DONE
+  goto MOVE_DONE
 
-MOVE.ROOM:
+MOVE_ROOM:
   eval depthtimeout $unixtime + %waitevalTimeOut
   if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
   put %movement
   eval depthtimeout $unixtime + %waitevalTimeOut
-  if (%depth > 0) then waiteval ((0 = %depth) || ($unixtime >= %depthtimeout))
-  goto MOVE.DONE
+  if (%depth > 0) then waiteval ((0 == %depth) || ($unixtime >= %depthtimeout))
+  goto MOVE_DONE
 
-MOVE.STOW:
-  if !matchre("Empty", "$lefthand") then gosub STOW.LEFT
-  if !matchre("Empty", "$righthand") then gosub STOW.RIGHT
+MOVE_STOW:
+  if !matchre("Empty", "$lefthand") then gosub STOW_LEFT
+  if !matchre("Empty", "$righthand") then gosub STOW_RIGHT
   if matchre("$righthand", "khuj|staff|atapwi") then put wear $righthandnoun
-  if (!matchre("Empty", "$lefthand") || !matchre("Empty", "$righthand")) then gosub STOW.ALT
+  if (!matchre("Empty", "$lefthand") || !matchre("Empty", "$righthand")) then gosub STOW_ALT
   pause %command_pause
   put %movement
   pause %command_pause
-  goto MOVE.DONE
+  goto MOVE_DONE
 
-MOVE.BOAT:
-  matchre MOVE.BOAT.ARRIVED ^The galley (\w*) glides into the dock
+MOVE_BOAT:
+  matchre MOVE_BOAT_ARRIVED ^The galley (\w*) glides into the dock
   matchwait 60
   put look
-  goto MOVE.BOAT
+  goto MOVE_BOAT
 
-MOVE.BOAT.ARRIVED:
+MOVE_BOAT_ARRIVED:
   put %movement
   pause %command_pause
-  goto MOVE.DONE
+  goto MOVE_DONE
 
-MOVE.ICE:
+MOVE_ICE:
   if (!$broom_carpet) then {
     action (skates) on
     eval depthtimeout $unixtime + %waitevalTimeOut
     if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
-    if (!%skatechecked) then gosub FIND.SKATES
-    if (%slow_on_ice) then gosub ICE.COLLECT
+    if (!%skatechecked) then gosub FIND_SKATES
+    if (%slow_on_ice) then gosub ICE_COLLECT
   }
   put %movement
   eval depthtimeout $unixtime + %waitevalTimeOut
-  if (%depth > 0) then waiteval ((0 = %depth) || ($unixtime >= %depthtimeout))
-  goto MOVE.DONE
+  if (%depth > 0) then waiteval ((0 == %depth) || ($unixtime >= %depthtimeout))
+  goto MOVE_DONE
 
-SKATE.NO:
+SKATE_NO:
   var slow_on_ice 1
   var wearing_skates 0
   if (%verbose) then gosub ECHO Could not find ice skates!
   if ((%ice_collect) && (%verbose)) then gosub ECHO Collecting rocks in every room like the other peasants
-SKATE.YES:
+SKATE_YES:
   return
 
-ICE.COLLECT:
-  if (!%ice_collect) then goto ICE.PAUSE
+ICE_COLLECT:
+  if (!%ice_collect) then goto ICE_PAUSE
   var action collect rock
   var success ^You manage to collect a pile
   gosub ACTION
@@ -757,7 +761,7 @@ ICE.COLLECT:
   pause %command_pause
   return
 
-ICE.PAUSE:
+ICE_PAUSE:
   action (mapper) off
   pause %command_pause
   if (%verbose) then gosub ECHO Pausing 15 seconds to regain footing on slippery ice.
@@ -767,149 +771,149 @@ ICE.PAUSE:
   action (mapper) on
   return
 
-MOVE.KNOCK:
+MOVE_KNOCK:
   action (mapper) off
   if ($roundtime > 0) then pause %command_pause
   eval depthtimeout $unixtime + %waitevalTimeOut
   if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
-  if !matchre("$citizenship", "Ilithi|Fayrin's Rest|Shard|Steelclaw Clan|Zaldi Taipa") then goto SHARD.FAILED
+  if !matchre("$citizenship", "Ilithi|Fayrin's Rest|Shard|Steelclaw Clan|Zaldi Taipa") then goto SHARD_FAILED
   var movement knock gate
-  matchre MOVE.KNOCK ^\.\.\.wait|^Sorry,|^You are still stun|^You can't do that while entangled
-  matchre KNOCK.DONE %move_OK
-  matchre SHARD.FAILED Hey, you're $charactername, a wanted criminal
-#  matchre SHARD.FAILED Sorry, you're not a citizen
+  matchre MOVE_KNOCK ^\.\.\.wait|^Sorry,|^You are still stun|^You can't do that while entangled
+  matchre KNOCK_DONE %move_OK
+  matchre SHARD_FAILED Hey, you're $charactername, a wanted criminal
+#  matchre SHARD_FAILED Sorry, you're not a citizen
 #^ this message goes to everyone in the room and screws things up
-  matchre CLOAK.LOGIC ^You turn away, disappointed\.
-#^ this message is the same for non-citizen error as well as feature hidden error, so need to branch at CLOAK.LOGIC
-  matchre KNOCK.INVIS ^The gate guard can't see you
+  matchre CLOAK_LOGIC ^You turn away, disappointed\.
+#^ this message is the same for non-citizen error as well as feature hidden error, so need to branch at CLOAK_LOGIC
+  matchre KNOCK_INVIS ^The gate guard can't see you
   put %movement
   matchwait
 #this is here to account for an outlander bug
-  goto KNOCK.DONE
+  goto KNOCK_DONE
 
-SHARD.FAILED:
-  if ((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) then gosub WEAR.CLOAK
-  if ((!%cloak_off) && (%cloak_worn)) then gosub RAISE.CLOAK
-  if !matchre("$zoneid", "(66|67|68|69)") then goto MOVE.FAILED
-  matchre KNOCK.DONE YOU HAVE ARRIVED\!
+SHARD_FAILED:
+  if ((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) then gosub WEAR_CLOAK
+  if ((!%cloak_off) && (%cloak_worn)) then gosub RAISE_CLOAK
+  if !matchre("$zoneid", "(66|67|68|69)") then goto MOVE_FAILED
+  matchre KNOCK_DONE YOU HAVE ARRIVED\!
   put .sharddetour
   matchwait 45
-  goto MOVE.DONE
+  goto MOVE_DONE
 
-KNOCK.INVIS:
+KNOCK_INVIS:
   action (mapper) on
-  goto MOVE.INVIS
+  goto MOVE_INVIS
 
-KNOCK.DONE:
+KNOCK_DONE:
   action (mapper) on
   shift
   math depth subtract 1
-  goto MOVE.DONE
+  goto MOVE_DONE
 
-CLOAK.LOGIC:
-  if (((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) || ((!%cloak_off) && (%cloak_worn))) then goto SHARD.FAILED
-  gosub FIND.CLOAK
-  goto MOVE.KNOCK
+CLOAK_LOGIC:
+  if (((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) || ((!%cloak_off) && (%cloak_worn))) then goto SHARD_FAILED
+  gosub FIND_CLOAK
+  goto MOVE_KNOCK
 
-MOVE.DRAG:
-MOVE.SNEAK:
-MOVE.SWIM:
-MOVE.RT:
+MOVE_DRAG:
+MOVE_SNEAK:
+MOVE_SWIM:
+MOVE_RT:
 ####added this to stop trainer
   eval movement replacere("%movement", "script crossingtrainerfix ", "")
   eval depthtimeout $unixtime + %waitevalTimeOut
   if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
-  matchre MOVE.RT.SUCCESS ^(?:Obvious|Ship) (?:paths|exits):
+  matchre MOVE_RT_SUCCESS ^(?:Obvious|Ship) (?:paths|exits):
   put %movement
   matchwait 15
-  goto MOVE.RT
-MOVE.RT.SUCCESS:
+  goto MOVE_RT
+MOVE_RT_SUCCESS:
   pause %command_pause
   if ($roundtime > 0) then pause %command_pause
-  goto MOVE.DONE
+  goto MOVE_DONE
 
-MOVE.WEB:
+MOVE_WEB:
   if ($webbed) then waiteval (!$webbed)
   pause %command_pause
   put %movement
   pause %command_pause
-  goto MOVE.DONE
+  goto MOVE_DONE
 
-MOVE.MUCK:
+MOVE_MUCK:
   action (mapper) off
   pause %command_pause
   if (!$standing) then put stand
-  matchre MOVE.MUCK ^\.\.\.wait|^Sorry,|^You are still stun|^You can't do that while entangled|^You struggle to dig|^Maybe you can reach better that way, but you'll need to stand up for that to really do you any good\.
-  matchre RETURN.CLEAR ^You manage to dig|^You will have to kneel closer|^You stand back up.|^You fruitlessly dig
+  matchre MOVE_MUCK ^\.\.\.wait|^Sorry,|^You are still stun|^You can't do that while entangled|^You struggle to dig|^Maybe you can reach better that way, but you'll need to stand up for that to really do you any good\.
+  matchre RETURN_CLEAR ^You manage to dig|^You will have to kneel closer|^You stand back up.|^You fruitlessly dig
   put dig
   matchwait
 
-MOVE.SLOW:
+MOVE_SLOW:
   if (%verbose) then gosub ECHO Slow and steady here to avoid mishaps...
   pause 3
-  goto MOVE.REAL
+  goto MOVE_REAL
 
-MOVE.CLIMB:
-  matchre MOVE.CLIMB %move_RETRY
-  matchre MOVE.DONE %move_OK
-  matchre MOVE.CLIMB.MOUNT.FAIL climb what\?
-  matchre MOVE.CLIMB.WITH.ROPE %climb_FAIL
+MOVE_CLIMB:
+  matchre MOVE_CLIMB %move_RETRY
+  matchre MOVE_DONE %move_OK
+  matchre MOVE_CLIMB_MOUNT_FAIL climb what\?
+  matchre MOVE_CLIMB_WITH_ROPE %climb_FAIL
   if ($broom_carpet) then eval movement replacere("%movement", "climb ", "go ")
   put %movement
   matchwait
 
-MOVE.CLIMB.MOUNT.FAIL:
-  matchre MOVE.CLIMB.MOUNT.FAIL %move_RETRY
-  matchre MOVE.DONE %move_OK
+MOVE_CLIMB_MOUNT_FAIL:
+  matchre MOVE_CLIMB_MOUNT_FAIL %move_RETRY
+  matchre MOVE_DONE %move_OK
   if ($broom_carpet) then eval movement replacere("%movement", "climb ", "go ")
   put %movement
   matchwait
 
-MOVE.CLIMB.WITH.ROPE:
+MOVE_CLIMB_WITH_ROPE:
   action (mapper) off
   if !matchre("$righthand $lefthand", "\brope\b") then gosub PUT get my braided rope
   if !matchre("$righthand $lefthand", "\brope\b") then gosub PUT get my heavy rope
   action (mapper) on
-  if (("$guild" = "Thief") && ($concentration > 50) && ($Athletics.Ranks < 600)) then gosub PUT khri flight focus
-  if matchre("$righthand $lefthand", "\brope\b") then goto MOVE.CLIMB.WITH.APP.AND.ROPE
-  matchre MOVE.CLIMB.WITH.ROPE %move_RETRY
-  matchre STOW.ROPE %move_OK
-  matchre MOVE.CLIMB.WITH.APP.AND.ROPE %climb_FAIL
+  if (("$guild" == "Thief") && ($concentration > 50) && ($Athletics.Ranks < 600)) then gosub PUT khri flight focus
+  if matchre("$righthand $lefthand", "\brope\b") then goto MOVE_CLIMB_WITH_APP_AND_ROPE
+  matchre MOVE_CLIMB_WITH_ROPE %move_RETRY
+  matchre STOW_ROPE %move_OK
+  matchre MOVE_CLIMB_WITH_APP_AND_ROPE %climb_FAIL
   put %movement with my rope
   matchwait
 
-MOVE.CLIMB.WITH.APP.AND.ROPE:
+MOVE_CLIMB_WITH_APP_AND_ROPE:
   eval climbobject replacere("%movement", "climb ", "")
   put appraise %climbobject quick
   waitforre ^\s*[\[\(]?Roundtime\s*\:?|^You cannot appraise that when you are in combat
-  if (("$guild" = "Thief") && ($concentration > 50) && ($Athletics.Ranks < 600)) then gosub PUT khri flight focus
-  matchre MOVE.CLIMB.WITH.APP.AND.ROPE %move_RETRY
-  matchre STOW.ROPE %move_OK
-  matchre MOVE.CLIMB.WITH.APP.AND.ROPE %climb_FAIL
+  if (("$guild" == "Thief") && ($concentration > 50) && ($Athletics.Ranks < 600)) then gosub PUT khri flight focus
+  matchre MOVE_CLIMB_WITH_APP_AND_ROPE %move_RETRY
+  matchre STOW_ROPE %move_OK
+  matchre MOVE_CLIMB_WITH_APP_AND_ROPE %climb_FAIL
   put %movement with my rope
   matchwait
 
-STOW.ROPE:
+STOW_ROPE:
   if matchre("$righthand $lefthand", "\brope\b") then gosub PUT stow my rope
-  goto MOVE.DONE
+  goto MOVE_DONE
 
-MOVE.SEARCH:
+MOVE_SEARCH:
 #maybe the path is already open, let's try that first, then waste time searching
   if ($broom_carpet) then eval movement replacere("%movement", "climb ", "go ")
   eval depthtimeout $unixtime + %waitevalTimeOut
   if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
   action (mapper) off
-  matchre MOVE.SEARCH2 %move_FAIL
-  matchre MOVE.SEARCH.PATHOPEN %move_OK
+  matchre MOVE_SEARCH2 %move_FAIL
+  matchre MOVE_SEARCH_PATHOPEN %move_OK
   put %movement
   matchwait
-MOVE.SEARCH.PATHOPEN:
+MOVE_SEARCH_PATHOPEN:
   shift
   math depth subtract 1
   if ((%verbose) && (len("%2") > 0)) then put #echo %color Next move: %2
   action (mapper) on
-  goto MOVE.DONE
-MOVE.SEARCH2:
+  goto MOVE_DONE
+MOVE_SEARCH2:
 # so here's some bullshit, if some paths are already open you "fail" to find them
 #>sear
 #There seems to be some sort of path leading to the east.
@@ -955,42 +959,42 @@ MOVE.SEARCH2:
   #108-354 You find some footholds leading up the rock wall.
 
   var action search
-  gosub ACTION.MAPPER.ON
+  gosub ACTION_MAPPER_ON
   var action_retry ^0$
   if ($roundtime > 0) then pause %command_pause
-  goto DO.MOVE
+  goto DO_MOVE
 
-MOVE.OBJSEARCH:
+MOVE_OBJSEARCH:
   put search %searchObj
   pause %command_pause
   if ($roundtime > 0) then pause %command_pause
   if ($broom_carpet) then eval movement replacere("%movement", "climb ", "go ")
-  goto DO.MOVE
+  goto DO_MOVE
 
-MOVE.SCRIPT:
+MOVE_SCRIPT:
   var subscript 1
   eval depthtimeout $unixtime + %waitevalTimeOut
   if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
   action (mapper) off
-  if ("%movement" = "oshumanor") then goto OSHUMANOR
-  if ("%movement" = "dragonspine") then goto DRAGONSPINE
-  if ("%movement" = "abbeyhatch") then goto ABBEY.HATCH
-  if ("%movement" = "gateofsouls") then goto GATE.OF.SOULS
-  if ("%movement" = "gateleave") then goto GATE.OF.SOULS.LEAVE
-  if ("%movement" = "ggbypass") then goto GEAR.GATE.BYPASS
-  if ("%movement" = "autoclimbup") then goto AUTOCLIMB.UP
-  if ("%movement" = "autoclimbdown") then goto AUTOCLIMB.DOWN
-  if ("%movement" = "armoire") then goto ARMOIRE
-  if ("%movement" = "mistwoodcliff") then goto MISTWOOD.CLIFF
-  if ("%movement" = "sandspit") then goto SANDSPIT.TAVERN
-  if ("%movement" = "hibintelligence") then goto HIB.INTELLIGENCE
-  if ("%movement" = "automoveenterdobeks") then goto ENTER.DOBEKS
-  matchre MOVE.SCRIPT.DONE ^MOVE SUCCESSFUL
-  matchre MOVE.FAILED ^MOVE FAILED
+  if ("%movement" == "oshumanor") then goto OSHUMANOR
+  if ("%movement" == "dragonspine") then goto DRAGONSPINE
+  if ("%movement" == "abbeyhatch") then goto ABBEY_HATCH
+  if ("%movement" == "gateofsouls") then goto GATE_OF_SOULS
+  if ("%movement" == "gateleave") then goto GATE_OF_SOULS_LEAVE
+  if ("%movement" == "ggbypass") then goto GEAR_GATE_BYPASS
+  if ("%movement" == "autoclimbup") then goto AUTOCLIMB_UP
+  if ("%movement" == "autoclimbdown") then goto AUTOCLIMB_DOWN
+  if ("%movement" == "armoire") then goto ARMOIRE
+  if ("%movement" == "mistwoodcliff") then goto MISTWOOD_CLIFF
+  if ("%movement" == "sandspit") then goto SANDSPIT_TAVERN
+  if ("%movement" == "hibintelligence") then goto HIB_INTELLIGENCE
+  if ("%movement" == "automoveenterdobeks") then goto ENTER_DOBEKS
+  matchre MOVE_SCRIPT_DONE ^MOVE SUCCESSFUL
+  matchre MOVE_FAILED ^MOVE FAILED
   put .%movement
   matchwait
 
-MOVE.SCRIPT.DONE:
+MOVE_SCRIPT_DONE:
 # lets room load before turning on triggers for genie
   if matchre("$client", "Genie") then delay 0.25
   var subscript 0
@@ -999,62 +1003,62 @@ MOVE.SCRIPT.DONE:
   var depth 0
   if ((%verbose) && (len("%2") > 0)) then put #echo %color Next move: %2
   action (mapper) on
-  goto MOVE.DONE
+  goto MOVE_DONE
 
-MOVE.FATIGUE:
+MOVE_FATIGUE:
   if (%verbose) then gosub ECHO TOO FATIGUED TO CLIMB!
   pause 0.5
-  if ("$guild" = "Barbarian") then {
+  if ("$guild" == "Barbarian") then {
     gosub PUT berserk avalanche
     pause 2
   }
-  if ("$guild" = "Bard") then {
+  if ("$guild" == "Bard") then {
     gosub PUT prep hodi 20
     pause 18
     gosub PUT cast
     pause
   }
-  if ("$guild" = "Empath") then {
+  if ("$guild" == "Empath") then {
     gosub PUT prep refresh 20
     pause 18
     gosub PUT cast
     pause
   }
-  if ("$guild" = "Warrior Mage") then {
+  if ("$guild" == "Warrior Mage") then {
     gosub PUT prep zephyr 20
     pause 18
     gosub PUT cast
     pause
   }
-  if ("$guild" = "Cleric") then {
+  if ("$guild" == "Cleric") then {
     gosub PUT prep EF 20
     pause 18
     gosub PUT cast
     pause
   }
   pause
-FATIGUE.WAIT:
+FATIGUE_WAIT:
   if ($stamina > 55) then {
     pause %command_pause
     put %movement
-    goto MOVE.DONE
+    goto MOVE_DONE
   }
   if (%verbose) then gosub ECHO Pausing to recover stamina
   pause 10
-  goto FATIGUE.WAIT
+  goto FATIGUE_WAIT
 
-MOVE.INVIS:
+MOVE_INVIS:
   eval depthtimeout $unixtime + %waitevalTimeOut
   if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
-  if ("$guild" = "Necromancer") then {
+  if ("$guild" == "Necromancer") then {
     gosub PUT release EOTB
     pause %command_pause
   }
-  if ("$guild" = "Thief") then {
+  if ("$guild" == "Thief") then {
     gosub PUT khri stop silence vanish
     pause %command_pause
   }
-  if ("$guild" = "Ranger") then {
+  if ("$guild" == "Ranger") then {
     gosub PUT release BLEND
     pause %command_pause
   }
@@ -1065,21 +1069,21 @@ MOVE.INVIS:
     pause %command_pause
   }
   pause %command_pause
-  if ($invisible = 1) then {
-    if ($SpellTimer.RefractiveField.active = 1) then gosub PUT release RF
-    if ($SpellTimer.StepsofVuan.active = 1) then gosub PUT release SOV
-    if ($SpellTimer.EyesoftheBlind.active = 1) then gosub PUT release EOTB
-    if ($SpellTimer.Blend.active = 1) then gosub PUT release BLEND
-    if ($SpellTimer.KhriSilence.active = 1) then gosub PUT khri stop silence
-    if ($SpellTimer.KhriVanish.active = 1) then gosub PUT khri stop vanish
+  if ($invisible == 1) then {
+    if ($SpellTimer.RefractiveField.active == 1) then gosub PUT release RF
+    if ($SpellTimer.StepsofVuan.active == 1) then gosub PUT release SOV
+    if ($SpellTimer.EyesoftheBlind.active == 1) then gosub PUT release EOTB
+    if ($SpellTimer.Blend.active == 1) then gosub PUT release BLEND
+    if ($SpellTimer.KhriSilence.active == 1) then gosub PUT khri stop silence
+    if ($SpellTimer.KhriVanish.active == 1) then gosub PUT khri stop vanish
     pause %command_pause
   }
   if ($hidden) then send unhide
   pause %command_pause
   put %movement
-  goto MOVE.DONE
+  goto MOVE_DONE
 
-MOVE.WAIT:
+MOVE_WAIT:
   action (mapper) off
   shift
   if (%movewait) then waitforre ^After a seemingly interminible length of time|^You reach|you reach|^Just when it seems|^Finally the bridge comes to an end|^Obvious|^You also see
@@ -1087,22 +1091,22 @@ MOVE.WAIT:
   var movewait 0
   pause %command_pause
   action (mapper) on
-  goto MOVE.DONE
+  goto MOVE_DONE
 
-MOVE.STAIRS:
+MOVE_STAIRS:
   pause %command_pause
   if (%movewait) then {
-    matchre MOVE.DONE ^You reach|you reach|^Just when it seems|^Finally the bridge comes to an end
+    matchre MOVE_DONE ^You reach|you reach|^Just when it seems|^Finally the bridge comes to an end
     matchwait
   }
-  goto MOVE.DONE
+  goto MOVE_DONE
 
-MOVE.STAND:
+MOVE_STAND:
   var StandCount 0
   gosub STAND
-  goto RETURN.CLEAR
+  goto RETURN_CLEAR
 
-ATTACK.RETREAT:
+ATTACK_RETREAT:
   if (%retreat.count > 2) then {
     gosub ECHO Unable to retreat, script exiting.
     put #flash
@@ -1112,66 +1116,66 @@ ATTACK.RETREAT:
   var action bob
   var success ^There is nothing else to face!|^What are you trying to attack\?|^Roundtime:
   gosub ACTION
-  if ($monstercount = 0) then goto RETURN.CLEAR
+  if ($monstercount == 0) then goto RETURN_CLEAR
   math retreat.count add 1
-MOVE.RETREAT:
+MOVE_RETREAT:
   action (mapper) off
   if (!$standing) then gosub STAND
   if ($hidden) then gosub UNHIDE
   pause %command_pause
-  matchre ATTACK.RETREAT ^Retreat to where\?\s+There's no place to retreat to\!
-  matchre MOVE.RETREAT %move_RETRY|^\s*[\[\(]?[rR]oundtime\s*\:?|^You retreat back
-  matchre RETURN.CLEAR ^You retreat from combat|^You sneak back out of combat|^You are already as far away as you can get|^You stop
-  matchre RETURN.CLEAR ^You begin to get up and \*\*SMACK\!\*\*
+  matchre ATTACK_RETREAT ^Retreat to where\?\s+There's no place to retreat to\!
+  matchre MOVE_RETREAT %move_RETRY|^\s*[\[\(]?[rR]oundtime\s*\:?|^You retreat back
+  matchre RETURN_CLEAR ^You retreat from combat|^You sneak back out of combat|^You are already as far away as you can get|^You stop
+  matchre RETURN_CLEAR ^You begin to get up and \*\*SMACK\!\*\*
   put retreat
   matchwait
-  goto MOVE.RETREAT
+  goto MOVE_RETREAT
 
-MOVE.DIVE:
+MOVE_DIVE:
   if ($broom_carpet) then {
     eval movement replacere("%movement", "dive ", "")
     put go %movement
   }
   else put dive %movement
-  goto MOVE.DONE
+  goto MOVE_DONE
 
-MOVE.GO:
+MOVE_GO:
   put go %movement
-  goto MOVE.DONE
+  goto MOVE_DONE
 
-MOVE.KNEEL:
+MOVE_KNEEL:
   var action kneel
   var success ^You rise to a kneeling|^You kneel|^You're already kneeling|^Subservient type
   gosub ACTION
   put %movement
-  goto MOVE.DONE
+  goto MOVE_DONE
 
-MOVE.LIE:
+MOVE_LIE:
   var action lie
   var success ^You lie down|^You are already lying down
   gosub ACTION
   put %movement
-  goto MOVE.DONE
+  goto MOVE_DONE
 
-MOVE.NOSNEAK:
-  if (%closed) then goto MOVE.CLOSED
+MOVE_NOSNEAK:
+  if (%closed) then goto MOVE_CLOSED
   eval movement replacere("%movement", "sneak ", "")
   put %movement
-  goto MOVE.DONE
+  goto MOVE_DONE
 
-MOVE.DRAWBRIDGE:
+MOVE_DRAWBRIDGE:
   waitforre ^Loose chains clank as the drawbridge settles on the ground with a solid thud\.
   put %movement
-  goto MOVE.DONE
+  goto MOVE_DONE
 
-MOVE.ROPE.BRIDGE:
+MOVE_ROPE_BRIDGE:
   action instant put retreat;put retreat when melee range|pole weapon range
   waitforre finally arriving|finally reaching
   action remove melee range|pole weapon range
   put %movement
-  goto MOVE.DONE
+  goto MOVE_DONE
 
-MOVE.FAILED:
+MOVE_FAILED:
   action (mapper) off
   var subscript 0
   evalmath failcounter %failcounter + 1
@@ -1188,31 +1192,31 @@ MOVE.FAILED:
     goto END
   }
   put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
-  put #echo %color <<  MOVE FAILED - Type: %type | Movement: %movement | Depth: %depth
-  put #echo %color <<   Remaining Moves: %argcount
+  put #echo %color {   MOVE FAILED - Type: %type | Movement: %movement | Depth: %depth
+  put #echo %color {    Remaining Moves: %argcount
   put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
   pause
   gosub ECHO RETRYING Movement...%failcounter / 3 Tries.
-MOVE.RETRY:
+MOVE_RETRY:
   gosub ECHO Retry movement %1
   if (%TryGoInsteadOfClimb) then eval movement replacere("%movement", "climb ", "go ")
   # SHROOM - LIGHT SOURCE CHECK - (MAY Need fine tuning) - CHECKS FOR DARK VISION/ LIGHT ITEM WHEN IN ROOMID = 0 AND DARK ROOM
-  if ((($roomid = 0) && matchre("$roomobjs $roomdesc","(pitch black|pitch dark)") && (%darkchecked = 0)) || ((%darkroom = 1) && (%darkchecked = 0))) then gosub LIGHT_SOURCE
+  if ((($roomid == 0) && matchre("$roomobjs $roomdesc","(pitch black|pitch dark)") && (%darkchecked == 0)) || ((%darkroom == 1) && (%darkchecked == 0))) then gosub LIGHT_SOURCE
   if ($webbed) then {
     if (%verbose) then gosub ECHO WEBBED - pausing
     pause
     if ($webbed) then pause 0.5
     if ($webbed) then waiteval (!$webbed)
-    goto MOVE.RETRY
+    goto MOVE_RETRY
   }
   if ($stunned) then {
     if (%verbose) then gosub ECHO STUNNED - pausing
     pause
     if ($stunned) then pause 0.5
     if ($stunned) then waiteval (!$stunned)
-    goto MOVE.RETRY
+    goto MOVE_RETRY
   }
-  if (%typeahead.max = 0) then {
+  if (%typeahead.max == 0) then {
     pause %command_pause
     put fatigue
   }
@@ -1220,13 +1224,13 @@ MOVE.RETRY:
   pause %command_pause
   if ($roundtime > 0) then pause $roundtime
 
-RETURN.CLEAR:
+RETURN_CLEAR:
   action (mapper) on
   var depth 0
   var movewait 0
-  goto MOVE.DONE
+  goto MOVE_DONE
 
-MOVE.CLOSED:
+MOVE_CLOSED:
   gosub ECHO SHOP IS CLOSED FOR THE NIGHT!
   put #parse SHOP CLOSED
   put #parse SHOP IS CLOSED
@@ -1244,13 +1248,13 @@ JAILED:
 #### The various types of walking actions
 CARAVAN:
   waitforre ^Your .*, following you\.
-  goto MAIN.LOOP.CLEAR
+  goto MAIN_LOOP_CLEAR
 
 MAPWALK:
   var typeahead.max 0
   var success ^The map has a large 'X' marked in the middle of it
   var action study my map
-  goto ACTION.WALK
+  goto ACTION_WALK
 
 POWERWALK:
   if (($Attunement.LearningRate > 33) || ($Attunement.Ranks >= 1750)) then {
@@ -1261,7 +1265,7 @@ POWERWALK:
   var typeahead.max 0
   var success ^\s*[\[\(]?[rR]oundtime\s*\:?|^Something in the area is interfering|^You are a bit too busy performing
   var action perceive
-  goto ACTION.WALK
+  goto ACTION_WALK
 
 SIGILWALK:
   if ((($Scholarship.LearningRate > 33) || ($Scholarship.Ranks >= 1750)) && (($Arcana.LearningRate > 33) || ($Arcana.Ranks >= 1750)) && (($Outdoorsmanship.LearningRate > 33) || ($Outdoorsmanship.Ranks >= 1750))) then {
@@ -1273,15 +1277,15 @@ SIGILWALK:
   var action_retry ^Roundtime: \d+ sec\.
   var success (?:antipode|ascension|clarification|decay|evolution|integration|metamorphosis|nurture|paradox|unity) sigil(?: has revealed itself| before you)?\.$|^Having recently been searched,|^You recall having already identified|^Something in the area is interfering|^You are too distracted
   var action perceive sigil
-  gosub ACTION.MAPPER.ON
+  gosub ACTION_MAPPER_ON
   var action_retry ^0$
-  goto MAIN.LOOP.CLEAR
+  goto MAIN_LOOP_CLEAR
 
 SEARCHWALK:
   var typeahead.max 0
   var success ^You search around|^After a careful search|^You notice|^\s*[\[\(]?[rR]oundtime\s*\:?|^You push through bushes|^You scan|^There seems to be|^You walk around the perimeter|^Just under the Bridge
   var action search
-  goto ACTION.WALK
+  goto ACTION_WALK
 
 USERWALK:
   #requested by djordje - 2022-12-06
@@ -1290,13 +1294,13 @@ USERWALK:
   if def(automapper.UserWalkRetry) then var action_retry $automapper.UserWalkRetry
   var success $automapper.UserWalkSuccess
   var action $automapper.UserWalkAction
-  gosub ACTION.MAPPER.ON
+  gosub ACTION_MAPPER_ON
   var action_retry ^0$
-  goto MAIN.LOOP.CLEAR
+  goto MAIN_LOOP_CLEAR
 
-MOVE.DONE:
+MOVE_DONE:
   if (!$standing) then gosub STAND
-  if ((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) then gosub WEAR.CLOAK
+  if ((%cloak_off) && matchre("$lefthand $righthand", "%cloaknouns")) then gosub WEAR_CLOAK
   if ($caravan) then goto CARAVAN
   if ($mapwalk) then goto MAPWALK
   if ($powerwalk) then goto POWERWALK
@@ -1305,27 +1309,27 @@ MOVE.DONE:
   if ($automapper.userwalk) then goto USERWALK
   gosub clear
   var movewait 0
-  goto MAIN.LOOP
+  goto MAIN_LOOP
 
-ABBEY.HATCH:
+ABBEY_HATCH:
   action (abbey) on
   action (abbey) var abbey_sconce 1 when ^What were you referring to?
   var abbey_sconce 0
   var action go secret hatchway
   var success ^What were you referring to?|^A narrow, winding staircase has been chiseled
   gosub ACTION
-  if (!%abbey_sconce) then goto ABBEY.HATCH.SUCCESS
+  if (!%abbey_sconce) then goto ABBEY_HATCH_SUCCESS
   move go ironbound door
   var action turn sconce
   var success ^The torch sconce has been turned as far as it will go|^You hear a faint click
   gosub ACTION
   move go ironbound door
   move go secret hatchway
-ABBEY.HATCH.SUCCESS:
+ABBEY_HATCH_SUCCESS:
   action (abbey) off
-  goto MOVE.SCRIPT.DONE
+  goto MOVE_SCRIPT_DONE
 
-GATE.OF.SOULS:
+GATE_OF_SOULS:
   action (souls) on
   action (souls) var pushing 0 when ^You stop pushing\.
   action (souls) var boulder 0 when ^The ground trembles slightly, causing a massive granite boulder to rock back and forth
@@ -1333,63 +1337,63 @@ GATE.OF.SOULS:
   action (souls) var pushing 1 when ^You lean against the boulder|^You're already pushing
   var boulder 0
   var pushing 0
-GATE.OF.SOULS.1:
+GATE_OF_SOULS.1:
   pause %command_pause
   if (!$standing) then gosub STAND
-  if matchre("$roomobjs", "low tunnel") then goto GATE.OF.SOULS.GO
-  if (%boulder = 1) then goto GATE.OF.SOULS.GO
-  if (%pushing = 0) then {
+  if matchre("$roomobjs", "low tunnel") then goto GATE_OF_SOULS_GO
+  if (%boulder == 1) then goto GATE_OF_SOULS_GO
+  if (%pushing == 0) then {
     gosub RETREAT
     put push boulder
     if ($roundtime > 0) then pause $roundtime
     pause %command_pause
   }
-  goto GATE.OF.SOULS.1
-GATE.OF.SOULS.GO:
+  goto GATE_OF_SOULS.1
+GATE_OF_SOULS_GO:
   gosub RETREAT
   if ($standing) then send lie
   pause %command_pause
-  matchre GATE.OF.SOULS.1 ^What were you
-  matchre GATE.OF.SOULS.GO ^Sorry|^You are engaged|^It's a pretty tight fit
-  matchre GATE.OF.SOULS.WAIT ^Wriggling on your stomach, you crawl into a low tunnel
+  matchre GATE_OF_SOULS.1 ^What were you
+  matchre GATE_OF_SOULS_GO ^Sorry|^You are engaged|^It's a pretty tight fit
+  matchre GATE_OF_SOULS_WAIT ^Wriggling on your stomach, you crawl into a low tunnel
   put go tunnel
   matchwait 5
-  goto GATE.OF.SOULS.1
-GATE.OF.SOULS.WAIT:
-  matchre GATE.OF.SOULS.DONE Coarse black grit blows in swirling eddies|^After a seemingly interminable length of time
+  goto GATE_OF_SOULS.1
+GATE_OF_SOULS_WAIT:
+  matchre GATE_OF_SOULS_DONE Coarse black grit blows in swirling eddies|^After a seemingly interminable length of time
   matchwait
-GATE.OF.SOULS.DONE:
+GATE_OF_SOULS_DONE:
   if (!$standing) then gosub STAND
   pause %command_pause
   action (souls) off
-  goto MOVE.SCRIPT.DONE
+  goto MOVE_SCRIPT_DONE
 
-GATE.OF.SOULS.LEAVE:
+GATE_OF_SOULS_LEAVE:
   if ($standing) then send lie
   pause %command_pause
-  matchre GATE.OF.SOULS.LEAVE.DONE ^Rising in a snubbed tower|^After a seemingly interminable length of time
+  matchre GATE_OF_SOULS_LEAVE_DONE ^Rising in a snubbed tower|^After a seemingly interminable length of time
   put go tunnel
   matchwait 75
-  goto GATE.OF.SOULS.LEAVE
-GATE.OF.SOULS.LEAVE.DONE:
+  goto GATE_OF_SOULS_LEAVE
+GATE_OF_SOULS_LEAVE_DONE:
   if (!$standing) then gosub STAND
   pause %command_pause
   action (souls) off
-  goto MOVE.SCRIPT.DONE
+  goto MOVE_SCRIPT_DONE
 
-GEAR.GATE.BYPASS:
+GEAR_GATE_BYPASS:
   var wall 0
   var wall_trigger torch
   action (ggbypass) var wall 0 when ^The stone wall slowly closes|stone wall closes\.$
   action (ggbypass) var wall 1 when ^A gouged stone wall slowly opens up|and a gouged stone wall opens up\.$
-  action (ggbypass) goto GEAR.GATE.BYPASS when ^I could not find what you were referring to\.$
+  action (ggbypass) goto GEAR_GATE_BYPASS when ^I could not find what you were referring to\.$
   action (ggbypass) on
-GEAR.GATE.BYPASS.CHECK:
+GEAR_GATE_BYPASS_CHECK:
   if (!$standing) then gosub STAND
   if matchre("$roomobjs", "a gouged stone wall") then var wall 1
-  if ("$roomid" = "263") then var wall_trigger stone basin
-  if ("$roomid" = "264") then var wall_trigger torch on wall
-  if (("$roomid" != "264") && ("$roomid" != "263")) then goto MOVE.FAILED
+  if ("$roomid" == "263") then var wall_trigger stone basin
+  if ("$roomid" == "264") then var wall_trigger torch on wall
+  if (("$roomid" != "264") && ("$roomid" != "263")) then goto MOVE_FAILED
   if (!%wall) then {
     var action turn %wall_trigger
     var success ^As you pull down on
@@ -1402,14 +1406,14 @@ GEAR.GATE.BYPASS.CHECK:
     move go wall
     action (ggbypass) off
     var subscript 0
-# Not sure which one to use! My testing worked with MOVE.DONE. If MOVE.SCRIPT.DONE is better, then remove "action (mapper) on" in this block.
+# Not sure which one to use! My testing worked with MOVE_DONE. If MOVE_SCRIPT_DONE is better, then remove "action (mapper) on" in this block.
 #    action (mapper) on
-#    goto MOVE.DONE
-    goto MOVE.SCRIPT.DONE
+#    goto MOVE_DONE
+    goto MOVE_SCRIPT_DONE
   }
-  goto GEAR.GATE.BYPASS.CHECK
+  goto GEAR_GATE_BYPASS_CHECK
 
-ENTER.DOBEKS:
+ENTER_DOBEKS:
   pause %command_pause
   put kiss scorpion
   pause
@@ -1417,7 +1421,7 @@ ENTER.DOBEKS:
   pause 13
   if ($stunned) then waiteval (!$stunned)
   if (!$standing) then gosub STAND
-  goto MOVE.SCRIPT.DONE
+  goto MOVE_SCRIPT_DONE
 
 OSHUMANOR:
   pause %command_pause
@@ -1432,8 +1436,8 @@ OSHUMANOR:
   waitforre %move_OK
   put go door
   pause %command_pause
-  if ($roomid = 113) then goto OSHUMANOR
-  goto MOVE.SCRIPT.DONE
+  if ($roomid == 113) then goto OSHUMANOR
+  goto MOVE_SCRIPT_DONE
 
 DRAGONSPINE:
   pause %command_pause
@@ -1445,7 +1449,7 @@ DRAGONSPINE:
 DRAGONSPINE2:
   action (mapper) on
   var subscript 0
-  goto MOVE.DONE
+  goto MOVE_DONE
 
 ARMOIRE:
   action (armoire) on
@@ -1460,9 +1464,9 @@ ARMOIRE:
   action (armoire) off
   action (mapper) on
   var subscript 0
-  goto MOVE.REAL
+  goto MOVE_REAL
 
-MISTWOOD.CLIFF:
+MISTWOOD_CLIFF:
 #shift away if room load trigger got turned off before it loaded
   if matchre("%1", "objsearch rocky.ledge climb shrub") then shift
   eval depthtimeout $unixtime + %waitevalTimeOut
@@ -1479,9 +1483,9 @@ MISTWOOD.CLIFF:
     put northwest
     waitforre %move_OK
   }
-  goto MOVE.SCRIPT.DONE
+  goto MOVE_SCRIPT_DONE
 
-SANDSPIT.TAVERN:
+SANDSPIT_TAVERN:
   action (sandspit) on
   action (sandspit) var barrel 0 when ^You duck quietly into an old barrel.
   action (sandspit) var barrel 1 when ^You can't do that.
@@ -1494,9 +1498,9 @@ SANDSPIT.TAVERN:
   }
   pause %command_pause
   action (sandspit) off
-  goto MOVE.SCRIPT.DONE
+  goto MOVE_SCRIPT_DONE
 
-HIB.INTELLIGENCE:
+HIB_INTELLIGENCE:
   action (hibintel) on
   action (hibintel) var steeldoor 0 when Chedik Bridge, Engineer's Tower
   action (hibintel) var steeldoor 1 when ^You can't do that.
@@ -1509,13 +1513,13 @@ HIB.INTELLIGENCE:
   }
   pause %command_pause
   action (hibintel) off
-  goto MOVE.SCRIPT.DONE
+  goto MOVE_SCRIPT_DONE
 
-AUTOCLIMB.DOWN:
+AUTOCLIMB_DOWN:
   var autoclimb down
   goto AUTOCLIMB
 
-AUTOCLIMB.UP:
+AUTOCLIMB_UP:
   var autoclimb up
 
 AUTOCLIMB:
@@ -1524,38 +1528,38 @@ AUTOCLIMB:
   var success ^You climb over the top|^Obvious
   gosub ACTION
   var action_retry ^0$
-  goto MOVE.SCRIPT.DONE
+  goto MOVE_SCRIPT_DONE
 
-ANDRESHLEW.VINE:
+ANDRESHLEW_VINE:
   var action tap vine
   var success ^As you attempt to (touch|tap) the vine
   gosub ACTION
   waitforre ^Just as you were about to hit, the vine snakes around your waist and sets you gently on the ground
   pause %command_pause
-  goto MOVE.SCRIPT.DONE
+  goto MOVE_SCRIPT_DONE
 
-GET.MAP:
+GET_MAP:
   var action get my map
   var success ^You get|^You are already holding
   goto ACTION
 
-FIND.SKATES:
+FIND_SKATES:
   var skatechecked 1
   if (%verbose) then gosub ECHO Checking for ice skates!
   action (skates) var skate.container $1 when ^You tap .*\bskates\b.*inside your (.*)\.$
   action (skates) var skate.container portal when ^In the .* eddy you see.* \bskates\b
   action (skates) var skate.container held when ^You are holding some.*\bskates\b
-  if matchre("$righthand|$lefthand", "skates") then goto CHECK.FOOTWEAR
+  if matchre("$righthand|$lefthand", "skates") then goto CHECK_FOOTWEAR
   var action tap my skates
   var success ^You tap|^I could not|^What were you
   gosub ACTION
   if (%wearing_skates) then return
-  if (%skate.container != 0) then goto CHECK.FOOTWEAR
+  if (%skate.container != 0) then goto CHECK_FOOTWEAR
 
-FIND.SKATES.PORTAL:
-  gosub LOOK.PORTAL
+FIND_SKATES_PORTAL:
+  gosub LOOK_PORTAL
 
-CHECK.FOOTWEAR:
+CHECK_FOOTWEAR:
 #waiting for a fix for outlander then we can re-anchor this and remove the action off
   action (skates2) var footwear $1 when (skates|boots?|shoes?|moccasins?|sandals?|slippers?|mules|workboots?|footwraps?|footwear|spats?|chopines?|nauda|booties|clogs|buskins?|cothurnes?|galoshes|half-boots?|ankle-boots?|gutalles?|hessians?|brogans?|toe\s?-?rings?|toe\s?-?bells?|loafers?|pumps?)
   action (skates) var footwear 0 when ^You aren't wearing anything like that
@@ -1564,87 +1568,87 @@ CHECK.FOOTWEAR:
   var success ^You aren't wearing anything like that|^All of your items worn on the feet
   gosub ACTION
   action (skates2) off
-  if ("%footwear" = "skates") then return
-  if (%skate.container = 0) then goto SKATE.NO
-  if ("%footwear" = "unknown") then {
+  if ("%footwear" == "skates") then return
+  if (%skate.container == 0) then goto SKATE_NO
+  if ("%footwear" == "unknown") then {
     if (%verbose) then gosub ECHO ERROR: Unknown noun for your footwear!
-    goto SKATE.NO
+    goto SKATE_NO
   }
   if (%verbose) then gosub ECHO Ice skates found!
-  if ((%footwear = 0) && ("%skate.container" = "held")) then goto WEAR.SKATES
-  if (%footwear = 0) then goto GET.SKATES
+  if ((%footwear == 0) && ("%skate.container" == "held")) then goto WEAR_SKATES
+  if (%footwear == 0) then goto GET_SKATES
 
-REMOVE.FOOTWEAR:
+REMOVE_FOOTWEAR:
   var action remove my %footwear
   var success ^You (aren't|can't|carefully|climb|deftly|detach|drape|fade|fall|get|hang|kneel|lie|loosen|place|pull|quickly|remove|rise|set|shift|silently|sit|slide|sling|slip|stand|step|unstrap|take|toss|untie|work|wrap|yank)
   gosub ACTION
 
-STOW.FOOTWEAR:
+STOW_FOOTWEAR:
   action (skates) var footwear.container $1 when ^You put your .* in your (.*)\.$
   var action stow my %footwear
   var success ^You put
   gosub ACTION
 
-GET.SKATES:
+GET_SKATES:
   var action get my skates in my %skate.container
   var success ^You get|^You fade in for a moment as you get
   gosub ACTION
 
-WEAR.SKATES:
+WEAR_SKATES:
   var action wear my skates
   var success ^You slide your ice skates on your feet and tightly tie the laces|^You (are already|aren't|attach|can't|carefully|climb|deftly|detach|drape|fade|fall|get|hang|kneel|lie|loosen|need|place|pull|put|quickly|remove|rise|set|shift|silently|sit|slide|sling|slip|stand|step|strap|take|tie|toss|untie|work|wrap|yank)
   goto ACTION
 
-REMOVE.SKATES:
+REMOVE_SKATES:
   if (%verbose) then gosub ECHO Removing ice skates!
   var action remove my skates
   var success ^You untie your skates and slip them off of your feet
   gosub ACTION
 
-STOW.SKATES:
-  if (%skate.container = 0) then var action stow my skates
+STOW_SKATES:
+  if (%skate.container == 0) then var action stow my skates
   else var action put my skates in my %skate.container
   var success ^You put
   gosub ACTION
 
-GET.FOOTWEAR:
-  if (%footwear = 0) then return
+GET_FOOTWEAR:
+  if (%footwear == 0) then return
   if (%verbose) then gosub ECHO Putting your %footwear back on!
   var action get my %footwear in my %footwear.container
   var success ^You get
   gosub ACTION
 
-WEAR.FOOTWEAR:
+WEAR_FOOTWEAR:
   var action wear my %footwear
   var success ^You (are already|attach|can't|carefully|climb|deftly|drape|fade|fall|get|hang|kneel|lie|loosen|place|pull|put|quickly|rise|set|shift|silently|sit|slide|sling|slip|stand|step|strap|take|tie|toss|untie|work|wrap|yank)
   goto ACTION
 
-FIND.CLOAK:
+FIND_CLOAK:
   action (cloak) on
   action (cloak) var cloak_worn 1 when ^You tap.*(%cloaknouns).*that you are wearing\.$
   action (cloak) var cloak_worn 2 when ^You attempt to turn|^You adjust the fit
   var cloakloop 0
   var cloak_worn 0
 
-TAP.CLOAK:
+TAP_CLOAK:
   eval cloak_noun element ("%cloaknouns", "%cloakloop")
-  if (%cloak_noun = 0) then return
+  if (%cloak_noun == 0) then return
   var action tap my %cloak_noun
   var success ^You tap|^I could not find
   gosub ACTION
   math cloakloop add 1
-  if (!%cloak_worn) then goto TAP.CLOAK
+  if (!%cloak_worn) then goto TAP_CLOAK
 
-LOWER.CLOAK:
+LOWER_CLOAK:
   var action_retry ^You pull your %cloak_noun
   var action turn my %cloak_noun
   var success ^You (adjust the fit|attempt to turn|pull down your|wind|unwind)
   gosub ACTION
   var action_retry ^0$
-  if (%cloak_worn = 2) then goto REMOVE.CLOAK
+  if (%cloak_worn == 2) then goto REMOVE_CLOAK
   return
 
-RAISE.CLOAK:
+RAISE_CLOAK:
   var action_retry ^You pull down your
   var action turn my %cloak_noun
   var success ^You (attempt to turn|pull your %cloak_noun|wind|unwind)
@@ -1652,14 +1656,14 @@ RAISE.CLOAK:
   var action_retry ^0$
   return
 
-REMOVE.CLOAK:
+REMOVE_CLOAK:
   var action remove my %cloak_noun
   var success ^You (are already|aren't|attach|can't|carefully|climb|deftly|detach|drape|fade|fall|get|hang|kneel|lie|loosen|need|place|pull|put|quickly|remove|rise|set|shift|silently|sit|slide|sling|slip|stand|step|strap|take|tie|toss|untie|work|wrap|yank)|slips away from your face
   gosub ACTION
   var cloak_off 1
   return
 
-WEAR.CLOAK:
+WEAR_CLOAK:
   if matchre("$lefthand", "(%cloaknouns)") then var action wear my $lefthandnoun
   if matchre("$righthand", "(%cloaknouns)") then var action wear my $righthandnoun
   var success ^You (are already|attach|can't|carefully|climb|deftly|drape|fade|fall|get|hang|kneel|lie|loosen|place|pull|put|quickly|rise|set|shift|silently|sit|slide|sling|slip|stand|step|strap|take|tie|toss|untie|wear|work|wrap|yank)
@@ -1667,281 +1671,12 @@ WEAR.CLOAK:
   var cloak_off 0
   return
 
-LOOK.PORTAL:
+LOOK_PORTAL:
   var action look in my watery portal
   var success ^In the.*you see|^I could not find
   gosub ACTION
   return
 
-STOW.FOOT.ITEM:
-  gosub STOW.FEET
-  gosub STOW.HANDS
-  goto ABSOLUTE.TOP
-
-STOW.FEET:
-  var action stow feet
-  if matchre("%footitem", "(mat|rug|cloth|tapestry)") then var action roll $1
-  var success ^You pick up .* lying at your feet|^You carefully gather up the delicate folds|^You start at one end of your|^Stow what\?
-  gosub ACTION
-## THIS LINE WAS ADDED TO FIX A RARE CONDITION WHERE THE FOOTITEM IS A "CLOTH/RUG" BUT ~CANNOT~ BE ROLLED THUS GOES INTO AN INFINITE LOOP OF FAILING TO ROLL
-## It should not really effect a normal stow feet other than firing "stow feet" twice which is inconsequential
-  send stow feet
-  pause %command_pause
-  return
-
-STOWING:
-STOW.HANDS:
-  if matchre("$righthand", "(khuj|staff|atapwi|parry stick)") then gosub PUT wear $righthandnoun
-  if !matchre("Empty", "$lefthand") then gosub STOW.LEFT
-  if !matchre("Empty", "$righthand") then gosub STOW.RIGHT
-  if (!matchre("Empty", "$lefthand") || !matchre("Empty", "$righthand")) then gosub STOW.ALT
-  return
-
-STOW.LEFT:
-  var action stow my $lefthandnoun
-  var success ^You put|^Stow what\?
-  gosub ACTION
-  return
-
-STOW.RIGHT:
-  var action stow my $righthandnoun
-  var success ^You put|^Stow what\?
-  gosub ACTION
-  return
-
-### BACKUP STOW METHOD IF REGULAR "STOW" FAILS
-### Will check for other worn containers and attempt stowing item in alternate containers
-STOW.ALT:
-  var StowLoop 0
-  gosub BAG.CHECK
-  STOW.ALT.1:
-  delay %infiniteLoopProtection
-  math StowLoop add 1
-  if (matchre("Empty", "$lefthand") && matchre("Empty", "$righthand")) then return
-  if (%StowLoop > 3) then {
-    gosub ECHO STOW ERROR - CANNOT FIND A PLACE TO STORE %item
-    return
-  }
-  if !matchre("Empty", "$righthand") then var item $righthandnoun
-  if !matchre("Empty", "$lefthand") then var item $lefthandnoun
-  if !matchre("%MAIN.BAG", "NULL") then {
-    var action put my %item in my %MAIN.BAG
-    var success ^You (put|slip)|^What were you|^Stow what\?
-    gosub ACTION
-  }
-  if (matchre("Empty", "$lefthand") && matchre("Empty", "$righthand")) then return
-  if !matchre("%BACKUP.BAG", "NULL") then {
-    var action put my %item in my %BACKUP.BAG
-    var success ^You (put|slip)|^What were you|^Stow what\?
-    gosub ACTION
-  }
-  if (matchre("Empty", "$lefthand") && matchre("Empty", "$righthand")) then return
-  if !matchre("%THIRD.BAG", "NULL") then {
-    var action put my %item in my %THIRD.BAG
-    var success ^You (put|slip)|^What were you|^Stow what\?
-    gosub ACTION
-  }
-  if (matchre("Empty", "$lefthand") && matchre("Empty", "$righthand")) then return
-  if !matchre("%FOURTH.BAG", "NULL") then {
-    var action put my %item in my %FOURTH.BAG
-    var success ^You (put|slip)|^What were you|^Stow what\?
-    gosub ACTION
-  }
-  goto STOW.ALT.1
-
-# Standalone Retreat
-RETREAT:
-  action (mapper) off
-  if (!$standing) then gosub STAND
-  if ($hidden) then gosub UNHIDE
-  pause %command_pause
-  matchre RETREAT %move_RETRY|^\s*[\[\(]?[rR]oundtime\s*\:?|^You retreat back
-  matchre RETREAT_RETURN ^You retreat from combat|^You sneak back out of combat|^You are already as far away as you can get|^You stop
-  put retreat
-  matchwait 3
-RETREAT_RETURN:
-  action (mapper) on
-  return
-
-UNHIDE:
-  var action unhide
-  var success ^But you are not hidden|^You come out of hiding
-  goto ACTION
-
-ACTION.STOW.HANDS:
-  var actionbackup %action
-  var successbackup %success
-  gosub STOW.HANDS
-  var action %actionbackup
-  var success %successbackup
-  goto ACTION
-
-ACTION.STOW.UNLOAD:
-  var unloadables crossbow|sling|bow|blowgun|arbalest|arbalist|chunenguti|hrr'ibu|jiranoci|jranoki|mahil|taisgwelduan|uku'uanstaho
-  var actionbackup %action
-  var successbackup %success
-  if matchre("$righthand", "%unloadables") then var action unload my $righthandnoun
-  if matchre("$lefthand", "%unloadables") then var action unload my $lefthandnoun
-  var success ^\s*[\[\(]?[rR]oundtime\s*\:?|^You unload
-  gosub ACTION
-  gosub STOW.HANDS
-  var action %actionbackup
-  var success %successbackup
-  goto ACTION
-
-STAND:
-  math StandCount add 1
-  var action stand
-  if (matchre("$roomname", "The Breech Tunnels") && (%StandCount < 3)) then return
-  var success ^You stand up|^You stand back up|^You are already standing|^As you stand
-  goto ACTION.MAPPER.ON
-
-ACTION.WALK:
-  gosub ACTION.MAPPER.ON
-  goto MAIN.LOOP.CLEAR
-
-ACTION.WAIT:
-  pause %command_pause
-  if ($roundtime > 0) then pause $roundtime
-  if ($stunned) then waiteval (!$stunned)
-  if ($webbed) then waiteval (!$webbed)
-
-ACTION:
-  #matchre ACTION_WAIT ^\s*[\[\(]?[rR]oundtime\s*\:?
-  # depending on the action, this could be a retry or a success...
-  action (mapper) off
-  var actionloop 0
-
-ACTION.MAPPER.ON:
-  if ($automapper.sigilwalk) then {
-    if ((($Scholarship.LearningRate > 33) || ($Scholarship.Ranks >= 1750)) && (($Arcana.LearningRate > 33) || ($Arcana.Ranks >= 1750)) && (($Outdoorsmanship.LearningRate > 33) || ($Outdoorsmanship.Ranks >= 1750))) then {
-      put #var automapper.sigilwalk 0
-      var typeahead.max $automapper.typeahead
-      goto ACTION.RETURN
-    }
-  }
-  math actionloop add 1
-  pause %command_pause
-  matchre ACTION ^\.\.\.wait|^Sorry,|^Please wait\.|^The weight of all your possessions|^You are overburdened and cannot|^You are so unbalanced|%action_retry
-  matchre TAP.CLOAK ^Something else is already hiding your features
-  matchre ACTION.RETURN %success
-  matchre ACTION.STOW.HANDS ^You must have at least one hand free to do that|^You need a free hand
-  matchre ACTION.WAIT ^You're unconscious|^You are still stunned|^You can't do that while|^You don't seem to be able to
-  matchre ACTION.FAIL ^(That's|The .*) too (heavy|thick|long|wide)|^There's no room|^Weirdly\,|^As you attempt|^That doesn't belong in there\!
-  matchre ACTION.FAIL ^There isn't any more room|^You just can't get the .+ to fit|^Where are you|^What were you|^You can't|^You begin to get up and \*\*SMACK\!\*\*
-  matchre ACTION.STOW.UNLOAD ^You should unload
-  put %action
-  if matchre("%action", "^\.|#") then matchwait
-  else matchwait 2
-  if (%actionloop > 2) then goto ACTION.FAIL
-  if (%typeahead.max = 0) then goto ACTION.MAPPER.ON
-  else goto ACTION.RETURN
-
-ACTION.FAIL:
-  gosub ECHO Unable to perform action: %action
-
-ACTION.RETURN:
-  var action_retry ^0$
-  var success ^0$
-  if ($roundtime > 0) then pause %command_pause
-  if (%subscript) then return
-  action (mapper) on
-  return
-
-ECHO:
-  var echoVar $0
-  eval border replacere("%echoVar", ".", "~")
-  put #echo
-  put #echo %color <~~~%border~~~>
-  put #echo %color <<  %echoVar  >>
-  put #echo %color <~~~%border~~~>
-  put #echo
-  return
-
-#### THIS AUTO SETS MAIN.BAG / BACKUP.BAG / THIRD.BAG VARIABLES
-#### FOR STOWING ROUTINE ONLY - BACKUP CONTAINERS IN CASE DEFAULT "STOW" FAILS - THIS WILL CATCH ANY COMMON LARGE CONTAINERS
-#### ~ THIS SHOULD ONLY FIRE IF THE MOVE.STOW ROUTINE TRIGGERS AND DEFAULT STOW DOES NOT FULLY CLEAR HANDS ~
-#### THIS WAS MADE AS HAPPY MEDIUM - IS MUCH BETTER THAN USING HARDCODED VARIABLES
-#### SETTING THE CONTAINERS AUTOMATICALLY MAKES IT EASY WITHOUT HAVING TO WORRY ABOUT USER VARIABLES / MULTI-CHARACTERS ETC..
-#### THIS SHOULD CATCH THE ~MAIN~ BAGS MOST PEOPLE HAVE AT LEAST ONE OR TWO OF
-BAG.CHECK:
-  var MAIN.BAG NULL
-  var BACKUP.BAG NULL
-  var THIRD.BAG NULL
-  var FOURTH.BAG NULL
-  var Backpack 0
-  var Haversack 0
-  var Pack 0
-  var Carryall 0
-  var Rucksack 0
-  var DuffelBag 0
-  var Vortex 0
-  var Eddy 0
-  var Shadows 0
-  var HipPouch 0
-  var ToolBelt 0
-  var cloak_worn 0
-  action var ToolBelt 1 when archeologist's toolbelt
-  action var Hip.Pouch 1 when light spidersilk hip pouch
-  action var Backpack 1 when backpack
-  action var Haversack 1 when haversack
-  action var Pack 1 when \bpack
-  action var Carryall 1 when carryall
-  action var Rucksack 1 when rucksack
-  action var Duffel.Bag 1 when duffel bag
-  action var Vortex 1 when (hollow vortex of water|corrupted vortex of swirling)
-  action var Eddy 1 when swirling eddy of incandescent
-  action var Shadows 1 when encompassing shadows
-  action var Brambles 1 when dense entangling brambles
-  delay %infiniteLoopProtection
-  gosub ECHO Checking Containers...
-  matchre BAG.PARSE INVENTORY
-  put inv container
-  matchwait 3
-BAG.PARSE:
-  var Bags Toolbelt|Hip.Pouch|Backpack|Haversack|Pack|Carryall|Rucksack|Duffel.Bag|Vortex|Eddy|Shadows|Brambles
-  eval TotalBags count("%Bags", "|")
-  var BagLoop 0
-  delay %infiniteLoopProtection
-BAG.LOOP:
-  delay %infiniteLoopProtection
-  var BAG %Bags(%BagLoop)
-  if (%BagLoop > %TotalBags) then {
-    put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    put #echo %color <<  Auto-setting container variables
-    put #echo %color <<  Main: %MAIN.BAG
-    put #echo %color <<  Backup: %BACKUP.BAG
-    put #echo %color <<  Third: %THIRD.BAG
-    put #echo %color <<  Fourth: %FOURTH.BAG
-    put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    return
-  }
-    if ("%%BAG" = 1) then
-      {
-      if matchre("%MAIN.BAG", "NULL") then
-        {
-        var MAIN.BAG %BAG
-        goto BAG.NEXT
-        }
-      if matchre("%BACKUP.BAG", "NULL") then
-        {
-        var BACKUP.BAG %BAG
-        goto BAG.NEXT
-        }
-      if matchre("%THIRD.BAG", "NULL") then
-        {
-        var THIRD.BAG %BAG
-        goto BAG.NEXT
-        }
-      if matchre("%FOURTH.BAG", "NULL") then
-        {
-        var FOURTH.BAG %BAG
-        goto BAG.NEXT
-        }
-      }
-BAG.NEXT:
-  math BagLoop add 1
-  goto BAG.LOOP
 
 #### Handle current pushing you around ####
 DRAGGED:
@@ -1949,346 +1684,8 @@ DRAGGED:
   if ($roundtime > 0) then pause $roundtime
   action (mapper) on
   var depth 0
-  goto MOVE.DONE
+  goto MOVE_DONE
 ####
-
-#### DARK ROOM HANDLING ####
-DARK_CHECK:
-  var darkroom 1
-  delay %infiniteLoopProtection
-  pause %command_pause
-  matchre DARK_CHECK %move_RETRY
-  matchre DARK_YES ^It's pitch dark and you can't see a thing\!|pitch black in here
-  matchre LIGHT_YES ^Obvious|^I could|^What
-  put look
-  matchwait 5
-  goto DARK_CHECK
-DARK_YES:
-  var darkroom 1
-  var darkTime $gametime
-  return
-LIGHT_YES:
-  var darkroom 0
-  var darkTime $gametime
-  return
-
-## FIND A LIGHT SOURCE - FIRST WE CHECK FOR ANY DARKVISION GUILD SKILLS
-LIGHT_SOURCE:
-  action (mapper) off
-  var subscript 0
-  var PREP 5
-  var darkchecked 1
-  gosub DARK_CHECK
-  if (%darkroom = 0) then return
-  ### KNOWN ISSUE - AFTER SUCCESSFULLY USING DARKVISION - SOMETIMES LOSES REMAINING PATH AFTER RETURNING
-  ### Have tried many various things but not sure best way to fix - This may work most of the time
-  shift
-  math depth subtract 1
-  delay %infiniteLoopProtection
-  gosub ECHO DARK ROOM - Checking for DARKVISION
-  gosub ECHO Need a light source!
-  delay %infiniteLoopProtection
-  if ("$preparedspell" != "None") then {
-    gosub PUT RELEASE spell
-    gosub PUT RELEASE camb
-  }
-  if (("$guild" = "Ranger") && ($circle > 39)) then {
-    gosub ECHO RANGER - Beseeching Dark to Sing
-    gosub PUT align 30
-    var action beseech dark to sing
-    var success ^Roundtime:
-    gosub ACTION
-    pause %command_pause
-    if ($roundtime > 0) then pause $roundtime
-  }
-  if ("$guild" = "Thief") then {
-    gosub ECHO THIEF - Khri Sight
-    gosub PUT khri sight
-    pause %command_pause
-    if ($roundtime > 0) then pause $roundtime
-  }
-  if (("$guild" = "Bard") && ($circle > 10)) then {
-    gosub ECHO BARD - Eye of Kertigen
-    gosub PUT release cyclic
-    gosub PUT prep EYE 5
-    pause 16
-    gosub PUT cast
-    pause %command_pause
-    if ($roundtime > 0) then pause $roundtime
-    gosub PUT perceive self
-  }
-  if (("$guild" = "Cleric")  && ($circle > 20)) then {
-    if ($Utility.Ranks < 120) then var PREP 2
-    if (($Utility.Ranks >= 120) && ($Utility.Ranks < 200)) then var PREP 5
-    if (($Utility.Ranks >= 200) && ($Utility.Ranks < 300)) then var PREP 9
-    if (($Utility.Ranks >= 300) && ($Utility.Ranks < 500)) then var PREP 12
-    if (($Utility.Ranks >= 500) && ($Utility.Ranks < 600)) then var PREP 15
-    if ($Utility.Ranks >= 600) then var PREP 15
-    gosub ECHO CLERIC - Divine Radiance
-    gosub PUT prep DR %PREP
-    pause 19
-    gosub PUT cast
-    gosub PUT perceive self
-    pause %command_pause
-    if ($roundtime > 0) then pause $roundtime
-  }
-  if (("$guild" = "Moon Mage") && ($circle > 20)) then {
-    if ($Utility.Ranks < 120) then var PREP 5
-    if (($Utility.Ranks >= 120) && ($Utility.Ranks < 200)) then var PREP 7
-    if (($Utility.Ranks >= 200) && ($Utility.Ranks < 300)) then var PREP 12
-    if (($Utility.Ranks >= 300) && ($Utility.Ranks < 500)) then var PREP 15
-    if (($Utility.Ranks >= 500) && ($Utility.Ranks < 600)) then var PREP 22
-    if ($Utility.Ranks >= 600) then var PREP 33
-    gosub ECHO MOON MAGE - Tenebrous Sense
-    gosub PUT prep TS %PREP
-    pause 19
-    gosub PUT cast
-    pause %command_pause
-    if ($roundtime > 0) then pause $roundtime
-  }
-  if (("$guild" = "Paladin") && ($circle > 15)) then {
-    gosub ECHO PALADIN - Glyph of Light
-    gosub PUT glyph light
-    pause %command_pause
-    if ($roundtime > 0) then pause $roundtime
-  }
-  delay %infiniteLoopProtection
-  pause %command_pause
-  gosub DARK_CHECK
-  if (%darkroom = 0) then goto YES_DARKVISION
-### ADDITIONAL CHECKS HERE FOR GOGGLES / GAEZTHEN
-# WE REACH THIS SUB IF WE HAVE ~NO GUILD SKILL FOR DARK VISION~
-# NOW WE CHECK FOR ITEMS THAT GIVE DARK VISION
-# CHECK FOR NIGHTVISION GOGGLES
-GOGGLE_CHECK:
-GOGGLE_YES:
-  delay %infiniteLoopProtection
-  gosub PUT get my goggle
-  delay %infiniteLoopProtection
-  if !matchre("$righthand $lefthand", "(?i)\bgoggle\b") then {
-    gosub PUT remove my goggle
-    pause %command_pause
-    if ($roundtime > 0) then pause $roundtime
-  }
-  if !matchre("$righthand $lefthand", "\bgoggle\b") then goto STARGLASS_CHECK
-  matchre GOGGLE_YES \s*\.\.\.wait|^Sorry,|^Please wait\.|^You are still stunned
-  matchre GOGGLE_STOW remains inert|^You rub|^What
-  matchre GOGGLE_STOW ^Your tactile sense
-  put rub my goggle
-  matchwait 5
-GOGGLE_STOW:
-  pause %command_pause
-  gosub PUT wear my goggle
-  delay %infiniteLoopProtection
-  gosub PUT rub my goggle
-  delay %infiniteLoopProtection
-  if matchre("$righthand $lefthand", "\bgoggle\b") then gosub STOWING
-  gosub DARK_CHECK
-  if (%darkroom = 0) then goto YES_DARKVISION
-### CHECK FOR A STARGLASS
-STARGLASS_CHECK:
-  gosub STOWING
-  gosub PUT GET my starglass
-  delay %infiniteLoopProtection
-  if !matchre("$righthand $lefthand", "(?i)\bstarglass\b") then {
-    gosub PUT remove my starglass
-    pause %command_pause
-    if ($roundtime > 0) then pause $roundtime
-  }
-  if !matchre("$righthand $lefthand", "(?i)starglass") then goto GAETHZEN_CHECK
-  gosub PUT CHARGE starglass 20
-  pause %command_pause
-  if ($roundtime > 0) then pause $roundtime
-  gosub PUT CHARGE starglass 20
-  pause %command_pause
-  if ($roundtime > 0) then pause $roundtime
-  put rub my starglass
-  pause %command_pause
-  if ($roundtime > 0) then pause $roundtime
-  gosub PUT WEAR my starglass
-  pause %command_pause
-  gosub DARK_CHECK
-  if (%darkroom = 0) then goto YES_DARKVISION
-### CHECK FOR A GAETHZEN LANTERN
-GAETHZEN_CHECK:
-  gosub STOWING
-  var Lantern.Types skull|salamander|sphere|wyvern|statuette|sunburst|star|lantern|firefly|rose|orchid|turnip
-  var Lantern.Check 0
-  var Lantern.Count 0
-  eval Lantern.Count count("%Lantern.Types", "|")
-  if (%Lantern.Check > %Lantern.Count) then goto LANTERN_CHECK
-GAETHZEN_GET:
-  gosub PUT GET my gaethzen %Lantern.Types(%Lantern.Check)
-  delay %infiniteLoopProtection
-  pause %command_pause
-  pause 0.1
-  if !matchre("$righthand $lefthand", "%Lantern.Types(%Lantern.Check)") then {
-    gosub PUT remove my gaethzen %Lantern.Types(%Lantern.Check)
-    pause %command_pause
-  }
-  if matchre("$righthand $lefthand", "(?i)%Lantern.Types(%Lantern.Check)") then goto GAETHZEN_SUCCESS
-GAETHZAN_FAIL:
-  math Lantern.Check add 1
-  if (%Lantern.Check > %Lantern.Count) then goto LANTERN_CHECK
-  goto GAETHZEN_GET
-
-GAETHZEN_SUCCESS:
-  var Gaethzen %Lantern.Types(%Lantern.Check)
-  var FullCharge 0
-  gosub ECHO FOUND A GAETHZEN! TYPE: %Gaethzen
-  gosub STOWING
-  gosub RETREAT
-  gosub PUT GET my gaethzen %Gaethzen
-  delay %infiniteLoopProtection
-  pause %command_pause
-  if !matchre("$righthand $lefthand", "(?i)%Gaethzen") then goto LANTERN_CHECK
-  gosub ECHO CHARGING GAETHZEN
-  var action_retry ^Roundtime: \d+ sec\.
-  var success ^The .+ is already holding as much power as you could possibly charge it with\.
-  var action CHARGE %Gaethzen 15
-  gosub ACTION
-GAETHZEN_2:
-  gosub PUT focus my %Gaethzen
-  gosub PUT rub my %Gaethzen
-  gosub PUT wear my %Gaethzen
-  gosub STOWING
-  gosub DARK_CHECK
-  if (%darkroom = 0) then goto YES_DARKVISION
-### CHECK HERE FOR A NORMAL OIL LANTERN
-LANTERN_CHECK:
-  var TriedOil 0
-  gosub STOWING
-  gosub PUT GET my lantern
-  if !matchre("$righthand $lefthand", "lantern") then {
-    gosub PUT remove my lantern
-    pause %command_pause
-  }
-  if !matchre("$righthand $lefthand", "(?i)lantern") then goto TORCH_CHECK
-LANTERN_DROP:
-  gosub PUT drop my lantern
-  gosub PUT GET my flint
-  gosub PUT GET my knife
-  if (!matchre("$righthand $lefthand", "flint") && !matchre("$righthand $lefthand", "knife")) then {
-    gosub ECHO FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
-    put #echo >Log #FF3E00 * FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
-    gosub STOWING
-    goto GAETHZEN_YES
-  }
-LANTERN_LIGHT:
-  matchre LANTERN_LIGHT %move_RETRY
-  matchre LIT_LANTERN manage to get a flame going
-  matchre REFUEL_IT But the flames fail to catch hold and they sputter out immediately\.
-  put light lantern with my flint
-  matchwait 5
-  goto LANTERN_LIGHT
-REFUEL_IT:
-  if (%TriedOil = 1) then goto LANTERN_DONE
-  gosub STOWING
-  gosub PUT GET lantern
-  gosub PUT GET lamp oil
-  gosub PUT pour oil in lantern
-  var TriedOil 1
-  goto LANTERN_DROP
-LIT_LANTERN:
-  gosub ECHO LANTERN LIT!
-  gosub STOWING
-  gosub PUT GET lantern
-  gosub PUT wear lantern
-LANTERN_DONE:
-  gosub STOWING
-  gosub DARK_CHECK
-  if (%darkroom = 0) then goto YES_DARKVISION
-### CHECK FOR A TORCH
-TORCH_CHECK:
-  gosub STOWING
-  put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
-  put #echo %color <<  ATTEMPTING LAST RESORT FOR LIGHT CHECK!   >>
-  put #echo %color <<  FLINT / TORCH / KNIFE                     >>
-  put #echo %color <<  CONSIDER ~NOT~ HUNTING IN A DARK AREA...  >>
-  put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
-  # if (%HaveLighter = 1) then
-      # {
-            # gosub PUT GET my %Lighter.Name
-            # pause 0.1
-            # pause 0.0001
-            # if !matchre("$righthand", "(?i)%Lighter.Name") then
-                # {
-                      # echo * LIGHTER NOT FOUND! - TURNING LIGHTER OFF
-                      # var HaveLighter 0
-                      # goto TORCH_FLINT
-                # }
-            # gosub PUT GET my torch
-            # pause 0.0001
-            # pause 0.0001
-            # if !matchre("$righthand $lefthand", "(?i)torch") then goto NO_DARKVISION
-            # gosub PUT point %Lighter.Name at torch
-            # pause 0.0001
-            # pause 0.0001
-            # gosub STOWIT %Lighter.Name
-            # gosub DARK_CHECK
-            # if (%darkroom = 0) then goto YES_DARKVISION
-      # }
-TORCH_FLINT:
-  if !matchre("$righthand $lefthand", "(?i)torch") then gosub PUT GET my torch
-  if !matchre("$righthand $lefthand", "(?i)torch") then goto NO_DARKVISION
-  gosub PUT drop my torch
-  gosub PUT GET my flint
-  gosub PUT GET my carving knife
-  if !matchre("$righthand $lefthand", "(?i)knife") then {
-    gosub PUT GET my knife
-    if !matchre("$righthand $lefthand", "(?i)knife") then gosub PUT remove my knife
-  }
-  if !matchre("$righthand $lefthand", "(?i)knife") then {
-    gosub PUT GET my blade
-  }
-  if (!matchre("$righthand $lefthand", "flint") && !matchre("$righthand $lefthand", "(knife|blade)")) then {
-    gosub ECHOecho * FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
-    put #echo >Log #FF3E00 * FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
-    gosub STOWING
-    goto NO_DARKVISION
-  }
-  gosub PUT light torch with my flint
-  gosub STOWING
-  gosub PUT GET torch
-  gosub DARK_CHECK
-  if (%darkroom = 0) then goto YES_DARKVISION
-  goto NO_DARKVISION
-
-YES_DARKVISION:
-  gosub ECHO DARKVISION HAS BEEN ACTIVATED!
-  var darkroom 0
-  put look
-  gosub STOWING
-  gosub RETREAT
-  action (mapper) on
-  return
-NO_DARKVISION:
-  gosub ECHO NO DARK VISION SKILL / ITEM FOUND! STUCK IN THE DARK! Escape Manually!
-  gosub ECHO GET YOURSELF A TORCH AND FLINT AT THE LEAST!
-  gosub ECHO OR A STARGLASS/GAEZTHEN/LANTERN
-  put #echo >Log Red ** NO DARKVISION/TORCH/LIGHTER/GAEZTHEN FOUND!
-  put #echo >Log Red ** CONSIDER ~NOT~ HUNTING IN DARK AREAS
-  var darkroom 1
-  gosub STOWING
-  action (mapper) on
-  return
-
-DARK_DOUBLECHECK:
-  matchre DARK_DOUBLECHECK \s*\.\.\.wait|^Sorry,|^Please wait\.|^You are still stunned
-  matchre DARK_NOPE ^It's pitch dark and you can't see a thing\!|pitch black in here
-  matchre LIGHT_ROOM Obvious|I|What|You
-  put look
-  matchwait 5
-  return
-DARK_NOPE:
-  var darkroom 1
-  var darkTime $gametime
-  return
-LIGHT_ROOM:
-  var darkroom 0
-  var darkTime $gametime
-  return
-#### END DARK ROOM HANDING SECTION ####
 
 #### Stop and get healed
 HEALING:
@@ -2301,7 +1698,7 @@ HEALING:
   gosub ACTION
   action (healing) off
   put #var automapper.seekhealing 0
-  goto MOVE.DONE
+  goto MOVE_DONE
 HEALTHCHECK:
   var wounded 0
   matchre WOUNDED ^You have (?:an?|some)
@@ -2311,158 +1708,4 @@ HEALTHCHECK:
 WOUNDED:
   var wounded 1
   return
-####
-
-#### SHROOM'S PUT SECTION ####
-PUT:
-  var putaction $0
-  var LOCATION PUT_1
-  PUT_1:
-  matchre WAIT ^\.\.\.wait|^Sorry,|^Please wait\.
-  matchre IMMOBILE ^You don't seem to be able to move to do that
-  matchre WEBBED ^You can't do that while entangled in a web
-  matchre STUNNED ^You are still stunned
-  matchre PUT_UNTIE ^You should untie
-  matchre PUT_STOW ^You need a free hand|^Free one of your hands|^That will be hard with both your hands full\!
-  matchre PUT_STAND ^You should stand up first\.|^Maybe you should stand up\.
-  matchre WAIT ^\[Enter your command again if you want to\.\]
-  matchre RETURN (You'?r?e?|As|With|Using) (?:accept|adeptly|add|adjust|allow|already|are|aren't|ask|cut|attach|attempt|.+ to|.+ fan|bash|begin|bend|blow|breathe|briefly|bring|bundle|cannot|can't|carefully|cautiously|chop|circle|clasp|close|collect|collector's|concentrate|corruption|count|combine|come|dance|decide|deduce|dodge|don't|drum|draw|effortlessly|eyes|gracefully|deftly|desire|detach|drop|drape|exhale|fade|fail|fake|feel(?! fully rested)|feint|fill|find|filter|focus|form|fumble|gaze|gesture|giggle|gingerly|get|glance|grab|hand|hang|have|icesteel|inhale|insert|kiss|kneel|knock|leap|lean|let|lose|lift|loosen|lob|load|measure|move|must|mutter|mind|not|now|need|offer|open|parry|place|pick|push|pout|pour|put|pull|prepare|press|quietly|quickly|raise|read|reach|ready|realize|recall|remain|release|remove|retreat|reverently|rock|roll|rub|scan|search|secure|sense|set|sheathe|shield|should|shouldn't|shove|silently|sit|skin|slide|sling|slip|slow|slowly|spin|spread|sprinkle|start|stick|stop|strap|struggle|swap|swiftly|swing|switch|tap|take|the|though|touch|tie|tilt|toss|trace|try|tug|turn|twist|unload|untie|vigorously|wave|wear|weave|whisper|whistle|will|wink|wring|work|yank|yell|you|zills) .*(?:\.|\!|\?)?
-  matchre RETURN ^Brother Durantine|^Durantine|^Mags|^Ylono|^Malik|^Kilam|^Ragge|^Randal|^Catrox|^Kamze|^Unspiek|^Wyla|^Ladar|^Dagul|^Granzer|^Gemsmith|^Fekoeti|^Diwitt|(?:An|The|A) attendant|^The clerk|A Dwarven|^.*He says,
-  matchre RETURN ^The(.*)?(clerk|teller|attendant|mortar|pestle|tongs|bowl|riffler|hammer|gem|book|page|lockpick|sconce|voice|waters|contours|person|is|has|are|slides|fades|hinges|spell|not)
-  matchre RETURN ^It('s)?(?:'s|a|and|the)?\s+?(?:would|will|is|a|already|dead|keen|practiced|graceful|stealthy|resounding|full|has)
-  matchre RETURN ^Roundtime\:?|^\[Roundtime\:?|^\(Roundtime\:?|^\[Roundtime|^Roundtime|\[Roundtime
-  matchre RETURN ^That('s)?\s+?(?:is|has|was|a|cannot|area|can't|won't|would|already|tool|will|cost|too)
-  matchre RETURN ^With(?: (a|and|the))?\s+?(?:keen|practiced|graceful|stealthy|resounding)
-  matchre RETURN ^This (is a .+ spell|is an exclusive|spell|ritual)
-  matchre RETURN ^The .*(is|has|are|slides|fades|hinges|spell|not|vines|antique|(.+) spider|pattern)
-  matchre RETURN ^There('s)?\s+?(?:is(n't)?|does(n't)?|already|no|not)
-  matchre RETURN ^But (?:that|you|you're|you've|the)
-  matchre RETURN ^Obvious (?:exits|paths)
-  matchre RETURN ^There's no room|any more room|no matter how you arrange|have all been used\.
-  matchre RETURN ^That's too heavy|too thick|too long|too wide|not designed to carry|cannot hold any more
-  matchre RETURN ^(You|I) can't|^Tie what\?|^You just can't|As you attempt to place your
-  matchre RETURN suddenly leaps toward you|and flies towards you|with a flick
-  matchre RETURN ^Brushing your fingers|^Sensing your intent|^Quietly touching your lips
-  matchre RETURN Lucky for you\!\s*That isn't damaged\!|I will not repair something that isn't broken\.
-  matchre RETURN I'm sorry, but I don't work on those|There isn't a scratch on that, and I'm not one to rob you\.
-  matchre RETURN I don't work on those here\.|I don't repair those here|Please don't lose this ticket\!
-  matchre RETURN ^Please rephrase that command\.|^I could not find|^Perhaps you should|^I don't|^Weirdly,|That can't
-  matchre RETURN \[You're|\[This is|too injured
-  matchre RETURN ^Moving|Brushing|Recalling|Unaware
-  matchre RETURN ^.*\[Praying for \d+ sec\.\]
-  matchre RETURN ^.+ is not in need|^That is closed\.
-  matchre RETURN ^What (?:were you|is it)
-  matchre RETURN ^In the name of love\?|^Play on|^(.+) what\?
-  matchre RETURN ^It's kind of wet out here\.
-  matchre RETURN ^Some (?:polished|people|tarnished|.* zills)
-  matchre RETURN ^(\S+) has accepted
-  matchre RETURN ^Subservient type|^The shadows|^Close examination|^Try though
-  matchre RETURN ^USAGE\:|^Using your|^You.*analyze
-  matchre RETURN ^Allows a Moon Mage|^Smoking commands are
-  matchre RETURN ^A (?:slit|pair|shadow) .*(?:\.|\!|\?)?
-  matchre RETURN ^Your (?:actions|dance|nerves) .*(?:\.|\!|\?)?
-  matchre RETURN ^Having no further use for .*, you discard it\.
-  matchre RETURN ^After a moment, .*\.
-  matchre RETURN ^.* (?:is|are) not in need of cleaning\.
-  matchre RETURN \[Type INVENTORY HELP for more options\]|\[Use INVENTORY HELP for more options\.\]
-  matchre RETURN ^A vortex|^A chance for|^In a flash|^It is locked|^An aftershock
-  matchre RETURN ^In the .* you see .*\.
-  matchre RETURN .* (?:Dokoras|Kronars|Lirums)
-  matchre RETURN ^You will now store .* in your .*\.
-  matchre RETURN ^\[Ingredients can be added by using ASSEMBLE Ingredient1 WITH Ingredient2\]
-  matchre RETURN ^\s\*LINK ALL CANCEL\s\*- Breaks all links
-  matchre RETURN ^Stalking is an inherently stealthy endeavor, try being out of sight\.
-  matchre RETURN ^You're already stalking|^There aren't any
-  matchre RETURN ^An offer|shakes (his|her) head
-  matchre RETURN ^Tie it off when it's empty\?
-  matchre RETURN ^But the merchant can't see you|are invisible
-  matchre RETURN Page|^As the world|^Obvious|^A ravenous energy
-  matchre RETURN ^In the|^The attendant|^That is already open\.|^Your inner
-  matchre RETURN ^(.+) hands you|^Searching methodically|^But you haven't prepared a symbiosis\!
-  matchre RETURN ^Illustrations of complex,|^It is labeled|^Your nerves
-  matchre RETURN ^The lockpick|^Doing that|is not required to continue crafting
-  matchre RETURN ^Without (any|a|the)|^Wouldn't (it|that|you)
-  matchre RETURN ^Weirdly, you can't manage
-  matchre RETURN ^Hold hands with whom\?
-  matchre RETURN ^Something in the area interferes
-  matchre RETURN ^With a .+ to your voice,
-  matchre RETURN ^Turning your focus solemnly inward
-  matchre RETURN ^Slow, rich tones form a somber introduction
-  matchre RETURN ^Images of streaking stars falling from the heavens
-  matchre RETURN ^With .* movements you prepare your body for the .* spell\.
-  matchre RETURN ^A strong wind swirls around you as you prepare the .* spell\.
-  matchre RETURN ^Roundtime\:?|^\[Roundtime\:?|^\(Roundtime\:?|^\[Roundtime|^Roundtime
-  matchre RETURN ^Shadow and light collide wildly around you as you prepare the .* spell\.
-  matchre RETURN ^The wailing of lost souls accompanies your preparations of the .* spell\.
-  matchre RETURN ^A soft breeze surrounds your body as you confidently prepare the .* spell\.
-  matchre RETURN ^Light withdraws from around you as you speak arcane words for the .* spell\.
-  matchre RETURN ^Tiny tendrils of lightning jolt between your hands as you prepare the .* spell\.
-  matchre RETURN ^Low, hummed tones form a soft backdrop for the opening notes of the .* enchante\.
-  matchre RETURN ^Heatless orange flames blaze between your fingertips as you prepare the .* spell\.
-  matchre RETURN ^Throwing your head back, you release a savage roar and growl words for the .* spell\.
-  matchre RETURN ^Entering a trance-like state, your hands begin to tremble as you prepare the .* spell\.
-  matchre RETURN ^Glowing geometric patterns arc between your upturned palms as you prepare the .* spell\.
-  matchre RETURN ^Focusing intently, you slice seven straight lines through the air as you invoke the .* spell.\.
-  matchre RETURN ^Accompanied with a flash of light, you clap your hands sharply together in preparation of the .* spell\.
-  matchre RETURN ^Icy blue frost crackles up your arms with the ferocity of a blizzard as you begin to prepare the .* spell\!
-  matchre RETURN ^A radiant glow wreathes your hands as you weave lines of light into the complicated pattern of the .* spell\.
-  matchre RETURN ^Kaleidoscopic ribbons of light swirl between your outstretched hands, coalescing into a spectral wildling spider\.
-  matchre RETURN ^Darkly gleaming motes of sanguine light swirl briefly about your fingertips as you gesture while uttering the .* spell\.
-  matchre RETURN ^As you begin to solemnly intone the .* spell a blue glow swirls about forming a nimbus that surrounds your entire being\.
-  matchre RETURN ^As you slam your fists together and inhale sharply, a glowing outline begins to form and a matrix of blue and white motes surround you\.
-  matchre RETURN ^In one fluid motion, you bring your palms close together and a fiery crimson mist begins to burn within them as you prepare the .* spell\.
-  matchre RETURN ^The first gentle notes of .* waft from you with delicate ease, riddled with low tones that gradually give way to a higher\-pitched theme\.
-  matchre RETURN ^Droplets of water coalesce around your fingertips as your arms undulate like gracefully flowing river currents to form the pattern of the .* spell\.
-  matchre RETURN ^Inhaling deeply, you adopt a cyclical rhythm in your breaths to reflect the ebb and flow of the natural world and steel yourself to prepare the .* spell\.
-  matchre RETURN ^Calmly reaching out with one hand, a silvery-blue beam of light descends from the sky to fill your upturned palm with radiance as you prepare the .* spell\.
-  matchre RETURN ^Turning your head slightly and gazing directly ahead with a calculating stare, tiny sparks of crystalline light flash around your eyes as you prepare the .* spell\.
-  matchre RETURN ^You take up a handful of dirt in your palm to prepare the .* spell\.  As you whisper arcane words, you gently blow the dust away and watch as it becomes swirling motes of glittering light that veil your hands in a pale aura\.
-  send %putaction
-  matchwait 20
-  put #echo >Log Crimson *** MISSING MATCH IN PUT! (%scriptname.cmd) ***
-  put #echo >Log Crimson Command = %putaction
-  put #log $datetime MISSING MATCH IN PUT! Command = %putaction (%scriptname.cmd)
-  return
-
-PUT_UNTIE:
-  pause 0.1
-  eval putaction replacere("%putaction", "\bget\b", "")
-  eval putaction replacere("%putaction", "\bmy\b", "")
-  put untie %putaction
-  pause 0.4
-  return
-PUT_STOW:
-  gosub STOWING
-  goto PUT_1
-PUT_STAND:
-  gosub STAND
-  goto PUT_1
-#### END PUT ####
-
-#### CATCH AND RETRY SUBS
-WAIT:
-  delay %infiniteLoopProtection
-  pause %command_pause
-  if (!$standing) then gosub STAND
-  goto %LOCATION
-WEBBED:
-  delay %infiniteLoopProtection
-  if ($webbed) then waiteval (!$webbed)
-  if (!$standing) then gosub STAND
-  goto %LOCATION
-IMMOBILE:
-  delay %infiniteLoopProtection
-  if contains("$prompt" , "I") then pause 20
-  if (!$standing) then gosub STAND
-  goto %LOCATION
-STUNNED:
-  delay %infiniteLoopProtection
-  if ($stunned) then waiteval (!$stunned)
-  if (!$standing) then gosub STAND
-  goto %LOCATION
-CALMED:
-  delay 5
-  if ($stunned) then waiteval (!$stunned)
-  if (!$standing) then gosub STAND
-  goto %LOCATION
 ####

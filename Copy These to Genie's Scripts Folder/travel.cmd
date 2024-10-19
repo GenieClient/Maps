@@ -56,44 +56,15 @@ var version 6.2024-10-17
 #  waitforre ^YOU ARRIVED\!
 #
 ##########################################
-#                                        #
 #       ADJUSTABLE VARIABLES             #
-#                                        #
 ##########################################
-##########################################
-##    ARE YOU A CITIZEN OF SHARD?       ##
-##        CHOOSE yes or no              ##
-##   ONLY USED FOR THE SHARD GATE       ##
-     var shardcitizen yes
-##########################################
-## MULTIPLE CHARACTER SUPPORT FOR THE SHARD CITIZEN VARIABLE
-## (IF using this script on multiple characters and want DIFFERENT shardcitizen variables for each)
-## YOU MUST CREATE GENIE GLOBAL VARIABLES NAMED - char1 / char2 / char3 / char4 etc.. IN GENIE FOR THIS TO WORK
-## EX. type into genie:  #var char1 Bob  - to create global variable for char1 - then repeat for each character
-## type: #var save - when finished to SAVE all your variables (so it persists)
-## Then just set the variables below according to what each character's status should be
-if ("$charactername") == ("$char1") then var shardcitizen yes
-if ("$charactername") == ("$char2") then var shardcitizen yes
-if ("$charactername") == ("$char3") then var shardcitizen yes
-if ("$charactername") == ("$char4") then var shardcitizen yes
-if ("$charactername") == ("$char5") then var shardcitizen yes
-if ("$charactername") == ("$char6") then var shardcitizen yes
-if ("$charactername") == ("$char7") then var shardcitizen no
-if ("$charactername") == ("$char8") then var shardcitizen no
-if ("$charactername") == ("$char9") then var shardcitizen no
-if ("$charactername") == ("$char10") then var shardcitizen no
-##########################################
-##  ADJUST THE ATHLETICS RANKS BELOW    ##
-##      TO USE CERTAIN SHORTCUTS        ##
-##  THESE ARE PRE-SET TO CONSERVATIVE   ##
-##   NUMBERS TO BE ON THE SAFER SIDE    ##
-##   TO ACCOUNT FOR BURDEN/STRENGTH     ##
-##                                      ##
-## TELLS THE SCRIPT WHAT SHORTCUTS      ##
-## YOU CAN TAKE AT CERTAIN ATHLETICS    ##
-##                                      ##
-##  IF you are joined in a ~GROUP~,     ##
-##  You WILL take public transportation ##
+##  ADJUST THE ATHLETICS RANKS VIA GLOBAL TO USE CERTAIN SHORTCUTS
+##  THESE ARE PRE-SET TO CONSERVATIVE NUMBERS TO BE ON THE SAFER SIDE
+##   TO ACCOUNT FOR BURDEN/STRENGTH
+## TELLS THE SCRIPT WHAT SHORTCUTS
+## YOU CAN TAKE AT CERTAIN ATHLETICS
+##  IF you are joined in a ~GROUP~,
+##  You WILL take public transportation
 ##########################################
 ##########################################
 ## RANKS TO USE ROSSMAN'S SHORTCUT      ##
@@ -101,31 +72,42 @@ if ("$charactername") == ("$char10") then var shardcitizen no
 ## NORTH IS ~SAFE~ AROUND 200           ##
 ## NORTH IS POSSIBLE ~175 W/ NO ARMOR   ##
 ## SOUTH IS MUCH EASIER, SAFE AT ~90    ##
-    var rossmannorth 200
-    var rossmansouth 90
+if !def(travel.rossmanNorth) then var rossmanNorth 200
+else var rossmanNorth $travel.rossmanNorth
+if !def(travel.rossmanSouth) then var rossmanSouth 90
+else var rossmanSouth $travel.rossmanSouth
 ###########################################
 ##  RANKS TO SWIM THE FALDESU RIVER      ##
 ##  HAVEN TO NTR OR VICA VERSA           ##
-##  SAFE == 190 - 200                     ##
+##  SAFE ~ 190 - 200                     ##
 ##  POSSIBLE= ~160+ w/ NO BURDEN/BUFFS   ##
-    var faldesu 190
+## RANKS TO USE ROSSMAN'S SHORTCUT      ##
+## TO SWIM THE JANTSPYRE RIVER          ##
+## NORTH IS ~SAFE~ AROUND 200           ##
+## NORTH IS POSSIBLE ~175 W/ NO ARMOR   ##
+## SOUTH IS MUCH EASIER, SAFE AT ~90    ##
+if !def(travel.faldesu) then var faldesu 190
+else var faldesu $travel.faldesu
 ############################################
 ##  RANKS TO SWIM THE SEGOLTHA RIVER     ##
 ##  TIGER CLAN TO STR OR VICA VERSA      ##
 ##  VERY TOUGH ONE! CAREFUL LOWERING!    ##
 ##  MAY GET STUCK IF YOU SET TOO LOW!    ##
 ##  SAFE= 550+ | BUFFED & STRONG= ~530   ##
-    var segoltha 550
+if !def(travel.segoltha) then var segoltha 550
+else var segoltha $travel.segoltha
 ##########################################
-## RANKS TO CLIMB UNDERGONDOLA SHORTCUT ##
+## RANKS TO CLIMB underGondola SHORTCUT ##
 ## SOME CAN DO ~480 W/ BUFFS & ROPE     ##
 ## ~510 - 530 IS GENERALLY SAFE         ##
-    var undergondola 515
+if !def(travel.underGondola) then var underGondola 515
+else var underGondola $travel.underGondola
 ##########################################
 ##########################################
 ## RANKS TO USE UNDER-SEGOLTHA (THIEF)  ##
 ## 35 MIN w/ NO BURDEN - 50 is "SAFE"   ##
-    var undersegoltha 50
+if !def(travel.underSegoltha) then var underSegoltha 50
+else var underSegoltha $travel.underSegoltha
 ##########################################
 #######################################################
 ## RANKS FOR VELAKA DESERT SHORTCUT TO MUSPARI       ##
@@ -133,14 +115,124 @@ if ("$charactername") == ("$char10") then var shardcitizen no
 ## 760 ~BARE MIN~ for this one! - 780-800 IS 'SAFE'  ##
 ## ITS ALSO POSSIBLE IT MAY GET LOST -NOT FOOLPROOF! ## 
 ## SET TO 2000 TO SKIP TAKING SHORTCUT AND USE FERRY ##
-    var muspari.shortcut 2000
+if !def(travel.muspari) then var muspari 2000
+else var muspari $travel.muspari
 #################################################
 #### END OF VARIABLES!!!
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
+include mapperINC
+# checks for outlander v. genie, outlander does not suppor the `mono` flag
+if matchre("$client", "Genie") then var helpecho #33CC99 mono
+if matchre("$client", "Outlander") then var helpecho #33CC99
+if matchre("%1", "help|HELP|Help|^$") then {
+  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+  put #echo %helpecho {  Welcome to travel Setup!   (version %version)           }
+  put #echo %helpecho {  Use the command line to set the following preferences:          }
+  put #echo %helpecho {    Pause                                                         }
+  put #echo %helpecho {      Time to pause before sending a "put x" command              }
+  put #echo %helpecho {      #var automapper.pause 0.01                                  }
+  put #echo %helpecho {    Infinite Loop Protection                                      }
+  put #echo %helpecho {      Increase if you get infinte loop errors                     }
+  put #echo %helpecho {      #var automapper.loop 0.001                                  }
+  put #echo %helpecho {    Waiteval Time Out                                             }
+  put #echo %helpecho {      prevents waiting forever for wave to collapse               }
+  put #echo %helpecho {      #var automapper.wavetimeout 15                              }
+  put #echo %helpecho {    Echoes                                                        }
+  put #echo %helpecho {      how verbose do you want automapper to be?                   }
+  put #echo %helpecho {      #var automapper.verbose 1                                   }
+  put #echo %helpecho {    Cyclic Spells                                                 }
+  put #echo %helpecho {      1: Turn off cyclic spells before moving                     }
+  put #echo %helpecho {      0: Leave cyclic spells running while moving                 }
+  put #echo %helpecho {      #var automapper.cyclic 1                                    }
+  put #echo %helpecho {    Color                                                         }
+  put #echo %helpecho {      What should the default automapper echo color be?           }
+  put #echo %helpecho {      #var automapper.color #33CC99                               }
+  put #echo %helpecho {    Class                                                         }
+  put #echo %helpecho {      Which classes should automapper turn on and off?            }
+  put #echo %helpecho {      #var automapper.class -arrive -combat -joust -racial -rp    }
+  put #echo %helpecho {                  }
+  put #echo %helpecho {  Now save! (#save vars for Genie | cmd-s for Outlander)          }
+  put #echo %helpecho {                                                                  }
+  put #echo %helpecho {  try `.automapper help` for help with automapper variables      }
+  put #echo %helpecho {    there is commonality-these variables will affect how travel works  }
+  put #echo %helpecho {      as it manages automapper      }
+  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+  exit
+}
+
+
+
+HELP:
+echo ## RANKS TO USE ROSSMAN'S SHORTCUT      ##
+echo ## TO SWIM THE JANTSPYRE RIVER          ##
+echo ## NORTH IS ~SAFE~ AROUND 200           ##
+echo ## NORTH IS POSSIBLE ~175 W/ NO ARMOR   ##
+echo ## SOUTH IS MUCH EASIER, SAFE AT ~90    ##
+echo if !def(travel.rossmannorth) then var rossmannorth 200
+echo else var rossmannorth $travel.rossmannorth
+echo if !def(travel.rossmansouth) then var rossmansouth 90
+echo else var rossmansouth $travel.rossmansouth
 ###########################################
-# CHANGELOG - Latest Update: 9/30/24
-#
+##  RANKS TO SWIM THE FALDESU RIVER      ##
+##  HAVEN TO NTR OR VICA VERSA           ##
+##  SAFE ~ 190 - 200                     ##
+##  POSSIBLE= ~160+ w/ NO BURDEN/BUFFS   ##
+## RANKS TO USE ROSSMAN'S SHORTCUT      ##
+## TO SWIM THE JANTSPYRE RIVER          ##
+## NORTH IS ~SAFE~ AROUND 200           ##
+## NORTH IS POSSIBLE ~175 W/ NO ARMOR   ##
+## SOUTH IS MUCH EASIER, SAFE AT ~90    ##
+if !def(travel.faldesu) then var faldesu 190
+else var faldesu $travel.faldesu
+############################################
+##  RANKS TO SWIM THE SEGOLTHA RIVER     ##
+##  TIGER CLAN TO STR OR VICA VERSA      ##
+##  VERY TOUGH ONE! CAREFUL LOWERING!    ##
+##  MAY GET STUCK IF YOU SET TOO LOW!    ##
+##  SAFE= 550+ | BUFFED & STRONG= ~530   ##
+if !def(travel.segoltha) then var segoltha 550
+else var segoltha $travel.segoltha
+##########################################
+## RANKS TO CLIMB UNDERGONDOLA SHORTCUT ##
+## SOME CAN DO ~480 W/ BUFFS & ROPE     ##
+## ~510 - 530 IS GENERALLY SAFE         ##
+if !def(travel.undergondola) then var undergondola 515
+else var undergondola $travel.undergondola
+##########################################
+##########################################
+## RANKS TO USE UNDER-SEGOLTHA (THIEF)  ##
+## 35 MIN w/ NO BURDEN - 50 is "SAFE"   ##
+if !def(travel.undersegoltha) then var undersegoltha 50
+else var undersegoltha $travel.undersegoltha
+##########################################
+#######################################################
+## RANKS FOR VELAKA DESERT SHORTCUT TO MUSPARI       ##
+## THIS IS THE HARDEST SHORTCUT IN THE GAME          ##
+## 760 ~BARE MIN~ for this one! - 780-800 IS 'SAFE'  ##
+## ITS ALSO POSSIBLE IT MAY GET LOST -NOT FOOLPROOF! ## 
+## SET TO 2000 TO SKIP TAKING SHORTCUT AND USE FERRY ##
+if !def(travel.muspari) then var muspari 2000
+else var muspari $travel.muspari
+#################################################
+
+travel.GroupShortCutsAnyway True
+travel.verbose
+
+
+
+
+
+
+
+###########################################
+# CHANGELOG
+
+#2024-10-17
+# Hanryu
+#   Big rewrite, pulled out commons subs to an INC
+#   unified look and feel with automapper.cmd
+
 # - Robustified FERRY travel FROM Ratha TO MAINLAND for NON-PREMIUM PRIME users
 # - FIRST - Will check for MAMMOTHS - IF MAMMOTHS ARE UP WILL TAKE MAMMOTHS - FC - ACENAMACRA 
 # - IF NO MAMMOTHS FOUND - WILL RUN TO DOCK AND CHECK FOR SKIRR'LOLASU
@@ -268,7 +360,7 @@ if ("$charactername") == ("$char10") then var shardcitizen no
 # - Fixed random hangups after withdrawing coins.  Other robustifications.
 # - Added Destinations: Throne City, Beisswurms, Caravansary, Hvaral, Alfren's Ferry, Gondola
 # - Added ASCII Art :)
-# - Robustified undergondola check - Added buffs for thieves/rangers
+# - Robustified underGondola check - Added buffs for thieves/rangers
 # - Updated help log and updated labels for more matches
 # - Fixed logic issue when starting from Map 50
 # - Fixed issue travelling between Fornsted area and Theren
@@ -277,16 +369,13 @@ if ("$charactername") == ("$char10") then var shardcitizen no
 # - Will now attempt to exchange coin for ferry before withdrawing
 # - Fixed problem traveling to P5
 # - Fixed several bad nodes
-# - Added multi-character support for shardcitizen variable
+# - Added multi-character support for shardCitizen variable
 # - Added travel  to and from Muspari
 # - Added Passport check / Sand Barge to Muspari
 ##########################################
 INIT:
-# debug 5
-# action goto START when ^Just when it seems you will never reach the end of the road
 action goto NOPASSPORT when No one proceeds through this checkpoint without a passport
 action goto NOCOIN when You haven't got enough (.+) to pay for your trip\.|You reach your funds, but realize you're short\.|\"Hey,\"\s+he says,\s+\"You haven't got enough Lirums to pay for your trip\.
-## action goto START when \"What in tarnation
 action (moving) var Moving 1 when Obvious (path|exits)|Roundtime
 action var OffTransport platform when a barge platform
 action var OffTransport pier when the Riverhaven pier
@@ -328,9 +417,10 @@ action var burden 10 when ^\s*Encumbrance\s*\:\s*Are you even able to move\?
 action var burden 11 when ^\s*Encumbrance\s*\:\s*It's amazing you aren't squashed\!
 
 var destination %1
+if ("%destination" == "") then goto NODESTINATION
 var burden 0
 var passport 0
-var premium 0
+if !def(premium) then gosub PREMIUM_CHECK
 var kronars 0
 var dokoras 0
 var lirums 0
@@ -345,56 +435,44 @@ var BoarNeeded 300
 var ToRatha 0
 var SkirrChecked 0
 var starting MAP:$zoneid | ROOM:$roomid
-if ("%destination" == "") then goto NODESTINATION
-eval destination toupper("%destination")
+if !def(citizenship) then gosub CITIZENSHIP
+var shardCitizen False
+if matchre("$citizenship", "Shard") then var shardCitizen True
 TOP:
 put #echo >Log #b3ff66 * TRAVEL START: $zonename (Map:$zoneid | Room:$roomid)
-echo
-echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-echo * Travel Script v%version
-echo * Start: $zonename (%starting)
-echo * Destination: %destination
-echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-echo
-if !def(Athletics.Ranks) then
-     {
-          echo
-          echo * Athletics.Ranks not set! Attempting to Auto-Fix...
-          echo * Do you have the EXPTracker Plugin installed??
-          echo
-          pause 0.5
-          put #tvar Athletics.Ranks 0
-          put exp 0
-          waitforre EXP HELP|Overall state
-          pause 0.1
-          pause 0.1
-     }
-if (!def(Athletics.Ranks) || ($Athletics.Ranks < 1)) then
-     {
-          echo
-          echo * Still not registering Athletics.Ranks!!! Make sure you have the EXPTracker Plugin!!
-          echo * Going for it anyway - But this will cause you to skip Athletics Shortcuts!
-          echo
-     }
+put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+put #echo %color <<  Travel Script v%version
+put #echo %color <<  Start: $zonename (%starting)
+put #echo %color <<  Destination: %destination
+put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+if !def(Athletics.Ranks) then {
+  gosub ECHO Athletics.Ranks not set! Attempting to Auto-Fix...
+  gosub ECHO Do you have the EXPTracker Plugin installed??
+  pause %command_pause
+  put #tvar Athletics.Ranks 0
+  put exp 0
+  waitforre EXP HELP|Overall state
+  pause %command_pause
+}
+if (!def(Athletics.Ranks) || ($Athletics.Ranks == 0)) then {
+  gosub ECHO Still not registering Athletics.Ranks!!! Make sure you have the EXPTracker Plugin!!
+  gosub ECHO Going for it anyway - But this will cause you to skip Athletics Shortcuts!
+}
 gosub INFO_CHECK
 gosub BAG_CHECK
-gosub PREMIUM_CHECK
-# put #mapper reset
-# put #var save
-if ($hidden) then send unhide
+if ($hidden) then gosub UNHIDE
 timer clear
 timer start
-if ($joined == 1) then
-     {
-          var rossmannorth 2000
-          var rossmansouth 2000
-          var faldesu 2000
-          var segoltha 2000
-          var undergondola 2000
-          var undersegoltha 2000
-          var shardcitizen no
-          echo ### You are in a group!  You will NOT be taking the gravy short cuts today! ###
-     }
+if ($joined == 1) ($travel.GroupShortCutsAnyway == False) then {
+  var rossmanNorth 2000
+  var rossmanSouth 2000
+  var faldesu 2000
+  var segoltha 2000
+  var underGondola 2000
+  var underSegoltha 2000
+  var shardCitizen False
+  gosub ECHO You are in a group!  You will NOT be taking the gravy short cuts today!
+}
 START:
 action (moving) on
 echo
@@ -459,45 +537,34 @@ if matchre("$roomname", "(Zaulfung, Dense Swamp|Kweld Gelvdael|Zaulfung, Urrem't
 if matchre("$roomname", "Zaulfung, Swamp") && matchre("$roomdesc", "Rancid mire") then gosub ZAULFUNG_ESCAPE
 if matchre("$roomname", "Zaulfung, Trackless Swamp") then gosub ZAULFUNG_ESCAPE_2
 if matchre("$roomname", "Velaka, Dunes") then gosub VELAKADUNES_ESCAPE
-
 ## CHECK TO SEE IF SCRIPT IS STARTED ON BOARD CERTAIN FERRIES - IF SO INITIATE FERRY LOGIC
-if matchre("$roomname", "Aboard the Mammoth") then gosub FERRYLOGIC
-if matchre("$roomname", "Gondola") then gosub FERRYLOGIC
-if matchre("$roomname", "\[\"Her Opulence\"\]|\[\"Hodierna's Grace\"\]|\[\"Kertigen's Honor\"\]|\[\"His Daring Exploit\"\]|\[\"Northern Pride\", Main Deck\]|\[\"Theren's Star\", Deck\]|\[The Evening Star\]|\[The Damaris' Kiss\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[\"The Desert Wind\"\]|\[\"The Suncatcher\"\]|\[\"The Riverhawk\"\]|\[\"Imperial Glory\"\]\"Hodierna's Grace\"|\"Her Opulence\"\]|\[The Galley Cercorim\]|\[The Jolas, Fore Deck\]|\[Aboard the Warship, Gondola\]|\[The Halasa Selhin, Main Deck\]|\[Aboard the Mammoth, Platform\]") then gosub FERRYLOGIC
-
+if matchre("$roomname", "Aboard the Mammoth|Gondola|\[\"Her Opulence\"\]|\[\"Hodierna's Grace\"\]|\[\"Kertigen's Honor\"\]|\[\"His Daring Exploit\"\]|\[\"Northern Pride\", Main Deck\]|\[\"Theren's Star\", Deck\]|\[The Evening Star\]|\[The Damaris' Kiss\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[\"The Desert Wind\"\]|\[\"The Suncatcher\"\]|\[\"The Riverhawk\"\]|\[\"Imperial Glory\"\]\"Hodierna's Grace\"|\"Her Opulence\"\]|\[The Galley Cercorim\]|\[The Jolas, Fore Deck\]|\[Aboard the Warship, Gondola\]|\[The Halasa Selhin, Main Deck\]|\[Aboard the Mammoth, Platform\]") then gosub FERRYLOGIC
 ## IF SCRIPT IS STARTED IN A ROOMID == 0 - DOUBLE CHECK TO SEE IF WE ARE ON ANY FERRY
 ## IF NOT ON A FERRY - MOVE IN RANDOM DIRECTIONS AND ATTEMPT TO GET AUTOMAPPER TO REGISTER THE ROOM NUMBER
-if (("$zoneid" == "0") || ("$roomid" == "0")) then
-     {
-          gosub FERRY_CHECK
-          echo ### Unknown map or room id - Attempting to move in random direction to recover
-          gosub RANDOMMOVE
-     }
+if (("$zoneid" == "0") || ("$roomid" == "0")) then {
+  gosub FERRY_CHECK
+  gosub ECHO Unknown map or room id - Attempting to move in random direction to recover
+  gosub RANDOMMOVE
+}
 ## SECOND ATTEMPT - IF AUTOMAPPER IS IN ROOMID=0 CONTINUE TO MOVE IN RANDOM DIRECTIONS AND ATTEMPT TO FIND ROOM NUMBER
 if (("$zoneid" == "0") || ("$roomid" == "0")) then gosub RANDOMMOVE
-
 ## IF ROOMID IS STILL 0 THEN ABORT SCRIPT
-if ("$roomid" == "0") then
-     {
-          ECHO ### You are in a spot not recognized by Genie, please start somewhere else! ###
-          echo ### ROOMID == 0 ! THIS MEANS THE MAP DOESN'T KNOW WHERE YOU ARE!! ##
-          echo ### TRY MOVING IN RANDOM DIRECTIONS UNTIL THE MAP REGISTERS LOCATIONS ###
-          exit
-     }
-
+if ("$roomid" == "0") then {
+  gosub ECHO You are in a spot not recognized by Genie, please start somewhere else!
+  gosub ECHO ROOMID = 0 ! THIS MEANS THE MAP DOESN'T KNOW WHERE YOU ARE!
+  gosub ECHO TRY MOVING IN RANDOM DIRECTIONS UNTIL THE MAP REGISTERS LOCATIONS
+  exit
+}
 ## CHECK COMMON 'SUB' MAP AREAS WE MIGHT GET STUCK IN AND MOVE TO THE MAIN MAP
 if ("$zoneid" == "2d") then gosub AUTOMOVE temple
 if ("$zoneid" == "1j") then gosub AUTOMOVE cross
 if ("$zoneid" == "1l") then gosub AUTOMOVE cross
 if ("$zoneid" == "2a") then gosub AUTOMOVE cross
-
 ## IF IN FOREST GRYPHONS - TAKE THE EASIEST PATH OUT (Avoid Automapper getting stuck on a hard climb)
-if (("$zoneid" == "34") && ($roomid > 89) && ($roomid < 116)) then
-     {
-          gosub AUTOMOVE 90
-          gosub AUTOMOVE 49
-     }
-
+if (("$zoneid" == "34") && ($roomid > 89) && ($roomid < 116)) then {
+  gosub AUTOMOVE 90
+  gosub AUTOMOVE 49
+}
 ## TO RATHA / HARAJAAL / TAISGATH LOGIC - PLAT/PREMIUM/TF ONLY
 RATHA_CHECK:
 if (matchre("%destination", "\b(ratha|hara?j?a?a?l?|tais?g?a?t?h?)") && matchre("$zoneid", "\b(1|30|42|47|61|66|67|90|99|107|108|116)\b")) then
@@ -1070,8 +1137,8 @@ if (matchre("$game", "(?i)DRX") && (%portal == 1)) then
      {
           if (matchre("$zoneid", "\b(1|30|40|47|67|90|99|107|116)\b") && (%ported == 0)) then gosub PORTAL_TIME
      }
-if (("$zoneid" == "40") && ($Athletics.Ranks >= %rossmansouth)) then gosub AUTOMOVE 213
-if (("$zoneid" == "40") && ($Athletics.Ranks < %rossmansouth)) then
+if (("$zoneid" == "40") && ($Athletics.Ranks >= %rossmanSouth)) then gosub AUTOMOVE 213
+if (("$zoneid" == "40") && ($Athletics.Ranks < %rossmanSouth)) then
      {
           echo ** Athletics NOT high enough for Jantspyre - Taking Ferry!
           gosub INFO_CHECK
@@ -1163,12 +1230,12 @@ if ("$zoneid" == "68") then
                pause 0.4
           }
      }
-if (("$zoneid" == "68") && matchre("%shardcitizen", "(?i)yes")) then
+if (("$zoneid" == "68") && matchre("%shardCitizen", "(?i)yes")) then
      {
           gosub AUTOMOVE 1
           gosub AUTOMOVE 135
      }
-if (("$zoneid" == "68") && matchre("%shardcitizen", "(?i)no")) then gosub AUTOMOVE 15
+if (("$zoneid" == "68") && matchre("%shardCitizen", "(?i)no")) then gosub AUTOMOVE 15
 if (matchre("$game", "(?i)DRX") && (%portal == 1)) then
      {
           if (matchre("$zoneid", "\b(1|30|40|47|67|90|99|107|116)\b") && (%ported == 0)) then gosub PORTAL_TIME
@@ -1179,22 +1246,22 @@ if (("$zoneid" == "67") && ("$guild" == "Thief")) then
           gosub AUTOMOVE 23
      }
 if ("$zoneid" == "67") then gosub AUTOMOVE 132
-if (("$zoneid" == "66") && ("$guild" == "Thief") && ($Athletics.Ranks >= %undergondola) && ($Athletics.Ranks < 600)) then
+if (("$zoneid" == "66") && ("$guild" == "Thief") && ($Athletics.Ranks >= %underGondola) && ($Athletics.Ranks < 600)) then
      {
           put khri flight harrier
           pause
      }
-if (("$zoneid" == "66") && ("$guild" == "Ranger") && ($Athletics.Ranks >= %undergondola)) then
+if (("$zoneid" == "66") && ("$guild" == "Ranger") && ($Athletics.Ranks >= %underGondola)) then
      {
           put prep athletic 12
           pause 8
           put cast
           pause 0.2
      }
-if (("$zoneid" == "66") && ($Athletics.Ranks >= %undergondola)) then gosub AUTOMOVE 317
-if (("$zoneid" == "66") && ($Athletics.Ranks < %undergondola)) then
+if (("$zoneid" == "66") && ($Athletics.Ranks >= %underGondola)) then gosub AUTOMOVE 317
+if (("$zoneid" == "66") && ($Athletics.Ranks < %underGondola)) then
      {
-          echo ** Athletics NOT high enough for UnderSegoltha - Taking Gondola!
+          echo ** Athletics NOT high enough for underSegoltha - Taking Gondola!
           gosub AUTOMOVE 156
           pause
           gosub FERRYLOGIC
@@ -1244,7 +1311,7 @@ if (("$zoneid" == "60") && ("%detour" == "alfren")) then
 if (("$zoneid" == "60") && matchre("%detour", "(leth|acen|taipa|LETH|ACEN|ratha|fang|ain|raven|outer|inner|adan'f|corik|steel|ylono|fayrin|horse|spire)")) then gosub AUTOMOVE leth
 if (("$zoneid" == "60") && ("$guild" == "Thief")) then
           {
-              if ($Athletics.Ranks >= %undersegoltha) then
+              if ($Athletics.Ranks >= %underSegoltha) then
                   {
                       gosub AUTOMOVE 107
                       if ("$zoneid" == "120") then gosub AUTOMOVE 107
@@ -1367,7 +1434,7 @@ if (("$zoneid" == "1") && matchre("%detour", "(leth|acen|taipa|ratha)")) then
      {
          if ("$guild" == "Thief") then
              {
-                 if ($Athletics.Ranks >= %undersegoltha) then
+                 if ($Athletics.Ranks >= %underSegoltha) then
                      {
                          gosub AUTOMOVE 650
                          gosub AUTOMOVE 23
@@ -1513,8 +1580,8 @@ if (matchre("$game", "(?i)DRX") && (%portal == 1)) then
           if (("$zoneid" == "1") && matchre("%detour", "(alfren|leth|bone)")) then goto ILLITHI_2
           if (matchre("$zoneid", "\b(1|30|40|47|67|90|99|107|116)\b") && (%ported == 0)) then gosub PORTAL_TIME
      }
-if (("$zoneid" == "40") && ($Athletics.Ranks >= %rossmansouth)) then gosub AUTOMOVE 213
-if (("$zoneid" == "40") && ($Athletics.Ranks < %rossmansouth)) then
+if (("$zoneid" == "40") && ($Athletics.Ranks >= %rossmanSouth)) then gosub AUTOMOVE 213
+if (("$zoneid" == "40") && ($Athletics.Ranks < %rossmanSouth)) then
      {
         echo ** Athletics NOT high enough for Jantspyre - Taking Ferry!
         gosub INFO_CHECK
@@ -1570,12 +1637,12 @@ if (matchre("$game", "(?i)DRX") && (%portal == 1)) then
           if (("$zoneid" == "1") && matchre("%detour", "(alfren|leth|bone)")) then goto ILLITHI_2
           if (matchre("$zoneid", "\b(1|30|40|47|67|90|99|107|116)\b") && (%ported == 0)) then gosub PORTAL_TIME
      }
-if (("$zoneid" == "40") && ($Athletics.Ranks >= %rossmansouth)) then
+if (("$zoneid" == "40") && ($Athletics.Ranks >= %rossmanSouth)) then
      {
           echo ** Athletics high enough for Jantspyre - Taking shortcut!
           gosub AUTOMOVE 213
      }
-if (("$zoneid" == "40") && ($Athletics.Ranks < %rossmansouth)) then
+if (("$zoneid" == "40") && ($Athletics.Ranks < %rossmanSouth)) then
           {
               echo ** Athletics NOT high enough for Jantspyre - Taking Ferry!
               gosub INFO_CHECK
@@ -1663,7 +1730,7 @@ if ("$zoneid" == "1") then
           {
               if ("$guild" == "Thief") then
                   {
-                      if ($Athletics.Ranks >= %undersegoltha) then
+                      if ($Athletics.Ranks >= %underSegoltha) then
                           {
                               gosub AUTOMOVE 650
                               gosub AUTOMOVE 23
@@ -1725,20 +1792,20 @@ if (("$zoneid" == "62") && matchre("(bone|germ)", "%detour")) then
               gosub AUTOMOVE 101
               goto ARRIVED
           }
-if (("$zoneid" == "62") && ("$guild" == "Thief") && ($Athletics.Ranks >= %undergondola) && ($Athletics.Ranks < 600)) then
+if (("$zoneid" == "62") && ("$guild" == "Thief") && ($Athletics.Ranks >= %underGondola) && ($Athletics.Ranks < 600)) then
           {
                put khri flight harrier
                pause
           }
-if (("$zoneid" == "62") && ("$guild" == "Ranger") && ($Athletics.Ranks >= %undergondola)) then
+if (("$zoneid" == "62") && ("$guild" == "Ranger") && ($Athletics.Ranks >= %underGondola)) then
           {
                put prep athlet 10
                pause 10
                put cast
           }
-if (("$zoneid" == "62") && ($Athletics.Ranks >= %undergondola)) then
+if (("$zoneid" == "62") && ($Athletics.Ranks >= %underGondola)) then
           {
-             echo ** Athletics high enough for Undergondola! Taking shortcut!
+             echo ** Athletics high enough for underGondola! Taking shortcut!
              gosub AUTOMOVE 41
              pause
              if matchre("$game", "(?i)DRF") then
@@ -1817,7 +1884,7 @@ if (("$zoneid" == "66") && ("%detour" == "garg")) then
               gosub AUTOMOVE 167
               goto ARRIVED
           }
-#if (("$zoneid" == "69") && ("%shardcitizen" == "yes")) then gosub AUTOMOVE 31
+#if (("$zoneid" == "69") && ("%shardCitizen" == "yes")) then gosub AUTOMOVE 31
 if ("$zoneid" == "69") then
      {
           if ($Athletics.Ranks > 350) then
@@ -1855,8 +1922,8 @@ if ("$zoneid" == "68") then
      }
 if (("$zoneid" == "68") && ("$guild" == "Thief")) then gosub AUTOMOVE 225
 if ("$zoneid" == "67a") then gosub AUTOMOVE shard
-if (("$zoneid" == "68") && matchre("%shardcitizen", "(?i)yes")) then gosub AUTOMOVE 1
-if (("$zoneid" == "68") && matchre("%shardcitizen", "(?i)no")) then gosub AUTOMOVE 15
+if (("$zoneid" == "68") && matchre("%shardCitizen", "(?i)yes")) then gosub AUTOMOVE 1
+if (("$zoneid" == "68") && matchre("%shardCitizen", "(?i)no")) then gosub AUTOMOVE 15
 if (("$zoneid" == "67") && matchre("alfren", "%detour")) then
           {
               goto CROSSING
@@ -1898,12 +1965,12 @@ if (("$zoneid" == "66") && matchre("%detour", "(steel|fayrin|ylono|corik|adan'f)
                               send climb embrasure
                               wait
                           }
-                      if (!matchre("%shardcitizen", "(?i)yes") && ("$zoneid" == 66)) then
+                      if (!matchre("%shardCitizen", "(?i)yes") && ("$zoneid" == 66)) then
                           {
                               gosub AUTOMOVE 216
                               gosub AUTOMOVE 230
                           }
-                      if (matchre("%shardcitizen", "(?i)yes") && ("$zoneid" == 66) && ($roomid > 54)) then
+                      if (matchre("%shardCitizen", "(?i)yes") && ("$zoneid" == 66) && ($roomid > 54)) then
                           {
                               gosub AUTOMOVE 215
                               gosub AUTOMOVE 230
@@ -1947,7 +2014,7 @@ if (("$zoneid" == "66") && ("$guild" == "Thief")) then
                gosub AUTOMOVE shard
           }
 if ("$zoneid" == "66a") then gosub AUTOMOVE shard
-if (matchre("%shardcitizen", "(?i)yes") && ("$zoneid" == 66) && ($roomid > 54)) then gosub AUTOMOVE 215
+if (matchre("%shardCitizen", "(?i)yes") && ("$zoneid" == 66) && ($roomid > 54)) then gosub AUTOMOVE 215
 if ("$zoneid" == "66") then gosub AUTOMOVE 216
 if ("$zoneid" == "67") then gosub AUTOMOVE 81
 if (("$zoneid" == "67") && matchre("gondola", "%detour")) then
@@ -2139,12 +2206,12 @@ if ("$zoneid" == "68") then
                pause 0.4
           }
      }
-if (("$zoneid" == "68") && matchre("%shardcitizen", "(?i)yes")) then
+if (("$zoneid" == "68") && matchre("%shardCitizen", "(?i)yes")) then
      {
           gosub AUTOMOVE 1
           gosub AUTOMOVE 135
      }
-if (("$zoneid" == "68") && matchre("%shardcitizen", "(?i)no")) then gosub AUTOMOVE 15
+if (("$zoneid" == "68") && matchre("%shardCitizen", "(?i)no")) then gosub AUTOMOVE 15
 if (matchre("$game", "(?i)DRX") && (%portal == 1)) then
      {
           if (matchre("$zoneid", "\b(1|30|40|47|67|90|99|107|116)\b") && (%ported == 0)) then gosub PORTAL_TIME
@@ -2188,25 +2255,25 @@ if (("$zoneid" == "66") && matchre("gondola", "%detour")) then
               gosub AUTOMOVE platform
               goto ARRIVED
           }
-if (("$zoneid" == "66") && ("$guild" == "Thief") && ($Athletics.Ranks >= %undergondola) && ($Athletics.Ranks < 600)) then
+if (("$zoneid" == "66") && ("$guild" == "Thief") && ($Athletics.Ranks >= %underGondola) && ($Athletics.Ranks < 600)) then
           {
                put khri flight harrier
                pause
           }
-if (("$zoneid" == "66") && ("$guild" == "Ranger") && ($Athletics.Ranks >= %undergondola)) then
+if (("$zoneid" == "66") && ("$guild" == "Ranger") && ($Athletics.Ranks >= %underGondola)) then
           {
                put prep athlet 10
                pause 8
                put cast
           }
-if (("$zoneid" == "66") && ($Athletics.Ranks >= %undergondola)) then
+if (("$zoneid" == "66") && ($Athletics.Ranks >= %underGondola)) then
           {
-               echo ** Athletics high enough for Undergondola! Taking shortcut!
+               echo ** Athletics high enough for underGondola! Taking shortcut!
                gosub AUTOMOVE 317
           }
-if (("$zoneid" == "66") && ($Athletics.Ranks < %undergondola)) then
+if (("$zoneid" == "66") && ($Athletics.Ranks < %underGondola)) then
           {
-              echo ** Athletics too low for Undergondola - Taking Gondola!
+              echo ** Athletics too low for underGondola - Taking Gondola!
               gosub AUTOMOVE 156
               pause
               gosub FERRYLOGIC
@@ -2224,7 +2291,7 @@ if ("$zoneid" == "61") then gosub AUTOMOVE 115
 if (("$zoneid" == "50") && ($Athletics.Ranks < %segoltha)) then gosub AUTOMOVE STR
 if (("$zoneid" == "60") && ("$guild" == "Thief")) then
           {
-              if ($Athletics.Ranks >= %undersegoltha) then
+              if ($Athletics.Ranks >= %underSegoltha) then
                   {
                       gosub AUTOMOVE segoltha
                       gosub AUTOMOVE 6
@@ -2360,8 +2427,8 @@ if (("$zoneid" == "34") && matchre("%detour", "(haven|zaulfung|throne)")) then
           {
               if (($roomid > 120) && ($roomid < 153)) then
                     {
-                    if ($Athletics.Ranks < %rossmansouth) then gosub AUTOMOVE 137
-                    if ($Athletics.Ranks >= %rossmansouth) then
+                    if ($Athletics.Ranks < %rossmanSouth) then gosub AUTOMOVE 137
+                    if ($Athletics.Ranks >= %rossmanSouth) then
                          {
                               gosub AUTOMOVE 121
                               if matchre("$roomdesc", "pair of ropes tied to trees") then
@@ -2464,7 +2531,7 @@ if (matchre("$game", "(?i)DRX") && (%portal == 1)) then
      }
 if (("$zoneid" == "30") && matchre("%detour", "(rossman|lang|theren|rakash|muspari|oasis|fornsted|el'bain|mriss|merk|hara)")) then
           {
-              if $Athletics.Ranks < %rossmannorth then
+              if $Athletics.Ranks < %rossmanNorth then
                   {
                       echo
                       echo ** Athletics too low for Rossman Shortcut - Taking Ferry
@@ -2474,7 +2541,7 @@ if (("$zoneid" == "30") && matchre("%detour", "(rossman|lang|theren|rakash|muspa
                       gosub AUTOMOVE 99
                       gosub FERRYLOGIC
                   }
-              if $Athletics.Ranks >= %rossmannorth then
+              if $Athletics.Ranks >= %rossmanNorth then
                   {
                       echo
                       echo ** Athletics high enough for Jantspyre River - Taking Rossman's Shortcut!
@@ -2576,7 +2643,7 @@ if (("$zoneid" == "40") && matchre("%detour", "(?i)(lang|rakash|el'bain|mriss|me
           }
 if (("$zoneid" == "40") && matchre("%detour", "(?i)(haven|zaulfung|throne)")) then
           {
-              if ($Athletics.Ranks >= %rossmansouth) then
+              if ($Athletics.Ranks >= %rossmanSouth) then
                   {
                       echo
                       echo ** Athletics high enough for Jantspyre River - Taking Rossman's Shortcut!
@@ -2597,7 +2664,7 @@ if (("$zoneid" == "40") && matchre("%detour", "(?i)(haven|zaulfung|throne)")) th
                if ("$zoneid" == "33") then gosub AUTOMOVE 1
                if ("$zoneid" == "33") then gosub AUTOMOVE 1
                     }
-              if ($Athletics.Ranks < %rossmansouth) then
+              if ($Athletics.Ranks < %rossmanSouth) then
                   {
                       echo ** Athletics too low for Rossman Shortcut - Taking Ferry
                       gosub INFO_CHECK
@@ -3077,7 +3144,7 @@ VELAKA_SHORTCUT_2:
      gosub MOVE southeast
      gosub MOVE east
      if matchre("$roomobjs", "black stones") then goto VELAKA_SHORTCUT_2
-VELAKA.SHORTCUT.22:
+VELAKA_SHORTCUT.22:
 VELAKA_SHORTCUT_22:
      gosub MOVE northeast
      gosub MOVE east
@@ -3169,8 +3236,8 @@ if ("$zoneid" == "41") then
 if ("$zoneid" == "40a") then gosub AUTOMOVE 125
 if ("$zoneid" == "42") then gosub AUTOMOVE 2
 if (("$zoneid" == "40") && matchre("$game", "(?i)DRX") && (%portal == 1) && (%ported == 0)) then gosub PORTAL_TIME
-if (("$zoneid" == "40") && ($Athletics.Ranks >= %rossmansouth)) then gosub AUTOMOVE 213
-if (("$zoneid" == "40") && ($Athletics.Ranks < %rossmansouth)) then
+if (("$zoneid" == "40") && ($Athletics.Ranks >= %rossmanSouth)) then gosub AUTOMOVE 213
+if (("$zoneid" == "40") && ($Athletics.Ranks < %rossmanSouth)) then
           {
               echo ** Athletics too low for Rossman Shortcut - Taking Ferry
               gosub INFO_CHECK
@@ -3235,7 +3302,7 @@ if ("$zoneid" == "1") then
           {
               if ("$guild" == "Thief") then
                   {
-                      if ($Athletics.Ranks >= %undersegoltha) then
+                      if ($Athletics.Ranks >= %underSegoltha) then
                           {
                               gosub AUTOMOVE 650
                               gosub AUTOMOVE 23
@@ -3271,19 +3338,19 @@ if (("$zoneid" == "114") && ("%detour" != "ain")) then
               gosub FERRYLOGIC
               gosub MOVE west
           }
-if (("$zoneid" == "63") && ($Athletics.Ranks < %undergondola)) then
+if (("$zoneid" == "63") && ($Athletics.Ranks < %underGondola)) then
           {
               gosub AUTOMOVE 112
               gosub AUTOMOVE 100
               gosub AUTOMOVE 126
           }
-if (("$zoneid" == "112") && ("$guild" == "Ranger") && ($Athletics.Ranks >= %undergondola)) then
+if (("$zoneid" == "112") && ("$guild" == "Ranger") && ($Athletics.Ranks >= %underGondola)) then
           {
                put prep athlet 10
                pause 8
                put cast
           }
-if (("$zoneid" == "112") && ("$guild" == "Thief") && ($Athletics.Ranks >= %undergondola) && ($Athletics.Ranks < 600)) then
+if (("$zoneid" == "112") && ("$guild" == "Thief") && ($Athletics.Ranks >= %underGondola) && ($Athletics.Ranks < 600)) then
           {
                put khri flight harrier
                pause 0.5
@@ -3291,12 +3358,12 @@ if (("$zoneid" == "112") && ("$guild" == "Thief") && ($Athletics.Ranks >= %under
           }
 if (("$zoneid" == "112") && ("%detour" == "ain")) then
           {
-              if ($Athletics.Ranks >= %undergondola) then
+              if ($Athletics.Ranks >= %underGondola) then
                   {
                       gosub AUTOMOVE 112
                       gosub AUTOMOVE 130
                   }
-              if ($Athletics.Ranks < %undergondola) then
+              if ($Athletics.Ranks < %underGondola) then
                   {
                       gosub INFO_CHECK
                       if (%dokoras < 120) then goto NOCOIN
@@ -3308,7 +3375,7 @@ if ("$zoneid" == "112") then gosub AUTOMOVE 112
 if ("$zoneid" == "58") then gosub AUTOMOVE 2
 if ("$zoneid" == "61") then gosub AUTOMOVE 130
 if ("$zoneid" == "63") then gosub AUTOMOVE 112
-if (("$zoneid" == "62") && ($Athletics.Ranks >= %undergondola)) then
+if (("$zoneid" == "62") && ($Athletics.Ranks >= %underGondola)) then
           {
              gosub AUTOMOVE 41
              pause
@@ -3388,13 +3455,13 @@ if ("$zoneid" == "68") then
                pause 0.4
           }
      }
-if (("$zoneid" == "68") && matchre("%shardcitizen", "(?i)yes")) then
+if (("$zoneid" == "68") && matchre("%shardCitizen", "(?i)yes")) then
      {
           gosub AUTOMOVE 1
           pause 0.1
           gosub AUTOMOVE 135
      }
-if (("$zoneid" == "68") && matchre("%shardcitizen", "(?i)no")) then gosub AUTOMOVE 15
+if (("$zoneid" == "68") && matchre("%shardCitizen", "(?i)no")) then gosub AUTOMOVE 15
 if (matchre("$game", "(?i)DRX") && (%portal == 1)) then
      {
           if (matchre("$zoneid", "\b(1|30|40|47|67|90|99|107|116)\b") && (%ported == 0)) then gosub PORTAL_TIME
@@ -4423,7 +4490,7 @@ NOCOIN:
                     gosub AUTOMOVE exchange
                     gosub KRONARS
                }
-            if (%kronars >= 120) then goto COIN.CONTINUE
+            if (%kronars >= 120) then goto COIN_CONTINUE
             gosub AUTOMOVE teller
             if ($invisible == 1) then gosub STOP_INVIS
             put withdraw 120 copper
@@ -4439,7 +4506,7 @@ NOCOIN:
                     gosub AUTOMOVE exchange
                     gosub KRONARS
                }
-            if (%kronars >= 120) then goto COIN.CONTINUE
+            if (%kronars >= 120) then goto COIN_CONTINUE
             gosub AUTOMOVE teller
             if ($invisible == 1) then gosub STOP_INVIS
             put withdraw 120 copper
@@ -4453,7 +4520,7 @@ NOCOIN:
                     gosub AUTOMOVE exchange
                     gosub LIRUMS
                }
-            if (%lirums >= 140) then goto COIN.CONTINUE
+            if (%lirums >= 140) then goto COIN_CONTINUE
             gosub AUTOMOVE teller
             if ($invisible == 1) then gosub STOP_INVIS
             put withdraw 140 copper
@@ -4467,7 +4534,7 @@ NOCOIN:
                     gosub AUTOMOVE exchange
                     gosub LIRUMS
                }
-            if (%lirums >= 140) then goto COIN.CONTINUE
+            if (%lirums >= 140) then goto COIN_CONTINUE
             gosub AUTOMOVE teller
             if ($invisible == 1) then gosub STOP_INVIS
             put withdraw 140 copper
@@ -4482,7 +4549,7 @@ NOCOIN:
                     gosub AUTOMOVE exchange
                     gosub LIRUMS
                }
-            if (%lirums >= 200) then goto COIN.CONTINUE
+            if (%lirums >= 200) then goto COIN_CONTINUE
             gosub AUTOMOVE teller
             if ($invisible == 1) then gosub STOP_INVIS
             put withdraw 200 copper
@@ -4504,7 +4571,7 @@ NOCOIN:
                     gosub LIRUMS
                }
             gosub AUTOMOVE teller
-            if (%lirums >= %BoarNeeded) then goto COIN.CONTINUE
+            if (%lirums >= %BoarNeeded) then goto COIN_CONTINUE
             if ($invisible == 1) then gosub STOP_INVIS
             if matchre("%detour", "(mriss|merk|hara)") then
                 {
@@ -4524,7 +4591,7 @@ NOCOIN:
                     gosub AUTOMOVE exchange
                     gosub DOKORAS
                }
-            if (%dokoras > 120) then goto COIN.CONTINUE
+            if (%dokoras > 120) then goto COIN_CONTINUE
             gosub AUTOMOVE teller
             if ($invisible == 1) then gosub STOP_INVIS
             put withdraw 120 copper
@@ -4540,7 +4607,7 @@ NOCOIN:
                     gosub AUTOMOVE exchange
                     gosub DOKORAS
                }
-            if (%dokoras > %TherenCoin) then goto COIN.CONTINUE
+            if (%dokoras > %TherenCoin) then goto COIN_CONTINUE
             gosub AUTOMOVE teller
             if ($invisible == 1) then gosub STOP_INVIS
 		  put withdraw %TherenCoin copper
@@ -4554,7 +4621,7 @@ NOCOIN:
                     gosub AUTOMOVE exchange
                     gosub DOKORAS
                }
-            if (%dokoras > 120) then goto COIN.CONTINUE
+            if (%dokoras > 120) then goto COIN_CONTINUE
             gosub AUTOMOVE teller
             if ($invisible == 1) then gosub STOP_INVIS
             put withdraw 120 copper
@@ -4569,7 +4636,7 @@ NOCOIN:
                     gosub AUTOMOVE exchange
                     gosub DOKORAS
                }
-            if (%dokoras > 120) then goto COIN.CONTINUE
+            if (%dokoras > 120) then goto COIN_CONTINUE
             gosub AUTOMOVE teller
             if ($invisible == 1) then gosub STOP_INVIS
             put withdraw 120 copper
@@ -4642,7 +4709,7 @@ NOCOIN:
     echo * YOU HAD MONEY IN THE BANK, LET'S TRY THIS AGAIN!
     pause
     goto %label
-COIN.CONTINUE:
+COIN_CONTINUE:
     put #echo >Log #ffff4d Withdrew ferry money to ride from $zonename
     echo * YOU EXCHANGED SOME MONIES, LET'S TRY THIS AGAIN!
     pause
@@ -4657,57 +4724,57 @@ LIRUMS:
      var Target.Currency LIRUMS
      if ("%kronars" != "0") then gosub EXCHANGE KRONARS
      if ("%dokoras" != "0") then gosub EXCHANGE DOKORAS
-     goto EXCHANGE.FINISH
+     goto EXCHANGE_FINISH
 KRONARS:
      var Target.Currency KRONARS
      if ("%lirums" != "0") then gosub EXCHANGE LIRUMS
      if ("%dokoras" != "0") then gosub EXCHANGE DOKORAS
-     goto EXCHANGE.FINISH
+     goto EXCHANGE_FINISH
 DOKORAS:
      var Target.Currency DOKORAS
      if ("%kronars" != "0") then gosub EXCHANGE KRONARS
      if ("%lirums" != "0") then gosub EXCHANGE LIRUMS
-     goto EXCHANGE.FINISH
+     goto EXCHANGE_FINISH
 EXCHANGE:
      var Coin $0
-EXCHANGE.CONTINUE:
+EXCHANGE_CONTINUE:
      pause 0.01
-     matchre EXCHANGE.CONTINUE ^\.\.\.wait\s+\d+\s+sec(?:onds?|s)?\.?|^Sorry,
-     matchre EXCHANGE.FINISH ^You hand your money to the money-changer\.\s*After collecting a.* fee, .* hands you .*\.
-     matchre EXCHANGE.FINISH Enjoy the holiday, friend\!
-     matchre EXCHANGE.FINISH ^The money-changer says crossly, \"A transaction that small isn't worth my time\.\s*The minimum is one bronze or ten coppers\.\"
-     matchre EXCHANGE.FINISH ^You count out all of your .* and drop them in the proper jar\.\s*After figuring a .* fee in the ledger beside the jar, you reach into the one filled with .* and withdraw .*\.
-     matchre EXCHANGE.FINISH ^One of the guards mutters, \"None of that, $charactername\.\s*You'd be lucky to get anything at all with an exchange that small\.\"
-     matchre EXCHANGE.FINISH ^But you don't have any .*\.
-     matchre EXCH.INVIS ^How can you exchange money when you can't be seen\?
-     matchre EXCHANGE.SMALLER transactions larger than a thousand
-     matchre EXCHANGE.FINISH ^There is no money-changer here\.
+     matchre EXCHANGE_CONTINUE ^\.\.\.wait\s+\d+\s+sec(?:onds?|s)?\.?|^Sorry,
+     matchre EXCHANGE_FINISH ^You hand your money to the money-changer\.\s*After collecting a.* fee, .* hands you .*\.
+     matchre EXCHANGE_FINISH Enjoy the holiday, friend\!
+     matchre EXCHANGE_FINISH ^The money-changer says crossly, \"A transaction that small isn't worth my time\.\s*The minimum is one bronze or ten coppers\.\"
+     matchre EXCHANGE_FINISH ^You count out all of your .* and drop them in the proper jar\.\s*After figuring a .* fee in the ledger beside the jar, you reach into the one filled with .* and withdraw .*\.
+     matchre EXCHANGE_FINISH ^One of the guards mutters, \"None of that, $charactername\.\s*You'd be lucky to get anything at all with an exchange that small\.\"
+     matchre EXCHANGE_FINISH ^But you don't have any .*\.
+     matchre EXCH_INVIS ^How can you exchange money when you can't be seen\?
+     matchre EXCHANGE_SMALLER transactions larger than a thousand
+     matchre EXCHANGE_FINISH ^There is no money-changer here\.
      put EXCHANGE ALL %Coin FOR %Target.Currency
      matchwait
-EXCHANGE.SMALLER:
+EXCHANGE_SMALLER:
      pause 0.1
      pause 0.1
-     matchre EXCHANGE.SMALLER ^\.\.\.wait\s+\d+\s+sec(?:onds?|s)?\.?|^Sorry,
-     matchre EXCHANGE.SMALLER ^You hand your .* to the money-changer\.\s*After collecting a.* fee, .* hands you .*\.
+     matchre EXCHANGE_SMALLER ^\.\.\.wait\s+\d+\s+sec(?:onds?|s)?\.?|^Sorry,
+     matchre EXCHANGE_SMALLER ^You hand your .* to the money-changer\.\s*After collecting a.* fee, .* hands you .*\.
      matchre RETURN ^The money-changer says crossly, \"A transaction that small isn't worth my time\.\s*The minimum is one bronze or ten coppers\.\"
      matchre RETURN ^One of the guards mutters, \"None of that, $charactername\.\s*You'd be lucky to get anything at all with an exchange that small\.\"
-     matchre EXCH.INVIS ^How can you exchange money when you can't be seen\?
-     matchre EXCHANGE.CONTINUE Enjoy the holiday, friend\!
-     matchre EXCHANGE.CONTINUE ^You count out all of your .* and drop them in the proper jar\.\s*After figuring a .* fee in the ledger beside the jar, you reach into the one filled with .* and withdraw .*\.
-     matchre EXCHANGE.CONTINUE ^But you don't have any .*\.
-     matchre EXCHANGE.CONTINUE ^You don't have that many
-     matchre EXCHANGE.FINISH ^There is no money-changer here\.
+     matchre EXCH_INVIS ^How can you exchange money when you can't be seen\?
+     matchre EXCHANGE_CONTINUE Enjoy the holiday, friend\!
+     matchre EXCHANGE_CONTINUE ^You count out all of your .* and drop them in the proper jar\.\s*After figuring a .* fee in the ledger beside the jar, you reach into the one filled with .* and withdraw .*\.
+     matchre EXCHANGE_CONTINUE ^But you don't have any .*\.
+     matchre EXCHANGE_CONTINUE ^You don't have that many
+     matchre EXCHANGE_FINISH ^There is no money-changer here\.
      put EXCHANGE 1000 plat %Coin FOR %Target.Currency
      matchwait
-EXCHANGE.FINISH:
+EXCHANGE_FINISH:
      pause 0.001
      put wealth
      pause 0.5
      RETURN
-EXCH.INVIS:
+EXCH_INVIS:
      delay 0.001
      gosub STOP_INVIS
-     goto EXCHANGE.CONTINUE
+     goto EXCHANGE_CONTINUE
 
 TO_SEACAVE:
 TO_SEACAVES:
@@ -4747,140 +4814,6 @@ INFO_CHECK:
      delay 0.001
      action remove Guild\:\s+(.*)$
      action remove Circle\: (\d+)
-     return
-
-## THIS AUTO SETS MAIN.BAG / BACKUP.BAG / THIRD.BAG VARIABLES
-## FOR STOWING ROUTINE ONLY - BACKUP CONTAINERS IN CASE DEFAULT "STOW" FAILS - THIS WILL CATCH ANY COMMON LARGE CONTAINERS
-## THIS SHOULD ONLY FIRE IF THE MOVE.STOW ROUTINE TRIGGERS AND DEFAULT STOW DOES NOT FULLY CLEAR HANDS ~
-## THIS WAS MADE AS HAPPY MEDIUM - IS MUCH BETTER THAN USING HARDCODED VARIABLES
-## SETTING CONTAINERS AUTOMATICALLY MAKES IT EASY WITHOUT HAVING TO WORRY ABOUT USER VARIABLES / MULTI-CHARACTERS ETC..
-## THIS SHOULD CATCH THE ~MAIN~ BAGS ALMOST EVERY CHARACTER HAS AT LEAST ONE OR TWO OF
-BAG_CHECK:
-     var MAIN.BAG NULL
-     var BACKUP.BAG NULL
-     var THIRD.BAG NULL
-     var FOURTH.BAG NULL
-     var Backpack 0
-     var Haversack 0
-     var Pack 0
-     var Carryall 0
-     var Rucksack 0
-     var DuffelBag 0
-     var Vortex 0
-     var Eddy 0
-     var Shadows 0
-     var HipPouch 0
-     var ToolBelt 0
-     var Lootsack 0
-     var Satchel 0
-     action var ToolBelt 1 when archeologist's toolbelt
-     action var Hip.Pouch 1 when light spidersilk hip pouch
-     action var Backpack 1 when backpack
-     action var Haversack 1 when haversack
-     action var Pack 1 when \bpack
-     action var Carryall 1 when carryall
-     action var Rucksack 1 when rucksack
-     action var Duffel.Bag 1 when duffel bag
-     action var Vortex 1 when (hollow vortex of water|corrupted vortex of swirling)
-     action var Eddy 1 when (swirling eddy of incandescent|effervescent eddy of honey-hued light)
-     action var Shadows 1 when encompassing shadows
-     action var Lootsack 1 when lootsack
-     action var Satchel 1 when satchel
-     echo * Scanning for Containers..
-     matchre BAG_PARSE INVENTORY
-     put inv container
-     matchwait 4
-BAG_PARSE:
-     var Bags Backpack|Haversack|Pack|Carryall|Rucksack|Duffel.Bag|Vortex|Eddy|Shadows|Toolbelt|Hip.Pouch|Lootsack|Satchel
-     eval TotalBags count("%Bags", "|")
-     var BagLoop 0
-     delay 0.00001
-BAG_LOOP:
-     delay 0.000001
-     var BAG %Bags(%BagLoop)
-     if (%BagLoop > %TotalBags) then
-          {
-               echo
-               echo * Auto-set container variables ~
-               echo * Main: %MAIN.BAG
-               if !matchre("%BACKUP.BAG", "NULL") then echo * Backup: %BACKUP.BAG
-               if !matchre("%THIRD.BAG", "NULL") then echo * Third: %THIRD.BAG
-               if !matchre("%FOURTH.BAG", "NULL") then echo * Fourth: %FOURTH.BAG
-               echo
-               goto BAG_RETURN
-          }
-     if ("%%BAG" == 1) then
-          {
-               if matchre("%MAIN.BAG", "NULL") then
-                    {
-                         var MAIN.BAG %BAG
-                         goto BAG_NEXT
-                    }
-               if matchre("%BACKUP.BAG", "NULL") then
-                    {
-                         var BACKUP.BAG %BAG
-                         goto BAG_NEXT
-                    }
-               if matchre("%THIRD.BAG", "NULL") then
-                    {
-                         var THIRD.BAG %BAG
-                         goto BAG_NEXT
-                    }
-               if matchre("%FOURTH.BAG", "NULL") then
-                    {
-                         var FOURTH.BAG %BAG
-                         goto BAG_NEXT
-                    }
-          }
-BAG_NEXT:
-     math BagLoop add 1
-     goto BAG_LOOP
-BAG_RETURN:
-     action remove archeologist's toolbelt
-     action remove  light spidersilk hip pouch
-     action remove  backpack
-     action remove  haversack
-     action remove  \bpack
-     action remove  carryall
-     action remove  rucksack
-     action remove  duffel bag
-     action remove  (hollow vortex of water|corrupted vortex of swirling)
-     action remove  (swirling eddy of incandescent|effervescent eddy of honey-hued light)
-     action remove  encompassing shadows
-     action remove  lootsack
-     action remove  satchel
-     return
-PREMIUM_CHECK:
-     echo *** Checking Premium..
-     matchre PREMIUM_NO ^You are not currently a Premium
-     matchre PREMIUM_YES ^Your premium service has been continuous
-     matchre PREMIUM_NO ^You need to concentrate
-     put ltb info
-     matchwait 5
-     goto PREMIUM_NO
-PREMIUM_NO:
-     var premium 0
-     return
-PREMIUM_YES:
-     var premium 1
-     echo *** Premium Enabled!
-     echo
-     if !matchre("$game", "DRX") then return
-PREMIUM_TIME:
-     var premtime 0
-     matchre PREMIUM_SET ^You have a cumulative Premium time of (\d+) months\.
-     matchre PREMIUM_SET ^You have a cumulative Platinum time of (\d+) months\.
-     put prem 10
-     matchwait 5
-     return
-PREMIUM_SET:
-     var premtime $1
-     delay 0.0001
-     if (%premtime >= 6) then
-          {
-               var portal 1
-               if matchre("$game", "DRX") then echo *** Premium Time > 6 -  Using Plat Portals!
-          }
      return
 
 ###########################################################################################################
@@ -5153,8 +5086,8 @@ ROC_1:
      # if matchre("%spelltimer", "Liturgy") && ($Utility.Ranks >= 800) then var NecroPrep ROG
      if (%ROCLoop > 1) then var NecroPrep ROC
      if ($Utility.Ranks < 60) then return
-     if (($spellROC == 1) && ("%NecroPrep" == "ROC")) then goto NECRO.DONE
-     # if (($spellROG == 1) && ("%NecroPrep" == "ROG")) then goto NECRO.DONE
+     if (($spellROC == 1) && ("%NecroPrep" == "ROC")) then goto NECRO_DONE
+     # if (($spellROG == 1) && ("%NecroPrep" == "ROG")) then goto NECRO_DONE
      echo **** Prepping %NecroPrep ****
      pause 0.1
      if ("$preparedspell" != "None") then send release spell
@@ -5164,7 +5097,7 @@ ROC_1:
                echo *** BAD ROOM
                return
           }
-     # gosub NECRO.CHECKROOM
+     # gosub NECRO_CHECKROOM
      if ($Utility.Ranks < 350) then var NecroMana 5
      if (($Utility.Ranks >= 350) && ($Utility.Ranks < 450)) then var NecroMana 7
      if (($Utility.Ranks >= 450) && ($Utility.Ranks < 600)) then var NecroMana 9
@@ -5191,7 +5124,7 @@ EOTB:
      var EOTBLoop 0
      var NecroPrep EOTB
 EOTB_1:
-     if ($invisible == 1) then goto NECRO.DONE
+     if ($invisible == 1) then goto NECRO_DONE
      if ($Utility.Ranks < 30) then return
      pause 0.1
      echo  **** Prepping EOTB ****
@@ -5214,7 +5147,7 @@ EOTB_1:
      ## ** This will not cast while inside the bank or any other unapproved rooms.
      if ((matchre("$roomobjs", "exchange rate board")) || (matchre("$roomname", "([T|t]eller|[E|e]xchange|[B|b]ank)")) || (matchre("$roomname", "(%donotcastlist)"))) then return
      if ($stamina < 30) then return
-     # gosub NECRO.CHECKROOM
+     # gosub NECRO_CHECKROOM
      if ($Utility.Ranks < 120) then var NecroMana 5
      if ($Utility.Ranks >= 120) && ($Utility.Ranks < 240) then var NecroMana 7
      if ($Utility.Ranks >= 240) && ($Utility.Ranks < 400) then var NecroMana 10
@@ -5229,10 +5162,10 @@ EOTB_1:
      # if (($invisible == 0) && (EOTBLoop < 1)) then goto EOTB_1
      var EOTBLoop 0
      return
-NECRO.DONE:
+NECRO_DONE:
      delay 0.0001
      return
-NECRO.CHECKROOM:
+NECRO_CHECKROOM:
      pause 0.01
      pause 0.01
      pause 0.01
@@ -5243,99 +5176,6 @@ NECRO.CHECKROOM:
      if !("$roomplayers" == "") then gosub RANDOMMOVE
      echo **** FOUND EMPTY ROOM! ***
      return
-###############################################################
-## Stow
-STOWING:
-     delay 0.0001
-     var LOCATION STOWING
-     if ("$righthandnoun" == "rope") then
-          {
-               send coil my rope
-               pause 0.2
-          }
-     # if matchre("$righthandnoun", "(crossbow|bow|short bow)") then gosub unload
-     if matchre("$righthand", "(partisan|shield|buckler|lumpy bundle|halberd|staff|longbow|khuj)") then gosub wear my $1
-     if ("$righthand" != "Empty") then GOSUB STOW right
-     if ("$lefthand" != "Empty") then GOSUB STOW left
-     if ("$righthand" != "Empty") then put sheath
-     return
-STOW:
-     var todo $0
-STOW1:
-     delay 0.0001
-     var LOCATION STOW1
-     matchre WAIT ^\.\.\.wait|^Sorry,
-     matchre IMMOBILE ^You don't seem to be able to move to do that
-     matchre WEBBED ^You can't do that while entangled in a web
-     matchre STUNNED ^You are still stunned
-     matchre STOW2 not designed to carry anything|any more room|no matter how you arrange|^That's too heavy|too thick|too long|too wide|^But that's closed|I can't find your container|^You can't
-     matchre RETURN ^Wear what\?|^Stow what\?  Type 'STOW HELP' for details\.
-     matchre RETURN ^You put
-     matchre RETURN ^You open
-     matchre RETURN needs to be
-     matchre RETURN ^You stop as you realize
-     matchre RETURN ^But that is already in your inventory\.
-     matchre RETURN ^That can't be picked up
-     matchre LOCATION.unload ^You should unload the
-     matchre LOCATION.unload ^You need to unload the
-     put stow %todo
-     matchwait 7
-     put #echo >$Log Crimson $datetime *** MISSING MATCH IN STOW! ***
-     put #echo >$Log Crimson $datetime Stow == %todo
-     put #log $datetime MISSING MATCH IN STOW (travel.cmd)
-STOW2:
-     delay 0.0001
-     var LOCATION STOW2
-     matchre RETURN ^Wear what\?|^Stow what\?
-     matchre RETURN ^You put
-     matchre RETURN ^But that is already in your inventory\.
-     matchre stow3 any more room|no matter how you arrange|^That's too heavy|too thick|too long|too wide|not designed to carry anything|^But that's closed
-     matchre LOCATION.unload ^You should unload the
-     matchre LOCATION.unload ^You need to unload the
-     put put %todo in my %MAIN.BAG
-     matchwait 7
-     put #echo >$Log Crimson $datetime *** MISSING MATCH IN STOW2! ***
-     put #echo >$Log Crimson $datetime Stow == %todo
-     put #log $datetime MISSING MATCH IN STOW2 (travel.cmd)
-STOW3:
-     delay 0.0001
-     var LOCATION STOW3
-     matchre open.thing ^But that's closed
-     matchre RETURN ^Wear what\?|^Stow what\?
-     matchre RETURN ^You put
-     matchre RETURN ^But that is already in your inventory\.
-     matchre STOW4 any more room|no matter how you arrange|^That's too heavy|too thick|too long|too wide|not designed to carry anything|^But that's closed
-     matchre LOCATION.unload ^You should unload the
-     matchre LOCATION.unload ^You need to unload the
-     put put %todo in my %BACKUP.BAG
-     matchwait 7
-     put #echo >$Log Crimson $datetime *** MISSING MATCH IN STOW3! ***
-     put #echo >$Log Crimson $datetime Stow == %todo
-     put #log $datetime MISSING MATCH IN STOW3 (travel.cmd)
-STOW4:
-     delay 0.0001
-     var LOCATION STOW4
-     matchre open.thing ^But that's closed
-     matchre RETURN ^Wear what\?|^Stow what\?
-     matchre RETURN ^You put your
-     matchre RETURN ^But that is already in your inventory\.
-     matchre REM.WEAR any more room|no matter how you arrange|^That's too heavy|too thick|too long|too wide
-     matchre LOCATION.unload ^You should unload the
-     matchre LOCATION.unload ^You need to unload the
-     put put %todo in my %THIRD.BAG
-     matchwait 7
-     put #echo >$Log Crimson $datetime *** MISSING MATCH IN STOW4! (travel.cmd) ***
-     put #echo >$Log Crimson $datetime Stow == %todo
-     put #log $datetime MISSING MATCH IN STOW4 (travel.cmd)
-OPEN.THING:
-     put open back
-     put open hav
-     pause 0.2
-     goto STOWING
-REM.WEAR:
-     echo *** ERROR IN STOWING - MAKE SURE YOU HAVE ROOM IN CONTAINERS
-     echo *** ABORTING SCRIPT!!!
-     exit
 #############################################################################################
 #############################################################################################
 ### ESCAPING MODULES (For Escaping from Areas where Automapper doesn't work/path properly)
@@ -5960,132 +5800,6 @@ EMPTY_HANDS:
      if ("$lefthand" != "Empty") then gosub STOW my $lefthandnoun
      if ("$righthand" != "Empty") then gosub STOW my $righthandnoun
      return
-#### PUT SUB
-PUT_UNTIE:
-     pause 0.2
-     eval putaction replacere("%putaction", "\bget\b", "")
-     eval putaction replacere("%putaction", "\bmy\b", "")
-     put untie %putaction
-     pause 0.4
-     return
-PUT_STOW:
-     gosub EMPTY_HANDS
-     goto PUT_1
-PUT_STAND:
-     gosub stand
-     goto PUT_1
-PUT:
-     delay 0.0001
-     var putaction $0
-     var LOCATION PUT_1
-     PUT_1:
-     pause 0.001
-     matchre WAIT ^\.\.\.wait|^Sorry,|^Please wait\.
-     matchre IMMOBILE ^You don't seem to be able to move to do that
-     matchre WEBBED ^You can't do that while entangled in a web
-     matchre STUNNED ^You are still stunned
-     matchre PUT_UNTIE ^You should untie
-     matchre PUT_STOW ^You need a free hand|^Free one of your hands|^That will be hard with both your hands full\!
-     matchre PUT_STAND ^You should stand up first\.|^Maybe you should stand up\.
-     matchre WAIT ^\[Enter your command again if you want to\.\]
-    matchre RETURN (You'?r?e?|As|With|Using) (?:accept|adeptly|add|adjust|allow|already|are|aren't|ask|cut|attach|attempt|.+ to|.+ fan|bash|begin|bend|blow|breathe|briefly|bring|bundle|cannot|can't|carefully|cautiously|chop|circle|clasp|close|collect|collector's|concentrate|corruption|count|combine|come|dance|decide|deduce|dodge|don't|drum|draw|effortlessly|eyes|gracefully|deftly|desire|detach|drop|drape|exhale|fade|fail|fake|feel(?! fully rested)|feint|fill|find|filter|focus|form|fumble|gaze|gesture|giggle|gingerly|get|glance|grab|hand|hang|have|icesteel|inhale|insert|kiss|kneel|knock|leap|lean|let|lose|lift|loosen|lob|load|measure|move|must|mutter|mind|not|now|need|offer|open|parry|place|pick|push|pout|pour|put|pull|prepare|press|quietly|quickly|raise|read|reach|ready|realize|recall|remain|release|remove|retreat|reverently|rock|roll|rub|scan|search|secure|sense|set|sheathe|shield|should|shouldn't|shove|silently|sit|skin|slide|sling|slip|slow|slowly|spin|spread|sprinkle|start|stick|stop|strap|struggle|swap|swiftly|swing|switch|tap|take|the|though|touch|tie|tilt|toss|trace|try|tug|turn|twist|unload|untie|vigorously|wave|wear|weave|whisper|whistle|will|wink|wring|work|yank|yell|you|zills) .*(?:\.|\!|\?)?
-     matchre RETURN ^Brother Durantine|^Durantine|^Mags|^Ylono|^Malik|^Kilam|^Ragge|^Randal|^Catrox|^Kamze|^Unspiek|^Wyla|^Ladar|^Dagul|^Granzer|^Gemsmith|^Fekoeti|^Diwitt|(?:An|The|A) attendant|^The clerk|A Dwarven|^.*He says,
-     matchre RETURN ^The(.*)?(clerk|teller|attendant|mortar|pestle|tongs|bowl|riffler|hammer|gem|book|page|lockpick|sconce|voice|waters|contours|person|is|has|are|slides|fades|hinges|spell|not)
-     matchre RETURN ^It('s)?(?:'s|a|and|the)?\s+?(?:would|will|is|a|already|dead|keen|practiced|graceful|stealthy|resounding|full|has)
-     matchre RETURN ^Roundtime\:?|^\[Roundtime\:?|^\(Roundtime\:?|^\[Roundtime|^Roundtime|\[Roundtime
-     matchre RETURN ^That('s)?\s+?(?:is|has|was|a|cannot|area|can't|won't|would|already|tool|will|cost|too)
-     matchre RETURN ^With(?: (a|and|the))?\s+?(?:keen|practiced|graceful|stealthy|resounding)
-     matchre RETURN ^This (is a .+ spell|is an exclusive|spell|ritual)
-     matchre RETURN ^The .*(is|has|are|slides|fades|hinges|spell|not|vines|antique|(.+) spider|pattern)
-     matchre RETURN ^There('s)?\s+?(?:is(n't)?|does(n't)?|already|no|not)
-     matchre RETURN ^But (?:that|you|you're|you've|the)
-     matchre RETURN ^Obvious (?:exits|paths)
-     matchre RETURN ^There's no room|any more room|no matter how you arrange|have all been used\.
-     matchre RETURN ^That's too heavy|too thick|too long|too wide|not designed to carry|cannot hold any more
-     matchre RETURN ^(You|I) can't|^Tie what\?|^You just can't|As you attempt to place your
-     matchre RETURN suddenly leaps toward you|and flies towards you|with a flick
-     matchre RETURN ^Brushing your fingers|^Sensing your intent|^Quietly touching your lips
-     matchre RETURN Lucky for you\!\s*That isn't damaged\!|I will not repair something that isn't broken\.
-     matchre RETURN I'm sorry, but I don't work on those|There isn't a scratch on that, and I'm not one to rob you\.
-     matchre RETURN I don't work on those here\.|I don't repair those here|Please don't lose this ticket\!
-     matchre RETURN ^Please rephrase that command\.|^I could not find|^Perhaps you should|^I don't|^Weirdly,|That can't
-     matchre RETURN \[You're|\[This is|too injured
-     matchre RETURN ^Moving|Brushing|Recalling|Unaware
-     matchre RETURN ^.*\[Praying for \d+ sec\.\]
-     matchre RETURN ^.+ is not in need|^That is closed\.
-     matchre RETURN ^What (?:were you|is it)
-     matchre RETURN ^In the name of love\?|^Play on|^(.+) what\?
-     matchre RETURN ^It's kind of wet out here\.
-     matchre RETURN ^Some (?:polished|people|tarnished|.* zills)
-     matchre RETURN ^(\S+) has accepted
-     matchre RETURN ^Subservient type|^The shadows|^Close examination|^Try though
-     matchre RETURN ^USAGE\:|^Using your|^You.*analyze
-     matchre RETURN ^Allows a Moon Mage|^Smoking commands are
-     matchre RETURN ^A (?:slit|pair|shadow) .*(?:\.|\!|\?)?
-     matchre RETURN ^Your (?:actions|dance|nerves) .*(?:\.|\!|\?)?
-     matchre RETURN ^Having no further use for .*, you discard it\.
-     matchre RETURN ^After a moment, .*\.
-     matchre RETURN ^.* (?:is|are) (not in need of cleaning|already activated)\.
-     matchre RETURN \[Type INVENTORY HELP for more options\]|\[Use INVENTORY HELP for more options\.\]
-     matchre RETURN ^A vortex|^A chance for|^In a flash|^It is locked|^An aftershock
-     matchre RETURN ^In the .* you see .*\.
-     matchre RETURN .* (?:Dokoras|Kronars|Lirums)
-     matchre RETURN ^You will now store .* in your .*\.
-     matchre RETURN ^\[Ingredients can be added by using ASSEMBLE Ingredient1 WITH Ingredient2\]
-     matchre RETURN ^\s\*LINK ALL CANCEL\s\*- Breaks all links
-     matchre RETURN ^Stalking is an inherently stealthy endeavor, try being out of sight\.
-     matchre RETURN ^You're already stalking|^There aren't any
-     matchre RETURN ^An offer|shakes (his|her) head
-     matchre RETURN ^Tie it off when it's empty\?
-     matchre RETURN ^But the merchant can't see you|are invisible
-     matchre RETURN Page|^As the world|^Obvious|^A ravenous energy
-     matchre RETURN ^A .* is currently
-     matchre RETURN ^In the|^The attendant|^That is already open\.|^Your inner
-     matchre RETURN ^(.+) hands you|^Searching methodically|^But you haven't prepared a symbiosis\!
-     matchre RETURN ^Illustrations of complex,|^It is labeled|^Your nerves
-     matchre RETURN ^The lockpick|^Doing that|is not required to continue crafting
-     matchre RETURN ^Without (any|a|the)|^Wouldn't (it|that|you)
-     matchre RETURN ^Weirdly, you can't manage
-     matchre RETURN ^Hold hands with whom\?
-     matchre RETURN ^Something in the area interferes
-     matchre RETURN ^With a .+
-     matchre RETURN ^Turning your focus solemnly inward
-     matchre RETURN ^Slow, rich tones form a somber introduction
-     matchre RETURN ^Images of streaking stars falling from the heavens
-     matchre RETURN ^With .* movements you prepare your body for the .* spell\.
-     matchre RETURN ^A strong wind swirls around you as you prepare the .* spell\.
-     matchre RETURN ^Roundtime\:?|^\[Roundtime\:?|^\(Roundtime\:?|^\[Roundtime|^Roundtime
-     matchre RETURN ^Shadow and light collide wildly around you as you prepare the .* spell\.
-     matchre RETURN ^The wailing of lost souls accompanies your preparations of the .* spell\.
-     matchre RETURN ^A soft breeze surrounds your body as you confidently prepare the .* spell\.
-     matchre RETURN ^Light withdraws from around you as you speak arcane words for the .* spell\.
-     matchre RETURN ^Tiny tendrils of lightning jolt between your hands as you prepare the .* spell\.
-     matchre RETURN ^Low, hummed tones form a soft backdrop for the opening notes of the .* enchante\.
-     matchre RETURN ^Heatless orange flames blaze between your fingertips as you prepare the .* spell\.
-     matchre RETURN ^Throwing your head back, you release a savage roar and growl words for the .* spell\.
-     matchre RETURN ^Entering a trance-like state, your hands begin to tremble as you prepare the .* spell\.
-     matchre RETURN ^Glowing geometric patterns arc between your upturned palms as you prepare the .* spell\.
-     matchre RETURN ^Focusing intently, you slice seven straight lines through the air as you invoke the .* spell.\.
-     matchre RETURN ^Accompanied with a flash of light, you clap your hands sharply together in preparation of the .* spell\.
-     matchre RETURN ^Icy blue frost crackles up your arms with the ferocity of a blizzard as you begin to prepare the .* spell\!
-     matchre RETURN ^A radiant glow wreathes your hands as you weave lines of light into the complicated pattern of the .* spell\.
-     matchre RETURN ^Kaleidoscopic ribbons of light swirl between your outstretched hands, coalescing into a spectral wildling spider\.
-     matchre RETURN ^Darkly gleaming motes of sanguine light swirl briefly about your fingertips as you gesture while uttering the .* spell\.
-     matchre RETURN ^As you begin to solemnly intone the .* spell a blue glow swirls about forming a nimbus that surrounds your entire being\.
-     matchre RETURN ^As you slam your fists together and inhale sharply, a glowing outline begins to form and a matrix of blue and white motes surround you\.
-     matchre RETURN ^In one fluid motion, you bring your palms close together and a fiery crimson mist begins to burn within them as you prepare the .* spell\.
-     matchre RETURN ^The first gentle notes of .* waft from you with delicate ease, riddled with low tones that gradually give way to a higher\-pitched theme\.
-     matchre RETURN ^Droplets of water coalesce around your fingertips as your arms undulate like gracefully flowing river currents to form the pattern of the .* spell\.
-     matchre RETURN ^Inhaling deeply, you adopt a cyclical rhythm in your breaths to reflect the ebb and flow of the natural world and steel yourself to prepare the .* spell\.
-     matchre RETURN ^Calmly reaching out with one hand, a silvery-blue beam of light descends from the sky to fill your upturned palm with radiance as you prepare the .* spell\.
-     matchre RETURN ^Turning your head slightly and gazing directly ahead with a calculating stare, tiny sparks of crystalline light flash around your eyes as you prepare the .* spell\.
-     matchre RETURN ^You take up a handful of dirt in your palm to prepare the .* spell\.  As you whisper arcane words, you gently blow the dust away and watch as it becomes swirling motes of glittering light that veil your hands in a pale aura\.
-     send %putaction
-     matchwait 20
-     put #echo >Log Crimson *** MISSING MATCH IN PUT! (%scriptname.cmd) ***
-     put #echo >Log Crimson Command == %putaction
-     put #log $datetime MISSING MATCH IN PUT! Command == %putaction (%scriptname.cmd)
-     return
 
 #####################################################################################
 #######################################################################
@@ -6198,427 +5912,7 @@ USHNISH_GO_ZONE3:
      put go door
      pause 0.5
      return
-#####################################################################################################
-# LIGHT SOURCE CHECK BY SHROOM - SCRIPT USES WHEN IN PITCH BLACK/DARK ROOMS
-# USE ANY KNOWN GUILD SKILLS/SPELLS TO ACTIVATE DARK VISION
-# IF NOT ACTIVE OR NO GUILD SPELL - CHECKS FOR/USES LIGHT-PRODUCING ITEMS (STARGLASS/LANTERN/GOGGLES)
-#####################################################################################################
-LIGHT_CHECK:
-LIGHT_SOURCE:
-     delay 0.0001
-     echo
-     echo ~~~~~~~~~~~~~~~~~~~~
-     echo * DARK ROOM - NEED A LIGHT SOURCE
-     echo * Checking for ~DARKVISION~
-     echo ~~~~~~~~~~~~~~~~~~~~
-     echo
-     delay 0.0001
-     delay 0.0001
-     gosub STOWING
-     if ("$preparedspell" != "None") then
-          {
-               put RELEASE spell
-               pause 0.6
-               put RELEASE camb
-               pause 0.7
-          }
-     if (("$guild" == "Ranger") && ($circle > 34)) then
-          {
-               echo
-               echo * RANGER - Beseeching Dark to Sing
-               echo
-               gosub PUT align 30
-               pause 0.5
-               pause 0.8
-               gosub PUT beseech dark to sing
-               pause 0.4
-          }
-     if ("$guild" == "Thief") then
-          {
-               echo
-               echo * THIEF - Khri Sight
-               echo
-               gosub PUT khri sight
-               pause 0.4
-          }
-     if (("$guild" == "Bard") && ($circle > 10)) then
-          {
-               send release cyclic
-               pause 0.5
-               pause 0.2
-               put prep EYE 5
-               pause 17
-               put cast
-               pause 0.5
-          }
-LIGHT_SOURCE_1:
-     if ("$guild" == "Cleric") then
-          {
-               echo * Attempting DR!
-               if ("$preparedspell" != "None") then
-                    {
-                         send release spell
-                         pause 0.7
-                    }
-               if ($Utility.Ranks < 120) then gosub PUT prep DR 2
-               if (($Utility.Ranks >= 120) && ($Utility.Ranks < 200)) then gosub PUT prep DR 5
-               if (($Utility.Ranks >= 200) && ($Utility.Ranks < 300)) then gosub PUT prep DR 9
-               if (($Utility.Ranks >= 300) && ($Utility.Ranks < 500)) then gosub PUT prep DR 12
-               if (($Utility.Ranks >= 500) && ($Utility.Ranks < 600)) then gosub PUT prep DR 15
-               if ($Utility.Ranks >= 600) then gosub PUT prep DR 15
-               pause 19
-               send cast
-               pause 0.5
-          }
-LIGHT_SOURCE_2:
-     if ("$guild" == "Moon Mage") then
-          {
-               echo * Attempting TS!
-               if ("$preparedspell" != "None") then
-                    {
-                         send release spell
-                         pause 0.7
-                    }
-               if ($Augmentation.Ranks < 120) then gosub PUT prep TS 5
-               if (($Augmentation.Ranks >= 120) && ($Augmentation.Ranks < 200)) then gosub PUT prep TS 7
-               if (($Augmentation.Ranks >= 200) && ($Augmentation.Ranks < 300)) then gosub PUT prep TS 12
-               if (($Augmentation.Ranks >= 300) && ($Augmentation.Ranks < 500)) then gosub PUT prep TS 15
-               if (($Augmentation.Ranks >= 500) && ($Augmentation.Ranks < 600)) then gosub PUT prep TS 20
-               if ($Augmentation.Ranks >= 600) then gosub PUT prep TS 33
-               pause 18
-               put cast
-               pause 0.5
-               pause 0.5
-          }
-LIGHT_SOURCE_3:
-     if ("$guild" == "Paladin") then
-          {
-               send glyph light
-               pause 0.7
-               pause 0.2
-          }
-LIGHT_SOURCE_4:
-     gosub DARK_CHECK
-     if (%darkroom == 0) then goto YES_DARKVISION
-#############################################################
-# WE REACH HERE IF WE HAVE ~NO GUILD SKILLS FOR DARK VISION~
-# NOW CHECK DARK VISION ITEMS
-#############################################################
-### NIGHTVISION GOGGLES
-GOGGLE_CHECK:
-GOGGLE_YES:
-     gosub STOWING
-     echo
-     echo ~~~~~~~~~~~~~~~~~~~~~~~
-     echo * NO GUILD DARK VISION!
-     echo * CHECKING FOR GAETHZEN/STARGLASS/LANTERNS
-     echo ~~~~~~~~~~~~~~~~~~~~~~~~
-     echo
-     delay 0.0001
-     gosub PUT GET my goggle
-     pause 0.5
-     pause 0.2
-     if !matchre("$righthand $lefthand", "(?i)goggle") then
-          {
-               gosub PUT remove my goggle
-               pause 0.2
-          }
-     if !matchre("$righthand $lefthand", "(?i)goggle") then goto STARGLASS_CHECK
-     matchre GOGGLE_YES \s*\.\.\.wait|^Sorry,|^Please wait\.|^You are still stunned
-     matchre GOGGLE_STOW remains inert|^You rub|^What
-     matchre GOGGLE_STOW ^Your tactile sense
-     put rub my goggle
-     matchwait 5
-GOGGLE_STOW:
-     pause 0.0001
-     gosub PUT WEAR my goggle
-     pause 0.0001
-     gosub PUT rub my goggle
-     gosub DARK_CHECK
-     if (%darkroom == 0) then goto YES_DARKVISION
-### STARGLASS ITEMS
-STARGLASS_CHECK:
-     gosub STOWING
-     pause 0.0001
-     gosub PUT GET my starglass
-     pause 0.5
-     pause 0.2
-     if !matchre("$righthand $lefthand", "(?i)starglass") then
-          {
-               gosub PUT remove my starglass
-               pause 0.2
-          }
-     if !matchre("$righthand $lefthand", "(?i)starglass") then goto GAETHZEN_CHECK
-     gosub PUT CHARGE starglass 20
-     pause 0.8
-     pause 0.5
-     gosub PUT CHARGE starglass 20
-     pause 0.8
-     pause 0.5
-     put rub my starglass
-     pause 0.2
-     pause 0.0001
-     gosub PUT WEAR my starglass
-     pause 0.3
-     # gosub stowing
-     gosub DARK_CHECK
-     if (%darkroom == 0) then goto YES_DARKVISION
-### GAETHZEN LANTERNS
-GAETHZEN_CHECK:
-     var Lantern.Types skull|salamander|sphere|wyvern|statuette|sunburst|star|lantern|firefly|rose|orchid|turnip
-     var Lantern.Check 0
-     var Lantern.Count 0
-     gosub STOWING
-     echo
-     echo * CHECKING FOR GATHZEN! *
-     echo * (Known types: %Lantern.Types)
-     echo
-     eval Lantern.Count count("%Lantern.Types", "|")
-     if (%Lantern.Check > %Lantern.Count) then goto LANTERN_CHECK
-     pause 0.0001
-GAETHZEN_GET:
-     gosub PUT GET my gaethzen %Lantern.Types(%Lantern.Check)
-     pause 0.1
-     if !matchre("$righthand $lefthand", "(?i)%Lantern.Types(%Lantern.Check)") then
-          {
-               gosub PUT remove my %Lantern.Types(%Lantern.Check)
-               pause 0.4
-          }
-     if matchre("$righthand $lefthand", "(?i)%Lantern.Types(%Lantern.Check)") then goto GAETHZEN_SUCCESS
-GAETHZAN_FAIL:
-     math Lantern.Check add 1
-     if (%Lantern.Check > %Lantern.Count) then goto LANTERN_CHECK
-     goto GAETHZEN_GET
 
-GAETHZEN_SUCCESS:
-     var Gaethzen %Lantern.Types(%Lantern.Check)
-     var FullCharge 0
-     var Activated 0
-     echo
-     echo * FOUND A GAETHZEN! TYPE: %Gaethzen
-     echo
-     if ($monstercount > 1) then gosub RETREAT
-     pause 0.0001
-     pause 0.2
-     if !matchre("$righthand $lefthand", "(?i)%Gaethzen") then goto LANTERN_CHECK
-     echo
-     echo ~~~~~~~~~~~~~~
-     echo * CHARGING GAETHZEN
-     echo ~~~~~~~~~~~~~~
-     echo
-     action var FullCharge 1 when ^The .+ is already holding as much power as you could possibly charge it with\.
-     action var Activated 1 when ^.* is currently activated\.
-     gosub PUT CHARGE %Gaethzen 15
-     pause 2
-     if (%FullCharge == 1) then goto GAETHZEN_2
-     if (%Activated == 1) then goto GAETHZEN_3
-     gosub PUT CHARGE %Gaethzen 15
-     pause 2
-     if (%Activated == 1) then goto GAETHZEN_3
-     if (%FullCharge == 1) then goto GAETHZEN_2
-     gosub PUT CHARGE %Gaethzen 10
-     pause 2
-GAETHZEN_2:
-     gosub PUT focus my %Gaethzen
-     pause 0.5
-     pause 0.3
-     gosub PUT rub my %Gaethzen
-     pause 0.5
-     pause 0.3
-GAETHZEN_3:
-     pause 0.0001
-     send wear my %Gaethzen
-     pause 0.2
-     pause 0.0001
-     if !matchre("$righthand", "Empty") then send wear my $righthandnoun
-     if !matchre("$lefthand", "Empty") then send wear my $lefthandnoun
-     action remove ^The .+ is already holding as much power as you could possibly charge it with\.
-     action remove ^.* is currently activated\.
-     gosub DARK_CHECK
-     if (%darkroom == 0) then goto YES_DARKVISION
-### NORMAL OIL LANTERNS
-LANTERN_CHECK:
-     var TriedOil 0
-     gosub STOWING
-     pause 0.0001
-     gosub PUT GET my lantern
-     pause 0.5
-     pause 0.2
-     if !matchre("$righthand $lefthand", "(?i)lantern") then
-          {
-               gosub PUT remove my lantern
-               pause 0.2
-          }
-     if !matchre("$righthand $lefthand", "(?i)lantern") then goto TORCH_CHECK
-LANTERN_DROP:
-     gosub PUT drop my lantern
-     pause 0.0001
-     gosub PUT GET my flint
-     gosub PUT GET my knife
-     pause 0.1
-     if (!matchre("$righthand $lefthand", "flint") && !matchre("$righthand $lefthand", "knife")) then
-          {
-               echo * FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
-               put #echo >Log #FF3E00 * FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
-               gosub STOWING
-               goto TORCH_CHECK
-          }
-LANTERN_LIGHT:
-     pause 0.0001
-     pause 0.0001
-     pause 0.0001
-     matchre LANTERN_LIGHT \s*\.\.\.wait|^Sorry,|^Please wait\.|^You are still stunned
-     matchre LIT_LANTERN manage to get a flame going
-     matchre REFUEL_IT But the flames fail to catch hold and they sputter out immediately\.
-     put light lantern with my flint
-     matchwait 5
-     goto LANTERN_LIGHT
-REFUEL_IT:
-     if (%TriedOil == 1) then goto LANTERN_DONE
-     pause 0.1
-     gosub stowing
-     pause 0.0001
-     gosub PUT GET lantern
-     gosub PUT GET lamp oil
-     pause 0.0001
-     put pour oil in lantern
-     pause 0.3
-     pause 0.0001
-     var TriedOil 1
-     goto LANTERN_DROP
-LIT_LANTERN:
-     pause 0.0001
-     echo * LANTERN LIT!
-     pause 0.0001
-     pause 0.0001
-     gosub stowing
-     gosub PUT GET lantern
-     pause 0.0001
-     put wear lantern
-     pause 0.2
-LANTERN_DONE:
-     pause 0.0001
-     gosub DARK_CHECK
-     if (%darkroom == 0) then goto YES_DARKVISION
-### FINAL CHECK FOR TORCH / FLINT
-TORCH_CHECK:
-     gosub stowing
-     echo
-     echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     echo * ATTEMPTING LAST RESORT LIGHT CHECK!
-     echo * TORCH - FLINT - KNIFE
-     echo * CONSIDER ~NOT~ HUNTING IN A DARK AREA...
-     echo * THE FUCKERY OF ALL DR...
-     echo * OR PICK UP A STARGLASS/GAEZTHEN/LANTERN!!
-     echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     echo
-     pause 0.5
-     pause 0.0001
-     # if (%HaveLighter == 1) then
-          # {
-               # gosub PUT GET my %Lighter.Name
-               # pause 0.1
-               # pause 0.0001
-               # if !matchre("$righthand", "(?i)%Lighter.Name") then
-                    # {
-                         # echo * LIGHTER NOT FOUND! - TURNING LIGHTER OFF
-                         # var HaveLighter 0
-                         # goto TORCH_FLINT
-                    # }
-               # gosub PUT GET my torch
-               # pause 0.0001
-               # pause 0.0001
-               # if !matchre("$righthand $lefthand", "(?i)torch") then goto NO_DARKVISION
-               # gosub PUT point %Lighter.Name at torch
-               # pause 0.0001
-               # pause 0.0001
-               # gosub STOWIT %Lighter.Name
-               # gosub DARK_CHECK
-               # if (%darkroom == 0) then goto YES_DARKVISION
-          # }
-TORCH_FLINT:
-     if !matchre("$righthand $lefthand", "(?i)torch") then gosub PUT GET my torch
-     pause 0.5
-     pause 0.3
-     if !matchre("$righthand $lefthand", "(?i)torch") then goto NO_DARKVISION
-     gosub PUT drop my torch
-     pause 0.0001
-     gosub PUT GET my flint
-     gosub PUT GET my carving knife
-     pause 0.7
-     pause 0.2
-     if !matchre("$righthand $lefthand", "(?i)knife") then
-          {
-               gosub PUT GET my knife
-               pause 0.7
-               pause 0.5
-               if !matchre("$righthand $lefthand", "(?i)knife") then gosub PUT remove my knife
-               pause 0.5
-          }
-     if !matchre("$righthand $lefthand", "(?i)knife") then
-          {
-               gosub PUT GET my blade
-               pause 0.7
-               pause 0.5
-          }
-     if (!matchre("$righthand $lefthand", "flint") && !matchre("$righthand $lefthand", "(knife|blade)")) then
-          {
-               echo * FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
-               put #echo >Log #FF3E00 * FLINT/WEAPON ERROR IN LIGHT SOURCE - Righthand: $righthand / Lefthand: $lefthand
-               gosub stowing
-               goto NO_DARKVISION
-          }
-     pause 0.0001
-     gosub PUT light torch with my flint
-     pause 0.0001
-     gosub stowing
-     gosub PUT GET torch
-     pause 0.1
-     gosub DARK_CHECK
-     if (%darkroom == 0) then goto YES_DARKVISION
-     goto NO_DARKVISION
-# DARK VISION RETURNS
-YES_DARKVISION:
-     echo
-     echo ~~~~~~~~~~~~~
-     echo * DARK VISION ACTIVATED!
-     echo ~~~~~~~~~~~~~
-     echo
-     var darkroom 0
-     return
-NO_DARKVISION:
-     echo
-     echo ~~~~~~~~~~~~~~~~~~~~~~~~~
-     echo * NO DARK VISION SKILL FOUND!
-     echo * AND MISSING FLINT/TORCH/LANTERN
-     echo * STUCK IN THE DARK! HAHA..
-     echo * Get a TORCH/FLINT at least...
-     echo * OR A STARGLASS/GAEZTHEN/LANTERN
-     echo ~~~~~~~~~~~~~~~~~~~~~~~~~
-     echo
-     put #echo >Log Red ** NO DARKVISION/TORCH/LIGHTER FOUND!
-     put #echo >Log Red ** CONSIDER ~NOT~ HUNTING IN DARK AREAS
-     var darkroom 1
-     gosub stowing
-     return
-#### DARK CHECK - CHECK TO MAKE SURE IF WE ARE IN A PITCH DARK ROOM OR ROOM
-DARK_CHECK:
-DARK_CHECK_1:
-     var darkroom 1
-     matchre DARK_CHECK_1 \s*\.\.\.wait|^Sorry,|^Please wait\.|^You are still stunned
-     matchre DARK_YES ^It's pitch dark and you can't see a thing\!|pitch black in here
-     matchre LIGHT_YES Obvious|I|What|You
-     put look
-     matchwait 5
-     return
-DARK_YES:
-     var darkroom 1
-     var darkTime $gametime
-     return
-LIGHT_YES:
-     var darkroom 0
-     var darkTime $gametime
-     return
 #########################################################################################################################################
 #########################################################################################################################################
 #### AUTOMOVEMENT - TRAVEL ROUTINES
@@ -6679,12 +5973,10 @@ AUTOMOVE_FAILED:
      goto AUTOMOVE_GO
 AUTOMOVE_FAIL_BAIL:
      action (moving) off
-     put #echo
      put #echo >Log Crimson *** AUTOMOVE FAILED. ***
      put #echo >Log Destination: %Destination
      put #echo Crimson *** AUTOMOVE FAILED.  ***
      put #echo Crimson Destination: %Destination
-     put #echo
 AUTOMOVE_RETURN:
      pause 0.00001
      var randomloop 0
@@ -7508,140 +6800,7 @@ RANDOMSOUTH:
      var lastmoved null
 RANDOMSOUTH_RETURN:
      return
-###########################################################
-STAND:
-     delay 0.0001
-     var LOCATION STAND_1
-     STAND_1:
-     matchre WAIT ^\.\.\.wait|^Sorry,
-     matchre WAIT ^.?Roundtime\:?
-     matchre WAIT ^The weight of all your possessions prevents you from standing\.
-     matchre WAIT ^You are overburdened and cannot manage to stand\.
-     matchre STUNNED ^You are still stunned
-     matchre WEBBED ^You can't do that while entangled in a web
-     matchre IMMOBILE ^You don't seem to be able to move to do that
-     matchre STAND_RETURN ^You stand (?:back )?up\.
-     matchre STAND_RETURN ^You stand up in the water
-     matchre STAND_RETURN ^You are already standing\.
-     send stand
-     matchwait
-STAND_RETURN:
-     pause 0.1
-     if (!$standing) then goto STAND
-     return
-###########################################################
-STAND_RET:
-     pause 0.1
-     put stand
-     pause 0.5
-RETREAT_PAUSE:
-     pause
-RETREAT:
-     var retreatLoop 0
-1RETREAT:
-     delay 0.00001
-     math retreatLoop add 1
-     var LOCATION RETREAT
-     if (%retreatLoop > 5) then goto RETREAT_RETURN
-     if ($standing == 0) then gosub STAND
-     matchre RETREAT ^\.\.\.wait|^Sorry,|^Please wait\.
-     matchre WAIT ^\.\.\.wait|^Sorry,|^Please wait\.
-     matchre STUNNED ^You are still stunned
-     matchre WEBBED ^You can't do that while entangled in a web
-     matchre IMMOBILE ^You don't seem to be able to move to do that
-     matchre RETREAT ^You stop advancing
-     matchre 2RETREAT ^You retreat back to pole range\.
-     matchre 2RETREAT ^You sneak back out
-     matchre STAND_RET ^You must stand first\.
-     matchre RETURN ^You retreat from combat\.
-     matchre RETURN ^You are already as far away as you can get\!
-     matchre RETURN ^You stop
-     matchre 1RETREAT ^You try to
-     matchre 1RETREAT revealing your hiding place\!
-     put retreat
-     matchwait 20
-     put #echo >Log Crimson *** MISSING MATCH IN RETREAT! (ubercombat.cmd) ***
-     put #log $datetime MISSING MATCH IN RETREAT (ubercombat.cmd)
-2RETREAT:
-     delay 0.00001
-     var LOCATION 2RETREAT
-     math retreatLoop add 1
-     if ($standing == 0) then gosub STAND
-     if (%retreatLoop > 6) then goto RETREAT_RETURN
-     matchre 2RETREAT ^\.\.\.wait|^Sorry,|^Please wait\.
-     matchre WAIT ^\.\.\.wait|^Sorry,|^Please wait\.
-     matchre STUNNED ^You are still stunned
-     matchre WEBBED ^You can't do that while entangled in a web
-     matchre IMMOBILE ^You don't seem to be able to move to do that
-     matchre RETURN ^You stop advancing
-     matchre RETURN ^You retreat from combat\.
-     matchre RETURN ^You retreat back to pole range\.
-     matchre RETURN ^You sneak back out
-     matchre RETURN ^You are already as far away as you can get\!
-     matchre RETURN ^You stop
-     matchre 2RETREAT ^You try to
-     matchre 2RETREAT revealing your hiding place\!
-     put retreat
-     matchwait 20
-     goto retry
-     put #echo >Log Crimson *** MISSING MATCH IN RETREAT! (ubercombat.cmd) ***
-     put #log $datetime MISSING MATCH IN RETREAT (ubercombat.cmd)
-     return
-RETREAT_RETURN:
-     pause 0.001
-     return
-RETREAT_FLEE:
-     var retreatloop 0
-RETREAT_FLEE_1:
-     var LOCATION RETREAT_FLEE_1
-     math retreatloop add 1
-     pause 0.01
-     pause 0.1
-     if ($standing == 0) then gosub STAND
-     if (%retreatloop > 6) then goto FLEE_NOW
-     matchre RETREAT_FLEE_1 ^\.\.\.wait|^Sorry,|^Please wait\.
-     matchre WAIT ^\.\.\.wait|^Sorry,|^Please wait\.
-     matchre STUNNED ^You are still stunned
-     matchre WEBBED ^You can't do that while entangled in a web
-     matchre IMMOBILE ^You don't seem to be able to move to do that
-     matchre RETREAT_FLEE_1 ^You stop advancing
-     matchre RETREAT_FLEE_1 ^You retreat back to pole range\.
-     matchre RETREAT_FLEE_1 ^You sneak back out
-     matchre RETREAT_FLEE_1 ^You must stand first\.
-     matchre RETREAT_FLEE_1 ^You stop
-     matchre RETREAT_FLEE_1 ^You try to
-     matchre RETREAT_FLEE_1 revealing your hiding place\!
-     matchre RETURN ^You retreat from combat\.
-     matchre RETURN ^You are already as far away as you can get\!
-     put retreat
-     matchwait 20
-     put #echo >Log Crimson *** MISSING MATCH IN RETREAT_FLEE_1! (ubercombat.cmd) ***
-     put #log $datetime MISSING MATCH IN RETREAT_FLEE_1 (ubercombat.cmd)
-FLEE_NOW:
-     pause 0.1
-     if ($standing == 0) then gosub STAND
-     pause 0.001
-     matchre RETURN ^Obvious|^.?Roundtime\:?|^A master|^Your?
-     put flee
-     matchwait 5
-     return
-UNHIDE:
-     delay 0.00001
-     if ($standing == 0) then gosub STAND
-     if ($hidden == 0) then return
-     UNHIDE_1:
-     pause 0.0001
-     matchre UNHIDE ^\.\.\.wait|^Sorry,|^You are still stunned\.
-     matchre STUNNED ^You are still stunned
-     matchre WEBBED ^You can't do that while entangled in a web
-     matchre IMMOBILE ^You don't seem to be able to move to do that
-     matchre RETURN ^But you are not hidden\!
-     matchre RETURN ^You come out of hiding\.
-     matchre RETURN ^Please rephrase that command\.|^I could not find|^Perhaps you should|^I don't|^Weirdly,
-     matchre RETURN (You'?r?e?|As|With) (?:accept|add|adjust|allow|already|are|aren't|ask|attach|attempt|.+ to|.+ fan|bash|begin|bend|blow|breathe|briefly|bundle|cannot|can't|chop|circle|close|corruption|count|combine|come|carefully|dance|decide|dodge|don't|drum|draw|effortlessly|gracefully|deftly|desire|detach|drop|drape|exhale|fade|fail|fall|fake|feel(?! fully rested)|feint|fill|find|filter|form|fumble|gesture|gingerly|get|glance|grab|hand|hang|have|icesteel|insert|kiss|kneel|knock|leap|lean|let|lose|lift|loosen|lob|load|move|must|mind|not|now|need|offer|open|parry|place|pick|push|pout|pour|put|pull|press|quietly|quickly|raise|read|reach|ready|realize|recall|remain|release|remove|retreat|reverently|roll|rub|scan|search|secure|sense|set|sheathe|shield|shouldn't|shove|silently|sit|slide|sling|slip|slowly|spin|spread|sprinkle|stop|strap|struggle|swiftly|swing|switch|tap|take|the|though|tie|tilt|toss|trace|try|tug|turn|twist|unload|untie|vigorously|wave|wear|weave|whisper|will|wink|wring|work|yank|you|zills) .*(?:\.|\!|\?)?
-     send unhide
-     matchwait 5
-     return
+
 ### NO VALID DESTINATION SET OR FOUND ERROR
 NODESTINATION:
   Echo ---------------------------------------------------------------------------------------------------------
@@ -7698,37 +6857,8 @@ NODESTINATION:
   ECHO ## *UNLESS YOU LIKE SURPRISES ;)         ##
   Echo -------------------------------------------
   exit
-#### CATCH AND RETRY SUBS
-WAIT:
-     delay 0.0001
-     pause 0.1
-     if (!$standing) then gosub STAND
-     goto %LOCATION
-WEBBED:
-     delay 0.0001
-     if ($webbed) then waiteval (!$webbed)
-     if (!$standing) then gosub STAND
-     goto %LOCATION
-IMMOBILE:
-     delay 0.0001
-     if contains("$prompt" , "I") then pause 20
-     if (!$standing) then gosub STAND
-     goto %LOCATION
-STUNNED:
-     delay 0.0001
-     if ($stunned) then waiteval (!$stunned)
-     if (!$standing) then gosub STAND
-     goto %LOCATION
-CALMED:
-     delay 5
-     if ($stunned) then waiteval (!$stunned)
-     if (!$standing) then gosub STAND
-     goto %LOCATION
-#### RETURNS
+
 RETURN_CLEAR:
      delay 0.0001
      put #queue clear
-     return
-RETURN:
-     delay 0.0001
      return
