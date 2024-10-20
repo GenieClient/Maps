@@ -3,7 +3,6 @@ var version 6.2024-10-17
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
-
 # use '.travel help' from the command line for variables and more
 # POWER TRAVEL SCRIPT FOR GENIE 4 ~ TRAVELS TO/FROM ALMOST ~ANYWHERE~ IN DRAGONREALMS
 # CAN START SCRIPT FROM ANYWHERE IN THE GAME
@@ -54,185 +53,88 @@ var version 6.2024-10-17
 #
 #  put .travel cross
 #  waitforre ^YOU ARRIVED\!
-#
-##########################################
-#       ADJUSTABLE VARIABLES             #
-##########################################
-##  ADJUST THE ATHLETICS RANKS VIA GLOBAL TO USE CERTAIN SHORTCUTS
-##  THESE ARE PRE-SET TO CONSERVATIVE NUMBERS TO BE ON THE SAFER SIDE
-##   TO ACCOUNT FOR BURDEN/STRENGTH
-## TELLS THE SCRIPT WHAT SHORTCUTS
-## YOU CAN TAKE AT CERTAIN ATHLETICS
-##  IF you are joined in a ~GROUP~,
-##  You WILL take public transportation
-##########################################
-##########################################
-## RANKS TO USE ROSSMAN'S SHORTCUT      ##
-## TO SWIM THE JANTSPYRE RIVER          ##
-## NORTH IS ~SAFE~ AROUND 200           ##
-## NORTH IS POSSIBLE ~175 W/ NO ARMOR   ##
-## SOUTH IS MUCH EASIER, SAFE AT ~90    ##
-if !def(travel.rossmanNorth) then var rossmanNorth 200
-else var rossmanNorth $travel.rossmanNorth
-if !def(travel.rossmanSouth) then var rossmanSouth 90
-else var rossmanSouth $travel.rossmanSouth
-###########################################
-##  RANKS TO SWIM THE FALDESU RIVER      ##
-##  HAVEN TO NTR OR VICA VERSA           ##
-##  SAFE ~ 190 - 200                     ##
-##  POSSIBLE= ~160+ w/ NO BURDEN/BUFFS   ##
-## RANKS TO USE ROSSMAN'S SHORTCUT      ##
-## TO SWIM THE JANTSPYRE RIVER          ##
-## NORTH IS ~SAFE~ AROUND 200           ##
-## NORTH IS POSSIBLE ~175 W/ NO ARMOR   ##
-## SOUTH IS MUCH EASIER, SAFE AT ~90    ##
-if !def(travel.faldesu) then var faldesu 190
-else var faldesu $travel.faldesu
-############################################
-##  RANKS TO SWIM THE SEGOLTHA RIVER     ##
-##  TIGER CLAN TO STR OR VICA VERSA      ##
-##  VERY TOUGH ONE! CAREFUL LOWERING!    ##
-##  MAY GET STUCK IF YOU SET TOO LOW!    ##
-##  SAFE= 550+ | BUFFED & STRONG= ~530   ##
-if !def(travel.segoltha) then var segoltha 550
-else var segoltha $travel.segoltha
-##########################################
-## RANKS TO CLIMB underGondola SHORTCUT ##
-## SOME CAN DO ~480 W/ BUFFS & ROPE     ##
-## ~510 - 530 IS GENERALLY SAFE         ##
-if !def(travel.underGondola) then var underGondola 515
-else var underGondola $travel.underGondola
-##########################################
-##########################################
-## RANKS TO USE UNDER-SEGOLTHA (THIEF)  ##
-## 35 MIN w/ NO BURDEN - 50 is "SAFE"   ##
-if !def(travel.underSegoltha) then var underSegoltha 50
-else var underSegoltha $travel.underSegoltha
-##########################################
-#######################################################
-## RANKS FOR VELAKA DESERT SHORTCUT TO MUSPARI       ##
-## THIS IS THE HARDEST SHORTCUT IN THE GAME          ##
-## 760 ~BARE MIN~ for this one! - 780-800 IS 'SAFE'  ##
-## ITS ALSO POSSIBLE IT MAY GET LOST -NOT FOOLPROOF! ## 
-## SET TO 2000 TO SKIP TAKING SHORTCUT AND USE FERRY ##
-if !def(travel.muspari) then var muspari 2000
-else var muspari $travel.muspari
-#################################################
-#### END OF VARIABLES!!!
-#### DONT TOUCH ANYTHING BELOW THIS LINE
-###########################################
+#################################################################################
+####  DONT TOUCH ANYTHING BELOW THIS LINE UNLESS YOU KNOW WHAT YOU'RE DOING  ####
+#################################################################################
 include mapperINC
 # checks for outlander v. genie, outlander does not suppor the `mono` flag
 if matchre("$client", "Genie") then var helpecho #33CC99 mono
 if matchre("$client", "Outlander") then var helpecho #33CC99
 if matchre("%1", "help|HELP|Help|^$") then {
-  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
-  put #echo %helpecho {  Welcome to travel Setup!   (version %version)           }
-  put #echo %helpecho {  Use the command line to set the following preferences:          }
-  put #echo %helpecho {    Pause                                                         }
-  put #echo %helpecho {      Time to pause before sending a "put x" command              }
-  put #echo %helpecho {      #var automapper.pause 0.01                                  }
-  put #echo %helpecho {    Infinite Loop Protection                                      }
-  put #echo %helpecho {      Increase if you get infinte loop errors                     }
-  put #echo %helpecho {      #var automapper.loop 0.001                                  }
-  put #echo %helpecho {    Waiteval Time Out                                             }
-  put #echo %helpecho {      prevents waiting forever for wave to collapse               }
-  put #echo %helpecho {      #var automapper.wavetimeout 15                              }
-  put #echo %helpecho {    Echoes                                                        }
-  put #echo %helpecho {      how verbose do you want automapper to be?                   }
-  put #echo %helpecho {      #var automapper.verbose 1                                   }
-  put #echo %helpecho {    Cyclic Spells                                                 }
-  put #echo %helpecho {      1: Turn off cyclic spells before moving                     }
-  put #echo %helpecho {      0: Leave cyclic spells running while moving                 }
-  put #echo %helpecho {      #var automapper.cyclic 1                                    }
-  put #echo %helpecho {    Color                                                         }
-  put #echo %helpecho {      What should the default automapper echo color be?           }
-  put #echo %helpecho {      #var automapper.color #33CC99                               }
-  put #echo %helpecho {    Class                                                         }
-  put #echo %helpecho {      Which classes should automapper turn on and off?            }
-  put #echo %helpecho {      #var automapper.class -arrive -combat -joust -racial -rp    }
-  put #echo %helpecho {                  }
-  put #echo %helpecho {  Now save! (#save vars for Genie | cmd-s for Outlander)          }
-  put #echo %helpecho {                                                                  }
-  put #echo %helpecho {  try `.automapper help` for help with automapper variables      }
+  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+  put #echo %helpecho {  Welcome to travel Setup!   (version %version)                        }
+  put #echo %helpecho {  Use the command line to set the following preferences:               }
+  put #echo %helpecho {    Pause                                                              }
+  put #echo %helpecho {      Time to pause before sending a "put x" command                   }
+  put #echo %helpecho {      #var automapper.pause 0.01                                       }
+  put #echo %helpecho {    Infinite Loop Protection                                           }
+  put #echo %helpecho {      Increase if you get infinte loop errors                          }
+  put #echo %helpecho {      #var automapper.loop 0.001                                       }
+  put #echo %helpecho {    Waiteval Time Out                                                  }
+  put #echo %helpecho {      prevents waiting forever for wave to collapse                    }
+  put #echo %helpecho {      #var automapper.wavetimeout 15                                   }
+  put #echo %helpecho {    Cyclic Spells                                                      }
+  put #echo %helpecho {      1: Turn off cyclic spells before moving                          }
+  put #echo %helpecho {      0: Leave cyclic spells running while moving                      }
+  put #echo %helpecho {      #var automapper.cyclic 1                                         }
+  put #echo %helpecho {    Color                                                              }
+  put #echo %helpecho {      What should the default automapper echo color be?                }
+  put #echo %helpecho {      #var automapper.color #33CC99                                    }
+  put #echo %helpecho {    Are you traveling with a group of capped characters?               }
+  put #echo %helpecho {      Are you bold enough to risk group breaking anyway?               }
+  put #echo %helpecho {      #var TRAVEL.GroupShortCutsAnyway True                            }
+  put #echo %helpecho {    Echoes                                                             }
+  put #echo %helpecho {      how verbose do you want .travel to be?                           }
+  put #echo %helpecho {      #var TRAVEL.verbose True                                         }
+  put #echo %helpecho {                                                                       }
+  put #echo %helpecho {  Ranks to use Rossman's shortcut to swim the Jantspyre River          }
+  put #echo %helpecho {    North is ~safe~ around 200 and POSSIBLE ~175 W/ no armor           }
+  put #echo %helpecho {    South is much easier, safe at ~90                                  }
+  put #echo %helpecho {    #var TRAVEL.RossmanNorth 200                                       }
+  put #echo %helpecho {    #var TRAVEL.RossmanSouth 90                                        }
+  put #echo %helpecho {                                                                       }
+  put #echo %helpecho {  Ranks to swim the Faldesu River - Haven <-> NTR                      }
+  put #echo %helpecho {    Safe ~ 190                                                         }
+  put #echo %helpecho {    Possible ~ 160+ w/ no burden/buffs                                 }
+  put #echo %helpecho {    #var TRAVEL.Faldesu 190                                            }
+  put #echo %helpecho {                                                                       }
+  put #echo %helpecho {  Ranks to swim the Segoltha River - Tiger/Crossing <-> STR            }
+  put #echo %helpecho {    Safe ~ 550                                                         }
+  put #echo %helpecho {    Possible ~ 530+ w/ no burden/buffs                                 }
+  put #echo %helpecho {   #var TRAVEL.Segoltha 550                                            }
+  put #echo %helpecho {                                                                       }
+  put #echo %helpecho {  Ranks to climb Under Gondola shortcut                                }
+  put #echo %helpecho {    Safe ~ 510                                                         }
+  put #echo %helpecho {    Possible ~ 480+ w/ buffs and a rope                                }
+  put #echo %helpecho {    #var TRAVEL.UnderGondola 515                                       }
+  put #echo %helpecho {                                                                       }
+  put #echo %helpecho {  Ranks to use 5th passage, Under-Segoltha (THIEF only)                }
+  put #echo %helpecho {    Safe ~ 50                                                          }
+  put #echo %helpecho {    Possible ~ 35 w/ no burden/buffs                                   }
+  put #echo %helpecho {    #var TRAVEL.UnderSegoltha 515                                      }
+  put #echo %helpecho {                                                                       }
+  put #echo %helpecho {  Ranks for Velka Desert Shortcut - Hvaral <-> Muspar'i                }
+  put #echo %helpecho {    THIS IS THE HARDEST SHORTCUT IN THE GAME                           }
+  put #echo %helpecho {    FRIENDS DON'T LET FRIENDS WALK TO MUSPAR'I, USE THE BLIMP          }
+  put #echo %helpecho {    Safe ~ 800                                                         }
+  put #echo %helpecho {    Possible ~ 760 w/ buffs                                            }
+  put #echo %helpecho {    #var TRAVEL.muspari 2000                                           }
+  put #echo %helpecho {                                                                       }
+  put #echo %helpecho {  try `.automapper help` for help with automapper variables            }
   put #echo %helpecho {    there is commonality-these variables will affect how travel works  }
-  put #echo %helpecho {      as it manages automapper      }
-  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+  put #echo %helpecho {      as it manages automapper                                         }
+  put #echo %helpecho {  Now save! (#save vars for Genie | cmd-s for Outlander)               }
+  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
   exit
 }
-
-
-
-HELP:
-echo ## RANKS TO USE ROSSMAN'S SHORTCUT      ##
-echo ## TO SWIM THE JANTSPYRE RIVER          ##
-echo ## NORTH IS ~SAFE~ AROUND 200           ##
-echo ## NORTH IS POSSIBLE ~175 W/ NO ARMOR   ##
-echo ## SOUTH IS MUCH EASIER, SAFE AT ~90    ##
-echo if !def(travel.rossmannorth) then var rossmannorth 200
-echo else var rossmannorth $travel.rossmannorth
-echo if !def(travel.rossmansouth) then var rossmansouth 90
-echo else var rossmansouth $travel.rossmansouth
-###########################################
-##  RANKS TO SWIM THE FALDESU RIVER      ##
-##  HAVEN TO NTR OR VICA VERSA           ##
-##  SAFE ~ 190 - 200                     ##
-##  POSSIBLE= ~160+ w/ NO BURDEN/BUFFS   ##
-## RANKS TO USE ROSSMAN'S SHORTCUT      ##
-## TO SWIM THE JANTSPYRE RIVER          ##
-## NORTH IS ~SAFE~ AROUND 200           ##
-## NORTH IS POSSIBLE ~175 W/ NO ARMOR   ##
-## SOUTH IS MUCH EASIER, SAFE AT ~90    ##
-if !def(travel.faldesu) then var faldesu 190
-else var faldesu $travel.faldesu
-############################################
-##  RANKS TO SWIM THE SEGOLTHA RIVER     ##
-##  TIGER CLAN TO STR OR VICA VERSA      ##
-##  VERY TOUGH ONE! CAREFUL LOWERING!    ##
-##  MAY GET STUCK IF YOU SET TOO LOW!    ##
-##  SAFE= 550+ | BUFFED & STRONG= ~530   ##
-if !def(travel.segoltha) then var segoltha 550
-else var segoltha $travel.segoltha
-##########################################
-## RANKS TO CLIMB UNDERGONDOLA SHORTCUT ##
-## SOME CAN DO ~480 W/ BUFFS & ROPE     ##
-## ~510 - 530 IS GENERALLY SAFE         ##
-if !def(travel.undergondola) then var undergondola 515
-else var undergondola $travel.undergondola
-##########################################
-##########################################
-## RANKS TO USE UNDER-SEGOLTHA (THIEF)  ##
-## 35 MIN w/ NO BURDEN - 50 is "SAFE"   ##
-if !def(travel.undersegoltha) then var undersegoltha 50
-else var undersegoltha $travel.undersegoltha
-##########################################
-#######################################################
-## RANKS FOR VELAKA DESERT SHORTCUT TO MUSPARI       ##
-## THIS IS THE HARDEST SHORTCUT IN THE GAME          ##
-## 760 ~BARE MIN~ for this one! - 780-800 IS 'SAFE'  ##
-## ITS ALSO POSSIBLE IT MAY GET LOST -NOT FOOLPROOF! ## 
-## SET TO 2000 TO SKIP TAKING SHORTCUT AND USE FERRY ##
-if !def(travel.muspari) then var muspari 2000
-else var muspari $travel.muspari
-#################################################
-
-travel.GroupShortCutsAnyway True
-travel.verbose
-
-
-
-
-
-
-
-###########################################
-# CHANGELOG
-
+#### CHANGELOG ####
 #2024-10-17
 # Hanryu
+#   version bump
 #   Big rewrite, pulled out commons subs to an INC
 #   unified look and feel with automapper.cmd
 
+# Shroom
 # - Robustified FERRY travel FROM Ratha TO MAINLAND for NON-PREMIUM PRIME users
 # - FIRST - Will check for MAMMOTHS - IF MAMMOTHS ARE UP WILL TAKE MAMMOTHS - FC - ACENAMACRA 
 # - IF NO MAMMOTHS FOUND - WILL RUN TO DOCK AND CHECK FOR SKIRR'LOLASU
@@ -438,6 +340,42 @@ var starting MAP:$zoneid | ROOM:$roomid
 if !def(citizenship) then gosub CITIZENSHIP
 var shardCitizen False
 if matchre("$citizenship", "Shard") then var shardCitizen True
+if !def(travel.rossmanNorth) then var rossmanNorth 200
+else var rossmanNorth $travel.rossmanNorth
+if !def(travel.rossmanSouth) then var rossmanSouth 90
+else var rossmanSouth $travel.rossmanSouth
+if !def(travel.faldesu) then var faldesu 190
+else var faldesu $travel.faldesu
+if !def(travel.segoltha) then var segoltha 550
+else var segoltha $travel.segoltha
+if !def(travel.underGondola) then var underGondola 515
+else var underGondola $travel.underGondola
+if !def(travel.underSegoltha) then var underSegoltha 50
+else var underSegoltha $travel.underSegoltha
+if !def(travel.muspari) then var muspari 2000
+else var muspari $travel.muspari
+  if ((!def(automapper.typeahead)) || (!matchre("$automapper.typeahead", "^\d$"))) then put #var automapper.typeahead 1
+  var typeahead.max $automapper.typeahead
+  # Time to pause before sending a "put x" command
+  if !def(automapper.pause) then var command_pause 0.01
+  else var command_pause $automapper.pause
+# echo next move? 1 = YES, 0 = NO
+  if !def(automapper.verbose) then var verbose 1
+  else var verbose $automapper.verbose
+# what color do you want for echos?
+  if !def(automapper.color) then var color #33CC99
+  else var color $automapper.color
+  if matchre("$client", "Genie") then var color %color mono
+# Decrease at your own risk, increase if you get infinte loop errors
+#default is 0.1 for Outlander, 0.001 for Genie
+  var infiniteLoopProtection 0.1
+  if def(client) then {
+    if matchre("$client", "Genie|None") then var infiniteLoopProtection 0.001
+    if matchre("$client", "Outlander") then var infiniteLoopProtection 0.1
+  }
+  if def(automapper.loop) then var infiniteLoopProtection $automapper.loop
+  if def(automapper.wavetimeout) then var waitevalTimeOut $automapper.wavetimeout
+  else var waitevalTimeOut 300
 TOP:
 put #echo >Log #b3ff66 * TRAVEL START: $zonename (Map:$zoneid | Room:$roomid)
 put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>

@@ -1,9 +1,14 @@
 # automapper.cmd
-var autoversion 8.2024-10-10
+var autoversion 9.2024-11-1
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
+
+#2024-10-19
+# Hanryu
+#   version 9 now
+#   mapperINC.cmd is a big enough chang to bump the rev number
 
 #2024-10-10
 # Hanryu
@@ -415,6 +420,9 @@ if matchre("%1", "help|HELP|Help|^$") then {
   put #echo %helpecho {    Brooms, Carpets, and Clouds, OH MY!                           }
   put #echo %helpecho {      Do you have a special movement item you want to use?        }
   put #echo %helpecho {      #var automapper.broom_carpet                                }
+  put #echo %helpecho {    Cyclic handling                                               }
+  put #echo %helpecho {      Release cyclics so you don't get arrseted?                  }
+  put #echo %helpecho {      #var automapper.ReleaseCyclics True                         }
   put #echo %helpecho {  Now save! (#save vars for Genie | cmd-s for Outlander)          }
   put #echo %helpecho {                                                                  }
   put #echo %helpecho {  try `.automapper walk` for help with the various walk types     }
@@ -504,9 +512,9 @@ ABSOLUTE_TOP:
   if !def(searchwalk) then put #tvar searchwalk 0
   if !def(automapper.userwalk) then put #tvar automapper.userwalk 0
   if !def(automapper.seekhealing) then put #tvar automapper.seekhealing 0
-  gosub CITIZENSHIP
+  if !def(citizenship) then gosub CITIZENSHIP
 # release cyclics if defined
-  if  $automapper.cyclic=1 then send release cyclic
+  if (($automapper.ReleaseCyclics) && def($automapper.ReleaseCyclics)) then gosub PUT release cyclic
 # turn off classes to speed movment
   if def(automapper.class) then put #class $automapper.class
 # ---------------
