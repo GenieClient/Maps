@@ -538,7 +538,7 @@ ABSOLUTE_TOP:
   var depth 0
   var movewait 0
   var TryGoInsteadOfClimb 0
-  var move_OK ^Obvious (paths|exits)|^It's pitch dark|The shop appears to be closed, but you catch the attention of a night attendant inside,|^You move effortlessly through the|^Your? stare into the shadows and see\.\.\.$
+  var move_OK ^Obvious (?:paths|exits)|^It's pitch dark|The shop appears to be closed, but you catch the attention of a night attendant inside,|^You move effortlessly through the|^Your? stare into the shadows and see\.\.\.$
   var move_FAIL ^You can't swim in that direction\.$|^You can't go there\.$|^A powerful blast of wind blows you to the|^What were you referring to\?|^I could not find what you were referring to\.|^You can't sneak in that direction|^You can't ride your.+(broom|carpet) in that direction|^You can't ride that way\.$
   var move_RETRY ^\.\.\.wait|^Sorry, |^The weight of all|^You quickly step around the exposed roots, but you lose your balance during the effort|^You are still stunned|^You're still recovering from your recent|^The mud gives way beneath your feet as you attempt to climb higher, sending you sliding back down the slope instead\!|^You're not sure you can
   var move_RETREAT ^You are engaged to|^You try to move, but you're engaged|^While in combat|^You can't do that while engaged|^You can't do that\!  You're in combat\!
