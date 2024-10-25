@@ -276,12 +276,6 @@ INIT:
 action goto NOPASSPORT when No one proceeds through this checkpoint without a passport
 action goto NOCOIN when You haven't got enough (?:.+) to pay for your trip\.|You reach your funds, but realize you're short\.|\"Hey,\"\s+he says,\s+\"You haven't got enough Lirums to pay for your trip\.
 action (moving) var Moving 1 when ^Obvious (?:paths|exits)|^\s*[\[\(]?Roundtime\s*\:?
-action var OffTransport platform when a barge platform
-action var OffTransport pier when the Riverhaven pier
-action var OffTransport beach when ^You also see the beach|mammoth and the beach
-action var OffTransport ladder when ^You also see a ladder|mammoth and a ladder
-action var OffTransport wharf when the Langenfirth wharf
-action var OffTransport dock when \[\"Her Opulence\"\]|\[\"Hodierna's Grace\"\]|\[\"Kertigen's Honor\"\]|\[\"His Daring Exploit\"\]|\[The Evening Star\]|\[The Damaris' Kiss\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[\"Imperial Glory\"\]|\[\"The Riverhawk\"\]|Baso Docks|a dry dock|the salt yard dock|covered stone dock|\[The Galley Sanegazat\]|\[The Galley Cercorim\]|\[Aboard the Warship, Gondola\]|\[The Halasa Selhin, Main Deck\]
 action send fatigue when ^You can see a ferry approaching on the left side\.|^The ferry|^A kingfisher|^A burst of|^The Elven|^The skiff|^The polemen|^Small waves|^The sturdy stone|^You are about a fourth of the way across\.|^The ferry moves away, nearly out of view\.|ferry passing you on the left\.|^You are nearing the docks\.|^A swarm of eels passes beneath the keel, probably on their way to the river's fresh water to spawn\.|followed by the clatter of wood on wood\.|^A family of dolphins leaps from the water beside the galley\.|^Some geese in a perfect V fly north high overhead\.|^Some small blue sharks slide past through the water\.|^A sailor walks by with a coil of rope\.|^A green turtle as large as a tower shield swims past
 action send fatigue when ^You are nearing the docks\.|A drumbeat sounds through the ship\.|^You are about a fourth of the way across\.|^A galley comes into sight, its oars beating rhythmically\.|^The galley moves away, the beat of its drum slowly fading\.|^For a few minutes, the drumbeat from below is echoed across the water by the beat from the galley passing on the left\.|^The door swings shut of its own accord, and the gondola pushes off\.|^The platform vanishes against the ridgeline\.|^The gondola arrives at the center of the chasm, and keeps heading (north|south)\.|^The cab trundles on along as the ropes overhead creak and moan\.|^The ropes creak as the gondola continues (north|south)\.|^The gondola creaks as a wind pushes it back and forth\.|^You hear a bell ring out three times|^The barge|^Several oars pull|^All that is visible|^The opposite bank|^A few of the other passengers|^The shore disappears
 action send fatigue when ^A desert oasis|^The oasis|^The endless expanse of the desert|^The dock disappears from view quickly|sand-bearing winds buffet|^Several skilled yeehar-handlers|^The Sand Elf|^The harsh winds|^The Gemfire Mountains|^The extreme heat causes|^The sand barge|^The large yeehars|^The murderous shriek|dark-skinned elf|Dark-skinned Elves|^As the barge is pulled|^As the dirigible continues|^The thick canopy of|^The dirigible|^The sinuous Southern Trade Route|^The Reshal Sea|^The peculiar sight|^A long moment of breathless suspense
@@ -298,17 +292,40 @@ action put #tvar spellROC 1 when ^You sense the Rite of Contrition spell upon yo
 action put #tvar spellROG 1 when ^You project your self-image outward on a gust of psychic miasma
 action put #tvar spellROG 1 when eval ($SpellTimer.RiteofGrace.active == 1)
 action put #tvar spellROG 0 when eval ($SpellTimer.RiteofGrace.active == 0)
+action put look when "YOU HAVE BEEN IDLE TOO LONG. PLEASE RESPOND."
 put #tvar spellROG 0
 put #tvar spellROC 0
 put #tvar spellEOTB 0
-
-action (ferry_check) var OffTransport platform when a barge platform
-action (ferry_check) var OffTransport pier when the Riverhaven pier
-action (ferry_check) var OffTransport beach when You also see the beach|mammoth and the beach
-action (ferry_check) var OffTransport ladder when You also see a ladder|mammoth and a ladder
-action (ferry_check) var OffTransport wharf when the Langenfirth wharf
-action (ferry_check) var OffTransport dock when \[\"Her Opulence\"\]|\[\"Hodierna's Grace\"\]|\[\"Kertigen's Honor\"\]|\[\"His Daring Exploit\"\]|\[The Evening Star\]|\[The Damaris' Kiss\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[\"Imperial Glory\"\]|\[\"The Riverhawk\"\]|Baso Docks|a dry dock|the salt yard dock|covered stone dock|\[The Galley Sanegazat\]|\[The Galley Cercorim\]|\[Aboard the Warship, Gondola\]|\[The Halasa Selhin, Main Deck\]|the south bank docks\.
-action (ferry_check) off
+#auto disembark TOGGLE ready
+#  the Kree'la (Riverhaven <-> Ratha)
+#  the Lybadel (Riverhaven <-> Aesry)
+#  the Skirr'lolasu (Crossing <-> Ratha)
+#  The "Damaris's Kiss" (Ain Ghazal <-> Haalikshal Highway)
+#  the "Evening Star" (Ain Ghazal <-> Haalikshal Highway)
+#  The gondola (Zoluren <-> Ilithi)
+#  Both Crossing<-->Leth ferries (Hodierna's Grace and Kertigen's Honor)
+#  Both Crossing<-->Haven ferries (His Daring Exploit and Her Opulence)
+#  Boar <-> Lang via Wizend Ranger
+TOGGLE:
+  matchre TOGGLE ^You will now remain on the transport
+  matchre TOGGLESET ^You will now automatically disembark
+  put toggle disembark
+  matchwait
+TOGGLESET:
+var dockNames 
+var ferryNames \[Aboard the Dirigible, Gondola\]|\[Alongside a Wizened Ranger\]|\[Aboard the Balloon, Gondola\]|\[Aboard the Mammoth, Platform\]|\[The Bardess' Fete, Deck\]|\[Aboard the Warship, Gondola\]|\[\"?A Birch Skiff\"?\]|\[\"?A Highly Polished Skiff\"?\]|\[\"?Aboard the Mammoth, Platform\"?\]|\[\"?Aboard the Warship, Gondola\"?\]|\[\"?(The )?Degan.+?\]|\[\"?Her Opulence\"?\]|\[\"?His Daring Exploit\"?\]|\[\"?Hodierna's Grace\"?\]|\[\"?Imperial Glory\"?\]|\[\"?Kertigen's Honor\"?\]|\[\"?Northern Pride.+?\]|\[\"?The Damaris' Kiss\"?\]|\[\"?The Desert Wind\"?\]|\[\"?The Evening Star\"?\]|\[\"?The Galley Cercorim\"?\]|\[\"?The Galley Sanegazat\"?\]|\[\"?The Halasa Selhin.+?\]|\[\"?The Jolas.+?\]|\[\"?The Kree'la.+?\]|\[\"?The Night Sky.+?\]|\[\"?The Riverhawk\"?\]|\[\"?The Skirr'lolasu.+?\]|\[\"?The Suncatcher\"?\]|\[\"?Theren's Star.+?\]
+var ferryArrivedAtDock ^The barge pulls into dock|^The captain barks the order to tie off the .+ to the docks\.|The crew ties it off and runs out the gangplank\.|^The warship lands with a creaky lurch|^You come to a very soft stop|dock and its crew ties the (ferry|barge) off\.|^The sand barge pulls into dock|^The skiff lightly taps|returning to Fang Cove|returning to Ratha
+var ferryArrivedAtDestinatoin 
+action (ferry_disembark) var ferryDisembarked 1 when %dockNames
+action (ferry_disembark) var ferryAtDock 1 when %ferryArrivedAtDock
+action (ferry_disembark) var ferryDisembarkMovement platform when a barge platform
+action (ferry_disembark) var ferryDisembarkMovement pier when the Riverhaven pier
+action (ferry_disembark) var ferryDisembarkMovement beach when You also see the beach|mammoth and the beach
+action (ferry_disembark) var ferryDisembarkMovement ladder when You also see a ladder|mammoth and a ladder
+action (ferry_disembark) var ferryDisembarkMovement wharf when the Langenfirth wharf
+action (ferry_disembark) var ferryDisembarkMovement dock when Baso Docks|a dry dock|the salt yard dock|covered stone dock|the south bank docks\.
+action (ferry_disembark) off
+action (ferry_disembark) off
 
 action var burden 0 when ^\s*Encumbrance\s*\:\s*None
 action var burden 1 when ^\s*Encumbrance\s*\:\s*Light Burden
@@ -377,7 +394,6 @@ else var muspari $travel.muspari
     if matchre("$client", "Outlander") then var infiniteLoopProtection 0.1
   }
   if def(automapper.loop) then var infiniteLoopProtection $automapper.loop
-  var ferryNames \[\"?Her Opulence\"?\]|\[\"?His Daring Exploit\"?\]|\[\"?Hodierna's Grace\"?\]|\[\"?Imperial Glory\"?\]|\[\"?Kertigen's Honor\"?\]|\[\"?Northern Pride\"?, Main Deck\]|\[\"?The Desert Wind\"?\]|\[\"?The Kree'la, Main Deck\"?]\|\[\"?The Riverhawk\"?\]|\[\"?The Skirr'lolasu, Main Deck\"?\]|\[\"?The Suncatcher\"?\]|\[\"?Theren's Star\"?, Deck\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[Aboard the Mammoth, Platform\]|\[Aboard the Warship, Gondola\]|\[The Damaris' Kiss\]|\[The Evening Star\]|\[The Galley Cercorim\]|\[The Galley Sanegazat\]|\[The Halasa Selhin, Main Deck\]|\[The Halasa Selhin, Main Deck\]|\[The Jolas, Fore Deck\]
 TOP:
 timer clear
 timer start
@@ -2801,750 +2817,243 @@ NOPASSPORT:
 ####  The public transport section  ####
 ### STANDALONE FERRY CHECK TO MAKE SURE WE AREN'T IN A FERRY (USED FOR RANDOMMOVE SUB IF SCRIPT GETS LOST IN A ROOMID == 0)
 FERRY_CHECK:
-  delay %infiniteLoopProtection
-  var OffTransport dock
+  var disembarkMovement dock
   action (ferry_check) on
   delay %infiniteLoopProtection
-  matchre ONFERRY %ferryNames
-  matchre ONFERRY Secured to the gigantic balloon overhead, the armored ironwood gondola dangles on a convoluted network of hempen rope\.
-  matchre ONFERRY ^One of the barge's crew members stops you and requests a transportation fee|A row of benches occupies the deck
-  matchre ONFERRY Long, wide and low, this vessel is built for utility, but the hand of luxury can be discerned in the ornately carved walnut railings, down-cushioned benches and the well polished deck
-  matchre ONFERRY ^A few weary travelers lean against a railing at the bow of this ferry, anxiously waiting to reach the opposite bank\.
-  matchre ONFERRY ^The ferry rocks gently as you step aboard\. Surrounded by the cool, briny air of the Segoltha, you take your place on the deserted deck and gaze up into the night sky\.
-  matchre ONFERRY ^Most of the passengers on this low riding barge have descended into quiet conversation, not wishing to stir the night\. A single lantern, swinging from the fore rail, pushes its dull gold rays across the dark water\.
-  matchre ONFERRY ^This is the only barge of its type to ply the waters of Lake Gwenalion|^A white-washed wood railing surrounds the entire upper deck of the barge
-  matchre ONFERRY ^The first of the massive barges to traverse Lake Gwenalion, \"Theren's Star\" still maintains a quiet elegance despite its apparent age\.
-  matchre ONFERRY ^Long and low, the sleek lines of the ferry are designed so that it slips through the water with a minimum of disturbance\.
-  matchre ONFERRY ^This particular skiff is roomy and solid with benches only slightly worn from use
-  matchre ONFERRY ^The newly crafted skiff smells of fresh wood and paint\.
-  matchre ONFERRY ^The warship (continues|rumbles)|^The din of battle abates as the Gnomish crew|^Sputtering loudly, the cast\-iron stove
-  matchre ONFERRY ^The resounding boom of a nearby cannon|^A flaming arrow narrowly misses the balloon|^Your ears are left ringing as the crew begins to fire the cannons|^Fang's Peak sinks below the southern horizon
-  matchre ONFERRY ^The Desert Wind barge is made up of a wooden flatboat mounted atop steel rails
-  matchre ONFERRY ^The deck of the wooden barge is mostly covered with tightly packed crates and barrels, all tied down so as not to tumble about or fall overboard during the sometimes turbulent river journeys\.
-  matchre ONFERRY ^A row of water-stained benches occupies the deck of the Imperial Glory, where wealthy passengers can sit at ease and view the beautiful landscape, rolling forests and a few sandy beaches, of southern Therengia\.
-  matchre ONFERRY ^The light bowl-shaped boat has a blue leather hide stretched tightly over its birch sapling frame
-  matchre ONFERRY ^Flecks of foam spray through the air when the Jolas cuts through the waves\.
-  matchre ONFERRY ^The deck is split down the middle by an open pit, bracketed on each end by the two masts\.
-  matchre ONFERRY ^Walking in this tiny area is difficult due to the litter of ropes, some coiled and some stretching from the railings and belaying pins up into the maze of wood and canvas above\.
-  matchre ONFERRY ^In anticipation of the sudden influx of passengers, makeshift benches have been hastily constructed from kegs, driftwood, and nets stretched tight between boards, then have been cleverly placed so that they are as out of the way as possible\.
-  matchre ONFERRY ^Passengers and cargo crowd the deck of the sleek, black galley\.
-  matchre ONFERRY ^The light bowl-shaped boat has a new leathery hide stretched tightly over its birch sapling frame\.
-  matchre ONFERRY ^The galley, like its twin, carries passengers and cargo, but it can easily become a war galley\.
-  matchre ONFERRY ^The bowsprit attached to the jib boom on the bow is rigged to hold three triangular foresails in front of the foremast\.
-  matchre ONFERRY ^The length of this ferry is filled to capacity with travelers making their way to the opposite bank of the Segoltha
-  matchre ONFERRY ^A few weary travelers lean against a railing at the bow of this ferry
-  matchre ONFERRY ^Passengers and cargo crowd the deck of the sleek, black galley\.|^The galley, like its twin, carries passengers and cargo,|^Grease spewed from the galley
-  matchre ONFERRY ^The Selhin ties off to the Uaro Dock\!
-  matchre NOFERRY ^Encumbrance
-  send look
-  send enc
-  matchwait 5
-NOFERRY:
-  if matchre ("$roomname", "Aboard the Mammoth") then goto ONFERRY
-  if matchre ("$roomname", "Imperial") then goto ONFERRY
-  if matchre ("$roomname", "Kertigen") then goto ONFERRY
-  if matchre ("$roomname", "Hodierna") then goto ONFERRY
-  if matchre ("$roomname", "Opulence") then goto ONFERRY
-  if matchre ("$roomname", "Daring") then goto ONFERRY
-  if matchre ("$roomname", "Northern Pride") then goto ONFERRY
-  if matchre ("$roomname", "Theren's Star") then goto ONFERRY
-  if matchre ("$roomname", "Damaris") then goto ONFERRY
-  if matchre ("$roomname", "Evening Star") then goto ONFERRY
-  if matchre ("$roomname", "Birch Skiff") then goto ONFERRY
-  if matchre ("$roomname", "Polished Skiff") then goto ONFERRY
-  if matchre ("$roomname", "Desert Wind") then goto ONFERRY
-  if matchre ("$roomname", "Suncatcher") then goto ONFERRY
-  if matchre ("$roomname", "Riverhawk") then goto ONFERRY
-  if matchre ("$roomname", "Imperial Glory") then goto ONFERRY
-  if matchre ("$roomname", "Galley Cercorim") then goto ONFERRY
-  if matchre ("$roomname", "Jolas") then goto ONFERRY
-  if matchre ("$roomname", "Aboard the Warship") then goto ONFERRY
-  if matchre ("$roomname", "Halasa Selhin") then goto ONFERRY
-  if matchre("$roomobjs", "the beach") then goto OFFTHERIDE
-  if matchre("$roomobjs", "a ladder") then goto OFFTHERIDE
+  if matchre("$roomname", "%ferryNames") then goto ONFERRY
+  if matchre("$roomobjs", "the beach") then goto FERRY_DISEMBARK
+  if matchre("$roomobjs", "a ladder") then goto FERRY_DISEMBARK
+  action (ferry_check) off
   return
 ### BEGINNING FERRY CHECK LOGIC - CHECK WHICH LOCATION WE ARE IN (AND/OR WHICH DIRECTION WE ARE GOING) TO TAKE CORRECT FERRY
+#han: delete join, make it all ferry
+JOINLOGIC:
 FERRYLOGIC:
+  if matchre("$roomname", "%ferryNames") then goto ONFERRY
   gosub INFO_CHECK
   if matchre("$zoneid", "\b(?:1|7|30|35|60|40|41|47|48|90|113|106|107|108|150)\b") then goto FERRY
-  if matchre("$roomname", "Aboard the Mammoth") then goto FERRY
-  if matchre("$roomname", "Gondola") then {
-    if matchre("%destination", "\b(?:acen?e?m?a?c?r?a?|cros?s?i?n?g?s?|xing?|knif?e?c?l?a?n?|tige?r?c?l?a?n?|dirg?e?|arth?e?d?a?l?e?|haiz?e?n?|oasis?|kaer?n?a?|ilay?a?t?a?i?p?|illa?y?a?t?a?i?p?a?|taipa|leth?d?e?r?i?e?l?|acen?a?m?a?c?r?a?|vipe?r?s?|guar?d?i?a?n?s?|leuc?r?o?s?|malod?o?r?o?u?s?|bucc?a?|dokt?|sorr?o?w?s?|misens?e?o?r?|beis?s?w?u?r?m?s?|ston?e?c?l?a?n?|bone?w?o?l?f?|germ?i?s?h?d?i?n?|alfr?e?n?s?|cara?v?a?n?s?a?r?y?|rive?r?h?a?v?e?n?|have?n?|ross?m?a?n?s?|ther?e?n?b?o?r?o?u?g?h?|lang?e?n?f?i?r?t?h?|el'?b?a?i?n?s?|elb?a?i?n?s?|raka?s?h?|thro?n?e?|musp?a?r?i?|forn?s?t?e?d?|hvar?a?l?|zaul?f?u?n?g?|mri?s?s?|merk?r?e?s?h?|kre?s?h?|har?a?j?a?a?l?|rath?a?)\b") then {
-      if (%verbose) then gosub ECHO ON GONDOLA! - HEADING NORTH
-      var direction north
-      gosub MOVE %direction
-      goto ONGONDOLA
-    }
-    if matchre("%destination", "\b(?:shar?d?|grani?t?e?|garg?o?y?l?e?|spir?e?|horse?c?l?a?n?|fayr?i?n?s?|steel?c?l?a?w?|cori?k?s?|ada?n?f?|ylo?n?o?|wyve?r?n?|aing?h?a?z?a?l?|rave?n?s?|hib?a?r?n?h?v?i?d?a?r?|out?e?r?|inne?r?|boar?c?l?a?n?|aes?r?y?|sur?l?a?e?n?i?s?|fan?g?|cov?e?)\b") then {
-      if (%verbose) then gosub ECHO ON GONDOLA! - HEADING SOUTH
-      var direction south
-      gosub MOVE %direction
-      goto ONGONDOLA
-    }
-    if matchre("%destination", "\bgondola?\b") then goto ARRIVED
-  }
-  if ("$zoneid" == "66") then {
-    var direction north
-    goto GONDOLA
-  }
-  if ("$zoneid" == "62") then {
-    var direction south
-    goto GONDOLA
-  }
-  if matchre("$roomname", "%ferryNames") then goto FERRY
-  else goto NODESTINATION
-GONDOLA:
-  pause %command_pause
-  if matchre("$roomname", "Gondola") then goto ONGONDOLA
-  matchre ONGONDOLA \[Gondola, Cab (North|South)\]
-  matchwait 3
-  if (%verbose) then gosub ECHO Waiting for Gondola to arrive
-GONDOLA_LOOP:
-  if matchre("$roomobjs", "gondola") then gosub MOVE go gondola
-  if matchre("$roomname", "Gondola") then goto ONGONDOLA
-#retry gondola every 10 seconds, or if gondola appears in roomobj
-  eval gondolaWaitTimeOut $unixtime + 10
-  waiteval (matchre("$roomobjs", "gondola") || ($unixtime >= %gondolaWaitTimeOut))
-  goto GONDOLA_LOOP
-ONGONDOLA:
-  action (ferry_check) off
-GONDOLAWAIT:
-  if (%verbose) then gosub ECHO ON GONDOLA - Heading %direction
-  if ($out) then goto GONDOLAOUT
-  waitforre ^With a soft
-  if ($standing == 0) then gosub STAND
-GONDOLAOUT:
-  if (("%direction" == "north") && ($north == 1)) then gosub MOVE north
-  if (("%direction" == "south") && ($south == 1)) then gosub MOVE south
-  gosub MOVE out
-  action (ferry_check) off
-  return
 ###  MAIN FERRY LOGIC - CHECK FOR AND WAIT TO BOARD FERRY  ####
+###  Also LOGIC FOR GETTING ON THE MAMMOTHS / WARSHIPS
 FERRY:
   var OnFerry 0
-  var TransportName NULL
-  var OffTransport dock
-  action var OffTransport platform when a barge platform
-  action var OffTransport pier when the Riverhaven pier
-  action var OffTransport beach when You also see the beach|mammoth and the beach
-  action var OffTransport ladder when You also see a ladder|mammoth and a ladder
-  action var OffTransport wharf when the Langenfirth wharf
-  action var OffTransport dock when %ferryNames|Baso Docks|a dry dock|the salt yard dock|covered stone dock|the south bank docks\.
-  action var TransportName Kertigen's Honor when Kertigen's Honor
-  action var TransportName Hodierna's Grace when Hodierna's Grace
-  action var TransportName Her Opulence when Her Opulence
-  action var TransportName His Daring Exploit when His Daring Exploit
-  action var TransportName Northern Pride when Northern Pride
-  action var TransportName Theren's Star when Theren's Star
-  action var TransportName The Damaris when The Damaris
-  action var TransportName Evening Star when Evening Star
-  action var TransportName Birch Skiff when Birch Skiff
-  action var TransportName Polished Skiff when Polished Skiff
-  action var TransportName Desert Wind when Desert Wind
-  action var TransportName Suncatcher when Suncatcher
-  action var TransportName Riverhawk when Riverhawk
-  action var TransportName Imperial Glory when Imperial Glory
-  action var TransportName Galley Cercorim when Galley Cercorim
-  action var TransportName Jolas when Jolas
-  action var TransportName Warship when Aboard the Warship
-  action var TransportName Halasa Selhin when Halasa Selhin
-  action var TransportName Night Sky when Night Sky
-  action var TransportName Skirr'lolasu when Skirr'lolasu
-  action var TransportName Kree'la when Kree'la
-  action var TransportName Sanegazat when Sanegazat
-  action var TransportName Degan when Degan
-  action var OnFerry 1 when \[\"?Imperial Glory\"?
-  action var OnFerry 1 when \[\"?Kertigen's Honor\"?
-  action var OnFerry 1 when \[\"?Hodierna's Grace\"?
-  action var OnFerry 1 when \[\"?Her Opulence\"?
-  action var OnFerry 1 when \[\"?His Daring Exploit\"?
-  action var OnFerry 1 when \[\"?Theren's Star\"?
-  action var OnFerry 1 when \[\"?A Birch Skiff\"?
-  action var OnFerry 1 when \[\"?A Highly Polished Skiff\"?
-  action var OnFerry 1 when \[\"?Aboard the Warship\"?
-  action var OnFerry 1 when \[\"?(The )?Desert Wind\"?
-  action var OnFerry 1 when \[\"?(The )?Suncatcher\"?
-  action var OnFerry 1 when \[\"?(The )?Damaris' Kiss\"?
-  action var OnFerry 1 when \[\"?(The )?Evening Star\"?
-  action var OnFerry 1 when \[\"?(The )?Riverhawk\"?
-  action var OnFerry 1 when \[\"?(The )?Galley Cercorim\"?
-  action var OnFerry 1 when \[\"?(The )?Jolas\"?
-  action var OnFerry 1 when \[\"?(The )?Halasa Selhin\"?
-  action var OnFerry 1 when \[\"?(The )?Night Sky\"?
-  action var OnFerry 1 when \[\"?(The )?Kree'la\"?
-  action var OnFerry 1 when \[\"?(The )?Skirr'lolasu\"?
-  action var OnFerry 1 when \[\"?(The )?Galley Sanegazat\"?
-  action var OnFerry 1 when \[\"?Degan\"?
+  var disembarkMovement dock
+  action (ferry_check) on
+  if (matchre("$roomname", "%ferryNames") || (%OnFerry == 1)) then goto ONFERRY
+  if (%verbose) then gosub ECHO Checking for a Transport...
   if ($invisible) then gosub STOP_INVIS
-  delay 0.0001
-  if (%OnFerry == 1) then goto ONFERRY
-  echo
-  echo ##############
-  echo # Checking for a Transport...
-  echo ##############
-  echo
-  matchre ONFERRY %ferryNames
-  matchre ONFERRY Secured to the gigantic balloon overhead, the armored ironwood gondola dangles on a convoluted network of hempen rope\.
-  matchre ONFERRY ^One of the barge's crew members stops you and requests a transportation fee|A row of benches occupies the deck
-  matchre ONFERRY Long, wide and low, this vessel is built for utility, but the hand of luxury can be discerned in the ornately carved walnut railings, down-cushioned benches and the well polished deck
-  matchre ONFERRY ^A few weary travelers lean against a railing at the bow of this ferry, anxiously waiting to reach the opposite bank\.
-  matchre ONFERRY ^The ferry rocks gently as you step aboard\. Surrounded by the cool, briny air of the Segoltha, you take your place on the deserted deck and gaze up into the night sky\.
-  matchre ONFERRY ^Most of the passengers on this low riding barge have descended into quiet conversation, not wishing to stir the night\. A single lantern, swinging from the fore rail, pushes its dull gold rays across the dark water\.
-  matchre ONFERRY ^This is the only barge of its type to ply the waters of Lake Gwenalion|^A white-washed wood railing surrounds the entire upper deck of the barge
-  matchre ONFERRY ^The first of the massive barges to traverse Lake Gwenalion, \"Theren's Star\" still maintains a quiet elegance despite its apparent age\.
-  matchre ONFERRY ^Long and low, the sleek lines of the ferry are designed so that it slips through the water with a minimum of disturbance\.
-  matchre ONFERRY ^This particular skiff is roomy and solid with benches only slightly worn from use
-  matchre ONFERRY ^The newly crafted skiff smells of fresh wood and paint\.
-  matchre ONFERRY ^The warship (continues|rumbles)|^The din of battle abates as the Gnomish crew|^Sputtering loudly, the cast-iron stove
-  matchre ONFERRY ^The resounding boom of a nearby cannon|^A flaming arrow narrowly misses the balloon|^Your ears are left ringing as the crew begins to fire the cannons|^Fang's Peak sinks below the southern horizon
-  matchre ONFERRY ^The Desert Wind barge is made up of a wooden flatboat mounted atop steel rails
-  matchre ONFERRY ^The deck of the wooden barge is mostly covered with tightly packed crates and barrels, all tied down so as not to tumble about or fall overboard during the sometimes turbulent river journeys\.
-  matchre ONFERRY ^A row of water-stained benches occupies the deck of the Imperial Glory, where wealthy passengers can sit at ease and view the beautiful landscape, rolling forests and a few sandy beaches, of southern Therengia\.
-  matchre ONFERRY ^The light bowl-shaped boat has a blue leather hide stretched tightly over its birch sapling frame
-  matchre ONFERRY ^Flecks of foam spray through the air when the Jolas cuts through the waves\.
-  matchre ONFERRY ^The deck is split down the middle by an open pit, bracketed on each end by the two masts\.
-  matchre ONFERRY ^Walking in this tiny area is difficult due to the litter of ropes, some coiled and some stretching from the railings and belaying pins up into the maze of wood and canvas above\.
-  matchre ONFERRY ^In anticipation of the sudden influx of passengers, makeshift benches have been hastily constructed from kegs, driftwood, and nets stretched tight between boards, then have been cleverly placed so that they are as out of the way as possible\.
-  matchre ONFERRY ^Passengers and cargo crowd the deck of the sleek, black galley\.
-  matchre ONFERRY ^The light bowl-shaped boat has a new leathery hide stretched tightly over its birch sapling frame\.
-  matchre ONFERRY ^The galley, like its twin, carries passengers and cargo, but it can easily become a war galley\.
-  matchre ONFERRY ^The bowsprit attached to the jib boom on the bow is rigged to hold three triangular foresails in front of the foremast\.
-  matchre ONFERRY ^The length of this ferry is filled to capacity with travelers making their way to the opposite bank of the Segoltha
-  matchre ONFERRY ^A few weary travelers lean against a railing at the bow of this ferry
-  matchre ONFERRY ^Passengers and cargo crowd the deck of the sleek, black galley\.|^The galley, like its twin, carries passengers and cargo,|^Grease spewed from the galley
-  matchre ONFERRY ^The Selhin ties off to the Uaro Dock\!
-  matchre INVIS ^How do you expect .+ crew to let you onboard if they can't see you\?
-  send look
-  pause 0.7
-  if (%OnFerry == 1) then goto ONFERRY
-  pause 0.2
+  if matchre("$roomobjs", "(skiff|galley|Night Sky|Gondola|Riverhawk|Imperial Glory|Jolas|Skirr'lolasu|Kree'la|Selhin|Halasa|Degan)") then gosub MOVE go $1
+  if matchre("$roomobjs", "(barge|Northern Pride|Desert Wind|Suncatcher|Theren's Star)") then gosub MOVE go barge
+  if matchre("$roomobjs", "(ferry|Hodierna's Grace|Kertigen's Honor|Evening Star|Damaris. Kiss|Her Opulence|His Daring Exploit)") then gosub MOVE go ferry
+  if matchre("$roomobjs", "(warship|balloon|airship|dirigible|mammoth)") then gosub MOVE join $1
+
+
+
+  if matchre("$roomobjs", "warship") then send join warship
+  if matchre("$roomobjs", "airship") then put join airship
+  if matchre("$roomobjs", "dirigible") then put join dirigible;join dirigible
+  if matchre("$roomobjs", "balloon") then put join balloon;join balloon
   if matchre("$roomobjs", "Gnomish warship") then send join warship
   if matchre("$roomobjs", "Riverhawk") then send go riverhawk
   if matchre("$roomobjs", "Imperial") then send go imperial glory
   if matchre("$roomobjs", "Star") then send go ferry
   if matchre("$roomobjs", "skiff") then send go skiff
+  if matchre("$roomobjs", "Skirr'lolasu") then send go skirr
   if matchre("$roomobjs", "Kiss") then send go ferry
   if matchre("$roomobjs", "ferry") then send go ferry
   if matchre("$roomobjs", "barge") then send go barge
   if matchre("$roomobjs", "galley") then send go galley
   if matchre("$roomobjs", "Jolas") then send go jolas
-  if matchre("$roomobjs", "Skirr'lolasu") then send go skirr
-  if matchre("$roomobjs", "Kree'la") then send go kree
   if matchre("$roomobjs", "Selhin") then send go selhin
   if matchre("$roomobjs", "Halasa") then put go selhin
   if matchre("$roomobjs", "warship") then send join warship
-  matchwait 5
-  if (%OnFerry == 1) then goto ONFERRY
-  if ($hidden == 0) then put hide
-  pause 10
-  echo
-  echo ##############
-  echo # Waiting for a transport..
-  echo ##############
-  echo
-  pause 0.3
-  if ($zoneid == 90) then
-     {
-          if (%verbose) then gosub ECHO RATHA PUBLIC TRANSPORTS COULD TAKE A WHILE TO ARRIVE...
-          pause 20
-     }
+  if matchre("$roomobjs", "wizened ranger") then put join wizened ranger;join wizened ranger
+  if (("$zoneid" == "58") && matchre("$roomobjs", "tall sea mammoth")) then put join tall mammoth
+  if (("$zoneid" == "90") && matchre("$roomobjs", "massive sea mammoth")) then put join sea mammoth
+  if ("$zoneid" == "150") then {
+    if ("%detour" == "fang") then goto ARRIVED
+    if ((%ToRatha == 1) && matchre("$roomobjs", "massive sea mammoth")) then put join sea mammoth
+    if ((%ToRatha == 0) && matchre("$roomobjs", "tall sea mammoth")) then put join tall mammoth
+    if (("%detour" == "hara") && matchre("$roomobjs", "warship")) then put join warship
+  }
+
+
+
+
+  delay %infiniteLoopProtection
+  if matchre("$roomname", "%ferryNames") then goto ONFERRY
+  if ($hidden == 0) then gosub PUT hide
+# waiting for ferry 60 seconds or arrival
+  if (%verbose) then gosub ECHO Waiting for a transport..
+  eval ferryWaitTimeOut $unixtime + 60
+  waiteval (matchre("$roomobjs", "skiff|galley|Night Sky|Gondola|Riverhawk|Imperial Glory|Jolas|Skirr'lolasu|Kree'la|Selhin|Halasa|Degan|barge|Northern Pride|Desert Wind|Suncatcher|Theren's Star|ferry|Hodierna's Grace|Kertigen's Honor|Evening Star|Damaris. Kiss|Her Opulence|His Daring Exploit|warship|balloon|airship|dirigible|mammoth") || ($unixtime >= %ferryWaitTimeOut))
   goto FERRY
 ## RIDING ON A FERRY - WE SHOULD ONLY BE HERE WHEN WE ARE RIDING ON A FERRY - THIS IS FOR THE 'NPC TRANSPORTS'
 ONFERRY:
-  action (ferry_check) off
-  pause 0.0001
-  if (%OffRide == 1) then goto OFFTHERIDE
+  if (%OffRide == 1) then goto FERRY_DISEMBARK
   var OffRide 0
-  var OffTransport dock
-  action var OffTransport platform when a barge platform
-  action var OffTransport pier when the Riverhaven pier
-  action var OffTransport beach when You also see the beach|mammoth and the beach
-  action var OffTransport ladder when You also see a ladder|mammoth and a ladder
-  action var OffTransport wharf when the Langenfirth wharf
-  action var OffTransport dock when \[\"Her Opulence\"\]|\[\"Hodierna's Grace\"\]|\[\"Kertigen's Honor\"\]|\[\"His Daring Exploit\"\]|\[The Evening Star\]|\[The Damaris' Kiss\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[\"Imperial Glory\"\]|\[\"The Riverhawk\"\]|Baso Docks|a dry dock|the salt yard dock|covered stone dock|\[The Galley Sanegazat\]|\[The Galley Cercorim\]|\[Aboard the Warship, Gondola\]|\[The Halasa Selhin, Main Deck\]|the south bank docks\.
-  action var TransportName Imperial Glory when Imperial Glory
-  action var TransportName Kertigen's Honor when Kertigen's Honor
-  action var TransportName Hodierna's Grace when Hodierna's Grace
-  action var TransportName Her Opulence when Her Opulence
-  action var TransportName His Daring Exploit when His Daring Exploit
-  action var TransportName Northern Pride when Northern Pride
-  action var TransportName Theren's Star when Theren's Star
-  action var TransportName The Damaris when The Damaris
-  action var TransportName Evening Star when Evening Star
-  action var TransportName Birch Skiff when Birch Skiff
-  action var TransportName Polished Skiff when Polished Skiff
-  action var TransportName Desert Wind when Desert Wind
-  action var TransportName Suncatcher when Suncatcher
-  action var TransportName Riverhawk when Riverhawk
-  action var TransportName Imperial Glory when Imperial Glory
-  action var TransportName Gallet Cercorim when Gallet Cercorim
-  action var TransportName Jolas when Jolas
-  action var TransportName Warship when Aboard the Warship
-  action var TransportName Halasa Selhin when Halasa Selhin
-  action var TransportName Night Sky when Night Sky
-  action var TransportName Skirr'lolasu when Skirr'lolasu
-  action var TransportName Kree'la when Kree'la
-  action var TransportName Sanegazat when Sanegazat
-  action var TransportName Degan when Degan
-  action var TransportName Mammoth when Aboard the Mammoth
-  action var OffRide 1 when dock and its crew ties the (ferry|barge) off\.|^You come to a very soft stop|^The skiff lightly taps|^The sand barge pulls into dock
-  action var OffRide 1 when ^The barge pulls into dock|The crew ties it off and runs out the gangplank\.
-  action var OffRide 1 when ^The captain barks the order to tie off the .+ to the docks\.
-  action var OffRide 1 when ^The warship lands with a creaky lurch|^The captain barks the order to tie off .+ to the docks\.|returning to Fang Cove|returning to Ratha
-  matchre OASIS_CHECK ^The sand barge pulls up to a desert oasis and stops\.
-  matchre OFFTHERIDE dock and its crew ties the (ferry|barge) off\.|^You come to a very soft stop|^The skiff lightly taps|^The sand barge pulls into dock
-  matchre OFFTHERIDE ^The barge pulls into dock|The crew ties it off and runs out the gangplank\.
-  matchre OFFTHERIDE ^The captain barks the order to tie off the .+ to the docks\.
-  matchre OFFTHERIDE ^The warship lands with a creaky lurch|^The captain barks the order to tie off .+ to the docks\.|returning to Fang Cove|returning to Ratha
-  pause 0.001
-  put look
-  pause
-  if (%OffRide == 1) then goto OFFTHERIDE
-  echo
-  echo ###############
-  echo # Riding on Public Transport!
-  echo # %TransportName
-  echo ###############
-  echo
-  if ($hidden == 0) then
-     {
-          send hide
-          pause
-     }
-  if matchre("$roomname", "(Skirr'lolasu|Kree'la)") then
-     {
-          if (%verbose) then gosub ECHO Transport/Dock waiting times can be extra long on this ferry!
-          pause 20
-     }
-  pause
-  if (%OffRide == 1) then goto OFFTHERIDE
-  if matchre("$roomobjs", "the beach") && matchre("%destination", "\bratha?") then goto OFFTHERIDE
-  if matchre("$roomobjs", "a ladder") && !matchre("%destination", "\bratha?") then goto OFFTHERIDE
-  if ("$guild" == "Necromancer") then
-     {
-          if (($spellROC == 0) || ($spellEOTB == 0)) then gosub NECRO_PREP
-     }
-  if (%OffRide == 1) then goto OFFTHERIDE
-  matchwait 60
-  goto ONFERRY
-  
-## HALFWAY CHECK FOR THE MUSPARI/OASIS TRANSPORT
-OASIS_CHECK:
-  pause 0.1
-  if matchre("%destination", "\b(haiz?e?n?|oasis?)\b") then
-     {
-          var OffTransport oasis
-          goto OFFTHERIDE
-     }
-  goto ONFERRY
-
-### GETTING OFF THE FERRY 
-OFFTHERIDE:
-  pause 0.0001
-  var OffTransport dock
-  action var OffTransport platform when a barge platform
-  action var OffTransport pier when the Riverhaven pier
-  action var OffTransport beach when You also see the beach|mammoth and the beach
-  action var OffTransport ladder when You also see a ladder|mammoth and a ladder
-  action var OffTransport wharf when the Langenfirth wharf
-  action var OffTransport dock when \[\"Her Opulence\"\]|\[\"Hodierna's Grace\"\]|\[\"Kertigen's Honor\"\]|\[\"His Daring Exploit\"\]|\[The Evening Star\]|\[The Damaris' Kiss\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[\"Imperial Glory\"\]|\[\"The Riverhawk\"\]|Baso Docks|a dry dock|the salt yard dock|covered stone dock|\[The Galley Sanegazat\]|\[The Galley Cercorim\]|\[Aboard the Warship, Gondola\]|\[The Halasa Selhin, Main Deck\]|the south bank docks\.
-  if ($hidden == 1) then
-     {
-          send unhide
-          pause 0.5
-     }
-  send look
-  pause 0.5
-  pause 0.2
-  # if ("$guild" == "Necromancer") then
-     # {
-          # if (($spellROC == 0) || ($spellEOTB == 0)) then gosub NECRO_PREP
-     # }
-  pause 0.001
-  if ($standing == 0) then gosub STAND
-  if matchre("$roomname", "Rocky Path") then
-     {
-          pause 0.001
-          send go beach
-          pause 0.5
-          pause 0.5
-          put #mapper reset
-          return
-     }
-  pause 0.001
-  pause 0.001
-  if matchre("$roomname", "Jolas") then
-    {
-        pause 0.001
-        if matchre("$roomobjs", "Sumilo") then put go dock
-        if matchre("$roomobjs", "Wharf") then put go end
-        pause 0.5
-        pause 0.5
-        put #mapper reset
-        return
+  var disembarkMovement dock
+  action (ferry_disembark) on
+  if matchre("$roomname", "%ferryNames") then var transportName $1
+  gosub ECHO Riding on Public Transport!|%transportName
+#### gondola is the only one where you can't just chill in the same room
+  if matchre("$roomname", "Gondola") then {
+    if (($north) && matchre("%destination", "\b(?:acen?e?m?a?c?r?a?|cros?s?i?n?g?s?|xing?|knif?e?c?l?a?n?|tige?r?c?l?a?n?|dirg?e?|arth?e?d?a?l?e?|haiz?e?n?|oasis?|kaer?n?a?|ilay?a?t?a?i?p?|illa?y?a?t?a?i?p?a?|taipa|leth?d?e?r?i?e?l?|acen?a?m?a?c?r?a?|vipe?r?s?|guar?d?i?a?n?s?|leuc?r?o?s?|malod?o?r?o?u?s?|bucc?a?|dokt?|sorr?o?w?s?|misens?e?o?r?|beis?s?w?u?r?m?s?|ston?e?c?l?a?n?|bone?w?o?l?f?|germ?i?s?h?d?i?n?|alfr?e?n?s?|cara?v?a?n?s?a?r?y?|rive?r?h?a?v?e?n?|have?n?|ross?m?a?n?s?|ther?e?n?b?o?r?o?u?g?h?|lang?e?n?f?i?r?t?h?|el'?b?a?i?n?s?|elb?a?i?n?s?|raka?s?h?|thro?n?e?|musp?a?r?i?|forn?s?t?e?d?|hvar?a?l?|zaul?f?u?n?g?|mri?s?s?|merk?r?e?s?h?|kre?s?h?|har?a?j?a?a?l?|rath?a?)\b")) then {
+      var direction north
+      gosub MOVE %direction
+      if (%verbose) then gosub ECHO ON GONDOLA! - Heading %direction
     }
+    if (($south) && matchre("%destination", "\b(?:shar?d?|grani?t?e?|garg?o?y?l?e?|spir?e?|horse?c?l?a?n?|fayr?i?n?s?|steel?c?l?a?w?|cori?k?s?|ada?n?f?|ylo?n?o?|wyve?r?n?|aing?h?a?z?a?l?|rave?n?s?|hib?a?r?n?h?v?i?d?a?r?|out?e?r?|inne?r?|boar?c?l?a?n?|aes?r?y?|sur?l?a?e?n?i?s?|fan?g?|cov?e?)\b")) then {
+      var direction south
+    }
+    if ($%direction) then {
+      gosub MOVE %direction
+      if (%verbose) then gosub ECHO ON GONDOLA! - Heading %direction
+    }
+  }
+  if ($hidden == 0) then gosub PUT hide
+#check for disembark every 60 seconds or when action fires
+  eval ferryWaitTimeOut $unixtime + 60
+  waiteval ((%OffRide == 1) || ($unixtime >= %ferryWaitTimeOut))
+  if (("$guild" == "Necromancer") && (($spellROC == 0) || ($spellEOTB == 0))) then gosub NECRO_PREP
+  if (%OffRide == 1) then goto FERRY_DISEMBARK
+  goto ONFERRY
+### GETTING OFF THE FERRY 
+FERRY_DISEMBARK:
+  action (ferry_disembark) off
+  action (ferry_check) off
+  if ($hidden == 1) then gosub PUT unhide
   if ($standing == 0) then gosub STAND
-  put go %OffTransport
-  wait
-  pause 0.7
-  put #mapper reset
+# did you auto-disembark?
+  if !matchre("$roomname", "%ferryNames") then return
+  if matchre("$roomname", "Rocky Path") then {
+    gosub MOVE go beach
+    return
+  }
+  if matchre("$roomname", "Jolas") then {
+    if matchre("$roomobjs", "Sumilo") then gosub MOVE go dock
+    if matchre("$roomobjs", "Wharf") then gosub MOVE go end
+    return
+  }
+## HALFWAY CHECK FOR THE MUSPARI/OASIS TRANSPORT
+  if (matchre("%destination", "\b(?:haiz?e?n?|oasis?)\b") && matchre("$roomobjs", "oasis")) then {
+    gosub MOVE go oasis
+    return
+  }
+## you'll stay on if you'r headed to muspari or havral and you're at the oasis
+  if (matchre("%destination", "\b(?:muspari|havral)\b") && matchre("$roomobjs", "oasis")) then {
+    var OffRide 0
+    goto ONFERRY
+  }
+  gosub MOVE go %disembarkMovement
+  if matchre("$roomname", "%ferryNames") then goto FERRY_DISEMBARK
   return
-  
-### LOGIC FOR GETTING ON THE MAMMOTHS / WARSHIPS 
-### MAINLY USED FOR ISLAND TRAVEL - MAMMOTHS/WARSHIPS ETC FROM ACENAMACRA/RATHA/FANG COVE
-JOINLOGIC:
-  delay 0.001
-  matchre ONJOINED ^\[Aboard the Dirigible, Gondola\]|^\[Alongside a Wizened Ranger\]|^An intricate network of silken rope|^\[Aboard the Balloon, Gondola\]|^A veritable spiderweb of ropes secures|^Thick, barnacle-encrusted ropes secure the platform to the|\[Aboard the Mammoth, Platform\]|\[The Bardess' Fete, Deck\]|^Silken rigging suspends the sweeping teak|\[Aboard the Warship, Gondola\]
-  matchre ONJOINED ^You join the Merelew driver|^Thick, barnacle-encrusted ropes secure the platform to the mammoth's back
-  put look
-  pause 0.3
-  pause 0.2
-  if matchre("$roomobjs $roomname", "(^\[Aboard the Dirigible, Gondola\]|^\[Alongside a Wizened Ranger\]|^An intricate network of silken rope|^\[Aboard the Balloon, Gondola\]|^A veritable spiderweb of ropes secures|^Thick, barnacle-encrusted ropes secure the platform to the|\[Aboard the Mammoth, Platform\]|\[The Bardess' Fete, Deck\]|^Silken rigging suspends the sweeping teak|\[Aboard the Warship, Gondola\])") then goto ONJOINED
-  if matchre("$roomobjs", "warship") then send join warship
-  if matchre("$roomobjs", "airship") then put join airship
-  if matchre("$roomobjs", "dirigible") then put join dirigible;join dirigible
-  if matchre("$roomobjs", "balloon") then put join balloon;join balloon
-  if matchre("$roomobjs", "Gnomish warship") then send join warship
-  if matchre("$roomobjs", "Riverhawk") then send go riverhawk
-  if matchre("$roomobjs", "Imperial") then send go imperial glory
-  if matchre("$roomobjs", "Star") then send go ferry
-  if matchre("$roomobjs", "skiff") then send go skiff
-  if matchre("$roomobjs", "Skirr'lolasu") then send go skirr
-  if matchre("$roomobjs", "Kiss") then send go ferry
-  if matchre("$roomobjs", "ferry") then send go ferry
-  if matchre("$roomobjs", "barge") then send go barge
-  if matchre("$roomobjs", "galley") then send go galley
-  if matchre("$roomobjs", "Jolas") then send go jolas
-  if matchre("$roomobjs", "Selhin") then send go selhin
-  if matchre("$roomobjs", "Halasa") then put go selhin
-  if matchre("$roomobjs", "warship") then send join warship
-  if matchre("$roomobjs", "wizened ranger") then put join wizened ranger;join wizened ranger
-  if (("$zoneid" == "58") && matchre("$roomobjs", "tall sea mammoth")) then put join tall mammoth
-  if (("$zoneid" == "90") && matchre("$roomobjs", "massive sea mammoth")) then put join sea mammoth
-  if ("$zoneid" == "150") then
-        {
-            if ("%detour" == "fang") then goto ARRIVED
-            if ((%ToRatha == 1) && matchre("$roomobjs", "massive sea mammoth")) then put join sea mammoth
-            if ((%ToRatha == 0) && matchre("$roomobjs", "tall sea mammoth")) then put join tall mammoth
-            if (("%detour" == "hara") && matchre("$roomobjs", "warship")) then put join warship
-        }
-  matchwait 3
-  echo
-  echo ###############
-  echo # Waiting for a transport..
-  echo ###############
-  echo
-  pause 3
-  if matchre("$roomobjs", "warship") then send join warship
-  if matchre("$roomobjs", "airship") then put join airship
-  if matchre("$roomobjs", "dirigible") then put join dirigible;join dirigible
-  if matchre("$roomobjs", "balloon") then put join balloon;join balloon
-  if matchre("$roomobjs", "Gnomish warship") then send join warship
-  if matchre("$roomobjs", "Riverhawk") then send go riverhawk
-  if matchre("$roomobjs", "Imperial") then send go imperial glory
-  if matchre("$roomobjs", "Star") then send go ferry
-  if matchre("$roomobjs", "skiff") then send go skiff
-  if matchre("$roomobjs", "Skirr'lolasu") then send go skirr
-  if matchre("$roomobjs", "Kiss") then send go ferry
-  if matchre("$roomobjs", "ferry") then send go ferry
-  if matchre("$roomobjs", "barge") then send go barge
-  if matchre("$roomobjs", "galley") then send go galley
-  if matchre("$roomobjs", "Jolas") then send go jolas
-  if matchre("$roomobjs", "Selhin") then send go selhin
-  if matchre("$roomobjs", "Halasa") then put go selhin
-  if matchre("$roomobjs", "warship") then send join warship
-  if matchre("$roomobjs", "wizened ranger") then put join wizened ranger;join wizened ranger
-  if (("$zoneid" == "58") && matchre("$roomobjs", "tall sea mammoth")) then put join tall mammoth
-  if (("$zoneid" == "90") && matchre("$roomobjs", "massive sea mammoth")) then put join sea mammoth
-  if ("$zoneid" == "150") then
-        {
-            if ("%detour" == "fang") then goto ARRIVED
-            if ((%ToRatha == 1) && matchre("$roomobjs", "massive sea mammoth")) then put join sea mammoth
-            if ((%ToRatha == 0) && matchre("$roomobjs", "tall sea mammoth")) then put join tall mammoth
-            if (("%detour" == "hara") && matchre("$roomobjs", "warship")) then put join warship
-        }
-  matchwait 3
-  goto JOINLOGIC
-
-ONJOINED:
-  pause 0.1
-ONJOINED1:
-  action var TransportName Imperial Glory when Imperial Glory
-  action var TransportName Kertigen's Honor when Kertigen's Honor
-  action var TransportName Hodierna's Grace when Hodierna's Grace
-  action var TransportName Her Opulence when Her Opulence
-  action var TransportName His Daring Exploit when His Daring Exploit
-  action var TransportName Northern Pride when Northern Pride
-  action var TransportName Theren's Star when Theren's Star
-  action var TransportName The Damaris when The Damaris
-  action var TransportName Evening Star when Evening Star
-  action var TransportName Birch Skiff when Birch Skiff
-  action var TransportName Polished Skiff when Polished Skiff
-  action var TransportName Desert Wind when Desert Wind
-  action var TransportName Suncatcher when Suncatcher
-  action var TransportName Riverhawk when Riverhawk
-  action var TransportName Imperial Glory when Imperial Glory
-  action var TransportName Gallet Cercorim when Gallet Cercorim
-  action var TransportName Jolas when Jolas
-  action var TransportName Warship when Aboard the Warship
-  action var TransportName Halasa Selhin when Halasa Selhin
-  action var TransportName Night Sky when Night Sky
-  action var TransportName Skirr'lolasu when Skirr'lolasu
-  action var TransportName Kree'la when Kree'la
-  action var TransportName Sanegazat when Sanegazat
-  action var TransportName Degan when Degan
-  action var TransportName Mammoth when Aboard the Mammoth
-  put look
-  pause 0.5
-  echo
-  echo ##############
-  echo # Riding on a Transport!
-  echo # %TransportName
-  echo ##############
-  echo
-  matchre OFFJOINED ^The grasses of this wide clearing|^From its northwest-facing position|^A deep firepit has been hacked into the frozen earth
-  matchre OFFJOINED ^The distance between the surrounding hills is narrower|^The ironwood platform has withstood|^A rickety platform in the top of this huge
-  matchre OFFJOINED ^Beyond the harbor, spray is thrown|^Giant boulders are scattered|^Crudely assembled yet sturdy just the
-  matchre OFFJOINED \[Fang Cove, Dock\]|\[Smuggler's Wharf\]|\[Outside Muspar'i\]|\[Northeast Wilds, Grimsage Way\]
-  matchre OFFJOINED ^The once pristine tower of the Warrior Mages|returning to Fang Cove|returning to Ratha
-  matchwait 22
-  goto ONJOINED1
-OFFJOINED:
-  put look
-  wait
-  if matchre("$roomname", "(Rocky Path|Shore Walk)") then put go beach
-  pause
-  put #mapper reset
-  return
-###  END OF FERRY LOGIC  ####
-### COIN LOGIC - GET MONEY FROM THE BANK TO TAKE FERRIES
-### ONLY REACHES THIS SUB IF WE DON'T HAVE ENOUGH MONEY ON HAND 
+####   END OF FERRY LOGIC  ####
+####  COIN LOGIC - GET MONEY FROM THE BANK TO TAKE FERRIES
+####  ONLY REACHES THIS SUB IF WE DON'T HAVE ENOUGH MONEY ON HAND 
+####  Get's here _always_ via goto, return is via goto %label
 NOCOIN:
-  put #parse NO COINS!
-  echo
-  echo ###################################
-  echo # You don't have enough coins to travel - you vagrant!
-  echo # Trying to get some coins from the nearest bank!!!
-  echo ###################################
-  echo
-  pause 0.4
-  put wealth
-  pause
-  if ($invisible == 1) then gosub STOP_INVIS
-  if ("$zoneid" == "1") then
-        {
-            var currencyneeded kro
-            if (%kronars < 120) then
-               {
-                    gosub AUTOMOVE exchange
-                    gosub KRONARS
-               }
-            if (%kronars >= 120) then goto COIN_CONTINUE
-            gosub AUTOMOVE teller
-            if ($invisible == 1) then gosub STOP_INVIS
-            put withdraw 120 copper
-            wait
-        }
+  gosub clear
+  gosub ECHO You don't have enough coins to travel - you vagrant!|Trying to get some coins from the nearest bank!!!
+  if ("$zoneid" == "1") then gosub COINWITHDRAW 120 kronars
   if ("$zoneid" == "60") then gosub AUTOMOVE leth
-  if ("$zoneid" == "61") then
-        {
-            var currencyneeded kro
-            gosub AUTOMOVE 57
-            if (%kronars < 120) then
-               {
-                    gosub AUTOMOVE exchange
-                    gosub KRONARS
-               }
-            if (%kronars >= 120) then goto COIN_CONTINUE
-            gosub AUTOMOVE teller
-            if ($invisible == 1) then gosub STOP_INVIS
-            put withdraw 120 copper
-            wait
-        }
-   if ("$zoneid" == "30") then
-        {
-            var currencyneeded lir
-            if (%lirums < 140) then
-               {
-                    gosub AUTOMOVE exchange
-                    gosub LIRUMS
-               }
-            if (%lirums >= 140) then goto COIN_CONTINUE
-            gosub AUTOMOVE teller
-            if ($invisible == 1) then gosub STOP_INVIS
-            put withdraw 140 copper
-            wait
-        }
-   if ("$zoneid" == "35") then
-        {
-            var currencyneeded lir
-            if (%lirums < 140) then
-               {
-                    gosub AUTOMOVE exchange
-                    gosub LIRUMS
-               }
-            if (%lirums >= 140) then goto COIN_CONTINUE
-            gosub AUTOMOVE teller
-            if ($invisible == 1) then gosub STOP_INVIS
-            put withdraw 140 copper
-            wait
-        }
-   if ("$zoneid" == "7") then
-        {
-            var currencyneeded lir
-            gosub AUTOMOVE 349
-            if (%lirums < 200) then
-               {
-                    gosub AUTOMOVE exchange
-                    gosub LIRUMS
-               }
-            if (%lirums >= 200) then goto COIN_CONTINUE
-            gosub AUTOMOVE teller
-            if ($invisible == 1) then gosub STOP_INVIS
-            put withdraw 200 copper
-            wait
-            pause 0.2
-            gosub AUTOMOVE exchange
-            pause 0.2
-            put exchange 200 copper kronar for lirum
-            wait
-            pause 0.2
-        }
-    if ("$zoneid" == "40") then
-        {
-            var currencyneeded lirtoboar
-            gosub AUTOMOVE 211
-            if (%lirums < %BoarNeeded) then
-               {
-                    gosub AUTOMOVE exchange
-                    gosub LIRUMS
-               }
-            gosub AUTOMOVE teller
-            if (%lirums >= %BoarNeeded) then goto COIN_CONTINUE
-            if ($invisible == 1) then gosub STOP_INVIS
-            if matchre("%detour", "(mriss|merk|hara)") then
-                {
-                    var currencyneeded qi
-                    put withdraw 10 gold
-                }
-            else put withdraw %BoarNeeded copper
-            wait
-        }
-    if (("$zoneid" == "113") && ("$roomid" == "4")) then gosub AUTOMOVE 10
-    if (("$zoneid" == "113") && ("$roomid" == "9")) then gosub AUTOMOVE 8
-    if ("$zoneid" == "114") then
-        {
-            var currencyneeded dok
-            if (%dokoras < 120) then
-               {
-                    gosub AUTOMOVE exchange
-                    gosub DOKORAS
-               }
-            if (%dokoras > 120) then goto COIN_CONTINUE
-            gosub AUTOMOVE teller
-            if ($invisible == 1) then gosub STOP_INVIS
-            put withdraw 120 copper
-            wait
-        }
-    if (("$zoneid" == "113") && ("$roomid" == "6")) then gosub AUTOMOVE 7
-    if ("$zoneid" == "123") then gosub AUTOMOVE hibar
-    if (("$zoneid" == "116") && matchre("%detour", "(rossman|lang|theren|rakash|muspari|fornsted|el'bain|mriss|merk|hara)")) then
-        {
-            var currencyneeded doktotheren
-            if (%dokoras < %TherenCoin) then
-               {
-                    gosub AUTOMOVE exchange
-                    gosub DOKORAS
-               }
-            if (%dokoras > %TherenCoin) then goto COIN_CONTINUE
-            gosub AUTOMOVE teller
-            if ($invisible == 1) then gosub STOP_INVIS
-		  put withdraw %TherenCoin copper
-            wait
-        }
-	if (("$zoneid" == "116") && !matchre("%detour", "(rossman|lang|theren|rakash|muspari|fornsted|el'bain|mriss|merk|hara)")) then
-        {
-            var currencyneeded dok
-            if (%dokoras < 120) then
-               {
-                    gosub AUTOMOVE exchange
-                    gosub DOKORAS
-               }
-            if (%dokoras > 120) then goto COIN_CONTINUE
-            gosub AUTOMOVE teller
-            if ($invisible == 1) then gosub STOP_INVIS
-            put withdraw 120 copper
-            wait
-        }
-     if (("$zoneid" == "113") && ("$roomid" == "1")) then gosub AUTOMOVE 5
-     if ("$zoneid" == "112") then
-        {
-            var currencyneeded dok
-            if (%dokoras < 120) then
-               {
-                    gosub AUTOMOVE exchange
-                    gosub DOKORAS
-               }
-            if (%dokoras > 120) then goto COIN_CONTINUE
-            gosub AUTOMOVE teller
-            if ($invisible == 1) then gosub STOP_INVIS
-            put withdraw 120 copper
-            wait
-        }
-    if (("$zoneid" == "67") && ("%detour" == "aesry")) then
-        {
-            var currencyneeded aesry
-            gosub AUTOMOVE teller
-            if ($invisible == 1) then gosub STOP_INVIS
-            if matchre("$game", "(?i)DR") then put withdraw 10 gold
-            if matchre("$game", "(?i)DRF") then
-               {
-                    var currencyneeded lir
-                    put withdraw 5 silver
-                    wait
-                    gosub AUTOMOVE exchange
-                    put exchange all dok to lirum
-               }
-            pause
-        }
-  if (("$zoneid" == "67") && !matchre("%detour", "(rossman|lang|theren|rakash|muspari|fornsted|el'bain|mriss|merk|hara|cross|river|haven|arthe|kaerna|stone|sorrow|throne|hvaral)")) then
-        {
-            var currencyneeded kro
-            gosub AUTOMOVE exchange
-            gosub DOKORAS
-            gosub AUTOMOVE teller
-            if ($invisible == 1) then gosub STOP_INVIS
-            put withdraw 300 copper
-            wait
-            gosub AUTOMOVE exchange
-            pause 0.3
-            put exchang 50 copper dok to kro
-            wait
-            pause 0.5
-            if matchre("%detour", "(rossman|lang|theren|rakash|muspari|fornsted|el'bain|mriss|merk|hara|river|haven|arthe|kaerna|stone|sorrow|throne|hvaral)") then put exchang 250 copper dok to lir
-            pause 0.5
-        }
-    if ("$zoneid" == "99") then
-        {
-            var currencyneeded aesryback
-            gosub AUTOMOVE teller
-            if ($invisible == 1) then gosub STOP_INVIS
-            put withdraw 10 gold
-        }
-    if ("$zoneid" == "107") then
-        {
-            var currencyneeded lir
-            gosub AUTOMOVE teller
-            if ($invisible == 1) then gosub STOP_INVIS
-            put withdraw 140 copper
-        }
-    if ("$zoneid" == "108") then
-        {
-            echo ## YOU ARE ON MRISS WITH NO COINS!  YOU NEED TO FIND A FRIEND FOR HELP!
-            echo ## OR KILL SOME STUFF AND SELL HIDES / GEMS!
-            exit
-        }
-    gosub INFO_CHECK
+  if ("$zoneid" == "60") then {
+    gosub AUTOMOVE leth
+    gosub COINWITHDRAW 120 Kronars
+    gosub AUTOMOVE Map60
+  }
+  if ("$zoneid" == "61") then gosub COINWITHDRAW 120 kronars
+  if ("$zoneid" == "30") then gosub COINWITHDRAW 140 lirums
+  if ("$zoneid" == "35") then gosub COINWITHDRAW 140 lirums
+  if ("$zoneid" == "7") then {
+    gosub AUTOMOVE crossing
+    gosub COINWITHDRAW 200 lirums
+    gosub AUTOMOVE negate
+  }
+  if ("$zoneid" == "40") then {
+    gosub AUTOMOVE therenborough
+    if matchre("%detour", "(mriss|merk|hara)") then gosub COINWITHDRAW 10000 lirums
+    else gosub COINWITHDRAW %BoarNeeded lirums
+    gosub AUTOMOVE Map40
+  }
+  #if on ferry map on the ain side move to ain
+  if (("$zoneid" == "113") && matchre("$roomid", "\b(?:4|8|9|10)\b")) then gosub AUTOMOVE Map114
+  #if on ferry map on the hib side move to hib
+  if (("$zoneid" == "113") && matchre("$roomid", "\b(?:6|7)\b")) then gosub AUTOMOVE Map123
+  #if on ferry map on the ilaya side move to ilaya
+  if (("$zoneid" == "113") && matchre("$roomid", "\b(?:1|5)\b")) then gosub AUTOMOVE Map112
+  if ("$zoneid" == "114") then gosub COINWITHDRAW 120 dokoras
+  if ("$zoneid" == "123") then gosub AUTOMOVE hibar
+  if (("$zoneid" == "116") && matchre("%detour", "(rossman|lang|theren|rakash|muspari|fornsted|el'bain|mriss|merk|hara)")) then gosub COINWITHDRAW %TherenCoin dokoras
+  if (("$zoneid" == "116") && !matchre("%detour", "(rossman|lang|theren|rakash|muspari|fornsted|el'bain|mriss|merk|hara)")) then gosub COINWITHDRAW 120 dokoras
+    if (("$zoneid" == "113") && ("$roomid" == "1")) then gosub AUTOMOVE 5
+    if ("$zoneid" == "112") then
+      {
+          var currencyneeded dok
+          if (%dokoras < 120) then
+              {
+                  gosub AUTOMOVE exchange
+                  gosub DOKORAS
+              }
+          if (%dokoras > 120) then goto COIN_CONTINUE
+          gosub AUTOMOVE teller
+          if ($invisible == 1) then gosub STOP_INVIS
+          put withdraw 120 copper
+          wait
+      }
+  if (("$zoneid" == "67") && ("%detour" == "aesry")) then
+      {
+          var currencyneeded aesry
+          gosub AUTOMOVE teller
+          if ($invisible == 1) then gosub STOP_INVIS
+          if matchre("$game", "(?i)DR") then put withdraw 10 gold
+          if matchre("$game", "(?i)DRF") then
+              {
+                  var currencyneeded lir
+                  put withdraw 5 silver
+                  wait
+                  gosub AUTOMOVE exchange
+                  put exchange all dok to lirum
+              }
+          pause
+      }
+if (("$zoneid" == "67") && !matchre("%detour", "(rossman|lang|theren|rakash|muspari|fornsted|el'bain|mriss|merk|hara|cross|river|haven|arthe|kaerna|stone|sorrow|throne|hvaral)")) then
+      {
+          var currencyneeded kro
+          gosub AUTOMOVE exchange
+          gosub DOKORAS
+          gosub AUTOMOVE teller
+          if ($invisible == 1) then gosub STOP_INVIS
+          put withdraw 300 copper
+          wait
+          gosub AUTOMOVE exchange
+          pause 0.3
+          put exchang 50 copper dok to kro
+          wait
+          pause 0.5
+          if matchre("%detour", "(rossman|lang|theren|rakash|muspari|fornsted|el'bain|mriss|merk|hara|river|haven|arthe|kaerna|stone|sorrow|throne|hvaral)") then put exchang 250 copper dok to lir
+          pause 0.5
+      }
+  if ("$zoneid" == "99") then
+      {
+          var currencyneeded aesryback
+          gosub AUTOMOVE teller
+          if ($invisible == 1) then gosub STOP_INVIS
+          put withdraw 10 gold
+      }
+  if ("$zoneid" == "107") then
+      {
+          var currencyneeded lir
+          gosub AUTOMOVE teller
+          if ($invisible == 1) then gosub STOP_INVIS
+          put withdraw 140 copper
+      }
+  if ("$zoneid" == "108") then
+      {
+          echo ## YOU ARE ON MRISS WITH NO COINS!  YOU NEED TO FIND A FRIEND FOR HELP!
+          echo ## OR KILL SOME STUFF AND SELL HIDES / GEMS!
+          exit
+      }
+  gosub INFO_CHECK
     pause 0.3
     if (("%currencyneeded" == "kro") && (%kronars < 50)) then goto COINQUIT
     if (("%currencyneeded" == "lirtoboar") && (%lirums < %BoarNeeded)) then goto COINQUIT
@@ -3568,6 +3077,18 @@ COINQUIT:
     put #echo >Log #ff0000 Travel Script Aborted! No money in bank to ride ferry in $zonename!
     put #parse OUT OF MONEY!
     exit
+COINWITHDRAW:
+  eval currencyNeeded toupper($2)
+  var noCoinAmmount $1
+  if (%kronars < %noCoinAmmount) then {
+    gosub AUTOMOVE exchange
+    gosub %currencyNeeded
+  }
+  if (%%currencyNeeded >= %noCoinAmmount) then goto COIN_CONTINUE
+  gosub AUTOMOVE teller
+  if ($invisible == 1) then gosub STOP_INVIS
+  gosub PUT withdraw %noCoinAmmount copper
+  return
 LIRUMS:
      var Target.Currency LIRUMS
      if ("%kronars" != "0") then gosub EXCHANGE KRONARS

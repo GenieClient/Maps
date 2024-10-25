@@ -11,6 +11,7 @@ goto mapperINCreturn
 #   aLocalVar
 
 #### check citizenship for shard ####
+#  you do have to ask about titles to get them, so you could be a citizen and not know it
 CITIZENSHIP:
   put #var citizenship none
   action (citizenship) put #var citizenship $1 when "^\s*\d\)\s+of (Aesry Surlaenis'a|Forfedhdar|Ilithi|M'Riss|Ratha|Therengia|Velaka|Zoluren|Acenamacra|Arthe Dale|Crossing|Dirge|Ilaya Taipa|Kaerna Village|Leth Deriel|Fornsted|Hvaral|Langenfirth|Riverhaven|Rossman's Landing|Siksraja|Therenborough|Fayrin's Rest|Shard|Steelclaw Clan|Zaldi Taipa|Ain Ghazal|Boar Clan|Hibarnhvidar|Raven's Point|Mer'Kresh|Muspar'i)"
