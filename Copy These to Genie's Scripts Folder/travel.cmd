@@ -511,10 +511,10 @@ if ("$roomid" == "0") then {
   exit
 }
 ## CHECK COMMON 'SUB' MAP AREAS WE MIGHT GET STUCK IN AND MOVE TO THE MAIN MAP
-if ("$zoneid" == "2d") then gosub AUTOMOVE temple
-if ("$zoneid" == "1j") then gosub AUTOMOVE cross
-if ("$zoneid" == "1l") then gosub AUTOMOVE cross
-if ("$zoneid" == "2a") then gosub AUTOMOVE cross
+if ("$zoneid" == "2d") then gosub AUTOMOVE Map2a_Temple.xml
+if ("$zoneid" == "1j") then gosub AUTOMOVE Map1_Crossing.xml
+if ("$zoneid" == "1l") then gosub AUTOMOVE Map1_Crossing.xml
+if ("$zoneid" == "2a") then gosub AUTOMOVE Map1_Crossing.xml
 ## IF IN FOREST GRYPHONS - TAKE THE EASIEST PATH OUT (Avoid Automapper getting stuck on a hard climb)
 if (("$zoneid" == "34") && ($roomid > 89) && ($roomid < 116)) then {
   gosub AUTOMOVE 90
@@ -607,7 +607,7 @@ if ("$zoneid" == "150") then {
   gosub JOINLOGIC
 }
 if matchre("$zonename", "Aesry") then gosub AESRYBACK
-cheatstart:
+DRPRIMESTART:
 #Hanryu: I think this is meant to skip the special teleport moves for some reason, I still need to find out why
 #### The goto CROSSING block ####
 if matchre("%destination", "\b(?:cros?s?i?n?g?s?|xing?)") then goto CROSSING
@@ -699,28 +699,10 @@ if (("$zoneid" == "150") && ("$game" != "DRF") && ("%detour" != "ratha")) then {
   var ToRatha 0
   gosub JOINLOGIC
   gosub AUTOMOVE 2
-  goto cheatstart
+  goto DRPRIMESTART
 }
 goto NODESTINATION
 ####  END PICK ROUTE BLOCK
-####  Aesry for TF-ers  ####
-AESRY_LONG:
-  if (%verbose) then gosub ECHO NO SHORTCUT TO AESRY IN TF - TAKING LONG ROUTE
-  if ("$zoneid" == "90") then goto AESRY_LONG_2
-  var detour aesry
-  gosub INFO_CHECK
-  if (%Lirums < 300) then goto NOCOIN
-  if ("$zoneid" == "67") then gosub AUTOMOVE east
-  gosub AUTOMOVE portal
-  put go meeting portal
-  gosub AUTOMOVE 2
-  var ToRatha 1
-  gosub JOINLOGIC
-AESRY_LONG_2:
-  gosub AUTOMOVE 234
-  gosub FERRYLOGIC
-  goto ARRIVED
-
 #### CROSSING ####
 CROSSING:
 var label CROSSING
@@ -766,10 +748,10 @@ if ("$zoneid" == "35") then {
   gosub AUTOMOVE 166
   gosub FERRYLOGIC
 }
-if ("$zoneid" == "7a") then gosub AUTOMOVE NTR
-if ("$zoneid" == "2") then gosub AUTOMOVE cross
-if ("$zoneid" == "1a") then gosub AUTOMOVE cross
-if ("$zoneid" == "2a") then gosub AUTOMOVE cross
+if ("$zoneid" == "7a") then gosub AUTOMOVE Map7_NTR.xml
+if ("$zoneid" == "2") then gosub MOVE Map1_Crossing.xml
+if ("$zoneid" == "1a") then gosub MOVE Map1_Crossing.xml
+if ("$zoneid" == "2a") then gosub MOVE Map1_Crossing.xml
 if (("$zoneid" == "47") && matchre("$game", "(?i)DRX") && (%portal == 1) && (%ported == 0)) then gosub PORTAL_TIME
 if (("$zoneid" == "47") && ($Athletics.Ranks >= %muspari.shortcut)) then gosub VELAKA_SHORTCUT
 if ("$zoneid" == "47") then {
@@ -851,7 +833,7 @@ if ("$zoneid" == "127") then gosub AUTOMOVE 510
 if ("$zoneid" == "126") then gosub AUTOMOVE 49
 if ("$zoneid" == "116") then gosub AUTOMOVE 3
 if ("$zoneid" == "123") then gosub AUTOMOVE 175
-if ("$zoneid" == "67a") then gosub AUTOMOVE shard
+if ("$zoneid" == "67a") then gosub MOVE Map67_Shard.xml
 if ("$zoneid" == "69") then gosub AUTOMOVE 1
 if ("$zoneid" == "68a") then gosub AUTOMOVE 29
 if ("$zoneid" == "68b") then gosub AUTOMOVE 44
@@ -886,7 +868,7 @@ if (("$zoneid" == "66") && ($Athletics.Ranks < %underGondola)) then {
   gosub AUTOMOVE 156
   gosub FERRYLOGIC
 }
-if ("$zoneid" == "1a") then gosub AUTOMOVE cross
+if ("$zoneid" == "1a") then gosub MOVE Map1_Crossing.xml
 if ("$zoneid" == "63") then gosub AUTOMOVE 112
 if ("$zoneid" == "65") then gosub AUTOMOVE 44
 if ("$zoneid" == "62") then gosub AUTOMOVE 100
@@ -928,8 +910,8 @@ if (("$zoneid" == "60") && ("$guild" == "Thief")) then {
   if ($Athletics.Ranks >= %underSegoltha) then {
     gosub AUTOMOVE 107
     if ("$zoneid" == "120") then gosub AUTOMOVE 107
-    gosub AUTOMOVE cross
-    if ("$zoneid" == "1a") then gosub AUTOMOVE cross
+    gosub MOVE Map1_Crossing.xml
+    if ("$zoneid" == "1a") then gosub MOVE Map1_Crossing.xml
   }
 }
 if (("$zoneid" == "60") && ($Athletics.Ranks >= %segoltha)) then gosub AUTOMOVE 108
@@ -948,7 +930,7 @@ if (("$zoneid" == "60") && ($Athletics.Ranks < %segoltha)) then {
   pause
   gosub FERRYLOGIC
 }
-if "$zoneid" == "6"  then gosub AUTOMOVE cross
+if "$zoneid" == "6"  then gosub MOVE Map1_Crossing.xml
 if ("$zoneid" == "4a") then gosub AUTOMOVE 15
 if ("$zoneid" == "4b") then gosub AUTOMOVE 1
 if (("$zoneid" == "4") && (("%detour" == "dokt"))) then {
@@ -969,7 +951,7 @@ if ("$zoneid" == "11") then gosub AUTOMOVE 2
 if (("$zoneid" == "1") && matchre("%detour", "(?:arthe|dirge|kaerna|stone|misen|sorrow|fist|beisswurms|bucca|viper)")) then {
   if ($invisible == 1) then {
     gosub AUTOMOVE N gate
-    gosub AUTOMOVE NTR
+    gosub MOVE Map7_NTR.xml
     goto CROSSING_2
   }
   gosub AUTOMOVE 171
@@ -1099,12 +1081,12 @@ if (("$zoneid" == "90") && !matchre("%destination", "\b(rath?a?|aesr?y?|hara|tai
 }
 ILITHI_1:
 if ("$zoneid" == "127") then gosub AUTOMOVE south
-if "$zoneid" == "6"  then gosub AUTOMOVE cross
-if ("$zoneid" == "7a") then gosub AUTOMOVE NTR
-if ("$zoneid" == "1a") then gosub AUTOMOVE cross
-if ("$zoneid" == "2") then gosub AUTOMOVE cross
-if ("$zoneid" == "2a") then gosub AUTOMOVE cross
-if ("$zoneid" == "67a") then gosub AUTOMOVE shard
+if "$zoneid" == "6"  then gosub MOVE Map1_Crossing.xml
+if ("$zoneid" == "7a") then gosub MOVE Map7_NTR.xml
+if ("$zoneid" == "1a") then gosub MOVE Map1_Crossing.xml
+if ("$zoneid" == "2") then gosub MOVE Map1_Crossing.xml
+if ("$zoneid" == "2a") then gosub MOVE Map1_Crossing.xml
+if ("$zoneid" == "67a") then gosub MOVE Map67_Shard.xml
 if matchre("$zonename", "(?:Hara'jaal|Mer'Kresh|M'Riss)") then {
   var backuplabel ILITHI
   var backupdetour %detour
@@ -1298,7 +1280,7 @@ if ("$zoneid" == "50") then gosub SEGOLTHA_SOUTH
 if ("$zoneid" == "1a") then gosub AUTOMOVE 23
 if (("$zoneid" == "67") && matchre("alfren", "%detour")) then goto CROSSING
 if (("$zoneid" == "62") && matchre("alfren", "%detour")) then gosub AUTOMOVE leth
-if (("$zoneid" == "61") && matchre("alfren", "%detour")) then gosub AUTOMOVE cross
+if (("$zoneid" == "61") && matchre("alfren", "%detour")) then gosub MOVE Map1_Crossing.xml
 if (("$zoneid" == "60") && matchre("alfren", "%detour")) then {
   gosub AUTOMOVE 42
   goto ARRIVED
@@ -1363,7 +1345,7 @@ if (("$zoneid" == "68") && ($Athletics.Ranks > 350)) then {
     pause %command_pause
 }
 if (("$zoneid" == "68") && ("$guild" == "Thief")) then gosub AUTOMOVE 225
-if ("$zoneid" == "67a") then gosub AUTOMOVE shard
+if ("$zoneid" == "67a") then gosub MOVE Map67_Shard.xml
 if (("$zoneid" == "68") && (%shardCitizen)) then gosub AUTOMOVE 1
 if (("$zoneid" == "68") && !(%shardCitizen)) then gosub AUTOMOVE 15
 if (("$zoneid" == "67") && matchre("alfren", "%detour")) then goto CROSSING
@@ -1389,7 +1371,7 @@ if (("$zoneid" == "66") && matchre("%detour", "(?:steel|fayrin|ylono|corik|adan'
       gosub MOVE go trail
       gosub MOVE south
       gosub MOVE south
-      gosub AUTOMOVE shard
+      gosub MOVE Map67_Shard.xml
       gosub AUTOMOVE 228
       gosub MOVE climb embrasure
       pause %command_pause
@@ -1429,9 +1411,9 @@ if (("$zoneid" == "66") && ("$guild" == "Thief")) then {
   gosub MOVE go trail
   gosub MOVE south
   gosub MOVE south
-  gosub AUTOMOVE shard
+  gosub MOVE Map67_Shard.xml
 }
-if ("$zoneid" == "66a") then gosub AUTOMOVE shard
+if ("$zoneid" == "66a") then gosub MOVE Map67_Shard.xml
 if ((%shardCitizen) && ("$zoneid" == 66) && ($roomid > 54)) then gosub AUTOMOVE 215
 if ("$zoneid" == "66") then gosub AUTOMOVE 216
 if ("$zoneid" == "67") then gosub AUTOMOVE 81
@@ -1484,13 +1466,13 @@ if (("$zoneid" == "48") && !matchre("%destination", "(?:oasis|yeehar|haizen)")) 
   gosub AUTOMOVE 1
   gosub FERRYLOGIC
 }
-if (("$zoneid" == "42") && ("%detour" == "rakash")) then gosub AUTOMOVE lang
-if ("$zoneid" == "7a") then gosub AUTOMOVE NTR
-if ("$zoneid" == "2") then gosub AUTOMOVE cross
-if ("$zoneid" == "1a") then gosub AUTOMOVE cross
-if ("$zoneid" == "2a") then gosub AUTOMOVE cross
-if ("$zoneid" == "6")  then gosub AUTOMOVE cross
-if ("$zoneid" == "67a") then gosub AUTOMOVE shard
+if (("$zoneid" == "42") && ("%detour" == "rakash")) then gosub AUTOMOVE Map40_Langenfirth_to_Therenborough.xml
+if ("$zoneid" == "7a") then gosub MOVE Map7_NTR.xml
+if ("$zoneid" == "2") then gosub MOVE Map1_Crossing.xml
+if ("$zoneid" == "1a") then gosub MOVE Map1_Crossing.xml
+if ("$zoneid" == "2a") then gosub MOVE Map1_Crossing.xml
+if ("$zoneid" == "6")  then gosub MOVE Map1_Crossing.xml
+if ("$zoneid" == "67a") then gosub MOVE Map67_Shard.xml
 if matchre("$zoneid", "106|107|108") then goto QITRAVEL
 if (matchre("%destination", "(?:ratha|hara?j?a?a?l?)") && matchre("$zoneid", "\b(?:1|30|42|47|61|66|67|90|99|107|108|116)\b")) then {
   if (matchre("$game", "(?i)DRX") && (%portal == 1) && matchre("$zoneid", "\b(1|30|40|47|67|90|99|107|116)\b") && (%ported == 0)) then gosub PORTAL_TIME
@@ -1566,11 +1548,11 @@ if (("$zoneid" == "67") && ("$guild" == "Thief")) then {
   gosub AUTOMOVE 566
   gosub AUTOMOVE 23
 }
-if ("$zoneid" == "67a") then gosub AUTOMOVE STR
-if ("$zoneid" == "67") then gosub AUTOMOVE 132
+if ("$zoneid" == "67a") then gosub AUTOMOVE Map66_STR3.xml
+if ("$zoneid" == "67") then gosub AUTOMOVE egate 66-44
 if (matchre("%destination", "\b(ratha|hara?j?a?a?l?)") && matchre("$zoneid", "\b(?:1|30|42|47|61|66|67|90|99|107|108|116)\b")) then {
   if (matchre("$game", "(?i)DRX") && (%portal == 1)) then {
-    if ("$zoneid" == "66") then gosub AUTOMOVE east
+    if ("$zoneid" == "66") then gosub AUTOMOVE egate 66-44
     if (matchre("$zoneid", "\b(1|30|40|47|67|90|99|107|116)\b") && (%ported == 0)) then gosub PORTAL_TIME
   }
   if (matchre("$game", "(?i)DRF") && matchre("%destination", "\brath?a?") || (%premium == 1) && matchre("%destination", "\brath?a?")) then {
@@ -1632,7 +1614,7 @@ if ("$zoneid" == "4a") then gosub AUTOMOVE 15
 if ("$zoneid" == "32") then gosub AUTOMOVE 1
 if ("$zoneid" == "4") then gosub AUTOMOVE 14
 if ("$zoneid" == "8") then gosub AUTOMOVE 43
-if ("$zoneid" == "10") then gosub AUTOMOVE NTR
+if ("$zoneid" == "10") then gosub MOVE Map7_NTR.xml
 if ("$zoneid" == "9b") then gosub AUTOMOVE 9
 if ("$zoneid" == "14b") then gosub AUTOMOVE 217
 if ("$zoneid" == "11") then gosub AUTOMOVE 2
@@ -1640,7 +1622,7 @@ if (matchre("$game", "(?i)DRX") && (%portal == 1) && matchre("$zoneid", "\b(1|30
 if ("$zoneid" == "1") then {
   if ($invisible == 1) then {
     gosub AUTOMOVE N gate
-    gosub AUTOMOVE NTR
+    gosub MOVE Map7_NTR.xml
     goto THERENGIA_1
   }
   gosub AUTOMOVE 171
@@ -2441,7 +2423,7 @@ if ("$zoneid" == "13") then gosub AUTOMOVE 71
 if ("$zoneid" == "4a") then gosub AUTOMOVE 15
 if ("$zoneid" == "4") then gosub AUTOMOVE 14
 if ("$zoneid" == "8") then gosub AUTOMOVE 43
-if ("$zoneid" == "10") then gosub AUTOMOVE NTR
+if ("$zoneid" == "10") then gosub MOVE Map7_NTR.xml
 if ("$zoneid" == "9b") then gosub AUTOMOVE 9
 if ("$zoneid" == "14b") then gosub AUTOMOVE 217
 if ("$zoneid" == "11") then gosub AUTOMOVE 2
@@ -2574,6 +2556,25 @@ if ("$zoneid" == "127") then gosub AUTOMOVE 24
 goto ARRIVED
 ####  END P5
 ####  P4  ####
+####  Aesry for TF-ers  ####
+AESRY_LONG:
+  var label AESRY_LONG
+  if (%verbose) then gosub ECHO NO SHORTCUT TO AESRY IN TF - TAKING LONG ROUTE
+  if ("$zoneid" == "90") then goto AESRY_LONG_2
+  var detour aesry
+  gosub INFO_CHECK
+  if (%Lirums < 300) then goto NOCOIN
+  if ("$zoneid" == "67") then gosub AUTOMOVE Map66_STR3.xml
+  gosub AUTOMOVE portal
+  gosub MOVE go meeting portal
+  gosub AUTOMOVE 2
+  var ToRatha 1
+  gosub JOINLOGIC
+AESRY_LONG_2:
+  gosub AUTOMOVE 234
+  gosub FERRYLOGIC
+  goto ARRIVED
+
 AESRYBACK:
   var label AESRYBACK
   if ("$zoneid" == "98") then gosub AUTOMOVE 86
@@ -2582,6 +2583,7 @@ AESRYBACK:
   gosub AUTOMOVE 427
   gosub JOINLOGIC
   return
+
 QITRAVEL:
   var label QITRAVEL
   if (matchre("$game", "(?i)DRX") && (%portal == 1) && matchre("$zoneid", "\b(?:1|30|40|47|67|90|99|107|116)\b") && (%ported == 0)) then gosub PORTAL_TIME
@@ -2698,7 +2700,7 @@ SEGOLTHA_NORTH:
     return
   }
   if matchre("$roomid", "\b(5|4|3|2|1)\b") then {
-    gosub AUTOMOVE crossing
+    gosub MOVE Map1_Crossing.xmling
     return
   }
  if matchre("$roomid", "\b(7|6|5)\b") then {
@@ -2971,7 +2973,7 @@ NOCOIN:
   if ("$zoneid" == "30") then gosub COINWITHDRAW 140 lirums
   if ("$zoneid" == "35") then gosub COINWITHDRAW 140 lirums
   if ("$zoneid" == "7") then {
-    gosub AUTOMOVE crossing
+    gosub MOVE Map1_Crossing.xmling
     gosub COINWITHDRAW 200 lirums
     gosub AUTOMOVE negate
   }
@@ -3090,14 +3092,16 @@ EXCH_INVIS:
 ####  Seacaves  ####
 TO_SEACAVE:
 TO_SEACAVES:
-  if ("$zoneid" == "67") then gosub AUTOMOVE east
-  if ("$zoneid" == "127") then gosub AUTOMOVE south
-  if ("$zoneid" == "124") then gosub AUTOMOVE hib
-  if ("$zoneid" == "112") then gosub AUTOMOVE leth
-  if ("$zoneid" == "4") then gosub AUTOMOVE cross
-  if ("$zoneid" == "7") then gosub AUTOMOVE cross
-  if ("$zoneid" == "67") then gosub AUTOMOVE east
-  if ("$zoneid" == "42") then gosub AUTOMOVE gate
+  if ("$zoneid" == "112") then gosub AUTOMOVE Map61_Leth_Deriel.xml
+  if ("$zoneid" == "126") then gosub AUTOMOVE Map116_Hibarnhvidar.xml
+  if ("$zoneid" == "127") then {
+    gosub AUTOMOVE Map126_Hawstkaal_Road.xml
+    gosub AUTOMOVE Map116_Hibarnhvidar.xml
+  }
+  if ("$zoneid" == "4") then gosub MOVE Map1_Crossing.xml
+  if ("$zoneid" == "42") then gosub AUTOMOVE Map40_Langenfirth_to_Therenborough.xml
+  if ("$zoneid" == "67") then gosub AUTOMOVE egate 66-44
+  if ("$zoneid" == "7") then gosub MOVE Map1_Crossing.xml
   gosub AUTOMOVE portal
   if ($invisible == 1) then gosub STOP_INVIS
   gosub MOVE go meeting portal
@@ -3939,7 +3943,7 @@ USHNISH_GO:
   if matchre("$roomname", "Beyond the Gate of Souls") then gosub USHNISH_AT_ZONE1
   if matchre("$roomname", "Temple of Ushnish") then gosub USHNISH_AT_ZONE3
   if matchre("$roomname", "The Fangs of Ushnish") then gosub USHNISH_AT_ZONE4
-  if ("$zoneid" == "1") then gosub AUTOMOVE NTR
+  if ("$zoneid" == "1") then gosub MOVE Map7_NTR.xml
   if ("$zoneid" != "7") then return
   if (("$zoneid" == "7") && ($roomid == 188)) then goto USHNISH_GO22
   gosub AUTOMOVE gate of soul
@@ -4020,18 +4024,24 @@ USHNISH_GO_ZONE3:
   gosub MOVE go door
   return
 ####  END ushnish
-##### AUTOMOVEMENT - TRAVEL ROUTINES  ####
-#### AUTOMOVE: using #goto
-guarantee this lands where it wants to
-wait for the room to load at the end and double check it
-save the number?  if $roomID not= %destination, then reexecute
+##### AUTOMOVEMENT - TRAVEL ROUTINES  using #goto and automapper.cmd ####
+# guarantees this lands where it wants to
+# usage:
+#   gosub AUTOMOVE Map1
+#    used to move between maps, will regex out the id to confirm
+#   gosub AUTOMOVE 17
+#     used to move to a room on a map, will confirm landing in that room before returning
+#   gosub AUTOMOVE egate 66-44
+#     used to move to a new map via a special path, will confirm landing in zoneid-roomid before returning
 AUTOMOVE:
-  # action var exit $1;var webtype $2;goto websarestupid when ^As you approach (?:an?|the)\b.*? ((?:[\w'-]+) [\w'-]+|[\w'-]+), you become tangled up in the.*? \b(metallic|spidersilk|phantasmal|dew-covered|shadowy nightweaver silk)\b webbing
-  # action goto ABYSS_ESCAPE when ^With lightning speed, something large and arachnid bursts from below, dragging you into a web-filled, subterranean gloom!
   action (moving) on
   var Moving 0
   var randomloop 0
   var Destination $0
+  if (!matchre("%Destination", "\b\d+\b") || !matchre("%Destination", "Map(\d+\w?\b)")|| !matchre("%Destination", "\w+ (\d+-\d+)")) then {
+    gosub ECHO ERROR: Hanryu messed up the script call, tell him to fix it!
+    exit
+  }
   var automovefailCounter 0
   if ($hidden == 1) then gosub UNHIDE
   if ($standing == 0) then gosub gosub STAND
@@ -4066,23 +4076,21 @@ AUTOMOVE_FAIL_BAIL:
   put #echo #DC143C *** AUTOMOVE FAILED.  ***
   put #echo #DC143C Destination: %Destination
 AUTOMOVE_RETURN:
-  delay %command_pause
+#make sure room loads
+  delay %infiniteLoopProtection
+#check to see if you made it where you wanted to go
+  if (matchre("%Destination", "\b\d+\b") && (%Destination != $roomid)) then goto AUTOMOVE_FAILED
+  if matchre("%Destination", "Map(\d+\w?\b)") then {
+    if ("$1" != "$zoneid") then goto AUTOMOVE_FAILED
+  }
+  if matchre("%Destination", "\w+ (\d+-\d+)") then {
+    if ("$1" != "$zoneid-$roomid") then goto AUTOMOVE_FAILED
+  }
   var randomloop 0
   var automovefailCounter 0
   action (moving) off
-  #Hanryu: what we should do is always feed it something we can check against, gosub AUTOMOVE destination "(zoneID = 20)"
-  ### MICRO PAUSES ADDED HERE - TO AVOID TRIPUPS WITH MAP/ZONEID CHANGES
-  ### SOMETIMES IT WOULD RETURN TOO FAST AND AUTOMAPPER WOULD STILL REGISTER THE OLD MAP
-  ### PERHAPS #MAPPER RESET COULD WORK, BUT COULD NOT THINK OF A FLUID WAY TO ADD THAT WASN'T SPAMMING CONSTANTLY
-  ### THIS JUST ADDS A *SLIGHT* PAUSE AFTER EVERY "GOSUB AUTOMOVE" WHICH SHOULD GIVE ENOUGH TIME
-  ### FOR AUTOMAPPER TO REGISTER ANY ZONE ID CHANGES - BUT NOT REALLY INTERFERE WITH THE SPEED MUCH
-  pause 0.001
-  pause 0.01
-  pause 0.01
+  #no more need for micropauses, we've confirmed we got where we wanted to be
   return
-ABYSS_ESCAPE:
-  gosub ECHO OH SHIT
-  goto INIT
 ################################
 # MOVE SINGLE
 ################################
