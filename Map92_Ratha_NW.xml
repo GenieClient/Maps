@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <zone name="Reshalia Trade Road" id="92">
   <node id="1" name="Shh'o'kumu Terrace, Sur'oson Gate" note="Map90_Ratha.xml|Ratha">
     <description>Tall timbers and rough-hewn stone form a giant gate in the great wall.  Standing open for the streams of wagon and foot traffic to pass through, the entrance to Ratha is carefully guarded by observant sentinels who watch every passerby with trained eyes.</description>
@@ -520,7 +520,7 @@
   </node>
   <node id="80" name="Reshalia Trade Road, Slopes" color="#008000">
     <description>The sloping ground is moist and fertile looking.  A few trees grow here and there, but most of the vegetation here is lower, shrubs and grasses whose roots bind the soil and prevent it all from running down into the ocean.  Mushrooms grow in odd patches of shade under bushes and next to rocks.</description>
-    <position x="200" y="-200" z="0" />
+    <position x="180" y="-180" z="0" />
     <arc exit="north" move="north" destination="85" />
     <arc exit="southwest" move="southwest" hidden="True" destination="79" />
   </node>
@@ -554,171 +554,171 @@
   </node>
   <node id="85" name="Reshalia Trade Road, Slopes">
     <description>A large granite boulder sits sentry on the side of the road.  A small gap at its base is too dark to see into, but the crusted piles of dirt in a half-circle around it suggest that something inside is having an addition put onto the back of the house.  The burrow has been cleverly placed on the downhill side of the boulder, so it's well sheltered from rain and water running down the slope.</description>
-    <position x="200" y="-220" z="0" />
+    <position x="180" y="-200" z="0" />
     <arc exit="north" move="north" destination="86" />
     <arc exit="south" move="south" destination="80" />
   </node>
   <node id="86" name="Reshalia Trade Road, Slopes">
     <description>The road meanders up a gentle slope, past acres of wildflowers and aromatic shrubs set amidst a grassy meadow that just happens to be somewhat tilted.  A cool, strong night breeze blows in from the ocean, just a mile or so west of here, carrying with it the scent of salt and the crashing of surf on rocks.</description>
     <description>The road meanders up a gentle slope, past wildflowers and aromatic shrubs set amidst a grassy meadow that just happens to be somewhat tilted.  Butterflies flutter from flower to flower, sipping from shy columbines and lillies of the valley nestled under larger bushes, and lilacs and poppies growing out in the sun.</description>
-    <position x="200" y="-240" z="0" />
+    <position x="180" y="-220" z="0" />
     <arc exit="northeast" move="northeast" destination="87" />
     <arc exit="south" move="south" destination="85" />
   </node>
   <node id="87" name="Reshalia Trade Road, Woods" color="#008000">
     <description>The tiny leaves of birch trees shiver in the breeze, dancing against the background of their white and black trunks and greyish branches.  Sassy bluejays perch on the branches overhead, chattering with each other and swooping down upon occasion to see if you've dropped anything tasty.  Gravel combines with birch leaves and seed clusters to make the surface of the road crunchy.</description>
-    <position x="220" y="-260" z="0" />
+    <position x="200" y="-240" z="0" />
     <arc exit="north" move="north" destination="88" />
     <arc exit="southwest" move="southwest" destination="86" />
   </node>
   <node id="88" name="Reshalia Trade Road, Woods" color="#008000">
     <description>Birch trees grow sparsely here, and the undergrowth is mostly grass, with a few small flowers and an odd succulent or two.  The sounds of the sea are clearly audible from this spot, as is the mournful call of the grey and black sea birds that swoop and circle overhead.  The air smells very slightly of salt, when the wind is from the west.</description>
-    <position x="220" y="-280" z="0" />
+    <position x="200" y="-260" z="0" />
     <arc exit="north" move="north" destination="89" />
     <arc exit="south" move="south" destination="87" />
   </node>
   <node id="89" name="Trade Road, Cliff Woods" color="#008000">
     <description>The road here runs within a few hundred feet of the cliff overlooking Slo'Tami Bay.  The sound of the surf below is plain, but twisted cypress trees block any view of the water.  The underbrush is dense, impassable except perhaps with a work crew wielding pickaxes.  A smaller road branches off to the east, curving around some trees and quickly out of sight.</description>
-    <position x="220" y="-300" z="0" />
+    <position x="200" y="-280" z="0" />
     <arc exit="south" move="south" destination="88" />
     <arc exit="northwest" move="northwest" destination="90" />
   </node>
   <node id="90" name="Trade Road, Cliff Woods" color="#008000">
     <description>The trade road curves around the northeastern point of the bay.  Cypresses press in on both sides, leaving scarcely room for two wagons to pass.  The underbrush is woody, tangled and dense.  No flowers grow nearby, nor even much grass save for a few yellowish tufts here and there.  The sound of the waves crashing on the rocks below is quite loud, but the trees are too dense to allow a view of the water.</description>
-    <position x="200" y="-320" z="0" />
+    <position x="180" y="-300" z="0" />
     <arc exit="southeast" move="southeast" destination="89" />
     <arc exit="northwest" move="northwest" destination="91" />
   </node>
   <node id="91" name="Trade Road, Cliff Woods" color="#008000">
     <description>The low spreading cypress trees cast deep shadows across the road.  The shade promotes damp, and the gravel spread regularly on the road sinks down into the mud beneath quickly enough that the road is muddy more often than not.  Birds screech and flap about in the dense foliage, but are only rarely seen overhead.  The air smells of sea salt and bird droppings.</description>
-    <position x="180" y="-340" z="0" />
+    <position x="160" y="-320" z="0" />
     <arc exit="southeast" move="southeast" destination="90" />
     <arc exit="west" move="west" destination="92" />
   </node>
   <node id="92" name="Trade Road, Cliff Woods" color="#008000">
     <description>Voices can be heard over the crashing of the waves, male voices mostly, calling to each other and laughing.  There must be a number of people about, somewhere on the bay side of the road, but the trees are impossible to see through, much less pass.  Flickers of firelight shine through the foliage, and a general glow comes from what's probably right around the edge of the cliff.</description>
     <description>Voices can be heard over the crashing of the waves, male voices mostly, calling to each other and laughing.  There must be a number of people about, somewhere on the bay side of the road, but the trees are are impossible to see through, much less pass.</description>
-    <position x="160" y="-340" z="0" />
+    <position x="140" y="-320" z="0" />
     <arc exit="east" move="east" destination="91" />
     <arc exit="west" move="west" destination="93" />
     <arc exit="go" move="search go narrow gap" destination="109" />
   </node>
   <node id="93" name="Trade Road, Cliff Woods" color="#008000">
     <description>Black and grey seabirds call and screech from an unpleasantly close distance.  A pair of them have made a nest in the cypresses right off the path, and they go hysterical whenever someone passes by, no matter how quietly.  Feathers, down and droppings litter the twigs and spot the ground, while forearm-long feathered bodies swoop back and forth across the road, complaining raucously.</description>
-    <position x="140" y="-340" z="0" />
+    <position x="120" y="-320" z="0" />
     <arc exit="east" move="east" destination="92" />
     <arc exit="west" move="west" destination="94" />
   </node>
   <node id="94" name="Trade Road, Cliff Woods" color="#008000">
     <description>The road hugs the edge of the bluffs here, forced right up to the brink by the twisted cypresses on the opposite side of the track.  To the west the land runs down a shallow incline, the cliffs stretching not quite so high as they do to the east.  The view to the southeast shows the Slo'Tami Cliffs in all their ruddy glory, while directly to the south and still over a hundred feet below lies the bay itself.</description>
-    <position x="120" y="-340" z="0" />
+    <position x="100" y="-320" z="0" />
     <arc exit="east" move="east" destination="93" />
     <arc exit="northwest" move="northwest" destination="95" />
   </node>
   <node id="95" name="Trade Road, Cliff Meadow">
     <description>Few trees grow here on the slopes.  Tough grasses send fibrous roots into the soil where they cling tight against the gales which blow in off the ocean.  An occasional cypress shrub raises its gnarled branches toward the sky, and here and there a low-growing patch of sea anemone spreads, its succulent leaves looking like green fruit spears, surrounding the fleshy purple and pink flowers which give the plant its name.</description>
-    <position x="100" y="-360" z="0" />
+    <position x="80" y="-340" z="0" />
     <arc exit="southeast" move="southeast" destination="94" />
     <arc exit="west" move="west" destination="96" />
   </node>
   <node id="96" name="Trade Road, Cliff Meadow">
     <description>The road slopes up to the east as the land rises toward the Slo'Tami Cliffs which curve around the inside of the bay of the same name.  A brisk wind smelling of salt and seaweed blows off the water, stirring the yellow fountains of grass and the bushes scattered about the meadow.  Hardy daisies nod in the shifting air currents, and dry leaves rustle.</description>
-    <position x="80" y="-360" z="0" />
+    <position x="60" y="-340" z="0" />
     <arc exit="east" move="east" destination="95" />
     <arc exit="west" move="west" destination="97" />
   </node>
   <node id="97" name="Reshalia Trade Road, Meadow" note="Sirese" color="#00FF00">
     <description>An open meadow spreads out to the north, bounded a few dozen yards away by a wooded area composed of what look like elms, birch, and an occasional oak.  Flowers dot the meadow, in orange and yellow and white, along with a number of burrows of about the size to have been dug by rabbits.</description>
-    <position x="60" y="-360" z="0" />
+    <position x="40" y="-340" z="0" />
     <arc exit="east" move="east" destination="96" />
     <arc exit="west" move="west" hidden="True" destination="98" />
   </node>
   <node id="98" name="Reshalia Trade Road, Meadow">
     <description>The road curves away from the bay to the northwest and toward the cliffs to the east.  It slopes very slightly to the south, and there are signs of water erosion in the ruts leading toward the cliff's edge.  If one looks closely, it's apparent that the road used to run right where the drop-off is now, but the receding cliff forced whomever maintains the road to pull it back for safety's sake.</description>
-    <position x="120" y="-180" z="0" />
+    <position x="100" y="-160" z="0" />
     <arc exit="east" move="east" hidden="True" destination="97" />
     <arc exit="northwest" move="northwest" destination="99" />
   </node>
   <node id="99" name="Reshalia Trade Road, Meadow">
     <description>An old cart wheel lies decaying by the side of the road.  A short distance away the remains of half a dozen broken barrels litter the grass, their rusted hoops arcing up above their rotting staves.  A patch of oats grows all around the spot where the junk is scattered, with a few smaller tufts nodding in the light wind to the east.</description>
-    <position x="100" y="-200" z="0" />
+    <position x="80" y="-180" z="0" />
     <arc exit="southeast" move="southeast" destination="98" />
     <arc exit="northwest" move="northwest" destination="100" />
   </node>
   <node id="100" name="Reshalia Trade Road, Meadow">
     <description>A huge oak tree grows hard by the side of the road, its rough-barked branches spreading grandly toward the sky.  The hooting of an owl is heard periodically, and fireflies swirl and dance in the night air, like a galaxy of stars come down to Elanthia to play.</description>
     <description>A huge oak tree grows hard by the side of the road, its rough-barked branches spreading grandly toward the sky on the side near the road, although the northeast side is rough and blackened and nearly flat.  Squirrels play up in the foliage, careless of the damage, chasing each other about and crunching on acorns.</description>
-    <position x="80" y="-220" z="0" />
+    <position x="60" y="-200" z="0" />
     <arc exit="southeast" move="southeast" destination="99" />
     <arc exit="northwest" move="northwest" destination="101" />
   </node>
   <node id="101" name="Reshalia Trade Road, Meadow" color="#008000">
     <description>A few young oak trees, hardly more than bushes, grow in the meadow here.  The grass grows green and lush away from them, though, decorated by purple alyssum and sweet-smelling pink and purple stock.  An odd bowl-shaped depression in the center of the area is full of grass and flowers, but no trees grow there.</description>
-    <position x="60" y="-240" z="0" />
+    <position x="40" y="-220" z="0" />
     <arc exit="southeast" move="southeast" destination="100" />
     <arc exit="northwest" move="northwest" destination="102" />
   </node>
   <node id="102" name="Reshalia Trade Road, Meadow">
     <description>Spreading bougainvillea vines snake across the ground, their blossoms like scarlet tissue resembling ruby rivers in the green grass.  One birch tree is nearly covered with the vines, and although the effect is very beautiful, the tree is being smothered and will likely die within a few years.  The grand old elms that border the meadow have likewise been trellised by climbing red roses, but these trees are old and established and seem to be bearing up well under the colorful invaders.</description>
-    <position x="40" y="-260" z="0" />
+    <position x="20" y="-240" z="0" />
     <arc exit="north" move="north" destination="103" />
     <arc exit="southeast" move="southeast" destination="101" />
   </node>
   <node id="103" name="Reshalia Trade Road, Meadow">
     <description>A large shadowed stone stands a few paces away from the road and near the indistinct border of the woods to the north.  Rising solitary out of the grass, its appearance is ominous and harsh, the focus of all that is dark and deathly in the night.</description>
     <description>A large stone stands a few paces away from the road and near the border of the woods to the north.  Made of red granite, its hard and solemn aspect contrasts with the cheerful appearance of the grassy meadow.  A large bouquet of field flowers, stocks and daisies and columbine and alyssum, with a spray of lilac to one side, lies before the stone.</description>
-    <position x="40" y="-300" z="0" />
+    <position x="20" y="-280" z="0" />
     <arc exit="north" move="north" destination="104" />
     <arc exit="south" move="south" destination="102" />
   </node>
   <node id="104" name="Reshalia Trade Road, Woods" color="#008000">
     <description>Mature old trees grow on either side of the trade road, spreading oaks and sturdy elms and graceful birches.  The woods are well tended, with little underbrush clogging the ground between the treetrunks.  But sweet green grass grows, and shy, shade-loving plants.  Nodding columbines thrive in the shadows, their gracefully spurred blooms nodding above their pretty clover-like foliage.  Dainty violets peep out of nooks and crannies, while pink stock perfumes the air.</description>
-    <position x="40" y="-300" z="0" />
+    <position x="20" y="-300" z="0" />
     <arc exit="south" move="south" destination="103" />
     <arc exit="northwest" move="northwest" destination="105" />
   </node>
   <node id="105" name="Reshalia Trade Road, Woods" color="#008000">
     <description>A dark mound grows up against a sturdy elm, seemingly about to engulf its trunk.  The mound quivers and rustles, its reaching arms trembling.  The wind blowing off the ocean might explain the movement, but somehow the rhythm of the shaking seems wrong.</description>
     <description>A mound of wild blackberry vines grows beside the road, its spiny foliage surrounding plump, dark fruit.  The vines lean up against one of the elms, and a few more adventurous shoots have climbed high into the branches, much to the delight of the squirrels up above.  Bold bluejays swoop down to perch on the vines and peck at the berries, watching you with one eye as they feast.</description>
-    <position x="20" y="-320" z="0" />
+    <position x="0" y="-320" z="0" />
     <arc exit="southeast" move="southeast" destination="104" />
     <arc exit="northwest" move="northwest" destination="106" />
   </node>
   <node id="106" name="Reshalia Trade Road, Woods" color="#008000">
     <description>One of the huge elms has fallen to the southwest of the road, taking other trees with it on the way down.  The scorched wood seems to indicate a lightning strike.  The open space gives a clear if narrow view of the beach, and the ocean beyond it.  A few saplings have grown up around their dead elders, but it will be some time before the view is completely obstructed once more, and for right now this is a pleasant place for travellers to catch their breath and enjoy the scenery.</description>
-    <position x="0" y="-340" z="0" />
+    <position x="-20" y="-340" z="0" />
     <arc exit="southeast" move="southeast" destination="105" />
     <arc exit="northwest" move="northwest" destination="107" />
   </node>
   <node id="107" name="Reshalia Trade Road, Woods" color="#008000">
     <description>The grass shivers in waves on the ground as the breeze from the ocean passes over it.  A ring of little brown-capped mushrooms is set in the shade of a tree, like a council room for tiny fae, gathered to discuss a coming moonlight dance or the flavor of this season's honeydew.</description>
-    <position x="-20" y="-360" z="0" />
+    <position x="-40" y="-360" z="0" />
     <arc exit="southeast" move="southeast" destination="106" />
     <arc exit="northwest" move="northwest" destination="108" />
   </node>
   <node id="108" name="Reshalia Trade Road, Woods" color="#008000">
     <description>Elms, oaks and birches grow sturdy and well spaced here in the dark woods.  Points of glowing light hover and drift and zip about in an eerie display, while owls hoot their hunger on their nightly hunt.</description>
     <description>Elms, oaks and birches grow sturdy and well spaced, among cool green grasses and delicate shade flowers.  The trees are relatively young here at the edge of the woods, but this land is well cared for, with signs that someone clears brush and removes deadwood promptly.  Birds cheep and squawk and tootle and dreedle-ee-ee from the branches overhead, in a raucous, joyous cacophony of woodland sound.</description>
-    <position x="-40" y="-380" z="0" />
+    <position x="-60" y="-380" z="0" />
     <arc exit="southeast" move="southeast" destination="107" />
     <arc exit="go" move="go roadblock" destination="291" />
   </node>
   <node id="109" name="Bay Cliffs, Trail">
     <description>This narrow trail through the woods is barely wide enough to walk sideways if you're bigger than a Dwarf.  Leaves obscure the line of sight in all directions, and branches and twigs poke from all sides.  Flying, crawling and hopping bugs are much closer than is comfortable, and there's no way to avoid them short of just leaving.  The foliage is denser to the south, but there are voices coming from that direction.</description>
-    <position x="160" y="-320" z="0" />
+    <position x="140" y="-300" z="0" />
     <arc exit="north" move="north" destination="92" />
     <arc exit="south" move="south" destination="110" />
   </node>
   <node id="110" name="Bay Cliffs, Monument">
     <description>The trees and bushes have been cleared away from the rim of the cliff.  Halfway between the edge of the woods and the edge of the precipice stands a tall bronze monument.  A couple of young men are lounging around and chatting near torches stuck in the grass.</description>
     <description>The trees and bushes have been cleared away from the rim of the cliff.  Halfway between the edge of the woods and the edge of the precipice stands a bronze monument, tall and shining.  A couple of young men are lounging on the grass and chatting.</description>
-    <position x="160" y="-300" z="0" />
+    <position x="140" y="-280" z="0" />
     <arc exit="north" move="north" destination="109" />
     <arc exit="go" move="go rock" destination="111" />
   </node>
   <node id="111" name="Bay Cliffs, Projecting Rock">
     <description>The granite of the cliff thrusts out over the water, projecting far enough to give a clear view of the bluegreen water and jagged rocks directly below.  The young men and women here on the rock are all very wet, which is odd considering the only source of water is a truly appalling distance away, straight down.</description>
-    <position x="160" y="-280" z="0" />
+    <position x="140" y="-260" z="0" />
     <arc exit="go" move="go grass" destination="110" />
   </node>
   <node id="112" name="Oak Tree" note="Bees">
@@ -1338,6 +1338,7 @@
     <position x="400" y="160" z="0" />
     <arc exit="north" move="north" destination="200" />
     <arc exit="go" move="search go trapdoor" destination="211" />
+    <arc exit="go" move="go trapdoor" destination="211" />
   </node>
   <node id="202" name="Lighthouse, Sitting Room">
     <description>This room was once homey and comfortable.  A decayed basket of knitting lies forgotten beside a light blue divan and upon the wall hangs a family portrait and a rack of hand-carved pipes.  A woman's touch is evident in the lacey curtains decorating a long window overlooking the sea.  That touch is long past, as dust lies heavily over the entire room.</description>
@@ -2086,148 +2087,222 @@
   </node>
   <node id="291" name="Pivilho Volcano, Base Route">
     <description>Large boulders of weathered ignimbrite dot the mountain face, and though the footing is precarious, the ground is partially hard packed by the traffic of local wildlife.  Scrub tenuously grows in what little shelter can be found, tufts of fur and feather mixing with the occasional scale in the clinging bushes.</description>
-    <position x="-100" y="-280" z="0" />
+    <position x="0" y="-380" z="0" />
     <arc exit="northeast" move="northeast" destination="292" />
     <arc exit="go" move="go roadblock" destination="108" />
   </node>
   <node id="292" name="Pivilho Volcano, Base Route">
     <description>The bleached remains of a large ram are scattered along the pathway, heavily pitted from the warm sea breeze and elements.  Several cracks spider along the nearby boulders, and large chips of stone littering the area primarily around the skeletal form suggest the creature did not go down without a fight.  A swath of rippled igneous rock forms a causeway that has long since cooled and been worn down by the passing wildlife.  Seabirds soar offshore, coasting on the rising thermals and occasionally diving for the waters.  A ravine continues up the volcano.</description>
-    <position x="-80" y="-300" z="0" />
+    <position x="20" y="-400" z="0" />
     <arc exit="southwest" move="southwest" destination="291" />
     <arc exit="go" move="go ravine" destination="293" />
   </node>
   <node id="293" name="Pivilho Volcano, Fellgust Vale">
     <description>Naturally carved from millennia of rain and harsh winds, a wide valley cuts almost straight up the side of the volcano.  Nearly constant gusts of hot, humid air stream downward bringing noxious fumes reeking of sulfur.  A thin trickle of muddy water runs along the center of the valley, swirling with a thick yellow slime.  Bushes grow along the edges of the valley and the cliff walls, a significant distance from the slow stream.  A narrow path leads towards the base route.</description>
-    <position x="-60" y="-320" z="0" />
+    <position x="40" y="-420" z="0" />
     <arc exit="north" move="north" destination="294" />
     <arc exit="go" move="go path" destination="292" />
   </node>
   <node id="294" name="Pivilho Volcano, Fellgust Vale">
     <description>The valley curves slightly here, catching the prevailing ocean trade winds, and strong gusts push down the valley, mixing faintly with the ever present volcanic fumes.  Clinging bushes rustle along the valley walls, and a few stunted trees sprout along the cliff edges.  The ground is churned, crisscrossed by claw marks and littered with fractured stone shards.</description>
-    <position x="-60" y="-340" z="0" />
+    <position x="40" y="-440" z="0" />
     <arc exit="south" move="south" destination="293" />
     <arc exit="northwest" move="northwest" destination="295" />
   </node>
   <node id="295" name="Pivilho Volcano, Fellgust Vale">
     <description>The valley branches here, bifurcating around a large outcropping.  Scoured by the winds and lashed with burn marks, the structure is heavily pocked and crumbling.  Merging as they are funneled around the rock, strong gusts of noxious wind howl and whip about chaotically.</description>
-    <position x="-80" y="-360" z="0" />
+    <position x="20" y="-460" z="0" />
     <arc exit="northeast" move="northeast" destination="296" />
     <arc exit="southeast" move="southeast" destination="294" />
     <arc exit="northwest" move="northwest" destination="298" />
   </node>
   <node id="296" name="Pivilho Volcano, Fellgust Vale">
     <description>The air is powerfully charged with static, dry as a bone and sheltered from the sea breeze.  Quartz tinged with cinnabar and lapis lazuli deposits in the ravine wall occasionally flicker with a faint blue as they discharge sparkling electricity.  Large claw marks rake the walls and ground.</description>
-    <position x="-60" y="-380" z="0" />
+    <position x="40" y="-480" z="0" />
     <arc exit="southwest" move="southwest" destination="295" />
     <arc exit="northwest" move="northwest" destination="297" />
   </node>
   <node id="297" name="Pivilho Volcano, Fellgust Vale">
     <description>The stream widens here, creating several pools lined with yellow-grey rings of accumulated sulfur deposits and salts.  These delicate rings demark bands of red and yellow, which deepen to greens and dark cerulean as the pools grow deeper.  Constantly churned by the strong winds, the waters within the pools are murky and bubble continuously as they are heated from below.  The air stinks of rotten eggs and worse.</description>
-    <position x="-80" y="-400" z="0" />
+    <position x="20" y="-500" z="0" />
     <arc exit="southeast" move="southeast" destination="296" />
     <arc exit="southwest" move="southwest" destination="298" />
   </node>
   <node id="298" name="Pivilho Volcano, Fellgust Vale">
     <description>Rough boulders and chunks of stone torn from the walls of the ravine are scattered haphazardly, held in place by a muddy trickle of stinking water.  Large nests made of shredded timber and scrub packed with assorted bones peak over caves dug into the ravine walls.  The wind howls along the valley, buffeting the nests.  An open reinforced wooden barricade allows passage further up the ravine.</description>
-    <position x="-100" y="-380" z="0" />
+    <position x="0" y="-480" z="0" />
     <arc exit="northeast" move="northeast" destination="297" />
     <arc exit="southeast" move="southeast" destination="295" />
     <arc exit="go" move="go barricade" destination="299" />
   </node>
   <node id="299" name="Pivilho Volcano, Summit Pathway">
-    <description>Set into a bermed nook, a simple wooden lean-to provides shelter against the elements, and affords travlers an opportunity to rest in the shade.  The andesite ground is faintly rippled and scoured from the elements.  The path continues to the north, curving around a bend, and an open reinforced wooden barricade allows passage back down to the vale.</description>
-    <position x="-120" y="-400" z="0" />
+    <description>Set into a bermed nook, a simple wooden lean-to provides shelter against the elements, and affords travelers an opportunity to rest in the shade.  The andesite ground is faintly rippled and scoured from the elements.  The track continues to the north, curving around a bend and an open reinforced wooden barricade allows passage back down to the vale while a steep, narrow path leads to a rocky ledge.</description>
+    <position x="-20" y="-480" z="0" />
     <arc exit="north" move="north" destination="300" />
     <arc exit="go" move="go barricade" destination="298" />
+    <arc exit="go" move="go narrow path" destination="314" />
   </node>
   <node id="300" name="Pivilho Volcano, Summit Pathway">
     <description>Revealed by weathering, thin hexagonal columnar joints form an outcropping on an otherwise effectively sheer face.  Carved steps allow for an easy climb up to a series of quarried platforms set into the cliff.  The air smells of sulfur and hot ash.</description>
-    <position x="-120" y="-420" z="0" />
+    <position x="-20" y="-500" z="0" />
     <arc exit="south" move="south" destination="299" />
     <arc exit="up" move="up" destination="301" />
   </node>
   <node id="301" name="Pivilho Volcano, Cliff Face">
     <description>Carved into the rock face, the columnar basalt has been rough hewn, resulting in numerous deep seated platforms.  Littered with large bones and lined with blackened fulgurite nodules spidering along the stone, the space appears to provide rest for more than just climbers scaling the cliff.  Further down the volcano, the waves beat against a black sand beach.</description>
-    <position x="-120" y="-440" z="0" />
+    <position x="-20" y="-520" z="0" />
     <arc exit="up" move="up" destination="302" />
     <arc exit="down" move="down" destination="300" />
   </node>
   <node id="302" name="Pivilho Volcano, Cliff Edge">
     <description>A largely flat and even surface set into the volcano marks a short, rough plain.  Haphazard boulders are scattered around, shattered as if dropped from great height.  Heavy winds have swept the area of smaller debris, revealing hexagonal jointing with largely even elevation, exacting lines abruptly ending with the cliff edge.  The height and unobstructed view affords an excellent vantage of the ocean.</description>
-    <position x="-120" y="-460" z="0" />
+    <position x="-20" y="-540" z="0" />
     <arc exit="north" move="north" destination="304" />
     <arc exit="west" move="west" destination="303" />
     <arc exit="down" move="down" destination="301" />
   </node>
   <node id="303" name="Pivilho Volcano, Cliff Edge">
     <description>A tall menhir made of weathered marble overlooks the ocean view and is set neatly between the hexagonal lines of the columnar ground.  Seabirds soar along the coast and the littoral waves are battered by the prevailing winds and tides.  The ground is swept clean, ending abruptly at the cliff's edge.</description>
-    <position x="-140" y="-460" z="0" />
+    <position x="-40" y="-540" z="0" />
     <arc exit="northeast" move="northeast" destination="304" />
     <arc exit="east" move="east" destination="302" />
   </node>
   <node id="304" name="Pivilho Volcano, Rockslide Plain">
     <description>Set into the volcano's side, the flat plain appears to be caused by a rockslide, though the area has been largely cleared of debris.  The area is dotted with several large nests composed of thick branches and shredded wood.  The ground and wall face are crisscrossed with black and green glassy fulgurite spikes and droplets.</description>
-    <position x="-120" y="-480" z="0" />
+    <position x="-20" y="-560" z="0" />
     <arc exit="south" move="south" destination="302" />
     <arc exit="southwest" move="southwest" destination="303" />
     <arc exit="go" move="go fumarole opening" destination="305" />
   </node>
   <node id="305" name="Pivilho Volcano, Fumarole Passage" color="White">
     <description>Sulfur crystals encrust the walls, shattered and scraped bare in places by deep claw marks.  The passage extends into the volcano at a modest downward angle, illuminated by a red glow.</description>
-    <position x="-120" y="-500" z="0" />
+    <position x="-20" y="-580" z="0" />
     <arc exit="northwest" move="northwest" destination="306" />
     <arc exit="go" move="go fumarole opening" destination="304" />
   </node>
   <node id="306" name="Pivilho Volcano, Borehole Overlook" color="White">
     <description>Opening onto a glowing red abyss, a wide bell-like expansion stretches down into the depths.  Hot, dry, stinging air roars upward, a howling updraft that whistles along the walls and across the edge.  Riveted into the ground, a thick steelsilk rope allows for an easy descent to the chamber floor below.</description>
-    <position x="-140" y="-520" z="0" />
+    <position x="-40" y="-600" z="0" />
     <arc exit="southeast" move="southeast" destination="305" />
     <arc exit="climb" move="climb steelsilk rope" destination="307" />
   </node>
   <node id="307" name="Pivilho Volcano, Hav'roth's Bridge" color="White">
     <description>The wide causeway extends as a large semi-circle across the magma, the rippled, black stone curving gently between the north and south chambers.  To the north, billowing clouds of choking gas swirl malevolently with ash and streaking embers, the ground cracked and glowing red as magma flows beneath barely cooled crust.  To the south, a mournful melody echoes along the walls, the chamber darker and cooler.</description>
-    <position x="-160" y="-540" z="0" />
+    <position x="-60" y="-620" z="0" />
     <arc exit="north" move="north" destination="309" />
     <arc exit="south" move="south" destination="308" />
     <arc exit="climb" move="climb steelsilk rope" destination="306" />
   </node>
   <node id="308" name="Pivilho Volcano, Peri'el's Calm" color="White">
     <description>The air is merely warm here, the tortuous heat diffusing harmlessly.  Jingling bells tinkle in the distance, a melody muffling the chaos to the north.  The dark banded rocks of the ground twist and kink, metallic inclusions glimmering in the faint light.  The walls and ceiling waver slightly.</description>
-    <position x="-160" y="-520" z="0" />
+    <position x="-60" y="-600" z="0" />
     <arc exit="north" move="north" destination="307" />
     <arc exit="southeast" move="southeast" destination="313" />
     <arc exit="southwest" move="southwest" destination="312" />
   </node>
   <node id="309" name="Pivilho Volcano, Ushnish's Rage" color="White">
     <description>Howling winds blast all around, and crevices burst with yellow hot liquid stone.  Cooling bubbles fade to black, illuminated softly from within with a dull red, occasionally blistering and pushing forward slightly, hissing in a sibilant rumble as the ground shifts in a precarious and mesmerizing flow.  Visibility is limited as hot embers and ash swirl chaotically.</description>
-    <position x="-160" y="-560" z="0" />
+    <position x="-60" y="-640" z="0" />
     <arc exit="northeast" move="northeast" destination="311" />
     <arc exit="south" move="south" destination="307" />
     <arc exit="northwest" move="northwest" destination="310" />
   </node>
   <node id="310" name="Pivilho Volcano, Ushnish's Rage" color="White">
     <description>A large pit opens here, billowing lava welling upward, cooling as it hits the air to form a thin skin of stone that shifts with the undercurrent.  Crackling as it moves, the stone skin exposes lines of brighter red magma, jagged and constantly in motion.  Searingly hot air roars around chaotically, thick with noxious fumes.  The walls glisten with metal and gem formations.</description>
-    <position x="-180" y="-580" z="0" />
+    <position x="-80" y="-660" z="0" />
     <arc exit="east" move="east" destination="311" />
     <arc exit="southeast" move="southeast" destination="309" />
   </node>
   <node id="311" name="Pivilho Volcano, Ushnish's Rage" color="White">
     <description>Several hollowed out boulders rise slightly from the ground, smoking and glowing with heat, but absent of the ever present magma.  Thick rock scales line the inside of the boulders, piled carefully around several egg-shaped black stones.  From deep within the swirling clouds and murky shadows echoes an angry hiss.</description>
-    <position x="-140" y="-580" z="0" />
+    <position x="-40" y="-660" z="0" />
     <arc exit="southwest" move="southwest" destination="309" />
     <arc exit="west" move="west" destination="310" />
   </node>
   <node id="312" name="Pivilho Volcano, Peri'el's Calm" color="White">
     <description>The ground is littered with blackened seashells and the area resounds with an oceanic hissing, reminiscent of the surf.  As the volcano's cacophonous sounds vie for attention, something akin to soft vocals pierce the din, but its source remains elusive.  Glimmering deep within the vaguely transparent banded walls, gemstones flicker with luminescence.</description>
-    <position x="-180" y="-500" z="0" />
+    <position x="-80" y="-580" z="0" />
     <arc exit="northeast" move="northeast" destination="308" />
     <arc exit="east" move="east" destination="313" />
   </node>
   <node id="313" name="Pivilho Volcano, Peri'el's Calm" color="White">
     <description>Striations of reds, yellows, lavenders, and blacks ripple along the floor, wall and ceiling, seeming to ebb and flow in the faint light.  Wafting through the area, a cool breeze gently carries a soft, soothing song.  A long, scorched gouge mars the wall, and a ragged chunk of stone is torn free.</description>
-    <position x="-140" y="-500" z="0" />
+    <position x="-40" y="-580" z="0" />
     <arc exit="west" move="west" destination="312" />
     <arc exit="northwest" move="northwest" destination="308" />
+  </node>
+  <node id="314" name="Pivilho Volcano, Ember Aerie Pathway" note="cindering harpy" color="White">
+    <description>A narrow crevice winds through the volcanic cliffside, forming a steep, narrow path that descends to a rocky shelf.  Loose pebbles and ash coat the ground, while tufts of hardy grass cling to cracks in the weathered stone.  The distant rumble of waves crashing below mixes with the constant whistling of the coastal breeze.</description>
+    <position x="-60" y="-475" z="0" />
+    <arc exit="west" move="west" destination="315" />
+    <arc exit="up" move="up" destination="316" />
+    <arc exit="down" move="down" destination="317" />
+    <arc exit="go" move="go narrow path" destination="299" />
+  </node>
+  <node id="315" name="Pivilho Volcano, Ember Aerie Grotto" color="White">
+    <description>Partially obscured by a curtain of lichen drapery, this small grotto is protected from the wind by dark, porous walls of stone.  Faint, glowing embers are scattered along the floor, evidence of a recent cookfire.  Shallow alcoves carved into the stone on one side hold various tools and trinkets, while a roughly hewn table with cut logs for seats takes up the other.</description>
+    <position x="-80" y="-475" z="0" />
+    <arc exit="east" move="east" destination="314" />
+    <arc exit="up" move="up" destination="319" />
+    <arc exit="down" move="down" destination="318" />
+    <arc exit="go" move="go stone steps" destination="320" />
+  </node>
+  <node id="316" name="Pivilho Volcano, Ember Aerie Ledge" color="White">
+    <description>A wide, rocky shelf stretches out along the cliff, its surface uneven and pitted from erosion.  Sparse vegetation clings to the edges, offering small splashes of green and flax against the dark volcanic stone.  The sound of distant waves echoes from below, occasionally muffled by the wind.</description>
+    <position x="-40" y="-460" z="0" />
+    <arc exit="southwest" move="southwest" destination="318" />
+    <arc exit="west" move="west" destination="319" />
+    <arc exit="down" move="down" destination="314" />
+  </node>
+  <node id="317" name="Pivilho Volcano, Ember Aerie Ledge" color="White">
+    <description>The narrow ledge is partially enclosed by jagged rock formations, offering some protection from the wind.  Ash and dust cover the ground, disturbed only by the occasional footprints.  The cliffs below drop steeply into the ocean, the waves crashing far below.</description>
+    <position x="-40" y="-440" z="0" />
+    <arc exit="west" move="west" destination="318" />
+    <arc exit="northwest" move="northwest" destination="319" />
+    <arc exit="up" move="up" destination="314" />
+  </node>
+  <node id="318" name="Pivilho Volcano, Ember Aerie Rookery" color="White">
+    <description>A nearly vertical cliff stretches below this rocky ledge, the steep slope pockmarked where the ground fell below to the rock-strewn beach.  Small structures made of scavenged timber and sea-worn stone are tucked along the narrow path, nestled into sheltered nooks, with intricately carved doors elevated too high for wingless visitors to enter without assistance.</description>
+    <position x="-60" y="-440" z="0" />
+    <arc exit="northeast" move="northeast" destination="316" />
+    <arc exit="east" move="east" destination="317" />
+    <arc exit="up" move="up" destination="315" />
+  </node>
+  <node id="319" name="Pivilho Volcano, Ember Aerie Ledge" color="White">
+    <description>The ground here is uneven and sloped, littered with broken pieces of volcanic rock in various sizes.  Dark streaks of ash mark the path, while occasional patches of brittle grass grow among the stones.  A few scattered feathers are caught in the cracks, gently shifting with the breeze, their dark tips streaked with hints of scarlet.</description>
+    <position x="-60" y="-460" z="0" />
+    <arc exit="east" move="east" destination="316" />
+    <arc exit="southeast" move="southeast" destination="317" />
+    <arc exit="down" move="down" destination="315" />
+  </node>
+  <node id="320" name="Pivilho Volcano, Ember Aerie Cliffs" color="White">
+    <description>The ledge slopes gently toward the sea, faraway waves visible through cracks in the rocky ground.  Clusters of driftwood and seashells are strewn about the area, some artfully placed as decoration.  Further downhill and leaning against the cliff face, a portion of a tall driftwood obelisk looms, weathered but standing firm against the coastal winds.</description>
+    <position x="-95" y="-460" z="0" />
+    <arc exit="southwest" move="southwest" destination="322" />
+    <arc exit="west" move="west" destination="321" />
+    <arc exit="down" move="down" destination="323" />
+    <arc exit="go" move="go stone steps" destination="315" />
+  </node>
+  <node id="321" name="Pivilho Volcano, Ember Aerie Cliffs" color="White">
+    <description>The path widens into a small gathering space, with smoothed volcanic rock forming a natural floor underfoot.  Scattered around the area, small stone piles suggest past gatherings, their rough edges smoothed by years of wind and weather.  Flecks of dried seaweed cling to the edges, carried there by the gusting coastal breeze.</description>
+    <position x="-115" y="-460" z="0" />
+    <arc exit="east" move="east" destination="320" />
+    <arc exit="southeast" move="southeast" destination="323" />
+    <arc exit="down" move="down" destination="322" />
+  </node>
+  <node id="322" name="Pivilho Volcano, Ember Aerie Cliffs" color="White">
+    <description>This elevated corner of the ledge overlooks the sea below, unidentifiable specks dotting the distant horizon.  Fine cracks in the stone reveal veins of dark mineral deposits, their glossy surfaces reflecting in the light.  A driftwood obelisk stands to the east, its irregular form tucked against the cliff face.</description>
+    <position x="-115" y="-440" z="0" />
+    <arc exit="northeast" move="northeast" destination="320" />
+    <arc exit="east" move="east" destination="323" />
+    <arc exit="up" move="up" destination="321" />
+  </node>
+  <node id="323" name="Pivilho Volcano, Ember Aerie Cliffs" color="White">
+    <description>Nestled against a natural rock wall, a wide ledge offers reprieve from the constant wind.  Stacked stones form crude seats, their surfaces worn smooth by the elements.  A large driftwood obelisk is visible to the southwest, its sea-worn branches skillfully arranged to resemble an outstretched wing.</description>
+    <position x="-95" y="-440" z="0" />
+    <arc exit="west" move="west" destination="322" />
+    <arc exit="northwest" move="northwest" destination="321" />
+    <arc exit="up" move="up" destination="320" />
   </node>
   <label text="Silver Leucros">
     <position x="530" y="-330" z="0" />
@@ -2275,13 +2350,13 @@
     <position x="570" y="-430" z="0" />
   </label>
   <label text="B">
-    <position x="190" y="-190" z="0" />
+    <position x="170" y="-170" z="0" />
   </label>
   <label text="C">
-    <position x="50" y="-380" z="0" />
+    <position x="30" y="-360" z="0" />
   </label>
   <label text="C">
-    <position x="120" y="-200" z="0" />
+    <position x="100" y="-180" z="0" />
   </label>
   <label text="- Climb path to D">
     <position x="330" y="210" z="0" />
@@ -2296,18 +2371,24 @@
     <position x="-140" y="-240" z="0" />
   </label>
   <label text="Gale Drakes">
-    <position x="-140" y="-350" z="0" />
+    <position x="40" y="-470" z="0" />
   </label>
   <label text="Hurricane Drakes">
-    <position x="-110" y="-460" z="0" />
+    <position x="-10" y="-540" z="0" />
   </label>
   <label text="Magma Cobraa">
-    <position x="-150" y="-560" z="0" />
+    <position x="-50" y="-640" z="0" />
   </label>
   <label text="Researcher">
-    <position x="140" y="-260" z="0" />
+    <position x="120" y="-240" z="0" />
   </label>
   <label text="Trelmik">
-    <position x="140" y="-250" z="0" />
+    <position x="120" y="-230" z="0" />
+  </label>
+  <label text="Cinderwing">
+    <position x="-120" y="-495" z="0" />
+  </label>
+  <label text="Harpy">
+    <position x="-123" y="-485" z="0" />
   </label>
 </zone>
