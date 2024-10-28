@@ -315,11 +315,11 @@ TOGGLE:
   put toggle disembark
   matchwait
 TOGGLESET:
-var dockNames 
-var ferryNames \[Aboard the Dirigible, Gondola\]|\[Alongside a Wizened Ranger\]|\[Aboard the Balloon, Gondola\]|\[Aboard the Mammoth, Platform\]|\[The Bardess' Fete, Deck\]|\[Aboard the Warship, Gondola\]|\[\"?A Birch Skiff\"?\]|\[\"?A Highly Polished Skiff\"?\]|\[\"?Aboard the Mammoth, Platform\"?\]|\[\"?Aboard the Warship, Gondola\"?\]|\[\"?(The )?Degan.+?\]|\[\"?Her Opulence\"?\]|\[\"?His Daring Exploit\"?\]|\[\"?Hodierna's Grace\"?\]|\[\"?Imperial Glory\"?\]|\[\"?Kertigen's Honor\"?\]|\[\"?Northern Pride.+?\]|\[\"?The Damaris' Kiss\"?\]|\[\"?The Desert Wind\"?\]|\[\"?The Evening Star\"?\]|\[\"?The Galley Cercorim\"?\]|\[\"?The Galley Sanegazat\"?\]|\[\"?The Halasa Selhin.+?\]|\[\"?The Jolas.+?\]|\[\"?The Kree'la.+?\]|\[\"?The Night Sky.+?\]|\[\"?The Riverhawk\"?\]|\[\"?The Skirr'lolasu.+?\]|\[\"?The Suncatcher\"?\]|\[\"?Theren's Star.+?\]
-var ferryArrivedAtDock ^The barge pulls into dock|^The captain barks the order to tie off the .+ to the docks\.|The crew ties it off and runs out the gangplank\.|^The warship lands with a creaky lurch|^You come to a very soft stop|dock and its crew ties the (ferry|barge) off\.|^The sand barge pulls into dock|^The skiff lightly taps|returning to Fang Cove|returning to Ratha
-var ferryArrivedAtDestinatoin 
-action (ferry_disembark) var ferryDisembarked 1 when %dockNames
+var dockRoomTitles 
+var ferryRoomTitles \[Aboard the Dirigible, Gondola\]|\[Alongside a Wizened Ranger\]|\[Aboard the Balloon, Gondola\]|\[Aboard the Mammoth, Platform\]|\[The Bardess' Fete, Deck\]|\[Aboard the Warship, Gondola\]|\[\"?A Birch Skiff\"?\]|\[\"?A Highly Polished Skiff\"?\]|\[\"?Aboard the Mammoth, Platform\"?\]|\[\"?Aboard the Warship, Gondola\"?\]|\[\"?(The )?Degan.+?\]|\[\"?Her Opulence\"?\]|\[\"?His Daring Exploit\"?\]|\[\"?Hodierna's Grace\"?\]|\[\"?Imperial Glory\"?\]|\[\"?Kertigen's Honor\"?\]|\[\"?Northern Pride.+?\]|\[\"?The Damaris' Kiss\"?\]|\[\"?The Desert Wind\"?\]|\[\"?The Evening Star\"?\]|\[\"?The Galley Cercorim\"?\]|\[\"?The Galley Sanegazat\"?\]|\[\"?The Halasa Selhin.+?\]|\[\"?The Jolas.+?\]|\[\"?The Kree'la.+?\]|\[\"?The Night Sky.+?\]|\[\"?The Riverhawk\"?\]|\[\"?The Skirr'lolasu.+?\]|\[\"?The Suncatcher\"?\]|\[\"?Theren's Star.+?\]
+var ferryArrivedAtDockMsgs ^The barge pulls into dock|^The captain barks the order to tie off the .+ to the docks\.|The crew ties it off and runs out the gangplank\.|^The warship lands with a creaky lurch|^You come to a very soft stop|dock and its crew ties the (ferry|barge) off\.|^The sand barge pulls into dock|^The skiff lightly taps|returning to Fang Cove|returning to Ratha
+var ferryArrivedAtDestinationMsgs 
+action (ferry_disembark) var ferryDisembarked 1 when %dockRoomTitles
 action (ferry_disembark) var ferryAtDock 1 when %ferryArrivedAtDock
 action (ferry_disembark) var ferryDisembarkMovement platform when a barge platform
 action (ferry_disembark) var ferryDisembarkMovement pier when the Riverhaven pier
@@ -495,7 +495,7 @@ if (matchre("$roomname", "Zaulfung, Swamp") && matchre("$roomdesc", "Rancid mire
 if matchre("$roomname", "Zaulfung, Trackless Swamp") then gosub ZAULFUNG_ESCAPE_2
 if matchre("$roomname", "Velaka, Dunes") then gosub VELAKADUNES_ESCAPE
 ## CHECK TO SEE IF SCRIPT IS STARTED ON BOARD CERTAIN FERRIES - IF SO INITIATE FERRY LOGIC
-if matchre("$roomname", "(%ferryNames)") then gosub FERRYLOGIC
+if matchre("$roomname", "(%ferryRoomTitles)") then gosub FERRYLOGIC
 ## IF SCRIPT IS STARTED IN A ROOMID == 0 - DOUBLE CHECK TO SEE IF WE ARE ON ANY FERRY
 ## IF NOT ON A FERRY - MOVE IN RANDOM DIRECTIONS AND ATTEMPT TO GET AUTOMAPPER TO REGISTER THE ROOM NUMBER
 if (("$zoneid" == "0") || ("$roomid" == "0")) then {
@@ -2828,7 +2828,7 @@ FERRY_CHECK:
   var disembarkMovement dock
   action (ferry_check) on
   delay %infiniteLoopProtection
-  if matchre("$roomname", "%ferryNames") then goto ONFERRY
+  if matchre("$roomname", "%ferryRoomTitles") then goto ONFERRY
   if matchre("$roomobjs", "the beach") then goto FERRY_DISEMBARK
   if matchre("$roomobjs", "a ladder") then goto FERRY_DISEMBARK
   action (ferry_check) off
@@ -2837,7 +2837,7 @@ FERRY_CHECK:
 #han: delete join, make it all ferry
 JOINLOGIC:
 FERRYLOGIC:
-  if matchre("$roomname", "%ferryNames") then goto ONFERRY
+  if matchre("$roomname", "%ferryRoomTitles") then goto ONFERRY
   gosub INFO_CHECK
   if matchre("$zoneid", "\b(?:1|7|30|35|60|40|41|47|48|90|113|106|107|108|150)\b") then goto FERRY
 ###  MAIN FERRY LOGIC - CHECK FOR AND WAIT TO BOARD FERRY  ####
@@ -2846,7 +2846,7 @@ FERRY:
   var OnFerry 0
   var disembarkMovement dock
   action (ferry_check) on
-  if (matchre("$roomname", "%ferryNames") || (%OnFerry == 1)) then goto ONFERRY
+  if (matchre("$roomname", "%ferryRoomTitles") || (%OnFerry == 1)) then goto ONFERRY
   if (%verbose) then gosub ECHO Checking for a Transport...
   if ($invisible) then gosub STOP_INVIS
   if matchre("$roomobjs", "(skiff|galley|Night Sky|Gondola|Riverhawk|Imperial Glory|Jolas|Skirr'lolasu|Kree'la|Selhin|Halasa|Degan)") then gosub MOVE go $1
@@ -2888,7 +2888,7 @@ FERRY:
 
 
   delay %infiniteLoopProtection
-  if matchre("$roomname", "%ferryNames") then goto ONFERRY
+  if matchre("$roomname", "%ferryRoomTitles") then goto ONFERRY
   if ($hidden == 0) then gosub PUT hide
 # waiting for ferry 60 seconds or arrival
   if (%verbose) then gosub ECHO Waiting for a transport..
@@ -2901,7 +2901,7 @@ ONFERRY:
   var OffRide 0
   var disembarkMovement dock
   action (ferry_disembark) on
-  if matchre("$roomname", "%ferryNames") then var transportName $1
+  if matchre("$roomname", "%ferryRoomTitles") then var transportName $1
   gosub ECHO Riding on Public Transport!|%transportName
 #### gondola is the only one where you can't just chill in the same room
   if matchre("$roomname", "Gondola") then {
@@ -2932,7 +2932,7 @@ FERRY_DISEMBARK:
   if ($hidden == 1) then gosub PUT unhide
   if ($standing == 0) then gosub STAND
 # did you auto-disembark?
-  if !matchre("$roomname", "%ferryNames") then return
+  if !matchre("$roomname", "%ferryRoomTitles") then return
   if matchre("$roomname", "Rocky Path") then {
     gosub MOVE go beach
     return
@@ -2953,7 +2953,7 @@ FERRY_DISEMBARK:
     goto ONFERRY
   }
   gosub MOVE go %disembarkMovement
-  if matchre("$roomname", "%ferryNames") then goto FERRY_DISEMBARK
+  if matchre("$roomname", "%ferryRoomTitles") then goto FERRY_DISEMBARK
   return
 ####   END OF FERRY LOGIC  ####
 ####  COIN LOGIC - GET MONEY FROM THE BANK TO TAKE FERRIES

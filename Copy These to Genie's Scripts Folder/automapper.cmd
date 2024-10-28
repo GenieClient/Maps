@@ -5,10 +5,11 @@ var autoversion 9.2024-11-1
 # debuglevel 10
 # debug 5
 
-#2024-10-19
+#2024-10-27
 # Hanryu
 #   version 9 now
 #   mapperINC.cmd is a big enough chang to bump the rev number
+#   also removed redundant check on ice road if you have skates
 
 #2024-10-10
 # Hanryu
@@ -745,8 +746,6 @@ MOVE_ICE:
     if (%slow_on_ice) then gosub ICE_COLLECT
   }
   put %movement
-  eval depthtimeout $unixtime + %waitevalTimeOut
-  if (%depth > 0) then waiteval ((0 == %depth) || ($unixtime >= %depthtimeout))
   goto MOVE_DONE
 
 SKATE_NO:
