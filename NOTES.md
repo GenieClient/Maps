@@ -459,3 +459,32 @@ You also see Uaro Dock, a barrel of fishing poles, a barrel of fish bait, a buck
  minutes transit
  minutes at dock
 -------------------
+roomname: Houses Consulate, Rooftop Platform (67-734)
+roomtitle: [Houses Consulate, Rooftop Platform] (67-734)
+From its northwest-facing position atop the consulate building, this precarious strip of rooftop space offers an especially stunning view of Shard's sky-piercing Great Tower, set dramatically against the turbulent thundercloud that rages above Stormwill Tower further in the distance.  Hundreds of glowing windows break the nighttime gloom below, speckling the cityscape with points of soft light.
+You also see an open skylight.
+
+>
+The Elothean aeromancer says, "I'm leaving shortly, returning to Aesry Surlaenis'a.  If you would like to accompany me for a safe trip there, just join me."  The Elothean aeromancer smiles.
+[JOIN CHARCOAL DIRIGIBLE before it leaves if you would like to go to Aesry Surlaenis'a.]
+
+YES TWICE!
+>join char diri
+The Elothean aeromancer says, "Woah there, sir.  I can only take a handful with me at a time.  It's going to cost you if you want to come along.  I'll accept 10000 copper Dokoras (1.0 plat)."
+>join char diri
+The Elothean aeromancer says, "Alright.  That'll be 10000 Dokoras (1.0 plat)."  You hand over your funds and step closer.  You join the Elothean aeromancer.  "Right this way, sir."
+
+roomname: Houses Consulate, Rooftop Platform (67-734)
+roomtitle: [Aboard the Dirigible, Gondola] (67-734)
+An intricate network of silken rope connects the dirigible's sleek copperwood gondola to the massive charcoal and silver striped balloon above.  At the stern of the boat-like vessel, an odd contraption resembling a convoluted silver stove hums sonorously as various runes flicker across its polished surface.  At the bow, a semi-enclosed cabin provides a row of silk-padded benches for comfort and protection from the elements during transit.
+You also see a rope ladder.
+
+roomname: Houses Consulate, Rooftop Platform (67-734)
+roomtitle: [Aesry Surlaenis'a, Landing Field] (67-734)
+The grasses of this wide clearing have been pressed flat under the weight of reiterant traffic.  Various stakes and anchors are installed near the center of the field, while little blue flags are set at even intervals around it to delineate its functional borders.
+You also see a silver-striped charcoal dirigible and a beaten footpath.
+
+AUTODISEMBARK
+9 minutes transit
+1 minute at dock
+-------------------
