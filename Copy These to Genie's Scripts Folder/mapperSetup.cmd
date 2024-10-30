@@ -82,3 +82,7 @@ put #var TRAVEL.Segoltha 550
 put #var TRAVEL.UnderGondola 515
 put #var TRAVEL.UnderSegoltha 515
 put #var TRAVEL.muspari 2000
+#Bags
+#  When travel needs to stow stuff, where does it go?
+put #var TRAVEL.bagMain $container_default
+put #var TRAVEL.backupBag $container_sheath

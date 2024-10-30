@@ -83,6 +83,10 @@ if matchre("%1", "help|HELP|Help|^$") then {
   put #echo %helpecho {    Echoes                                                             }
   put #echo %helpecho {      how verbose do you want .travel to be?                           }
   put #echo %helpecho {      #var TRAVEL.verbose True                                         }
+  put #echo %helpecho {    Bags                                                               }
+  put #echo %helpecho {      When travel needs to stow stuff, where does it go?               }
+  put #echo %helpecho {      #var TRAVEL.bagMain backpack                                     }
+  put #echo %helpecho {      #var TRAVEL.backupBag duffelbag                                  }
   put #echo %helpecho {                                                                       }
   put #echo %helpecho {  Ranks to use Rossman's shortcut to swim the Jantspyre River          }
   put #echo %helpecho {    North is ~safe~ around 200 and POSSIBLE ~175 W/ no armor           }
@@ -98,7 +102,7 @@ if matchre("%1", "help|HELP|Help|^$") then {
   put #echo %helpecho {  Ranks to swim the Segoltha River - Tiger/Crossing <-> STR            }
   put #echo %helpecho {    Safe ~ 550                                                         }
   put #echo %helpecho {    Possible ~ 530+ w/ no burden/buffs                                 }
-  put #echo %helpecho {   #var TRAVEL.Segoltha 550                                            }
+  put #echo %helpecho {    #var TRAVEL.Segoltha 550                                           }
   put #echo %helpecho {                                                                       }
   put #echo %helpecho {  Ranks to climb Under Gondola shortcut                                }
   put #echo %helpecho {    Safe ~ 510                                                         }
@@ -379,23 +383,29 @@ else var underSegoltha $travel.underSegoltha
 if !def(travel.muspari) then var muspari 2000
 else var muspari $travel.muspari
 # what color do you want for echos?
-  if !def(automapper.color) then var color #B3FF66
-  else var color $automapper.color
-  if matchre("$client", "Genie") then var color %color mono
+if !def(automapper.color) then var color #B3FF66
+else var color $automapper.color
+if matchre("$client", "Genie") then var color %color mono
 # Time to pause before sending a "put x" command
-  if !def(automapper.pause) then var command_pause 0.01
-  else var command_pause $automapper.pause
+if !def(automapper.pause) then var command_pause 0.01
+else var command_pause $automapper.pause
 # verbosity
-  if !def(TRAVEL.verbose) then var verbose 1
-  else var verbose $TRAVEL.verbose
+if !def(TRAVEL.verbose) then var verbose 1
+else var verbose $TRAVEL.verbose
 # Decrease at your own risk, increase if you get infinte loop errors
 #default is 0.1 for Outlander, 0.001 for Genie
-  var infiniteLoopProtection 0.1
-  if def(client) then {
-    if matchre("$client", "Genie|None") then var infiniteLoopProtection 0.001
-    if matchre("$client", "Outlander") then var infiniteLoopProtection 0.1
-  }
-  if def(automapper.loop) then var infiniteLoopProtection $automapper.loop
+var infiniteLoopProtection 0.1
+if def(client) then {
+  if matchre("$client", "Genie|None") then var infiniteLoopProtection 0.001
+  if matchre("$client", "Outlander") then var infiniteLoopProtection 0.1
+}
+if def(automapper.loop) then var infiniteLoopProtection $automapper.loop
+if def(TRAVEL.mainBag) && def(TRAVEL.backupBag) then {
+  var bagMain $TRAVEL.mainBag
+  var bagMain $TRAVEL.backupBag
+} else {
+  gosub BAG_CHECK
+}
 TOP:
 timer clear
 timer start
@@ -416,7 +426,6 @@ action put #var circle $1 when Circle\: (\d+)
 gosub INFO_CHECK
 action remove Guild\:\s+(.*)$
 action remove Circle\: (\d+)
-gosub BAG_CHECK
 if ($hidden) then gosub UNHIDE
 if (($joined == 1) && ($travel.GroupShortCutsAnyway == False)) then {
   var rossmanNorth 2000
@@ -657,13 +666,13 @@ if matchre("%destination", "\b(?:mri?s?s?)") then var detour mriss
 if matchre("%destination", "\b(?:merk?r?e?s?h?|kre?s?h?)") then var detour merk
 if matchre("%destination", "\b(?:har?a?j?a?a?l?)") then var detour hara
 goto THERENGIA
-#### The goto FORD block ####
-if matchre("%destination", "\b(?:boar?c?l?a?n?)") then goto FORD
+#### The goto FORF block ####
+if matchre("%destination", "\b(?:boar?c?l?a?n?)") then goto FORF
 if matchre("%destination", "\b(?:aing?h?a?z?a?l?)") then var detour ain
 if matchre("%destination", "\b(?:rave?n?s?)") then var detour raven
 if matchre("%destination", "\b(?:hib?a?r?n?h?v?i?d?a?r?|out?e?r?)") then var detour outer
 if matchre("%destination", "\b(?:inne?r?)") then var detour inner
-goto FORD
+goto FORF
 #### END BLOCKS ####
 if matchre("%destination", "\b(?:tais?g?a?t?h?)") then {
   var detour ratha
@@ -2333,11 +2342,11 @@ VELAKA_SHORTCUT_5:
 ####  END P3  ####
 ####  P5  ####
 # hanryu: is this supposed to be for*F*?
-FORD:
-var label FORD
+FORF:
+var label FORF
 if (matchre("$game", "(?i)DRX") && (%portal == 1) && matchre("$zoneid", "\b(?:1|30|40|47|67|90|99|107|116)\b") && (%ported == 0)) then gosub PORTAL_TIME
 if matchre("$zoneid", "(?:Hara'jaal|Mer'Kresh|M'Riss)") then {
-  var backuplabel FORD
+  var backuplabel FORF
   var backupdetour %detour
   var detour mriss
   var tomainland 1
@@ -2387,7 +2396,7 @@ if ("$zoneid" == "40a") then {
   }
   gosub AUTOMOVE 68
   gosub JOINLOGIC
-  goto FORD_3
+  goto FORF_3
 }
 if ("$zoneid" == "34a") then gosub AUTOMOVE 134
 if ("$zoneid" == "34") then gosub AUTOMOVE 15
@@ -2475,14 +2484,14 @@ if ("$zoneid" == "63") then gosub AUTOMOVE 112
 if (("$zoneid" == "62") && ($Athletics.Ranks >= %underGondola)) then {
   gosub BUFFCLIMB
   gosub AUTOMOVE 153
-  goto FORD_2
+  goto FORF_2
 }
 if (matchre("$game", "(?i)DRX") && (%portal == 1) && (matchre("$zoneid", "\b(1|30|40|47|67|90|99|107|116)\b") && (%ported == 0)) then gosub PORTAL_TIME
 if (("$zoneid" == "62") && ($Athletics.Ranks < %underGondola)) then {
   gosub AUTOMOVE 2
   gosub FERRYLOGIC
 }
-FORD_2:
+FORF_2:
 if ("$zoneid" == "65") then gosub AUTOMOVE 1
 if ("$zoneid" == "68b") then gosub AUTOMOVE 44
 if ("$zoneid" == "68a") then gosub AUTOMOVE 29
@@ -2514,7 +2523,7 @@ if ("$zoneid" == "67a") then gosub AUTOMOVE STR
 if ("$zoneid" == "67") then gosub AUTOMOVE West
 if ("$zoneid" == "66") then gosub AUTOMOVE 217
 if ("$zoneid" == "69") then gosub AUTOMOVE 283
-FORD_3:
+FORF_3:
 if ("$zoneid" == "69") then gosub AUTOMOVE 283
 if (("$zoneid" == "127") && matchre("%detour", "(raven|outer|inner|ain)")) then gosub AUTOMOVE 510
 if (("$zoneid" == "126") && matchre("%detour", "(raven|outer|inner|ain)")) then gosub AUTOMOVE 49
@@ -3298,7 +3307,7 @@ MUSPARI_PORTAL:
                if matchre("%destination", "\b(aing?h?a?z?a?l?|rave?n?s?|hib?a?r?n?h?v?i?d?a?r?|out?e?r?|inne?r?|boar?c?l?a?n?)\b") then
                     {
                          gosub clear
-                         goto FORD
+                         goto FORF
                     }
           }
 ## HIBAR PORTAL ENTRANCE Zone 116 Room 188
