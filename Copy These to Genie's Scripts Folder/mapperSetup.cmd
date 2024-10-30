@@ -73,70 +73,12 @@ put #var automapper.UserWalkSuccess ~~TeXtToMaTcH~~
 # Repeat this style as needed for other walk types
 
 ####  TRAVEL Setup!  ####
-if matchre("$client", "Genie") then var helpecho #33CC99 mono
-if matchre("$client", "Outlander") then var helpecho #33CC99
-if matchre("%1", "help|HELP|Help|^$") then {
-  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
-Welcome to travel Setup!   (version %version)
-Use the command line to set the following preferences:
-  Pause
-    Time to pause before sending a "put x" command
-#var automapper.pause 0.01
-  Infinite Loop Protection
-    Increase if you get infinte loop errors
-#var automapper.loop 0.001
-  Waiteval Time Out
-    prevents waiting forever for wave to collapse
-#var automapper.wavetimeout 15
-  Cyclic Spells
-    1: Turn off cyclic spells before moving
-    0: Leave cyclic spells running while moving
-#var automapper.cyclic 1
-  Color
-    What should the default automapper echo color be?
-#var automapper.color #33CC99
-  Are you traveling with a group of capped characters?
-    Are you bold enough to risk group breaking anyway?
-#var TRAVEL.GroupShortCutsAnyway True
-  Echoes
-    how verbose do you want .travel to be?
-#var TRAVEL.verbose True
-
-Ranks to use Rossman's shortcut to swim the Jantspyre River
-  North is ~safe~ around 200 and POSSIBLE ~175 W/ no armor
-  South is much easier, safe at ~90
-#var TRAVEL.RossmanNorth 200
-#var TRAVEL.RossmanSouth 90
-
-Ranks to swim the Faldesu River - Haven <-> NTR
-  Safe ~ 190
-  Possible ~ 160+ w/ no burden/buffs
-#var TRAVEL.Faldesu 190
-
-Ranks to swim the Segoltha River - Tiger/Crossing <-> STR
-  Safe ~ 550
-  Possible ~ 530+ w/ no burden/buffs
-#var TRAVEL.Segoltha 550
-
-Ranks to climb Under Gondola shortcut
-  Safe ~ 510
-  Possible ~ 480+ w/ buffs and a rope
-#var TRAVEL.UnderGondola 515
-
-Ranks to use 5th passage, Under-Segoltha (THIEF only)
-  Safe ~ 50
-  Possible ~ 35 w/ no burden/buffs
-#var TRAVEL.UnderSegoltha 515
-
-Ranks for Velka Desert Shortcut - Hvaral <-> Muspar'i
-  THIS IS THE HARDEST SHORTCUT IN THE GAME
-  FRIENDS DON'T LET FRIENDS WALK TO MUSPAR'I, USE THE BLIMP
-  Safe ~ 800
-  Possible ~ 760 w/ buffs
-#var TRAVEL.muspari 2000
-
-try `.automapper help` for help with automapper variables
-  there is commonality-these variables will affect how travel works
-    as it manages automapper
-Now save! (#save vars for Genie | cmd-s for Outlander)
-  put #echo %helpecho <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+put #var TRAVEL.GroupShortCutsAnyway True
+put #var TRAVEL.verbose True
+put #var TRAVEL.RossmanNorth 200
+put #var TRAVEL.RossmanSouth 90
+put #var TRAVEL.Faldesu 190
+put #var TRAVEL.Segoltha 550
+put #var TRAVEL.UnderGondola 515
+put #var TRAVEL.UnderSegoltha 515
+put #var TRAVEL.muspari 2000

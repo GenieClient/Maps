@@ -57,6 +57,9 @@ PREMIUM_SET:
 #### gosub ECHO Some|multi|line text|box
 #### initial idea by Hanryu, Jon fixed it for genie
 ECHO:
+
+debug 0
+
   var echoVar $0
   if !matchre("%echoVar", "\|") then {
     eval border replacere("%echoVar", ".", "~")
@@ -65,6 +68,9 @@ ECHO:
     put #echo %color {  %echoVar  }
     put #echo %color <~~%border~~>
     put #echo
+
+debug 5
+
     return
   } else {
     eval echoVarLines count("%echoVar", "|")
@@ -98,6 +104,9 @@ ECHO:
         if (%c <= %echoVarLines) then goto PRINTBOXLOOP
       put #echo %color <~~~%border~~~>
       put #echo
+
+debug 5
+
       return
   }
 ####
@@ -837,54 +846,47 @@ BAG_CHECK:
   var backupBag NULL
   var thirdBag NULL
   var fourthBag NULL
-  var Backpack 0
-  var Haversack 0
-  var Pack 0
-  var Carryall 0
-  var Rucksack 0
-  var DuffelBag 0
-  var Vortex 0
-  var Eddy 0
-  var Shadows 0
-  var HipPouch 0
-  var ToolBelt 0
+  var backpack 0
+  var brambles 0
+  var carryall 0
   var cloak_worn 0
-  action var toolBelt 1 when archeologist's toolbelt
-  action var hipPouch 1 when light spidersilk hip pouch
+  var duffelbag 0
+  var eddy 0
+  var haversack 0
+  var hippouch 0
+  var pack 0
+  var rucksack 0
+  var shadows 0
+  var toolbelt 0
+  var vortex 0
   action var backpack 1 when backpack
-  action var haversack 1 when haversack
-  action var pack 1 when \bpack\b
-  action var carryall 1 when carryall
-  action var rucksack 1 when rucksack
-  action var duffelBag 1 when duffel bag
-  action var vortex 1 when (hollow vortex of water|corrupted vortex of swirling)
-  action var eddy 1 when swirling eddy of incandescent
-  action var shadows 1 when encompassing shadows
   action var brambles 1 when dense entangling brambles
-  delay %infiniteLoopProtection
+  action var carryall 1 when carryall
+  action var cloak_worn 1 when cloak
+  action var duffelbag 1 when duffel bag
+  action var eddy 1 when swirling eddy of incandescent
+  action var haversack 1 when haversack
+  action var hippouch 1 when light spidersilk hip pouch
+  action var pack 1 when \bpack\b
+  action var rucksack 1 when rucksack
+  action var shadows 1 when encompassing shadows
+  action var toolbelt 1 when archeologist's toolbelt
+  action var vortex 1 when (hollow vortex of water|corrupted vortex of swirling)
   gosub ECHO Checking Containers...
   matchre BAG_PARSE INVENTORY
   put inv container
   matchwait 3
 BAG_PARSE:
-  var bags Toolbelt|Hip Pouch|Backpack|Haversack|Pack|Carryall|Rucksack|Duffel Bag|Vortex|Eddy|Shadows|Brambles
+  var bags backpack|brambles|carryall|duffelbag|eddy|haversack|hip pouch|pack|rucksack|shadows|toolbelt|vortex
   eval totalBags count("%bags", "|")
-  var bagLoop 0
-  delay %infiniteLoopProtection
 BAG_LOOP:
   delay %infiniteLoopProtection
-  var bag %bags(%bagLoop)
-  if (%bagLoop > %totalBags) then {
-    put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    put #echo %color <<  Auto-setting container variables
-    put #echo %color <<  Main: %mainBag
-    put #echo %color <<  Backup: %backupBag
-    put #echo %color <<  Third: %thirdBag
-    put #echo %color <<  Fourth: %fourthBag
-    put #echo %color <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  var bag %bags(%totalBags)
+  if (%totalBags < 0) then {
+    gosub ECHO Auto-setting container variables|  Main: %mainBag|  Backup: %backupBag|  Third: %thirdBag|  Fourth: %fourthBag
     return
   }
-  if ("%%bag" = 1) then {
+  if ("%%bag" = "1") then {
     if matchre("%mainBag", "NULL") then {
       var mainBag %bag
       goto BAG_NEXT
@@ -903,7 +905,7 @@ BAG_LOOP:
     }
   }
 BAG_NEXT:
-  math bagLoop add 1
+  math totalBags subtract 1
   goto BAG_LOOP
 #### end bag search
 #### return ####
@@ -912,4 +914,3 @@ RETURN:
 #####
 ### END OF FILE ###
 mapperINCreturn:
-  return

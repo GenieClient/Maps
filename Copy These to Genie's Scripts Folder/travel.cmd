@@ -2,7 +2,7 @@
 var version 6.2024-10-17
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
-# debug 5
+ debug 5
 # use '.travel help' from the command line for variables and more
 # POWER TRAVEL SCRIPT FOR GENIE 4 ~ TRAVELS TO/FROM ALMOST ~ANYWHERE~ IN DRAGONREALMS
 # CAN START SCRIPT FROM ANYWHERE IN THE GAME
@@ -432,7 +432,6 @@ START:
 action (moving) on
 if (%verbose) then {
   echo
-  echo
   echo ** TRAVEL DRAGON~!
   echo
   echo                 \||/
@@ -449,14 +448,7 @@ if (%verbose) then {
   echo
   echo *** LET'S GO!!
   echo
-  echo ~~~~~~~~~~~~~~~~~~~~~~~~~
-  echo * STARTING AREA: 
-  echo * $roomname
-  echo * MAP: $zoneid | ROOM: $roomid
-  echo
-  echo * DESTINATION: %destination
-  echo ~~~~~~~~~~~~~~~~~~~~~~~~~
-  echo
+  put gosub ECHO STARTING AREA:| $roomname| MAP: $zoneid | ROOM: $roomid|| DESTINATION: %destination
 }
 eval destination tolower("%destination")
 ## DESTINATION
@@ -776,9 +768,8 @@ if ("$zoneid" == "114") then {
 if (("$zoneid" == "113") && ("$roomid" == "1")) then gosub AUTOMOVE 5
 if ("$zoneid" == "40a") then gosub AUTOMOVE 125
 if (matchre("$game", "(?i)DRX") && (%portal == 1) && matchre("$zoneid", "\b(?:1|30|40|47|67|90|99|107|116)\b") && (%ported == 0)) then gosub PORTAL_TIME
+if (("$zoneid" == "40") && ($Athletics.Ranks >= %rossmanSouth)) then gosub AUTOMOVE 213
 if (("$zoneid" == "40") && ($Athletics.Ranks >= %rossmanSouth)) then {
-  gosub AUTOMOVE 213
-} else {
   if (%verbose) then gosub ECHO Athletics NOT high enough for Jantspyre - Taking Ferry!
   gosub INFO_CHECK
   if (%Lirums < 140) then goto NOCOIN
