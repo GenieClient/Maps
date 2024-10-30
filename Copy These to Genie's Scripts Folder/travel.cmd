@@ -401,8 +401,8 @@ if def(client) then {
 }
 if def(automapper.loop) then var infiniteLoopProtection $automapper.loop
 if def(TRAVEL.mainBag) && def(TRAVEL.backupBag) then {
-  var bagMain $TRAVEL.mainBag
-  var bagMain $TRAVEL.backupBag
+  var mainBag $TRAVEL.mainBag
+  var backupBag $TRAVEL.backupBag
 } else {
   gosub BAG_CHECK
 }
@@ -457,7 +457,7 @@ if (%verbose) then {
   echo
   echo *** LET'S GO!!
   echo
-  put gosub ECHO STARTING AREA:| $roomname| MAP: $zoneid | ROOM: $roomid|| DESTINATION: %destination
+  gosub ECHO STARTING AREA:| $roomname| MAP: $zoneid | ROOM: $roomid|| DESTINATION: %destination
 }
 eval destination tolower("%destination")
 ## DESTINATION
@@ -613,9 +613,9 @@ DRPRIMESTART:
 if (matchre("%destination", "\b(?:cros?s?i?n?g?s?|xing?)")) then goto CROSSING
 if (matchre("%destination", "\b(?:wolfc?l?a?n?)")) then var detour wolf
 if (matchre("%destination", "\b(?:west?g?a?t?e?)")) then var detour knife
-if (matchre("%destination", "\b(?:ushni?s?h?)")) then var detour dirge
 if (matchre("%destination", "\b(?:knif?e?c?l?a?n?)")) then var detour knife
 if (matchre("%destination", "\b(?:tige?r?c?l?a?n?)")) then var detour tiger
+if (matchre("%destination", "\b(?:ushni?s?h?)")) then var detour dirge
 if (matchre("%destination", "\b(?:dirg?e?)")) then var detour dirge
 if (matchre("%destination", "\b(?:arth?e?d?a?l?e?)")) then var detour arthe
 if (matchre("%destination", "\b(?:kaer?n?a?)")) then var detour kaerna
@@ -834,7 +834,7 @@ if ("$zoneid" == "126") then gosub AUTOMOVE 49
 if ("$zoneid" == "116") then gosub AUTOMOVE 3
 if ("$zoneid" == "123") then gosub AUTOMOVE 175
 if ("$zoneid" == "67a") then gosub MOVE Map67_Shard.xml
-if ("$zoneid" == "69") then gosub AUTOMOVE 1
+if ("$zoneid" == "69") then gosub AUTOMOVE Map66_STR3.xml
 if ("$zoneid" == "68a") then gosub AUTOMOVE 29
 if ("$zoneid" == "68b") then gosub AUTOMOVE 44
 if ("$zoneid" == "68") then {
@@ -861,7 +861,7 @@ if (("$zoneid" == "67") && ("$guild" == "Thief")) then {
 if ("$zoneid" == "67") then gosub AUTOMOVE 132
 if (("$zoneid" == "66") && ($Athletics.Ranks >= %underGondola)) then {
   gosub BUFFCLIMB
-  gosub AUTOMOVE 317
+  gosub AUTOMOVE Map65_Under_the_Gondola.xml
 }
 if (("$zoneid" == "66") && ($Athletics.Ranks < %underGondola)) then {
   if (%verbose) then gosub ECHO Athletics NOT high enough for underSegoltha - Taking Gondola!
@@ -870,8 +870,8 @@ if (("$zoneid" == "66") && ($Athletics.Ranks < %underGondola)) then {
 }
 if ("$zoneid" == "1a") then gosub MOVE Map1_Crossing.xml
 if ("$zoneid" == "63") then gosub AUTOMOVE 112
-if ("$zoneid" == "65") then gosub AUTOMOVE 44
-if ("$zoneid" == "62") then gosub AUTOMOVE 100
+if ("$zoneid" == "65") then gosub AUTOMOVE Map62_STR2.xml
+if ("$zoneid" == "62") then gosub AUTOMOVE Map61_Leth_Deriel.xml
 if ("$zoneid" == "112") then gosub AUTOMOVE 112
 if ("$zoneid" == "58") then gosub AUTOMOVE leth
 if (("$zoneid" == "60") && (matchre("%detour", "(?:leth|acen|taipa|LETH|ACEN|ratha|fang)"))) then gosub AUTOMOVE 57
@@ -898,7 +898,7 @@ if (("$zoneid" == "61") && (matchre("%detour", "(?:leth|acen|taipa|LETH|ACEN|rat
   if ("%detour" == "leth") then gosub AUTOMOVE 18
   goto ARRIVED
 }
-if ("$zoneid" == "61") then gosub AUTOMOVE 115
+if ("$zoneid" == "61") then gosub AUTOMOVE Map60_STR1.xml
 if ("$zoneid" == "50") && (matchre("%destination", "\b(?:haizen|yeehar|oasis|hvaral|forns?t?e?d?|elbain|el'bain|alfren|rossm?a?n?|viper|leucro?|misens|beiss|sorrow|ushnish|caravan?s?a?r?y?|dokt|west|stone|knife|wolf|tiger|dirge|arthe|kaerna?|river|haven|riverhaven|theren|lang|throne|zaulfu?n?|rakash|muspar?i?|zaulfung|cross?|crossing)")) && ($Athletics.Ranks > %segoltha) then gosub SEGOLTHA_NORTH
 if ("$zoneid" == "50") then gosub SEGOLTHA_SOUTH
 if (("$zoneid" == "60") && ("%detour" == "alfren")) then {
@@ -914,7 +914,7 @@ if (("$zoneid" == "60") && ("$guild" == "Thief")) then {
     if ("$zoneid" == "1a") then gosub MOVE Map1_Crossing.xml
   }
 }
-if (("$zoneid" == "60") && ($Athletics.Ranks >= %segoltha)) then gosub AUTOMOVE 108
+if (("$zoneid" == "60") && ($Athletics.Ranks >= %segoltha)) then gosub AUTOMOVE Map50_Segoltha_River.xml
 # Crossing | Arthe Dale | West Gate | Tiger Clan | Wolf Clan | Dokt | Knife Clan | Kaerna
 # Stone Clan | Caravansary | Dirge | Ushnish | Sorrow's | Beisswurms | Misenseor |Leucros
 # Vipers | Malodorous Buccas | Alfren's Ferry | Leth Deriel  | Ilaya Taipa | Acenemacra
@@ -4038,7 +4038,7 @@ AUTOMOVE:
   var Moving 0
   var randomloop 0
   var Destination $0
-  if ((!matchre("%Destination", "\b\d+\b")) || (!matchre("%Destination", "Map(\d+\w?\b)")|| !matchre("%Destination", "\w+ (\d+-\d+)"))) then {
+  if (!(matchre("%Destination", "\b\d+\b")) && !(matchre("%Destination", "Map(\d+\w?)")) && !(matchre("%Destination", "\w+ (\d+-\d+)"))) then {
     gosub ECHO ERROR: Hanryu messed up the script call, tell him to fix it!
     exit
   }
@@ -4046,7 +4046,6 @@ AUTOMOVE:
   if ($hidden == 1) then gosub UNHIDE
   if ($standing == 0) then gosub gosub STAND
   if ($roomid == 0) then gosub RANDOMMOVE
-  if ("$roomid" == "%Destination") then return
 AUTOMOVE_GO:
   matchre AUTOMOVE_FAILED ^(?:AUTOMAPPER )?MOVE(?:MENT)? FAILED
   matchre AUTOMOVE_RETURN ^YOU HAVE ARRIVED(?:\!)?
@@ -4068,6 +4067,9 @@ AUTOMOVE_FAILED:
   if (%automovefailCounter > 1) then put #mapper reset
   delay %command_pause
   if (($roomid == 0) || (%automovefailCounter > 2)) then gosub RANDOMMOVE
+
+exit
+
   goto AUTOMOVE_GO
 AUTOMOVE_FAIL_BAIL:
   action (moving) off
