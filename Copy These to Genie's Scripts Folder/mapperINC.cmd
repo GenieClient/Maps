@@ -142,6 +142,7 @@ ACTION:
   #requires %success and %action
   action (mapper) off
   var actionloop 0
+ACTION_MAPPER_ON:
   var lastLabel ACTION
   math actionloop add 1
   pause %command_pause
