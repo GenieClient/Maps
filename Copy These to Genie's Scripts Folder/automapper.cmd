@@ -10,6 +10,7 @@ var autoversion 9.2024-11-1
 #   version 9 now
 #   mapperINC.cmd is a big enough chang to bump the rev number
 #   also removed redundant check on ice road if you have skates
+#   guild-circle checks
 
 #2024-10-10
 # Hanryu
@@ -514,6 +515,10 @@ ABSOLUTE_TOP:
   if !def(automapper.userwalk) then put #tvar automapper.userwalk 0
   if !def(automapper.seekhealing) then put #tvar automapper.seekhealing 0
   if !def(citizenship) then gosub CITIZENSHIP
+  if (!def(guild) || !def(circle)) then action (guildcircle) on
+  gosub INFO_CHECK
+  if !def(premium) then gosub PREMIUM_CHECK
+  if !def(citizenship) then gosub CITIZENSHIP
 # release cyclics if defined
   if (($automapper.ReleaseCyclics) && def($automapper.ReleaseCyclics)) then gosub PUT release cyclic
 # turn off classes to speed movment
@@ -691,7 +696,7 @@ MOVE:
 #  }
 #
   eval type toupper(%type)
-  goto MOVE.%type
+  goto MOVE_%type
 
 MOVE_REAL:
   if (%wearing_skates) then gosub REMOVE_SKATES

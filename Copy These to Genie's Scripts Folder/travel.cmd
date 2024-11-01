@@ -300,9 +300,6 @@ action put look when "YOU HAVE BEEN IDLE TOO LONG. PLEASE RESPOND."
 put #tvar spellROG 0
 put #tvar spellROC 0
 put #tvar spellEOTB 0
-action (wealth) var $2 $1 when ^\s*\d?.+\((\d+) copper (Kronars|Lirums|Dokoras)\)\.$
-action (wealth) var $1 0 when ^\s*No (Kronars|Lirums|Dokoras)\.$
-action (wealth) off
 #auto disembark TOGGLE ready
 #  the Kree'la (Riverhaven <-> Ratha)
 #  the Lybadel (Riverhaven <-> Aesry)
@@ -350,7 +347,6 @@ var destination %1
 if ("%destination" == "") then goto NODESTINATION
 var burden 0
 var passport 0
-if !def(premium) then gosub PREMIUM_CHECK
 var Kronars 0
 var Dokoras 0
 var Lirums 0
@@ -365,6 +361,9 @@ var BoarNeeded 300
 var ToRatha 0
 var SkirrChecked 0
 var starting MAP:$zoneid | ROOM:$roomid
+if (!def(guild) || !def(circle)) then action (guildcircle) on
+gosub INFO_CHECK
+if !def(premium) then gosub PREMIUM_CHECK
 if !def(citizenship) then gosub CITIZENSHIP
 var shardCitizen False
 if (matchre("$citizenship", "Shard")) then var shardCitizen True
@@ -400,7 +399,7 @@ if def(client) then {
   if (matchre("$client", "Outlander")) then var infiniteLoopProtection 0.1
 }
 if def(automapper.loop) then var infiniteLoopProtection $automapper.loop
-if def(TRAVEL.mainBag) && def(TRAVEL.backupBag) then {
+if (def(TRAVEL.mainBag) && def(TRAVEL.backupBag)) then {
   var mainBag $TRAVEL.mainBag
   var backupBag $TRAVEL.backupBag
 } else {
@@ -421,11 +420,6 @@ if !def(Athletics.Ranks) then {
 if (!def(Athletics.Ranks) || ($Athletics.Ranks == 0)) then {
   gosub ECHO Still not registering Athletics.Ranks!!! Make sure you have the EXPTracker Plugin!!|Going for it anyway - But this will cause you to skip Athletics Shortcuts!
 }
-action put #var guild $1 when Guild\:\s+(.*)$
-action put #var circle $1 when Circle\: (\d+)
-gosub INFO_CHECK
-action remove Guild\:\s+(.*)$
-action remove Circle\: (\d+)
 if ($hidden) then gosub UNHIDE
 if (($joined == 1) && ($travel.GroupShortCutsAnyway == False)) then {
   var rossmanNorth 2000
@@ -3105,16 +3099,6 @@ TO_SEACAVES:
   gosub AUTOMOVE portal
   if ($invisible == 1) then gosub STOP_INVIS
   gosub MOVE go meeting portal
-  return
-####
-####  Get wealth, and if first time set guild/circle
-INFO_CHECK:
-  action (wealth) on
-  delay %infiniteLoopProtection
-  put info
-  waitforre ^\s*Debt\s*\:
-  delay %infiniteLoopProtection
-  action (wealth) off
   return
 ####
 ####  Plat Portals  ####

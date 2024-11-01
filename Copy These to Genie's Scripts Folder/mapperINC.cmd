@@ -1,20 +1,31 @@
 #mapperINC.cmd
 # THE include script for automapper.cmd and travel.cmd
 var version 1.2024-10-17
-goto mapperINCreturn
 
 #2024-10-17
 # Hanryu
-#   take subs that overlap from travel and automapper and pull them into a common include
 #   initial release
+#   take subs that overlap from travel and automapper and pull them into a common include
 #   THIS_IS_A_LABEL:
 #   aLocalVar
+
+#### LOAD ACTIONS then turn them off ####
+action (wealth) var $2 $1 when ^\s*\d?.+\((\d+) copper (Kronars|Lirums|Dokoras)\)\.$
+action (wealth) var $1 0 when ^\s*No (Kronars|Lirums|Dokoras)\.$
+action (wealth) off
+action (guildcircle) put #var guild $1 when Guild\:\s+(.*)$
+action (guildcircle) put #var circle $1 when Circle\: (\d+)
+action (guildcircle) off
+action (citizenship) put #var citizenship $1 when "^\s*\d\)\s+of (Aesry Surlaenis'a|Forfedhdar|Ilithi|M'Riss|Ratha|Therengia|Velaka|Zoluren|Acenamacra|Arthe Dale|Crossing|Dirge|Ilaya Taipa|Kaerna Village|Leth Deriel|Fornsted|Hvaral|Langenfirth|Riverhaven|Rossman's Landing|Siksraja|Therenborough|Fayrin's Rest|Shard|Steelclaw Clan|Zaldi Taipa|Ain Ghazal|Boar Clan|Hibarnhvidar|Raven's Point|Mer'Kresh|Muspar'i)"
+action (citizenship) off
+
+goto mapperINCreturn
 
 #### check citizenship for shard ####
 #  you do have to ask about titles to get them, so you could be a citizen and not know it
 CITIZENSHIP:
   put #var citizenship none
-  action (citizenship) put #var citizenship $1 when "^\s*\d\)\s+of (Aesry Surlaenis'a|Forfedhdar|Ilithi|M'Riss|Ratha|Therengia|Velaka|Zoluren|Acenamacra|Arthe Dale|Crossing|Dirge|Ilaya Taipa|Kaerna Village|Leth Deriel|Fornsted|Hvaral|Langenfirth|Riverhaven|Rossman's Landing|Siksraja|Therenborough|Fayrin's Rest|Shard|Steelclaw Clan|Zaldi Taipa|Ain Ghazal|Boar Clan|Hibarnhvidar|Raven's Point|Mer'Kresh|Muspar'i)"
+  action (citizenship) on
   put title affiliation list
   send encumbrance
   waitfor Encumbrance :
@@ -50,6 +61,17 @@ PREMIUM_SET:
     var portal 1
     if matchre("$game", "DRX") then gosub ECHO Using Plat Portals!
   }
+  return
+####
+####  Get wealth, and if first time set guild/circle
+INFO_CHECK:
+  action (wealth) on
+  delay %infiniteLoopProtection
+  put info
+  waitforre ^\s*Debt\s*\:
+  delay %infiniteLoopProtection
+  action (guildcircle) off
+  action (wealth) off
   return
 ####
 #### Universal formatted echo ####
