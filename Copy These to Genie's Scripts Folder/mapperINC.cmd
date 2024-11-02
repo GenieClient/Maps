@@ -91,7 +91,7 @@ debug 0
     put #echo %color <~~%border~~>
     put #echo
 
-debug 5
+# debug 5
 
     return
   } else {
@@ -127,7 +127,7 @@ debug 5
       put #echo %color <~~~%border~~~>
       put #echo
 
-debug 5
+debug 0
 
       return
   }
