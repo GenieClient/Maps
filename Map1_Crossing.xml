@@ -3262,6 +3262,7 @@
   <node id="484" name="Strand Communal Center, Common Room">
     <description>An itinerant mage keeps a fragrant breeze, heavy with the scent of shalyria blossoms growing outside the windows, swirling softly about the room.  White wicker tables provide a place to relax while nibbling from an array of snacks which are laid out on a lunat sideboard along the back wall.  Dangling strands of colorful glass beads clatter musically as a young boy veers around a potted fern on his way to an archway opposite the louvered doors leading to the veranda.</description>
     <position x="250" y="320" z="0" />
+    <arc exit="go" move="go shimmering portal" destination="1049" />
     <arc exit="go" move="go louvered doors" destination="483" />
     <arc exit="go" move="go curtained archway" destination="485" />
   </node>
@@ -6722,6 +6723,12 @@
     <position x="155" y="230" z="0" />
     <arc exit="west" move="west" />
     <arc exit="east" move="east" />
+  </node>
+  <node id="1049" name="Aesry Surlaenis'a, Staho Pivo'hrr'schu'Mus" note="Map99_Aesry_Surlaenis'a.xml|PlatPortal|1049">
+    <description></description>
+    <position x="250" y="320" z="-1" />
+    <arc exit="north" move="north" />
+    <arc exit="south" move="south" />
   </node>
   <label text="Shipyard">
     <position x="-20" y="314" z="0" />

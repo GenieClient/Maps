@@ -1659,6 +1659,7 @@
   <node id="254" name="Beech Glade, Trail">
     <description>A narrow trail leads a short distance away from the cordon and ends at the entrance to a weathered hide tent.</description>
     <position x="-80" y="-516" z="0" />
+    <arc exit="go" move="go shimmering portal" destination="394" />
     <arc exit="north" move="north" destination="251" />
     <arc exit="east" move="east" destination="255" />
     <arc exit="go" move="go deer-hide tent" destination="389" />
@@ -2556,6 +2557,11 @@
     <description>The walls of this room rise chest-height on a human, allowing a gentle breeze to blow under the vine and branch braided roof.  Benches surround a huge table carved from a single block of ironwood that dominates the otherwise sparse area.  Designs of wild horses prance across the surface of the table, as scattered parchments block their way.</description>
     <position x="0" y="-496" z="0" />
     <arc exit="out" move="out" destination="391" />
+  </node>
+  <node id="394" name="Old Lata'arna Keep, Exchange Vault" note="Map47_Muspar'i.xml|PlatPortal">
+    <description>For security reasons, steel grates have been added in the gaps between the eaves and stone walls to compartment the exchange vault from the rest of the floor.  A pair of burly guards lurks in the corners of the vault, keeping an eye on all that enter.  In the center of the room, an Olvi Moon Mage reclines upon a couch, his only job to maintain the moongate shimmering in the arch on the back wall.</description>
+    <position x="-80" y="-516" z="-1" />
+    <arc exit="west" move="west" />
   </node>
   <label text="Therenborough">
     <position x="155" y="-1380" z="0" />

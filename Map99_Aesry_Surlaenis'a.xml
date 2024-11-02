@@ -762,6 +762,7 @@
   <node id="115" name="Tona Kertigen, Bank Vault" note="Premium Exchange" color="#00FF00">
     <description>A heavy iron grill covers the entrance to the vault, and guards armed with crossbows stand sentry on either side.  Within the vault, coins are stored in locked cabinets.  A Dwarven Moon Mage sits behind an ironwood table, his ankles shackled to the floor to prevent him from leaving the vault.  Clerks pass bags of money and official-looking documents through a moongate he maintains to transfer money to and from other banks.</description>
     <position x="90" y="430" z="0" />
+    <arc exit="go" move="go shimmering portal" destination="463" />
     <arc exit="go" move="go vault entrance" destination="114" />
   </node>
   <node id="116" name="Aesry Surlaenis'a, The Traders' Market" note="Traders' Market|Bazaar|Tent" color="#FF0000">
@@ -2900,6 +2901,11 @@
     <description>Pieced together by a seemingly blind worker, the walls are covered with scraps of rugs, blankets, and carpets in a kaleidoscope of colors.  A burly, light pink feldspar table is stashed in a corner of the room, providing plenty of room to work.</description>
     <position x="242" y="161" z="0" />
     <arc exit="go" move="go shadowed alcove" destination="456" />
+  </node>
+  <node id="463" name="First Bank of Ilithi, Exchange Vault" note="Map67_Shard.xml|PlatPortal">
+    <description>Leather-clad guards stand at attention on each side of the polished blue marble arch which frames the moongate.  Behind them, out of reach of the portal, a slender fair-haired Elothean woman reclines on a comfortable high-backed chair.  Her richly embroidered scarlet silk robes almost conceal the gilded chains which fasten her ankles to iron rings in the floor.  A steady stream of bank employees and favored customers enter and exit the vault all day to process transactions with other banks.</description>
+    <position x="90" y="430" z="-1" />
+    <arc exit="out" move="out" />
   </node>
   <label text="Vaults">
     <position x="270" y="310" z="0" />

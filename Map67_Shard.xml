@@ -3124,6 +3124,7 @@
   <node id="455" name="Lady Atladene's Salon, Entryway" note="Lady Atladene's Salon">
     <description>Thick blue carpet covers the floor of the entryway, a strip of rich purple down the center to accent it.  Painted murals cover the walls, alive with vibrant hues that pull at the eyes.  The faint sound of talking and laughter echoes down the corridor that leads into the parlor, where the upper class of Shard gather to chat and dine.</description>
     <position x="380" y="360" z="0" />
+    <arc exit="go" move="go shimmering portal" destination="808" />
     <arc exit="out" move="out" destination="9" />
     <arc exit="go" move="go long corridor" destination="456" />
   </node>
@@ -5233,6 +5234,11 @@
     <description>A small, potted cactus consisting of several prickly knobs growing off of one another is the only decoration to be seen here.  Otherwise, the desk is neatly organized with stacks of parchments, a feathered quill resting in a half-filled inkwell, and a heavy tome of records that the clerk casually pages through.</description>
     <position x="450" y="340" z="0" />
     <arc exit="east" move="east" destination="805" />
+  </node>
+  <node id="808" name="Wharf End, Mer'Kresh" note="Map107_Mer'Kresh.xml|PlatPortal">
+    <description>Through the gaps in the heavy wood planks, one can easily see the waters of Torbis Sanhalas lapping noisily at the pilings.  Although most of the surface of the wharf is covered by a wide assortment of boxes, barrels and shipping goods, there is little that would stop a dropped coin or trinket from vanishing through the slats and sinking into a watery grave.</description>
+    <position x="380" y="360" z="-1" />
+    <arc exit="northwest" move="northwest" />
   </node>
   <label text="Curio Tent">
     <position x="252" y="181" z="0" />

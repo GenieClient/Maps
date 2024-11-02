@@ -2199,6 +2199,7 @@
   <node id="331" name="Armiger's Mansion, Foyer" note="Armiger's Mansion|Estate Holders">
     <description>Hexagonal tiles set in bands of alternating gold and azure form the floor in this elegantly decorated foyer.  To one side is the comfortable lounge, with food and drink.  A sun parlor matches it on the opposite side of the hall.  A large hall tree holds the cloaks and other garments of visiting members.</description>
     <position x="300" y="260" z="0" />
+    <arc exit="go" move="go shimmering portal" destination="565" />
     <arc exit="north" move="north" destination="332" />
     <arc exit="east" move="east" destination="333" />
     <arc exit="south" move="south" destination="334" />
@@ -3577,6 +3578,14 @@
   <description>Fancifully designed sconces brighten the nights with a mix of flickering flames and steady gaethzen globes.  A small fountain with crossed stone lightning bolts is perfectly positioned beneath the opened roof to catch any precipitation with funneling assistance from cleverly located, colorful canopies above.  The shop entries here are similarly themed with rainbows, glitter-covered raindrops, clouds of cotton and more.</description>
     <position x="380" y="550" z="0" />
     <arc exit="south" move="south" destination="563" />
+  </node>
+  <node id="565" name="Sshoi-sson Palace, Portico" note="Map90_Ratha.xml|PlatPortal">
+    <description>A wide, sweeping stair of gleaming white alabaster carries the eye from the grandeur of the Palace grounds to the equally imposing portico.  Giant guards flank the doors, immobile as if cast from stone.  The portico itself spreads across the front of the palace offering cool shade from the heat of the day.  Several fountains spout from bronze grotesques set into the wall, their streams running down into stone basins where the traveler may quench a thirst or lave dusty feet.</description>
+    <position x="300" y="260" z="-1" />
+    <arc exit="east" move="east" />
+    <arc exit="west" move="west" />
+    <arc exit="go" move="go doors" />
+    <arc exit="climb" move="climb stair" />
   </node>
   <label text="Underwharf">
     <position x="110" y="832" z="0" />

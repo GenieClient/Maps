@@ -2993,6 +2993,7 @@
   <node id="468" name="Sshoi-sson Palace, Provincial Bank Foyer" note="3bank">
     <description>Understated elegance is the theme of this, the premier bank of the province.  Carpet thicker than the bedding in many a cheap hostel muffles every sound.  A golden light filters down from giant lamps set with stained-glass, while a gentle perfume scents the air.  Deep banquettes, upholstered in richly embroidered fabrics provide a comfortable resting place for those waiting to conduct business.</description>
     <position x="-52" y="-389" z="0" />
+    <arc exit="go" move="go shimmering portal" destination="876" />
     <arc exit="east" move="east" destination="469" />
     <arc exit="west" move="west" destination="466" />
   </node>
@@ -5633,6 +5634,12 @@
     <description>Tucked away in a corner of the square is a wide stone counter set into the conical carousel beneath a wooden awning.  Spread across the awning's underside is a sweeping mural of a summer sky, with realistic white clouds set against a cerulean blue expanse.  Vast, countless rows of differently sized shelves are behind the counter, and complex Dwarven mechanisms can be heard as they rearrange the package-covered storage.  Clerks shuffle endlessly back and forth between the counters and shelving as they assist patrons with their packaging and mailing needs.</description>
     <position x="-3" y="359" z="0" />
     <arc exit="south" move="south" destination="259" />
+  </node>
+  <node id="876" name="Outside the Circle, The Ironwoods" note="Map40_Langenfirth_to_Therenborough.xml|PlatPortal">
+    <description>Two closely-spaced ironwood trees stand at the end of a tunnel of beech branches and boles.  A friendly-looking young ranger stands at guard, ready to alert her mates about any unwelcome visitors, or greet those who have found their way home.</description>
+    <position x="-52" y="-389" z="-1" />
+    <arc exit="east" move="east" />
+    <arc exit="go" move="go ironwood trees" />
   </node>
   <label text="To First Tier">
     <position x="488" y="-69" z="0" />

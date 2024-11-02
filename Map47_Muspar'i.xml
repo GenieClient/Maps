@@ -758,6 +758,7 @@
   <node id="97" name="Velakan Trade Road">
     <description>Curving away from the walls of Muspar'i, a stone road runs out into the swirling desert sands.  The solid grey stone blocks are worn even by countless years of use, combined with the harshness of the elements.  This close to the city, a number of travelers mingle about on the road, most waiting for entry.</description>
     <position x="820" y="940" z="0" />
+    <arc exit="go" move="go shimmering portal" destination="562" />
     <arc exit="east" move="east" destination="96" />
     <arc exit="west" move="west" destination="98" />
   </node>
@@ -3749,6 +3750,13 @@
     <description>Tucked up against the limestone building is a low stone counter made from pale tan sandstone.  Carved sandalwood screens section off the area from the bustling square beyond.  Vast, countless rows of differently sized shelves are behind the counter, and complex Dwarven mechanisms can be heard as they rearrange the package-covered storage.  Clerks shuffle endlessly back and forth between the counters and shelving as they assist patrons with their packaging and mailing needs.</description>
     <position x="530" y="560" z="0" />
     <arc exit="south" move="south" destination="272" />
+  </node>
+  <node id="562" name="Inner Hibarnhvidar, Tower Base" note="Map116_Hibarnhvidar.xml|PlatPortal">
+    <description>A pair of stairways, carved directly from the stone of the cavern's walls, leads to the terrace above.  Short, fence-like barriers of rounded dark rocks separate the private gardens of the Dwarves that have made their homes here.  A walkway of perfectly cut and laid stone leads around the base of the massive tower.</description>
+    <position x="820" y="940" z="-1" />
+    <arc exit="north" move="north" />
+    <arc exit="east" move="east" />
+    <arc exit="climb" move="climb stone stairway" />
   </node>
   <label text="Barge to Hvaral, Theren">
     <position x="850" y="1030" z="0" />

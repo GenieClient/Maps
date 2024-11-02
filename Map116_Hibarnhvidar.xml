@@ -1377,6 +1377,7 @@
   <node id="188" name="The Stony Hub, Entryway">
     <description>Stark walls of cold polished stone gleam with an eternal beauty all their own.  Dark obsidian benches line each side of the entryway while tall iron sconces lend their light to the darkness, outlining a broad archway nearby.</description>
     <position x="60" y="330" z="0" />
+    <arc exit="go" move="go shimmering portal" destination="493" />
     <arc exit="out" move="out" destination="93" />
     <arc exit="go" move="go broad archway" destination="189" />
   </node>
@@ -3284,6 +3285,13 @@
     <description>Haphazardly placed into crevices within the surrounding craggy stone walls, oil lanterns provide a steady light with no flickering.  A pair of displays are placed side by side at the center of the cavern, showcasing the fine wares of the shop.</description>
     <position x="60" y="100" z="0" />
     <arc exit="go" move="go steel archway" destination="101" />
+  </node>
+  <node id="493" name="Communal Center, Veranda" note="Map1_Crossing.xml|PlatPortal">
+    <description>Stretching the entire length of the communal center, this veranda faces east towards the Oxenwaithe.  It's a favorite gathering place for resort occupants, but at any given time a travelling merchant or two can be found enjoying a cool drink and the delightful view.  Several tables covered in crisp white cloth stand in neat rows across its length.</description>
+    <position x="60" y="330" z="-1" />
+    <arc exit="out" move="out" />
+    <arc exit="go" move="go louvered doors" />
+    <arc exit="go" move="go curving footpath" />
   </node>
   <label text="Inner Hibarnhvidar">
     <position x="40" y="210" z="0" />
