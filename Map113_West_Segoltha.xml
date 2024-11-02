@@ -16,6 +16,7 @@
   </node>
   <node id="3" name="A Highly Polished Skiff">
     <description>The newly crafted skiff smells of fresh wood and paint, its sides practically gleaming with polish.  Wide benches are padded with grasses braided to form oblong cushions that are tied with leather thongs.  A brass bell hangs below a tall lantern, ready to be rung when another skiff gets too close for comfort along the water way.</description>
+    <description>The newly crafted skiff smells of fresh wood and paint.  Wide benches are padded with grasses braided to form oblong cushions.  A brass bell hangs below a tall brightly lit lantern.</description>
     <position x="440" y="140" z="0" />
     <arc exit="go" move="go dock" destination="1" />
     <arc exit="go" move="go dock" destination="4" />
@@ -80,7 +81,8 @@
     <arc exit="go" move="go east pier" destination="4" />
   </node>
   <node id="12" name="The Evening Star">
-    <description>Hard packed ground is littered with barrels, boxes and various conveyances awaiting the ferries' return to dock.  Smooth rock benches are scattered around the large area, for those travelers wishing to wait off their feet.  The dock itself is crafted from dark wood and braced by huge rocks and beams, while iron lanterns blaze from poles hung along each side.</description>
+    <description>Long and low, the sleek lines of the ferry are designed so that it slips through the water with a minimum of disturbance.  Benches are scattered along the railing, with gaps where the Gor'Tog polemen stand to push the boat across the river.  Cables run up to a massive chain strung from shore to shore just overhead, providing a leash to keep the ferry from being pushed downriver by the strong current.</description>
+    <description></description>
     <position x="180" y="260" z="0" />
     <arc exit="go" move="go dock" destination="8" />
     <arc exit="go" move="go dock" destination="6" />

@@ -1735,11 +1735,12 @@
     <position x="17" y="369" z="0" />
     <arc exit="out" move="out" destination="260" />
   </node>
-  <node id="262" name="Uasin Dock, Port of Ratha" note="Uasin Dock|Hara'jaal">
+  <node id="262" name="Uasin Dock, Port of Ratha">
     <description>This dock is as sturdy and well-made as the others in the city, but has been painted a garish peacock blue, oddly out of place against the stark canvas and weathered wood of the rest of the area.</description>
     <description>This dock, as well made as the others in the city, is painted a garish peacock blue.  Workers, dressed in dark clothing, rush about loading and unloading ships.</description>
     <position x="238" y="481" z="0" />
     <arc exit="north" move="north" destination="19" />
+    <arc exit="go" move="go ramp" destination="877" />
   </node>
   <node id="263" name="Ratha Traders' Guild, Reception" note="Trader">
     <description>A jewel-toned carpet covers the floor of this cozy office, giving it a cheerful quality despite its cramped quarters.  Teak paneling surrounds the room, supporting a rich exhibit of wall displays by local artists.  A curved corner desk dominates the room, manned by the guild secretary, and directly across from it sits a brocade-cushioned bench.  Just to the side of the desk is an arch that leads to the hallway, the faint noise of workers beyond.</description>
@@ -5618,17 +5619,17 @@
   <node id="872" name="Ratha Alchemy Society, Workroom" note="Alchemy Dryer">
     <description>Carved out of dense granite, the laboratory holds a set of alchemical equipment scattered at various points about the room.  The high ceilings are dotted with small holes that provide a way for deadly gasses to be released out of the area, while an archway out affords anyone in the room the chance to escape from a dangerous conflagration of chemicals.</description>
     <position x="138" y="61" z="0" />
-    <arc exit="out" move="west" destination="870" />
+    <arc exit="west" move="west" destination="870" />
   </node>
   <node id="873" name="Ratha Alchemy Society, Workroom" note="Alchemy Dryer">
     <description>Carved out of dense granite, the laboratory holds a set of alchemical equipment scattered at various points about the room.  The high ceilings are dotted with small holes that provide a way for deadly gasses to be released out of the area, while an archway out affords anyone in the room the chance to escape from a dangerous conflagration of chemicals.</description>
     <position x="138" y="81" z="0" />
-    <arc exit="out" move="west" destination="870" />
+    <arc exit="west" move="west" destination="870" />
   </node>
   <node id="874" name="Ratha Alchemy Society, Workroom" note="Alchemy Dryer">
     <description>Carved out of dense granite, the laboratory holds a set of alchemical equipment scattered at various points about the room.  The high ceilings are dotted with small holes that provide a way for deadly gasses to be released out of the area, while an archway out affords anyone in the room the chance to escape from a dangerous conflagration of chemicals.</description>
     <position x="138" y="101" z="0" />
-    <arc exit="out" move="west" destination="870" />
+    <arc exit="west" move="west" destination="870" />
   </node>
   <node id="875" name="Ratha, Rundmolen Post Office" note="Post Office|mail" color="#00FF00">
     <description>Tucked away in a corner of the square is a wide stone counter set into the conical carousel beneath a wooden awning.  Spread across the awning's underside is a sweeping mural of a summer sky, with realistic white clouds set against a cerulean blue expanse.  Vast, countless rows of differently sized shelves are behind the counter, and complex Dwarven mechanisms can be heard as they rearrange the package-covered storage.  Clerks shuffle endlessly back and forth between the counters and shelving as they assist patrons with their packaging and mailing needs.</description>
@@ -5636,10 +5637,15 @@
     <arc exit="south" move="south" destination="259" />
   </node>
   <node id="876" name="Outside the Circle, The Ironwoods" note="Map40_Langenfirth_to_Therenborough.xml|PlatPortal">
-    <description>Two closely-spaced ironwood trees stand at the end of a tunnel of beech branches and boles.  A friendly-looking young ranger stands at guard, ready to alert her mates about any unwelcome visitors, or greet those who have found their way home.</description>
-    <position x="-52" y="-389" z="-1" />
-    <arc exit="east" move="east" />
-    <arc exit="go" move="go ironwood trees" />
+  <description>Two closely-spaced ironwood trees stand at the end of a tunnel of beech branches and boles.  A friendly-looking young ranger stands at guard, ready to alert her mates about any unwelcome visitors, or greet those who have found their way home.</description>
+  <position x="-52" y="-389" z="-1" />
+  <arc exit="east" move="east" />
+  <arc exit="go" move="go ironwood trees" />
+  </node>
+  <node id="877" name="Uasin Dock, Port of Ratha" note="Uasin Dock|Hara'jaal" color="#FF00FF">
+    <description>Crates of all sorts, partially covered by dark canvas tarps, are being moved onto ships all along the dock.  The laborers, dressed in black clothing, work in only the small amount of light given off by the stars in the night sky.</description>
+    <position x="248" y="491" z="0" />
+    <arc exit="go" move="go ramp" destination="262" />
   </node>
   <label text="To First Tier">
     <position x="488" y="-69" z="0" />
