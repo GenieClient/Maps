@@ -1814,6 +1814,7 @@
     <description>Thick growths of honeysuckle mingle with clumps of red and blue bellflowers to cover the iron fence and block out much of the noise of the street beyond.  Though the plants drape seemingly randomly over the fence, a guiding hand has been at work here.  The grass has been trimmed closely along the sides of a gravel path and bands of flowering plants curve alongside all the way to the walls of a sturdy stone building across from an iron gate.</description>
     <description>A dark mass of plants clings tenaciously to the iron fence that surrounds the garden.  Even at night, the bright colors of flowers stand out against the shadows, obviously tended on a regular basis.  A paltry few torches dimly light a gravel path as it angles its way up the sloped surface of a stone building.  The flicker of light is brighter on the roof of that building and contrastingly darker where the path runs down to the iron gate that leads to the street.</description>
     <position x="320" y="20" z="0" />
+    <arc exit="go" move="go shimmering portal" destination="360" />
     <arc exit="up" move="up" destination="274" />
     <arc exit="go" move="go iron gate" destination="82" />
   </node>
@@ -2339,6 +2340,12 @@
     <description>A bold deobar carving of Hodierna perches over the booth, arms outstretched and a sly smile spread across her face.  White alfar statuettes descend from her embrace, pierced by metal rods that hold them in place in the vignette.  To enhance the drama, the depiction of a clear night sky slowly dissolving into a sunrise has been painted in grand colors.  A few wavy letters mark the signature of the artist right near the side of the table.</description>
     <position x="-330" y="225" z="0" />
     <arc exit="out" move="out" destination="356" />
+  </node>
+  <node id="360" name="Riverhaven, Tree-shaded Lane" note="Map30_Riverhaven.xml|PlatPortal">
+    <description>This quiet, tree-shaded lane serves an elegantly turreted mansion.  Surrounded by a high stone wall, the view in is limited to glimpses of a polished slate roof set with numerous gables and dormers and one turret, rising in the center like a miniature castle.</description>
+    <position x="320" y="20" z="-1" />
+    <arc exit="northwest" move="northwest" />
+    <arc exit="go" move="go wrought-iron gate" />
   </node>
   <label text="Gardens">
     <position x="-4" y="-211" z="0" />

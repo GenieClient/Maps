@@ -1740,7 +1740,7 @@
     <description>This dock, as well made as the others in the city, is painted a garish peacock blue.  Workers, dressed in dark clothing, rush about loading and unloading ships.</description>
     <position x="238" y="481" z="0" />
     <arc exit="north" move="north" destination="19" />
-    <arc exit="go" move="go ramp" destination="876" />
+    <arc exit="go" move="go ramp" destination="877" />
   </node>
   <node id="263" name="Ratha Traders' Guild, Reception" note="Trader">
     <description>A jewel-toned carpet covers the floor of this cozy office, giving it a cheerful quality despite its cramped quarters.  Teak paneling surrounds the room, supporting a rich exhibit of wall displays by local artists.  A curved corner desk dominates the room, manned by the guild secretary, and directly across from it sits a brocade-cushioned bench.  Just to the side of the desk is an arch that leads to the hallway, the faint noise of workers beyond.</description>
@@ -2994,6 +2994,7 @@
   <node id="468" name="Sshoi-sson Palace, Provincial Bank Foyer" note="3bank">
     <description>Understated elegance is the theme of this, the premier bank of the province.  Carpet thicker than the bedding in many a cheap hostel muffles every sound.  A golden light filters down from giant lamps set with stained-glass, while a gentle perfume scents the air.  Deep banquettes, upholstered in richly embroidered fabrics provide a comfortable resting place for those waiting to conduct business.</description>
     <position x="-52" y="-389" z="0" />
+    <arc exit="go" move="go shimmering portal" destination="876" />
     <arc exit="east" move="east" destination="469" />
     <arc exit="west" move="west" destination="466" />
   </node>
@@ -5635,7 +5636,13 @@
     <position x="-3" y="359" z="0" />
     <arc exit="south" move="south" destination="259" />
   </node>
-  <node id="876" name="Uasin Dock, Port of Ratha" note="Uasin Dock|Hara'jaal" color="#FF00FF">
+  <node id="876" name="Outside the Circle, The Ironwoods" note="Map40_Langenfirth_to_Therenborough.xml|PlatPortal">
+  <description>Two closely-spaced ironwood trees stand at the end of a tunnel of beech branches and boles.  A friendly-looking young ranger stands at guard, ready to alert her mates about any unwelcome visitors, or greet those who have found their way home.</description>
+  <position x="-52" y="-389" z="-1" />
+  <arc exit="east" move="east" />
+  <arc exit="go" move="go ironwood trees" />
+  </node>
+  <node id="877" name="Uasin Dock, Port of Ratha" note="Uasin Dock|Hara'jaal" color="#FF00FF">
     <description>Crates of all sorts, partially covered by dark canvas tarps, are being moved onto ships all along the dock.  The laborers, dressed in black clothing, work in only the small amount of light given off by the stars in the night sky.</description>
     <position x="248" y="491" z="0" />
     <arc exit="go" move="go ramp" destination="262" />
