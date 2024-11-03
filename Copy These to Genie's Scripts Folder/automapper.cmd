@@ -515,8 +515,10 @@ ABSOLUTE_TOP:
   if !def(automapper.userwalk) then put #tvar automapper.userwalk 0
   if !def(automapper.seekhealing) then put #tvar automapper.seekhealing 0
   if !def(citizenship) then gosub CITIZENSHIP
-  if (!def(guild) || !def(circle)) then action (guildcircle) on
-  gosub INFO_CHECK
+  if (!def(guild) || !def(circle)) then {
+    action (guildcircle) on
+    gosub INFO_CHECK
+  }
   if !def(premium) then gosub PREMIUM_CHECK
   if !def(citizenship) then gosub CITIZENSHIP
 # release cyclics if defined
