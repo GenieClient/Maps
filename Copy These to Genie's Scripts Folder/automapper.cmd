@@ -832,7 +832,6 @@ MOVE_SNEAK:
 MOVE_SWIM:
 MOVE_RT:
 ####added this to stop trainer
-  eval movement replacere("%movement", "script crossingtrainerfix ", "")
   eval depthtimeout $unixtime + %waitevalTimeOut
   if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
   matchre MOVE_RT_SUCCESS ^(?:Obvious|Ship) (?:paths|exits):
@@ -988,19 +987,19 @@ MOVE_SCRIPT:
   eval depthtimeout $unixtime + %waitevalTimeOut
   if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
   action (mapper) off
-  if ("%movement" == "oshumanor") then goto OSHUMANOR
-  if ("%movement" == "dragonspine") then goto DRAGONSPINE
   if ("%movement" == "abbeyhatch") then goto ABBEY_HATCH
-  if ("%movement" == "gateofsouls") then goto GATE_OF_SOULS
-  if ("%movement" == "gateleave") then goto GATE_OF_SOULS_LEAVE
-  if ("%movement" == "ggbypass") then goto GEAR_GATE_BYPASS
-  if ("%movement" == "autoclimbup") then goto AUTOCLIMB_UP
-  if ("%movement" == "autoclimbdown") then goto AUTOCLIMB_DOWN
   if ("%movement" == "armoire") then goto ARMOIRE
-  if ("%movement" == "mistwoodcliff") then goto MISTWOOD_CLIFF
-  if ("%movement" == "sandspit") then goto SANDSPIT_TAVERN
-  if ("%movement" == "hibintelligence") then goto HIB_INTELLIGENCE
+  if ("%movement" == "autoclimbdown") then goto AUTOCLIMB_DOWN
+  if ("%movement" == "autoclimbup") then goto AUTOCLIMB_UP
   if ("%movement" == "automoveenterdobeks") then goto ENTER_DOBEKS
+  if ("%movement" == "dragonspine") then goto DRAGONSPINE
+  if ("%movement" == "gateleave") then goto GATE_OF_SOULS_LEAVE
+  if ("%movement" == "gateofsouls") then goto GATE_OF_SOULS
+  if ("%movement" == "ggbypass") then goto GEAR_GATE_BYPASS
+  if ("%movement" == "hibintelligence") then goto HIB_INTELLIGENCE
+  if ("%movement" == "mistwoodcliff") then goto MISTWOOD_CLIFF
+  if ("%movement" == "oshumanor") then goto OSHUMANOR
+  if ("%movement" == "sandspit") then goto SANDSPIT_TAVERN
   matchre MOVE_SCRIPT_DONE ^MOVE SUCCESSFUL
   matchre MOVE_FAILED ^MOVE FAILED
   put .%movement
