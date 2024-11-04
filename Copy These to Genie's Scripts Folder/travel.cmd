@@ -1,5 +1,5 @@
 #travel.cmd
-var version 6.2024-10-17
+var version 6.2024-11-04
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
  debug 5
@@ -134,6 +134,7 @@ if (matchre("%1", "help|HELP|Help|^$")) then {
 #   version bump
 #   Big rewrite, pulled out commons subs to an INC
 #   unified look and feel with automapper.cmd
+#   Finally pulled in Jon's path logic
 
 # Shroom
 # - Robustified FERRY travel FROM Ratha TO MAINLAND for NON-PREMIUM PRIME users
@@ -515,2118 +516,929 @@ if (("$zoneid" == "34") && ($roomid > 89) && ($roomid < 116)) then {
   gosub AUTOMOVE 90
   gosub AUTOMOVE 49
 }
-## TO RATHA / HARAJAAL / TAISGATH LOGIC - PLAT/PREMIUM/TF ONLY
-RATHA_CHECK:
-if ((matchre("%destination", "\b(?:ratha|hara?j?a?a?l?|tais?g?a?t?h?)")) && (matchre("$zoneid", "\b(?:1|30|42|47|61|66|67|90|99|107|108|116)\b"))) then {
-## PLAT USERS - IF PORTALS ACTIVE - TAKE PLAT PORTALS
-  if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (matchre("$zoneid", "\b(?:1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-## TF / PREMIUM ONLY - TAKE FC FOR RATHA/TAISGATH
-  if ((matchre("$game", "(?i)DRF?\b")) && (matchre("%destination", "\b(?:rath?a?|tais?g?a?t?h?)")) || (%premium == 1) && (matchre("%destination", "\b(?:rath?a?|tais?g?a?t?h?)"))) then {
-    gosub ECHO GOING TO FC FOR RATHA/TAISGATH TRAVEL
-    gosub TO_SEACAVE
-    gosub AUTOMOVE 2
-    var ToRatha 1
-    gosub JOINLOGIC
-    gosub AUTOMOVE 252
-    if (matchre("%destination", "\bratha")) then goto ARRIVED
-  }
-## TF ONLY - TRAVEL TO HARAJAAL VIA FC
-  if ((matchre("$game", "(?i)DRF")) && (matchre("%destination", "\b(?:haraj?a?a?l?)"))) then {
-    gosub ECHO GOING TO FC FOR HARAJAAL TRAVEL
-    gosub TO_SEACAVE
-    gosub AUTOMOVE 3
-    gosub JOINLOGIC
-    goto ARRIVED
-  }
-}
-## BACK TO MAINLAND AREA (DESTINATION: SOUTH OF HAVEN)
-## IF IN RATHA AND IN PLAT TAKE PLAT PORTALS
-## OTHERWISE TAKE MAMMOTHS TO FC - THEN BACK TO MAINLAND
-RATHA_CHECK2:
-if (("$zoneid" == "90") && (!matchre("%destination", "\b(?:rath?a?|aesr?y?|hara|taisg?a?t?h?|ross?m?a?n?s?|rive?r?h?a?v?e?n?|have?n?|ther?e?n?b?o?r?o?u?g?h?|lang?e?n?f?i?r?t?h?|musp?a?r?i?|forn?s?t?e?d?|hvar?a?l?|oasi?s?|haize?n?|yeehar?|zaul?f?u?n?g?)"))) then {
-  if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (matchre("$zoneid", "\b(?:1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-## PRIMARY METHOD FOR NON-PREMIUM USERS - TAKE MAMMOTHS FROM RATHA TO FC - THEN TALL MAMMOTHS BACK TO MAINLAND (ACENAMACRA)
-  var ToRatha 0
-  gosub AUTOMOVE 24
-  gosub MOVE go rocks
-  pause %command_pause
-  if ((!matchre("$roomobjs", "mammoth")) && (%SkirrChecked == 0)) then {
-    gosub ECHO NO MAMMOTH FOUND!|CHECKING FOR SKIRR'LOLASU
-    gosub MOVE go beach
-    goto RATHA_CHECK3
-  }
-  gosub JOINLOGIC
-  gosub AUTOMOVE 2
-}
-RATHA_CHECK3:
-## IF IN RATHA AND GOING TO RIVERHAVEN/THEREN AREA - TAKE THE KREE'LA
-if (("$zoneid" == "90") && (!matchre("%destination", "\b(?:rath?a?|aesr?y?|hara|taisg?a?t?h?)"))) then {
-  if ((matchre("%destination", "\b(?:ross?m?a?n?s?|rive?r?h?a?v?e?n?|have?n?|ther?e?n?b?o?r?o?u?g?h?|lang?e?n?f?i?r?t?h?|musp?a?r?i?|forn?s?t?e?d?|hvar?a?l?|oasi?s?|haize?n?|yeehar?|zaul?f?u?n?g?)\b"))) then {
-    gosub AUTOMOVE 1
-    gosub FERRYLOGIC
-  }
-}
-## BACKUP METHOD TO CROSS - TAKE SKIRR'LOLASU
-if (("$zoneid" == "90") && (!matchre("%destination", "\b(?:rath?a?|aesr?y?|hara|taisg?a?t?h?|ross?m?a?n?s?|rive?r?h?a?v?e?n?|have?n?|ther?e?n?b?o?r?o?u?g?h?|lang?e?n?f?i?r?t?h?|musp?a?r?i?|forn?s?t?e?d?|hvar?a?l?|oasi?s?|haize?n?|yeehar?|zaul?f?u?n?g?)\b")) then {
-  var ToRatha 0
-  gosub AUTOMOVE 2
-  pause %command_pause
-  if (!matchre("$roomobjs", "the Skirr'lolasu")) then {
-    gosub ECHO NO FERRIES BACK TO MAINLAND FOUND!|PAUSING - THEN CHECKING AGAIN
-    var SkirrChecked 1
-    pause 10
-    goto RATHA_CHECK
-  }
-  gosub FERRYLOGIC
-}
-## RATHA TO TAISGATH
-if (("$zoneid" == "90") && (matchre("%destination", "\btais?g?a?t?h?"))) then {
-  gosub AUTOMOVE 398
-  gosub MOVE go moongate
-  goto ARRIVED
-}
-## IF IN FC FOR SOME REASON AS NON-PREMIUM - TAKE MAMMOTHS OUT
-if (("$zoneid" == "150") && (%premium == 0)) then {
-  gosub AUTOMOVE 2
-  gosub JOINLOGIC
-}
-## IF STARTING IN FC AND ARE PREMIUM - AND DESTINATION IS ~NOT~ RATHA/LETH - TAKE EXIT PORTAL OUT
-if (("$zoneid" == "150") && (!matchre("%destination", "\b(?:rath?a?|acen?e?m?a?c?r?a?|leth)"))) then {
-  gosub AUTOMOVE 85
-  gosub MOVE go exit portal
-  pause %command_pause
-}
-## IF ~STILL~ IN FC (EXIT PORTAL DIDN'T WORK) - TAKE MAMMOTHS OUT 
-if ("$zoneid" == "150") then {
-  gosub AUTOMOVE 2
-  gosub JOINLOGIC
-}
-if (matchre("$zonename", "Aesry")) then gosub AESRYBACK
-DRPRIMESTART:
-#### The goto CROSSING (P1) block ####
-if (matchre("%destination", "\b(?:cros?s?i?n?g?s?|xing?)")) then goto CROSSING
-if (matchre("%destination", "\b(?:wolfc?l?a?n?)")) then var detour wolf
-if (matchre("%destination", "\b(?:west?g?a?t?e?)")) then var detour knife
-if (matchre("%destination", "\b(?:knif?e?c?l?a?n?)")) then var detour knife
-if (matchre("%destination", "\b(?:tige?r?c?l?a?n?)")) then var detour tiger
-if (matchre("%destination", "\b(?:ushni?s?h?)")) then var detour dirge
-if (matchre("%destination", "\b(?:dirg?e?)")) then var detour dirge
-if (matchre("%destination", "\b(?:arth?e?d?a?l?e?)")) then var detour arthe
-if (matchre("%destination", "\b(?:kaer?n?a?)")) then var detour kaerna
-if (matchre("%destination", "\b(?:ilay?a?t?a?i?p?|illa?y?a?t?a?i?p?a?|taipa)")) then var detour taipa
-if (matchre("%destination", "\b(?:leth?d?e?r?i?e?l?)")) then var detour leth
-if (matchre("%destination", "\b(?:acen?a?m?a?c?r?a?)")) then var detour acen
-if (matchre("%destination", "\b(?:vipe?r?s?|guar?d?i?a?n?s?|leuc?r?o?s?)")) then var detour viper
-if (matchre("%destination", "\b(?:malod?o?r?o?u?s?|bucc?a?)")) then var detour bucca
-if (matchre("%destination", "\b(?:dokt?)")) then var detour dokt
-if (matchre("%destination", "\bsorr?o?w?s?")) then var detour sorrow
-if (matchre("%destination", "\bmisens?e?o?r?")) then var detour misen
-if (matchre("%destination", "\bbeis?s?w?u?r?m?s?")) then var detour beisswurms
-if (matchre("%destination", "\bston?e?c?l?a?n?")) then var detour stone
-if (matchre("%destination", "\b(fan?g?|cov?e?)")) then var detour fang
-if ("%detour" != "NULL") then goto CROSSING
-#### The goto THERENGIA (P2) block ####
-if (matchre("%destination", "\b(?:ther?e?n?b?o?r?o?u?g?h?)")) then goto THERENGIA
-if (matchre("%destination", "\b(?:cara?v?a?n?s?a?r?y?)")) then var detour caravansary
-if (matchre("%destination", "\b(?:rive?r?h?a?v?e?n?|have?n?)")) then var detour haven
-if (matchre("%destination", "\b(?:ross?m?a?n?s?)")) then var detour rossman
-if (matchre("%destination", "\b(?:lang?e?n?f?i?r?t?h?)")) then var detour lang
-if (matchre("%destination", "\b(?:el'?b?a?i?n?s?|elb?a?i?n?s?)")) then var detour el'bain
-if (matchre("%destination", "\b(?:raka?s?h?)")) then var detour rakash
-if (matchre("%destination", "\bthro?n?e?")) then var detour throne
-if (matchre("%destination", "\b(?:forn?s?t?e?d?)")) then var detour fornsted
-if (matchre("%destination", "\b(?:musp?a?r?i?)")) then var detour muspari
-if (matchre("%destination", "\b(?:hvar?a?l?)")) then var detour hvaral
-if (matchre("%destination", "\b(?:oasi?s?|haize?n?|yeehar?)")) then var detour oasis
-if (matchre("%destination", "\b(?:zaul?f?u?n?g?)")) then var detour zaulfung
-if (matchre("%destination", "\b(?:mri?s?s?)")) then var detour mriss
-if (matchre("%destination", "\b(?:merk?r?e?s?h?|kre?s?h?)")) then var detour merk
-if (matchre("%destination", "\b(?:har?a?j?a?a?l?)")) then var detour hara
-if ("%detour" != "NULL") then goto THERENGIA
-#### The goto ILITHI (P3) block ####
-if (matchre("%destination", "\bshar?d?")) then goto ILITHI
-if (matchre("%destination", "\b(?:bone?w?o?l?f?|germ?i?s?h?d?i?n?)")) then var detour bone
-if (matchre("%destination", "\balfr?e?n?s?")) then var detour alfren
-if (matchre("%destination", "\b(?:gond?o?l?a?)")) then var detour gondola
-if (matchre("%destination", "\b(?:grani?t?e?|garg?o?y?l?e?)")) then var detour garg
-if (matchre("%destination", "\b(?:spir?e?)")) then var detour spire
-if (matchre("%destination", "\b(?:horse?c?l?a?n?)")) then var detour horse
-if (matchre("%destination", "\b(?:fayr?i?n?s?)")) then var detour fayrin
-if (matchre("%destination", "\b(?:steel?c?l?a?w?)")) then var detour steel
-if (matchre("%destination", "\b(?:cori?k?s?)")) then var detour corik
-if (matchre("%destination", "\b(?:ada?n?f?)")) then var detour adan'f
-if (matchre("%destination", "\b(?:ylo?n?o?)")) then var detour ylono
-if (matchre("%destination", "\b(?:wyve?r?n?)")) then var detour wyvern
-if (matchre("%destination", "\b(?:aes?r?y?|sur?l?a?e?n?i?s?)")) then var detour aesry
-if ("%detour" != "NULL") then goto ILITHI
-#### The goto ISLANDS (P4) block ####
-if (matchre("%destination", "\b(?:tais?g?a?t?h?)")) then {
-  var detour ratha
-  if ("$zoneid" == "150") then {
-    gosub AUTOMOVE 2
-    var ToRatha 1
-    gosub JOINLOGIC
-    gosub AUTOMOVE 398
-    goto ARRIVED
-  }
-}
-if (matchre("%destination", "\b(?:rath?a?)")) then {
-  var detour ratha
-  if ("$zoneid" == "150") then {
-    gosub AUTOMOVE 2
-    var ToRatha 1
-    gosub JOINLOGIC
-    gosub AUTOMOVE 252
-    goto ARRIVED
-  }
-  goto CROSSING
-}
-if (("$zoneid" == "150") && ("$game" != "DRF") && ("%detour" != "ratha")) then {
-  gosub AUTOMOVE 2
-  var ToRatha 0
-  gosub JOINLOGIC
-  gosub AUTOMOVE 2
-  goto DRPRIMESTART
-}
-#### The goto FORF (P5) block ####
-if (matchre("%destination", "\b(?:boar?c?l?a?n?)")) then goto FORF
-if (matchre("%destination", "\b(?:aing?h?a?z?a?l?)")) then var detour ain
-if (matchre("%destination", "\b(?:rave?n?s?)")) then var detour raven
-if (matchre("%destination", "\b(?:hib?a?r?n?h?v?i?d?a?r?|out?e?r?)")) then var detour outer
-if (matchre("%destination", "\b(?:inne?r?)")) then var detour inner
-if ("%detour" != "NULL") then goto FORF
-#### END BLOCKS ####
-goto NODESTINATION
-####  END PICK ROUTE BLOCK
-#### CROSSING ####
-CROSSING:
-var label CROSSING
-if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (matchre("$zoneid", "\b(?:30|40|47|67|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-## IF IN RATHA - HEAD BACK TO MAINLAND
-if (("$zoneid" == "90") && (!matchre("%destination", "\b(?:rath?a?|aesr?y?|hara|taisg?a?t?h?|ross?m?a?n?s?|rive?r?h?a?v?e?n?|have?n?|ther?e?n?b?o?r?o?u?g?h?|lang?e?n?f?i?r?t?h?|musp?a?r?i?|forn?s?t?e?d?|hvar?a?l?|oasi?s?|haize?n?|yeehar?|zaul?f?u?n?g?)"))) then {
-  if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (matchre("$zoneid", "\b(?:1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-## TAKE MAMMOTHS FROM RATHA - TO FC - THEN BACK TO MAINLAIND (ACENAMACRA)
-  var ToRatha 0
-  gosub AUTOMOVE 24
-  gosub MOVE go rocks
-  gosub JOINLOGIC
-  gosub AUTOMOVE 2
-  gosub JOINLOGIC
-}
-## IF IN RATHA AND GOING TO RIVERHAVEN/THEREN AREA - TAKE THE KREE'LA
-if (("$zoneid" == "90") && (!matchre("%destination", "\b(?:rath?a?|aesr?y?|hara|taisg?a?t?h?)"))) then {
-  if (matchre("%destination", "\b(?:ross?m?a?n?s?|rive?r?h?a?v?e?n?|have?n?|ther?e?n?b?o?r?o?u?g?h?|lang?e?n?f?i?r?t?h?|musp?a?r?i?|forn?s?t?e?d?|hvar?a?l?|oasi?s?|haize?n?|yeehar?|zaul?f?u?n?g?)\b")) then {
-    gosub AUTOMOVE 1
-    gosub FERRYLOGIC
-  }
-  gosub AUTOMOVE 2
-  gosub FERRYLOGIC
-}
-if ("$zoneid" == "48") then {
-  gosub AUTOMOVE 1
-  gosub FERRYLOGIC
-}
-if (matchre("$zonename", "(?:Hara'jaal|Mer'Kresh|M'Riss)")) then {
-  var backuplabel CROSSING
-  var backupdetour %detour
-  var detour mriss
-  var tomainland 1
-  goto QITRAVEL
-}
-if (("$zoneid" == "150") && (!matchre("%destination", "\b(?:rath?a?|acen?e?m?a?c?r?a?|haraj?a?a?l?)"))) then {
-  gosub AUTOMOVE 85
-  gosub PUT go exit portal
-}
-if ("$zoneid" == "35") then {
-  gosub INFO_CHECK
-  if (%Lirums < 240) then goto NOCOIN
-  gosub AUTOMOVE 166
-  gosub FERRYLOGIC
-}
-if ("$zoneid" == "7a") then gosub AUTOMOVE Map7_NTR.xml
-if ("$zoneid" == "2") then gosub MOVE Map1_Crossing.xml
-if ("$zoneid" == "1a") then gosub MOVE Map1_Crossing.xml
-if ("$zoneid" == "2a") then gosub MOVE Map1_Crossing.xml
-if (("$zoneid" == "47") && (matchre("$game", "(?i)DRX")) && (%portal == 1) && (%ported == 0)) then gosub PORTAL_TIME
-if (("$zoneid" == "47") && ($Athletics.Ranks >= %muspari.shortcut)) then gosub VELAKA_SHORTCUT
-if ("$zoneid" == "47") then {
-  gosub AUTOMOVE 117
-  gosub FERRYLOGIC
-}
-if ("$zoneid" == "41") then {
-  gosub AUTOMOVE 53
-  gosub PUT east
-  waitforre ^Just when it seems
-  pause %command_pause
-}
-if ("$zoneid" == "42") then gosub AUTOMOVE 2
-if ("$zoneid" == "59") then gosub AUTOMOVE 12
-if ("$zoneid" == "114") then {
-  gosub INFO_CHECK
-  if (%Dokoras < 120) then goto NOCOIN
-  gosub AUTOMOVE 1
-  gosub FERRYLOGIC
-  gosub PUT go oak doors
-}
-if (("$zoneid" == "113") && ("$roomid" == "1")) then gosub AUTOMOVE 5
-if ("$zoneid" == "40a") then gosub AUTOMOVE 125
-if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (matchre("$zoneid", "\b(?:1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-if (("$zoneid" == "40") && ($Athletics.Ranks >= %rossmanSouth)) then gosub AUTOMOVE 213
-if (("$zoneid" == "40") && ($Athletics.Ranks >= %rossmanSouth)) then {
-  if (%verbose) then gosub ECHO Athletics NOT high enough for Jantspyre - Taking Ferry!
-  gosub INFO_CHECK
-  if (%Lirums < 140) then goto NOCOIN
-  gosub AUTOMOVE 36
-  gosub FERRYLOGIC
-}
-if ("$zoneid" == "34a") then gosub AUTOMOVE 134
-if ("$zoneid" == "34") then {
-  if (($roomid > 120) && ($roomid < 153)) then {
-    gosub AUTOMOVE 121
-    if (matchre("$roomdesc", "pair of ropes tied to trees")) then {
-      gosub STOWING
-      gosub PUT climb rope
-      gosub SHUFFLE_SOUTH
-    }
-  }
-  gosub AUTOMOVE 15
-}
-if ("$zoneid" == "33a") then gosub AUTOMOVE 46
-if (matchre("$zoneid", "\b(?:33|32|31)\b")) then gosub AUTOMOVE 1
-if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (matchre("$zoneid", "\b(?:1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-if ("$zoneid" == "30") then {
-  ### CHECK HERE TO MAKE SURE BURDEN IS NOT TOO HIGH AT LOWER RANKS
-  if ((($Athletics.Ranks < 170) && (%burden > 2)) || (($Athletics.Ranks < 190) && (%burden > 3))) then {
-    if (%verbose) then gosub ECHO BURDEN TOO HIGH FOR FALDESU RIVER @ CURRENT RANKS!
-    goto FALDESU_FERRY
-  }
-  if ($Athletics.Ranks >= %faldesu) then goto CROSSING_1
-}
-if ("$zoneid" != "30") then goto CROSSING_1
-if ($Athletics.Ranks >= %faldesu) then goto CROSSING_1
-FALDESU_FERRY:
-  if ("$zoneid" != "30") then goto CROSSING_1
-  echo
-  if (%verbose) then gosub ECHO Athletics (+burden) NOT high enough for Faldesu River - Taking Ferry!
-  echo
-  gosub INFO_CHECK
-  if (%Lirums < 140) then goto NOCOIN
-  gosub AUTOMOVE 103
-  pause
-  gosub FERRYLOGIC
-CROSSING_1:
-if (("$zoneid" == "30") && ($Athletics.Ranks >= %faldesu)) then {
-  if (%verbose) then gosub ECHO Athletics high enough for Faldesu - Taking River!
-  gosub AUTOMOVE 203
-  gosub AUTOMOVE 79
-}
-if ("$zoneid" == "14c") then gosub FALDESU_SOUTH
-if ("$zoneid" == "14c") then gosub FALDESU_SOUTH
-if ("$zoneid" == "14c") then gosub FALDESU_SOUTH
-if ("$zoneid" == "127") then gosub AUTOMOVE 510
-if ("$zoneid" == "126") then gosub AUTOMOVE 49
-if ("$zoneid" == "116") then gosub AUTOMOVE 3
-if ("$zoneid" == "123") then gosub AUTOMOVE 175
-if ("$zoneid" == "67a") then gosub MOVE Map67_Shard.xml
-if ("$zoneid" == "69") then gosub AUTOMOVE Map66_STR3.xml
-if ("$zoneid" == "68a") then gosub AUTOMOVE 29
-if ("$zoneid" == "68b") then gosub AUTOMOVE 44
-if ("$zoneid" == "68") then {
-  if ((matchre("$roomname", "(?:Blackthorn Canyon|Corik's Wall|Stormfells|Shadow's Reach|Reach Forge|Darkling Wood, Trader Outpost)")) || (($roomid > 67) && ($roomid < 75))) then {
-    gosub AUTOMOVE 68
-    gosub AUTOMOVE 65
-    gosub AUTOMOVE 62
-  }
-  if ($Athletics.Ranks > 250) then {
-    gosub AUTOMOVE 2
-    gosub PUT climb wall
-  }
-}
-if (("$zoneid" == "68") && (%shardCitizen)) then {
-  gosub AUTOMOVE 1
-  gosub AUTOMOVE 135
-}
-if (("$zoneid" == "68") && !(%shardCitizen)) then gosub AUTOMOVE 15
-if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (matchre("$zoneid", "\b(?:1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-if (("$zoneid" == "67") && ("$guild" == "Thief")) then {
-  gosub AUTOMOVE 566
-  gosub AUTOMOVE 23
-}
-if ("$zoneid" == "67") then gosub AUTOMOVE 132
-if (("$zoneid" == "66") && ($Athletics.Ranks >= %underGondola)) then {
-  gosub BUFFCLIMB
-  gosub AUTOMOVE Map65_Under_the_Gondola.xml
-}
-if (("$zoneid" == "66") && ($Athletics.Ranks < %underGondola)) then {
-  if (%verbose) then gosub ECHO Athletics NOT high enough for underSegoltha - Taking Gondola!
-  gosub AUTOMOVE 156
-  gosub FERRYLOGIC
-}
-if ("$zoneid" == "1a") then gosub MOVE Map1_Crossing.xml
-if ("$zoneid" == "63") then gosub AUTOMOVE 112
-if ("$zoneid" == "65") then gosub AUTOMOVE Map62_STR2.xml
-if ("$zoneid" == "62") then gosub AUTOMOVE Map61_Leth_Deriel.xml
-if ("$zoneid" == "112") then gosub AUTOMOVE 112
-if ("$zoneid" == "58") then gosub AUTOMOVE leth
-if (("$zoneid" == "60") && (matchre("%detour", "(?:leth|acen|taipa|LETH|ACEN|ratha|fang)"))) then gosub AUTOMOVE 57
-if (("$zoneid" == "61") && (matchre("%detour", "(?:leth|acen|taipa|LETH|ACEN|ratha|fang)"))) then {
-  if ("%detour" == "acen") then {
-    gosub AUTOMOVE 178
-    gosub AUTOMOVE 47
-  }
-  if ("%detour" == "taipa") then {
-    gosub AUTOMOVE 126
-    gosub AUTOMOVE 27
-  }
-## PRIME USER (NON-PREMIUM) TO RATHA: TRAVEL TO ACENAMACRA/MAMMOTH TO FC/MAMMOTH TO RATHA
-  if ("%detour" == "ratha") then {
-    gosub AUTOMOVE 178
-    gosub AUTOMOVE 47
-    var ToRatha 1
-    gosub JOINLOGIC
+##################
+###Pather Start###
+##################
+gosub Load
+gosub Paths
+
+if (def(travel.test) && ($travel.test = 1)) then {
     pause
-    gosub JOINLOGIC
-    gosub AUTOMOVE 252
-    goto ARRIVED
-  }
-  if ("%detour" == "leth") then gosub AUTOMOVE 18
-  goto ARRIVED
+    echo %Path_Weight
+    echo %Path_Paths
+    echo %Path_Arcs
+    echo %Path_Names
+    echo %Path_Rooms
+    exit
+} 
+
+var i_Path 0
+Travel_Path:
+if ("%Path_Arcs(%i_Path)" != "") then {
+  gosub automove %Path_Arcs(%i_Path) "%Path_Rooms(%i_Path)"
+  math i_Path add 1
+  goto Travel_Path
 }
-if ("$zoneid" == "61") then gosub AUTOMOVE Map60_STR1.xml
-if ("$zoneid" == "50") && (matchre("%destination", "\b(?:haizen|yeehar|oasis|hvaral|forns?t?e?d?|elbain|el'bain|alfren|rossm?a?n?|viper|leucro?|misens|beiss|sorrow|ushnish|caravan?s?a?r?y?|dokt|west|stone|knife|wolf|tiger|dirge|arthe|kaerna?|river|haven|riverhaven|theren|lang|throne|zaulfu?n?|rakash|muspar?i?|zaulfung|cross?|crossing)")) && ($Athletics.Ranks > %segoltha) then gosub SEGOLTHA_NORTH
-if ("$zoneid" == "50") then gosub SEGOLTHA_SOUTH
-if (("$zoneid" == "60") && ("%detour" == "alfren")) then {
-  gosub AUTOMOVE 42
-  goto ARRIVED
-}
-if (("$zoneid" == "60") && (matchre("%detour", "(leth|acen|taipa|LETH|ACEN|ratha|fang|ain|raven|outer|inner|adan'f|corik|steel|ylono|fayrin|horse|spire)"))) then gosub AUTOMOVE leth
-if (("$zoneid" == "60") && ("$guild" == "Thief")) then {
-  if ($Athletics.Ranks >= %underSegoltha) then {
-    gosub AUTOMOVE 107
-    if ("$zoneid" == "120") then gosub AUTOMOVE 107
-    gosub MOVE Map1_Crossing.xml
-    if ("$zoneid" == "1a") then gosub MOVE Map1_Crossing.xml
-  }
-}
-if (("$zoneid" == "60") && ($Athletics.Ranks >= %segoltha)) then gosub AUTOMOVE Map50_Segoltha_River.xml
-# Crossing | Arthe Dale | West Gate | Tiger Clan | Wolf Clan | Dokt | Knife Clan | Kaerna
-# Stone Clan | Caravansary | Dirge | Ushnish | Sorrow's | Beisswurms | Misenseor |Leucros
-# Vipers | Malodorous Buccas | Alfren's Ferry | Leth Deriel  | Ilaya Taipa | Acenemacra
-# Riverhaven | Rossmans | Langenfirth | El'Bains | Zaulfun | Therenborough
-if ("$zoneid" == "50") && (matchre("%destination", "\b(?:haizen|yeehar|oasis|hvaral|forns?t?e?d?|elbain|el'bain|alfren|rossm?a?n?|viper|leucro?|misens|beiss|sorrow|ushnish|caravan?s?a?r?y?|dokt|west|stone|knife|wolf|tiger|dirge|arthe|kaerna?|river|haven|riverhaven|theren|lang|throne|zaulfu?n?|rakash|muspar?i?|zaulfung|cross?|crossing)")) && ($Athletics.Ranks > %segoltha) then gosub SEGOLTHA_NORTH
-if ("$zoneid" == "50") then gosub SEGOLTHA_SOUTH
-if (("$zoneid" == "60") && ($Athletics.Ranks < %segoltha)) then {
-  if (%verbose) then gosub ECHO Athletics NOT high enough for Segoltha - Taking Ferry!
-  gosub INFO_CHECK
-  if (%Kronars < 40) then goto NOCOIN
-  gosub AUTOMOVE 42
-  if ("$roomid" != "42") then gosub AUTOMOVE 42
-  pause
-  gosub FERRYLOGIC
-}
-if "$zoneid" == "6"  then gosub MOVE Map1_Crossing.xml
-if ("$zoneid" == "4a") then gosub AUTOMOVE 15
-if ("$zoneid" == "4b") then gosub AUTOMOVE 1
-if (("$zoneid" == "4") && (("%detour" == "dokt"))) then {
-  gosub AUTOMOVE dok
-  goto ARRIVED
-}
-if (("$zoneid" == "4") && (matchre("%destination", "\bwest"))) then {
-  gosub AUTOMOVE 16
-  goto ARRIVED
-}
-if ("$zoneid" == "4") then gosub AUTOMOVE 14
-if ("$zoneid" == "13") then gosub AUTOMOVE 71
-if ("$zoneid" == "12a") then gosub AUTOMOVE 60
-if ("$zoneid" == "10") then gosub AUTOMOVE 116
-if ("$zoneid" == "9b") then gosub AUTOMOVE 9
-if ("$zoneid" == "14b") then gosub AUTOMOVE 217
-if ("$zoneid" == "11") then gosub AUTOMOVE 2
-if (("$zoneid" == "1") && (matchre("%detour", "(?:arthe|dirge|kaerna|stone|misen|sorrow|fist|beisswurms|bucca|viper)"))) then {
-  if ($invisible == 1) then {
-    gosub AUTOMOVE N gate
-    gosub MOVE Map7_NTR.xml
-    goto CROSSING_2
-  }
-  gosub AUTOMOVE 171
-}
-CROSSING_2:
-if (("$zoneid" == "7") && (matchre("%detour", "(?:arthe|dirge|kaerna|stone|misen|sorrow|fist|beisswurms|bucca|viper)"))) then {
-  if (matchre("%destination", "(?i)ushnish")) then {
-    gosub AUTOMOVE 188
-    gosub GATE_OF_SOULS
-    goto ARRIVED
-  }
-  if ("%detour" == "dirge") then {
-      gosub AUTOMOVE 147
-      if ("$zoneid" == "7") then gosub AUTOMOVE 147
-      if ("$zoneid" == "13") then gosub AUTOMOVE 11
-  }
-  if ("%detour" == "arthe") then gosub AUTOMOVE 535
-  if ("%detour" == "kaerna") then gosub AUTOMOVE 352
-  if (("%detour" == "stone") && ("$zoneid" == "7")) then gosub AUTOMOVE 396
-  if (("%detour" == "stone") && ("$zoneid" == "7")) then gosub AUTOMOVE 396
-  if (("%detour" == "beisswurms") && ("$zoneid" == "7")) then gosub AUTOMOVE 396
-  if (("%detour" == "beisswurms") && ("$zoneid" == "7")) then gosub AUTOMOVE 396
-  if ("%detour" == "fist") then gosub AUTOMOVE 253
-  if ("%detour" == "misen") then gosub AUTOMOVE 437
-  if ("%detour" == "viper") then {
-    gosub AUTOMOVE 394
-    if ($Perception.Ranks > 150) then gosub AUTOMOVE 5
-  }
-  if (matchre("%detour", "(?:sorrow|bucca)")) then {
-    gosub AUTOMOVE 397
-    if ("%detour" == "sorrow") then {
-      gosub AUTOMOVE 77
-      goto ARRIVED
-    }
-    if ("%detour" == "bucca") then {
-      gosub AUTOMOVE 124
-      goto ARRIVED
-    }
-  }
-  if ("%detour" == "beisswurms") then gosub AUTOMOVE 31
-  goto ARRIVED
-}
-if ("$zoneid" == "7") then gosub AUTOMOVE 349
-if ("$zoneid" == "7") then gosub AUTOMOVE 349
-if ("$zoneid" == "8") then gosub AUTOMOVE 43
-if (("$zoneid" == "1") && (matchre("%detour", "(?:wolf|knife|tiger)"))) then {
-  gosub AUTOMOVE 172
-  if (matchre("%destination", "\bwest")) then {
-    gosub AUTOMOVE 16
-    goto ARRIVED
-  }
-  if ("%detour" == "wolf") then gosub AUTOMOVE 126
-  if ("%detour" == "knife") then gosub AUTOMOVE 459
-  if ("%detour" == "tiger") then gosub AUTOMOVE 87
-  goto ARRIVED
-}
-if (("$zoneid" == "1") && (matchre("%detour", "(?:leth|acen|taipa|ratha)"))) then {
-  if (("$guild" == "Thief") && ($Athletics.Ranks >= %underSegoltha)) then {
-    gosub AUTOMOVE 650
-    gosub AUTOMOVE 23
-  }
-  if ($Athletics.Ranks >= %segoltha) then {
-    if (%verbose) then gosub ECHO Athletics high enough for Segoltha - Taking River!
-    gosub AUTOMOVE 476
-    gosub SEGOLTHA_SOUTH
-  } else {
-    if (%verbose) then gosub ECHO Athletics NOT high enough for Segoltha - Taking Ferry!
-    gosub INFO_CHECK
-    if (%Kronars < 100) then goto NOCOIN
-    gosub AUTOMOVE 236
-    gosub FERRYLOGIC
-  }
-  gosub MOVE south
-  put #mapper reset
-  gosub AUTOMOVE 57
-  if ("%detour" == "acen") then {
-    gosub AUTOMOVE 178
-    gosub AUTOMOVE 47
-  }
-  if ("%detour" == "taipa") then {
-    gosub AUTOMOVE 126
-    gosub AUTOMOVE 27
-  }
-## PRIME USER (NON-PREMIUM) TO RATHA: TRAVEL TO ACENAMACRA/MAMMOTH TO FC/MAMMOTH TO RATHA
-  if ("%detour" == "ratha") then {
-    gosub AUTOMOVE 178
-    gosub AUTOMOVE 47
-    var ToRatha 1
-    gosub JOINLOGIC
-    pause
-    gosub JOINLOGIC
-    gosub MOVE go beach
-    gosub AUTOMOVE 252
-    goto ARRIVED
-  }
-  if ("%detour" == "leth") then gosub AUTOMOVE 18
-}
-if ("$zoneid" == "1") then gosub AUTOMOVE 42
 goto ARRIVED
 
-ILITHI:
-var label ILITHI
-if ((matchre("$game", "(?i)DRX")) && (%portal == 1)) then {
-  if (("$zoneid" == "1") && (matchre("%detour", "(alfren|leth|bone)"))) then goto ILLITHI_2
-  if ((matchre("$zoneid", "\b(1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-}
-## IF IN RATHA - HEAD BACK TO MAINLAND
-if (("$zoneid" == "90") && (!matchre("%destination", "\b(?:rath?a?|aesr?y?|hara|taisg?a?t?h?|ross?m?a?n?s?|rive?r?h?a?v?e?n?|have?n?|ther?e?n?b?o?r?o?u?g?h?|lang?e?n?f?i?r?t?h?|musp?a?r?i?|forn?s?t?e?d?|hvar?a?l?|oasi?s?|haize?n?|yeehar?|zaul?f?u?n?g?)"))) then {
-  if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (matchre("$zoneid", "\b(1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-## TAKE MAMMOTHS FROM RATHA - TO FC - THEN BACK TO MAINLAIND (ACENAMACRA)
-  var ToRatha 0
-  gosub AUTOMOVE 24
-  gosub MOVE go rocks
-  gosub JOINLOGIC
-  pause
-  gosub JOINLOGIC
-  gosub AUTOMOVE 2
-}
-## IF IN RATHA AND GOING TO RIVERHAVEN/THEREN AREA - TAKE THE KREE'LA
-if (("$zoneid" == "90") && (!matchre("%destination", "\b(rath?a?|aesr?y?|hara|taisg?a?t?h?)"))) then {
-  if (matchre("%destination", "\b(?:ross?m?a?n?s?|rive?r?h?a?v?e?n?|have?n?|ther?e?n?b?o?r?o?u?g?h?|lang?e?n?f?i?r?t?h?|musp?a?r?i?|forn?s?t?e?d?|hvar?a?l?|oasi?s?|haize?n?|yeehar?|zaul?f?u?n?g?)\b")) then {
-    gosub AUTOMOVE 1
-    gosub FERRYLOGIC
-  }
-  gosub AUTOMOVE 2
-  gosub FERRYLOGIC
-}
-ILITHI_1:
-if ("$zoneid" == "127") then gosub AUTOMOVE south
-if "$zoneid" == "6"  then gosub MOVE Map1_Crossing.xml
-if ("$zoneid" == "7a") then gosub MOVE Map7_NTR.xml
-if ("$zoneid" == "1a") then gosub MOVE Map1_Crossing.xml
-if ("$zoneid" == "2") then gosub MOVE Map1_Crossing.xml
-if ("$zoneid" == "2a") then gosub MOVE Map1_Crossing.xml
-if ("$zoneid" == "67a") then gosub MOVE Map67_Shard.xml
-if (matchre("$zonename", "(?:Hara'jaal|Mer'Kresh|M'Riss)")) then {
-  var backuplabel ILITHI
-  var backupdetour %detour
-  var detour mriss
-  var tomainland 1
-  goto QITRAVEL
-}
-if ("$zoneid" == "48") then {
-  if ($Athletics.Ranks >= %muspari.shortcut) then gosub VELAKA_SHORTCUT
-  if (%verbose) then gosub ECHO Athletics NOT high enough for Velaka Desert - Taking Ferry!
-  gosub AUTOMOVE 1
-  gosub FERRYLOGIC
-}
-if ("$zoneid" == "35") then
-     {
-         gosub INFO_CHECK
-         if (%Lirums < 120) then goto NOCOIN
-         gosub AUTOMOVE 166
-         gosub FERRYLOGIC
-     }
-if (("$zoneid" == "47") && ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (%ported == 0))) then gosub PORTAL_TIME
-if (("$zoneid" == "47") && ($Athletics.Ranks >= %muspari.shortcut)) then gosub VELAKA_SHORTCUT
-if ("$zoneid" == "47") then {
-  gosub AUTOMOVE 117
-  gosub FERRYLOGIC
-}
-if ("$zoneid" == "41") then {
-  gosub AUTOMOVE 2
-  gosub PUT east
-  waitforre ^Just when it seems
-  pause
-  put #mapper reset
-}
-if ("$zoneid" == "127") then gosub AUTOMOVE south
-if ("$zoneid" == "40a") then gosub AUTOMOVE 125
-if ((matchre("$game", "(?i)DRX")) && (%portal == 1)) then {
-  if (("$zoneid" == "1") && (matchre("%detour", "(?:alfren|leth|bone)"))) then goto ILLITHI_2
-  if ((matchre("$zoneid", "\b(?:1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-}
-if (("$zoneid" == "40") && ($Athletics.Ranks >= %rossmanSouth)) then gosub AUTOMOVE 213
-if (("$zoneid" == "40") && ($Athletics.Ranks < %rossmanSouth)) then {
-  if (%verbose) then gosub ECHO Athletics NOT high enough for Jantspyre - Taking Ferry!
-  gosub INFO_CHECK
-  evalmath BoarNeeded ($circle * 20)
-  if (%Lirums < %BoarNeeded) then goto NOCOIN
-  gosub AUTOMOVE 263
-}
-if ("$zoneid" == "40a") then {
-  gosub INFO_CHECK
-  evalmath BoarNeeded ($circle * 20)
-  if (%Lirums < %BoarNeeded) then {
-    gosub AUTOMOVE 125
-    goto NOCOIN
-  }
-  gosub AUTOMOVE 68
-  gosub JOINLOGIC
-}
-if ("$zoneid" == "126") then gosub AUTOMOVE 49
-if ("$zoneid" == "127") then gosub AUTOMOVE south
-if ("$zoneid" == "126") then gosub AUTOMOVE 49
-if ((matchre("$game", "(?i)DRX")) && (%portal == 1)) then {
-  if (("$zoneid" == "1") && (matchre("%detour", "(?:alfren|leth|bone)"))) then goto ILLITHI_2
-  if ((matchre("$zoneid", "\b(?:1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-}
-if ("$zoneid" == "116") then gosub AUTOMOVE 3
-if ("$zoneid" == "114") then {
-  gosub INFO_CHECK
-  if (%Dokoras < 120) then goto NOCOIN
-  gosub AUTOMOVE 4
-  gosub FERRYLOGIC
-  gosub MOVE west
-  wait
-}
-if ("$zoneid" == "112") then gosub AUTOMOVE 112
-if ("$zoneid" == "123") then gosub AUTOMOVE 175
-if ("$zoneid" == "42") then gosub AUTOMOVE 2
-if ("$zoneid" == "59") then gosub AUTOMOVE 12
-if ("$zoneid" == "114") then {
-  gosub INFO_CHECK
-  if (%Dokoras < 120) then goto NOCOIN
-  gosub AUTOMOVE 1
-  gosub FERRYLOGIC
-  gosub MOVE go oak doors
-}
-if ("$zoneid" == "40a") then gosub AUTOMOVE 125
-if ((matchre("$game", "(?i)DRX")) && (%portal == 1)) then {
-  if (("$zoneid" == "1") && (matchre("%detour", "(?:alfren|leth|bone)"))) then goto ILLITHI_2
-  if ((matchre("$zoneid", "\b(?:1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-}
-if (("$zoneid" == "40") && ($Athletics.Ranks >= %rossmanSouth)) then {
-  if (%verbose) then gosub ECHO Athletics high enough for Jantspyre - Taking shortcut!
-  gosub AUTOMOVE 213
-}
-if (("$zoneid" == "40") && ($Athletics.Ranks < %rossmanSouth)) then {
-  if (%verbose) then gosub ECHO Athletics NOT high enough for Jantspyre - Taking Ferry!
-  gosub INFO_CHECK
-  if (%Lirums < 140) then goto NOCOIN
-  gosub AUTOMOVE 36
-  gosub FERRYLOGIC
-}
-if ("$zoneid" == "34a") then gosub AUTOMOVE 134
-if ("$zoneid" == "34") then {
-  if (($roomid > 120) && ($roomid < 153)) then {
-    gosub AUTOMOVE 121
-    if (matchre("$roomdesc", "pair of ropes tied to trees")) then {
-      gosub STOWING
-      gosub PUT climb rope
-      pause %command_pause
-      gosub SHUFFLE_SOUTH
+
+Paths:
+    if !(matchre("%Maps", "\|%Current_Zone\|")) then {
+            gosub %Current_Zone
+        var Maps %Maps%Current_Zone|
     }
-  }
-  gosub AUTOMOVE 15
-}
-if ("$zoneid" == "33a") then gosub AUTOMOVE 46
-if ("$zoneid" == "33") then gosub AUTOMOVE 1
-if ("$zoneid" == "32") then gosub AUTOMOVE 1
-if ("$zoneid" == "31") then gosub AUTOMOVE 1
-if ((matchre("$game", "(?i)DRX")) && (%portal == 1)) then {
-  if (("$zoneid" == "1") && (matchre("%detour", "(?:alfren|leth|bone)"))) then goto ILLITHI_2
-  if ((matchre("$zoneid", "\b(?:1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-}
-if ("$zoneid" == "30") then {
-### CHECK HERE TO MAKE SURE BURDEN IS NOT TOO HIGH AT LOWER RANKS
-  if ((($Athletics.Ranks < 170) && (%burden > 2)) || (($Athletics.Ranks < 190) && (%burden > 3))) then {
-    if (%verbose) then gosub ECHO BURDEN TOO HIGH FOR FALDESU RIVER @ CURRENT RANKS!
-    goto ILLITHI_FERRY
-  }
-  if ($Athletics.Ranks >= %faldesu) then goto ILLITHI_11
-}
-if ("$zoneid" != "30") then goto ILLITHI_11
-if ($Athletics.Ranks >= %faldesu) then goto ILLITHI_11
-ILLITHI_FERRY:
-if ("$zoneid" == "30") then {
-    if (%verbose) then gosub ECHO Athletics NOT high enough for Faldesu - Taking Ferry!
-    gosub INFO_CHECK
-    if (%Lirums < 140) then goto NOCOIN
-    gosub AUTOMOVE 103
-    gosub FERRYLOGIC
-  }
-ILLITHI_11:
-if (("$zoneid" == "30") && ($Athletics.Ranks >= %faldesu)) then {
-  if (%verbose) then gosub ECHO Athletics high enough for Faldesu - Taking River!
-  gosub AUTOMOVE 203
-  gosub AUTOMOVE 79
-}
-if ("$zoneid" == "14c") then gosub FALDESU_SOUTH
-if ("$zoneid" == "14c") then gosub FALDESU_SOUTH
-if ("$zoneid" == "14c") then gosub FALDESU_SOUTH
-if ("$zoneid" == "13") then gosub AUTOMOVE 71
-if ("$zoneid" == "12a") then gosub AUTOMOVE 60
-if ("$zoneid" == "4a") then gosub AUTOMOVE 15
-if ("$zoneid" == "4") then gosub AUTOMOVE 14
-if ("$zoneid" == "8") then gosub AUTOMOVE 43
-if ("$zoneid" == "10") then gosub AUTOMOVE 116
-if ("$zoneid" == "9b") then gosub AUTOMOVE 9
-if ("$zoneid" == "14b") then gosub AUTOMOVE 217
-if ("$zoneid" == "11") then gosub AUTOMOVE 2
-if ("$zoneid" == "7") then gosub AUTOMOVE 349
-if ("$zoneid" == "7") then gosub AUTOMOVE 349
-if ("$zoneid" == "7") then gosub AUTOMOVE 349
-if ("$zoneid" == "112") then gosub AUTOMOVE 112
-if ((matchre("$game", "(?i)DRX")) && (%portal == 1)) then {
-  if (("$zoneid" == "1") && (matchre("%detour", "(?:alfren|leth|bone)"))) then goto ILLITHI_2
-  if ((matchre("$zoneid", "\b(?:1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-}
-ILLITHI_2:
-if ("$zoneid" == "1") then
-{
-  if (("$guild" == "Thief") && ($Athletics.Ranks >= %underSegoltha)) then {
-    gosub AUTOMOVE 650
-    gosub AUTOMOVE 23
-  }
-  if (($Athletics.Ranks >= %segoltha) && ("$zoneid" == "1")) then {
-    if (%verbose) then gosub ECHO Athletics High enough for Segoltha! Taking shortcut!
-    gosub AUTOMOVE 476
-    gosub SEGOLTHA_SOUTH
-  }
-  if ("$zoneid" == "1") then {
-    if (%verbose) then gosub ECHO Athletics not high enough for Segoltha - Taking ferry!
-    gosub INFO_CHECK
-    if %Kronars < 100 then goto NOCOIN
-    gosub AUTOMOVE 236
-    gosub FERRYLOGIC
-  }
-  gosub MOVE south
-  wait
-  put #mapper reset
-}
-if (("$zoneid" == "50") && (matchre("%destination", "(?:haizen|yeehar|oasis|hvaral|forns?t?e?d?|elbain|el'bain|alfren|rossm?a?n?|viper|leucro?|misens|beiss|sorrow|ushnish|caravan?s?a?r?y?|dokt|west|stone|knife|wolf|tiger|dirge|arthe|kaerna?|river|haven|riverhaven|theren|lang|throne|zaulfu?n?|rakash|muspar?i?|zaulfung|cross?|crossing)")) && ($Athletics.Ranks > %segoltha)) then gosub SEGOLTHA_NORTH
-if ("$zoneid" == "50") then gosub SEGOLTHA_SOUTH
-if ("$zoneid" == "1a") then gosub AUTOMOVE 23
-if (("$zoneid" == "67") && (matchre("alfren", "%detour"))) then goto CROSSING
-if (("$zoneid" == "62") && (matchre("alfren", "%detour"))) then gosub AUTOMOVE leth
-if (("$zoneid" == "61") && (matchre("alfren", "%detour"))) then gosub MOVE Map1_Crossing.xml
-if (("$zoneid" == "60") && (matchre("alfren", "%detour"))) then {
-  gosub AUTOMOVE 42
-  goto ARRIVED
-}
-if ("$zoneid" == "60") then gosub AUTOMOVE 57
-if ("$zoneid" == "112") then gosub AUTOMOVE 112
-if ("$zoneid" == "59") then gosub AUTOMOVE 12
-if ("$zoneid" == "58") then gosub AUTOMOVE 2
-if ("$zoneid" == "61") then gosub AUTOMOVE 130
-if ("$zoneid" == "63") then gosub AUTOMOVE 112
-if (("$zoneid" == "62") && (matchre("gondola", "%detour"))) then {
-  gosub AUTOMOVE 2
-  goto ARRIVED
-}
-if (("$zoneid" == "62") && (matchre("%detour", "(?:bone|germ)"))) then {
-  gosub AUTOMOVE 101
-  goto ARRIVED
-}
-if (("$zoneid" == "62") && ($Athletics.Ranks >= %underGondola)) then {
-  gosub BUFFCLIMB
-  if (%verbose) then gosub ECHO Athletics high enough for underGondola! Taking shortcut!
-  # #goto undergondola
-  gosub AUTOMOVE 153
-}
-if ("$zoneid" == "62") then {
-  gosub AUTOMOVE 2
-  gosub FERRYLOGIC
-  goto ILITHI_3
-}
-ILITHI_3:
-if (("$zoneid" == "69") && (matchre("%detour", "(?:horse|spire|wyvern)"))) then {
-  if ("%detour" == "horse") then gosub AUTOMOVE 199
-  if ("%detour" == "spire") then gosub AUTOMOVE 334
-  if ("%detour" == "wyvern") then gosub AUTOMOVE 15
-  goto ARRIVED
-}
-if ("$zoneid" == "65") then gosub AUTOMOVE 1
-if (("$zoneid" == "66") && ("%detour" == "garg")) then {
-  gosub AUTOMOVE 167
-  goto ARRIVED
-}
-if (("$zoneid" == "69") && (%shardCitizen)) then gosub AUTOMOVE 31
-if (("$zoneid" == "69") && ($Athletics.Ranks > 350)) then {
-  if (%verbose) then gosub ECHO Athletics high enough for Shard Walls! Climbing Wall
-  gosub AUTOMOVE 10
-  gosub MOVE climb wall
-  gosub MOVE north
-  gosub MOVE climb ladder
-  pause %command_pause
-}
-if ("$zoneid" == "69") then gosub AUTOMOVE 1
-if ("$zoneid" == "68a") then gosub AUTOMOVE 29
-if (("$zoneid" == "68") && (matchre("%detour", "(?:adan'f|corik)"))) then {
-  if ("%detour" == "corik") then gosub AUTOMOVE 114
-  if ("%detour" == "adan'f") then gosub AUTOMOVE 29
-  goto ARRIVED
-}
-if (("$zoneid" == "68") && ($Athletics.Ranks > 350)) then {
-    if (%verbose) then gosub ECHO Athletics high enough for Shard Walls! Climbing Wall
-    gosub AUTOMOVE 2
-    gosub MOVE climb wall
-    pause %command_pause
-}
-if (("$zoneid" == "68") && ("$guild" == "Thief")) then gosub AUTOMOVE 225
-if ("$zoneid" == "67a") then gosub MOVE Map67_Shard.xml
-if (("$zoneid" == "68") && (%shardCitizen)) then gosub AUTOMOVE 1
-if (("$zoneid" == "68") && !(%shardCitizen)) then gosub AUTOMOVE 15
-if (("$zoneid" == "67") && (matchre("alfren", "%detour"))) then goto CROSSING
-if (("$zoneid" == "67") && ("$guild" == "Thief") && (matchre("%detour", "(?:steel|ylono|fayrin|horse|spire|wyvern)"))) then {
-  gosub AUTOMOVE 566
-  gosub AUTOMOVE 23
-}
-if (("$zoneid" == "67") && ("$guild" == "Thief") && (matchre("%detour", "(?:adan'f|corik)"))) then {
-  gosub AUTOMOVE 228
-  gosub MOVE climb embrasure
-  pause %command_pause
-  if ("%detour" == "adan'f") then gosub AUTOMOVE 29
-  if ("%detour" == "corik") then gosub AUTOMOVE 114
-}
-if (("$zoneid" == "67") && (matchre("%detour", "(?:steel|ylono|fayrin|horse|spire|wyvern|corik|adan'f)"))) then gosub AUTOMOVE 132
-if (("$zoneid" == "66") && (matchre("%detour", "(?:steel|fayrin|ylono|corik|adan'f)"))) then {
-  if ("%detour" == "steel") then gosub AUTOMOVE 99
-  if ("%detour" == "fayrin") then gosub AUTOMOVE 127
-  if ("%detour" == "ylono") then gosub AUTOMOVE 495
-  if (matchre("%detour", "(?:corik|adan'f)")) then {
-    if ("$guild" == "Thief") then {
-      gosub AUTOMOVE 66
-      gosub MOVE go trail
-      gosub MOVE south
-      gosub MOVE south
-      gosub MOVE Map67_Shard.xml
-      gosub AUTOMOVE 228
-      gosub MOVE climb embrasure
-      pause %command_pause
+    if ("%Arc_Queue(1)" != "") then {
+        gosub Arc_Queue
+        if ("%Current_Zone" != "") then goto Paths
     }
-    if (!(%shardCitizen) && ("$zoneid" == 66)) then {
-      gosub AUTOMOVE 216
-      gosub AUTOMOVE 230
+goto Link_Paths
+
+Arc_Queue:
+    var i_Arc_Queue 1
+    var j_Arc_Queue 0
+    var t_Arc_Queue 
+    var Next_Shortest_Path
+    Pick_Shortest_Path:
+        eval t_Arc_Queue replacere("%Arc_Queue(%i_Arc_Queue)", ";", "|")
+        if (%j_Arc_Queue != 0) then {
+            if (%t_Arc_Queue(1) < %Next_Shortest_Path) then {
+                var Next_Shortest_Path %t_Arc_Queue(1)
+                var Current_Zone %t_Arc_Queue(0)
+                var j_Arc_Queue %i_Arc_Queue
+            }
+        } else {
+            var Next_Shortest_Path %t_Arc_Queue(1)
+            var Current_Zone %t_Arc_Queue(0)
+            var j_Arc_Queue %i_Arc_Queue
+        }
+        math i_Arc_Queue add 1
+        if ("%Arc_Queue(%i_Arc_Queue)" != "") then goto Pick_Shortest_Path
+        eval Arc_Queue replacere("%Arc_Queue", "\|%Current_Zone;[^\|]+\|", "|")
+return
+
+Link_Paths:
+    var Previous_Zone %Ending_Zone
+    if !(matchre("%Maps", "\|%Previous_Zone\|")) then {
+        echo No path to destination
+        exit
     }
-    if ((%shardCitizen) && ("$zoneid" == 66) && ($roomid > 54)) then {
-      gosub AUTOMOVE 215
-      gosub AUTOMOVE 230
+    Link_Paths_Loop:
+        eval Current_Zone replacere("%Link%Previous_Zone", "^.*\|Link", "")
+        var Path_Map %%Current_Zone_to_%Previous_Zone
+        var Path_Paths %Current_Zone_to_%Previous_Zone|%Path_Paths
+        var Path_Part %Path_Map(0)
+        var Path_Weight %Path_Part|%Path_Weight
+        var Path_Part %Path_Map(2)
+        var Path_Arcs %Path_Part|%Path_Arcs
+        var Path_Part %Path_Map(3)
+        var Path_Names %Path_Part|%Path_Names
+        var Path_Part %Path_Map(4)
+        var Path_Rooms %Path_Part|%Path_Rooms
+        if ("%Current_Zone" != "") && ("%Current_Zone" != "%Starting_Zone") then {
+            var Previous_Zone %Current_Zone
+            goto Link_Paths_Loop
+        }
+return
+
+Map_to_Map:
+    var Map_to_Map $1
+    var Map_to_Map_Vars $0
+    eval Map_to_Map_Vars replacere("%Map_to_Map_Vars", "^%Map_to_Map ", "")
+    eval Map_to_Map_Maps replacere("%Map_to_Map", "_to_", "|")
+    if (matchre("%Maps", "\|%Map_to_Map_Maps(1)\|")) then return
+    gosub Check_Distance %Map_to_Map_Maps(0) %Map_to_Map_Maps(1) %Map_to_Map_Vars(0) %Map_to_Map_Vars(1)
+    if (%updt_time == 1) then {
+        var %Map_to_Map %Map_to_Map_Vars
+        var Arc_Queue %Arc_Queue%Map_to_Map_Maps(1);%chk_curSet|
     }
-    if ("$zoneid" == "66") then gosub AUTOMOVE 3
-    if ("%detour" == "adan'f") then gosub AUTOMOVE 29
-    if ("%detour" == "corik") then gosub AUTOMOVE 114
-  }
-  goto ARRIVED
-}
-if (("$zoneid" == "66") && (matchre("%detour", "(?:horse|spire|wyvern)"))) then {
-  gosub AUTOMOVE 217
-  if ("%detour" == "horse") then gosub AUTOMOVE 199
-  if ("%detour" == "spire") then gosub AUTOMOVE 334
-  if ("%detour" == "wyvern") then gosub AUTOMOVE 15
-}
-if ("$zoneid" == "66") then {
-  if ($Athletics.Ranks > 350) then {
-    if (%verbose) then gosub ECHO Athletics high enough for Shard Walls! Climbing Wall
-    gosub AUTOMOVE 70
-    gosub MOVE climb wall
-    gosub MOVE east
-    gosub MOVE climb ladder
-    pause %command_pause
-  }
-}
-if (("$zoneid" == "66") && ("$guild" == "Thief")) then {
-  gosub AUTOMOVE 66
-  gosub MOVE go trail
-  gosub MOVE south
-  gosub MOVE south
-  gosub MOVE Map67_Shard.xml
-}
-if ("$zoneid" == "66a") then gosub MOVE Map67_Shard.xml
-if ((%shardCitizen) && ("$zoneid" == 66) && ($roomid > 54)) then gosub AUTOMOVE 215
-if ("$zoneid" == "66") then gosub AUTOMOVE 216
-if ("$zoneid" == "67") then gosub AUTOMOVE 81
-if (("$zoneid" == "67") && (matchre("%detour", "gondola"))) then {
-  gosub AUTOMOVE north
-  gosub AUTOMOVE platform
-  goto ARRIVED
-}
-if (matchre("aesry", "%detour")) then {
-    if (matchre("$game", "DRF")) then goto AESRY_LONG
-    gosub AUTOMOVE 734
-    gosub JOINLOGIC
-    gosub AUTOMOVE 113
-}
-goto ARRIVED
-#################################################################################
-THEREN:
-THERENGIA:
-var label THERENGIA
-## IF IN RATHA - HEAD BACK TO MAINLAND
-if (("$zoneid" == "90") && (!matchre("%destination", "\b(rath?a?|aesr?y?|hara|taisg?a?t?h?|ross?m?a?n?s?|rive?r?h?a?v?e?n?|have?n?|ther?e?n?b?o?r?o?u?g?h?|lang?e?n?f?i?r?t?h?|musp?a?r?i?|forn?s?t?e?d?|hvar?a?l?|oasi?s?|haize?n?|yeehar?|zaul?f?u?n?g?)"))) then {
-  if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (matchre("$zoneid", "\b(1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-## TAKE MAMMOTHS FROM RATHA - TO FC - THEN BACK TO MAINLAIND (ACENAMACRA)
-  var ToRatha 0
-  gosub AUTOMOVE 24
-  gosub MOVE go rocks
-  pause
-  gosub JOINLOGIC
-  pause
-  gosub JOINLOGIC
-  gosub AUTOMOVE 2
-}
-## IF IN RATHA AND GOING TO RIVERHAVEN/THEREN AREA - TAKE THE KREE'LA
-  if (("$zoneid" == "90") && (!matchre("%destination", "\b(rath?a?|aesr?y?|hara|taisg?a?t?h?)"))) then {
-    if (matchre("%destination", "\b(ross?m?a?n?s?|rive?r?h?a?v?e?n?|have?n?|ther?e?n?b?o?r?o?u?g?h?|lang?e?n?f?i?r?t?h?|musp?a?r?i?|forn?s?t?e?d?|hvar?a?l?|oasi?s?|haize?n?|yeehar?|zaul?f?u?n?g?)\b")) then {
-      gosub AUTOMOVE 1
-      gosub FERRYLOGIC
+return
+
+Check_Distance:
+    var chk_curM Link$1
+    var chk_nxtM Link$2
+    var chk_curSet $3
+    var chk_Set_Mod $4
+    var updt_time 0
+    if ("%chk_Set_Mod" != "0") then gosub Modify_Weight
+    if (("%chk_Set_Mod" != "0") && (%mod_weight == 0)) then return
+    var temp %%chk_curM
+    evalmath chk_curSet (%temp(0) + %chk_curSet)
+    if ("%chk_nxtM" == "") then return
+    if ("%%chk_nxtM" == "\%%chk_nxtM") then {
+        #Var does not exist
+        if  ("%chk_curSet" != "") then gosub Link_Maps
+    } else {
+        #Var does exist checking value
+        if  ("%%chk_nxtM" != "") then {
+            var temp %%chk_nxtM
+            var chk_prvSet %temp(0)
+            if (%chk_curSet < %chk_prvSet) then gosub Link_Maps
+        }
     }
-    gosub AUTOMOVE 2
-    gosub FERRYLOGIC
-  }
-if (("$zoneid" == "42") && (matchre("%detour", "muspari"))) then gosub AUTOMOVE gate
-if (("$zoneid" == "47") && (matchre("%destination", "muspari"))) then goto ARRIVED
-if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (matchre("$zoneid", "\b(1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-if (("$zoneid" == "48") && (matchre("%detour", "muspari"))) then {
-  gosub AUTOMOVE 3
-  gosub FERRYLOGIC
-}
-if (("$zoneid" == "48") && (!matchre("%destination", "(?:oasis|yeehar|haizen)"))) then {
-  gosub AUTOMOVE 1
-  gosub FERRYLOGIC
-}
-if (("$zoneid" == "42") && ("%detour" == "rakash")) then gosub AUTOMOVE Map40_Langenfirth_to_Therenborough.xml
-if ("$zoneid" == "7a") then gosub MOVE Map7_NTR.xml
-if ("$zoneid" == "2") then gosub MOVE Map1_Crossing.xml
-if ("$zoneid" == "1a") then gosub MOVE Map1_Crossing.xml
-if ("$zoneid" == "2a") then gosub MOVE Map1_Crossing.xml
-if ("$zoneid" == "6")  then gosub MOVE Map1_Crossing.xml
-if ("$zoneid" == "67a") then gosub MOVE Map67_Shard.xml
-if (matchre("$zoneid", "106|107|108")) then goto QITRAVEL
-if ((matchre("%destination", "(?:ratha|hara?j?a?a?l?)")) && (matchre("$zoneid", "\b(?:1|30|42|47|61|66|67|90|99|107|108|116)\b"))) then {
-  if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (matchre("$zoneid", "\b(1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-  if ((matchre("$game", "(?i)DRF")) && (matchre("%destination", "\brath?a?")) || (%premium == 1) && (matchre("%destination", "\brath?a?"))) then {
-    if (%verbose) then gosub ECHO TO FANG COVE
-    gosub TO_SEACAVE
-    gosub AUTOMOVE 2
-    var ToRatha 1
-    gosub JOINLOGIC
-    gosub AUTOMOVE 252
-    goto ARRIVED
-  }
-  if ((matchre("$game", "(?i)DRF")) && (matchre("%destination", "\b(haraj?a?a?l?)"))) then {
-    if (%verbose) then gosub ECHO TO FANG COVE
-    gosub TO_SEACAVE
-    gosub AUTOMOVE 3
-    gosub JOINLOGIC
-    goto ARRIVED
-  }
-}
-if (matchre("$zonename", "(Hara'jaal|Mer'Kresh|M'Riss)")) then {
-  var backuplabel THERENGIA
-  var backupdetour %detour
-  var detour mriss
-  var tomainland 1
-  goto QITRAVEL
-}
-if (("$zoneid" == "150") && (matchre("$game", "(?i)DRF")) && ("%detour" == "hara")) then {
-  gosub AUTOMOVE 3
-  gosub FERRYLOGIC
-}
-if (("$zoneid" == "35") && ("%detour" != "throne")) then {
-  gosub INFO_CHECK
-  if (%Lirums < 240) then goto NOCOIN
-  gosub AUTOMOVE 166
-  gosub FERRYLOGIC
-}
-if ("$zoneid" == "127") then gosub AUTOMOVE 510
-if ("$zoneid" == "126") then gosub AUTOMOVE 49
-if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (matchre("$zoneid", "\b(1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-if ("$zoneid" == "116") then gosub AUTOMOVE 3
-if ("$zoneid" == "114") then {
-  gosub INFO_CHECK
-  if (%Dokoras < 140) then goto NOCOIN
-  gosub AUTOMOVE 1
-  gosub FERRYLOGIC
-  gosub MOVE go oak doors
-}
-if (("$zoneid" == "113") && ("$roomid" == "1")) then gosub AUTOMOVE 5
-if ("$zoneid" == "123") then gosub AUTOMOVE 175
-if ("$zoneid" == "69") then gosub AUTOMOVE 1
-if ("$zoneid" == "68a") then gosub AUTOMOVE 29
-if ("$zoneid" == "68b") then gosub AUTOMOVE 44
-if ("$zoneid" == "68") then {
-  if ((matchre("$roomname", "(Blackthorn Canyon|Corik's Wall|Stormfells|Shadow's Reach|Reach Forge|Darkling Wood, Trader Outpost)")) || (($roomid > 67) && ($roomid < 75))) then {
-    gosub AUTOMOVE 68
-    gosub AUTOMOVE 65
-    gosub AUTOMOVE 62
-  }
-  if ($Athletics.Ranks > 250) then {
-    if (%verbose) then gosub ECHO Athletics high enough for Shard Walls! Taking Walls
-    gosub AUTOMOVE 2
-    gosub MOVE climb wall
-  }
-}
-if (("$zoneid" == "68") && (%shardCitizen)) then {
-  gosub AUTOMOVE 1
-  gosub AUTOMOVE 135
-}
-if (("$zoneid" == "68") && !(%shardCitizen)) then gosub AUTOMOVE 15
-if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (matchre("$zoneid", "\b(?:1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-if (("$zoneid" == "67") && ("$guild" == "Thief")) then {
-  gosub AUTOMOVE 566
-  gosub AUTOMOVE 23
-}
-if ("$zoneid" == "67a") then gosub AUTOMOVE Map66_STR3.xml
-if ("$zoneid" == "67") then gosub AUTOMOVE egate 66-44
-if ((matchre("%destination", "\b(ratha|hara?j?a?a?l?)")) && (matchre("$zoneid", "\b(?:1|30|42|47|61|66|67|90|99|107|108|116)\b"))) then {
-  if ((matchre("$game", "(?i)DRX")) && (%portal == 1)) then {
-    if ("$zoneid" == "66") then gosub AUTOMOVE egate 66-44
-    if ((matchre("$zoneid", "\b(1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-  }
-  if ((matchre("$game", "(?i)DRF")) && (matchre("%destination", "\brath?a?")) || (%premium == 1) && (matchre("%destination", "\brath?a?"))) then {
-    if (%verbose) then gosub ECHO GOING TO Fang Cove
-    gosub TO_SEACAVE
-    gosub AUTOMOVE 2
-    var ToRatha 1
-    gosub JOINLOGIC
-    gosub AUTOMOVE 252
-    goto ARRIVED
-  }
-  if ((matchre("$game", "(?i)DRF")) && (matchre("%destination", "\b(?:haraj?a?a?l?)"))) then {
-    if (%verbose) then gosub ECHO GOING TO Fang Cove
-    gosub TO_SEACAVE
-    gosub AUTOMOVE 3
-    gosub JOINLOGIC
-    goto ARRIVED
-  }
-}
-if (("$zoneid" == "66") && (matchre("gondola", "%detour"))) then {
-  gosub AUTOMOVE platform
-  goto ARRIVED
-}
-if (("$zoneid" == "66") && ($Athletics.Ranks >= %underGondola)) then {
-  gosub BUFFCLIMB
-  if (%verbose) then gosub ECHO Athletics high enough for underGondola! Taking shortcut!
-  gosub AUTOMOVE 317
-}
-if (("$zoneid" == "66") && ($Athletics.Ranks < %underGondola)) then {
-  if (%verbose) then gosub ECHO Athletics too low for underGondola - Taking Gondola!
-  gosub AUTOMOVE 156
-  gosub FERRYLOGIC
-}
-if ("$zoneid" == "65") then gosub AUTOMOVE 44
-if ("$zoneid" == "63") then gosub AUTOMOVE 112
-if ("$zoneid" == "62") then gosub AUTOMOVE 100
-if ("$zoneid" == "112") then gosub AUTOMOVE 112
-if ("$zoneid" == "59") then gosub AUTOMOVE 12
-if ("$zoneid" == "58") then gosub AUTOMOVE 2
-if (("$zoneid" == "50") && ($Athletics.Ranks > %segoltha)) then gosub SEGOLTHA_NORTH
-if ("$zoneid" == "50") then gosub SEGOLTHA_SOUTH
-if ("$zoneid" == "61") then gosub AUTOMOVE 115
-if (("$zoneid" == "50") && ($Athletics.Ranks < %segoltha)) then gosub AUTOMOVE STR
-if (("$zoneid" == "60") && ("$guild" == "Thief") && ($Athletics.Ranks >= %underSegoltha)) then {
-  gosub AUTOMOVE segoltha
-  gosub AUTOMOVE 6
-}
-if (("$zoneid" == "60") && ($Athletics.Ranks >= %segoltha)) then gosub AUTOMOVE 108
-if (("$zoneid" == "60") && ($Athletics.Ranks < %segoltha)) then {
-  if (%verbose) then gosub ECHO Athletics too low for Segoltha - Taking Ferry
-  gosub INFO_CHECK
-  if (%Kronars < 100) then goto NOCOIN
-  gosub AUTOMOVE 42
-  gosub FERRYLOGIC
-}
-if (("$zoneid" == "50") && ($Athletics.Ranks > %segoltha)) then gosub SEGOLTHA_NORTH
-if ("$zoneid" == "13") then gosub AUTOMOVE 71
-if ("$zoneid" == "4a") then gosub AUTOMOVE 15
-if ("$zoneid" == "32") then gosub AUTOMOVE 1
-if ("$zoneid" == "4") then gosub AUTOMOVE 14
-if ("$zoneid" == "8") then gosub AUTOMOVE 43
-if ("$zoneid" == "10") then gosub MOVE Map7_NTR.xml
-if ("$zoneid" == "9b") then gosub AUTOMOVE 9
-if ("$zoneid" == "14b") then gosub AUTOMOVE 217
-if ("$zoneid" == "11") then gosub AUTOMOVE 2
-if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (matchre("$zoneid", "\b(1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-if ("$zoneid" == "1") then {
-  if ($invisible == 1) then {
-    gosub AUTOMOVE N gate
-    gosub MOVE Map7_NTR.xml
-    goto THERENGIA_1
-  }
-  gosub AUTOMOVE 171
-}
-THERENGIA_1:
-if (("$zoneid" == "7") && (matchre("%detour", "(muspari|oasis)")) && ("$game" != "DRF")) then {
-  gosub AUTOMOVE 271
-  gosub JOINLOGIC
-  goto ARRIVED
-}
-if (("$zoneid" == "7") && ("%detour" == "caravansary")) then {
-    gosub AUTOMOVE caravan
-    goto ARRIVED
-}
-### CHECK HERE TO MAKE SURE BURDEN IS NOT TOO HIGH AT LOWER RANKS
-if ("$zoneid" == "7") then {
-  if ((($Athletics.Ranks < 170) && (%burden > 2)) || (($Athletics.Ranks < 190) && (%burden > 3))) then {
-    if (%verbose) then gosub ECHO BURDEN TOO HIGH FOR FALDESU RIVER @ CURRENT RANKS!
-    goto THERENGIA_FERRY
-  }
-  if ($Athletics.Ranks >= %faldesu) then goto THERENGIA_2
-}
-if ("$zoneid" != "7") then goto THERENGIA_2
-if ($Athletics.Ranks >= %faldesu) then goto THERENGIA_2
-THERENGIA_FERRY:
-if ("$zoneid" == "7") then {
-  if (%verbose) then gosub ECHO Athletics too low for Faldesu - Taking Ferry
-  gosub INFO_CHECK
-  if (%Lirums < 140) then goto NOCOIN
-  gosub AUTOMOVE 81
-  gosub FERRYLOGIC
-}
-THERENGIA_2:
-if (("$zoneid" == "7") && ($Athletics.Ranks >= %faldesu)) then {
-  gosub AUTOMOVE 197
-  send #mapper reset
-  pause %command_pause
-  if ("$zoneid" == "14c") then gosub FALDESU_NORTH
-}
-if (("$zoneid" == "7") && ($Athletics.Ranks >= %faldesu)) then {
-  gosub AUTOMOVE 197
-  send #mapper reset
-  pause %command_pause
-}
-if ("$zoneid" == "14c") then gosub FALDESU_NORTH
-if ("$zoneid" == "33a") then gosub AUTOMOVE 46
-if ("$zoneid" == "33") then gosub AUTOMOVE 1
-if (("$zoneid" == "31") && ("%detour" == "zaulfung")) then {
-  gosub AUTOMOVE 89
-  gosub MOVE go curving path
-  gosub SICKLY_TREE
-}
-if ("$zoneid" == "31") then {
-  gosub AUTOMOVE 1
-  send #mapper reset
-  pause %command_pause
-}
-if (("$zoneid" == "34a") && (!matchre("%detour", "rossman"))) then gosub AUTOMOVE forest
-if (("$zoneid" == "34") && (matchre("%detour", "rossman"))) then {
-  gosub INFO_CHECK
-  if (%Lirums < 70) then goto NOCOIN
-  gosub AUTOMOVE 22
-  goto ARRIVED
-}
-if (("$zoneid" == "34") && (matchre("%detour", "(lang|theren|rakash|muspari|oasis|fornsted|el'bain)"))) then {
-  if (($roomid < 120) || ($roomid > 153)) then {
-    gosub AUTOMOVE 53
-    if (matchre("$roomobjs", "two fragile ropes")) then {
-      gosub STOWING
-      gosub MOVE climb rope
-      gosub SHUFFLE_NORTH
+return
+
+Link_Maps:
+    var %chk_nxtM %chk_curSet|%chk_curM
+    var updt_time 1
+return
+
+Modify_Weight:
+    var mod_weight 0
+    ###AND checks###
+    if matchre("%chk_Set_Mod", "Athletics;([^;]+);?") then {
+        if !(def(Athletics.Ranks) && ($Athletics.Ranks >= %$1)) then return
+        if !(matchre("%chk_Set_Mod", "([^;]+;){2,}")) then var mod_weight 1
     }
-  }
-  gosub AUTOMOVE 137
-}
-if (("$zoneid" == "34") && (matchre("%detour", "(haven|zaulfung|throne)"))) then {
-  if (($roomid > 120) && ($roomid < 153)) then {
-    if ($Athletics.Ranks < %rossmanSouth) then gosub AUTOMOVE 137
-    if ($Athletics.Ranks >= %rossmanSouth) then {
-      gosub AUTOMOVE 121
-      if (matchre("$roomdesc", "pair of ropes tied to trees")) then {
-        gosub STOWING
-        gosub PUT climb rope
-        pause 0.5
-        gosub SHUFFLE_SOUTH
+    ###OR checks###
+    if matchre("%chk_Set_Mod", "Guild;([^;]+);?") then {
+        if (def(guild) && matchre("%Guild", "(?i)$1")) then var mod_weight 1
+    }
+
+    if matchre("%chk_Set_Mod", "Citizenship;([^;]+);?") then {
+        if (def(citizenship) && matchre("%Citizenship", "(?i)$1")) then var mod_weight 1
+    }
+    if matchre("%chk_Set_Mod", "Subscription;([^;]+);?") then {
+        if (def(subscription) && matchre("%Subscription", "(?i)$1")) then {
+            var mod_weight 1
+            var chk_curSet 1
+            return
+        }
+    }
+    if matchre("%chk_Set_Mod", "Game;([^;]+);?") then {
+        if (def(game) && matchre("$Game", "(?i)$1")) then var mod_weight 1
+    }
+    if matchre("%chk_Set_Mod", "Moons;([^;]+);?") then {
+        if (def(Moons) && matchre("$Moons", "(?i)%$1")) then var mod_weight 1
+    }
+    if matchre("%chk_Set_Mod", "Courage;([^;]+);?") then {
+        if (def(Courage) && matchre("$Courage", "(?i)%$1")) then var mod_weight 1
+    }
+
+    if (%mod_weight = 1) then {
+        var chk_curSet 10
+    } else var chk_curSet 99999999999
+return
+
+##########################
+###Map Data Starts Here###
+##########################
+
+    Map99999Array:
+    Map118eArray:
+    return
+
+
+
+    Map1Array:
+        ## CROSS PORTAL ENTRANCE Zone 1 Room 484
+        gosub Map_to_Map Map1Array_to_Map99Array 1|Subscription;Platinum|1049|Map99_Aesry_Surlaenis'a.xml|Aesry Surlaenis'a, Staho Pivo'hrr'schu'Mus
+        gosub Map_to_Map Map1Array_to_Map150Array 10|Subscription;Premium|652|Map150_Fang_Cove.xml|Fang Cove, Fate's Fortune Lane
+        gosub Map_to_Map Map1Array_to_Map50Array 20|0|476|Map50_Segoltha_River.xml|Riverbank Trail
+        gosub Map_to_Map Map1Array_to_Map1a_4Array 10|Guild;Thief|650|Map1a_Crossing_Thief.xml|Riverbank Mudflats, Rough Stairway
+        gosub Map_to_Map Map1Array_to_Map1a_3Array 10|Guild;Thief|853|Map1a_Crossing_Thief.xml|Underground Passageway
+        gosub Map_to_Map Map1Array_to_Map1a_3Array 10|Guild;Thief|854|Map1a_Crossing_Thief.xml|Underground Passageway
+        gosub Map_to_Map Map1Array_to_Map1a_1Array 10|Guild;Thief|855|Map1a_Crossing_Thief.xml|A Dank Dark Passage
+        gosub Map_to_Map Map1Array_to_Map1a_1Array 10|Guild;Thief|856|Map1a_Crossing_Thief.xml|A Dank, Cluttered Passage
+        gosub Map_to_Map Map1Array_to_Map1a_2Array 10|Guild;Thief|859|Map1a_Crossing_Thief.xml|The Raven's Court, Secret Passage
+        gosub Map_to_Map Map1Array_to_Map1a_2Array 10|Guild;Thief|860|Map1a_Crossing_Thief.xml|Behind the Half Pint Inn
+        gosub Map_to_Map Map1Array_to_Map1a_2Array 10|Guild;Thief|861|Map1a_Crossing_Thief.xml|The Raven's Court, Basement
+        gosub Map_to_Map Map1Array_to_Map1jArray 10|0|850|Map1j_Market_Plaza.xml|Market Plaza, Foyer
+        gosub Map_to_Map Map1Array_to_Map1lArray 10|0|477|Map1l_Crossing_Amusement_Pier.xml|Amusement Pier, Entrance
+        gosub Map_to_Map Map1Array_to_Map1mArray 10|0|294|Map1m_Crossing_Jadewater.xml|Jadewater Mansion, Cobbled Path
+        gosub Map_to_Map Map1Array_to_Map2aArray 10|0|440|Map2a_Temple.xml|Temple Grounds, Entry Gates
+        gosub Map_to_Map Map1Array_to_Map2dArray 10|0|1005|Map2d_Escape_Tunnels.xml|Crossing Escape Tunnels, Kuniyo's Egress
+        gosub Map_to_Map Map1Array_to_Map2dArray 10|0|1006|Map2d_Escape_Tunnels.xml|Crossing Escape Tunnels, Truffenyi's Way
+        gosub Map_to_Map Map1Array_to_Map2dArray 10|0|1007|Map2d_Escape_Tunnels.xml|Crossing Escape Tunnels, Hodierna's Path
+        gosub Map_to_Map Map1Array_to_Map4Array 10|0|172|Map4_Crossing_West_Gate.xml|Mycthengelde, Flatlands
+        # gosub Map_to_Map Map1Array_to_Map4Array 10|Athletics;CrossingWall|403|Map4_Crossing_West_Gate.xml|Mycthengelde, Flatlands
+        # gosub Map_to_Map Map1Array_to_Map4Array 10|Athletics;CrossingWall|434|Map4_Crossing_West_Gate.xml|Northwall Trail, Wooded Grove
+        # gosub Map_to_Map Map1Array_to_Map4Array 10|Athletics;CrossingWall|864|Map4_Crossing_West_Gate.xml|Northwall Trail, Wooded Grove
+        # gosub Map_to_Map Map1Array_to_Map4Array 10|Athletics;CrossingWall|868|Map4_Crossing_West_Gate.xml|Wildulf Woods, Dense Forest
+        gosub Map_to_Map Map1Array_to_Map502Array 10|0|1017|Map502_The_Seacaves_of_Peri'el.xml|The Seacaves of Peri'el, Tidal Cave
+        gosub Map_to_Map Map1Array_to_Map6Array 10|0|173|Map6_Crossing_North_Gate.xml|North Turnpike, Forest
+        gosub Map_to_Map Map1Array_to_Map6Array 10|Guild;Ranger|985|Map6_Crossing_North_Gate.xml|Northwall Trail, Tree Top
+        gosub Map_to_Map Map1Array_to_Map7Array 10|0|171|Map7_NTR.xml|Northeast Wilds, Outside Northeast Gate
+        gosub Map_to_Map Map1Array_to_Map8Array 10|0|170|Map8_Crossing_East_Gate.xml|Eastern Tier, Outside Gate
+        # gosub Map_to_Map Map1Array_to_Map8Array 10|Athletics;CrossingWall|389|Map8_Crossing_East_Gate.xml|Outside East Wall, Footpath
+        # gosub Map_to_Map Map1Array_to_Map8Array 10|Athletics;CrossingWall|402|Map8_Crossing_East_Gate.xml|Outside East Wall, Footpath
+        # gosub Map_to_Map Map1Array_to_Map8Array 10|Athletics;CrossingWall|862|Map8_Crossing_East_Gate.xml|Outside East Wall, Footpath
+        gosub Map_to_Map Map1Array_to_Map998_9Array 10800|0|368|Map998_Transports.xml|The Skirr'lolasu, Main Deck
+        gosub Map_to_Map Map1Array_to_Map998_1Array 500|0|935|Map998_Transports.xml|Kertigen's Honor
+        gosub Map_to_Map Map1Array_to_Map998_1Array 500|0|936|Map998_Transports.xml|Hodierna's Grace
+    return
+
+    Map10Array:
+        gosub Map_to_Map Map10Array_to_Map7Array 10|0|116|Map7_NTR.xml|Foothills, Stony Incline
+    return
+
+    Map106Array:
+        gosub Map_to_Map Map106Array_to_MapTF1Array 10|Game;DRF|99|MapTF1_The_Arch.xml|Droughtman's Maze, The Opal Lounge
+    return
+
+    Map107Array:
+        ## MERKRESH PORTAL ENTRANCE Zone 107 Room 273
+        gosub Map_to_Map Map107Array_to_Map30Array 1|Subscription;Platinum|360|Map30_Riverhaven.xml|Riverhaven, Tree-shaded Lane
+        gosub Map_to_Map Map107Array_to_Map107aArray 500|0|285|Map107a_Belarritaco_Bay.xml|The Galley Sanegazat
+        gosub Map_to_Map Map107Array_to_Map107aArray 500|0|286|Map107a_Belarritaco_Bay.xml|The Galley Cercorim
+        gosub Map_to_Map Map107Array_to_Map150Array 10|Subscription;Premium|315|Map150_Fang_Cove.xml|Fang Cove, Fate's Fortune Lane
+    return
+
+    Map107aArray:
+        gosub Map_to_Map Map107aArray_to_Map107Array 500|0|4|Map107_Mer'Kresh.xml|Mer'Kresh, The Galley Dock
+        gosub Map_to_Map Map107aArray_to_Map108Array 500|0|3|Map108_M'Riss.xml|Belarritaco Bay, The Galley Dock
+    return
+
+    Map108Array:
+        gosub Map_to_Map Map108Array_to_Map107aArray 500|0|307|Map107a_Belarritaco_Bay.xml|The Galley Sanegazat
+        gosub Map_to_Map Map108Array_to_Map107aArray 500|0|308|Map107a_Belarritaco_Bay.xml|The Galley Cercorim
+        gosub Map_to_Map Map108Array_to_Map150Array 10|Subscription;Premium|378|Map150_Fang_Cove.xml|Fang Cove, Fate's Fortune Lane
+    return
+
+    Map11Array:
+        gosub Map_to_Map Map11Array_to_Map7Array 10|0|2|Map7_NTR.xml|Northern Trade Road, Wooded Valley
+    return
+
+    Map112Array:
+        gosub Map_to_Map Map112Array_to_Map113_1Array 100|0|98|Map113_West_Segoltha.xml|Ilaya Taipa, Baso Dock
+        gosub Map_to_Map Map112Array_to_Map61Array 100|0|112|Map61_Leth_Deriel.xml|Old Crank's Road, Forest
+    return
+
+    Map113_1Array:
+        gosub Map_to_Map Map113_1Array_to_Map112Array 500|0|5|Map112_Ilaya_Taipa.xml|Ilaya Taipa, Northeast Harbor Wall
+        gosub Map_to_Map Map113_1Array_to_Map114Array 500|0|10|Map114_Ain_Ghazal.xml|Ain Ghazal, River Road
+        return
+        Map113_2Array:
+        gosub Map_to_Map Map113_2Array_to_Map114Array 500|0|9|Map114_Ain_Ghazal.xml|Ain Ghazal, River Road
+        gosub Map_to_Map Map113_2Array_to_Map123Array 500|0|7|Map123_Himineldar_Shel.xml|Haalikshal Highway, Himineldar Shel to Ain Ghazal
+    return
+
+    Map114Array:
+        gosub Map_to_Map Map114Array_to_Map113_1Array 100|0|1|Map113_West_Segoltha.xml|Ain Ghazal, East Pier
+        gosub Map_to_Map Map114Array_to_Map113_2Array 100|0|4|Map113_West_Segoltha.xml|Ain Ghazal, Ferry Dock
+        gosub Map_to_Map Map114Array_to_Map150Array 10|Subscription;Premium|175|Map150_Fang_Cove.xml|Fang Cove, Fate's Fortune Lane
+    return
+
+    Map116Array:
+        ## HIBAR PORTAL ENTRANCE Zone 116 Room 188
+        gosub Map_to_Map Map116Array_to_Map1Array 1|Subscription;Platinum|493|Map1_Crossing.xml|Communal Center, Veranda
+        gosub Map_to_Map Map116Array_to_Map118eArray 10|0|216|Map118e_Firecats.xml|Cavern of Fire, Stalagmite Maze
+        gosub Map_to_Map Map116Array_to_Map123Array 10|0|3|Map123_Himineldar_Shel.xml|Lewkar Awg, The Courtyard
+        gosub Map_to_Map Map116Array_to_Map126Array 10|0|217|Map126_Hawstkaal_Road.xml|Gate to Hibarnhvidar
+        gosub Map_to_Map Map116Array_to_Map150Array 10|Subscription;Premium|419|Map150_Fang_Cove.xml|Fang Cove, Fate's Fortune Lane
+    return
+
+    Map123Array:
+        gosub Map_to_Map Map123Array_to_Map113_2Array 100|0|174|Map113_West_Segoltha.xml|Haalikshal Highway, Ferry Dock
+        gosub Map_to_Map Map123Array_to_Map116Array 10|0|169|Map116_Hibarnhvidar.xml|Haalikshal Highway, The Sky Road
+        gosub Map_to_Map Map123Array_to_Map69Array 10|0|175|Map69_Shard_West_Gate.xml|Cragstone Vale, Roadway
+        gosub Map_to_Map Map123Array_to_Map69Array 500|0|268|Map69_Shard_West_Gate.xml|Seord Kerwaith, Gear Gate
+    return
+
+    Map126Array:
+        gosub Map_to_Map Map126Array_to_Map116Array 10|Athletics;BoarArchersFord|49|Map116_Hibarnhvidar.xml|Outer Hibarnhvidar, Market Road
+        gosub Map_to_Map Map126Array_to_Map127Array 10|Athletics;BoarArchersFord|103|Map127_Boar_Clan.xml|Hawstkaal Road, Boar Clan Bridge
+    return
+
+    Map127Array:
+        gosub Map_to_Map Map127Array_to_Map126Array 10|0|510|Map126_Hawstkaal_Road.xml|Hawstkaal Road, Dense Forest
+    return
+
+    Map12aArray:
+        gosub Map_to_Map Map12aArray_to_Map7Array 10|0|60|Map7_NTR.xml|Northern Trade Road, Deep Forest
+    return
+
+    Map13Array:
+        gosub Map_to_Map Map13Array_to_Map7Array 10|0|71|Map7_NTR.xml|North Roads Caravansary
+    return
+
+    Map14bArray:
+        gosub Map_to_Map Map14bArray_to_Map7Array 10|0|217|Map7_NTR.xml|Sicle Grove, Low Mound
+    return
+
+    Map14cArray:
+        gosub Map_to_Map Map14cArray_to_Map31Array 100|Athletics;RiverhavenFaldesu|22|Map31_Riverhaven_East_Gate.xml|Riverhaven, Stone Bridge
+        gosub Map_to_Map Map14cArray_to_Map7Array 100|Athletics;RiverhavenFaldesu|21|Map7_NTR.xml|The Marsh, Stone Road
+    return
+
+    Map14dArray:
+        gosub Map_to_Map Map14dArray_to_Map7cArray 10|0|1|Map7c_NTR_Part2.xml|North Road, Plains
+    return
+
+    Map150Array:
+        gosub Map_to_Map Map150Array_to_Map58Array 300|0|231|Map58_Acenamacra_Village.xml|Acenamacra Pier
+        gosub Map_to_Map Map150Array_to_Map90Array 300|0|53|Map90_Ratha.xml|Shore Walk, Rocky Path
+    return
+
+    Map1a_1Array:
+            gosub Map_to_Map Map1a_1Array_to_Map1Array 10|Guild;Thief|29|Map1_Crossing.xml|The Crossing, Trollferry Quay
+            gosub Map_to_Map Map1a_1Array_to_Map1Array 10|Guild;Thief|30|Map1_Crossing.xml|The Strand, Crystalline Beach
+        return
+        Map1a_2Array:
+
+            gosub Map_to_Map Map1a_2Array_to_Map1Array 10|Guild;Thief|33|Map1_Crossing.xml|The Raven's Court, Garden of Midnight
+            gosub Map_to_Map Map1a_2Array_to_Map1Array 10|Guild;Thief|35|Map1_Crossing.xml|The Raven's Court, Scullery
+            gosub Map_to_Map Map1a_2Array_to_Map1Array 10|Guild;Thief|39|Map1_Crossing.xml|The Crossing, Werfnen's Strole
+        return
+        Map1a_3Array:
+            gosub Map_to_Map Map1a_3Array_to_Map1Array 10|Guild;Thief|4|Map1_Crossing.xml|The Crossing, Town Green Northeast
+            gosub Map_to_Map Map1a_3Array_to_Map1Array 10|Guild;Thief|43|Map1_Crossing.xml|Thieves' Guild, Master's Den
+            gosub Map_to_Map Map1a_3Array_to_Map1Array 10|Guild;Thief|5|Map1_Crossing.xml|The Crossing, Oralana Ramble
+        return
+        Map1a_4Array:
+            gosub Map_to_Map Map1a_4Array_to_Map1Array 10|Guild;Thief;Athletics;Crossing5thPassage|6|Map1_Crossing.xml|Riverbank Mudflats
+            gosub Map_to_Map Map1a_4Array_to_Map60Array 10|Guild;Thief;Athletics;Crossing5thPassage|23|Map60_STR1.xml|Southern Trade Route, Endrus Forest
+    return
+
+    Map1jArray:
+        gosub Map_to_Map Map1jArray_to_Map1Array 10|0|1|Map1_Crossing.xml|The Crossing, Mongers' Square
+    return
+
+    Map1lArray:
+        gosub Map_to_Map Map1lArray_to_Map1Array 10|0|1|Map1_Crossing.xml|The Crossing, Esplanade Eluned
+    return
+
+    Map1mArray:
+        gosub Map_to_Map Map1mArray_to_Map1Array 10|0|1|Map1_Crossing.xml|The Crossing, Eylhaar Bane Road
+        gosub Map_to_Map Map1mArray_to_Map7Array 10|0|28|Map7_NTR.xml|Jadewater Mansion, Rear Entrance
+    return
+
+    Map2Array:
+        gosub Map_to_Map Map2Array_to_Map4Array 10|0|2|Map4_Crossing_West_Gate.xml|Mycthengelde, Knoll
+    return
+
+    Map2aArray:
+        gosub Map_to_Map Map2aArray_to_Map1Array 10|0|3|Map1_Crossing.xml|The Crossing, Immortals' Approach
+        gosub Map_to_Map Map2aArray_to_Map2dArray 10|0|188|Map2d_Escape_Tunnels.xml|Temple, North Tower
+    return
+
+    Map2dArray:
+        gosub Map_to_Map Map2dArray_to_Map1Array 10|Guild;Cleric|24|Map1_Crossing.xml|Clerics' Guild, Wine Cellar
+        gosub Map_to_Map Map2dArray_to_Map1Array 10|Guild;Ranger|39|Map1_Crossing.xml|Wilds, Pine Needle Path
+        gosub Map_to_Map Map2dArray_to_Map1Array 10|Guild;Empath|4|Map1_Crossing.xml|The Healerie, Entrance Hall
+        gosub Map_to_Map Map2dArray_to_Map2aArray 10|0|62|Map2a_Temple.xml|Temple Grounds, North Tower
+    return
+
+    Map30Array:
+        ## RIVERHAVEN PORTAL ENTRANCE Zone 30 Room 331
+        gosub Map_to_Map Map30Array_to_Map90Array 1|Subscription;Platinum|565|Map90_Ratha.xml|Sshoi-sson Palace, Portico
+        gosub Map_to_Map Map30Array_to_Map150Array 10|Subscription;Premium|445|Map150_Fang_Cove.xml|Fang Cove, Fate's Fortune Lane
+        gosub Map_to_Map Map30Array_to_Map30aArray 10|0|384|Map30a_Dunshade_Manor.xml|Dunshade Manor, Front Lawn
+        gosub Map_to_Map Map30Array_to_Map30bArray 10|Guild;Thief|396|Map30b_Riverhaven_Thief.xml|Riverhaven, Smugglers' Passage
+        gosub Map_to_Map Map30Array_to_Map30bArray 10|Guild;Thief|397|Map30b_Riverhaven_Thief.xml|Riverhaven, Smugglers' Passage
+        gosub Map_to_Map Map30Array_to_Map31Array 10|0|203|Map31_Riverhaven_East_Gate.xml|Riverhaven, Stone Bridge
+        gosub Map_to_Map Map30Array_to_Map32Array 10|0|204|Map32_Riverhaven_North_Gate.xml|Riverhaven, Outside North Gate
+        gosub Map_to_Map Map30Array_to_Map33Array 10|0|174|Map33_Riverhaven_West_Gate.xml|Riverhaven Exterior, Southwest Gate
+        gosub Map_to_Map Map30Array_to_Map35Array 500|0|207|Map35_Throne_City.xml|Stone Docks, Covered Shore
+        gosub Map_to_Map Map30Array_to_Map998_2Array 300|0|201|Map998_Transports.xml|Her Opulence
+        gosub Map_to_Map Map30Array_to_Map998_2Array 300|0|202|Map998_Transports.xml|His Daring Exploit
+        gosub Map_to_Map Map30Array_to_Map998_3Array 500|0|205|Map998_Transports.xml|Theren's Star, Deck
+        gosub Map_to_Map Map30Array_to_Map998_3Array 500|0|483|Map998_Transports.xml|Northern Pride, Main Deck
+        gosub Map_to_Map Map30Array_to_Map998_7Array 500|0|218|Map998_Transports.xml|Lybadel, Main Deck
+        gosub Map_to_Map Map30Array_to_Map998_6Array 500|0|444|Map998_Transports.xml|The Kree'la, Main Deck
+    return
+
+    Map30aArray:
+        gosub Map_to_Map Map30aArray_to_Map30Array 10|0|57|Map30_Riverhaven.xml|Riverhaven, Crossroads
+    return
+
+    Map30bArray:
+        gosub Map_to_Map Map30bArray_to_Map30Array 10|Guild;Thief|13|Map30_Riverhaven.xml|Riverhaven, Ring Road West
+        gosub Map_to_Map Map30bArray_to_Map30Array 10|Guild;Thief|14|Map30_Riverhaven.xml|Riverhaven, River Road West
+        gosub Map_to_Map Map30bArray_to_Map32Array 10|Guild;Thief|12|Map32_Riverhaven_North_Gate.xml|Wildlands, Meandering Path
+    return
+
+    Map31Array:
+        gosub Map_to_Map Map31Array_to_Map14cArray 10|0|79|Map14c_Faldesu.xml|Faldesu River, North Bank
+        gosub Map_to_Map Map31Array_to_Map30Array 10|0|1|Map30_Riverhaven.xml|Riverhaven, River Road East
+        gosub Map_to_Map Map31Array_to_Map31aArray 10|0|100|Map31a_Zaulfung.xml|Zaulfung, Swamp
+    return
+
+    Map31aArray:
+        gosub Map_to_Map Map31aArray_to_Map31Array 10|0|122|Map31_Riverhaven_East_Gate.xml|Zaulfung, Dense Swamp
+        gosub Map_to_Map Map31aArray_to_Map31bArray 10|0|117|Map31b_Maelshyve's_Fortress.xml|Zaulfung, Underwater
+        gosub Map_to_Map Map31aArray_to_Map31bArray 10|0|123|Map31b_Maelshyve's_Fortress.xml|Beneath The Zaulfung, Charred Caverns
+    return
+
+    Map31bArray:
+        gosub Map_to_Map Map31bArray_to_Map31aArray 10|0|122|Map31a_Zaulfung.xml|Kweld Gelvdael, Dark Tunnel
+        gosub Map_to_Map Map31bArray_to_Map31aArray 10|0|5|Map31a_Zaulfung.xml|Zaulfung, Ruined Shrine
+        gosub Map_to_Map Map31bArray_to_Map501Array 1000|Courage;DeathWish|123|Map501_Soul_of_Maelshyve.xml|Soul of Maelshyve, The Involution
+    return
+
+    Map32Array:
+        gosub Map_to_Map Map32Array_to_Map30Array 10|0|1|Map30_Riverhaven.xml|Riverhaven, Theren Way
+        gosub Map_to_Map Map32Array_to_Map30bArray 10|Guild;Thief|81|Map30b_Riverhaven_Thief.xml|Riverhaven, Smugglers' Passage
+    return
+
+    Map33Array:
+        gosub Map_to_Map Map33Array_to_Map30Array 10|0|1|Map30_Riverhaven.xml|Riverhaven, River Road West
+        gosub Map_to_Map Map33Array_to_Map33aArray 10|0|29|Map33a_Road_to_Therenborough.xml|Mistwood Forest Road
+    return
+
+    Map33aArray:
+        gosub Map_to_Map Map33aArray_to_Map33Array 10|0|46|Map33_Riverhaven_West_Gate.xml|Riverhaven Exterior, Trodden Path
+        gosub Map_to_Map Map33aArray_to_Map34Array 40|Athletics;RossmanJantspyreNorth|48|Map34_Mistwood_Forest.xml|Jantspyre River, In the Water
+    return
+
+    Map34Array:
+        gosub Map_to_Map Map34Array_to_Map33aArray 40|Athletics;RossmanJantspyreSouth|15|Map33a_Road_to_Therenborough.xml|Jantspyre River, South Bank
+        gosub Map_to_Map Map34Array_to_Map34aArray 10|0|22|Map34a_Rossman's_Landing.xml|Rossman's Landing, Foregate Passage
+        gosub Map_to_Map Map34Array_to_Map40Array 10|0|137|Map40_Langenfirth_to_Therenborough.xml|North Road, Farmlands
+    return
+
+    Map34aArray:
+        gosub Map_to_Map Map34aArray_to_Map34Array 10|0|134|Map34_Mistwood_Forest.xml|Rossman's Landing, Southeast Gate
+    return
+
+    Map35Array:
+        gosub Map_to_Map Map35Array_to_Map30Array 500|0|199|Map30_Riverhaven.xml|Salt Yard, Barge Dock
+        gosub Map_to_Map Map35Array_to_Map42Array 10|Moons;Up|198|Map42_Therenborough_and_Keep.xml|Gealeranendae College, Tear of Grazhir Exhibit
+    return
+    # 35a_1
+    # 35|59>35a|11
+
+    # 35a_2
+    # 35|61>35a|1
+    # 35|102>35a|3
+
+    # 35a_3
+    # 35|17>35a|4
+    # 35|148>35a|6
+
+    Map35a_1Array:
+        gosub Map_to_Map Map35a_1Array_to_Map35Array 10|Guild;Thief|16|Map35_Throne_City.xml|Old Throne City, Dahl Aeliy
+        return
+        Map35a_2Array:
+        gosub Map_to_Map Map35a_2Array_to_Map35Array 10|Guild;Thief|7|Map35_Throne_City.xml|Imperial Palace, Dungeon
+        gosub Map_to_Map Map35a_2Array_to_Map35Array 10|Guild;Thief|8|Map35_Throne_City.xml|Old Throne City, Dahl Aeliy
+        return
+        Map35a_3Array:
+        gosub Map_to_Map Map35a_3Array_to_Map35Array 10|Guild;Thief|9|Map35_Throne_City.xml|Old Throne City, Entertainment District
+        gosub Map_to_Map Map35a_3Array_to_Map35Array 10|Guild;Thief|10|Map35_Throne_City.xml|Seven Star Exchange and Pawn
+    return
+
+    Map4Array:
+        gosub Map_to_Map Map4Array_to_Map1Array 10|0|14|Map1_Crossing.xml|The Crossing, Western Gate
+        # gosub Map_to_Map Map4Array_to_Map1Array 10|Athletics;CrossingWall|265|Map1_Crossing.xml|Crossing, North Wall Battlements
+        # gosub Map_to_Map Map4Array_to_Map1Array 10|Athletics;CrossingWall|266|Map1_Crossing.xml|Crossing, West Gate Battlements
+        # gosub Map_to_Map Map4Array_to_Map1Array 10|Athletics;CrossingWall|267|Map1_Crossing.xml|Crossing, West Wall Battlements
+        gosub Map_to_Map Map4Array_to_Map2Array 10|0|15|Map2_Lake_of_Dreams.xml|Laakvor
+        gosub Map_to_Map Map4Array_to_Map4aArray 10|0|87|Map4a_Tiger_Clan.xml|Tiger Clan Home, Dirt Pathway
+        gosub Map_to_Map Map4Array_to_Map6Array 10|0|264|Map6_Crossing_North_Gate.xml|Northwall Trail, Wooded Grove
+    return
+
+    Map40Array:
+        ## ELBAINS PORTAL ENTRANCE Zone 40 Room 254
+        gosub Map_to_Map Map40Array_to_Map47Array 1|Subscription;Platinum|394|Map47_Muspar'i.xml|Old Lata'arna Keep, Exchange Vault
+        gosub Map_to_Map Map40Array_to_Map150Array 10|Subscription;Premium|375|Map150_Fang_Cove.xml|Fang Cove, Fate's Fortune Lane
+        gosub Map_to_Map Map40Array_to_Map34Array 10|0|213|Map34_Mistwood_Forest.xml|Mistwood Forest Road
+        gosub Map_to_Map Map40Array_to_Map40aArray 10|0|263|Map40a_Langenfirth_to_Siksraja.xml|Langenfirth, Trail Above the Fens
+        gosub Map_to_Map Map40Array_to_Map41Array 70|0|376|Map41_Marauders.xml|Ker'Leor, Deep Forest Path
+        gosub Map_to_Map Map40Array_to_Map42Array 10|0|211|Map42_Therenborough_and_Keep.xml|Therenborough, Town Gate
+        gosub Map_to_Map Map40Array_to_Map998_3Array 500|0|245|Map998_Transports.xml|Northern Pride, Main Deck
+        gosub Map_to_Map Map40Array_to_Map998_3Array 500|0|377|Map998_Transports.xml|Theren's Star, Deck
+        gosub Map_to_Map Map40Array_to_Map99999Array 10|0|316|Map99999_Guildfest.xml|Fairegrounds Entrance
+    return 
+
+    Map40aArray:
+        gosub Map_to_Map Map40aArray_to_Map40Array 10|0|125|Map40_Langenfirth_to_Therenborough.xml|Langenfirth, Blufe Path
+        # gosub Map_to_Map Map40aArray_to_Map127Array ranger something to boar
+    return
+
+    Map41Array:
+        gosub Map_to_Map Map41Array_to_Map40Array 70|0|53|Map40_Langenfirth_to_Therenborough.xml|Theren Road
+        gosub Map_to_Map Map41Array_to_Map48Array 70|0|208|Map48_Haizen_Cugis.xml|Velaka Desert, Beneath the Dry Dock
+        gosub Map_to_Map Map41Array_to_Map998_5Array 500|0|184|Map998_Transports.xml|The Desert Wind
+        gosub Map_to_Map Map41Array_to_Map998_5Array 500|0|207|Map998_Transports.xml|The Suncatcher
+    return
+
+    Map42Array:
+        gosub Map_to_Map Map42Array_to_Map35Array 10|Moons;Up|292|Map35_Throne_City.xml|Phelim's Sanctum, Tear of Grazhir
+        gosub Map_to_Map Map42Array_to_Map40Array 10|0|2|Map40_Langenfirth_to_Therenborough.xml|North Road, Barony Pass
+    return
+
+    Map47Array:
+        ## MUSPARI PORTAL ENTRANCE Zone 47 Room 97
+        gosub Map_to_Map Map47Array_to_Map116Array 1|Subscription;Platinum|562|Map116_Hibarnhvidar.xml|Inner Hibarnhvidar, Tower Base
+        gosub Map_to_Map Map47Array_to_Map150Array 10|Subscription;Premium|483|Map150_Fang_Cove.xml|Fang Cove, Fate's Fortune Lane
+        gosub Map_to_Map Map47Array_to_Map47aArray 10|Guild;Thief|367|Map47a_Muspar'i_Thief.xml|Muspar'i, Behind the Justice Office
+        gosub Map_to_Map Map47Array_to_Map47aArray 10|Guild;Thief|368|Map47a_Muspar'i_Thief.xml|Muspar'i, Rear Lot
+        gosub Map_to_Map Map47Array_to_Map47aArray 10|Guild;Thief|369|Map47a_Muspar'i_Thief.xml|Muspar'i, Shadow of the Great Gate
+        gosub Map_to_Map Map47Array_to_Map48Array 10|Athletics;HaizenCugisDesert|391|Map48_Haizen_Cugis.xml|Velaka Desert
+        gosub Map_to_Map Map47Array_to_Map998_5Array 500|0|143|Map998_Transports.xml|The Desert Wind
+        gosub Map_to_Map Map47Array_to_Map998_5Array 500|0|482|Map998_Transports.xml|The Suncatcher
+    return
+
+    Map47aArray:
+        gosub Map_to_Map Map47aArray_to_Map47Array 10|Guild;Thief|1|Map47_Muspar'i.xml|Muspar'i, Great Gate Square
+        gosub Map_to_Map Map47aArray_to_Map47Array 10|Guild;Thief|2|Map47_Muspar'i.xml|Muspar'i, Tuul Yamshuk Staho
+        gosub Map_to_Map Map47aArray_to_Map47Array 10|Guild;Thief|3|Map47_Muspar'i.xml|Muspar'i, Golden Heights
+        gosub Map_to_Map Map47aArray_to_Map47Array 10|Guild;Thief|4|Map47_Muspar'i.xml|Muspar'i, Shorka's Square
+    return
+
+    Map48Array:
+        gosub Map_to_Map Map48Array_to_Map41Array 10|Athletics;HaizenCugisDesert|92|Map41_Marauders.xml|Hvaral, Dry Dock
+        gosub Map_to_Map Map48Array_to_Map47Array 10|Athletics;HaizenCugisDesert|129|Map47_Muspar'i.xml|Velaka Desert
+        gosub Map_to_Map Map48Array_to_Map998_5Array 500|0|67|Map998_Transports.xml|The Suncatcher
+        gosub Map_to_Map Map48Array_to_Map998_5Array 500|0|68|Map998_Transports.xml|The Desert Wind
+    return
+
+    Map4aArray:
+        gosub Map_to_Map Map4aArray_to_Map4Array 10|0|15|Map4_Crossing_West_Gate.xml|Grassland Path, Village Gate
+        gosub Map_to_Map Map4aArray_to_Map50Array 10|0|73|Map50_Segoltha_River.xml|Tiger Clan, Grassy Trail
+    return
+
+    Map50Array:
+        gosub Map_to_Map Map50Array_to_Map1Array 200|Athletics;CrossingSegoltha|8|Map1_Crossing.xml|The Crossing, Haven's End
+        gosub Map_to_Map Map50Array_to_Map4aArray 200|Athletics;CrossingSegoltha|36|Map4a_Tiger_Clan.xml|Tiger Clan Home, Old Mill
+        gosub Map_to_Map Map50Array_to_Map60Array 200|Athletics;CrossingSegoltha|30|Map60_STR1.xml|Southern Trade Route, Segoltha Plain
+    return
+
+    Map501Array:
+        gosub Map_to_Map Map501Array_to_Map31bArray 10000|Courage;DeathWish|52|Map31b_Maelshyve's_Fortress.xml|Maelshyve's Fortress, Inner Sanctum
+        gosub Map_to_Map Map501Array_to_Map66Array 10000|Courage;DeathWish|53|Map66_STR3.xml|Abyssal Nether, Maelshyve's Remnant
+    return
+
+    Map502Array:
+        gosub Map_to_Map Map502Array_to_Map1Array 10|0|24|Map1_Crossing.xml|The Crossing, Landfall Jetty
+    return
+
+    Map510Array:
+        gosub Map_to_Map Map510Array_to_Map1Array 10|0|82|Map1_Crossing.xml|The Crossing, Town Green Southeast
+    return
+
+    Map58Array:
+        gosub Map_to_Map Map58Array_to_Map61Array 10|0|2|Map61_Leth_Deriel.xml|Fala Inisulen, Road
+        gosub Map_to_Map Map58Array_to_Map150Array 300|0|52|Map150_Fang_Cove.xml|Aboard the Mammoth, Platform
+    return
+
+    Map59Array:
+        gosub Map_to_Map Map59Array_to_Map61Array 10|0|12|Map61_Leth_Deriel.xml|Eik Wood, Granite Outcroppings
+    return
+
+    Map6Array:
+        gosub Map_to_Map Map6Array_to_Map1Array 10|Guild;Ranger|116|Map1_Crossing.xml|Ranger's Guild, The Tree House
+        gosub Map_to_Map Map6Array_to_Map1Array 10|0|23|Map1_Crossing.xml|North Gate, Gate
+        gosub Map_to_Map Map6Array_to_Map4Array 10|0|114|Map4_Crossing_West_Gate.xml|Northwall Trail, Wooded Grove
+        gosub Map_to_Map Map6Array_to_Map7Array 10|0|98|Map7_NTR.xml|Northern Trade Road, Open Forest
+    return
+
+    Map60Array:
+        gosub Map_to_Map Map60Array_to_Map1a_4Array 10|Guild;Thief;Athletics;Crossing5thPassage|107|Map1a_Crossing_Thief.xml|Southern Trade Route, Endrus Forest
+        gosub Map_to_Map Map60Array_to_Map50Array 10|0|108|Map50_Segoltha_River.xml|Fisherman's Trail, Footpath
+        gosub Map_to_Map Map60Array_to_Map61Array 10|0|57|Map61_Leth_Deriel.xml|Southern Trade Route, Bosque Deriel
+        gosub Map_to_Map Map60Array_to_Map998_1Array 300|0|106|Map998_Transports.xml|Hodierna's Grace
+        gosub Map_to_Map Map60Array_to_Map998_1Array 300|0|124|Map998_Transports.xml|Kertigen's Honor
+    return
+
+    Map61Array:
+        gosub Map_to_Map Map61Array_to_Map112Array 10|0|126|Map112_Ilaya_Taipa.xml|Old Crank's Road, Forest
+        gosub Map_to_Map Map61Array_to_Map150Array 10|Subscription;Premium|236|Map150_Fang_Cove.xml|Fang Cove, Fate's Fortune Lane
+        gosub Map_to_Map Map61Array_to_Map58Array 10|0|178|Map58_Acenamacra_Village.xml|Fala Inisulen, Sequoia Tunnel
+        gosub Map_to_Map Map61Array_to_Map59Array 10|0|182|Map59_Boggy_Wood.xml|Eik Wood, Granite Outcroppings
+        gosub Map_to_Map Map61Array_to_Map60Array 10|0|115|Map60_STR1.xml|Southern Trade Route, Bosque Deriel
+        gosub Map_to_Map Map61Array_to_Map62Array 10|0|130|Map62_STR2.xml|Southern Trade Route, Esouvar Deriel
+    return
+
+    Map62Array:
+        gosub Map_to_Map Map62Array_to_Map61Array 10|0|100|Map61_Leth_Deriel.xml|Southern Trade Route, Esouvar Deriel
+        gosub Map_to_Map Map62Array_to_Map63Array 10|0|101|Map63_Oshu'ehhrsk_Manor.xml|Silhouette Forest, Near the Southern Trade Route
+        gosub Map_to_Map Map62Array_to_Map65Array 10|Athletics;ShardUnderGondola|153|Map65_Under_the_Gondola.xml|Chasm, Vertical Pothole
+        gosub Map_to_Map Map62Array_to_Map998_4Array 300|0|1|Map998_Transports.xml|Gondola, Cab North
+    return
+
+    Map62bArray:
+    #no path to here
+        gosub Map_to_Map Map62bArray_to_Map62Array 10|0|20|Map62_STR2.xml|Southern Trade Route, Alongside the Forest
+    return
+
+    Map63Array:
+        # gosub Map_to_Map Map63Array_to_Map999Array 10|0|118|Map999_The_Ways.xml|Astral Plane, Asharshpar'i Conduit
+        gosub Map_to_Map Map63Array_to_Map62Array 10|0|112|Map62_STR2.xml|Southern Trade Route, Esouvar Deriel
+    return
+
+    Map65Array:
+        gosub Map_to_Map Map65Array_to_Map62Array 10|Athletics;ShardUnderGondola|44|Map62_STR2.xml|Obsidian Pass, Mountain Trail
+        # gosub Map_to_Map Map65Array_to_Map62Array 60|shall we path this?|48|Map62_STR2.xml|Southern Trade Route, Alongside the Forest
+        gosub Map_to_Map Map65Array_to_Map66Array 10|0|1|Map66_STR3.xml|Dragon's Spine, Astrar's Sorrow
+    return
+
+    Map66Array:
+        gosub Map_to_Map Map66Array_to_Map150Array 10|Subscription;Premium|618|Map150_Fang_Cove.xml|Fang Cove, Fate's Fortune Lane
+        gosub Map_to_Map Map66Array_to_Map501Array 1000000|Courage;DeathWish|682|Map501_Soul_of_Maelshyve.xml|Soul of Maelshyve, The Sowing
+        gosub Map_to_Map Map66Array_to_Map65Array 10|0|317|Map65_Under_the_Gondola.xml|Dragon's Spine, Behind the Waterfall
+        gosub Map_to_Map Map66Array_to_Map67Array 100|Citizenship;Shard;Time;Day|215|Map67_Shard.xml|Shard, North City Gates
+        gosub Map_to_Map Map66Array_to_Map67Array 10|0|216|Map67_Shard.xml|Shard, East City Gates
+        gosub Map_to_Map Map66Array_to_Map67a_2Array 10|Guild;Thief|617|Map67a_Shard_Thief.xml|Shard, Smuggler's Bridge
+        gosub Map_to_Map Map66Array_to_Map68Array 80|0|3|Map68_Shard_South_Gate.xml|Derelict Road, Whistling Wood
+        gosub Map_to_Map Map66Array_to_Map69Array 10|0|217|Map69_Shard_West_Gate.xml|Shard, Northwestern Shore
+        gosub Map_to_Map Map66Array_to_Map998_4Array 300|0|218|Map998_Transports.xml|Gondola, Cab South
+    return
+
+    Map67Array:
+        ## SHARD PORTAL ENTRANCE Zone 67 Room 455
+        gosub Map_to_Map Map67Array_to_Map107Array 1|Subscription;Platinum|808|Map107_Mer'Kresh.xml|Wharf End, Mer'Kresh
+        gosub Map_to_Map Map67Array_to_Map66Array 10|Citizenship;Shard;Time;Day|135|Map66_STR3.xml|Shard, North Bridge
+        gosub Map_to_Map Map67Array_to_Map66Array 10|0|132|Map66_STR3.xml|Shard, East Bridge
+        gosub Map_to_Map Map67Array_to_Map67a_1Array 10|Guild;Thief|136|Map67a_Shard_Thief.xml|Shard, Tunnels
+        gosub Map_to_Map Map67Array_to_Map67a_1Array 10|Guild;Thief|149|Map67a_Shard_Thief.xml|Shard Tunnels
+        gosub Map_to_Map Map67Array_to_Map67a_1Array 10|Guild;Thief|162|Map67a_Shard_Thief.xml|Shard Tunnels
+        gosub Map_to_Map Map67Array_to_Map67a_1Array 10|Guild;Thief|163|Map67a_Shard_Thief.xml|Shard, Abandoned Building
+        gosub Map_to_Map Map67Array_to_Map67a_1Array 10|Guild;Thief|380|Map67a_Shard_Thief.xml|Undershard, Tunnels
+        gosub Map_to_Map Map67Array_to_Map67a_1Array 10|Guild;Thief|595|Map67a_Shard_Thief.xml|Shard, Basement
+        gosub Map_to_Map Map67Array_to_Map67a_1Array 10|Guild;Thief|596|Map67a_Shard_Thief.xml|Undershard, Tunnels
+        gosub Map_to_Map Map67Array_to_Map67a_2Array 10|Guild;Thief|566|Map67a_Shard_Thief.xml|Shard, Smuggler's Bridge
+        gosub Map_to_Map Map67Array_to_Map68Array 10|Citizenship;Shard;Time;Day|230|Map68_Shard_South_Gate.xml|Old Ilithi Trade Route, Journey's Rest
+        #this is not a good route gosub Map_to_Map Map67Array_to_Map68Array 10|0|381|Map68_Shard_South_Gate.xml|Sewer
+        gosub Map_to_Map Map67Array_to_Map69Array 10|Citizenship;Shard;Time;Day|129|Map69_Shard_West_Gate.xml|Shard, West Bridge
+    return
+
+    Map67a_1Array:
+        gosub Map_to_Map Map67a_1Array_to_Map67Array 10|Guild;Thief|10|Map67_Shard.xml|Shard, Crystal Lane
+        gosub Map_to_Map Map67a_1Array_to_Map67Array 10|Guild;Thief|11|Map67_Shard.xml|Shard, Emerald Lane Open Market
+        gosub Map_to_Map Map67a_1Array_to_Map67Array 10|Guild;Thief|12|Map67_Shard.xml|Shard, Katamba's Crescent Road
+        gosub Map_to_Map Map67a_1Array_to_Map67Array 10|Guild;Thief|16|Map67_Shard.xml|Undershard, The Grey Market
+        gosub Map_to_Map Map67a_1Array_to_Map67Array 10|Guild;Thief|17|Map67_Shard.xml|Shard, Grey Market
+        gosub Map_to_Map Map67a_1Array_to_Map67Array 10|Guild;Thief|6|Map67_Shard.xml|Shard, Ruined Building
+        gosub Map_to_Map Map67a_1Array_to_Map67Array 10|Guild;Thief|8|Map67_Shard.xml|Shard, Sunstone Street
+        return
+        Map67a_2Array:
+        gosub Map_to_Map Map67a_2Array_to_Map66Array 10|Guild;Thief|23|Map66_STR3.xml|South Trade Route, Journey's Rest
+        gosub Map_to_Map Map67a_2Array_to_Map67Array 10|Guild;Thief|19|Map67_Shard.xml|Shard, Katamba's Crescent Road
+    return
+
+    Map68Array:
+        gosub Map_to_Map Map68Array_to_Map66Array 30|0|15|Map66_STR3.xml|Prairie
+        gosub Map_to_Map Map68Array_to_Map66Array 64|0|215|Map66_STR3.xml|Abandoned Road
+        gosub Map_to_Map Map68Array_to_Map67Array 10|Citizenship;Shard;Time;Day|1|Map67_Shard.xml|Shard, The New South Bridge
+        gosub Map_to_Map Map68Array_to_Map67Array 10|Guild;Thief;Athletics;ShardSewageEntrance|188|Map67_Shard.xml|Undershard, Sewage Tunnel
+        gosub Map_to_Map Map68Array_to_Map67Array 10|Athletics;ShardWalls|225|Map67_Shard.xml|The New Bridge, East Tower
+        gosub Map_to_Map Map68Array_to_Map68aArray 10|0|208|Map68a_Ice_Caves.xml|Ice Caves, Cave Mouth
+        gosub Map_to_Map Map68Array_to_Map68aArray 10|0|214|Map68a_Ice_Caves.xml|Whistling Wood, Fissure
+        gosub Map_to_Map Map68Array_to_Map68bArray 10|0|207|Map68b_Lost_Ground.xml|Corik's Wall, Graev's Gate
+    return
+
+    Map68aArray:
+        gosub Map_to_Map Map68aArray_to_Map68Array 10|0|29|Map68_Shard_South_Gate.xml|Whistling Wood, Clearing
+        gosub Map_to_Map Map68aArray_to_Map68Array 10|0|30|Map68_Shard_South_Gate.xml|Whistling Wood, Narrow Path
+    return
+
+    Map68bArray:
+        gosub Map_to_Map Map68bArray_to_Map68Array 10|0|44|Map68_Shard_South_Gate.xml|Blackthorn Canyon, Before the Wall
+    return
+
+    Map69Array:
+        gosub Map_to_Map Map69Array_to_Map123Array 10|0|283|Map123_Himineldar_Shel.xml|Seord Kerwaith, Crystalline Gorge
+        gosub Map_to_Map Map69Array_to_Map123Array 300|0|316|Map123_Himineldar_Shel.xml|Raven's Point, Gear Gate
+        gosub Map_to_Map Map69Array_to_Map66Array 10|0|1|Map66_STR3.xml|Southern Trade Route, Road to Shard
+        gosub Map_to_Map Map69Array_to_Map67Array 10|Citizenship;Shard;Time;Day|31|Map67_Shard.xml|Shard, West City Gates
+    return
+
+    Map7Array:
+        gosub Map_to_Map Map7Array_to_Map1Array 10|0|349|Map1_Crossing.xml|The Crossing, Northeast Customs
+        gosub Map_to_Map Map7Array_to_Map1Array 10|Athletics;CrossingWall|641|Map1_Crossing.xml|Crossing, Northeast Gate Battlements
+        gosub Map_to_Map Map7Array_to_Map10Array 10|0|396|Map10_Abandoned_Mine_Lairocott.xml|Lairocott Brach, Entrance
+        gosub Map_to_Map Map7Array_to_Map11Array 10|0|394|Map11_Vipers_Rock_Guardians.xml|Wilderness, Overgrown Path
+        gosub Map_to_Map Map7Array_to_Map12aArray 10|0|437|Map12a_Misenseor_Abbey.xml|Dense Copse
+        gosub Map_to_Map Map7Array_to_Map13Array 10|0|147|Map13_Dirge.xml|Lava Fields, Narrow Trace
+        gosub Map_to_Map Map7Array_to_Map14bArray 10|0|253|Map14b_Greater_Fist.xml|Greater Fist Footpath, Large Boulder
+        gosub Map_to_Map Map7Array_to_Map14cArray 10|0|197|Map14c_Faldesu.xml|Faldesu River, South Bank
+        gosub Map_to_Map Map7Array_to_Map6Array 10|0|347|Map6_Crossing_North_Gate.xml|Northwall Trail, Open Forest
+        gosub Map_to_Map Map7Array_to_Map7aArray 10|0|350|Map7a_Vineyard.xml|Northeast Vineyard, Farmhouse
+        gosub Map_to_Map Map7Array_to_Map7aArray 10|0|436|Map7a_Vineyard.xml|Baearholt's Farmhold
+        gosub Map_to_Map Map7Array_to_Map7cArray 10|0|794|Map7c_DiSilveron.xml|DiSilveron, Front Gate
+        gosub Map_to_Map Map7Array_to_Map8Array 10|0|348|Map8_Crossing_East_Gate.xml|Outside East Wall, Footpath
+        gosub Map_to_Map Map7Array_to_Map998_2Array 300|0|640|Map998_Transports.xml|Her Opulence
+        gosub Map_to_Map Map7Array_to_Map998_2Array 300|0|787|Map998_Transports.xml|His Daring Exploit
+        gosub Map_to_Map Map7Array_to_Map9bArray 10|0|397|Map9b_Sorrow's_Reach.xml|Foothills, Abandoned Road
+    return
+
+    Map7aArray:
+        gosub Map_to_Map Map7aArray_to_Map7Array 10|0|15|Map7_NTR.xml|Northern Trade Road, Farmlands
+        gosub Map_to_Map Map7aArray_to_Map7Array 10|0|65|Map7_NTR.xml|Northern Trade Road, Grasslands
+    return
+
+    Map7cArray:
+        gosub Map_to_Map Map7cArray_to_Map7Array 10|0|1|Map7_NTR.xml|Northern Trade Road, Farmlands
+    return
+
+    Map8Array:
+        # gosub Map_to_Map Map8Array_to_Map1Array 10|0|124|Map1_Crossing.xml|Crossing, East Gate Battlements
+        # gosub Map_to_Map Map8Array_to_Map1Array 10|0|125|Map1_Crossing.xml|Crossing, East Wall Battlements
+        # gosub Map_to_Map Map8Array_to_Map1Array 10|0|126|Map1_Crossing.xml|Crossing, East Wall Battlements
+        gosub Map_to_Map Map8Array_to_Map1Array 10|0|43|Map1_Crossing.xml|The Crossing, Eastern Gate
+        gosub Map_to_Map Map8Array_to_Map7Array 10|0|53|Map7_NTR.xml|Northeast Wilds, Outside Northeast Gate
+        gosub Map_to_Map Map8Array_to_Map8aArray 10|0|70|Map8a_Lost_Crossing.xml|Observatory, Foyer
+    return
+
+    Map8aArray:
+        gosub Map_to_Map Map8aArray_to_Map8Array 10|0|15|Map8_Crossing_East_Gate.xml|Observatory, First Level
+    return
+
+    Map90Array:
+        ## RATHA PORTAL ENTRANCE Zone 90 Room 468
+        gosub Map_to_Map Map90Array_to_Map40Array 1|Subscription;Platinum|876|Map40_Langenfirth_to_Therenborough.xml|Outside the Circle, The Ironwoods
+        gosub Map_to_Map Map90Array_to_Map150Array 300|0|835|Map150_Fang_Cove.xml|Aboard the Mammoth, Platform
+        gosub Map_to_Map Map90Array_to_Map150Array 10|Subscription;Premium|836|Map150_Fang_Cove.xml|Fang Cove, Fate's Fortune Lane
+        gosub Map_to_Map Map90Array_to_Map90aArray 10|0|228|Map90a_Sand_Sprites_Ochre_La'heke.xml|Ratha, Rocky Shore
+        gosub Map_to_Map Map90Array_to_Map90dArray 10|Moons;Up|628|Map90d_Taisgath.xml|Crescent Cove, Shrine to Phelim
+        gosub Map_to_Map Map90Array_to_Map92Array 10|0|663|Map92_Ratha_NW.xml|Ratha, Outside Sur'oson Gate
+        gosub Map_to_Map Map90Array_to_Map95Array 10|0|662|Map95_Ratha_NE.xml|Reshalia, Coastal Road
+        gosub Map_to_Map Map95Array_to_Map998_8Array 500|0|NEEDS NODE ON MAP|Map998_Transports.xml|The Halasa Selhin, Main Deck
+    return
+
+    Map90aArray:
+        gosub Map_to_Map Map90aArray_to_Map90Array 10|0|1|Map90_Ratha.xml|Ratha, Port Walk
+    return
+
+    Map90dArray:
+        gosub Map_to_Map Map90dArray_to_Map90Array 10|0|63|Map90_Ratha.xml|Phelim's Temple, Planetarium
+    return
+
+    Map92Array:
+        gosub Map_to_Map Map92Array_to_Map90Array 10|0|1|Map90_Ratha.xml|Shh'o'kumu Terrace, Sur'oson Gate
+    return
+
+    Map95Array:
+        gosub Map_to_Map Map95Array_to_Map90Array 10|0|1|Map90_Ratha.xml|Shh'o'kumu Terrace, Por'oson Gate
+        gosub Map_to_Map Map95Array_to_Map998_8Array 500|0|245|Map998_Transports.xml|The Halasa Selhin, Main Deck
+    return
+
+    Map98Array:
+        gosub Map_to_Map Map98Array_to_Map98aArray 10|0|36|Map98a_Sea_Caves.xml|Sea Caves, Tunnel
+        gosub Map_to_Map Map98Array_to_Map99Array 10|0|86|Map99_Aesry_Surlaenis'a.xml|Aesry Surlaenis'a, Beneath the Prayer Gate
+        gosub Map_to_Map Map98Array_to_Map998_7Array 500|0|148|Map998_Transports.xml|Lybadel, Main Deck
+        gosub Map_to_Map Map98Array_to_Map998_8Array 500|0|338|Map998_Transports.xml|The Halasa Selhin, Main Deck
+    return
+
+    Map98aArray:
+        gosub Map_to_Map Map98aArray_to_Map98Array 10|0|109|Map98_Road_to_Aesry.xml|Ocean, Near the Cove
+        gosub Map_to_Map Map98aArray_to_Map98Array 10|0|97|Map98_Road_to_Aesry.xml|Aesry Surlaenis'a, Cliff Path
+    return
+
+    Map99Array:
+        ## AESRY PORTAL ENTRANCE Zone 99 Room 115
+        gosub Map_to_Map Map99Array_to_Map67Array 1|Subscription;Platinum|463|Map67_Shard.xml|First Bank of Ilithi, Exchange Vault
+        gosub Map_to_Map Map99Array_to_Map150Array 10|Subscription;Premium|392|Map150_Fang_Cove.xml|Fang Cove, Fate's Fortune Lane
+        gosub Map_to_Map Map99Array_to_Map98Array 10|0|390|Map98_Road_to_Aesry.xml|Aesry Surlaenis'a, Eluned Prayer Gate
+    return
+
+    Map998_1Array:
+        gosub Map_to_Map Map998_1Array_to_Map1Array 100|0|45|Map1_Crossing.xml|The Crossing, Alfren's Ferry
+        gosub Map_to_Map Map998_1Array_to_Map60Array 100|0|44|Map60_STR1.xml|Southern Trade Route, Segoltha South Bank
+        return
+        Map998_2Array:
+        gosub Map_to_Map Map998_2Array_to_Map30Array 100|0|36|Map30_Riverhaven.xml|Riverhaven, Ferry Dock
+        gosub Map_to_Map Map998_2Array_to_Map7Array 100|0|35|Map7_NTR.xml|North Road, Ferry
+        return
+        Map998_3Array:
+        gosub Map_to_Map Map998_3Array_to_Map30Array 500|0|47|Map30_Riverhaven.xml|Riverhaven, Pier
+        gosub Map_to_Map Map998_3Array_to_Map40Array 500|0|48|Map40_Langenfirth_to_Therenborough.xml|Langenfirth, Wharf
+        return
+        Map998_4Array:
+        gosub Map_to_Map Map998_4Array_to_Map62Array 100|0|37|Map62_STR2.xml|Obsidian Pass, Platform
+        gosub Map_to_Map Map998_4Array_to_Map66Array 100|0|27|Map66_STR3.xml|Obsidian Pass, Platform
+        return
+        Map998_5Array:
+        gosub Map_to_Map Map998_5Array_to_Map41Array 500|0|50|Map41_Marauders.xml|Hvaral, Dry Dock
+        gosub Map_to_Map Map998_5Array_to_Map47Array 500|0|41|Map47_Muspar'i.xml|Outside Muspar'i, Barge Platform
+        gosub Map_to_Map Map998_5Array_to_Map48Array 500|0|51|Map48_Haizen_Cugis.xml|Velaka, Desert Oasis
+        gosub Map_to_Map Map998_5Array_to_Map48Array 500|0|53|Map48_Haizen_Cugis.xml|Velaka, Desert Oasis
+        return
+        Map998_6Array:
+        gosub Map_to_Map Map998_6Array_to_Map90Array 108000|0|33|Map90_Ratha.xml|Neh Dock, Port of Ratha
+        gosub Map_to_Map Map998_6Array_to_Map30Array 108000|0|60|Map30_Riverhaven.xml|Riverhaven, East Pier
+        return
+        Map998_7Array:
+        gosub Map_to_Map Map998_7Array_to_Map30Array 108000|0|7|Map30_Riverhaven.xml|Riverhaven, East Pier
+        gosub Map_to_Map Map998_7Array_to_Map98Array 108000|0|8|Map98_Road_To_Aesry.xml|Aesry Surlaenis'a, Shadaer
+        return
+        Map998_8Array:
+        gosub Map_to_Map Map998_8Array_to_Map90Array 500|0|24|Map90_Ratha.xml|Uaro Dock, Port of Ratha
+        gosub Map_to_Map Map998_8Array_to_Map95Array 500|0|15|Map95_Ratha_NE.xml|Pokekehekepi, Beachhead
+        gosub Map_to_Map Map998_8Array_to_Map98Array 500|0|10|Map98_Road_To_Aesry.xml|Harbor Docks, Aesry Surlaenis'a
+        return
+        Map998_9Array:
+        gosub Map_to_Map Map998_9Array_to_Map1Array 108000|0|21|Map1_Crossing.xml|The Crossing Docks, South End
+        gosub Map_to_Map Map998_9Array_to_Map90Array 108000|0|23|Map90_Ratha.xml|Neh Dock, Port of Ratha
+    return
+
+    Map99dArray:
+        gosub Map_to_Map Map99dArray_to_Map99Array 10|0|18|Map99_Aesry_Town.xml|Aesry Surlaenis'a
+    return
+
+    Map9bArray:
+        gosub Map_to_Map Map9bArray_to_Map7Array 10|0|9|Map7_NTR.xml|Foothills, Stony Incline
+    return
+
+    MapTF1Array:
+        gosub Map_to_Map MapTF1Array_to_Map1Array 10|Game;DRF|23|Map1_Crossing.xml|The Crossing, Town Green Southwest
+        gosub Map_to_Map MapTF1Array_to_Map107Array 10|Game;DRF|22|Map107_MerKresh.xml|Wharf End, Mer'Kresh
+        gosub Map_to_Map MapTF1Array_to_Map108Array 10|Game;DRF|26|Map108_M'Riss.xml|Belarritaco Bay, The Galley Dock
+        gosub Map_to_Map MapTF1Array_to_Map30Array 10|Game;DRF|24|Map30_Riverhaven.xml|Riverhaven, Town Square
+        gosub Map_to_Map MapTF1Array_to_Map40Array 10|Game;DRF|25|Map40_Langenfirth_to_Theren_Gate.xml|North Road, Beech Grove
+    return
+
+###########################
+####Pather Loading start###
+###########################
+Load:
+    # add in handling for starting in a named "Subzone"
+    var Starting_Zone Map$zoneidArray
+    var Ending_Zone Map%1Array
+    if ("%Ending_Zone" = "%Starting_Zone") then {
+        echo At destination
+        exit
+    }
+    if ("%Ending_Zone" = "MapArray") then {
+        goto NODESTINATION
+    }
+    if ("%Starting_Zone" = "") then {
+        put #mapper reset
+        pause
+        var Starting_Zone Map$zoneidArray
+        if ("%Starting_Zone" = "") then {
+            echo unknown starting map
+            exit
+        }
+    }
+
+    var Map_to_Map_Maps
+    var Map_to_Map_Vars
+    var Map_to_Map_Paths
+    var Map_to_Map_Nodes
+    var Maps |
+    var Arc_Queue |
+    var i_Arc_Queue 0
+
+    var Path_Map
+    var Path_Part
+    var Path_Weight
+    var Path_Paths
+    var Path_Arcs
+    var Path_Names
+    var Path_Rooms
+
+    var Current_Zone %Starting_Zone
+    var Link%Current_Zone 0|LinkMap0Array
+    var LinkMap0Array 0|0
+    var AthleticsChecks ShardWalls|ShardSewageEntrance|CrossingWall|ShardUnderGondola|Crossing5thPassage|HaizenCugisDesert|CrossingSegoltha|RiverhavenFaldesu|RossmanJantspyreNorth|RossmanJantspyreSouth|BoarArchersFord
+
+    var Guild
+    var Citizenship
+    var Subscription
+    var Game
+    var Courage
+    var Moons
+
+    if !def(subscription) then gosub SUBSCRIPTION_CHECK
+    var Subscription $subscription
+    if !def(citizenship) then gosub CITIZENSHIP
+    var Citizenship $citizenship
+
+    if !def(travel.RossmanJantspyreNorth) then var RossmanJantspyreNorth 200
+    else var RossmanJantspyreNorth $travel.RossmanJantspyreNorth
+    if !def(travel.RossmanJantspyreSouth) then var RossmanJantspyreSouth 90
+    else var RossmanJantspyreSouth $travel.RossmanJantspyreSouth
+    if !def(travel.RiverhavenFaldesu) then var RiverhavenFaldesu 190
+    else var RiverhavenFaldesu $travel.RiverhavenFaldesu
+    if !def(travel.CrossingSegoltha) then var CrossingSegoltha 550
+    else var CrossingSegoltha $travel.CrossingSegoltha
+    if !def(travel.ShardUnderGondola) then var ShardUnderGondola 550
+    else var ShardUnderGondola $travel.ShardUnderGondola
+    if !def(travel.Crossing5thPassage) then var Crossing5thPassage 50
+    else var Crossing5thPassage $travel.Crossing5thPassage
+    if !def(travel.HaizenCugisDesert) then var HaizenCugisDesert 800
+    else var HaizenCugisDesert $travel.HaizenCugisDesert
+    if !def(travel.ShardWalls) then var ShardWalls 350
+    else var ShardWalls $travel.ShardWalls
+    if !def(travel.ShardSewageEntrance) then var ShardSewageEntrance 300
+    else var ShardSewageEntrance $travel.ShardSewageEntrance
+    if !def(travel.CrossingWall) then var CrossingWall 350
+    else var CrossingWall $travel.CrossingWall
+    if !def(travel.BoarArchersFord) then var BoarArchersFord 160
+    else var BoarArchersFord $travel.BoarArchersFord
+
+    if (($joined == 1) && ($travel.GroupShortCutsAnyway == False)) then {
+        var ShardWalls 2000
+        var ShardSewageEntrance 2000
+        var CrossingWall 2000
+        var ShardUnderGondola 2000
+        var Crossing5thPassage 2000
+        var HaizenCugisDesert 2000
+        var CrossingSegoltha 2000
+        var RiverhavenFaldesu 2000
+        var RossmanJantspyreNorth 2000
+        var RossmanJantspyreSouth 2000
+        var BoarArchersFord 2000
+
+        var Citizenship None
+        var Subscription Basic
+
+        if (%verbose) then gosub ECHO You are in a group!  You will NOT be taking the gravy short cuts today!
       }
-    }
-  }
-  if ("$zoneid" == "34") then gosub AUTOMOVE 15
-  if ("$zoneid" == "34") then gosub AUTOMOVE 15
-  if ("$zoneid" == "33a") then gosub AUTOMOVE 46
-  if ("$zoneid" == "33a") then gosub AUTOMOVE 46
-  if ("$zoneid" == "33") then gosub AUTOMOVE 1
-  if ("$zoneid" == "33") then gosub AUTOMOVE 1
-}
-if (("$zoneid" == "47") && (matchre("$game", "(?i)DRX")) && (%portal == 1) && (%ported == 0)) then gosub PORTAL_TIME
-if (("$zoneid" == "47") && ($Athletics.Ranks >= %muspari.shortcut)) then gosub VELAKA_SHORTCUT
-if ("$zoneid" == "47") then {
-  if (%verbose) then gosub ECHO Athletics too LOW for Muspari Shortcut - Taking Long Route
-  gosub AUTOMOVE 117
-  gosub FERRYLOGIC
-}
-if (("$zoneid" == "41") && (matchre("%detour", "(?:muspari|fornsted|oasis)"))) then {
-  if (matchre("%detour", "fornsted")) then {
-    gosub AUTOMOVE 91
-    goto ARRIVED
-  }
-  if (%passport == 0) then gosub PASSPORT_CHECK
-  if (%passport == 0) then {
-    gosub AUTOMOVE Map40
-    gosub PASSPORT_GET
-    gosub AUTOMOVE Map41
-  }
-  if (matchre("%detour", "(?:muspari|oasis)")) then {
-    if (%verbose) then gosub ECHO Athletics too low for Muspari Shortcut - Taking Long Route
-    gosub AUTOMOVE 91
-    gosub AUTOMOVE 160
-    if ($Athletics.Ranks >= %muspari.shortcut) then goto HAIZEN_SHORTCUT
-    gosub FERRYLOGIC
-    gosub STOWING
-  }
-}
-if (("$zoneid" == "48") && (matchre("%detour", "oasis"))) then {
-  gosub AUTOMOVE 22
-  if (matchre("%destination", "(?i)oasis?")) then goto ARRIVED
-}
-if (("$zoneid" == "41") && (!matchre("%detour", "(?:muspari|fornsted|oasis)"))) then {
-  gosub AUTOMOVE 53
-  gosub PUT east
-  waitforre ^Just when it seems
-  pause %command_pause
-  put #mapper reset
-  pause %command_pause
-}
-if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (matchre("$zoneid", "\b(?:1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-if (("$zoneid" == "47") && (matchre("muspari", "%detour"))) then {
-  gosub AUTOMOVE 235
-  goto ARRIVED
-}
-if ("$zoneid" == "47") then {
-  gosub AUTOMOVE 117
-  gosub FERRYLOGIC
-}
-if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (matchre("$zoneid", "\b(?:1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-if (("$zoneid" == "30") && (matchre("%detour", "(?:rossman|lang|theren|rakash|muspari|oasis|fornsted|el'bain|mriss|merk|hara)"))) then {
-  if $Athletics.Ranks < %rossmanNorth then {
-    if (%verbose) then gosub ECHO Athletics too low for Rossman Shortcut - Taking Ferry
-    gosub INFO_CHECK
-    if (%Lirums < 140) then goto NOCOIN
-    gosub AUTOMOVE 99
-    gosub FERRYLOGIC
-  }
-  if $Athletics.Ranks >= %rossmanNorth then {
-    if (%verbose) then gosub ECHO Athletics high enough for Jantspyre River - Taking Rossman's Shortcut!
-    gosub AUTOMOVE 174
-    gosub AUTOMOVE 29
-    gosub AUTOMOVE 48
-    if ("%detour" == "rossman") then {
-      gosub AUTOMOVE 22
-      goto ARRIVED
-    }
-    gosub AUTOMOVE 53
-    if (matchre("$roomobjs", "two fragile ropes")) then {
-      gosub STOWING
-      gosub PUT climb rope
-      gosub SHUFFLE_NORTH
-    }
-    gosub AUTOMOVE 137
-  }
-}
-if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (matchre("$zoneid", "\b(?:1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-if ("$zoneid" == "116") then {
-  gosub INFO_CHECK
-  evalmath TherenCoin $circle * 20
-  if (%Dokoras < %TherenCoin) then goto NOCOIN
-  gosub AUTOMOVE 217
-}
-if ("$zoneid" == "126") then {
-  gosub INFO_CHECK
-  evalmath TherenCoin $circle * 20
-  if (%Dokoras < %TherenCoin) then {
-    gosub AUTOMOVE 49
-    goto NOCOIN
-  }
-  gosub AUTOMOVE 103
-}
-if ("$zoneid" == "127") then {
-  gosub INFO_CHECK
-  evalmath TherenCoin $circle * 20
-  if (%Dokoras < %TherenCoin) then {
-    gosub AUTOMOVE 510
-    gosub AUTOMOVE 49
-    goto NOCOIN
-  }
-  gosub AUTOMOVE 363
-  gosub JOINLOGIC
-}
-if ("$zoneid" == "40a") then gosub AUTOMOVE 125
-if "$zoneid" == "42" && "%detour" != "theren" then gosub AUTOMOVE 2
-if (("$zoneid" == "40") && (matchre("$game", "(?i)DRX")) && (%portal == 1) && (!matchre("%detour", "(?i)(?:el'bain|lang|rakash)")) && (%ported == 0)) then gosub PORTAL_TIME
-if (("$zoneid" == "40") && (matchre("%detour", "(?:muspari|oasis|fornsted|hvaral)")) && (%passport == 0)) then {
-  gosub PASSPORT_CHECK
-  if (%passport == 0) then gosub PASSPORT_GET
-}
-if (("$zoneid" == "40") && ("%detour" == "rossman")) then {
-  gosub AUTOMOVE 213
-  gosub AUTOMOVE 22
-  goto ARRIVED
-}
-if (("$zoneid" == "40") && (matchre("%detour", "(?i)(?:lang|rakash|el'bain|mriss|merk|hara)"))) then {
-  if ("%detour" == "el'bain") then {
-    gosub AUTOMOVE 142
-    goto ARRIVED
-  }
-  if ("%detour" == "lang") then {
-    gosub AUTOMOVE 1
-    goto ARRIVED
-  }
-  if ("%detour" == "rakash") then {
-    gosub AUTOMOVE 263
-    gosub AUTOMOVE 96
-    goto ARRIVED
-  }
-  if (matchre("%detour", "(mriss|merk|hara)")) then {
-    gosub AUTOMOVE 305
-    gosub JOINLOGIC
-    goto QITRAVEL
-  }
-}
-if (("$zoneid" == "40") && (matchre("%detour", "(?i)(?:haven|zaulfung|throne)"))) then {
-  if ($Athletics.Ranks >= %rossmanSouth) then {
-    if (%verbose) then gosub ECHO Athletics high enough for Jantspyre River - Taking Rossman's Shortcut!
-    gosub AUTOMOVE 213
-    gosub AUTOMOVE 121
-    if (matchre("$roomdesc", "pair of ropes tied to trees")) then {
-      gosub STOWING
-      gosub PUT climb rope
-      pause 0.5
-      gosub SHUFFLE_SOUTH
-    }
-    if ("$zoneid" == "34") then gosub AUTOMOVE 15
-    if ("$zoneid" == "34") then gosub AUTOMOVE 15
-    if ("$zoneid" == "33a") then gosub AUTOMOVE 46
-    if ("$zoneid" == "33a") then gosub AUTOMOVE 46
-    if ("$zoneid" == "33") then gosub AUTOMOVE 1
-    if ("$zoneid" == "33") then gosub AUTOMOVE 1
-  }
-  if ($Athletics.Ranks < %rossmanSouth) then {
-    if (%verbose) then gosub ECHO Athletics too low for Rossman Shortcut - Taking Ferry
-    gosub INFO_CHECK
-    if (%Lirums < 140) then goto NOCOIN
-    gosub AUTOMOVE 36
-    gosub FERRYLOGIC
-  }
-}
-if (("$zoneid" == "40") && ("%detour" == "theren")) then gosub AUTOMOVE 211
-if (("$zoneid" == "42") && ("%detour" == "theren")) then {
-  gosub AUTOMOVE 56
-  goto ARRIVED
-}
-if (("$zoneid" == "40") && (matchre("%detour", "(?:muspari|oasis|fornsted|hvaral)"))) then {
-  if (%passport == 0) then gosub PASSPORT_CHECK
-  if (%passport == 0) then gosub PASSPORT_GET
-  gosub AUTOMOVE 376
-  gosub PUT west
-  waitforre ^Just when it seems
-  pause %command_pause
-  put #mapper reset
-}
-if (("$zoneid" == "41") && ("%detour" == "fornsted")) then {
-  gosub AUTOMOVE 91
-  goto ARRIVED
-}
-if (("$zoneid" == "41") && ("%detour" == "hvaral")) then {
-  gosub AUTOMOVE 91
-  gosub PASSPORT
-  gosub AUTOMOVE 145
-  goto ARRIVED
-}
-if (("$zoneid" == "41") && (matchre("%detour", "(?:muspari|oasis)"))) then {
-  gosub AUTOMOVE 91
-  gosub PASSPORT
-  if ($Athletics.Ranks >= %muspari.shortcut) then goto HAIZEN_SHORTCUT
-  gosub FERRYLOGIC
-}
-if (("$zoneid" == "48") && (matchre("%detour", "oasis"))) then {
-  gosub AUTOMOVE 22
-  if (matchre("%destination", "(?i)oasi?s?")) then goto ARRIVED
-}
-if (("$zoneid" == "41") && (matchre("%detour", "(?:rossman|lang|theren|rakash|el'bain|haven|zaulfung)"))) then {
-  gosub AUTOMOVE 53
-  gosub PUT east
-  waitforre ^Just when it seems
-  pause %command_pause
-  put #mapper reset
-}
-if (("$zoneid" == "30") && ("%detour" == "throne")) then {
-  gosub AUTOMOVE throne city barge
-  gosub FERRYLOGIC
-  goto ARRIVED
-}
-if (("$zoneid" == "30") && ("%detour" == "zaulfung")) then {
-  gosub AUTOMOVE 203
-  gosub AUTOMOVE 100
-}
-if ("$zoneid" == "30") then {
-  gosub AUTOMOVE 8
-  goto ARRIVED
-}
-if (("$zoneid" == "48") && (matchre("%destination", "(haize?n?|yeehar)"))) then {
-  gosub AUTOMOVE 66
-  goto VELAKA_DUNES
-}
-gosub STOWING
-goto ARRIVED
-####
-####  Rope bridge shuffle, sorry TFers  ####
-SHUFFLE_SOUTH:
-  if ($roomid == 121) then {
-    if (%verbose) then gosub ECHO ROPE OCCUPIED - TRYING AGAIN IN 20..
-    pause 20
-    if ($monstercount > 0) then gosub RETREAT
-    gosub PUT climb rope
-    pause %command_pause
-    goto SHUFFLE_SOUTH
-  }
-  pause %infiniteLoopProtection
-  gosub PUT shuffle south
-  pause %command_pause
-  if ($roundtime > 0) then pause $roundtime
-  if ($roomid == 53) then return
-  if (matchre("$roomdesc", "The trail twists around")) then return
-  pause %command_pause
-  if ($stunned == 1) then waiteval ($stunned == 0)
-  if ($standing == 0) then gosub STAND
-  if ($roomid == 121) then {
-    if ($monstercount > 0) then gosub RETREAT
-    gosub PUT climb rope
-    pause %command_pause
-  }
-  goto SHUFFLE_SOUTH
-SHUFFLE_NORTH:
-  if ($roomid == 53) then {
-    if (%verbose) then gosub ECHO ROPE OCCUPIED - TRYING AGAIN IN 20..
-    pause 20
-    if ($monstercount > 0) then gosub RETREAT
-    gosub PUT climb rope
-    pause %command_pause
-    goto SHUFFLE_NORTH
-  }
-  pause %infiniteLoopProtection
-  if ($monstercount > 0) then gosub RETREAT
-  gosub PUT shuffle north
-  pause %command_pause
-  if ($roundtime > 0) then pause $roundtime
-  if ($roomid == 121) then return
-  if (matchre("$roomdesc", "A steep-sided ravine")) then return
-  pause %command_pause
-  if ($stunned == 1) then waiteval ($stunned == 0)
-  if ($standing == 0) then gosub STAND
-  if ($roomid == 53) then {
-    if ($monstercount > 0) then gosub RETREAT
-    gosub PUT climb rope
-    pause %command_pause
-    goto SHUFFLE_NORTH
-  }
-  goto SHUFFLE_NORTH
-####
-####  Looking for the sick tree  ####
-SICKLY_TREE:
-  pause %infiniteLoopProtection
-  if (%verbose) then gosub ECHO LOOKING FOR THE SICKLY TREE
-  if (matchre("$roomobjs", "sickly tree")) then goto SICKLY_TREE_2
-  gosub RANDOMWEIGHT east
-  if (matchre("$roomobjs", "sickly tree")) then goto SICKLY_TREE_2
-  gosub RANDOMWEIGHT east
-  if (matchre("$roomobjs", "sickly tree")) then goto SICKLY_TREE_2
-  gosub RANDOMWEIGHT northeast
-  if (matchre("$roomobjs", "sickly tree")) then goto SICKLY_TREE_2
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "sickly tree")) then goto SICKLY_TREE_2
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "sickly tree")) then goto SICKLY_TREE_2
-  gosub RANDOMWEIGHT west
-  if (matchre("$roomobjs", "sickly tree")) then goto SICKLY_TREE_2
-  gosub RANDOMWEIGHT west
-  goto SICKLY_TREE
-SICKLY_TREE_2:
-  pause %infiniteLoopProtection
-  gosub MOVE climb sickly tree
-  delay %infiniteLoopProtection
-  if ("$zoneid" == "31") then goto SICKLY_TREE
-  return
-####
-####  velaka dunes  ####
-VELAKA_DUNES:
-  pause %command_pause
-  if ((matchre("%destination", "(haize?n?)")) && (matchre("$roomobjs", "(?i)twisting trail"))) then {
-    gosub MOVE go trail
-    gosub AUTOMOVE 29
-    goto ARRIVED
-  }
-  if ((matchre("%destination", "(oasis?)")) && (matchre("$roomobjs", "(?i)path"))) then {
-    gosub MOVE go path
-    gosub AUTOMOVE 2
-    goto ARRIVED
-  }
-  if ((matchre("%destination", "yeeha?r?")) && (matchre("$roomobjs", "(?i)canyon"))) then {
-    gosub MOVE go canyon
-    gosub AUTOMOVE 49
-    goto ARRIVED
-  }
-  gosub RANDOMMOVE
-  goto VELAKA_DUNES
-####
-####  Oasis Shortcut  ####
-HAIZEN_SHORTCUT:
-     if (%verbose) then gosub ECHO WE HAVE 700+ ATHLETICS!~|TAKING DESERT DUNES SHORTCUT TO MUSPARI
-     gosub AUTOMOVE 208
-     gosub AUTOMOVE 66
-HAIZEN_SHORTCUT_1:
-  pause %command_pause
-  if ((matchre("%destination", "(haize?n?|muspar?i?)")) && (matchre("$roomobjs", "(?i)twisting trail"))) then {
-    gosub MOVE go trail
-    gosub AUTOMOVE 29
-    if (matchre("%destination", "haize?n?")) then goto ARRIVED
-    goto HAIZEN_SHORTCUT_2
-  }
-  if ((matchre("%destination", "oasi?s?")) && (matchre("$roomobjs", "(?i)path"))) then {
-    gosub MOVE go path
-    gosub AUTOMOVE 2
-    goto ARRIVED
-  }
-  if ((matchre("%destination", "yeeha?r?")) && (matchre("$roomobjs", "(?i)canyon"))) then {
-    gosub MOVE go canyon
-    gosub AUTOMOVE 49
-    goto ARRIVED
-  }
-  gosub RANDOMMOVE
-  goto HAIZEN_SHORTCUT_1
-HAIZEN_SHORTCUT_2:
-  gosub AUTOMOVE 36
-HAIZEN_SHORTCUT_3:
-  gosub MOVE west
-  gosub MOVE west
-  gosub MOVE west
-  gosub MOVE southwest
-  gosub MOVE west
-  gosub MOVE northwest
-  gosub MOVE west
-  gosub MOVE southwest
-  gosub MOVE west
-  gosub MOVE southwest
-  gosub MOVE west
-  gosub MOVE northwest
-  gosub MOVE west
-  gosub MOVE west
-  gosub MOVE west
-  gosub MOVE west
-  gosub MOVE northwest
-  gosub MOVE west
-  gosub MOVE southwest
-  gosub MOVE west
-  gosub MOVE west
-  gosub MOVE west
-  gosub MOVE west
-  gosub MOVE west
-  gosub MOVE west
-HAIZEN_SHORTCUT_33:
-  if (matchre("$roomobjs", "black stones")) then goto HAIZEN_SHORTCUT_22
-  gosub MOVE southwest
-  if (matchre("$roomobjs", "black stones")) then goto HAIZEN_SHORTCUT_22
-  gosub MOVE west
-  if (matchre("$roomobjs", "black stones")) then goto HAIZEN_SHORTCUT_22
-  gosub MOVE southwest
-  if (matchre("$roomobjs", "black stones")) then goto HAIZEN_SHORTCUT_22
-  gosub MOVE northwest
-  if (matchre("$roomobjs", "black stones")) then goto HAIZEN_SHORTCUT_22
-  gosub MOVE southwest
-  if (matchre("$roomobjs", "black stones")) then goto HAIZEN_SHORTCUT_22
-  gosub MOVE west
-  if (matchre("$roomobjs", "black stones")) then goto HAIZEN_SHORTCUT_22
-  gosub MOVE southwest
-  if (matchre("$roomobjs", "black stones")) then goto HAIZEN_SHORTCUT_22
-  gosub MOVE west
-  if (matchre("$roomobjs", "black stones")) then goto HAIZEN_SHORTCUT_22
-  gosub MOVE west
-  if (matchre("$roomobjs", "black stones")) then goto HAIZEN_SHORTCUT_22
-  gosub MOVE southwest
-  if (matchre("$roomobjs", "black stones")) then goto HAIZEN_SHORTCUT_22
-  gosub MOVE west
-  if (matchre("$roomobjs", "black stones")) then goto HAIZEN_SHORTCUT_22
-  if ($zoneid != 47) then goto HAIZEN_SHORTCUT_33
-  goto HAIZEN_SHORTCUT_3
-HAIZEN_SHORTCUT_22:
-  gosub MOVE go stone
-HAIZEN_SHORTCUT_4:
-  if (%verbose) then gosub ECHO Trying to Navigate the stupid Velaka Desert...|Looking for the "rocky trail"
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMWEIGHT west
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMWEIGHT west
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMWEIGHT west
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMWEIGHT west
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMWEIGHT east
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMWEIGHT east
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMWEIGHT east
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMWEIGHT east
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "rocky trail")) then goto HAIZEN_SHORTCUT_5
-  gosub RANDOMMOVE
-  goto HAIZEN_SHORTCUT_4
-HAIZEN_SHORTCUT_5:
-  gosub MOVE go trail
-  goto ARRIVED
-####
-####  Oasis <-> Mooseparty  ####
-VELAKA_SHORTCUT:
-  if (%verbose) then gosub ECHO TAKING DESERT DUNES SHORTCUT FROM MUSPARI
-  if ("$zoneid" == "48") then goto VELAKA_SHORTCUT_3
-  if ("$roomid" != "0") then gosub AUTOMOVE 118
-VELAKA_SHORTCUT_1:
-  if (%verbose) then gosub ECHO LOOKING FOR THE BLACK STONES
-  if (matchre("$roomobjs", "black stones")) then {
-    gosub MOVE go stone
-    goto VELAKA_SHORTCUT_2
-  }
-  gosub RANDOMWEIGHT east
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMEAST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMEAST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMEAST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMEAST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMEAST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMEAST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMEAST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMEAST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMEAST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMEAST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMEAST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMWEST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMWEST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMWEST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMWEST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMWEST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMWEST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMSOUTH
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMSOUTH
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMWEST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMWEST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMSOUTH
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMSOUTH
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMWEST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMWEST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMSOUTH
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMSOUTH
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMWEST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMWEST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMWEST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMWEST
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_1
-  gosub RANDOMWEST
-  goto VELAKA_SHORTCUT_1
-VELAKA_SHORTCUT_2:
-  if (%verbose) then gosub ECHO TRUDGING THROUGH THE DESERT|NICE AND EASY... HOPE WE DON'T GET LOST...
-  gosub MOVE east
-  gosub MOVE northeast
-  gosub MOVE east
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_2
-  gosub MOVE east
-  gosub MOVE northeast
-  gosub MOVE east
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_2
-  gosub MOVE northeast
-  gosub MOVE southeast
-  gosub MOVE northeast
-  gosub MOVE east
-  gosub MOVE northeast
-  gosub MOVE east
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_2
-  gosub MOVE east
-  gosub MOVE east
-  gosub MOVE east
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_2
-  gosub MOVE east
-  gosub MOVE east
-  gosub MOVE northeast
-  gosub MOVE east
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_2
-  gosub MOVE southeast
-  gosub MOVE east
-  gosub MOVE east
-  gosub MOVE east
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_2
-  gosub MOVE east
-  gosub MOVE southeast
-  gosub MOVE east
-  gosub MOVE northeast
-  gosub MOVE east
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_2
-  gosub MOVE northeast
-  gosub MOVE east
-  gosub MOVE southeast
-  gosub MOVE east
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_2
-VELAKA_SHORTCUT_22:
-  gosub MOVE northeast
-  gosub MOVE east
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_2
-  gosub MOVE east
-  gosub MOVE east
-  gosub MOVE southeast
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_2
-  gosub MOVE east
-  gosub MOVE southeast
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_2
-  gosub MOVE east
-  gosub MOVE south
-  gosub MOVE southeast
-  if (matchre("$roomobjs", "black stones")) then goto VELAKA_SHORTCUT_2
-  if ($roomid == 0) then goto VELAKA_SHORTCUT_22
-VELAKA_SHORTCUT_3:
-  gosub MOVE go twisting trail
-VELAKA_SHORTCUT_4:
-  if (matchre("$roomobjs", "broad valley")) then goto VELAKA_SHORTCUT_5
-  gosub RANDOMWEIGHT west
-  if (matchre("$roomobjs", "broad valley")) then goto VELAKA_SHORTCUT_5
-  gosub RANDOMWEIGHT west
-  if (matchre("$roomobjs", "broad valley")) then goto VELAKA_SHORTCUT_5
-  gosub RANDOMWEIGHT west
-  if (matchre("$roomobjs", "broad valley")) then goto VELAKA_SHORTCUT_5
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "broad valley")) then goto VELAKA_SHORTCUT_5
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "broad valley")) then goto VELAKA_SHORTCUT_5
-  gosub RANDOMMOVE
-  if (matchre("$roomobjs", "broad valley")) then goto VELAKA_SHORTCUT_5
-  gosub RANDOMMOVE
-  goto VELAKA_SHORTCUT_4
-VELAKA_SHORTCUT_5:
-  gosub MOVE go valley
-  gosub AUTOMOVE dry
-  return
-####  END P3  ####
-####  P5  ####
-# hanryu: is this supposed to be for*F*?
-FORF:
-var label FORF
-if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (matchre("$zoneid", "\b(?:1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-if (matchre("$zoneid", "(?:Hara'jaal|Mer'Kresh|M'Riss)")) then {
-  var backuplabel FORF
-  var backupdetour %detour
-  var detour mriss
-  var tomainland 1
-  goto QITRAVEL
-}
-if ("$zoneid" == "48") then {
-  gosub AUTOMOVE 1
-  gosub FERRYLOGIC
-  pause
-}
-if (("$zoneid" == "35") && ("%detour" != "throne")) then {
-  gosub INFO_CHECK
-  if (%Lirums < 240) then goto NOCOIN
-  gosub AUTOMOVE 166
-  gosub FERRYLOGIC
-}
-if (("$zoneid" == "47") && ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (%ported == 0))) then gosub PORTAL_TIME
-if (("$zoneid" == "47") && ($Athletics.Ranks >= %muspari.shortcut)) then gosub VELAKA_SHORTCUT
-if ("$zoneid" == "47") then {
-  gosub AUTOMOVE 117
-  gosub FERRYLOGIC
-}
-if ("$zoneid" == "41") then {
-  gosub AUTOMOVE 53
-  gosub PUT east
-  waitforre ^Just when it seems
-  pause %command_pause
-  put #mapper reset
-}
-if ("$zoneid" == "40a") then gosub AUTOMOVE 125
-if ("$zoneid" == "42") then gosub AUTOMOVE 2
-if (("$zoneid" == "40") && (matchre("$game", "(?i)DRX")) && (%portal == 1) && (%ported == 0)) then gosub PORTAL_TIME
-if (("$zoneid" == "40") && ($Athletics.Ranks >= %rossmanSouth)) then gosub AUTOMOVE 213
-if (("$zoneid" == "40") && ($Athletics.Ranks < %rossmanSouth)) then {
-  if (%verbose) then gosub ECHO Athletics too low for Rossman Shortcut - Taking Ferry
-  gosub INFO_CHECK
-  evalmath BoarNeeded $circle * 20
-  if (%Lirums < %BoarNeeded) then goto NOCOIN
-  gosub AUTOMOVE 263
-}
-if ("$zoneid" == "40a") then {
-  gosub INFO_CHECK
-  evalmath BoarNeeded $circle*20
-  if (%Lirums < %BoarNeeded) then {
-    gosub AUTOMOVE 125
-    goto NOCOIN
-  }
-  gosub AUTOMOVE 68
-  gosub JOINLOGIC
-  goto FORF_3
-}
-if ("$zoneid" == "34a") then gosub AUTOMOVE 134
-if ("$zoneid" == "34") then gosub AUTOMOVE 15
-if ("$zoneid" == "33a") then gosub AUTOMOVE 46
-if ("$zoneid" == "33") then gosub AUTOMOVE 1
-if ("$zoneid" == "32") then gosub AUTOMOVE 1
-if ("$zoneid" == "31") then gosub AUTOMOVE river
-if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (matchre("$zoneid", "\b(?:1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-if (("$zoneid" == "30") && ($Athletics.Ranks < %faldesu)) then {
-  if (%verbose) then gosub ECHO Athletics too low for Faldesu - Taking Ferry
-  gosub INFO_CHECK
-  if (%Lirums < 140) then goto NOCOIN
-  gosub AUTOMOVE 103
-  gosub FERRYLOGIC
-}
-if (("$zoneid" == "30") && ($Athletics.Ranks >= %faldesu)) then {
-  ## TO FALDESU
-  gosub AUTOMOVE 203
-  gosub AUTOMOVE 79
-}
-if ("$zoneid" == "14c") then gosub FALDESU_SOUTH
-if ("$zoneid" == "14c") then gosub FALDESU_SOUTH
-if ("$zoneid" == "13") then gosub AUTOMOVE 71
-if ("$zoneid" == "4a") then gosub AUTOMOVE 15
-if ("$zoneid" == "4") then gosub AUTOMOVE 14
-if ("$zoneid" == "8") then gosub AUTOMOVE 43
-if ("$zoneid" == "10") then gosub MOVE Map7_NTR.xml
-if ("$zoneid" == "9b") then gosub AUTOMOVE 9
-if ("$zoneid" == "14b") then gosub AUTOMOVE 217
-if ("$zoneid" == "11") then gosub AUTOMOVE 2
-if ("$zoneid" == "7") then gosub AUTOMOVE 349
-if ((matchre("$game", "(?i)DRX")) && (%portal == 1)) && (matchre("$zoneid", "\b(?:1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-if ("$zoneid" == "1") then {
-  if (("$guild" == "Thief") && ($Athletics.Ranks >= %underSegoltha)) then {
-    gosub AUTOMOVE 650
-    gosub AUTOMOVE 23
-  }
-  if (($Athletics.Ranks >= %segoltha) && ("$zoneid" == "1")) then {
-    gosub AUTOMOVE 476
-    gosub SEGOLTHA_SOUTH
-  }
-  if ("$zoneid" == "1") then {
-    if (%verbose) then gosub ECHO Athletics too low - Taking Ferry
-    gosub INFO_CHECK
-    if %Kronars < 100 then goto NOCOIN
-    gosub AUTOMOVE 236
-    gosub FERRYLOGIC
-  }
-  gosub MOVE south
-  put #mapper reset
-}
-if ("$zoneid" == "50") then gosub SEGOLTHA_SOUTH
-if ("$zoneid" == "60") then gosub AUTOMOVE 57
-if ("$zoneid" == "58") then gosub AUTOMOVE 2
-if (("$zoneid" == "61") && ("%detour" == "ain")) then gosub AUTOMOVE 126
-if (("$zoneid" == "114") && ("%detour" != "ain")) then {
-  gosub INFO_CHECK
-  if (%Dokoras < 120) then goto NOCOIN
-  gosub AUTOMOVE 4
-  gosub FERRYLOGIC
-  gosub MOVE west
-}
-if (("$zoneid" == "63") && ($Athletics.Ranks < %underGondola)) then {
-  gosub AUTOMOVE 112
-  gosub AUTOMOVE 100
-  gosub AUTOMOVE 126
-}
-gosub BUFFCLIMB
-if (("$zoneid" == "112") && ("%detour" == "ain")) then {
-  if ($Athletics.Ranks >= %underGondola) then {
-    gosub AUTOMOVE 112
-    gosub AUTOMOVE 130
-  }
-  if ($Athletics.Ranks < %underGondola) then {
-    gosub INFO_CHECK
-    if (%Dokoras < 120) then goto NOCOIN
-    gosub AUTOMOVE 98
-    gosub FERRYLOGIC
-  }
-}
-if ("$zoneid" == "112") then gosub AUTOMOVE 112
-if ("$zoneid" == "58") then gosub AUTOMOVE 2
-if ("$zoneid" == "61") then gosub AUTOMOVE 130
-if ("$zoneid" == "63") then gosub AUTOMOVE 112
-if (("$zoneid" == "62") && ($Athletics.Ranks >= %underGondola)) then {
-  gosub BUFFCLIMB
-  gosub AUTOMOVE 153
-  goto FORF_2
-}
-if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && ((matchre("$zoneid", "\b(1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-if (("$zoneid" == "62") && ($Athletics.Ranks < %underGondola)) then {
-  gosub AUTOMOVE 2
-  gosub FERRYLOGIC
-}
-FORF_2:
-if ("$zoneid" == "65") then gosub AUTOMOVE 1
-if ("$zoneid" == "68b") then gosub AUTOMOVE 44
-if ("$zoneid" == "68a") then gosub AUTOMOVE 29
-if ("$zoneid" == "68") then {
-  if ((matchre("$roomname", "(?:Blackthorn Canyon|Corik's Wall|Stormfells|Shadow's Reach|Reach Forge|Darkling Wood, Trader Outpost)")) || (($roomid > 67) && ($roomid < 75))) then {
-  gosub AUTOMOVE 68
-  gosub AUTOMOVE 65
-  gosub AUTOMOVE 62
-  }
-  if ($Athletics.Ranks > 250) then {
-    gosub AUTOMOVE 2
-    gosub MOVE climb wall
-  }
-}
-if (("$zoneid" == "68") && (%shardCitizen)) then {
-  gosub AUTOMOVE 1
-  gosub AUTOMOVE 135
-}
-if (("$zoneid" == "68") && !(%shardCitizen)) then gosub AUTOMOVE 15
-if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (matchre("$zoneid", "\b(1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-if (("$zoneid" == "67") && ("$guild" == "Thief")) then {
-  gosub AUTOMOVE 566
-  gosub AUTOMOVE 23
-}
-if ("$zoneid" == "67a") then gosub AUTOMOVE STR
-if ("$zoneid" == "67") then gosub AUTOMOVE West
-if ("$zoneid" == "66") then gosub AUTOMOVE 217
-if ("$zoneid" == "67a") then gosub AUTOMOVE STR
-if ("$zoneid" == "67") then gosub AUTOMOVE West
-if ("$zoneid" == "66") then gosub AUTOMOVE 217
-if ("$zoneid" == "69") then gosub AUTOMOVE 283
-FORF_3:
-if ("$zoneid" == "69") then gosub AUTOMOVE 283
-if (("$zoneid" == "127") && (matchre("%detour", "(raven|outer|inner|ain)"))) then gosub AUTOMOVE 510
-if (("$zoneid" == "126") && (matchre("%detour", "(raven|outer|inner|ain)"))) then gosub AUTOMOVE 49
-if (("$zoneid" == "116") && (matchre("%detour", "(raven|ain)"))) then gosub AUTOMOVE 3
-if (("$zoneid" == "123") && ("%detour" == "ain")) then {
-  gosub INFO_CHECK
-  if (%Dokoras < 120) then goto NOCOIN
-  gosub AUTOMOVE 174
-  gosub FERRYLOGIC
-}
-if (("$zoneid" == "123") && ("%detour" == "raven")) then {
-  gosub AUTOMOVE 133
-  goto ARRIVED
-}
-if ("$zoneid" == "123") then gosub AUTOMOVE 169
-if (("$zoneid" == "116") && ("%detour" == "outer")) then {
-  gosub AUTOMOVE 225
-  goto ARRIVED
-}
-if (("$zoneid" == "116") && ("%detour" == "inner")) then {
-  gosub AUTOMOVE 96
-  goto ARRIVED
-}
-if (("$zoneid" == "113") && ("$roomid" == "4")) then gosub MOVE west
-if (("$zoneid" == "113") && ("$roomid" == "8")) then gosub MOVE north
-if (("$zoneid" == "114") && ("%detour" == "ain")) then gosub AUTOMOVE 34
-if ("$zoneid" == "116") then gosub AUTOMOVE 217
-if ("$zoneid" == "126") then gosub AUTOMOVE 103
-if ("$zoneid" == "127") then gosub AUTOMOVE 24
-goto ARRIVED
-####  END P5
-####  P4  ####
-####  Aesry for TF-ers  ####
-AESRY_LONG:
-  var label AESRY_LONG
-  if (%verbose) then gosub ECHO NO SHORTCUT TO AESRY IN TF - TAKING LONG ROUTE
-  if ("$zoneid" == "90") then goto AESRY_LONG_2
-  var detour aesry
-  gosub INFO_CHECK
-  if (%Lirums < 300) then goto NOCOIN
-  if ("$zoneid" == "67") then gosub AUTOMOVE Map66_STR3.xml
-  gosub AUTOMOVE portal
-  gosub MOVE go meeting portal
-  gosub AUTOMOVE 2
-  var ToRatha 1
-  gosub JOINLOGIC
-AESRY_LONG_2:
-  gosub AUTOMOVE 234
-  gosub FERRYLOGIC
-  goto ARRIVED
-
-AESRYBACK:
-  var label AESRYBACK
-  if ("$zoneid" == "98") then gosub AUTOMOVE 86
-  if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (%ported == 0)) then gosub PORTAL_TIME
-  if (matchre("$game", "(?i)DRF")) then goto AESRY_LONG
-  gosub AUTOMOVE 427
-  gosub JOINLOGIC
-  return
-
-QITRAVEL:
-  var label QITRAVEL
-  if ((matchre("$game", "(?i)DRX")) && (%portal == 1) && (matchre("$zoneid", "\b(?:1|30|40|47|67|90|99|107|116)\b")) && (%ported == 0)) then gosub PORTAL_TIME
-  if (!matchre("106|107|108", "$zoneid")) then goto therengia
-  if (("$zoneid" == "108") && (matchre("%detour", "(?:merk|hara)"))) then {
-    gosub AUTOMOVE 151
-    if ("$roomid" != "151") then gosub AUTOMOVE 151
-    gosub FERRYLOGIC
-  }
-  if (("$zoneid" == "107") && ("%detour" == "hara")) then {
-    gosub AUTOMOVE 78
-    gosub FERRYLOGIC
-    gosub AUTOMOVE 173
-  }
-  if (("$zoneid" == "106") && (matchre("$game", "(?i)DRF"))) then {
-    gosub AUTOMOVE 102
-    gosub JOINLOGIC
-    pause %command_pause
-    put #mapper reset
-    goto %label
-  }
-  if (("$zoneid" == "106") && (matchre("%detour", "(?:merk|mriss)"))) then {
-    gosub AUTOMOVE 101
-    gosub FERRYLOGIC
-  }
-  if (("$zoneid" == "107") && ("%detour" == "merk")) then {
-    gosub AUTOMOVE 194
-    goto ARRIVED
-  }
-  if (("$zoneid" == "107") && ("%detour" == "mriss")) then {
-    gosub AUTOMOVE 113
-    gosub FERRYLOGIC
-  }
-  if (%tomainland) then {
-    gosub AUTOMOVE 222
-    var tomainland 0
-    var label %backuplabel
-    var detour %backupdetour
-    gosub JOINLOGIC
-    pause %command_pause
-    put #mapper reset
-    goto %label
-  }
-  if (("$zoneid" == "108") && ("%detour" == "mriss")) then {
-    gosub AUTOMOVE 150
-    goto ARRIVED
-  }
-goto ARRIVED
-####  END P4  ####
+    
+return
 #############################################################
 ARRIVED:
   if_2 then {
@@ -2694,7 +1506,7 @@ SEGOLTHA_NORTH:
     return
   }
   if (matchre("$roomid", "\b(5|4|3|2|1)\b")) then {
-    gosub MOVE Map1_Crossing.xmling
+    gosub MOVE Map1_Crossing.xml
     return
   }
  if (matchre("$roomid", "\b(7|6|5)\b")) then {
@@ -2833,6 +1645,7 @@ JOINLOGIC:
 FERRYLOGIC:
   if (matchre("$roomname", "%ferryRoomTitles")) then goto ONFERRY
   gosub INFO_CHECK
+#what is the point of this line?
   if (matchre("$zoneid", "\b(?:1|7|30|35|60|40|41|47|48|90|113|106|107|108|150)\b")) then goto FERRY
 ###  MAIN FERRY LOGIC - CHECK FOR AND WAIT TO BOARD FERRY  ####
 ###  Also LOGIC FOR GETTING ON THE MAMMOTHS / WARSHIPS
@@ -2843,41 +1656,22 @@ FERRY:
   if ((matchre("$roomname", "%ferryRoomTitles")) || (%OnFerry == 1)) then goto ONFERRY
   if (%verbose) then gosub ECHO Checking for a Transport...
   if ($invisible) then gosub STOP_INVIS
-  if (matchre("$roomobjs", "(skiff|galley|Night Sky|Gondola|Riverhawk|Imperial Glory|Jolas|Skirr'lolasu|Kree'la|Selhin|Halasa|Degan)")) then gosub MOVE go $1
   if (matchre("$roomobjs", "(barge|Northern Pride|Desert Wind|Suncatcher|Theren's Star)")) then gosub MOVE go barge
   if (matchre("$roomobjs", "(ferry|Hodierna's Grace|Kertigen's Honor|Evening Star|Damaris. Kiss|Her Opulence|His Daring Exploit)")) then gosub MOVE go ferry
+  if (matchre("$roomobjs", "(skiff|galley|Night Sky|Gondola|Riverhawk|Imperial Glory|Jolas|Skirr'lolasu|Kree'la|Selhin|Halasa|Degan)")) then gosub MOVE go $1
   if (matchre("$roomobjs", "(warship|balloon|airship|dirigible|mammoth)")) then gosub MOVE join $1
+#han: still working here
 
 
-
-  if (matchre("$roomobjs", "warship")) then send join warship
-  if (matchre("$roomobjs", "airship")) then put join airship
   if (matchre("$roomobjs", "dirigible")) then put join dirigible;join dirigible
   if (matchre("$roomobjs", "balloon")) then put join balloon;join balloon
-  if (matchre("$roomobjs", "Gnomish warship")) then send join warship
-  if (matchre("$roomobjs", "Riverhawk")) then send go riverhawk
-  if (matchre("$roomobjs", "Imperial")) then send go imperial glory
-  if (matchre("$roomobjs", "Star")) then send go ferry
-  if (matchre("$roomobjs", "skiff")) then send go skiff
-  if (matchre("$roomobjs", "Skirr'lolasu")) then send go skirr
-  if (matchre("$roomobjs", "Kiss")) then send go ferry
-  if (matchre("$roomobjs", "ferry")) then send go ferry
-  if (matchre("$roomobjs", "barge")) then send go barge
-  if (matchre("$roomobjs", "galley")) then send go galley
-  if (matchre("$roomobjs", "Jolas")) then send go jolas
-  if (matchre("$roomobjs", "Selhin")) then send go selhin
-  if (matchre("$roomobjs", "Halasa")) then put go selhin
-  if (matchre("$roomobjs", "warship")) then send join warship
   if (matchre("$roomobjs", "wizened ranger")) then put join wizened ranger;join wizened ranger
-  if (("$zoneid" == "58") && (matchre("$roomobjs", "tall sea mammoth"))) then put join tall mammoth
-  if (("$zoneid" == "90") && (matchre("$roomobjs", "massive sea mammoth"))) then put join sea mammoth
   if ("$zoneid" == "150") then {
     if ("%detour" == "fang") then goto ARRIVED
     if ((%ToRatha == 1) && (matchre("$roomobjs", "massive sea mammoth"))) then put join sea mammoth
     if ((%ToRatha == 0) && (matchre("$roomobjs", "tall sea mammoth"))) then put join tall mammoth
     if (("%detour" == "hara") && (matchre("$roomobjs", "warship"))) then put join warship
   }
-
 
 
 
@@ -3101,234 +1895,7 @@ TO_SEACAVES:
   gosub MOVE go meeting portal
   return
 ####
-####  Plat Portals  ####
-EKKO:
-  if (%verbose) then gosub ECHO USING PLAT PORTALS TO TRAVEL!|Starting ZoneID:$zoneid RoomID:$roomid|Final Destination: %destination
-  return
-PORTAL_TIME:
-  action var portal 0;var ported 0 when ^You step towards the shimmering portal, but the wall of magic around it flares\.
-## CROSS PORTAL ENTRANCE Zone 1 Room 484
-CROSS_PORTAL:
-if ("$zoneid" == "1") then {
-  if (matchre("%destination", "cross?i?n?g?s?")) then return
-  if (matchre("%destination", "\b(knif?e?c?l?a?n?|tige?r?c?l?a?n?|dirg?e?|arth?e?d?a?l?e?|kaer?n?a?|ilay?a?t?a?i?p?|illa?y?a?t?a?i?p?a?|taipa|leth?d?e?r?i?e?l?|acen?a?m?a?c?r?a?|vipe?r?s?|guar?d?i?a?n?s?|leuc?r?o?s?|malod?o?r?o?u?s?|bucc?a?|dokt?|sorr?o?w?s?|misens?e?o?r?|beis?s?w?u?r?m?s?|ston?e?c?l?a?n?|bone?w?o?l?f?|germ?i?s?h?d?i?n?|alfr?e?n?s?|cara?v?a?n?s?a?r?y?)\b")) then return
-  if ($roomid != 484) then gosub AUTOMOVE 484
-  if ($roomid != 484) then goto CROSS_PORTAL
-  gosub EKKO
-  pause 0.1
-  var ported 1
-  put go portal
-  wait
-  pause 0.4
-  pause 0.1
-  if (%ported == 0) then return
-  put #mapper reset
-  pause 0.4
-  if ($roomid == 0) then gosub RANDOMMOVE
-  if ($roomid == 0) then gosub RANDOMMOVE
-  if (matchre("%destination", "aesr?y?")) then goto ARRIVED
-}
-## AESRY PORTAL ENTRANCE Zone 99 Room 115
-AESRY_PORTAL:
-     if ("$zoneid" == "99") then
-          {
-               if (matchre("%destination", "aesr?y?")) then return
-               pause 0.3
-               if ($roomid != 115) then gosub AUTOMOVE 115
-               if ($roomid != 115) then goto AESRY_PORTAL
-               gosub EKKO
-               pause 0.2
-               var ported 1
-               put go portal
-               wait
-               pause 0.4
-               pause 0.1
-               if (%ported == 0) then return
-               put #mapper reset
-               pause 0.2
-               if ($roomid == 0) then gosub RANDOMMOVE
-               if ($roomid == 0) then gosub RANDOMMOVE
-               if (matchre("%destination", "shard?")) then goto ARRIVED
-               if (matchre("%destination", "\b(grani?t?e?|garg?o?y?l?e?|spir?e?|horse?c?l?a?n?|fayr?i?n?s?|steel?c?l?a?w?|cori?k?s?|ada?n?f?|ylo?n?o?|wyve?r?n?|rave?n?s?|fan?g?|cov?e?)\b")) then
-                    {
-                         gosub clear
-                         goto ILITHI
-                    }
-          }
-## SHARD PORTAL ENTRANCE Zone 67 Room 455
-SHARD_PORTAL:
-     if ("$zoneid" == "67") then
-          {
-               if (matchre("%destination", "\b(grani?t?e?|garg?o?y?l?e?|spir?e?|horse?c?l?a?n?|fayr?i?n?s?|steel?c?l?a?w?|cori?k?s?|ada?n?f?|ylo?n?o?|wyve?r?n?|rave?n?s?|fan?g?|cov?e?|shard?)\b")) then return
-               if ($roomid != 455) then gosub AUTOMOVE 455
-               if ($roomid != 455) then goto SHARD_PORTAL
-               gosub EKKO
-               pause 0.2
-               var ported 1
-               put go portal
-               wait
-               pause 0.4
-               pause 0.1
-               if (%ported == 0) then return
-               put #mapper reset
-               pause 0.4
-               if ($roomid == 0) then gosub RANDOMMOVE
-               if ($roomid == 0) then gosub RANDOMMOVE
-               if (matchre("%destination", "(mriss?|merk?r?e?s?h?)")) then goto ARRIVED
-          }
-## MERKRESH PORTAL ENTRANCE Zone 107 Room 273
-MERKRESH_PORTAL:
-     if ("$zoneid" == "107") then
-          {
-               if (matchre("%destination", "(mriss?|merk?r?e?s?h?)")) then return
-               pause 0.3
-               if ($roomid != 273) then gosub AUTOMOVE 273
-               if ($roomid != 273) then goto MERKRESH_PORTAL
-               gosub EKKO
-               pause 0.2
-               var ported 1
-               put go portal
-               wait
-               pause 0.4
-               pause 0.1
-               if (%ported == 0) then return
-               put #mapper reset
-               pause 0.4
-               if ($roomid == 0) then gosub RANDOMMOVE
-               if ($roomid == 0) then gosub RANDOMMOVE
-               if (matchre("%destination", "(rive?r?h?a?v?e?n?|have?n?|rossm?a?n?)")) then goto ARRIVED
-          }
-## RIVERHAVEN PORTAL ENTRANCE Zone 30 Room 331
-RIVERHAVEN_PORTAL:
-     if ("$zoneid" == "30") then
-          {
-               if (matchre("%destination", "(riverh?a?v?e?n?|haven|rossman)")) then return
-               pause 0.3
-               if ($roomid != 331) then gosub AUTOMOVE 331
-               if ($roomid != 331) then goto RIVERHAVEN_PORTAL
-               gosub EKKO
-               pause 0.2
-               var ported 1
-               put go portal
-               wait
-               pause 0.4
-               pause 0.1
-               if (%ported == 0) then return
-               put #mapper reset
-               pause 0.4
-               if ($roomid == 0) then gosub RANDOMMOVE
-               if ($roomid == 0) then gosub RANDOMMOVE
-               if (matchre("%destination", "(ratha?)")) then goto ARRIVED
-          }
-## RATHA PORTAL ENTRANCE Zone 90 Room 468
-RATHA_PORTAL:
-     if ("$zoneid" == "90") then
-          {
-               if (matchre("%destination", "(ratha?)")) then return
-               pause 0.3
-               if ($roomid != 468) then gosub AUTOMOVE 468
-               if ($roomid != 468) then goto RATHA_PORTAL
-               gosub EKKO
-               pause 0.2
-               var ported 1
-               put go portal
-               wait
-               pause 0.4
-               pause 0.1
-               if (%ported == 0) then return
-               put #mapper reset
-               pause 0.4
-               if ($roomid == 0) then gosub RANDOMMOVE
-               if ($roomid == 0) then gosub RANDOMMOVE
-               if (matchre("%destination", "(el'?b?a?i?n?s?|elbai?n?s?)")) then goto ARRIVED
-               if (matchre("%destination", "\b(ther?e?n?b?o?r?o?u?g?h?|lang?e?n?f?i?r?t?h?|el'?b?a?i?n?s?|elb?a?i?n?s?|raka?s?h?|thro?n?e?|forn?s?t?e?d?|hvar?a?l?)\b")) then
-                    {
-                         gosub clear
-                         goto THERENGIA
-                    }
-          }
-## ELBAINS PORTAL ENTRANCE Zone 40 Room 254
-ELBAINS_PORTAL:
-     if ("$zoneid" == "40") then
-          {
-               if (matchre("%destination", "\b(ther?e?n?b?o?r?o?u?g?h?|lang?e?n?f?i?r?t?h?|el'?b?a?i?n?s?|elb?a?i?n?s?|raka?s?h?|thro?n?e?|forn?s?t?e?d?|hvar?a?l?|el'?b?a?i?n?s?|elbai?n?s?|ross?m?a?n?s?)\b")) then return
-               if ($roomid != 254) then gosub AUTOMOVE 254
-               if ($roomid != 254) then goto ELBAINS_PORTAL
-               gosub EKKO
-               pause 0.2
-               var ported 1
-               put go portal
-               wait
-               pause 0.4
-               pause 0.1
-               if (%ported == 0) then return
-               put #mapper reset
-               pause 0.4
-               if ($roomid == 0) then gosub RANDOMMOVE
-               if ($roomid == 0) then gosub RANDOMMOVE
-               if (matchre("%destination", "(mus?p?a?r?i?)")) then goto ARRIVED
-          }
-## MUSPARI PORTAL ENTRANCE Zone 47 Room 97
-MUSPARI_PORTAL:
-     if ("$zoneid" == "47") then
-          {
-               if (matchre("%destination", "(mus?p?a?r?i?)")) then return
-               if ($roomid != 97) then gosub AUTOMOVE 97
-               if ($roomid != 97) then goto MUSPARI_PORTAL
-               gosub EKKO
-               pause 0.2
-               var ported 1
-               put go portal
-               wait
-               pause 0.4
-               pause 0.1
-               if (%ported == 0) then return
-               put #mapper reset
-               pause 0.4
-               if ($roomid == 0) then gosub RANDOMMOVE
-               if ($roomid == 0) then gosub RANDOMMOVE
-               if (matchre("%destination", "(hiba?r?n?h?v?i?d?a?r?)")) then goto ARRIVED
-               if (matchre("%destination", "\b(aing?h?a?z?a?l?|rave?n?s?|hib?a?r?n?h?v?i?d?a?r?|out?e?r?|inne?r?|boar?c?l?a?n?)\b")) then
-                    {
-                         gosub clear
-                         goto FORF
-                    }
-          }
-## HIBAR PORTAL ENTRANCE Zone 116 Room 188
-HIB_PORTAL:
-     if ("$zoneid" == "127") then gosub AUTOMOVE boar
-     if ("$zoneid" == "126") then gosub AUTOMOVE boar
-     put east
-     pause 0.5
-     pause 0.2
-     if ("$zoneid" == "116") then
-          {
-               if (matchre("%destination", "\b(aing?h?a?z?a?l?|rave?n?s?|hib?a?r?n?h?v?i?d?a?r?|out?e?r?|inne?r?|boar?c?l?a?n?|hiba?r?n?h?v?i?d?a?r?)\b")) then return
-               if ($roomid != 188) then gosub AUTOMOVE 188
-               if ($roomid != 188) then goto HIB_PORTAL
-               gosub EKKO
-               pause 0.2
-               var ported 1
-               put go portal
-               wait
-               pause 0.4
-               pause 0.1
-               if (%ported == 0) then return
-               put #mapper reset
-               pause 0.1
-               if ($roomid == 0) then gosub RANDOMMOVE
-               if ($roomid == 0) then gosub RANDOMMOVE
-               if (matchre("%destination", "cross?i?n?g?s?")) then goto ARRIVED
-               if (matchre("%destination", "\b(knif?e?c?l?a?n?|tige?r?c?l?a?n?|dirg?e?|arth?e?d?a?l?e?|kaer?n?a?|ilay?a?t?a?i?p?|illa?y?a?t?a?i?p?a?|taipa|leth?d?e?r?i?e?l?|acen?a?m?a?c?r?a?|vipe?r?s?|guar?d?i?a?n?s?|leuc?r?o?s?|malod?o?r?o?u?s?|bucc?a?|dokt?|sorr?o?w?s?|misens?e?o?r?|beis?s?w?u?r?m?s?|ston?e?c?l?a?n?|bone?w?o?l?f?|germ?i?s?h?d?i?n?|alfr?e?n?s?|cara?v?a?n?s?a?r?y?)\b")) then
-                    {
-                         gosub clear
-                         goto CROSSING
-                    }
-          }
-     goto CROSS_PORTAL
-###############################################################
-#### END OF PLAT PORTAL LOGIC
-###############################################################
+####  NECRO HANDLING  ####
 NECRO_PREP:
   if ("$guild" != "Necromancer") then return
   var donotcastlist The Crossing, Western Gate|Northeast Wilds, Outside Northeast Gate
@@ -3942,7 +2509,7 @@ USHNISH_GO22:
   if ($standing == 0) then gosub STAND
   if contains("$roomobjs", "low tunnel") then goto USHNISH_GO3
   gosub RETREAT
-  if ($roundtime > 0) then {pause $pauseTime}
+  if ($roundtime > 0) then pause $roundtime
   matchre USHNISH_GO3 ^At the bottom of the hollow, a low tunnel is revealed
   matchre USHNISH_GO22 ^You stop pushing
   send push boulder
@@ -4021,7 +2588,8 @@ AUTOMOVE:
   action (moving) on
   var Moving 0
   var randomloop 0
-  var Destination $0
+  var Destination $1
+  var Destination_room $2
   if (!(matchre("%Destination", "\b\d+\b")) && !(matchre("%Destination", "Map(\d+\w?)")) && !(matchre("%Destination", "\w+ (\d+-\d+)"))) then {
     gosub ECHO ERROR: Hanryu messed up the script call, tell him to fix it!
     exit
@@ -4051,7 +2619,8 @@ AUTOMOVE_FAILED:
   if (%automovefailCounter > 1) then put #mapper reset
   delay %command_pause
   if (($roomid == 0) || (%automovefailCounter > 2)) then gosub RANDOMMOVE
-
+echo why we failing
+  pause 10
 exit
 
   goto AUTOMOVE_GO
@@ -4065,6 +2634,9 @@ AUTOMOVE_RETURN:
 #make sure room loads
   delay %infiniteLoopProtection
 #check to see if you made it where you wanted to go
+if (%Destination_room == $roomname) then {
+    goto AUTOMOVE_RETURN_2
+} 
   if ((matchre("%Destination", "\b\d+\b")) && (%Destination != $roomid)) then goto AUTOMOVE_FAILED
   if (matchre("%Destination", "Map(\d+\w?\b)")) then {
     if ("$1" != "$zoneid") then goto AUTOMOVE_FAILED
@@ -4088,6 +2660,8 @@ MOVE:
   var lastmoved %Direction
 MOVE_RESUME:
   matchre MOVE_RETRY ^\.\.\.wait|^Sorry, you may only type|^Please wait\.|You are still stunned\.
+#double join
+  matchre MOVE_RESUME ^The .+? says, .Woah there
   matchre MOVE_RETURN_CHECK ^You can't (swim|move|climb) in that direction\.
   matchre MOVE_RESUME ^You make your way up the .*\.\s*Partway up, you make the mistake of looking down\.\s*Struck by vertigo, you cling to the .* for a few moments, then slowly climb back down\.
   matchre MOVE_RESUME ^You pick your way up the .*, but reach a point where your footing is questionable\.\s*Reluctantly, you climb back down\.

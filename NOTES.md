@@ -488,3 +488,33 @@ AUTODISEMBARK
 9 minutes transit
 1 minute at dock
 -------------------
+roomname: Hag's Crag, Widow's Respite (127-363)
+roomtitle: [Hag's Crag, Widow's Respite] (127-363)
+A deep firepit has been hacked into the frozen earth.  It is protected from the howling mountain winds by a circlet of small craggy rocks.  Grouped close to the firepit are huge tree trunks that have been cut in half lengthwise to provide crude, uncomfortable benches.
+You also see a wizened ranger and a frozen stump with a chiseled out hollow at its base.
+
+ARRIVAL:
+The ranger says, "I'm leaving shortly, returning to Therengia.  If you would like to accompany me for a safe trip there, just join me."  The ranger smiles.
+[JOIN WIZENED RANGER before it leaves if you would like to go to Therengia.]
+The ranger says, "I'm leaving shortly, returning to Forfedhdar.  If you would like to accompany me for a safe trip there, just join me."  The ranger smiles.
+[JOIN WIZENED RANGER before it leaves if you would like to go to Forfedhdar.]
+>join ranger
+The ranger says, "Woah there, sir.  I can only take a handful with me at a time.  It's going to cost you if you want to come along.  I'll accept 5000 copper Dokoras."
+>
+>join ranger
+The ranger says, "Alright.  That'll be 5000 Dokoras."  You hand over your funds and step closer.  You join the ranger.  "Right this way, sir."
+  
+roomname: Hag's Crag, Widow's Respite (127-363)
+roomtitle: [Alongside a Wizened Ranger] (127-363)
+You are in the company of a wizened Dwarven ranger who has been hired to assist you with the arduous passage across the Therengia-Forfedhdar border.
+
+NO AUTODISEMBARK MESSAGE
+roomname: Hag's Crag, Widow's Respite (127-363)
+roomtitle: [Svesinek Cels, Blocked Canyon] (127-363)
+The distance between the surrounding hills is narrower and the gentleness of the slope disappears, exchanged for high bluffs on either side.  The result of this geographical change is that the pleasant countryside is now a narrow canyon overshadowed by enormous rock formations.  A huge boulder has crashed down on the roadway and blocks access through the canyon at this point.
+You also see a wizened ranger.
+
+AUTODISEMBARK
+8 minutes transit
+1.5 minute at dock
+-------------------
