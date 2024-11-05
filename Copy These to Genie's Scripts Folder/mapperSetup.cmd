@@ -13,7 +13,7 @@ put#var automapper.typeahead 1
 #    Time to pause before sending a "put x" command
 #var automapper.pause 0.01
 #  Infinite Loop Protection
-#    Increase if you get infinte loop errors
+#    Increase if you get infinite loop errors
 #var automapper.loop 0.001
 #  Waiteval Time Out
 #    prevents waiting forever for wave to collapse
@@ -75,13 +75,17 @@ put #var automapper.UserWalkSuccess ~~TeXtToMaTcH~~
 ####  TRAVEL Setup!  ####
 put #var TRAVEL.GroupShortCutsAnyway True
 put #var TRAVEL.verbose True
-put #var TRAVEL.RossmanNorth 200
-put #var TRAVEL.RossmanSouth 90
-put #var TRAVEL.Faldesu 190
-put #var TRAVEL.Segoltha 550
-put #var TRAVEL.UnderGondola 515
-put #var TRAVEL.UnderSegoltha 515
-put #var TRAVEL.muspari 2000
+put #var TRAVEL.RossmanJantspyreNorth 200
+put #var TRAVEL.RossmanJantspyreSouth 90
+put #var TRAVEL.RiverhavenFaldesu 190
+put #var TRAVEL.CrossingSegoltha 550
+put #var TRAVEL.ShardUnderGondola 550
+put #var TRAVEL.Crossing5thPassage 50
+put #var TRAVEL.HaizenCugisDesert 800
+put #var TRAVEL.ShardWalls 350
+put #var TRAVEL.ShardSewageEntrance 300
+put #var TRAVEL.CrossingWall 350
+put #var TRAVEL.BoarArchersFord 160
 #Bags
 #  When travel needs to stow stuff, where does it go?
 put #var TRAVEL.mainBag $container_default

@@ -33,35 +33,41 @@ CITIZENSHIP:
   return
 ####
 #### set premie status ####
-PREMIUM_CHECK:
-  gosub ECHO Checking Premium
-  match PREMIUM_YES Account Status: Premium
+SUBSCRIPTION_CHECK:
+  gosub ECHO Checking Account Status
+  match PREMIUM Account Status: Premium
+  match PLATINUM Account Status: Platinum
   match PREMIUM_NO Current Account Status: Basic
   match PREMIUM_NO Current Account Status: F2P
   put played
   matchwait 5
   goto PREMIUM_NO
 PREMIUM_NO:
-  put #var premium 0
+  put #var subscription Basic
   return
-PREMIUM_YES:
-  put #var premium 1
+PLATINUM:
+  put #var subscription Platinum|Premium
   gosub ECHO Premium Enabled!
   if !matchre("$game", "DRX") then return
-PREMIUM_TIME:
-  var premtime 0
-  matchre PREMIUM_SET ^You have a cumulative Premium time of (\d+) months\.
-  matchre PREMIUM_SET ^You have a cumulative Platinum time of (\d+) months\.
+  goto SUBSCRIPTION_TIME
+PREMIUM:
+  put #var subscription Premium
+  gosub ECHO Premium Enabled!
+  return
+SUBSCRIPTION_TIME:
+  var Subtime 0
+  matchre SUBSCRIPTION_SET ^You have a cumulative Premium time of (\d+) months\.
+  matchre SUBSCRIPTION_SET ^You have a cumulative Platinum time of (\d+) months\.
   put premium 10
   matchwait 5
   return
-PREMIUM_SET:
-  var premtime $1
-  if (%premtime >= 6) then {
+SUBSCRIPTION_SET:
+  var Subtime $1
+  if (%Subtime >= 6) then {
     var portal 1
     if matchre("$game", "DRX") then gosub ECHO Using Plat Portals!
   }
-  return
+return
 ####
 ####  Get wealth, and if first time set guild/circle
 INFO_CHECK:
@@ -79,9 +85,8 @@ INFO_CHECK:
 #### gosub ECHO Some|multi|line text|box
 #### initial idea by Hanryu, Jon fixed it for genie
 ECHO:
-
-debug 0
-
+  var TESTVAR 25
+  eval TESTVAR2 %TESTVAR - 1
   var echoVar $0
   if !matchre("%echoVar", "\|") then {
     eval border replacere("%echoVar", ".", "~")
@@ -90,11 +95,8 @@ debug 0
     put #echo %color {  %echoVar  }
     put #echo %color <~~%border~~>
     put #echo
-
-# debug 5
-
     return
-  } else {
+  }
     eval echoVarLines count("%echoVar", "|")
     var c 0
     var lineMaxLen 0
@@ -106,31 +108,37 @@ debug 0
     PADRIGHT:
       if (%c <= 0) then goto PRINTBOX
       math c subtract 1
+      if ("$client" == "Outlander") then {
+        eval temp %c % %TESTVAR
+        if (%temp == %TESTVAR2) then delay %infiniteLoopProtection
+      }
       if (len(%line%c) = %lineMaxLen) then goto PADRIGHT
       eval whiteLoopVar %lineMaxLen - len(%line%c)
       WHITERIGHT:
         var line%c %line%c_
         math whiteLoopVar subtract 1
-        eval temp %whiteLoopVar % 50
-        if (%temp == 49) then delay %infiniteLoopProtection
+        if ("$client" == "Outlander") then {
+          eval temp %whiteLoopVar % %TESTVAR
+          if (%temp == %TESTVAR2) then delay %infiniteLoopProtection
+        }
         if (%whiteLoopVar > 0) then goto WHITERIGHT
         eval line%c replacere("%line%c", "_", " ")
         goto PADRIGHT
     PRINTBOX:
       eval border replacere("%line%c", ".", "~")
       put #echo
-      put #echo %color <~~~%border~~~>
+      put #echo %color <~~%border~~>
       PRINTBOXLOOP:
         put #echo %color {  %line%c  }
         math c add 1
+        if ("$client" == "Outlander") then {
+          eval temp %c % %TESTVAR
+          if (%temp == %TESTVAR2) then delay %infiniteLoopProtection
+        }
         if (%c <= %echoVarLines) then goto PRINTBOXLOOP
-      put #echo %color <~~~%border~~~>
+      put #echo %color <~~%border~~>
       put #echo
-
-debug 0
-
-      return
-  }
+  return
 ####
 #### Do a thing
 ACTION_WAIT:

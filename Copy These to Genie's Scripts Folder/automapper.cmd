@@ -397,7 +397,7 @@ if matchre("%1", "help|HELP|Help|^$") then {
   put #echo %helpecho {      Time to pause before sending a "put x" command              }
   put #echo %helpecho {      #var automapper.pause 0.01                                  }
   put #echo %helpecho {    Infinite Loop Protection                                      }
-  put #echo %helpecho {      Increase if you get infinte loop errors                     }
+  put #echo %helpecho {      Increase if you get infinite loop errors                     }
   put #echo %helpecho {      #var automapper.loop 0.001                                  }
   put #echo %helpecho {    Waiteval Time Out                                             }
   put #echo %helpecho {      prevents waiting forever for wave to collapse               }
@@ -490,7 +490,7 @@ ABSOLUTE_TOP:
   if !def(automapper.color) then var color #33CC99
   else var color $automapper.color
   if matchre("$client", "Genie") then var color %color mono
-# Decrease at your own risk, increase if you get infinte loop errors
+# Decrease at your own risk, increase if you get infinite loop errors
 #default is 0.1 for Outlander, 0.001 for Genie
   var infiniteLoopProtection 0.1
   if def(client) then {

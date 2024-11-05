@@ -2,7 +2,7 @@
 var version 6.2024-11-04
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
- debug 5
+# debug 5
 # use '.travel help' from the command line for variables and more
 # POWER TRAVEL SCRIPT FOR GENIE 4 ~ TRAVELS TO/FROM ALMOST ~ANYWHERE~ IN DRAGONREALMS
 # CAN START SCRIPT FROM ANYWHERE IN THE GAME
@@ -56,7 +56,7 @@ var version 6.2024-11-04
 #################################################################################
 ####  DONT TOUCH ANYTHING BELOW THIS LINE UNLESS YOU KNOW WHAT YOU'RE DOING  ####
 #################################################################################
-include mapperINC
+include mapperINC.cmd
 # checks for outlander v. genie, outlander does not suppor the `mono` flag
 if (matchre("$client", "Genie")) then var helpecho #33CC99 mono
 if (matchre("$client", "Outlander")) then var helpecho #33CC99
@@ -88,38 +88,59 @@ if (matchre("%1", "help|HELP|Help|^$")) then {
   put #echo %helpecho {      #var TRAVEL.bagMain backpack                                     }
   put #echo %helpecho {      #var TRAVEL.backupBag duffelbag                                  }
   put #echo %helpecho {                                                                       }
-  put #echo %helpecho {  Ranks to use Rossman's shortcut to swim the Jantspyre River          }
-  put #echo %helpecho {    North is ~safe~ around 200 and POSSIBLE ~175 W/ no armor           }
-  put #echo %helpecho {    South is much easier, safe at ~90                                  }
-  put #echo %helpecho {    #var TRAVEL.RossmanNorth 200                                       }
-  put #echo %helpecho {    #var TRAVEL.RossmanSouth 90                                        }
+  put #echo %helpecho {  Athletics Variables                                                  }
+  put #echo %helpecho {    Ranks to use Rossman's shortcut to swim the Jantspyre River        }
+  put #echo %helpecho {      North is ~safe~ around 200 and POSSIBLE ~175 W/ no armor         }
+  put #echo %helpecho {      South is much easier, safe at ~90                                }
+  put #echo %helpecho {      #var TRAVEL.RossmanJantspyreNorth 200                            }
+  put #echo %helpecho {      #var TRAVEL.RossmanJantspyreSouth 90                             }
   put #echo %helpecho {                                                                       }
-  put #echo %helpecho {  Ranks to swim the Faldesu River - Haven <-> NTR                      }
-  put #echo %helpecho {    Safe ~ 190                                                         }
-  put #echo %helpecho {    Possible ~ 160+ w/ no burden/buffs                                 }
-  put #echo %helpecho {    #var TRAVEL.Faldesu 190                                            }
+  put #echo %helpecho {    Ranks to swim the Faldesu River - Haven <-> NTR                    }
+  put #echo %helpecho {      Safe ~ 190                                                       }
+  put #echo %helpecho {      Possible ~ 160+ w/ no burden/buffs                               }
+  put #echo %helpecho {      #var TRAVEL.RiverhavenFaldesu 190                                }
   put #echo %helpecho {                                                                       }
-  put #echo %helpecho {  Ranks to swim the Segoltha River - Tiger/Crossing <-> STR            }
-  put #echo %helpecho {    Safe ~ 550                                                         }
-  put #echo %helpecho {    Possible ~ 530+ w/ no burden/buffs                                 }
-  put #echo %helpecho {    #var TRAVEL.Segoltha 550                                           }
+  put #echo %helpecho {    Ranks to swim the Segoltha River - Tiger/Crossing <-> STR          }
+  put #echo %helpecho {      Safe ~ 550                                                       }
+  put #echo %helpecho {      Possible ~ 530+ w/ no burden/buffs                               }
+  put #echo %helpecho {      #var TRAVEL.CrossingSegoltha 550                                 }
   put #echo %helpecho {                                                                       }
-  put #echo %helpecho {  Ranks to climb Under Gondola shortcut                                }
-  put #echo %helpecho {    Safe ~ 510                                                         }
-  put #echo %helpecho {    Possible ~ 480+ w/ buffs and a rope                                }
-  put #echo %helpecho {    #var TRAVEL.UnderGondola 515                                       }
+  put #echo %helpecho {    Ranks to climb Under Gondola shortcut                              }
+  put #echo %helpecho {      Safe ~ 510                                                       }
+  put #echo %helpecho {      Possible ~ 480+ w/ buffs and a rope                              }
+  put #echo %helpecho {      #var TRAVEL.ShardUnderGondola 515                                }
   put #echo %helpecho {                                                                       }
-  put #echo %helpecho {  Ranks to use 5th passage, Under-Segoltha (THIEF only)                }
-  put #echo %helpecho {    Safe ~ 50                                                          }
-  put #echo %helpecho {    Possible ~ 35 w/ no burden/buffs                                   }
-  put #echo %helpecho {    #var TRAVEL.UnderSegoltha 515                                      }
+  put #echo %helpecho {    Ranks to use 5th passage, Under-Segoltha (THIEF only)              }
+  put #echo %helpecho {      Safe ~ 50                                                        }
+  put #echo %helpecho {      Possible ~ 35 w/ no burden/buffs                                 }
+  put #echo %helpecho {      #var TRAVEL.Crossing5thPassage 515                               }
   put #echo %helpecho {                                                                       }
-  put #echo %helpecho {  Ranks for Velka Desert Shortcut - Hvaral <-> Muspar'i                }
-  put #echo %helpecho {    THIS IS THE HARDEST SHORTCUT IN THE GAME                           }
-  put #echo %helpecho {    FRIENDS DON'T LET FRIENDS WALK TO MUSPAR'I, USE THE BLIMP          }
-  put #echo %helpecho {    Safe ~ 800                                                         }
-  put #echo %helpecho {    Possible ~ 760 w/ buffs                                            }
-  put #echo %helpecho {    #var TRAVEL.muspari 2000                                           }
+  put #echo %helpecho {    Ranks for Velka Desert Shortcut - Hvaral <-> Muspar'i              }
+  put #echo %helpecho {      THIS IS THE HARDEST SHORTCUT IN THE GAME                         }
+  put #echo %helpecho {      FRIENDS DON'T LET FRIENDS WALK TO MUSPAR'I, USE THE BLIMP        }
+  put #echo %helpecho {      Safe ~ 800                                                       }
+  put #echo %helpecho {      Possible ~ 760 w/ buffs                                          }
+  put #echo %helpecho {      #var TRAVEL.HaizenCugisDesert 2000                               }
+  put #echo %helpecho {                                                                       }
+  put #echo %helpecho {    Ranks to climb the Shard Walls at night                            }
+  put #echo %helpecho {      Safe ~ 350                                                       }
+  put #echo %helpecho {      Possible ~ 320 w/ buffs                                          }
+  put #echo %helpecho {      #var TRAVEL.ShardWalls 350                                       }
+  put #echo %helpecho {                                                                       }
+  put #echo %helpecho {    Ranks to climb the Crossing Walls                                  }
+  put #echo %helpecho {      Safe ~ 350                                                       }
+  put #echo %helpecho {      Possible ~ 320 w/ buffs                                          }
+  put #echo %helpecho {      #var TRAVEL.CrossingWall 350                                     }
+  put #echo %helpecho {                                                                       }
+  put #echo %helpecho {    Ranks to swim to Boar Clan                                         }
+  put #echo %helpecho {      Safe ~ 160                                                       }
+  put #echo %helpecho {      Possible ~ 140 w/ buffs                                          }
+  put #echo %helpecho {      #var TRAVEL.BoarArchersFord 160                                  }
+  put #echo %helpecho {                                                                       }
+  put #echo %helpecho {    Ranks to swim into Shard South Gate                                }
+  put #echo %helpecho {      Safe ~ 300                                                       }
+  put #echo %helpecho {      Possible ~ 290 w/ buffs                                          }
+  put #echo %helpecho {      #var TRAVEL.ShardSewageEntrance 300                              }
   put #echo %helpecho {                                                                       }
   put #echo %helpecho {  try `.automapper help` for help with automapper variables            }
   put #echo %helpecho {    there is commonality-these variables will affect how travel works  }
@@ -277,7 +298,7 @@ if (matchre("%1", "help|HELP|Help|^$")) then {
 # - Added travel  to and from Muspari
 # - Added Passport check / Sand Barge to Muspari
 ##########################################
-INIT:
+####  LOAD ACTIONS  ####
 action goto NOPASSPORT when No one proceeds through this checkpoint without a passport
 action goto NOCOIN when You haven't got enough (?:.+) to pay for your trip\.|You reach your funds, but realize you're short\.|\"Hey,\"\s+he says,\s+\"You haven't got enough Lirums to pay for your trip\.
 action (moving) var Moving 1 when ^Obvious (?:paths|exits)|^\s*[\[\(]?Roundtime\s*\:?
@@ -343,9 +364,46 @@ action var burden 8 when ^\s*Encumbrance\s*\:\s*Extremely Overburdened
 action var burden 9 when ^\s*Encumbrance\s*\:\s*Tottering Under Burden
 action var burden 10 when ^\s*Encumbrance\s*\:\s*Are you even able to move\?
 action var burden 11 when ^\s*Encumbrance\s*\:\s*It's amazing you aren't squashed\!
-
+####  LOAD VARS  ####
 var destination %1
+shift
 if ("%destination" == "") then goto NODESTINATION
+# add in handling for starting in a named "Subzone"
+var Starting_Zone Map$zoneidArray
+var Ending_Zone Map%1Array
+# .travel2 crossing 1 rangers
+# .travel2 Wyvern 69 513
+if ("%Ending_Zone" = "%Starting_Zone") then goto ARRIVED
+if ("%Ending_Zone" = "MapArray") then goto NODESTINATION
+if ("%Starting_Zone" = "") then {
+  put #mapper reset
+  pause
+  var Starting_Zone Map$zoneidArray
+  if ("%Starting_Zone" = "") then {
+    echo unknown starting map
+    exit
+  }
+}
+var Map_to_Map_Maps
+var Map_to_Map_Vars
+var Map_to_Map_Paths
+var Map_to_Map_Nodes
+var Maps |
+var Arc_Queue |
+var i_Arc_Queue 0
+var Path_Map
+var Path_Part
+var Path_Weight
+var Path_Paths
+var Path_Arcs
+var Path_Names
+var Path_Rooms
+
+var Current_Zone %Starting_Zone
+var Link%Current_Zone 0|LinkMap0Array
+var LinkMap0Array 0|0
+var AthleticsChecks ShardWalls|ShardSewageEntrance|CrossingWall|ShardUnderGondola|Crossing5thPassage|HaizenCugisDesert|CrossingSegoltha|RiverhavenFaldesu|RossmanJantspyreNorth|RossmanJantspyreSouth|BoarArchersFord
+
 var burden 0
 var passport 0
 var Kronars 0
@@ -361,27 +419,60 @@ var TherenCoin 300
 var BoarNeeded 300
 var ToRatha 0
 var SkirrChecked 0
+var Guild
+var Citizenship
+var Subscription
+var Game
+var Courage
+var Moons
+
+if !def(TRAVEL.RossmanJantspyreNorth) then var RossmanJantspyreNorth 200
+else var RossmanJantspyreNorth $TRAVEL.RossmanJantspyreNorth
+if !def(TRAVEL.RossmanJantspyreSouth) then var RossmanJantspyreSouth 90
+else var RossmanJantspyreSouth $TRAVEL.RossmanJantspyreSouth
+if !def(TRAVEL.RiverhavenFaldesu) then var RiverhavenFaldesu 190
+else var RiverhavenFaldesu $TRAVEL.RiverhavenFaldesu
+if !def(TRAVEL.CrossingSegoltha) then var CrossingSegoltha 550
+else var CrossingSegoltha $TRAVEL.CrossingSegoltha
+if !def(TRAVEL.ShardUnderGondola) then var ShardUnderGondola 550
+else var ShardUnderGondola $TRAVEL.ShardUnderGondola
+if !def(TRAVEL.Crossing5thPassage) then var Crossing5thPassage 50
+else var Crossing5thPassage $TRAVEL.Crossing5thPassage
+if !def(TRAVEL.HaizenCugisDesert) then var HaizenCugisDesert 800
+else var HaizenCugisDesert $TRAVEL.HaizenCugisDesert
+if !def(TRAVEL.ShardWalls) then var ShardWalls 350
+else var ShardWalls $TRAVEL.ShardWalls
+if !def(TRAVEL.ShardSewageEntrance) then var ShardSewageEntrance 300
+else var ShardSewageEntrance $TRAVEL.ShardSewageEntrance
+if !def(TRAVEL.CrossingWall) then var CrossingWall 350
+else var CrossingWall $TRAVEL.CrossingWall
+if !def(TRAVEL.BoarArchersFord) then var BoarArchersFord 160
+else var BoarArchersFord $TRAVEL.BoarArchersFord
+
+if (($joined == 1) && ($TRAVEL.GroupShortCutsAnyway == False)) then {
+  var ShardWalls 2000
+  var ShardSewageEntrance 2000
+  var CrossingWall 2000
+  var ShardUnderGondola 2000
+  var Crossing5thPassage 2000
+  var HaizenCugisDesert 2000
+  var CrossingSegoltha 2000
+  var RiverhavenFaldesu 2000
+  var RossmanJantspyreNorth 2000
+  var RossmanJantspyreSouth 2000
+  var BoarArchersFord 2000
+  var Citizenship None
+  var Subscription Basic
+  if (%verbose) then gosub ECHO You are in a group!  You will NOT be taking the gravy short cuts today!
+}
+
 var starting MAP:$zoneid | ROOM:$roomid
 if (!def(guild) || !def(circle)) then action (guildcircle) on
 gosub INFO_CHECK
-if !def(premium) then gosub PREMIUM_CHECK
+if !def(subscription) then gosub SUBSCRIPTION_CHECK
+var Subscription $subscription
 if !def(citizenship) then gosub CITIZENSHIP
-var shardCitizen False
-if (matchre("$citizenship", "Shard")) then var shardCitizen True
-if !def(travel.rossmanNorth) then var rossmanNorth 200
-else var rossmanNorth $travel.rossmanNorth
-if !def(travel.rossmanSouth) then var rossmanSouth 90
-else var rossmanSouth $travel.rossmanSouth
-if !def(travel.faldesu) then var faldesu 190
-else var faldesu $travel.faldesu
-if !def(travel.segoltha) then var segoltha 550
-else var segoltha $travel.segoltha
-if !def(travel.underGondola) then var underGondola 515
-else var underGondola $travel.underGondola
-if !def(travel.underSegoltha) then var underSegoltha 50
-else var underSegoltha $travel.underSegoltha
-if !def(travel.muspari) then var muspari 2000
-else var muspari $travel.muspari
+var Citizenship $citizenship
 # what color do you want for echos?
 if !def(automapper.color) then var color #B3FF66
 else var color $automapper.color
@@ -392,7 +483,7 @@ else var command_pause $automapper.pause
 # verbosity
 if !def(TRAVEL.verbose) then var verbose 1
 else var verbose $TRAVEL.verbose
-# Decrease at your own risk, increase if you get infinte loop errors
+# Decrease at your own risk, increase if you get infinite loop errors
 #default is 0.1 for Outlander, 0.001 for Genie
 var infiniteLoopProtection 0.1
 if def(client) then {
@@ -406,6 +497,8 @@ if (def(TRAVEL.mainBag) && def(TRAVEL.backupBag)) then {
 } else {
   gosub BAG_CHECK
 }
+####  end LOAD VARS  ####
+#### TOP, let's get started ####
 TOP:
 timer clear
 timer start
@@ -418,20 +511,8 @@ if !def(Athletics.Ranks) then {
   waitforre ^EXP HELP|^Overall state
   pause %command_pause
 }
-if (!def(Athletics.Ranks) || ($Athletics.Ranks == 0)) then {
-  gosub ECHO Still not registering Athletics.Ranks!!! Make sure you have the EXPTracker Plugin!!|Going for it anyway - But this will cause you to skip Athletics Shortcuts!
-}
+if (!def(Athletics.Ranks) || ($Athletics.Ranks == 0)) then gosub ECHO Still not registering Athletics.Ranks!!! Make sure you have the EXPTracker Plugin!!|Going for it anyway - But this will cause you to skip Athletics Shortcuts!
 if ($hidden) then gosub UNHIDE
-if (($joined == 1) && ($travel.GroupShortCutsAnyway == False)) then {
-  var rossmanNorth 2000
-  var rossmanSouth 2000
-  var faldesu 2000
-  var segoltha 2000
-  var underGondola 2000
-  var underSegoltha 2000
-  var shardCitizen False
-  if (%verbose) then gosub ECHO You are in a group!  You will NOT be taking the gravy short cuts today!
-}
 START:
 action (moving) on
 if (%verbose) then {
@@ -460,12 +541,12 @@ eval destination tolower("%destination")
 ## THIS CHECKS IF WE ARE STARTING FROM A KNOWN MAZE / MESSED UP AREA THAT AUTOMAPPER GETS LOST IN
 ## THEN USES SPECIAL ESCAPE LOGIC TO GET TO A KNOWN LOCATION THAT AUTOMAPPER CAN USE BEFORE STARTING SCRIPT
 if (matchre("$roomname", "The Raven's Court")) then gosub AUTOMOVE 74
-if (("$zoneid" == "47") && ($Athletics.Ranks >= %muspari.shortcut) && (!matchre("%destination", "\b(?:musp?a?r?i?)"))) then gosub VELAKA_SHORTCUT
+if (("$zoneid" == "47") && ($Athletics.Ranks >= %HaizenCugisDesert) && matchre("%destination", "\b(?:musp?a?r?i?)")) then gosub VELAKA_SHORTCUT
 if (matchre("$roomname", "(?:Velaka, Slot Canyon|Yeehar's Graveyard|Heru Taipa)")) then gosub AUTOMOVE 66
 if (matchre("$roomname", "(?:Wyvern Mountain, Cavern|Wyvern Mountain, Dragon Shrine|Wyvern Mountain, Raised Dais)")) then gosub SHARD_FAVOR_ESCAPE
 if (matchre("$roomname", "(?:Cavern of Glass|Aldauth's Lair)")) then gosub ALDAUTH_ESCAPE
 if (matchre("$roomname", "Ehhrsk Highway")) then gosub EHHRSK_ESCAPE
-if ((matchre("$roomname", "Zaulfung, Swamp")) && (matchre("$roomdesc", "Rancid mire"))) then gosub ZAULFUNG_ESCAPE
+if (matchre("$roomname", "Zaulfung, Swamp") && matchre("$roomdesc", "Rancid mire")) then gosub ZAULFUNG_ESCAPE
 if (matchre("$roomname", "Zaulfung, Trackless Swamp")) then gosub ZAULFUNG_ESCAPE_2
 if (matchre("$roomname", "Velaka Desert")) then gosub VELAKA_ESCAPE
 if (matchre("$roomname", "Undershard")) then gosub WARRENS_ESCAPE
@@ -487,7 +568,7 @@ if (matchre("$roomname", "Maelshyve's Fortress, Inner Sanctum")) then gosub MAEL
 if (matchre("$roomname", "(?:Maelshyve's Fortress, Hall of Malice|Glutton's Rest|Fallen Altar|Great Dais|Inner Sanctum)")) then gosub MAELSHYVE_FORTRESS_ESCAPE
 if (matchre("$roomname", "(?:Charred Caverns|Beneath the Zaulfung|Maelshyve's Threshold)")) then gosub BENEATH_ZAULFUNG_ESCAPE
 if (matchre("$roomname", "(?:Zaulfung, Dense Swamp|Kweld Gelvdael|Zaulfung, Urrem'tier's Spire|Zaulfung, Crooked Treetop)")) then gosub ZAULFUNG_ESCAPE_0
-if ((matchre("$roomname", "Zaulfung, Swamp")) && (matchre("$roomdesc", "Rancid mire"))) then gosub ZAULFUNG_ESCAPE
+if (matchre("$roomname", "Zaulfung, Swamp") && matchre("$roomdesc", "Rancid mire")) then gosub ZAULFUNG_ESCAPE
 if (matchre("$roomname", "Zaulfung, Trackless Swamp")) then gosub ZAULFUNG_ESCAPE_2
 if (matchre("$roomname", "Velaka, Dunes")) then gosub VELAKADUNES_ESCAPE
 ## CHECK TO SEE IF SCRIPT IS STARTED ON BOARD CERTAIN FERRIES - IF SO INITIATE FERRY LOGIC
@@ -519,10 +600,12 @@ if (("$zoneid" == "34") && ($roomid > 89) && ($roomid < 116)) then {
 ##################
 ###Pather Start###
 ##################
-gosub Load
+
+debug 5
+
 gosub Paths
 
-if (def(travel.test) && ($travel.test = 1)) then {
+if (def(TRAVEL.test) && ($TRAVEL.test = 1)) then {
     pause
     echo %Path_Weight
     echo %Path_Paths
@@ -530,87 +613,94 @@ if (def(travel.test) && ($travel.test = 1)) then {
     echo %Path_Names
     echo %Path_Rooms
     exit
-} 
+}
 
 var i_Path 0
 Travel_Path:
-if ("%Path_Arcs(%i_Path)" != "") then {
-  gosub automove %Path_Arcs(%i_Path) "%Path_Rooms(%i_Path)"
-  math i_Path add 1
-  goto Travel_Path
-}
-goto ARRIVED
-
+  if ("%Path_Arcs(%i_Path)" != "") then {
+    gosub automove %Path_Arcs(%i_Path) "%Path_Rooms(%i_Path)"
+    math i_Path add 1
+    goto Travel_Path
+  }
+  goto ARRIVED
 
 Paths:
-    if !(matchre("%Maps", "\|%Current_Zone\|")) then {
-            gosub %Current_Zone
-        var Maps %Maps%Current_Zone|
-    }
-    if ("%Arc_Queue(1)" != "") then {
-        gosub Arc_Queue
-        if ("%Current_Zone" != "") then goto Paths
-    }
-goto Link_Paths
+  if ("$client" == "Outlander") then delay %infiniteLoopProtection
+  if !(matchre("%Maps", "\|%Current_Zone\|")) then {
+    gosub %Current_Zone
+    var Maps %Maps%Current_Zone|
+  }
+  if ("%Arc_Queue(1)" != "") then {
+    gosub Arc_Queue
+    if ("%Current_Zone" != "") then goto Paths
+  }
+  goto Link_Paths
 
 Arc_Queue:
-    var i_Arc_Queue 1
-    var j_Arc_Queue 0
-    var t_Arc_Queue 
-    var Next_Shortest_Path
-    Pick_Shortest_Path:
-        eval t_Arc_Queue replacere("%Arc_Queue(%i_Arc_Queue)", ";", "|")
-        if (%j_Arc_Queue != 0) then {
-            if (%t_Arc_Queue(1) < %Next_Shortest_Path) then {
-                var Next_Shortest_Path %t_Arc_Queue(1)
-                var Current_Zone %t_Arc_Queue(0)
-                var j_Arc_Queue %i_Arc_Queue
-            }
-        } else {
-            var Next_Shortest_Path %t_Arc_Queue(1)
-            var Current_Zone %t_Arc_Queue(0)
-            var j_Arc_Queue %i_Arc_Queue
-        }
-        math i_Arc_Queue add 1
-        if ("%Arc_Queue(%i_Arc_Queue)" != "") then goto Pick_Shortest_Path
-        eval Arc_Queue replacere("%Arc_Queue", "\|%Current_Zone;[^\|]+\|", "|")
+  var i_Arc_Queue 1
+  var j_Arc_Queue 0
+  var t_Arc_Queue 
+  var Next_Shortest_Path
+  Pick_Shortest_Path:
+    eval t_Arc_Queue replacere("%Arc_Queue(%i_Arc_Queue)", ";", "|")
+    if (%j_Arc_Queue != 0) then
+    {
+      if (%t_Arc_Queue(1) < %Next_Shortest_Path) then
+      {
+        var Next_Shortest_Path %t_Arc_Queue(1)
+        var Current_Zone %t_Arc_Queue(0)
+        var j_Arc_Queue %i_Arc_Queue
+      }
+    }
+    else
+    {
+      var Next_Shortest_Path %t_Arc_Queue(1)
+      var Current_Zone %t_Arc_Queue(0)
+      var j_Arc_Queue %i_Arc_Queue
+    }
+    math i_Arc_Queue add 1
+
+              if ("$client" == "Outlander") then delay %infiniteLoopProtection
+
+    if ("%Arc_Queue(%i_Arc_Queue)" != "") then goto Pick_Shortest_Path
+    eval Arc_Queue replacere("%Arc_Queue", "\|%Current_Zone;[^\|]+\|", "|")
 return
 
 Link_Paths:
-    var Previous_Zone %Ending_Zone
-    if !(matchre("%Maps", "\|%Previous_Zone\|")) then {
-        echo No path to destination
-        exit
+  var Previous_Zone %Ending_Zone
+  if !(matchre("%Maps", "\|%Previous_Zone\|")) then {
+    echo No path to destination
+    exit
+  }
+  Link_Paths_Loop:
+    eval Current_Zone replacere("%Link%Previous_Zone", "^.*\|Link", "")
+    var Path_Map %%Current_Zone_to_%Previous_Zone
+    var Path_Paths %Current_Zone_to_%Previous_Zone|%Path_Paths
+    var Path_Part %Path_Map(0)
+    var Path_Weight %Path_Part|%Path_Weight
+    var Path_Part %Path_Map(2)
+    var Path_Arcs %Path_Part|%Path_Arcs
+    var Path_Part %Path_Map(3)
+    var Path_Names %Path_Part|%Path_Names
+    var Path_Part %Path_Map(4)
+    var Path_Rooms %Path_Part|%Path_Rooms
+    if ("%Current_Zone" != "") && ("%Current_Zone" != "%Starting_Zone") then {
+      var Previous_Zone %Current_Zone
+      goto Link_Paths_Loop
     }
-    Link_Paths_Loop:
-        eval Current_Zone replacere("%Link%Previous_Zone", "^.*\|Link", "")
-        var Path_Map %%Current_Zone_to_%Previous_Zone
-        var Path_Paths %Current_Zone_to_%Previous_Zone|%Path_Paths
-        var Path_Part %Path_Map(0)
-        var Path_Weight %Path_Part|%Path_Weight
-        var Path_Part %Path_Map(2)
-        var Path_Arcs %Path_Part|%Path_Arcs
-        var Path_Part %Path_Map(3)
-        var Path_Names %Path_Part|%Path_Names
-        var Path_Part %Path_Map(4)
-        var Path_Rooms %Path_Part|%Path_Rooms
-        if ("%Current_Zone" != "") && ("%Current_Zone" != "%Starting_Zone") then {
-            var Previous_Zone %Current_Zone
-            goto Link_Paths_Loop
-        }
 return
 
 Map_to_Map:
-    var Map_to_Map $1
-    var Map_to_Map_Vars $0
-    eval Map_to_Map_Vars replacere("%Map_to_Map_Vars", "^%Map_to_Map ", "")
-    eval Map_to_Map_Maps replacere("%Map_to_Map", "_to_", "|")
-    if (matchre("%Maps", "\|%Map_to_Map_Maps(1)\|")) then return
-    gosub Check_Distance %Map_to_Map_Maps(0) %Map_to_Map_Maps(1) %Map_to_Map_Vars(0) %Map_to_Map_Vars(1)
-    if (%updt_time == 1) then {
-        var %Map_to_Map %Map_to_Map_Vars
-        var Arc_Queue %Arc_Queue%Map_to_Map_Maps(1);%chk_curSet|
-    }
+  var Map_to_Map $1
+  var Map_to_Map_Vars $0
+  eval Map_to_Map_Vars replacere("%Map_to_Map_Vars", "^%Map_to_Map ", "")
+  eval Map_to_Map_Maps replacere("%Map_to_Map", "_to_", "|")
+  if (matchre("%Maps", "\|%Map_to_Map_Maps(1)\|")) then return
+  gosub Check_Distance %Map_to_Map_Maps(0) %Map_to_Map_Maps(1) %Map_to_Map_Vars(0) %Map_to_Map_Vars(1)
+  if (%updt_time == 1) then {
+    var %Map_to_Map %Map_to_Map_Vars
+    var Arc_Queue %Arc_Queue%Map_to_Map_Maps(1);%chk_curSet|
+  }
 return
 
 Check_Distance:
@@ -624,15 +714,26 @@ Check_Distance:
     var temp %%chk_curM
     evalmath chk_curSet (%temp(0) + %chk_curSet)
     if ("%chk_nxtM" == "") then return
-    if ("%%chk_nxtM" == "\%%chk_nxtM") then {
+#    if contains("%%chk_nxtM", "%") then
+    if ("%%chk_nxtM" == "\%%chk_nxtM") then
+    {
         #Var does not exist
-        if  ("%chk_curSet" != "") then gosub Link_Maps
-    } else {
+        if ("%chk_curSet" != "") then
+        {
+          gosub Link_Maps
+        }
+    }
+    else
+    {
         #Var does exist checking value
-        if  ("%%chk_nxtM" != "") then {
+        if ("%%chk_nxtM" != "") then
+        {
             var temp %%chk_nxtM
             var chk_prvSet %temp(0)
-            if (%chk_curSet < %chk_prvSet) then gosub Link_Maps
+            if (%chk_curSet < %chk_prvSet) then
+            {
+              gosub Link_Maps
+            }
         }
     }
 return
@@ -674,9 +775,8 @@ Modify_Weight:
         if (def(Courage) && matchre("$Courage", "(?i)%$1")) then var mod_weight 1
     }
 
-    if (%mod_weight = 1) then {
-        var chk_curSet 10
-    } else var chk_curSet 99999999999
+    if (%mod_weight = 1) then var chk_curSet 10
+    else var chk_curSet 99999999999
 return
 
 ##########################
@@ -1338,107 +1438,6 @@ return
         gosub Map_to_Map MapTF1Array_to_Map30Array 10|Game;DRF|24|Map30_Riverhaven.xml|Riverhaven, Town Square
         gosub Map_to_Map MapTF1Array_to_Map40Array 10|Game;DRF|25|Map40_Langenfirth_to_Theren_Gate.xml|North Road, Beech Grove
     return
-
-###########################
-####Pather Loading start###
-###########################
-Load:
-    # add in handling for starting in a named "Subzone"
-    var Starting_Zone Map$zoneidArray
-    var Ending_Zone Map%1Array
-    if ("%Ending_Zone" = "%Starting_Zone") then {
-        echo At destination
-        exit
-    }
-    if ("%Ending_Zone" = "MapArray") then {
-        goto NODESTINATION
-    }
-    if ("%Starting_Zone" = "") then {
-        put #mapper reset
-        pause
-        var Starting_Zone Map$zoneidArray
-        if ("%Starting_Zone" = "") then {
-            echo unknown starting map
-            exit
-        }
-    }
-
-    var Map_to_Map_Maps
-    var Map_to_Map_Vars
-    var Map_to_Map_Paths
-    var Map_to_Map_Nodes
-    var Maps |
-    var Arc_Queue |
-    var i_Arc_Queue 0
-
-    var Path_Map
-    var Path_Part
-    var Path_Weight
-    var Path_Paths
-    var Path_Arcs
-    var Path_Names
-    var Path_Rooms
-
-    var Current_Zone %Starting_Zone
-    var Link%Current_Zone 0|LinkMap0Array
-    var LinkMap0Array 0|0
-    var AthleticsChecks ShardWalls|ShardSewageEntrance|CrossingWall|ShardUnderGondola|Crossing5thPassage|HaizenCugisDesert|CrossingSegoltha|RiverhavenFaldesu|RossmanJantspyreNorth|RossmanJantspyreSouth|BoarArchersFord
-
-    var Guild
-    var Citizenship
-    var Subscription
-    var Game
-    var Courage
-    var Moons
-
-    if !def(subscription) then gosub SUBSCRIPTION_CHECK
-    var Subscription $subscription
-    if !def(citizenship) then gosub CITIZENSHIP
-    var Citizenship $citizenship
-
-    if !def(travel.RossmanJantspyreNorth) then var RossmanJantspyreNorth 200
-    else var RossmanJantspyreNorth $travel.RossmanJantspyreNorth
-    if !def(travel.RossmanJantspyreSouth) then var RossmanJantspyreSouth 90
-    else var RossmanJantspyreSouth $travel.RossmanJantspyreSouth
-    if !def(travel.RiverhavenFaldesu) then var RiverhavenFaldesu 190
-    else var RiverhavenFaldesu $travel.RiverhavenFaldesu
-    if !def(travel.CrossingSegoltha) then var CrossingSegoltha 550
-    else var CrossingSegoltha $travel.CrossingSegoltha
-    if !def(travel.ShardUnderGondola) then var ShardUnderGondola 550
-    else var ShardUnderGondola $travel.ShardUnderGondola
-    if !def(travel.Crossing5thPassage) then var Crossing5thPassage 50
-    else var Crossing5thPassage $travel.Crossing5thPassage
-    if !def(travel.HaizenCugisDesert) then var HaizenCugisDesert 800
-    else var HaizenCugisDesert $travel.HaizenCugisDesert
-    if !def(travel.ShardWalls) then var ShardWalls 350
-    else var ShardWalls $travel.ShardWalls
-    if !def(travel.ShardSewageEntrance) then var ShardSewageEntrance 300
-    else var ShardSewageEntrance $travel.ShardSewageEntrance
-    if !def(travel.CrossingWall) then var CrossingWall 350
-    else var CrossingWall $travel.CrossingWall
-    if !def(travel.BoarArchersFord) then var BoarArchersFord 160
-    else var BoarArchersFord $travel.BoarArchersFord
-
-    if (($joined == 1) && ($travel.GroupShortCutsAnyway == False)) then {
-        var ShardWalls 2000
-        var ShardSewageEntrance 2000
-        var CrossingWall 2000
-        var ShardUnderGondola 2000
-        var Crossing5thPassage 2000
-        var HaizenCugisDesert 2000
-        var CrossingSegoltha 2000
-        var RiverhavenFaldesu 2000
-        var RossmanJantspyreNorth 2000
-        var RossmanJantspyreSouth 2000
-        var BoarArchersFord 2000
-
-        var Citizenship None
-        var Subscription Basic
-
-        if (%verbose) then gosub ECHO You are in a group!  You will NOT be taking the gravy short cuts today!
-      }
-    
-return
 #############################################################
 ARRIVED:
   if_2 then {
@@ -1561,8 +1560,7 @@ FALDESU_SOUTH:
     gosub MOVE southwest
     gosub MOVEALLTHEWAY southeast
   }
-  if ((!$southwest) && (!$southeast) && (!$south)) then
-  {
+  if ((!$southwest) && (!$southeast) && (!$south)) then {
     gosub MOVE climb stone bridge
     put #mapper reset
     pause %command_pause
@@ -3121,67 +3119,57 @@ RANDOMWEIGHT:
   if $south%weight then var randomweight %randomweight|south%weight
   eval randomweightcount count("%randomweight", "|")
 RANDOMWEIGHT_2:
-     if ("%randomweight" == "") then return
-     random 1 %randomweightcount
-     gosub MOVE %randomweight(%r)
-     return
+  if ("%randomweight" == "") then return
+  random 1 %randomweightcount
+  gosub MOVE %randomweight(%r)
+  return
 RANDOMNORTH:
-     if (($north) && ("%lastmoved" != "south")) then
-          {
-               gosub MOVE north
-               goto RANDOMSOUTH_RETURN
-          }
-     if (($northeast) && ("%lastmoved" != "southwest")) then
-          {
-               gosub MOVE northeast
-               goto RANDOMSOUTH_RETURN
-          }
-     if (($northwest) && ("%lastmoved" != "southeast")) then
-          {
-               gosub MOVE northwest
-               return
-          }
-     if (($west) && ("%lastmoved" != "east")) then
-          {
-               gosub MOVE west
-               goto RANDOMSOUTH_RETURN
-          }
-     if (($east) && ("%lastmoved" != "west")) then
-          {
-               gosub MOVE east
-               goto RANDOMSOUTH_RETURN
-          }
-     var lastmoved null
-     return
+  if (($north) && ("%lastmoved" != "south")) then {
+    gosub MOVE north
+    goto RANDOMSOUTH_RETURN
+  }
+  if (($northeast) && ("%lastmoved" != "southwest")) then {
+    gosub MOVE northeast
+    goto RANDOMSOUTH_RETURN
+  }
+  if (($northwest) && ("%lastmoved" != "southeast")) then {
+    gosub MOVE northwest
+    return
+  }
+  if (($west) && ("%lastmoved" != "east")) then {
+    gosub MOVE west
+    goto RANDOMSOUTH_RETURN
+  }
+  if (($east) && ("%lastmoved" != "west")) then {
+    gosub MOVE east
+    goto RANDOMSOUTH_RETURN
+  }
+  var lastmoved null
+  return
 RANDOMSOUTH:
-     if (($south) && ("%lastmoved" != "north")) then
-          {
-               gosub MOVE south
-               goto RANDOMSOUTH_RETURN
-          }
-     if (($southeast) && ("%lastmoved" != "northwest")) then
-          {
-               gosub MOVE southeast
-               goto RANDOMSOUTH_RETURN
-          }
-     if (($southwest) && ("%lastmoved" != "northeast")) then
-          {
-               gosub MOVE southwest
-               goto RANDOMSOUTH_RETURN
-          }
-     if (($east) && ("%lastmoved" != "west")) then
-          {
-               gosub MOVE east
-               goto RANDOMSOUTH_RETURN
-          }
-     if (($west) && ("%lastmoved" != "east")) then
-          {
-               gosub MOVE west
-               goto RANDOMSOUTH_RETURN
-          }
-     var lastmoved null
+  if (($south) && ("%lastmoved" != "north")) then {
+    gosub MOVE south
+    goto RANDOMSOUTH_RETURN
+  }
+  if (($southeast) && ("%lastmoved" != "northwest")) then {
+    gosub MOVE southeast
+    goto RANDOMSOUTH_RETURN
+  }
+  if (($southwest) && ("%lastmoved" != "northeast")) then {
+    gosub MOVE southwest
+    goto RANDOMSOUTH_RETURN
+  }
+  if (($east) && ("%lastmoved" != "west")) then {
+    gosub MOVE east
+    goto RANDOMSOUTH_RETURN
+  }
+  if (($west) && ("%lastmoved" != "east")) then {
+    gosub MOVE west
+    goto RANDOMSOUTH_RETURN
+  }
+  var lastmoved null
 RANDOMSOUTH_RETURN:
-     return
+  return
 
 ### NO VALID DESTINATION SET OR FOUND ERROR
 NODESTINATION:
