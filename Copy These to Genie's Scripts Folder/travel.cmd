@@ -365,8 +365,9 @@ action var burden 9 when ^\s*Encumbrance\s*\:\s*Tottering Under Burden
 action var burden 10 when ^\s*Encumbrance\s*\:\s*Are you even able to move\?
 action var burden 11 when ^\s*Encumbrance\s*\:\s*It's amazing you aren't squashed\!
 ####  LOAD VARS  ####
-var destination %1
-shift
+var destination dirge
+# var destination %1
+# shift
 if ("%destination" == "") then goto NODESTINATION
 # add in handling for starting in a named "Subzone"
 var Starting_Zone Map$zoneidArray
