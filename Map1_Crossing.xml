@@ -382,7 +382,6 @@
     <arc exit="southeast" move="southeast" destination="51" />
     <arc exit="northwest" move="northwest" destination="49" />
     <arc exit="go" move="go meeting portal" destination="652" />
-    <arc exit="go" move="go festive portal" destination="1048" />
   </node>
   <node id="51" name="The Strand, Crystalline Beach">
     <description>Several bungalows surround a large communal center sporting a long, wide veranda.  These form the heart of The Strand's resort area, providing respite from day-to-day concerns.  Each bungalow is a simple, single-story unit, positioned to afford an uninterrupted view of the delta where the Oxenwaithe and Segoltha meet.  Beyond the bungalows, sparkling sand stretches from a grassy knoll down a gentle incline, ending in a low ledge of rock pocked with tidal pools.</description>
@@ -6717,12 +6716,6 @@
     <position x="229" y="180" z="0" />
     <arc exit="climb" move="climb stairs" destination="1042" />
   </node>
-  <node id="1048" name="A'baya Esplanade, Central Walkway" note="Taisidon_Mystery.xml|taisidon|mystery|mt">
-    <description>At the center of the busy shopping walkway, a beautiful ocean mosaic is pieced together with bits of shell and seaglass.  Festive gaethzen globes are hung from tall poles that are placed at even intervals along the macawood boardwalk.</description>
-    <position x="155" y="230" z="0" />
-    <arc exit="west" move="west" />
-    <arc exit="east" move="east" />
-  </node>
   <label text="Shipyard">
     <position x="-20" y="314" z="0" />
   </label>
@@ -7043,11 +7036,5 @@
   </label>
   <label text="Cove">
     <position x="89" y="201" z="0" />
-  </label>
-  <label text="Taisidon">
-    <position x="99" y="221" z="0" />
-  </label>
-  <label text="Mystery">
-    <position x="99" y="231" z="0" />
   </label>
 </zone>
