@@ -6,7 +6,7 @@
     <arc exit="northeast" move="northeast" />
     <arc exit="east" move="east" />
     <arc exit="south" move="south" />
-    <arc exit="go" move="go trail" destination="2" />
+    <arc exit="go" move="go muddy trail" destination="2" />
   </node>
   <node id="2" name="Shard, Northwestern Shore">
     <description>A muddy path wends its way amidst the reeds which border the shore of the Lake of Tears.  To the southeast, the towers of Shard loom above the city walls, gleaming as brightly as a paladin's soul.</description>
@@ -38,7 +38,7 @@
     <position x="600" y="497" z="0" />
     <arc exit="east" move="east" destination="7" />
     <arc exit="west" move="west" destination="11" />
-    <arc exit="go" move="go trail" destination="5" />
+    <arc exit="go" move="go muddy trail" destination="5" />
     <arc exit="go" move="search go narrow path" destination="362" />
   </node>
   <node id="7" name="Shard, West Bridge">
@@ -102,7 +102,7 @@
     <position x="500" y="437" z="0" />
     <arc exit="north" move="north" destination="16" />
     <arc exit="east" move="east" destination="14" />
-    <arc exit="go" move="go path" destination="452" />
+    <arc exit="go" move="go rocky path" destination="452" />
   </node>
   <node id="16" name="Western Road, Foot of Wyvern Mountain">
     <description>Some unknown force has left one slope of the mountain fire-blackened and sheared nearly smooth.  Carved into the base of the slope is a line of flowing, irregular symbols, weathered and almost entirely chipped away.  On the other side of the road, a blanket of tiny starflowers covers the scorched land, beginning the cycle of renewal.</description>
@@ -424,12 +424,12 @@
     <description>Thick-spiked windfeather and mature bluestem create a tapestry of purple and russet that stretches to the horizon, competing with the vastness of the sky.  Occasionally, the joyful, raucous yips of coyotes can be heard as they hunt for field mice or create their particular and unique brand of trouble.</description>
     <position x="-160" y="257" z="0" />
     <arc exit="north" move="north" destination="65" />
-    <arc exit="southwest" move="southwest" destination="67" />
+    <arc exit="go" move="go faint path" destination="67" />
   </node>
   <node id="67" name="Gilen Otso Steppes, Game Trail" color="#00FFFF">
     <description>Patches of ricegrass peek out from amongst the loftier bluestem, ruffled edges heavy with the whitish buds that create its name and attract foraging antelope and bison.  Overwhelmed by the heavy growth, the trail ghosts almost entirely away.</description>
     <position x="-180" y="277" z="0" />
-    <arc exit="northeast" move="northeast" destination="66" />
+    <arc exit="go" move="go faint path" destination="66" />
     <arc exit="southeast" move="southeast" destination="68" />
   </node>
   <node id="68" name="Gilen Otso Steppes, Game Trail" note="RTI05|RT-HC-S" color="#C2B280">
@@ -471,13 +471,13 @@
     <description>A litter of acorns and leaves cloaks the ground beneath a prairie grove of venerable white oaks, their bark like burnished silver in the light.  Beyond the grove, the plains are awash in the cheerful yellow blossoms of brittlebush and the burning red blooms of firefall vines.</description>
     <position x="-120" y="357" z="0" />
     <arc exit="northwest" move="northwest" destination="72" />
-    <arc exit="go" move="go path" destination="74" />
+    <arc exit="go" move="go shaded path" destination="74" />
   </node>
   <node id="74" name="Gilen Otso Steppes, Shattered Oak">
     <description>The faint smell of burning wood can still be detected from the scorched innards of the oak.  Snapped like a gidii's wishbone, one half of the gallant tree still stands while its counterpart lies listless upon the ground.  Small birds have taken up refuge under the fallen branches and dart to-and-fro through the newly created underbrush.</description>
     <position x="-140" y="357" z="0" />
-    <arc exit="go" move="go path" destination="73" />
-    <arc exit="climb" move="climb tree" destination="75" />
+    <arc exit="go" move="go shaded path" destination="73" />
+    <arc exit="climb" move="climb shattered tree" destination="75" />
     <arc exit="go" move="go underbrush" destination="532" />
   </node>
   <node id="75" name="Shattered Oak, Lower Limb">
@@ -542,13 +542,13 @@
     <position x="-460" y="217" z="0" />
     <arc exit="east" move="east" destination="83" />
     <arc exit="west" move="west" destination="88" />
-    <arc exit="northwest" move="northwest" destination="85" />
+    <arc exit="go" move="go overgrown path" destination="85" />
   </node>
   <node id="85" name="Julge Dolen Zaldeni, Grasslands">
     <description>Faint trails wind through the grasslands, leading from nowhere to nowhere.  The ground beneath the undulating stalks rises and falls, gradually sloping downward toward the north.</description>
     <position x="-540" y="137" z="0" />
     <arc exit="north" move="north" destination="86" />
-    <arc exit="southeast" move="southeast" destination="84" />
+    <arc exit="go" move="go overgrown path" destination="84" />
   </node>
   <node id="86" name="Julge Dolen Zaldeni, Grasslands">
     <description>Clover sprigs, thistle clumps, and small bushes break the surface of the grass.  Each variety of plant battles for its share of sunlight and water -- competition is not reserved to those that go on four legs.</description>
@@ -573,13 +573,13 @@
     <description>Tall lanceleaf plants reach skyward with spires of pale yellow flowers that loft above the steppes.  A spider has taken advantage of their height to craft a web at the corollas' upper reaches, and the number of silk-wrapped forms dotting the gossamer strands give silent proof of the little weaver's good hunting instincts.</description>
     <position x="-520" y="217" z="0" />
     <arc exit="east" move="east" destination="88" />
-    <arc exit="southwest" move="southwest" destination="90" />
+    <arc exit="go" move="go faint trail" destination="90" />
     <arc exit="go" move="go narrow track" destination="133" />
   </node>
   <node id="90" name="Gilen Otso Steppes, Grasslands">
     <description>Russet-tipped plumegrasses feather passersby with a fine scattering of pale yellow pollen when touched.  Whispering eternally in a dry sibilance perhaps understood only by the earth itself, they loom so high in some spots that the rest of the world nearly seems to disappear.</description>
     <position x="-540" y="237" z="0" />
-    <arc exit="northeast" move="northeast" destination="89" />
+    <arc exit="go" move="go faint trail" destination="89" />
     <arc exit="southeast" move="southeast" destination="91" />
   </node>
   <node id="91" name="Gilen Otso Steppes, Grasslands">
@@ -616,12 +616,12 @@
     <description>The cadence of cicadas thrums on all sides, persistent even in the disturbance created by passersby.  The earth is strewn with the matted, grassy carpeting of the previous seasons' growth.</description>
     <position x="-600" y="317" z="0" />
     <arc exit="northeast" move="northeast" destination="95" />
-    <arc exit="west" move="west" destination="97" />
+    <arc exit="go" move="go faint path" destination="97" />
   </node>
   <node id="97" name="Gilen Otso Steppes, Grasslands">
     <description>A tracery of delicate cloven hoofprints weaves back and forth over a small patch of clear ground, then disappears again into the shelter of the grasses.  Too small for cattle, the tracks must be from deer or antelope that take advantage of the wealth of vegetation available for grazing and browsing.</description>
     <position x="-620" y="317" z="0" />
-    <arc exit="east" move="east" destination="96" />
+    <arc exit="go" move="go faint path" destination="96" />
     <arc exit="southwest" move="southwest" destination="98" />
   </node>
   <node id="98" name="Gilen Otso Steppes, Grasslands">
@@ -700,12 +700,6 @@
     <arc exit="north" move="north" destination="111" />
     <arc exit="up" move="up" destination="108" />
   </node>
-  <node id="110" name="Julge Dolen Zaldeni, Valley">
-    <description>Overhead, the stars seem brighter than on the grasslands, the high valley walls bringing the expanse into focus.  A parliament of owls sometimes wings by, looking for richer lark-hunting on the plains above.</description>
-    <description>Overhead, the sky seems bluer than on the grasslands, the high valley walls bringing the span into focus.  An exaltation of larks sometimes sings by, looking for a greener bit of grassland on the plains above.</description>
-    <position x="-520" y="-23" z="0" />
-    <arc exit="northwest" move="northwest" destination="118" />
-  </node>
   <node id="111" name="Julge Dolen Zaldeni, Valley">
     <description>Starflowers and wild carrots spread along the valley floor side by side with sedge and buffalo grass.  Faint trails of hoofprints meander through the grasses in no discernible direction, though to the south a trail leading up the ridge can be seen.</description>
     <position x="-500" y="17" z="0" />
@@ -721,7 +715,6 @@
   <node id="113" name="Julge Dolen Zaldeni, Valley">
     <description>Blades of grass stretch to eye level on a Gor'Tog and are intermingled with shorter grasses and sedges.  The patter of small feet is barely audible over the rustling of the plants as rodents slip easily along the ground.</description>
     <position x="-540" y="17" z="0" />
-    <arc exit="climb" move="climb sturdy fence" destination="118" />
     <arc exit="east" move="east" destination="112" />
     <arc exit="west" move="west" destination="114" />
   </node>
@@ -736,94 +729,6 @@
     <position x="-600" y="37" z="0" />
     <arc exit="northeast" move="northeast" destination="114" />
     <arc exit="up" move="up" destination="129" />
-  </node>
-  <node id="116" name="Julge Dolen Zaldeni, Valley">
-    <description>The tall grasses are thicker to the east and west, but a faint path is worn northward where large animals have made for the stream.  The air is redolent of lush greenery, and one can almost hear the roots unfurling within the earth as the plants grow.</description>
-    <position x="-580" y="-63" z="0" />
-    <arc exit="southeast" move="southeast" destination="117" />
-    <arc exit="northwest" move="northwest" destination="119" />
-  </node>
-  <node id="117" name="Julge Dolen Zaldeni, Valley">
-    <description>The tough tops of the towering grass have been broken and chewed in places, but the resilient stems persist in growing.  The greenery sways with every breeze.</description>
-    <position x="-560" y="-43" z="0" />
-    <arc exit="north" move="north" destination="124" />
-    <arc exit="east" move="east" destination="118" />
-    <arc exit="northwest" move="northwest" destination="116" />
-  </node>
-  <node id="118" name="Julge Dolen Zaldeni, Valley">
-    <description>Sinuous shapes occasionally flicker through the tall, thick grass as bright-eyed ferrets scour the area for food.  A half-cropped tuft of buffalo grass shades a hole in the ground that leads to the creatures' burrow.</description>
-    <position x="-540" y="-43" z="0" />
-    <arc exit="southeast" move="southeast" destination="110" />
-    <arc exit="climb" move="climb sturdy fence" destination="113" />
-    <arc exit="west" move="west" destination="117" />
-  </node>
-  <node id="119" name="Julge Dolen Zaldeni, Stream Bank">
-    <description>Closer to the stream, the grass becomes even more lush and stands just a few hands high -- perfect for grazing.  A few vedda trees provide shade and, in times of desperation, food.</description>
-    <position x="-600" y="-83" z="0" />
-    <arc exit="northeast" move="northeast" destination="120" />
-    <arc exit="southeast" move="southeast" destination="116" />
-  </node>
-  <node id="120" name="Julge Dolen Zaldeni, Stream Bank">
-    <description>Weeping willows stretch their boughs over the water at the stream's head, providing shelter for a small flock of ducks whose nests dot the bank.  A number of rodents also dwell by the trees, receiving shelter from the elements.</description>
-    <position x="-580" y="-103" z="0" />
-    <arc exit="east" move="east" destination="121" />
-    <arc exit="southwest" move="southwest" destination="119" />
-  </node>
-  <node id="121" name="Julge Dolen Zaldeni, Stream Bank">
-    <description>Red cedar trees cling to the stream bank, surrounded by weeping willows that vie for the water.  The cedars' gnarled roots protrude into the rivulet, both stabilizing the bank and providing a convenient seat.</description>
-    <position x="-520" y="-103" z="0" />
-    <arc exit="southeast" move="southeast" destination="122" />
-    <arc exit="southwest" move="southwest" destination="124" />
-    <arc exit="west" move="west" destination="120" />
-    <arc exit="climb" move="climb cedar root" destination="125" />
-  </node>
-  <node id="122" name="Julge Dolen Zaldeni, Valley">
-    <description>Saplings have taken root among the tenacious grass.  The young trees are not faring well -- tufts of hair are caught in the ragged bark where horses have used them as grooming aids.</description>
-    <position x="-500" y="-83" z="0" />
-    <arc exit="south" move="south" destination="123" />
-    <arc exit="northwest" move="northwest" destination="121" />
-  </node>
-  <node id="123" name="Julge Dolen Zaldeni, Valley">
-    <description>Southwest, the shorter grass gives way to a taller variety as the valley rolls in a slow dip.  The grass is a thick, cropped carpet here, with divots turned up by the hooves of fast-moving horses.</description>
-    <position x="-500" y="-63" z="0" />
-    <arc exit="north" move="north" destination="122" />
-    <arc exit="west" move="west" destination="124" />
-  </node>
-  <node id="124" name="Julge Dolen Zaldeni, Valley">
-    <description>A few cedars stretch north toward the water.  Short-bladed grass and some sedges vie for ground cover.  A meadowlark's nest is almost hidden within the grass, its woven roof a patch of brown among the green.</description>
-    <position x="-560" y="-63" z="0" />
-    <arc exit="northeast" move="northeast" destination="121" />
-    <arc exit="east" move="east" destination="123" />
-    <arc exit="south" move="south" destination="117" />
-  </node>
-  <node id="125" name="Julge Dolen Zaldeni, Stream" color="#0000FF">
-    <description>To the west, a morass of rocks and dead trees holds back the water that flows from the top of the ridge to the valley floor.  What water manages to force its way through and over the natural dam feeds into this streambed.  Although the stream is murky, it is untainted.  Cedar trees shade this portion, and toads croak along the bank.</description>
-    <description>A morass of rocks and dead trees filters the water that flows to the ridge from to the valley floor, creating a natural dam that widens the stream.  Although the stream is murky, the water at the surface is clean and untainted.  Cedar trees shade the stream and keep it cool, and toads croak along the bank in a cacaphony of noise.</description>
-    <position x="-520" y="-123" z="0" />
-    <arc exit="east" move="swim east" destination="126" />
-    <arc exit="climb" move="climb cedar root" destination="121" />
-  </node>
-  <node id="126" name="Julge Dolen Zaldeni, Stream" color="#0000FF">
-    <description>The stream widens and gets deeper as it tumbles from the west.  The northern bank rises too steeply for climbing -- the constantly flowing water has cut deep into the underlying rock.</description>
-    <description>The wide stream runs through the small valley, bordered on each side by jutting feldspar stones constantly dampened by the fresh spray.  Tiny minnows dart here and there under the surface, constantly playing in an underwater dance in the clear water and sometimes darting downward and out of sight.  Occasionally leaves and twigs float downstream, carried by the rushing current.</description>
-    <position x="-500" y="-123" z="0" />
-    <arc exit="east" move="swim east" destination="127" />
-    <arc exit="west" move="swim west" destination="125" />
-    <arc exit="down" move="swim down" destination="259" />
-  </node>
-  <node id="127" name="Julge Dolen Zaldeni, Stream" color="#0000FF">
-    <description>The water eddies against the side of the ridge that walls the valley, slowly eroding the rock.  A gentle downward tug hints at deeper water.</description>
-    <description>Flowing water eddies against the side of the ridge that walls the small valley, slowly eroding the rock.  Dark blue water below hints that the stream is quite deep, the murky depths disappearing before the bottom is visible.  Small reeds line each side of the bank, small insects jumping back and forth between them.</description>
-    <position x="-480" y="-123" z="0" />
-    <arc exit="west" move="swim west" destination="126" />
-    <arc exit="down" move="swim down" destination="258" />
-    <arc exit="climb" move="climb tall stone" destination="128" />
-  </node>
-  <node id="128" name="Julge Dolen Zaldeni, Diving Rock" note="Diving Rock">
-    <description>From the flat top of the outcropping, the stream is close enough for an easy dive.  The water laps at the stream bank on one side, sending willow fronds swaying.  Farther upstream is a natural dam and a pool that feeds the flow.  At the far end of the valley, the stars shine on the water that falls from the top of the ridge, collected from the grasslands.</description>
-    <description>From the flat top of the outcropping, the stream is close enough for an easy dive.  The water laps at the stream bank on one side, sending willow fronds swaying.  Farther upstream is a natural dam and a pool that feeds the flow.  At the far end of the valley, the sun glints off the water that falls from the top of the ridge, collected from the grasslands.</description>
-    <position x="-460" y="-123" z="0" />
-    <arc exit="none" move="dive deep stream" destination="127" />
   </node>
   <node id="129" name="Julge Dolen Zaldeni, Grasslands">
     <description>Underneath a tumbled rock, a small nest of twigs and grass makes a cozy home for some field mice.  The creatures dart about looking for seeds borne by the wind, but scatter rapidly if anything larger than a rat approaches.</description>
@@ -1096,7 +1001,7 @@
     <position x="-800" y="397" z="0" />
     <arc exit="west" move="west" destination="173" />
     <arc exit="northwest" move="northwest" destination="171" />
-    <arc exit="go" move="go tent" destination="223" />
+    <arc exit="go" move="go felt tent" destination="223" />
   </node>
   <node id="173" name="Zaldi Taipa, Cedar Path">
     <description>Placed close to the shepherd's tent both for the safety of its little inhabitants and the convenience of their caretaker is an osage orangewood pen used for orphaned lambs and kids.  One end of the pen has been covered with a lattice of bent willow and juniper boughs, and the ground beneath spread with a heavy layer of soft grasses, the whole providing a fragrant nursery that is well-protected by the heavy osage thorns.</description>
@@ -1116,7 +1021,7 @@
     <position x="-820" y="417" z="0" />
     <arc exit="southeast" move="southeast" destination="176" />
     <arc exit="northwest" move="northwest" destination="174" />
-    <arc exit="go" move="go tent" destination="221" />
+    <arc exit="go" move="go gold tent" destination="221" />
   </node>
   <node id="176" name="Zaldi Taipa, Cedar Path">
     <description>A square of dirt has been carefully cleared and smoothed.  At its center a miniature fence of twigs surrounds some stick figures that, given their adornment of haphazardly placed tufts of wool, may represent sheep.  The childish pen is currently deserted, though a partially constructed twig animal left nearby hints that the young shepherd may not have gone far.</description>
@@ -1129,7 +1034,7 @@
     <position x="-800" y="457" z="0" />
     <arc exit="north" move="north" destination="176" />
     <arc exit="southwest" move="southwest" destination="178" />
-    <arc exit="go" move="go tent" destination="219" />
+    <arc exit="go" move="go felt tent" destination="219" />
   </node>
   <node id="178" name="Zaldi Taipa, Cedar Path">
     <description>Their warm golden hues blooming against the earth like flowers against the dark earth, several split willow and yucca baskets have been set out to dry before their weaver adds the traditional finishing touches of quail and meadowlark feathers to the edges.  All around are the subdued sounds of the village at night -- a woman crooning to a fretful child, the quiet laughter of a group of men chatting in a nearby tent, and the occasional bark of a watchful sheepdog.</description>
@@ -1180,7 +1085,7 @@
     <position x="-680" y="497" z="0" />
     <arc exit="south" move="south" destination="186" />
     <arc exit="northwest" move="northwest" destination="184" />
-    <arc exit="go" move="go tent" destination="217" />
+    <arc exit="go" move="go felt tent" destination="217" />
   </node>
   <node id="186" name="Zaldi Taipa, Tamarisk Path">
     <description>Climbing prairie roses have taken advantage of the presence of a few clumps of sagebrush to create a tangle of deep green leaves and pale pink blossoms, nearly obliterating the more austere sage from view.  Around the bushes the ground is nearly clear of vegetation, worn down by the constant footsteps of passing villagers.</description>
@@ -1195,7 +1100,7 @@
     <arc exit="south" move="south" destination="189" />
     <arc exit="west" move="west" destination="199" />
     <arc exit="northwest" move="northwest" destination="186" />
-    <arc exit="go" move="go tent" destination="216" />
+    <arc exit="go" move="go felt tent" destination="216" />
   </node>
   <node id="188" name="Zaldi Taipa, Firing Pit" note="Firing Pit">
     <description>Heat radiates steadily from a firepit just behind the potter's tent.  River stones have been piled up above the hot coals, and a planked pine framework placed over them with a second fire burning on top -- the whole creating an inferno from which the distinctive Horse Clan pottery is born.  Nearby, large baskets of cedar kindling and dried horse manure stand ready to replenish the hungry flames.</description>
@@ -1220,7 +1125,7 @@
     <position x="-660" y="577" z="0" />
     <arc exit="southeast" move="southeast" destination="192" />
     <arc exit="west" move="west" destination="190" />
-    <arc exit="go" move="go tent" destination="214" />
+    <arc exit="go" move="go felt tent" destination="214" />
   </node>
   <node id="192" name="Zaldi Taipa, Osage Path">
     <description>Brilliant colors flash against the ground, revealed to be bird skins stretched to dry on cane circles laid out neatly on lengths of clean felt.  Bright gold, scarlet, velvety black, and iridescent blue feathers are destined to become vivid embellishments on weapons, clothing, or baskets.</description>
@@ -1233,7 +1138,7 @@
     <position x="-640" y="657" z="0" />
     <arc exit="north" move="north" destination="192" />
     <arc exit="northwest" move="northwest" destination="194" />
-    <arc exit="go" move="go tent" destination="213" />
+    <arc exit="go" move="go felt tent" destination="213" />
   </node>
   <node id="194" name="Zaldi Taipa, Osage Path">
     <description>Opulent bands of amber and scarlet embroidery are crosshatched against the deep brown felt of a large tent that has beaded streamers of chestnut and black horsehair flowing from the tops of its entry poles.  Several low willow camp chairs with supple kidskin seats have been placed in a half-circle a slight distance from the entrance, perhaps to provide a bit of privacy for haggling and the all-important analysis of horseflesh.</description>
@@ -1262,7 +1167,7 @@
     <arc exit="northeast" move="northeast" destination="198" />
     <arc exit="southeast" move="southeast" destination="196" />
     <arc exit="northwest" move="northwest" destination="203" />
-    <arc exit="go" move="go tent" destination="208" />
+    <arc exit="go" move="go white tent" destination="208" />
   </node>
   <node id="198" name="Zaldi Taipa, Tower of Spears">
     <description>Placed between the four white tents at the heart of the village is a stack of horse skulls, each gleaming with beadwork of black, gold, and scarlet.  Arching over them are six great silver-tipped spears wrapped in white and yellow silk and lashed together to form a tower that lifts imposingly against the sky.  At the tower's apex, long streamers of silver-beaded white horsehair flutter in the passing breezes, casting a veil of moving shadows over the ornately decorated skulls beneath.</description>
@@ -1304,19 +1209,19 @@
     <arc exit="northeast" move="northeast" destination="201" />
     <arc exit="southeast" move="southeast" destination="197" />
     <arc exit="west" move="west" destination="204" />
-    <arc exit="go" move="go tent" destination="211" />
+    <arc exit="go" move="go white tent" destination="211" />
   </node>
   <node id="204" name="Zaldi Taipa, Shaded Thicket">
     <description>Growing thick and fragrant, a tall hedge of prairie roses crowns an embankment that drops to a dense stand of sycamore trees, signaling water somewhere nearby.  A narrow pathway pierces the vegetation to form a shadowy tunnel that meanders down through the thicket, a secret highway nearly hidden from view.</description>
     <position x="-800" y="557" z="0" />
     <arc exit="east" move="east" destination="203" />
-    <arc exit="go" move="go path" destination="205" />
+    <arc exit="go" move="go shadowy pathway" destination="205" />
   </node>
   <node id="205" name="Zaldi Taipa, Shaded Grove" note="Aldauth|shrine" color="#A6A3D9">
     <description>The sweet sound of water bubbles nearby as the pathway drops into a grove of sycamore, their lower branches ornamented with an assortment of felt and kidskin pouches.  Around the base of the trees, ornate yucca baskets trimmed with quail and meadowlark feathers hold fragrant sage leaves and bundles of delicate bird bones wrapped with braided grass.  A small altar crafted of deep purple osage heartwood holds a beaded hawk-wing fan framing a brass bowl filled with milk.</description>
     <position x="-820" y="557" z="0" />
     <arc exit="southwest" move="southwest" destination="206" />
-    <arc exit="go" move="go path" destination="204" />
+    <arc exit="go" move="go shaded pathway" destination="204" />
   </node>
   <node id="206" name="Zaldi Taipa, Shaded Grove">
     <description>A grove of white-barked aspens lifts to the sky, their leaves a dance of moon-silvered green and gold.  Lashed between them is a canopy of alabaster felt edged with a row of tiny silver bells and amber-beaded feathers.  An elaborately carved sandalwood bucket filled with grain sits amidst a drift of the sweet grasses that grow thickly around the tree trunks.</description>
@@ -1351,34 +1256,34 @@
     <description>Moonlight filters through blue-green silk draped over the opening at the tent's apex, the wash of cool hues creating a dreamlike atmosphere heightened by the scent of sage rising from triple-coil baskets lining the walls.  Taller baskets holding an assortment of gourd rattles and feathered prayer sticks surround a gleaming white and gold saddle dominating the center of the room.  Near the saddle, an osage heartwood altar holds a pair of clay bowls -- one filled with milk, the other with grain.</description>
     <description>Sunlight filters through blue-green silk draped over the opening at the tent's apex, the wash of cool hues creating a dreamlike atmosphere heightened by the scent of sage rising from triple-coil baskets lining the walls.  Taller baskets holding an assortment of gourd rattles and feathered prayer sticks surround a gleaming white and gold saddle dominating the center of the room.  Near the saddle, an osage heartwood altar holds a pair of clay bowls -- one filled with milk, the other with grain.</description>
     <position x="-800" y="537" z="0" />
-    <arc exit="go" move="go flap" destination="203" />
+    <arc exit="go" move="go entry flap" destination="203" />
     <arc exit="go" move="go quiet corner" destination="448" />
   </node>
   <node id="212" name="Zaldi Taipa, Horse-trader's Chadir">
     <description>The world outside grows distant as luxury offers its embrace.  Wine-colored carpets soften each step, and silks and brocades in saffron and blue create a flow of rich colors from floor to ceiling.  Horseflesh is serious business here: Elegant sculptures of great past horses grace the corners, bridles so ornate that they could command a ransom hang from the walls like fine paintings, and a carved sandalwood table bears a locked, leather-bound book titled 'Lineage of the Akhaal'.</description>
     <position x="-660" y="617" z="0" />
-    <arc exit="go" move="go drape" destination="194" />
+    <arc exit="go" move="go scarlet drape" destination="194" />
   </node>
   <node id="213" name="Zaldi Taipa, Yasnah's Cashmere" note="Yasnah's Cashmere" color="#FF0000">
     <description>Fresh rushes and sweet grass cover the floor, crackling with each step and making the air smell of meadows and sunshine.  Thick deobar crossbeams stretch upwards from the stout center pole like the branches of a short but sturdy tree.</description>
     <position x="-620" y="657" z="0" />
-    <arc exit="go" move="go flap" destination="193" />
+    <arc exit="go" move="go tent flap" destination="193" />
   </node>
   <node id="214" name="Zaldi Taipa, Bowyer" note="Bowyer" color="#FF0000">
     <description>Fresh air wafts down from the opening at the apex of the tent, bringing the crisp, golden scent of the grasslands into the room.  A tall aspen pole, carved top to bottom with birds in flight, has been pegged so that quivers may be hung from it.  Nearby, a deep willow basket edged with the coppery iridescence of pheasant feathers holds an assortment of fletching pouches.</description>
     <position x="-640" y="577" z="0" />
-    <arc exit="go" move="go curtain" destination="215" />
+    <arc exit="go" move="go doehide curtain" destination="215" />
     <arc exit="go" move="go flap" destination="191" />
   </node>
   <node id="215" name="Zaldi Taipa, Bowyer" color="#FF0000">
     <description>Fabric dyed the color of the winter sky covers a framework of interlaced aspen poles.  White felt edged with black goat hide and embroidered with colorful vines and birds drapes the entryway.  In the corners, tall willow baskets are filled with fragrant juniper boughs that fill the air with a sharp, cool scent.</description>
     <position x="-620" y="577" z="0" />
-    <arc exit="go" move="go curtain" destination="214" />
+    <arc exit="go" move="go doehide curtain" destination="214" />
   </node>
   <node id="216" name="Zaldi Taipa, Potter" note="Potter" color="#FF0000">
     <description>Rushes crackle underfoot, bringing the scent of sun-dried grasses to mix pleasantly with the earthier smell of clay.  Along the walls is an array of mixing vessels, and loops of cord suspend an assortment of yucca-leaf brushes used to decorate the pottery that fills the room.  One corner is crowded with flat baskets holding little jars of paint, multi-colored shards, and shining fragments of crushed mica.</description>
     <position x="-660" y="517" z="0" />
-    <arc exit="go" move="go flap" destination="187" />
+    <arc exit="go" move="go entrance flap" destination="187" />
   </node>
   <node id="217" name="Zaldi Taipa, Ela's Equine Supplies" note="Ela's Equine Supplies|Tack" color="#FF0000">
     <description>All kinds of tack and horse supplies fill the inside of the tent.  Saddles and bridles, halters and combs -- everything a horse could need is contained in this tent.  An important-looking sign painted with various images of horses hangs over a pile of trunks and baskets, and a large feed box sits nearby.</description>
@@ -1411,18 +1316,18 @@
   <node id="222" name="The Lamb's Shank, Quiet Corner">
     <description>One corner of the tent has been screened off with heavy felt drapes, providing at least a bit of privacy for those who wish to have their meal in more solitude than can be had in the larger communal area.</description>
     <position x="-860" y="417" z="0" />
-    <arc exit="go" move="go drape" destination="221" />
+    <arc exit="go" move="go felt drapes" destination="221" />
   </node>
   <node id="223" name="Zaldi Taipa, Shepherd's Chadir" note="Shepherd's Chadir">
     <description>Perhaps deriving a perverse satisfaction from treading on the creatures that are often thorns in his side, the shepherd has flung the skins of various predators on the floor of his compact tent.  The central space is taken up by the tawny hide of a large cougar, while the heavier furs of wolf, coyote, and even a spotted lynx are arranged along the sides.  Interspersed among the simple items that make the tent a home are sheep-sized halters, baskets of medicinal herbs, and other tools of the trade.</description>
     <position x="-780" y="397" z="0" />
     <arc exit="go" move="go alcove" destination="224" />
-    <arc exit="go" move="go flap" destination="172" />
+    <arc exit="go" move="go tent flap" destination="172" />
   </node>
   <node id="224" name="Zaldi Taipa, Furrier" note="Bundles" color="#00FF00">
     <description>Furs in hues of buff and cream and sable hang side by side, contrasting warmly with the deep green felt of the walls.  The air is full of the scent of leather and tanned hides, though there is an undercurrent of a wild, musky odor -- a reminder of the creatures whose existence played out in the grasslands and forests beyond this tent.  Niklotai, the shepherd's son, hums tunelessly as he sorts a stack of cougar hides by color and quality.</description>
     <position x="-760" y="397" z="0" />
-    <arc exit="go" move="go flap" destination="223" />
+    <arc exit="go" move="go bear-hide flap" destination="223" />
   </node>
   <node id="225" name="The Western Road, Farmlands">
     <description>Fields to the north and south of the road look cultivated, or at least were tilled some short time in the past.  The road is in good repair, which argues for a local population that takes on the task of maintenance.</description>
@@ -1638,20 +1543,6 @@
     <position x="-320" y="-283" z="0" />
     <arc exit="west" move="west" destination="256" />
   </node>
-  <node id="258" name="Julge Dolen Zaldeni, Stream" color="#000080">
-    <description>The water flows to the east, funneling into a crevice not much wider than a hand.  Silty gloom surrounds you, and long-feelered fish wriggle through the muck at the bottom of the stream.</description>
-    <description>Murky water flows to the west, funneling in from a crevice not much wider than a hand.  Silty gloom lurks at the bottom of the water, and long-feelered fish wriggle through the muck at the bottom of the stream.  A thin coating of green algae coats the bottom of the stream bed, clinging between low rocks worn smooth by the current.</description>
-    <position x="-480" y="-103" z="0" />
-    <arc exit="west" move="swim west" destination="259" />
-    <arc exit="up" move="swim up" destination="127" />
-  </node>
-  <node id="259" name="Julge Dolen Zaldeni, Stream" color="#000080">
-    <description>The current flows to the east with a gentle tug.  The water is murky with silt churned from the lands above.  An occasional fish brushes past, more a disturbance in the water than a flash of silver through the gloom.</description>
-    <description>The current flows upward lightly as it hits a large bank of rough feldspar that houses numerous small fish and pockets of green algae.  Murky silt churns up from the streambed, filling the water with plumes that briefly resemble stormclouds before dissipating.  An occasional minnow darts here and there, creating a disturbance in the water and a flash of silver in the gloom.</description>
-    <position x="-500" y="-103" z="0" />
-    <arc exit="east" move="swim east" destination="258" />
-    <arc exit="up" move="swim up" destination="126" />
-  </node>
   <node id="260" name="Seord Kerwaith, Crystalline Gorge">
     <description>The frigid wind slides smoothly across the rock walls that enclose the valley, pulling shards of ice and compacted snow from the rough surface.  A massive boulder of the same black rock found within this valley rests securely in a narrow divot cut into the ground, covered in narrow gouges that crisscross along its rough surface.  In the gentle dusting of snow covering the ground several clawed prints follow the shadows along the edge of the valley leading northward towards the outpost.</description>
     <position x="-320" y="-223" z="0" />
@@ -1728,7 +1619,7 @@
     <description>Sheltered under the watchful eye of the mountain, towering walls and craggy parapets rise like a ravenous serpent from the rock that composes this end of the ravine.  Wrought of mikkhalbamar and thick, iron bands, the massive gates of the fortress mark the end of the valley road.  Silent evidence of battle litters the ground riven siege towers, wrecked onagers and shattered scorpions have been trodden nearly to splinters by time and the footfalls of great beasts.</description>
     <position x="0" y="-303" z="0" />
     <arc exit="northwest" move="northwest" destination="270" />
-    <arc exit="go" move="go gates" destination="331" />
+    <arc exit="go" move="go massive gates" destination="331" />
   </node>
   <node id="272" name="Cragstone Vale, Corral">
     <description>The mountain's flank flattens, creating a broad ledge between the cliffs above and the forest below.  A fence of stout mikkhalbamar logs has been erected around the area to create an enclosure in which the Dragon Priests train their war mounts.  Through a massive, open gate to the southeast, the road continues toward the mountain itself.</description>
@@ -2410,7 +2301,7 @@
     <description>Tangled brush surrounds this small clearing on all sides, save for a narrow trail which leads east.  Next to the trail lie the twisted remains of a once mighty oak tree, phosphorescent lichen glowing faintly from its blackened trunk.  A faint smell of charred woodsmoke hangs on the still air to tickle the senses.  Footprints criss-cross the clearing between the trail and a particularly rough patch of brush.</description>
     <position x="500" y="617" z="0" />
     <arc exit="go" move="go narrow trail" destination="366" />
-    <arc exit="go" move="lie;go opening" destination="368" />
+    <arc exit="go" move="lie;go low opening" destination="368" />
   </node>
   <node id="368" name="Wyvern Mountain, Cavern">
     <description>Light passes through cracks in the roof of the cavern to reflect silently off the piles of gems and jewelry which lie heaped before a finely-crafted statue of a Dwarven man.  Golden leprechauns scamper over the piles of treasure, the natural guardians of such a booty.  An onyx raven seems to watch the leprechaun's antics with an expression of detached amusement.</description>
@@ -2936,7 +2827,7 @@
     <description>Wyvern Mountain towers high rises in the sky above, with a thundering waterfall cascading down its front.  Several smaller peaks rise around the mountain cap like dragon's teeth, framing its snowy top.  Massive boulders frame the narrow winding trail, which slopes steeply upward and appears to have been recently cleared of rubble.</description>
     <position x="340" y="597" z="0" />
     <arc exit="south" move="south" destination="453" />
-    <arc exit="go" move="go path" destination="15" />
+    <arc exit="go" move="go rocky path" destination="15" />
   </node>
   <node id="453" name="Foot of Wyvern Mountain, Steep Trail">
     <description>Huge claw and fang marks mar the rocky terrain, the telltale signs of battle littering the steep trail.  Several of the huge boulders bear numerous dried bloodstains, and portions of the path are blackened and charred.  Wyvern Mountain blocks nearly half the sky, and the thundering waterfall cascading down its front can be both clearly seen and heard.</description>
@@ -3059,7 +2950,7 @@
     <description>The stone along the bank is somewhat treacherous, worn smooth and slick with the relentless passage of time and water.  This close to the precipice, the thunderous roar devours all other sound as the rapids race forward to plummet over the edge of the mountainside.  An impenetrable mist rises from the pool far below, tiny droplets trying in vain to resist the inevitable fall.</description>
     <position x="160" y="517" z="0" />
     <arc exit="down" move="down" destination="470" />
-    <arc exit="go" move="go bridge" destination="472" />
+    <arc exit="go" move="go sturdy bridge" destination="472" />
   </node>
   <node id="472" name="Wyvern Falls, Bridge">
     <description>The sturdy stone bridge spans the very top of Wyvern Falls as it crests over the side of the mountain.  On one side of the bridge the water is nearly still, caught in the calm just before going over the drop.  The world falls away on the other side into a dizzying drop hundreds of feet straight down, the falling water creating a mist rendering the distant ground invisible.</description>
@@ -3073,7 +2964,7 @@
     <position x="140" y="477" z="0" />
     <arc exit="east" move="east" destination="479" />
     <arc exit="west" move="west" destination="474" />
-    <arc exit="go" move="go bridge" destination="472" />
+    <arc exit="go" move="go sturdy bridge" destination="472" />
   </node>
   <node id="474" name="Wyvern Mountain, Above the Treeline">
     <description>The cliff extends above the evergreen canopy, giving an unbroken view of thousands of pine trees.  Clouds ring the purplish mountains distant on the horizon, while the towers and walls of Shard are clearly visible to the east.  Numerous claw marks mar the steep mountainside, permanently etched into the hard stone.</description>
@@ -3106,7 +2997,7 @@
     <description>Jutting out almost directly overhead, a wide dolomite ledge shades the pathway somewhat.  Numerous hardy plants cling to the side of the mountain, sheltering in the protection of the ledge above.  Tufts of tall grass grow around a tall fence crafted of green bamboo that ends the mountain pathway, sturdy and very well kept.</description>
     <position x="40" y="437" z="0" />
     <arc exit="southeast" move="southeast" destination="477" />
-    <arc exit="go" move="go gate" destination="534" />
+    <arc exit="go" move="go bamboo gate" destination="534" />
   </node>
   <node id="479" name="Wyvern Mountain, Above the Rapids">
     <description>The water-soaked bank follows a series of cascading rapids, blocked off by a steep drop that makes passage into the water impossible.  Sprays of water crest with white foam and flow constantly over the shallow and uneven boulders in the water.  Occasional sprays of water splash heavily against the path's edge, creating foaming white curtains that quickly fall again.</description>
@@ -3120,7 +3011,7 @@
     <arc exit="northeast" move="northeast" destination="482" />
     <arc exit="east" move="east" destination="481" />
     <arc exit="climb" move="climb cliff" destination="479" />
-    <arc exit="go" move="go track" destination="567" />
+    <arc exit="go" move="go narrow track" destination="567" />
   </node>
   <node id="481" name="Wyvern Mountain, Breeding Grounds">
     <description>A sharp ledge of pale rock juts out from the side of the mountain, hanging high over the raging rapids below.  Several abandoned nests lie here and there along the ledge, scattered with the bones of deer and other large game.  Clearly visible below the raging rapids is the mountain's treeline, the ancient evergreen forests covering a good portion of the steep slopes.</description>
@@ -3335,7 +3226,7 @@
     <description>The narrow ledge forms a very shallow cavern in the side of the cliff face, offering some limited shelter for travelers.  A makeshift firepit is dug into the ground just before the shelter, with a small supply of wood set out in a bin.  Flat, wide boulders circle the firepit, providing a place to sit and rest.</description>
     <position x="300" y="377" z="0" />
     <arc exit="west" move="west" destination="513" />
-    <arc exit="go" move="go spring" destination="526" />
+    <arc exit="go" move="go crystal spring" destination="526" />
   </node>
   <node id="515" name="Wyvern Mountain, Forest" color="#008000">
     <description>A small patch of vivid blue flowers grows in a rich streak of soil in a gap between two trees, hugging the edge of a steep cliff.  Wide spaces between the tall trees allow them to grow oversized feather-shaped branches, fanning out over the shady path.  Long strips of bark hang from several of the evergreens, marred at the edges with bite marks that expose the pale white sapwood underneath.</description>
@@ -3465,7 +3356,7 @@
     <description>A small and well-maintained garden has been built on either side of the pathway, flourishing in the shady space between the tall mountain boulders.  Bright blue violets, scorpion blossoms, and snowdrops grow in abundance, filling the air with a heady scent.  Twin fountains flow on either side of the path, made from natural rocks that spill crystal clear water into perfectly circular ponds.</description>
     <position x="20" y="417" z="0" />
     <arc exit="northwest" move="northwest" destination="535" />
-    <arc exit="go" move="go gate" destination="478" />
+    <arc exit="go" move="go bamboo gate" destination="478" />
   </node>
   <node id="535" name="Wyvern Mountain, Temple Path">
     <description>Numerous shoots of bamboo frame the small path, blocking most of the view of the surrounding rock and forming a lush green canopy overhead.  Blue paper lanterns hang on poles that follow both sides of the narrow path, casting a serene glow that tinges the area in gentle cerulean hues.  Well-tended herbs grow in stone-lined garden beds, protected from the harsh mountain wind by the hardy bamboo plants.</description>
@@ -3484,14 +3375,14 @@
     <description>Lacy foliage wends around numerous pallid statuary that blaze with inner light, illuminating the temple that rests at this garden's center.  A sweeping ivory edifice rendered even more luminous by the surrounding shadows, the temple is itself of elegant construction, from its niche-carved walls to its elaborately tiered roofs, each staggered to overlap the last as they climb upward to embrace the building's integration into the mountainous terrain.</description>
     <position x="-20" y="377" z="0" />
     <arc exit="south" move="south" destination="536" />
-    <arc exit="go" move="go door" destination="538" />
+    <arc exit="go" move="go double doors" destination="538" />
   </node>
   <node id="538" name="Temple of Serenity, Sanctuary">
     <description>Rendered in burnished gold, the elaborate carvings of the temple's exterior seem to only expand once within its walls, covering the entire ceiling here.  Patterned rice paper set within golden framing serves as interior walls, the warm glow of lanterns on the other side casting distorted silhouettes upon it.  Set into the floor is a lidless, vertically-slitted eye crafted from amber and onyx, its edges limned in inscribed silver.</description>
     <position x="-20" y="357" z="0" />
     <arc exit="north" move="north" destination="541" />
     <arc exit="west" move="west" destination="539" />
-    <arc exit="go" move="go door" destination="537" />
+    <arc exit="go" move="go double doors" destination="537" />
   </node>
   <node id="539" name="Temple of Serenity, Sanctuary">
     <description>Placid blue streaks across the bottom of the rice paper, as the scene upon it expands to include a multitude of robed figures seated around the banks of a lake, their raised arms meeting golden rays of sunlight.  Carved into the ivory of the opposite wall, a series of fantastically embellished niches holds opened scrolls bearing silver gilt text.  The scent of heavily spiced incense wafts in from the north, bringing with it the soft murmur of footsteps and song.</description>
@@ -3504,7 +3395,7 @@
     <position x="-40" y="337" z="0" />
     <arc exit="east" move="east" destination="541" />
     <arc exit="south" move="south" destination="539" />
-    <arc exit="go" move="go door" destination="542" />
+    <arc exit="go" move="go golden door" destination="542" />
   </node>
   <node id="541" name="Temple of Serenity, Podium" note="Niloa" color="#FF0000">
     <description>The walls here, two paper and two stone, are nearly obscured by the many floor-to-ceiling lanterns that line them, washing the eerily-still temple attendants in a saffron light that matches their silken robes.  Mostly Elotheans and Humans, they stand upon the raised platform in the room's center, eyes closed and faces tilted skyward as they chant.  Perfumed smoke filters down from the cloud-carved ivory censers set into the golden sun-patterned ceiling, tickling the senses with rich, spicy notes that play atop an earthy musk base.</description>
@@ -3516,31 +3407,31 @@
     <description>The majority of this chamber consists of large, silver-lined pools filled with shimmering koi.  Slender pathways curve between them, swelling at uneven intervals to accommodate movement around those seated in meditation without causing disruption.  Water cascades down the rippled golden walls, catching in ivory basins before trickling across multitudes of crystalline bells on its way to the ponds below.</description>
     <position x="-40" y="317" z="0" />
     <arc exit="east" move="east" destination="543" />
-    <arc exit="go" move="go door" destination="540" />
+    <arc exit="go" move="go golden door" destination="540" />
   </node>
   <node id="543" name="Temple of Serenity, Narrow Hallway">
     <description>The elevated height of this passage alleviates any impressions of tightness engendered by its narrow width.  Tranquil wave patterns wrought in alternating silver and gold stream through the ivory of the walls, the hammered metals catching light from the hanging lanterns to scintillating effect.  Carried in on a soft breeze from some unknown source, the delicate scent of lotus blossoms lingers in the air.</description>
     <position x="-20" y="317" z="0" />
     <arc exit="east" move="east" destination="544" />
     <arc exit="west" move="west" destination="542" />
-    <arc exit="go" move="go wall" hidden="True" destination="548" />
+    <arc exit="go" move="go ivory wall" hidden="True" destination="548" />
   </node>
   <node id="544" name="Temple of Serenity, Narrow Hallway">
     <description>The ceiling here descends, tapering down to a much more humble scale that stands in striking counterpoint to the grandiosity of its etched silver embellishments.  Set into the ivory walls, hammered golden troughs hold resplendent lotuses floating within crystal clear waters, their pale, unblemished petals illuminated from above.</description>
     <position x="0" y="317" z="0" />
     <arc exit="west" move="west" destination="543" />
-    <arc exit="go" move="go passageway" destination="545" />
+    <arc exit="go" move="go narrow passageway" destination="545" />
   </node>
   <node id="545" name="Temple of Serenity, Side Room">
     <description>The heady aroma of dried lotus blossoms mingles with that of the sweet almond oil in the decanters situated upon the low, golden table in this small room's center.  Wooden benches, heavily gilded and lacquered to a flawless sheen, line the elaborately carved walls, providing a place to sit in respite before or after enjoying the adjacent cleansing spring.  A silver serving cart sits near the entry, holding a large golden pitcher.</description>
     <position x="20" y="317" z="0" />
-    <arc exit="go" move="go passageway" destination="544" />
-    <arc exit="climb" move="climb ladder" destination="546" />
+    <arc exit="go" move="go narrow passageway" destination="544" />
+    <arc exit="climb" move="climb golden ladder" destination="546" />
   </node>
   <node id="546" name="Temple of Serenity, Cleansing Spring">
     <description>The smooth ivory flooring of the room above gives way to a solid gold coating that lines the natural depression created by the spring.  An eye has been carved into the gold along the bottom, its inset amber iris split by the crevice through which the water rises up from within the mountain itself.  Warm enough to melt away tension, the mineral laden water holds a slightly earthy smell that lingers within the resultant steam.</description>
     <position x="20" y="337" z="0" />
-    <arc exit="climb" move="climb ladder" destination="545" />
+    <arc exit="climb" move="climb golden ladder" destination="545" />
   </node>
   <node id="547" name="Underground Passage">
     <description>Slender wavy lines have been carved into the ceiling in a meandering pattern, encircling golden disks from which hang a series of red paper lanterns.  The carvings become more complex as they radiate outward, incorporating alchemical symbols and jagged geometric glyphs.  Set into one of the walls, a curving osage door looms, its frame nearly as tall as the passage itself.</description>
@@ -3932,14 +3823,14 @@
     <arc exit="south" move="south" destination="601" />
     <arc exit="southwest" move="southwest" destination="598" />
     <arc exit="west" move="west" destination="600" />
-    <arc exit="go" move="go trail" destination="603" />
+    <arc exit="go" move="go winding trail" destination="603" />
   </node>
   <node id="603" name="Wyvern Plateau, Grassy Vale">
     <description>Cupped within the surrounding grassland, a small vale enclosed by low rocky walls stetches around a small spring.  Tendrils of water flow out from the spring, feeding two meager rivulets winding amongst the savannah.</description>
     <position x="500" y="517" z="0" />
     <arc exit="north" move="north" destination="604" />
     <arc exit="west" move="west" destination="605" />
-    <arc exit="go" move="go trail" destination="602" />
+    <arc exit="go" move="go winding trail" destination="602" />
   </node>
   <node id="604" name="Wyvern Plateau, Grassy Vale">
     <description>The meandering streamlet eventually peters out into nothingness, its moisture dispersing amongst the thirsty grasses.  A few stray boulders mark the edge of the plateau, providing some warning of the plunge into the surrounding forest lurking below.</description>
@@ -4109,7 +4000,6 @@
     <arc exit="south" move="south" destination="626" />
     <arc exit="southwest" move="southwest" destination="627" />
   </node>
-
   <node id="629" name="The Black Spire, Intercessor Training">
     <description>Ropes and cables drape and hang from the ceilings and snake across the area to sturdy bolts sunk into the masonry walls.  Thick mats cover the floor, cushioning any falls from the adventurous users of the training equipment. Subdued lighting comes from the gaethzen spheres scattered about the space.</description>
     <position x="400" y="-203" z="0" />
@@ -4132,7 +4022,7 @@
     <arc exit="south" move="south" destination="630" />
     <arc exit="southwest" move="southwest" destination="574" />
   </node>
-   <node id="632" name="The Black Spire, Top of Rope">
+  <node id="632" name="The Black Spire, Top of Rope">
     <description>Dusty cobwebs traverse this corner of the ceiling, which is shrouded in shadows.  A rugged bolt anchors a thick hempen rope that dangles down to the floor.</description>
     <position x="420" y="-223" z="0" />
     <arc exit="climb" move="climb rope" destination="629" />
@@ -4146,17 +4036,14 @@
   <label text="To North Gate">
     <position x="643" y="399" z="0" />
   </label>
-  <label text="Grass Eels">
-    <position x="-610" y="-123" z="0" />
-  </label>
   <label text="Clouded Arzumos">
-    <position x="-720" y="177" z="0" />
+    <position x="-580" y="307" z="0" />
   </label>
   <label text="Dragon Priests, Peccaries">
     <position x="-900" y="107" z="0" />
   </label>
   <label text="Antelopes">
-    <position x="-380" y="247" z="0" />
+    <position x="-580" y="317" z="0" />
   </label>
   <label text="Golden Pards">
     <position x="-580" y="37" z="0" />
@@ -4316,5 +4203,8 @@
   </label>
   <label text="Beltunumshi">
     <position x="620" y="647" z="0" />
+  </label>
+  <label text="Golden Pards">
+    <position x="-250" y="287" z="0" />
   </label>
 </zone>
