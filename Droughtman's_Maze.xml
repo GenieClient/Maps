@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Droughtman's Maze" id="505">
+  <node id="1" name="Droughtman's Maze, Grand Hall" note="Grand Hall|Spieler">
+    <description>Suspended between jewel-toned pennants overhead, ornate oil lanterns softly illuminate the grand entry hall of Droughtman's Maze.  Eager contestants crowd the mahogany registration desk at the center of the chamber, while a gold-carpeted staircase dominates the northern wall, providing access to the observation deck.</description>
+    <position x="340" y="220" z="0" />
+    <arc exit="go" move="go narrow hallway" destination="4" />
+    <arc exit="climb" move="climb gold-carpeted staircase" destination="7" />
+    <arc exit="go" move="go colorful portal" destination="2" />
+  </node>
+  <node id="2" name="Foyer" note="MT_Prize_Wings.xml|loot|endloot|end loot">
+    <description>Subdued lighting illuminates the tasteful wooden paneling of the room while a bevy of overstuffed furniture provides comfortable seating for those contemplating weighty choices.  Thick plush carpets in a myriad of hues cover the floor, almost totally obscuring the pale wooden planks of the flooring.  Around the walls, a number of colored archways contain magical portals that, when open, allow access to the prize rooms beyond.  A large set of double doors allows access to rooms devoted to dispenser activities while a round opening leads to the area devoted to workshops for alterations.</description>
+    <description>Lighting illuminates the room which has carpets covering the floors.  A number of colored archways contain magic portals that, when open, allow access to the prize rooms beyond.  A set of double doors allows access to the dispensers while a round opening leads to the alteration area.</description>
+    <position x="360" y="220" z="0" />
+  </node>
+  <node id="4" name="Droughtman's Maze, Recovery Room" color="#00FF00">
+    <description>The noise from the cheering spectators, although muffled, can still be heard echoing off the walls of this comfortably cooled room.</description>
+    <position x="360" y="240" z="0" />
+    <arc exit="out" destination="1" />
+  </node>
+  <node id="5" name="Droughtman's Maze, Contestant's Box" color="#00FF00">
+    <description>This appears to be a preparation room for the maze contestants.  Aside from the signage posted along its western wall, the room is completely bare and devoid of any furniture or decoration.</description>
+    <position x="340" y="120" z="0" />
+    <arc exit="go" move="go door" />
+  </node>
+  <node id="6" name="Droughtman's Maze, Winner's Circle" color="#00FF00">
+    <description>The air in this room carries a hint of peach and vanilla.  A celebratory tune, a lively march, can be heard faintly from an unknown source, almost as if a complete orchestra were nearby, saluting not only the winner but all the contestants as well.</description>
+    <position x="320" y="220" z="0" />
+    <arc exit="go" move="go silver oval;go silver oval" destination="1" />
+  </node>
+  <node id="7" name="Droughtman's Maze, The Opal Lounge">
+    <description>The lighting here is dim, but not enough to obscure the opalescent wallpaper.  Couches and upholstered chairs in every shade of the rainbow are scattered around the room in groups, surrounding tables set with food.  A bar occupies one wall, which is hung with a mirror that only magnifies the maelstrom of color in the room.  One has to wonder, is the decor an attempt at opulence, or is it intended to induce patrons to drink more, just to blunt their senses?</description>
+    <position x="340" y="180" z="0" />
+    <arc exit="east" move="east" destination="8" />
+    <arc exit="west" move="west" destination="13" />
+    <arc exit="climb" move="climb gold-carpeted staircase" destination="1" />
+  </node>
+  <node id="8" name="Droughtman's Maze, Observation Deck">
+    <description>Light seems to follow you as you move about, allowing you to see what's in front of you but very little of what's beyond.  A slight odor of peaches is prevalent throughout the hallway.</description>
+    <position x="380" y="180" z="0" />
+    <arc exit="east" move="east" destination="9" />
+    <arc exit="west" move="west" destination="7" />
+    <arc exit="go" move="go doorway" destination="18" />
+  </node>
+  <node id="9" name="Droughtman's Maze, Observation Deck">
+    <description>Light seems to follow you as you move about, allowing you to see what's in front of you but very little of what's beyond.  A slight odor of peaches is prevalent throughout the hallway.</description>
+    <position x="440" y="180" z="0" />
+    <arc exit="east" move="east" destination="10" />
+    <arc exit="west" move="west" destination="8" />
+    <arc exit="go" move="go doorway" destination="19" />
+  </node>
+  <node id="10" name="Droughtman's Maze, Observation Deck">
+    <description>Light seems to follow you as you move about, allowing you to see what's in front of you but very little of what's beyond.  A slight odor of peaches is prevalent throughout the hallway.</description>
+    <position x="500" y="180" z="0" />
+    <arc exit="northeast" move="northeast" destination="11" />
+    <arc exit="west" move="west" destination="9" />
+    <arc exit="go" move="go doorway" destination="20" />
+  </node>
+  <node id="11" name="Droughtman's Maze, Observation Deck">
+    <description>Light seems to follow you as you move about, allowing you to see what's in front of you but very little of what's beyond.  A slight odor of peaches is prevalent throughout the hallway.</description>
+    <position x="540" y="140" z="0" />
+    <arc exit="northeast" move="northeast" destination="12" />
+    <arc exit="southwest" move="southwest" destination="10" />
+    <arc exit="go" move="go doorway" destination="21" />
+  </node>
+  <node id="12" name="Droughtman's Maze, Observation Deck">
+    <description>Light seems to follow you as you move about, allowing you to see what's in front of you but very little of what's beyond.  A slight odor of peaches is prevalent throughout the hallway.</description>
+    <position x="580" y="100" z="0" />
+    <arc exit="southwest" move="southwest" destination="11" />
+    <arc exit="go" move="go doorway" destination="22" />
+  </node>
+  <node id="13" name="Droughtman's Maze, Observation Deck">
+    <description>Light seems to follow you as you move about, allowing you to see what's in front of you but very little of what's beyond.  A slight odor of peaches is prevalent throughout the hallway.</description>
+    <position x="300" y="180" z="0" />
+    <arc exit="east" move="east" destination="7" />
+    <arc exit="west" move="west" destination="14" />
+    <arc exit="go" move="go doorway" destination="23" />
+  </node>
+  <node id="14" name="Droughtman's Maze, Observation Deck">
+    <description>Light seems to follow you as you move about, allowing you to see what's in front of you but very little of what's beyond.  A slight odor of peaches is prevalent throughout the hallway.</description>
+    <position x="240" y="180" z="0" />
+    <arc exit="east" move="east" destination="13" />
+    <arc exit="west" move="west" destination="15" />
+    <arc exit="go" move="go doorway" destination="24" />
+  </node>
+  <node id="15" name="Droughtman's Maze, Observation Deck">
+    <description>Light seems to follow you as you move about, allowing you to see what's in front of you but very little of what's beyond.  A slight odor of peaches is prevalent throughout the hallway.</description>
+    <position x="180" y="180" z="0" />
+    <arc exit="east" move="east" destination="14" />
+    <arc exit="northwest" move="northwest" destination="16" />
+    <arc exit="go" move="go doorway" destination="25" />
+  </node>
+  <node id="16" name="Droughtman's Maze, Observation Deck">
+    <description>Light seems to follow you as you move about, allowing you to see what's in front of you but very little of what's beyond.  A slight odor of peaches is prevalent throughout the hallway.</description>
+    <position x="140" y="140" z="0" />
+    <arc exit="southeast" move="southeast" destination="15" />
+    <arc exit="northwest" move="northwest" destination="17" />
+    <arc exit="go" move="go doorway" destination="26" />
+  </node>
+  <node id="17" name="Droughtman's Maze, Observation Deck">
+    <description>Light seems to follow you as you move about, allowing you to see what's in front of you but very little of what's beyond.  A slight odor of peaches is prevalent throughout the hallway.</description>
+    <position x="100" y="100" z="0" />
+    <arc exit="southeast" move="southeast" destination="16" />
+    <arc exit="go" move="go doorway" destination="27" />
+  </node>
+  <node id="18" name="Droughtman's Maze, The Diamond Room" note="Diamond Room">
+    <description>White marble walls speckled with tiny diamonds enclose a formidable sitting room.  Hanging from the ceiling, a large crystal chandelier bears an array of lit candles, giving off a glorious light reflected through the crystals.  Nestled against the far wall is a plump white sofa, offering comfortable seating to view the ongoing show through the large window on the opposite wall.</description>
+    <position x="380" y="160" z="0" />
+    <arc exit="go" move="go doorway" destination="8" />
+  </node>
+  <node id="19" name="Droughtman's Maze, The Ruby Room" note="Ruby Room">
+    <description>Stretching the length of one wall, a large heart-shaped window framed by sheer red curtains looks down on the maze.  Tiered redwood tables topped by a multitude of lit red candles are scattered throughout the room.  Large floor cushions lie around the room to give comfort to those spectators who might wish to relax.</description>
+    <position x="440" y="160" z="0" />
+    <arc exit="go" move="go doorway" destination="9" />
+  </node>
+  <node id="20" name="Droughtman's Maze, The Emerald Room" note="Emerald Room">
+    <description>Twining around the room, iron ivy vines have been arranged with dark green candles resting precariously upon upturned leaves.  Small wooden trunks topped with emerald green cushions offer firm but comfortable seating.  Upon the wall is a wide window bordered with green-tinted stained glass panels and framed with a soft green moss, which fills the room with a pleasant, earthy aroma.</description>
+    <position x="500" y="160" z="0" />
+    <arc exit="go" move="go doorway" destination="10" />
+  </node>
+  <node id="21" name="Droughtman's Maze, The Sapphire Room" note="Sapphire Room">
+    <description>A large replica of Xibar hangs from the ceiling and rotates slowly, refracting and reflecting the light from surrounding oil lamps so that the room is awash in various shades of blue.  Blue velvet chairs are arranged in various locations around the room, next to small ironwood tables set with small blue votive candleholders.</description>
+    <position x="560" y="140" z="0" />
+    <arc exit="go" move="go doorway" destination="11" />
+  </node>
+  <node id="22" name="Droughtman's Maze, The Amethyst Room" note="Amethyst Room">
+    <description>Regally stiff, this room bears no knick-knacks or superfluous decoration.  Standing on each side of a large observation window are two pedestals on which two plain oil lamps glow brightly.  A large solitary purple couch stands at the center of the room between two pale purple marble tables.</description>
+    <position x="600" y="100" z="0" />
+    <arc exit="go" move="go doorway" destination="12" />
+  </node>
+  <node id="23" name="Droughtman's Maze, The Black Pearl Room" note="Black Pearl Room">
+    <description>Dangling from the low ceiling, a black crystal chandelier bearing carved candles illuminates the room.  Sheer curtains, tied neatly at each side with satin ribbons, frame a slightly tinted window.  Plush black silk pillows surround a black ebonwood table in the center of the room.</description>
+    <position x="300" y="160" z="0" />
+    <arc exit="go" move="go doorway" destination="13" />
+  </node>
+  <node id="24" name="Droughtman's Maze, The Moonstone Room" note="Moonstone Room">
+    <description>Iridescent walls surround a large circular table of milky quartz set in the center of the moonstone-tiled floor.  One entire wall has been replaced with a large window with opaque designs bordering the edges like frost on a winter-chilled pane.  Simple bentwood silver-birch chairs are turned at an angle to the window, to permit both conversation and a clear view.</description>
+    <position x="240" y="160" z="0" />
+    <arc exit="go" move="go doorway" destination="14" />
+  </node>
+  <node id="25" name="Droughtman's Maze, The Citrine Room" note="Citrine Room">
+    <description>Resting in each corner of this vibrant room are wicker tables laden with yellow and orange candles in various sizes.  Painted upon the wall opposite the observation window is a mural of a rising sun.  Scattered throughout the room are large wicker chairs, each topped with a plush orange or yellow cushion, which provide seating for spectators.</description>
+    <position x="180" y="160" z="0" />
+    <arc exit="go" move="go doorway" destination="15" />
+  </node>
+  <node id="26" name="Droughtman's Maze, The Aquamarine Room" note="Aquamarine Room">
+    <description>Light blue walls, expertly painted with softly blended swirls of white and blue, give the impression of a room immersed in a soft, cool mist.  Aquamarine-tinted cut-crystal lamps hang from the walls.  Plush sky-blue sofas are arranged in staggered rows and elevated on risers to provide each seated spectator with a clear view out of a large oval window.</description>
+    <position x="120" y="140" z="0" />
+    <arc exit="go" move="go doorway" destination="16" />
+  </node>
+  <node id="27" name="Droughtman's Maze, The Peridot Room" note="Peridot Room">
+    <description>Chairs with cushions in lemon- or lime-green are set about the room, each with its own yellow-and-green-striped glass table.  Splotches of brilliant yellow and splatters of light green paint decorate the walls in abstract patterns.  The light aroma of fresh vanilla drifts from incense holders placed evenly below the observation window.</description>
+    <position x="80" y="100" z="0" />
+    <arc exit="go" move="go doorway" destination="17" />
+  </node>
+  <node id="28" name="The Strand, Sandy Path" note="Map1_Crossing.xml|Crossing|exit">
+    <description>Following the roadside along the Oxenwaithe's bank, you are struck by the quiet beauty of the place.  Taking pause to breathe in the crisp, clean air, you reflect on your surroundings.  Sand, sparkling as if mixed with diamond dust, pours into deep blue undulating waters.  A lush copse of trees spreads to the north, while to the southeast, a series of delightful small buildings is set back from the river's edge.</description>
+    <position x="320" y="240" z="0" />
+    <arc exit="southeast" move="southeast" />
+    <arc exit="northwest" move="northwest" />
+    <arc exit="none" move="ask spieler about treasure" destination="1" />
+  </node>
+  <node id="29" name="Droughtman's Compound, Center of Maze" color="#00FF00">
+    <description>The walls of the maze are constructed of smooth black marble with web-like veins of gold and silver that stand out boldly against the dark background.  The floors are covered with iron grating allowing for more than adequate drainage of any fluids which might be spilled within the confines of the labyrinth.  Several flickering torches are placed in gold trimmed sconces spaced evenly along the passage walls.</description>
+    <position x="340" y="80" z="0" />
+    <arc exit="go" move="go golden arch" hidden="True" destination="6" />
+  </node>
+  <label text="Peridot ">
+    <position x="35" y="90" z="0" />
+  </label>
+  <label text="Aquamarine">
+    <position x="50" y="130" z="0" />
+  </label>
+  <label text="Citrine">
+    <position x="160" y="140" z="0" />
+  </label>
+  <label text="Moonstone">
+    <position x="210" y="140" z="0" />
+  </label>
+  <label text="Black Pearl">
+    <position x="270" y="140" z="0" />
+  </label>
+  <label text="Diamond">
+    <position x="350" y="140" z="0" />
+  </label>
+  <label text="Ruby">
+    <position x="420" y="140" z="0" />
+  </label>
+  <label text="Emerald">
+    <position x="480" y="140" z="0" />
+  </label>
+  <label text="Sapphire">
+    <position x="565" y="130" z="0" />
+  </label>
+  <label text="Amethyst">
+    <position x="610" y="90" z="0" />
+  </label>
+  <label text="Winner's Circle">
+    <position x="240" y="210" z="0" />
+  </label>
+  <label text="Contestant's Box">
+    <position x="250" y="110" z="0" />
+  </label>
+  <label text="Recovery Room">
+    <position x="365" y="235" z="0" />
+  </label>
+  <label text="Center of Maze">
+    <position x="255" y="70" z="0" />
+  </label>
+  <label text="End Loot">
+    <position x="365" y="210" z="0" />
+  </label>
+</zone>
