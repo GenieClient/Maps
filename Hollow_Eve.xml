@@ -328,6 +328,7 @@
   </node>
   <node id="38" name="Saidakyp of Andreshlew, Registrar's Office">
     <description>High arched windows let sunlight stream in, bathing the creamy blue-streaked marble walls in a soft glow.  Standing behind a long marble counter and flanked by enormous filing cabinets, meticulously dressed clerks attend to incoming paperwork.</description>
+    <description>High arched windows let air in, and candles bathe the creamy blue-streaked marble walls in a soft glow.  Standing behind a long marble counter and flanked by enormous filing cabinets, meticulously dressed clerks attend to incoming paperwork.</description>
     <position x="510" y="-370" z="0" />
     <arc exit="east" move="east" destination="37" />
     <arc exit="go" move="go coralite curtain" destination="39" />
