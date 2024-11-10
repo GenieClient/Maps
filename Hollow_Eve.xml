@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<zone name="Hollow Eve Festival 2024" id="62022">
+<zone name="Hollow Eve Festival 2024" id="612">
   <node id="375" name="Exit" note="exit|corral" color="#FF00FF">
     <description>It's the ocean!</description>
     <position x="130" y="-200" z="0" />
