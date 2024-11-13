@@ -293,8 +293,8 @@
     <arc exit="east" move="east" destination="35" />
     <arc exit="northwest" move="northwest" destination="33" />
     <arc exit="go" move="go white gazebo" destination="137" />
-    <arc exit="go" move="go clapboard emnporium" destination="195" />
-    <arc exit="go" move="go clapboard emporium" destination="197" />
+    <arc exit="go" move="go clapboard emporium" destination="195" />
+    <arc exit="go" move="go canvas tent" destination="197" />
     <arc exit="go" move="go rambling shop" destination="198" />
     <arc exit="go" move="go forest-green wagon" destination="368" />
   </node>
@@ -307,7 +307,6 @@
     <arc exit="go" move="go entrance" destination="205" />
     <arc exit="go" move="go cramped shack" destination="82" />
     <arc exit="go" move="go small shop" destination="207" />
-    <arc exit="go" move="go arch" destination="36" />
   </node>
   <node id="36" name="Andreshlew, Falashtan">
     <description>This end of the lane is shaded by several aquamarine coral trees draped with silken strands of flutter moss.  They frame a small building made entirely from the horned carapace of some giant crustacean.  Its translucent walls shade from cream to scarlet.  A sign spans the round doorway, held in place by the creature's enormous claws.</description>
@@ -369,6 +368,7 @@
     <arc exit="go" move="go enclosed gazebo" destination="247" />
     <arc exit="go" move="go canvas pavilion" destination="249" />
     <arc exit="go" move="go brick building" destination="250" />
+    <arc exit="go" move="go rainbow tent" destination="340" />
   </node>
   <node id="43" name="Andreshlew, Suporni Tomerszentani">
     <description>Water-sodden areas to either side of the walkway are occupied by hundreds of cream-colored cowry shells bearing slender brown twigs.  Most are covered with red, trumpet-like blossoms.  An immense tree trunk, once oak, now driftwood, maintains a central spot in the lane.  Carved with arabesqued depictions of Dwarves battling forest-sized monsters, it has been covered with a lattice of copper designed to resemble stitched branches.</description>
@@ -396,7 +396,8 @@
     <arc exit="southwest" move="southwest" destination="44" />
     <arc exit="go" move="go silk pavilion" destination="237" />
     <arc exit="go" move="go canvas tent" destination="242" />
-    <arc exit="go" move="go small shack" />
+    <arc exit="go" move="go small shack" destination="344" />
+    <arc exit="go" move="go sturdy shed" destination="238" />
   </node>
   <node id="46" name="Andreshlew, Suporni Tomerszentani">
     <description>A swale of sandy turf envelops the meandering lane.  Tussocks of seaweave grass display a wavering golden carpet, bordered by pink coral coaxed and nurtured into various animal shapes.  Dolphins bound, seahorses gallop.  Sea crabs extend rocky pincers forever above their shells.  A school of sculpted flounders loops a fanciful circle around a salmon-colored whale.</description>
@@ -679,7 +680,7 @@
     <arc exit="go" move="go registration booth" destination="114" />
     <arc exit="go" move="go pebbled path" destination="46" />
   </node>
-  <node id="82" name="Bobbing For Lamprey" note="bobbing for lamprey|lamprey" color="#00FF00">
+  <node id="82" name="Bobbing for Lamprey" note="bobbing for lamprey|lamprey" color="#00FF00">
     <description>Light creeping in from beyond the flap casts streaks of illumination across the room.</description>
     <position x="690" y="-260" z="0" />
     <arc exit="go" move="go leather flap" destination="35" />
@@ -1029,7 +1030,7 @@
   <node id="138" name="The Dolefaren, Common Room" note="Dolefaren|inn" color="#00FF00">
     <description>The dim interior of the ship is lit by scattered brass lanterns hanging along the walls.  A Merelew woman with green hair and silver scales serves the delicacies of her people to the restaurant's guests at several wood tables.</description>
     <position x="110" y="-600" z="0" />
-    <arc exit="go" move="go door" destination="26" />
+    <arc exit="go" move="go exit door" destination="26" />
   </node>
   <node id="139" name="Two Doors Down, Salesroom" note="two doors down" color="#FF0000">
     <description>Pale cream walls are trimmed with matching painted baseboards and crown molding, giving a subtle warmth to the shop.  That radiance is enhanced by the oil lamps hanging from the ceiling.  The expensive merchandise is displayed on hinged mounts, allowing purchasers to examine each offering on both sides.</description>
@@ -1308,13 +1309,13 @@
     <description>Materials, gadgets, weapons, and so many other contraptions are scattered about haphazardly without any recognizable sense of organization.  In one area is a collection of dozens of bones ranging in size from small, rat-like creatures all the way up to ones that surely belonged to a leviathan.  Some are bleached, others are scrimshawed, and still others glow with illusory sigils hovering about them.  A group of Merelew hunters are gathered around a table showing off various crossbow designs and are engaged in a seemingly never-ending debate about how or if such devices could be used practically beneath the waves.  From time to time, as one moves away, another approaches and begins the debate anew.</description>
     <position x="620" y="-330" z="0" />
     <arc exit="southwest" move="southwest" destination="188" />
-    <arc exit="go" move="go doorways" destination="191" />
+    <arc exit="go" move="go guarded doorways" destination="191" />
   </node>
   <node id="190" name="Craftsmen's Academy, Hall of Forges" note="forging|blacksmithing|armorsmithing">
     <description>A row of forges stands opposite a matching row of anvils, and curtains of thick hides are suspended from the ceiling to help contain and redirect the smoky air and heat towards windows and vents higher up.  They also serve to soften the constant clanging of metal striking metal as craftsmen show off specialized techniques to accomplish their creative designs.  Private forges lie beyond guarded doorways nearby for those unwilling to disclose their secrets in the more public spaces here.</description>
     <position x="600" y="-330" z="0" />
     <arc exit="southeast" move="southeast" destination="188" />
-    <arc exit="go" move="go guarded doorway" destination="316" />
+    <arc exit="go" move="go guarded doorways" destination="316" />
   </node>
   <node id="191" name="Craftsmen's Academy, A Private Engineering Room">
     <description>A fine layer of wood and stone shavings covers most of the well-worn granite floor.  The white walls have seen better days, and black and grey scuff marks adorn much of the open space.  A large workstation along one wall is unnaturally free of clutter and holds several organized tools and implements.  Grunts, curses, and labored breathing from other patrons echo throughout the large workroom.</description>
@@ -1325,19 +1326,19 @@
     <description>A trio of spinning wheels sit between a handful of looms, and all are arranged in a horseshoe shape around a platform that showcases various Merelew fashions intermixed with vibrant fabrics, thick furs and other textiles from the mainlands.  Several elderly ladies walk the circuit, taking turns sharing stories and showing off knitting techniques as they furiously work their needles with yarn carefully feeding out of satchels slung over their shoulders.  Some guarded doorways are tucked away along a back wall.</description>
     <position x="620" y="-310" z="0" />
     <arc exit="northwest" move="northwest" destination="188" />
-    <arc exit="go" move="go guarded doorway" destination="325" />
+    <arc exit="go" move="go guarded doorways" destination="325" />
   </node>
   <node id="193" name="Craftsmen's Academy, Applied Artificing" note="enchanting|artificing">
     <description>A series of guarded doorways line a segment of the wall here.  Scattered between them are tables with differently styled magical founts, beads and wands of different metals, woods and stones, and other tools commonly used by artificers.  Several strange contraptions also serve as a gathering point where a Merelew Enchantress tries to explain their purpose, but the perplexed expressions of those gathered about her don't seem promising.</description>
     <position x="610" y="-310" z="0" />
-    <arc exit="go" move="go guarded doorway" destination="326" />
+    <arc exit="go" move="go guarded doorways" destination="326" />
     <arc exit="north" move="north" destination="188" />
   </node>
   <node id="194" name="Craftsmen's Academy, Association of Alchemists" note="alchemy|remedies">
     <description>Shelves are lined with jars of pastes, unguents, potions and other finished remedies.  Tables set along a windowed wall display several variations of the Wayerd pyramid, some with cambrinth and others without.  Overhead, numerous clumps of colorful dried and drying herbs are bundled with lengths of seaweed that dangle from a large fishing net -- all of which provide a heady, medicinal aroma.  Additional stations lie beyond guarded doorways.</description>
     <position x="600" y="-310" z="0" />
     <arc exit="northeast" move="northeast" destination="188" />
-    <arc exit="go" move="go guarded doorway" destination="319" />
+    <arc exit="go" move="go guarded doorways" destination="319" />
   </node>
   <node id="195" name="Shimmers of Silver" note="shimmers of silver" color="#FF0000">
     <description>Despite the rather small confines of this long, narrow hall, careful attention has been given to the expensive-looking decorations.  The white walls prominently showcase several small glass windows that look into elegant sculptures of colored glass, and bright lighting in the ceiling of their small cabinets shines onto the the works of art.</description>
@@ -1510,7 +1511,7 @@
   </node>
   <node id="224" name="The Eyes Have It, Salesfloor" note="the eyes have it|eyes have it" color="#FF0000">
     <description>Stepping into the shop, there is an inviting ambiance with soft, pastel hues adorning the walls and plush, cream-colored carpet underfoot.   Oil lanterns overhead create a warm and comforting glow, illuminating the tastefully arranged shelves and racks.  A few sales clerks mingle with the shoppers, answering questions and straightening merchandise.</description>
-    <position x="550" y="140" z="0" />
+    <position x="530" y="120" z="0" />
     <arc exit="go" move="go solid door" destination="47" />
   </node>
   <node id="225" name="Only The Holy, Salesfloor" note="only the holy" color="#FF0000">
@@ -2187,7 +2188,7 @@
     <arc exit="northwest" move="northwest" destination="340" />
   </node>
   <node id="342" name="Aerial Artistry, Featureless" color="#FF0000">
-    <description>Masks of all shapes and sizes cover the walls, appearing to show no order to their placement.  They create a riot of colors and expressions around the area.  Painted stands are placed carefully along the edges of the area.  </description>
+    <description>Masks of all shapes and sizes cover the walls, appearing to show no order to their placement.  They create a riot of colors and expressions around the area.  Painted stands are placed carefully along the edges of the area.</description>
     <position x="440" y="110" z="0" />
     <arc exit="east" move="east" destination="341" />
     <arc exit="northeast" move="northeast" destination="340" />
@@ -2227,7 +2228,7 @@
   </node>
   <node id="348" name="The Finer Things, Front Room" note="the finer things|finger things" color="#FF0000">
     <description>The room is lavishly floored with durian buffed to a brilliant sheen while a perfume bottle chandelier hangs from above illuminating the opulent coral walls with a warm glow.  A shelf of brushed platinum faces an intricately carved chest, each carefully placed to subtly catch the light upon their showcased wares.  Taking the central focal point of the room is a glass counter wrapped in strands of seashells and adorned with purposely placed jars of brightly glowing gaethzen.</description>
-    <position x="530" y="100" z="0" />
+    <position x="560" y="140" z="0" />
     <arc exit="east" move="east" destination="369" />
     <arc exit="southwest" move="southwest" destination="370" />
     <arc exit="go" move="go door" destination="47" />
@@ -2345,12 +2346,12 @@
   </node>
   <node id="369" name="The Finer Things, Back Room" color="#FF0000">
     <description>The opulence of the shop is carried into this room, but with a more casual setting.  Sun bleached coral walls are draped in pastel-tinted whisperlayne interwoven with soft glowing lights that help to highlight the salt-stained durian floors.  Reclaimed wood and expensive fabrics combine to create the chests and whitewashed shelves used to display the wares in the cozy area.</description>
-    <position x="540" y="100" z="0" />
+    <position x="570" y="140" z="0" />
     <arc exit="west" move="west" destination="348" />
   </node>
-  <node id="370" name="The Finer Things, Corner" color="#FF0000">
+  <node id="370" name="The Finer Things, Corner" color="#00FF00">
     <description>The lush, ocean-blue carpeting of the small room serves the dual purposes of muffling the sounds of heavy foot traffic and providing a more cushioned place to sit or stand.  Lavish piles of sea-shell patterned pillows are stacked with an eye to detail and the customers' comfort in mind.  Potted palm trees strung with softly glowing sungold lanterns stand in each corner of the room, giving off just enough light to create a relaxed ambience.</description>
-    <position x="520" y="110" z="0" />
+    <position x="550" y="150" z="0" />
     <arc exit="northeast" move="northeast" destination="348" />
   </node>
   <node id="371" name="The Gear Shop, The Intrepid Adventuress" color="#FF0000">
@@ -2531,5 +2532,11 @@
   </label>
   <label text="Mishli">
     <position x="535" y="-380" z="0" />
+  </label>
+  <label text="Finest Box">
+    <position x="540" y="155" z="0" />
+  </label>
+  <label text="of Gems">
+    <position x="540" y="165" z="0" />
   </label>
 </zone>
