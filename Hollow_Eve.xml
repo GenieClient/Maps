@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <zone name="Hollow Eve Festival 2024" id="612">
-  <node id="375" name="Exit" note="exit|corral" color="#FF00FF">
-    <description>It's the ocean!</description>
-    <position x="130" y="-200" z="0" />
-  </node>
   <node id="1" name="Andreshlew, South Dock" note="dolphin|invitation|authorization|entrance|dock" color="#00FF00">
     <description>Overhead, sea plants woven into a mat spread from pillars of coral to provide shade for the visiting land folk.  Small glass and crystal globes hang from the pillars.  Underfoot, the smooth sandstone is decorated with coral, shells, and gold.  Columns and domes rise up from the water surrounding the dock.  Cargo is being brought in by Merelew workers and then stacked on the dock for sorting.</description>
     <description>Overhead, glowing crystal globes shed a soft green-yellow light on the dock.  Tall coral pillars rise from the sandstone to provide anchorage for the awning overhead.  The smooth sandstone of the dock is decorated with coral, shells, and gold.  In the water, glowing points of light give a glimpse of the true Merelew city.  Soft breezes blow through the pillars, and in the darkness, the sound of the sea murmurs unchanged.</description>
@@ -41,6 +37,7 @@
     <description>The silverwood wall panels are covered in fine sea foam-colored silks.  Around the room are couches decorated with carved motifs of shells, and covered in dark blue brocade.  Cedar tables, with chairs of ebonwood inlaid with bits of shell and covered in leather, are available for people to meet take up much of the remaining space.  The silver candleholders are all shaped like deobar trees.</description>
     <position x="160" y="-240" z="0" />
     <arc exit="go" move="go silverwood door" destination="7" />
+    <arc exit="go" move="go lunat door" destination="7" />
     <arc exit="climb" move="climb staircase" destination="4" />
   </node>
   <node id="7" name="The Gallaenia, Purser's Office" note="bank|teller" color="#00FF00">
@@ -260,7 +257,7 @@
     <arc exit="go" move="go frost-covered shop" destination="173" />
     <arc exit="go" move="go tapestry tent" destination="174" />
     <arc exit="go" move="go whalebone lodge" destination="175" />
-    <arc exit="go" move="go multi-roomed tent" destination="402" />
+    <arc exit="go" move="go multi-roomed tent" destination="345" />
   </node>
   <node id="32" name="Andreshlew, Sinuous Shore Road">
     <description>Along the shore, the road is separated from the ocean by a low wall, which is dotted at intervals by pillars decorated with images of kraken.  A sandstone building topped by a low, onion-shaped dome stands on the northern side of the road, and more domes and towers rise across the water.</description>
@@ -426,11 +423,10 @@
     <arc exit="north" move="north" destination="49" />
     <arc exit="east" move="east" destination="41" />
     <arc exit="west" move="west" destination="53" />
+    <arc exit="go" move="go canvas pavilion" destination="349" />
     <arc exit="go" move="go otter den" destination="79" />
     <arc exit="go" move="go elegant emporium" destination="251" />
     <arc exit="go" move="go canvas tent" destination="253" />
-    <arc exit="go" move="go canvas pavilion" destination="349" />
-    <arc exit="go" move="go sturdy lean-to" />
   </node>
   <node id="49" name="Andreshlew, Falashtan" color="#FF00FF">
     <description>The road slopes through a well-shaded region covered with massive blue and red lichen patches.  Their heavy growths have been carefully trimmed into broad, conical shapes, inset with pale glowstones.  The lichen bushes stir slightly, perpetually undulating from side to side, although no breath of air stirs within the area.  Beneath several specimens lies an eight-sided doorway leading into the earth, outlined in irregular glowstones that slowly shift between darkness and an angry red glare.</description>
@@ -1688,10 +1684,12 @@
     <position x="250" y="220" z="0" />
     <arc exit="go" move="go square doorway" destination="251" />
   </node>
-  <node id="253" name="Things That Go Bump in the Fight, Control Room" note="things that go bump in the fight" color="#FF0000">
-    <description>Set up in the middle of the floor are a number of utilitarian shelves and racks made of wood.  A few small cubicles are set up along the canvas tent walls so that patrons can try on the merchandise.  The scent of oiled canvas and freshly cut wood still drifts on the air in the confined space.</description>
-    <position x="260" y="180" z="0" />
+  <node id="253" name="The Clerks' Collections, Entryway" color="#FF0000">
+    <description>A deep blue carpet lines the floor, though ripples in the material show it was hastily thrown down and not properly secured.  The bare canvas walls reflect the sounds of shoppers outside.  Hallways branch off in opposite directions leading away from the entrance.</description>
+    <position x="300" y="180" z="0" />
     <arc exit="go" move="go canvas flap" destination="48" />
+    <arc exit="north" move="north" destination="377" />
+    <arc exit="south" move="south" destination="383" />
   </node>
   <node id="254" name="Sputkin's Splendors, Entry" note="sputkins splendors" color="#FF0000">
     <description>Decoration is sparse in the entryway.  A cramped passage leads northward between stacks of empty crates, whose contents are presumably on display elsewhere.</description>
@@ -1738,6 +1736,7 @@
     <description>Arched walls are hung with ivory gauze layered over pale rose silk, softening the light of the room and rippling with every breeze.  Tall seagrass baskets filled with honeysuckle blossoms and curls of sandalwood and cinnamon bark are tucked in the corners, lending a light and spicy fragrance to the air.  Big cushions covered with raw silk and edged with tiny golden bells are scattered near the merchandise racks, inviting shoppers to linger and choose.</description>
     <position x="210" y="220" z="0" />
     <arc exit="go" move="go tent flap" destination="53" />
+    <arc exit="east" move="east" destination="384" />
   </node>
   <node id="262" name="Sable's, Odd Treasures" note="sable's|sables" color="#FF0000">
     <description>Occasional breezes cause the sheets of canvas forming the walls and ribbons on racks to flutter.  A layer of sawdust covers the ground, and pale streams of light radiate from whimsical gaethzen globes set at even intervals around the room, giving everything a cheery glow.</description>
@@ -1780,7 +1779,7 @@
   <node id="269" name="Knotty Pirate, Entry" note="knotty pirate" color="#FF0000">
     <description>Plain oak paneling covers the walls with rich, yellow-brown wood while the floors are narrower planks of the same wood.  Occupying the central space of the entry are some mannequins, dressed in flamboyant outfits.</description>
     <position x="300" y="120" z="0" />
-    <arc exit="go" move="go tent flap" destination="49" />
+    <arc exit="go" move="go wooden door" destination="49" />
   </node>
   <node id="270" name="Heikea, Beds" color="#FF0000">
     <description>White painted walls give the shop a clean, bright feeling.  Nestled in among the various other furniture displays visible in the background, this corner of the shop features beds available for purchase by the discerning homeowner.</description>
@@ -1921,6 +1920,7 @@
   </node>
   <node id="294" name="Hidden Treasures" note="hidden treasures" color="#FF0000">
     <description>Paper-covered figures crowd this small but festive shop, spilling over tabletops and hanging from hooks in the rafters.  A small counter provides limited purchasing space, behind which a smiling clerk awaits all customers.  Paper frills and ribbons flutter with every passing breeze, causing the room's contents to wave with colorful abandon.</description>
+    <description>Figures covered in colorful paper sway from their positions on hooks in the rafters, their colors more subdued in the evening light.  A few carefully watched lanterns enclosed in thick glass cast light into the dark corners, causing distorted shadow performances on the walls as the light dances over the pinatas on display.</description>
     <position x="-150" y="40" z="0" />
     <arc exit="go" move="go painted door" destination="63" />
   </node>
@@ -2203,7 +2203,7 @@
     <position x="480" y="-50" z="0" />
     <arc exit="go" move="go rickety door" destination="45" />
   </node>
-  <node id="402" name="High on the Frog, Entrance" note="high on the frog" color="#FF0000">
+  <node id="345" name="High on the Frog, Entrance" note="high on the frog" color="#FF0000">
     <description>Set in the corners are four polished brass braziers that illuminate the entryway with flickering flames.  Canvas walls wave slightly in the breeze, the pale blue bands at their bottom swaying much like the waves on the ocean.  Wood shavings are spread on the ground, the faint pine scent mixing with the faint smoky smell from the braziers.</description>
     <position x="270" y="-550" z="0" />
     <arc exit="north" move="north" destination="360" />
@@ -2235,7 +2235,7 @@
   </node>
   <node id="349" name="The Gear Shop, The Inventive Gentleman" note="the gear shop|gear shop" color="#FF0000">
     <description>Painted across the canvas panels with an inexpert hand are scenes of young male Gnomes exploring a bright green and tangled jungle.  One stands proudly atop a fallen log, his right hand shielding his eyes as his left hand stretches toward some distant spectacle.  A plush rug of dirt-brown speckled with grass-green shades covers the floor from edge to edge.  Low shelves stand next to the walls, presenting a danger of banged knees to the taller races.</description>
-    <position x="300" y="180" z="0" />
+    <position x="260" y="180" z="0" />
     <arc exit="north" move="north" destination="371" />
     <arc exit="go" move="go canvas flap" destination="48" />
   </node>
@@ -2298,7 +2298,7 @@
     <description>All along the canvas walls are a series of stylized frogs painted in shades of green and brown.  A few are hopping while others are sitting or attempting to capture flying insects.  Overhead a series of brass lanterns illuminate the shop's merchandise.</description>
     <position x="270" y="-560" z="0" />
     <arc exit="northeast" move="northeast" destination="361" />
-    <arc exit="south" move="south" destination="402" />
+    <arc exit="south" move="south" destination="345" />
     <arc exit="northwest" move="northwest" destination="362" />
   </node>
   <node id="361" name="High on the Frog, Side Chamber" color="#FF0000">
@@ -2356,7 +2356,7 @@
   </node>
   <node id="371" name="The Gear Shop, The Intrepid Adventuress" color="#FF0000">
     <description>Brightly hued paints depict a young female Gnome standing alone on a stretching savanna, small blobs of trees and animals only guessable by their colors.  She stands tall, for a Gnome, with high heeled boots and an umbrella perched jauntily over her shoulder while her long hair curls to the side as if caught by a wind.  Sandy hued, a rug covers the floor and allows the many short tables a place to rest.</description>
-    <position x="300" y="170" z="0" />
+    <position x="260" y="170" z="0" />
     <arc exit="south" move="south" destination="349" />
   </node>
   <node id="372" name="Tieheq With the Thirteen, Accouterments" color="#FF0000">
@@ -2377,11 +2377,70 @@
     <arc exit="southwest" move="southwest" destination="354" />
     <arc exit="northwest" move="northwest" destination="373" />
   </node>
+  <node id="375" name="Exit" note="exit|corral" color="#FF00FF">
+    <description>It's the ocean!</description>
+    <position x="130" y="-200" z="0" />
+  </node>
+  <node id="376" name="The Gallaenia, Postal Office" note="mail|post office" color="#00FF00">
+    <description>Tucked away in a compartment is a wooden counter.  Spread across the compartment walls is a sweeping mural of a noontide sky over a whitecapped ocean.  Vast, countless rows of differently sized shelves are behind the counter, and complex Dwarven mechanisms can be heard as they rearrange the package-covered storage.  Clerks shuffle endlessly back and forth between the counters and shelving as they assist patrons with their packaging and mailing needs.</description>
+    <position x="170" y="-240" z="0" />
+    <arc exit="go" move="go lunat door" destination="6" />
+  </node>
+  <node id="377" name="The Clerks' Collections, Entrances" color="#FF0000">
+    <description>A deep blue carpet lines the floors, though ripples in the material show it was hastily thrown down and not properly secured.  Strips of matching material line the walls at regular intervals to mute some of the echoing sounds, and gaethzen lanterns occupy every other gap to light the corridor.  Leaning in the remaining open spaces are replicas of a number of doorways, arches, and other entrances of various styles.</description>
+    <position x="300" y="170" z="0" />
+    <arc exit="north" move="north" destination="380" />
+    <arc exit="northeast" move="northeast" destination="381" />
+    <arc exit="east" move="east" destination="382" />
+    <arc exit="south" move="south" destination="253" />
+    <arc exit="west" move="west" destination="378" />
+    <arc exit="northwest" move="northwest" destination="379" />
+  </node>
+  <node id="378" name="The Clerks' Collections, Additional Surfaces" color="#FF0000">
+    <description>A deep blue carpet lines the floor, though ripples in the material show it was hastily thrown down and not properly secured.  Sheets of gleaming metal conceal most of the spider's construction, though the steam pipes overhead remain exposed.  The items scattered around would ordinarily seem to belong to a storage room, but most have price tags attached indicating inventory waiting to be sold.</description>
+    <position x="290" y="170" z="0" />
+    <arc exit="east" move="east" destination="377" />
+  </node>
+  <node id="379" name="The Clerks' Collections, Backroom Access" color="#FF0000">
+    <description>A deep blue carpet lines the floors, though ripples in the material show it was hastily thrown down and not properly secured.  Strips of matching material line the walls at regular intervals to mute some of the echoing sounds, and gaethzen lanterns occupy every other gap to light the small chamber.  Leaned in the remaining open spaces are replicas of a number of doorways, arches and other entrances of various styles.</description>
+    <position x="290" y="160" z="0" />
+    <arc exit="southeast" move="southeast" destination="377" />
+  </node>
+  <node id="380" name="The Clerks' Collections, Wall Panels" color="#FF0000">
+    <description>The floor and ceiling of the circular chamber are bare, the canvas rippling slightly occasionally.  A single gaethzen lantern hangs from the tent poles overhead.  Curiously, the tent walls are covered in a hodgepodge of panels depicting segments of otherwise typical walls consisting of wood, colored papers, and more.</description>
+    <position x="300" y="160" z="0" />
+    <arc exit="south" move="south" destination="377" />
+  </node>
+  <node id="381" name="The Clerks' Collections, Surfaces Aplenty" color="#FF0000">
+    <description>A deep blue carpet lines the floors, though ripples in the material show it was hastily thrown down and not properly secured.  Pale light from a back corner illuminates the space, though it's rather weak in the corners opposite from it.  A number of tables, counters, pedestals and other flat surfaces fill the large chamber's floorspace while racks, shelves and hooks hang from the walls.</description>
+    <position x="310" y="160" z="0" />
+    <arc exit="southwest" move="southwest" destination="377" />
+  </node>
+  <node id="382" name="The Clerks' Collections, Flooring" color="#FF0000">
+    <description>The floor and walls are plain canvas in this chamber.  A single gaethzen lantern hangs from the exposed tent pipes overhead, illuminating a number of upright panels that would look better laid flat as flooring.</description>
+    <position x="310" y="170" z="0" />
+    <arc exit="west" move="west" destination="377" />
+  </node>
+  <node id="383" name="The Clerks' Collections, Miscellany" color="#FF0000">
+    <description>A deep blue carpet lines the floor, though ripples in the material show it was hastily thrown down and not properly secured.  The walls of plain canvas hide the crowds outside and the supporting tent poles hold up the roof.  The items scattered around would ordinarily seem to belong to a storage room, but most have price tags attached indicating inventory waiting to be sold.</description>
+    <position x="300" y="190" z="0" />
+    <arc exit="north" move="north" destination="253" />
+  </node>
+  <node id="384" name="Farhana's Island Exquistites, Back Room" color="#FF0000">
+    <description>Arched openings in the walls are hung with airy aqua gauze layered over light green silk, adding a blue tint to the room and rippling in the sea breezes.  A few potted flowers are scattered about, adding a splash of color and scenting the air with floral fragrances.  A few mannequins act as displays for outfits while hooks hold the merchandise.</description>
+    <position x="220" y="220" z="0" />
+    <arc exit="west" move="west" destination="261" />
+  </node>
+  <node id="385" name="Limited Trejures, Caravan Interior" color="#FF0000">
+    <description>Rickety racks and shelves line the cramped interior which is lit by a couple of oil lanterns placed haphazardly about.  A slight musty scent pervades the area while the small windows are so grime-covered as to be opaque.</description>
+    <position x="-165" y="-456" z="0" />
+    <arc exit="go" move="go caravan door" destination="0" />
+  </node>
   <label text="Docks">
     <position x="110" y="-200" z="0" />
   </label>
   <label text="Bank">
-    <position x="165" y="-240" z="0" />
+    <position x="145" y="-230" z="0" />
   </label>
   <label text="Raffles">
     <position x="185" y="-540" z="0" />
@@ -2538,5 +2597,8 @@
   </label>
   <label text="of Gems">
     <position x="540" y="165" z="0" />
+  </label>
+  <label text="Post Office">
+    <position x="175" y="-250" z="0" />
   </label>
 </zone>
