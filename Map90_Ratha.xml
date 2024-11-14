@@ -3589,6 +3589,7 @@
     <position x="-232" y="-709" z="0" />
     <arc exit="southwest" move="southwest" destination="562" />
     <arc exit="out" move="out" destination="560" />
+	<arc exit="climb" move="climb ramp" destination="876" />
   </node>
   <node id="562" name="Warrior Mage Guild, Testing Chamber" note="Testing Chamber|Stamina training" color="#FFFF00">
     <description>This long hallway within the courtyard walls is filled with people working on various ways to increase their stamina for combat.  A ladder at the far end of the hall leads up to one of the defensive towers.</description>
@@ -5370,6 +5371,7 @@
     <arc exit="southwest" move="southwest" destination="830" />
     <arc exit="west" move="west" destination="831" />
     <arc exit="northwest" move="northwest" destination="832" />
+	<arc exit="south" move="south" destination="838" />
   </node>
   <node id="830" name="Forging Society, Forge" note="Forge1|1Forge">
     <description>The ceiling of this forge has been cut away, leaving half the room under open sky.  The forge sits close to the inner wall under the shelter of the covered half while a rusty anvil lies further out, with limited protection.  Although this is a bit cramped compared to the other two forges, the constant airflow adds a great deal of relief from the heat.</description>
@@ -5415,6 +5417,11 @@
     <position x="-232" y="-179" z="0" />
     <arc exit="out" move="out" destination="304" />
   </node>
+  <node id="838" name="Forging Society, Bulk Materials" note="Forging Bulk|Bulk Forging" color="#FF0000">
+	<description>Tucked away in little more than a closet, this small space somehow manages to serve those who spend ample time in the nearby forges by supplying large quantities of the metals used.  A lone, red-eyed clerk is crammed behind a makeshift counter -- a door resting atop two differently sized barrels.  She coughs from time to time as the poorly ventilated area frequently fills with smoke.</description>
+	<position x="-269" y="398" z="0" />
+	<arc exit="north" move="north" destination="829" />
+	</node>
   <node id="839" name="Ratha Outfitting Society, Reception" note="Outfitting Society|Outfitting Clerk">
     <description>Creamy marble with a mirror-like finish spreads across the floor underfoot, while a variety of animal hides and shields are displayed at various points upon the surrounding walls.  A pair of brocade settees sit opposite each other at the center of the room, separated by a short oval table which is highlighted under the soft glow of the chandelier overhead.  A S'Kra Mur clerk stands behind a nearby counter, making notes in a small ledger.</description>
     <position x="-112" y="-259" z="0" />
@@ -5633,6 +5640,29 @@
     <description>Tucked away in a corner of the square is a wide stone counter set into the conical carousel beneath a wooden awning.  Spread across the awning's underside is a sweeping mural of a summer sky, with realistic white clouds set against a cerulean blue expanse.  Vast, countless rows of differently sized shelves are behind the counter, and complex Dwarven mechanisms can be heard as they rearrange the package-covered storage.  Clerks shuffle endlessly back and forth between the counters and shelving as they assist patrons with their packaging and mailing needs.</description>
     <position x="-3" y="359" z="0" />
     <arc exit="south" move="south" destination="259" />
+  </node>
+  <node id="876" name="Warrior Mage Guild, Lounge" note="WM Lounge|havri'negh">
+	<description>Thick stone walls muffle the sounds of the world outside of the guildhall, creating a sense of peace.  Thickly-cushioned chairs form a circle around a small oak table, its surface scarred by heated debates of the past.  An oak door in the south wall is carved with the havri'negh symbol.</description>
+	<position x="-232" y="-730" z="0" />
+	<arc exit="down" move="down" destination="561" />
+	<arc exit="north" move="north" destination="877" />
+	<arc exit="go" move="go door" destination="878" />
+  </node>
+  <node id="877" name="Warrior Mage Guild, Library" note="WM Library|WM Grimoire">
+	<description>Long tables and padded benches of dark rosewood fill the room, their surfaces polished smooth from years of use.  Two beveled-glass doors lead out onto a balcony which overlooks the tier's edge.  Strategically placed lamps cast a gentle glow on the rows of books lining the bookshelves.</description>
+	<position x="-232" y="-740" z="0" />
+	<arc exit="south" move="south" destination="876" />
+	<arc exit="go" move="go door" destination="879" />
+  </node>
+  <node id="878" name="Warrior Mage Guild, Targeting Range" note="WM Target Range" color="#00FF00">
+	<description>Set above the salle, the targeting range was created to train Warrior Mages in the most effective ways to disable their opponents with magic.  The stone walls are scarred by blasts of fire and warped by lightning strikes.  A slightly singed banner hangs on one side of the room.</description>>
+	 <position x="-242" y="-730" z="0" />
+	 <arc exit="go" move="go door" destination="876" />
+  </node>
+  <node id="879" name="Warrior Mage Guild, Balcony">
+	<description>An elaborately carved stone balustrade is the only barrier between the guildhall and the sheer drop that separates the tiers.  Spreading out below is the vast expanse of the lower tiers, and the limitless depths of the ocean.  A pair of beveled-glass doors lead back into the guild proper.</description>
+	 <position x="-232" y="-750" z="0" />
+	 <arc exit="go" move="go door" destination="877" />
   </node>
   <label text="To First Tier">
     <position x="488" y="-69" z="0" />
