@@ -1045,7 +1045,7 @@
   </node>
   <node id="142" name="Hot Tropics, Sunkissed Sands" note="hot tropics" color="#FF0000">
     <description>Golden candlelight flickers over the colorful shells arranged in an intricate swirl across the tall walls.  A tufted rug is stretched over the mottled yellow wooden floorboards.  Colorful sundresses and sarongs hang on metal racks arranged around the room.</description>
-	<description>Sunlight streams through the avodire-framed windows and open doorway of this spacious room, highlighting the colorful shells arranged in an intricate swirl across the tall walls.  A tufted rug is stretched over the mottled yellow wooden floorboards.  Colorful sundresses and sarongs hang on metal racks arranged around the room.</description>
+    <description>Sunlight streams through the avodire-framed windows and open doorway of this spacious room, highlighting the colorful shells arranged in an intricate swirl across the tall walls.  A tufted rug is stretched over the mottled yellow wooden floorboards.  Colorful sundresses and sarongs hang on metal racks arranged around the room.</description>
     <position x="310" y="-330" z="0" />
     <arc exit="south" move="south" destination="143" />
     <arc exit="go" move="go avodire-framed door" destination="22" />
@@ -1454,7 +1454,7 @@
   </node>
   <node id="215" name="The Haunted House, Bedroom" color="#FF0000">
     <description>Rather well lit with a single bright candle set in a grubby lantern, the room is laid out with several pieces of furniture, which are arranged neatly.  Though antique at best, the pieces lining the room are masterfully carved.  Each has a somewhat sinister air about it, the arrangement of chairs and headboards throwing sharp shadows on the walls in macabre patterns.  Treacherous holes in the floor are precariously patched over with thin boards, offering little safety.</description>
-	<description>Very little light filters through boarded-up windows, covered in webs thick with the dried corpses of black widow spiders.  Antique at best and sinister at worst, the furniture lining the room is neatly laid out, though much of it is difficult to make out in the dim light.  Treacherous holes in the floor have been precariously patched over with thin boards, offering little safety.</description>
+    <description>Very little light filters through boarded-up windows, covered in webs thick with the dried corpses of black widow spiders.  Antique at best and sinister at worst, the furniture lining the room is neatly laid out, though much of it is difficult to make out in the dim light.  Treacherous holes in the floor have been precariously patched over with thin boards, offering little safety.</description>
     <position x="440" y="180" z="0" />
     <arc exit="east" move="east" destination="213" />
     <arc exit="west" move="west" destination="216" />
@@ -1467,7 +1467,7 @@
   </node>
   <node id="217" name="The Haunted House, Attic" color="#FF0000">
     <description>The cramped room resembles a large crawlspace underneath a peaked roof, with the sharply slanted ceiling intersecting the floor on the eastern side.  A single candle is set on the sill of a frosted window, throwing the room into a myriad of light and shadow.  Cobwebs clutter every corner of the small room and drape over dreary pieces of furniture.</description>
-	<description>The cramped room resembles a large crawlspace underneath a peaked roof, with the sharply slanted ceiling intersecting the floor on the eastern side.  Muted light filters in through a frosted window, illuminating dust motes floating through the air.  Cobwebs clutter every corner of the small room and drape over dreary pieces of furniture.</description>
+    <description>The cramped room resembles a large crawlspace underneath a peaked roof, with the sharply slanted ceiling intersecting the floor on the eastern side.  Muted light filters in through a frosted window, illuminating dust motes floating through the air.  Cobwebs clutter every corner of the small room and drape over dreary pieces of furniture.</description>
     <position x="440" y="170" z="0" />
     <arc exit="down" move="down" destination="215" />
   </node>
