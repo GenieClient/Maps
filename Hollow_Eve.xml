@@ -2333,6 +2333,7 @@
   </node>
   <node id="366" name="Riptide Roasters, Brightwater Blend" note="riptide roasters" color="#FF0000">
     <description>As night falls, the shop takes on a tranquil glow, lit by hanging lanterns shaped like jellyfish.  The warm light flickers across the smooth driftwood walls and sparkles off the glassy seashell chandeliers.  The gentle hum of waves can be heard through the open windows, while candles on each surfboard table cast long, dancing shadows over the sand-hued floor.</description>
+	<description>The coffee shop is bright and airy, with light filtering through wide windows framed by seashells.  The walls are adorned with driftwood carvings and nautical maps, while woven hammocks sway gently in the corners.  Wooden tables shaped like surfboards line the sand-colored floors, and the scent of saltwater mingles with exotic brews steeping behind the lifesculpted coral counter.</description>
     <position x="450" y="-280" z="0" />
     <arc exit="go" move="go coralite door" destination="32" />
     <arc exit="west" move="west" destination="367" />
