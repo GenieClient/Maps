@@ -2592,7 +2592,7 @@
   <node id="380" name="The Crossing, Mongers' Square" note="Gnomish workman|workman" color="#00FF00">
     <description>Set into the center of the bazaar's main square is a bronzed fountain depicting the fatherly figure of Divyaush, his long chiseled beard covering the top of his robes and his painted azure eyes gazing into the water below.  Children and shoppers stop on their way past, often wetting their hands or their faces in the cool clear water.  To the southwest, brightly covered pennants sail above the sea of canvas that is the Traders' Market tent.</description>
     <position x="280" y="-190" z="0" />
-    <arc exit="go" move="stone arch" destination="379" />
+    <arc exit="go" move="go stone arch" destination="379" />
     <arc exit="go" move="go walkway ramp" destination="384" />
     <arc exit="go" move="go market tent" destination="391" />
     <arc exit="go" move="go market plaza" destination="850" />
