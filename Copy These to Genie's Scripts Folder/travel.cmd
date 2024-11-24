@@ -7,8 +7,8 @@
 # Inspired by the OG Wizard Travel Script - But made 1000x better w/ the power of GENIE
 # Originally written by Achilles - Revitalized and Robustified by Shroom
 #
-# Updated: 10/23/24
-var version 5.3
+# Updated: 11/17/24
+var version 5.3.1
 #
 # USES PLAT PORTALS TO TRAVEL BETWEEN CITIES IF PLATINUM
 # KNOWS HOW TO NAVIGATE OUT OF ANY MAZE / PUZZLE AREAS / FERRIES ETC
@@ -122,7 +122,7 @@ if ("$charactername") == ("$char10") then var shardcitizen no
 ##########################################
 ## RANKS TO USE UNDER-SEGOLTHA (THIEF)  ##
 ## 35 MIN w/ NO BURDEN - 50 is "SAFE"   ##
-    var undersegoltha 50
+    var undersegoltha 500
 ##########################################
 #######################################################
 ## RANKS FOR VELAKA DESERT SHORTCUT TO MUSPARI       ##
@@ -136,7 +136,9 @@ if ("$charactername") == ("$char10") then var shardcitizen no
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
 ###########################################
-# CHANGELOG - Latest Update: 10/23/24
+# CHANGELOG - Latest Update: 11/17/24
+#
+# - Fixed several bad checks for NOT TF which would cause infinite loops for PLAT users in some areas
 #
 # - Changed most leftover PUT <DIRECTION> commands to GOSUB MOVE <DIRECTION>
 # - Changed "FORD" label to "FORF"
@@ -1770,7 +1772,7 @@ if (("$zoneid" == "62") && ($Athletics.Ranks >= %undergondola)) then
                         gosub AUTOMOVE 153
                         goto ILITHI_3
                    }
-             if ("$game" == "DR") then
+             if ("$game" != "DRF") then
                    {
                         gosub MOVE sw
                         gosub MOVE sw
@@ -1781,7 +1783,7 @@ if (("$zoneid" == "62") && ($Athletics.Ranks >= %undergondola)) then
                         gosub AUTOMOVE 153
                    }
           }
-if (("$zoneid" == "62") && ("$game"= "DRF")) then
+if (("$zoneid" == "62") && ("$game" = "DRF")) then
           {
               gosub AUTOMOVE 41
               gosub MOVE sw
@@ -1792,7 +1794,7 @@ if (("$zoneid" == "62") && ("$game"= "DRF")) then
               gosub FERRYLOGIC
               goto ILITHI_3
           }
-if (("$zoneid" == "62") && ("$game" == "DR")) then
+if (("$zoneid" == "62") && ("$game" != "DRF")) then
           {
               gosub AUTOMOVE 41
               gosub MOVE sw
@@ -1804,6 +1806,11 @@ if (("$zoneid" == "62") && ("$game" == "DR")) then
               gosub AUTOMOVE 2
               gosub FERRYLOGIC
               goto ILITHI_3
+          }
+if ("$zoneid" == "62") then
+          {
+              gosub AUTOMOVE 2
+              gosub FERRYLOGIC
           }
 ILITHI_3:
 if (("$zoneid" == "69") && matchre("%detour", "ye{2,}t")) then
@@ -3354,7 +3361,7 @@ if (("$zoneid" == "62") && ($Athletics.Ranks >= %undergondola)) then
                         gosub AUTOMOVE 153
                         goto FORF_2
                    }
-             if ("$game" == "DR") then
+             if ("$game" != "DRF") then
                    {
                         gosub MOVE SW
                         gosub MOVE SW
