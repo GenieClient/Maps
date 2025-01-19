@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <zone name="Southern Trade Route Part 2 (Leth to Gondola)" id="62">
   <node id="1" name="Gondola, Cab North" note="Map998_Transports.xml">
     <description>Worn down to a dusky grey color, the proud wood once cut and fitted to compose this gondola creaks with age and disrepair, but appears to be steady.  Seats have been lifesculpted up from the floor and melded into the sides.  Weak light streams in through the yellow-tinted windows, eating away patiently at what little color remains in the tiny, musty chamber.</description>
@@ -1187,14 +1187,15 @@
     <description>Crumbling stone walls end at a gateway inset into the dilapidated enclosure.  Formed from wrought iron bars set upright within a frame, the two panels of the gate have fallen off their hinges and lean drunkenly against the arched gateway.  The gaping space thus formed allows access into the courtyard beyond, while further progress on the pathway is blocked by a wall of thorn bushes.</description>
     <position x="480" y="120" z="0" />
     <arc exit="south" move="south" destination="184" />
-    <arc exit="go" move="go gate" destination="186" />
+    <arc exit="go" move="go derelict gate" destination="186" />
   </node>
   <node id="186" name="Tref Dinta, Courtyard">
     <description>Weeds push through the cobbles of the courtyard which lies within the enclosing stone walls.  An arched gateway pierces the enclosure, allowing egress through the ramparts.  Two gate panels lie off their hinges in the gateway, leaning against the walls like drunken soldiers sleeping off a late night drinking bout.  The grass-choked yard stretches to the west and north, while a tower rises to the northwest.</description>
     <position x="480" y="80" z="0" />
     <arc exit="north" move="north" destination="187" />
     <arc exit="west" move="west" destination="188" />
-    <arc exit="go" move="go gate" destination="185" />
+    <arc exit="go" move="go derelict gate" destination="185" />
+    <arc exit="go" move="go wooden workshop" destination="220" />
   </node>
   <node id="187" name="Tref Dinta, Courtyard">
     <description>A wooden stable stands in the northern section of the courtyard, its still sturdy doors barred and locked against intrusion.  The closed window shutters likewise prevent all entry.  An occasional rustle or other sound comes forth from within, but no way of access can be discerned.</description>
@@ -1324,7 +1325,7 @@
   </node>
   <node id="215" name="Kruar Li Dael, Circular Valley">
     <description>Picked clean of all flora and fauna, a smooth trabe crystal mosiac lines the ground, delineating a series of whorls and forms in a clean arc.  The pattern continues in a broad arc around the clearing.  Despite the proximity to the forest, there is no sound of wildlife, and no birds seem to fly nearby or overhead.</description>
-  <description>Picked clean of all flora and fauna, a smooth trabe crystal mosiac lines the ground, glowing with a soft, periodic pulsation, delineating a series of whorls and forms in a clean arc.  The pattern continues in a broad arc around the clearing, gently illuminating the area.  Despite the proximity to the forest, there is no sound of wildlife, and no bats seem to fly nearby or overhead.</description>
+    <description>Picked clean of all flora and fauna, a smooth trabe crystal mosiac lines the ground, glowing with a soft, periodic pulsation, delineating a series of whorls and forms in a clean arc.  The pattern continues in a broad arc around the clearing, gently illuminating the area.  Despite the proximity to the forest, there is no sound of wildlife, and no bats seem to fly nearby or overhead.</description>
     <position x="360" y="500" z="0" />
     <arc exit="northeast" move="northeast" destination="216" />
     <arc exit="east" move="east" destination="219" />
@@ -1333,7 +1334,7 @@
   </node>
   <node id="216" name="Kruar Li Dael, Circular Valley">
     <description>Picked clean of all flora and fauna, a smooth trabe crystal mosiac lines the ground, delineating a series of whorls and forms in a clean arc.  The pattern continues in a broad arc around the clearing.  To the north rises a squat rocky hill, a smooth semi-circle demarking the clearing carved cleanly into the rock face.</description>
-  <description>Picked clean of all flora and fauna, a smooth trabe crystal mosiac lines the ground, glowing with a soft, periodic pulsation, delineating a series of whorls and forms in a clean arc.  The pattern continues in a broad arc around the clearing, gently illuminating the area.  To the north rises a squat rocky hill, a smooth, glowing, semi-circle demarking the clearing carved cleanly into the rock face.</description>
+    <description>Picked clean of all flora and fauna, a smooth trabe crystal mosiac lines the ground, glowing with a soft, periodic pulsation, delineating a series of whorls and forms in a clean arc.  The pattern continues in a broad arc around the clearing, gently illuminating the area.  To the north rises a squat rocky hill, a smooth, glowing, semi-circle demarking the clearing carved cleanly into the rock face.</description>
     <position x="380" y="480" z="0" />
     <arc exit="southeast" move="southeast" destination="217" />
     <arc exit="south" move="south" destination="219" />
@@ -1341,7 +1342,7 @@
   </node>
   <node id="217" name="Kruar Li Dael, Circular Valley">
     <description>Picked clean of all flora and fauna, a smooth trabe crystal mosiac lines the ground, delineating a series of whorls and forms in a clean arc.  The pattern continues in a broad arc around the clearing.  The view east is blocked by a wall of neatly stacked boulders, fit together with stunning precision.</description>
-  <description>Picked clean of all flora and fauna, a smooth trabe crystal mosiac lines the ground, glowing with a soft, periodic pulsation, delineating a series of whorls and forms in a clean arc.  The pattern continues in a broad arc around the clearing, gently illuminating the area.  The view east is blocked by a wall of neatly stacked boulders, fit together with stunning precision.</description>
+    <description>Picked clean of all flora and fauna, a smooth trabe crystal mosiac lines the ground, glowing with a soft, periodic pulsation, delineating a series of whorls and forms in a clean arc.  The pattern continues in a broad arc around the clearing, gently illuminating the area.  The view east is blocked by a wall of neatly stacked boulders, fit together with stunning precision.</description>
     <position x="400" y="500" z="0" />
     <arc exit="southwest" move="southwest" destination="218" />
     <arc exit="west" move="west" destination="219" />
@@ -1363,6 +1364,59 @@
     <arc exit="east" move="east" destination="217" />
     <arc exit="south" move="south" destination="218" />
     <arc exit="west" move="west" destination="215" />
+  </node>
+  <node id="220" name="Workshop, Vestibule" color="White">
+    <description>Round pegs stick out from one side wall, set into the weathered planks to provide a place to hang cloaks or aprons.  A cloak, dusty and almost rotted away from age, still hangs forlornly as if waiting for its owner.  Dust covers the floor and settles into the gaps between the floorboards.</description>
+    <position x="500" y="60" z="0" />
+    <arc exit="east" move="east" destination="221" />
+    <arc exit="go" move="go wooden door" destination="186" />
+  </node>
+  <node id="221" name="Workroom, Workspace" color="White">
+    <description>Open floorspace is ringed by dust-covered equipment, some of it decayed into piles of rotting or rusted parts that are utterly incapable of identification.  Dried leaves mix with the dirt and filth to form a thick layer of detrius on the floors.  A few holes in the roof show where the leaves gained entrance.</description>
+    <position x="520" y="60" z="0" />
+    <arc exit="north" move="north" destination="222" />
+    <arc exit="northeast" move="northeast" destination="223" />
+    <arc exit="east" move="east" destination="226" />
+    <arc exit="southeast" move="southeast" destination="225" />
+    <arc exit="south" move="south" destination="224" />
+    <arc exit="west" move="west" destination="220" />
+  </node>
+  <node id="222" name="Workroom, Workspace" color="White">
+    <description>Racks containing dusty tools stand against the walls.  A few worktables stand nearby with equipment haphazardly scattered atop them as if abandoned in mid-task.  High overhead, the exposed roof beams provide a staging area for the complex lattice of spiderwebs.</description>
+    <position x="520" y="40" z="0" />
+    <arc exit="east" move="east" destination="223" />
+    <arc exit="southeast" move="southeast" destination="226" />
+    <arc exit="south" move="south" destination="221" />
+  </node>
+  <node id="223" name="Workroom, Storage" color="White">
+    <description>Bins and barrels hold the rotting and decaying remains of materials once used in this working area.  A few burlap sacks lie in crumbling heaps against the walls, what they once contained long since decayed away.</description>
+    <position x="540" y="40" z="0" />
+    <arc exit="south" move="south" destination="226" />
+    <arc exit="southwest" move="southwest" destination="221" />
+    <arc exit="west" move="west" destination="222" />
+  </node>
+  <node id="224" name="Workroom, Storage" color="White">
+    <description>Once these shelves held parts and materials for use in the workshop, but now they are covered with corroded and crumbling lumps.  The shelving itself shows signs of disrepair, with some uprights leaning dangerously and others appearing ready to buckle at any moment.</description>
+    <position x="520" y="80" z="0" />
+    <arc exit="north" move="north" destination="221" />
+    <arc exit="northeast" move="northeast" destination="226" />
+    <arc exit="east" move="east" destination="225" />
+  </node>
+  <node id="225" name="Workroom, Workspace" color="White">
+    <description>Two sawhorses are set up in the middle of the area, spaced far apart.  A rusting saw leans against one leg, its blade warped and bent from its long wait.  Two lanterns, long since guttered out, hang suspended on chains from the exposed beams overhead.</description>
+    <position x="540" y="80" z="0" />
+    <arc exit="north" move="north" destination="226" />
+    <arc exit="west" move="west" destination="224" />
+    <arc exit="northwest" move="northwest" destination="221" />
+  </node>
+  <node id="226" name="Workroom, Workspace" color="White">
+    <description>Pegs on one wall hold the remains of tools, although a few have lost handles or other parts.  Dangling ropes hang from the roofbeams, their exact purpose long since lost to time.  Dust covers everything in a thick shroud of concealing grime and grit.</description>
+    <position x="540" y="60" z="0" />
+    <arc exit="north" move="north" destination="223" />
+    <arc exit="south" move="south" destination="225" />
+    <arc exit="southwest" move="southwest" destination="224" />
+    <arc exit="west" move="west" destination="221" />
+    <arc exit="northwest" move="northwest" destination="222" />
   </node>
   <label text="to Shard">
     <position x="430" y="480" z="0" />
@@ -1435,5 +1489,8 @@
   </label>
   <label text="Scuttlers">
     <position x="360" y="530" z="0" />
+  </label>
+  <label text="Huge Tools">
+    <position x="480" y="20" z="0" />
   </label>
 </zone>
