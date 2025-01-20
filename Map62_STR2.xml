@@ -1490,7 +1490,7 @@
   <label text="Scuttlers">
     <position x="360" y="530" z="0" />
   </label>
-  <label text="Workshop">
-    <position x="490" y="15" z="0" />
+  <label text="Animated Items">
+    <position x="480" y="15" z="0" />
   </label>
 </zone>
