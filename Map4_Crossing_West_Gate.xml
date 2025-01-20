@@ -67,6 +67,7 @@
     <position x="-140" y="-100" z="0" />
     <arc exit="south" move="rt south" destination="8" />
     <arc exit="go" move="rt go rough trench" destination="15" />
+    <arc exit="go" move="go glass greenhouse" destination="532" />
   </node>
   <node id="10" name="Mycthengelde, Flatlands">
     <description>Patches of thistle grow tall along the trail, waving softly in the breeze.  You stumble across some wild-growing almagarus flowers, their deep red petals a sharp contrast to the seemingly endless carpet of green.  Now and again you can see a group of travelers making their way north towards The Crossing, while the undulating vista of the Siergelde is visible to the southwest, breaking the otherwise flat horizon.</description>
@@ -3043,7 +3044,7 @@
   </node>
   <node id="471" name="Knife Clan, Deep Forest's Edge">
     <description>A few taffelberry bushes have managed to find a niche here in the shadow of looming trees.  From the bushes' rather barren appearance, the local wildlife has acquired quite a taste for the sweet berries.</description>
-    <position x="-680" y="-520" z="0" />
+    <position x="-660" y="-520" z="0" />
     <arc exit="south" move="south" destination="470" />
     <arc exit="southwest" move="southwest" destination="469" />
     <arc exit="west" move="west" destination="467" />
@@ -3431,6 +3432,14 @@
     <position x="-600" y="-560" z="0" />
     <arc exit="southwest" move="southwest" destination="530" />
     <arc exit="northwest" move="northwest" destination="526" />
+  </node>
+  <node id="532" name="Lake of Dreams, White Gladiolus Greenhouse" note="White Gladiolus Greenhouse|greenhouse" color="White">
+    <description>Nestled between Mycthengelde and the Lake of Dreams, a verdant hollow is encased in glass to form a greenhouse that is filled with frilled gladiolus blossoms.  Long tables placed at the center of the building are dressed in silk and ivy, each lit by rows of flickering candles.  Gentle ripples drift across the silvery surface of the nearby water, evidence of the stately procession of a pair of graceful white swans.</description>
+    <description>A verdant lakeside hollow blooms with gladiolus blossoms.  Long tables are placed at the center of the glade.</description>
+    <description>The deep, heady scent of gladiolus blossoms lingers in the night air, pervading a verdant lakeside hollow encased in glass and cloaked in darkness.  Rows of candles throw dancing shadows across long tables placed at the center of the building.  Flickering fireflies bob gently to and fro, their mesmerizing light reflected upon the placid surface of the nearby water.</description>
+    <description>The scent of gladiolus blossoms lingers in the night air, pervading a verdant lakeside hollow.  Long tables are placed at the center of the glade.</description>
+    <position x="-120" y="-100" z="0" />
+    <arc exit="out" move="out" destination="9" />
   </node>
   <label text="Bobcats">
     <position x="-50" y="400" z="0" />
