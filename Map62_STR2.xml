@@ -1493,7 +1493,4 @@
   <label text="Workshop">
     <position x="490" y="15" z="0" />
   </label>
-  <label text="New Label">
-    <position x="0" y="0" z="0" />
-  </label>
 </zone>
