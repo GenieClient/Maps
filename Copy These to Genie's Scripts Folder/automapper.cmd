@@ -1,9 +1,13 @@
 # automapper.cmd
-var autoversion 8.2024-10-10
+var autoversion 8.2025-02-09
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
+
+#2025-02-09
+# Hanryu
+#   accounting for the various vela'tohr adj/noun
 
 #2024-10-10
 # Hanryu
@@ -584,7 +588,7 @@ ACTIONS:
   action (mapper) var footitem $1;goto STOW.FOOT.ITEM when ^You notice (?:an |a )?(.+) at your feet, and do not wish to leave it behind\.
   action (skates) var wearing_skates 1 when ^You slide your ice skates on your feet and tightly tie the laces\.|^Your ice skates help you traverse the frozen terrain\.|^Your movement is hindered .* by your ice skates\.|^You tap some.*\bskates\b.*that you are wearing
   action (skates) var wearing_skates 0 when ^You untie your skates and slip them off of your feet\.
-  action (healing) var plant $1;goto HEALING when an ethereal (vela'tohr thicket|vela'tohr plant)
+  action (healing) var plant $1;goto HEALING when (vela'tohr (?:briar|bush|plant|shrub|thicket|thornbush))
   action (healing) off
 #  if (($automapper.seekhealing = 1) && ($guild != Necromancer)) then action (healing) on
   if ($automapper.seekhealing = 1) then action (healing) on
