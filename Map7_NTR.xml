@@ -5463,6 +5463,7 @@
     <arc exit="northeast" move="northeast" destination="814" />
     <arc exit="northwest" move="northwest" destination="820" />
     <arc exit="up" move="up" destination="818" />
+    <arc exit="south" move="south" destination="848" />
   </node>
   <node id="820" name="Vale, Journalai Ruins">
     <description>A cracked and perilous-looking pylon marks the gateway into the city, its lintel carved with the defaced visage of an unknown goddess who yet beckons all to pass beneath her with outspread arms.  Moss, ivy, and lichen have crept steadily into the cracks in the gateway, slowly nibbling away at what must have once been a proud testimony to some artisan's genius.  The collapsed rubble that was once the outer curtain of the city's walls yet serves as a barrier.</description>
@@ -5490,6 +5491,7 @@
   </node>
   <node id="824" name="Wooded Hills, Rocky Glade">
     <description>Bending in the slightest breeze, some cattails mark a small declivity that gathers moisture from the surrounding hillsides.  Birds flit from the forest's edge to the puddle, their cries filling the daytime sky with song and noise.</description>
+    <description>Almost invisible in the darkness, some cattails mark a small declavity that gathers moisture from the surrounding hillsides.  The hunting cries of nightjars fill the sky as they hunt for insects on the wing.</description>
     <position x="-20" y="1920" z="0" />
     <arc exit="east" move="east" destination="823" />
     <arc exit="south" move="south" destination="826" />
@@ -5626,6 +5628,33 @@
     <description>Heaped in large stacks, decaying logs and limbs block the trail.  The hoofprints mill about in the ash, indicating the confusion of the area's denizens when faced with the obstacle.  The odor of decay has driven out the sulfur scents that normally permeate this desolate valley.</description>
     <position x="340" y="430" z="0" />
     <arc exit="southwest" move="southwest" destination="846" />
+  </node>
+  <node id="848" name="Vale, Ravine">
+    <description>Wisps of fog drift above the rock-strewn ground, while denser banks of mist roil overhead, obscuring the sky and the upper walls of the canyon.  Scrubby bushes and clumps of grass cling desperately to the loose scree at the foot of the cliffs, their stunted size and pale leaves testimony to the barren nature of the area.</description>
+    <position x="60" y="1940" z="0" />
+    <arc exit="north" move="north" destination="819" />
+    <arc exit="southeast" move="southeast" destination="849" />
+    <arc exit="east" move="east" destination="851" />
+  </node>
+  <node id="849" name="Vale, Ravine">
+    <description>Large boulders cover the ground, having fallen from the steep cliffs lining the ravine.  One has crashed into a tree, splintering it and scattering limbs and branches across the ground.  A few clumps of grass grow near a few small puddles formed in some of the craters created when rocks from above hit the ground.</description>
+    <position x="80" y="1960" z="0" />
+    <arc exit="north" move="north" destination="851" />
+    <arc exit="east" move="east" destination="850" />
+    <arc exit="northwest" move="northwest" destination="848" />
+  </node>
+  <node id="850" name="Vale, Ravine">
+    <description>Some long-forgotten catastrophe has brought down one cliff, creating a rockslide that blocks further progress.  A small start has been made at clearing the rockfall, but the small piles that have been removed only serve to show how much more remains in clearing the blockade.  What is unclear is who or what would be working to clear the impediment and why they would want to.</description>
+    <position x="100" y="1960" z="0" />
+    <arc exit="west" move="west" destination="849" />
+    <arc exit="northwest" move="northwest" destination="851" />
+  </node>
+  <node id="851" name="Vale, Ravine">
+    <description>Granite walls loom out of the ever-present mist, towering high above the stony canyon floor.  Mist and fog flow across the ground and ooze amongst the occasional bush that grows in the scanty soil.  An occasional crash echoes through the ravine, but the source remains unknown.</description>
+    <position x="80" y="1940" z="0" />
+    <arc exit="southeast" move="southeast" destination="850" />
+    <arc exit="south" move="south" destination="849" />
+    <arc exit="west" move="west" destination="848" />
   </node>
   <label text="Warrior Mage">
     <position x="460" y="2440" z="0" />
