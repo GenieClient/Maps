@@ -3177,7 +3177,7 @@
     <position x="320" y="1790" z="0" />
     <arc exit="east" move="east" destination="401" />
     <arc exit="west" move="west" destination="442" />
-    <arc exit="go" move="go rough dirt" destination="400" />
+    <arc exit="go" move="go rough dirt" destination="" />
   </node>
   <node id="442" name="Journalai Route, Rolling Hills">
     <description>The Route continues to the east and west, while to the north you notice a dirt path that looks to have been tread by the passage of feet, not the passage of wagons.  A trickling stream passes over the road, leaving mud and muck in its wake as it vanishes into the grasses of the surrounding hillside.</description>
