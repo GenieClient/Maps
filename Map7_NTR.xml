@@ -5660,7 +5660,7 @@
     <position x="460" y="2440" z="0" />
   </label>
   <label text="Vineyard">
-    <position x="240" y="2390" z="0" />
+    <position x="220" y="2393" z="0" />
   </label>
   <label text="North Gate + Brambles">
     <position x="130" y="2320" z="0" />
@@ -5705,7 +5705,7 @@
     <position x="275" y="2500" z="0" />
   </label>
   <label text="Jadewater Mansion--&gt;">
-    <position x="185" y="2340" z="0" />
+    <position x="155" y="2342" z="0" />
   </label>
   <label text="Misenseor Abbey">
     <position x="570" y="1240" z="0" />
@@ -5834,7 +5834,7 @@
     <position x="130" y="1850" z="0" />
   </label>
   <label text="Onyx Gargoyles">
-    <position x="20" y="1930" z="0" />
+    <position x="65" y="1922" z="0" />
   </label>
   <label text="Rock Trolls">
     <position x="280" y="1800" z="0" />
