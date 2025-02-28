@@ -5479,7 +5479,7 @@
     <arc exit="go" move="go cave entrance" destination="811" />
   </node>
   <node id="822" name="Foothills Cave, Back">
-    <description>Sloping downwards towards the back of the cave, the rocky ceiling merges with the slate floor and cuts off all further progress underground.  Dirt has drifted into the crevices and corners, adding to the cramped feeling at the edges of the cavern.  There are fewer signs of the inhabitants here, perhaps because they find it more cramped than the entrance.</description>
+    <description>Sloping downwards towards the back of the cave, the rocky ceiling merges with the slate floor and shunts all further progress into a narrow crevice leading deeper underground.  Dirt has drifted into the cracks and corners, adding to the cramped feeling at the edges of the cavern.  There are fewer signs of the inhabitants here, perhaps because they find it more cramped than the entrance.  </description>
     <position x="160" y="1840" z="0" />
     <arc exit="east" move="east" destination="848" />
     <arc exit="west" move="west" destination="821" />
