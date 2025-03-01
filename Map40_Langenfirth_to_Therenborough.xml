@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-16"?>
 <zone name="Langenfirth and Surrounding Areas (to Therenborough)" id="40">
   <node id="1" name="Langenfirth, Blufe Path" note="Bin" color="#00FFFF">
     <description>The rustic town is nestled in the Danduwen Forest, on the shore of a sheltered cove on Gwenalion Lake.  The fir and pine trees grow very tall and in thick stands, with a few birch and oak finding room to spread under the lower limbs of the taller firs.  The streets, more like paths, wind and twist past the huge tree trunks, obviously an effort to avoid cutting down any tree.</description>
@@ -1149,9 +1149,11 @@
   </node>
   <node id="171" name="Pathway, Arboreal Gateway">
     <description>Majestic old trees appear in the distance on either side of the road, but close by, in place of what used to grow wild and free, intertwined saplings and decorative shrubs have been planted in a more formal arrangement.  Behind the entryway through this arbor, borders of stone keep the wilderness beyond from encroaching.</description>
+    <description>Majestic old trees appear in the distance on either side of the road, but close by, in place of what used to grow wild and free, intertwined saplings and decorative shrubs have been planted in a more formal arrangement</description>
     <position x="-200" y="-996" z="0" />
     <arc exit="southeast" move="southeast" destination="170" />
     <arc exit="northwest" move="northwest" destination="172" />
+    <arc exit="west" move="west" destination="394" />
   </node>
   <node id="172" name="Pathway, Patterned Walk">
     <description>The meandering road continues, and the stones themselves begin to form a pattern.  A multitude of tiny dark and light stones have been placed to create a slightly inset maze-like design centered in the well-paved road.</description>
@@ -2557,14 +2559,67 @@
     <position x="0" y="-496" z="0" />
     <arc exit="out" move="out" destination="391" />
   </node>
+  <node id="394" name="Shadethorn Forest, Faint Trail" note="Shadethorn Forest" color="White">
+    <description>A faint trail winds its way up the hillside, barely discernible through the dense undergrowth of shrubs and low grasses.  Weathered roots from nearby trees cross the path, creating uneven steps.  Scattered tufts of wildflowers cling to the slope, their petals trembling with every breeze.  Small stones displaced by passing feet dot the trail, rolling toward the forest's shadowy edge.</description>
+    <description>A faint trail winds up the hillside, tangled with roots and dotted with loose stones.  Wildflowers cling to the slope, their petals trembling as the path nears the forest's edge.</description>
+    <position x="-220" y="-996" z="0" />
+    <arc exit="east" move="east" destination="171" />
+    <arc exit="west" move="west" destination="395" />
+  </node>
+  <node id="395" name="Shadethorn Forest, Faint Trail" color="White">
+    <description>The trail opens into a wide clearing surrounded by towering oaks and slender birches.  Clusters of ferns line the edges, their delicate fronds brushing against moss-covered stones.  The ground here is packed dirt, interrupted by patches of hardy grass.  Scattered animal tracks mark the earth, while a hollowed log lies to one side, its interior home to small claw marks and broken twigs.</description>
+    <description>The trail widens into a clearing framed by oaks and birches.  Ferns brush mossy stones, and animal tracks crisscross the packed dirt.  A hollow log rests nearby, marked by small claws.</description>
+    <position x="-240" y="-996" z="0" />
+    <arc exit="east" move="east" destination="394" />
+    <arc exit="go" move="go faint trail" destination="396" />
+  </node>
+  <node id="396" name="Shadethorn Forest, Sylvan Arch" note="thornkins" color="White">
+    <description>At the heart of the forest, slender saplings intertwine to form a graceful living arch.  Their braided trunks rise in perfect harmony, bark patterns blending where they meet.  Fresh green shoots sprout from the weave, forming delicate fronds that dangle like ornaments.  The ground beneath is clear of debris, marked only by soft mosses that thrive in the embrace of the arch's shelter.</description>
+    <description>At the forest's heart, saplings intertwine into a living arch, their braided trunks adorned with fresh shoots.  Beneath, soft moss carpets the ground in the arch's shelter.</description>
+    <position x="-220" y="-956" z="0" />
+    <arc exit="north" move="north" destination="397" />
+    <arc exit="east" move="east" destination="398" />
+    <arc exit="south" move="south" destination="399" />
+    <arc exit="west" move="west" destination="400" />
+    <arc exit="go" move="go faint trail" destination="395" />
+  </node>
+  <node id="397" name="Shadethorn Forest, Northern Slope" color="White">
+    <description>The forest climbs a gentle slope, where large boulders protrude from the soil like ancient sentinels.  Their surfaces are mottled with patches of pale lichen and streaked with weathered cracks.  Between the stones, small saplings push upward, their leaves trembling in a faint breeze.  Evidence of burrowing animals shows in the loose dirt around the roots.</description>
+    <description>The forest ascends a gentle slope, dotted with boulders streaked with cracks and lichen.  Saplings grow between them, their leaves stirring faintly, while loose dirt reveals burrowed dens.</description>
+    <position x="-220" y="-976" z="0" />
+    <arc exit="southeast" move="southeast" destination="398" />
+    <arc exit="south" move="south" destination="396" />
+    <arc exit="southwest" move="southwest" destination="400" />
+  </node>
+  <node id="398" name="Shadethorn Forest, Silver Grove" color="White">
+    <description>At the base of the mountainside, a grove of silver-barked trees stands in quiet contrast to the rugged stone backdrop.  The trunks curve gracefully upward, their branches tangled with wispy vines.  A faint trail skirts the rocky incline, marked by scattered flakes of stone from above.  The low sound of rustling leaves accompanies the occasional movements of unseen woodland creatures.</description>
+    <description>A grove of silver-barked trees rises against the rocky mountainside, their branches tangled in vines.  A faint trail winds past scattered stone flakes amid rustling leaves and bird calls.</description>
+    <position x="-200" y="-956" z="0" />
+    <arc exit="southwest" move="southwest" destination="399" />
+    <arc exit="west" move="west" destination="396" />
+    <arc exit="northwest" move="northwest" destination="397" />
+  </node>
+  <node id="399" name="Shadethorn Forest, Beside a Stream" color="White">
+    <description>A shallow stream cuts through the forest, its pebbled banks lined with water-smoothed stones.  Narrow reeds and patches of cattails grow in the calmer pools.  Fallen leaves float lazily downstream, brushing against the occasional piece of driftwood lodged in the current.  Small pawprints in the muddy bank suggest a recent visit from thirsty creatures.</description>
+    <description>A shallow stream winds through the forest, its banks dotted with reeds and cattails.  Leaves drift along the current, brushing against driftwood, while pawprints mark the muddy shore.</description>
+    <position x="-220" y="-936" z="0" />
+    <arc exit="north" move="north" destination="396" />
+    <arc exit="northeast" move="northeast" destination="398" />
+    <arc exit="northwest" move="northwest" destination="400" />
+  </node>
+  <node id="400" name="Shadethorn Forest, Brambles" color="White">
+    <description>A narrow path snakes through dense thickets of brambles, their thorn-laden vines twisting in a chaotic weave.  The air is faintly sweet with the scent of crushed berries underfoot.  Stripped bark on the lower trunks of nearby trees hints at the passage of foraging animals.  In places, the trail is barely visible, partially obscured by clusters of creeping ivy.</description>
+    <description>A narrow path winds through brambles, the thorny vines twisting in chaos.  Crushed berries scent the air, while stripped bark and ivy hint at passing wildlife.</description>
+    <position x="-240" y="-956" z="0" />
+    <arc exit="northeast" move="northeast" destination="397" />
+    <arc exit="east" move="east" destination="396" />
+    <arc exit="southeast" move="southeast" destination="399" />
+  </node>
   <label text="Therenborough">
     <position x="155" y="-1380" z="0" />
   </label>
   <label text="Homesite">
     <position x="250" y="-1396" z="0" />
-  </label>
-  <label text="Droughtmans Maze (Closed)">
-    <position x="-230" y="-1066" z="0" />
   </label>
   <label text="Sun Vultures">
     <position x="140" y="-850" z="0" />
@@ -2670,5 +2725,8 @@
   </label>
   <label text="Post Office">
     <position x="-130" y="-661" z="0" />
+  </label>
+  <label text="Thornkins">
+    <position x="-255" y="-931" z="0" />
   </label>
 </zone>
