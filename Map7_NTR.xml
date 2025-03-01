@@ -5462,10 +5462,9 @@
     <description>The vale meets up with the steep curve of the hills that protect it here.  Though the occluding mist limits vision, the faint outlines of dark trees can be detected bordering the top of the hill, creating a tangible boundary between the ruins and the hinterland that surrounds it.  Hazy figures move like ghostly shadows through the wilderness, a hint of something sinister amidst the cemetary-like stillness of the dead city.</description>
     <position x="60" y="1920" z="0" />
     <arc exit="northeast" move="northeast" destination="814" />
-    <arc exit="northwest" move="northwest" destination="820" />
     <arc exit="south" move="south" destination="854" />
+    <arc exit="northwest" move="northwest" destination="820" />
     <arc exit="up" move="up" destination="818" />
-    <arc exit="south" move="south" destination="848" />
   </node>
   <node id="820" name="Vale, Journalai Ruins">
     <description>A cracked and perilous-looking pylon marks the gateway into the city, its lintel carved with the defaced visage of an unknown goddess who yet beckons all to pass beneath her with outspread arms.  Moss, ivy, and lichen have crept steadily into the cracks in the gateway, slowly nibbling away at what must have once been a proud testimony to some artisan's genius.  The collapsed rubble that was once the outer curtain of the city's walls yet serves as a barrier.</description>
