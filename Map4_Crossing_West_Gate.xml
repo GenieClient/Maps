@@ -3433,11 +3433,9 @@
     <arc exit="southwest" move="southwest" destination="530" />
     <arc exit="northwest" move="northwest" destination="526" />
   </node>
-  <node id="532" name="Lake of Dreams, White Gladiolus Greenhouse" note="White Gladiolus Greenhouse|greenhouse" color="White">
+  <node id="532" name="Lake of Dreams, White Gladiolus Greenhouse" note="White Gladiolus Greenhouse|greenhouse">
     <description>Nestled between Mycthengelde and the Lake of Dreams, a verdant hollow is encased in glass to form a greenhouse that is filled with frilled gladiolus blossoms.  Long tables placed at the center of the building are dressed in silk and ivy, each lit by rows of flickering candles.  Gentle ripples drift across the silvery surface of the nearby water, evidence of the stately procession of a pair of graceful white swans.</description>
-    <description>A verdant lakeside hollow blooms with gladiolus blossoms.  Long tables are placed at the center of the glade.</description>
     <description>The deep, heady scent of gladiolus blossoms lingers in the night air, pervading a verdant lakeside hollow encased in glass and cloaked in darkness.  Rows of candles throw dancing shadows across long tables placed at the center of the building.  Flickering fireflies bob gently to and fro, their mesmerizing light reflected upon the placid surface of the nearby water.</description>
-    <description>The scent of gladiolus blossoms lingers in the night air, pervading a verdant lakeside hollow.  Long tables are placed at the center of the glade.</description>
     <position x="-120" y="-100" z="0" />
     <arc exit="out" move="out" destination="9" />
   </node>
