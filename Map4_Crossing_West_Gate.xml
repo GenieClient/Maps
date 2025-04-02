@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-16"?>
 <zone name="Crossing West Gate" id="4">
   <node id="1" name="Mycthengelde, Flatlands">
     <description>Well-worn paths lead through a grove of trees to a gate in The Crossing's western wall.  Now and again you hear birds calling to one another in the branches, or the bustling of a merchant's cart as it makes its way past.  A handful of adventurers nod at you in greeting as they make their way into town.  An aromatic mix of wildflowers mingles with wyndwood, oak and juniper trees as the grove stretches north and south, while to the west, you can see grassy flatlands through a small clearing.</description>
@@ -2996,8 +2996,9 @@
     <position x="-700" y="-660" z="0" />
     <arc exit="south" move="south" destination="461" />
   </node>
-  <node id="464" name="Knife Clan, Triage" note="Triage|Healer|Dokt" color="#00BF80">
-    <description>Low groans rising from the injured fill the cramped alcove as wounded hunters and warriors receive aid.  Mattresses line the walls, about half occupied by recovering patients.  The floor is almost entirely covered by a dark red stain, paying testament to the enthusiasm of the field surgeons.  An ominous bone saw leans against the wall, obviously a favorite method of treatment.</description>
+  <node id="464" name="Knife Clan, Healer's Kitchen" note="Healer's Kitchen|herb shop|Dokt" color="#FF0000">
+    <description>The cramped room smells of baked goods with fading notes of an antiseptic.  Standing torches illuminate the whitewashed floor and matching stone walls.  Darker stains can be seen beyond the coating of both, a testament to the lifetime of surgeries and triage that were once performed here.  Now, the sounds of such medicine are replaced with the rhythmic pounding of herbs in mortars and stirring of medicines and batters in large bowls.</description>
+    <description>Whitewashed floors and stone walls barely conceal darker stains beneath.  The sounds of remedy preparation and smells of baking dominate the space.</description>
     <position x="-720" y="-640" z="0" />
     <arc exit="east" move="east" destination="461" />
   </node>
@@ -3461,7 +3462,7 @@
     <position x="-450" y="10" z="0" />
   </label>
   <label text="Knife Clan">
-    <position x="-790" y="-550" z="0" />
+    <position x="-800" y="-640" z="0" />
   </label>
   <label text="Wolf Clan">
     <position x="-800" y="230" z="0" />
