@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <zone name="Ratha" id="90">
   <node id="1" name="Neh Dock, Port of Ratha" color="#FF00FF">
     <description>Yells and shouts fill the surroundings as dock workers communicate in the only way that is fitting for this noisy, hectic environment.  A couple young boys watch the work anxiously, planning their future and their torment.</description>
@@ -3253,10 +3253,11 @@
     <position x="298" y="-679" z="0" />
     <arc exit="northwest" move="northwest" destination="507" />
     <arc exit="go" move="go stone steps" destination="509" />
+    <arc exit="go" move="go slouchy lean-to" destination="880" />
   </node>
   <node id="509" name="Narrow Alley, Alcove">
     <description>An unmarked door is set within this dark alcove along the grey granite wall.  To the left of the door, a small dingy window hints of a brightly colored curtain on the inside.   A set of stone steps lead back up to the alley.</description>
-    <position x="298" y="-659" z="0" />
+    <position x="315" y="-659" z="0" />
     <arc exit="go" move="go stone steps" destination="508" />
   </node>
   <node id="510" name="Ratha, Angels' Flight">
@@ -5655,7 +5656,7 @@
     <arc exit="go" move="go door" destination="879" />
   </node>
   <node id="878" name="Warrior Mage Guild, Targeting Range" note="WM Target Range" color="#00FF00">
-    <description>Set above the salle, the targeting range was created to train Warrior Mages in the most effective ways to disable their opponents with magic.  The stone walls are scarred by blasts of fire and warped by lightning strikes.  A slightly singed banner hangs on one side of the room.</description>>
+    <description>Set above the salle, the targeting range was created to train Warrior Mages in the most effective ways to disable their opponents with magic.  The stone walls are scarred by blasts of fire and warped by lightning strikes.  A slightly singed banner hangs on one side of the room.</description>
     <position x="-242" y="-730" z="0" />
     <arc exit="go" move="go door" destination="876" />
   </node>
@@ -5663,6 +5664,11 @@
     <description>An elaborately carved stone balustrade is the only barrier between the guildhall and the sheer drop that separates the tiers.  Spreading out below is the vast expanse of the lower tiers, and the limitless depths of the ocean.  A pair of beveled-glass doors lead back into the guild proper.</description>
     <position x="-232" y="-750" z="0" />
     <arc exit="go" move="go door" destination="877" />
+  </node>
+  <node id="880" name="Ratha, The Rusted Tumbler" note="Rusted Tumbler|lockpicks" color="#FF0000">
+    <description>The rough-hewn wooden walls of the lean-to tilt at uneven angles, the packed dirt floor worn smooth in places and scuffed in others.  Daylight filters through gaps in the patched canvas roof, illuminating drifting dust motes.  A crooked, scratched table displays a rusted lantern and scattered metal bits, while the air carries the tang of salt and the ubiquitous stench of rotting rubbish.</description>
+    <position x="278" y="-659" z="0" />
+    <arc exit="go" move="go irregular opening" destination="508" />
   </node>
   <label text="To First Tier">
     <position x="488" y="-69" z="0" />
@@ -6032,5 +6038,8 @@
   </label>
   <label text="Office">
     <position x="-43" y="352" z="0" />
+  </label>
+  <label text="Lockpicks">
+    <position x="248" y="-659" z="0" />
   </label>
 </zone>
