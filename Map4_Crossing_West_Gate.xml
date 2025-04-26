@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <zone name="Crossing West Gate" id="4">
   <node id="1" name="Mycthengelde, Flatlands">
     <description>Well-worn paths lead through a grove of trees to a gate in The Crossing's western wall.  Now and again you hear birds calling to one another in the branches, or the bustling of a merchant's cart as it makes its way past.  A handful of adventurers nod at you in greeting as they make their way into town.  An aromatic mix of wildflowers mingles with wyndwood, oak and juniper trees as the grove stretches north and south, while to the west, you can see grassy flatlands through a small clearing.</description>
@@ -3079,10 +3079,11 @@
     <arc exit="climb" move="climb jade staircase" destination="472" />
   </node>
   <node id="477" name="Arnack's Tavern, Bar Room" note="Arnack's Tavern" color="#FF0000">
-    <description>At first glimpse the tavern offers all the sign outside promises.  In one corner a pair of aged men play instruments and sing the occasional tune, while the other side of the room holds a number of tables and chairs for comfort and conversation.  A barkeep bustles around, behind a bar in the back of the room, barking at servers to hustle and at the same time keeping a welcoming smile for all the customers.</description>
+    <description>At first glimpse, the tavern offers all the sign outside promises.  In one corner, a pair of aged men play instruments and sing the occasional tune, while the other side of the room holds a number of tables and chairs for comfort and conversation.  Several patrons cluster around a dartboard on the back wall.  A barkeep bustles around behind a bar, barking at servers to hustle while keeping a welcoming smile for all the customers at the same time.</description>
     <position x="-780" y="220" z="0" />
     <arc exit="out" move="out" destination="128" />
     <arc exit="go" move="go private room" destination="478" />
+    <arc exit="south" destination="533" />
   </node>
   <node id="478" name="Arnack's Tavern, Private Room">
     <description>A table sits in the middle of this small room, surrounded by cushioned chairs.  A window in the back wall looks into the forest, limbs occasionally knocking against the glass with the sway of the wind.  The bustle of the main room is mostly muffled here allowing quiet and privacy if needed.</description>
@@ -3439,6 +3440,23 @@
     <position x="-120" y="-100" z="0" />
     <arc exit="out" move="out" destination="9" />
   </node>
+  <node id="533" name="Arnack's Tavern, Mud Pit" note="Mud pit" color="#00FF00">
+    <description>A large banner is suspended directly above the large, muddy pit that dominates the room.  Arranged in a semicircle around the pit, wooden benches are placed on platforms for better viewing.</description>
+    <position x="-780" y="240" z="0" />
+    <arc exit="north" move="north" destination="477" />
+    <arc exit="go" move="go curtained archway" destination="534" />
+  </node>
+  <node id="534" name="Arnack's Tavern, Washroom" note="Arnack's Tavern, Washroom|washroom" color="#FF0000">
+    <description>Faint, lingering traces of dried mud mar the otherwise pristine tile flooring.  Neatly arranged next to each other, a sturdy wooden counter, towel stand, and soap basin are placed near the entrance of the room.</description>
+    <position x="-797" y="240" z="0" />
+    <arc exit="go" move="go curtained archway" destination="533" />
+    <arc exit="go" move="go wooden tub" destination="535" />
+  </node>
+  <node id="535" name="Arnack's Tavern, Wooden Tub" color="#0000FF">
+    <description>Preventing the steaming, hot water from overflowing and spilling out of the tub, the tub's tall staves are carved with convenient handholds and footholds for bathers to exit easily.</description>
+    <position x="-797" y="257" z="0" />
+    <arc exit="climb" move="climb tall staves" destination="534" />
+  </node>
   <label text="Bobcats">
     <position x="-50" y="400" z="0" />
   </label>
@@ -3464,7 +3482,7 @@
     <position x="-790" y="-550" z="0" />
   </label>
   <label text="Wolf Clan">
-    <position x="-800" y="230" z="0" />
+    <position x="-783" y="250" z="0" />
   </label>
   <label text="Forager Goblins">
     <position x="-400" y="-100" z="0" />
