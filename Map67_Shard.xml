@@ -5235,11 +5235,6 @@
     <position x="450" y="340" z="0" />
     <arc exit="east" move="east" destination="805" />
   </node>
-  <node id="808" name="Affordable Treasures, Sales Floor" note="Malbog's|Affordable Treasures" color="#FF0000">
-    <description>A wide lunat sales counter sits prominently in the back of the shop, providing a surface for merchant and customer to haggle or exchange goods for coin.  A lunat cart sits on the lunat floor, with a lunat lowboy and a glass bin placed nearby to provide a variety of browsing options.  A glass highboy stands against the silk-covered walls.</description>
-    <position x="135" y="370" z="0" />
-    <arc exit="out" move="out" destination="810" />
-  </node>
   <node id="809" name="Crystal Plaza, Stormshine Room" note="Stormshine Room" >
     <description>A tile mosaic spans the curved walls and shifts from ominously dark grey storm clouds to billowing white clouds in a brilliant blue sky.  Overhead, a lantern shielded by cloudy crystal on one side and clear amber on the other complements the aesthetic as it casts dimmed light to the stormy side of the room and sunny yellow light to the other.  A single long bench curves around some protective railing that overlooks the rotunda below.</description>
     <position x="125" y="370" z="0" />
@@ -5251,7 +5246,6 @@
     <position x="135" y="360" z="0" />
     <arc exit="e" move="e" destination="811" />
     <arc exit="sw" move="sw" destination="809" />
-    <arc exit="go" move="go wolf-shaped entry" destination="808" />
   </node>
   <node id="811" name="Crystal Plaza, River Room" note="River Room" >
     <description>Water falls thunderously from a spout in one wall near the ceiling, creating a small waterfall that still manages to cast misty spray around the pool in the floor.  A river speeds out from the pool and winds its way around the shop entrances, and small bridges cross it at key points to provide access.  While visually novel in its design, the crashing and rushing water creates enough noise that visitors frequently yell at their companions just to be heard.</description>
