@@ -3236,12 +3236,13 @@
     <position x="310" y="390" z="0" />
     <arc exit="go" move="go marquetry door" destination="467" />
   </node>
-  <node id="473" name="Crystal Plaza, Lobby" note="Crystal Plaza|Plaza|listings board|board">
+  <node id="473" name="Crystal Plaza, Lobby" note="Crystal Plaza|Plaza|Market|listings board|board">
     <description>The ceiling here is raised three stories high with a bronzed statue of an Elothean female in the center of the room.  As they move across the rust-colored tiles, the visitors' footfalls and voices echo sharply off the elaborate cornices.  A listings board on the far wall has an ornate gilded frame.</description>
     <position x="140" y="420" z="0" />
     <arc exit="north" move="north" destination="475" />
     <arc exit="go" move="go solid door" destination="474" />
     <arc exit="go" move="go marble entrance" destination="80" />
+    <arc exit="climb" move="climb spiral staircase" destination="809" />
   </node>
   <node id="474" name="Crystal Plaza, Office" note="Office|Bounty|Assassins" color="#00FF00">
     <description>Gleaming brass stanchions with velvet-lined ropes stretch across the carpeted room inside the doorway.  Traders and vendors wait quietly in line to be called to the long counter with four clerks waiting behind it.  Occasionally, an awaiting party is directed behind to one of the desks where they sit to discuss more intensive business.</description>
@@ -5234,6 +5235,35 @@
     <position x="450" y="340" z="0" />
     <arc exit="east" move="east" destination="805" />
   </node>
+  <node id="808" name="Affordable Treasures, Sales Floor" note="Malbog's|Affordable Treasures" color="#FF0000">
+    <description>A wide lunat sales counter sits prominently in the back of the shop, providing a surface for merchant and customer to haggle or exchange goods for coin.  A lunat cart sits on the lunat floor, with a lunat lowboy and a glass bin placed nearby to provide a variety of browsing options.  A glass highboy stands against the silk-covered walls.</description>
+    <position x="135" y="370" z="0" />
+    <arc exit="out" move="out" destination="810" />
+  </node>
+  <node id="809" name="Crystal Plaza, Stormshine Room" note="Stormshine Room" >
+    <description>A tile mosaic spans the curved walls and shifts from ominously dark grey storm clouds to billowing white clouds in a brilliant blue sky.  Overhead, a lantern shielded by cloudy crystal on one side and clear amber on the other complements the aesthetic as it casts dimmed light to the stormy side of the room and sunny yellow light to the other.  A single long bench curves around some protective railing that overlooks the rotunda below.</description>
+    <position x="125" y="370" z="0" />
+    <arc exit="ne" move="ne" destination="810" />
+    <arc exit="climb" move="climb spiral staircase" destination="473" />
+  </node>
+  <node id="810" name="Crystal Plaza, Observatory Room" note="Observatory Room" >
+    <description>A false ceiling patterned to resemble a starry night sky hangs overhead.  Through impressive engineering, large crystalline orbs, each colored to simulate one of Elanthia's moons, move across the sky as their real counterparts would and provide tinted illumination for patrons to navigate by.  The varied aromas of the foods being prepared and served in the food court below suffuse the air.  Tall windows between the shopfronts grant a modest view of the true sky outside.</description>
+    <position x="135" y="360" z="0" />
+    <arc exit="e" move="e" destination="811" />
+    <arc exit="sw" move="sw" destination="809" />
+    <arc exit="go" move="go wolf-shaped entry" destination="808" />
+  </node>
+  <node id="811" name="Crystal Plaza, River Room" note="River Room" >
+    <description>Water falls thunderously from a spout in one wall near the ceiling, creating a small waterfall that still manages to cast misty spray around the pool in the floor.  A river speeds out from the pool and winds its way around the shop entrances, and small bridges cross it at key points to provide access.  While visually novel in its design, the crashing and rushing water creates enough noise that visitors frequently yell at their companions just to be heard.</description>
+    <position x="145" y="360" z="0" />
+    <arc exit="se" move="se" destination="812" />
+    <arc exit="w" move="w" destination="810" />
+  </node>
+  <node id="812" name="Crystal Plaza, Treehouse Room" note="Treehouse Room" >
+    <description>The canopy of the giant oak below explodes out from the floor here.  The overall design strongly resembles a treehouse with rope bridge-like pathways snaking through and around the branches.  Beyond the roped-off areas, varieties of ivy and colorfully flowering vines creep along the ground and over the shop entrances.  The air is filled with strong floral scents atop earthy undertones.</description>
+    <position x="155" y="370" z="0" />
+    <arc exit="nw" move="nw" destination="811" />
+  </node>
   <label text="Curio Tent">
     <position x="252" y="181" z="0" />
   </label>
@@ -5280,7 +5310,7 @@
     <position x="460" y="400" z="0" />
   </label>
   <label text="Bank">
-    <position x="185" y="402" z="0" />
+    <position x="185" y="401" z="0" />
   </label>
   <label text="Great Tower">
     <position x="950" y="360" z="0" />
@@ -5303,8 +5333,8 @@
   <label text="Thugs">
     <position x="1200" y="370" z="0" />
   </label>
-  <label text="Market">
-    <position x="121" y="370" z="0" />
+  <label text="Crystal Plaza Market">
+    <position x="85" y="340" z="0" />
   </label>
   <label text="Trader Tables">
     <position x="47" y="390" z="0" />
