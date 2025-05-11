@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <zone name="Hibarnhvidar" id="116">
   <node id="1" name="Haalikshal Highway, The Sky Road">
     <description>The lights of a distant settlement dot the darkness to the southwest.  To the northeast, flickering torches flank a gate in a wall at the crest of the hill.  Behind the wall, a tower is dimly visible.</description>
@@ -531,6 +531,7 @@
   </node>
   <node id="76" name="Inner Hibarnhvidar, The North Colonnade">
     <description>Blasted from solid rock, and lovingly carved over thousands of anlaen by untold numbers of Dwarven craftsmen, the workmanship in this huge cavern cannot be matched outside Hibarnhvidar.  Thick, ornate columns support a balcony that looms over the eastern side of the hall, causing the area beneath it to disappear into the gloom save for the occasional glint of light reflected off treasured gold work.  To the northwest, ponderous leaves of hammered iron form the arch to Outer Hibarnhvidar.</description>
+    <description>Meticulously crafted, ponderous leaves of hammered iron form the arch to Outer Hibarnhvidar.  A balcony looms over the eastern side of the hall, causing the area beneath it to disappear into the gloom.</description>
     <position x="0" y="90" z="0" />
     <arc exit="northeast" move="northeast" destination="99" />
     <arc exit="east" move="east" destination="98" />
@@ -805,6 +806,7 @@
   </node>
   <node id="108" name="Inner Hibarnhvidar, Upper Cavern">
     <description>The path of the balcony follows the gentle curve of the wall.  Mounted in the center of the wall, a large iron lantern holds the shadows at bay, ensuring that travelers keep their footing.  A thin wooden pole hangs from iron chains that descend from the darkness, supporting a trio of green fabric banners that sway slightly at the touch of any breeze.</description>
+    <description>Mounted in the center of the wall, a large iron lantern holds the shadows at bay.  A thin wooden pole hangs from iron chains, supporting a trio of green fabric banners.</description>
     <position x="40" y="100" z="1" />
     <arc exit="south" move="south" destination="109" />
     <arc exit="northwest" move="northwest" destination="136" />
@@ -1093,6 +1095,7 @@
   </node>
   <node id="146" name="Inner Hibarnhvidar, Harst Haalm" note="Harst Haalm" color="#00FFFF">
     <description>A small clumping of Dwarven dwellings is recessed along the cavern's wall.  Decorative silk banners and ribbons are woven into the protective fence in an effort to add color to the neighborhood and draw attention away from the drab housing and tenants.</description>
+    <description>A small clumping of Dwarven dwellings is recessed along the cavern's wall.</description>
     <position x="-40" y="80" z="1" />
     <arc exit="northeast" move="northeast" destination="145" />
     <arc exit="southwest" move="southwest" destination="147" />
@@ -1557,7 +1560,7 @@
     <arc exit="west" move="west" />
     <arc exit="go" move="go hibarnhvidar gate" destination="24" />
   </node>
-  <node id="218" name="Vandorf's House of Hides" note="Vandorf's House of Hides|Bundles" color="#00FF00">
+  <node id="218" name="Vandorf's House of Hides" note="Vandorf's House of Hides|bundles|skins" color="#00FF00">
     <description>The smell of curing hides clings to the air, cloying the nostrils with a heavy unpleasant smell of decayed animal flesh.  A thick cord draped with various furs extends from one end of the room to the other, acting as a makeshift curtain that leads to the back room.  The shop owner Vandorf tends to his furs, stopping every so often to acknowledge customers that walk in to do business.</description>
     <position x="-260" y="10" z="0" />
     <arc exit="go" move="go wooden door" destination="19" />
@@ -2768,8 +2771,9 @@
     <arc exit="southeast" move="southeast" destination="416" />
     <arc exit="southwest" move="southwest" destination="418" />
   </node>
-  <node id="418" name="Empaths' Guild, Hall of Battle" note="RS Empath|Sarkranis" color="#00FFFF">
+  <node id="418" name="Empaths' Guild, Hall of Battle" note="RS Empath" color="#00FFFF">
     <description>A dark red carpet covers the floor of a hallway dimly illuminated by guttering iron wall sconces.  An armor stand against one wall features a chainmail armor display, with some links rusted, broken, or bloodstained.  At the display's feet rest a battered shield emblazoned with the Empath Guild crest and a bundle of dried flowers tied with a sapphire-blue ribbon.  Mounted on the wall, a wooden plaque featuring brass nameplates lists some of those lost in the fields.</description>
+    <description>An armor stand against one wall features a chainmail display.  The hall is dimly lit and carpeted in dark red.</description>
     <position x="100" y="-20" z="1" />
     <arc exit="northeast" move="northeast" destination="417" />
     <arc exit="east" move="east" destination="414" />
