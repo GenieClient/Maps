@@ -3396,8 +3396,10 @@
     <arc exit="go" move="go curving footpath" destination="483" />
   </node>
   <node id="506" name="The Strand, Tree-lined Path" color="#00FFFF">
-    <description>The rhythmic sound and smell of the ocean linger faintly in the air, only interrupted by the occasional grunt, groan or curse for those working on the Crossing Docks.  Hanging gaethzen globes light a path in the darkness toward an old-growth forest northward and toward the sound of the crashing waves to the south.  Illuminated by the glow are several ants scurrying along the ground in and around a damaged anthill.</description>
     <description>A few pockets of marram grass stick out of the sand, mixing with more traditional short green tufts that dot the area.  The trees, laden with gaethzen globes, also grow denser as the pathway winds its way northward away from the docks towards an old-growth forest.  Breaking the serenity of the landscape are countless large black ants diligently swarming around a damaged anthill near the base of a nearby willow.</description>
+    <description>Trees laden with gaethzen globes line the pathway as it continues toward an old-growth forest towards the north.  Black ants scurry in and around a damaged anthill.</description>
+    <description>The rhythmic sound and smell of the ocean linger faintly in the air, only interrupted by the occasional grunt, groan or curse for those working on the Crossing Docks.  Hanging gaethzen globes light a path in the darkness toward an old-growth forest northward and toward the sound of the crashing waves to the south.  Illuminated by the glow are several ants scurrying along the ground in and around a damaged anthill.</description>
+    <description>Several gaethzen globes light a path northwards towards an old-growth forest and southward toward the beach.  The glow also illuminates an anthill and several black ants.</description>
     <position x="370" y="300" z="0" />
     <arc exit="north" move="north" destination="507" />
     <arc exit="southwest" move="southwest" destination="505" />
@@ -5280,7 +5282,9 @@
   </node>
   <node id="807" name="Paladins' Guild, Holy Warrior's Promenade" color="#00FFFF">
     <description>A neat row of trimmed hedges borders a quaint whitewashed fence, their branches carefully clipped to form a perfect rectangular shape.  Growing in lush clumps, small pale purple flowers edge the colorful pebbled path and fill the air with the sweet scent of lavender.</description>
+    <description>A neat row of hedges borders a fence, their branches clipped to form a perfect rectangular shape.  Growing in lush clumps, small flowers edge the path and fill the air with the sweet scent of lavender.</description>
     <description>A neat row of trimmed hedges borders a quaint whitewashed fence, their branches carefully clipped to form a perfect rectangular shape.  Growing in lush clumps, small flowers edge the colorful pebbled path and fill the air with the sweet scent of lavender.</description>
+    <description>A neat row of hedges borders a fence, their branches clipped to form a perfect rectangular shape.  Growing in lush clumps, small flowers edge the path and fill the air with the sweet scent of lavender.</description>
     <position x="367" y="-576" z="0" />
     <arc exit="north" move="north" destination="805" />
     <arc exit="east" move="east" destination="810" />
