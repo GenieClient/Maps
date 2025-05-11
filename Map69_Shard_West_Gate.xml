@@ -3780,6 +3780,7 @@
   </node>
   <node id="597" name="Wyvern Plateau, Narrow Crevice">
     <description>Cutting deep into the edge of the plateau, a narrow crevice cleaves downward towards the precipice.  Right at the drop-off, a steep trail begins and zigzags down the cliff face towards the forest below.</description>
+    <description>A narrow crevice cleaves downward towards a steep trail that zigzags down to the forest below.</description>
     <position x="440" y="557" z="0" />
     <arc exit="north" move="north" destination="599" />
     <arc exit="northeast" move="northeast" destination="600" />
@@ -3788,6 +3789,7 @@
   </node>
   <node id="598" name="Wyvern Plateau, Grassland">
     <description>Grassland stretches endlessly out from the plateau's edge, rippling in the wind.  Only a very few stumpy trees rise above the vegetation, their branches gnarled by the ever-present breeze.</description>
+    <description>Grassland stretches out from the plateau's edge, broken occasionally by stumpy trees poking above the vegetation.</description>
     <position x="460" y="557" z="0" />
     <arc exit="north" move="north" destination="600" />
     <arc exit="northeast" move="northeast" destination="602" />
@@ -3797,12 +3799,15 @@
   </node>
   <node id="599" name="Wyvern Plateau, Grassland">
     <description>Grassland stretches out from the edges of the plateau, a mass of undulating greenery that effectively hides the rocky soil beneath.  Songbirds dart amongst the stems, their melodious voices rising above the susurration of the swaying leaves.</description>
+    <description>Grassland stretches out from the edges of the plateau, hiding the rocky soil beneath.</description>
     <position x="440" y="537" z="0" />
     <arc exit="east" move="east" destination="600" />
     <arc exit="southeast" move="southeast" destination="598" />
     <arc exit="south" move="south" destination="597" />
   </node>
   <node id="600" name="Wyvern Plateau, Grassland">
+    <description>Grassland stretches out from the edges of the plateau, with only a few shrubs to break the monotony of the whispering grasses swaying in the wind.  Birds soar above the cliff, using the updrafts to gain altitude above the forests spread at the feet of the plateau.</description>
+    <description>Grassland stretches out from the edges of the plateau, a few shrubs breaking above the swaying grasses.</description>
     <description>Grassland stretches out from the edges of the plateau, with only a few shrubs to break the monotony of the whispering grasses swaying in the wind.  Bats swirl in the night, darting out from their cliffside cave homes in search of insects and other prey.</description>
     <position x="460" y="537" z="0" />
     <arc exit="east" move="east" destination="602" />
@@ -3812,7 +3817,8 @@
     <arc exit="west" move="west" destination="599" />
   </node>
   <node id="601" name="Wyvern Plateau, Grassland">
-    <description>Grassand stretches out from the plateau's edge, running right up to the edge of the vertical cliffs.  The crumbling edge is festooned with teetering rocks and boulders, poised to crash to the forest below.</description>
+    <description>Grassland stretches out from the plateau's edge, running right up to the edge of the vertical cliffs.  The crumbling edge is festooned with teetering rocks and boulders, poised to crash to the forest below.</description>
+    <description>Grassland stretches out from the plateau's edge, where teetering boulders are poised to crash to the forest below.</description>
     <position x="480" y="557" z="0" />
     <arc exit="north" move="north" destination="602" />
     <arc exit="west" move="west" destination="598" />
@@ -3820,6 +3826,7 @@
   </node>
   <node id="602" name="Wyvern Plateau, Grassland">
     <description>Grassland stretches out from the edges of the plateau, the thick growth almost hiding a winding trail that snakes towards a small vale cupped within the rocky outcrop.</description>
+    <description>Grassland stretches out from the edges of the plateau, almost hiding a winding trail snaking towards a small vale.</description>
     <position x="480" y="537" z="0" />
     <arc exit="south" move="south" destination="601" />
     <arc exit="southwest" move="southwest" destination="598" />
@@ -3828,6 +3835,7 @@
   </node>
   <node id="603" name="Wyvern Plateau, Grassy Vale">
     <description>Cupped within the surrounding grassland, a small vale enclosed by low rocky walls stetches around a small spring.  Tendrils of water flow out from the spring, feeding two meager rivulets winding amongst the savannah.</description>
+    <description>Cupped within the surrounding grassland, a small vale enclosed by rocky walls stretches around a small spring.</description>
     <position x="500" y="517" z="0" />
     <arc exit="north" move="north" destination="604" />
     <arc exit="west" move="west" destination="605" />
@@ -3835,6 +3843,7 @@
   </node>
   <node id="604" name="Wyvern Plateau, Grassy Vale">
     <description>The meandering streamlet eventually peters out into nothingness, its moisture dispersing amongst the thirsty grasses.  A few stray boulders mark the edge of the plateau, providing some warning of the plunge into the surrounding forest lurking below.</description>
+    <description>The streamlet peters out into nothingness amongst the thirsty grasses.</description>
     <position x="500" y="497" z="0" />
     <arc exit="south" move="south" destination="603" />
     <arc exit="southwest" move="southwest" destination="605" />
@@ -3847,6 +3856,7 @@
   </node>
   <node id="606" name="Wyvern Plateau, Opening">
     <description>Overhead the rocks meet in an arch that extends into a gorge that opens up to the sky.  In contrast to the outer trail, the walls are lush with vegetation that grows in the seeping rocks.  The accumulated moisture pools on the floor and then disappears into a narrow crack, flowing into some unknown subterreanean passage.</description>
+    <description>Rocks meet overhead in an arch that extends into a gorge open to the sky.  Lush vegetation clings to the walls.</description>
     <position x="540" y="557" z="0" />
     <arc exit="north" move="north" destination="607" />
     <arc exit="go" move="go arched opening" destination="593" />
@@ -3854,6 +3864,7 @@
   </node>
   <node id="607" name="Wyvern Trail, Grotto">
     <description>Glimpses of the sky are visible above, fleeting glances only available when the sheer rocks of the grotto widen enough to allow them.  Luxuriant plant life runs riot over the cliffs, sending roots and tendrils deep into the seeping rock faces.  Small pools and puddles run along the bottom of the grotto before combining into a small trickle that wends its way towards the grotto's exit.</description>
+    <description>Luxuriant plant life runs over the cliff walls that seep water which collects into a trickle on the grotto floor.</description>
     <position x="540" y="537" z="0" />
     <arc exit="north" move="north" destination="611" />
     <arc exit="northeast" move="northeast" destination="610" />
@@ -3869,6 +3880,7 @@
   </node>
   <node id="609" name="Wyvern Trail, Grotto">
     <description>Sheer sandstone walls loom above the thicket of shrubs and low trees that crowd the sodden ground.  The verdant leaves and vines drip with moisture with an occasional *plop* as a droplet falls into a puddle being the only sound that resonates in the area.</description>
+    <description>Sandstone walls loom above thickets of shrubs and low trees crowding the sodden ground.</description>
     <position x="540" y="497" z="0" />
     <arc exit="east" move="east" destination="612" />
     <arc exit="southeast" move="southeast" destination="610" />
@@ -3877,6 +3889,7 @@
   </node>
   <node id="610" name="Wyvern Trail, Grotto">
     <description>Thick tree trunks rise from the damp soil, their bark almost completely covered in deep growths of greenish moss.  Vines snake from branch to branch, their lush foliage helping to further obscure vision within the grotto.</description>
+    <description>Trees rise from the damp soil, their branches festooned with vines.</description>
     <position x="560" y="517" z="0" />
     <arc exit="north" move="north" destination="612" />
     <arc exit="southwest" move="southwest" destination="607" />
@@ -3885,6 +3898,7 @@
   </node>
   <node id="611" name="Wyvern Trail, Grotto">
     <description>Willow saplings crowd the center of the grotto, sinking their roots into the dirt, crumbled rock, and pools of water that form the ground of the rocky crevice.  The dense copse of trees almost completely obscures the sky, but a few game trails wend between the swaying trunks.</description>
+    <description>Willow saplings crowd the center of the grotto.</description>
     <position x="540" y="517" z="0" />
     <arc exit="north" move="north" destination="609" />
     <arc exit="northeast" move="northeast" destination="612" />
@@ -3894,6 +3908,7 @@
   </node>
   <node id="612" name="Wyvern Trail, Grotto">
     <description>Seeping rock walls meet in a sharp corner where a small pool has formed.  It must have an underground outflow, as no stream or even trickle of water exits the muddy banks.  Tracks of unknown animals almost completely cover the muddy ground, the sheer numbers of them serving to obscure their owner's identity.</description>
+    <description>Seeping rock walls meet at a corner near a small pool.</description>
     <position x="560" y="497" z="0" />
     <arc exit="south" move="south" destination="610" />
     <arc exit="southwest" move="southwest" destination="611" />
@@ -3901,6 +3916,7 @@
   </node>
   <node id="613" name="Wyvern Trail, Hollow">
     <description>Sandstone walls open into a small hollow within the larger ravine that runs into the plateau.  Tiny rivulets of water trickle down the walls, providing the water necessary to keep alive the lush vegetation that fills the hollow.  A few industrious vines have bridged the gap between the walls, their leaves dripping with condensation.</description>
+    <description>Sandstone walls open into a small hollow filled with lush vegetation.</description>
     <position x="560" y="557" z="0" />
     <arc exit="northeast" move="northeast" destination="614" />
     <arc exit="east" move="east" destination="615" />
@@ -3908,12 +3924,14 @@
   </node>
   <node id="614" name="Wyvern Trail, Hollow">
     <description>A small pool has formed at the base of the sandstone walls, its waters gathered from the seepage that drips down from the rocky cliffs and condenses on the leaves of the trees.  A lush carpet of ferns covers the damp ground between the tree trunks, and moss cloaks the bark on the trees.</description>
+    <description>A small pool has formed at the base of the rock walls while a carpet of ferns covers the damp ground.</description>
     <position x="580" y="537" z="0" />
     <arc exit="south" move="south" destination="615" />
     <arc exit="southwest" move="southwest" destination="613" />
   </node>
   <node id="615" name="Wyvern Trail, Hollow">
     <description>A dense stand of willows nearly fills this part of the gorge, their dense foliage and leaves threaded throughout with a network of game trails.  Tiny pawprints cover the damp ground of the trails, their sheer number making identification almost impossible.</description>
+    <description>A dense stand of willows fills the gorge.  Game trails thread through the trees.</description>
     <position x="580" y="557" z="0" />
     <arc exit="north" move="north" destination="614" />
     <arc exit="west" move="west" destination="613" />
