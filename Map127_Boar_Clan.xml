@@ -3760,12 +3760,14 @@
   </node>
   <node id="559" name="Boar Clan, Overgrown Path">
     <description>Scraggly branches protrude from the bulky hedgerow to the south like a centipede's legs.  The shrubbery crowds the path somewhat, but the tall, flowery grasses along the northern edge balance the scene.  A rut divides the rocky path in an uneven line, likely caused by a wheelbarrow's habitual journey.</description>
+    <description>A rut divides the rocky path in an uneven line, likely caused by a wheelbarrow's habitual journey.</description>
     <position x="120" y="300" z="0" />
     <arc exit="northeast" move="northeast" destination="558" />
     <arc exit="west" move="west" destination="581" />
   </node>
   <node id="560" name="Boar Clan, Derelict Togball Field" note="Stompers">
     <description>Once lush and verdant, the thick grass sprawls unchecked along the ground.  The massive hedgerows loom over this corner of the field to create an abundance of shadows for all sorts of creepy crawlies to seek for shelter.  Most of the soil is intact here due to the relatively infrequent use during game days, though a giant felled tree creates an imposing dent.</description>
+    <description>Most of the soil is intact here due to the relatively infrequent use during game days, though a giant felled tree creates an imposing dent.</description>
     <position x="120" y="320" z="0" />
     <arc exit="south" move="south" destination="562" />
     <arc exit="southwest" move="southwest" destination="561" />
@@ -3773,6 +3775,7 @@
   </node>
   <node id="561" name="Boar Clan, Derelict Togball Field">
     <description>Trash accumulates upon the ground in staggered clumps, blown onto the grass by errant winds or simply discarded by careless spectators of the past.  The corners of a few benches tossed onto the field jut through the tangle of brambles slowly invading the area.  Sticky mud underfoot emits immodest sucking sounds as people and creatures traverse the turf.</description>
+    <description>Trash accumulates upon the ground, and a few benches jut through the tangle of brambles.</description>
     <position x="100" y="340" z="0" />
     <arc exit="north" move="north" destination="563" />
     <arc exit="northeast" move="northeast" destination="560" />
@@ -3783,6 +3786,7 @@
   </node>
   <node id="562" name="Boar Clan, Derelict Togball Field">
     <description>Two dilapidated posts lie willy-nilly upon the ground.  Once designating the brown side's goal, the rotting shafts serve no more purpose now than to give termites and fungi a place to call home.  Debris in the form of jagged branches and decaying leaves restricts passage through the field where there formerly was open space.</description>
+    <description>Two dilapidated posts lie willy-nilly upon the ground.</description>
     <position x="120" y="340" z="0" />
     <arc exit="north" move="north" destination="560" />
     <arc exit="south" move="south" destination="565" />
@@ -3791,11 +3795,13 @@
   </node>
   <node id="563" name="Boar Clan, Derelict Togball Field">
     <description>With its roots splayed for all to see, a humongous dead tree prohibits movement in an eastward direction.  Insects scurry along the base to scavenge for morsels of detritus or to consume the tender bark.  Mold and mushrooms proliferate along the surface, presumably because of the large gaps in the hedgerow that allow outside light to filter in.</description>
+    <description>Mold and mushrooms proliferate along the surface of a dead tree.  Large gaps in the hedgerow let outside light in.</description>
     <position x="100" y="320" z="0" />
     <arc exit="south" move="south" destination="561" />
   </node>
   <node id="564" name="Boar Clan, Derelict Togball Field">
     <description>Dense thicket grasses make a play to claim a pair of overturned benches strewn sideways on the ground.  Whether the bleachers were ripped from the sidelines by a terrible storm or a pack of rabid fans remains a mystery, though both scenarios are equally as likely.  Whatever the reason, the long wooden seats inhibit passage westward, but other trailblazers' footsteps and weapons have cleared the brush in other directions.</description>
+    <description>Dense thicket grasses make a play to claim a pair of overturned benches strewn sideways on the ground.</description>
     <position x="100" y="360" z="0" />
     <arc exit="north" move="north" destination="561" />
     <arc exit="northeast" move="northeast" destination="562" />
@@ -3803,6 +3809,7 @@
   </node>
   <node id="565" name="Boar Clan, Derelict Togball Field" color="#FFBF00">
     <description>Years of abandonment transformed the field's southeast corner into a marshy swamp.  Stagnant liquid refuses to absorb into the water table underground, and since the grassy floor descends slightly, the earth degrades into muck and filth.  Splatters of mud cake the surrounding hedgerows as if out of spite.</description>
+    <description>Years of abandonment transformed the field's southeast corner into a marshy swamp.</description>
     <position x="120" y="360" z="0" />
     <arc exit="north" move="north" destination="562" />
     <arc exit="west" move="west" destination="564" />
@@ -3810,6 +3817,7 @@
   </node>
   <node id="566" name="Boar Clan, Derelict Togball Field">
     <description>Weathered fragments of bone litter one spot in this section of the field.  The shards surround a large humanoid skull, likely that of a fallen combatant.  Grass grows through the eye sockets and nose holes as fiercely as it flourishes elsewhere in the field.</description>
+    <description>Bone fragments surround a humanoid skull in the middle of the grass.</description>
     <position x="60" y="340" z="0" />
     <arc exit="south" move="south" destination="567" />
     <arc exit="southwest" move="southwest" destination="568" />
@@ -3819,6 +3827,7 @@
   </node>
   <node id="567" name="Boar Clan, Derelict Togball Field">
     <description>Dull paint flakes off the immense benches blocking passage to the east, and vines creep around the wooden legs to ensnare them for all eternity.  Dotting the unshapely hedgerows along the southern edge are numerous practice togballs.  The dented leather globes protrude from the branches and leaves only a fraction and must have been thrown into the shrubbery with astounding force.</description>
+    <description>Benches block passage to the east.  Leather practice togballs protrude from the hedgerows.</description>
     <position x="60" y="360" z="0" />
     <arc exit="north" move="north" destination="566" />
     <arc exit="west" move="west" destination="568" />
@@ -3826,6 +3835,7 @@
   </node>
   <node id="568" name="Boar Clan, Derelict Togball Field">
     <description>Tattered and shriveled, what's left of a jersey clings to the pointy branches of the hedgerow.  A large ditch plowed into the ground disrupts the field's natural flow, preventing easy travel west.  The edges of the long, deep furrow are smooth with slimy moss, indicating the hole is not a recent occurrence.</description>
+    <description>What's left of a jersey clings to the hedgerow.  A large ditch plowed into the ground disrupts the field's natural flow.</description>
     <position x="40" y="360" z="0" />
     <arc exit="north" move="north" destination="569" />
     <arc exit="northeast" move="northeast" destination="566" />
@@ -3833,6 +3843,7 @@
   </node>
   <node id="569" name="Boar Clan, Derelict Togball Field">
     <description>Great ruts and gouges in the ground allude to the many midfield battles that took place here in the past.  Grass collects in the depressions along with weeds and twigs, though the terrain still threatens to twist the ankles of unobservant wanderers.  The formerly pristine landscape now lies in ruins, devoid of its former glory.</description>
+    <description>Great ruts and gouges in the ground allude to the many midfield battles that took place here in the past.</description>
     <position x="40" y="340" z="0" />
     <arc exit="northeast" move="northeast" destination="570" />
     <arc exit="east" move="east" destination="566" />
@@ -3841,12 +3852,14 @@
   </node>
   <node id="570" name="Boar Clan, Derelict Togball Field">
     <description>Bumpy logs from a variety of native trees spread across the ground in no particular order.  The long, thick chunks of wood rise from the depths of the untamed grass like the backs of alligators in a murky creek.  Thankfully, these arboreal additions lack the vicious teeth of the reptiles, though they do manage to trip unwary adventurers and stub quite a few toes.</description>
+    <description>Bumpy logs from a variety of native trees spread across the ground in no particular order.</description>
     <position x="60" y="320" z="0" />
     <arc exit="southwest" move="southwest" destination="569" />
     <arc exit="west" move="west" destination="571" />
   </node>
   <node id="571" name="Boar Clan, Derelict Togball Field" note="Maulers">
     <description>Most of the coarse underbrush gives way to less impenetrable grass at this conjunction of sorts.  Haphazardly cut, a ragged gash in the hedgerow facilitates access to a gravel path circumnavigating the field.  Bits of cloth stick to the rough twigs along the gap's edges, fluttering like confetti against the green backdrop.</description>
+    <description>Haphazardly cut, a ragged gash in the hedgerow facilitates access to a gravel path circumnavigating the field.</description>
     <position x="40" y="320" z="0" />
     <arc exit="east" move="east" destination="570" />
     <arc exit="southeast" move="southeast" destination="566" />
@@ -3855,6 +3868,7 @@
   </node>
   <node id="572" name="Boar Clan, Derelict Togball Field" note="Head-splitters">
     <description>Birds have overrun the towering hedgerow initially set up as the northern barrier.  Tawny nests peek out from the foliage, and broken eggshells produce a bright mosaic in the mud below.  Wooden posts in various states of destruction rest solemnly upon the tall grass like fallen soldiers on a silent battlefield.</description>
+    <description>Birds' nests peek out from the hedgerow, and broken eggshells litter the ground around some wooden posts.</description>
     <position x="20" y="320" z="0" />
     <arc exit="south" move="south" destination="574" />
     <arc exit="southwest" move="southwest" destination="580" />
@@ -3863,6 +3877,7 @@
   </node>
   <node id="573" name="Boar Clan, Derelict Togball Field">
     <description>A broad tree slices through the hedgerow border, likely having crashed onto the field after a lighting strike or other natural calamity.  The moldy bark bears deep scratches all along the side, as if some creature was trying to rend the giant trunk in two.  Messy patches of earth have been dug up from the ground as well, leaving unsightly bare spots in the grass.</description>
+    <description>A broad tree slices through the hedgerow border, likely having crashed onto the field after a lighting strike or other natural calamity.</description>
     <position x="0" y="320" z="0" />
     <arc exit="east" move="east" destination="572" />
     <arc exit="southeast" move="southeast" destination="574" />
@@ -3870,6 +3885,7 @@
   </node>
   <node id="574" name="Boar Clan, Derelict Togball Field">
     <description>A collection of sculpted oak creatures sits in a circle around a huge grey boulder.  The arrangement is somewhat peculiar considering the environment.  Wavy stalks of grass caress the carvings, the growth not impeded by the wooden residents.</description>
+    <description>A collection of sculpted oak creatures sits in a circle around a huge grey boulder.</description>
     <position x="20" y="340" z="0" />
     <arc exit="north" move="north" destination="572" />
     <arc exit="south" move="south" destination="575" />
@@ -3879,6 +3895,7 @@
   </node>
   <node id="575" name="Boar Clan, Derelict Togball Field">
     <description>Flying insects swarm above a ditch separating this end of the grounds from midfield.  Copious amounts of soggy leaves and smashed twigs obscure the formerly green and manicured lawn underneath.  No matter the weather, an eerie chill and a stench of death infect the desolate field.</description>
+    <description>Flying insects swarm above a ditch separating this end of the grounds from midfield.</description>
     <position x="20" y="360" z="0" />
     <arc exit="north" move="north" destination="574" />
     <arc exit="west" move="west" destination="576" />
@@ -3886,6 +3903,7 @@
   </node>
   <node id="576" name="Boar Clan, Derelict Togball Field">
     <description>Slumped on the ground like bloated corpses, some leather dummies rest amidst the grass and leaves.  The practice equipment rots and decays just like everything else exposed to the elements for years on end.  A family of enterprising rodents claims sanctuary in one of the torsos, and every now and then, beady eyes glint from the holes riddled through the fabric.</description>
+    <description>Slumped on the ground like bloated corpses, some leather dummies rest amidst the grass and leaves.</description>
     <position x="0" y="360" z="0" />
     <arc exit="north" move="north" destination="580" />
     <arc exit="northeast" move="northeast" destination="574" />
@@ -3894,6 +3912,7 @@
   </node>
   <node id="577" name="Boar Clan, Derelict Togball Field">
     <description>Splintered oak planks and bent metal rods compose the ruins of a modest structure.  A sign hangs from a single nail near the relatively small doorframe.  The only inhabitants now are the same weeds and grasses overwhelming the rest of the field.</description>
+    <description>Splintered oak planks and bent metal rods compose the ruins of a modest structure, and a sign hangs near the doorframe.</description>
     <position x="-20" y="360" z="0" />
     <arc exit="north" move="north" destination="578" />
     <arc exit="east" move="east" destination="576" />
@@ -3901,6 +3920,7 @@
   </node>
   <node id="578" name="Boar Clan, Derelict Togball Field">
     <description>Forgotten along with the rest of the clutter, a rusty rake lies adjacent to a tarnished pair of branch cutters.  From here, the view of the field through the goal posts reveals how nature is stealing the grounds slowly but surely.  Only the few gardening tools, relics of a past time, linger on the field as if to lie in wait for the elements to claim them, too.</description>
+    <description>Forgotten along with the rest of the clutter, a rusty rake lies adjacent to a tarnished pair of branch cutters.</description>
     <position x="-20" y="340" z="0" />
     <arc exit="north" move="north" destination="579" />
     <arc exit="northeast" move="northeast" destination="573" />
@@ -3909,12 +3929,14 @@
   </node>
   <node id="579" name="Boar Clan, Derelict Togball Field">
     <description>An upended wheelbarrow in the corner explains the excessive amount of dingy white chalk dust encrusted on the hedgerow and grass.  Too persistent to be washed away by rain or snow, the mixture must include some type of mortar or cement, likely the brainchild of a lazy landscaper who hated redrawing the lines on the field.  Unfortunately, a squirrel met his untimely demise while scampering through the stuff, as he now accents the area as a perfect plaster-cast statue.</description>
+    <description>An upended wheelbarrow in the corner explains the excessive amount of dingy white chalk dust encrusted on the hedgerow and grass.  A squirrel caught in the stuff now rests in the corner as a statue.</description>
     <position x="-20" y="320" z="0" />
     <arc exit="southeast" move="southeast" destination="580" />
     <arc exit="south" move="south" destination="578" />
   </node>
   <node id="580" name="Boar Clan, Derelict Togball Field">
     <description>Curiously out of place amongst the lanky weeds, a large metal bathtub is situated directly in front of the green team's goalposts.  A film of matte-brown algae thrives upon the surface of the rainwater collected within.  The grass does not seem to care, however, as it just keeps growing skyward around the bizarrely placed basin.</description>
+    <description>A film of matte-brown algae thrives upon the surface of the rainwater collected within a large metal bathtub.</description>
     <position x="0" y="340" z="0" />
     <arc exit="northeast" move="northeast" destination="572" />
     <arc exit="east" move="east" destination="574" />
@@ -3925,6 +3947,7 @@
   </node>
   <node id="581" name="Boar Clan, Overgrown Path">
     <description>Shattered and askew beside the road, a rotting oaken plank slowly succumbs to the torture of both time and nature.  Deteriorating food scraps and empty bottles abound near a barrel tipped on its side, a gooey sludge leaking from the mouth like regurgitated bile.  All signs point to this area formerly housing the field's concession stand, particularly the faded banner labeled 'SNAX' in faint red paint.</description>
+    <description>A rotting plank lies near a collection of empty cartons and bottles flowing from an overturned barrel leaking gooey sludge.  Forgotten, a faded banner drapes across the side of the road.</description>
     <position x="60" y="300" z="0" />
     <arc exit="east" move="east" destination="559" />
     <arc exit="northwest" move="northwest" destination="582" />
@@ -3938,6 +3961,7 @@
   </node>
   <node id="583" name="Boar Clan, Abandoned Utility Shed" note="Mutant Togballs">
     <description>Next to the door, a remarkably intact wooden sign shows a curious but effective stick figure of a large biped wiping its feet on a mat.  Two walls are lined with hooks and cubbyholes, where togballers and the grounds crew could store their muddy gear.  Tattered bits of once-bright clothing and rotted muddy boots still remain, although the main occupants of the compartments now are a few weasels and a surly raccoon.</description>
+    <description>Two walls are lined with hooks and cubbyholes.  Tatted bits of clothing and rotted boots still remain.</description>
     <position x="180" y="300" z="0" />
     <arc exit="north" move="north" destination="589" />
     <arc exit="east" move="east" destination="584" />
@@ -3945,6 +3969,7 @@
   </node>
   <node id="584" name="Boar Clan, Abandoned Utility Shed">
     <description>Racks along the wall contain implements for the care and upkeep of the field.  Rusty rakes, shovels and the like stand at wobbly attention, but a few have fallen out of formation -- especially those where the wooden handles have completely given up the ghost.  Some bins in one corner may have held grass seed meant to fill in divots and bare spots on the field after a round of mayhem, although there is no real evidence of this, and they may have actually held turnips or rum for all the observer can tell.</description>
+    <description>Racks along the wall contain implements for the upkeep of the field.</description>
     <position x="200" y="300" z="0" />
     <arc exit="north" move="north" destination="586" />
     <arc exit="east" move="east" destination="585" />
@@ -3952,11 +3977,13 @@
   </node>
   <node id="585" name="Boar Clan, Abandoned Utility Shed">
     <description>The shattered remains of a door frame along with some badly tilting shelving indicate that this small nook was probably a closet of some sort.  Splintered chunks of wood, most of it liberally gnawed, cover the floor.  Piled on the shelves and slipped off onto the ground nearby, shreds of jerseys lie as if they were still freshly washed and awaiting the next match.</description>
+    <description>This small nook was probably a closet of some sort.</description>
     <position x="220" y="300" z="0" />
     <arc exit="west" move="west" destination="584" />
   </node>
   <node id="586" name="Boar Clan, Abandoned Utility Shed">
-    <description>Tattered banners hang from the rafters.  On some one can still see the figure of a boar's head others are merely limp shreds of fabric.  Little else distinguishes this area other than a fallen length of roof lying atop a fractured skull.  The skull appears too small to be an adult Gor'Tog's, but aside from that, there are no clues as to its origin.</description>
+    <description>Tattered banners hang from the rafters.  On some one can still see the figure of a boar's head; others are merely limp shreds of fabric.  Little else distinguishes this area other than a fallen length of roof lying atop a fractured skull.  The skull appears too small to be an adult Gor'Tog's, but aside from that, there are no clues as to its origin.</description>
+    <description>Tattered banners hang from the rafters.  On some one can still see the figure of a boar's head.</description>
     <position x="200" y="280" z="0" />
     <arc exit="north" move="north" destination="588" />
     <arc exit="east" move="east" destination="587" />
@@ -3964,16 +3991,19 @@
   </node>
   <node id="587" name="Boar Clan, Abandoned Utility Shed">
     <description>A badly decayed woven rush mat covers nearly the entire floor here.  This must have been the practice room, where players could try out their moves with only a modest number of broken bones and smashed heads.  Lying askew in one corner, a large skull grins as if proud that it remains intact.</description>
+    <description>A badly decayed rush mat covers nearly the entire floor.</description>
     <position x="220" y="280" z="0" />
     <arc exit="west" move="west" destination="586" />
   </node>
   <node id="588" name="Boar Clan, Abandoned Utility Shed">
     <description>Battered wooden crates and barrels are scattered throughout the area, creating a sort of obstacle course to walk through for any but small animals.  It seems likely that they once held foodstuffs, but anything that remained has long since decomposed.  The occasional chittering and the faint scrape of claws suggest that some critters have indeed made this place home.</description>
+    <description>Battered crates and barrels are scattered throughout the area.</description>
     <position x="200" y="260" z="0" />
     <arc exit="south" move="south" destination="586" />
   </node>
   <node id="589" name="Boar Clan, Abandoned Utility Shed">
     <description>A ring of rusted keys still sitting on a peg on the wall hints that this may have been the guard room for Togs posted to watch the togballs penned in the adjacent room.  The remains of a table with three collapsed legs and several oversized broken chairs, none of which are still functional, lie in a jumble in the middle of the floor.  Indicative of the seriousness with which guard duty was taken, a pair of dented iron tankards completes the decor.</description>
+    <description>Rusted keys sit on a peg on the wall.  A broken table and chairs lie on the floor along with a pair of dented tankards.</description>
     <position x="180" y="280" z="0" />
     <arc exit="north" move="north" destination="590" />
     <arc exit="south" move="south" destination="583" />
@@ -3981,11 +4011,13 @@
   </node>
   <node id="590" name="Boar Clan, Abandoned Utility Shed">
     <description>This appears to be the remains of a large pen.  Rusted, cross-hatched wire presumably once kept unfortunates assigned to be togballs inside, although given that the balls were frequently smarter than their jailers, it's debatable whether they really stayed inside for very long.  A flimsy door swings on one intact hinge, but it is now unnecessary due to wide gaps in the old wire.</description>
+    <description>This appears to be the remains of a pen.  Rusted wire presumably once kept togballs inside.</description>
     <position x="180" y="260" z="0" />
     <arc exit="south" move="south" destination="589" />
   </node>
   <node id="591" name="Boar Clan, Abandoned Utility Shed">
     <description>The roots of an immense tree have broken through the floor here, bringing with them a host of mosses, lichens and fungi.  As a result, the footing is tricky, requiring one to high-step, duck and be wary of slipping.  It is not immediately obvious what this room was used for, but whatever the case, nature has surely claimed it back.</description>
+    <description>The roots of an immense tree have broken through the floor here.</description>
     <position x="160" y="280" z="0" />
     <arc exit="east" move="east" destination="589" />
   </node>
@@ -4192,6 +4224,7 @@
   </node>
   <node id="613" name="Boar Clan, Spoiled Well" note="Premium Zombies">
     <description>Shoots of brown grass tickle the sides of a grey stone well situated inside a partitioned yard.  The wooden support from over top the structure has collapsed to one side and now lies covered in soil and weeds.  Nowhere to be seen, the well's bucket must have been rescued for a better life elsewhere.</description>
+    <description>Shoots of brown grass tickle the sides of a grey stone well situated inside a partitioned yard.</description>
     <position x="-10" y="280" z="0" />
     <arc exit="north" move="north" destination="618" />
     <arc exit="south" move="south" destination="614" />
@@ -4202,6 +4235,7 @@
   </node>
   <node id="614" name="Boar Clan, Around the Watering Hole">
     <description>Grass springs up around the wooden slats fencing in the area.  A few tree stumps, their bodies withered and moldy, disfigure the ground in one corner.  By the looks of things, they once were used as makeshift seating, and one has a cup-sized hole carved into the top.</description>
+    <description>A few tree stumps, their bodies withered and moldy, disfigure the ground in one corner.</description>
     <position x="-10" y="290" z="0" />
     <arc exit="north" move="north" destination="613" />
     <arc exit="west" move="west" destination="615" />
@@ -4209,6 +4243,7 @@
   </node>
   <node id="615" name="Boar Clan, Around the Watering Hole">
     <description>At first glance, the corner fence seems to have received a whitewash in order to improve and preserve the appearance.  However, closer inspection reveals layer upon layer of caked-on bird droppings.  The nearby hedgerow to the south shakes with activity, likely from the very avian miscreants responsible for decorating the planks.</description>
+    <description>Layer upon layer of caked-on bird droppings coat the corner fence.</description>
     <position x="-20" y="290" z="0" />
     <arc exit="north" move="north" destination="616" />
     <arc exit="northeast" move="northeast" destination="613" />
@@ -4216,6 +4251,7 @@
   </node>
   <node id="616" name="Boar Clan, Around the Watering Hole">
     <description>Muddy puddles quiver in the ground, their surfaces rippling from time to time due to heavy breezes or footfalls.  Impressions in the soft soil take the shape of animal tracks, though some are distinctly humanoid.  The grass attempts to prevail despite the injuries from boots and hooves.</description>
+    <description>Muddy puddles quiver in the ground, and impressions in the soil take the shape of animal and humanoid tracks.</description>
     <position x="-20" y="280" z="0" />
     <arc exit="north" move="north" destination="617" />
     <arc exit="northeast" move="northeast" destination="618" />
@@ -4225,6 +4261,7 @@
   </node>
   <node id="617" name="Boar Clan, Around the Watering Hole">
     <description>Clumps of grass grow wild around the base of the fence.  Though this area was never fully landscaped in its prime, the will of nature has certainly taken charge nowadays.  Bleached by the sun and ravaged by inclement weather, the wooden beams enclosing the space survive despite the odds.</description>
+    <description>Clumps of grass grow wild around the base of the fence.</description>
     <position x="-20" y="270" z="0" />
     <arc exit="east" move="east" destination="618" />
     <arc exit="southeast" move="southeast" destination="613" />
@@ -4232,10 +4269,12 @@
   </node>
   <node id="618" name="Boar Clan, Around the Watering Hole">
     <description>Huddled in the corner, a simple shack tilts slightly to its right, as if using the fence for support.  A tiny moon carved out of the waterlogged wooden door declares this as the field's outhouse, though the repugnant stench and residual brown muck seeping from the bottom are both key pieces of evidence for that conclusion.  Crude markings on the fence's railings illustrate the boredom and impatience of those forced to wait in line to use the facility.</description>
+    <description>Huddled in the corner, a simple outhouse tilts slightly to its right, as if using the fence for support.</description>
     <position x="-10" y="270" z="0" />
     <arc exit="south" move="south" destination="613" />
     <arc exit="southwest" move="southwest" destination="616" />
     <arc exit="west" move="west" destination="617" />
+    <arc exit="go" move="go simple outhouse" destination="666" />
   </node>
   <node id="619" name="Forest, Amongst the Trees" note="path">
     <description>Periodic sounds of rustling branches and snapping twigs issue forth from deep within the trees, far out of sight in the darkness that pervades this area.  The air holds itself thickly still, a bated breath that never seems to be exhaled.</description>
@@ -4556,6 +4595,7 @@
   </node>
   <node id="660" name="Boar Clan, Tusky Pens">
     <description>Bent and smashed rusty steel bars are all that remains of the barricade separating the pens from the togball field to the east.  The ground is churned to a thick mud, and is devoid of any plant growth.  The air reeks of animal waste and rotting flesh.</description>
+    <description>Bent and smashed rusty steel bars are all that remain of the barricade to the east.  The ground is churned to a thick mud, and the air reeks of animal waste and rotting flesh.</description>
     <position x="-40" y="360" z="0" />
     <arc exit="go" move="go walkway" destination="577" />
     <arc exit="north" move="north" destination="665" />
@@ -4594,12 +4634,19 @@
   </node>
   <node id="665" name="Boar Clan, Tusky Pens">
     <description>Sunk deep into the muck and wide as an oak trunk, a post rests here at a sharp angle, its top adorned with a short steel chain with links as thick as a Gor'Tog's thumb.  The chain terminates at a broken link, the metal warped and twisted at the weld.</description>
+    <description>A thick post rests here at a sharp angle, a torn steel chain hanging from its top.  The chain terminates in a warped and broken link.</description>
     <position x="-40" y="340" z="0" />
     <arc exit="north" move="north" destination="664" />
     <arc exit="south" move="south" destination="660" />
     <arc exit="southwest" move="southwest" destination="661" />
     <arc exit="west" move="west" destination="662" />
     <arc exit="northwest" move="northwest" destination="663" />
+  </node>
+  <node id="666" name="Boar Clan, Outhouse" note="Outhouse">
+    <description>Clearly in poor condition for quite some time, the dank hole in the ground is filled with sludge so pungent and foul, an orc would cry tears of joy.  The wooden seat over top the depository is broken and splintered, and one would risk falling bottom-first into the pit should he or she attempt to make use of the utility in a typical fashion.  Trickles of dark goo coat the floor and stain the walls, as if someone missed the target more than once, either from haste or negligence.</description>
+    <description>The seat over top the depository is broken, and one would risk falling bottom-first into the pit should he or she attempt to make use of the utility in a typical fashion.</description>
+    <position x="5" y="270" z="0" />
+    <arc exit="out" move="out" destination="618" />
   </node>
   <label text="Boar Clan">
     <position x="140" y="560" z="0" />

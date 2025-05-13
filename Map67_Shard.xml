@@ -32,8 +32,10 @@
     <arc exit="go" move="go supplies shop" destination="452" />
   </node>
   <node id="5" name="Shard, Diamond Street">
-    <description>Shuttered and shadowed by the hand of night, the residencies that line the streets sleep with the land.  The faint traces of the mark of Elven and Elothean architecture can still be detected by the discriminating eye, the carefully painted vines, flowers, and birds that cover the front and sides of the homes chasing each other as if trying to catch up with something -- or get away from another.</description>
     <description>Charming buildings constructed of seasoned wood painted in shades of white, blue, or beige line the street on either side, some three stories and roofed with silverwood shingles, some squat and flat.  All bear the mark of Elothean and Elven architecture, with arched doorways and delicate paintings of vines, flowers, and small birds around the front and sides.</description>
+    <description>Shuttered and shadowed by the hand of night, the residencies that line the streets sleep with the land.  The faint traces of the mark of Elven and Elothean architecture can still be detected by the discriminating eye, the carefully painted vines, flowers, and birds that cover the front and sides of the homes chasing each other as if trying to catch up with something -- or get away from another.</description>
+    <description>Charming buildings constructed of seasoned wood line the street on either side.</description>
+    <description>Shuttered and shadowed by the hand of night, the residencies that line the streets sleep with the land.</description>
     <position x="420" y="180" z="0" />
     <arc exit="north" move="north" destination="4" />
     <arc exit="south" move="south" destination="6" />
@@ -69,7 +71,7 @@
     <arc exit="go" move="go brass gate" destination="8" />
     <arc exit="go" move="go elven home" destination="455" />
     <arc exit="go" move="go garden door" destination="455" />
-	<arc exit="go" move="go squat building" destination="805" />
+    <arc exit="go" move="go squat building" destination="805" />
   </node>
   <node id="10" name="Shard, North Entrance of The Great Tower">
     <description>A high plaster wall marks the end of Diamond Street, the road narrowing down until it splits into three parts.  One leads up to a sweeping marble archway, while the other two paths circumvent the barrier.  The night reflects off the tower's polished surface, blurring its outline until it seems to melt into the stars.</description>
@@ -371,6 +373,7 @@
   </node>
   <node id="47" name="Shard, Katamba's Crescent Road">
     <description>No grass grows within twenty feet of the city walls, and the homes are pulled back for at least forty.  The steep walls rise up high, their sides slick and smooth, unpitted by weather or wear.  To the southwest, Stormwill Tower bubbles up out of the walls, a small black-grey cloud hovering ominously above it.</description>
+    <description>To the southwest, Stormwill Tower bubbles up out of the walls, a small black-grey cloud hovering ominously above it.</description>
     <position x="260" y="20" z="0" />
     <arc exit="east" move="east" destination="48" />
     <arc exit="southwest" move="southwest" destination="46" />
@@ -459,6 +462,7 @@
   </node>
   <node id="59" name="Shard, Yavash Circle">
     <description>The circular wall to the north that hedges in the path shifts from the brick of its eastern half to the glittering diamondique of its western half in a noticeable and surely magical melding of the two substances.  Spikes of crystal jut from the top of the opaque western segment, while pikes of steel poke up out of the other section.</description>
+    <description>The circular wall to the north that hedges in the path shifts from brick to diamondique in a noticeable and surely magical melding of the two substances.</description>
     <position x="440" y="500" z="0" />
     <arc exit="northeast" move="northeast" destination="58" />
     <arc exit="west" move="west" destination="16" />
@@ -2762,7 +2766,7 @@
     <description>A dark portal has forced itself upon the wall at the end of this alcove, the edges pulling at the black marble and drawing it close in a swirling embrace of greys and obsidians.  To the west, fleeting, sickly illumination attempts to break through the eternal night of the temple.</description>
     <position x="940" y="1040" z="0" />
     <arc exit="west" move="west" destination="392" />
-    <arc exit="" move="go dark portal" />
+	<arc exit="go" move="go dark portal" hidden="True" />
   </node>
   <node id="395" name="Temple of Darkness, Glassus' Shop" note="Glassus' Shop" color="#FF0000">
     <description>The walls and floor of this sparsely furnished but clean room are of gold-veined white marble.  A series of immaculate countertops displays a variety of god-related artwork.  The proprietor of the shop, a smiling grey-cloaked monk by the name of Glassus, can often be found at his desk casually plucking the feathers from a dead and bloody pigeon.</description>
@@ -3735,7 +3739,7 @@
     <position x="1060" y="1040" z="0" />
     <arc exit="northeast" move="northeast" destination="552" />
     <arc exit="go" move="go silver portal" hidden="True" destination="418" />
-    <arc exit="go" move="go dark portal"/>
+    <arc exit="go" move="go dark portal" hidden="True" />
   </node>
   <node id="552" name="Shard, Hall of Enlightenment" note="Hall of Enlightenment">
     <description>This hall is wide, plastered stone, and roofed by an arched ceiling.  Heavy wooden beams form arches every few feet.  Clerics can be seen walking the hall, stopping every few feet to recite prayers, before moving on.</description>
@@ -5235,28 +5239,28 @@
     <position x="450" y="340" z="0" />
     <arc exit="east" move="east" destination="805" />
   </node>
-  <node id="809" name="Crystal Plaza, Stormshine Room" note="Stormshine Room" >
+  <node id="809" name="Crystal Plaza, Stormshine Room" note="Stormshine Room">
     <description>A tile mosaic spans the curved walls and shifts from ominously dark grey storm clouds to billowing white clouds in a brilliant blue sky.  Overhead, a lantern shielded by cloudy crystal on one side and clear amber on the other complements the aesthetic as it casts dimmed light to the stormy side of the room and sunny yellow light to the other.  A single long bench curves around some protective railing that overlooks the rotunda below.</description>
     <position x="125" y="370" z="0" />
-    <arc exit="ne" move="ne" destination="810" />
+    <arc exit="northeast" move="ne" destination="810" />
     <arc exit="climb" move="climb spiral staircase" destination="473" />
   </node>
-  <node id="810" name="Crystal Plaza, Observatory Room" note="Observatory Room" >
+  <node id="810" name="Crystal Plaza, Observatory Room" note="Observatory Room">
     <description>A false ceiling patterned to resemble a starry night sky hangs overhead.  Through impressive engineering, large crystalline orbs, each colored to simulate one of Elanthia's moons, move across the sky as their real counterparts would and provide tinted illumination for patrons to navigate by.  The varied aromas of the foods being prepared and served in the food court below suffuse the air.  Tall windows between the shopfronts grant a modest view of the true sky outside.</description>
     <position x="135" y="360" z="0" />
-    <arc exit="e" move="e" destination="811" />
-    <arc exit="sw" move="sw" destination="809" />
+    <arc exit="east" move="e" destination="811" />
+    <arc exit="southwest" move="sw" destination="809" />
   </node>
-  <node id="811" name="Crystal Plaza, River Room" note="River Room" >
+  <node id="811" name="Crystal Plaza, River Room" note="River Room">
     <description>Water falls thunderously from a spout in one wall near the ceiling, creating a small waterfall that still manages to cast misty spray around the pool in the floor.  A river speeds out from the pool and winds its way around the shop entrances, and small bridges cross it at key points to provide access.  While visually novel in its design, the crashing and rushing water creates enough noise that visitors frequently yell at their companions just to be heard.</description>
     <position x="145" y="360" z="0" />
-    <arc exit="se" move="se" destination="812" />
-    <arc exit="w" move="w" destination="810" />
+    <arc exit="southeast" move="se" destination="812" />
+    <arc exit="west" move="w" destination="810" />
   </node>
-  <node id="812" name="Crystal Plaza, Treehouse Room" note="Treehouse Room" >
+  <node id="812" name="Crystal Plaza, Treehouse Room" note="Treehouse Room">
     <description>The canopy of the giant oak below explodes out from the floor here.  The overall design strongly resembles a treehouse with rope bridge-like pathways snaking through and around the branches.  Beyond the roped-off areas, varieties of ivy and colorfully flowering vines creep along the ground and over the shop entrances.  The air is filled with strong floral scents atop earthy undertones.</description>
     <position x="155" y="370" z="0" />
-    <arc exit="nw" move="nw" destination="811" />
+    <arc exit="northwest" move="nw" destination="811" />
   </node>
   <label text="Curio Tent">
     <position x="252" y="181" z="0" />
