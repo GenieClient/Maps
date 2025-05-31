@@ -7,8 +7,8 @@
 # Inspired by the OG Wizard Travel Script - But made 1000x better w/ the power of GENIE
 # Originally written by Achilles - Revitalized and Robustified by Shroom
 #
-# Updated: 11/17/24
-var version 5.3.1
+# Updated: 5/30/25
+var version 5.3.2
 #
 # USES PLAT PORTALS TO TRAVEL BETWEEN CITIES IF PLATINUM
 # KNOWS HOW TO NAVIGATE OUT OF ANY MAZE / PUZZLE AREAS / FERRIES ETC
@@ -96,27 +96,28 @@ if ("$charactername") == ("$char10") then var shardcitizen no
 ## RANKS TO USE ROSSMAN'S SHORTCUT      ##
 ## TO SWIM THE JANTSPYRE RIVER          ##
 ## NORTH IS ~SAFE~ AROUND 200           ##
-## NORTH IS POSSIBLE ~175 W/ NO ARMOR   ##
+## NORTH IS POSSIBLE ~175 W/ ~NO ARMOR~ ##
 ## SOUTH IS MUCH EASIER, SAFE AT ~90    ##
     var rossmannorth 200
     var rossmansouth 90
 ###########################################
 ##  RANKS TO SWIM THE FALDESU RIVER      ##
 ##  HAVEN TO NTR OR VICA VERSA           ##
-##  SAFE == 190 - 200                     ##
+##  SAFE == 190 - 200                    ##
 ##  POSSIBLE= ~160+ w/ NO BURDEN/BUFFS   ##
     var faldesu 190
 ############################################
 ##  RANKS TO SWIM THE SEGOLTHA RIVER     ##
 ##  TIGER CLAN TO STR OR VICA VERSA      ##
-##  VERY TOUGH ONE! CAREFUL LOWERING!    ##
-##  MAY GET STUCK IF YOU SET TOO LOW!    ##
+##  THIS IS A VERY TOUGH ONE! CAREFUL!   ##
+##  DO NOT SET TOO LOW - MIGHT GET STUCK ##
 ##  SAFE= 550+ | BUFFED & STRONG= ~530   ##
     var segoltha 550
 ##########################################
 ## RANKS TO CLIMB UNDERGONDOLA SHORTCUT ##
 ## SOME CAN DO ~480 W/ BUFFS & ROPE     ##
-## ~510 - 530 IS GENERALLY SAFE         ##
+## ~510 - 530 IS GENERALLY 'SAFE'       ##
+## AUTO CHECKS FOR A ROPE UNDER 620     ##
     var undergondola 515
 ##########################################
 ##########################################
@@ -136,7 +137,9 @@ if ("$charactername") == ("$char10") then var shardcitizen no
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
 ###########################################
-# CHANGELOG - Latest Update: 11/17/24
+# CHANGELOG - Latest Update: 5/30/25
+#
+# - Re-Added trying to pull out a heavy/braided rope when climbing undergondola under 600 ranks 
 #
 # - Fixed several bad checks for NOT TF which would cause infinite loops for PLAT users in some areas
 #
@@ -352,7 +355,7 @@ var starting MAP:$zoneid | ROOM:$roomid
 if ("%destination" == "") then goto NODESTINATION
 eval destination toupper("%destination")
 TOP:
-put #echo >Log #b3ff66 * TRAVEL START: $zonename (Map:$zoneid | Room:$roomid)
+put #echo >Log #DAF7A6 * TRAVEL START: $zonename (Map:$zoneid | Room:$roomid)
 echo
 echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 echo * Travel Script v%version
@@ -1198,7 +1201,30 @@ if (("$zoneid" == "66") && ("$guild" == "Ranger") && ($Athletics.Ranks >= %under
           put cast
           pause 0.2
      }
-if (("$zoneid" == "66") && ($Athletics.Ranks >= %undergondola)) then gosub AUTOMOVE 317
+if (("$zoneid" == "66") && ($Athletics.Ranks >= %undergondola)) then
+     {
+          if ($Athletics.Ranks < 620) then
+               {
+                    send get my heavy rope
+                    wait
+                    pause 0.4
+                    send glance
+                    pause 0.1
+                    if !matchre("$righthand $lefthand", "rope") then
+                         {
+                              send get my braided rope
+                              wait
+                              pause 0.4
+                         }
+                    if !matchre("$righthand $lefthand", "rope") then
+                         {
+                              send get my climbing rope
+                              wait
+                              pause 0.4
+                         }
+               }
+          gosub AUTOMOVE 317
+     }
 if (("$zoneid" == "66") && ($Athletics.Ranks < %undergondola)) then
      {
           echo ** Athletics NOT high enough for UnderSegoltha - Taking Gondola!
@@ -1759,12 +1785,32 @@ if (("$zoneid" == "62") && ("$guild" == "Ranger") && ($Athletics.Ranks >= %under
           }
 if (("$zoneid" == "62") && ($Athletics.Ranks >= %undergondola)) then
           {
-             echo
-             echo * Athletics high enough for Undergondola! Taking shortcut!
-             echo
-             gosub AUTOMOVE 41
-             pause
-             if matchre("$game", "(?i)DRF") then
+               echo
+               echo * Athletics high enough for Undergondola! Taking shortcut!
+               echo
+               if ($Athletics.Ranks < 620) then
+                    {
+                         send get my heavy rope
+                         wait
+                         pause 0.4
+                         send glance
+                         pause 0.1
+                         if !matchre("$righthand $lefthand", "rope") then
+                              {
+                                   send get my braided rope
+                                   wait
+                                   pause 0.4
+                              }
+                         if !matchre("$righthand $lefthand", "rope") then
+                              {
+                                   send get my climbing rope
+                                   wait
+                                   pause 0.4
+                              }
+                    }
+               gosub AUTOMOVE 41
+               pause
+               if matchre("$game", "(?i)DRF") then
                    {
                         gosub MOVE sw
                         gosub MOVE sw
@@ -1772,7 +1818,7 @@ if (("$zoneid" == "62") && ($Athletics.Ranks >= %undergondola)) then
                         gosub AUTOMOVE 153
                         goto ILITHI_3
                    }
-             if ("$game" != "DRF") then
+               if ("$game" != "DRF") then
                    {
                         gosub MOVE sw
                         gosub MOVE sw
@@ -2238,6 +2284,26 @@ if (("$zoneid" == "66") && ("$guild" == "Ranger") && ($Athletics.Ranks >= %under
 if (("$zoneid" == "66") && ($Athletics.Ranks >= %undergondola)) then
           {
                echo ** Athletics high enough for Undergondola! Taking shortcut!
+               if ($Athletics.Ranks < 620) then
+                    {
+                         send get my heavy rope
+                         wait
+                         pause 0.4
+                         send glance
+                         pause 0.1
+                         if !matchre("$righthand $lefthand", "rope") then
+                              {
+                                   send get my braided rope
+                                   wait
+                                   pause 0.4
+                              }
+                         if !matchre("$righthand $lefthand", "rope") then
+                              {
+                                   send get my climbing rope
+                                   wait
+                                   pause 0.4
+                              }
+                    }
                gosub AUTOMOVE 317
           }
 if (("$zoneid" == "66") && ($Athletics.Ranks < %undergondola)) then
@@ -3351,6 +3417,26 @@ if ("$zoneid" == "61") then gosub AUTOMOVE 130
 if ("$zoneid" == "63") then gosub AUTOMOVE 112
 if (("$zoneid" == "62") && ($Athletics.Ranks >= %undergondola)) then
           {
+               if ($Athletics.Ranks < 620) then
+                    {
+                         send get my heavy rope
+                         wait
+                         pause 0.4
+                         send glance
+                         pause 0.1
+                         if !matchre("$righthand $lefthand", "rope") then
+                              {
+                                   send get my braided rope
+                                   wait
+                                   pause 0.4
+                              }
+                         if !matchre("$righthand $lefthand", "rope") then
+                              {
+                                   send get my climbing rope
+                                   wait
+                                   pause 0.4
+                              }
+                    }
              gosub AUTOMOVE 41
              pause
              if matchre("$game", "(?i)DRF") then
@@ -3606,7 +3692,7 @@ ARRIVED:
   eval destination toupper("%destination")
   echo ## WOW! YOU ARRIVED AT YOUR DESTINATION: %destination in %t seconds!  That's FAST! ##
   echo ## STARTED FROM: %starting
-  put #echo >Log #1ad1ff * TRAVEL ARRIVAL: $zonename (Map: $zoneid | Room: $roomid)
+  put #echo >Log #00c1ff * TRAVEL ARRIVAL: $zonename (Map: $zoneid | Room: $roomid)
   put #class arrive off
   exit
 #####################################################################################
@@ -6995,6 +7081,7 @@ moveRandomDirection:
      if (%moved == 1) then return
      if (matchre("$roomobjs $roomdesc","\bpanel\b") && ("%lastmoved" != "go panel")) then gosub MOVE go panel
      if (matchre("$roomobjs $roomdesc","\btent flap\b") && ("%lastmoved" != "go flap")) then gosub MOVE go flap
+     if (matchre("$roomobjs $roomdesc","\bsmall crack\b") && ("%lastmoved" != "go crack")) then gosub MOVE go crack
      if (matchre("$roomobjs $roomdesc","\bnarrow track\b") && ("%lastmoved" != "go track")) then gosub MOVE go track
      if (matchre("$roomobjs $roomdesc","\blava field\b") && ("%lastmoved" != "go lava field")) then gosub MOVE go lava field
      if (%moved == 1) then return
@@ -7249,6 +7336,7 @@ RANDOMMOVE_1:
                if (matchre("$roomobjs $roomdesc","\bcurtain\b") && ("%lastmoved" != "go curtain")) then gosub MOVE go curtain
                if (%moved == 1) then return
                if (matchre("$roomobjs $roomdesc","\bnarrow track\b") && ("%lastmoved" != "go track")) then gosub MOVE go track
+               if (matchre("$roomobjs $roomdesc","\bsmall crack\b") && ("%lastmoved" != "go crack")) then gosub MOVE go crack
                if (matchre("$roomobjs $roomdesc","\blava field\b") && ("%lastmoved" != "go lava field")) then gosub MOVE go lava field
                if (matchre("$roomobjs $roomdesc","\bgate\b") && ("%lastmoved" != "go gate")) then gosub MOVE go gate
                if (matchre("$roomobjs $roomdesc","\barch\b") && ("%lastmoved" != "go arch")) then gosub MOVE go arch
@@ -7464,6 +7552,7 @@ TRUE_RANDOM:
      if (matchre("$roomobjs $roomdesc","\bsteps\b") && ("%lastmoved" != "climb step")) then gosub MOVE climb step
      if (%moved == 1) then return
      if (matchre("$roomobjs $roomdesc","\bpanel\b") && ("%lastmoved" != "go panel")) then gosub MOVE go panel
+     if (matchre("$roomobjs $roomdesc","\bsmall crack\b") && ("%lastmoved" != "go crack")) then gosub MOVE go crack
      if (matchre("$roomobjs $roomdesc","\bnarrow track\b") && ("%lastmoved" != "go track")) then gosub MOVE go track
      if (matchre("$roomobjs $roomdesc","\bthe garden\b") && ("%lastmoved" != "go garden")) then gosub MOVE go garden
      if (matchre("$roomobjs $roomdesc","\btent flap\b") && ("%lastmoved" != "go flap")) then gosub MOVE go flap
