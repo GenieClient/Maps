@@ -519,7 +519,7 @@ ABSOLUTE_TOP:
     action (guildcircle) on
     gosub INFO_CHECK
   }
-  if !def(premium) then gosub PREMIUM_CHECK
+  if !def(subscription) then gosub SUBSCRIPTION_CHECK
   if !def(citizenship) then gosub CITIZENSHIP
 # release cyclics if defined
   if (($automapper.ReleaseCyclics) && def($automapper.ReleaseCyclics)) then gosub PUT release cyclic
@@ -596,7 +596,7 @@ ACTIONS:
   action (mapper) var footitem $1;goto STOW_FOOT_ITEM when ^You notice (?:an |a )?(.+) at your feet, and do not wish to leave it behind\.
   action (skates) var wearing_skates 1 when ^You slide your ice skates on your feet and tightly tie the laces\.|^Your ice skates help you traverse the frozen terrain\.|^Your movement is hindered .* by your ice skates\.|^You tap some.*\bskates\b.*that you are wearing
   action (skates) var wearing_skates 0 when ^You untie your skates and slip them off of your feet\.
-  action (healing) var plant $1;goto HEALING when an ethereal (vela'tohr thicket|vela'tohr plant)
+  action (healing) var plant $1;goto HEALING when (vela'tohr (?:briar|bush|plant|shrub|thicket|thornbush))
   action (healing) off
 #  if (($automapper.seekhealing == 1) && ($guild != Necromancer)) then action (healing) on
   if ($automapper.seekhealing == 1) then action (healing) on
@@ -1287,7 +1287,7 @@ SIGILWALK:
     return
     }
   var typeahead.max 0
-  var action_retry ^Roundtime: \d+ sec\.
+  var action_retry ^Roundtime: \d+ (?:sec|Irenos).
   var success (?:antipode|ascension|clarification|decay|evolution|integration|metamorphosis|nurture|paradox|unity) sigil(?: has revealed itself| before you)?\.$|^Having recently been searched,|^You recall having already identified|^Something in the area is interfering|^You are too distracted
   var action perceive sigil
   gosub ACTION_MAPPER_ON
@@ -1613,6 +1613,7 @@ WEAR_SKATES:
   goto ACTION
 
 REMOVE_SKATES:
+  var depth 0
   if (%verbose) then gosub ECHO Removing ice skates!
   var action remove my skates
   var success ^You untie your skates and slip them off of your feet
@@ -1632,6 +1633,7 @@ GET_FOOTWEAR:
   gosub ACTION
 
 WEAR_FOOTWEAR:
+  var depth 0
   var action wear my %footwear
   var success ^You (are already|attach|can't|carefully|climb|deftly|drape|fade|fall|get|hang|kneel|lie|loosen|place|pull|put|quickly|rise|set|shift|silently|sit|slide|sling|slip|stand|step|strap|take|tie|toss|untie|work|wrap|yank)
   goto ACTION
@@ -1644,7 +1646,7 @@ FIND_CLOAK:
   var cloak_worn 0
 
 TAP_CLOAK:
-  eval cloak_noun element ("%cloaknouns", "%cloakloop")
+  eval cloak_noun element("%cloaknouns", "%cloakloop")
   if (%cloak_noun == 0) then return
   var action tap my %cloak_noun
   var success ^You tap|^I could not find
