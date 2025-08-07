@@ -1,9 +1,15 @@
 # automapper.cmd
-var autoversion 8.2025-08-04
+var autoversion 8.2025-08-07
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
+
+#2025-08-07
+# Hanryu
+#   swap to gametime timeous after omgsticks showed that unixtime timeouts don't work on genie
+#   genie4 issue #179
+#   also fancier vela'tohr fix for the permanent plant in empaths
 
 #2025-08-04
 # Hanryu
@@ -592,7 +598,7 @@ ACTIONS:
   action (mapper) var footitem $1;goto STOW.FOOT.ITEM when ^You notice (?:an |a )?(.+) at your feet, and do not wish to leave it behind\.
   action (skates) var wearing_skates 1 when ^You slide your ice skates on your feet and tightly tie the laces\.|^Your ice skates help you traverse the frozen terrain\.|^Your movement is hindered .* by your ice skates\.|^You tap some.*\bskates\b.*that you are wearing
   action (skates) var wearing_skates 0 when ^You untie your skates and slip them off of your feet\.
-  action (healing) var plant $1;goto HEALING when (vela'tohr (?:briar|bush|plant|shrub|thicket|thornbush))
+  action (healing) var plant $1;goto HEALING when ((?:a|an)\s(?!large\svela'tohr\splant)(?:[\w']+\s)*vela'tohr\s(?:[\w']+\s)*(thicket|plant|thornbush|briar|bush|shrub))
   action (healing) off
 #  if (($automapper.seekhealing = 1) && ($guild != Necromancer)) then action (healing) on
   if ($automapper.seekhealing = 1) then action (healing) on
@@ -713,10 +719,10 @@ DO.MOVE:
 
 MOVE.ROOM:
   evalmath depthtimeout $unixtime + %waitevalTimeOut
-  if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
+  if (%depth > 1) then waiteval ((1 <= %depth) || ($gametime >= %depthtimeout))
   put %movement
   evalmath depthtimeout $unixtime + %waitevalTimeOut
-  if (%depth > 0) then waiteval ((0 = %depth) || ($unixtime >= %depthtimeout))
+  if (%depth > 0) then waiteval ((0 = %depth) || ($gametime >= %depthtimeout))
   goto MOVE.DONE
 
 MOVE.STOW:
@@ -744,13 +750,13 @@ MOVE.ICE:
   if (!$broom_carpet) then {
     action (skates) on
     evalmath depthtimeout $unixtime + %waitevalTimeOut
-    if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
+    if (%depth > 1) then waiteval ((1 <= %depth) || ($gametime >= %depthtimeout))
     if (!%skatechecked) then gosub FIND.SKATES
     if (%slow_on_ice) then gosub ICE.COLLECT
   }
   put %movement
   evalmath depthtimeout $unixtime + %waitevalTimeOut
-  if (%depth > 0) then waiteval ((0 = %depth) || ($unixtime >= %depthtimeout))
+  if (%depth > 0) then waiteval ((0 = %depth) || ($gametime >= %depthtimeout))
   goto MOVE.DONE
 
 SKATE.NO:
@@ -787,7 +793,7 @@ MOVE.KNOCK:
   action (mapper) off
   if ($roundtime > 0) then pause %command_pause
   evalmath depthtimeout $unixtime + %waitevalTimeOut
-  if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
+  if (%depth > 1) then waiteval ((1 <= %depth) || ($gametime >= %depthtimeout))
   if !matchre("$citizenship", "Ilithi|Fayrin's Rest|Shard|Steelclaw Clan|Zaldi Taipa") then goto SHARD.FAILED
   var movement knock gate
   matchre MOVE.KNOCK ^\.\.\.wait|^Sorry,|^You are still stun|^You can't do that while entangled
@@ -834,7 +840,7 @@ MOVE.RT:
 ####added this to stop trainer
   eval movement replacere("%movement", "script crossingtrainerfix ", "")
   evalmath depthtimeout $unixtime + %waitevalTimeOut
-  if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
+  if (%depth > 1) then waiteval ((1 <= %depth) || ($gametime >= %depthtimeout))
   matchre MOVE.RT.SUCCESS ^(?:Obvious|Ship) (?:paths|exits):
   put %movement
   matchwait 15
@@ -913,7 +919,7 @@ MOVE.SEARCH:
 #maybe the path is already open, let's try that first, then waste time searching
   if ($broom_carpet) then eval movement replacere("%movement", "climb ", "go ")
   evalmath depthtimeout $unixtime + %waitevalTimeOut
-  if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
+  if (%depth > 1) then waiteval ((1 <= %depth) || ($gametime >= %depthtimeout))
   action (mapper) off
   matchre MOVE.SEARCH2 %move_FAIL
   matchre MOVE.SEARCH.PATHOPEN %move_OK
@@ -986,7 +992,7 @@ MOVE.OBJSEARCH:
 MOVE.SCRIPT:
   var subscript 1
   evalmath depthtimeout $unixtime + %waitevalTimeOut
-  if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
+  if (%depth > 1) then waiteval ((1 <= %depth) || ($gametime >= %depthtimeout))
   action (mapper) off
   if ("%movement" = "oshumanor") then goto OSHUMANOR
   if ("%movement" = "dragonspine") then goto DRAGONSPINE
@@ -1061,7 +1067,7 @@ FATIGUE.WAIT:
 
 MOVE.INVIS:
   evalmath depthtimeout $unixtime + %waitevalTimeOut
-  if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
+  if (%depth > 1) then waiteval ((1 <= %depth) || ($gametime >= %depthtimeout))
   if ("$guild" = "Necromancer") then {
     gosub PUT release EOTB
     pause %command_pause
@@ -1482,7 +1488,7 @@ MISTWOOD.CLIFF:
 #shift away if room load trigger got turned off before it loaded
   if matchre("%1", "objsearch rocky.ledge climb shrub") then shift
   evalmath depthtimeout $unixtime + %waitevalTimeOut
-  if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
+  if (%depth > 1) then waiteval ((1 <= %depth) || ($gametime >= %depthtimeout))
   put peer path
   waitforre ^Peering closely at a faint path, you realize you would need to head (\w+)\.
   var Dir $1
@@ -2311,7 +2317,7 @@ HEALING:
   delay %infiniteLoopProtection
   if ($roundtime > 0) then pause $roundtime
   evalmath depthtimeout $unixtime + %waitevalTimeOut
-  if (%depth > 1) then waiteval ((1 <= %depth) || ($unixtime >= %depthtimeout))
+  if (%depth > 1) then waiteval ((1 <= %depth) || ($gametime >= %depthtimeout))
   var action touch %plant
   var success ^The last of your wounds knit shut|^The vela'tohr plant recoils from you|^You reach out to touch an ethereal vela'tohr plant, but it shudders its leaves rustling angrily and bristling with sharp edges and thorns|^You feel a brief flare of warmth where your skin previously
   gosub ACTION
