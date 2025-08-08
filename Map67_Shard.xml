@@ -71,7 +71,6 @@
     <arc exit="go" move="go brass gate" destination="8" />
     <arc exit="go" move="go elven home" destination="455" />
     <arc exit="go" move="go garden door" destination="455" />
-    <arc exit="go" move="go squat building" destination="805" />
   </node>
   <node id="10" name="Shard, North Entrance of The Great Tower">
     <description>A high plaster wall marks the end of Diamond Street, the road narrowing down until it splits into three parts.  One leads up to a sweeping marble archway, while the other two paths circumvent the barrier.  The night reflects off the tower's polished surface, blurring its outline until it seems to melt into the stars.</description>
