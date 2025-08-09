@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <zone name="Ker'Leor, Fornsted, and Hraval" id="41">
   <node id="1" name="Ker'Leor, Deep Forest Path">
     <description>A twisted bough reaches out from the darkness, curling upward in search of sky.  A hesitant whooping sound occasionally ricochets through the moistened air, hollow and uncomfortably close.</description>
@@ -46,14 +46,14 @@
     <description>A little bit of sky peeks through the thick forest canopy, shedding fingers of light upon the immediate area.  Astonishingly, the forest is awash with colors, from brilliant flowers to myriad shades of green.  Along with the clarity, though, comes the intense feeling of being closely scrutinized.</description>
     <description>A little bit of sky peeks through the thick forest canopy, offering a glimpse at the stars in the sky.  Aside from the distant sound of a strummed guitar and beaten tambourine, though, the area lacks any noticeable activity.</description>
     <position x="80" y="40" z="0" />
-    <arc exit="northeast" move="northeast" destination="9" />
     <arc exit="southwest" move="southwest" destination="7" />
+    <arc exit="climb" move="climb fallen tree" destination="9" />
   </node>
   <node id="9" name="Ker'Leor, Deep Forest Path">
     <description>Undulating lichen cover the base of a particularly tight-knit group of oaks standing in the center of the path.  Their pale pink color gleams in the darkness, illuminated by an internal chemical.  Wailing and hooting sounds fill the air, but nothing moves within the trees.</description>
     <position x="100" y="20" z="0" />
-    <arc exit="southwest" move="southwest" destination="8" />
     <arc exit="northwest" move="northwest" destination="10" />
+    <arc exit="climb" move="climb fallen tree" destination="8" />
   </node>
   <node id="10" name="Ker'Leor, Deep Forest Path">
     <description>Blossoming reggus bushes send their pungent aroma upward with any movement along the path.  A short, warm breeze stirs the misty cover of the forest floor, exposing lacy ferns and pockets of dirdel flowers.</description>
@@ -72,39 +72,39 @@
     <description>Thinning trees along the eastern edge of the forest reveal a road running parallel to the shadowy path.  As a tentative breeze billows and wanes, it carries the soft sound of a strummed guitar accompanied by lively yet far-off voices.  The path itself grows less marshy and more rocky, while the canopy overhead is rapidly diminishing.</description>
     <position x="100" y="-60" z="0" />
     <arc exit="south" move="south" destination="11" />
-    <arc exit="go" move="go road" destination="13" />
+    <arc exit="east" move="east" destination="13" />
   </node>
-  <node id="13" name="Ker'Leor, Gypsy Road">
+  <node id="13" name="Ker'Leor, Forest Road">
     <description>A wide dirt road runs parallel to the mountains from this clearing in the expansive forest.  Delightful shrubbery take advantage of the exposure to rain and sun, blooming brilliantly between the trees.</description>
     <description>A wide dirt road runs parallel to the mountains from this clearing in the expansive forest.  A soft breeze cools the area, dispersing clouds to reveal brilliant stars in the night sky.</description>
     <position x="120" y="-60" z="0" />
     <arc exit="north" move="north" destination="14" />
     <arc exit="west" move="west" destination="12" />
   </node>
-  <node id="14" name="Ker'Leor, Gypsy Road">
-    <description>Heavily-trampled patches of grass indicate that some large caravan or animal herd has traveled here recently.  An occasional glimpse eastward through trees which fringe the road provides a hint of a clearing not far to the northeast.  Buzzing insects bite and bother, and shrill whistles fill the air.</description>
+  <node id="14" name="Ker'Leor, Forest Road">
+    <description>Heavily-trampled patches of grass indicate that some large body of people has traveled here recently.  An occasional glimpse eastward through trees which fringe the road provides a hint of a clearing not far to the northeast.  Buzzing insects bite and bother, and shrill whistles fill the air.</description>
     <position x="120" y="-80" z="0" />
     <arc exit="northeast" move="northeast" destination="15" />
     <arc exit="south" move="south" destination="13" />
   </node>
-  <node id="15" name="Ker'Leor, Gypsy Road">
+  <node id="15" name="Ker'Leor, Forest Road">
     <description>The mighty mountain range of Ker'Leor dominates the western sky, rising dark and imposing into a thick bank of churning clouds.  Though the air is crisp and amazingly invigorating, the mental image of unblinking eyes staring from the forest shadows has always assaulted travelers along this stretch of the road.</description>
     <position x="140" y="-100" z="0" />
     <arc exit="southwest" move="southwest" destination="14" />
-    <arc exit="northwest" move="northwest" destination="16" />
+    <arc exit="climb" move="climb fallen trunk" destination="16" />
   </node>
-  <node id="16" name="Ker'Leor, Gypsy Road">
-    <description>Constant chittering issues forth from the branches of nearby trees.  Though they tilt and sway, no creature is ever seen moving among the sparse leaves.  Hoots and whistles, followed by the strains of a lilting female voice in gentle song, ride the wind from a small clearing to the east.</description>
+  <node id="16" name="Ker'Leor, Forest Road">
+    <description>Constant chittering issues forth from the branches of nearby trees.  Though they tilt and sway, no creature is ever seen moving among the sparse leaves.  Hoots and whistles, followed by the clash of weapons, ride the wind from a small clearing to the east.</description>
     <position x="120" y="-120" z="0" />
-    <arc exit="east" move="east" destination="17" />
-    <arc exit="southeast" move="southeast" destination="15" />
+    <arc exit="climb" move="climb sandstrike crystals" destination="17" />
     <arc exit="northwest" move="northwest" destination="25" />
+    <arc exit="climb" move="climb fallen trunk" destination="15" />
   </node>
   <node id="17" name="Ker'Leor, Laakmir">
     <description>Emerald grass fed by a nearby water source look too groomed to be a natural part of these surroundings.  All sound has died away save the whoosh of wind through the ring of trees which encase this clearing.</description>
     <position x="140" y="-120" z="0" />
     <arc exit="east" move="east" destination="18" />
-    <arc exit="west" move="west" destination="16" />
+    <arc exit="climb" move="climb sandstrike crystals" destination="16" />
   </node>
   <node id="18" name="Ker'Leor, Laakmir">
     <description>Dainty wildflowers grow in neat hedges along the north and south border of this gentle lawn.  Sycamores grow majestically alongside junipers, tabors and dwarf wisteria, creating a living palette of many shades of green.  Once in a rare while, branches crackle behind the trees as if stepped on by some stalking being.</description>
@@ -118,6 +118,7 @@
     <arc exit="southwest" move="southwest" destination="18" />
     <arc exit="go" move="go rock" destination="20" />
     <arc exit="go" move="go lake" destination="24" />
+    <arc exit="northeast" move="northeast" destination="20" />
   </node>
   <node id="20" name="Ker'Leor, Laakmir">
     <description>Trees impinge upon a rise of rock skirting the tiny lake.  The ground is somewhat uneven but meticulously manicured, but by whom is anyone's guess.  A thicket of woven boughs closes off the clearing, preventing further progress to the east.</description>
@@ -136,6 +137,7 @@
     <position x="220" y="-200" z="0" />
     <arc exit="southwest" move="southwest" destination="21" />
     <arc exit="climb" move="climb cave" destination="23" />
+    <arc exit="go" move="go narrow cleft" destination="244" />
   </node>
   <node id="23" name="Laakmir, Caves">
     <description>Light filters softly through the dust which is suspended in the air of this cave.  Shallow, but with a high ceiling, it is pleasantly dry and of comfortable temperature.  A dark patch of charred ground indicates that someone has camped here recently.</description>
@@ -148,33 +150,33 @@
     <position x="200" y="-120" z="0" />
     <arc exit="out" move="out" destination="19" />
   </node>
-  <node id="25" name="Ker'Leor, Gypsy Road">
+  <node id="25" name="Ker'Leor, Forest Road">
     <description>In a curious twist of horticulture, several rows of vegetables grow in tight formation along the roadside.  Wild carrots, vanderpeas and purple corbane flourish.  A few hedges of iffithyl, an herb known to ward off pests, are planted here and there within each row.</description>
     <position x="100" y="-140" z="0" />
     <arc exit="north" move="north" destination="26" />
     <arc exit="southeast" move="southeast" destination="16" />
   </node>
-  <node id="26" name="Ker'Leor, Gypsy Road">
+  <node id="26" name="Ker'Leor, Forest Road">
     <description>Deep gutters are cut into the roadside like crude irrigation ditches.</description>
     <position x="100" y="-160" z="0" />
     <arc exit="north" move="north" destination="27" />
     <arc exit="south" move="south" destination="25" />
   </node>
-  <node id="27" name="Ker'Leor, Gypsy Road">
+  <node id="27" name="Ker'Leor, Forest Road">
     <description>The rocky base of Ker'Leor is visible on the western edge of the road through gaps in the trees.  Towering infinitely skyward from this vantage point, its steep-cut fissures and gullies are awesome to behold.  The range appears to stretch endlessly northward.</description>
     <description>The rocky base of Ker'Leor blots out all of the western sky.  In the soft moonlight, only a bank of clouds hovering high above breaks the endless wall of black that seems to stretch ever northward.</description>
     <position x="100" y="-180" z="0" />
     <arc exit="south" move="south" destination="26" />
     <arc exit="northwest" move="northwest" destination="28" />
   </node>
-  <node id="28" name="Ker'Leor, Gypsy Road">
-    <description>Sparse stands of trees line the road as it inclines along the base of Ker'Leor.  Chunks of rock dot the ground, some nearly the size of boulders.  As the breeze builds and wanes, it carries the lively beat and tinkle of a faraway tambourine.</description>
+  <node id="28" name="Ker'Leor, Forest Road">
+    <description>Sparse stands of trees line the road as it inclines along the base of Ker'Leor.  Chunks of rock dot the ground, some nearly the size of boulders.  As the breeze builds and wanes, it carries the distant clamor of clashing weapons.</description>
     <position x="80" y="-200" z="0" />
     <arc exit="north" move="north" destination="29" />
     <arc exit="southeast" move="southeast" destination="27" />
   </node>
-  <node id="29" name="Ker'Leor, Gypsy Road" note="Slab">
-    <description>Sparse stands of trees line the road as it inclines along the base of Ker'Leor.  Chunks of rock dot the ground, some nearly the size of boulders.  As the breeze builds and wanes, it carries the lively beat and tinkle of a faraway tambourine.</description>
+  <node id="29" name="Ker'Leor, Forest Road" note="Slab">
+    <description>Sparse stands of trees line the road as it inclines along the base of Ker'Leor.  Chunks of rock dot the ground, some nearly the size of boulders.</description>
     <position x="80" y="-220" z="0" />
     <arc exit="south" move="south" destination="28" />
     <arc exit="climb" move="climb rocky path" destination="54" />
@@ -189,13 +191,13 @@
     <description>Black tree trunks stand in the perpetual gloom, individual branches lost in the tangle overhead.  Pine needles underfoot deaden sound.  The air tastes of decay with an overlay of dust, as though nothing living had walked the ground in a long time.  Facing away from the path is a haycart, its wheels broken and the sodden, rotted mass inside it barely recognizable as hay.</description>
     <position x="-40" y="20" z="0" />
     <arc exit="northeast" move="northeast" destination="30" />
-    <arc exit="south" move="south" destination="32" />
     <arc exit="west" move="west" destination="37" />
+    <arc exit="climb" move="climb tangled deadfall" destination="32" />
   </node>
   <node id="32" name="Ker'Leor, Seordav Telga" color="#008000">
-    <description>The lower branches of the pine trees jut stiffly from the trunks, bristling with needles that look black in the thin light.  A tattered kerchief lies half-buried on a small mound by the roots of one tree, all that's left of some lost Gypsy.</description>
+    <description>The lower branches of the pine trees jut stiffly from the trunks, bristling with needles that look black in the thin light.  A tattered kerchief lies half-buried on a small mound by the roots of one tree, all that's left of some lost fighter.</description>
     <position x="-40" y="40" z="0" />
-    <arc exit="north" move="north" destination="31" />
+    <arc exit="climb" move="climb tangled deadfall" destination="31" />
     <arc exit="southwest" move="southwest" destination="33" />
     <arc exit="west" move="west" destination="36" />
   </node>
@@ -256,7 +258,7 @@
   </node>
   <node id="42" name="Ker'Leor, Kolfur Bog">
     <description>A wall of brambles guards the top of a steep bank that drops westerly and sinks into the bog.  The colors in the bog are brilliant -- red, yellow, orange, and green moss, small red flowers, bright yellow plants -- but something sickly lies underneath.  From here nothing more definite can be seen, yet the sense of wrongness rises from the fecund ground like a mist.</description>
-    <position x="-100" y="0" z="0" />
+    <position x="-140" y="0" z="0" />
     <arc exit="southwest" move="southwest" destination="43" />
     <arc exit="northwest" move="northwest" destination="50" />
     <arc exit="go" move="go gap" destination="35" />
@@ -1555,6 +1557,55 @@
     <arc exit="east" move="east" destination="242" />
     <arc exit="up" move="up" destination="239" />
   </node>
+  <node id="244" name="Ker'Leor, Crevice" note="fluffy stolb" color="White">
+    <description>Sheer rock walls tower on either side of this narrow rift in the stony mountains.  Sparse foliage covers the rocky dirt, each clump or bush struggling to survive in this inhospitable place.</description>
+    <position x="240" y="-220" z="0" />
+    <arc exit="east" move="east" destination="245" />
+    <arc exit="go" move="go narrow cleft" destination="22" />
+  </node>
+  <node id="245" name="Ker'Leor, Crevice" color="White">
+    <description>Cracks in the granite rock allow a few small shrubs to cling to the surrounding cliffs.  Occasionally a pebble falls from above, the sound of it bouncing off the cliffs echoes throughout the crevice.  The air has a slightly charged feel and the breeze carries a slight scorched scent.</description>
+    <position x="260" y="-220" z="0" />
+    <arc exit="northeast" move="northeast" destination="246" />
+    <arc exit="west" move="west" destination="244" />
+  </node>
+  <node id="246" name="Ker'Leor, Gorge" color="White">
+    <description>Steep rock walls split apart to enclose a narrow, forest-filled valley. Taking full advantage of the increased light and space, towering redwoods and pines stretch toward the sky. Birds flit amongst the trees.</description>
+    <position x="280" y="-240" z="0" />
+    <arc exit="north" move="north" destination="247" />
+    <arc exit="northeast" move="northeast" destination="248" />
+    <arc exit="east" move="east" destination="249" />
+    <arc exit="southwest" move="southwest" destination="245" />
+  </node>
+  <node id="247" name="Ker'Leor, Gorge" color="White">
+    <description>Sometime in the past a boulder crashed down from the cliffs and crushed a conifer, its trunk splintered and fallen to the ground.  Insects are busily reclaiming the collapsed tree, burrowing and tunneling through the wood to return it to nature.</description>
+    <position x="280" y="-260" z="0" />
+    <arc exit="east" move="east" destination="248" />
+    <arc exit="southeast" move="southeast" destination="249" />
+    <arc exit="south" move="south" destination="246" />
+  </node>
+  <node id="248" name="Ker'Leor, Gorge" color="White">
+    <description>Reaching for the sky, massive firs and pines tower over the dirt ground.  Thick trunks growing close together make movement through the area difficult even before the dense underbrush is dealt with.</description>
+    <position x="300" y="-260" z="0" />
+    <arc exit="east" move="east" destination="250" />
+    <arc exit="south" move="south" destination="249" />
+    <arc exit="southwest" move="southwest" destination="246" />
+    <arc exit="west" move="west" destination="247" />
+  </node>
+  <node id="249" name="Ker'Leor, Gorge" color="White">
+    <description>Far overhead, coniferous trees reach for the sky filling the air with their green spires. The narrow valley twitters with bird calls as they flit amongst the branches. Underneath the scents of earth and sap is a faint tang of burning like the approach of a summer thunderstorm.</description>
+    <position x="300" y="-240" z="0" />
+    <arc exit="north" move="north" destination="248" />
+    <arc exit="northeast" move="northeast" destination="250" />
+    <arc exit="west" move="west" destination="246" />
+    <arc exit="northwest" move="northwest" destination="247" />
+  </node>
+  <node id="250" name="Ker'Leor, Gorge" color="White">
+    <description>Nestled in a small alcove is a tiny spring-fed pool surrounded by a grass-filled glade.  Hoof and paw prints cover the muddy edges of the pond, evidence of the local wildlife's need for water.</description>
+    <position x="320" y="-260" z="0" />
+    <arc exit="southwest" move="southwest" destination="249" />
+    <arc exit="west" move="west" destination="248" />
+  </node>
   <label text="Theren and Lang">
     <position x="130" y="170" z="0" />
   </label>
@@ -1602,5 +1653,8 @@
   </label>
   <label text="Zengmodaleth">
     <position x="-70" y="-310" z="0" />
+  </label>
+  <label text="Fluffy Stolb">
+    <position x="240" y="-280" z="0" />
   </label>
 </zone>
