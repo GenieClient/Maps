@@ -3291,66 +3291,66 @@
     <position x="60" y="100" z="0" />
     <arc exit="go" move="go steel archway" destination="101" />
   </node>
-  <node id="493" name="Cavern of Fire, Rough Tunnel" color="White">
+  <node id="493" name="Cavern of Fire, Rough Tunnel">
     <description>Someone or something has crudely hacked out an extension of the passage, roughly working the walls just enough to allow travel deeper into the caverns and subterranean areas that surround Hibarnhvidar.  The unfinished feel of the excavation extends to the flooring, which is uneven and treacherous underfoot.</description>
     <position x="280" y="100" z="2" />
     <arc exit="west" move="west" destination="132" />
     <arc exit="go" move="go charred archway" destination="494" />
     <arc exit="go" move="go side passage" destination="500" />
   </node>
-  <node id="494" name="Cavern of Flame, Entrance" color="White">
+  <node id="494" name="Cavern of Flame, Entrance">
     <description>Cut from the walls of the twisting cavern, a blackened archway stands as testament to the efforts of explorers to delve deeper underneath the mountains.  Fault lines within the rock strata allowed the formation of this sinuous opening within the mountain.</description>
     <position x="300" y="80" z="2" />
     <arc exit="northeast" move="northeast" destination="499" />
     <arc exit="east" move="east" destination="495" />
     <arc exit="go" move="go charred archway" destination="493" />
   </node>
-  <node id="495" name="Cavern of Flame, Rocky Alcove" color="White">
+  <node id="495" name="Cavern of Flame, Rocky Alcove">
     <description>Piles of fallen boulders lie heaped on the rough floor, providing an approximation of walls for this small alcove within the larger cavern.  Something has burned the rocks and the floor, coating them all with a dark film of soot that mixes with the dust to turn everything dark and dingy.</description>
     <position x="320" y="80" z="2" />
     <arc exit="northeast" move="northeast" destination="496" />
     <arc exit="west" move="west" destination="494" />
   </node>
-  <node id="496" name="Cavern of Flame, Rocky Cavern" color="White">
+  <node id="496" name="Cavern of Flame, Rocky Cavern">
     <description>A partial ceiling collapse here forces anyone traveling through to veer around the fallen rock.  Wafting through the air is the vague scent of fire and smoke that fights with the more normal musty odor of deep underground spaces.</description>
     <position x="340" y="60" z="2" />
     <arc exit="north" move="north" destination="497" />
     <arc exit="southwest" move="southwest" destination="495" />
     <arc exit="west" move="west" destination="499" />
   </node>
-  <node id="497" name="Cavern of Flame, Rocky Cavern" color="White">
+  <node id="497" name="Cavern of Flame, Rocky Cavern">
     <description>Nothing moves in this corner of the cavern, not even the slightest bit of breeze or zephyr.  Further passage deeper within the rock is blocked by the soot-stained walls, so heavily blackened that it is impossible to know what the rocks are beneath their layers of gunk.</description>
     <position x="340" y="40" z="2" />
     <arc exit="south" move="south" destination="496" />
     <arc exit="west" move="west" destination="498" />
   </node>
-  <node id="498" name="Cavern of Flame, Rocky Cavern" color="White">
+  <node id="498" name="Cavern of Flame, Rocky Cavern">
     <description>The cavern ends in a solid wall of granite, its granular surface covered with overlapping splotches of soot and smoke residue.  Although it appears that something has attempted to blast an opening through the rockface with fire, the attempt was in vain as the walls still enclose the cavern.</description>
     <position x="320" y="40" z="2" />
     <arc exit="east" move="east" destination="497" />
     <arc exit="south" move="south" destination="499" />
   </node>
-  <node id="499" name="Cavern of Flame, Rocky Cavern" color="White">
+  <node id="499" name="Cavern of Flame, Rocky Cavern">
     <description>A natural dip in the cavern floor is filled with seepage, forming a stagnant pool among the mostly dry and desolate cavern.  Oddly, the grimy surface of the pool is covered with a thin scum of soot and ash, although how it occurred is unknown.</description>
     <position x="320" y="60" z="2" />
     <arc exit="north" move="north" destination="498" />
     <arc exit="east" move="east" destination="496" />
     <arc exit="southwest" move="southwest" destination="494" />
   </node>
-  <node id="500" name="Cavern of Flame, Charred Grotto" color="White">
+  <node id="500" name="Cavern of Flame, Charred Grotto">
     <description>Dips and holes litter the cavern floor, some filled with dark and dank liquids that seep from the walls and pool on the floor.  A few scattered boulders also lie haphazardly about, testimony to the unstable nature of the ceiling.</description>
     <position x="280" y="50" z="2" />
     <arc exit="north" move="north" destination="501" />
     <arc exit="west" move="west" destination="502" />
     <arc exit="go" move="go side passage" destination="493" />
   </node>
-  <node id="501" name="Cavern of Flame, Charred Grotto" color="White">
+  <node id="501" name="Cavern of Flame, Charred Grotto">
     <description>The scent of fire and ash lingers in the alcove, apparently coming from the grotto's walls that are coated with old blast marks.  Ash and soot mixes with the rock dust on the floor, each step causing a small cloud of the detritus to explode into the air before drifting slowly back to the ground.</description>
     <position x="280" y="30" z="2" />
     <arc exit="south" move="south" destination="500" />
     <arc exit="southwest" move="southwest" destination="502" />
   </node>
-  <node id="502" name="Cavern of Flame, Charred Grotto" color="White">
+  <node id="502" name="Cavern of Flame, Charred Grotto">
     <description>Overlapping blast circles cover one cavern wall, evidence of the attempts of the residents to escape their confinement within the depths of the earth.  A pile of rocks is capped by a teetering slab that balances precariously atop a rough pyramid.</description>
     <position x="260" y="50" z="2" />
     <arc exit="northeast" move="northeast" destination="501" />
