@@ -1,13 +1,19 @@
 # automapper.cmd
-var autoversion 8.2025-08-07
+var autoversion 8.2025-08-08
+
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
 
+#2025-08-08
+# Maje
+#   created new class (move) to handle depth updates
+#   solves errors related to additional typeahead when doing special areas like skating
+
 #2025-08-07
 # Hanryu
-#   swap to gametime timeous after omgsticks showed that unixtime timeouts don't work on genie
+#   swap to gametime timeous after Maje showed that unixtime timeouts don't work on genie
 #   genie4 issue #179
 #   also fancier vela'tohr fix for the permanent plant in empaths
 
@@ -570,8 +576,8 @@ ABSOLUTE.TOP:
   var move_INVIS ^The .* can't see you\!|^But no one can see you\!|^How can you .* can't even see you\?|^You can't move in that direction while unseen\.
   var climb_mount_FAIL climb what?
 ACTIONS:
-  action (mapper) action (mapper) off;goto DRAGGED when ^The current drags you
-  action (mapper) if (%movewait = 0) then shift;if (%movewait = 0) then math depth subtract 1;if ((%verbose) && (len("%2") > 0)) then put #echo %color Next move: %2 when %move_OK
+  action (move) action (move) off;goto DRAGGED when ^The current drags you
+  action (move) if (%movewait = 0) then shift;if (%movewait = 0) then math depth subtract 1;if ((%verbose) && (len("%2") > 0)) then put #echo %color Next move: %2 when %move_OK
   action (mapper) goto MOVE.FAILED when %move_FAIL
   action (mapper) var TryGoInsteadOfClimb 1 when ^You can't climb that\.$
   action (mapper) goto MOVE.RETRY when %move_RETRY|%move_WEB|^You can't climb that\.$
@@ -749,14 +755,10 @@ MOVE.BOAT.ARRIVED:
 MOVE.ICE:
   if (!$broom_carpet) then {
     action (skates) on
-    evalmath depthtimeout $unixtime + %waitevalTimeOut
-    if (%depth > 1) then waiteval ((1 <= %depth) || ($gametime >= %depthtimeout))
     if (!%skatechecked) then gosub FIND.SKATES
     if (%slow_on_ice) then gosub ICE.COLLECT
   }
   put %movement
-  evalmath depthtimeout $unixtime + %waitevalTimeOut
-  if (%depth > 0) then waiteval ((0 = %depth) || ($gametime >= %depthtimeout))
   goto MOVE.DONE
 
 SKATE.NO:
@@ -1969,7 +1971,7 @@ BAG.NEXT:
 DRAGGED:
   delay %infiniteLoopProtection
   if ($roundtime > 0) then pause $roundtime
-  action (mapper) on
+  action (move) on
   var depth 0
   goto MOVE.DONE
 ####
