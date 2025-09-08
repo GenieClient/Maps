@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-16"?>
 <zone name="Northern Trade Road" id="7">
   <node id="1" name="The Marsh, Stone Road" note="Marsh">
     <description>Dirt meets stone here as a road begins its winding journey north along a cut-out hillside shrouded by a grove of trees. Just a few hundred feet north a large growth of reeds forces a jog to the northwest.  In a clump of weeds sits a makeshift stone bench and small pile of stones.  If it was once a shrine, someone has long since removed the statue and abandoned its care.</description>
@@ -1988,70 +1988,70 @@
   </node>
   <node id="256" name="Dismal Grove, Paper Mill">
     <description>Surrounded by boulders and jagged rocks, a small wooden paper mill sits in the center of the circle of dead poplars, appearing to be relatively newly built.  Several younger trees near the building struggle valiantly against the harsh environment, providing patches of green that sharply contrast the barren landscape.</description>
-    <position x="500" y="950" z="0" />
+    <position x="580" y="910" z="0" />
     <arc exit="go" move="go main road" destination="131" />
     <arc exit="go" move="go mill's door" destination="257" />
   </node>
   <node id="257" name="Paper Mill, Entrance" note="Paper Mill|origami factory">
     <description>The paper mill's high walls are crafted from planks of untreated wood, held together with bare nails in even rows.  Wooden beams hold up the high ceiling, and sawdust is scattered over the dirt floor.  The building has an unfinished air about it, as if aesthetics were sacrificed solely for function.</description>
-    <position x="510" y="960" z="0" />
+    <position x="590" y="920" z="0" />
     <arc exit="west" move="west" destination="258" />
     <arc exit="go" move="go mill's door" destination="256" />
   </node>
   <node id="258" name="Paper Mill, Narrow Hallway">
     <description>The smell of sawdust hangs heavily in the air, and a fine wooden powder covers everything.  A boarded-up window on the western wall lets in light through a few cracks, and motes of dust float lazily through the air.  An eerie silence hangs over the mill, punctuated occasionally by the sound of rustling paper.</description>
     <description>The smell of sawdust hangs heavily in the air, and a fine wooden powder covers everything.  Light from an old gaethzen orb flickers above a boarded-up window, the aged sphere constantly threatening to go out.  The sound of crickets occasionally breaks the silence, and occasionally a rustle of paper echoes through the mill.</description>
-    <position x="500" y="960" z="0" />
+    <position x="580" y="920" z="0" />
     <arc exit="east" move="east" destination="257" />
     <arc exit="south" move="south" destination="259" />
   </node>
   <node id="259" name="Paper Mill, Drying Chambers">
     <description>Enormous sheets of white paper hang from wooden dowels over narrow troughs of water, arranged in diagonals to make the most of the mill's space.  The ceiling rises high, occasional lines of light from outside shining through cracks in the untreated wood.  A faint chemical smell hangs in the air, mixing with the constant scent of sawdust.</description>
-    <position x="500" y="970" z="0" />
+    <position x="580" y="930" z="0" />
     <arc exit="north" move="north" destination="258" />
     <arc exit="east" move="east" destination="260" />
   </node>
   <node id="260" name="Paper Mill, Drying Chambers">
     <description>A constant drip, drip, drip sound comes from a slanted tin panel hanging over a trough of water.  Apparently set up as an attempt to remove moisture from the drying area, the mechanism is attached to a fist-wide drainage pipe that leads outside.  In the southern portion of the expansive room, freshly made sheets of paper hang from wooden dowels, waiting to be moved.</description>
-    <position x="510" y="970" z="0" />
+    <position x="590" y="930" z="0" />
     <arc exit="west" move="west" destination="259" />
     <arc exit="go" move="go narrow door" destination="261" />
   </node>
   <node id="261" name="Paper Mill, Chemical Baths" note="Chemical Baths">
     <description>Steel troughs filled with steaming water line rows of thick shelves, each long basin delivering an acrid smell into the air.  Softening wood chips line the bottom of each one, preparing them to be turned into pulp for paper.  Shallow puddles mar the floor next to the troughs, slowly sinking into the dirt floor, while small piles of sawdust lie discarded in the corners.</description>
-    <position x="540" y="970" z="0" />
+    <position x="610" y="930" z="0" />
     <arc exit="south" move="south" destination="262" />
     <arc exit="go" move="go narrow door" destination="260" />
   </node>
   <node id="262" name="Paper Mill, Chemical Baths">
     <description>An enormous pile of wood chips dominates the eastern side of the room, underneath a large chute fixed in the ceiling.  Stuck halfway into the mound is a rusty shovel, apparently made for shoveling the wood chips into nearby troughs filled with water and chemicals.  The scent of sawdust hangs heavy in the air, and the chirping of birds can distantly be heard from outside.</description>
     <description>An enormous pile of wood chips dominates the eastern side of the room, underneath a large chute fixed in the ceiling.  Stuck halfway into the mound is a rusty shovel, apparently made for shoveling the wood chips into nearby troughs filled with water and chemicals.  The scent of sawdust hangs heavy in the air, and the occasional hooting of an owl can be heard from nearby outside.</description>
-    <position x="540" y="990" z="0" />
+    <position x="610" y="960" z="0" />
     <arc exit="north" move="north" destination="261" />
     <arc exit="west" move="west" destination="263" />
     <arc exit="go" move="go large window" destination="265" />
   </node>
   <node id="263" name="Paper Mill, Working Stations" note="Working Stations">
     <description>Towering stacks of square wooden frames filled with thin layers of wood pulp take up most of the floor space in this warehouse.  Set out to begin the curing process, each of the frames is large enough to make a full yard of paper.  The plain floor is simply hardened dirt, packed tight and scattered with a fine layer of sawdust.</description>
-    <position x="530" y="990" z="0" />
+    <position x="600" y="960" z="0" />
     <arc exit="north" move="north" destination="264" />
     <arc exit="east" move="east" destination="262" />
   </node>
   <node id="264" name="Paper Mill, Working Stations">
     <description>The center of the room is dominated by a pair of rollers, apparently used to squeeze chemical-laced water from freshly made paper.  Nearby a wide, shallow vat filled with water holds several large sheets of paper, sitting ready to be put through the wringer.  The walls and equipment show some signs of neglect: spots of rust appearing on the metallic parts of the equipment.</description>
-    <position x="530" y="980" z="0" />
+    <position x="600" y="950" z="0" />
     <arc exit="south" move="south" destination="263" />
     <arc exit="climb" move="climb narrow stairs" destination="788" />
   </node>
   <node id="265" name="Paper Mill, Sawdust Heap" note="Sawdust Heap">
     <description>An enormous pile of sawdust mixed with bits of bark, metals and discarded paper makes a huge heap in this corner of the scrap yard, apparently unsuited for creating paper.  The mixture spreads over the entire yard, choking what little grass there is and mixing with the dirt underfoot.  A few barrels have been shoved next to the building, giving off a somewhat chemical smell.</description>
-    <position x="560" y="1010" z="0" />
+    <position x="630" y="980" z="0" />
     <arc exit="west" move="west" destination="266" />
     <arc exit="go" move="go large window" destination="262" />
   </node>
   <node id="266" name="Paper Mill, Scrap Yard" note="Scrap Yard">
     <description>Sheared scraps of discarded bark, broken and rusty equipment, crumpled paper and other waste line the edges of the yard.  A relatively clear path leads east, where an enormous sawdust pile can be seen.  A compost bin has been shoved into the corner of the room, the rotting greens casting off an earthy smell.</description>
-    <position x="550" y="1010" z="0" />
+    <position x="620" y="980" z="0" />
     <arc exit="east" move="east" destination="265" />
   </node>
   <node id="267" name="Northeast Wilds, Birder Lane" note="RTZ02|RT-XNE-HF" color="#C2B280">
@@ -2101,7 +2101,7 @@
   <node id="273" name="Northeast Wilds, Grimsage Way">
     <description>The small path skirts the shattered remains of Arhat's tower to the west, and branches off to the east.  The low mound that forms the ruins of Motte Fort lies to the southeast, and just east of that the solid stone walls of the Keep of the Ughtensgard.  Another tower, capped with a gleaming crystal dome, is visible farther southeast.</description>
     <description>The small path skirts the shattered remains of Arhat's tower to the west, and branches off to the east.  The low mound that forms the ruins of Motte Fort lies to the southeast, and just east of that are the devastated walls of what was once the Keep of the Ughtensgard.  Another tower, capped with a gleaming crystal dome, is visible farther southeast.</description>
-    <position x="460" y="2570" z="0" />
+    <position x="440" y="2570" z="0" />
     <arc exit="east" move="east" destination="275" />
     <arc exit="southwest" move="southwest" destination="274" />
     <arc exit="northwest" move="northwest" destination="272" />
@@ -2114,25 +2114,25 @@
   </node>
   <node id="275" name="Northeast Wilds, Grimsage Way">
     <description>The small path curves slowly northwards, heading farther and farther away from the protection of the Crossing's gates.  Arhat's tower, once home of the Warrior Mage Guild, lies in a crumbling heap of stone to the west.</description>
-    <position x="480" y="2570" z="0" />
+    <position x="460" y="2570" z="0" />
     <arc exit="northeast" move="northeast" destination="276" />
     <arc exit="west" move="west" destination="273" />
   </node>
   <node id="276" name="Northeast Wilds, Grimsage Way">
     <description>Rising above the surrounding lands, the stone walls of Arhat's tower end in jagged edges that pierce the sky.  The small path continues to the north, leading towards a larger tower of freshly-cut silvery-grey stone.</description>
-    <position x="500" y="2550" z="0" />
+    <position x="480" y="2550" z="0" />
     <arc exit="north" move="north" destination="277" />
     <arc exit="southwest" move="southwest" destination="275" />
   </node>
   <node id="277" name="Northeast Wilds, Grimsage Way" note="Grimsage Way">
     <description>An enormous tower of grey marble rises imposingly from the ground, its stones fitted so closely that it appears to be one seamless spear of earth.  The top of the tower gleams brightly, the light reflecting from the panes of a skylight set into the roof.  A set of gleaming ebonwood doors inlaid with gold lead into the tower.</description>
-    <position x="500" y="2530" z="0" />
+    <position x="480" y="2530" z="0" />
     <arc exit="south" move="south" destination="276" />
     <arc exit="go" move="go door" destination="278" />
   </node>
   <node id="278" name="Warrior Mage Guild, Foyer" note="Warrior Mage">
     <description>Slate grey walls span the tower interior, faint reflections fading in and out of its glassy sheen.  A long steep staircase cut into the walls spirals its way up the tapering interior.  Two gruesome and fierce-countenanced dvarapalas stare sullenly at a set of gleaming ebonwood doors leading outside.  Set precisely in the center of the floor is a large golden wheel engraved with the crest of the Warrior Mage guild.</description>
-    <position x="500" y="2510" z="0" />
+    <position x="480" y="2510" z="0" />
     <arc exit="go" move="go marble arch" destination="279" />
     <arc exit="climb" move="climb staircase" destination="280" />
     <arc exit="go" move="go door" destination="277" />
@@ -2140,12 +2140,12 @@
   <node id="279" name="Warrior Mage Guild, Gauthus' Office" note="GL WM|GL Warrior Mage|Gauthus" color="#FF8000">
     <description>A pink marble arch connects the office with the foyer of the guildhall, allowing Gauthus to keep a watchful eye on visitors and apprentices alike from his seat behind a bare pine desk.  Gazing about with impartial interest, a red-banded hawk moves restlessly on her wooden perch, shifting from foot to foot or ruffling her feathers.  High transom windows along the walls provide ventilation and light in what might otherwise be a small, airless room.</description>
     <description>A pink marble arch connects the office with the foyer of the guildhall, allowing Gauthus to keep a watchful eye on visitors and apprentices alike from his seat behind a bare pine desk.  Gazing about with impartial interest, a red-banded hawk moves restlessly on her wooden perch, shifting from foot to foot or ruffling her feathers.  Gaethzen spheres sway in the breeze from the high transom windows, providing light for the small room.</description>
-    <position x="480" y="2510" z="0" />
+    <position x="460" y="2510" z="0" />
     <arc exit="go" move="go marble arch" destination="278" />
   </node>
   <node id="280" name="Warrior Mage Guild, Landing">
     <description>The second floor landing is paneled in softly-colored woods that start at a pleasant gold at the north and south, and shade gently to a pale pink at the east and west.  A large goldenwood door to the north blends perfectly with the paneling, and is flanked by two archways of pale pink marble to the east and west.</description>
-    <position x="500" y="2490" z="0" />
+    <position x="480" y="2490" z="0" />
     <arc exit="east" move="east" destination="282" />
     <arc exit="west" move="west" destination="281" />
     <arc exit="up" move="up" destination="283" />
@@ -2154,19 +2154,19 @@
   </node>
   <node id="281" name="Warrior Mage Guild, Library" note="Library">
     <description>Pale pink marble walls and ceiling, a luxurious white carpet, and an abundance of comfortable but unadorned furniture are the only features of this pleasantly warm room.  A large rosewood shelf lined with tomes of history and lore matches the pale pink marble of the archway to the east.</description>
-    <position x="480" y="2490" z="0" />
+    <position x="460" y="2490" z="0" />
     <arc exit="east" move="east" destination="280" />
     <arc exit="go" move="go archway" destination="280" />
   </node>
   <node id="282" name="Warrior Mage Guild, Hall of History" note="Hall of History|RS Warrior Mage">
     <description>Thickly woven tapestries adorn the dull granite walls, each depicting something different.  Iron sconces shaped like human hands, each holding a brightly lit gaethzen sphere, are affixed to the walls at regular intervals around the hall.  A few mages read quietly in plush, high-backed chairs sitting atop the thick, bright red carpet.</description>
-    <position x="520" y="2490" z="0" />
+    <position x="500" y="2490" z="0" />
     <arc exit="west" move="west" destination="280" />
     <arc exit="go" move="go wood door" destination="291" />
   </node>
   <node id="283" name="Warrior Mage Guild, Landing">
     <description>The slate grey walls of the tower end, and large panes of glass taper to a point above, creating a massive skylight and window to the heavens above.  Five archways ring the room, each one etched with a curious symbol at its apex.  Dangling from the skylight, a wooden ladder hangs almost directly over a spiraling staircase that leads into the floor.</description>
-    <position x="560" y="2450" z="0" />
+    <position x="540" y="2450" z="0" />
     <arc exit="down" move="down" destination="280" />
     <arc exit="climb" move="climb staircase" destination="284" />
     <arc exit="go" move="go fire arch" destination="285" />
@@ -2178,42 +2178,42 @@
   </node>
   <node id="284" name="Warrior Mage Guild, Chamber of Earth" note="Chamber of Earth">
     <description>This small cavern, held secret within the depths of the earth, seems to pulse with the very heartbeat of Elanthia.  Phospherein lines the ceiling, emitting a steady, pearlescent green glow.  Roots of various plants, some ancient as the Gods themselves, entwine together to form a small couch upon the ground.</description>
-    <position x="560" y="2470" z="0" />
+    <position x="540" y="2470" z="0" />
     <arc exit="climb" move="climb staircase" destination="283" />
   </node>
   <node id="285" name="Warrior Mage Guild, Chamber of Fire" note="Chamber of Fire">
     <description>Walls of obsidian blackness reflect the light from a fire-pit in the center of this room.  Smoking braziers of flame-kissed gold line the walls, filling the room with pleasant heat.  Spiderweb traces of rhodonite line the ceiling, glowing in the firelight with the stylized image of a flame.</description>
-    <position x="540" y="2450" z="0" />
+    <position x="520" y="2450" z="0" />
     <arc exit="go" move="go fire archway" destination="283" />
   </node>
   <node id="286" name="Warrior Mage Guild, Chamber of Steel" note="Chamber of Steel">
     <description>This plain white room is unadorned, save for a large map of the realms upon the northern wall, and a small weapons rack.  Several rows of benches cluster about the map, obviously used for strategy sessions, and war games.</description>
-    <position x="540" y="2470" z="0" />
+    <position x="520" y="2470" z="0" />
     <arc exit="go" move="go steel archway" destination="283" />
   </node>
   <node id="287" name="Warrior Mage Guild, Chamber of Electricity" note="Chamber of Electricity">
     <description>An anticipatory hum resonates through the air, as though everything in this room were filled with the power of a lightning strike.  Columns of pure ilmenite line the walls, glowing from within with pent-up force.  All traces of metal are conspicuously absent from the room's furnishings.</description>
-    <position x="540" y="2430" z="0" />
+    <position x="520" y="2430" z="0" />
     <arc exit="go" move="go electricity archway" destination="283" />
   </node>
   <node id="288" name="Warrior Mage Guild, Chamber of Air" note="Chamber of Air">
     <description>Dominated by the translucent panes of the massive skylight, the roof of the tower provides an unparalleled view of the lands around the Crossing, including the shattered remains of Arhat's Tower to the south.  Fickle breezes and gusty gales swirl about the stone, causing the tower to resonate in a never-ending song of change glorifying the dance of the winds.</description>
-    <position x="560" y="2430" z="0" />
+    <position x="540" y="2430" z="0" />
     <arc exit="climb" move="climb ladder" destination="283" />
   </node>
   <node id="289" name="Warrior Mage Guild, Chamber of Water" note="Chamber of Water">
     <description>Perpetually frozen, a great stalactite of ice hangs from the ceiling, reaching almost to the floor.  As the end slowly melts, drops of water fall into a pool below and flow along cracks in the stone to form an intricate lattice-work beneath.  Fog slowly rolls off of the ice, cooling the air and settling into a dream-like haze upon the blue marble.</description>
-    <position x="580" y="2450" z="0" />
+    <position x="560" y="2450" z="0" />
     <arc exit="go" move="go water archway" destination="283" />
   </node>
   <node id="290" name="Warrior Mage Guild, Chamber of Aether" note="Chamber of Aether">
     <description>Silvery-blue wall hangings cover the base stone walls of the room, matching the cushions scattered about the floor.  Floating in the center of the room is a sphere of white-gold which glows with an inner fire.  Undefined patterns of light and color swirl about the wall hangings, as though this room were not entirely within the Plane of Abiding.</description>
-    <position x="580" y="2430" z="0" />
+    <position x="560" y="2430" z="0" />
     <arc exit="go" move="go aether archway" destination="283" />
   </node>
   <node id="291" name="Warrior Mage Guild, Chamber of Reflection" note="Chamber of Reflection">
     <description>From the peaked ceiling hangs an enormous gaethzen sphere which casts a bright, white light onto the room.  Polished marble walls intensify the light, creating an aura effect around everything.  In the center of the floor sits a fountain where a tall marble statue of a robed Elven male sends water arching into the pool below from cupped hands.  Large, fluffy cushions circle the fountain, creating a comfortable spot to rest.</description>
-    <position x="540" y="2490" z="0" />
+    <position x="520" y="2490" z="0" />
     <arc exit="go" move="go vault arch" destination="292" />
     <arc exit="go" move="go marble arch" destination="293" />
     <arc exit="go" move="go wood door" destination="282" />
@@ -2221,12 +2221,12 @@
   </node>
   <node id="292" name="Warrior Mage Guild, Target Range" note="Target Range">
     <description>Blackened marks mar the surface of the grey stones which form this room.  The charred remains of a tapestry hang on one wall, now only a narrow border of blue surrounding a black-edged hole.  From time to time, young apprentices sidle in to practice their magic upon one of the constructs, only to hurry off to classes.  They leave behind new pits in the stone walls, though perhaps not much damage to the construct they had aimed at.</description>
-    <position x="560" y="2510" z="0" />
+    <position x="540" y="2510" z="0" />
     <arc exit="go" move="go vaulted arch" destination="291" />
   </node>
   <node id="293" name="Warrior Mage Guild, Archery Range" note="Archery Range">
     <description>A wide marble archway opens up into a spacious room.  Grey stones form the vaulted ceiling and smooth walls, giving this space a somewhat austere feel.  Affixed to the front of a bale of hay is a small target.  The target has been sloppily painted on a square of canvas, streaks of paint running down onto the hay.  Some paint has been splattered liberally on a tree branch from which the canvas hangs.</description>
-    <position x="540" y="2510" z="0" />
+    <position x="520" y="2510" z="0" />
     <arc exit="go" move="go marble arch" destination="291" />
   </node>
   <node id="294" name="Arhat's Tower, Foyer" note="Arhat's Tower">
@@ -2242,7 +2242,7 @@
   </node>
   <node id="296" name="Forest, A Quiet Path">
     <description>A cool wind twists through the air, carrying the crisp scent of pine.   A generous carpet of needles and loam lines the ground, churning up dust that offsets the sharper smells with a sweet mustiness.  In the distance, a sparrow whistles, calling out an ancient melody that only others of its kind can recall the words to.</description>
-    <position x="460" y="2410" z="0" />
+    <position x="440" y="2410" z="0" />
     <arc exit="northwest" move="northwest" destination="297" />
     <arc exit="go" move="go trail" destination="269" />
   </node>
@@ -2270,27 +2270,27 @@
   <node id="300" name="Northeast Wilds, Fields">
     <description>The subtle scent of hay and butter-yellow blossoms infuses the air with a fragrance that brings to mind summer breezes.  Crushed and tattered grasses form a ragged path through the growth, and the constant hum and buzz of insects lends a sense of drowsy solitude to the empty lands.</description>
     <description>The subtle scent of hay and jes-rose blossoms infuses the air with a pungent scent.  Crushed and tattered grasses glimmer in the pale light of the stars as they form a ragged path through the growth.  The sense of solitude and emptiness is overwhelming.</description>
-    <position x="460" y="2330" z="0" />
+    <position x="440" y="2330" z="0" />
     <arc exit="northeast" move="northeast" destination="301" />
     <arc exit="southwest" move="southwest" destination="299" />
   </node>
   <node id="301" name="Northeast Wilds, Fields">
     <description>Tiny, annoying gnats and flies whirr through the field, flying into faces and darting quickly away before they can meet their doom.  From time to time you catch a flash of movement as one of the local avians zooms in to snatch any particularly attractive or plump-looking bugs, but the sense of poetic justice is quickly erased as another buzzes in to take the place of the one that was consumed.</description>
     <description>Cool breezes sweep the fields, visiting unto the parched vegetation release from the naked heat of day.</description>
-    <position x="480" y="2310" z="0" />
+    <position x="460" y="2310" z="0" />
     <arc exit="southwest" move="southwest" destination="300" />
     <arc exit="northwest" move="northwest" destination="302" />
   </node>
   <node id="302" name="Northeast Wilds, Fields">
     <description>The grass stirs in slow patterns as a breeze -- the only permanent resident of the empty hinterland -- swirls over it.  Like a wave searching for a shore, the wind pushes back and forth over the changing shades and hues of the growth, hunting for a haven it will never find.</description>
-    <position x="460" y="2290" z="0" />
+    <position x="440" y="2290" z="0" />
     <arc exit="north" move="north" destination="303" />
     <arc exit="southeast" move="southeast" destination="301" />
     <arc exit="northwest" move="northwest" destination="306" />
   </node>
   <node id="303" name="Northeast Wilds, Fields">
     <description>An ocean of grass edges around the beaten-down path that curls precariously through the field's vastness.  With the wind steadily running its fingers through the grasses, the stalks rise and fall in a continual show of motion as inexorable and reflexive as a heartbeat.</description>
-    <position x="460" y="2210" z="0" />
+    <position x="440" y="2210" z="0" />
     <arc exit="south" move="south" destination="302" />
     <arc exit="southwest" move="southwest" destination="304" />
   </node>
@@ -2632,25 +2632,25 @@
   </node>
   <node id="355" name="Northern Trade Road, Open Grasslands">
     <description>The wind rushes through the grass, making a soft shirring sound.  Occasionally you catch the crackle of movement or the twitterings of birds, but any sounds of civilization generated by something other than yourself seem like the sort of thing you would think up in a dream.</description>
-    <position x="420" y="1730" z="0" />
+    <position x="440" y="1730" z="0" />
     <arc exit="southeast" move="southeast" destination="354" />
     <arc exit="northwest" move="northwest" destination="356" />
   </node>
   <node id="356" name="Northern Trade Road, Open Grasslands" note="RTZ09|RT-K-KC" color="#C2B280">
     <description>Miles upon miles of uncivilized land lie before you, devoid of any sign of humanity.  A shifting sea of brown, green, and tan grasses rises about you, rustling with the movement of the occasional bird or butterfly that dares to plunge down into the vegetation.  A line of dark mountains rises to the north, shadowed and gloomy, they climb abruptly from the grasslands.</description>
-    <position x="400" y="1710" z="0" />
+    <position x="420" y="1710" z="0" />
     <arc exit="north" move="north" destination="357" />
     <arc exit="southeast" move="southeast" destination="355" />
   </node>
   <node id="357" name="Northern Trade Road, Foothills" color="#008000">
     <description>The road rises along the curve of a low hill that slopes down to the south into open grasslands.  The rocky crest of the hill rises sharply above you as you toil along the well-kept roadway.  Local stones from the hillside have been smoothed and shaped to form the roadbed and the footing is good.  Northwards though, the hills shift quickly into steep mountains.</description>
-    <position x="400" y="1690" z="0" />
+    <position x="420" y="1690" z="0" />
     <arc exit="east" move="east" destination="358" />
     <arc exit="south" move="south" destination="356" />
   </node>
   <node id="358" name="Northern Trade Road, Foothills" color="#008000">
     <description>You crest a low hill that gives a far-reaching view.  To the north a line of mountains rises steeply from the surrounding hills, while southward the hills fade out to forest and plain.  Far to the south, a heavy haze obscures the view, but you glimpse the occasional flash of open water.</description>
-    <position x="420" y="1690" z="0" />
+    <position x="440" y="1690" z="0" />
     <arc exit="east" move="east" destination="359" />
     <arc exit="west" move="west" destination="357" />
   </node>
@@ -2886,7 +2886,7 @@
   </node>
   <node id="395" name="Foothills, Stony Incline">
     <description>Taking the opportunity to examine the distant countryside, large green forests in the southwest, flatlands to the south and the large ocean expanse to the southeast all catch the eye.  All seem more attractive than the forbidding set of cliffs up ahead.</description>
-    <position x="500" y="1690" z="0" />
+    <position x="480" y="1690" z="0" />
     <arc exit="up" move="up" destination="396" />
     <arc exit="climb" move="climb stony trail" destination="359" />
     <arc exit="go" move="search go overgrown path" destination="397" />
@@ -2894,13 +2894,13 @@
   <node id="396" name="Lairocott Brach, Entrance" note="Map10_Abandoned_Mine_Lairocott.xml|Abandoned Mine|Stone Clan">
     <description>Placed in the wall of the sheer cliff that stands before you is a large stone door, currently blasted open.  Two large lifelike sentinels, one on either side of the door, have been scorched black.</description>
     <description>Placed in the wall of the sheer cliff is a huge stone door with an arched top.  Two large lifelike sentinels, one on either side of the door, stand at attention in silence.</description>
-    <position x="560" y="1720" z="0" />
+    <position x="500" y="1710" z="0" />
     <arc exit="west" move="west" />
     <arc exit="down" move="down" destination="395" />
   </node>
   <node id="397" name="Foothills, Abandoned Road" note="Map9b_Sorrow's_Reach.xml|Sorrow's Reach">
     <description>The path underfoot is overgrown with weeds and almost completely covered with dried, fallen branches yet still feels surprisingly firm.  A few pine saplings off to one side struggle to push up through the heavy soil.</description>
-    <position x="540" y="1690" z="0" />
+    <position x="500" y="1690" z="0" />
     <arc exit="northeast" move="northeast" />
     <arc exit="west" move="west" destination="395" />
   </node>
@@ -2931,19 +2931,19 @@
   </node>
   <node id="402" name="Northeast Wilds, Bramble Thicket">
     <description>The bramble thicket is not very dense here, and its tangled, matted shrubs seem to shrink back from the north side of the clearing, almost as if shunning it.  Just beyond the clearing rises a massive gate.  Sere vines and dead vermin are scattered about its base, but nothing, not even moss, mars its surface.</description>
-    <position x="542" y="2412" z="0" />
+    <position x="522" y="2412" z="0" />
     <arc exit="north" move="north" destination="403" />
     <arc exit="go" move="go thin path" destination="269" />
   </node>
   <node id="403" name="Hilltop Cemetery, Lich Gate" note="Lich Gate">
     <description>The ground beneath your feet is black and dead, as though it had once been engulfed in a great inferno.  Oddly enough, the Lich Gate before you appears pristine and intact, unscathed by the apparent waste and desolation that surround or perhaps radiate from it.</description>
-    <position x="542" y="2392" z="0" />
+    <position x="522" y="2392" z="0" />
     <arc exit="south" move="south" destination="402" />
     <arc exit="go" move="go lich gate" destination="404" />
   </node>
   <node id="404" name="Hilltop Cemetery, Inside Fence">
     <description>A cold breeze blows through the area changing its direction when you turn, as if guided by some unseen force.  Several paths lead off to the north into the trees.  Along the perimeter, a low wrought-iron fence serves as a token boundary for the cemetery.</description>
-    <position x="560" y="2370" z="0" />
+    <position x="540" y="2370" z="0" />
     <arc exit="north" move="north" destination="408" />
     <arc exit="northeast" move="northeast" destination="407" />
     <arc exit="northwest" move="northwest" destination="405" />
@@ -2951,14 +2951,14 @@
   </node>
   <node id="405" name="Hilltop Cemetery, Winding Footpath">
     <description>The path begins to weave its way through dense trees, snaking around small burial sites that contain several old stone grave markers.  The grounds have been kept clear and the grass is cut low around each tombstone.  Someone must visit this place regularly.</description>
-    <position x="540" y="2350" z="0" />
+    <position x="520" y="2350" z="0" />
     <arc exit="northeast" move="northeast" destination="406" />
     <arc exit="east" move="east" destination="408" />
     <arc exit="southeast" move="southeast" destination="404" />
   </node>
   <node id="406" name="Hilltop Cemetery, Winding Footpath">
     <description>Just beyond the iron fence that runs along the path to the southeast, you hear something moving about in the underbrush.  Faint pinpoints of light fade in and out of the trees and you would swear the temperature just dropped.  The outline of a square structure lies to the south, while a faint trail heads northwest through low-hanging trees.</description>
-    <position x="560" y="2330" z="0" />
+    <position x="540" y="2330" z="0" />
     <arc exit="southeast" move="southeast" destination="407" />
     <arc exit="south" move="south" destination="408" />
     <arc exit="southwest" move="southwest" destination="405" />
@@ -2967,14 +2967,14 @@
   </node>
   <node id="407" name="Hilltop Cemetery, Graves" note="Graves">
     <description>Each of the graves in this part of the cemetery is marked with a simple wax candle.  Despite the constant breeze, the flames of every candle continue to burn and flicker, lighting the ground with an eerie orange glow.</description>
-    <position x="580" y="2350" z="0" />
+    <position x="560" y="2350" z="0" />
     <arc exit="southwest" move="southwest" destination="404" />
     <arc exit="west" move="west" destination="408" />
     <arc exit="northwest" move="northwest" destination="406" />
   </node>
   <node id="408" name="Hilltop Cemetery, Before Mausoleum" note="Cemetery">
     <description>The trees have given way to a mausoleum crafted from white marble.  The entrance is marked by two smooth columns and perched just above, a solemn-looking stone gargoyle surveys the surroundings.</description>
-    <position x="560" y="2350" z="0" />
+    <position x="540" y="2350" z="0" />
     <arc exit="north" move="north" destination="406" />
     <arc exit="east" move="east" destination="407" />
     <arc exit="south" move="south" destination="404" />
@@ -2982,159 +2982,159 @@
   </node>
   <node id="409" name="Hilltop Cemetery, Worn Path">
     <description>Branches reach out towards you, groping at your clothing.  Just beyond the path, misty vapors weave their way between the trees, seeking unknown prey.  A worn path bends around from the southwest to southeast.  To the northwest, you spot some sort of clearing.</description>
-    <position x="540" y="2310" z="0" />
+    <position x="520" y="2310" z="0" />
     <arc exit="southeast" move="southeast" destination="406" />
     <arc exit="southwest" move="southwest" destination="411" />
     <arc exit="northwest" move="northwest" destination="410" />
   </node>
   <node id="410" name="Hilltop Cemetery, Cenote" note="Cenote|triage">
     <description>You are standing on the edge of a deep sinkhole, about eighty feet wide and perfectly round.  Peering into the deep hole, you find that it's filled with water, the surface about thirty feet below you.  Judging from the smoothness of the walls and a skeleton still clinging to the rocks below, you surmise that jumping into this cenote might be a bad idea.</description>
-    <position x="520" y="2290" z="0" />
+    <position x="500" y="2290" z="0" />
     <arc exit="southeast" move="southeast" destination="409" />
   </node>
   <node id="411" name="Hilltop Cemetery, Shady Path">
     <description>The trees hang low over the path along the westward curve, forming an eerie tunnel of foliage.  From somewhere in the darkness, the hoot of an owl echoes through the woods.</description>
-    <position x="520" y="2330" z="0" />
+    <position x="500" y="2330" z="0" />
     <arc exit="northeast" move="northeast" destination="409" />
     <arc exit="west" move="west" destination="412" />
   </node>
   <node id="412" name="Hilltop Cemetery, Ring of Stones" note="Ring of Stones">
     <description>The tunnel of trees opens up into a round clearing where eight gravestones have been placed in a circle.  The stone markers face inward, towards a small stone altar resting in the center.  There are ash marks across its surface, leading you to believe something was once set aflame upon it.</description>
-    <position x="500" y="2330" z="0" />
+    <position x="480" y="2330" z="0" />
     <arc exit="east" move="east" destination="411" />
   </node>
   <node id="413" name="Graveyard, Inside Crypt" note="Ghouls|Crypt|Graveyard">
     <description>A low stone altar heaped with dried flowers, old rotted offerings of food and streaked with ancient pools of melted wax, stands opposite the heavy iron gateway which leads out of the crypt.  The walls are lined with closed graves, sealed with heavy marble facings, each bearing a polished bronze plaque with the name of one of the departed.  A lone flickering candle standing atop the stone fights a precarious battle against the heavy oppressive darkness of the crypt.</description>
-    <position x="560" y="2310" z="0" />
+    <position x="540" y="2310" z="0" />
     <arc exit="out" move="out" destination="406" />
     <arc exit="go" move="go crack" destination="414" />
   </node>
   <node id="414" name="Graveyard, Tunnels">
     <description>The ceiling and walls are mostly dirt aside from one bright patch of cracked marble overhead.  Two burning torches fixed to the ceiling in heavy iron brackets light up the tunnel with a deep reddish glow, glinting off bits of ivory bone and old wood in the walls.  The tunnel slopes downwards and to the east, fading into inky blackness beyond the light.</description>
-    <position x="580" y="2310" z="0" />
+    <position x="560" y="2310" z="0" />
     <arc exit="east" move="east" destination="419" />
     <arc exit="up" move="up" destination="413" />
   </node>
   <node id="415" name="Graveyard, Tunnels">
     <description>The flat bottom of a wooden coffin hangs down from the ceiling overhead, glistening darkly in the torchlight, with a dark ragged hole ripped in its side.  The floor is damp and slimy with mud and deeply rutted, as if someone or something has been dragged through it.</description>
-    <position x="620" y="2330" z="0" />
+    <position x="600" y="2330" z="0" />
     <arc exit="east" move="east" destination="416" />
     <arc exit="northwest" move="northwest" destination="419" />
   </node>
   <node id="416" name="Graveyard, Tunnels">
     <description>A gaping hole branches off from the main tunnel to the north, an inky blackness against the dark walls.  The black earth is scattered with tiny pale flecks, like stars on a cloudy night.  An ivory shard juts from the wall, standing out in the flickering light.</description>
-    <position x="640" y="2330" z="0" />
+    <position x="620" y="2330" z="0" />
     <arc exit="north" move="north" destination="417" />
     <arc exit="northeast" move="northeast" destination="420" />
     <arc exit="west" move="west" destination="415" />
   </node>
   <node id="417" name="Graveyard, Tunnels">
     <description>Tiny trickles of mud drip down from overhead as if disturbed by your passage.  This section of tunnel seems more freshly excavated, and the earth less packed down.  The dirt roof overhead is uneven and pitted with holes.</description>
-    <position x="640" y="2310" z="0" />
+    <position x="620" y="2310" z="0" />
     <arc exit="south" move="south" destination="416" />
     <arc exit="northwest" move="northwest" destination="418" />
   </node>
   <node id="418" name="Graveyard, Tunnels">
     <description>This branch of the tunnel dead-ends in a nightmare tableau revealed in the tenuous light.  Someone or something has piled stacks of polished bones into neat sorted piles, along with bits of stained rotting cloth.</description>
-    <position x="620" y="2290" z="0" />
+    <position x="600" y="2290" z="0" />
     <arc exit="southeast" move="southeast" destination="417" />
   </node>
   <node id="419" name="Graveyard, Tunnels">
     <description>Dark dripping branches hang down from the low earth ceiling like knotted, grasping fingers reaching towards you.  Tiny rivulets of dirty water run in narrow branching grooves, pooling in strangely distorted tracks in the hard packed mud.</description>
-    <position x="600" y="2310" z="0" />
+    <position x="580" y="2310" z="0" />
     <arc exit="southeast" move="southeast" destination="415" />
     <arc exit="west" move="west" destination="414" />
   </node>
   <node id="420" name="Graveyard, Tunnels">
     <description>The musty cavern air clings to the ground like a thick blanket of decay and old death.  Black glistening insects hang from the walls, grown fat and complacent living off the rich bounty buried overhead.</description>
-    <position x="660" y="2310" z="0" />
+    <position x="640" y="2310" z="0" />
     <arc exit="northeast" move="northeast" destination="427" />
     <arc exit="southeast" move="southeast" destination="421" />
     <arc exit="southwest" move="southwest" destination="416" />
   </node>
   <node id="421" name="Graveyard, Tunnels">
     <description>Glistening pearly snail tracks paint luminescent stripes along the underside of a stone slab forming part of the ceiling.  Although the slab is still unbroken, deep gashes along its surface reveal the labors of some clawed would-be intruder.</description>
-    <position x="695" y="2345" z="0" />
+    <position x="675" y="2345" z="0" />
     <arc exit="northeast" move="northeast" destination="425" />
     <arc exit="southeast" move="southeast" destination="422" />
     <arc exit="northwest" move="northwest" destination="420" />
   </node>
   <node id="422" name="Graveyard, Tunnels">
     <description>Matted branches tangled together like worms form a living roof overhead, seeming almost to wiggle in the flickering light.  Pale patches in the dark walls reveal the location of ancient graves, so old that nothing remains but a faint ivory taint to the soil.</description>
-    <position x="720" y="2370" z="0" />
+    <position x="700" y="2370" z="0" />
     <arc exit="east" move="east" destination="423" />
     <arc exit="northwest" move="northwest" destination="421" />
   </node>
   <node id="423" name="Graveyard, Tunnels">
     <description>An old wooden coffin sticks part way out of the southern wall, its side ripped open and its contents gone.  Bits of wood and less identifiable things lie strewn about, sticking up like thorns from the muddy cave floor.</description>
-    <position x="740" y="2370" z="0" />
+    <position x="720" y="2370" z="0" />
     <arc exit="northeast" move="northeast" destination="424" />
     <arc exit="west" move="west" destination="422" />
   </node>
   <node id="424" name="Graveyard, Tunnels">
     <description>A sickening stench of decay rises from a noxious pool formed in a dip in the tunnel.  Bits of unidentifiable something float over the oily surface of the water, and somewhere in the darkness something makes a splashing sound.  The muddy tunnel floor rises to the west and southwest.</description>
-    <position x="800" y="2310" z="0" />
+    <position x="780" y="2310" z="0" />
     <arc exit="southwest" move="southwest" destination="423" />
     <arc exit="west" move="west" destination="425" />
   </node>
   <node id="425" name="Graveyard, Tunnels">
     <description>The tunnel branches off in three directions, bent and forked like a lightning stroke through the damp dark earth.  The constant wet dripping from the walls forms tiny rivulets which flow down the sloped branch to the east.</description>
-    <position x="730" y="2310" z="0" />
+    <position x="710" y="2310" z="0" />
     <arc exit="north" move="north" destination="426" />
     <arc exit="east" move="east" destination="424" />
     <arc exit="southwest" move="southwest" destination="421" />
   </node>
   <node id="426" name="Graveyard, Tunnels">
     <description>The tunnel makes a sharp bend, skirting the edges of a huge limestone boulder which looms over the passage to the west.  The stone's face is slick with sickly growths of dank moss.  To the north, the tunnel narrows quickly and dead-ends in solid rock.  A narrow crack in the stone looks passable.</description>
-    <position x="730" y="2300" z="0" />
+    <position x="710" y="2300" z="0" />
     <arc exit="south" move="south" destination="425" />
     <arc exit="go" move="go crack" destination="432" />
   </node>
   <node id="427" name="Graveyard, Tunnels">
     <description>A line of ants climbs along the tunnel walls, passing busily in and out of a dark hole dug into the dirt.  Several other pits have been dug into the moist ground, but seem to have been picked clean of anything they might once have contained.</description>
-    <position x="680" y="2290" z="0" />
+    <position x="660" y="2290" z="0" />
     <arc exit="east" move="east" destination="428" />
     <arc exit="southwest" move="southwest" destination="420" />
   </node>
   <node id="428" name="Graveyard, Tunnels">
     <description>A hollow thump echoes as you travel down the tunnel, sounding strangely muffled against the dry earthen walls.  Looking down, you realize you are standing on a coffin lid, half buried in the dirt beneath your feet.</description>
-    <position x="700" y="2290" z="0" />
+    <position x="680" y="2290" z="0" />
     <arc exit="northeast" move="northeast" destination="429" />
     <arc exit="west" move="west" destination="427" />
   </node>
   <node id="429" name="Graveyard, Tunnels">
     <description>The narrow tunnel walls change abruptly here, as smooth ancient limestone to the east gives way to packed earth.  Jagged shards fallen from the wall litter the floor, forcing visitors to step carefully.  A blazing fire to the east casts a faint reddish light over the whole area.</description>
-    <position x="720" y="2270" z="0" />
+    <position x="700" y="2270" z="0" />
     <arc exit="east" move="east" destination="431" />
     <arc exit="southwest" move="southwest" destination="428" />
     <arc exit="northwest" move="northwest" destination="430" />
   </node>
   <node id="430" name="Graveyard, Tunnels">
     <description>A faint scratching sound out of sight sets your teeth on edge, as if tiny claws were scrabbling across a wooden table.  Staring yellow eyes flicker by the firelight and vanish quickly as half-seen shadows darting across the tunnel.</description>
-    <position x="700" y="2250" z="0" />
+    <position x="680" y="2250" z="0" />
     <arc exit="southeast" move="southeast" destination="429" />
   </node>
   <node id="431" name="Graveyard, Tunnels">
     <description>A natural cavern in the surrounding limestone forms a great bowl overhead, lit by a huge bonfire towards the eastern side.  The firelight glows red off an onyx slab piled high with unmentionable offerings set before a carved niche in the stone.  Piles of old gnawed bones are stacked in haphazard fashion along the northern wall, ending in a rounded opening heading west.</description>
-    <position x="730" y="2270" z="0" />
+    <position x="710" y="2270" z="0" />
     <arc exit="south" move="south" destination="432" />
     <arc exit="west" move="west" destination="429" />
     <arc exit="go" move="go niche" destination="433" />
   </node>
   <node id="432" name="Graveyard, Tunnel">
     <description>Towering walls of greenish stone rise to either side and seem to press inward as you make your way through a natural crack in the stone.  Misshapen muddy tracks on the stone floor look almost like rat tracks, but are far too large.  Some of the tracks are smeared as if something had been dragged over them.</description>
-    <position x="730" y="2290" z="0" />
+    <position x="710" y="2290" z="0" />
     <arc exit="north" move="north" destination="431" />
     <arc exit="south" move="south" destination="426" />
   </node>
   <node id="433" name="Graveyard, Tunnels">
     <description>A broad round slab of polished marble dominates this tiny niche, covered in strange runic inscriptions.  The walls are made of chiseled granite blocks, clashing with the natural limestone of the cavern outside.  The floor around the slab is scratched and gouged, as if some burrowing animal has been digging at it.</description>
-    <position x="730" y="2250" z="0" />
+    <position x="710" y="2250" z="0" />
     <arc exit="out" move="out" destination="431" />
   </node>
   <node id="434" name="Warrior Mage Guild, Workshop" note="donation1|workshop">
     <description>The stench of sulfur vies with the tingling effect of ozone in this cluttered workshop.  An eclectic assortment of arcane ingredients line the cabinets and shelves.  Odd glowing stains mark the floor, most likely the result of past experiments possibly gone awry, reflecting the light from twin gaethzen spheres set on marble pedestals.</description>
-    <position x="500" y="2470" z="0" />
+    <position x="480" y="2470" z="0" />
     <arc exit="go" move="go goldenwood door" destination="280" />
     <arc exit="west" move="west" destination="795" />
   </node>
@@ -3152,7 +3152,7 @@
   </node>
   <node id="437" name="Dense Copse" note="Map12a_Misenseor_Abbey.xml|Misenseor Abbey">
     <description>The branches of pine and birch trees loom overhead, overlapping to create a canopy that nearly chokes off almost all light from hitting what little green undergrowth is here.  Dried needles and dead branches crackle underfoot with every step, the only sound that can be heard save those of the forlorn cries of a wood thrush in the distance.</description>
-    <position x="560" y="1250" z="0" />
+    <position x="540" y="1250" z="0" />
     <arc exit="east" move="east" />
   </node>
   <node id="438" name="Ruined Tollhouse, Interior">
@@ -3177,7 +3177,7 @@
     <position x="320" y="1790" z="0" />
     <arc exit="east" move="east" destination="401" />
     <arc exit="west" move="west" destination="442" />
-    <arc exit="go" move="go rough dirt" />
+    <arc exit="go" move="go rough dirt" destination="400" />
   </node>
   <node id="442" name="Journalai Route, Rolling Hills">
     <description>The Route continues to the east and west, while to the north you notice a dirt path that looks to have been tread by the passage of feet, not the passage of wagons.  A trickling stream passes over the road, leaving mud and muck in its wake as it vanishes into the grasses of the surrounding hillside.</description>
@@ -3520,7 +3520,7 @@
   </node>
   <node id="496" name="Lower Kaerna, Village Green" color="#00FFFF">
     <description>Running along the south side of the green, a narrow path leads past a group of tiny cabins that almost disappear into a thick copse of aspen and sweet chestnut trees.  Despite their modesty, each humble dwelling appears spotlessly clean and diligently maintained, their secluded location in the village's only uncombed spot is clearly a careful choice made by fastidious and discerning people.</description>
-    <position x="570" y="1850" z="0" />
+    <position x="560" y="1850" z="0" />
     <arc exit="east" move="east" destination="495" />
     <arc exit="west" move="west" destination="484" />
   </node>
@@ -3560,7 +3560,7 @@
   </node>
   <node id="503" name="Lower Kaerna, High Street" color="#00FFFF">
     <description>A row of neat homes runs across the northern side of the green, the grandly-named High Street more of a country lane than the major artery its nomenclature might suggest.  Each dwelling here seems to take great pride in its prime location, presenting to the public a meticulously maintained facade complete with colorful curtains and window-boxes brimming with seasonal blooms.</description>
-    <position x="570" y="1810" z="0" />
+    <position x="560" y="1810" z="0" />
     <arc exit="east" move="east" destination="493" />
     <arc exit="west" move="west" destination="486" />
   </node>
@@ -3637,117 +3637,117 @@
   <node id="516" name="Marja Tee, Tula Veraja">
     <description>Berry bushes and green shrubs grow between the trunks of elm and birch trees.  Overhead, the soft hoot of an owl calls to its mate.  Numerous golden lights of a small community flicker to the distant northwest.</description>
     <description>Berry bushes and green shrubs grow between the trunks of elm and birch trees.  Sparrows flutter out of the high branches to light gracefully on a twig, grab a ripe berry, and wing back to their perches.  In the distant northwest a small village can be seen.</description>
-    <position x="460" y="2170" z="0" />
+    <position x="440" y="2170" z="0" />
     <arc exit="southeast" move="southeast" destination="517" />
     <arc exit="northwest" move="northwest" destination="515" />
   </node>
   <node id="517" name="Marja Tee, Musikaz Masi">
     <description>Tracks left by wagons laden with heavy cargo mar the road with deep ruts.  A multitude of blackberry bushes, full of plump berries, mingle with a few scattered trees that line each side of this wide byway.</description>
-    <position x="480" y="2190" z="0" />
+    <position x="460" y="2190" z="0" />
     <arc exit="southeast" move="southeast" destination="518" />
     <arc exit="northwest" move="northwest" destination="516" />
   </node>
   <node id="518" name="Marja Tee, Musikaz Masi">
     <description>The road crests a small hill covered with ripe blackberry bushes.  Dozens of squashed berries have been imbedded into the packed earth by the wheels of overloaded wagons.  Occasionally a bird swoops down to greedily grab a tiny black treasure from a mature bush.</description>
-    <position x="500" y="2210" z="0" />
+    <position x="480" y="2210" z="0" />
     <arc exit="east" move="east" destination="519" />
     <arc exit="northwest" move="northwest" destination="517" />
   </node>
   <node id="519" name="Marja Tee, Orjamakaz Niitto">
     <description>Small shrubs growing in tight clumps line the road on both sides.  Nestled in the brush are dense clusters of briarberry bushes with tiny berries hanging from woody stems.</description>
-    <position x="520" y="2210" z="0" />
+    <position x="500" y="2210" z="0" />
     <arc exit="east" move="east" destination="520" />
     <arc exit="west" move="west" destination="518" />
   </node>
   <node id="520" name="Marja Tee, Orjamakaz Niitto">
     <description>Meandering gently through a dense meadow, the road is evenly covered in tiny stones laid to smooth the rough terrain.  Endless rows of briarberry bushes, cultivated and harvested for their woody roots, border each side of the wide road.</description>
-    <position x="540" y="2210" z="0" />
+    <position x="520" y="2210" z="0" />
     <arc exit="northeast" move="northeast" destination="521" />
     <arc exit="west" move="west" destination="519" />
   </node>
   <node id="521" name="Marja Tee, Orjamakaz Niitto">
     <description>The road continues its trek through the lush meadow.  Flowers of all kinds grow haphazardly among dense groupings of briarberry bushes filled with bright red berries.  Irrigation ditches filled with rainwater line both sides of the road.</description>
-    <position x="560" y="2190" z="0" />
+    <position x="540" y="2190" z="0" />
     <arc exit="northeast" move="northeast" destination="522" />
     <arc exit="southwest" move="southwest" destination="520" />
   </node>
   <node id="522" name="Marja Tee, Orjamakaz Niitto">
     <description>A wooden cart filled with freshly dug briarberry bushes is parked on the side of the roadway.  Coveted for their woody roots in the making of tobacco pipes, briarberry bushes are carefully harvested annually by the local Olvi families of the area.</description>
     <description>A wooden cart filled with freshly dug briarberry bushes is parked on the side of the roadway.  Coveted for their woody roots in the making of tobacco pipes, briarberry bushes are carefully harvested annually by the local Olvi families of the area.  Deep in the meadow, you can see a small group of Olvi thinning the denser clumps.</description>
-    <position x="580" y="2170" z="0" />
+    <position x="560" y="2170" z="0" />
     <arc exit="southeast" move="southeast" destination="523" />
     <arc exit="southwest" move="southwest" destination="521" />
   </node>
   <node id="523" name="Marja Tee, Orjamakaz Niitto">
     <description>The road narrows a little here, as briarberry bushes laden with heavy plump berries mingle with wild cinnamon shrubs that fight to reclaim this well traveled byway.  Scattered amidst the dense brush are a few birch and elm trees, with occasional clumps of pink clover peeking through the heavy brambles.</description>
-    <position x="600" y="2190" z="0" />
+    <position x="580" y="2190" z="0" />
     <arc exit="east" move="east" destination="524" />
     <arc exit="northwest" move="northwest" destination="522" />
   </node>
   <node id="524" name="Marja Tee, Girio Masi">
     <description>Hardy, wild cinnamon shrubs grace both sides of the road as the path widens.  Their leathery leaves offer an open invitation to a mass influx of butterflies that migrate to this area in the spring.  Occasionally, the sound of small wildlife can be heard scurrying beneath the compact bushes.</description>
-    <position x="620" y="2190" z="0" />
+    <position x="600" y="2190" z="0" />
     <arc exit="east" move="east" destination="525" />
     <arc exit="west" move="west" destination="523" />
   </node>
   <node id="525" name="Marja Tee, Girio Masi">
     <description>The road crests a small hill flanked by dense clumps of wild cinnamon shrubs.  The shadowed bushes resemble tiny gnomelike creatures tottering imperceptibly as the night breeze causes the leaves to gently sway.</description>
     <description>The road crests a small hill flanked by dense clumps of wild cinnamon shrubs.  A multitude of migrating butterflies can be seen fluttering amidst the bushes, their beautifully colored wings complimenting the deep green of the leathery leafed shrubs.</description>
-    <position x="640" y="2190" z="0" />
+    <position x="620" y="2190" z="0" />
     <arc exit="east" move="east" destination="526" />
     <arc exit="west" move="west" destination="524" />
   </node>
   <node id="526" name="Marja Tee, Marja Poosa Sappa">
     <description>A shallow gully runs across the road at the bottom of a small hill.  Thick walls of bushes grow wildly like untamed hedgerows bordering the road.</description>
-    <position x="660" y="2190" z="0" />
+    <position x="640" y="2190" z="0" />
     <arc exit="northeast" move="northeast" destination="527" />
     <arc exit="west" move="west" destination="525" />
   </node>
   <node id="527" name="Marja Tee, Marja Poosa Sappa">
     <description>The road here snakes through some of the thickest bushes and brambles.  Fragrant cinnamon mixes with sweet raspberry in a panoply of earthy, spiced scents.</description>
-    <position x="680" y="2170" z="0" />
+    <position x="660" y="2170" z="0" />
     <arc exit="southeast" move="southeast" destination="528" />
     <arc exit="southwest" move="southwest" destination="526" />
   </node>
   <node id="528" name="Marja Tee, Marja Poosa Sappa">
     <description>Bushes and vines grow wildly, high enough to block out most of the sky.  The road dips and weaves through high bushes and snarls of vicious brambles.</description>
-    <position x="700" y="2190" z="0" />
+    <position x="680" y="2190" z="0" />
     <arc exit="northeast" move="northeast" destination="529" />
     <arc exit="northwest" move="northwest" destination="527" />
   </node>
   <node id="529" name="Marja Tee, Marja Poosa Sappa">
     <description>The narrow road rises up to the peak of a small hill, rife with tangled bushes.  A broken, berry-stained wooden pail lies shattered on the side of the road.</description>
-    <position x="720" y="2170" z="0" />
+    <position x="700" y="2170" z="0" />
     <arc exit="east" move="east" destination="530" />
     <arc exit="southwest" move="southwest" destination="528" />
   </node>
   <node id="530" name="Marja Tee, Marja Poosa Sappa">
     <description>The path glides gently down a low rise toward the open ocean.  A small step ladder stands to one side of the road, overcome by creeping vines of bramble and raspberry.</description>
-    <position x="740" y="2170" z="0" />
+    <position x="720" y="2170" z="0" />
     <arc exit="east" move="east" destination="531" />
     <arc exit="west" move="west" destination="529" />
   </node>
   <node id="531" name="Marja Tee, Kaber Jise">
     <description>A soft breeze carries the faint scent of the sea from the east.  The road begins to widen as if to hasten travelers towards the shore.  Interspersed with bramble and berry bushes are wild sirese flowers, their bright blooms swaying gently in the wind.</description>
-    <position x="760" y="2170" z="0" />
+    <position x="740" y="2170" z="0" />
     <arc exit="east" move="east" destination="532" />
     <arc exit="west" move="west" destination="530" />
   </node>
   <node id="532" name="Marja Tee, Babukaz Masi">
     <description>Dozens of wild raspberry bushes intermingled with clumps of sweet woodruff attempt to encroach upon the widening road.  Small woodland critters scamper beneath the brush, knocking ripe berries to the ground.</description>
-    <position x="780" y="2170" z="0" />
+    <position x="760" y="2170" z="0" />
     <arc exit="east" move="east" destination="533" />
     <arc exit="west" move="west" destination="531" />
   </node>
   <node id="533" name="Marja Tee, Babukaz Masi">
     <description>Atop a small hill, the road crests just high enough to see a bay to the east.  The fresh smell from the sea is strong and mingles with the scent of ripe raspberries that hang from the many bushes attempting to trespass upon the widening road.</description>
-    <position x="800" y="2170" z="0" />
+    <position x="780" y="2170" z="0" />
     <arc exit="east" move="east" destination="534" />
     <arc exit="west" move="west" destination="532" />
   </node>
   <node id="534" name="Arthe Dale, Busar Saaf" note="Harbor">
     <description>A small harbor with several brightly painted docks cheerfully greets seafaring visitors to the small community of Arthe Dale.  A few seagulls can be seen greedily pecking at ripe berries pilfered from the many bushes that flank a road leading westward.</description>
-    <position x="820" y="2190" z="0" />
+    <position x="800" y="2190" z="0" />
     <arc exit="go" move="go road" destination="533" />
   </node>
   <node id="535" name="Arthe Dale, Taffelberry Path">
@@ -4096,20 +4096,20 @@
   </node>
   <node id="589" name="Berry Knolls, Taffelberry Trail">
     <description>Large oak trees line this well-traveled trail as it winds its way towards a secluded community nestled among the surrounding low-lying hills.  Wind-borne glaysker seeds have found a cozy home at the base of some of the trees, growing in an array of lavender and pink blooms.  Clay pots of carefully tended taffelberry bushes sit at measured intervals along the path.</description>
-    <position x="640" y="2050" z="0" />
+    <position x="630" y="2040" z="0" />
     <arc exit="east" move="east" destination="590" />
     <arc exit="northwest" move="northwest" destination="583" />
   </node>
   <node id="590" name="Berry Knolls, Taffelberry Trail" note="Berry Knolls" color="#00FFFF">
     <description>The hills encircle diminutive knolls clustered about a small village green within the valley.  The hardened earth of the trail forks to meander its way past humble homes constructed within each knoll.  The scent of ripened berries wafts on the breeze.</description>
-    <position x="660" y="2050" z="0" />
+    <position x="650" y="2040" z="0" />
     <arc exit="northeast" move="northeast" destination="601" />
     <arc exit="east" move="east" destination="591" />
     <arc exit="west" move="west" destination="589" />
   </node>
   <node id="591" name="Berry Knolls, Loganberry Place" color="#00FFFF">
     <description>Simple white arbors stand at the entrance of each path to the knolls.  Plump purple loganberries dangle amongst the deep green leaves of the bushes.  A copse of oak trees lines the back of the lots, creating pools of ever-changing shadows upon the ground.</description>
-    <position x="700" y="2050" z="0" />
+    <position x="690" y="2040" z="0" />
     <arc exit="northeast" move="northeast" destination="600" />
     <arc exit="east" move="east" destination="592" />
     <arc exit="west" move="west" destination="590" />
@@ -4118,7 +4118,7 @@
   </node>
   <node id="592" name="Berry Knolls, Loganberry Place" color="#00FFFF">
     <description>The stone-lined road continues from the northeast to the west, separating the grass-covered knolls to the south from an enormous tree at the center of the community.  Yellow and orange mums circle around the base of a a smaller oak at the side of the path, bobbing their bright, flowery heads in the breeze as if dancing in a merry child's game.</description>
-    <position x="720" y="2050" z="0" />
+    <position x="710" y="2040" z="0" />
     <arc exit="north" move="north" destination="600" />
     <arc exit="northeast" move="northeast" destination="593" />
     <arc exit="west" move="west" destination="591" />
@@ -4203,19 +4203,19 @@
   </node>
   <node id="603" name="Berry Knolls, Gooseberry Loop" color="#00FFFF">
     <description>A copse of brown, dried trees blocks all view of the community to the north.  The pot-holed path continues to the east, past abandoned knolls covered with patches of dried grass and the occasional tall, green weed.  Torn curtains flutter in the breeze through a nearby broken window.</description>
-    <position x="700" y="2070" z="0" />
+    <position x="690" y="2060" z="0" />
     <arc exit="east" move="east" destination="604" />
     <arc exit="go" move="go narrow path" destination="591" />
   </node>
   <node id="604" name="Berry Knolls, Gooseberry Loop" color="#00FFFF">
     <description>Dry, matted grass and tall weeds cover the nearby abandoned knolls.  A gooseberry bush near the edge of the path has turned feral from neglect, becoming a wild tangle of thorny branches with nary a single berry in evidence among its browning leaves.</description>
-    <position x="710" y="2070" z="0" />
+    <position x="700" y="2060" z="0" />
     <arc exit="east" move="east" destination="605" />
     <arc exit="west" move="west" destination="603" />
   </node>
   <node id="605" name="Berry Knolls, Gooseberry Loop" color="#00FFFF">
     <description>Islands of undaunted weeds appear in a sea of bare, parched earth along the path.  Broken pieces of furniture lie scattered across the yard of one home, some of them burned, others merely torn apart as if for sport.</description>
-    <position x="720" y="2070" z="0" />
+    <position x="710" y="2060" z="0" />
     <arc exit="west" move="west" destination="604" />
     <arc exit="go" move="go narrow path" destination="592" />
   </node>
@@ -4449,7 +4449,7 @@
   </node>
   <node id="644" name="Stone Clan, Trader's Guild Outpost" note="Trading Outpost Stone Clan|SC Outpost" color="#00FF00">
     <description>This outpost is built of heavy, massive rockwork in the Dwarven style, plain but durable.  Designed for safe storage, as well as easy buying and selling of bulk goods by Guild members, it is crammed and jammed with crates, boxes and packages of all manner and value.  A stern-looking Guild trade minister is at hand to expedite transactions and to make sure nothing leaves or arrives without the proper fees and monies being exchanged.</description>
-    <position x="420" y="1710" z="0" />
+    <position x="440" y="1710" z="0" />
     <arc exit="out" move="out" destination="359" />
   </node>
   <node id="645" name="Lava Flow, Rocky Path">
@@ -4853,27 +4853,27 @@
   </node>
   <node id="720" name="Forest Path, Rocky Shore">
     <description>The trees cling to a tedious life along the path that winds around the shore of the Silverwater Lake.  The ground is firmly packed, and ruts dig deeply into the earth on either side, remnants of a once thriving community.  The dead slap of water against water brings an eerie echo up from the lake shore.</description>
-    <position x="420" y="1150" z="0" />
+    <position x="440" y="1150" z="0" />
     <arc exit="north" move="north" destination="721" />
     <arc exit="southeast" move="southeast" destination="719" />
   </node>
   <node id="721" name="Forest Path, Rocky Shore">
     <description>A shattered wood beam crosses your path here, the remnants of a house that has now long since vanished.  Fragments of rocks lie scattered across the ground, turning treacherously underfoot.  The ground creates odd embankments, as if the hand of a god pushed it back with one quick, idle brush.</description>
-    <position x="420" y="1130" z="0" />
+    <position x="440" y="1130" z="0" />
     <arc exit="north" move="north" destination="722" />
     <arc exit="south" move="south" destination="720" />
   </node>
   <node id="722" name="Silverwater Mines, Entrance">
     <description>A jagged rip lies flush against the ebony mountainside, a layer of darkness against blackness against night.  Fine onyx sand lines the ground, its surface riddled with deep gouges, shattered glass, and broken support beams.  From within the mine's entrance you can hear odd snickering noises.</description>
     <description>A jagged rip in the mountainside marks the entrance to the Silverwater Mines.  Broken support beams, shattered lanterns, and deep gouges in the fine sand that lie around the opening are all that remain of a once prosperous establishment.  You can barely make out what lies beyond, save for a few dark shapes and odd snickering noises.</description>
-    <position x="420" y="1110" z="0" />
+    <position x="440" y="1110" z="0" />
     <arc exit="north" move="north" destination="723" />
     <arc exit="south" move="south" destination="721" />
     <arc exit="west" move="west" destination="729" />
   </node>
   <node id="723" name="Silverwater Mines, Tunnel">
     <description>Strange noises bounce off the ragged stone ceiling, amplified by the quiet air of the night.  The dark is so thick that you can hardly see ahead, and the only thing clueing you toward the exit is the lapping sound of the lake shore coming from the south.  To the north the tunnel is choked with debris, but maneuverable.</description>
-    <position x="420" y="1090" z="0" />
+    <position x="440" y="1090" z="0" />
     <arc exit="north" move="rt north" destination="727" />
     <arc exit="northeast" move="northeast" destination="724" />
     <arc exit="south" move="south" destination="722" />
@@ -4892,7 +4892,7 @@
   </node>
   <node id="726" name="Silverwater Mines, Tunnel">
     <description>The mine opens up into a somewhat larger room here, the walls extending up some fifty feet before shading off into darkness.  In the center of the chamber is a deep shaft that plunges as far down as the walls climb up.  The floor is oddly free of the debris that litters the rest of the mines.</description>
-    <position x="420" y="1050" z="0" />
+    <position x="440" y="1050" z="0" />
     <arc exit="north" move="north" destination="728" />
     <arc exit="southeast" move="southeast" destination="724" />
     <arc exit="south" move="rt south" destination="727" />
@@ -4900,43 +4900,43 @@
   </node>
   <node id="727" name="Silverwater Mines, Tunnel">
     <description>Broken stones, abandoned tools, and wooden beams choke this bottleneck passageway.  The smooth stone walls rise up to either side, constricting movement and creating a pretty place for an ambush.</description>
-    <position x="420" y="1070" z="0" />
+    <position x="440" y="1070" z="0" />
     <arc exit="north" move="rt north" destination="726" />
     <arc exit="south" move="rt south" destination="723" />
   </node>
   <node id="728" name="Silverwater Mines, Tunnel">
     <description>The tunnel dead-ends here, choked by a wall of rubble and stone that blocks all further passage.  Chunks of rock lie strewn around you, and from beyond the stones you can hear a faint snickering sound.  A fine layer of dust lies over everything, and here and there you notice the faint tracings of footprints.</description>
-    <position x="420" y="1030" z="0" />
+    <position x="440" y="1030" z="0" />
     <arc exit="south" move="south" destination="726" />
   </node>
   <node id="729" name="Wilderness, Clearing" color="#00FFFF">
     <description>The trees and undergrowth stop abruptly at the edge of this small clearing, the hard, cracked soil underfoot showing no sign of vegetation.  A broken cart lies near a cold fire pit in the center of the clearing, several pieces of unused firewood poking their heads over its splintered sides.  A small cave leads into the rocky hillside.</description>
-    <position x="400" y="1110" z="0" />
+    <position x="420" y="1110" z="0" />
     <arc exit="east" move="east" destination="722" />
     <arc exit="go" move="go small cave" destination="753" />
   </node>
   <node id="730" name="Silverwater Mines, Shaft">
     <description>The smooth walls of the mine shaft rise up to either side, a glossy black color.  Some fifty feet of sheer wall rests between this platform, the opening above, and the next platform below.</description>
-    <position x="400" y="1060" z="0" />
+    <position x="420" y="1050" z="0" />
     <arc exit="up" move="rt up" destination="726" />
     <arc exit="down" move="rt down" destination="731" />
   </node>
   <node id="731" name="Silverwater Mines, Shaft">
     <description>The smooth walls of the mine shaft rise up to either side of you, a glossy black color.  Some fifty feet of sheer wall rests between the platform you stand on, the one above you, and the next platform below.</description>
-    <position x="380" y="1060" z="0" />
+    <position x="400" y="1050" z="0" />
     <arc exit="up" move="rt up" destination="730" />
     <arc exit="down" move="rt down" destination="732" />
     <arc exit="go" move="go sheltered ledge" destination="747" />
   </node>
   <node id="732" name="Silverwater Mines, Shaft">
     <description>The smooth walls of the mine shaft rise up to either side of you, a glossy black color.  Some fifty feet of sheer wall rests between the platform you stand on, the one above you, and the mine floor far below.</description>
-    <position x="360" y="1060" z="0" />
+    <position x="380" y="1050" z="0" />
     <arc exit="up" move="rt up" destination="731" />
     <arc exit="down" move="rt down" destination="733" />
   </node>
   <node id="733" name="Silverwater Mines, Cavern of Glass">
     <description>This room is breathtakingly massive in size.  The walls shimmer like sheer glass, and the floor itself is made of a black, bubbled obsidian.  Cut into the low ceiling is a narrow opening that leads up to an abandoned mine shaft.  Faint light trickles through it, the only illumination and the one thing that still connects the cavern to the world that waits outside it.</description>
-    <position x="320" y="1040" z="0" />
+    <position x="340" y="1030" z="0" />
     <arc exit="north" move="north" destination="746" />
     <arc exit="northeast" move="northeast" destination="735" />
     <arc exit="east" move="east" destination="734" />
@@ -4945,120 +4945,120 @@
   </node>
   <node id="734" name="Silverwater Mines, Cavern of Glass">
     <description>A monstrous image awaits you here: the backside of a Human, preserved in the glass.  Shoved face-first into the obsidian walls, it is hard to tell what this hapless man's last expression was, but a guess would estimate that it was not a happy one.  Fickle light from the west plays off the pristine white of his clothing, preserved forever within the opaque surface.</description>
-    <position x="340" y="1040" z="0" />
+    <position x="360" y="1030" z="0" />
     <arc exit="west" move="west" destination="733" />
   </node>
   <node id="735" name="Silverwater Mines, Tunnel">
     <description>The floor of this bell-shaped room is smooth and level and so free of debris that it warrants suspicion.  An arching roof of smooth rock flies up overhead, fading off into the cave's natural darkness.  A pale greenish light from the north fills the cavern partially, becoming gradually watered down and consumed as it tries to reach south.</description>
-    <position x="360" y="1000" z="0" />
+    <position x="360" y="1010" z="0" />
     <arc exit="north" move="north" destination="736" />
     <arc exit="southwest" move="southwest" destination="733" />
   </node>
   <node id="736" name="Silverwater Mines, Tunnel">
     <description>Twin pillars of limestone divide the center of the tunnel into three graceful arches of equal size.  The fancy that these creations are of nature is shattered when you notice the glowing emeralds inset at the top of each arch, filling the room with a feverish green glow that reflects starkly off the limestone.  Toward the south the tunnel opens up more, which is compensated for by its narrowing to the north.</description>
-    <position x="360" y="980" z="0" />
+    <position x="360" y="1000" z="0" />
     <arc exit="north" move="north" destination="737" />
     <arc exit="south" move="south" destination="735" />
   </node>
   <node id="737" name="Silverwater Mines, Tunnel">
     <description>The steady drip drip drip of water echoes in from somewhere close, but for some reason you cannot divine the direction the sound is coming from.  The unsettling rhythm it sets is more than grating on the nerves.  Toward the south you can see the faint shine of the eerie green light that fills all the tunnels, while toward the west the shadows thicken and seem to draw into themselves.</description>
-    <position x="360" y="960" z="0" />
+    <position x="360" y="970" z="0" />
     <arc exit="south" move="south" destination="736" />
     <arc exit="northwest" move="rt northwest" destination="738" />
     <arc exit="go" move="search go small alcove" destination="745" />
   </node>
   <node id="738" name="Silverwater Mines, Tunnel">
     <description>Large chunks of rocks lie thrown about here, natural born ruins of Hodierna's heart.  The tunnel twists at a right angle ahead, moving with the sharp grace of the World Dragon itself.</description>
-    <position x="350" y="950" z="0" />
+    <position x="350" y="960" z="0" />
     <arc exit="southeast" move="rt southeast" destination="737" />
     <arc exit="northwest" move="rt northwest" destination="739" />
   </node>
   <node id="739" name="Silverwater Mines, Rubble">
     <description>Mounds of clutter and rubble lie packed around this room, the remains of a mining site that was abandoned before it could be properly dealt with.</description>
-    <position x="340" y="940" z="0" />
+    <position x="340" y="950" z="0" />
     <arc exit="southeast" move="rt southeast" destination="738" />
     <arc exit="west" move="rt west" destination="740" />
   </node>
   <node id="740" name="Silverwater Mines, Gentle Slope">
     <description>The floor climbs slowly upward toward the south and west while the roof remains level, lending an appearance of awkwardness to the tunnel.  Rough shapes protrude from the walls, and it is only after a moment of staring that you realize the shapes bear a strong resemblance to Human faces, mouths wide open in shock and terror, and Human arms, desperately trying to claw their way out through a grave of stone.</description>
-    <position x="320" y="940" z="0" />
+    <position x="330" y="950" z="0" />
     <arc exit="east" move="rt east" destination="739" />
     <arc exit="southwest" move="southwest" destination="741" />
   </node>
   <node id="741" name="Silverwater Mines, Desolate Cavern">
     <description>This underground chamber is filled with a pale, eerie green light that comes from no visible source.  Broken bits of stone, mangled remains of bodies, and rotting mementos of a past now scattered and gone are the only sign that this was once an active mining site.</description>
-    <position x="300" y="960" z="0" />
+    <position x="310" y="970" z="0" />
     <arc exit="northeast" move="northeast" destination="740" />
     <arc exit="west" move="west" destination="742" />
     <arc exit="go" move="search go hidden alcove" destination="745" />
   </node>
   <node id="742" name="Silverwater Mines, Desolate Cavern">
     <description>A massive cavern yawns open about you, endlessly huge.  The ceiling and floors are lined in jagged stumps that were once whole stalactites and stalagmites, and shattered skeletal remains lie strewn about.  A deathly silence hangs heavy in the air, like a palpable curtain waiting to be drawn back.  The walls are scratched by claw marks, and the whole panorama hearkens to a raging tempest that whirlwinded through, tearing all within its path to shreds.</description>
-    <position x="260" y="960" z="0" />
+    <position x="290" y="970" z="0" />
     <arc exit="east" move="east" destination="741" />
     <arc exit="southeast" move="southeast" destination="743" />
   </node>
   <node id="743" name="Silverwater Mines, Tunnel">
     <description>Broken bits of pottery, discarded mining picks, and remains of clothing and rags lie scattered about the floor.  The rock walls climb up around you, sealing out sound and lending a cramped feeling to the air.</description>
-    <position x="300" y="1000" z="0" />
+    <position x="320" y="1000" z="0" />
     <arc exit="south" move="south" destination="744" />
     <arc exit="northwest" move="northwest" destination="742" />
   </node>
   <node id="744" name="Silverwater Mines, Tunnel">
     <description>Old rusting hooks are still embedded in the rough walls of the tunnel, though they hold little but air these days.  Lichen grows in small clumps on the walls, filling the room with a fitful, unearthly illumination.  Scintillating out of the corner of your eye, minerals glitter in a Fae sugar-coating on the rocks and stones.</description>
-    <position x="300" y="1020" z="0" />
+    <position x="320" y="1010" z="0" />
     <arc exit="north" move="north" destination="743" />
     <arc exit="southeast" move="southeast" destination="733" />
   </node>
   <node id="745" name="Silverwater Mines, Alcove">
     <description>This alcove, tucked away from the rest of the mine, sits like a lost child between the two wider service tunnels.  The floor holds a scattering of dirt across its surface along with an assorted collection of rubble.  A small shelf has been carved into one of the walls, its surface all but hidden by the shadows.</description>
-    <position x="330" y="960" z="0" />
+    <position x="340" y="970" z="0" />
     <arc exit="east" move="east" destination="737" />
     <arc exit="west" move="west" destination="741" />
   </node>
   <node id="746" name="Silverwater Mines, Cavern of Glass">
     <description>The west side of the cave slopes gradually downward, ending in a gentle curve where it meets the floor and creating a small cup in which subterranean water has begun to pool.  A sickly green glow -- the color of a wounded forest -- emanates from the water, casting the room in its light.</description>
-    <position x="320" y="1020" z="0" />
+    <position x="340" y="1010" z="0" />
     <arc exit="south" move="south" destination="733" />
   </node>
   <node id="747" name="Silverwater Mines, A Sheltered Ledge">
     <description>Set back from the rest of the shaft, this recessed ledge appears to have been safe enough for miners to set up a few bunks for sleeping in.  Sadly, all that remains of the cots are a rusting iron frame and clinging tatters of rotting canvas.</description>
-    <position x="360" y="1080" z="0" />
+    <position x="380" y="1070" z="0" />
     <arc exit="out" move="out" destination="731" />
     <arc exit="climb" move="climb rickety ladder" destination="748" />
   </node>
   <node id="748" name="Silverwater Mines, Along the Ladder">
     <description>The steady drip of water trickling down the sides of the smooth obsidian walls reverberates with a cascade of echoes throughout the dark shaft.  Creaking loudly with any weight placed upon its shabby rungs, the old ladder adds readily to the strange music.  The absence of a few rungs requires the use of nearby handholds eroded out of the otherwise slick surface of the rock.</description>
-    <position x="340" y="1080" z="0" />
+    <position x="360" y="1070" z="0" />
     <arc exit="climb" move="climb handholds" destination="749" />
     <arc exit="climb" move="climb rickety ladder" destination="747" />
   </node>
   <node id="749" name="Silverwater Mines, Along the Ladder">
     <description>Damp and dark, the narrow shaft forms a perfect environment for the propagation of various types of lichen that cling in crusty patches to the surface of the smooth walls.  Even the rickety old ladder with its missing rungs is not immune to their scaly invasion.  Only a few fragile handholds formed of jagged rock protruding from the slick surface bring any hope of retreat.</description>
-    <position x="320" y="1080" z="0" />
+    <position x="340" y="1070" z="0" />
     <arc exit="climb" move="climb ladder" destination="750" />
     <arc exit="climb" move="climb handholds" destination="748" />
   </node>
   <node id="750" name="Silverwater Mines, Along the Ladder">
     <description>Every few seconds, harsh creaks reverberate through the shaft as a wooden platform attached to a thick steel cable whizzes past.  Anyone foolish enough to attempt this climb along the ladder would be wise to keep themselves plastered closely against the smooth wall.  Overhead, a small niche is crudely chiseled into the surface of the rock.</description>
-    <position x="300" y="1080" z="0" />
+    <position x="320" y="1070" z="0" />
     <arc exit="climb" move="climb small niche" destination="751" />
     <arc exit="climb" move="climb ladder" destination="749" />
   </node>
   <node id="751" name="Silverwater Mines, Along the Ladder">
     <description>Traces of minerals embedded in the obsidian walls reflect faint beams of light that occasionally filter down the narrow shaft.  The dim rays provide just enough light to reveal a series of illegible markings scratched into the wall, much like fingernails that have missed their reach.</description>
-    <position x="280" y="1080" z="0" />
+    <position x="300" y="1070" z="0" />
     <arc exit="climb" move="climb ladder" destination="752" />
     <arc exit="climb" move="climb small niche" destination="750" />
   </node>
   <node id="752" name="Silverwater Mines, Along the Ladder">
     <description>Every sound is magnified tenfold in the hollowness of the dank shaft, including the occasional scream from less capable climbers below.  Looking as though it might fall from the rotted wood at any moment, an old oil lamp hanging from one of the few remaining rungs of the ladder proves that others have also attempted this climb up the shaft.  The obvious lack of any further handholds, either man-made or natural, makes it clear that retreat is now the only possible means of escape.</description>
-    <position x="260" y="1080" z="0" />
+    <position x="280" y="1070" z="0" />
     <arc exit="climb" move="climb ladder" destination="751" />
   </node>
   <node id="753" name="Gazit Lair, Grotto" note="Gazit Lair" color="#00FFFF">
     <description>A slight breeze mingles fresh, damp air from the outside with the musty dryness of this ancient cave.  The ground rises slightly as it heads north into the center of the lair.</description>
-    <position x="300" y="1180" z="0" />
+    <position x="320" y="1180" z="0" />
     <arc exit="north" move="north" destination="755" />
     <arc exit="northeast" move="northeast" destination="754" />
     <arc exit="northwest" move="northwest" destination="756" />
@@ -5066,7 +5066,7 @@
   </node>
   <node id="754" name="Gazit Lair, Grotto" color="#00FFFF">
     <description>An array of intertwining crystalline vines laces the jagged rock walls, their smooth, dry surfaces gleaming dully in the ambient light.  Crude steps chiseled into the walls lead up to a wide stone ledge.  A fine patina of dust covers the floor, roiling into brown clouds with the slightest disturbance.</description>
-    <position x="320" y="1160" z="0" />
+    <position x="340" y="1160" z="0" />
     <arc exit="north" move="north" destination="759" />
     <arc exit="southwest" move="southwest" destination="753" />
     <arc exit="west" move="west" destination="755" />
@@ -5075,7 +5075,7 @@
   </node>
   <node id="755" name="Gazit Lair, Fire Pit" color="#00FFFF">
     <description>Rows of stacked stones surround a deep firepit in the center of the dirt floor.  A mass of ash, pieces of blackened wood and small bits of fire-greyed bone fill the pit, their presence adding a slight scent of char to the air.  Several large stone benches line the walls, chiseled from the cave's native limestone.</description>
-    <position x="300" y="1160" z="0" />
+    <position x="320" y="1160" z="0" />
     <arc exit="north" move="north" destination="758" />
     <arc exit="northeast" move="northeast" destination="759" />
     <arc exit="east" move="east" destination="754" />
@@ -5085,7 +5085,7 @@
   </node>
   <node id="756" name="Gazit Lair, Grotto" color="#00FFFF">
     <description>Ambient light dances across the face of a large crystalline formation that stretches from floor to ceiling, teasing ever-changing shadows across the room.  To the left of the crystals, a flow of smooth limestone has shaped itself into a natural staircase leading up to the rock lip encircling the chamber.</description>
-    <position x="280" y="1160" z="0" />
+    <position x="300" y="1160" z="0" />
     <arc exit="north" move="north" destination="757" />
     <arc exit="northeast" move="northeast" destination="758" />
     <arc exit="east" move="east" destination="755" />
@@ -5094,14 +5094,14 @@
   </node>
   <node id="757" name="Gazit Lair, Grotto" color="#00FFFF">
     <description>Milky-white deposits of limestone cascade down the northwest wall in formation created long ago but long since dried and dead.  A casualty of the near-total darkness, a spindly, single-leafed stalk hangs limply over the edge of a cracked clay pot that squats near one of the doors set into the walls of the cavern.</description>
-    <position x="280" y="1140" z="0" />
+    <position x="300" y="1140" z="0" />
     <arc exit="east" move="east" destination="758" />
     <arc exit="southeast" move="southeast" destination="755" />
     <arc exit="south" move="south" destination="756" />
   </node>
   <node id="758" name="Gazit Lair, Grotto" color="#00FFFF">
     <description>Velvety limestone draperies flow down the far wall, adding a superficial appearance of softness to the rock's surface.  A number of flat, grey stones have been stacked into a tower of precarious steps leading up to a wide rock lip that encirles the entire cavern.</description>
-    <position x="300" y="1140" z="0" />
+    <position x="320" y="1140" z="0" />
     <arc exit="east" move="east" destination="759" />
     <arc exit="southeast" move="southeast" destination="754" />
     <arc exit="south" move="south" destination="755" />
@@ -5110,40 +5110,40 @@
   </node>
   <node id="759" name="Gazit Lair, Grotto" color="#00FFFF">
     <description>Silent stalactites glint far overhead with an eerie iridescence that lights the entire cavern in a pale, green glow.  A pile of large boulders along one wall give shelter to a tiny opening nestled in the rock face.</description>
-    <position x="320" y="1140" z="0" />
+    <position x="340" y="1140" z="0" />
     <arc exit="south" move="south" destination="754" />
     <arc exit="southwest" move="southwest" destination="755" />
     <arc exit="west" move="west" destination="758" />
   </node>
   <node id="760" name="Gazit Lair, Karik Rim" color="#00FFFF">
     <description>A stream of cool water trickles from a narrow crack in the rock wall and onto the floor, forming a small pool.  An even smaller rivulet dribbles from the other side of the pool, spreading across the nearby rock to evaporate into the warm, dry air.</description>
-    <position x="250" y="1160" z="0" />
+    <position x="270" y="1160" z="0" />
     <arc exit="northeast" move="northeast" destination="764" />
     <arc exit="southeast" move="southeast" destination="761" />
     <arc exit="climb" move="climb rock staircase" destination="756" />
   </node>
   <node id="761" name="Gazit Lair, Karik Rim" color="#00FFFF">
     <description>A painting of a huge, four-legged creature dominates the near wall of this section of the chamber.  A plethora of runic symbols encircle the figure, interspersed between them the outlines of several large handprints.  The entire piece has been painted in the same, unvarying ochre hue.</description>
-    <position x="290" y="1200" z="0" />
+    <position x="310" y="1200" z="0" />
     <arc exit="east" move="east" destination="762" />
     <arc exit="northwest" move="northwest" destination="760" />
   </node>
   <node id="762" name="Gazit Lair, Karik Rim" color="#00FFFF">
     <description>A pile of discarded skulls and bones lies at the base of one wall, gleaming dully in the dim light.  The walls here are stained a smokey grey, darker near the lower areas where an abandoned firepit is slowly being consumed by the steady accumulation of dust on the cavern's floor.</description>
-    <position x="310" y="1200" z="0" />
+    <position x="330" y="1200" z="0" />
     <arc exit="northeast" move="northeast" destination="763" />
     <arc exit="west" move="west" destination="761" />
   </node>
   <node id="763" name="Gazit Lair, Karik Rim" color="#00FFFF">
     <description>This large stone ledge, wide enough for a yak caravan to travel, circles the entire rim of the cavern.  A series of crude drawings have been sketched along the walls, their images showing miniature Gor'Togs standing in an endless battle against creatures frozen in time.</description>
-    <position x="350" y="1160" z="0" />
+    <position x="370" y="1160" z="0" />
     <arc exit="southwest" move="southwest" destination="762" />
     <arc exit="northwest" move="northwest" destination="764" />
     <arc exit="climb" move="climb crude steps" destination="754" />
   </node>
   <node id="764" name="Gazit Lair, Karik Rim" color="#00FFFF">
     <description>A row of stalagmites form a natural railing along the lip of the stone walkway underfoot, lending a modicum of protection against falling to the cavern floor below.  The air is slightly warmer here than the rest of the cave.</description>
-    <position x="300" y="1110" z="0" />
+    <position x="320" y="1110" z="0" />
     <arc exit="southeast" move="southeast" destination="763" />
     <arc exit="southwest" move="southwest" destination="760" />
   </node>
@@ -5283,25 +5283,25 @@
   </node>
   <node id="788" name="Paper Mill, Upper Chutes">
     <description>Cut blocks of wood, trimmed of all their bark, are piled in neat stacks all around this area.  A large saw lies suspended over a nearby cutting table, looking heavy enough to require four people to use.  Several discarded pieces of half-folded origami lie next to a wooden bench, as if their creator became disinterested halfway through the project.</description>
-    <position x="510" y="990" z="0" />
+    <position x="580" y="950" z="0" />
     <arc exit="south" move="south" destination="789" />
     <arc exit="climb" move="climb narrow stairs" destination="264" />
   </node>
   <node id="789" name="Paper Mill, Upper Chutes">
     <description>The center of this room is dominated by a large metallic grinder, apparently used to turn logs of wood into chips for papermaking.  A large half-covered hole near the grinder shows an enormous pile of cut wood chips in the room below.  Near the southern wall, a second chute lies open, apparently made for dumping discarded bark and other waste into the scrap yard.</description>
-    <position x="510" y="1000" z="0" />
+    <position x="580" y="960" z="0" />
     <arc exit="north" move="north" destination="788" />
     <arc exit="west" move="west" destination="790" />
   </node>
   <node id="790" name="Paper Mill, Rooftop">
     <description>The slightly slanted rooftop of the paper mill is covered with piles of sawdust, creating little piles of powder that resemble dirty snow.  Jet black tiling peeks through the heavy layer of dust occasionally, in vague shapes that sometimes resemble footprints.  A sizable storm drain edges the roof, likely used to collect runoff water to be used for other purposes.</description>
-    <position x="500" y="1000" z="0" />
+    <position x="570" y="960" z="0" />
     <arc exit="north" move="north" destination="791" />
     <arc exit="east" move="east" destination="789" />
   </node>
   <node id="791" name="Paper Mill, Rooftop">
     <description>This small area of the rooftop is relatively bare except for an empty bird's nest tucked into one corner of the storm drains.  A few bits of eggshell still remain inside the random-looking bundle of twigs and bark.  The roof is fairly flat in this area, only a slight angle directing rainwater into the trough lining its edge.</description>
-    <position x="500" y="990" z="0" />
+    <position x="570" y="950" z="0" />
     <arc exit="south" move="south" destination="790" />
   </node>
   <node id="794" name="DiSilveron, Front Gate" note="Map7c_DiSilveron.xml|DiSilveron">
@@ -5311,17 +5311,17 @@
   </node>
   <node id="795" name="Warrior Mage Guild, Storage" note="donation2|storage">
     <description>Crates of food are stacked in this place, leaving very little room to move about.  Some of the crates are marked "For Cats Only", obviously nourishment for familiars when the season grows too cold for them to hunt on their own.  A counter on one wall is piled with odds and ends not yet packed away for storage.</description>
-    <position x="480" y="2470" z="0" />
+    <position x="460" y="2470" z="0" />
     <arc exit="east" move="east" destination="434" />
   </node>
   <node id="796" name="Warrior Mage Guild, Storage" note="WM Shop|Warrior Mage Shop">
     <description>A small space has been set aside in the guild for the storage of goods.  Numerous crates are stacked up against the walls leaving an open area in the center of the room.  The room is dimly lit by a small lantern which sits atop a wooden box near the wall opposite an iron door.  Behind the box sits an apprentice, his eyes focused intently on a ledger before him.</description>
-    <position x="560" y="2490" z="0" />
+    <position x="540" y="2490" z="0" />
     <arc exit="go" move="go iron door" destination="291" />
   </node>
   <node id="797" name="Warrior Mage Guild, Warrens">
     <description>This small cavern is filled with ledge upon ledge perfectly suited to fit the varied bodies of familiars.  A small stone in the center of the room glows with a subdued red light, providing heat for those incarnated into cold-blooded bodies.</description>
-    <position x="580" y="2470" z="0" />
+    <position x="560" y="2470" z="0" />
   </node>
   <node id="798" name="Yulugri Wala, Floor Seating">
     <description>Bright red upholstered seats allow guests to sit in comfort for the performances.  This section of the floor seating provides few frills, but does allow a clear view of the stage -- as long as the occupants of the seats farther forward are not too tall.</description>
@@ -5330,62 +5330,64 @@
   </node>
   <node id="799" name="Deep Forest, Dilapidated Cabin">
     <description>The trees thin slightly here, opening up around the ruins of a cabin.  The vine-choked structure struggles to stand under the weight of a fallen tree, with the occasional foreboding creak emanating from its boards.  Off to one side, a pile of rocks marks the location of a crumbling well.</description>
-    <position x="580" y="1310" z="0" />
-    <arc exit="go" move="go dilapidated cabin" destination="800" />
+    <position x="560" y="1310" z="0" />
     <arc exit="go" move="go narrow trail" destination="381" />
+    <arc exit="southeast" destination="849" />
+    <arc exit="east" destination="848" />
+    <arc exit="go" move="go dilapidated cabin" destination="800" />
   </node>
   <node id="800" name="Dilapidated Cabin">
     <description>A strong odor of rotting vegetation fills this small cabin, despite planks missing at varying intervals leaving the area open to the outside.  Dead branches reach through the broken ceiling above like long, bony fingers, in contrast to the tender seedlings pushing up through the floorboards.  A small, rotting area rug is pulled back in one corner, revealing a trapdoor.</description>
-    <position x="600" y="1310" z="0" />
+    <position x="580" y="1290" z="0" />
     <arc exit="go" move="go trapdoor" destination="801" />
     <arc exit="go" move="go crooked doorway" destination="799" />
   </node>
   <node id="801" name="Dilapidated Cabin, Basement">
     <description>A rusted lantern hanging from above shines a gentle glow over this space, which is little more than a cave carved in the vague shape of a room.  Makeshift tables and shelves line the walls, covered with an assortment of gears and metal scraps.  Heavy wooden supports stand at the north and south ends of the area, framing parts of the cavern that were left in their natural states.</description>
-    <position x="620" y="1310" z="0" />
+    <position x="600" y="1290" z="0" />
     <arc exit="north" move="north" destination="802" />
     <arc exit="south" move="south" destination="808" />
     <arc exit="climb" move="climb wooden steps" destination="800" />
   </node>
   <node id="802" name="Dilapidated Cabin, Tunnel">
     <description>The rough rock forms a jagged arch overhead that curves to the south and northeast along the tunnel.  Piles of stones line the sides of the path, each scarred by chisel marks.</description>
-    <position x="620" y="1290" z="0" />
+    <position x="600" y="1270" z="0" />
     <arc exit="northeast" move="northeast" destination="803" />
     <arc exit="south" move="south" destination="801" />
   </node>
   <node id="803" name="Dilapidated Cabin, Tunnel">
     <description>The path curves sharply to the southwest and southeast, hugging a cluster of stalactites and stalagmites.  A gear is deeply embedded in the rock, almost appearing as though it was naturally formed along with the stone.</description>
-    <position x="640" y="1270" z="0" />
+    <position x="620" y="1250" z="0" />
     <arc exit="southeast" move="southeast" destination="804" />
     <arc exit="southwest" move="southwest" destination="802" />
   </node>
   <node id="804" name="Dilapidated Cabin, Tunnel">
     <description>Deep gouges are cut in the walls, like scars in the stone, forming clean furrows as though the tool used was slicing through clay instead of hard rock.  A ruddy stain, vaguely resembling a handprint, mars the surface alongside the gash.</description>
-    <position x="660" y="1290" z="0" />
+    <position x="640" y="1270" z="0" />
     <arc exit="southeast" move="southeast" destination="805" />
     <arc exit="northwest" move="northwest" destination="803" />
   </node>
   <node id="805" name="Dilapidated Cabin, Tunnel">
     <description>Curving gently, the tunnel is shaped in such a way that it makes it difficult to tell which directions various skittering noises are coming from.  Overhead, roots squeeze through cracks, further dampening sounds.</description>
-    <position x="680" y="1310" z="0" />
+    <position x="660" y="1290" z="0" />
     <arc exit="southwest" move="southwest" destination="806" />
     <arc exit="northwest" move="northwest" destination="804" />
   </node>
   <node id="806" name="Dilapidated Cabin, Tunnel">
     <description>The coolness of the air is heightened by the addition of moisture and creating a scent similar to dust after the rain.  Droplets of water cling to the stone walls, making them look as though they're perspiring.</description>
-    <position x="660" y="1330" z="0" />
+    <position x="640" y="1310" z="0" />
     <arc exit="northeast" move="northeast" destination="805" />
     <arc exit="southwest" move="southwest" destination="807" />
   </node>
   <node id="807" name="Dilapidated Cabin, Tunnel">
     <description>Cracks spread across the stone walls in an intricate cobweb pattern, as if something with massive strength punched the rock.  A small clump of lichen clings to one of the fractures, following the jagged line like a tiny, greenish lightning bolt.</description>
-    <position x="640" y="1350" z="0" />
+    <position x="620" y="1330" z="0" />
     <arc exit="northeast" move="northeast" destination="806" />
     <arc exit="northwest" move="northwest" destination="808" />
   </node>
   <node id="808" name="Dilapidated Cabin, Tunnel">
     <description>A deep shelf is carved into the wall, in which is stored locked chests bound by chains.  Strange symbols are crudely etched into the rock wall above each one, though their relation is unclear.</description>
-    <position x="620" y="1330" z="0" />
+    <position x="600" y="1310" z="0" />
     <arc exit="north" move="north" destination="801" />
     <arc exit="southeast" move="southeast" destination="807" />
   </node>
@@ -5419,7 +5421,6 @@
     <description>The hillside fans outward to the west and narrows into a cramped pass to the east.  The gentle slope of a valley sweeps up to meet the pass, the green grass short and spikey and surprisingly lush.</description>
     <position x="100" y="1880" z="0" />
     <arc exit="north" move="north" destination="812" />
-    <arc exit="east" move="east" destination="850" />
     <arc exit="climb" move="climb hillside" destination="814" />
   </node>
   <node id="814" name="Wooded Hills, East Slope" note="Onyx Gargoyles|Gargoyles">
@@ -5462,7 +5463,6 @@
     <description>The vale meets up with the steep curve of the hills that protect it here.  Though the occluding mist limits vision, the faint outlines of dark trees can be detected bordering the top of the hill, creating a tangible boundary between the ruins and the hinterland that surrounds it.  Hazy figures move like ghostly shadows through the wilderness, a hint of something sinister amidst the cemetary-like stillness of the dead city.</description>
     <position x="60" y="1920" z="0" />
     <arc exit="northeast" move="northeast" destination="814" />
-    <arc exit="south" move="south" destination="854" />
     <arc exit="northwest" move="northwest" destination="820" />
     <arc exit="up" move="up" destination="818" />
   </node>
@@ -5479,9 +5479,8 @@
     <arc exit="go" move="go cave entrance" destination="811" />
   </node>
   <node id="822" name="Foothills Cave, Back">
-    <description>Sloping downwards towards the back of the cave, the rocky ceiling merges with the slate floor and shunts all further progress into a narrow crevice leading deeper underground.  Dirt has drifted into the cracks and corners, adding to the cramped feeling at the edges of the cavern.  There are fewer signs of the inhabitants here, perhaps because they find it more cramped than the entrance.  </description>
+    <description>Sloping downwards towards the back of the cave, the rocky ceiling merges with the slate floor and cuts off all further progress underground.  Dirt has drifted into the crevices and corners, adding to the cramped feeling at the edges of the cavern.  There are fewer signs of the inhabitants here, perhaps because they find it more cramped than the entrance.</description>
     <position x="160" y="1840" z="0" />
-    <arc exit="east" move="east" destination="848" />
     <arc exit="west" move="west" destination="821" />
   </node>
   <node id="823" name="Wooded Hills, Rocky Glade">
@@ -5493,7 +5492,6 @@
   </node>
   <node id="824" name="Wooded Hills, Rocky Glade">
     <description>Bending in the slightest breeze, some cattails mark a small declivity that gathers moisture from the surrounding hillsides.  Birds flit from the forest's edge to the puddle, their cries filling the daytime sky with song and noise.</description>
-    <description>Almost invisible in the darkness, some cattails mark a small declavity that gathers moisture from the surrounding hillsides.  The hunting cries of nightjars fill the sky as they hunt for insects on the wing.</description>
     <position x="-20" y="1920" z="0" />
     <arc exit="east" move="east" destination="823" />
     <arc exit="south" move="south" destination="826" />
@@ -5631,77 +5629,23 @@
     <position x="340" y="430" z="0" />
     <arc exit="southwest" move="southwest" destination="846" />
   </node>
-  <node id="848" name="Foothills Cave, Crevice">
-    <description>Granite walls twist and turn as the narrow space runs deeper underground.  Musky scents of animals mingle with the smells of decaying refuse dragged in by the cave system's denizens.  A few tufts of fur are caught in the rough outcrops of stone.</description>
-    <position x="180" y="1840" z="0" />
-    <arc exit="northeast" move="northeast" destination="849" />
-    <arc exit="west" move="west" destination="822" />
+  <node id="848" name="Deep Forest, Derelict Garden">
+    <description>What was once a garden lies in disarray, its beds little more than outlines in the soil.  A few twisted stakes jut up from the earth, tangled with brittle vines long gone to seed.  Scattered stones trace the faint remains of a boundary wall, half-buried beneath moss and leaf litter.</description>
+    <position x="580" y="1310" z="0" />
+    <arc exit="south" move="south" destination="849" />
+    <arc exit="west" move="west" destination="799" />
   </node>
-  <node id="849" name="Foothills Cave, Cleft">
-    <description>Piles of fetid debris lie heaped against the walls, mingling with animal dung and rotting carcasses to permeate the area with a pungent odor.  In the distance, an occasional *plink* sounds as water drips within the cave system.  Bones and other refuse make the footing treacherous underfoot.</description>
-    <position x="200" y="1820" z="0" />
-    <arc exit="southwest" move="southwest" destination="848" />
-  </node>
-  <node id="850" name="Foothills, Rocky Ravine">
-    <description>Thick clumps of grass cling to the rocky ground, interspersed with a multitude of boulders and rubble littering the terrain.  Surrounding the narrow valley are steep hills, their sides bare of trees.</description>
-    <position x="120" y="1880" z="0" />
-    <arc exit="east" move="east" destination="851" />
-    <arc exit="southeast" move="southeast" destination="853" />
-    <arc exit="west" move="west" destination="813" />
-  </node>
-  <node id="851" name="Foothills, Rocky Ravine">
-    <description>Thick clumps of grass cling to the rocky ground, interspersed with a multitude of boulders and rubble littering the terrain.  Surrounding the narrow valley are steep hills, their sides bare of trees.</description>
-    <position x="140" y="1880" z="0" />
-    <arc exit="south" move="south" destination="851" />
-    <arc exit="southeast" move="southeast" destination="852" />
-    <arc exit="west" move="west" destination="850" />
-  </node>
-  <node id="852" name="Foothills, Rocky Ravine">
-    <description>Grey hills empty of all but rocks curve around the valley floor.  Shrubs and grasses rise amongst the rocks and boulders of the valley bottom, clinging to whatever purchase they can find.</description>
-    <position x="160" y="1900" z="0" />
-    <arc exit="northwest" move="northwest" destination="851" />
-    <arc exit="west" move="west" destination="853" />
-  </node>
-  <node id="853" name="Foothills, Rocky Ravine">
-    <description>Hidden by a screen of reeds, the meager stream empties into a modest pool.  A few rocks break the surface while more reeds emerge from the muddy banks.  Barren hills rise above the valley but do nothing to block the ever-present wind.</description>
-    <position x="140" y="1900" z="0" />
-    <arc exit="northwest" move="northwest" destination="850" />
-    <arc exit="north" move="north" destination="851" />
-    <arc exit="east" move="east" destination="852" />
-  </node>
-  <node id="854" name="Vale, Ravine">
-    <description>Wisps of fog drift above the rock-strewn ground, while denser banks of mist roil overhead, obscuring the sky and the upper walls of the canyon.  Scrubby bushes and clumps of grass cling desperately to the loose scree at the foot of the cliffs, their stunted size and pale leaves testimony to the barren nature of the area.</description>
-    <position x="60" y="1940" z="0" />
-    <arc exit="east" move="east" destination="855" />
-    <arc exit="southeast" move="southeast" destination="857" />
-    <arc exit="north" move="north" destination="819" />
-  </node>
-  <node id="855" name="Vale, Ravine">
-    <description>Granite walls loom out of the ever-present mist, towering high above the stony canyon floor.  Mist and fog flow across the ground and ooze amongst the occasional bush that grows in the scanty soil.  An occasional crash echoes through the ravine, but the source remains unknown.</description>
-    <position x="80" y="1940" z="0" />
-    <arc exit="west" move="west" destination="854" />
-    <arc exit="southeast" move="southeast" destination="856" />
-    <arc exit="south" move="south" destination="857" />
-  </node>
-  <node id="856" name="Vale, Rock Pile">
-    <description>Some long-forgotten catastrophe has brought down one cliff, creating a rockslide that blocks further progress.  A small start has been made at clearing the rockfall, but the small piles that have been removed only serve to show how much more remains in clearing the blockade.  What is unclear is who or what would be working to clear the impediment and why they would want to.</description>
-    <position x="100" y="1960" z="0" />
-    <arc exit="northwest" move="northwest" destination="855" />
-    <arc exit="west" move="west" destination="857" />
-  </node>
-  <node id="857" name="Vale, Ravine">
-    <description>Large boulders cover the ground, having fallen from the steep cliffs lining the ravine.  One has crashed into a tree, splintering it and scattering limbs and branches across the ground.  A few clumps of grass grow near a few small puddles formed in some of the craters created when rocks from above hit the ground.</description>
-    <position x="80" y="1960" z="0" />
-    <arc exit="northwest" move="northwest" destination="854" />
-    <arc exit="north" move="north" destination="855" />
-    <arc exit="east" move="east" destination="856" />
+  <node id="849" name="Deep Forest, Collapsed Shed">
+    <description>Near the edge of the clearing, a small outbuilding has given way to time.  Its sagging roof folds inward, beams rotted through and swallowed by creeping ivy under the open sky.  Rusted tools jut from the debris, their edges dulled and spotted, as if left in place on the last day they were used.</description>
+    <position x="580" y="1330" z="0" />
+    <arc exit="north" move="north" destination="848" />
+    <arc exit="northwest" move="northwest" destination="799" />
   </node>
   <label text="Warrior Mage">
     <position x="460" y="2440" z="0" />
   </label>
   <label text="Vineyard">
-    <position x="220" y="2393" z="0" />
-    <position x="220" y="2393" z="0" />
+    <position x="210" y="2360" z="0" />
   </label>
   <label text="North Gate + Brambles">
     <position x="130" y="2320" z="0" />
@@ -5713,16 +5657,16 @@
     <position x="100" y="1710" z="0" />
   </label>
   <label text="Abandoned Mine">
-    <position x="570" y="1710" z="0" />
+    <position x="510" y="1695" z="0" />
   </label>
   <label text="Lairocott Brach">
-    <position x="570" y="1720" z="0" />
+    <position x="510" y="1705" z="0" />
   </label>
   <label text="Slai Scouts, Slai Screamers">
-    <position x="560" y="1670" z="0" />
+    <position x="495" y="1660" z="0" />
   </label>
   <label text="Wir Dinego">
-    <position x="590" y="1680" z="0" />
+    <position x="525" y="1670" z="0" />
   </label>
   <label text="Vipers, Black Leucros, Rock Guardians">
     <position x="300" y="1520" z="0" />
@@ -5737,20 +5681,19 @@
     <position x="460" y="1080" z="0" />
   </label>
   <label text="Cemetery">
-    <position x="500" y="2360" z="0" />
+    <position x="480" y="2360" z="0" />
   </label>
   <label text="Ghouls">
-    <position x="680" y="2300" z="0" />
+    <position x="660" y="2300" z="0" />
   </label>
   <label text="East Gate">
     <position x="275" y="2500" z="0" />
   </label>
   <label text="Jadewater Mansion--&gt;">
-    <position x="155" y="2342" z="0" />
-    <position x="155" y="2342" z="0" />
+    <position x="150" y="2340" z="0" />
   </label>
-  <label text="Misenseor Abbey">
-    <position x="570" y="1240" z="0" />
+  <label text="Misenseor">
+    <position x="550" y="1240" z="0" />
   </label>
   <label text="Kaerna Village">
     <position x="430" y="1780" z="0" />
@@ -5759,7 +5702,7 @@
     <position x="574" y="1477" z="0" />
   </label>
   <label text="Death Squirrels">
-    <position x="590" y="2150" z="0" />
+    <position x="570" y="2150" z="0" />
   </label>
   <label text="Shack">
     <position x="660" y="220" z="0" />
@@ -5795,7 +5738,7 @@
     <position x="550" y="430" z="0" />
   </label>
   <label text="Shifting Maze">
-    <position x="150" y="970" z="0" />
+    <position x="40" y="940" z="0" />
   </label>
   <label text="Supple Firecat">
     <position x="20" y="970" z="0" />
@@ -5828,10 +5771,10 @@
     <position x="214" y="700" z="0" />
   </label>
   <label text="Paper Mill">
-    <position x="483" y="1007" z="0" />
+    <position x="555" y="967" z="0" />
   </label>
   <label text="origami">
-    <position x="498" y="1020" z="0" />
+    <position x="570" y="980" z="0" />
   </label>
   <label text="Crystal Hand">
     <position x="-240" y="310" z="0" />
@@ -5866,8 +5809,8 @@
   <label text="Trail to Dirge">
     <position x="-640" y="60" z="0" />
   </label>
-  <label text="Giant Mechanical Mice">
-    <position x="590" y="1360" z="0" />
+  <label text="Mechanical Mice">
+    <position x="575" y="1335" z="0" />
   </label>
   <label text="Muspar'i Airship">
     <position x="330" y="2590" z="0" />
@@ -5876,7 +5819,7 @@
     <position x="130" y="1850" z="0" />
   </label>
   <label text="Onyx Gargoyles">
-    <position x="-20" y="1960" z="0" />
+    <position x="20" y="1930" z="0" />
   </label>
   <label text="Rock Trolls">
     <position x="280" y="1800" z="0" />
@@ -5889,5 +5832,8 @@
   </label>
   <label text="Magma Bulls">
     <position x="310" y="410" z="0" />
+  </label>
+  <label text="Abbey">
+    <position x="550" y="1250" z="0" />
   </label>
 </zone>
