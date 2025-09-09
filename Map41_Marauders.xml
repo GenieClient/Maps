@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <zone name="Ker'Leor, Fornsted, and Hraval" id="41">
   <node id="1" name="Ker'Leor, Deep Forest Path">
     <description>A twisted bough reaches out from the darkness, curling upward in search of sky.  A hesitant whooping sound occasionally ricochets through the moistened air, hollow and uncomfortably close.</description>
@@ -141,7 +141,7 @@
   <node id="24" name="Laakmir, Shallow Lake" note="Laakmir|lake">
     <description>Surprisingly, the little lake is no more than ankle deep, hardly fit for any type of carousing.  The water is a pleasant, deep blue color and wonderfully cool to the touch.</description>
     <position x="200" y="-140" z="0" />
-    <arc exit="out" move="out" />
+    <arc exit="out" move="out" destination="19" />
   </node>
   <node id="25" name="Ker'Leor, Forest Road">
     <description>In a curious twist of horticulture, several rows of vegetables grow in tight formation along the roadside.  Wild carrots, vanderpeas and purple corbane flourish.  A few hedges of iffithyl, an herb known to ward off pests, are planted here and there within each row.</description>
