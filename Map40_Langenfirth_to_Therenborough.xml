@@ -1153,6 +1153,7 @@
     <position x="-200" y="-996" z="0" />
     <arc exit="southeast" move="southeast" destination="170" />
     <arc exit="northwest" move="northwest" destination="172" />
+    <arc exit="west" move="west" destination="394" />
   </node>
   <node id="172" name="Pathway, Patterned Walk">
     <description>The meandering road continues, and the stones themselves begin to form a pattern.  A multitude of tiny dark and light stones have been placed to create a slightly inset maze-like design centered in the well-paved road.</description>
@@ -2768,4 +2769,5 @@
   <label text="Crafting Supplies">
     <position x="-50" y="-296" z="0" />
   </label>
+
 </zone>
