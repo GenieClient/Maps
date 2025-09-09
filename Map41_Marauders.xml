@@ -247,7 +247,7 @@
     <description>The path ends abruptly, a wall of brambles entwined with the tree trunks closing in on the pine-needled trail.  To the north the trees seem to thin, but there must be another route around, as the forest here will not give way.  The top supports of a ladder peek from a slight depression in the ground, but the bottom of the ladder is invisible in the darkness below.</description>
     <position x="-80" y="-60" z="0" />
     <arc exit="southeast" move="southeast" destination="39" />
-    <arc exit="climb" move="climb wooden ladder" destination="52" />
+    <arc exit="climb" move="climb wooden ladder" destination="190" />
   </node>
   <node id="42" name="Ker'Leor, Kolfur Bog">
     <description>A wall of brambles guards the top of a steep bank that drops westerly and sinks into the bog.  The colors in the bog are brilliant -- red, yellow, orange, and green moss, small red flowers, bright yellow plants -- but something sickly lies underneath.  From here nothing more definite can be seen, yet the sense of wrongness rises from the fecund ground like a mist.</description>
@@ -311,11 +311,6 @@
     <position x="-160" y="-120" z="0" />
     <arc exit="southwest" move="southwest" destination="48" />
     <arc exit="go" move="go copse" destination="209" />
-  </node>
-  <node id="52" name="Haleer Lyba, Filtimor">
-    <description>Rough earthen walls crawl with lichen, mushrooms, and other slimy things that do not bear investigation.  The ground at the base of the ladder is a layer of mud and dead pine needles, with a few small bones near the walls.  The room seems more like an oubliette than a tunnel.</description>
-    <position x="-100" y="-80" z="0" />
-    <arc exit="climb" move="climb ladder" destination="41" />
   </node>
   <node id="53" name="Theren Road" note="Map40_Langenfirth_to_Therenborough.xml|Therenborough|Langenfirth">
     <description>Dust kicks up in swirls among the brambles which accent the exterior of Therenborough.  A straight, flat road runs due west from the thorny corridor created by the break between mortared stone and resident flora.  Ker'Leor, the majestic mountain range which some believe to be enchanted, rises like jagged teeth across the northwest horizon.  From the wall which rises nearby comes the cacophony of civilization.</description>
@@ -1651,4 +1646,5 @@
   <label text="Stolbs">
     <position x="190" y="-270" z="0" />
   </label>
+
 </zone>
