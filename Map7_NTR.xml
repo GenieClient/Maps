@@ -3152,7 +3152,7 @@
   </node>
   <node id="437" name="Dense Copse" note="Map12a_Misenseor_Abbey.xml|Misenseor Abbey">
     <description>The branches of pine and birch trees loom overhead, overlapping to create a canopy that nearly chokes off almost all light from hitting what little green undergrowth is here.  Dried needles and dead branches crackle underfoot with every step, the only sound that can be heard save those of the forlorn cries of a wood thrush in the distance.</description>
-    <position x="560" y="1250" z="0" />
+    <position x="540" y="1250" z="0" />
     <arc exit="east" move="east" />
   </node>
   <node id="438" name="Ruined Tollhouse, Interior">
@@ -4093,6 +4093,7 @@
     <description>A tidy room more reminiscent of a country kitchen than a shop, this is a bright and cheerful place filled with the aroma of fresh cheeses, breads and other foods.  Attached to one wall, a straw basket of fresh flowers brings a splash of color to the room.  An open window reveals a clean, straw-filled stable.</description>
     <position x="580" y="1980" z="0" />
     <arc exit="out" move="out" destination="583" />
+    <arc exit="north" destination="858" />
   </node>
   <node id="589" name="Berry Knolls, Taffelberry Trail">
     <description>Large oak trees line this well-traveled trail as it winds its way towards a secluded community nestled among the surrounding low-lying hills.  Wind-borne glaysker seeds have found a cozy home at the base of some of the trees, growing in an array of lavender and pink blooms.  Clay pots of carefully tended taffelberry bushes sit at measured intervals along the path.</description>
@@ -5333,59 +5334,61 @@
     <position x="580" y="1310" z="0" />
     <arc exit="go" move="go dilapidated cabin" destination="800" />
     <arc exit="go" move="go narrow trail" destination="381" />
+    <arc exit="east" destination="859" />
+    <arc exit="southeast" destination="860" />
   </node>
   <node id="800" name="Dilapidated Cabin">
     <description>A strong odor of rotting vegetation fills this small cabin, despite planks missing at varying intervals leaving the area open to the outside.  Dead branches reach through the broken ceiling above like long, bony fingers, in contrast to the tender seedlings pushing up through the floorboards.  A small, rotting area rug is pulled back in one corner, revealing a trapdoor.</description>
-    <position x="600" y="1310" z="0" />
+    <position x="600" y="1290" z="0" />
     <arc exit="go" move="go trapdoor" destination="801" />
     <arc exit="go" move="go crooked doorway" destination="799" />
   </node>
   <node id="801" name="Dilapidated Cabin, Basement">
     <description>A rusted lantern hanging from above shines a gentle glow over this space, which is little more than a cave carved in the vague shape of a room.  Makeshift tables and shelves line the walls, covered with an assortment of gears and metal scraps.  Heavy wooden supports stand at the north and south ends of the area, framing parts of the cavern that were left in their natural states.</description>
-    <position x="620" y="1310" z="0" />
+    <position x="620" y="1290" z="0" />
     <arc exit="north" move="north" destination="802" />
     <arc exit="south" move="south" destination="808" />
     <arc exit="climb" move="climb wooden steps" destination="800" />
   </node>
   <node id="802" name="Dilapidated Cabin, Tunnel">
     <description>The rough rock forms a jagged arch overhead that curves to the south and northeast along the tunnel.  Piles of stones line the sides of the path, each scarred by chisel marks.</description>
-    <position x="620" y="1290" z="0" />
+    <position x="620" y="1270" z="0" />
     <arc exit="northeast" move="northeast" destination="803" />
     <arc exit="south" move="south" destination="801" />
   </node>
   <node id="803" name="Dilapidated Cabin, Tunnel">
     <description>The path curves sharply to the southwest and southeast, hugging a cluster of stalactites and stalagmites.  A gear is deeply embedded in the rock, almost appearing as though it was naturally formed along with the stone.</description>
-    <position x="640" y="1270" z="0" />
+    <position x="640" y="1250" z="0" />
     <arc exit="southeast" move="southeast" destination="804" />
     <arc exit="southwest" move="southwest" destination="802" />
   </node>
   <node id="804" name="Dilapidated Cabin, Tunnel">
     <description>Deep gouges are cut in the walls, like scars in the stone, forming clean furrows as though the tool used was slicing through clay instead of hard rock.  A ruddy stain, vaguely resembling a handprint, mars the surface alongside the gash.</description>
-    <position x="660" y="1290" z="0" />
+    <position x="660" y="1270" z="0" />
     <arc exit="southeast" move="southeast" destination="805" />
     <arc exit="northwest" move="northwest" destination="803" />
   </node>
   <node id="805" name="Dilapidated Cabin, Tunnel">
     <description>Curving gently, the tunnel is shaped in such a way that it makes it difficult to tell which directions various skittering noises are coming from.  Overhead, roots squeeze through cracks, further dampening sounds.</description>
-    <position x="680" y="1310" z="0" />
+    <position x="680" y="1290" z="0" />
     <arc exit="southwest" move="southwest" destination="806" />
     <arc exit="northwest" move="northwest" destination="804" />
   </node>
   <node id="806" name="Dilapidated Cabin, Tunnel">
     <description>The coolness of the air is heightened by the addition of moisture and creating a scent similar to dust after the rain.  Droplets of water cling to the stone walls, making them look as though they're perspiring.</description>
-    <position x="660" y="1330" z="0" />
+    <position x="660" y="1310" z="0" />
     <arc exit="northeast" move="northeast" destination="805" />
     <arc exit="southwest" move="southwest" destination="807" />
   </node>
   <node id="807" name="Dilapidated Cabin, Tunnel">
     <description>Cracks spread across the stone walls in an intricate cobweb pattern, as if something with massive strength punched the rock.  A small clump of lichen clings to one of the fractures, following the jagged line like a tiny, greenish lightning bolt.</description>
-    <position x="640" y="1350" z="0" />
+    <position x="640" y="1330" z="0" />
     <arc exit="northeast" move="northeast" destination="806" />
     <arc exit="northwest" move="northwest" destination="808" />
   </node>
   <node id="808" name="Dilapidated Cabin, Tunnel">
     <description>A deep shelf is carved into the wall, in which is stored locked chests bound by chains.  Strange symbols are crudely etched into the rock wall above each one, though their relation is unclear.</description>
-    <position x="620" y="1330" z="0" />
+    <position x="620" y="1310" z="0" />
     <arc exit="north" move="north" destination="801" />
     <arc exit="southeast" move="southeast" destination="807" />
   </node>
@@ -5479,7 +5482,7 @@
     <arc exit="go" move="go cave entrance" destination="811" />
   </node>
   <node id="822" name="Foothills Cave, Back">
-    <description>Sloping downwards towards the back of the cave, the rocky ceiling merges with the slate floor and shunts all further progress into a narrow crevice leading deeper underground.  Dirt has drifted into the cracks and corners, adding to the cramped feeling at the edges of the cavern.  There are fewer signs of the inhabitants here, perhaps because they find it more cramped than the entrance.  </description>
+    <description>Sloping downwards towards the back of the cave, the rocky ceiling merges with the slate floor and shunts all further progress into a narrow crevice leading deeper underground.  Dirt has drifted into the cracks and corners, adding to the cramped feeling at the edges of the cavern.  There are fewer signs of the inhabitants here, perhaps because they find it more cramped than the entrance.</description>
     <position x="160" y="1840" z="0" />
     <arc exit="east" move="east" destination="848" />
     <arc exit="west" move="west" destination="821" />
@@ -5696,11 +5699,27 @@
     <arc exit="north" move="north" destination="855" />
     <arc exit="east" move="east" destination="856" />
   </node>
+  <node id="858" name="Feta's Kitchen, Tea-time Catering" color="#FF0000">
+    <description>The bright and cheerful room bustles with young Halflings carrying food for catering orders, as well as returning empty baskets and platters to be refilled.  Attached to one wall and flanking a painted sign, planters of fresh herbs bring a splash of color to the room.  An open window reveals a clean, straw-filled stable.</description>
+    <position x="580" y="1970" z="0" />
+    <arc exit="south" destination="588" />
+  </node>
+  <node id="859" name="Deep Forest, Derelict Garden">
+    <description>What was once a garden lies in disarray, its beds little more than outlines in the soil.  A few twisted stakes jut up from the earth, tangled with brittle vines long gone to seed.  Scattered stones trace the faint remains of a boundary wall, half-buried beneath moss and leaf litter.</description>
+    <position x="600" y="1310" z="0" />
+    <arc exit="south" move="south" destination="860" />
+    <arc exit="west" move="west" destination="799" />
+  </node>
+  <node id="860" name="Deep Forest, Collapsed Shed">
+    <description>Near the edge of the clearing, a small outbuilding has given way to time.  Its sagging roof folds inward, beams rotted through and swallowed by creeping ivy under the open sky.  Rusted tools jut from the debris, their edges dulled and spotted, as if left in place on the last day they were used.</description>
+    <position x="600" y="1330" z="0" />
+    <arc exit="north" move="north" destination="859" />
+    <arc exit="northwest" move="northwest" destination="799" />
+  </node>
   <label text="Warrior Mage">
     <position x="460" y="2440" z="0" />
   </label>
   <label text="Vineyard">
-    <position x="220" y="2393" z="0" />
     <position x="220" y="2393" z="0" />
   </label>
   <label text="North Gate + Brambles">
@@ -5747,10 +5766,9 @@
   </label>
   <label text="Jadewater Mansion--&gt;">
     <position x="155" y="2342" z="0" />
-    <position x="155" y="2342" z="0" />
   </label>
-  <label text="Misenseor Abbey">
-    <position x="570" y="1240" z="0" />
+  <label text="Misenseor">
+    <position x="550" y="1240" z="0" />
   </label>
   <label text="Kaerna Village">
     <position x="430" y="1780" z="0" />
@@ -5867,7 +5885,7 @@
     <position x="-640" y="60" z="0" />
   </label>
   <label text="Giant Mechanical Mice">
-    <position x="590" y="1360" z="0" />
+    <position x="580" y="1335" z="0" />
   </label>
   <label text="Muspar'i Airship">
     <position x="330" y="2590" z="0" />
@@ -5889,5 +5907,8 @@
   </label>
   <label text="Magma Bulls">
     <position x="310" y="410" z="0" />
+  </label>
+  <label text="Abbey">
+    <position x="550" y="1250" z="0" />
   </label>
 </zone>
