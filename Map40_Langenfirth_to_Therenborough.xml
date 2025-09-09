@@ -63,7 +63,7 @@
     <position x="0" y="-216" z="0" />
     <arc exit="east" move="east" destination="10" />
     <arc exit="southwest" move="southwest" destination="8" />
-    <arc exit="go" move="go narrow entryway" destination="394" />
+    <arc exit="go" move="go narrow entryway" destination="401" />
   </node>
   <node id="10" name="Langenfirth, Polwich Street">
     <description>Several modest cabins line this street.  The buildings are well-kept and sturdy, although there is nothing remarkable about them.  The tightly shuttered windows and closed doors suggest that the occupants must be away working their traps or tending the forest.</description>
@@ -2558,51 +2558,104 @@
     <position x="0" y="-496" z="0" />
     <arc exit="out" move="out" destination="391" />
   </node>
-  <node id="394" name="Langenfirth Crafting Society Outpost, Main Room" color="#FF0000">
+  <node id="394" name="Shadethorn Forest, Faint Trail" note="Shadethorn Forest">
+    <description>A faint trail winds its way up the hillside, barely discernible through the dense undergrowth of shrubs and low grasses.  Weathered roots from nearby trees cross the path, creating uneven steps.  Scattered tufts of wildflowers cling to the slope, their petals trembling with every breeze.  Small stones displaced by passing feet dot the trail, rolling toward the forest's shadowy edge.</description>
+    <description>A faint trail winds up the hillside, tangled with roots and dotted with loose stones.  Wildflowers cling to the slope, their petals trembling as the path nears the forest's edge.</description>
+    <position x="-220" y="-996" z="0" />
+    <arc exit="east" move="east" destination="171" />
+    <arc exit="west" move="west" destination="395" />
+  </node>
+  <node id="395" name="Shadethorn Forest, Faint Trail">
+    <description>The trail opens into a wide clearing surrounded by towering oaks and slender birches.  Clusters of ferns line the edges, their delicate fronds brushing against moss-covered stones.  The ground here is packed dirt, interrupted by patches of hardy grass.  Scattered animal tracks mark the earth, while a hollowed log lies to one side, its interior home to small claw marks and broken twigs.</description>
+    <description>The trail widens into a clearing framed by oaks and birches.  Ferns brush mossy stones, and animal tracks crisscross the packed dirt.  A hollow log rests nearby, marked by small claws.</description>
+    <position x="-240" y="-996" z="0" />
+    <arc exit="east" move="east" destination="394" />
+    <arc exit="go" move="go faint trail" destination="396" />
+  </node>
+  <node id="396" name="Shadethorn Forest, Sylvan Arch" note="thornkins">
+    <description>At the heart of the forest, slender saplings intertwine to form a graceful living arch.  Their braided trunks rise in perfect harmony, bark patterns blending where they meet.  Fresh green shoots sprout from the weave, forming delicate fronds that dangle like ornaments.  The ground beneath is clear of debris, marked only by soft mosses that thrive in the embrace of the arch's shelter.</description>
+    <description>At the forest's heart, saplings intertwine into a living arch, their braided trunks adorned with fresh shoots.  Beneath, soft moss carpets the ground in the arch's shelter.</description>
+    <position x="-220" y="-956" z="0" />
+    <arc exit="north" move="north" destination="397" />
+    <arc exit="east" move="east" destination="398" />
+    <arc exit="south" move="south" destination="399" />
+    <arc exit="west" move="west" destination="400" />
+    <arc exit="go" move="go faint trail" destination="395" />
+  </node>
+  <node id="397" name="Shadethorn Forest, Northern Slope">
+    <description>The forest climbs a gentle slope, where large boulders protrude from the soil like ancient sentinels.  Their surfaces are mottled with patches of pale lichen and streaked with weathered cracks.  Between the stones, small saplings push upward, their leaves trembling in a faint breeze.  Evidence of burrowing animals shows in the loose dirt around the roots.</description>
+    <description>The forest ascends a gentle slope, dotted with boulders streaked with cracks and lichen.  Saplings grow between them, their leaves stirring faintly, while loose dirt reveals burrowed dens.</description>
+    <position x="-220" y="-976" z="0" />
+    <arc exit="southeast" move="southeast" destination="398" />
+    <arc exit="south" move="south" destination="396" />
+    <arc exit="southwest" move="southwest" destination="400" />
+  </node>
+  <node id="398" name="Shadethorn Forest, Silver Grove">
+    <description>At the base of the mountainside, a grove of silver-barked trees stands in quiet contrast to the rugged stone backdrop.  The trunks curve gracefully upward, their branches tangled with wispy vines.  A faint trail skirts the rocky incline, marked by scattered flakes of stone from above.  The low sound of rustling leaves accompanies the occasional movements of unseen woodland creatures.</description>
+    <description>A grove of silver-barked trees rises against the rocky mountainside, their branches tangled in vines.  A faint trail winds past scattered stone flakes amid rustling leaves and bird calls.</description>
+    <position x="-200" y="-956" z="0" />
+    <arc exit="southwest" move="southwest" destination="399" />
+    <arc exit="west" move="west" destination="396" />
+    <arc exit="northwest" move="northwest" destination="397" />
+  </node>
+  <node id="399" name="Shadethorn Forest, Beside a Stream">
+    <description>A shallow stream cuts through the forest, its pebbled banks lined with water-smoothed stones.  Narrow reeds and patches of cattails grow in the calmer pools.  Fallen leaves float lazily downstream, brushing against the occasional piece of driftwood lodged in the current.  Small pawprints in the muddy bank suggest a recent visit from thirsty creatures.</description>
+    <description>A shallow stream winds through the forest, its banks dotted with reeds and cattails.  Leaves drift along the current, brushing against driftwood, while pawprints mark the muddy shore.</description>
+    <position x="-220" y="-936" z="0" />
+    <arc exit="north" move="north" destination="396" />
+    <arc exit="northeast" move="northeast" destination="398" />
+    <arc exit="northwest" move="northwest" destination="400" />
+  </node>
+  <node id="400" name="Shadethorn Forest, Brambles">
+    <description>A narrow path snakes through dense thickets of brambles, their thorn-laden vines twisting in a chaotic weave.  The air is faintly sweet with the scent of crushed berries underfoot.  Stripped bark on the lower trunks of nearby trees hints at the passage of foraging animals.  In places, the trail is barely visible, partially obscured by clusters of creeping ivy.</description>
+    <description>A narrow path winds through brambles, the thorny vines twisting in chaos.  Crushed berries scent the air, while stripped bark and ivy hint at passing wildlife.</description>
+    <position x="-240" y="-956" z="0" />
+    <arc exit="northeast" move="northeast" destination="397" />
+    <arc exit="east" move="east" destination="396" />
+    <arc exit="southeast" move="southeast" destination="399" />
+  </node>
+  <node id="401" name="Langenfirth Crafting Society Outpost, Main Room" color="#FF0000">
     <description>Broad wooden planks span the floor, contrasting warmly with three plain white walls, while the fourth is painted with a detailed mural of a sunlit forest.  The ceiling is vaulted, with a combination of gaethzen owls and lanterns hung at regular intervals.  An open floor plan invites patrons to explore other areas of the shop.</description>
     <position x="0" y="-236" z="0" />
     <arc exit="go" move="go narrow entrance" destination="9" />
-    <arc exit="northwest" destination="395" />
-    <arc exit="north" destination="398" />
-    <arc exit="northeast" destination="397" />
+    <arc exit="northwest" destination="402" />
+    <arc exit="north" destination="405" />
+    <arc exit="northeast" destination="404" />
   </node>
-  <node id="395" name="Langenfirth Crafting Society Outpost, Engineering Enclave" color="#FF0000">
+  <node id="402" name="Langenfirth Crafting Society Outpost, Engineering Enclave" color="#FF0000">
     <description>Broad floorboards stretch beneath a vaulted ceiling lined with suspended lanterns and elegant gaethzen owls.  Archways connect this area to the rest of the shop, the curved woodwork inlaid with smooth stone rods.  One wall is fashioned of a colorful herringbone pattern of colorful wood scraps, each protected with a shiny gloss.</description>
     <position x="-20" y="-256" z="0" />
-    <arc exit="northeast" move="northeast" destination="396" />
-    <arc exit="east" move="east" destination="398" />
-    <arc exit="southeast" move="southeast" destination="394" />
+    <arc exit="northeast" move="northeast" destination="403" />
+    <arc exit="east" move="east" destination="405" />
+    <arc exit="southeast" move="southeast" destination="401" />
   </node>
-  <node id="396" name="Langenfirth Crafting Society Outpost, Enchanting Emporium" color="#FF0000">
+  <node id="403" name="Langenfirth Crafting Society Outpost, Enchanting Emporium" color="#FF0000">
     <description>Vaulted overhead beams hold a series of alternating lanterns and sleek gaethzen owls.  Beneath them, broad planks span the floor in uniform rows.  One wall features an arrangement of gleaming metal artwork, each piece inscribed with a flowing medley of esoteric symbols.</description>
     <position x="0" y="-276" z="0" />
-    <arc exit="southeast" move="southeast" destination="397" />
-    <arc exit="south" move="south" destination="398" />
-    <arc exit="southwest" move="southwest" destination="395" />
+    <arc exit="southeast" move="southeast" destination="404" />
+    <arc exit="south" move="south" destination="405" />
+    <arc exit="southwest" move="southwest" destination="402" />
   </node>
-  <node id="397" name="Langenfirth Crafting Society Outpost, Alchemy Annex" color="#FF0000">
+  <node id="404" name="Langenfirth Crafting Society Outpost, Alchemy Annex" color="#FF0000">
     <description>Smooth wooden planks run wall to wall beneath a high vaulted ceiling, with lanterns and gaethzen owls hanging overhead.  Three walls are plain white, while the fourth is painted with a kaleidoscope of flowering herbs.  Cased openings engraved with wandering vines connect the space to the rest of the shop.</description>
     <position x="20" y="-256" z="0" />
-    <arc exit="southwest" move="southwest" destination="394" />
-    <arc exit="west" move="west" destination="398" />
-    <arc exit="northwest" move="northwest" destination="396" />
+    <arc exit="southwest" move="southwest" destination="401" />
+    <arc exit="west" move="west" destination="405" />
+    <arc exit="northwest" move="northwest" destination="403" />
   </node>
-  <node id="398" name="Langenfirth Crafting Society Outpost, Outfitting Outlet" color="#FF0000">
+  <node id="405" name="Langenfirth Crafting Society Outpost, Outfitting Outlet" color="#FF0000">
     <description>The floor is laid with wide boards of pale wood, their grain worn smooth.  One wall boasts a large tapestry depicting a collection of sewing tools and accessories.  A vaulted ceiling supports hanging lights and gaethzen owls.  Several archways lead to adjacent rooms, their glossy trim painted with bright white lines to mimic a tidy hem.</description>
     <position x="0" y="-256" z="0" />
-    <arc exit="north" move="north" destination="396" />
-    <arc exit="east" move="east" destination="397" />
-    <arc exit="south" move="south" destination="394" />
-    <arc exit="west" move="west" destination="395" />
+    <arc exit="north" move="north" destination="403" />
+    <arc exit="east" move="east" destination="404" />
+    <arc exit="south" move="south" destination="401" />
+    <arc exit="west" move="west" destination="402" />
   </node>
   <label text="Therenborough">
     <position x="155" y="-1380" z="0" />
   </label>
   <label text="Homesite">
     <position x="250" y="-1396" z="0" />
-  </label>
-  <label text="Droughtmans Maze (Closed)">
-    <position x="-230" y="-1066" z="0" />
   </label>
   <label text="Sun Vultures">
     <position x="140" y="-850" z="0" />
@@ -2708,6 +2761,9 @@
   </label>
   <label text="Post Office">
     <position x="-130" y="-661" z="0" />
+  </label>
+  <label text="Thornkins">
+    <position x="-255" y="-931" z="0" />
   </label>
   <label text="Crafting Supplies">
     <position x="-50" y="-296" z="0" />
