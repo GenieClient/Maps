@@ -1599,16 +1599,16 @@
     <position x="130" y="150" z="0" />
   </label>
   <label text="Morah Vines">
-    <position x="10" y="-10" z="0" />
+    <position x="-10" y="20" z="0" />
   </label>
   <label text="Mauraders">
-    <position x="90" y="-230" z="0" />
+    <position x="190" y="-170" z="0" />
   </label>
   <label text="Wood Trolls">
-    <position x="90" y="-220" z="0" />
+    <position x="40" y="-100" z="0" />
   </label>
-  <label text="Mauraders">
-    <position x="10" y="0" z="0" />
+  <label text="Foothill Fighters">
+    <position x="-110" y="40" z="0" />
   </label>
   <label text="Scaly Seordmaor">
     <position x="70" y="-480" z="0" />
@@ -1646,5 +1646,10 @@
   <label text="Stolbs">
     <position x="190" y="-270" z="0" />
   </label>
-
+  <label text="Warriors">
+    <position x="-100" y="-80" z="0" />
+  </label>
+  <label text="Sunderers">
+    <position x="30" y="-210" z="0" />
+  </label>
 </zone>
