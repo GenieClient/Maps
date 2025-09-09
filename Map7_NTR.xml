@@ -3152,7 +3152,7 @@
   </node>
   <node id="437" name="Dense Copse" note="Map12a_Misenseor_Abbey.xml|Misenseor Abbey">
     <description>The branches of pine and birch trees loom overhead, overlapping to create a canopy that nearly chokes off almost all light from hitting what little green undergrowth is here.  Dried needles and dead branches crackle underfoot with every step, the only sound that can be heard save those of the forlorn cries of a wood thrush in the distance.</description>
-    <position x="560" y="1250" z="0" />
+    <position x="540" y="1250" z="0" />
     <arc exit="east" move="east" />
   </node>
   <node id="438" name="Ruined Tollhouse, Interior">
@@ -4093,7 +4093,7 @@
     <description>A tidy room more reminiscent of a country kitchen than a shop, this is a bright and cheerful place filled with the aroma of fresh cheeses, breads and other foods.  Attached to one wall, a straw basket of fresh flowers brings a splash of color to the room.  An open window reveals a clean, straw-filled stable.</description>
     <position x="580" y="1980" z="0" />
     <arc exit="out" move="out" destination="583" />
-    <arc exit="north" destination="848" />
+    <arc exit="north" destination="858" />
   </node>
   <node id="589" name="Berry Knolls, Taffelberry Trail">
     <description>Large oak trees line this well-traveled trail as it winds its way towards a secluded community nestled among the surrounding low-lying hills.  Wind-borne glaysker seeds have found a cozy home at the base of some of the trees, growing in an array of lavender and pink blooms.  Clay pots of carefully tended taffelberry bushes sit at measured intervals along the path.</description>
@@ -5334,59 +5334,61 @@
     <position x="580" y="1310" z="0" />
     <arc exit="go" move="go dilapidated cabin" destination="800" />
     <arc exit="go" move="go narrow trail" destination="381" />
+    <arc exit="east" destination="859" />
+    <arc exit="southeast" destination="860" />
   </node>
   <node id="800" name="Dilapidated Cabin">
     <description>A strong odor of rotting vegetation fills this small cabin, despite planks missing at varying intervals leaving the area open to the outside.  Dead branches reach through the broken ceiling above like long, bony fingers, in contrast to the tender seedlings pushing up through the floorboards.  A small, rotting area rug is pulled back in one corner, revealing a trapdoor.</description>
-    <position x="600" y="1310" z="0" />
+    <position x="600" y="1290" z="0" />
     <arc exit="go" move="go trapdoor" destination="801" />
     <arc exit="go" move="go crooked doorway" destination="799" />
   </node>
   <node id="801" name="Dilapidated Cabin, Basement">
     <description>A rusted lantern hanging from above shines a gentle glow over this space, which is little more than a cave carved in the vague shape of a room.  Makeshift tables and shelves line the walls, covered with an assortment of gears and metal scraps.  Heavy wooden supports stand at the north and south ends of the area, framing parts of the cavern that were left in their natural states.</description>
-    <position x="620" y="1310" z="0" />
+    <position x="620" y="1290" z="0" />
     <arc exit="north" move="north" destination="802" />
     <arc exit="south" move="south" destination="808" />
     <arc exit="climb" move="climb wooden steps" destination="800" />
   </node>
   <node id="802" name="Dilapidated Cabin, Tunnel">
     <description>The rough rock forms a jagged arch overhead that curves to the south and northeast along the tunnel.  Piles of stones line the sides of the path, each scarred by chisel marks.</description>
-    <position x="620" y="1290" z="0" />
+    <position x="620" y="1270" z="0" />
     <arc exit="northeast" move="northeast" destination="803" />
     <arc exit="south" move="south" destination="801" />
   </node>
   <node id="803" name="Dilapidated Cabin, Tunnel">
     <description>The path curves sharply to the southwest and southeast, hugging a cluster of stalactites and stalagmites.  A gear is deeply embedded in the rock, almost appearing as though it was naturally formed along with the stone.</description>
-    <position x="640" y="1270" z="0" />
+    <position x="640" y="1250" z="0" />
     <arc exit="southeast" move="southeast" destination="804" />
     <arc exit="southwest" move="southwest" destination="802" />
   </node>
   <node id="804" name="Dilapidated Cabin, Tunnel">
     <description>Deep gouges are cut in the walls, like scars in the stone, forming clean furrows as though the tool used was slicing through clay instead of hard rock.  A ruddy stain, vaguely resembling a handprint, mars the surface alongside the gash.</description>
-    <position x="660" y="1290" z="0" />
+    <position x="660" y="1270" z="0" />
     <arc exit="southeast" move="southeast" destination="805" />
     <arc exit="northwest" move="northwest" destination="803" />
   </node>
   <node id="805" name="Dilapidated Cabin, Tunnel">
     <description>Curving gently, the tunnel is shaped in such a way that it makes it difficult to tell which directions various skittering noises are coming from.  Overhead, roots squeeze through cracks, further dampening sounds.</description>
-    <position x="680" y="1310" z="0" />
+    <position x="680" y="1290" z="0" />
     <arc exit="southwest" move="southwest" destination="806" />
     <arc exit="northwest" move="northwest" destination="804" />
   </node>
   <node id="806" name="Dilapidated Cabin, Tunnel">
     <description>The coolness of the air is heightened by the addition of moisture and creating a scent similar to dust after the rain.  Droplets of water cling to the stone walls, making them look as though they're perspiring.</description>
-    <position x="660" y="1330" z="0" />
+    <position x="660" y="1310" z="0" />
     <arc exit="northeast" move="northeast" destination="805" />
     <arc exit="southwest" move="southwest" destination="807" />
   </node>
   <node id="807" name="Dilapidated Cabin, Tunnel">
     <description>Cracks spread across the stone walls in an intricate cobweb pattern, as if something with massive strength punched the rock.  A small clump of lichen clings to one of the fractures, following the jagged line like a tiny, greenish lightning bolt.</description>
-    <position x="640" y="1350" z="0" />
+    <position x="640" y="1330" z="0" />
     <arc exit="northeast" move="northeast" destination="806" />
     <arc exit="northwest" move="northwest" destination="808" />
   </node>
   <node id="808" name="Dilapidated Cabin, Tunnel">
     <description>A deep shelf is carved into the wall, in which is stored locked chests bound by chains.  Strange symbols are crudely etched into the rock wall above each one, though their relation is unclear.</description>
-    <position x="620" y="1330" z="0" />
+    <position x="620" y="1310" z="0" />
     <arc exit="north" move="north" destination="801" />
     <arc exit="southeast" move="southeast" destination="807" />
   </node>
@@ -5420,6 +5422,7 @@
     <description>The hillside fans outward to the west and narrows into a cramped pass to the east.  The gentle slope of a valley sweeps up to meet the pass, the green grass short and spikey and surprisingly lush.</description>
     <position x="100" y="1880" z="0" />
     <arc exit="north" move="north" destination="812" />
+    <arc exit="east" move="east" destination="850" />
     <arc exit="climb" move="climb hillside" destination="814" />
   </node>
   <node id="814" name="Wooded Hills, East Slope" note="Onyx Gargoyles|Gargoyles">
@@ -5462,6 +5465,7 @@
     <description>The vale meets up with the steep curve of the hills that protect it here.  Though the occluding mist limits vision, the faint outlines of dark trees can be detected bordering the top of the hill, creating a tangible boundary between the ruins and the hinterland that surrounds it.  Hazy figures move like ghostly shadows through the wilderness, a hint of something sinister amidst the cemetary-like stillness of the dead city.</description>
     <position x="60" y="1920" z="0" />
     <arc exit="northeast" move="northeast" destination="814" />
+    <arc exit="south" move="south" destination="854" />
     <arc exit="northwest" move="northwest" destination="820" />
     <arc exit="up" move="up" destination="818" />
   </node>
@@ -5478,8 +5482,9 @@
     <arc exit="go" move="go cave entrance" destination="811" />
   </node>
   <node id="822" name="Foothills Cave, Back">
-    <description>Sloping downwards towards the back of the cave, the rocky ceiling merges with the slate floor and cuts off all further progress underground.  Dirt has drifted into the crevices and corners, adding to the cramped feeling at the edges of the cavern.  There are fewer signs of the inhabitants here, perhaps because they find it more cramped than the entrance.</description>
+    <description>Sloping downwards towards the back of the cave, the rocky ceiling merges with the slate floor and shunts all further progress into a narrow crevice leading deeper underground.  Dirt has drifted into the cracks and corners, adding to the cramped feeling at the edges of the cavern.  There are fewer signs of the inhabitants here, perhaps because they find it more cramped than the entrance.</description>
     <position x="160" y="1840" z="0" />
+    <arc exit="east" move="east" destination="848" />
     <arc exit="west" move="west" destination="821" />
   </node>
   <node id="823" name="Wooded Hills, Rocky Glade">
@@ -5491,6 +5496,7 @@
   </node>
   <node id="824" name="Wooded Hills, Rocky Glade">
     <description>Bending in the slightest breeze, some cattails mark a small declivity that gathers moisture from the surrounding hillsides.  Birds flit from the forest's edge to the puddle, their cries filling the daytime sky with song and noise.</description>
+    <description>Almost invisible in the darkness, some cattails mark a small declavity that gathers moisture from the surrounding hillsides.  The hunting cries of nightjars fill the sky as they hunt for insects on the wing.</description>
     <position x="-20" y="1920" z="0" />
     <arc exit="east" move="east" destination="823" />
     <arc exit="south" move="south" destination="826" />
@@ -5628,22 +5634,99 @@
     <position x="340" y="430" z="0" />
     <arc exit="southwest" move="southwest" destination="846" />
   </node>
-  <node id="848" name="Feta's Kitchen, Tea-time Catering" note="Catering" color="#FF0000">
+  <node id="848" name="Foothills Cave, Crevice">
+    <description>Granite walls twist and turn as the narrow space runs deeper underground.  Musky scents of animals mingle with the smells of decaying refuse dragged in by the cave system's denizens.  A few tufts of fur are caught in the rough outcrops of stone.</description>
+    <position x="180" y="1840" z="0" />
+    <arc exit="northeast" move="northeast" destination="849" />
+    <arc exit="west" move="west" destination="822" />
+  </node>
+  <node id="849" name="Foothills Cave, Cleft">
+    <description>Piles of fetid debris lie heaped against the walls, mingling with animal dung and rotting carcasses to permeate the area with a pungent odor.  In the distance, an occasional *plink* sounds as water drips within the cave system.  Bones and other refuse make the footing treacherous underfoot.</description>
+    <position x="200" y="1820" z="0" />
+    <arc exit="southwest" move="southwest" destination="848" />
+  </node>
+  <node id="850" name="Foothills, Rocky Ravine">
+    <description>Thick clumps of grass cling to the rocky ground, interspersed with a multitude of boulders and rubble littering the terrain.  Surrounding the narrow valley are steep hills, their sides bare of trees.</description>
+    <position x="120" y="1880" z="0" />
+    <arc exit="east" move="east" destination="851" />
+    <arc exit="southeast" move="southeast" destination="853" />
+    <arc exit="west" move="west" destination="813" />
+  </node>
+  <node id="851" name="Foothills, Rocky Ravine">
+    <description>Thick clumps of grass cling to the rocky ground, interspersed with a multitude of boulders and rubble littering the terrain.  Surrounding the narrow valley are steep hills, their sides bare of trees.</description>
+    <position x="140" y="1880" z="0" />
+    <arc exit="south" move="south" destination="851" />
+    <arc exit="southeast" move="southeast" destination="852" />
+    <arc exit="west" move="west" destination="850" />
+  </node>
+  <node id="852" name="Foothills, Rocky Ravine">
+    <description>Grey hills empty of all but rocks curve around the valley floor.  Shrubs and grasses rise amongst the rocks and boulders of the valley bottom, clinging to whatever purchase they can find.</description>
+    <position x="160" y="1900" z="0" />
+    <arc exit="northwest" move="northwest" destination="851" />
+    <arc exit="west" move="west" destination="853" />
+  </node>
+  <node id="853" name="Foothills, Rocky Ravine">
+    <description>Hidden by a screen of reeds, the meager stream empties into a modest pool.  A few rocks break the surface while more reeds emerge from the muddy banks.  Barren hills rise above the valley but do nothing to block the ever-present wind.</description>
+    <position x="140" y="1900" z="0" />
+    <arc exit="northwest" move="northwest" destination="850" />
+    <arc exit="north" move="north" destination="851" />
+    <arc exit="east" move="east" destination="852" />
+  </node>
+  <node id="854" name="Vale, Ravine">
+    <description>Wisps of fog drift above the rock-strewn ground, while denser banks of mist roil overhead, obscuring the sky and the upper walls of the canyon.  Scrubby bushes and clumps of grass cling desperately to the loose scree at the foot of the cliffs, their stunted size and pale leaves testimony to the barren nature of the area.</description>
+    <position x="60" y="1940" z="0" />
+    <arc exit="east" move="east" destination="855" />
+    <arc exit="southeast" move="southeast" destination="857" />
+    <arc exit="north" move="north" destination="819" />
+  </node>
+  <node id="855" name="Vale, Ravine">
+    <description>Granite walls loom out of the ever-present mist, towering high above the stony canyon floor.  Mist and fog flow across the ground and ooze amongst the occasional bush that grows in the scanty soil.  An occasional crash echoes through the ravine, but the source remains unknown.</description>
+    <position x="80" y="1940" z="0" />
+    <arc exit="west" move="west" destination="854" />
+    <arc exit="southeast" move="southeast" destination="856" />
+    <arc exit="south" move="south" destination="857" />
+  </node>
+  <node id="856" name="Vale, Rock Pile">
+    <description>Some long-forgotten catastrophe has brought down one cliff, creating a rockslide that blocks further progress.  A small start has been made at clearing the rockfall, but the small piles that have been removed only serve to show how much more remains in clearing the blockade.  What is unclear is who or what would be working to clear the impediment and why they would want to.</description>
+    <position x="100" y="1960" z="0" />
+    <arc exit="northwest" move="northwest" destination="855" />
+    <arc exit="west" move="west" destination="857" />
+  </node>
+  <node id="857" name="Vale, Ravine">
+    <description>Large boulders cover the ground, having fallen from the steep cliffs lining the ravine.  One has crashed into a tree, splintering it and scattering limbs and branches across the ground.  A few clumps of grass grow near a few small puddles formed in some of the craters created when rocks from above hit the ground.</description>
+    <position x="80" y="1960" z="0" />
+    <arc exit="northwest" move="northwest" destination="854" />
+    <arc exit="north" move="north" destination="855" />
+    <arc exit="east" move="east" destination="856" />
+  </node>
+  <node id="858" name="Feta's Kitchen, Tea-time Catering" color="#FF0000">
     <description>The bright and cheerful room bustles with young Halflings carrying food for catering orders, as well as returning empty baskets and platters to be refilled.  Attached to one wall and flanking a painted sign, planters of fresh herbs bring a splash of color to the room.  An open window reveals a clean, straw-filled stable.</description>
     <position x="580" y="1970" z="0" />
-    <arc exit="south" move="south" destination="588" />
+    <arc exit="south" destination="588" />
+  </node>
+  <node id="859" name="Deep Forest, Derelict Garden">
+    <description>What was once a garden lies in disarray, its beds little more than outlines in the soil.  A few twisted stakes jut up from the earth, tangled with brittle vines long gone to seed.  Scattered stones trace the faint remains of a boundary wall, half-buried beneath moss and leaf litter.</description>
+    <position x="600" y="1310" z="0" />
+    <arc exit="south" move="south" destination="860" />
+    <arc exit="west" move="west" destination="799" />
+  </node>
+  <node id="860" name="Deep Forest, Collapsed Shed">
+    <description>Near the edge of the clearing, a small outbuilding has given way to time.  Its sagging roof folds inward, beams rotted through and swallowed by creeping ivy under the open sky.  Rusted tools jut from the debris, their edges dulled and spotted, as if left in place on the last day they were used.</description>
+    <position x="600" y="1330" z="0" />
+    <arc exit="north" move="north" destination="859" />
+    <arc exit="northwest" move="northwest" destination="799" />
   </node>
   <label text="Warrior Mage">
     <position x="460" y="2440" z="0" />
   </label>
   <label text="Vineyard">
-    <position x="240" y="2390" z="0" />
+    <position x="220" y="2393" z="0" />
   </label>
   <label text="North Gate + Brambles">
     <position x="130" y="2320" z="0" />
   </label>
   <label text="Arthe Dale">
-    <position x="485" y="1990" z="0" />
+    <position x="520" y="1950" z="0" />
   </label>
   <label text="Rock Trolls">
     <position x="100" y="1710" z="0" />
@@ -5682,10 +5765,10 @@
     <position x="275" y="2500" z="0" />
   </label>
   <label text="Jadewater Mansion--&gt;">
-    <position x="185" y="2340" z="0" />
+    <position x="155" y="2342" z="0" />
   </label>
-  <label text="Misenseor Abbey">
-    <position x="570" y="1240" z="0" />
+  <label text="Misenseor">
+    <position x="550" y="1240" z="0" />
   </label>
   <label text="Kaerna Village">
     <position x="430" y="1780" z="0" />
@@ -5802,7 +5885,7 @@
     <position x="-640" y="60" z="0" />
   </label>
   <label text="Giant Mechanical Mice">
-    <position x="590" y="1360" z="0" />
+    <position x="580" y="1335" z="0" />
   </label>
   <label text="Muspar'i Airship">
     <position x="330" y="2590" z="0" />
@@ -5811,7 +5894,7 @@
     <position x="130" y="1850" z="0" />
   </label>
   <label text="Onyx Gargoyles">
-    <position x="20" y="1930" z="0" />
+    <position x="-20" y="1960" z="0" />
   </label>
   <label text="Rock Trolls">
     <position x="280" y="1800" z="0" />
@@ -5824,5 +5907,8 @@
   </label>
   <label text="Magma Bulls">
     <position x="310" y="410" z="0" />
+  </label>
+  <label text="Abbey">
+    <position x="550" y="1250" z="0" />
   </label>
 </zone>
