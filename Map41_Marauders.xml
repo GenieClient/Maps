@@ -1626,7 +1626,7 @@
     <position x="50" y="-640" z="0" />
   </label>
   <label text="Hvaral">
-    <position x="-550" y="-570" z="0" />
+    <position x="-540" y="-580" z="0" />
   </label>
   <label text="Muspar'i">
     <position x="-680" y="-440" z="0" />
@@ -1653,3 +1653,4 @@
     <position x="30" y="-210" z="0" />
   </label>
 </zone>
+
