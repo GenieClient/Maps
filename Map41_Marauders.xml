@@ -1,481 +1,469 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <zone name="Ker'Leor, Fornsted, and Hraval" id="41">
   <node id="1" name="Ker'Leor, Deep Forest Path">
     <description>A twisted bough reaches out from the darkness, curling upward in search of sky.  A hesitant whooping sound occasionally ricochets through the moistened air, hollow and uncomfortably close.</description>
-    <position x="80" y="160" z="0" />
+    <position x="80" y="140" z="0" />
     <arc exit="south" move="south" destination="2" />
     <arc exit="northwest" move="northwest" destination="3" />
   </node>
   <node id="2" name="Ker'Leor, Deep Forest Path">
     <description>An endless assortment of towering trees and vividly-colored underbrush crowd the base of Ker'Leor.  So dense is the forest that steam rises from its floor, hanging as a still mist which threatens to obscure the faint path.  Eerie wails, moans and hisses echo forth from the deep shadows, bending the imagination toward the hideous and threatening.</description>
-    <position x="80" y="180" z="0" />
+    <position x="80" y="160" z="0" />
     <arc exit="north" move="north" destination="1" />
     <arc exit="east" move="rt east" destination="53" />
   </node>
   <node id="3" name="Ker'Leor, Deep Forest Path">
     <description>The canopy of the forest is hopelessly tangled, one tree trunk nearly indistinguishable from the next.  Heady, earthy scents rise from the spongy ground like the tiny insects that nip and bite.  As each sense takes in its fill of information, the most overpowering is that of being watched.</description>
-    <position x="60" y="140" z="0" />
+    <position x="60" y="120" z="0" />
     <arc exit="north" move="north" destination="4" />
     <arc exit="southeast" move="southeast" destination="1" />
   </node>
   <node id="4" name="Ker'Leor, Deep Forest Path">
     <description>A silvery vine manages to reflect what scant light filters through the trees.  As it winds its way over root and rock, it exudes a pungent odor not unlike rotted meat.  A few grapelike clusters hang from dense tendrils of a sathmoor moss which is draped over an eye-level branch.</description>
-    <position x="60" y="120" z="0" />
+    <position x="60" y="100" z="0" />
     <arc exit="south" move="south" destination="3" />
     <arc exit="northwest" move="northwest" destination="5" />
   </node>
   <node id="5" name="Ker'Leor, Deep Forest Path">
     <description>Nasty kinter bugs hover over the muddy ground, waiting for an unprotected ankle.  A trickle of sap runs from a pine tree, its smell sickeningly sweet against the mulchy odor of the forest floor.</description>
-    <position x="40" y="100" z="0" />
+    <position x="40" y="80" z="0" />
     <arc exit="northeast" move="northeast" destination="6" />
     <arc exit="southeast" move="southeast" destination="4" />
   </node>
   <node id="6" name="Ker'Leor, Deep Forest Path">
     <description>The ground becomes marshy, in some places nearly ankle-deep with swollen sod and forest debris.  A thin rivulet courses between some smoothed stones, heading toward a ring of rocks beyond a tangle of firethorn bushes.</description>
-    <position x="60" y="80" z="0" />
+    <position x="60" y="60" z="0" />
     <arc exit="north" move="north" destination="7" />
     <arc exit="southwest" move="southwest" destination="5" />
   </node>
   <node id="7" name="Ker'Leor, Deep Forest Path">
     <description>Tree roots and ground cover are hopelessly tangled into one, steaming mess.  Each footstep stirs up a slew of blood-sucking mosquitos, gnats and midges.  More like an auditory hallucination than anything else, the strains of music filter through the forest, utterly out of place and from an indeterminable direction.</description>
-    <position x="60" y="60" z="0" />
+    <position x="60" y="40" z="0" />
     <arc exit="northeast" move="northeast" destination="8" />
     <arc exit="south" move="south" destination="6" />
   </node>
   <node id="8" name="Ker'Leor, Deep Forest Path">
     <description>A little bit of sky peeks through the thick forest canopy, shedding fingers of light upon the immediate area.  Astonishingly, the forest is awash with colors, from brilliant flowers to myriad shades of green.  Along with the clarity, though, comes the intense feeling of being closely scrutinized.</description>
-    <description>A little bit of sky peeks through the thick forest canopy, offering a glimpse at the stars in the sky.  Aside from the distant sound of a strummed guitar and beaten tambourine, though, the area lacks any noticeable activity.</description>
-    <position x="80" y="40" z="0" />
-    <arc exit="southwest" move="southwest" destination="7" />
+    <description>A little bit of sky peeks through the thick forest canopy, offering a glimpse at the stars in the sky.  Aside from the distant sound of singing and clanking pots, though, the area lacks any noticeable activity.</description>
+    <position x="80" y="20" z="0" />
     <arc exit="climb" move="climb fallen tree" destination="9" />
+    <arc exit="southwest" move="southwest" destination="7" />
   </node>
   <node id="9" name="Ker'Leor, Deep Forest Path">
     <description>Undulating lichen cover the base of a particularly tight-knit group of oaks standing in the center of the path.  Their pale pink color gleams in the darkness, illuminated by an internal chemical.  Wailing and hooting sounds fill the air, but nothing moves within the trees.</description>
-    <position x="100" y="20" z="0" />
+    <position x="100" y="0" z="0" />
     <arc exit="northwest" move="northwest" destination="10" />
     <arc exit="climb" move="climb fallen tree" destination="8" />
   </node>
   <node id="10" name="Ker'Leor, Deep Forest Path">
     <description>Blossoming reggus bushes send their pungent aroma upward with any movement along the path.  A short, warm breeze stirs the misty cover of the forest floor, exposing lacy ferns and pockets of dirdel flowers.</description>
-    <position x="80" y="0" z="0" />
+    <position x="80" y="-20" z="0" />
     <arc exit="northeast" move="northeast" destination="11" />
     <arc exit="southeast" move="southeast" destination="9" />
     <arc exit="climb" move="climb felled tree" destination="30" />
   </node>
   <node id="11" name="Ker'Leor, Deep Forest Path">
     <description>Marshy earth meets solid rock as the forest hugs Ker'Leor at this point.  Though still distant, the rumble of a waterfall slices the thick air, punctuated now and again by bird calls and strange warbling.</description>
-    <position x="100" y="-20" z="0" />
+    <position x="100" y="-40" z="0" />
     <arc exit="north" move="north" destination="12" />
     <arc exit="southwest" move="southwest" destination="10" />
   </node>
   <node id="12" name="Ker'Leor, Deep Forest Path">
-    <description>Thinning trees along the eastern edge of the forest reveal a road running parallel to the shadowy path.  As a tentative breeze billows and wanes, it carries the soft sound of a strummed guitar accompanied by lively yet far-off voices.  The path itself grows less marshy and more rocky, while the canopy overhead is rapidly diminishing.</description>
-    <position x="100" y="-60" z="0" />
+    <description>Thinning trees along the eastern edge of the forest reveal a road running parallel to the shadowy path.  As a tentative breeze billows and wanes, it carries the distant sound of beaten hammers and weapons clashing.  The path itself grows less marshy and more rocky, while the canopy overhead is rapidly diminishing.</description>
+    <position x="100" y="-80" z="0" />
     <arc exit="south" move="south" destination="11" />
-    <arc exit="east" move="east" destination="13" />
-  </node>
-  <node id="13" name="Ker'Leor, Forest Road">
-    <description>A wide dirt road runs parallel to the mountains from this clearing in the expansive forest.  Delightful shrubbery take advantage of the exposure to rain and sun, blooming brilliantly between the trees.</description>
-    <description>A wide dirt road runs parallel to the mountains from this clearing in the expansive forest.  A soft breeze cools the area, dispersing clouds to reveal brilliant stars in the night sky.</description>
-    <position x="120" y="-60" z="0" />
-    <arc exit="north" move="north" destination="14" />
-    <arc exit="west" move="west" destination="12" />
+    <arc exit="east" move="east" destination="244" />
   </node>
   <node id="14" name="Ker'Leor, Forest Road">
     <description>Heavily-trampled patches of grass indicate that some large body of people has traveled here recently.  An occasional glimpse eastward through trees which fringe the road provides a hint of a clearing not far to the northeast.  Buzzing insects bite and bother, and shrill whistles fill the air.</description>
-    <position x="120" y="-80" z="0" />
+    <position x="120" y="-100" z="0" />
+    <arc exit="south" move="south" destination="244" />
     <arc exit="northeast" move="northeast" destination="15" />
-    <arc exit="south" move="south" destination="13" />
   </node>
   <node id="15" name="Ker'Leor, Forest Road">
     <description>The mighty mountain range of Ker'Leor dominates the western sky, rising dark and imposing into a thick bank of churning clouds.  Though the air is crisp and amazingly invigorating, the mental image of unblinking eyes staring from the forest shadows has always assaulted travelers along this stretch of the road.</description>
-    <position x="140" y="-100" z="0" />
-    <arc exit="southwest" move="southwest" destination="14" />
+    <position x="140" y="-120" z="0" />
     <arc exit="climb" move="climb fallen trunk" destination="16" />
+    <arc exit="southwest" move="southwest" destination="14" />
   </node>
   <node id="16" name="Ker'Leor, Forest Road">
     <description>Constant chittering issues forth from the branches of nearby trees.  Though they tilt and sway, no creature is ever seen moving among the sparse leaves.  Hoots and whistles, followed by the clash of weapons, ride the wind from a small clearing to the east.</description>
-    <position x="120" y="-120" z="0" />
+    <position x="120" y="-140" z="0" />
     <arc exit="climb" move="climb sandstrike crystals" destination="17" />
-    <arc exit="northwest" move="northwest" destination="25" />
     <arc exit="climb" move="climb fallen trunk" destination="15" />
+    <arc exit="northwest" move="northwest" destination="25" />
   </node>
   <node id="17" name="Ker'Leor, Laakmir">
     <description>Emerald grass fed by a nearby water source look too groomed to be a natural part of these surroundings.  All sound has died away save the whoosh of wind through the ring of trees which encase this clearing.</description>
-    <position x="140" y="-120" z="0" />
+    <position x="140" y="-140" z="0" />
     <arc exit="east" move="east" destination="18" />
     <arc exit="climb" move="climb sandstrike crystals" destination="16" />
   </node>
   <node id="18" name="Ker'Leor, Laakmir">
     <description>Dainty wildflowers grow in neat hedges along the north and south border of this gentle lawn.  Sycamores grow majestically alongside junipers, tabors and dwarf wisteria, creating a living palette of many shades of green.  Once in a rare while, branches crackle behind the trees as if stepped on by some stalking being.</description>
-    <position x="160" y="-120" z="0" />
+    <position x="160" y="-140" z="0" />
     <arc exit="northeast" move="northeast" destination="19" />
     <arc exit="west" move="west" destination="17" />
   </node>
   <node id="19" name="Ker'Leor, Laakmir">
     <description>Rolling grass gives way to a bluff of exposed rock, then dips down to the rim of a small, freshwater lake.  Daisies and dirdel dance amidst moro grasses at the water's edge.  The rock itself continues to rise along the eastern perimeter of the lake, reminiscent of the rim of a volcanic cauldron with its onyx-colored, smooth surface.</description>
-    <position x="180" y="-140" z="0" />
-    <arc exit="southwest" move="southwest" destination="18" />
-    <arc exit="go" move="go rock" destination="20" />
-    <arc exit="go" move="go lake" destination="24" />
+    <position x="180" y="-160" z="0" />
     <arc exit="northeast" move="northeast" destination="20" />
+    <arc exit="southwest" move="southwest" destination="18" />
+    <arc exit="climb" move="climb exposed rock" destination="20" />
+    <arc exit="go" move="go small lake" destination="24" />
   </node>
   <node id="20" name="Ker'Leor, Laakmir">
     <description>Trees impinge upon a rise of rock skirting the tiny lake.  The ground is somewhat uneven but meticulously manicured, but by whom is anyone's guess.  A thicket of woven boughs closes off the clearing, preventing further progress to the east.</description>
-    <position x="200" y="-160" z="0" />
+    <position x="180" y="-180" z="0" />
     <arc exit="north" move="north" destination="21" />
     <arc exit="southwest" move="southwest" destination="19" />
   </node>
   <node id="21" name="Ker'Leor, Laakmir">
     <description>A hill of glassy black rock tumbles into thick forest, making this a difficult area to traverse.  Footing is uncertain along the rocky slope, and an ominous row of thorn bushes threatens to entangle any hapless traveler unlucky enough to tumble from the rocks toward the trees.</description>
-    <position x="200" y="-180" z="0" />
+    <position x="180" y="-200" z="0" />
     <arc exit="northeast" move="northeast" destination="22" />
     <arc exit="south" move="south" destination="20" />
   </node>
   <node id="22" name="Ker'Leor, Laakmir">
     <description>The sheer concave of the exposed rock shields the eastern edge of the small lake with its pumice-laden crescent.  It is all that is left of an ancient volcano, collapsed and filled over a millennium.  What looks like a large cave pocks the cresent's surface, accessible by some evenly-spaced handholds.</description>
-    <position x="220" y="-200" z="0" />
+    <position x="200" y="-220" z="0" />
     <arc exit="southwest" move="southwest" destination="21" />
-    <arc exit="climb" move="climb cave" destination="23" />
-    <arc exit="go" move="go narrow cleft" destination="244" />
+    <arc exit="go" move="go narrow cleft" destination="23" />
+    <arc exit="go" move="go cleft" />
   </node>
-  <node id="23" name="Laakmir, Caves">
-    <description>Light filters softly through the dust which is suspended in the air of this cave.  Shallow, but with a high ceiling, it is pleasantly dry and of comfortable temperature.  A dark patch of charred ground indicates that someone has camped here recently.</description>
-    <description>Soft moonlight filters through the opening of the cave.  Shallow, but with a high ceiling, it is pleasantly dry and of comfortable temperature.  A dark patch of charred ground indicates that someone has camped here recently.</description>
-    <position x="220" y="-220" z="0" />
-    <arc exit="down" move="down" destination="22" />
+  <node id="23" name="Ker'Leor, Crevice">
+    <description>Sheer rock walls tower on either side of this narrow rift in the stony mountains.  Sparse foliage covers the rocky dirt, each clump or bush struggling to survive in this inhospitable place.</description>
+    <position x="200" y="-240" z="0" />
+    <arc exit="east" move="east" destination="245" />
+    <arc exit="go" move="go narrow cleft" destination="22" />
   </node>
-  <node id="24" name="Laakmir, Shallow Lake" note="Laakmir|Lake">
+  <node id="24" name="Laakmir, Shallow Lake" note="Laakmir|lake">
     <description>Surprisingly, the little lake is no more than ankle deep, hardly fit for any type of carousing.  The water is a pleasant, deep blue color and wonderfully cool to the touch.</description>
-    <position x="200" y="-120" z="0" />
+    <position x="200" y="-140" z="0" />
     <arc exit="out" move="out" destination="19" />
   </node>
   <node id="25" name="Ker'Leor, Forest Road">
     <description>In a curious twist of horticulture, several rows of vegetables grow in tight formation along the roadside.  Wild carrots, vanderpeas and purple corbane flourish.  A few hedges of iffithyl, an herb known to ward off pests, are planted here and there within each row.</description>
-    <position x="100" y="-140" z="0" />
+    <position x="100" y="-160" z="0" />
     <arc exit="north" move="north" destination="26" />
     <arc exit="southeast" move="southeast" destination="16" />
   </node>
   <node id="26" name="Ker'Leor, Forest Road">
     <description>Deep gutters are cut into the roadside like crude irrigation ditches.</description>
-    <position x="100" y="-160" z="0" />
+    <position x="100" y="-180" z="0" />
     <arc exit="north" move="north" destination="27" />
     <arc exit="south" move="south" destination="25" />
   </node>
   <node id="27" name="Ker'Leor, Forest Road">
     <description>The rocky base of Ker'Leor is visible on the western edge of the road through gaps in the trees.  Towering infinitely skyward from this vantage point, its steep-cut fissures and gullies are awesome to behold.  The range appears to stretch endlessly northward.</description>
     <description>The rocky base of Ker'Leor blots out all of the western sky.  In the soft moonlight, only a bank of clouds hovering high above breaks the endless wall of black that seems to stretch ever northward.</description>
-    <position x="100" y="-180" z="0" />
+    <position x="100" y="-200" z="0" />
     <arc exit="south" move="south" destination="26" />
     <arc exit="northwest" move="northwest" destination="28" />
   </node>
   <node id="28" name="Ker'Leor, Forest Road">
     <description>Sparse stands of trees line the road as it inclines along the base of Ker'Leor.  Chunks of rock dot the ground, some nearly the size of boulders.  As the breeze builds and wanes, it carries the distant clamor of clashing weapons.</description>
-    <position x="80" y="-200" z="0" />
+    <position x="80" y="-220" z="0" />
     <arc exit="north" move="north" destination="29" />
     <arc exit="southeast" move="southeast" destination="27" />
   </node>
-  <node id="29" name="Ker'Leor, Forest Road" note="Slab">
+  <node id="29" name="Ker'Leor, Forest Road" note="slab">
     <description>Sparse stands of trees line the road as it inclines along the base of Ker'Leor.  Chunks of rock dot the ground, some nearly the size of boulders.</description>
-    <position x="80" y="-220" z="0" />
+    <position x="80" y="-240" z="0" />
     <arc exit="south" move="south" destination="28" />
     <arc exit="climb" move="climb rocky path" destination="54" />
   </node>
   <node id="30" name="Ker'Leor, Fog's Edge">
     <description>The scent of reggus bushes wafts through the air, a few plants surviving on this side of the tree.  Ferns nearby grow hesitantly, reaching for a sky blocked by the thickly woven forest canopy.  Trickling water pools at the edges of hearing somewhere in the murk beyond.</description>
-    <position x="-20" y="0" z="0" />
+    <position x="-20" y="-20" z="0" />
     <arc exit="southwest" move="southwest" destination="31" />
     <arc exit="climb" move="climb felled tree" destination="10" />
   </node>
   <node id="31" name="Ker'Leor, Seordav Telga" color="#008000">
     <description>Black tree trunks stand in the perpetual gloom, individual branches lost in the tangle overhead.  Pine needles underfoot deaden sound.  The air tastes of decay with an overlay of dust, as though nothing living had walked the ground in a long time.  Facing away from the path is a haycart, its wheels broken and the sodden, rotted mass inside it barely recognizable as hay.</description>
-    <position x="-40" y="20" z="0" />
+    <position x="-40" y="0" z="0" />
     <arc exit="northeast" move="northeast" destination="30" />
-    <arc exit="west" move="west" destination="37" />
     <arc exit="climb" move="climb tangled deadfall" destination="32" />
+    <arc exit="west" move="west" destination="37" />
   </node>
   <node id="32" name="Ker'Leor, Seordav Telga" color="#008000">
     <description>The lower branches of the pine trees jut stiffly from the trunks, bristling with needles that look black in the thin light.  A tattered kerchief lies half-buried on a small mound by the roots of one tree, all that's left of some lost fighter.</description>
-    <position x="-40" y="40" z="0" />
+    <position x="-40" y="20" z="0" />
     <arc exit="climb" move="climb tangled deadfall" destination="31" />
     <arc exit="southwest" move="southwest" destination="33" />
     <arc exit="west" move="west" destination="36" />
   </node>
   <node id="33" name="Ker'Leor, Seordav Telga" color="#008000">
     <description>A fickle breeze churns the fog, sending clammy droplets like a cloak around the pine trees.  Black trunks stretch in all directions, vanishing into the mist.  Moving through the thick air, kinterbugs hover close to the ground, ready to feed on vulnerable skin.</description>
-    <position x="-60" y="60" z="0" />
+    <position x="-60" y="40" z="0" />
     <arc exit="northeast" move="northeast" destination="32" />
     <arc exit="northwest" move="northwest" destination="34" />
   </node>
   <node id="34" name="Ker'Leor, Seordav Telga" color="#008000">
     <description>Shapes move slowly through the trees at the edge of your vision.  Almost blending into the mist and the black tree trunks, the figures toil at some labor, never pausing, constant as the winds on the mountains.  Through the pine-needled ground comes the vibration of wood pounding on earth.</description>
-    <position x="-80" y="40" z="0" />
+    <position x="-80" y="20" z="0" />
     <arc exit="north" move="north" destination="35" />
     <arc exit="southeast" move="southeast" destination="33" />
   </node>
   <node id="35" name="Ker'Leor, Seordav Telga" color="#008000">
     <description>The black pine trees thin out, but a wall of brambles -- thick and unyielding and sharp-thorned -- prevents further passage to the north and west.  The ground underfoot squelches as you step on the blanket of pine needles.  The mist seethes angrily, seeping into the brambles.</description>
-    <position x="-80" y="20" z="0" />
+    <position x="-80" y="0" z="0" />
     <arc exit="southeast" move="southeast" destination="36" />
     <arc exit="south" move="south" destination="34" />
     <arc exit="go" move="go gap" destination="42" />
   </node>
   <node id="36" name="Ker'Leor, Seordav Telga" color="#008000">
     <description>Brambles have been hacked back around the trees to form the path here, which is thickly carpeted with pine needles that absorb footfalls.  The brambles are blackened with decay, and the trees they surround are covered in a slimy brown moss.  More of this moss hangs from the trees' branches, brushing a wet trail across whoever passes by.</description>
-    <position x="-60" y="40" z="0" />
+    <position x="-60" y="20" z="0" />
     <arc exit="east" move="east" destination="32" />
     <arc exit="northwest" move="northwest" destination="35" />
   </node>
   <node id="37" name="Ker'Leor, Seordav Telga" color="#008000">
     <description>The mountains can be sensed, a looming presence beyond the treetops.  Branches stretch and intertwine far above, impeding a clear view of anything beyond the forest.</description>
-    <position x="-60" y="20" z="0" />
+    <position x="-60" y="0" z="0" />
     <arc exit="east" move="east" destination="31" />
     <arc exit="northwest" move="northwest" destination="38" />
   </node>
   <node id="38" name="Ker'Leor, Seordav Telga" color="#008000">
     <description>A glint of gold within the striated bark of an oak among the pines catches the light.  Half-covered by the tree's bark, the glint reveals itself as a gold bracelet whose delicate carvings are worn with age and exposure.  The bracelet grows out of the trunk just a few hands from the ground, but no wound in the tree shows how the bracelet came to be imbedded there.</description>
-    <position x="-80" y="0" z="0" />
+    <position x="-80" y="-20" z="0" />
     <arc exit="northeast" move="northeast" destination="39" />
     <arc exit="southeast" move="southeast" destination="37" />
   </node>
   <node id="39" name="Ker'Leor, Seordav Telga" color="#008000">
     <description>Still and black and silent, the forest presses in along the path.  Although nothing rustles in the bramble bushes that skirt the trees, and there is hardly a breeze to be felt, there is a presence in these woods with you.  The tree trunks are limned with moss that makes them stand in sharper contrast with each other while at the same time blurring the edges between the ranks.</description>
-    <position x="-60" y="-20" z="0" />
+    <position x="-60" y="-40" z="0" />
     <arc exit="north" move="north" destination="40" />
     <arc exit="southwest" move="southwest" destination="38" />
     <arc exit="northwest" move="northwest" destination="41" />
   </node>
   <node id="40" name="Ker'Leor, Seordav Telga" color="#008000">
     <description>The path ends abruptly, a wall of brambles entwined with the tree trunks closing in on the pine-needled trail.  To the north the trees seem to thin, but there must be another route around, as the forest here will not give way.  The everpresent mist roils about the brambles, shifting and disorienting, tickling around the ground then drifting away.</description>
-    <position x="-60" y="-40" z="0" />
+    <position x="-60" y="-60" z="0" />
     <arc exit="south" move="south" destination="39" />
   </node>
   <node id="41" name="Ker'Leor, Seordav Telga" color="#008000">
     <description>The path ends abruptly, a wall of brambles entwined with the tree trunks closing in on the pine-needled trail.  To the north the trees seem to thin, but there must be another route around, as the forest here will not give way.  The top supports of a ladder peek from a slight depression in the ground, but the bottom of the ladder is invisible in the darkness below.</description>
-    <position x="-80" y="-40" z="0" />
+    <position x="-80" y="-60" z="0" />
     <arc exit="southeast" move="southeast" destination="39" />
-    <arc exit="climb" move="climb ladder" destination="52" />
+    <arc exit="climb" move="climb wooden ladder" destination="190" />
   </node>
   <node id="42" name="Ker'Leor, Kolfur Bog">
     <description>A wall of brambles guards the top of a steep bank that drops westerly and sinks into the bog.  The colors in the bog are brilliant -- red, yellow, orange, and green moss, small red flowers, bright yellow plants -- but something sickly lies underneath.  From here nothing more definite can be seen, yet the sense of wrongness rises from the fecund ground like a mist.</description>
-    <position x="-140" y="0" z="0" />
+    <position x="-100" y="-20" z="0" />
     <arc exit="southwest" move="southwest" destination="43" />
     <arc exit="northwest" move="northwest" destination="50" />
     <arc exit="go" move="go gap" destination="35" />
   </node>
   <node id="43" name="Ker'Leor, Kolfur Bog">
     <description>Grey shapes flit among the standing, blighted tree trunks, moving with a steady purpose.  They dig at the ground with rhythmic thuds, then pick something up and vanish into the mist with it.  The figures seem not to notice the folk treading in the bog as they continue blankly doing their tasks.</description>
-    <position x="-160" y="20" z="0" />
+    <position x="-160" y="0" z="0" />
     <arc exit="northeast" move="northeast" destination="42" />
     <arc exit="northwest" move="northwest" destination="44" />
   </node>
   <node id="44" name="Ker'Leor, Kolfur Bog">
     <description>The ground quakes with every carefully placed step over the soft peat.  Moss lies in a thin layer over earth and water, making it hard to discern where solid ground stands.  The moss squelches underfoot, sodden with the water and decaying plants -- and other decaying things -- of the bog.</description>
-    <position x="-180" y="0" z="0" />
+    <position x="-180" y="-20" z="0" />
     <arc exit="north" move="north" destination="45" />
     <arc exit="southeast" move="southeast" destination="43" />
   </node>
   <node id="45" name="Ker'Leor, Kolfur Bog">
     <description>The sky can be glimpsed through the tangled, dead branches of the sodden trees standing sentinel in the boggy ground.  To the north, the mountains rise like sithannik backs, while close by the path northwards lies a pool of murky water.  The reek of decaying things belches from the pool when its contents settle and air bubbles burst on the surface.</description>
-    <position x="-180" y="-20" z="0" />
+    <position x="-180" y="-40" z="0" />
     <arc exit="south" move="south" destination="44" />
     <arc exit="west" move="west" destination="46" />
   </node>
   <node id="46" name="Ker'Leor, Kolfur Bog">
     <description>Like a sodden rag, the taste of the foul air lashes at you as you pass alongside the murky pool.  A small overflow meanders out of sight to the west, carrying indescribable bits of black with it.  The rill is hardly a hand wide but cuts deep through the moss and muck, which tremble under each footstep.</description>
-    <position x="-200" y="-20" z="0" />
+    <position x="-200" y="-40" z="0" />
     <arc exit="north" move="north" destination="47" />
     <arc exit="east" move="east" destination="45" />
   </node>
   <node id="47" name="Ker'Leor, Kolfur Bog">
     <description>An odd group of plants, their green stems topped by bright yellow pitcher-shaped flowers, grows in a circle around a rotting stump that rises through the brown and red moss.  A sickly-sweet smell from the plants overtakes the underlying scent of rot.  The sluggish water of the rill trickles to the south, while a buzzing of flying insects sounds much closer.</description>
-    <position x="-200" y="-40" z="0" />
+    <position x="-200" y="-60" z="0" />
     <arc exit="northeast" move="northeast" destination="48" />
     <arc exit="south" move="south" destination="46" />
   </node>
   <node id="48" name="Ker'Leor, Kolfur Bog">
     <description>Stones, piled one atop the other in a sort of pyramid, inscribe a circle on the ground, which is more dirt than water in this area.  Within the circle is a set of stone stairs that leads down into the darkness of what might be a tunnel.  The muck is kept at bay here with more stones set as though pressed against the sides of a well.  Beside the stairs is a flat granite marker.</description>
-    <position x="-180" y="-60" z="0" />
+    <position x="-180" y="-80" z="0" />
     <arc exit="northeast" move="northeast" destination="51" />
     <arc exit="southeast" move="southeast" destination="49" />
     <arc exit="southwest" move="southwest" destination="47" />
-    <arc exit="climb" move="climb stairs" destination="186" />
+    <arc exit="climb" move="climb stone stairs" destination="186" />
   </node>
   <node id="49" name="Ker'Leor, Kolfur Bog">
     <description>The hint of path that you follow edges around a slime-covered pool only distinguished from the muck underfoot by a crop of water lilies struggling to stay afloat.  Intermingled with the sickly green leaves are strange fish, shadows under the shadowed water.</description>
-    <position x="-160" y="-40" z="0" />
+    <position x="-160" y="-60" z="0" />
     <arc exit="south" move="south" destination="50" />
     <arc exit="northwest" move="northwest" destination="48" />
   </node>
   <node id="50" name="Ker'Leor, Kolfur Bog">
     <description>Blighted pine trees, drowned in the bog, rise as pickets through the moss.  Clusters of sundew flowers, their sticky petals ready to trap unwary insects, gather at the bases of the trees and spread across the moss like pools of blood.  An unmoving sparrow perches on a dead pine branch, staring at the amber sap oozing across its claws.</description>
-    <position x="-160" y="-20" z="0" />
+    <position x="-160" y="-40" z="0" />
     <arc exit="north" move="north" destination="49" />
     <arc exit="southeast" move="southeast" destination="42" />
   </node>
   <node id="51" name="Ker'Leor, Kolfur Bog">
     <description>The ground turns firmer, the peat with just a little give underfoot.  Brown moss creeps over stones toward moisture cupped in the hollows.  A copse of trees stands silent to the east, beckoning toward its hidden depths.  The gloom hovers over the copse, and breezes from the bog have little effect on the murk.</description>
-    <position x="-160" y="-80" z="0" />
+    <position x="-160" y="-120" z="0" />
     <arc exit="southwest" move="southwest" destination="48" />
     <arc exit="go" move="go copse" destination="209" />
-  </node>
-  <node id="52" name="Haleer Lyba, Filtimor">
-    <description>Rough earthen walls crawl with lichen, mushrooms, and other slimy things that do not bear investigation.  The ground at the base of the ladder is a layer of mud and dead pine needles, with a few small bones near the walls.  The room seems more like an oubliette than a tunnel.</description>
-    <position x="-100" y="-60" z="0" />
-    <arc exit="climb" move="climb ladder" destination="41" />
   </node>
   <node id="53" name="Theren Road" note="Map40_Langenfirth_to_Therenborough.xml|Therenborough|Langenfirth">
     <description>Dust kicks up in swirls among the brambles which accent the exterior of Therenborough.  A straight, flat road runs due west from the thorny corridor created by the break between mortared stone and resident flora.  Ker'Leor, the majestic mountain range which some believe to be enchanted, rises like jagged teeth across the northwest horizon.  From the wall which rises nearby comes the cacophony of civilization.</description>
     <description>Your journey along the road leading west to Ker'Leor continues.</description>
-    <position x="120" y="180" z="0" />
+    <position x="120" y="160" z="0" />
     <arc exit="west" move="rt west" destination="2" />
     <arc exit="go" move="go wall" />
   </node>
   <node id="54" name="Ker'Leor, Ascent">
     <description>A smattering of massive boulders litters a narrow trench of dried riverbed which cuts through Ker'Leor's ancient, pastel stone.  Blue-grey dust swirls with the breeze, like chalk painting itself across the exposed rock.  The air crackles with energy and smells slightly sulfuric.</description>
-    <position x="80" y="-240" z="0" />
+    <position x="80" y="-260" z="0" />
     <arc exit="up" move="up" destination="55" />
     <arc exit="climb" move="climb rocky path" destination="29" />
   </node>
   <node id="55" name="Ker'Leor, Ascent">
     <description>Heat bounces back and forth between the steep sides of rock which sculpt the ravine.  Sky, rock and path converge in one continuous blackness which gives no sign of ending.  Only the barest of light pierces the depths of the rocky walls.</description>
     <description>Heat bounces back and forth between the steep sides of rock which sculpt the ravine.  Sky, rock and path converge in one continuous blackness which gives no sign of ending.</description>
-    <position x="100" y="-260" z="0" />
+    <position x="100" y="-280" z="0" />
     <arc exit="up" move="up" destination="56" />
     <arc exit="down" move="down" destination="54" />
   </node>
   <node id="56" name="Ker'Leor, Ascent">
     <description>The walls of the ravine encroach the narrow trail as if to suffocate it.  Seeds from dried shrubs blow hither and yon, their tough silvery husks glinting now and again in the subdued light.</description>
-    <position x="80" y="-260" z="0" />
+    <position x="80" y="-280" z="0" />
     <arc exit="up" move="up" destination="57" />
     <arc exit="down" move="down" destination="55" />
   </node>
   <node id="57" name="Ker'Leor, Ascent">
     <description>Sharply jagged rocks jut from the otherwise smooth surface of the ravine walls like a series of knives.  The path climbs ever higher and higher, seeming to reach to the clouds themselves.</description>
-    <position x="80" y="-280" z="0" />
+    <position x="80" y="-300" z="0" />
     <arc exit="up" move="up" destination="58" />
     <arc exit="down" move="down" destination="56" />
   </node>
   <node id="58" name="Ker'Leor, Ascent">
     <description>A slightly wider pocket in the otherwise narrow passageway lends some breathing space.  Greyish, hardened wood looks suspiciously like fossilized tree stumps conveniently supplied as seating for travelers.</description>
-    <position x="100" y="-280" z="0" />
+    <position x="100" y="-300" z="0" />
     <arc exit="up" move="up" destination="59" />
     <arc exit="down" move="down" destination="57" />
   </node>
   <node id="59" name="Ker'Leor, Ascent">
     <description>Sharply converging from two directions, a steep gulch cuts through the mountains.  On either side of a high, flat ridge, dried pathways carved by a long-gone, meandering river showcase strata of colorful soils compacted over a millenium.  Blue-grey dust swirls with the wind.</description>
-    <position x="100" y="-300" z="0" />
+    <position x="100" y="-320" z="0" />
     <arc exit="northeast" move="northeast" destination="73" />
     <arc exit="northwest" move="northwest" destination="60" />
     <arc exit="down" move="down" destination="58" />
   </node>
   <node id="60" name="Ker'Leor, Valner's Gulch">
     <description>Bands of soil as old as Elanthia reveal themselves along the smooth, deep-cut gulch.  Some greenery struggles in fissures and on outcrops, but mostly the area is flavored by pebbles, boulders and dust.</description>
-    <position x="80" y="-320" z="0" />
+    <position x="80" y="-340" z="0" />
     <arc exit="southeast" move="southeast" destination="59" />
     <arc exit="northwest" move="northwest" destination="61" />
   </node>
   <node id="61" name="Ker'Leor, Valner's Gulch">
     <description>A pocket of bright orange dirt tinged with a metallic substance peeks out from beneath a series of blackish stones.  A slightly sulfuric odor tickles the nostrils, pausing with the passing of a strong gust of wind.</description>
-    <position x="60" y="-340" z="0" />
+    <position x="60" y="-360" z="0" />
     <arc exit="north" move="north" destination="62" />
     <arc exit="southeast" move="southeast" destination="60" />
   </node>
   <node id="62" name="Ker'Leor, Valner's Gulch">
     <description>The walls of the gulch rise steeply, their smooth texture interspersed with the occasional pock created by rockfall.  Large chunks of pressurized soil have fallen onto the ground, creating a decidedly pastel environment.  As the gulch inclines to the north, it becomes noticeably drab.</description>
-    <position x="60" y="-360" z="0" />
+    <position x="60" y="-380" z="0" />
     <arc exit="north" move="north" destination="63" />
     <arc exit="south" move="south" destination="61" />
     <arc exit="climb" move="climb wall" destination="76" />
   </node>
   <node id="63" name="Ker'Leor, Valner's Gulch">
     <description>Huge boulders make for difficult travel over the sloping terrain.  Several hearty shrubs cling tenaciously to dry surfaces, their greenery shrouded by a thin coating of the ever-present dust.</description>
-    <position x="60" y="-420" z="0" />
+    <position x="60" y="-440" z="0" />
     <arc exit="south" move="south" destination="62" />
     <arc exit="northwest" move="northwest" destination="64" />
   </node>
   <node id="64" name="Ker'Leor, Valner's Gulch">
     <description>High walls to either side of you create a tunnel of shadow through which to pass.  The coolness accentuates an unexpected moisture in the air, as if a fine mist were rolling through the area.  Looking upward, one can glimpse the sunlight which glazes the topmost area of the gulch.</description>
     <description>High walls to either side of you are indistinguishable from the night sky.  The coolness accentuates an unexpected moisture in the air, as if a fine mist were rolling through the area.  Looking upward, one can glimpse a snakelike alley of stars above the gulch.</description>
-    <position x="40" y="-440" z="0" />
+    <position x="40" y="-460" z="0" />
     <arc exit="northeast" move="northeast" destination="65" />
     <arc exit="southeast" move="southeast" destination="63" />
     <arc exit="climb" move="climb wall" destination="77" />
   </node>
   <node id="65" name="Ker'Leor, Valner's Gulch">
     <description>A handful of brilliant sunset hues peek out from the lower portions of the gulch walls, while higher up, the soil grows dark brown, then black, then grey.  Sharp crags of shale, raked by relentless winds, have eroded into little terraces upon which plants struggle to survive.</description>
-    <position x="60" y="-460" z="0" />
+    <position x="60" y="-480" z="0" />
     <arc exit="northeast" move="northeast" destination="66" />
     <arc exit="southwest" move="southwest" destination="64" />
   </node>
   <node id="66" name="Ker'Leor, Valner's Gulch">
     <description>Pulverized rock strewn along the pathway is colored in soft shades, muted by the ever-present dust.  A tiny tree is perched here and there on the walls of the gulch, struggling to grow in spite of the lack of viable soil.  Their roots, dangling like twisted wire, search the air for the smallest trace of moisture.</description>
-    <position x="80" y="-480" z="0" />
+    <position x="80" y="-500" z="0" />
     <arc exit="northeast" move="northeast" destination="67" />
     <arc exit="southwest" move="southwest" destination="65" />
   </node>
   <node id="67" name="Ker'Leor, Valner's Gulch">
     <description>The high regions of Ker'Leor dominate the northern gulch, rising steep and forbidding against the sky.  The gulch takes a quick turn, bathed in blue-grey and peppered with shrubs.  At the pinnacle of the turn rises a natural trail which meanders up a weathered plateau.</description>
-    <position x="100" y="-500" z="0" />
+    <position x="100" y="-520" z="0" />
     <arc exit="east" move="east" destination="68" />
     <arc exit="southwest" move="southwest" destination="66" />
     <arc exit="up" move="up" destination="78" />
   </node>
   <node id="68" name="Ker'Leor, Valner's Gulch">
     <description>A trickle of water seeps from a reddish ribbon of soil low on the gulch's eastern wall.  It barely darkens the dusty topsoil before evaporating.  A lone tree stump, turned on its end, lies at the side of the pebbled pathway.</description>
-    <position x="160" y="-500" z="0" />
+    <position x="160" y="-520" z="0" />
     <arc exit="south" move="south" destination="69" />
     <arc exit="west" move="west" destination="67" />
     <arc exit="climb" move="climb wall" destination="79" />
   </node>
   <node id="69" name="Ker'Leor, Valner's Gulch">
     <description>Dense stands of dried shrubs lend their brittle accent to the parched earthen alley.  A section of nearby wall is veined with downward-facing grooves, as if fingers of water had once worked their way toward the path.</description>
-    <position x="160" y="-420" z="0" />
+    <position x="160" y="-440" z="0" />
     <arc exit="north" move="north" destination="68" />
     <arc exit="southwest" move="southwest" destination="70" />
     <arc exit="climb" move="climb wall" destination="204" />
   </node>
   <node id="70" name="Ker'Leor, Valner's Gulch">
     <description>The ground is pitted with deep holes where boulders once sat within silt.  All that are left of these monoliths, however, are stones about the size of human fists.  A few dead leaves litter the path.</description>
-    <position x="140" y="-400" z="0" />
+    <position x="140" y="-420" z="0" />
     <arc exit="northeast" move="northeast" destination="69" />
     <arc exit="southeast" move="southeast" destination="71" />
     <arc exit="climb" move="climb rocky path" destination="80" />
   </node>
   <node id="71" name="Ker'Leor, Valner's Gulch">
     <description>A sharp curve in the western wall of the gulch traps a mound of greyish dust against colorful ribbons of ancient soil.  A great furrow in the path is strewn with tiny, rounded stones.</description>
-    <position x="160" y="-380" z="0" />
+    <position x="160" y="-400" z="0" />
     <arc exit="south" move="south" destination="72" />
     <arc exit="northwest" move="northwest" destination="70" />
     <arc exit="up" move="up" destination="74" />
   </node>
   <node id="72" name="Ker'Leor, Valner's Gulch">
     <description>An up-ended bench sticks partially from the soil, utterly out of place in this barren stretch of land.  The occasional stone catches your eye, with shapes that seem suspiciously man-made.</description>
-    <position x="160" y="-360" z="0" />
+    <position x="160" y="-380" z="0" />
     <arc exit="north" move="north" destination="71" />
     <arc exit="southwest" move="southwest" destination="73" />
   </node>
   <node id="73" name="Ker'Leor, Valner's Gulch">
     <description>The eastern wall of the gulch rises sharply, formed by a ledge which abuts the still-higher mountains of Ker'Leor.  Barely visible in the craggy heights above, the towers of a mountain keep are ringed by clouds and stone.</description>
-    <position x="120" y="-320" z="0" />
+    <position x="120" y="-340" z="0" />
     <arc exit="northeast" move="northeast" destination="72" />
     <arc exit="southwest" move="southwest" destination="59" />
   </node>
   <node id="74" name="Ker'Leor, Handsome Plateau">
     <description>A deep trough splits this weathered edge of plateau, creating a furrow which dips into the gulch below.  The trees that ring the area thin out, leaving a dusty surface void of vegetation.</description>
-    <position x="120" y="-380" z="0" />
+    <position x="120" y="-400" z="0" />
     <arc exit="south" move="south" destination="75" />
     <arc exit="northwest" move="northwest" destination="76" />
     <arc exit="down" move="down" destination="71" />
   </node>
   <node id="75" name="Ker'Leor, Handsome Plateau">
     <description>Stripes of deep blue soil traverse exposed brown bedrock.  A great, lone pine juts from its deadened surroundings like a razor ripping the sky.  Its deep green color can almost be felt as much as seen.</description>
-    <position x="120" y="-360" z="0" />
+    <position x="120" y="-380" z="0" />
     <arc exit="north" move="north" destination="74" />
   </node>
   <node id="76" name="Ker'Leor, Handsome Plateau">
     <description>A jagged edge of cliff rains pebbles into the gulch which encircles the plateau.  Branches laden with grape-like fruit bow toward the ground, dipping and dancing with each gust of wind.  A smattering of dirdel carpets the area between the trees.</description>
-    <position x="100" y="-420" z="0" />
+    <position x="100" y="-440" z="0" />
     <arc exit="north" move="north" destination="77" />
     <arc exit="east" move="east" destination="204" />
     <arc exit="southeast" move="southeast" destination="74" />
@@ -483,7 +471,7 @@
   </node>
   <node id="77" name="Ker'Leor, Handsome Plateau">
     <description>Trees give way to small tufts of grass and pockets of bright yellow dirdel.  A tumbleweed leans against the trunk of a spreading oak, teetering once in a while as if attempting to get past.  The greyish soil is dotted with some crystalline substance which gives off a slightly metallic odor.</description>
-    <position x="100" y="-440" z="0" />
+    <position x="100" y="-460" z="0" />
     <arc exit="north" move="north" destination="78" />
     <arc exit="northeast" move="northeast" destination="79" />
     <arc exit="southeast" move="southeast" destination="204" />
@@ -493,51 +481,51 @@
   </node>
   <node id="78" name="Ker'Leor, Handsome Plateau">
     <description>A grouping of flowering trees in various stages of bloom struggle to look respectable against the bluish-grey dirt which covers everything.  Now and again a pine pierces the sky like an inverted exclamation point.  Great boulders rest along the edge of the plateau, threatening to tumble toward the dusty gulch.</description>
-    <position x="100" y="-480" z="0" />
+    <position x="100" y="-500" z="0" />
     <arc exit="east" move="east" destination="79" />
     <arc exit="south" move="south" destination="77" />
     <arc exit="down" move="down" destination="67" />
   </node>
   <node id="79" name="Ker'Leor, Handsome Plateau">
     <description>Tall grass, brittle and straw-like for the most part, waves in a soft wind.  Bordered by trees on either side, the clearing is open to the sky above.  A small portion of ground is darkened by a hint of water.</description>
-    <position x="140" y="-480" z="0" />
+    <position x="140" y="-500" z="0" />
     <arc exit="southwest" move="southwest" destination="77" />
     <arc exit="west" move="west" destination="78" />
     <arc exit="climb" move="climb wall" destination="68" />
   </node>
   <node id="80" name="Ker'Leor, Regnan's Trail">
     <description>A deep furrow cut along the eastern edge of the gulch provides passage upward.  Exposed roots, desperately breaking through the dry earth in search of water, provide tenuous support on the steep incline.  The trail upward is blocked by large boulders from a recent rockslide, barring passage for all.</description>
-    <position x="260" y="-400" z="0" />
+    <position x="260" y="-420" z="0" />
     <arc exit="climb" move="climb stone ramp" destination="81" />
     <arc exit="climb" move="climb rocky path" destination="70" />
   </node>
   <node id="81" name="Ker'Leor, Regnan's Trail">
     <description>A wide canyon opens up ahead, the jagged path dropping off into nothingness.  Along the edge of the cliff grow scraggly vines and plants, in deep green and pale violet colors, clinging to the drab brown rocks of the mountain.  Far from the bottom of the ravine rise the sounds of the quarry -- stone grinding and the hollow echo of metal picks and chisels hammering against rock.  A narrow steel bridge stretches across the ravine, and a large granite keep can be seen on the other side.</description>
-    <position x="260" y="-560" z="0" />
+    <position x="260" y="-580" z="0" />
     <arc exit="down" move="down" destination="80" />
     <arc exit="go" move="go steel bridge" destination="82" />
   </node>
   <node id="82" name="Ker'Leor, Regnan's Trail">
     <description>Harsh canyon winds buffet the bridge of strong and sturdy steel.  Even in the midst of the fierce attack, the bridge neither shakes nor creaks.  Misty clouds swirl about the walkway in a dizzying display, though a chest-high handrail aids in preventing travelers from falling to their deaths below.  From this section of the bridge, the rough granite walls and towers of the keep loom overhead, and crouching gargoyles are barely visible at the staggering heights of their perches, obscured by cloaks of cloud.</description>
-    <position x="240" y="-560" z="0" />
+    <position x="240" y="-580" z="0" />
     <arc exit="east" move="east" destination="81" />
     <arc exit="west" move="west" destination="83" />
   </node>
   <node id="83" name="Ker'Leor, Regnan's Trail">
     <description>Spindly brown iffithyl bushes are scattered about the western side of the ravine, and thorny vines have wrapped themselves about the steel bridge and the handrail.  Dirt from the ground to the west has been blown across the surface of the bridge, granting the keep's approach a less than shiny appearance.  The decorative gargoyles hunched above seem ready to pounce down upon those encroaching on their territory.</description>
-    <position x="220" y="-560" z="0" />
+    <position x="220" y="-580" z="0" />
     <arc exit="east" move="east" destination="82" />
     <arc exit="west" move="west" destination="84" />
   </node>
   <node id="84" name="Outside the Fornsted Walls">
     <description>Massive walls of grey granite surge up from the barren earth here, their surface breached by a slim gate of iron bars, currently raised, which leads within.  Clustered about the gate are several sentries garbed in blue and gold tabards.  Beyond the gate, steep towers and a dusty road are partially visible.  Occasionally, the soldiers stop a trader to search for illegal cargo.</description>
-    <position x="200" y="-560" z="0" />
+    <position x="200" y="-580" z="0" />
     <arc exit="go" move="go gate" destination="85" />
     <arc exit="go" move="go steel bridge" destination="83" />
   </node>
   <node id="85" name="Fornsted, Arnshal Thoroughfare" note="Tanner|Furrier">
     <description>Small, quaint houses clutter a wide dirt road, the practical lodgings densely packed together to conserve space.  The dusty street leads westward to an imposing fortress, the only feasible gateway through the mountain pass.  The north side of the street is occupied by a large lumber building.  Wooden ladders flanking the gate lead to battlements atop the walls surrounding the village.</description>
-    <position x="180" y="-560" z="0" />
+    <position x="180" y="-580" z="0" />
     <arc exit="west" move="west" destination="91" />
     <arc exit="go" move="go gate" destination="84" />
     <arc exit="go" move="go pavilion" destination="86" />
@@ -546,34 +534,34 @@
   </node>
   <node id="86" name="Fornsted, Pavilion Center">
     <description>Weathered hides have been expertly stitched together and stretched between strong wooden poles to form the walls of the pavilion.  Various provisions and supplies are stowed here in wooden crates neatly arranged along the rear wall.  Workers dressed in finely cured leathers busily load and unload new shipments.</description>
-    <position x="160" y="-600" z="0" />
+    <position x="160" y="-620" z="0" />
     <arc exit="north" move="north" destination="88" />
     <arc exit="west" move="west" destination="87" />
     <arc exit="out" move="out" destination="85" />
   </node>
   <node id="87" name="Fornsted, Pavilion Outpost" note="Gem Seller" color="#00FF00">
     <description>A large wooden desk looks strangely out of place on the cobbled floor.  Small tufts of grass struggle to sprout between the stones in the less trafficked corners.  A Dwarven clerk stands at the desk, busily recording inventory and shipments in several ledgers stacked about him.  The commerce minister is stationed within eyeshot of both the clerks and workers.</description>
-    <position x="140" y="-600" z="0" />
+    <position x="140" y="-620" z="0" />
     <arc exit="east" move="east" destination="86" />
   </node>
   <node id="88" name="Fornsted, Pavilion Tannery" note="Kisosa|Tannery|Furrier" color="#00FF00">
     <description>Preserved hides of large creatures, complete with long claws and pointed teeth, have been nailed to boards and hung about as trophies or perhaps as a testament of the tanner's skill.  The scent of fresh hides being cured by strong chemicals permeates the room.  A large high-backed leather chair sits before a dark-stained worktable littered with various tools of the trade.  A rack of sharp tools stands next to a grindstone in the far corner.</description>
-    <position x="160" y="-620" z="0" />
+    <position x="160" y="-640" z="0" />
     <arc exit="south" move="south" destination="86" />
   </node>
   <node id="89" name="Fornsted, Wall">
     <description>On the stone walls surrounding Fornsted village and the keep, the surrounding areas are clearly visible.  A looking glass is mounted upon a pedestal, pointed to the east.  Rough slits are carved in the surface of the wall, allowing crossbows to be aimed below.</description>
-    <position x="180" y="-580" z="0" />
+    <position x="180" y="-600" z="0" />
     <arc exit="climb" move="climb ladder" destination="85" />
   </node>
   <node id="90" name="Fornsted, Wall">
     <description>A massive iron cauldron rests on the walkway, a dangerous weapon in times of battle when filled with boiling oil or water.  A pedestal facing southwest contains a metal scope allowing the soldiers of the keep to survey the landscape.</description>
-    <position x="200" y="-580" z="0" />
+    <position x="200" y="-600" z="0" />
     <arc exit="climb" move="climb ladder" destination="85" />
   </node>
   <node id="91" name="Fornsted, Arnshal Thoroughfare">
     <description>A giant pair of wooden doors serves as the primary entrance to the keep which dominates the tiny village of quarriers, trappers, and traders.  The dull and drab grey of the granite is marred by two brilliant banners hanging on either side of the doors, one bearing the rearing blue and gold banner of House Theren, the other bearing the crest of the lord currently residing in the keep.  The street is packed with small houses, purely utilitarian in nature.</description>
-    <position x="160" y="-560" z="0" />
+    <position x="160" y="-580" z="0" />
     <arc exit="east" move="east" destination="85" />
     <arc exit="southwest" move="southwest" destination="93" />
     <arc exit="northwest" move="northwest" destination="92" />
@@ -581,18 +569,18 @@
   </node>
   <node id="92" name="Fornsted, Dust Path">
     <description>A large lodge extends from the granite keep, surrounded by a spiked wooden fence and containing a dirt courtyard for soldiers to practice in.  Across from the Therengian garrison house stands a ramshackle building frequented by dust-cloaked and burly workers carrying picks and mattocks.</description>
-    <position x="140" y="-580" z="0" />
+    <position x="140" y="-600" z="0" />
     <arc exit="southeast" move="southeast" destination="91" />
   </node>
   <node id="93" name="Fornsted, Dust Path">
     <description>The dusty roadway of the village stops before a rustic cabin.  Elegantly carved into the surface of the chapel door are the images of a cobra and a lion to symbolize the local deities.  Behind a whitewashed picket fence outside the chapel is a tiny herb garden, lovingly tended to by the village's priests.</description>
-    <position x="140" y="-540" z="0" />
+    <position x="140" y="-560" z="0" />
     <arc exit="northeast" move="northeast" destination="91" />
     <arc exit="go" move="go rustic cabin" destination="205" />
   </node>
   <node id="94" name="Arnshal Keep, First Floor">
     <description>Dark ironwood doors lead from the stone keep to the village outside.  The bland granite walls of the keep are brought to life by fulgent color in thick wool tapestries.  Silver candelabra lining a long corridor breathe warmth and light into the cold stone.  To the north and south stand staircases leading to the other floors of the keep.</description>
-    <position x="80" y="-560" z="0" />
+    <position x="80" y="-580" z="0" />
     <arc exit="north" move="north" destination="97" />
     <arc exit="south" move="south" destination="98" />
     <arc exit="west" move="west" destination="95" />
@@ -600,363 +588,363 @@
   </node>
   <node id="95" name="Arnshal Keep, First Floor">
     <description>The main corridor, which stretches the length of the entire keep, is filled with bright silver candelabra and multihued tapestries.  A small gateway, just large enough for a caravan to fit through, leads to a steep and winding path down the mountain outside.</description>
-    <position x="60" y="-560" z="0" />
+    <position x="60" y="-580" z="0" />
     <arc exit="east" move="east" destination="94" />
     <arc exit="go" move="go alabaster arch" destination="96" />
     <arc exit="go" move="go gateway" destination="103" />
   </node>
   <node id="96" name="Arnshal Keep, Great Hall">
     <description>This cavernous chamber is filled with several rows of rectangular wooden tables and benches.  A raised dais at the far back of the room looks over Arnshal's Great Hall and holds a smaller table where the lord, visiting dignitaries, and the chief advisors and staff feast.  A blazing firepit warms the cold stone of the hall.</description>
-    <position x="40" y="-560" z="0" />
+    <position x="40" y="-580" z="0" />
     <arc exit="out" move="out" destination="95" />
   </node>
   <node id="97" name="Arnshal Keep, First Floor">
     <description>The shadowy cracked stone of a downward spiraling stairway is barely lit by flickering torches held in bronze wall sconces.  A vibrant blue tapestry depicts a pale cloaked man strung up on a gallows, while flame-wielding villagers surround him.</description>
-    <position x="80" y="-580" z="0" />
+    <position x="80" y="-600" z="0" />
     <arc exit="south" move="south" destination="94" />
     <arc exit="climb" move="climb stairway" destination="101" />
   </node>
   <node id="98" name="Arnshal Keep, First Floor">
     <description>Bright yellow and orange tapestries hang from the walls, between them a flaring torch held in place by a sconce.  A thick oak door, locked with a heavy iron bar, leads to the armory and the food storehouses for the keep and the village beyond.  A stone staircase ascends to the second floor.</description>
-    <position x="80" y="-540" z="0" />
+    <position x="80" y="-560" z="0" />
     <arc exit="north" move="north" destination="94" />
     <arc exit="climb" move="climb stairway" destination="99" />
   </node>
   <node id="99" name="Arnshal Keep, Second Floor">
     <description>This hallway is brightly lit, with royal blue and purple tapestries along the wall and golden candelabra casting their glow across everything.  Fine oak doors partially obscured by red curtains serve as entrances to guest chambers which provide all the beauty and luxury possible in this isolated fortress.</description>
-    <position x="80" y="-520" z="0" />
+    <position x="80" y="-540" z="0" />
     <arc exit="east" move="east" destination="100" />
     <arc exit="climb" move="climb stairway" destination="98" />
   </node>
   <node id="100" name="Arnshal Keep, Second Floor">
     <description>The second floor corridor ends before a set of double oak doors, behind them the antechamber and bedroom of the keep's lord.  Large suits of antique armor stand sentinel before the doorway, their brightly polished steel shields bearing the crest of their master, and their halberds threatening off all who would do him harm.</description>
-    <position x="100" y="-520" z="0" />
+    <position x="100" y="-540" z="0" />
     <arc exit="west" move="west" destination="99" />
   </node>
   <node id="101" name="Arnshal Keep, Lower Level">
     <description>The walls in this dreary corridor are devoid of shining candelabra or radiant silk and woolen tapestries to brighten the lifeless stone.  The wooden floor is notched and scraped and bears numerous stains of unidentifiable natures.  Roughened doors of unpolished pinewood on either side of the hall lead to the quarters of the keep's servants.  A single swath of red paint across one door marks the living space of the male servants, while a blue slash marks that of the females.</description>
-    <position x="80" y="-600" z="0" />
+    <position x="80" y="-620" z="0" />
     <arc exit="west" move="west" destination="102" />
     <arc exit="climb" move="climb stairway" destination="97" />
   </node>
   <node id="102" name="Arnshal Keep, Lower Level">
     <description>A slow and steady dripping of water can be heard from deep below, as another staircase, even more cracked and dirty than the first, leads further underground here.  Joining the water in its nonstop symphony are the sounds of metal chains rattling against each other or the granite stone, and the sounds of booted footsteps pacing back and forth from the dungeon below.</description>
-    <position x="60" y="-600" z="0" />
+    <position x="60" y="-620" z="0" />
     <arc exit="east" move="east" destination="101" />
     <arc exit="climb" move="climb stairway" destination="215" />
   </node>
   <node id="103" name="Arnshal Road, Keep Entrance">
     <description>Grinning stone gargoyles perch eternally over a small gateway leading into the Keep.  Each gargoyle clasps a long pole in its stone claws.  From one pole hangs the banner of Therengia while the banner of the Keep's current ruler hangs from the other.</description>
     <description>Grinning stone gargoyles perch eternally over a small gateway leading into the Keep.  Each gargoyle clasps a long pole in its stone claws.  From one pole hangs the banner of Therengia while the banner of the Keep's current ruler hangs from the other.  Torches burn back the darkness, casting flickering shadows against the walls of the Keep.</description>
-    <position x="60" y="-540" z="0" />
+    <position x="60" y="-560" z="0" />
     <arc exit="west" move="west" destination="104" />
     <arc exit="go" move="go small gateway" destination="95" />
   </node>
   <node id="104" name="Arnshal Road, Causeway">
     <description>Guards in the brilliant blue and gold tabards of Therengia stand at ease, pikes held in a loose but ready grip.  A steady stream of travelers moves in each direction under the watchful eyes of crossbowmen in the battlements.</description>
     <description>Bright torches march into the night.  Guards in the brilliant blue and gold tabards of Therengia keep a watchful eye on the shadows, pikes held in a loose but ready grip.  Crossbowmen stand at intervals in the battlements ready to cover retreat into the Keep if needed.</description>
-    <position x="40" y="-540" z="0" />
+    <position x="40" y="-560" z="0" />
     <arc exit="west" move="west" destination="105" />
     <arc exit="go" move="go stone causeway" destination="103" />
   </node>
   <node id="105" name="Arnshal Road, Mountain Meadow">
     <description>At the southern end of the meadow two large boulders narrow the path where the road winds down into the forest.  The road has been cleared of hazards, ensuring a clear view for the guards watching the approach to the Keep.  On the north side of the road, a small pool mirrors the mighty trees surrounding the meadow.</description>
     <description>At the southern end of the meadow two large boulders narrow the path where the road winds down into the forest.  A small guardhouse is partially hidden in the deeper shadows of the largest boulder.  Torchlight flickers off rows of loaded crossbows hanging in easy reach of the sentries.  On the north side of the road, a small pool mirrors the torchlight.</description>
-    <position x="0" y="-540" z="0" />
+    <position x="0" y="-560" z="0" />
     <arc exit="east" move="east" destination="104" />
     <arc exit="southwest" move="southwest" destination="106" />
   </node>
   <node id="106" name="Arnshal Road, Caravan Route">
     <description>Scrubby bushes and small boulders clutter the edges of the road, ensuring travelers stay in the watchtowers' line of sight as they leave or approach the Keep.  A small guardhouse is slightly hidden in the shadow of a large boulder.  Lighter spots of gravel reveal recently filled potholes and ruts, proving that this close to civilization the route is well maintained.</description>
     <description>Bushes and small boulders clutter the edges of the road, ensuring travelers stay in the watchtowers' line of sight as they leave or approach the Keep.  The smooth even grade of the road shows that, this close to civilization, the route is well maintained.  A small guardhouse is slightly hidden in the shadow of a large boulder.</description>
-    <position x="-20" y="-520" z="0" />
+    <position x="-20" y="-540" z="0" />
     <arc exit="northeast" move="northeast" destination="105" />
     <arc exit="southwest" move="southwest" destination="107" />
   </node>
   <node id="107" name="Arnshal Road, Caravan Route">
     <description>A sweeping view down the mountain is available from this vantage point.  To the northeast, the watchtowers of the Keep are barely visible.  Further down the mountain, the road twists and turns like a tortured snake through the ancient forest.  A shallow depression in the shadow of a large boulder hints that water was once available here.</description>
     <description>A sweeping view down the mountain is available from this vantage point.  Faint light from the Keep to the northeast casts odd flickering shadows into the night.  Further down the mountain, the road twists and turns like a tortured snake through the ancient forest.  A shallow depression in the shadow of a large boulder hints that water was once available here.</description>
-    <position x="-40" y="-500" z="0" />
+    <position x="-40" y="-520" z="0" />
     <arc exit="northeast" move="northeast" destination="106" />
     <arc exit="south" move="south" destination="108" />
   </node>
   <node id="108" name="Arnshal Road, Caravan Route">
     <description>Bordered by towering trees that dapple the road with shadows, orderly rows of stones line the edge of the route, designating the proper path.  A deep layer of leaves cushions the forest floor, masking any sound of forest dwellers and surrounding an immense boulder that leans precariously over the southern edge of the road.</description>
     <description>Bordered by towering trees that deepen the shadows along the road, small boulders line the edge of the route, designating the proper path.  A deep layer of leaves cushions the forest floor, masking any sound of forest dwellers and surrounding an immense boulder that leans precariously over the southern edge of the road.</description>
-    <position x="-40" y="-480" z="0" />
+    <position x="-40" y="-500" z="0" />
     <arc exit="north" move="north" destination="107" />
     <arc exit="south" move="south" destination="109" />
   </node>
   <node id="109" name="Arnshal Road, Caravan Route">
     <description>Loose pebbles skitter away under each step, creating colorful showers of stones off the edge of the path.  A virtual rainbow of colors can be seen in the variety of stone that makes up this area, offset by the muted greys and greens of the local shrubbery.  Ancient elms and hoary oaks compete for space and sunlight.</description>
     <description>Loose pebbles skitter away under each step.  The night-darkened landscape is filled with oddly looming shadows.  Ancient elms and hoary oaks claw at the night sky, competing for space against the firmament.</description>
-    <position x="-40" y="-460" z="0" />
+    <position x="-40" y="-480" z="0" />
     <arc exit="north" move="north" destination="108" />
     <arc exit="south" move="south" destination="110" />
   </node>
   <node id="110" name="Arnshal Road, Caravan Route">
     <description>The road continues its winding route down the mountain.  Large boulders, stacked one atop another as if placed there for some purpose, march side by side with mighty trees.  Smaller trees and scattered shrubs take up positions along the edge of the road.  A gnarled and bent oak, a lonely sentinel, guards a gap in the stones as if guarding the gate to a keep.</description>
     <description>The road continues its winding route down the mountain.  Large boulders, stacked one atop another as if placed there for some purpose, cast looming shadows into the night.  Scattered trees and shrubs blend into the shadows, seeming to disappear into the night.  A gnarled and bent oak, a lonely sentinel, casts a determined shadow over a gap in the stones as if guarding the gate to a keep.</description>
-    <position x="-40" y="-440" z="0" />
+    <position x="-40" y="-460" z="0" />
     <arc exit="north" move="north" destination="109" />
     <arc exit="southwest" move="southwest" destination="111" />
   </node>
   <node id="111" name="Arnshal Road, Caravan Route">
     <description>The road gently curves around a huge stone column that may once have been part of some long ago edifice.  Odd markings seem to be etched into the side of the stone, chiseled by some strange hand, or the sharp blade of the wind.  Stately elms and oaks hold back the march of the forest, preventing it from overtaking the road.</description>
     <description>The road gently curves around a huge stone column that may once have been part of some long ago edifice.  Stately elms and oaks hold back the deeper darkness of the forest, preventing it from overtaking the road.</description>
-    <position x="-60" y="-420" z="0" />
+    <position x="-60" y="-440" z="0" />
     <arc exit="northeast" move="northeast" destination="110" />
     <arc exit="southwest" move="southwest" destination="112" />
   </node>
   <node id="112" name="Arnshal Road, Stone Column">
     <description>A huge column of multi-hued stone dominates the view.  Tumbled boulders on the opposite side of the road suggest it once was one of a pair, perhaps the gateway to a forgotten city.  The wind and rain have erased any evidence of the column's origin.</description>
     <description>A huge stone column looms in the darkness.  Tumbled boulders on the opposite side of the road suggest it once was one of a pair, perhaps the gateway to a forgotten city.  Eerie light issues from tiny patches of lichen covering the stones.</description>
-    <position x="-80" y="-400" z="0" />
+    <position x="-80" y="-420" z="0" />
     <arc exit="northeast" move="northeast" destination="111" />
     <arc exit="northwest" move="northwest" destination="113" />
   </node>
   <node id="113" name="Arnshal Road, Caravan Route">
     <description>Forced to curve around a huge stone column, the route is jagged with smooth fragments of stone that rear up through the sand and pebbles to trip unwary feet, evidence that a road of some kind has been here for ages.  Ancient forest giants march to the horizon, towering over low bushes malformed by the screeching wind, and thorny fingers reach out to catch at unwary travelers.</description>
     <description>Forced to curve around a huge stone column, the route is jagged with smooth fragments of stone that rear up through the sand and pebbles to trip unwary feet, evidence that a road of some kind has been here for ages.  Thorny bushes reach through the night to catch at unwary travelers.</description>
-    <position x="-100" y="-420" z="0" />
+    <position x="-100" y="-440" z="0" />
     <arc exit="southeast" move="southeast" destination="112" />
     <arc exit="northwest" move="northwest" destination="114" />
   </node>
   <node id="114" name="Arnshal Road, Caravan Route">
     <description>To the south and east, the walls give way abruptly to flat, level ground.  Striated bands of color spread ribbons of rainbows across the walls of the ravine.  The path slopes steeply down to the north through the deep cut.  Acres of mingled elms, aspens and oak stretch to the horizon, the road into the ravine the only possible path.</description>
     <description>To the south and east, the walls give way abruptly to flat, level ground.  The path slopes steeply down to the north through the deep cut.  Acres of mingled elms, aspens and oak darken the road into the ravine the only possible path.</description>
-    <position x="-160" y="-440" z="0" />
+    <position x="-160" y="-460" z="0" />
     <arc exit="north" move="north" destination="115" />
     <arc exit="southeast" move="southeast" destination="113" />
   </node>
   <node id="115" name="Arnshal Road, Ravine">
     <description>Steep walls lean in overhead, providing a touch of shade.  A dry dusty scent permeates the air while seed puffs and dust motes dance in the breeze.  Scrub oak trees cling tenaciously to the lip of the ravine, sending long tendrils of roots in quest of moisture.</description>
     <description>Steep walls lean in overhead, deepening the darkness of the night.  Oak leaves rustle against each other, creating a strangely compelling music competing with the soughing of the wind in the pines.</description>
-    <position x="-160" y="-460" z="0" />
+    <position x="-160" y="-480" z="0" />
     <arc exit="north" move="north" destination="116" />
     <arc exit="south" move="south" destination="114" />
   </node>
   <node id="116" name="Arnshal Road, Ravine">
     <description>Patches of lichen and scrubby brush dot the walls, bravely clinging to life in this harsh landscape.  Small boulders and multi-hued pebbles are strewn across the floor of the ravine looking like nothing more than a giant child's abandoned game of marbles.  Noble aspens peer down on the path from their vantage on the edge of the cut.</description>
-    <position x="-160" y="-480" z="0" />
+    <position x="-160" y="-500" z="0" />
     <arc exit="north" move="north" destination="117" />
     <arc exit="south" move="south" destination="115" />
   </node>
   <node id="117" name="Arnshal Road, Ravine">
     <description>Layers of pastel stone paint odd designs across the walls as if laid down by the brush of an artist with a fondness for patterns in wind-scoured rock.  Shrubs and boulders near the road form sculptures of their own, adding to nature's composition. </description>
     <description>Deep shadows within the ravine hide the beauty that can only be appreciated by day.  The deep chill of the mountain night turns breath to fog that shrouds the trees and shrubs in ghostly costume.  Odd sculptures of stone and brush add their own confusing shadows.</description>
-    <position x="-160" y="-500" z="0" />
+    <position x="-160" y="-520" z="0" />
     <arc exit="north" move="north" destination="118" />
     <arc exit="south" move="south" destination="116" />
   </node>
   <node id="118" name="Arnshal Road, Ravine">
     <description>Sharp slivers of stone and tumbled boulders litter the floor of the ravine making travel dangerous.  In odd harmony, glorious colors fan out across the walls, a sunset of stone frozen for eternity.  Smooth patches underfoot reveal that this road was once paved, long before the roots of mighty forest giants began to break the stone.</description>
     <description>Sharp slivers of stone and tumbled boulders trip unwary feet in the darkness.  Smooth patches underfoot reveal that this road was once paved, long before the roots of mighty forest giants began to break the stone.</description>
-    <position x="-160" y="-520" z="0" />
+    <position x="-160" y="-540" z="0" />
     <arc exit="south" move="south" destination="117" />
     <arc exit="northwest" move="northwest" destination="119" />
   </node>
   <node id="119" name="Arnshal Road, Ravine">
     <description>The ravine curves sharply to the north and south, blocking the view of the path in either direction.  Thorny shrubs and pale patches of lichen are the only signs of life.  Sculptures of stone decorate the road with odd shapes, vaguely reminiscent of animals and people though worn by wind and rain.  A lone oak bends as if to examine nature's artwork.</description>
     <description>The sharp turning of the ravine to the north and south blocks any light that may be cast by night travelers coming from those directions.  The only sound is the sighing of the wind through the brush and the occasional call of a nightbird.</description>
-    <position x="-180" y="-540" z="0" />
+    <position x="-180" y="-560" z="0" />
     <arc exit="southeast" move="southeast" destination="118" />
     <arc exit="northwest" move="northwest" destination="120" />
   </node>
   <node id="120" name="Arnshal Road, Ravine">
     <description>Striated bands of color spread ribbons of rainbows across the walls of the ravine as the walls to the north and east abruptly give way to level ground.  The path slopes steeply down to the north through the deep cut.  Acres of oak, aspen and elm trees stretch to the horizon, the road into the ravine the only possible path.</description>
     <description>The darkness within the ravine walls is nearly impenetrable, broken only by the sound of stones that occasionally clatter down from somewhere above.  To the north and east, the walls abruptly give way to level ground and the path slopes steeply down to the north through the deep cut.  Acres of oak and aspen trees stretch to the horizon, the road into the ravine the only possible path.</description>
-    <position x="-200" y="-560" z="0" />
+    <position x="-200" y="-580" z="0" />
     <arc exit="southeast" move="southeast" destination="119" />
     <arc exit="west" move="west" destination="121" />
   </node>
   <node id="121" name="Arnshal Road, Caravan Route">
     <description>The road enters a small clearing here, a convenient rest stop for weary travelers.  Low boulders edging a patch of soft grass provide comfortable seating around a large, flat-top boulder, an ideal table for a roadside picnic.  Off to one side, a stone well offers the possibility of a cooling sip of water.</description>
     <description>The road enters a small clearing here, a convenient rest stop for weary travelers.  Low boulders edging a patch of soft grass sit to either side of a large flat-top boulder, a safe backdrop to pitch a tent against.  Night glowing lichen grows against rocks used to line the path to the well on one side of the clearing.</description>
-    <position x="-220" y="-560" z="0" />
+    <position x="-220" y="-580" z="0" />
     <arc exit="east" move="east" destination="120" />
     <arc exit="southwest" move="southwest" destination="122" />
   </node>
   <node id="122" name="Arnshal Road, Caravan Route">
     <description>The road curves sharply to the north and south, though thickly growing trees and shrubs block the view of the path in either direction.  Boulders are tumbled about the area, perhaps flung there by some long-ago flood.  Colorful shrubs define the edge of the road.</description>
     <description>The road curves sharply to the north and south, though thickly growing trees and shrubs block the view of the path in either direction.  Boulders are tumbled about the area, perhaps flung there by some long-ago flood.  Barely visible in night's dark cloak, tangled shrubs define the edge of the road.</description>
-    <position x="-240" y="-540" z="0" />
+    <position x="-240" y="-560" z="0" />
     <arc exit="northeast" move="northeast" destination="121" />
     <arc exit="southwest" move="southwest" destination="123" />
   </node>
   <node id="123" name="Arnshal Road, Caravan Route">
     <description>Colorful flowering shrubs offset the soft shadows under the trees.  Along the dark earth, a cascade of red peonies flows in a bright stream punctuated by cataracts of blue gentians breaking against small boulders strewn under the trees.  The scent of wild honey carries on the breeze.</description>
     <description>The scent of wild honey carries on the night breeze.  Deeper shadows beneath the trees mark the presence of bushes and stones, their forms softened by darkness.  Stately forest giants rest peacefully against the darkened sky.</description>
-    <position x="-260" y="-520" z="0" />
+    <position x="-260" y="-540" z="0" />
     <arc exit="northeast" move="northeast" destination="122" />
     <arc exit="south" move="south" destination="124" />
   </node>
   <node id="124" name="Arnshal Road, Caravan Route">
     <description>Squared off boulders lay in a jumbled heap on the west side of the road, along the banks of a dry streambed.  Bundles of limbs and twigs entwined in vines and moss lay scattered amid the mess.  To the east, more boulders are stacked in a seemingly random pattern.  One scraggly aspen guards a gap in the stones.</description>
     <description>Squared off boulders lay in a jumbled heap on the west side of the road, along the banks of a dry streambed.  To the east, more boulders are stacked in a seemingly random pattern.  One scraggly aspen casts a guarding shadow across a gap in the stones.</description>
-    <position x="-260" y="-500" z="0" />
+    <position x="-260" y="-520" z="0" />
     <arc exit="north" move="north" destination="123" />
     <arc exit="south" move="south" destination="125" />
   </node>
   <node id="125" name="Arnshal Road, Caravan Route">
     <description>Layers of weathered stone, laid bare by wind and rain, display broad bands of color spread out across the face of the mountain.  The roots of mighty trees have broken the stone into pastel rainbows of dirt and sand, and occasional flowers dot the landscape with brighter hues than the faded stone can muster.</description>
     <description>Layers of weathered stone, laid bare by wind and rain, display moon-silvered striations spread out across the face of the mountain.  The roots of mighty trees have broken the stone into a jumble of dirt and sand dotted with the forms of flowers slumbering through the night.</description>
-    <position x="-260" y="-480" z="0" />
+    <position x="-260" y="-500" z="0" />
     <arc exit="north" move="north" destination="124" />
     <arc exit="south" move="south" destination="126" />
   </node>
   <node id="126" name="Arnshal Road, Caravan Route">
     <description>Myriad shrubs and rock create elaborate formations against the backdrop of elms, aspens and oak that dominate the forest.  A mountain daisy bobs its head to the rhythm of the wind blowing down from the heights.  One ancient oak bends in silent supplication to the earth, its spine bowed by the weight of years.</description>
     <description>Myriad shrubs and rock create elaborate shadows against the backdrop of elms, aspens and oak that dominate the forest.  A mountain daisy, petals furled against the dark, bobs its head to the rhythm of the wind blowing down from the heights.  One ancient oak bends in silent supplication to the earth, its spine bowed by the weight of years.</description>
-    <position x="-260" y="-460" z="0" />
+    <position x="-260" y="-480" z="0" />
     <arc exit="north" move="north" destination="125" />
     <arc exit="south" move="south" destination="127" />
   </node>
   <node id="127" name="Arnshal Road, Caravan Route">
     <description>A deep carpet of leaves layers the forest floor, filling the air with a light, earthy scent.  Enveloped in the consuming embrace of a flowering vine, a spindly oak that is almost bare of leaves seems to be slowly losing its battle against the invader.</description>
     <description>A deep carpet of leaves layers the forest floor, filling the night air with a light, earthy scent.  Enveloped in the consuming embrace of a flowering vine, a spindly oak that is almost bare of leaves seems to be slowly losing its battle against the invader.</description>
-    <position x="-260" y="-440" z="0" />
+    <position x="-260" y="-460" z="0" />
     <arc exit="north" move="north" destination="126" />
     <arc exit="southwest" move="southwest" destination="128" />
   </node>
   <node id="128" name="Arnshal Road, Caravan Route">
     <description>Glorious color spreads out in an epic canvas of stones and shrubs.  Multi-hued boulders dot the landscape, creating odd silhouettes.  Muted greys and greens of low shrubs offset the brilliant colors of their flowers reaching out to the warmth and sun.  Above and behind it all, towering elms, delicate aspens and stately oaks nod in bemused silence at the panorama.</description>
     <description>Large boulders dot the dark landscape, creating odd patterns in the hues of the night.  Looming shadows reveal themselves to be low shrubs and trees taking on weird dimensions in the darkness.  Above and behind it all, towering elms, delicate aspens and stately oaks cast guardian shadows over the smaller flora.</description>
-    <position x="-280" y="-420" z="0" />
+    <position x="-280" y="-440" z="0" />
     <arc exit="northeast" move="northeast" destination="127" />
     <arc exit="northwest" move="northwest" destination="129" />
   </node>
   <node id="129" name="Arnshal Road, Caravan Route">
     <description>Scattered amongst the boulders lining the route, brightly hued flowers compete with the trees for sun and rain, their cheerful displays of color flung randomly about as though designed by playful fae.</description>
     <description>Scattered amongst the boulders lining the route, flowers slumber through the night, their cheerful displays of color tucked away in wait for the morning light.  Trees loom in the darkness, and shadowed undergrowth sends tendrils snaking across the path to trip unwary travelers.</description>
-    <position x="-300" y="-440" z="0" />
+    <position x="-300" y="-460" z="0" />
     <arc exit="southeast" move="southeast" destination="128" />
     <arc exit="northwest" move="northwest" destination="130" />
   </node>
   <node id="130" name="Arnshal Road, Caravan Route">
     <description>Rainbow flecked granite mingles with milky quartz where the roots of great trees have exposed the ancient foundation of the mountains.  An assortment of colorful stones and low flowering shrubs blurs the line between the road and the forest.  The forest spreads to the horizon on every side.</description>
     <description>Jumbled rocks show where the roots of great trees have exposed the ancient foundation of the mountains.  Stones and shrubs cast a smudge of shadow at the knees of ancient trees, blurring the edge where road meets forest.  The deeper darkness of the forest spreads to the horizon on every side.</description>
-    <position x="-320" y="-460" z="0" />
+    <position x="-320" y="-480" z="0" />
     <arc exit="southeast" move="southeast" destination="129" />
     <arc exit="northwest" move="northwest" destination="131" />
   </node>
   <node id="131" name="Arnshal Road, Caravan Route">
     <description>The vines of a rambling rose bush climb onto the knees of ancient oaks.  Towering elms entwine their limbs in a long arc over the route.  Deep moss dampens the sounds of the forest.</description>
     <description>Day flowers tuck their petals in close for the night.  Ancient oaks gather the vines of rambling roses into their spreading arms.  Stately elms cast a blanket of shadow over the smaller flora.</description>
-    <position x="-340" y="-480" z="0" />
+    <position x="-340" y="-500" z="0" />
     <arc exit="north" move="north" destination="132" />
     <arc exit="southeast" move="southeast" destination="130" />
   </node>
   <node id="132" name="Arnshal Road, Caravan Route">
     <description>The trees grow so close together that they appear engaged in whispered conversation.  Brightly flowered shrubs reach toward the sky, trying to emulate their taller cousins.  The rich scent of forest loam mingles with the sweet nectar of wild rambling roses.</description>
     <description>Growing close together, elms, deobars and aspens cast an impenetrable shadow over the road.  Low lying shrubs deepen the darkness at the base of the trees.  The rich scent of forest loam mingles with the sweet nectar of wild rambling roses.</description>
-    <position x="-340" y="-500" z="0" />
+    <position x="-340" y="-520" z="0" />
     <arc exit="north" move="north" destination="133" />
     <arc exit="south" move="south" destination="131" />
   </node>
   <node id="133" name="Arnshal Road, Caravan Route">
     <description>The branches high overhead create a leafy roof over the forest floor.  Light filters down between the spaces in the leaves, creating pools of amber light on the vegetation below.  Tumbled boulders show dully against the verdant green.</description>
     <description>Branches overhead try to block out the light of the stars, creating a dark tunnel.  In the few spaces between the branches, stars twinkle intermittently.  Tumbled boulders are lighter patches against darkness.</description>
-    <position x="-340" y="-520" z="0" />
+    <position x="-340" y="-540" z="0" />
     <arc exit="north" move="north" destination="134" />
     <arc exit="south" move="south" destination="132" />
   </node>
   <node id="134" name="Arnshal Road, Caravan Route">
     <description>Clinging tendrils of creeping vines entwine the trunks of ancient oaks and aspens.  Beeches and birches mingle with the other trees in an obscure dance of nature.  Leaves of past autumns blanket the forest floor with a green and brown carpet.</description>
     <description>The intoxicating scent of night-blooming trumpet flowers reveals their presence.  Beeches and birches mingle with the other trees in an obscure dance of nature.  Night sounds are muffled by the leaves of past autumns carpeting the forest floor.</description>
-    <position x="-340" y="-540" z="0" />
+    <position x="-340" y="-560" z="0" />
     <arc exit="south" move="south" destination="133" />
     <arc exit="northwest" move="northwest" destination="135" />
   </node>
   <node id="135" name="Arnshal Road, Caravan Route">
     <description>Wild rose bushes edge the road in a perfect line on either side as if purposefully placed there.  An occasional thorny branch reaches out to snag travelers on the road.  Smaller bushes space themselves out between the roses to fill in any gaps, forming a formidable barrier to what treasures may be hidden beyond the edge of the road.</description>
     <description>The scent of wild roses drifts on the night breeze.  An occasional thorny branch reaches out to snag travelers on the road.  Rose bushes intertwine with smaller shrubs, a formidable barrier to what treasures may be hidden beyond the edge of the road.</description>
-    <position x="-360" y="-560" z="0" />
+    <position x="-360" y="-580" z="0" />
     <arc exit="southeast" move="southeast" destination="134" />
     <arc exit="northwest" move="northwest" destination="136" />
   </node>
   <node id="136" name="Arnshal Road, Caravan Route">
     <description>Branches arc overhead to create a protective cover against the wind.  Light flits down from gaps in the canopy, creating halos of light over the road.  The trees press close to the hedges lining the road in an effort to find a break in their strength.</description>
     <description>Branches arc overhead to create a protective cover against the wind.  Gaps in the canopy afford an occasional glimpse of the night sky.  The trees press close to the hedges lining the road in an effort to find a break in its strength.</description>
-    <position x="-380" y="-580" z="0" />
+    <position x="-380" y="-600" z="0" />
     <arc exit="southeast" move="southeast" destination="135" />
     <arc exit="southwest" move="southwest" destination="137" />
   </node>
   <node id="137" name="Arnshal Road, Caravan Route">
     <description>Various flowering shrubs line the road, a colorful bonanza against the monotonous browns and greens of the forest.  The rainbow hues dazzle the eye with a vibrant display.  Farther along, shrubs fade into hedges of myrtle that screen the forest floor from view.</description>
     <description>The dark forms of shrubs line the road.  The sweet scent of nectar lingers in the night.  Farther along, dark mountain shrubbery fades into the deeper shadows of hedges lining the road.</description>
-    <position x="-400" y="-560" z="0" />
+    <position x="-400" y="-580" z="0" />
     <arc exit="northeast" move="northeast" destination="136" />
     <arc exit="south" move="south" destination="138" />
   </node>
   <node id="138" name="Arnshal Road, Caravan Route">
     <description>Hedges of myrtle line the road, attempting to keep the forest from taking the road back into its clutches.  A rainbow of flowers sprouts from the hedges to offset the uniform color of the forest.  Tree branches overhead close together to form a web of shade.</description>
     <description>Dark hedges line the road, attempting to keep the forest from taking the road back into its clutches.  Overhead, tree branches form a dark web against the night sky.  Creeping tendrils reach out from the darkness to snag the unwary.</description>
-    <position x="-400" y="-540" z="0" />
+    <position x="-400" y="-560" z="0" />
     <arc exit="north" move="north" destination="137" />
     <arc exit="south" move="south" destination="139" />
   </node>
   <node id="139" name="Arnshal Road, Caravan Route">
     <description>Colorful flowers parade next to the edges of the road.  Majestic trees reach for the heavens, their branches striving to block out the light of day and providing cool shade.  One large boulder leans through the shrub as if to fall onto the road.</description>
     <description>Majestic trees reach for the heavens, their branches blocking out the night sky.  One large boulder leans through the shrub as if to fall onto the road.  Sweet scents hint at the beauty waiting to be revealed at the dawn.</description>
-    <position x="-400" y="-520" z="0" />
+    <position x="-400" y="-540" z="0" />
     <arc exit="north" move="north" destination="138" />
     <arc exit="south" move="south" destination="140" />
   </node>
   <node id="140" name="Arnshal Road, Caravan Route">
     <description>The road cuts through the dense forest where overhanging branches form a leafy arc blocking out most of the light.  Ladders of light climb to the heavens through gaps in the canopy.  Scattered rocks and boulders create pools of stone in a sea of soft green moss.</description>
     <description>The road cuts through the dense forest where overhanging branches form a leafy arc blocking out most of the night sky.  Occasional stars twinkle through gaps in the canopy.  Scattered rocks and boulders create pools of stone in a sea of soft green moss.</description>
-    <position x="-400" y="-500" z="0" />
+    <position x="-400" y="-520" z="0" />
     <arc exit="north" move="north" destination="139" />
     <arc exit="southwest" move="southwest" destination="141" />
   </node>
   <node id="141" name="Arnshal Road, Mountain Approach">
     <description>Young saplings stretch toward the sky, trying to emulate their older, taller neighbors.  The road snakes through the edge of the forest where the trees grudgingly admit they cannot overcome the rockier ground.  Occasional small boulders dot the edge where road meets forest.</description>
-    <position x="-420" y="-480" z="0" />
+    <position x="-420" y="-500" z="0" />
     <arc exit="northeast" move="northeast" destination="140" />
     <arc exit="southwest" move="southwest" destination="142" />
   </node>
   <node id="142" name="Arnshal Road, Mountain Approach">
     <description>Hard stony ground prevents the forest from encroaching further.  An ash-filled fire ring to the side of the road marks the stopover spot of previous travelers.  Logs and stumps have been pulled up for seating around the fire.  A few paces back, smaller logs are stacked waiting to be burned.</description>
     <description>Hard stony ground prevents the forest from encroaching further.  The great dome of the night sky arcs overhead.  An ash-filled fire ring to the side of the road marks the stopover spot of previous travelers.  Logs and stumps have been pulled up for seating around the fire.  A few paces back, smaller logs are stacked waiting to be burned.</description>
-    <position x="-440" y="-460" z="0" />
+    <position x="-440" y="-480" z="0" />
     <arc exit="northeast" move="northeast" destination="141" />
     <arc exit="west" move="west" destination="143" />
   </node>
   <node id="143" name="Arnshal Road, Mountain Approach">
     <description>The forested land of the valley dies away quite a bit to the east, and the rocky ground sloping upward at this stretch of roadway affords a fine view of the sentinel-like trees.  As the boulder-strewn path ascends the base of the mountains, large and encircling walls can be seen further west.</description>
-    <position x="-460" y="-460" z="0" />
+    <position x="-460" y="-480" z="0" />
     <arc exit="east" move="east" destination="142" />
     <arc exit="up" move="up" destination="144" />
   </node>
   <node id="144" name="Arnshal Road, Mountain Approach">
     <description>The craggy heights of the Gemfire Mountains rise to epic proportions, dizzying any that would trail their eyes toward the tops of those peaks.  A fine carpeting of rocks, brandishing colors of browns and greys, makes a slightly less decorative adornment than the blanket of soft and dewy green grass in the valley to the east.</description>
-    <position x="-460" y="-480" z="0" />
+    <position x="-460" y="-500" z="0" />
     <arc exit="west" move="west" destination="145" />
     <arc exit="down" move="down" destination="143" />
   </node>
   <node id="145" name="Arnshal Road, Mountain Approach">
     <description>Under the watchful eye and protective arm of the towering mountains, a thick stone wall reclines here.  A narrow gateway, its portcullis raised, emulates a tunnel as it cuts through the dense wall to allow passage.  To the east, a rocky road leads down the sloping mountain approach.</description>
-    <position x="-480" y="-480" z="0" />
+    <position x="-480" y="-500" z="0" />
     <arc exit="east" move="east" destination="144" />
     <arc exit="go" move="go narrow gateway" destination="146" />
   </node>
   <node id="146" name="Hvaral, Gate">
     <description>High, thick walls surround a fairly small, but still bustling, town.  The solid rock walls are breached by a narrow gateway, wide enough for but a single caravan to pass.  Surmounting the gateway is a row of iron bars, their tips lovingly adorned with spikes that bear the appearance of lethality -- though they are raised now, it seems they would be easily enough lowered when needed.</description>
-    <position x="-500" y="-480" z="0" />
+    <position x="-500" y="-500" z="0" />
     <arc exit="west" move="west" destination="147" />
     <arc exit="go" move="go narrow gateway" destination="145" />
   </node>
   <node id="147" name="Hvaral, Theren Street">
     <description>While the roadway is scattered with small rock buildings, the predominant feature along this stretch of packed dirt road is a well-frequented wooden stablehouse, to which traverse mounts of a wide variety of breeds and sizes.  To the south, the stable connects to an even larger hall, while the imposing, gargoyle-decored walls loom eastward.</description>
-    <position x="-520" y="-480" z="0" />
+    <position x="-520" y="-500" z="0" />
     <arc exit="east" move="east" destination="146" />
     <arc exit="south" move="south" destination="153" />
     <arc exit="west" move="west" destination="148" />
   </node>
   <node id="148" name="Hvaral, Elbaeryn Square">
     <description>This square, dutifully named after the house controlling this region, serves as a focal point of the town.  A fountain, Hvaral's main gathering place, protrudes from the road to the west, while to the east stands the imposing gate and wall of the fortified town.  The sky-touching keep stands proudly in the south, keeping watch over all and ready to protect.</description>
-    <position x="-560" y="-480" z="0" />
+    <position x="-560" y="-500" z="0" />
     <arc exit="east" move="east" destination="147" />
     <arc exit="southwest" move="southwest" destination="170" />
     <arc exit="west" move="west" destination="149" />
@@ -964,12 +952,12 @@
   </node>
   <node id="149" name="Hvaral, Theren Street">
     <description>A meticulously crafted if somewhat garishly designed fountain looms just west of the square, combating the constant heat and dust-choked air.  Obviously a pretension of the town's latest inhabitants, the Therengians have constructed a beast spewing forth water from the stone heads of a lion, a bull, and an eagle.  Wooden benches also occupying the area indicate that this is a popular gathering spot for the town.</description>
-    <position x="-580" y="-480" z="0" />
+    <position x="-580" y="-500" z="0" />
     <arc exit="east" move="east" destination="148" />
   </node>
   <node id="150" name="Hvaral, Merchant Row">
     <description>A domelike building stretches over the dusty road here, a receding doorway leading within its shadowed depths.  Off to one side of the well-frequented dome stands the entrance to a caravan stable.  To the southeast stretches the small town's main thoroughfare, while a tower watches over a smaller path to the northeast.</description>
-    <position x="-580" y="-500" z="0" />
+    <position x="-580" y="-520" z="0" />
     <arc exit="northeast" move="northeast" destination="151" />
     <arc exit="southeast" move="southeast" destination="148" />
     <arc exit="go" move="go doorway" destination="174" />
@@ -978,62 +966,62 @@
   </node>
   <node id="151" name="Hvaral, Eagle Road">
     <description>A large spire pierces through the roadway and rises upward, its monstrous stone constructs perched on ledges of quarried rock and grasping angrily for the clouds.  The old Dwarven buildings nearby cling low to the ground as if shying away from the brooding tower.</description>
-    <position x="-560" y="-520" z="0" />
+    <position x="-560" y="-540" z="0" />
     <arc exit="southwest" move="southwest" destination="150" />
     <arc exit="west" move="west" destination="152" />
   </node>
   <node id="152" name="Hvaral, Eagle Road">
     <description>A fence crafted of wooden poles sharpened into spikes driven into the ground stands guard around a large building set well off from the roadway and the other buildings, homes and shops, of the town.  The Therengian barracks, home to a regiment of the Baron's Guard, seems well stocked -- a stable, the practice dummies of a training yard, and the heavy smoke of a forge are all evident even from the road.</description>
-    <position x="-580" y="-520" z="0" />
+    <position x="-580" y="-540" z="0" />
     <arc exit="east" move="east" destination="151" />
   </node>
   <node id="153" name="Hvaral, Neristan Street">
     <description>A sprawling mass of quarry rock and lumber beams comprise the town's inn.  A sign attached to a pole, looming out over the dusty street, displays the dual images of a bed and a mug of something.  Clutching at the lolling beast to the north is a stableyard for travelers to Hvaral.</description>
-    <position x="-520" y="-460" z="0" />
+    <position x="-520" y="-480" z="0" />
     <arc exit="north" move="north" destination="147" />
     <arc exit="southwest" move="southwest" destination="154" />
     <arc exit="west" move="west" destination="156" />
   </node>
   <node id="154" name="Hvaral, Stalwart Road">
     <description>The dust-choked road comes to an abrupt halt before the gently sloping archway of a red brick building.  A small wreath of vibrant flowers, extraordinarily out of place in this harsh landscape, adorns the topmost point of the arch, indicating a more serene atmosphere.</description>
-    <position x="-540" y="-440" z="0" />
+    <position x="-540" y="-460" z="0" />
     <arc exit="northeast" move="northeast" destination="153" />
     <arc exit="go" move="go sloping archway" destination="155" />
   </node>
   <node id="155" name="Hvaral, Church" note="Minister|Clerk">
     <description>A few hewn-oak benches, low to the ground in a near parody of the town's Dwarven structures, are placed before a gorgeously made altar.  Worked in rare stones and metals, the altar demonstrates that beneath Hvaral's simplicity is a town gorging on trade profits.</description>
-    <position x="-520" y="-440" z="0" />
+    <position x="-520" y="-460" z="0" />
     <arc exit="go" move="go archway" destination="154" />
   </node>
   <node id="156" name="Hvaral, Neristan Street">
     <description>Iron poles, capped with cagelike bowls filled with rushes, line the dirt roadway.  Set afire in the dark evenings to provide light and safety, the poles present somewhat of a comforting presence to the town's residents in such deep mountains wilderness.  The buildings in this part of town are almost prevailingly of Human origin, perhaps due to the proximity to the Therengian built keep nearby.</description>
     <description>Iron poles, capped with cagelike bowls filled with rushes, line the dirt roadway.  The rushes are burning with a steady flame now, providing light, safety, and a somewhat comforting presence to the town's residents in such deep mountains wilderness.  The buildings in this part of town are almost prevailingly of Human origin, perhaps due to the proximity to the Therengian built keep nearby.</description>
-    <position x="-540" y="-460" z="0" />
+    <position x="-540" y="-480" z="0" />
     <arc exit="east" move="east" destination="153" />
     <arc exit="southwest" move="southwest" destination="157" />
   </node>
   <node id="157" name="Hvaral, Neristan Street">
     <description>Stone walls as thick as those surrounding Hvaral itself rise up here, protecting the inner fortress -- Neristan Keep, home to Elbaeryn Dacawla.  Clashing with the Dwarven architecture making up most of the town, Neristan Keep watches over everything like a protective father keeping an eye on a wayward child while also observing the wolves surrounding it.  An iron portcullis protects the gate leading to the keep, and the road from here to the northwest is sided by a tall fence of wooden spears.</description>
-    <position x="-560" y="-440" z="0" />
+    <position x="-560" y="-460" z="0" />
     <arc exit="northeast" move="northeast" destination="156" />
     <arc exit="northwest" move="northwest" destination="158" />
     <arc exit="go" move="go gate" destination="161" />
   </node>
   <node id="158" name="Hvaral, Neristan Street">
     <description>The road comes to a stop at the town wall.  Burrowing into the earth beneath the wall is a steep ramp, connecting Hvaral to its renowned Dry Dock.  Both sides of the road here are guarded by a fence of wooden spears, forcing all entrants into the town to pass by the imposing and well-defended Neristan Keep to the southwest -- a bane to any invaders.</description>
-    <position x="-620" y="-460" z="0" />
+    <position x="-620" y="-480" z="0" />
     <arc exit="southeast" move="southeast" destination="157" />
     <arc exit="go" move="go ramp" destination="159" />
   </node>
   <node id="159" name="Hvaral, Beneath the Walls">
     <description>Precious little light reaches this stretch of roadway directly beneath the thick stone wall, but torches burn in brackets on either side of the dug out path, attempting to fill the void.  A ramp leads back up into Hvaral proper, while the stone roadway leading west goes to the Dry Dock.</description>
-    <position x="-640" y="-480" z="0" />
+    <position x="-640" y="-500" z="0" />
     <arc exit="west" move="west" destination="160" />
     <arc exit="go" move="go ramp" destination="158" />
   </node>
   <node id="160" name="Hvaral, Dry Dock" note="Sandbarge|Barge|Muspar'i">
     <description>A dock extends from the stone roadway here, hanging out over a low-lying mountain road.  No water here, and certainly no ships, Hvaral's Dry Dock is serviced by barges pulled by somewhat strange looking beasts.  Outside the protection of the wall, arid mountain winds sting the faces of those who would dare to tarry in the open.  Officials in Therengia's blue and gold livery thoroughly inspect rows of crates and barrels that litter the dock, awaiting either import or export.</description>
-    <position x="-660" y="-480" z="0" />
+    <position x="-660" y="-500" z="0" />
     <arc exit="east" move="east" destination="159" />
     <arc exit="climb" move="climb frayed rope" destination="208" />
     <arc exit="go" move="go barge" destination="184" />
@@ -1041,7 +1029,7 @@
   </node>
   <node id="161" name="Neristan Keep, Inner Bailey">
     <description>The outer wall looms to the north, its continuity breached by the gate leading back to the town, the gate guarded by a now-raised iron portcullis.  To the south, the fortress itself climbs forth from the mountainous earth, the only entrance seeming to be a pair of thick double oak doors reinforced by bands of iron.  Trapped between the two beasts, a small stretch of yard tries to eke out its meager existence.</description>
-    <position x="-560" y="-420" z="0" />
+    <position x="-560" y="-440" z="0" />
     <arc exit="east" move="east" destination="162" />
     <arc exit="west" move="west" destination="163" />
     <arc exit="go" move="go double doors" destination="164" />
@@ -1049,17 +1037,17 @@
   </node>
   <node id="162" name="Neristan Keep, Inner Bailey">
     <description>An odd group of knights looms here, in this section of the keep's yard -- their bones of wood, their flesh of sackcloth, their blood of straw -- ready to take arm against the house soldiers for training exercises.  Leaning against the keep, a spruce rack, currently chained and locked, holds numerous practice weapons.</description>
-    <position x="-540" y="-420" z="0" />
+    <position x="-540" y="-440" z="0" />
     <arc exit="west" move="west" destination="161" />
   </node>
   <node id="163" name="Neristan Keep, Inner Bailey">
     <description>The rounded bulk of the keep's west tower rises here, leaving little space in this section of bailey for wandering about.  The ground cover is patchy, its grass growing sparsely where it grows at all.  Surrounded by the tower, the keep, and the outer wall on three sides, the yard leaves only one route of exit: back to the east.</description>
-    <position x="-580" y="-420" z="0" />
+    <position x="-580" y="-440" z="0" />
     <arc exit="east" move="east" destination="161" />
   </node>
   <node id="164" name="Neristan Keep, Entry">
     <description>Iron candelabra, of a height nearing the neck of a Human, cast flickering light across the entry hall of Neristan Keep as they flank on either side a set of wide double doors, oak in make and metal-strengthened.  The grey stone of the keep's corridors stretches off in various directions, and the only decor of any significance is the artwork etched in the doors.</description>
-    <position x="-560" y="-400" z="0" />
+    <position x="-560" y="-420" z="0" />
     <arc exit="east" move="east" destination="167" />
     <arc exit="south" move="south" destination="166" />
     <arc exit="west" move="west" destination="165" />
@@ -1067,117 +1055,117 @@
   </node>
   <node id="165" name="Neristan Keep, Corridor">
     <description>The hungry granite-block walls of the keep seem to consume all sound and color that should pass through their depths.  Valiantly, one color-flecked tapestry stands like a lone knight holding the line by radiating splotches of brightness here.</description>
-    <position x="-580" y="-400" z="0" />
+    <position x="-580" y="-420" z="0" />
     <arc exit="east" move="east" destination="164" />
   </node>
   <node id="166" name="Neristan Keep, Corridor">
     <description>To one side of the hallway, a heavy steel door, sealed up quite thoroughly, marks the entrance to the keep's armory and its storehouse.  Few are allowed entry beyond, save during emergencies.  Further down the corridor, a high, vaulting arch rears over the floor, the splendor of the Great Hall visible beyond.  Niches along the wall hold burning torches, to provide both light to the traversers and warmth to the lifeless stone.</description>
-    <position x="-560" y="-380" z="0" />
+    <position x="-560" y="-400" z="0" />
     <arc exit="north" move="north" destination="164" />
     <arc exit="east" move="east" destination="168" />
     <arc exit="go" move="go vaulted archway" destination="169" />
   </node>
   <node id="167" name="Neristan Keep, Corridor">
     <description>Large granite blocks fuse and merge together to craft the cold, heavy walls of the monstrous keep.  Near the far wall, a narrow stairwell burrows into the deep reaches of Neristan.  Oil-soaked reed torches burning in recessed wall sconces illume the chain stretched across the stair barring all save those intended from entering the barracks.</description>
-    <position x="-540" y="-400" z="0" />
+    <position x="-540" y="-420" z="0" />
     <arc exit="west" move="west" destination="164" />
   </node>
   <node id="168" name="Neristan Keep, Keep Archives" note="Library" color="#00FF00">
     <description>A few shelves fill this small room, most of them loaded with records of personnel, stores and arms, and the treasury.  They are all cordoned off by glass encasements to prevent tampering.  On the other side of the room, though, a case with several volumes lies exposed for the casual reader.  Between the case and the records shelves stands a small writing desk, likely used by some official in the service of the keep.</description>
-    <position x="-540" y="-380" z="0" />
+    <position x="-540" y="-400" z="0" />
     <arc exit="west" move="west" destination="166" />
   </node>
   <node id="169" name="Neristan Keep, Great Hall">
     <description>Benches and tables occupy much of the large Great Hall with its high ceiling.  In one corner, a massive fire burns, making the valiant effort to fill the cold, dull stones with a semblance of warmth that would otherwise be lacking.  Many colorful tapestries, depicting epic stories or just stray images, hang along the length of the hall, but the largest and grandest by far are the two banners hanging over a dais at the far wall, displaying the crests of the keep's lord and his sovereign.</description>
-    <position x="-580" y="-380" z="0" />
+    <position x="-580" y="-400" z="0" />
     <arc exit="go" move="go vaulted archway" destination="166" />
   </node>
   <node id="170" name="Hvaral, Gemfire Road">
     <description>Sparse groupings of less-than-vibrant grass climb skyward between the cracking granite blocks of the roadway.  Clumps of scrub tossed about by the winds blowing up the lane have settled against the mix of dwellings that have cropped up along the side of the road, each one a mixture of eclectic design.  From the heavy stone bases and walls to the detailed woodcraft and hastily thatched roofs, one might grasp the conclusion the architects were willing to compromise on their designs, but not their ideals.</description>
-    <position x="-600" y="-460" z="0" />
+    <position x="-600" y="-480" z="0" />
     <arc exit="northeast" move="northeast" destination="148" />
     <arc exit="northwest" move="northwest" destination="171" />
   </node>
   <node id="171" name="Hvaral, Gemfire Road">
     <description>Squat windowless stone buildings, their structures built into the ground, are interspersed with taller edifices of wood and thatching.  The vast contrasts of the architectures of the town's two masters are clearly evident when set side-by-side.  Off to one side of the road, nearer to the town wall, sits a rock well, most likely connected to the fountain, but built to provide water of a somewhat cleaner and more usable level.</description>
-    <position x="-620" y="-480" z="0" />
+    <position x="-620" y="-500" z="0" />
     <arc exit="north" move="north" destination="172" />
     <arc exit="southeast" move="southeast" destination="170" />
   </node>
   <node id="172" name="Hvaral, Gemfire Road">
     <description>Crumbling stone grinds quietly underfoot, the heavy rock of the roadway shattered with the passage of time and the elements.  Looking closer, the shattered granite becomes more than just a broken weathered roadway, but a mural of multi-colored stone -- spiraling patterns in varying shades of grey and dull whites giving pause to the thought that the builder had much more in mind when the roadway was constructed, and even the most mundane creation should hold mystery for those with an adventurous mind.</description>
-    <position x="-620" y="-500" z="0" />
+    <position x="-620" y="-520" z="0" />
     <arc exit="northeast" move="northeast" destination="173" />
     <arc exit="south" move="south" destination="171" />
   </node>
   <node id="173" name="Hvaral, Gemfire Road">
     <description>Most of the buildings in this stretch of town are built low to the ground, the stone devoid of windows, as though the spirits of the homes cling to their Dwarven stubbornness despite an approaching storm.  Iron bars sporting bowls at the top are dug into the ground, the iron bowls filled with unlit reed torches.</description>
-    <position x="-600" y="-520" z="0" />
+    <position x="-600" y="-540" z="0" />
     <arc exit="southwest" move="southwest" destination="172" />
     <arc exit="go" move="go house" destination="206" />
   </node>
   <node id="174" name="Hvaral Trading Post, South Side">
     <description>Desks and chairs line the southern side of the exchange floor as stock clerks and guild officials shuffle paperwork and calculate their ledgers, working to keep track of the merchandise coming on and off the exchange floor.  From beyond a marble archway carved to fit the contours of the circular room, the calls from beasts of burden and the scent of fresh straw and sweated animals announce the presence of the trading post's stable.</description>
-    <position x="-520" y="-500" z="0" />
+    <position x="-520" y="-520" z="0" />
     <arc exit="north" move="north" destination="175" />
     <arc exit="out" move="out" destination="150" />
     <arc exit="go" move="go archway" destination="177" />
   </node>
   <node id="175" name="Hvaral Trading Post, The Granite Exchange">
     <description>Precisely cut granite bricks comprise the walls of the circular domed structure.  Its unique design provides for a large, spacious trading floor where folk from across the desert can come to haggle their goods in hopes of discovering the road to prosperity.  Golden light streams down from a glowing orb hung in silver netting from the center of the dome, shining on a sandstone pedestal placed below it.  A detailed crystal sculpture has been placed upon the pedestal, sparkling like diamonds.</description>
-    <position x="-520" y="-520" z="0" />
+    <position x="-520" y="-540" z="0" />
     <arc exit="north" move="north" destination="176" />
     <arc exit="south" move="south" destination="174" />
   </node>
   <node id="176" name="Hvaral Trading Post, North Side">
     <description>Crates are piled along the curve of the northern wall of the exchange floor, some of them partially opened as if in hopes of attracting a business eye for a quick sale.  Peddlers and merchants gather with their unsold wares, negotiating for trades of coin or cargo.</description>
-    <position x="-520" y="-540" z="0" />
+    <position x="-520" y="-560" z="0" />
     <arc exit="south" move="south" destination="175" />
   </node>
   <node id="177" name="Hvaral Trading Post, Caravan Stable">
     <description>Fresh straw has been laid over the cold stone floors as stable hands perform their daily duties to keep the stable clean and the animals properly rubbed down and fed.  Yaks, ponies and mules can be heard over the wooden stall doors, as if they were catching up on all the gossip of life on the trade roads.</description>
-    <position x="-540" y="-520" z="0" />
+    <position x="-540" y="-540" z="0" />
     <arc exit="out" move="out" destination="150" />
     <arc exit="go" move="go archway" destination="174" />
   </node>
   <node id="178" name="Griniel's Cottage, Garden">
     <description>Bursting with sultry perfumes and vibrant color, well-maintained gardens surround a cozy whitewashed cottage.  Sparkling colors glitter from the matching stained glass windows that peek through the climbing roses garnishing either side of the arched entry.</description>
-    <position x="-600" y="-540" z="0" />
+    <position x="-600" y="-560" z="0" />
     <arc exit="north" move="north" destination="179" />
     <arc exit="go" move="go entry" destination="180" />
     <arc exit="go" move="go gate" destination="150" />
   </node>
   <node id="179" name="Griniel's Cottage, Water Gardens">
     <description>The wasteful display of immense quantities of clear water flaunts the wealth and power of the owner of this place.  Artistically designed miniature waterfalls splash water droplets into the larger pond.  Behind the trio of oval rock ponds, a red maple arches sturdy branches over the trimmed grass, beckoning one to sit in the bench swing suspended from the lowest limb.</description>
-    <position x="-600" y="-560" z="0" />
+    <position x="-600" y="-580" z="0" />
     <arc exit="south" move="south" destination="178" />
   </node>
   <node id="180" name="Griniel's Cottage, Parlor">
     <description>Overstuffed chairs are arranged invitingly before the stone fireplace, while the rumpled rag rug spread over the hearth suggests much use by napping familiars.  A buffet table covered with delicious foods and drinks stands against the far wall between a beaded curtain and an archway.  Any sunlight entering the matching stained glass windows casts sparkling rainbows over the polished wood floor and the beveled glass of a long display case.</description>
-    <position x="-580" y="-540" z="0" />
+    <position x="-580" y="-560" z="0" />
     <arc exit="out" move="out" destination="178" />
     <arc exit="go" move="go archway" destination="181" />
     <arc exit="climb" move="climb stair" destination="182" />
   </node>
   <node id="181" name="Griniel's Cottage, Display Room">
     <description>Crowded shelves and racks in various sizes vie for space along the walls.  An immense oval mirror and a silk screen closing off a private changing area dominate the far corner.  Pale peach globes concealing small oil lamps seem to hover in every nook and cranny, providing a flattering illumination over the merchandise temptingly displayed for the discerning customer.</description>
-    <position x="-560" y="-560" z="0" />
+    <position x="-560" y="-580" z="0" />
     <arc exit="go" move="go archway" destination="180" />
   </node>
   <node id="182" name="Griniel's Cottage, Attic">
     <description>Smoky drifts of pale dust filter from the broad dormer window spanning the front of the attic, stroking ethereal streamers over the large trunk wedged tightly against a mirrored oak wardrobe.  A cracked dressing mirror completes the array, leaning drunkenly against an emerald table draped with dainty lace.</description>
-    <position x="-580" y="-560" z="0" />
+    <position x="-580" y="-580" z="0" />
     <arc exit="north" move="north" destination="183" />
     <arc exit="climb" move="climb stair" destination="180" />
   </node>
   <node id="183" name="Griniel's Cottage, Under the Eaves">
     <description>Dust motes fly like impish fairies in fanciful flight from the fraying oval rug spread haphazardly over the broad planks of the floor.  A neat cabinet squats against the wall, the elaborate decoration on the meticulously polished wood indicative of a Gnomish attention to fine craftsmanship.</description>
-    <position x="-580" y="-580" z="0" />
+    <position x="-580" y="-600" z="0" />
     <arc exit="south" move="south" destination="182" />
   </node>
   <node id="184" name="The Desert Wind" note="Map998_Transports.xml">
     <description>The Desert Wind barge is made up of a wooden flatboat mounted atop steel rails.  An elevated platform at the front of the craft is used by the team of Sand Elves that sail it through the desert ocean by controlling the team of massive yeehars that pull it.  The barge itself is full of coils of rope, wooden crates and barrels, and bulging sackcloth.</description>
-    <position x="-680" y="-500" z="0" />
+    <position x="-680" y="-520" z="0" />
     <arc exit="go" move="go barge platform" />
     <arc exit="go" move="go dry dock" destination="160" />
     <arc exit="go" move="go desert oasis" />
@@ -1185,93 +1173,93 @@
   </node>
   <node id="186" name="Ker'Leor, Haleer Lyba">
     <description>The smell of musty things rotting somewhere is strong in the air in this underground antechamber.  The floor is of stones, pressed into the earth and covered in mold.  The walls crawl with dampness, water seeping through the earthen ceiling and moving silently to the floor, disappearing under the slippery rocks.</description>
-    <position x="-220" y="-140" z="0" />
+    <position x="-220" y="-180" z="0" />
     <arc exit="south" move="south" destination="187" />
     <arc exit="climb" move="climb stairs" destination="48" />
   </node>
   <node id="187" name="Ker'Leor, Haleer Lyba">
     <description>Tepid, murky water trickles down the walls of the rough tunnel, making the passage clammy.  The chill comes as much from within as without, for here more than in the bog above can you feel the death in the air.</description>
-    <position x="-220" y="-120" z="0" />
+    <position x="-220" y="-160" z="0" />
     <arc exit="north" move="north" destination="186" />
     <arc exit="east" move="east" destination="188" />
   </node>
   <node id="188" name="Ker'Leor, Haleer Lyba">
     <description>A small pile of bones is cluttered by the southeast wall of the earth tunnel, perhaps washed there by a spring flood at some time.  Although tumbled and gnawed, the bones retain enough remains that the stench is eye-watering.  The mold beginning to consume the skeleton of the unfortunate creature detracts not at all from the scent.</description>
-    <position x="-200" y="-120" z="0" />
+    <position x="-200" y="-160" z="0" />
     <arc exit="north" move="north" destination="191" />
     <arc exit="east" move="east" destination="189" />
     <arc exit="west" move="west" destination="187" />
   </node>
   <node id="189" name="Ker'Leor, Haleer Lyba">
     <description>Markings on the tunnel walls are so smeared from running water that they are illegible, but some stone chips pressed into the walls under the marks form an arrow pointing east.  The floor here is a runnel of mud squishing underfoot.</description>
-    <position x="-180" y="-120" z="0" />
+    <position x="-180" y="-160" z="0" />
     <arc exit="north" move="north" destination="203" />
     <arc exit="east" move="east" destination="190" />
     <arc exit="west" move="west" destination="188" />
   </node>
   <node id="190" name="Haleer Lyba, Filtimor">
     <description>Rough earthen walls crawl with lichen, mushrooms, and other slimy things that do not bear investigation.  The ground at the base of the ladder is a layer of mud and dead pine needles, with a few small bones near the walls.  The room seems more like an oubliette than a tunnel.</description>
-    <position x="-160" y="-120" z="0" />
+    <position x="-160" y="-160" z="0" />
     <arc exit="west" move="west" destination="189" />
-    <arc exit="climb" move="climb ladder" destination="41" />
+    <arc exit="climb" move="climb wooden ladder" destination="41" />
   </node>
   <node id="191" name="Ker'Leor, Haleer Lyba">
     <description>The twisting tunnels are disorienting, spiraling through the dark like a demented seashell.  Air stirs sullenly as you pass, bringing the fresh reek of decay to brush against your face.</description>
-    <position x="-200" y="-140" z="0" />
+    <position x="-200" y="-180" z="0" />
     <arc exit="north" move="north" destination="192" />
     <arc exit="east" move="east" destination="203" />
     <arc exit="south" move="south" destination="188" />
   </node>
   <node id="192" name="Ker'Leor, Haleer Lyba">
     <description>A curtain of water sheathes the walls and puddles on the floor, the liquid slowly oozing into the walls but making the ground underfoot a squelching pool of mud.  The earth walls here are a little smoother from the work of the murky water.</description>
-    <position x="-200" y="-160" z="0" />
+    <position x="-200" y="-200" z="0" />
     <arc exit="east" move="east" destination="202" />
     <arc exit="south" move="south" destination="191" />
     <arc exit="west" move="west" destination="193" />
   </node>
   <node id="193" name="Ker'Leor, Haleer Lyba">
     <description>A stone dam blocks the north part of the tunnel, keeping the bogwater collected on the muddy floor from seeping any farther.  At one time the dam might have covered the entire opening, but stones have fallen inward so that although the lower section is blocked, a hefty gap has opened at the top.  Chill air wafts over the stones, a bit more fresh than what the rest of the tunnels offer.</description>
-    <position x="-220" y="-160" z="0" />
+    <position x="-220" y="-200" z="0" />
     <arc exit="east" move="east" destination="192" />
     <arc exit="south" move="south" destination="186" />
     <arc exit="climb" move="climb dam" destination="194" />
   </node>
   <node id="194" name="Ker'Leor, Gelvitaen Almi">
     <description>Stone surrounds you, grey and dank and unforgiving.  These tunnels were not carved from the stone, but built with stone blocks, roofed with slate, floored with stone chips.  The labor involved is hard to imagine, but the evidence stretches before you.</description>
-    <position x="-240" y="-160" z="0" />
+    <position x="-240" y="-200" z="0" />
     <arc exit="northeast" move="northeast" destination="196" />
     <arc exit="northwest" move="northwest" destination="195" />
     <arc exit="climb" move="climb rocks" destination="193" />
   </node>
   <node id="195" name="Ker'Leor, Gelvitaen Almi">
     <description>Lichen and moss grow on the walls, the latter close to the floor where, perhaps, the water sometimes seeps.  The lichen is grey and barely noticeable against the grey stone until a fat black spider crawls across it and out of sight.  Looking up, you see the ceiling is rough here and draped with cobwebs.</description>
-    <position x="-260" y="-180" z="0" />
+    <position x="-260" y="-220" z="0" />
     <arc exit="northeast" move="northeast" destination="199" />
     <arc exit="southeast" move="southeast" destination="194" />
   </node>
   <node id="196" name="Ker'Leor, Gelvitaen Almi">
     <description>Large rocks lie tumbled on the stone floor, which is covered in a fine layer of grit.  The walls have gouges where the rocks have been torn out, whether by natural settling of the earth or by a conscious effort is hard to tell.  The sound of trickling water echoes from the northeast.</description>
-    <position x="-220" y="-180" z="0" />
+    <position x="-220" y="-220" z="0" />
     <arc exit="northeast" move="northeast" destination="197" />
     <arc exit="southwest" move="southwest" destination="194" />
     <arc exit="northwest" move="northwest" destination="199" />
   </node>
   <node id="197" name="Ker'Leor, Gelvitaen Almi">
     <description>A trickle of fresh water seeps through the piled rubble of a long-ago rockfall.  Hints of fresh air drift through the stones, but the way east is decidedly blocked.</description>
-    <position x="-200" y="-200" z="0" />
+    <position x="-200" y="-240" z="0" />
     <arc exit="southwest" move="southwest" destination="196" />
     <arc exit="northwest" move="northwest" destination="198" />
   </node>
   <node id="198" name="Ker'Leor, Gelvitaen Almi">
     <description>Water drips somewhere nearby, but the floor in this part of the tunnels is even and dry.  The thick stone walls with their rough surfaces make sound move strangely, and a scream would carry its own weight through the corridors.  From the northwest comes a low hum, more felt than heard.</description>
-    <position x="-220" y="-220" z="0" />
+    <position x="-220" y="-260" z="0" />
     <arc exit="southeast" move="southeast" destination="197" />
     <arc exit="southwest" move="southwest" destination="199" />
     <arc exit="northwest" move="northwest" destination="201" />
   </node>
   <node id="199" name="Ker'Leor, Gelvitaen Almi">
     <description>Running water echoes from somewhere in the tunnels, along with strange scraping noises.  The grey stone walls divulge nothing, lowering flat and rough over the uneven floor.</description>
-    <position x="-240" y="-200" z="0" />
+    <position x="-240" y="-240" z="0" />
     <arc exit="northeast" move="northeast" destination="198" />
     <arc exit="southeast" move="southeast" destination="196" />
     <arc exit="southwest" move="southwest" destination="195" />
@@ -1279,33 +1267,33 @@
   </node>
   <node id="200" name="Ker'Leor, Gelvitaen Almi">
     <description>A pair of thick iron chains suspended from the ceiling are bracketed to the west wall, and from there hang to the floor, ending in an empty pair of manacles.  Small rodents scurrying over the metal into cracks in the walls cause the chains to rub the stone in a distinctive, teeth-clenching scrape.  Hints of gold in the wall, knee-high to a Dwarf, catch the eye.  From the northeast comes a low vibration through the stone.</description>
-    <position x="-260" y="-220" z="0" />
+    <position x="-260" y="-260" z="0" />
     <arc exit="northeast" move="northeast" destination="201" />
     <arc exit="southeast" move="southeast" destination="199" />
   </node>
   <node id="201" name="Ker'Leor, Zindalyi Lyba" note="Zindalyi Lyba|Dergati|pilgrim's badge|altar|shrine-2-08" color="#A6A3D9">
     <description>A rough chunk of stone rises from the floor as though it grew from the mountains themselves.  Closer inspection reveals careful chiseling and subtle carving to create a flat-topped altar.  This part of the tunnel is hushed, the stone floor clean, the walls spotless, but thrums with power.  Someone -- or something -- keeps the altar in good repair.  Small bits of bone and feathers are arranged behind the altar, holding meaning known only to those who laid them there.</description>
     <description>A rough chunk of stone with careful chiseling and subtle carving is kept in good repair.  Small bits of bone and feathers are arranged behind the altar, holding meaning known only to those who laid them there.</description>
-    <position x="-240" y="-240" z="0" />
+    <position x="-240" y="-280" z="0" />
     <arc exit="southeast" move="southeast" destination="198" />
     <arc exit="southwest" move="southwest" destination="200" />
   </node>
   <node id="202" name="Ker'Leor, Haleer Lyba">
     <description>The twisting tunnels are disorienting, spiraling through the dark like a demented seashell.  Air stirs sullenly as you pass, bringing the fresh reek of decay to brush against your face.</description>
-    <position x="-180" y="-160" z="0" />
+    <position x="-180" y="-200" z="0" />
     <arc exit="south" move="south" destination="203" />
     <arc exit="west" move="west" destination="192" />
   </node>
   <node id="203" name="Ker'Leor, Haleer Lyba">
     <description>Tattered clothing lies mostly buried in the muck of the floor, wedged against the rough walls.  A few forlorn bells chime when water drips from the ceiling onto the befouled heap, and a mocking laugh echoes through the tunnels in response.</description>
-    <position x="-180" y="-140" z="0" />
+    <position x="-180" y="-180" z="0" />
     <arc exit="north" move="north" destination="202" />
     <arc exit="south" move="south" destination="189" />
     <arc exit="west" move="west" destination="191" />
   </node>
   <node id="204" name="Ker'Leor, Handsome Plateau">
     <description>Chunks of shale are packed within the greyish dirt of the plateau.  Dropped and crushed fruits create an organic trail from the northern trees to the southern clearing, their loamy odor wafting upward from the otherwise dry ground.</description>
-    <position x="120" y="-420" z="0" />
+    <position x="120" y="-440" z="0" />
     <arc exit="west" move="west" destination="76" />
     <arc exit="northwest" move="northwest" destination="77" />
     <arc exit="climb" move="climb wall" destination="69" />
@@ -1313,17 +1301,17 @@
   <node id="205" name="Fornsted, Chapel" note="Depart|Chadatru|pilgrim's badge|altar|shrine-2-23" color="#400040">
     <description>The chapel is built of fine-grained deobar wood.  The predominant feature is an altar of polished alabaster, a bronze lion depicted on the front in tile mosaic.  Poised above the altar is a luminous gold and jade cobra with emerald eyes, its silver tongue forking between sharp fangs.  A few candelabra are scattered about the room, illuminating the cherrywood benches facing the front of the chapel.</description>
     <description>The predominant feature is an altar of polished alabaster, a bronze lion depicted on the front in tile mosaic.  Poised above the altar is a luminous gold and jade cobra with emerald eyes, its silver tongue forking between sharp fangs.</description>
-    <position x="140" y="-530" z="0" />
+    <position x="140" y="-550" z="0" />
     <arc exit="out" move="out" destination="93" />
   </node>
   <node id="206" name="Old Skasaarn's House" note="Old Skasaarn|Skasaarn" color="#00FF00">
     <description>This low-ceilinged house exemplifies, above all else, practicality.  Scorning all form of luxury and convenience, the town's oldest resident subsists on an uncomfortable looking pallet with a pile of rocks in one corner serving as a makeshift altar.  A starched cloth spread out on the stone floor fills in for a table.  The only other decoration is a carved stone case near the pallet.</description>
-    <position x="-620" y="-520" z="0" />
+    <position x="-620" y="-540" z="0" />
     <arc exit="go" move="go door" destination="173" />
   </node>
   <node id="207" name="The Suncatcher" note="Map998_Transports.xml">
     <description>The Suncatcher barge is made up of a wooden flatboat mounted atop steel rails.  An elevated platform at the front of the craft is used by the team of Sand Elves that sail it through the desert ocean by controlling the team of massive yeehars that pull it.  The barge itself is full of coils of rope, wooden crates and barrels, and bulging sackcloth.</description>
-    <position x="-680" y="-460" z="0" />
+    <position x="-680" y="-480" z="0" />
     <arc exit="go" move="go barge platform" />
     <arc exit="go" move="go dry dock" destination="160" />
     <arc exit="go" move="go desert oasis" />
@@ -1331,7 +1319,7 @@
   </node>
   <node id="208" name="Velaka Desert, Beneath the Dry Dock" note="Map48_Haizen_Cugis.xml">
     <description>To the west, the barren landscape of the Velaka Desert takes on the appearance of a painting, framed on the top and sides by the aged wood of the dry dock and its supports.  A seemingly endless sea of crescent-shaped dunes stretches forth, blocking the horizon almost immediately from view.  The dock itself stands partially submerged in the base of the first slope, a lone scout of an ever-encroaching army of sand.</description>
-    <position x="-660" y="-540" z="0" />
+    <position x="-660" y="-560" z="0" />
     <arc exit="north" move="north" />
     <arc exit="west" move="west" />
     <arc exit="northwest" move="northwest" />
@@ -1339,13 +1327,14 @@
   </node>
   <node id="209" name="Ker'Leor, Gallows Gather" color="#008000">
     <description>Thick as syrup, the smell of death oozes in from the east, where the gloom is almost impenetrable.  The creak of branches rubbing against each other suggests that more trees lie that way.  When the wind gusts from the west, laughter echoes in this clearing from something malign, though it could just be the way the wind whistles through the area.  The copse of trees shrinks away from a carved stake in the ground.</description>
-    <position x="-100" y="-120" z="0" />
+    <position x="-100" y="-160" z="0" />
     <arc exit="east" move="east" destination="210" />
     <arc exit="go" move="go copse" destination="51" />
   </node>
   <node id="210" name="Ker'Leor, Gallows Woods" color="#008000">
     <description>Ancient trees claw at the sky, black with decay and a nearly tangible reek of haunting.  Bodies in various states of decomposition hang impaled on the spear-like branches, as if some mighty evil had placed them there.</description>
-    <position x="-80" y="-120" z="0" />
+    <description>Thick gloom clouds the air, obscuring vision and lending the appearance of dark shadows hanging limply in the branches overhead.</description>
+    <position x="-80" y="-160" z="0" />
     <arc exit="northeast" move="northeast" hidden="True" destination="212" />
     <arc exit="southeast" move="southeast" destination="211" />
     <arc exit="southwest" move="southwest" hidden="True" destination="211" />
@@ -1354,7 +1343,7 @@
   </node>
   <node id="211" name="Ker'Leor, Gallows Woods" color="#008000">
     <description>Ancient trees claw at the sky, black with decay and a nearly tangible reek of haunting.  Bodies in various states of decomposition hang impaled on the spear-like branches, as if some mighty evil had placed them there.</description>
-    <position x="-60" y="-100" z="0" />
+    <position x="-60" y="-140" z="0" />
     <arc exit="northeast" move="northeast" hidden="True" destination="212" />
     <arc exit="southeast" move="southeast" destination="212" />
     <arc exit="southwest" move="southwest" hidden="True" destination="213" />
@@ -1362,7 +1351,7 @@
   </node>
   <node id="212" name="Ker'Leor, Gallows Woods" color="#008000">
     <description>Ancient trees claw at the sky, black with decay and a nearly tangible reek of haunting.  Bodies in various states of decomposition hang impaled on the spear-like branches, as if some mighty evil had placed them there.</description>
-    <position x="-40" y="-80" z="0" />
+    <position x="-40" y="-120" z="0" />
     <arc exit="northeast" move="northeast" hidden="True" destination="211" />
     <arc exit="southeast" move="southeast" destination="213" />
     <arc exit="southwest" move="southwest" hidden="True" destination="211" />
@@ -1370,7 +1359,7 @@
   </node>
   <node id="213" name="Ker'Leor, Gallows Woods" color="#008000">
     <description>Ancient trees claw at the sky, black with decay and a nearly tangible reek of haunting.  Bodies in various states of decomposition hang impaled on the spear-like branches, as if some mighty evil had placed them there.</description>
-    <position x="-20" y="-60" z="0" />
+    <position x="-20" y="-80" z="0" />
     <arc exit="northeast" move="northeast" hidden="True" destination="212" />
     <arc exit="southeast" move="southeast" destination="214" />
     <arc exit="southwest" move="southwest" hidden="True" destination="212" />
@@ -1378,7 +1367,7 @@
   </node>
   <node id="214" name="Ker'Leor, Gallows Woods" color="#008000">
     <description>Ancient trees claw at the sky, black with decay and a nearly tangible reek of haunting.  Bodies in various states of decomposition hang impaled on the spear-like branches, as if some mighty evil had placed them there.</description>
-    <position x="0" y="-40" z="0" />
+    <position x="0" y="-60" z="0" />
     <arc exit="northeast" move="northeast" hidden="True" destination="213" />
     <arc exit="southeast" move="southeast" hidden="True" destination="210" />
     <arc exit="southwest" move="southwest" hidden="True" destination="212" />
@@ -1386,21 +1375,21 @@
   </node>
   <node id="215" name="Arnshal Keep, Dungeon">
     <description>Eerie noises waft throughout the dungeon.  Chains rattle, rats squeak, and occasionally a muffled groan or a scream of pain lances down the dark corridors.  Throughout it all, the ever-present noise of water dripping steadily echoes.</description>
-    <position x="40" y="-600" z="0" />
+    <position x="40" y="-620" z="0" />
     <arc exit="north" move="north" destination="216" />
     <arc exit="climb" move="climb stairway" destination="102" />
     <arc exit="go" move="go cell door" destination="221" />
   </node>
   <node id="216" name="Arnshal Keep, Dungeon">
     <description>The dank black hallway is filled with the foul stenches of sweat and dried blood, and the musty lingering odor of mildew.  Thick iron bars lead to cramped cells with straw-covered floors of cold rock, tiny and half-rotted wooden cots the only furniture.</description>
-    <position x="40" y="-640" z="0" />
+    <position x="40" y="-660" z="0" />
     <arc exit="north" move="north" destination="217" />
     <arc exit="south" move="south" destination="215" />
     <arc exit="go" move="go cell door" />
   </node>
   <node id="217" name="Arnshal Keep, Dungeon">
     <description>The long hallway is lit only by a single flickering reed torch hanging from the black wall.  The musky atmosphere could almost have been taken directly from a deep bog, as a cloud of fog hangs in the air along with the fumes of water tinged with blood, urine, and rust.</description>
-    <position x="40" y="-680" z="0" />
+    <position x="40" y="-700" z="0" />
     <arc exit="north" move="north" destination="218" />
     <arc exit="south" move="south" destination="216" />
     <arc exit="west" move="west" destination="219" />
@@ -1408,233 +1397,233 @@
   </node>
   <node id="218" name="Arnshal Keep, Dungeon">
     <description>The rows of iron barred cells are interrupted here by an impenetrable steel door.  Thick though it may be, the sounds of weeping or the harsh snap of a whip cracking escape from the sealed chamber beyond every now and then.</description>
-    <position x="40" y="-700" z="0" />
+    <position x="40" y="-720" z="0" />
     <arc exit="south" move="south" destination="217" />
     <arc exit="go" move="go cell door" destination="220" />
   </node>
   <node id="219" name="Arnshal Keep, Dungeon">
     <description>The bleached white bones of a human skeleton are held prisoner inside a tiny cell, its lifeless arm held to the wall in iron manacles.  Rats skitter back and forth around the inanimate inmate, prying at the departed's dessicated remains.</description>
-    <position x="20" y="-680" z="0" />
+    <position x="20" y="-700" z="0" />
     <arc exit="east" move="east" destination="217" />
     <arc exit="go" move="go cell door" />
   </node>
   <node id="220" name="Arnshal Keep, Cell">
     <description>The floor, made of cold, hard, and rough rock, is covered by a straw pallet.  Iron manacles hang from the walls, and the rock surface is marred by countless tiny scratches and clawmarks from the cell's smaller inhabitants, the rats.  An unpainted ceramic pot with several chips and cracks sits in one corner of the cramped cell.</description>
-    <position x="40" y="-720" z="0" />
+    <position x="40" y="-740" z="0" />
     <arc exit="go" move="go cell door" destination="218" />
   </node>
   <node id="221" name="Arnshal Keep, Cell">
     <description>The floor, made of cold, hard, and rough rock, is covered by a straw pallet.  Iron manacles hang from the walls, and the rock surface is marred by countless tiny scratches and clawmarks from the cell's smaller inhabitants.  An unpainted ceramic pot with several chips and cracks sits in one corner of the cramped cell.</description>
-    <position x="40" y="-580" z="0" />
+    <position x="40" y="-600" z="0" />
     <arc exit="go" move="go cell door" destination="215" />
   </node>
   <node id="222" name="Arnshal Keep, Cell">
     <description>The floor, made of cold, hard, and rough rock, is covered by a straw pallet.  Iron manacles hang from the walls, and the rock surface is marred by countless tiny scratches and clawmarks from the cell's smaller inhabitants, the rats.  An unpainted ceramic pot with several chips and cracks sits in one corner of the cramped cell.</description>
-    <position x="60" y="-680" z="0" />
+    <position x="60" y="-700" z="0" />
     <arc exit="go" move="go cell door" destination="217" />
   </node>
   <node id="223" name="Arnshal Keep, Cell">
     <description>The floor, made of cold, hard, and rough rock, is covered by a straw pallet.  Iron manacles hang from the walls, and the rock surface is marred by countless tiny scratches and clawmarks from the cell's smaller inhabitants, the rats.  An unpainted ceramic pot with several chips and cracks sits in one corner of the cramped cell.</description>
-    <position x="0" y="-680" z="0" />
+    <position x="0" y="-700" z="0" />
     <arc exit="go" move="go cell door" destination="219" />
   </node>
   <node id="224" name="Arnshal Keep, Cell">
     <description>The floor, made of cold, hard, and rough rock, is covered by a straw pallet.  Iron manacles hang from the walls, and the rock surface is marred by countless tiny scratches and clawmarks from the cell's smaller inhabitants, the rats.  An unpainted ceramic pot with several chips and cracks sits in one corner of the cramped cell.</description>
-    <position x="20" y="-640" z="0" />
+    <position x="20" y="-660" z="0" />
     <arc exit="go" move="go cell door" destination="216" />
   </node>
   <node id="225" name="Zengmodaleth, Ancillary Rear Containment">
     <description>A complex web of copper piping appears to cover the walls and ceiling, branching and merging as it traverses the length of the room.  The elastic ground appears to be composed of a darkly dyed fiber woven with strips of rubber.  Rippling blue and green light crackles throughout the area, strange shadows dancing around and emerging from the portal entrance.  You note the smell of ozone and lubricating solvents, and the warm air is extremely dry.</description>
-    <position x="-20" y="-320" z="0" />
+    <position x="-20" y="-340" z="0" />
     <arc exit="go" move="go crackling ring" destination="77" />
     <arc exit="north" move="north" destination="226" />
     <arc exit="go" move="go orb" />
   </node>
   <node id="226" name="Zengmodaleth, T-Junction">
     <description>The piping appears to abruptly bend here, running south and east.  A plaque made of polished oravir features a series of elemental symbols and a broad arrow pointing to the west, where the corridor appears to fade into a bright blue glow, the scent of oil thick in the air.  At semi-regular intervals, a loud metallic groan echoes through the area, trailing off to a series of rapid pops and clicks.</description>
-    <position x="-20" y="-360" z="0" />
+    <position x="-20" y="-380" z="0" />
     <arc exit="east" move="east" destination="227" />
     <arc exit="south" move="south" destination="225" />
     <arc exit="west" move="west" destination="229" />
   </node>
   <node id="227" name="Zengmodaleth, Elbow Bend">
     <description>From the north, a thick structure of flattened framework is mounted above, and as it approaches the hallway bend, branches outward into hundreds of pipes that splay across the wall and ceiling.  As the hallway continues, the piping runs through a series of access boxes, each encased in thick lead glass mounted on polished oravir hinges.  Visible behind the plate glass are brilliantly coruscating bands of energy, pulsating as they stream across the interior of the access box.  Sharp crackles and violent explosions can be heard to the north.</description>
-    <position x="0" y="-360" z="0" />
+    <position x="0" y="-380" z="0" />
     <arc exit="north" move="north" destination="228" />
     <arc exit="west" move="west" destination="226" />
   </node>
   <node id="228" name="Zengmodaleth, Olkan Rae Audrus">
     <description>The corridor abruptly ends, and you find yourself surrounded by an ephemeral bubble of blue energy, affording a view of an unfathomably vast metallic vertical structure composed of equal parts metal lattice, dodecahedrons crackling with electricity, and rippling spikes composed of pure energy.  Occasional errant whips of electricity soar outward from the structure and rake along the surface of the bubble, filling the area with blinding white light and a piercing whine that descends in tone as the incredible energy is shunted elsewhere.  Though only briefly visible as jagged arcs and lingering visual artifacts, the widening of the bolts as they cross from the column to your location suggests that the structure is unfathomably distant.  The bubble ripples and flexes with each strike, and you realize that the bolts are incredibly large.  In the distance, beyond the structure, there is simply emptiness.</description>
-    <position x="0" y="-380" z="0" />
+    <position x="0" y="-400" z="0" />
     <arc exit="south" move="south" destination="227" />
   </node>
   <node id="229" name="Zengmodaleth, Jalmor Olkan">
     <description>The hallway abruptly ends here, and the splayed piping bends to the ground where it seems to feed a large pool from which emerge half a dozen stacked columns about a Gor'Tog's height across.  The pool is filled with a silvery-black liquid, and the columns crackle with energy and their surfaces churn as the strange fluid flows along narrow grooves etched along their sides.  Arrayed along the ceiling are gaethzen orbs, casting a bright, even light across the area.  A faint breeze swirls around, pushed by the motion of the fluid.</description>
-    <position x="-40" y="-360" z="0" />
+    <position x="-40" y="-380" z="0" />
     <arc exit="east" move="east" destination="226" />
     <arc exit="go" move="go orb" destination="230" />
   </node>
   <node id="230" name="Plasma Vortex, Eastern Pylon">
     <description>A softly glowing energy field pulses far above, behind which the pitch black and featureless sky is periodically crisscrossed with jagged bolts of filamentous lightning, unfurling in surges.  Thunder rattles the area both immediately and with delays, clouding any sense of scale or distance.  Ozone and lubricating solvents fill the air, and where the lightning strikes the field, blossoming sparks and ribbons of energy peel outward in mesmerizing displays.  To the west, a caged sphere of rapidly spinning purple screeches, incessantly lashing against four curved pylons placed in an enclosing square.</description>
-    <position x="-60" y="-360" z="0" />
+    <position x="-60" y="-380" z="0" />
     <arc exit="go" move="go orb" destination="229" />
     <arc exit="northwest" move="northwest" destination="234" />
     <arc exit="southwest" move="southwest" destination="232" />
   </node>
   <node id="232" name="Plasma Vortex, Southern Pylon">
     <description>A softly glowing energy field pulses far above, behind which the pitch black and featureless sky is periodically crisscrossed with jagged bolts of filamentous lightning, unfurling in surges.  Thunder rattles the area both immediately and with delays, clouding any sense of scale or distance.  Ozone and lubricating solvents fill the air, and where the lightning strikes the field, blossoming sparks and ribbons of energy peel outward in mesmerizing displays.  To the north, a caged sphere of rapidly spinning purple screeches, incessantly lashing against four curved pylons placed in an enclosing square.  A narrow walkway extends to the south.</description>
-    <position x="-80" y="-340" z="0" />
+    <position x="-80" y="-360" z="0" />
     <arc exit="northeast" move="northeast" destination="230" />
     <arc exit="south" move="south" destination="235" />
     <arc exit="northwest" move="northwest" destination="233" />
   </node>
   <node id="233" name="Plasma Vortex, Western Pylon">
     <description>A softly glowing energy field pulses far above, behind which the pitch black and featureless sky is periodically crisscrossed with jagged bolts of filamentous lightning, unfurling in surges.  Thunder rattles the area both immediately and with delays, clouding any sense of scale or distance.  Ozone and lubricating solvents fill the air, and where the lightning strikes the field, blossoming sparks and ribbons of energy peel outward in mesmerizing displays.  To the east, a caged sphere of rapidly spinning purple screeches, incessantly lashing against four curved pylons placed in an enclosing square.</description>
-    <position x="-100" y="-360" z="0" />
+    <position x="-100" y="-380" z="0" />
     <arc exit="northeast" move="northeast" destination="234" />
     <arc exit="southeast" move="southeast" destination="232" />
   </node>
   <node id="234" name="Plasma Vortex, Northern Pylon">
     <description>A softly glowing energy field pulses far above, behind which the pitch black and featureless sky is periodically crisscrossed with jagged bolts of filamentous lightning, unfurling in surges.  Thunder rattles the area both immediately and with delays, clouding any sense of scale or distance.  Ozone and lubricating solvents fill the air, and where the lightning strikes the field, blossoming sparks and ribbons of energy peel outward in mesmerizing displays.  To the south, a caged sphere of rapidly spinning purple screeches, incessantly lashing against four curved pylons placed in an enclosing square.</description>
-    <position x="-80" y="-380" z="0" />
+    <position x="-80" y="-400" z="0" />
     <arc exit="southeast" move="southeast" destination="230" />
     <arc exit="southwest" move="southwest" destination="233" />
   </node>
   <node id="235" name="Access Passage, Narrow Walkway">
     <description>Barely wide enough to comfortably -- let alone safely -- walk across, the narrow bridge is build from wire-wrapped bars of silvery plated steel sunk into thick ceramic discs.  A single, thin silver cable railing provides slim security as one crosses the bridge.  Spanning a wide valley between the raging purple storm to the north and a blocky structure to the south, the overpass appears to be the only means across the divide, which stretches to the horizon to both the east and the west.  Errant gusts of dry air blast in random directions, carrying the scent of scorched metal, and a seething glow vibrates an indistinguishable distance below the walkway.</description>
-    <position x="-80" y="-320" z="0" />
+    <position x="-80" y="-340" z="0" />
     <arc exit="north" move="north" destination="232" />
     <arc exit="south" move="south" destination="236" />
   </node>
   <node id="236" name="Access Passage, Middle of the Divide">
     <description>Though fairly rigid, the narrow bridge sways slightly at this point, the cable railing bowing noticeably.  The air is warmer here, an upwelling of buoyant air providing a slight breeze.  To the far north, a purple storm rages atop a large platform, and to the far south, the bridge appears to enter a blocky structure.</description>
-    <position x="-80" y="-300" z="0" />
+    <position x="-80" y="-320" z="0" />
     <arc exit="north" move="north" destination="235" />
     <arc exit="south" move="south" destination="237" />
   </node>
   <node id="237" name="Access Passage, Scador li Darva">
     <description>The bridge seamlessly merges with the large building directly beneath a circular entryway, with no ledge, window, or feature otherwise marking the perfectly smooth silver walls of the structure.  An echoing reverberation can be heard deep within the building, a staccato pounding of metal on metal.</description>
-    <position x="-80" y="-280" z="0" />
+    <position x="-80" y="-300" z="0" />
     <arc exit="north" move="north" destination="236" />
     <arc exit="go" move="go circular entryway" destination="238" />
   </node>
   <node id="238" name="Scador li Darva, Entrance">
     <description>An expansive facility sprawls to the south, enormous workshops pumping and churning strangely glowing sheets of crackling energy into bizarre and unrecognizable constructions.  Rows of towering shelves hold perfect geometric forms bound in glossy silvery fiber, and a veritable army of custodians move in carefully choreographed service to the enterprise.  A circular entryway is the sole disruption to an otherwise perfectly featureless wall to the north.</description>
-    <position x="-80" y="-260" z="0" />
+    <position x="-80" y="-280" z="0" />
     <arc exit="southeast" move="southeast" destination="241" />
     <arc exit="southwest" move="southwest" destination="239" />
     <arc exit="go" move="go circular entryway" destination="237" />
   </node>
   <node id="239" name="Scador li Darva, Static Looms">
     <description>Dozens of looms are arrayed here, silvery metal framework holding filament thin glowing wires of the warp taut, heddles vibrating too fast to follow, weft carriers oscillating back and forth in a blur.  Wound static fiber is delivered from below, the custodians ensuring a steady supply of the thread-like material for processing.  Performing esoteric adjustments to the machines, the custodians gather the finished weave on thick rollers and carry the cloth deeper into the facility.  To the southeast, a steady clanging of metal striking metal can be heard.</description>
-    <position x="-100" y="-240" z="0" />
+    <position x="-100" y="-260" z="0" />
     <arc exit="northeast" move="northeast" destination="238" />
     <arc exit="southeast" move="southeast" destination="240" />
     <arc exit="down" move="down" destination="243" />
   </node>
   <node id="240" name="Scador li Darva, Ancillary Processing and Logistics">
     <description>The focal point of the production to the north and above, the custodians gather processed materials and place them in a wide metal maw that regularly slams shut and opens, revealing an empty chamber.  Nearby shelving units are emptied and almost immediately refilled, and the custodians ensure a steady stream of deliveries.</description>
-    <position x="-80" y="-220" z="0" />
+    <position x="-80" y="-240" z="0" />
     <arc exit="northeast" move="northeast" destination="241" />
     <arc exit="northwest" move="northwest" destination="239" />
   </node>
   <node id="241" name="Scador li Darva, Arc Furnace">
     <description>Dozens of furnaces are arrayed here, thick, paired discs of silvery coated metal wrapped in copper and cambrinth wire and mounted a few yards apart.  The storms contained within are deafening, fed with glowing cables from below, pouring blindingly white liquid into channels for transport deeper into the facility.  The custodians maintain the forges, adjusting power levels and throughput via interactions that defy understanding.  To the southwest, a steady clanging of metal striking metal can be heard.</description>
-    <position x="-60" y="-240" z="0" />
+    <position x="-60" y="-260" z="0" />
     <arc exit="southwest" move="southwest" destination="240" />
     <arc exit="northwest" move="northwest" destination="238" />
     <arc exit="down" move="down" destination="242" />
   </node>
   <node id="242" name="Scador li Darva, Piezoelectric Bellows">
     <description>Thick sheets of white metal and ceramic are mounted between thick pylons, crossed with long torque struts protruding from the ground.  Steadily pumping back and forth, the struts cause the sheets to flex.  With each cycle of deformation the sheets crackle with electricity, which surges along the pylons and up to the furnaces above.  The custodians tend to the assembly, ensuring smooth operation of the struts and proper contact of the sheets to the pylons.</description>
-    <position x="-60" y="-200" z="0" />
+    <position x="-60" y="-220" z="0" />
     <arc exit="west" move="west" destination="243" />
     <arc exit="up" move="up" destination="241" />
   </node>
   <node id="243" name="Scador li Darva, Charge Distaffs">
     <description>Tall, inverted threaded ceramic cones are mounted on rotating bases below spikes protruding from the ceiling.  Fine, bristling clouds of branching lightning fan outward from the spikes and wind around the cones as static fiber.  The custodians gather the filled distaffs and transport them upstairs for processing, ensuring a steady flow of material.</description>
-    <position x="-100" y="-200" z="0" />
+    <position x="-100" y="-220" z="0" />
     <arc exit="east" move="east" destination="242" />
     <arc exit="up" move="up" destination="239" />
   </node>
-  <node id="244" name="Ker'Leor, Crevice" note="fluffy stolb" color="White">
-    <description>Sheer rock walls tower on either side of this narrow rift in the stony mountains.  Sparse foliage covers the rocky dirt, each clump or bush struggling to survive in this inhospitable place.</description>
-    <position x="240" y="-220" z="0" />
-    <arc exit="east" move="east" destination="245" />
-    <arc exit="go" move="go narrow cleft" destination="22" />
+  <node id="244" name="Ker'Leor, Forest Road">
+    <description>A wide dirt road runs parallel to the mountains from this clearing in the expansive forest.  A soft breeze cools the area, dispersing clouds to reveal brilliant stars in the night sky.</description>
+    <position x="120" y="-80" z="0" />
+    <arc exit="north" move="north" destination="14" />
+    <arc exit="west" move="west" destination="12" />
   </node>
-  <node id="245" name="Ker'Leor, Crevice" color="White">
+  <node id="245" name="Ker'Leor, Crevice">
     <description>Cracks in the granite rock allow a few small shrubs to cling to the surrounding cliffs.  Occasionally a pebble falls from above, the sound of it bouncing off the cliffs echoes throughout the crevice.  The air has a slightly charged feel and the breeze carries a slight scorched scent.</description>
-    <position x="260" y="-220" z="0" />
+    <position x="220" y="-240" z="0" />
     <arc exit="northeast" move="northeast" destination="246" />
-    <arc exit="west" move="west" destination="244" />
+    <arc exit="west" move="west" destination="23" />
   </node>
-  <node id="246" name="Ker'Leor, Gorge" color="White">
-    <description>Steep rock walls split apart to enclose a narrow, forest-filled valley. Taking full advantage of the increased light and space, towering redwoods and pines stretch toward the sky. Birds flit amongst the trees.</description>
-    <position x="280" y="-240" z="0" />
+  <node id="246" name="Ker'Leor, Gorge">
+    <description>Steep rock walls split apart to enclose a narrow, forest-filled valley. Taking full advantage of the additional space, towering redwoods and pines stretch toward the stars. Bats flit amongst the trees.</description>
+    <position x="240" y="-260" z="0" />
     <arc exit="north" move="north" destination="247" />
     <arc exit="northeast" move="northeast" destination="248" />
     <arc exit="east" move="east" destination="249" />
     <arc exit="southwest" move="southwest" destination="245" />
   </node>
-  <node id="247" name="Ker'Leor, Gorge" color="White">
+  <node id="247" name="Ker'Leor, Gorge">
     <description>Sometime in the past a boulder crashed down from the cliffs and crushed a conifer, its trunk splintered and fallen to the ground.  Insects are busily reclaiming the collapsed tree, burrowing and tunneling through the wood to return it to nature.</description>
-    <position x="280" y="-260" z="0" />
+    <position x="240" y="-280" z="0" />
     <arc exit="east" move="east" destination="248" />
     <arc exit="southeast" move="southeast" destination="249" />
     <arc exit="south" move="south" destination="246" />
   </node>
-  <node id="248" name="Ker'Leor, Gorge" color="White">
+  <node id="248" name="Ker'Leor, Gorge">
     <description>Reaching for the sky, massive firs and pines tower over the dirt ground.  Thick trunks growing close together make movement through the area difficult even before the dense underbrush is dealt with.</description>
-    <position x="300" y="-260" z="0" />
+    <position x="260" y="-280" z="0" />
     <arc exit="east" move="east" destination="250" />
     <arc exit="south" move="south" destination="249" />
     <arc exit="southwest" move="southwest" destination="246" />
     <arc exit="west" move="west" destination="247" />
   </node>
-  <node id="249" name="Ker'Leor, Gorge" color="White">
+  <node id="249" name="Ker'Leor, Gorge">
     <description>Far overhead, coniferous trees reach for the sky filling the air with their green spires. The narrow valley twitters with bird calls as they flit amongst the branches. Underneath the scents of earth and sap is a faint tang of burning like the approach of a summer thunderstorm.</description>
-    <position x="300" y="-240" z="0" />
+    <position x="260" y="-260" z="0" />
     <arc exit="north" move="north" destination="248" />
     <arc exit="northeast" move="northeast" destination="250" />
     <arc exit="west" move="west" destination="246" />
     <arc exit="northwest" move="northwest" destination="247" />
   </node>
-  <node id="250" name="Ker'Leor, Gorge" color="White">
+  <node id="250" name="Ker'Leor, Gorge">
     <description>Nestled in a small alcove is a tiny spring-fed pool surrounded by a grass-filled glade.  Hoof and paw prints cover the muddy edges of the pond, evidence of the local wildlife's need for water.</description>
-    <position x="320" y="-260" z="0" />
+    <position x="280" y="-280" z="0" />
     <arc exit="southwest" move="southwest" destination="249" />
     <arc exit="west" move="west" destination="248" />
   </node>
   <label text="Theren and Lang">
-    <position x="130" y="170" z="0" />
+    <position x="130" y="150" z="0" />
   </label>
   <label text="Morah Vines">
-    <position x="10" y="10" z="0" />
+    <position x="-10" y="20" z="0" />
   </label>
   <label text="Mauraders">
-    <position x="90" y="-230" z="0" />
+    <position x="190" y="-170" z="0" />
   </label>
   <label text="Wood Trolls">
-    <position x="90" y="-220" z="0" />
+    <position x="40" y="-100" z="0" />
   </label>
-  <label text="Mauraders">
-    <position x="10" y="20" z="0" />
+  <label text="Foothill Fighters">
+    <position x="-110" y="40" z="0" />
   </label>
   <label text="Scaly Seordmaor">
-    <position x="80" y="-470" z="0" />
+    <position x="70" y="-480" z="0" />
   </label>
   <label text="Dark Spirit">
-    <position x="-290" y="-130" z="0" />
+    <position x="-290" y="-150" z="0" />
   </label>
   <label text="Barges to">
     <position x="-680" y="-450" z="0" />
   </label>
   <label text="Fornsted Village">
-    <position x="130" y="-650" z="0" />
+    <position x="120" y="-660" z="0" />
   </label>
   <label text="Arnshal Keep">
-    <position x="50" y="-630" z="0" />
+    <position x="50" y="-640" z="0" />
   </label>
   <label text="Hvaral">
     <position x="-550" y="-570" z="0" />
@@ -1643,10 +1632,10 @@
     <position x="-680" y="-440" z="0" />
   </label>
   <label text="Forest Geni">
-    <position x="-110" y="-160" z="0" />
+    <position x="-110" y="-200" z="0" />
   </label>
   <label text="(premium only)">
-    <position x="-110" y="-150" z="0" />
+    <position x="-110" y="-190" z="0" />
   </label>
   <label text="Velvers">
     <position x="-30" y="-650" z="0" />
@@ -1654,7 +1643,13 @@
   <label text="Zengmodaleth">
     <position x="-70" y="-310" z="0" />
   </label>
-  <label text="Fluffy Stolb">
-    <position x="240" y="-280" z="0" />
+  <label text="Stolbs">
+    <position x="190" y="-270" z="0" />
+  </label>
+  <label text="Warriors">
+    <position x="-100" y="-80" z="0" />
+  </label>
+  <label text="Sunderers">
+    <position x="30" y="-210" z="0" />
   </label>
 </zone>
