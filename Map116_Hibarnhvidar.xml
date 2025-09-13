@@ -1007,9 +1007,11 @@
   </node>
   <node id="132" name="Inner Hibarnhvidar, Upper Cavern">
     <description>A narrow side passage leads off from the upper cavern, ending in a nearly closed iron-barred door.  The waves of heat that pour through the opening cause beads of sweat upon the faces of the guards posted outside, their axes held ready despite the lack of obvious threat.</description>
+    <description>A narrow side passage leads off from the upper cavern, ending in a nearly closed iron-barred door.  The waves of heat that pour through the opening cause beads of sweat upon the faces of the guards posted outside, their axes held ready despite the lack of obvious threat.  A roughed out tunnel leads east.</description>
     <position x="80" y="100" z="1" />
     <arc exit="southeast" move="southeast" destination="112" />
     <arc exit="go" move="go iron-barred door" destination="186" />
+    <arc exit="east" destination="493" />
   </node>
   <node id="133" name="Inner Hibarnhvidar, Upper Cavern">
     <description>The path of the balcony follows the gentle curve of the wall.  Mounted in the center of the wall, a large iron lantern holds the shadows at bay, ensuring that travelers keep their footing.  A thin wooden pole hangs from iron chains that descend from the darkness, supporting a trio of blue fabric banners that sway slightly at the touch of any breeze.</description>
@@ -2780,7 +2782,7 @@
   </node>
   <node id="419" name="Fang Cove, Fate's Fortune Lane" note="Map150_Fang_Cove.xml">
     <description>A towering marble archway opens a gap in the wall to the north and separates the ongoing construction and somewhat more refined completed structures of Fate's Fortune Lane from the crude structures and makeshift walkway along the beach.  The entrance to a squat, wide bungalow sits in opposition to the arch, and the sheltering cliffs of Fang's Peak rise up from behind it.  To either side of the arch, cobblestones of different shapes and sizes have been laid out to form the wide Fate's Fortune Lane.</description>
-    <position x="20" y="130" z="2" />
+    <position x="20" y="130" z="3" />
     <arc exit="north" move="north" />
     <arc exit="east" move="east" />
     <arc exit="west" move="west" />
@@ -3289,6 +3291,71 @@
     <position x="60" y="100" z="0" />
     <arc exit="go" move="go steel archway" destination="101" />
   </node>
+  <node id="493" name="Cavern of Fire, Rough Tunnel">
+    <description>Someone or something has crudely hacked out an extension of the passage, roughly working the walls just enough to allow travel deeper into the caverns and subterranean areas that surround Hibarnhvidar.  The unfinished feel of the excavation extends to the flooring, which is uneven and treacherous underfoot.</description>
+    <position x="280" y="100" z="2" />
+    <arc exit="west" move="west" destination="132" />
+    <arc exit="go" move="go charred archway" destination="494" />
+    <arc exit="go" move="go side passage" destination="500" />
+  </node>
+  <node id="494" name="Cavern of Flame, Entrance">
+    <description>Cut from the walls of the twisting cavern, a blackened archway stands as testament to the efforts of explorers to delve deeper underneath the mountains.  Fault lines within the rock strata allowed the formation of this sinuous opening within the mountain.</description>
+    <position x="300" y="80" z="2" />
+    <arc exit="northeast" move="northeast" destination="499" />
+    <arc exit="east" move="east" destination="495" />
+    <arc exit="go" move="go charred archway" destination="493" />
+  </node>
+  <node id="495" name="Cavern of Flame, Rocky Alcove">
+    <description>Piles of fallen boulders lie heaped on the rough floor, providing an approximation of walls for this small alcove within the larger cavern.  Something has burned the rocks and the floor, coating them all with a dark film of soot that mixes with the dust to turn everything dark and dingy.</description>
+    <position x="320" y="80" z="2" />
+    <arc exit="northeast" move="northeast" destination="496" />
+    <arc exit="west" move="west" destination="494" />
+  </node>
+  <node id="496" name="Cavern of Flame, Rocky Cavern">
+    <description>A partial ceiling collapse here forces anyone traveling through to veer around the fallen rock.  Wafting through the air is the vague scent of fire and smoke that fights with the more normal musty odor of deep underground spaces.</description>
+    <position x="340" y="60" z="2" />
+    <arc exit="north" move="north" destination="497" />
+    <arc exit="southwest" move="southwest" destination="495" />
+    <arc exit="west" move="west" destination="499" />
+  </node>
+  <node id="497" name="Cavern of Flame, Rocky Cavern">
+    <description>Nothing moves in this corner of the cavern, not even the slightest bit of breeze or zephyr.  Further passage deeper within the rock is blocked by the soot-stained walls, so heavily blackened that it is impossible to know what the rocks are beneath their layers of gunk.</description>
+    <position x="340" y="40" z="2" />
+    <arc exit="south" move="south" destination="496" />
+    <arc exit="west" move="west" destination="498" />
+  </node>
+  <node id="498" name="Cavern of Flame, Rocky Cavern">
+    <description>The cavern ends in a solid wall of granite, its granular surface covered with overlapping splotches of soot and smoke residue.  Although it appears that something has attempted to blast an opening through the rockface with fire, the attempt was in vain as the walls still enclose the cavern.</description>
+    <position x="320" y="40" z="2" />
+    <arc exit="east" move="east" destination="497" />
+    <arc exit="south" move="south" destination="499" />
+  </node>
+  <node id="499" name="Cavern of Flame, Rocky Cavern">
+    <description>A natural dip in the cavern floor is filled with seepage, forming a stagnant pool among the mostly dry and desolate cavern.  Oddly, the grimy surface of the pool is covered with a thin scum of soot and ash, although how it occurred is unknown.</description>
+    <position x="320" y="60" z="2" />
+    <arc exit="north" move="north" destination="498" />
+    <arc exit="east" move="east" destination="496" />
+    <arc exit="southwest" move="southwest" destination="494" />
+  </node>
+  <node id="500" name="Cavern of Flame, Charred Grotto">
+    <description>Dips and holes litter the cavern floor, some filled with dark and dank liquids that seep from the walls and pool on the floor.  A few scattered boulders also lie haphazardly about, testimony to the unstable nature of the ceiling.</description>
+    <position x="280" y="50" z="2" />
+    <arc exit="north" move="north" destination="501" />
+    <arc exit="west" move="west" destination="502" />
+    <arc exit="go" move="go side passage" destination="493" />
+  </node>
+  <node id="501" name="Cavern of Flame, Charred Grotto">
+    <description>The scent of fire and ash lingers in the alcove, apparently coming from the grotto's walls that are coated with old blast marks.  Ash and soot mixes with the rock dust on the floor, each step causing a small cloud of the detritus to explode into the air before drifting slowly back to the ground.</description>
+    <position x="280" y="30" z="2" />
+    <arc exit="south" move="south" destination="500" />
+    <arc exit="southwest" move="southwest" destination="502" />
+  </node>
+  <node id="502" name="Cavern of Flame, Charred Grotto">
+    <description>Overlapping blast circles cover one cavern wall, evidence of the attempts of the residents to escape their confinement within the depths of the earth.  A pile of rocks is capped by a teetering slab that balances precariously atop a rough pyramid.</description>
+    <position x="260" y="50" z="2" />
+    <arc exit="northeast" move="northeast" destination="501" />
+    <arc exit="east" move="east" destination="500" />
+  </node>
   <label text="Inner Hibarnhvidar">
     <position x="40" y="210" z="0" />
   </label>
@@ -3465,5 +3532,11 @@
   </label>
   <label text="Post Office">
     <position x="104" y="120" z="0" />
+  </label>
+  <label text="Dinnsehencha">
+    <position x="260" y="0" z="2" />
+  </label>
+  <label text="Premium">
+    <position x="212" y="24" z="2" />
   </label>
 </zone>
