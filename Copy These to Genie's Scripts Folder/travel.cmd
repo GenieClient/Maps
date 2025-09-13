@@ -7,8 +7,8 @@
 # Inspired by the OG Wizard Travel Script - But made 1000x better w/ the power of GENIE
 # Originally written by Achilles - Revitalized and Robustified by Shroom
 #
-# Updated: 5/30/25
-var version 5.3.2
+# Updated: 9/13/25
+var version 5.3.4
 #
 # USES PLAT PORTALS TO TRAVEL BETWEEN CITIES IF PLATINUM
 # KNOWS HOW TO NAVIGATE OUT OF ANY MAZE / PUZZLE AREAS / FERRIES ETC
@@ -60,7 +60,9 @@ var version 5.3.2
 ##########################################
 ##    ARE YOU A CITIZEN OF SHARD?       ##
 ##        CHOOSE yes or no              ##
-##   ONLY USED FOR THE SHARD GATE       ##
+##     FOR SHARD GATE AT NIGHT          ##
+##   NOT NECESSARY TO SET AS SCRIPT     ##
+##  WILL CLIMB SHARD WALLS IF IT CAN    ##
      var shardcitizen yes
 ##########################################
 ## MULTIPLE CHARACTER SUPPORT FOR THE SHARD CITIZEN VARIABLE
@@ -109,8 +111,8 @@ if ("$charactername") == ("$char10") then var shardcitizen no
 ############################################
 ##  RANKS TO SWIM THE SEGOLTHA RIVER     ##
 ##  TIGER CLAN TO STR OR VICA VERSA      ##
-##  THIS IS A VERY TOUGH ONE! CAREFUL!   ##
-##  DO NOT SET TOO LOW - MIGHT GET STUCK ##
+##  THIS IS A VERY TOUGH SWIM! CAREFUL!  ##
+##  DO NOT SET TOO LOW - COULD GET STUCK ##
 ##  SAFE= 550+ | BUFFED & STRONG= ~530   ##
     var segoltha 550
 ##########################################
@@ -123,22 +125,26 @@ if ("$charactername") == ("$char10") then var shardcitizen no
 ##########################################
 ## RANKS TO USE UNDER-SEGOLTHA (THIEF)  ##
 ## 35 MIN w/ NO BURDEN - 50 is "SAFE"   ##
-    var undersegoltha 500
+    var undersegoltha 50
 ##########################################
 #######################################################
 ## RANKS FOR VELAKA DESERT SHORTCUT TO MUSPARI       ##
 ## THIS IS THE HARDEST SHORTCUT IN THE GAME          ##
-## 760 ~BARE MIN~ for this one! - 780-800 IS 'SAFE'  ##
-## ITS ALSO POSSIBLE IT MAY GET LOST -NOT FOOLPROOF! ## 
-## SET TO 2000 TO SKIP TAKING SHORTCUT AND USE FERRY ##
+## YOU CAN ALSO DIE IN THE DESERT IF YOU GET LOST    ##
+## ~780 RANKS ~BARE MIN~ for this! - 850+ IS 'SAFER' ##
+## ALSO POSSIBLY MAY GET LOST - NOT FOOLPROOF!       ## 
+## SET TO 2000 TO SKIP DESERT SHORTCUT AND USE FERRY ##
     var muspari.shortcut 2000
 #################################################
 #### END OF VARIABLES!!!
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
 ###########################################
-# CHANGELOG - Latest Update: 5/30/25
+# CHANGELOG - Latest Update: 9/13/25
 #
+# - Robustified FERRY Logic - should fix bug sometimes getting on ferry and immediately getting off in a loop
+# - Should stow anything in hands before ending script
+
 # - Re-Added trying to pull out a heavy/braided rope when climbing undergondola under 600 ranks 
 #
 # - Fixed several bad checks for NOT TF which would cause infinite loops for PLAT users in some areas
@@ -3655,6 +3661,7 @@ QITRAVEL:
      goto ARRIVED
 #############################################################
 ARRIVED:
+     gosub STOWING
      if_2 then gosub AUTOMOVE %2 %3 %4
      ### Backup in case Automapper majorly screws up - Double check to make sure it's in the correct Zone ID
      ### If not at your destination will restart script from beginning - Only support for main cities for now
@@ -4055,6 +4062,7 @@ INVIS:
 ### MAIN FERRY LOGIC - CHECK FOR AND WAIT TO BOARD FERRY 
 FERRY:
   delay 0.0001
+  var OffRide 0
   var OnFerry 0
   var TransportName NULL
   var OffTransport dock
@@ -4274,6 +4282,7 @@ OASIS_CHECK:
 ### GETTING OFF THE FERRY 
 OFFTHERIDE:
   pause 0.0001
+  var OffRide 0
   var OffTransport dock
   action var OffTransport platform when a barge platform
   action var OffTransport pier when the Riverhaven pier
@@ -4327,8 +4336,12 @@ OFFTHERIDE:
 ### MAINLY USED FOR ISLAND TRAVEL - MAMMOTHS/WARSHIPS ETC FROM ACENAMACRA/RATHA/FANG COVE
 JOINLOGIC:
   delay 0.001
-  matchre ONJOINED ^\[Aboard the Dirigible, Gondola\]|^\[Alongside a Wizened Ranger\]|^An intricate network of silken rope|^\[Aboard the Balloon, Gondola\]|^A veritable spiderweb of ropes secures|^Thick, barnacle-encrusted ropes secure the platform to the|\[Aboard the Mammoth, Platform\]|\[The Bardess' Fete, Deck\]|^Silken rigging suspends the sweeping teak|\[Aboard the Warship, Gondola\]
-  matchre ONJOINED ^You join the Merelew driver|^Thick, barnacle-encrusted ropes secure the platform to the mammoth's back
+  var OffRide 0
+  matchre ONJOINED ^\[Aboard the Dirigible, Gondola\]|^\[Alongside a Wizened Ranger\]|^\[Aboard the Balloon, Gondola\]|\[Aboard the Mammoth, Platform\]|\[The Bardess' Fete, Deck\]|\[Aboard the Warship, Gondola\]
+  matchre ONJOINED ^You join the Merelew driver|^A veritable spiderweb of ropes secures
+  matchre ONJOINED Thick, barnacle-encrusted ropes secure the platform to the mammoth's back
+  matchre ONJOINED Silken rigging suspends the sweeping teak
+  matchre ONJOINED ^An intricate network of silken rope
   put look
   pause 0.3
   pause 0.2
