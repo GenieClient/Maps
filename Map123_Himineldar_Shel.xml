@@ -658,14 +658,14 @@
     <arc exit="south" move="south" destination="97" />
     <arc exit="climb" move="climb ledge" destination="92" />
   </node>
-  <node id="97" name="Seord'Kerwaith, A Narrow Ledge">
+  <node id="97" name="Seord Kerwaith, A Narrow Ledge">
     <description>A rockslide has damaged a large portion of the ledge, creating a dangerously unstable section.  The surface of the trail is splintered and fractured, and portions have been completely destroyed by the falling debris.  Gale force winds batter the rock wall with brutish force.</description>
     <description>A rockslide has damaged a large portion of the ledge, creating a dangerously unstable section.  The surface of the trail is splintered and fractured, and portions have been completely destroyed by the falling debris.  Gale force winds batter the rock wall with brutish force.  </description>
     <position x="-60" y="630" z="0" />
     <arc exit="north" move="north" destination="96" />
     <arc exit="south" move="south" destination="98" />
   </node>
-  <node id="98" name="Seord'Kerwaith, A Narrow Ledge">
+  <node id="98" name="Seord Kerwaith, A Narrow Ledge">
     <description>In the darkness, the shadows of shattered buttes common to this region loom on the horizon.  Repeated freezing of snow and ice have created gigantic fissures and chasms throughout the flat topped mountains resulting in the formation of small minarets.  These solitary spiny pinnacles thrust up into the night sky like ancient watch towers, their fires long ago extinguished, and guards over an inhospitable land.  High above, a natural stone bridge connects the mountain to a distant butte.</description>
     <description>Shattered buttes loom along the horizon, carved by the eroding effects of snow and ice over the centuries into gigantic fissures and chasms, forming small rocky minarets.  The spiny pinnacles thrust up into the sky like ancient watch towers, guardians over an inhospitable land.  High above, a natural stone bridge connects the mountain to a distant butte.</description>
     <description>Shattered buttes loom along the horizon, carved by the eroding effects of snow and ice over the centuries into gigantic fissures and chasms, forming small rocky minarets.  The spiny pinnacles thrust up into the sky like ancient watch towers, guardians over an inhospitable land.  High above, a natural stone bridge connects the mountain to a distant butte.  </description>
@@ -673,7 +673,7 @@
     <arc exit="north" move="north" destination="97" />
     <arc exit="south" move="south" destination="99" />
   </node>
-  <node id="99" name="Seord'Kerwaith, A Narrow Ledge" note="RTF41|RT-FB-MG" color="#C2B280">
+  <node id="99" name="Seord Kerwaith, A Narrow Ledge" note="RTF41|RT-FB-MG" color="#C2B280">
     <description>Slowly winding its way along the mountainside, the ledge is increasingly difficult to traverse.  Large fractures in the rock split the path, and the gaps in between gape blackly, their depths hidden in the darkness.  Rock protrusions along the mountain side of the trail hinder the ability to walk upright in places.</description>
     <description>Slowly winding its way along the mountainside, the ledge is increasingly difficult to traverse.  Large fractures in the rock split the path, and the gaps in between provide a magnificent view of the chasm below.  Rock protrusions along the mountain side of the trail hinder the ability to walk upright in places.</description>
     <description>Slowly winding its way along the mountainside, the ledge is increasingly difficult to traverse.  Large fractures in the rock split the path, and the gaps in between provide a magnificent view of the chasm below.  Rock protrusions along the mountain side of the trail hinder the ability to walk upright in places.  </description>
@@ -1823,7 +1823,7 @@
     <position x="390" y="630" z="0" />
   </label>
   <label text="Frostweyr Bears">
-    <position x="-50" y="630" z="0" />
+    <position x="-45" y="685" z="0" />
   </label>
   <label text="Jeol Moradu">
     <position x="190" y="610" z="0" />
@@ -1851,5 +1851,8 @@
   </label>
   <label text="Bundles">
     <position x="411" y="662" z="0" />
+  </label>
+  <label text="Frost Trolls">
+    <position x="-30" y="615" z="0" />
   </label>
 </zone>
