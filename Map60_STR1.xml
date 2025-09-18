@@ -424,7 +424,7 @@
     <position x="180" y="-160" z="0" />
     <arc exit="north" move="north" destination="64" />
     <arc exit="southeast" move="southeast" destination="66" />
-    <arc exit="go" move="go overgrown path" destination="104" />
+    <arc exit="climb" move="climb overgrown path" destination="104" />
   </node>
   <node id="66" name="Forest of Night, Path" color="#008000">
     <description>Tangled trees of the famed black ironwood rise about you, their foliage twining and intertwining with each other.  Light struggles in vain to creep through the canopy, and the scent of loam is heavy and pungent.  The trail finally fades here, a living wall of gnarled trunk and leaf cutting off any further advancement through the wood.</description>
@@ -601,7 +601,7 @@
     <description>The black waters of the river surge forward, heedlessly crashing over stones and watery reeds.  The river bank is relatively dry, and a dirt path leads up from it, heading back to the main road.</description>
     <position x="220" y="-240" z="0" />
     <arc exit="southeast" move="southeast" destination="92" />
-    <arc exit="west" move="west" destination="62" />
+    <arc exit="go" move="go dirt path" destination="62" />
   </node>
   <node id="94" name="Forest of Night, Outer Woods" color="#008000">
     <description>A barely visible path winds through the forest, dodging between the trees and leaping around bushes and low-lying shrubbery.  A narrow deer trail jumps from the path and up a steep embankment, eventually vanishing between two slender ironwood trunks.</description>
@@ -677,7 +677,7 @@
   <node id="104" name="Forest of Night, Outer Wood" color="#008000">
     <description>Overgrown and underused, the path winds heedlessly through the wood, one way leading to the heart of a grove of black-leaved trees, the other up a steep embankment.</description>
     <position x="160" y="-140" z="0" />
-    <arc exit="northeast" move="northeast" destination="65" />
+    <arc exit="climb" move="climb steep embankment" destination="65" />
     <arc exit="west" move="west" destination="103" />
   </node>
   <node id="105" name="Forest of Night, Inner Shrine" note="Inner Shrine|Hav'roth|Ushnish">
