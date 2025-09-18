@@ -658,7 +658,7 @@
     <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted with a sturdy, stubby grass and clover, the clover's tiny white flowers dot the land giving it an uneven texture.  An occasional tree provides respite from summer storms.</description>
     <position x="-960" y="-200" z="0" />
     <arc exit="west" move="west" destination="105" />
-    <arc exit="climb" move="climb log fence" destination="54" />
+    <arc exit="climb" move="climb rolling hill" destination="54" />
   </node>
   <node id="105" name="Clover Fields">
     <description>Gentle hills roll up and down as the field stretches to the horizon.  Planted to clover and a sturdy, stubby grass, the land under its carpet of snow has an uneven texture.  An occasional tree lifts barren branches skyward in anticipation of spring.</description>
