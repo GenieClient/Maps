@@ -140,7 +140,6 @@
     <position x="520" y="320" z="0" />
     <arc exit="northeast" move="northeast" destination="49" />
     <arc exit="south" move="south" destination="51" />
-    <arc exit="go" move="go winding trail" />
   </node>
   <node id="51" name="Jalren'rae'Taisidon, Thicket" color="#008000">
     <description>A forbidding fortress of winding tendrils wraps about tree trunks and locks them in a continuous mesh, defying all but the sharpest machetes.  Even now, the twisting vines have begun the work of reclosing the gap just created.</description>
