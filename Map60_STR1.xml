@@ -424,7 +424,7 @@
     <position x="180" y="-160" z="0" />
     <arc exit="north" move="north" destination="64" />
     <arc exit="southeast" move="southeast" destination="66" />
-    <arc exit="go" move="go overgrown path" destination="104" />
+    <arc exit="climb" move="climb overgrown path" destination="104" />
   </node>
   <node id="66" name="Forest of Night, Path" color="#008000">
     <description>Tangled trees of the famed black ironwood rise about you, their foliage twining and intertwining with each other.  Light struggles in vain to creep through the canopy, and the scent of loam is heavy and pungent.  The trail finally fades here, a living wall of gnarled trunk and leaf cutting off any further advancement through the wood.</description>
@@ -482,13 +482,13 @@
     <description>The trees of the forest stand about you, their trunks glistening black and their leaves shimmering as a forest breeze passes through them.  Oddly, rather than the normal whisper that usually accompanies leaf against leaf, the sound this foliage makes is metallic in nature.</description>
     <position x="340" y="-260" z="0" />
     <arc exit="northeast" move="northeast" destination="73" />
-    <arc exit="southeast" move="southeast" destination="75" />
+    <arc exit="go" move="go narrow path" destination="75" />
   </node>
   <node id="75" name="Forest of Night, Outer Woods" color="#008000">
     <description>Two of the trees bend toward each other here, creating a living doorway that opens up on more forest.  The path winds onward, tripping a thin line between the deeper, thicker clusters of the inner wood and the looser, more open growth of the outer grove.</description>
     <position x="360" y="-240" z="0" />
     <arc exit="south" move="south" destination="76" />
-    <arc exit="northwest" move="northwest" destination="74" />
+    <arc exit="go" move="go narrow path" destination="74" />
   </node>
   <node id="76" name="Forest of Night, Outer Woods" color="#008000">
     <description>Somewhere to the south you hear the soft roar of a river.  The only thing that muffles this sound is the occasional squawk from one of the ravens that roosts in the trees above you, or the crunch of the leaves coming from your own feet.</description>
@@ -507,14 +507,14 @@
     <description>The black leaves of the trees shimmer with a metallic sheen, and the trunks stand straight and upright, like the poles of spears.  The path seems to fork toward the southeast here, but the hope of another road is a false one, as the deviating trail eventually fades off into forest too thick to walk through.</description>
     <position x="340" y="-180" z="0" />
     <arc exit="northeast" move="northeast" destination="77" />
-    <arc exit="southeast" move="southeast" destination="79" />
+    <arc exit="go" move="go deviating trail" destination="79" />
     <arc exit="west" move="west" destination="84" />
   </node>
   <node id="79" name="Forest of Night, Outer Woods" color="#008000">
     <description>The secretive whispering of the wind that shakes the trees is unnerving and a little sinister.  Tendrils of raevelthorn reach out from the low brush, creating barely visible caltrops that all but vanish in the dark grass.</description>
     <position x="360" y="-160" z="0" />
     <arc exit="southeast" move="southeast" destination="80" />
-    <arc exit="northwest" move="northwest" destination="78" />
+    <arc exit="go" move="go main path" destination="78" />
   </node>
   <node id="80" name="Forest of Night, Outer Woods" color="#008000">
     <description>The rustle of leaves cuts like a knife through the uneasy silence, followed swiftly by the flurry of wings as small forest birds take flight through the gloom.  The bare bones of the earth lay revealed where someone has painstakingly scraped a path through the wood, disregarding the presence of the trees and brush with the neglience of nobility.</description>
@@ -601,7 +601,7 @@
     <description>The black waters of the river surge forward, heedlessly crashing over stones and watery reeds.  The river bank is relatively dry, and a dirt path leads up from it, heading back to the main road.</description>
     <position x="220" y="-240" z="0" />
     <arc exit="southeast" move="southeast" destination="92" />
-    <arc exit="west" move="west" destination="62" />
+    <arc exit="go" move="go dirt path" destination="62" />
   </node>
   <node id="94" name="Forest of Night, Outer Woods" color="#008000">
     <description>A barely visible path winds through the forest, dodging between the trees and leaping around bushes and low-lying shrubbery.  A narrow deer trail jumps from the path and up a steep embankment, eventually vanishing between two slender ironwood trunks.</description>
@@ -630,14 +630,14 @@
     <description>Black steel-sheened leaves brush the sky and equally black roots occasionally poke up from the forest floor.  Thick, massive trunks create a living fence that bars deviating from the narrow trail that the ironwoods have deigned to allow.</description>
     <position x="100" y="-240" z="0" />
     <arc exit="north" move="north" destination="96" />
-    <arc exit="south" move="south" destination="98" />
+    <arc exit="climb" move="climb black roots" destination="98" />
   </node>
   <node id="98" name="Forest of Night, Outer Wood" color="#008000">
     <description>Somewhere to the south you can hear the distant trill of a songbird, echoing through the wood and cutting the squawks of the roosting ravens like a knife.  A sense of heaviness weighs you down, as if the trees wished to set the burden of air and darkness upon your shoulders.</description>
     <description>A clinging white mist on the forest floor seems to tug at your feet, and the heaviness of the night air seeks to aid the strange miasma in its task.</description>
     <description>A clinging white mist on the forest floor seems to tug at the feet, and the heaviness of the night air seeks to aid the strange miasma in its task.</description>
     <position x="100" y="-220" z="0" />
-    <arc exit="north" move="north" destination="97" />
+    <arc exit="climb" move="climb black roots" destination="97" />
     <arc exit="south" move="south" destination="99" />
   </node>
   <node id="99" name="Forest of Night, Outer Wood" color="#008000">
@@ -677,7 +677,7 @@
   <node id="104" name="Forest of Night, Outer Wood" color="#008000">
     <description>Overgrown and underused, the path winds heedlessly through the wood, one way leading to the heart of a grove of black-leaved trees, the other up a steep embankment.</description>
     <position x="160" y="-140" z="0" />
-    <arc exit="northeast" move="northeast" destination="65" />
+    <arc exit="climb" move="climb steep embankment" destination="65" />
     <arc exit="west" move="west" destination="103" />
   </node>
   <node id="105" name="Forest of Night, Inner Shrine" note="Inner Shrine|Hav'roth|Ushnish">
@@ -971,8 +971,8 @@
     <arc exit="north" move="north" destination="142" />
     <arc exit="east" move="east" destination="144" />
   </node>
-  <node id="144" name="Siilverclaw Hub, Lookout">
-    <description>Covered only by a truncated roof, the platform here is open to the elements, allowing the Prydaen to scout the forest for potential food or danger.  The platform extends out slightly underneath an overhanging branch, providing a way to access a wooden-seated swing that someone has installed.</description>
+  <node id="144" name="Silverclaw Hub, Lookout">
+    <description>Covered by a truncated roof, the platform here is open to the elements.  A wooden-seated swing suspends from an overhanging branch.  </description>
     <position x="440" y="-160" z="0" />
     <arc exit="north" move="north" destination="141" />
     <arc exit="west" move="west" destination="143" />
@@ -1127,17 +1127,8 @@
   <label text="Leth Deriel">
     <position x="50" y="40" z="0" />
   </label>
-  <label text="Blood Nyads, Blood Dryads">
-    <position x="190" y="-290" z="0" />
-  </label>
-  <label text="Cougars">
-    <position x="240" y="-280" z="0" />
-  </label>
-  <label text="Blood Dryads">
-    <position x="110" y="-200" z="0" />
-  </label>
-  <label text="Blood Nyads">
-    <position x="110" y="-190" z="0" />
+  <label text="Blood Nyads, Dryads">
+    <position x="330" y="-330" z="0" />
   </label>
   <label text="Ferry to Crossing">
     <position x="80" y="-740" z="0" />
@@ -1149,7 +1140,7 @@
     <position x="250" y="30" z="0" />
   </label>
   <label text="Forest of Night">
-    <position x="220" y="-360" z="0" />
+    <position x="150" y="-370" z="0" />
   </label>
   <label text="Murky Woods">
     <position x="200" y="-20" z="0" />
@@ -1183,5 +1174,8 @@
   </label>
   <label text="The Grove">
     <position x="50" y="-70" z="0" />
+  </label>
+  <label text="Cougars">
+    <position x="280" y="-180" z="0" />
   </label>
 </zone>
