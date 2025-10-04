@@ -757,7 +757,7 @@
     <arc exit="southeast" move="southeast" destination="168" />
     <arc exit="climb" move="climb cliff" destination="177" />
   </node>
-  <node id="170" name="Jalren'rai'Taisidon, Pass" color="#993300">
+  <node id="170" name="Jalren'rae'Taisidon, Pass" color="#993300">
     <description>The trail wends its way through this gap between two snow-covered mountain peaks.  Faint patches of grassland can be seen to the southeast.  Littered with huge boulders, the trail begins to slope downward.</description>
     <position x="74" y="200" z="0" />
     <arc exit="southeast" move="southeast" destination="171" />
