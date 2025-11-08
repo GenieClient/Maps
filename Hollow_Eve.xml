@@ -1016,7 +1016,7 @@
     <position x="150" y="160" z="0" />
     <arc exit="go" move="go open doorway" destination="54" />
   </node>
-  <node id="130" name="Natural Halberd, Salesroom" color="#FF0000">
+  <node id="130" name="Natural Halberd, Salesroom" note="natural halberd" color="#FF0000">
     <description>Rich red canvas provides the walls while tall poles hold up the roof.  Some woven grass mats help keep the grass from turning into mud underfoot.  Clerks bustle between the small salescounter and the various racks and stands displaying merchandise.</description>
     <position x="260" y="140" z="0" />
     <arc exit="go" move="go tent flap" destination="49" />
@@ -1242,7 +1242,7 @@
     <position x="370" y="-510" z="0" />
     <arc exit="go" move="go sturdy door" destination="30" />
   </node>
-  <node id="172" name="Signs of the Times" color="#FF0000">
+  <node id="172" name="Signs of the Times" note="signs of the times"  color="#FF0000">
     <description>Constructed of rough, paint-splattered wood, the hastily assembled stall with its leaning walls and crooked floor seems to be fairly sturdy, and might even hold up to a light breeze.  A grumpy-faced Gnome stands behind the durable worktable located towards the back of the room, glancing up occasionally from his reading to glare balefully at the customers.  Several barrels and a wide trough line the walls, displaying the wares in haphazard fashion.</description>
     <position x="390" y="-550" z="0" />
     <arc exit="go" move="go exit" destination="30" />
