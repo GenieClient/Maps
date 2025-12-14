@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <zone name="Shard West Gate Hunting Area and Horse Clan" id="69">
   <node id="1" name="Southern Trade Route, Road to Shard" note="Map66_STR3.xml|North Gate|N Gate|NorthGate|ngate">
     <description>Wyvern Mountain towers far into the sky to the southwest, a monument to time and myth.  East of it reclines Shard, a shimmer of light against the omnipresent darkness of the glowering peak.</description>
@@ -718,6 +718,7 @@
     <position x="-540" y="17" z="0" />
     <arc exit="east" move="east" destination="112" />
     <arc exit="west" move="west" destination="114" />
+    <arc exit="climb" move="climb sturdy fence" destination="640" />
   </node>
   <node id="114" name="Julge Dolen Zaldeni, Grasslands">
     <description>Tall, head-high grass mixes with short, broad-bladed grass emerging from the detritus at the base of the slope.  Some of the blades are crushed and broken, but most simply spring back when disturbed.</description>
@@ -752,7 +753,7 @@
   </node>
   <node id="132" name="Julge Dolen Zaldeni, Grasslands">
     <description>Meandering along the ridge, the trail widens to the west as it begins its descent to the valley.  Loose rocks, disturbed by passing wildlife, skitter a few feet before coming to rest again.</description>
-    <position x="-580" y="97" z="0" />
+    <position x="-560" y="97" z="0" />
     <arc exit="west" move="west" destination="131" />
     <arc exit="go" move="go trail" destination="87" />
   </node>
@@ -3748,10 +3749,12 @@
     <arc exit="west" move="west" destination="590" />
   </node>
   <node id="592" name="Wyvern Trail, Climbing Path">
+    <description>Although it barely clings to the side of the cliff in some places, the trail still manages to allow passage up the craggy side of the plateau.  Trees sink deep roots into the rocks in an attempt to stay upright.  A recent rockslide has created a jumble of rocks, providing access to a previously hidden canyon.</description>
     <description>Although it barely clings to the side of the cliff in some places, the trail still manages to allow passage up the craggy side of the plateau.  Trees sink deep roots into the rocks in an attempt to stay upright.</description>
     <position x="560" y="597" z="0" />
     <arc exit="up" move="up" destination="593" />
     <arc exit="climb" move="climb path" destination="365" />
+    <arc exit="go" move="go jumbled rocks" destination="655" />
   </node>
   <node id="593" name="Wyvern Trail, Twisted Ledge">
     <description>A brief respite from the sheer verticality of the route is provided by a narrow ledge that juts out from the surrounding rocks.  A few small shrubs have established themselves in the shadows of the overhanging cliff.</description>
@@ -3938,19 +3941,19 @@
   </node>
   <node id="616" name="Shambling Weald, Gap">
     <description>Dim light from the passage filters through the foliage, illuminating an opening in the forest that's barely wide enough for a Gor'Tog to pass through.  The sounds of animals and insects come from the underbrush, along with other, unidentifiable sounds.</description>
-    <position x="600" y="657" z="0" />
+    <position x="600" y="687" z="0" />
     <arc exit="northeast" move="northeast" destination="617" />
     <arc exit="go" move="go twisting passage" destination="365" />
   </node>
   <node id="617" name="Shambling Weald, Wildwood">
     <description>Raucous calls of birds ring out overhead from the unseen sky.  Vines and creepers dangle from the soaring canopy which stretches far above the shrubs and saplings of the forest floor.</description>
-    <position x="620" y="637" z="0" />
+    <position x="610" y="677" z="0" />
     <arc exit="east" move="east" destination="618" />
     <arc exit="southwest" move="southwest" destination="616" />
   </node>
   <node id="618" name="Shambling Weald, Glade">
     <description>Standing tall and straight in the forest opening, a mighty durmast stretches skyward, its spreading branches reaching like outstretched arms to the surrounding forest.  The opening in the canopy allows for grass to struggle with the ever-present vines and shrubs.</description>
-    <position x="660" y="637" z="0" />
+    <position x="650" y="677" z="0" />
     <arc exit="north" move="north" destination="619" />
     <arc exit="east" move="east" destination="623" />
     <arc exit="west" move="west" destination="617" />
@@ -3958,7 +3961,7 @@
   </node>
   <node id="619" name="Shambling Weald, Wildwood">
     <description>Growing up over a clump of saplings and shrubs, a particularly exuberant creeper has all but obscured one path through the woods here.  Further paths are less overgrown, and show evidence of being used by something, although the tracks are not quite like any animal recorded.</description>
-    <position x="660" y="617" z="0" />
+    <position x="650" y="657" z="0" />
     <arc exit="northeast" move="northeast" destination="620" />
     <arc exit="east" move="east" destination="622" />
     <arc exit="south" move="south" destination="618" />
@@ -3966,56 +3969,56 @@
   </node>
   <node id="620" name="Shambling Weald, Wildwood">
     <description>Fallen leaves lie like forgotten children's toys along the forest trail, tattered and strewn about with the passage of animals.  The faint scent of decaying foliage lingers in the air, everpresent beneath the smell of the forest.</description>
-    <position x="680" y="597" z="0" />
+    <position x="670" y="637" z="0" />
     <arc exit="east" move="east" destination="621" />
     <arc exit="southeast" move="southeast" destination="622" />
     <arc exit="southwest" move="southwest" destination="619" />
   </node>
   <node id="621" name="Shambling Weald, Wildwood">
     <description>Seeping from the ground, a tiny spring burbles within the forest, its waters making the area more humid while providing a source of moisture for delicate plants.  One bank of the pool shows signs that the waters are also used by the forest's denizens as welcome refreshment.</description>
-    <position x="700" y="597" z="0" />
+    <position x="690" y="637" z="0" />
     <arc exit="west" move="west" destination="620" />
   </node>
   <node id="622" name="Shambling Weald, Wildwood">
     <description>The game trails that wend their way through the heavy undergrowth come together long enough to split apart again.  The rustle of leaves gives evidence of something lurking just beyond sight, but nothing gives any clue as to the unknown creature's identity.</description>
-    <position x="700" y="617" z="0" />
+    <position x="690" y="657" z="0" />
     <arc exit="south" move="south" destination="623" />
     <arc exit="west" move="west" destination="619" />
     <arc exit="northwest" move="northwest" destination="620" />
   </node>
   <node id="623" name="Shambling Weald, Wildwood">
     <description>Falling like a curtain from the canopy, a wall of vines has interwoven itself so tightly that it blocks further passage in some directions.  Game trails twist their way through the rest of the trees, joining and parting like a meandering stream.</description>
-    <position x="700" y="637" z="0" />
+    <position x="690" y="677" z="0" />
     <arc exit="north" move="north" destination="622" />
     <arc exit="west" move="west" destination="618" />
   </node>
   <node id="624" name="Shambling Weald, Durmast Branches">
     <description>Broad branches provide a safe place to escape the crowded forest floor with its dangerous creatures and cloying vegetation.  Unfortunately, further progress up the tree is blocked by a heavy growth of vines and creepers that has so intermingled that it is like a living wall.</description>
-    <position x="640" y="617" z="0" />
+    <position x="630" y="657" z="0" />
     <arc exit="climb" move="climb durmast trunk" destination="618" />
   </node>
   <node id="625" name="Shambling Weald, Thicket">
     <description>Underbrush crowds up against the taller trees, almost choking out any passage.  Forest creatures, however, have left their mark and a few twisting passages allow for travel deeper within the wilderness.</description>
-    <position x="660" y="597" z="0" />
+    <position x="650" y="637" z="0" />
     <arc exit="west" move="west" destination="626" />
     <arc exit="go" move="go tangled path" destination="619" />
   </node>
   <node id="626" name="Shambling Weald, Thicket">
     <description>The stench of something rotting suffuses the air, cloying and fetid at the same time.  Along with the onmipresent fetor, the trail is swarming with flies and other hovering insects, drawn to the odor like hummingbirds to flowers.</description>
-    <position x="640" y="597" z="0" />
+    <position x="630" y="637" z="0" />
     <arc exit="north" move="north" destination="628" />
     <arc exit="east" move="east" destination="625" />
     <arc exit="west" move="west" destination="627" />
   </node>
   <node id="627" name="Shambling Weald, Thicket">
     <description>The trail takes a sharp turn at a rocky outcrop that emerges from the surrounding forest, its sides too steep and rocky to allow much vegetation to grow.  A few creepers, however, have managed to secure a foothold and have begun their work of insinuating roots into the slabs.</description>
-    <position x="620" y="597" z="0" />
+    <position x="610" y="637" z="0" />
     <arc exit="northeast" move="northeast" destination="628" />
     <arc exit="east" move="east" destination="626" />
   </node>
   <node id="628" name="Shambling Weald, Thicket">
     <description>Sheer cliffs rise out of the trees, blocking further passage even more emphatically than the constricting vegetation.  Even the most vigorous vines have been unable to secure purchase in the hard rocks, which offer no openings for foot or root.</description>
-    <position x="640" y="577" z="0" />
+    <position x="630" y="617" z="0" />
     <arc exit="south" move="south" destination="626" />
     <arc exit="southwest" move="southwest" destination="627" />
   </node>
@@ -4094,6 +4097,132 @@
     <arc exit="east" move="east" destination="637" />
     <arc exit="southeast" move="southeast" destination="638" />
     <arc exit="west" move="west" destination="634" />
+  </node>
+  <node id="640" name="Julge Dolen Zaldeni, Valley" color="White">
+    <description>Sinuous shapes occasionally flicker through the tall, thick grass as bright-eyed ferrets scour the area for food.  A half-cropped tuft of buffalo grass shades a hole in the ground that leads to the creatures' burrow.</description>
+    <position x="-540" y="-23" z="0" />
+    <arc exit="southeast" move="southeast" destination="641" />
+    <arc exit="west" move="west" destination="642" />
+    <arc exit="climb" move="climb sturdy fence" destination="113" />
+  </node>
+  <node id="641" name="Julge Dolen Zaldeni, Valley" color="White">
+    <description>Overhead, the stars seem brighter than on the grasslands, the high valley walls bringing the expanse into focus.  A parliament of owls sometimes wings by, looking for richer lark-hunting on the plains above.</description>
+    <position x="-520" y="-3" z="0" />
+    <arc exit="northwest" move="northwest" destination="640" />
+  </node>
+  <node id="642" name="Julge Dolen Zaldeni, Valley" color="White">
+    <description>The tough tops of the towering grass have been broken and chewed in places, but the resilient stems persist in growing.  The greenery sways with every breeze.</description>
+    <position x="-580" y="-23" z="0" />
+    <arc exit="north" move="north" destination="647" />
+    <arc exit="east" move="east" destination="640" />
+    <arc exit="northwest" move="northwest" destination="643" />
+  </node>
+  <node id="643" name="Julge Dolen Zaldeni, Valley" color="White">
+    <description>The tall grasses are thicker to the east and west, but a faint path is worn northward where large animals have made for the stream.  The air is redolent of lush greenery, and one can almost hear the roots unfurling within the earth as the plants grow.</description>
+    <position x="-600" y="-43" z="0" />
+    <arc exit="southeast" move="southeast" destination="642" />
+    <arc exit="northwest" move="northwest" destination="644" />
+  </node>
+  <node id="644" name="Julge Dolen Zaldeni, Stream Bank" color="White">
+    <description>Closer to the stream, the grass becomes even more lush and stands just a few hands high -- perfect for grazing.  A few vedda trees provide shade and, in times of desperation, food.</description>
+    <position x="-620" y="-63" z="0" />
+    <arc exit="northeast" move="northeast" destination="645" />
+    <arc exit="southeast" move="southeast" destination="643" />
+  </node>
+  <node id="645" name="Julge Dolen Zaldeni, Stream Bank" color="White">
+    <description>Weeping willows stretch their boughs over the water at the stream's head, providing shelter for a small flock of ducks whose nests dot the bank.  A number of rodents also dwell by the trees, receiving shelter from the elements.</description>
+    <position x="-580" y="-103" z="0" />
+    <arc exit="east" move="east" destination="646" />
+    <arc exit="southwest" move="southwest" destination="644" />
+  </node>
+  <node id="646" name="Julge Dolen Zaldeni, Stream Bank" color="White">
+    <description>Red cedar trees cling to the stream bank, surrounded by weeping willows that vie for the water.  The cedars' gnarled roots protrude into the rivulet, both stabilizing the bank and providing a convenient seat.</description>
+    <position x="-540" y="-103" z="0" />
+    <arc exit="southeast" move="southeast" destination="649" />
+    <arc exit="southwest" move="southwest" destination="647" />
+    <arc exit="west" move="west" destination="645" />
+    <arc exit="climb" move="climb cedar root" destination="650" />
+  </node>
+  <node id="647" name="Julge Dolen Zaldeni, Valley" color="White">
+    <description>A few cedars stretch north toward the water.  Short-bladed grass and some sedges vie for ground cover.  A meadowlark's nest is almost hidden within the grass, its woven roof a patch of brown among the green.</description>
+    <position x="-580" y="-63" z="0" />
+    <arc exit="northeast" move="northeast" destination="646" />
+    <arc exit="east" move="east" destination="648" />
+    <arc exit="south" move="south" destination="642" />
+  </node>
+  <node id="648" name="Julge Dolen Zaldeni, Valley" color="White">
+    <description>Southwest, the shorter grass gives way to a taller variety as the valley rolls in a slow dip.  The grass is a thick, cropped carpet here, with divots turned up by the hooves of fast-moving horses.</description>
+    <position x="-520" y="-63" z="0" />
+    <arc exit="north" move="north" destination="649" />
+    <arc exit="west" move="west" destination="647" />
+  </node>
+  <node id="649" name="Julge Dolen Zaldeni, Valley" color="White">
+    <description>Saplings have taken root among the tenacious grass.  The young trees are not faring well -- tufts of hair are caught in the ragged bark where horses have used them as grooming aids.</description>
+    <position x="-520" y="-83" z="0" />
+    <arc exit="south" move="south" destination="648" />
+    <arc exit="northwest" move="northwest" destination="646" />
+  </node>
+  <node id="650" name="Julge Dolen Zaldeni, Stream" color="#0000FF">
+    <description>A morass of rocks and dead trees filters the water that flows to the ridge from to the valley floor, creating a natural dam that widens the stream.  Although the stream is murky, the water at the surface is clean and untainted.  Cedar trees shade the stream and keep it cool, and toads croak along the bank in a cacaphony of noise.</description>
+    <position x="-520" y="-123" z="0" />
+    <arc exit="east" move="swim east" destination="651" />
+    <arc exit="climb" move="climb cedar root" destination="646" />
+  </node>
+  <node id="651" name="Julge Dolen Zaldeni, Stream" color="#0000FF">
+    <description>The wide stream runs through the small valley, bordered on each side by jutting feldspar stones constantly dampened by the fresh spray.  Tiny minnows dart here and there under the surface, constantly playing in an underwater dance in the clear water and sometimes darting downward and out of sight.  Occasionally leaves and twigs float downstream, carried by the rushing current.</description>
+    <position x="-500" y="-123" z="0" />
+    <arc exit="east" move="swim east" destination="652" />
+    <arc exit="west" move="swim west" destination="650" />
+    <arc exit="down" move="swim down" destination="653" />
+  </node>
+  <node id="652" name="Julge Dolen Zaldeni, Stream" color="#0000FF">
+    <description>Flowing water eddies against the side of the ridge that walls the small valley, slowly eroding the rock.  Dark blue water below hints that the stream is quite deep, the murky depths disappearing before the bottom is visible.  Small reeds line each side of the bank, small insects jumping back and forth between them.</description>
+    <position x="-480" y="-123" z="0" />
+    <arc exit="west" move="swim west" destination="651" />
+    <arc exit="down" move="swim down" destination="654" />
+  </node>
+  <node id="653" name="Julge Dolen Zaldeni, Stream" color="#0000FF">
+    <description>The current flows upward lightly as it hits a large bank of rough feldspar that houses numerous small fish and pockets of green algae.  Murky silt churns up from the streambed, filling the water with plumes that briefly resemble stormclouds before dissipating.  An occasional minnow darts here and there, creating a disturbance in the water and a flash of silver in the gloom.</description>
+    <position x="-500" y="-103" z="0" />
+    <arc exit="east" move="swim east" destination="654" />
+    <arc exit="up" move="swim up" destination="651" />
+  </node>
+  <node id="654" name="Julge Dolen Zaldeni, Stream" color="#0000FF">
+    <description>Murky water flows to the west, funneling in from a crevice not much wider than a hand.  Silty gloom lurks at the bottom of the water, and long-feelered fish wriggle through the muck at the bottom of the stream.  A thin coating of green algae coats the bottom of the stream bed, clinging between low rocks worn smooth by the current.</description>
+    <position x="-480" y="-103" z="0" />
+    <arc exit="west" move="swim west" destination="653" />
+    <arc exit="up" move="swim up" destination="652" />
+  </node>
+  <node id="655" name="Wyvern Trail, Hidden Canyon" note="tree sloth" color="White">
+    <description>Buried by an enormous pile of rocks, one end of the twisting canyon now allows a somewhat precarious passage in and out.  Massive tree trunks crowd the rest of the gorge, their branches filling the space overhead.</description>
+    <position x="680" y="577" z="0" />
+    <arc exit="southwest" move="southwest" destination="656" />
+    <arc exit="go" move="go jumbled rocks" destination="592" />
+  </node>
+  <node id="656" name="Wyvern Trail, Hidden Canyon" color="White">
+    <description>Carved long ago, the steep sides of the canyon enclose a lush, almost tropical forest.  Trunks topped by verdant growth tower overhead while the sounds of birds and animals echo throughout.</description>
+    <position x="660" y="597" z="0" />
+    <arc exit="northeast" move="northeast" destination="655" />
+    <arc exit="west" move="west" destination="659" />
+    <arc exit="northwest" move="northwest" destination="657" />
+  </node>
+  <node id="657" name="Wyvern Trail, Hidden Canyon" color="White">
+    <description>High overhead there is a break in the canopy as one of the forest's titans has fallen, its thick trunk splayed across the ground where it fell.  Saplings and other scrubby plants grow thickly around the giant's remains, each one striving to crowd out the others and reach the sky.</description>
+    <position x="640" y="577" z="0" />
+    <arc exit="southeast" move="southeast" destination="656" />
+    <arc exit="west" move="west" destination="658" />
+  </node>
+  <node id="658" name="Wyvern Trail, Hidden Canyon" color="White">
+    <description>Chirps and cheeps sound overhead as birds flit between the branches.  An occasional drip of moisture falls from above as the muggy air condenses into a liquid drop.</description>
+    <position x="620" y="577" z="0" />
+    <arc exit="east" move="east" destination="657" />
+    <arc exit="south" move="south" destination="659" />
+  </node>
+  <node id="659" name="Wyvern Trail, Hidden Canyon" color="White">
+    <description>Little grows on the forest floor as most sunlight is blocked by the towering canopy overhead.  A few scraggly bushes struggle for life amongst the leaf litter while the trunks of the colossal trunks host mosses and lichens that grow profusely in the damp climate.</description>
+    <position x="620" y="597" z="0" />
+    <arc exit="north" move="north" destination="658" />
+    <arc exit="east" move="east" destination="656" />
   </node>
   <label text="Horse Clan">
     <position x="-770" y="487" z="0" />
@@ -4270,12 +4399,15 @@
     <position x="540" y="567" z="0" />
   </label>
   <label text="Beltunumshi">
-    <position x="620" y="647" z="0" />
+    <position x="610" y="687" z="0" />
   </label>
   <label text="Golden Pards">
     <position x="-250" y="287" z="0" />
   </label>
   <label text="Lengthy Grass Eels">
     <position x="90" y="37" z="0" />
+  </label>
+  <label text="Tree Sloth ">
+    <position x="620" y="557" z="0" />
   </label>
 </zone>

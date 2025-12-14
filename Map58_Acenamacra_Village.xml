@@ -1,160 +1,160 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <zone name="Acenamacra Village" id="58">
   <node id="1" name="Fala Inisulen, Sequoia Tunnel">
     <description>Carved initials and blown handprints cover the sides of the tunnel, souvenirs left by centuries of travelers.  The floor is littered with leaves and small bits of rubble have been pushed against the walls by passing caravans.  The ceiling, what can be seen in the dim light, looks covered in soot.  Some helpful traveler has painted a westerly-facing arrow on one wall that proclaims, Leth and on the opposite wall, an eastward arrow labeled, Ocean.</description>
-    <position x="20" y="20" z="0" />
+    <position x="20" y="80" z="0" />
     <arc exit="go" move="go west opening" destination="2" />
     <arc exit="go" move="go east opening" destination="3" />
   </node>
   <node id="2" name="Fala Inisulen, Road" note="Map61_Leth_Deriel.xml|Leth">
     <description>Veering neither left nor right, the road continues straight into an arched tunnel cut through a massive sequoia straddling the road.  From a distance the tunnel looks dangerously narrow, but the opening proves wide enough to allow for two lane caravan travel.  A sign planted at the base of the tree cautions, Yell first!</description>
-    <position x="0" y="20" z="0" />
+    <position x="0" y="80" z="0" />
     <arc exit="southwest" move="southwest" />
     <arc exit="go" move="go tunnel" destination="1" />
   </node>
   <node id="3" name="Fala Inisulen, Road">
     <description>At perhaps its straightest point, this twisting route plunges directly into a tunnel burrowed through a sequoia bestriding the roadway.  A deep gouge in the tunnel's arched opening, about the height of a wagon's wheelhub, proves the difficulty of encouraging caravan teams to venture inside.  Past the massive sequoia, the rest of the road wends its way through the forest, skirting around the thinning number of redwood, and threading through groves of silver birch and mountain laurel.</description>
-    <position x="40" y="20" z="0" />
+    <position x="40" y="80" z="0" />
     <arc exit="northeast" move="northeast" destination="4" />
     <arc exit="go" move="go sequoia tunnel" destination="1" />
   </node>
   <node id="4" name="Fala Inisulen, Road">
     <description>Lichen-speckled boulders are scattered through the thinning forest like a giant child's game of jacks.  Some of the stones are piled together, or cracked, with fronds of ferns and delicate flowers growing from the rocky crevices.  Others stand solitary watch over the road that courses among them.  The sky is visible overhead, as the obscuring canopy of sequoia branches has given way to shorter, less dense hardwoods.</description>
-    <position x="60" y="0" z="0" />
+    <position x="60" y="60" z="0" />
     <arc exit="east" move="east" destination="5" />
     <arc exit="southwest" move="southwest" destination="3" />
   </node>
   <node id="5" name="Fala Inisulen, Road">
     <description>Clothed in hanging moss, an oak has rooted in the cleft of a split granite boulder.  The oak's trunk grows horizontally from the rock, then angles straight upward.  A trickle of water seeping from the bottom of the cracked stone creates a damp patch over the roadway before soaking into the ground on the other side.  Curving among the trees, the path dips northeast toward a shallow ravine.</description>
-    <position x="80" y="0" z="0" />
+    <position x="80" y="60" z="0" />
     <arc exit="northeast" move="northeast" destination="6" />
     <arc exit="west" move="west" destination="4" />
   </node>
   <node id="6" name="Fala Inisulen, Ravine">
     <description>Running along the bottom of this sloped ravine, the pathway shoulders against the damp rock wall.  Ferns and moss growing from the sides of the walls are wet with moisture seeping from small breaks in the stone above.  The ground underfoot is spongy, but the thick layer of leaves provides steady footing for animals and wheels.</description>
-    <position x="100" y="-20" z="0" />
+    <position x="100" y="40" z="0" />
     <arc exit="north" move="north" destination="7" />
     <arc exit="southwest" move="southwest" destination="5" />
   </node>
   <node id="7" name="Fala Inisulen, Ravine">
     <description>Furrowing deeper into the rock, the ravine's plunging slope bends in a northeasterly angle.  The sheer rock walls glisten with seeping water and the air is chilly as it slides against cold, damp stone.  Vines trail down from the top of the ravine to mingle with the dark green moss and grass that have found purchase on the walls.  Thick planks are staked into the ground -- not quite so uneven as a stairway, nor so smooth as a ramp.</description>
-    <position x="100" y="-40" z="0" />
+    <position x="100" y="20" z="0" />
     <arc exit="northeast" move="northeast" destination="8" />
     <arc exit="south" move="south" destination="6" />
   </node>
   <node id="8" name="Fala Inisulen, Ravine">
     <description>A massive boulder is wedged overhead, having crashed down the rock face and become lodged between the walls of the ravine.  Smaller chunks of granite are piled to the side of the trail and held in place by a network of creeping vines and grass.  The air is heavy with moisture, and stone surfaces are perpetually damp.  The path's steep slope is made negotiable for caravan and foot-travelers alike by thick planks staked into the ground.</description>
-    <position x="120" y="-60" z="0" />
+    <position x="120" y="0" z="0" />
     <arc exit="northeast" move="northeast" destination="9" />
     <arc exit="southwest" move="southwest" destination="7" />
   </node>
   <node id="9" name="Fala Inisulen, Ravine">
     <description>With its sheer granite walls tall enough to swallow a small tree, this steeply sloped stretch of curving road between Leth Deriel and the ocean more resembles a flume than ravine or gorge.  The water trickling down the walls collects upon the rocky floor, creating a fast-moving shallow stream.  A ledge jutting from the stone face offers a dry route suitable for traveler and caravan.</description>
-    <position x="140" y="-80" z="0" />
+    <position x="140" y="-20" z="0" />
     <arc exit="east" move="east" destination="10" />
     <arc exit="southwest" move="southwest" destination="8" />
   </node>
   <node id="10" name="Fala Inisulen, Flume's South Face">
     <description>Frothy white water spills down the vertical drop that was the ravine floor, crashing into a deep emerald green pool below, and drowning out all sounds in the forest.  Mist from the churning water at the bottom of the falls curls up the stone walls, coating the clinging vegetation with moisture.  The ledge ends abruptly, but the pathway continues upon a narrow wood-and-rope bridge that swings between rocky outcroppings on the flume's south and north faces.</description>
-    <position x="160" y="-80" z="0" />
+    <position x="160" y="-20" z="0" />
     <arc exit="west" move="west" destination="9" />
     <arc exit="go" move="go rope bridge" destination="11" />
   </node>
   <node id="11" name="Fala Inisulen, Flume Bridge">
     <description>Water tumbles overhead and surges toward the swaying rope bridge.  The roaring torrent falls short of the bridge, but its misty breath drenches the ropes and planks with moisture.  The cascade bounces off a small ledge just below the bridge, then pours into the emerald green pool below.</description>
-    <position x="160" y="-100" z="0" />
+    <position x="160" y="-40" z="0" />
     <arc exit="go" move="go north face" destination="12" />
     <arc exit="go" move="go south face" destination="10" />
   </node>
   <node id="12" name="Fala Inisulen, Flume's North Face">
     <description>Foaming white water plummeting over the stone face dashes against a small ledge, then splashes into the deep emerald green pool below.  The rush of water scarcely misses the rope bridge swaying in the sodden air between the flume's north and south faces.  Most narrow at the bridge's anchoring, the ledge becomes wider as it descends toward the forest floor.</description>
-    <position x="160" y="-120" z="0" />
+    <position x="160" y="-60" z="0" />
     <arc exit="east" move="east" destination="13" />
     <arc exit="go" move="go rope bridge" destination="11" />
   </node>
   <node id="13" name="Fala Inisulen, North Ledge">
     <description>From here, travelers have a panoramic view of the waterfall rolling from the top of the flume and the bridge swaying through shimmying clouds of mist cast up from the emerald green basin at the bottom of the cascade.  Water sluicing from the pool courses northeast, following the ground's descending slope.  The ledge protrudes from the crevice-cracked north face, then ends abruptly some fifty feet above the valley floor.</description>
-    <position x="180" y="-120" z="0" />
+    <position x="180" y="-60" z="0" />
     <arc exit="west" move="west" destination="12" />
     <arc exit="go" move="go crevice" destination="14" />
   </node>
   <node id="14" name="Fala Inisulen, Cavern Tunnel">
     <description>Sconces fixed near the cave opening cast a beckoning beacon to the outside world.  A group of short white, cone-shaped limestone rocks clustered near the far wall so resembles a miniature model of the snow-capped mountains separating southern Zoluren from Ilithi that someone has scratched Dragon's Spine at the base of one formation.  Wooden planks staked into the ground create uneven footing, but make a useful trail for finding one's way through the cavern tunnel.</description>
-    <position x="200" y="-120" z="0" />
+    <position x="200" y="-60" z="0" />
     <arc exit="east" move="east" destination="15" />
     <arc exit="go" move="go opening" destination="13" />
   </node>
   <node id="15" name="Fala Inisulen, Cavern Tunnel">
     <description>Stale, damp air hangs in the tunnel, and water dripping from above sounds a monotonous plut...plut...plut as it splatters on the stony floor.  The ceiling is lost to darkness despite the steady glow cast by luminescent green lichen growing on the walls, but the light is enough to navigate the twisting maze of rock formations.  Thick wooden planks staked into the steeply sloped floor provide an easily followed trail.</description>
-    <position x="220" y="-120" z="0" />
+    <position x="220" y="-60" z="0" />
     <arc exit="northeast" move="northeast" destination="16" />
     <arc exit="west" move="west" destination="14" />
   </node>
   <node id="16" name="Fala Inisulen, Cavern Tunnel">
     <description>Near the cavern opening are mineral formations, the color of ripe oranges and sun-struck gold, that hang from the ceiling like curtains quivering in the breeze.  Thick ropes of luminescent moss winding around the ceiling's rocky teeth cast an eerie greenish glow.  The floor around the cave mouth is rutted with caravan tracks, but further in, a path of wooden planks staked to the steeply sloped ground prevents anybody from getting lost among the columns of damp limestone.</description>
-    <position x="240" y="-140" z="0" />
+    <position x="240" y="-80" z="0" />
     <arc exit="southwest" move="southwest" destination="15" />
     <arc exit="go" move="go cavern opening" destination="17" />
   </node>
   <node id="17" name="Fala Inisulen, Road">
     <description>During the centuries since the last tremor shook this great forest, giant oaks and fir have taken root atop an ancient northward-running fault.  The scarp is partially obscured with vines growing from atop its face, but the tilted striations of colored earth are visible through the leaves.  A moss-covered boulder, fallen from the rocky face, shelters a small cave.</description>
-    <position x="260" y="-160" z="0" />
+    <position x="260" y="-100" z="0" />
     <arc exit="north" move="north" destination="18" />
     <arc exit="go" move="go cave" destination="16" />
   </node>
   <node id="18" name="Fala Inisulen, Road">
     <description>Uprooted, overturned and green with vines and moss, a massive stump resting at the side of the road provides a home for wildlife, although a bit differently than when it was a strong tree towering in the forest.  Now, the birds build their nests among its roots instead of its branches, its trunk shelters rabbit holes, and the flowers growing from a lightning scar provide nectar for butterflies.</description>
     <description>In the night's dim light, a massive stump resting by the side of the road -- uprooted, overturned and green with vines and moss -- looks like a wild, multi-tusked beast poised to protect its turf.  Lightning bugs wink among the forest's trees like faeries inviting travelers to follow them home.</description>
-    <position x="260" y="-180" z="0" />
+    <position x="260" y="-120" z="0" />
     <arc exit="northeast" move="northeast" destination="19" />
     <arc exit="south" move="south" destination="17" />
   </node>
   <node id="19" name="Fala Inisulen, Road">
     <description>The road twists among the thick maple groves and past the skinny limbs of oak saplings.  Caterpillar nests -- some fresh, some abandoned tattered wisps -- look like layers of spun sugar caught among the slender branches of young poplar and low shrubs.  Glints of light reflecting off water filter through the leaves and the sound of water rushing over rock is never far away.</description>
     <description>The road twists among the thick maple groves and past the skinny limbs of oak saplings.  Caterpillar nests -- some fresh, some abandoned tattered wisps -- look like layers of spun sugar caught among the slender branches of young poplar and low shrubs.  Although the stream is unseen in the dark, the sound of water rushing over rock is never far away.</description>
-    <position x="280" y="-200" z="0" />
+    <position x="280" y="-140" z="0" />
     <arc exit="east" move="east" destination="20" />
     <arc exit="southwest" move="southwest" destination="18" />
   </node>
   <node id="20" name="Fala Inisulen, Road">
     <description>Splashing and trilling among the rocks, the stream's song keeps the road company as together they meander through the woods.  Giant oak and maple give way to smaller evergreen and mimosa, signaling the gradual transition from deep forest to coast.</description>
-    <position x="300" y="-200" z="0" />
+    <position x="300" y="-140" z="0" />
     <arc exit="northeast" move="northeast" destination="21" />
     <arc exit="west" move="west" destination="19" />
   </node>
   <node id="21" name="Fala Inisulen, Road">
     <description>With every bend and curve, the road follows the stream's lazy path.  Traversing stands of scrub pine and wild fruit trees, the path is broken by small clearings of sweet grass and ragweed.  Southwest, the forest looms upslope like a green glacier threatening to overtake the scant clearings as it oozes oceanward.</description>
-    <position x="320" y="-220" z="0" />
+    <position x="320" y="-160" z="0" />
     <arc exit="northeast" move="northeast" destination="22" />
     <arc exit="southwest" move="southwest" destination="20" />
   </node>
   <node id="22" name="Fala Inisulen, Road">
     <description>Swirling into two branches, the stream is split by a silt embankment.  The roots of a moss-slung banyan tree collect dirt and rocks as the stream flows by, creating an ever-larger divider.  Water from one branch of the brook spills over the roadway, mixing rock and dirt into a shallow mud pond before draining into the clearing opposite the other branch flows into the woods.</description>
-    <position x="340" y="-240" z="0" />
+    <position x="340" y="-180" z="0" />
     <arc exit="northeast" move="northeast" destination="23" />
     <arc exit="southwest" move="southwest" destination="21" />
   </node>
   <node id="23" name="Fala Inisulen, Road">
     <description>Sloping downward to the northeast, the road rarely curves from a straight path through a scattering of scrub pine and young hardwood that can scarcely be termed a forest.  Weathered and lichen-stained, a white stone cairn stands sentinel at the side of the road.</description>
-    <position x="360" y="-260" z="0" />
+    <position x="360" y="-200" z="0" />
     <arc exit="east" move="east" destination="24" />
     <arc exit="southwest" move="southwest" destination="22" />
   </node>
   <node id="24" name="Acenamacra Road, Marsh">
     <description>Bursting from a stand of wild pear trees, a deep stream sloshes over rocks and swirls around fallen logs before turning into a broad, shallow rivulet that seeps into the wide, marshy plain.  At the edge of the marsh, the rutted dirt trail abruptly ends.  In its place, a corduroy road has been built -- it's bumpy and ankle-twisting, but better than wading knee-deep through the marsh.</description>
-    <position x="380" y="-260" z="0" />
+    <position x="380" y="-200" z="0" />
     <arc exit="northeast" move="northeast" destination="25" />
     <arc exit="west" move="west" destination="23" />
   </node>
   <node id="25" name="Acenamacra Road, Marsh">
     <description>Cattails and hummocks of tall grass grow along the edges of the corduroy road.  Although the path is rough and uneven, a caravan attempting to pass through the marsh anywhere other than on the crosswise log trail would merely sink to its hubs into muck.  As the leagues pass, so too pass cricks in direction, but the route generally runs a steady northeast-southwest course.</description>
-    <position x="400" y="-280" z="0" />
+    <position x="400" y="-220" z="0" />
     <arc exit="northeast" move="northeast" destination="26" />
     <arc exit="southwest" move="southwest" destination="24" />
   </node>
   <node id="26" name="Acenamacra Road, Meadow">
     <description>Flattened weeds, a charred stone circle, and a bark-roofed lean-to mark a well-used campsite.  Emerging from the marsh to the southwest, a brook meanders through the meadow and ripples past the far side of the shelter, then turns northward toward the forest.  Dots of red and yellow, blue and violet -- colors of lazily swaying blooms -- are scattered upon the greensward.</description>
-    <position x="420" y="-300" z="0" />
+    <position x="420" y="-240" z="0" />
     <arc exit="northeast" move="northeast" destination="27" />
     <arc exit="southwest" move="southwest" destination="25" />
     <arc exit="go" move="go bark-roofed lean-to" destination="51" />
@@ -162,70 +162,71 @@
   <node id="27" name="Acenamacra Road, Meadow">
     <description>Neatly furrowed fields merge with the tangled weeds and grasses of the southwestern meadow as the road continues its leisurely slope toward the ocean.  Every so often, animal tracks enter the route from one side, follow for a distance, then cross the road, plunging into the field or meadow beyond.  To the north and west, a streak of dark green marks the horizon, and the great Fala Inisulen forest.</description>
     <description>Neatly furrowed fields merge with the tangled weeds and grasses of the southwestern meadow as the road continues its leisurely slope toward the ocean.  The ruts and bumps along the route make for rough footing in the evening's dim light.  Every so often, there's a rustling nearby and a dark shape flits across the road, signaling there are more than two-footed travelers in the area.</description>
-    <position x="440" y="-320" z="0" />
+    <position x="440" y="-260" z="0" />
     <arc exit="northeast" move="northeast" destination="28" />
     <arc exit="southwest" move="southwest" destination="26" />
   </node>
   <node id="28" name="Acenamacra Road, White Oak Farm">
     <description>Set behind a woven fence of mauve crepe myrtle and lilac, rests a greying clapboard farmhouse with forest green shutters and a wide front porch.  The house is shaded by ancient white oaks, and lace curtains hang at the windows.  Various outbuildings are laid out behind the main structure, as well as dotting the acres of fields comprising the farm.  At the wagon entrance is an unobtrusive sign stating, White Oak Farm.</description>
     <description>Set behind a woven fence of mauve crepe myrtle and lilac, rests a greying clapboard farmhouse with forest green shutters and a wide front porch.  A welcoming glow of lantern light filters through white lace curtains and the breeze rustles the branches of ancient white oaks protecting the house.  Dark shapes of various outbuildings are visible behind the main structure, and acres of field stretch into the night.  At the wagon entrance is an unobtrusive sign stating, White Oak Farm.</description>
-    <position x="460" y="-340" z="0" />
+    <position x="460" y="-280" z="0" />
     <arc exit="northeast" move="northeast" destination="29" />
     <arc exit="southwest" move="southwest" destination="27" />
   </node>
   <node id="29" name="Acenamacra Road, Farmland">
     <description>Summer crops or tender spring shoots or hardy winter grass -- no matter -- these fields are always more green than brown.  Off to the north, a perimeter of old-growth trees border the cultivated spaces.  Stretching eastward, the fields merge hazily into the blue-grey smudge of the ocean.</description>
     <description>Summer crops or tender spring shoots or hardy winter grass -- no matter -- these fields are always more green than brown.  Off to the north, a perimeter of old-growth trees borders the cultivated spaces.  Stretching eastward, the fields merge hazily into the blue-grey smudge of the ocean.</description>
-    <position x="480" y="-360" z="0" />
+    <position x="480" y="-300" z="0" />
     <arc exit="northeast" move="northeast" destination="30" />
     <arc exit="southwest" move="southwest" destination="28" />
   </node>
   <node id="30" name="Acenamacra Road, Farmland">
     <description>Squares and rectangles of green, broken only by windbreaks of skinny trees and drainage ditches, hem the road.  The air is redolent with the loamy-aroma of damp earth and a subtle saltiness.  In the distance, the eastern skyline is split between land and sea as the path's gentle eastward slope continues downward toward the ocean.</description>
-    <position x="500" y="-380" z="0" />
+    <position x="500" y="-320" z="0" />
     <arc exit="east" move="east" destination="31" />
     <arc exit="southwest" move="southwest" destination="29" />
   </node>
   <node id="31" name="Acenamacra Road, Clifftop">
     <description>Salt and screeching gulls populate the air.  Westward, the road undulates among a patchwork of gently rising hills, checkered fields and orchards.  Eastward, the land ends abruptly, as if the edge of the world has dropped into the ocean.</description>
     <description>Salt breezes waft through the night air.  Westward, the road disappears into the darkness, and few cheery yellow lights pinpoint farmsteads.  Eastward, the land ends abruptly, as if the edge of the world has dropped into the ocean.</description>
-    <position x="520" y="-380" z="0" />
+    <position x="520" y="-320" z="0" />
     <arc exit="west" move="west" destination="30" />
     <arc exit="down" move="down" destination="32" />
+    <arc exit="climb" move="climb steep trail" destination="52" />
   </node>
   <node id="32" name="Acenamacra Road, Cliffs">
     <description>Square foundation beams, laid an arm's length apart, have been staked sideways across the path and partially buried beneath crushed rock.  These planks, stretching from the top of the steep slope to the switchback turn below, create a series of bumpy ridges that catch at passing caravan wheels, preventing them from speeding through the flimsy netting and flying off the edge of the cliff path.</description>
-    <position x="520" y="-360" z="0" />
+    <position x="520" y="-300" z="0" />
     <arc exit="up" move="up" destination="31" />
     <arc exit="down" move="down" destination="33" />
   </node>
   <node id="33" name="Acenamacra Road, Cliffs">
     <description>This flat, wide turning-apron on the cliff side road has been created by nature, or perhaps by nature nudged.  A slab of granite has sheared from the wall above, and become firmly wedged between two pinnacle rocks.  It is the perfect spot for wagons to negotiate the path's switchback turn.  Netted rope slung at the outer edge of the turn won't prevent a brakeless caravan careening down the upper slope from plummeting to the sand below, but it does warn a fall is imminent.</description>
-    <position x="520" y="-340" z="0" />
+    <position x="520" y="-280" z="0" />
     <arc exit="up" move="up" destination="32" />
     <arc exit="down" move="down" destination="34" />
   </node>
   <node id="34" name="Acenamacra, Cliff Path">
     <description>Steep and treacherous, the trail is just wide enough to allow two small caravans to squeeze by, side-by-side.  Massive beams of wood, laid an arm's length apart, have been staked sideways across the path, with crushed stone from the cliff's face used to fill the gaps between the planks.</description>
-    <position x="520" y="-320" z="0" />
+    <position x="520" y="-260" z="0" />
     <arc exit="up" move="up" destination="33" />
     <arc exit="down" move="down" destination="35" />
   </node>
   <node id="35" name="Acenamacra, Cliff Bottom">
     <description>Debris litters the sandy beach some the discarded odds and ends of the villagers, other items things tossed upon the beach by the sea.  A rusted anchor with a cracked wooden stock has been lashed to one of the splintered pilings marking an old pier.  A path traverses this almost-garbage dump, through the tough sea grass and toward the bottom of the cliff where the trail up begins.</description>
-    <position x="520" y="-300" z="0" />
+    <position x="520" y="-240" z="0" />
     <arc exit="east" move="east" destination="36" />
     <arc exit="go" move="go cliff trail" destination="34" />
   </node>
   <node id="36" name="Acenamacra, The Village Path" note="Acenamacra">
     <description>The path curves around behind the huts of the village, heading toward the cliff.  It passes by a fenced area, apparently a corral, judging by the smell and a few bales of feed in the far corner.  The tracks of draft animals covering the path confirm that observation.</description>
-    <position x="540" y="-300" z="0" />
+    <position x="540" y="-240" z="0" />
     <arc exit="east" move="east" destination="37" />
     <arc exit="west" move="west" destination="35" />
   </node>
   <node id="37" name="Acenamacra, The Village Path">
     <description>A rough kind of storage shed has been cobbled together between the beach and the cliff wall.  The planks, though weathered, are in good repair, and the door is hung on brass hinges, not the usual leather.  The path shows signs of a lot of traffic between the shed and the pier to the east.</description>
-    <position x="560" y="-300" z="0" />
+    <position x="560" y="-240" z="0" />
     <arc exit="north" move="north" destination="38" />
     <arc exit="northeast" move="northeast" destination="43" />
     <arc exit="east" move="east" destination="44" />
@@ -235,7 +236,7 @@
   </node>
   <node id="38" name="Acenamacra, The Village Path">
     <description>The little path curves, following the crescent of the beach among a few fishermen's huts.  On the landward side stands (if that's the right word) a rickety shed, with a few sacks visible through gaps in the wall.  A strong smell of dried fish lies over the area like a blanket.</description>
-    <position x="560" y="-320" z="0" />
+    <position x="560" y="-260" z="0" />
     <arc exit="northeast" move="northeast" destination="39" />
     <arc exit="east" move="east" destination="43" />
     <arc exit="southeast" move="southeast" destination="44" />
@@ -245,7 +246,7 @@
   <node id="39" name="Acenamacra, The Village Path">
     <description>Between the path and the loom of the cliffs lie some huts and their little gardens, where a few women sit, mending nets and minding children.  On the beach to the east, an overturned fishing boat is drawn up on the sand above the high-tide line.  Some distance offshore, men in a dory are checking buoys bobbing in the water.</description>
     <description>Between the path and the loom of the cliffs lie some huts and their little gardens.  On the beach to the east, an overturned fishing boat is drawn up on the sand above the high-tide line.  The bay itself is empty.</description>
-    <position x="580" y="-340" z="0" />
+    <position x="580" y="-280" z="0" />
     <arc exit="northeast" move="northeast" destination="40" />
     <arc exit="east" move="east" destination="42" />
     <arc exit="south" move="south" destination="43" />
@@ -253,7 +254,7 @@
   </node>
   <node id="40" name="Acenamacra, The Village Path">
     <description>The grandest house in the village lies at the end of the path, the apparent social center of the settlement.  For one thing, it has mullioned windows, not just wooden shutters.  And there are signs that it was painted at one time -- although in several different colors, if the flakes can be believed.</description>
-    <position x="600" y="-360" z="0" />
+    <position x="600" y="-300" z="0" />
     <arc exit="east" move="east" destination="41" />
     <arc exit="south" move="south" destination="42" />
     <arc exit="southwest" move="southwest" destination="39" />
@@ -261,13 +262,13 @@
   </node>
   <node id="41" name="Acenamacra, The Beach">
     <description>The strip of sand shrinks to nothing as the cliffs advance right to the water's edge.  They shelter the little bay from the prevailing winds, stretching northeast in an unbroken line to the horizon, a pencil-thin dividing line between sea and sky.</description>
-    <position x="620" y="-360" z="0" />
+    <position x="620" y="-300" z="0" />
     <arc exit="southwest" move="southwest" destination="42" />
     <arc exit="west" move="west" destination="40" />
   </node>
   <node id="42" name="Acenamacra, The Beach">
     <description>This smooth stretch of sand looks to be where the fishermen beach their boats when not in use.  A fairly big one rests here now, turned hull-up as if for repairs.  Three oarlocks on the visible side suggest it usually has a crew of six rowers, and it probably also can have a mast stepped for a small sail.</description>
-    <position x="600" y="-340" z="0" />
+    <position x="600" y="-280" z="0" />
     <arc exit="north" move="north" destination="40" />
     <arc exit="northeast" move="northeast" destination="41" />
     <arc exit="southwest" move="southwest" destination="43" />
@@ -276,7 +277,7 @@
   </node>
   <node id="43" name="Acenamacra, The Beach">
     <description>A double line of rotting pilings stretches from the sand out into the water of the bay, either the remains of an earlier pier from more prosperous times or more probably one that was wrecked in a storm.  Although the villagers look well-fed and content enough, it's hard to imagine the little inlet supporting a much larger settlement.</description>
-    <position x="580" y="-320" z="0" />
+    <position x="580" y="-260" z="0" />
     <arc exit="north" move="north" destination="39" />
     <arc exit="northeast" move="northeast" destination="42" />
     <arc exit="south" move="south" destination="44" />
@@ -285,7 +286,7 @@
   </node>
   <node id="44" name="Acenamacra, The Beach">
     <description>A sturdy pier reaches out into the bay.  It's heavily planked, with stout bollards on each side for a ship to moor to.  Scuffed rope fenders against the pilings tell of frequent use, which is more than a little puzzling, because the fishing boats of the village simply pull up on the beach.</description>
-    <position x="580" y="-300" z="0" />
+    <position x="580" y="-240" z="0" />
     <arc exit="north" move="north" destination="43" />
     <arc exit="west" move="west" destination="37" />
     <arc exit="northwest" move="northwest" destination="38" />
@@ -293,44 +294,80 @@
   </node>
   <node id="45" name="Acenamacra, The Village Path">
     <description>The path comes to an end at the water's edge, not far from the cliff wall to the south.  Apart from the usual bits of broken shell and driftwood, the only objects in sight are a few racks for drying fish, although there are no fish on them.</description>
-    <position x="580" y="-280" z="0" />
+    <position x="580" y="-220" z="0" />
     <arc exit="northwest" move="northwest" destination="37" />
   </node>
   <node id="46" name="Acenamacra, An Upturned Boat">
     <description>There's a good view of the beach and the low-lying village from the vantage of the upturned fishing boat.  From far out at sea, it must look like some monster of the deep has taken a bite out of the coastal cliffs, leaving the small bay as a reminder of its appetite.</description>
     <description>Not a light shows in the village, but the beach glows with the phosphorescence of sea-foam as waves break, roll up on the beach, and recede with a soft hush.  The cliffs to the west are visible only as a blacker outline against the night sky.</description>
-    <position x="620" y="-340" z="0" />
+    <position x="620" y="-280" z="0" />
     <arc exit="go" move="go beach" destination="42" />
   </node>
   <node id="47" name="Acenamacra Pier" note="Pier|Degan|Mammoth|FC|Fang Cove" color="#FF00FF">
     <description>Beyond the harbor, spray is thrown high into the air as waves strike the enclosing reef.  The crash of the surf on the coral alternates with a long, drawn-out hiss as each retreating wave regroups to try again.  From the vantage of the pier, several breaks in the reef are visible, but it would take an experienced and daring captain to attempt them.</description>
-    <position x="600" y="-300" z="0" />
+    <position x="600" y="-240" z="0" />
     <arc exit="go" move="go beach" destination="44" />
   </node>
   <node id="48" name="Acenamacra, A Storage Shed">
     <description>The shed is empty, just four plank walls and a few trails of sawdust here and there on the dirt floor.  Despite its simplicity, the shed is well-made, its framing timbers set squarely and the planks nailed without gaps between them.  A small shelf on one wall holds a few nubs of candles, burned down almost to the wood.</description>
-    <position x="540" y="-280" z="0" />
+    <position x="540" y="-220" z="0" />
     <arc exit="go" move="go sturdy door" destination="37" />
   </node>
   <node id="49" name="Acenamacra, A Rickety Shed">
     <description>A door sags at one end of the small, dusty shed, creaking with every wind that blows.  At the other end, some burlap sacks lie piled in a corner.  There's a smell of fish in the room, but an even stronger sense of disuse about the place.</description>
-    <position x="540" y="-320" z="0" />
+    <position x="540" y="-260" z="0" />
     <arc exit="go" move="go creaking door" destination="38" />
   </node>
   <node id="50" name="Acenamacra, The Village Tavern" note="Village Tavern|Tavern" color="#FF0000">
     <description>An aroma of tar and salt underlies a strong smell of fish inside the dim tavern.  Apart from a few kegs for use as chairs, the only piece of furniture is a trestle table made from boards laid across empty casks.  A sign and some bottles stand on the makeshift table.</description>
-    <position x="600" y="-380" z="0" />
+    <position x="600" y="-320" z="0" />
     <arc exit="go" move="go open door" destination="40" />
   </node>
   <node id="51" name="Acenamacra Road, Shelter">
     <description>Overlapping stones lining the walls channel any water overflowing the shallow trench outside away from the shelter's floor.  Colorful strips of cloth have been woven into the sides, and the ceiling is aflutter with feathers tied to the leftover ends of twine that bind the bark roof.  The open face of the lean-to has a canvas flap to protect those within from the elements.</description>
-    <position x="440" y="-300" z="0" />
+    <position x="440" y="-240" z="0" />
     <arc exit="out" move="out" destination="26" />
   </node>
+  <node id="52" name="Blue Fire Cove, Steep Trail" note="shadewing harpy" color="White">
+    <description>A narrow, steep path winds down the cliffside, its surface uneven with jagged stone and loose gravel.  Sharp rocks jut from the sheer walls on either side, while beneath, the water lies far below, stretching along the base of the cliff.  Sparse tufts of hardy coastal vegetation cling to cracks in the rock.  The trail narrows in places, forcing careful footing as it descends toward the beach.</description>
+    <position x="520" y="-340" z="0" />
+    <arc exit="southeast" move="southeast" destination="53" />
+    <arc exit="climb" move="climb steep trail" destination="31" />
+  </node>
+  <node id="53" name="Blue Fire Cove, Sheltered Shore" color="White">
+    <description>A narrow strip of sand curves beneath the stone overhang, its surface scattered with smooth pebbles and pale driftwood.  The rocky ceiling arches low in places, shaped by years of falling spray.  Channels carved into the sand suggest the steady pull of the tide, while dark pools gather near the cliff base, their edges ringed with mossy stone.</description>
+    <position x="540" y="-320" z="0" />
+    <arc exit="east" move="east" destination="55" />
+    <arc exit="southeast" move="southeast" destination="56" />
+    <arc exit="south" move="south" destination="54" />
+    <arc exit="northwest" move="northwest" destination="52" />
+  </node>
+  <node id="54" name="Blue Fire Cove, Overhang Hollow" color="White">
+    <description>A recessed alcove rests beneath a sweeping curve of stone, its walls streaked with muted blue-grey mineral deposits that form natural patterns.  Loose sand gathers near the back where the rock bends inward, mingling with scattered feathers and faint claw marks that suggest frequent winged visitors.</description>
+    <position x="540" y="-300" z="0" />
+    <arc exit="north" move="north" destination="53" />
+    <arc exit="east" move="east" destination="56" />
+  </node>
+  <node id="55" name="Blue Fire Cove, Tide-Carved Ledge" color="White">
+    <description>A flat shelf of rock hugs the lagoon's inner rim, worn by centuries of water grinding against its edge.  Pitted surfaces reveal pockets of trapped shells, and shallow grooves run parallel to the shoreline.  The ledge rises only a few feet above the beach, yet offers a clear view of the cove's circular basin and its sheltered waters.</description>
+    <position x="560" y="-320" z="0" />
+    <arc exit="south" move="south" destination="56" />
+    <arc exit="west" move="west" destination="53" />
+  </node>
+  <node id="56" name="Blue Fire Cove, Lagoon's Heart" color="White">
+    <description>The lagoon forms a shallow pool bordered by rock and packed sand, its water sheltered by the protective cliff walls.  Large boulders break the surface near the center, creating natural stepping stones.  A narrow channel at the far edge connects to the open sea, its rocky mouth partially masked by tangled marine growth clinging to the stone.</description>
+    <position x="560" y="-300" z="0" />
+    <arc exit="north" move="north" destination="55" />
+    <arc exit="west" move="west" destination="54" />
+    <arc exit="northwest" move="northwest" destination="53" />
+  </node>
   <label text="Acenamacra">
-    <position x="530" y="-270" z="0" />
+    <position x="530" y="-210" z="0" />
   </label>
   <label text="Fala Inisulen">
-    <position x="290" y="-170" z="0" />
+    <position x="290" y="-110" z="0" />
+  </label>
+  <label text="shadewing harpy">
+    <position x="530" y="-350" z="0" />
   </label>
 </zone>
