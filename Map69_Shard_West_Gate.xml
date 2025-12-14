@@ -307,7 +307,7 @@
     <position x="120" y="157" z="0" />
     <arc exit="southeast" move="southeast" destination="47" />
     <arc exit="west" move="west" destination="49" />
-    <arc exit="go" move="go faint path" />
+    <arc exit="go" move="go faint path" destination="633" />
   </node>
   <node id="49" name="Western Road, Rolling Hills">
     <description>A roughly-cut hillside to the west stretches to meet the tall grasses and aspen of the eastern slopes.  From somewhere beyond the hill, the wind carries the sounds of goats and sheep bleating and the occasional bark of a sheepdog to echo off rocky slopes in an oddly harmonious duet.</description>
