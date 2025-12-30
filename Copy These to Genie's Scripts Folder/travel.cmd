@@ -1,4 +1,4 @@
-#debug 5
+#debug 10
 # POWER TRAVEL SCRIPT FOR GENIE 4 ~ TRAVELS TO/FROM ALMOST ~ANYWHERE~ IN DRAGONREALMS
 # CAN START SCRIPT FROM ANYWHERE IN THE GAME
 #
@@ -7,8 +7,8 @@
 # Inspired by the OG Wizard Travel Script - But made 1000x better w/ the power of GENIE
 # Originally written by Achilles - Revitalized and Robustified by Shroom
 #
-# Updated: 9/13/25
-var version 5.3.4
+# Updated: 12/29/25
+var version 5.3.6
 #
 # USES PLAT PORTALS TO TRAVEL BETWEEN CITIES IF PLATINUM
 # KNOWS HOW TO NAVIGATE OUT OF ANY MAZE / PUZZLE AREAS / FERRIES ETC
@@ -132,7 +132,7 @@ if ("$charactername") == ("$char10") then var shardcitizen no
 ## THIS IS THE HARDEST SHORTCUT IN THE GAME          ##
 ## YOU CAN ALSO DIE IN THE DESERT IF YOU GET LOST    ##
 ## ~780 RANKS ~BARE MIN~ for this! - 850+ IS 'SAFER' ##
-## ALSO POSSIBLY MAY GET LOST - NOT FOOLPROOF!       ## 
+## ALSO POSSIBLY MAY GET LOST - NOT FOOLPROOF!       ##
 ## SET TO 2000 TO SKIP DESERT SHORTCUT AND USE FERRY ##
     var muspari.shortcut 2000
 #################################################
@@ -140,12 +140,14 @@ if ("$charactername") == ("$char10") then var shardcitizen no
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
 ###########################################
-# CHANGELOG - Latest Update: 9/13/25
+# CHANGELOG - Latest Update: 10/12/25
+#
+# - Fixed Logic travelling to and from M'riss in TF (There is no airship)
 #
 # - Robustified FERRY Logic - should fix bug sometimes getting on ferry and immediately getting off in a loop
 # - Should stow anything in hands before ending script
 
-# - Re-Added trying to pull out a heavy/braided rope when climbing undergondola under 600 ranks 
+# - Re-Added trying to pull out a heavy/braided rope when climbing undergondola under 600 ranks
 #
 # - Fixed several bad checks for NOT TF which would cause infinite loops for PLAT users in some areas
 #
@@ -155,9 +157,9 @@ if ("$charactername") == ("$char10") then var shardcitizen no
 # - Various other tweaks and code cleanup
 #
 # - Robustified FERRY travel FROM Ratha TO MAINLAND for NON-PREMIUM PRIME users
-# - FIRST - Will check for MAMMOTHS - IF MAMMOTHS ARE UP WILL TAKE MAMMOTHS - FC - ACENAMACRA 
+# - FIRST - Will check for MAMMOTHS - IF MAMMOTHS ARE UP WILL TAKE MAMMOTHS - FC - ACENAMACRA
 # - IF NO MAMMOTHS FOUND - WILL RUN TO DOCK AND CHECK FOR SKIRR'LOLASU
-# - IF NO SKIRR'LOLASU - WILL PAUSE THEN CHECK FOR MAMMOTH AGAIN 
+# - IF NO SKIRR'LOLASU - WILL PAUSE THEN CHECK FOR MAMMOTH AGAIN
 # - WILL RUN BACK FORTH BETWEEN DOCKS - AND TAKE THE FIRST TRANSPORT THAT ARRIVES
 #
 # - Heavily Robustified Ferry (NPC Transportation) Travel
@@ -429,7 +431,7 @@ echo
 echo *** LET'S GO!!
 echo
 echo ~~~~~~~~~~~~~~~~~~~~~~~~~
-echo * STARTING AREA: 
+echo * STARTING AREA:
 echo * $roomname
 echo * MAP: $zoneid | ROOM: $roomid
 echo
@@ -524,7 +526,7 @@ if (matchre("%destination", "\b(ratha|hara?j?a?a?l?|tais?g?a?t?h?)") && matchre(
      if (matchre("$game", "(?i)DRF") && matchre("%destination", "\b(rath?a?|tais?g?a?t?h?)") || (%premium == 1) && matchre("%destination", "\b(rath?a?|tais?g?a?t?h?)")) then
                {
                     echo
-                    echo * TF - GOING TO FC FOR RATHA/TAISGATH TRAVEL 
+                    echo * TF - GOING TO FC FOR RATHA/TAISGATH TRAVEL
                     echo
                     pause
                     gosub TO_SEACAVE
@@ -535,7 +537,7 @@ if (matchre("%destination", "\b(ratha|hara?j?a?a?l?|tais?g?a?t?h?)") && matchre(
                     if matchre("%destination", "\bratha") then goto ARRIVED
                }
 ## TF ONLY - TRAVEL TO HARAJAAL VIA FC
-      if (matchre("$game", "(?i)DRF") && matchre("%destination", "\b(haraj?a?a?l?)")) then
+      if (matchre("$game", "(?i)DRF") && matchre("%destination", "\b(haraj?a?a?l?|mriss|merk)")) then
           {
                echo
                echo * TF - GOING TO FC FOR HARAJAAL TRAVEL
@@ -544,7 +546,7 @@ if (matchre("%destination", "\b(ratha|hara?j?a?a?l?|tais?g?a?t?h?)") && matchre(
                gosub TO_SEACAVE
                gosub AUTOMOVE 3
                gosub JOINLOGIC
-               goto ARRIVED
+               if matchre("%destination", "haraj?a?a?l?") then goto ARRIVED
           }
     }
 ## BACK TO MAINLAND AREA (DESTINATION: SOUTH OF HAVEN)
@@ -579,8 +581,8 @@ if (("$zoneid" == "90") && !matchre("%destination", "\b(rath?a?|aesr?y?|hara|tai
                goto RATHA_CHECK3
           }
         # JOINLOGIC INTENTIONALLY HERE TWICE FOR FASTER TRAVEL BACK TO MAINLAND FOR NON-PREMIUM
-        # 1ST JOINLOGIC - RATHA MAMMOTHS TO FANG COVE 
-        # 2ND JOINLOGIC - FC MAMMOTHS TO ACENAMACRA 
+        # 1ST JOINLOGIC - RATHA MAMMOTHS TO FANG COVE
+        # 2ND JOINLOGIC - FC MAMMOTHS TO ACENAMACRA
         gosub JOINLOGIC
         pause
         gosub JOINLOGIC
@@ -645,7 +647,7 @@ if (("$zoneid" == "150") && !matchre("%destination", "\b(rath?a?|acen?e?m?a?c?r?
          send look
          pause 0.5
      }
-## IF ~STILL~ IN FC (EXIT PORTAL DIDN'T WORK) - TAKE MAMMOTHS OUT 
+## IF ~STILL~ IN FC (EXIT PORTAL DIDN'T WORK) - TAKE MAMMOTHS OUT
 if ("$zoneid" == "150") then
      {
          gosub AUTOMOVE 2
@@ -747,7 +749,11 @@ if matchre("%destination", "\bston?e?c?l?a?n?") then
           var detour stone
           goto CROSSING
      }
-if matchre("%destination", "\bshar?d?") then goto ILITHI
+if matchre("%destination", "\bshar?d?") then
+     {
+          var detour shard
+          goto ILITHI
+     }
 if matchre("%destination", "\b(yolo?|ye{2,}t)") then
      {
           var detour yeet
@@ -840,9 +846,9 @@ if matchre("%destination", "\b(lang?e?n?f?i?r?t?h?)") then
      }
 if matchre("%destination", "\b(el'?b?a?i?n?s?|elb?a?i?n?s?)") then
      {
-	      var detour el'bain
-		  goto THERENGIA
-	 }
+          var detour el'bain
+          goto THERENGIA
+     }
 if matchre("%destination", "\b(raka?s?h?)") then
      {
           var detour rakash
@@ -1258,7 +1264,7 @@ if (("$zoneid" == "61") && matchre("%detour", "(leth|acen|taipa|LETH|ACEN|ratha|
                     gosub AUTOMOVE 27
                }
 ## PRIME USER (NON-PREMIUM) TO RATHA: TRAVEL TO ACENAMACRA TO FC - MAMMOTH TO RATHA
-# 1ST JOINLOGIC - MAMMOTHS TO FANG COVE 
+# 1ST JOINLOGIC - MAMMOTHS TO FANG COVE
 # 2ND JOINLOGIC - MAMMOTHS TO RATHA
           if ("%detour" == "rat") then
                {
@@ -1411,6 +1417,7 @@ if (("$zoneid" == "1") && matchre("%detour", "(leth|acen|taipa|ratha)")) then
                  if ($Athletics.Ranks >= %undersegoltha) then
                      {
                          gosub AUTOMOVE 650
+                         pause 0.5
                          gosub AUTOMOVE 23
                      }
              }
@@ -1567,17 +1574,17 @@ if (("$zoneid" == "40") && ($Athletics.Ranks < %rossmansouth)) then
         pause 0.2
      }
 if ("$zoneid" == "40a") then
-	{
+     {
      gosub INFO_CHECK
-	evalmath BoarNeeded ($circle * 20)
-	if (%lirums < %BoarNeeded) then
-		{
-		gosub AUTOMOVE 125
-		goto NOCOIN
-		}
-	gosub AUTOMOVE 68
-	gosub JOINLOGIC
-	}
+     evalmath BoarNeeded ($circle * 20)
+     if (%lirums < %BoarNeeded) then
+          {
+          gosub AUTOMOVE 125
+          goto NOCOIN
+          }
+     gosub AUTOMOVE 68
+     gosub JOINLOGIC
+     }
 if ("$zoneid" == "126") then gosub AUTOMOVE 49
 if ("$zoneid" == "127") then gosub AUTOMOVE south
 if ("$zoneid" == "126") then gosub AUTOMOVE 49
@@ -1714,6 +1721,7 @@ if ("$zoneid" == "1") then
                       if ($Athletics.Ranks >= %undersegoltha) then
                           {
                               gosub AUTOMOVE 650
+                              pause 0.5
                               gosub AUTOMOVE 23
                           }
                   }
@@ -2138,7 +2146,7 @@ if ("$zoneid" == "2a") then gosub AUTOMOVE cross
 if ("$zoneid" == "6")  then gosub AUTOMOVE cross
 if ("$zoneid" == "67a") then gosub AUTOMOVE shard
 if matchre("$zoneid", "106|107|108") then goto QITRAVEL
-if (matchre("%destination", "(ratha|hara?j?a?a?l?)") && matchre("$zoneid", "\b(1|30|42|47|61|66|67|90|99|107|108|116)\b")) then
+if (matchre("%destination", "(ratha|hara?j?a?a?l?|mriss|merk)") && matchre("$zoneid", "\b(1|30|40|42|47|61|66|67|90|99|107|108|116)\b")) then
      {
           if (matchre("$game", "(?i)DRX") && (%portal == 1)) then
           {
@@ -2154,16 +2162,16 @@ if (matchre("%destination", "(ratha|hara?j?a?a?l?)") && matchre("$zoneid", "\b(1
                     gosub AUTOMOVE 252
                     goto ARRIVED
                }
-      if (matchre("$game", "(?i)DRF") && matchre("%destination", "\b(haraj?a?a?l?)")) then
+      if (matchre("$game", "(?i)DRF") && matchre("%destination", "\b(haraj?a?a?l?|mriss|merk)")) then
           {
                echo ** TO FANG COVE
                gosub TO_SEACAVE
                gosub AUTOMOVE 3
                gosub JOINLOGIC
-               goto ARRIVED
+               if matchre("%destination", "\bhara?j?a?a?l") then goto ARRIVED
           }
     }
-if matchre("$zonename", "(Hara'jaal|Mer'Kresh|M'Riss)") then
+if matchre("$zonename", "(Hara'jaal|Mer'Kresh|M'Riss) && !matchre("%destination", "\b(haraj?a?a?l?|mriss|merk|mer'k)")") then
           {
               var backuplabel THERENGIA
               var backupdetour %detour
@@ -2245,7 +2253,7 @@ if (("$zoneid" == "67") && ("$guild" == "Thief")) then
           }
 if ("$zoneid" == "67a") then gosub AUTOMOVE STR
 if ("$zoneid" == "67") then gosub AUTOMOVE 132
-if (matchre("%destination", "\b(ratha|hara?j?a?a?l?)") && matchre("$zoneid", "\b(1|30|42|47|61|66|67|90|99|107|108|116)\b")) then
+if (matchre("%destination", "\b(ratha|hara?j?a?a?l?|mriss|merk)") && matchre("$zoneid", "\b(1|30|42|47|61|66|67|90|99|107|108|116)\b")) then
      {
           if (matchre("$game", "(?i)DRX") && (%portal == 1)) then
           {
@@ -2262,11 +2270,11 @@ if (matchre("%destination", "\b(ratha|hara?j?a?a?l?)") && matchre("$zoneid", "\b
                     gosub AUTOMOVE 252
                     goto ARRIVED
                }
-      if (matchre("$game", "(?i)DRF") && matchre("%destination", "\b(haraj?a?a?l?)")) then
+      if (matchre("$game", "(?i)DRF") && matchre("%destination", "\b(haraj?a?a?l?|mriss|merk)")) then
           {
                echo ** TO FANG COVE
                gosub TO_SEACAVE
-               gosub AUTOMOVE 3
+               gosub AUTOMOVE 2
                gosub JOINLOGIC
                goto ARRIVED
           }
@@ -2334,8 +2342,9 @@ if (("$zoneid" == "60") && ("$guild" == "Thief")) then
           {
               if ($Athletics.Ranks >= %undersegoltha) then
                   {
-                      gosub AUTOMOVE segoltha
-                      gosub AUTOMOVE 6
+                    gosub AUTOMOVE 107
+                    pause 0.5
+                    gosub AUTOMOVE 6
                   }
           }
 if (("$zoneid" == "60") && ($Athletics.Ranks >= %segoltha)) then gosub AUTOMOVE 108
@@ -2612,38 +2621,56 @@ if (matchre("$game", "(?i)DRX") && (%portal == 1)) then
      {
           if (matchre("$zoneid", "\b(1|30|40|47|67|90|99|107|116)\b") && (%ported == 0)) then gosub PORTAL_TIME
      }
+if (("$zoneid" == "106") && matchre("%detour", "(merk|mriss)")) then
+          {
+              gosub AUTOMOVE 101
+              pause 0.1
+              gosub FERRYLOGIC
+          }
+if (("$zoneid" == "106") && matchre("%detour", "ratha")) then
+          {
+              gosub AUTOMOVE 1
+              pause 0.1
+              gosub FERRYLOGIC
+          }
+if (("$zoneid" == "107") && matchre("%detour", "mriss")) then
+          {
+              gosub AUTOMOVE 113
+              pause 0.1
+              gosub FERRYLOGIC
+          }
 ### GET COINS FOR FERRY TRAVELS
 if ("$zoneid" == "116") then
-			{
+          {
                gosub INFO_CHECK
-			evalmath TherenCoin $circle*20
-			if (%dokoras < %TherenCoin) then goto NOCOIN
-			gosub AUTOMOVE 217
-			}
+               evalmath TherenCoin $circle*20
+               if (%dokoras < %TherenCoin) then goto NOCOIN
+               gosub AUTOMOVE 217
+          }
 if ("$zoneid" == "126") then
-			{
+          {
                gosub INFO_CHECK
-			evalmath TherenCoin $circle*20
-			if (%dokoras < %TherenCoin) then
-				{
-				gosub AUTOMOVE 49
-				goto NOCOIN
-				}
-			gosub AUTOMOVE 103
-			}
+               evalmath TherenCoin $circle*20
+               if (%dokoras < %TherenCoin) then
+               {
+                    gosub AUTOMOVE 49
+                    goto NOCOIN
+               }
+               gosub AUTOMOVE 103
+          }
 if ("$zoneid" == "127") then
-			{
-               gosub INFO_CHECK
-			evalmath TherenCoin $circle*20
-			if (%dokoras < %TherenCoin) then
-				{
-				gosub AUTOMOVE 510
-				gosub AUTOMOVE 49
-				goto NOCOIN
-				}
-			gosub AUTOMOVE 363
-			gosub JOINLOGIC
-			}
+{
+     gosub INFO_CHECK
+     evalmath TherenCoin $circle*20
+     if (%dokoras < %TherenCoin) then
+     {
+          gosub AUTOMOVE 510
+          gosub AUTOMOVE 49
+          goto NOCOIN
+     }
+     gosub AUTOMOVE 363
+     gosub JOINLOGIC
+}
 # if matchre("rakash", "(?i)%detour") then goto ARRIVED
 if ("$zoneid" == "40a") then gosub AUTOMOVE 125
 if "$zoneid" == "42" && "%detour" != "theren" then gosub AUTOMOVE 2
@@ -2678,7 +2705,13 @@ if (("$zoneid" == "40") && matchre("%detour", "(?i)(lang|rakash|el'bain|mriss|me
                       gosub AUTOMOVE 96
                       goto ARRIVED
                   }
-              if matchre("%detour", "(mriss|merk|hara)") then
+              if (matchre("%detour", "(mriss|merk|hara)") && !matchre("$game", "(?i)DRF")) then
+                  {
+                      gosub AUTOMOVE 305
+                      gosub JOINLOGIC
+                      goto QITRAVEL
+                  }
+              if (matchre("%detour", "(mriss|merk|hara)") && matchre("$game", "(?i)DRF")) then
                   {
                       gosub AUTOMOVE 305
                       gosub JOINLOGIC
@@ -3287,23 +3320,23 @@ if (("$zoneid" == "40") && ($Athletics.Ranks < %rossmansouth)) then
           {
               echo ** Athletics too low for Rossman Shortcut - Taking Ferry
               gosub INFO_CHECK
-		    evalmath BoarNeeded $circle*20
+              evalmath BoarNeeded $circle*20
               if (%lirums < %BoarNeeded) then goto NOCOIN
               gosub AUTOMOVE 263
           }
 if ("$zoneid" == "40a") then
-			{
-                    gosub INFO_CHECK
-				evalmath BoarNeeded $circle*20
-				if (%lirums < %BoarNeeded) then
-					{
-					gosub AUTOMOVE 125
-					goto NOCOIN
-					}
-				gosub AUTOMOVE 68
-				gosub JOINLOGIC
-				goto FORF_3
-			}
+     {
+          gosub INFO_CHECK
+          evalmath BoarNeeded $circle*20
+          if (%lirums < %BoarNeeded) then
+               {
+               gosub AUTOMOVE 125
+               goto NOCOIN
+               }
+          gosub AUTOMOVE 68
+          gosub JOINLOGIC
+          goto FORF_3
+     }
 if ("$zoneid" == "34a") then gosub AUTOMOVE 134
 if ("$zoneid" == "34") then gosub AUTOMOVE 15
 if ("$zoneid" == "33a") then gosub AUTOMOVE 46
@@ -3642,7 +3675,7 @@ QITRAVEL:
                 gosub AUTOMOVE 113
                 gosub FERRYLOGIC
             }
-  if %tomainland then
+  if ((%tomainland) && !matchre("$game", "(?i)DRF")) then
             {
                 gosub AUTOMOVE 222
                 var tomainland 0
@@ -3652,6 +3685,26 @@ QITRAVEL:
                 pause
                 put #mapper reset
                 goto %label
+            }
+### AIRSHIP FROM MRISS TO LANG IS ~NOT~ IN TF - TAKE BACKUP METHOD
+  if ((%tomainland) && matchre("$game", "(?i)DRF")) then
+            {
+                echo ** TAKING MAMMOTHS BACK TO MAINLAND
+                var ToRatha 0
+                var label %backuplabel
+                var detour %backupdetour
+                gosub TO_SEACAVE
+                gosub AUTOMOVE 2
+                gosub JOINLOGIC
+                pause
+                put #mapper reset
+                goto %label
+                # gosub AUTOMOVE 151
+                # gosub FERRYLOGIC
+                # gosub AUTOMOVE 78
+                # gosub FERRYLOGIC
+                # gosub AUTOMOVE 102
+                # gosub JOINLOGIC
             }
   if (("$zoneid" == "108") && ("%detour" == "mriss")) then
             {
@@ -4059,7 +4112,7 @@ GONDOLAOUT:
 INVIS:
   gosub STOP_INVIS
 #################################################################################
-### MAIN FERRY LOGIC - CHECK FOR AND WAIT TO BOARD FERRY 
+### MAIN FERRY LOGIC - CHECK FOR AND WAIT TO BOARD FERRY
 FERRY:
   delay 0.0001
   var OffRide 0
@@ -4125,7 +4178,7 @@ FERRY:
   echo # Checking for a Transport...
   echo ##############
   echo
-  matchre ONFERRY \[\"Her Opulence\"\]|\[\"Hodierna\'s Grace\"\]|\[\"Kertigen\'s Honor\"\]|\[\"His Daring Exploit\"\]|\[\"?The Kree'la, Main Deck\"?]\|\[\"?The Skirr'lolasu, Main Deck\"?\]|\[\"Northern Pride\", Main Deck\]|\[\"Theren's Star\", Deck\]|\[The Evening Star\]|\[The Damaris' Kiss\]|\[A Birch Skiff\]|\[A Highly Polished Skiff\]|\[\"The Desert Wind\"\]|\[\"The Suncatcher\"\]|\[\"The Riverhawk\"\]|\[\"Imperial Glory\"\]\"Hodierna's Grace\"|\[\"Her Opulence\"\]|\[The Galley Cercorim\]|\[The Jolas, Fore Deck\]|\[Aboard the Warship, Gondola\]|\[The Halasa Selhin, Main Deck\]|\[Aboard the Mammoth, Platform\]
+  matchre ONFERRY Her Opulence|Hodierna's Grace|Kertigen's Honor|His Daring Exploit|The Kree'la, Main Deck|The Skirr'lolasu, Main Deck|Northern Pride, Main Deck|Theren's Star, Deck|The Evening Star|The Damaris' Kiss|A Birch Skiff|A Highly Polished Skiff|The Desert Wind|The Suncatcher|The Riverhawk|Imperial Glory|Hodierna's Grace|Her Opulence|The Galley Cercorim|The Jolas, Fore Deck|Aboard the Warship, Gondola|The Halasa Selhin, Main Deck|Aboard the Mammoth, Platform
   matchre ONFERRY Secured to the gigantic balloon overhead, the armored ironwood gondola dangles on a convoluted network of hempen rope\.
   matchre ONFERRY ^One of the barge's crew members stops you and requests a transportation fee|A row of benches occupies the deck
   matchre ONFERRY Long, wide and low, this vessel is built for utility, but the hand of luxury can be discerned in the ornately carved walnut railings, down-cushioned benches and the well polished deck
@@ -4268,7 +4321,7 @@ ONFERRY:
   if (%OffRide == 1) then goto OFFTHERIDE
   matchwait 60
   goto ONFERRY
-  
+
 ## HALFWAY CHECK FOR THE MUSPARI/OASIS TRANSPORT
 OASIS_CHECK:
   pause 0.1
@@ -4279,7 +4332,7 @@ OASIS_CHECK:
      }
   goto ONFERRY
 
-### GETTING OFF THE FERRY 
+### GETTING OFF THE FERRY
 OFFTHERIDE:
   pause 0.0001
   var OffRide 0
@@ -4331,21 +4384,21 @@ OFFTHERIDE:
   pause 0.7
   put #mapper reset
   return
-  
-### LOGIC FOR GETTING ON THE MAMMOTHS / WARSHIPS 
+
+### LOGIC FOR GETTING ON THE MAMMOTHS / WARSHIPS
 ### MAINLY USED FOR ISLAND TRAVEL - MAMMOTHS/WARSHIPS ETC FROM ACENAMACRA/RATHA/FANG COVE
 JOINLOGIC:
   delay 0.001
   var OffRide 0
-  matchre ONJOINED ^\[Aboard the Dirigible, Gondola\]|^\[Alongside a Wizened Ranger\]|^\[Aboard the Balloon, Gondola\]|\[Aboard the Mammoth, Platform\]|\[The Bardess' Fete, Deck\]|\[Aboard the Warship, Gondola\]
-  matchre ONJOINED ^You join the Merelew driver|^A veritable spiderweb of ropes secures
+  matchre ONJOINED Aboard the Dirigible, Gondola|Alongside a Wizened Ranger|Aboard the Balloon, Gondola|Aboard the Mammoth, Platform|The Bardess' Fete, Deck|Aboard the Warship, Gondola
+  matchre ONJOINED ^You join the Merelew driver|^A veritable spiderweb of ropes secures|^You join the Gnomish pilot
   matchre ONJOINED Thick, barnacle-encrusted ropes secure the platform to the mammoth's back
   matchre ONJOINED Silken rigging suspends the sweeping teak
   matchre ONJOINED ^An intricate network of silken rope
   put look
   pause 0.3
   pause 0.2
-  if matchre("$roomobjs $roomname", "(^\[Aboard the Dirigible, Gondola\]|^\[Alongside a Wizened Ranger\]|^An intricate network of silken rope|^\[Aboard the Balloon, Gondola\]|^A veritable spiderweb of ropes secures|^Thick, barnacle-encrusted ropes secure the platform to the|\[Aboard the Mammoth, Platform\]|\[The Bardess' Fete, Deck\]|^Silken rigging suspends the sweeping teak|\[Aboard the Warship, Gondola\])") then goto ONJOINED
+  if matchre("$roomobjs $roomname", "(Aboard the Dirigible, Gondola|^Alongside a Wizened Ranger|^An intricate network of silken rope|Aboard the Balloon, Gondola|^A veritable spiderweb of ropes secures|^Thick, barnacle-encrusted ropes secure the platform to the|Aboard the Mammoth, Platform]|The Bardess' Fete, Deck|^Silken rigging suspends the sweeping teak|Aboard the Warship, Gondola)") then goto ONJOINED
   if matchre("$roomobjs", "warship") then send join warship
   if matchre("$roomobjs", "airship") then put join airship
   if matchre("$roomobjs", "dirigible") then put join dirigible;join dirigible
@@ -4462,7 +4515,7 @@ OFFJOINED:
   pause
   put #mapper reset
   return
-### END OF FERRY LOGIC 
+### END OF FERRY LOGIC
 ########################################################################################################
 PASSPORT_CHECK:
   pause 0.2
@@ -4530,7 +4583,7 @@ NOPASSPORT:
   goto ARRIVED
 
 ### COIN LOGIC - GET MONEY FROM THE BANK TO TAKE FERRIES
-### ONLY REACHES THIS SUB IF WE DON'T HAVE ENOUGH MONEY ON HAND 
+### ONLY REACHES THIS SUB IF WE DON'T HAVE ENOUGH MONEY ON HAND
 NOCOIN:
   put #parse NO COINS!
   echo
@@ -4642,6 +4695,21 @@ NOCOIN:
             else put withdraw %BoarNeeded copper
             wait
         }
+#### MERKRESH FERRY TO MRISS WILL TAKE MORE COIN THAN NEEDED FOR ONE TRIP - DUE TO NO BANK IN MRISS
+    if ("$zoneid" == "107") then
+        {
+            var currencyneeded lir
+            if (%lirums < 120) then
+               {
+                    gosub AUTOMOVE exchange
+                    gosub LIRUMS
+               }
+            if (%lirums >= 120) then goto COIN.CONTINUE
+            gosub AUTOMOVE teller
+            if ($invisible == 1) then gosub STOP_INVIS
+            put withdraw 140 copper
+            wait
+        }
     if (("$zoneid" == "113") && ("$roomid" == "4")) then gosub AUTOMOVE 10
     if (("$zoneid" == "113") && ("$roomid" == "9")) then gosub AUTOMOVE 8
     if ("$zoneid" == "114") then
@@ -4671,10 +4739,10 @@ NOCOIN:
             if (%dokoras > %TherenCoin) then goto COIN.CONTINUE
             gosub AUTOMOVE teller
             if ($invisible == 1) then gosub STOP_INVIS
-		  put withdraw %TherenCoin copper
+            put withdraw %TherenCoin copper
             wait
         }
-	if (("$zoneid" == "116") && !matchre("%detour", "(rossman|lang|theren|rakash|muspari|fornsted|el'bain|mriss|merk|hara)")) then
+     if (("$zoneid" == "116") && !matchre("%detour", "(rossman|lang|theren|rakash|muspari|fornsted|el'bain|mriss|merk|hara)")) then
         {
             var currencyneeded dok
             if (%dokoras < 120) then
@@ -4705,9 +4773,15 @@ NOCOIN:
         }
     if (("$zoneid" == "67") && ("%detour" == "aesry")) then
         {
-            var currencyneeded aesry
-            gosub AUTOMOVE teller
+            var currencyneeded lir
             if ($invisible == 1) then gosub STOP_INVIS
+            if (%lirums < %TherenCoin) then
+               {
+                    gosub AUTOMOVE exchange
+                    gosub LIRUMS
+               }
+            if (%lirums > 5000) then goto COIN.CONTINUE
+            gosub AUTOMOVE teller
             if !matchre("$game", "(?i)DRF") then put withdraw 10 gold
             if matchre("$game", "(?i)DRF") then
                {
@@ -4719,14 +4793,21 @@ NOCOIN:
                }
             pause
         }
-	if (("$zoneid" == "67") && !matchre("(rossman|lang|theren|rakash|muspari|fornsted|el'bain|mriss|merk|hara|cross|river|haven|arthe|kaerna|stone|sorrow|throne|hvaral)", "%detour")) then
+     if (("$zoneid" == "67") && !matchre("(rossman|lang|theren|rakash|muspari|fornsted|el'bain|mriss|merk|hara|cross|river|haven|arthe|kaerna|stone|sorrow|throne|hvaral)", "%detour")) then
         {
-            var currencyneeded kro
-            gosub AUTOMOVE exchange
-            gosub DOKORAS
-            gosub AUTOMOVE teller
+            var currencyneeded lir
             if ($invisible == 1) then gosub STOP_INVIS
-            put withdraw 300 copper
+            if (%lirums < 300) then
+               {
+                    gosub AUTOMOVE exchange
+                    gosub LIRUMS
+               }
+            gosub AUTOMOVE teller
+            wait
+            put dep all
+            wait
+            pause 0.5
+            put withdraw 500 copper
             wait
             gosub AUTOMOVE exchange
             pause 0.3
@@ -4743,17 +4824,14 @@ NOCOIN:
             if ($invisible == 1) then gosub STOP_INVIS
             put withdraw 10 gold
         }
-    if ("$zoneid" == "107") then
-        {
-            var currencyneeded lir
-            gosub AUTOMOVE teller
-            if ($invisible == 1) then gosub STOP_INVIS
-            put withdraw 140 copper
-        }
     if ("$zoneid" == "108") then
         {
-            echo ## YOU ARE ON MRISS WITH NO COINS!  YOU NEED TO FIND A FRIEND FOR HELP!
-            echo ## OR KILL SOME STUFF AND SELL HIDES / GEMS!
+            echo #####################################################################
+            echo ## ERROR! ABORTING SCRIPT!
+            echo ## YOU ARE ON MRISS WITH NO COINS! FIND A FRIEND FOR HELP!
+            echo ## OR GO KILL SOME STUFF AND SELL GEMS AND HIDES FOR FERRY MONEY!
+            echo #####################################################################
+            echo
             exit
         }
     gosub INFO_CHECK
@@ -4858,7 +4936,7 @@ TO_SEACAVES:
      pause 0.2
      return
 
-## STARTING INFO CHECK - SAVES GUILD, CIRCLE AND COINS ON HAND 
+## STARTING INFO CHECK - SAVES GUILD, CIRCLE AND COINS ON HAND
 INFO_CHECK:
      action put #var guild $1 when Guild\:\s+(.*)$
      action put #var circle $1 when Circle\: (\d+)
@@ -5535,16 +5613,16 @@ MAELSHYVE_FORTRESS_ESCAPE:
      echo ** ESCAPING FROM MAELSHYVE'S FORTRESS
      echo ===========================
      gosub AUTOMOVE 109
-	gosub MOVE south
+     gosub MOVE south
      gosub circle
      gosub RETREAT
-	move south
-	gosub AUTOMOVE 93
-	put touch etching
-	pause 0.5
-	pause 0.5
-	pause 0.5
-	gosub MOVE south
+     move south
+     gosub AUTOMOVE 93
+     put touch etching
+     pause 0.5
+     pause 0.5
+     pause 0.5
+     gosub MOVE south
      gosub MOVE south
      return
 BENEATH_ZAULFUNG_ESCAPE:
@@ -5620,7 +5698,7 @@ BROCKET_ESCAPE:
      echo ===================
      echo ** ESCAPING BROCKET DEER
      echo ==================
-	 if ($east) then gosub move east
+     if ($east) then gosub move east
       if ($east) then gosub move east
       if ($east) then gosub move east
       if matchre("$roomobjs", "rolling hill") then
@@ -5645,7 +5723,7 @@ BROCKET_ESCAPE:
                pause 0.5
                pause 0.1
           }
-	 if ($east) then gosub move east
+     if ($east) then gosub move east
       if ($east) then gosub move east
       if ($east) then gosub move east
       if matchre("$roomobjs", "log fence") then
@@ -5977,11 +6055,11 @@ ABYSSAL_ESCAPE:
      return
 CIRCLE:
      pause 0.2
-	put stand circle
-	match RETURN As the lights within the circle fade and die, you step out
+     put stand circle
+     match RETURN As the lights within the circle fade and die, you step out
      matchre RETURN ^You are already standing\.
      matchre RETURN ^You step into the etched circle, but nothing seems to happen, so you step back out\.
-	matchwait 40
+     matchwait 40
      goto CIRCLE
 ADDERNEST_ESCAPE:
      echo ===========================
