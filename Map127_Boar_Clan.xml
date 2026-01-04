@@ -2351,6 +2351,7 @@
     <arc exit="southeast" move="southeast" destination="334" />
     <arc exit="southwest" move="southwest" destination="332" />
     <arc exit="west" move="west" destination="330" />
+    <arc exit="northeast" move="northeast" destination="667" />
   </node>
   <node id="336" name="Hag's Crag, Vela'Tohr Overlook">
     <description>Cold air sinks from above, chilling the bare stone underfoot.  Nature's hand has carved a vast plateau from the cliffs that overlook the Vela'Tohr Woods.  The night sky and mountain's shadows conspire to obscure the source of a muffled clattering punctuated with sharp pops and snaps.</description>
@@ -4647,6 +4648,11 @@
     <description>The seat over top the depository is broken, and one would risk falling bottom-first into the pit should he or she attempt to make use of the utility in a typical fashion.</description>
     <position x="5" y="270" z="0" />
     <arc exit="out" move="out" destination="618" />
+  </node>
+  <node id="667" name="Hag's Crag, Star Shrine" note="Aevargwem|Grazhir|Ways|Astral Plane" color="#FF00FF">
+    <description>Carved into the mountainside, a simple shrine is set in reverence to the heavens.  Swirled channels carved into the broad plinth gather frost, and a deep alcove provides modest shelter against the howling winds, set with a pair of sconces holding wide burning flames.  Though open to the elements, the shelter is clean and warm.</description>
+    <position x="500" y="-280" z="0" />
+    <arc exit="southwest" move="southwest" destination="335" />
   </node>
   <label text="Boar Clan">
     <position x="140" y="560" z="0" />
