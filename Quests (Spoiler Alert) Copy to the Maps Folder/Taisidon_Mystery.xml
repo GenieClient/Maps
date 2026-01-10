@@ -73,6 +73,7 @@
     <position x="820" y="220" z="0" />
     <arc exit="north" move="north" destination="11" />
     <arc exit="southwest" move="southwest" destination="9" />
+    <arc exit="go" move="go sandy path" destination="90" />
   </node>
   <node id="11" name="Jalren'rae'Taisidon, Rocky Beach">
     <description>Waves surge forcefully across the narrowing beach crashing against the foot of the volcanic rock cliffs rising overhead before being sucked back into the sea.  The jungle edges forward in what little sand remains, exposed roots recoiling from the salty water while quickly tacking in place any soil blown by the wind.  A felled durian tree, serving as a home for a few industrious sand crabs, lies across the path to a rocky point that extends into the churning surf.</description>
@@ -394,6 +395,31 @@
     <arc exit="southeast" move="southeast" destination="86" />
     <arc exit="southwest" move="southwest" destination="87" />
     <arc exit="northwest" move="northwest" destination="88" />
+  </node>
+  <node id="90" name="Emberclaw Expedition, Bonfire Pit" note="bonfire">
+    <description>Sand-worn driftwood benches and low stumps line the central bonfire, spaced to allow easy movement.  A tall bamboo palisade borders the area, draped with long fishnets in various stages of cleaning.  The steady murmur of waves drifts from the nearby beach, carrying the tang of salt on the breeze.  Off to one side rests a sculpted stone sea turtle, its central shell scute hollowed while the surrounding plates gleam with iridescent mother-of-pearl inlay.</description>
+    <position x="740" y="240" z="0" />
+    <arc exit="southwest" move="southwest" destination="93" />
+    <arc exit="northwest" move="northwest" destination="91" />
+    <arc exit="go" move="go sandy path" destination="10" />
+  </node>
+  <node id="91" name="Emberclaw Expedition, Bonfire Pit">
+    <description>Driftwood logs are arranged at the edge of an enormous bonfire, each makeshift bench weathered by wind and sea.  A tall bamboo palisade forms a protective barrier with small lanterns hung at intervals along its length.  Clusters of colorful seaglass and large white shells are wired into flower-like patterns and woven into the fence with long vines.</description>
+    <position x="720" y="220" z="0" />
+    <arc exit="southwest" move="southwest" destination="92" />
+    <arc exit="southeast" move="southeast" destination="90" />
+  </node>
+  <node id="92" name="Emberclaw Expedition, Food and Flame">
+    <description>Tucked against the base of the cliff with the bonfire close enough for light and warmth, the ground is compacted and level, while a small sail is suspended at a strategic angle to provide some shelter over the area.  A long bamboo table and a two-high row of salt-stained crates are set along the perimeter palisade, neatly displaying goods for sale.</description>
+    <position x="700" y="240" z="0" />
+    <arc exit="southeast" move="southeast" destination="91" />
+    <arc exit="northeast" move="northeast" destination="93" />
+  </node>
+  <node id="93" name="Emberclaw Expedition, Bonfire Beverages">
+    <description>Tables fashioned from empty barrels are shaded by colorful canvas umbrellas.  A short bar is crafted from bamboo and covered by a palm frond awning, with a collection of empty glasses on the counter awaiting a fresh beverage.  Wide pathways between tables and the bar allow patrons easy access to the central bonfire.</description>
+    <position x="720" y="260" z="0" />
+    <arc exit="northwest" move="northwest" destination="92" />
+    <arc exit="northeast" move="northeast" destination="90" />
   </node>
   <node id="114" name="Jalren'rae'Taisidon, Atop the Cliff">
     <description>Just back from the ledge, jungle brush and swampbay trees quickly become a solid wall beyond which distant mountains tower in the haze.  To the east an open ring of cliffs rises over the churning water of the sea, while the way down the cliffs to the south descends to the beach.  Birds swoop and glide through the air.  Their cries echo off the rocky walls below and mingle with the sound of the crashing waves.</description>
@@ -731,7 +757,7 @@
     <arc exit="southeast" move="southeast" destination="168" />
     <arc exit="climb" move="climb cliff" destination="177" />
   </node>
-  <node id="170" name="Jalren'rai'Taisidon, Pass" color="#993300">
+  <node id="170" name="Jalren'rae'Taisidon, Pass" color="#993300">
     <description>The trail wends its way through this gap between two snow-covered mountain peaks.  Faint patches of grassland can be seen to the southeast.  Littered with huge boulders, the trail begins to slope downward.</description>
     <position x="74" y="200" z="0" />
     <arc exit="southeast" move="southeast" destination="171" />
