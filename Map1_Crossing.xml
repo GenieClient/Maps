@@ -663,8 +663,8 @@
     <arc exit="north" move="north" destination="89" />
     <arc exit="south" move="south" destination="84" />
     <arc exit="west" move="west" destination="86" />
-    <arc exit="go" move="script crossingtrainerfix go cottage" destination="385" />
-    <arc exit="go" move="script crossingtrainerfix go haberdashery" destination="704" />
+    <arc exit="go" move="go cottage" destination="385" />
+    <arc exit="go" move="go haberdashery" destination="704" />
   </node>
   <node id="89" name="The Crossing, Water Sprite Way">
     <description>Water Sprite Way intersects here with Scorpion Lane to the west.  Although this riverside walk is pleasant and refreshing, you cannot help but notice a large proportion of rather seedy-looking characters coming and going from the various side streets to the west and northwest.  Prosperous, beefy-faced traders stroll north and south, destined for the various commercial areas down by the river and in the eastern half of town.</description>
@@ -851,11 +851,11 @@
   <node id="117" name="The Crossing, Damaris Lane">
     <description>Unlike most of the Crossing's broad and expansive intersections, the corners where Damaris Lane meets Cutpurse Alley are shadowy and sinister.  Though the junction makes for a small plaza of sorts, there is a claustrophobic feel here that does not bode well.</description>
     <position x="-190" y="-140" z="0" />
-    <arc exit="north" move="script crossingtrainerfix north" destination="116" />
-    <arc exit="east" move="script crossingtrainerfix east" destination="91" />
-    <arc exit="south" move="script crossingtrainerfix south" destination="118" />
-    <arc exit="west" move="script crossingtrainerfix west" destination="120" />
-    <arc exit="go" move="script crossingtrainerfix go academy" destination="367" />
+    <arc exit="north" move="north" destination="116" />
+    <arc exit="east" move="east" destination="91" />
+    <arc exit="south" move="south" destination="118" />
+    <arc exit="west" move="west" destination="120" />
+    <arc exit="go" move="go academy" destination="367" />
   </node>
   <node id="118" name="The Crossing, Dodgers' Row">
     <description>Feet tread the cobbled streets here, booted feet, sandaled feet, armored feet, rag-wrapped feet, all thumping against the pavement and reverberating off the closely-spaced, rundown buildings.  In the slimy gutter, along the west curb, a pile of dry straw has been heaped up against a sewer grating.</description>
@@ -910,10 +910,10 @@
   <node id="125" name="The Crossing, Fostra Square" note="Fostra Square">
     <description>Truffenyi Place ends in a broad plaza here, a pleasant river- and pine-scented breeze greeting you in the open space.  Several tall, sculpted columns flank a heavily-carved rosewood door that serves as the entryway to the Clerics' Guild.  The sounds of muttered chants, invocations and lessons are audible from the building's stained-glass windows.</description>
     <position x="10" y="-528" z="0" />
-    <arc exit="south" move="script crossingtrainerfix south" destination="124" />
-    <arc exit="go" move="script crossingtrainerfix go guild" destination="344" />
-    <arc exit="go" move="script crossingtrainerfix go hovel" destination="366" />
-    <arc exit="go" move="script crossingtrainerfix go portico gate" destination="725" />
+    <arc exit="south" move="south" destination="124" />
+    <arc exit="go" move="go guild" destination="344" />
+    <arc exit="go" move="go hovel" destination="366" />
+    <arc exit="go" move="go portico gate" destination="725" />
   </node>
   <node id="126" name="The Crossing, Sicle Grove Lane">
     <description>A low, shed-like building stands beneath the trees along the road here.  It has a gabled roof that dips off to the side, covering a smaller annex from which a vent disgorges noxious vapors into the street.  Various antlers, skulls, and tusks decorate the outside of the shed.</description>
@@ -1370,8 +1370,8 @@
   <node id="192" name="Tembeg's Armory, Salesroom" note="Tembeg's Armory|Armor" color="#FF0000">
     <description>This shop is filled with a goodly array of armor of all the more popular types.  Tembeg himself, a Gor'Tog of some skill at ironwork and smithing, believes in plain but serviceable goods.  Simple of speech, he prefers direct deals to bargaining and haggling.  Good armor at good prices is Tembeg's motto.  You may not find the latest fashions in engraved jousting plate, but you will find good, honest metal and sturdy workmanship.</description>
     <position x="130" y="-200" z="0" />
-    <arc exit="out" move="script crossingtrainerfix out" destination="225" />
-    <arc exit="go" move="script crossingtrainerfix go doorway" destination="193" />
+    <arc exit="out" move="out" destination="225" />
+    <arc exit="go" move="go doorway" destination="193" />
   </node>
   <node id="193" name="Tembeg's Armory, Workroom">
     <description>This room, dark and crowded with iron-working tools, is where Tembeg and his assistants perform repairs and simple manufacturing of the armors and weapons sold here.  A massive set of bellows in the next room awaits the sweat and labor of someone sturdy enough to waken the forge fire into life.  A massive anvil takes up much of the rest of the floor space.</description>
@@ -2303,11 +2303,11 @@
   <node id="335" name="The Crossing, Champions' Square">
     <description>Statues of famous barbarians and arena champions form an arcade leading to the arched steel-clad door of the Barbarians' Guild.  The building itself is high and massive, and the roof rises into a dome towards the east, covering the Champions' Arena.  Through narrow, slit windows you can hear the clang of weapon on shield, and the voice of the trainers barking out instructions to the would-be fighters, gladiators, knights and mercenaries within.</description>
     <position x="300" y="-368" z="0" />
-    <arc exit="north" move="script crossingtrainerfix north" destination="1" />
-    <arc exit="south" move="script crossingtrainerfix south" destination="6" />
-    <arc exit="west" move="script crossingtrainerfix west" destination="8" />
-    <arc exit="go" move="script crossingtrainerfix go stone structure" destination="301" />
-    <arc exit="go" move="script crossingtrainerfix go barbarian guild" destination="302" />
+    <arc exit="north" move="north" destination="1" />
+    <arc exit="south" move="south" destination="6" />
+    <arc exit="west" move="west" destination="8" />
+    <arc exit="go" move="go stone structure" destination="301" />
+    <arc exit="go" move="go barbarian guild" destination="302" />
   </node>
   <node id="336" name="Wilds, Pine Needle Path">
     <description>A well-trod path leads from a small open gateway in the town wall and heads into a grove of whispering pine.  Lean, muscular figures stride by briskly, some carrying longbows, others staves, and all garbed in muted tones of earth and forest.</description>
@@ -2584,10 +2584,10 @@
   <node id="379" name="The Crossing, Mongers' Bazaar" note="Mags|Firewood Peddler" color="#00FF00">
     <description>Some ramshackle stalls and tattered tents comprise the informal flea market known as Mongers' Bazaar.  The springy grass of the Green has been trampled into foot-sucking muck by folk seeking bargains, black-market goods, or unusual trinkets.  Exotic items of rare power and value are sometimes sold here by the itinerant vendors who flock to The Crossing from all corners of Elanthia.</description>
     <position x="240" y="-230" z="0" />
-    <arc exit="north" move="script crossingtrainerfix north" destination="10" />
-    <arc exit="southeast" move="script crossingtrainerfix southeast" destination="380" />
-    <arc exit="go" move="script crossingtrainerfix go collegium" destination="381" />
-    <arc exit="go" move="script crossingtrainerfix go path" destination="17" />
+    <arc exit="north" move="north" destination="10" />
+    <arc exit="southeast" move="southeast" destination="380" />
+    <arc exit="go" move="go collegium" destination="381" />
+    <arc exit="go" move="go path" destination="17" />
   </node>
   <node id="380" name="The Crossing, Mongers' Square" note="Gnomish workman|workman" color="#00FF00">
     <description>Set into the center of the bazaar's main square is a bronzed fountain depicting the fatherly figure of Divyaush, his long chiseled beard covering the top of his robes and his painted azure eyes gazing into the water below.  Children and shoppers stop on their way past, often wetting their hands or their faces in the cool clear water.  To the southwest, brightly covered pennants sail above the sea of canvas that is the Traders' Market tent.</description>
