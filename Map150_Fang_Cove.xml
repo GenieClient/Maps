@@ -607,6 +607,8 @@
     <arc exit="go" move="go sturdy wagon" destination="176" />
     <arc exit="go" move="go wooden wagon" destination="153" />
     <arc exit="go" move="go brown wagon" destination="247" />
+    <arc exit="go" move="go maple caravan" destination="262" />
+    <arc exit="go" move="go purpleheart wagon" destination="264" />
   </node>
   <node id="89" name="Fang Cove, Fate's Fortune Lane">
     <description>The swirling ocean breeze stirs the sand that finds its way onto everything, creating intricate patterns across the surfaces of the cobblestones that form the lane.  Long and low wooden planter boxes are centered in the gap between the lane and the wall on the northern side, an effort to fill the space in the absence of the growing structures across the way.  Some of the gardens are covered to create makeshift tables to serve the workers meals at different times of the day.</description>
@@ -1130,36 +1132,36 @@
   </node>
   <node id="166" name="Frother's Beasts" note="Frother's Beasts" color="#FF0000">
     <description>Strong scents of wet fur and animal musk fill the large wagon.  The floor is thickly covered with straw and boxes are stacked up along the walls.  A covered walkway opens the back of the wagon to a large canvas tent.</description>
-    <position x="180" y="360" z="0" />
+    <position x="190" y="360" z="0" />
     <arc exit="south" move="south" destination="167" />
     <arc exit="out" move="out" destination="88" />
   </node>
   <node id="167" name="Frother's Beasts" color="#FF0000">
     <description>The canvas walls and ceiling are a dingy white with many water stains and holes.  There is a large wooden pen in one corner of the tent and the other has a stack of cages.  Mostly clean hay covers the ground here.  The air is quite stifling from lack of ventilation that makes the strong animal scents almost too hard to endure.</description>
-    <position x="180" y="370" z="0" />
+    <position x="190" y="370" z="0" />
     <arc exit="north" move="north" destination="166" />
     <arc exit="southeast" move="southeast" destination="168" />
   </node>
   <node id="168" name="Frother's Tent, The Back Corner" color="#FF0000">
     <description>This corner is brightly lit and much cleaner than the rest of the area.  Empty crates are set up in such a way as to cut off this corner from the rest of the shelter.</description>
-    <position x="190" y="380" z="0" />
+    <position x="200" y="380" z="0" />
     <arc exit="northwest" move="northwest" destination="167" />
   </node>
   <node id="169" name="The Black Orchid, Front Room" note="Black Orchid" color="#FF0000">
     <description>Tall nightsilk screens line the walls of this spacious tent.  Dark crystals dangle from ornate iron candelabras, providing what minimal light is allowed.  A cloth-covered counter and an ironwood wardrobe offer merchandise for those daring enough to enter.</description>
-    <position x="160" y="410" z="0" />
+    <position x="170" y="380" z="0" />
     <arc exit="north" move="north" destination="170" />
     <arc exit="go" move="go flap" destination="88" />
   </node>
   <node id="170" name="The Black Orchid, Back Room" color="#FF0000">
     <description>Randomly placed crystal sconces guard candles that flicker against dark nightsilk walls.  This room features furniture for sale, from silk-covered beds to ironwood desks.  An aromatic scent of vanilla and musk drift from bowls of simmering incense.</description>
-    <position x="160" y="400" z="0" />
+    <position x="170" y="370" z="0" />
     <arc exit="south" move="south" destination="169" />
     <arc exit="go" move="go nightsilk screen" destination="171" />
   </node>
   <node id="171" name="The Black Orchid, Bethany's Boudoiur" color="#FF0000">
     <description>A dark red velvet couch dominates this softly lit room.  A web of gleaming black nightsilk along one of the suede walls displays the owner's treasures.  A low table bears a pewter bowl simmering with fragrant incense, its scent reminiscent of long ago memory.</description>
-    <position x="150" y="400" z="0" />
+    <position x="160" y="370" z="0" />
     <arc exit="go" move="go nightsilk screen" destination="170" />
   </node>
   <node id="172" name="The Knob, Beds Galore" note="Knob" color="#FF0000">
@@ -1622,7 +1624,7 @@
   </node>
   <node id="247" name="The Art of Attack, Salesfloor" note="The Art of Attack" color="#FF0000">
     <description>The interior walls are covered with paneling made from tropical hardwoods set into a herringbone pattern.  A plushly carpeted floor allows access to the surfaces displaying the wares on offer.  Blades are arranged on an albarco counter while a kapok table carries blunt weapons.  In the corner a ramin stand holds long staves and pikes while a flamethorn rack exhibits bows.</description>
-    <position x="153" y="353" z="0" />
+    <position x="207" y="347" z="0" />
     <arc exit="go" move="go brown door" destination="88" />
   </node>
   <node id="248" name="Fang Cove Forging Society, Crucible" note="foundry3|smelting3|crucible3">
@@ -1697,6 +1699,22 @@
     <description>Low hanging trees, branches and dense vegetation make this little island seem to be like its own secluded world.  The sounds of the nearby waterfall are nearly drowned out by the abundant insects, birds and other creatures hiding within the profuse foliage.  A well-worn tree stump, smooth with age, sits before a large flat rock that appears to have been used as a table.</description>
     <position x="420" y="320" z="0" />
     <arc exit="climb" move="climb low-hanging branch" destination="119" />
+  </node>
+  <node id="262" name="Stone and Thread, Showroom" note="stone and thread" color="#FF0000">
+    <description>Light plastered walls complement wide warm grey plank floors, while a pair of thick oak beams run horizontally across the pale green-painted ceiling.  Domed copper lanterns are mounted high on the walls, casting a soft glow over the merchandise.</description>
+    <position x="160" y="353" z="0" />
+    <arc exit="west" move="west" destination="263" />
+    <arc exit="go" move="go maple door" destination="88" />
+  </node>
+  <node id="263" name="Stone and Thread, Alcove" color="#FF0000">
+    <description>Pale canvas panels extend outward from the main pavilion to form a wide alcove, their edges sharply folded against light timber framing.  Evenly spaced ceiling beams cross above smooth stone slabs, where pale oat-colored runners stretch end to end.</description>
+    <position x="147" y="353" z="0" />
+    <arc exit="east" move="east" destination="262" />
+  </node>
+  <node id="264" name="Colorful Cosmetics" note="colorful cosmetics" color="#FF0000">
+    <description>The atmosphere is warm and inviting, seamlessly merging a sense of whimsy with stylish flair.  Majestic purpleheart wood beams stretch across the ceiling, supporting the roof with elegance, while the rich, wood-grained planks create a robust floor that enhances the character of the long wagon.  Sunlight streams through rows of charming windows that line the sides of the vibrant violet walls, casting playful shadows throughout the space.  Scattered throughout the room, intricately carved tables made of purpleheart wood come in a delightful array of shapes and sizes, adding both functionality and artistic charm to the enchanting setting.</description>
+    <position x="120" y="320" z="0" />
+    <arc exit="go" move="go purpleheart door" destination="88" />
   </node>
   <label text="quartz">
     <position x="505" y="40" z="0" />
