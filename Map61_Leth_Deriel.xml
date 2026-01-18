@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <zone name="Leth Deriel" id="61">
   <node id="1" name="Deobar Bower Gate, Esouvar Deriel">
     <description>A tall gate rises over a well-kept road.  Ironwood trees gather in patches around the steep city walls, their dark forms casting shadows over the thin brush.  The slender bows and branches that make the thick panels of the gateway into Leth curve and twist, their still-tender bark formed into a living arch by a lifesculptor's hand.</description>
@@ -557,6 +557,7 @@
     <position x="80" y="0" z="0" />
     <arc exit="southeast" move="southeast" destination="29" />
     <arc exit="northwest" move="northwest" destination="81" />
+    <arc exit="go" move="go tool shed" destination="267" />
   </node>
   <node id="81" name="Leth Deriel, Cambium Circle">
     <description>Here is yet another intersection, where Cambium Circle joins Myristica Wynd to the southwest and Atila Lane to the northeast.  You sense at this and at every corner or turn along the streets of Leth Deriel, that clearings, tended paths and compacted dirt roads are grudging concessions to the outsiders who provide essential trade goods, foodstuffs and raw materials to the disdainful locals.</description>
@@ -1511,13 +1512,13 @@
   </node>
   <node id="237" name="Iltesh Neg Degti, Entryway">
     <description>The scent of ash and soot floats in the air, drifting from the large, rounded structure to the south.  Flowered terraces rise on either side of the building's entrance, built in an attempt to cover the air's odor, but the acrid smell of fire and metal easily overpowers the sweetness of the delicate plants.  Though no glimpses of flame can be had, an occasional wave of a warm breeze manages to work its way past the dyed leather curtain that hangs across the entryway.</description>
-    <position x="-21" y="-59" z="0" />
+    <position x="-20" y="-63" z="0" />
     <arc exit="go" move="go gate" destination="15" />
     <arc exit="go" move="go curtain" destination="238" />
   </node>
   <node id="238" name="Iltesh Neg Degti, Tool Store" note="Forging Society|Forging Tools|Forging prestige board" color="#FF0000">
     <description>Surrounding the forge is a rock wall, meticulously arranged from a variety of colored stone in an obvious attempt to compensate for the normally sooty condition of the foundries.  Despite the overall state of the well-maintained corral, indelible stains mark its surface, left by uncaring or uncautious workers as they dragged, pushed or pulled their metal projects across the earthen ground and out into the world.</description>
-    <position x="-21" y="-46" z="0" />
+    <position x="-20" y="-45" z="0" />
     <arc exit="east" move="east" destination="239" />
     <arc exit="south" move="south" destination="251" />
     <arc exit="southwest" move="southwest" destination="248" />
@@ -1525,90 +1526,91 @@
   </node>
   <node id="239" name="Iltesh Neg Degti, Book Store" note="Forging Books" color="#FF0000">
     <description>Radically designed for a forge, Iltesh Neg Degti resembles more a stable than a place for serious metal working.  Circular in shape, the outer building is predominantly wooden, with a low wall of unburnable stone as a foundation and wide windows to release the heat.  Nestled at its heart, however, is a squat granite structure in which all the hottest work takes place.</description>
-    <position x="-6" y="-46" z="0" />
+    <position x="-5" y="-45" z="0" />
     <arc exit="east" move="east" destination="240" />
     <arc exit="south" move="south" destination="250" />
     <arc exit="west" move="west" destination="238" />
   </node>
   <node id="240" name="Iltesh Neg Degti, Maker's Mark Ordering" note="Maker's Marks" color="#00FF00">
     <description>The low stone wall that surrounds the entire complex curves toward the south, reminiscent of the serpentine tail of some lazy dragon.  Stray grasses and weeds grow up here and there, close enough along the wall to be spared from being trodden by passing boots.  Though the roof is high enough to allow the swirling of an occasional breeze, the constant use of the forges keeps the whole area heated to an extreme.</description>
-    <position x="9" y="-46" z="0" />
+    <position x="10" y="-45" z="0" />
     <arc exit="southeast" move="southeast" destination="241" />
     <arc exit="south" move="south" destination="249" />
     <arc exit="west" move="west" destination="239" />
   </node>
   <node id="241" name="Iltesh Neg Degti, Foundry">
     <description>Large indentations in the inner structure of the forge are each home to one or more huge iron crucibles, safely tucked away from heat-stealing drafts.  Shovels have been rammed deep into the massive piles of coal along the opposite wall, as though some worker fancied himself a warrior and the coal a foul beast in need of slaying.  Colored in similar fashion to the heaps is the bellows, making suitable imaginary wings for the savage, slain monstrosity.</description>
-    <position x="24" y="-31" z="0" />
+    <position x="25" y="-30" z="0" />
     <arc exit="south" move="south" destination="242" />
     <arc exit="northwest" move="northwest" destination="240" />
   </node>
   <node id="242" name="Iltesh Neg Degti, Foundry">
     <description>The wind swirls tauntingly a mere stone's throw away, just on the other side of the open frames of the outer wall.  Presumably, the gaps were designed to offer some relief from the broiling heat suffered by forge workers, but the necessary safe distance from the blazing fires, the blistering iron crucibles, and the fatigue-draining bellows means that there can be little release from the painful temperatures.</description>
-    <position x="24" y="-21" z="0" />
+    <position x="25" y="-20" z="0" />
     <arc exit="north" move="north" destination="241" />
     <arc exit="south" move="south" destination="243" />
   </node>
   <node id="243" name="Iltesh Neg Degti, Foundry">
     <description>As fitting for a place built by Elven hands, the ironwood timbers bear intricate inscriptions and artistic representations of workers in various stages of effort and relaxation.  Since its construction, at least a few of the users of this facility have grown uncaring, as the lower designs vanish beneath piles of coal or are obscured by black dust.  Nonetheless, the essence of craftsmanship is evident in everything from the crucible to the bellows, regardless of the forge's rugged functionality.</description>
-    <position x="24" y="-11" z="0" />
+    <position x="25" y="-10" z="0" />
     <arc exit="north" move="north" destination="242" />
     <arc exit="southwest" move="southwest" destination="244" />
   </node>
   <node id="244" name="Iltesh Neg Degti, Forge Yard">
     <description>Unlike the other portions of the forge, the southern-most forge yard is home to regular cool breezes and free from the worst of the heat.  Unfortunately, that same cooling wind whips the dust and debris from the grinding rooms against anyone or anything that dares to rest too long.  A fine layer of grey and black covers the wall surrounding the complex, a grim testimony that the molten metals and furnace-temperature air are not always the worst hazards in a forge.</description>
-    <position x="9" y="4" z="0" />
+    <position x="10" y="5" z="0" />
     <arc exit="north" move="north" destination="252" />
     <arc exit="northeast" move="northeast" destination="243" />
     <arc exit="west" move="west" destination="245" />
   </node>
   <node id="245" name="Iltesh Neg Degti, Forge Yard">
     <description>Judging by the marks in the dirt, many have made use of the ample space available in the forge yard to work on large projects, leaving behind only hoof prints and the deep scars of the horses' dragged burdens.  In emergency situations, this area likely has served as additional room to house troops or repair arms and armor, but for now, it sits unused.  Only the dust from the grinding rooms sweeps through the area on any regular basis.</description>
-    <position x="-6" y="4" z="0" />
+    <position x="-5" y="5" z="0" />
     <arc exit="east" move="east" destination="244" />
     <arc exit="west" move="west" destination="246" />
   </node>
   <node id="246" name="Iltesh Neg Degti, Forge Yard">
     <description>Left to rust in the one section of the forge open to the sky, several scrap metal bits of incomprehensible design lean against the wooden slats of the outer wall.  Some are combinations of basic geometric shapes, while others seem to be nothing more than large hunks of slag.  Here they lie, exposed to the ravages of wind and rain, ignoring the blatant sign proclaiming that all workers should dispose of unwanted materials appropriately.</description>
-    <position x="-21" y="4" z="0" />
+    <position x="-20" y="5" z="0" />
     <arc exit="north" move="north" destination="247" />
     <arc exit="east" move="east" destination="245" />
   </node>
   <node id="247" name="Iltesh Neg Degti, Grinding Area">
     <description>Unmistakably in a favorite location, the grindstone here has been kept routinely cleaned, revealing its white stone surface.  The reason for the preference is obvious with every breath.  Though the stifling heat that plagues the other areas of the forge is not absent here, a gentle draft manages to pull most of the aberrant dust out into the forge yard and away from panting workers slaving over the grindstone.</description>
-    <position x="-21" y="-6" z="0" />
+    <position x="-20" y="-5" z="0" />
     <arc exit="east" move="east" destination="253" />
     <arc exit="south" move="south" destination="246" />
   </node>
   <node id="248" name="Iltesh Neg Degti, Forge Supply Shop" note="Forging Supplies" color="#FF0000">
     <description>All along the eaves, reed wind chimes and ornamental decorations jangle and dance, bouncing gently off one another.  With every breeze, the soft clinks and jingles of the noisemakers rise in subtle crescendo, playing counterpoint with the steady pounding of hammer on steel in other sections of the forge.</description>
-    <position x="-36" y="-31" z="0" />
+    <position x="-40" y="-25" z="0" />
     <arc exit="northeast" move="northeast" destination="238" />
+    <arc exit="east" destination="272" />
   </node>
   <node id="249" name="Iltesh Neg Degti, Forge">
     <description>Resembling little more than extravagant walk-in chimneys, the smithies of Leth Deriel's renowned forge works are smartly crafted with fluted stones to direct smoke and ash upward.  Though free of smoky obstruction, the air is still hot enough to induce instant beads of sweat on exposed flesh.  Presumably, the vents near the roof that release the gaseous by-products of heated metal and burning wood are too far above to make for an equal respite from temperature.</description>
-    <position x="9" y="-31" z="0" />
+    <position x="10" y="-35" z="0" />
     <arc exit="go" move="go arch" destination="240" />
   </node>
   <node id="250" name="Iltesh Neg Degti, Forge">
     <description>A constant sibilant sound of hissing stirs the chamber, augmented in orchestral fashion by the odd low pops of heat and the high-pitched whistle of outside breezes.  Grey streamers of smoke flutter upward from a reinforced forge, ascending like a pack of drab butterflies to freedom through the vents in the roof.</description>
-    <position x="-6" y="-31" z="0" />
+    <position x="-5" y="-35" z="0" />
     <arc exit="go" move="go arch" destination="239" />
   </node>
   <node id="251" name="Iltesh Neg Degti, Forge">
     <description>Arranged neatly in this cramped area is a good assortment of the tools of the trade.  A steel anvil awaits every new blow of the hammer, its horn polished by either a tidy hand or regular use.  Standing half the height of the chimney-like room, a stone forge melds flawlessly with the back wall.  Lines of soot and dust trail upward in little spirals along the wall, the only remains of the smoke and ash from the forge's previous use.</description>
-    <position x="-21" y="-31" z="0" />
+    <position x="-20" y="-35" z="0" />
     <arc exit="go" move="go arch" destination="238" />
   </node>
   <node id="252" name="Iltesh Neg Degti, Grinding Area">
     <description>Beneath the cover of the high, sloped roof, the grindstones have been used for years, spouting layer upon layer of dust in a triangular spray against the walls and ground.  Often, a miscreant burst of wind will suck away some of residue, sending it into the forge yard as short swirls of choking filth.  Luckily, the area is not left just for the wind to clean, and the ground is scraped by the marks of shovel and broom.</description>
-    <position x="9" y="-6" z="0" />
+    <position x="10" y="-5" z="0" />
     <arc exit="south" move="south" destination="244" />
     <arc exit="west" move="west" destination="253" />
   </node>
   <node id="253" name="Iltesh Neg Degti, Grinding Area">
     <description>The sounds of work in the other sections of the forge echo through the walls of this area, reverberating even over the noisy spinning of grindstones.  Since this space is bordered on two sides by stone walls -- one being the back of the forge area -- the ringing tones of metal on metal bounce noisily, clashing with the rasping grindstones, and creating a distorted cacophony of sound.</description>
-    <position x="-6" y="-6" z="0" />
+    <position x="-5" y="-5" z="0" />
     <arc exit="east" move="east" destination="252" />
     <arc exit="west" move="west" destination="247" />
   </node>
@@ -1694,6 +1696,40 @@
     <arc exit="northeast" move="northeast" destination="261" />
     <arc exit="east" move="east" destination="265" />
   </node>
+  <node id="267" name="Leth Deriel Crafting Society Outpost, Main Room" note="Crafting Society" color="#FF0000">
+    <description>Hooks shaped like small leaves hold decorative tools more ornamental than useful, their polished handles gleaming softly.  A faint scent of cedar drifts from the smooth plank floor, grounding the room in simple craftsmanship.</description>
+    <position x="80" y="30" z="0" />
+    <arc exit="northeast" move="northeast" destination="269" />
+    <arc exit="southeast" move="southeast" destination="270" />
+    <arc exit="southwest" move="southwest" destination="271" />
+    <arc exit="northwest" move="northwest" destination="268" />
+    <arc exit="go" move="go vine-framed doorway" destination="80" />
+  </node>
+  <node id="268" name="Leth Deriel Crafting Society Outpost, Enchanting Emporium" note="Enchanting Emporium" color="#FF0000">
+    <description>Exposed rafters span the ceiling, supporting an assortment of hanging lanterns.  Wide boards cover the floor in even rows, their surfaces worn smooth from use.  Along one wall, sheets of worked metal display etched symbols arranged in precise, deliberate patterns.</description>
+    <position x="70" y="20" z="0" />
+    <arc exit="southeast" move="southeast" destination="267" />
+  </node>
+  <node id="269" name="Leth Deriel Crafting Society Outpost, Engineering Enclave" note="Engineering Enclave" color="#FF0000">
+    <description>Panels of brushed steel form a decorative border along the walls, their matte finish accented by precise rivetwork.  The walls are covered in detailed diagrams, and anchored with sprocket-headed brass pins.</description>
+    <position x="90" y="20" z="0" />
+    <arc exit="southwest" move="southwest" destination="267" />
+  </node>
+  <node id="270" name="Leth Deriel Crafting Society Outpost, Outfitting Outlet" note="Outfitting Outlet" color="#FF0000">
+    <description>Soft plum and ivory stripes accent the plank walls, bordered with intricate filigree trim painted in stitch-like strokes.  Delicate silhouettes of spools, needles, and looping thread are woven into the decorative motif.</description>
+    <position x="90" y="40" z="0" />
+    <arc exit="northwest" move="northwest" destination="267" />
+  </node>
+  <node id="271" name="Leth Deriel Crafting Society Outpost, Alchemy Annex" note="Alchemy Annex" color="#FF0000">
+    <description>Wood plank walls bear faint scorch marks that form curling patterns across their surface, as if left by careful experimentation.  Large wooden plaques hang in neat alignment, each carved to resemble a piece of parchment inscribed with simple geometric symbols.</description>
+    <position x="70" y="40" z="0" />
+    <arc exit="northeast" move="northeast" destination="267" />
+  </node>
+  <node id="272" name="Iltesh Neg Degti, Bulk Materials" note="bulk Forging supplies" color="#FF0000">
+    <description>Tucked into a corner of the shop is a small alcove circumscribed by stone walls.  While the thickly mortared masonry is discolored from the ever-present soot of the surrounding forges, everything is well-maintained and swept clean.</description>
+    <position x="-30" y="-25" z="0" />
+    <arc exit="west" move="west" destination="248" />
+  </node>
   <label text="to Shard">
     <position x="-90" y="160" z="0" />
   </label>
@@ -1716,7 +1752,7 @@
     <position x="30" y="-430" z="0" />
   </label>
   <label text="">
-    <position x="0" y="0" z="0" />
+    <position x="1" y="1" z="0" />
   </label>
   <label text="Ilaya Taipa">
     <position x="-180" y="70" z="0" />
@@ -1758,7 +1794,7 @@
     <position x="205" y="-157" z="0" />
   </label>
   <label text="Weapons">
-    <position x="13" y="25" z="0" />
+    <position x="8" y="25" z="0" />
   </label>
   <label text="Baskets">
     <position x="23" y="82" z="0" />
@@ -1807,5 +1843,11 @@
   </label>
   <label text="Forge">
     <position x="-63" y="-51" z="0" />
+  </label>
+  <label text="Crafting">
+    <position x="60" y="50" z="0" />
+  </label>
+  <label text=" Society">
+    <position x="60" y="60" z="0" />
   </label>
 </zone>
