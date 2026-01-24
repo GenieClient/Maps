@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <zone name="Southern Trade Road Part 1 (Ferry to Leth Deriel)" id="60">
   <node id="1" name="Southern Trade Route, Bosque Deriel" color="#00FFFF">
     <description>A more enchanting mix of foliage, exotic herbs, fragrant plants and glorious undergrowth exists perhaps nowhere else on Elanthia.  Surrounded by what can only be called a forager's paradise, you marvel at the bounty of nature.  Each individual species here has something of value to offer the body, soul, or spirit.  Taking a deep breath and casting a long, wistful gaze, you continue on.</description>
@@ -379,56 +379,63 @@
     <position x="160" y="-320" z="0" />
     <arc exit="north" move="north" destination="58" />
     <arc exit="southeast" move="southeast" destination="60" />
-    <arc exit="go" move="go narrow trail" destination="94" />
+    <arc exit="southwest" move="southwest" destination="94" />
   </node>
   <node id="60" name="Forest of Night, Path" color="#008000">
     <description>Gnarled oak and twisted pines grow in abundance here, but neither outnumber nor out-tower the black ironwood that gave this forest its name.  Dark jade grass carpets the forest floor, growing fat on the rich loam created by fallen leaves and needles.</description>
     <description>Gnarled oak and twisted pines grow in abundance here, but not one out-towers or outnumbers the black ironwood that gave this forest its name.  Dark jade grass carpets the forest floor, growing fat on the rich loam created by fallen leaves and needles.</description>
     <description>The oaks and pines of the forest seem to fall under the shadow of the black ironwood that earned the forest its name.  Twisted beyond belief, the knotted trunks and boughs of the trees look agonized in their deformed states.</description>
     <description>Gnarled oak and twisted pines grow in abundance here, but neither outnumber nor out-tower the black ironwood that gave this forest its name.  Dark jade grass carpets the forest floor, growing fat on the rich loam created by fallen leaves and needles.</description>
-    <position x="200" y="-300" z="0" />
+    <position x="180" y="-300" z="0" />
     <arc exit="southwest" move="southwest" destination="61" />
     <arc exit="northwest" move="northwest" destination="59" />
   </node>
   <node id="61" name="Forest of Night, Path" color="#008000">
+    <description>Light fails almost utterly here, and the dark foliage about you only serves to foster old, primal fears of the dark.  Over the soft roar of a nearby river, you hear the movement of something as it makes its way through the trees, but the light is too dim to discover the source of the sound.</description>
     <description>Somewhere in the distance, you hear the rushing sound of a river pounding over the sinister whispering of the trees.  Overhead, the branches lift and stretch, blocking all sight of the sky save for a few patches where the leaves fail to weave themselves together.</description>
     <description>Light fails almost utterly here, and the dark foliage about you only serves to foster old, primal fears of the dark.  Over the soft roar of a nearby river, you hear the movement of something as it makes its way through the trees, but the light is too dim to discover the source of the sound.  </description>
-    <position x="180" y="-280" z="0" />
+    <position x="160" y="-280" z="0" />
     <arc exit="northeast" move="northeast" destination="60" />
-    <arc exit="south" move="south" destination="62" />
+    <arc exit="go" move="go deer trail" destination="62" />
   </node>
   <node id="62" name="Forest of Night, Path" color="#008000">
     <description>The spreading boughs of the black ironwood trees cast deep shadows over the winding path.  A slope off to one side of the path descends down toward a grassy river bank, the black waters of the river barely visible from the road, but clearly audible.</description>
     <description>The spreading boughs of the black ironwood trees shield what little light is available, trapping you inside the cold, shivering night.  Eerily, the one thing that keeps you from being plunged in total darkness is a layer of white fog that covers the ground and reflects a pale light of its own, just barely illuminating a river bank that rises up off to the side.</description>
-    <position x="180" y="-240" z="0" />
-    <arc exit="north" move="north" destination="61" />
+    <position x="160" y="-220" z="0" />
+    <arc exit="go" move="go narrow trail" destination="61" />
     <arc exit="southeast" move="southeast" destination="63" />
     <arc exit="go" move="go river bank" destination="93" />
+    <arc exit="southwest" move="southwest" destination="99" />
+    <arc exit="northwest" move="northwest" destination="98" />
   </node>
   <node id="63" name="Forest of Night, Path" color="#008000">
     <description>It is nearly as dark as night here, and certainly as gloomy.  The coloring of the bark on the ironwoods is so flat and depthless, it causes them at first glance to appear to be shadowy doorways into an unknown abyss.  Black-feathered birds perch on the trees, each and every one a carrion species.  Beady yellow eyes gaze down at you, watching, waiting.</description>
     <description>The trees and foliage are so black they seem to blend into each other, making it hard to distinguish separate shapes.  The only thing you can pick out is the glaring reflection of the eyes of the birds that perch in the trees, their steady, hateful gaze watching you, as if waiting expectantly for something.</description>
-    <position x="200" y="-220" z="0" />
+    <position x="180" y="-200" z="0" />
     <arc exit="southwest" move="southwest" destination="64" />
     <arc exit="northwest" move="northwest" destination="62" />
+    <arc exit="west" move="west" destination="99" />
   </node>
   <node id="64" name="Forest of Night, Path" color="#008000">
     <description>The forest's silent sentinels, the black ironwood trees, rise up to either side, blocking off any attempt to advance through the wood other than by the path that it seems they have deigned to allow pass through here.  The bright, restless eyes of the nesting ravens that reside within the boughs of the trees watch you as you pass, and you feel an unnatural intelligence within their cold, yellowed gaze.</description>
     <description>The bright shine of raven eyes watch you as you pass along the sylvan path.  A cold, restless white mist covers the forest floor, and from time to time a clinging tendril reaches out and seems to almost seek you out, wrapping about feet, ankles, and legs.</description>
-    <position x="180" y="-200" z="0" />
+    <position x="160" y="-180" z="0" />
     <arc exit="northeast" move="northeast" destination="63" />
     <arc exit="south" move="south" destination="65" />
+    <arc exit="southwest" destination="100" />
+    <arc exit="northwest" destination="99" />
   </node>
   <node id="65" name="Forest of Night, Path" color="#008000">
     <description>The path winds unsteadily through the wood like a drunken snake with half-protruding stones for scales.  Sadly, most of these scales have long vanished, pried out as time and disuse wear down the road to a ghost of what it used to be.  Patches of deep green grass stick through the cracks in the remaining stones, the serrated edges catching at flesh and clothing.  An overgrown path, in worse state than the road you now walk, splits off from the main trail, eventually vanishing into the trees.</description>
-    <position x="180" y="-160" z="0" />
+    <position x="160" y="-160" z="0" />
     <arc exit="north" move="north" destination="64" />
     <arc exit="southeast" move="southeast" destination="66" />
     <arc exit="climb" move="climb overgrown path" destination="104" />
+    <arc exit="west" move="west" destination="100" />
   </node>
   <node id="66" name="Forest of Night, Path" color="#008000">
     <description>Tangled trees of the famed black ironwood rise about you, their foliage twining and intertwining with each other.  Light struggles in vain to creep through the canopy, and the scent of loam is heavy and pungent.  The trail finally fades here, a living wall of gnarled trunk and leaf cutting off any further advancement through the wood.</description>
-    <position x="200" y="-140" z="0" />
+    <position x="180" y="-140" z="0" />
     <arc exit="northwest" move="northwest" destination="65" />
   </node>
   <node id="67" name="Forest of Night, Outer Woods" color="#008000">
@@ -593,13 +600,13 @@
   </node>
   <node id="92" name="Forest of Night, The River Bank" color="#008000">
     <description>Fine droplets of water dash up against you from time to time as the river gushes along its way.  Overhead, the trees yet rise, casting long shadows and dropping the occasional stray leaf into the rapid waters.</description>
-    <position x="240" y="-220" z="0" />
+    <position x="240" y="-240" z="0" />
     <arc exit="south" move="south" destination="91" />
     <arc exit="northwest" move="northwest" destination="93" />
   </node>
   <node id="93" name="Forest of Night, The River Bank" color="#008000">
     <description>The black waters of the river surge forward, heedlessly crashing over stones and watery reeds.  The river bank is relatively dry, and a dirt path leads up from it, heading back to the main road.</description>
-    <position x="220" y="-240" z="0" />
+    <position x="220" y="-260" z="0" />
     <arc exit="southeast" move="southeast" destination="92" />
     <arc exit="go" move="go dirt path" destination="62" />
   </node>
@@ -608,9 +615,10 @@
     <description>The heavy darkness of night obscures the path which winds through the forest.  Barely visible, a narrow deer trail jumps from the path and up a steep embankment.</description>
     <position x="140" y="-300" z="0" />
     <arc exit="southwest" move="southwest" destination="95" />
-    <arc exit="go" move="go deer trail" destination="59" />
+    <arc exit="northeast" move="northeast" destination="59" />
   </node>
   <node id="95" name="Forest of Night, Outer Wood" color="#008000">
+    <description>The trees grow thick here, shouldering up against one another as if they had something to fear.  Metallic-sheened leaves glitter, reflecting light that never seems to reach the forest floor.</description>
     <description>The trees grow thick here, shouldering up against one another as if they had something to fear.  Metallic-sheened leaves glitter, reflecting light that never seems to reach you.</description>
     <description>The trees grow thick here, shoulder up against each other and blending so perfectly that it is hard to discern them from the cloak of the night sky.  A thick white mist coils at the base of the trees, its light, silvery tendrils caressing the tree trunks with a pale, watered light.</description>
     <description>The trees grow thick here, shouldering up against each other and blending so perfectly that it is hard to discern them from the cloak of the night sky.  A thick white mist coils at the base of the trees, its light, silvery tendrils caressing the tree trunks with a pale, watered light.</description>
@@ -633,50 +641,59 @@
     <arc exit="climb" move="climb black roots" destination="98" />
   </node>
   <node id="98" name="Forest of Night, Outer Wood" color="#008000">
+    <description>Originating from somewhere vaguely southward, the distant trill of a songbird echoes through the wood and cuts the squawks of the roosting ravens like a knife.  The air feels thick and heavy, as if the trees shirk the burden of air and darkness and lay it instead upon the shoulders of intruders.</description>
     <description>Somewhere to the south you can hear the distant trill of a songbird, echoing through the wood and cutting the squawks of the roosting ravens like a knife.  A sense of heaviness weighs you down, as if the trees wished to set the burden of air and darkness upon your shoulders.</description>
     <description>A clinging white mist on the forest floor seems to tug at your feet, and the heaviness of the night air seeks to aid the strange miasma in its task.</description>
     <description>A clinging white mist on the forest floor seems to tug at the feet, and the heaviness of the night air seeks to aid the strange miasma in its task.</description>
-    <position x="100" y="-220" z="0" />
+    <position x="140" y="-240" z="0" />
     <arc exit="climb" move="climb black roots" destination="97" />
     <arc exit="south" move="south" destination="99" />
+    <arc exit="southeast" destination="62" />
   </node>
   <node id="99" name="Forest of Night, Outer Wood" color="#008000">
+    <description>The delicate trill of a songbird fills the air, its song at once beautiful and sad.</description>
     <description>The delicate trill of a songbird fills the wood about you, its song at once beautiful and sad.</description>
     <description>Silent silvery-white mist wraps its coils about ankles and knees, moving up from where it wraps around the trees, like a snake waiting to strike.</description>
-    <position x="100" y="-200" z="0" />
+    <position x="140" y="-200" z="0" />
     <arc exit="north" move="north" destination="98" />
     <arc exit="south" move="south" destination="100" />
+    <arc exit="east" move="east" destination="63" />
+    <arc exit="southeast" move="southeast" destination="64" />
+    <arc exit="northeast" move="norheast" destination="62" />
   </node>
   <node id="100" name="Forest of Night, Outer Wood" color="#008000">
     <description>The trees thin out to the south, but grow all the more thicker to the north.  The grass looks freshly trodden with tracks made by something other than deer or rabbit.</description>
     <description>Southward, the wood appears to thin and grows ever more thickly to the north.  The path seems a bit wider here as if this is a well-traveled stretch of grass, but between the darkness of night and the foliage cover above it is difficult to make out any clear tracks.</description>
-    <position x="100" y="-180" z="0" />
+    <position x="140" y="-160" z="0" />
     <arc exit="north" move="north" destination="99" />
     <arc exit="south" move="south" destination="101" />
+    <arc exit="east" move="east" destination="65" />
+    <arc exit="northeast" move="northeast" destination="64" />
   </node>
   <node id="101" name="Forest of Night, Raevelthorn Patch" color="#008000">
     <description>The trees move aside here to allow the raevelthorn to grow.  The bushes, with their wicked thorns, seem to almost willingly seek out flesh or scale, reaching for the fluid that pumps within the veins that the flesh sheathes.</description>
     <description>The trees are sparser here as if to make more room for the abundant raevelthorn that sprawls through the area.  The bushes, with their wicked thorns, seem to intentionally seek out flesh or scale, using the cover of night to better ambush those that dare tread here and draw out the fluid that pumps through the victims' veins.</description>
-    <position x="100" y="-160" z="0" />
+    <position x="140" y="-140" z="0" />
     <arc exit="north" move="north" destination="100" />
     <arc exit="southeast" move="southeast" destination="102" />
   </node>
   <node id="102" name="Forest of Night, Blackfruit Tree" note="Blackfruit Tree|Asketi|Shrine" color="#A6A3D9">
+    <description>A wide, round swath of bare, dark grey earth interrupts the path.  Directly in the center of the unnaturally perfect cleared circle grows a tall blackfruit tree.  A small altar rests in front of the tree, and a smoking censer releases a heavy perfume into the air.  The silence here is unnatural and contributes to a heavy air quality not unlike a summer afternoon right before a storm.</description>
     <description>A wide clearing of bare, black earth lies before you, in the center of which grows a tall blackfruit tree.  A small altar rests in front of the tree, and a smoking censer releases a heavy perfume into the air.  The silence here is unnatural, and the back of your neck prickles with the heavy foreboding that permeates the air.</description>
     <description>The grass of the path ends abruptly as a large swatch of circular bare dirt interrupts the path.  At the center of the clearing, a large blackfruit tree grows and before it rests a small altar.  A smoking censer releases a heavy perfume into the thick and heavy night air, attracting insects who announce their presence with dischordant buzzing and pricking bites.</description>
-    <position x="120" y="-140" z="0" />
+    <position x="160" y="-120" z="0" />
     <arc exit="east" move="east" destination="103" />
     <arc exit="northwest" move="northwest" destination="101" />
   </node>
   <node id="103" name="Forest of Night, Raevelthorn Patch" color="#008000">
     <description>The low-lying raevelthorn outgrows the ironwood tree in this part of the forest.  Small, questing trailers covered in black thorns crawl over the path you tread, perhaps seeking out a quick snack from an unprotected foot.</description>
-    <position x="140" y="-140" z="0" />
+    <position x="170" y="-120" z="0" />
     <arc exit="east" move="east" destination="104" />
     <arc exit="west" move="west" destination="102" />
   </node>
   <node id="104" name="Forest of Night, Outer Wood" color="#008000">
     <description>Overgrown and underused, the path winds heedlessly through the wood, one way leading to the heart of a grove of black-leaved trees, the other up a steep embankment.</description>
-    <position x="160" y="-140" z="0" />
+    <position x="180" y="-120" z="0" />
     <arc exit="climb" move="climb steep embankment" destination="65" />
     <arc exit="west" move="west" destination="103" />
   </node>
@@ -972,7 +989,7 @@
     <arc exit="east" move="east" destination="144" />
   </node>
   <node id="144" name="Silverclaw Hub, Lookout">
-    <description>Covered by a truncated roof, the platform here is open to the elements.  A wooden-seated swing suspends from an overhanging branch.  </description>
+    <description>Covered only by a truncated roof, the platform here is open to the elements, allowing the Prydaen to scout the forest for potential food or danger.  The platform extends out slightly underneath an overhanging branch, providing a way to access a wooden-seated swing that someone has installed.</description>
     <position x="440" y="-160" z="0" />
     <arc exit="north" move="north" destination="141" />
     <arc exit="west" move="west" destination="143" />
@@ -1127,8 +1144,11 @@
   <label text="Leth Deriel">
     <position x="50" y="40" z="0" />
   </label>
-  <label text="Blood Nyads, Dryads">
-    <position x="330" y="-330" z="0" />
+  <label text="Blood Nyads">
+    <position x="250" y="-362" z="0" />
+  </label>
+  <label text="Cougars">
+    <position x="300" y="-240" z="0" />
   </label>
   <label text="Ferry to Crossing">
     <position x="80" y="-740" z="0" />
@@ -1140,7 +1160,7 @@
     <position x="250" y="30" z="0" />
   </label>
   <label text="Forest of Night">
-    <position x="150" y="-370" z="0" />
+    <position x="100" y="-360" z="0" />
   </label>
   <label text="Murky Woods">
     <position x="200" y="-20" z="0" />
@@ -1175,7 +1195,16 @@
   <label text="The Grove">
     <position x="50" y="-70" z="0" />
   </label>
-  <label text="Cougars">
-    <position x="280" y="-180" z="0" />
+  <label text="Blood Dryads">
+    <position x="250" y="-310" z="0" />
+  </label>
+  <label text="ossein">
+    <position x="230" y="-280" z="0" />
+  </label>
+  <label text="amalgam">
+    <position x="230" y="-270" z="0" />
+  </label>
+  <label text="Tree Snake">
+    <position x="80" y="-320" z="0" />
   </label>
 </zone>

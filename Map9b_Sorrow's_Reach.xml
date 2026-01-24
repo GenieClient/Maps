@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <zone name="Sorrow's Reach" id="9b">
   <node id="1" name="Foothills, Abandoned Road">
     <description>Meandering rows of saplings impede your progress as the path seems to try to envelop you in foliage.  Glancing northeast to get your bearings you see mountain brush beginning to take over the landscape.  Occasionally, as you trudge along, your feet scuff up bits of dirt and clay.</description>
@@ -845,6 +845,7 @@
     <arc exit="northeast" move="northeast" destination="135" />
     <arc exit="east" move="east" destination="133" />
     <arc exit="go" move="go hide tent" destination="136" />
+    <arc exit="go" move="go wooden lean-to" destination="140" />
   </node>
   <node id="135" name="Sunfall Hub, Firepit Circle" note="Sunfall Hub|Firepit Circle">
     <description>At the dead center of the Hub, an expansive bonfire blazes, tended to by the resident Prydaen.  Several groups gather in the area to exchange trade, words, or to simply stop and share a meal.  Nearby, a small group of well-protected kits take instruction from two Claw members while nearby warriors keep a watchful eye on the area.</description>
@@ -877,6 +878,11 @@
     <position x="300" y="0" z="0" />
     <arc exit="northeast" move="northeast" destination="137" />
     <arc exit="east" move="east" destination="138" />
+  </node>
+  <node id="140" name="Sunfall Hub, Inside A Lean-To" note="lean-to" color="#FF0000">
+    <description>The walls of the lean-to are comprised of closely stacked branches and logs, and stuffed with bits of bark and foliage to block the wind from sneaking through the cracks.  A flat wooden surface resting against the back wall holds a small assortment of weapons, while a bench displays other items for sale.  A leather hide curtains the exit.</description>
+    <position x="400" y="-80" z="0" />
+    <arc exit="go" move="go leather hide" destination="134" />
   </node>
   <label text="Rock Trolls">
     <position x="230" y="-470" z="0" />
