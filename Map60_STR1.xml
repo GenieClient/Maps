@@ -1204,10 +1204,10 @@
   <label text="amalgam">
     <position x="230" y="-270" z="0" />
   </label>
-  <label text="Tree Snake">
-    <position x="80" y="-320" z="0" />
+  <label text="Tree Snakes">
+    <position x="70" y="-310" z="0" />
   </label>
-  <label text="Etes Drone">
-    <position x="80" y="-180" z="0" />
+  <label text="Etes Drones">
+    <position x="75" y="-190" z="0" />
   </label>
 </zone>
