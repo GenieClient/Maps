@@ -435,7 +435,7 @@
   </node>
   <node id="66" name="Forest of Night, Path" color="#008000">
     <description>Tangled trees of the famed black ironwood rise about you, their foliage twining and intertwining with each other.  Light struggles in vain to creep through the canopy, and the scent of loam is heavy and pungent.  The trail finally fades here, a living wall of gnarled trunk and leaf cutting off any further advancement through the wood.</description>
-    <position x="180" y="-140" z="0" />
+    <position x="173" y="-147" z="0" />
     <arc exit="northwest" move="northwest" destination="65" />
   </node>
   <node id="67" name="Forest of Night, Outer Woods" color="#008000">
@@ -710,7 +710,7 @@
   </node>
   <node id="107" name="Southern Trade Route, Endrus Forest" note="Map1a_Crossing_Thief.xml|5th Passage">
     <description>Coppery leaves casting dappled shadows against their pale bark, a few ragged shrubs grow among a tumbled collection of boulders left behind by floodwaters.  Between a dense growth of briars, a narrow gap leads back toward the trade route.</description>
-    <position x="160" y="-640" z="0" />
+    <position x="160" y="-640" z="1" />
   </node>
   <node id="108" name="Fisherman's Trail, Footpath" note="Map50_Segoltha_River.xml|Segoltha River">
     <description>The well-worn path winds its way erratically between and around the few hardy bushes and shrubs that cling to the perpetually muddy riverbank.  Sparse vegetation interspersed with forgotten whiskey bottles and broken fishing poles lines the edges of the beaten track between the river to the west and the trail running southeast to the trade route.</description>
@@ -731,7 +731,7 @@
   </node>
   <node id="111" name="Forest of Night, Murky Woods" color="#008000">
     <description>Black matte trunks grow aimlessly about you, their branches creating a curtain of thick leaves and shadows.  The light is just enough to make you wish for more, and dim enough to make every tree look like the next.</description>
-    <position x="300" y="-20" z="0" />
+    <position x="315" y="-40" z="0" />
     <arc exit="east" move="east" destination="116" />
     <arc exit="southeast" move="southeast" destination="123" />
     <arc exit="south" move="south" destination="112" />
@@ -740,7 +740,7 @@
   </node>
   <node id="112" name="Forest of Night, Murky Woods" color="#008000">
     <description>Black matte trunks grow aimlessly about you, their branches creating a curtain of thick leaves and shadows.  The light is just enough to make you wish for more, and dim enough to make every tree look like the next.</description>
-    <position x="300" y="0" z="0" />
+    <position x="315" y="-20" z="0" />
     <arc exit="north" move="north" destination="111" />
     <arc exit="northeast" move="northeast" destination="116" />
     <arc exit="east" move="east" destination="123" />
@@ -750,14 +750,14 @@
   </node>
   <node id="113" name="Forest of Night, Murky Woods" color="#008000">
     <description>Black matte trunks grow aimlessly about you, their branches creating a curtain of thick leaves and shadows.  The light is just enough to make you wish for more, and dim enough to make every tree look like the next.</description>
-    <position x="280" y="0" z="0" />
+    <position x="295" y="-20" z="0" />
     <arc exit="northeast" move="northeast" destination="111" />
     <arc exit="east" move="east" destination="112" />
     <arc exit="southeast" move="southeast" destination="114" />
   </node>
   <node id="114" name="Forest of Night, Murky Woods" color="#008000">
     <description>Black matte trunks grow aimlessly about you, their branches creating a curtain of thick leaves and shadows.  The light is just enough to make you wish for more, and dim enough to make every tree look like the next.</description>
-    <position x="300" y="20" z="0" />
+    <position x="315" y="0" z="0" />
     <arc exit="north" move="north" destination="112" />
     <arc exit="northeast" move="northeast" destination="123" />
     <arc exit="east" move="east" destination="122" />
@@ -766,7 +766,7 @@
   </node>
   <node id="115" name="Forest of Night, Murky Woods" color="#008000">
     <description>Black matte trunks grow aimlessly about you, their branches creating a curtain of thick leaves and shadows.  The light is just enough to make you wish for more, and dim enough to make every tree look like the next.</description>
-    <position x="340" y="-20" z="0" />
+    <position x="355" y="-40" z="0" />
     <arc exit="east" move="east" destination="119" />
     <arc exit="southeast" move="southeast" destination="117" />
     <arc exit="south" move="south" destination="120" />
@@ -775,7 +775,7 @@
   </node>
   <node id="116" name="Forest of Night, Murky Woods" color="#008000">
     <description>Black matte trunks grow aimlessly about you, their branches creating a curtain of thick leaves and shadows.  The light is just enough to make you wish for more, and dim enough to make every tree look like the next.</description>
-    <position x="320" y="-20" z="0" />
+    <position x="335" y="-40" z="0" />
     <arc exit="east" move="east" destination="115" />
     <arc exit="southeast" move="southeast" destination="120" />
     <arc exit="south" move="south" destination="123" />
@@ -784,7 +784,7 @@
   </node>
   <node id="117" name="Forest of Night, Murky Woods" color="#008000">
     <description>Black matte trunks grow aimlessly about you, their branches creating a curtain of thick leaves and shadows.  The light is just enough to make you wish for more, and dim enough to make every tree look like the next.</description>
-    <position x="360" y="0" z="0" />
+    <position x="375" y="-20" z="0" />
     <arc exit="north" move="north" destination="119" />
     <arc exit="northeast" move="northeast" destination="118" />
     <arc exit="southwest" move="southwest" destination="121" />
@@ -793,14 +793,14 @@
   </node>
   <node id="118" name="Forest of Night, Murky Woods" color="#008000">
     <description>Black matte trunks grow aimlessly about you, their branches creating a curtain of thick leaves and shadows.  The light is just enough to make you wish for more, and dim enough to make every tree look like the next.</description>
-    <position x="380" y="-20" z="0" />
+    <position x="395" y="-40" z="0" />
     <arc exit="southwest" move="southwest" destination="117" />
     <arc exit="west" move="west" destination="119" />
     <arc exit="go" move="go dark valley" destination="125" />
   </node>
   <node id="119" name="Forest of Night, Murky Woods" color="#008000">
     <description>Black matte trunks grow aimlessly about you, their branches creating a curtain of thick leaves and shadows.  The light is just enough to make you wish for more, and dim enough to make every tree look like the next.</description>
-    <position x="360" y="-20" z="0" />
+    <position x="375" y="-40" z="0" />
     <arc exit="east" move="east" destination="118" />
     <arc exit="south" move="south" destination="117" />
     <arc exit="southwest" move="southwest" destination="120" />
@@ -808,7 +808,7 @@
   </node>
   <node id="120" name="Forest of Night, Murky Woods" color="#008000">
     <description>Black matte trunks grow aimlessly about you, their branches creating a curtain of thick leaves and shadows.  The light is just enough to make you wish for more, and dim enough to make every tree look like the next.</description>
-    <position x="340" y="0" z="0" />
+    <position x="355" y="-20" z="0" />
     <arc exit="north" move="north" destination="115" />
     <arc exit="northeast" move="northeast" destination="119" />
     <arc exit="east" move="east" destination="117" />
@@ -819,7 +819,7 @@
   </node>
   <node id="121" name="Forest of Night, Murky Woods" color="#008000">
     <description>Black matte trunks grow aimlessly about you, their branches creating a curtain of thick leaves and shadows.  The light is just enough to make you wish for more, and dim enough to make every tree look like the next.</description>
-    <position x="340" y="20" z="0" />
+    <position x="355" y="0" z="0" />
     <arc exit="north" move="north" destination="120" />
     <arc exit="northeast" move="northeast" destination="117" />
     <arc exit="west" move="west" destination="122" />
@@ -827,7 +827,7 @@
   </node>
   <node id="122" name="Forest of Night, Murky Woods" color="#008000">
     <description>Black matte trunks grow aimlessly about you, their branches creating a curtain of thick leaves and shadows.  The light is just enough to make you wish for more, and dim enough to make every tree look like the next.</description>
-    <position x="320" y="20" z="0" />
+    <position x="335" y="0" z="0" />
     <arc exit="north" move="north" destination="123" />
     <arc exit="northeast" move="northeast" destination="120" />
     <arc exit="east" move="east" destination="121" />
@@ -836,7 +836,7 @@
   </node>
   <node id="123" name="Forest of Night, Murky Woods" color="#008000">
     <description>Black matte trunks grow aimlessly about you, their branches creating a curtain of thick leaves and shadows.  The light is just enough to make you wish for more, and dim enough to make every tree look like the next.</description>
-    <position x="320" y="0" z="0" />
+    <position x="335" y="-20" z="0" />
     <arc exit="north" move="north" destination="116" />
     <arc exit="northeast" move="northeast" destination="115" />
     <arc exit="east" move="east" destination="120" />
@@ -1154,16 +1154,16 @@
     <position x="80" y="-740" z="0" />
   </label>
   <label text="Only open at night">
-    <position x="294" y="-40" z="0" />
+    <position x="309" y="-60" z="0" />
   </label>
   <label text="Pale Grey Death Spirits">
-    <position x="250" y="30" z="0" />
+    <position x="265" y="10" z="0" />
   </label>
   <label text="Forest of Night">
     <position x="100" y="-360" z="0" />
   </label>
   <label text="Murky Woods">
-    <position x="200" y="-20" z="0" />
+    <position x="215" y="-40" z="0" />
   </label>
   <label text="Sanrisi Tree">
     <position x="230" y="-155" z="0" />
@@ -1206,5 +1206,8 @@
   </label>
   <label text="Tree Snake">
     <position x="80" y="-320" z="0" />
+  </label>
+  <label text="Etes Drone">
+    <position x="80" y="-180" z="0" />
   </label>
 </zone>
