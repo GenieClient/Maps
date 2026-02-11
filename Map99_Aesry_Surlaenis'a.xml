@@ -524,6 +524,7 @@
     <position x="220" y="260" z="0" />
     <arc exit="east" move="east" destination="81" />
     <arc exit="southwest" move="southwest" destination="79" />
+    <!-- <arc exit="go" move="go office" destination="145" /> -->
   </node>
   <node id="81" name="Aesry Surlaenis'a, Liva'an Cha'walkas">
     <description>The pale shell roadway narrows to a path which winds between a jutting rock-ledge of the hillside and the soft black sand of the lough shore.  The overhanging ledge of dark basalt shades most of the path from the sun and weather.</description>
@@ -932,6 +933,30 @@
     <description>The dark basalt ledge looks southward over the lake, and gusts of wind brush dust and grit scuttering over the stone's surface.  A small clump of gorse clings to a crevice of soil and whispers and clicks as it scratches against the rock.</description>
     <position x="235" y="230" z="0" />
     <arc exit="none" move="jump road" destination="80" />
+  </node>
+  <node id="145" name="Aesry Orders Office, Lobby" note="Orders Office">
+    <description>Bright rays of daylight flood through the beveled panes of a small oval window and light up this room, which acts as parlor to guests and as the lobby of the Aesry Regional Orders office.  Various documents on the smooth plaster wall overhang a pair of stools that stand on either side of the desk in the corner.  Narrow hallways run east and west of the wide staircase whose sweeping curve leads to the upper floors.</description>
+    <description>The flickering flames of myriad candles cast a golden reflection in the beveled panes of a small oval window.  The warm glow lights up the room that is both parlor to guests and the lobby of the Aesry Regional Orders office.  Framed documents on the smooth plaster wall overhang a pair of stools that stand on either side of the desk in the corner.  To the east and west run narrow hallways adjoining a wide staircase, its curve leading to the upper floors.</description>
+    <position x="220" y="290" z="0" />
+    <arc exit="east" move="east" destination="147" />
+    <arc exit="west" move="west" destination="146" />
+    <arc exit="go" move="go heavy door" destination="80" />
+  </node>
+  <node id="146" name="Aesry Orders Office, Recruitment Hall">
+    <description>Simplicity seems to be the decorating order of the day in this hallway.  The walls are soft grey-white and rather plain, bare of any decoration save a single painting hanging from a small, inscribed picture hook.  Notwithstanding the elementary decor, the dominant feature here is the set of ornate arches that each boasts a pair of heavy curtains and a small plaque indicating the Order within.</description>
+    <position x="210" y="290" z="0" />
+    <arc exit="east" move="east" destination="145" />
+    <arc exit="go" move="go ebonwood archway" destination="148" />
+  </node>
+  <node id="147" name="Aesry Orders Office, Recruitment Hall">
+    <description>Simplicity seems to be the decorating order of the day in this hallway.  The walls are soft grey-white and rather plain, bare of any decoration save a single mirror hanging from a small-inscribed picture hook.  Reflecting the world around, the etched circle only emphasizes the elementary decor.  Notwithstanding the artistry of the mirror, the dominant feature here is the set of ornate arches that each boasts a pair of heavy curtains and a small plaque indicating the Order within.</description>
+    <position x="230" y="290" z="0" />
+    <arc exit="west" move="west" destination="145" />
+  </node>
+  <node id="148" name="Aesry Orders Office, Iron Circle Recruitment Room" note="Iron Circle Recruitment Room">
+    <description>Placed above the archway is a massive gold and black shield etched with the vivid image of a mighty dragon and loosely draped with a banner of scarlet silk.  Atop a nearby table rests an elaborately feathered quill.  Against the far wall, a heavy wooden stand supports a wooden box, fastened with a polished silver lock.  Above it, a brass plaque hangs shimmering softly in the available light.</description>
+    <position x="210" y="300" z="0" />
+    <arc exit="go" move="go ebonwood archway" destination="146" />
   </node>
   <node id="149" name="Aesry Surlaenis'a, Debt Office" note="Debt" color="#00FF00">
     <description>Several sections of the paper walls have been removed, creating windows to let the cool breeze enter.  Beyond the windows lie the multicolored rock gardens that surround the government buildings, as well as the crushed shell path ringing the lake.  A clerk sits behind a white birch counter, waiting for those who need to pay their debts to the Tribunal.</description>
