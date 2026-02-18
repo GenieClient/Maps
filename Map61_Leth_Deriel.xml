@@ -442,6 +442,7 @@
     <position x="220" y="-220" z="0" />
     <arc exit="southeast" move="southeast" destination="62" />
     <arc exit="northwest" move="northwest" destination="64" />
+    <arc exit="go" move="go whitewashed cottage" destination="273" />
   </node>
   <node id="64" name="Leth Deriel, Elder Bark Circle">
     <description>Sullen Elven lads wield pine-bough brooms and sweep the path perfunctorily.  The platform in the trees along the north bristles with vigilant archers.  Such protection is merited by the presence of eminent scholars from all over Elanthia, who lecture at Izma Ru'ef, Leth Deriel's university.  Truly a seat of higher learning, it is headquartered in the tall sequoia set off from the south side of the road.</description>
@@ -1730,6 +1731,11 @@
     <position x="-30" y="-25" z="0" />
     <arc exit="west" move="west" destination="248" />
   </node>
+  <node id="273" name="Leth Deriel, The Crafty Cat" note="The Crafty Cat|crafty cat|Verrys|Repair Metal|repair leather|repair armor|repair weapons|repair" color="#00FF00">
+    <description>Long worktables line the whitewashed stone walls, one side of the open room arranged with weapon racks and armor stands, the other hosting a colorful array of partially completed craft projects.  A brick-lined opening in the far wall provides access to a forge, while the main body of the fire pit extends behind the building.  Tall open-beam ceilings rise overhead with vents near the peak, and expansive accordion windows admit ambient light and fresh air.</description>
+    <position x="220" y="-240" z="0" />
+    <arc exit="go" move="go ironwood doorway" destination="63" />
+  </node>
   <label text="to Shard">
     <position x="-90" y="160" z="0" />
   </label>
@@ -1849,5 +1855,11 @@
   </label>
   <label text=" Society">
     <position x="60" y="60" z="0" />
+  </label>
+  <label text="Repair">
+    <position x="225" y="-250" z="0" />
+  </label>
+  <label text="Crafty Cat">
+    <position x="210" y="-260" z="0" />
   </label>
 </zone>
