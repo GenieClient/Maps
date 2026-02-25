@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <zone name="Aesry Surlaenis'a" id="99">
   <node id="1" name="Aesry Surlaenis'a, Staho Pivo'hrr'schu'Mus">
     <description>The northwestern corner of the city is curiously barren of both houses and trees, save for a single building set well away from the street.  A peculiar aroma from the building wafts over the crushed shell path, bringing the scent of curing animal hide.  The only entrance is a wooden gate leading to the tanning courtyard.</description>
@@ -52,7 +52,7 @@
     <position x="220" y="20" z="0" />
     <arc exit="east" move="east" destination="9" />
     <arc exit="southwest" move="southwest" destination="7" />
-    <arc exit="go" move="go stone building" />
+    <arc exit="go" move="go stone building" destination="439" />
   </node>
   <node id="9" name="Aesry Surlaenis'a, Aeliy Ilerthan'a">
     <description>A few homes can be seen scattered through the trees, their white-tiled roofs showing in contrast to the darkness of the leaves.  A squirrel sits on its hind legs while holding an acorn in its paws, occasionally glancing at one of the passersby.</description>
@@ -365,6 +365,7 @@
     <position x="100" y="230" z="0" />
     <arc exit="northeast" move="northeast" destination="54" />
     <arc exit="south" move="south" destination="56" />
+    <arc exit="go" move="go stone building" destination="477" />
   </node>
   <node id="56" name="Aesry Surlaenis'a, Ayor Eloir'i'a">
     <description>Tall hedges conceal the nearby homes allowing only a view of their tiled roofs.  Walking along the street, an occasional glimpse of the thick papered walls can be seen through a small opening.</description>
@@ -523,7 +524,6 @@
     <position x="220" y="260" z="0" />
     <arc exit="east" move="east" destination="81" />
     <arc exit="southwest" move="southwest" destination="79" />
-    <!-- <arc exit="go" move="go office" destination="145" /> -->
   </node>
   <node id="81" name="Aesry Surlaenis'a, Liva'an Cha'walkas">
     <description>The pale shell roadway narrows to a path which winds between a jutting rock-ledge of the hillside and the soft black sand of the lough shore.  The overhanging ledge of dark basalt shades most of the path from the sun and weather.</description>
@@ -933,7 +933,7 @@
     <position x="235" y="230" z="0" />
     <arc exit="none" move="jump road" destination="80" />
   </node>
-<!--   <node id="145" name="Aesry Orders Office, Lobby" note="Orders Office">
+  <!--   <node id="145" name="Aesry Orders Office, Lobby" note="Orders Office">
     <description>Bright rays of daylight flood through the beveled panes of a small oval window and light up this room, which acts as parlor to guests and as the lobby of the Aesry Regional Orders office.  Various documents on the smooth plaster wall overhang a pair of stools that stand on either side of the desk in the corner.  Narrow hallways run east and west of the wide staircase whose sweeping curve leads to the upper floors.</description>
     <description>The flickering flames of myriad candles cast a golden reflection in the beveled panes of a small oval window.  The warm glow lights up the room that is both parlor to guests and the lobby of the Aesry Regional Orders office.  Framed documents on the smooth plaster wall overhang a pair of stools that stand on either side of the desk in the corner.  To the east and west run narrow hallways adjoining a wide staircase, its curve leading to the upper floors.</description>
     <position x="220" y="290" z="0" />
@@ -1192,6 +1192,7 @@
     <arc exit="go" move="go white shop" destination="205" />
   </node>
   <node id="186" name="Aesry Surlaenis'a, Aeliy Ushiaena'a">
+    <description>Willow trees grow in graceful clusters about a freshwater pond in a nearby park.  Sounds of splashing mingle with the calls of children at play.  A white gravel path wends its way among the trees toward the pond, the smooth stones gleaming gently in the sunlight.</description>
     <description>Willow trees grow in graceful clusters about a freshwater pond in a nearby park.  The sounds of frogs and crickets combine in a monotonous chorus which echoes about the street.  A white gravel path wends its way among the trees toward the pond, the smooth stones gleaming gently in the moonlight.</description>
     <position x="190" y="680" z="0" />
     <arc exit="southeast" move="southeast" destination="185" />
@@ -1369,8 +1370,10 @@
     <position x="40" y="680" z="0" />
     <arc exit="north" move="north" destination="214" />
     <arc exit="east" move="east" destination="216" />
+    <arc exit="go" move="go domed building" destination="463" />
   </node>
   <node id="216" name="Aesry Surlaenis'a, Chui'mysanda Jama">
+    <description>Iridescent flecks of sparkling quartz crystals mingle with crushed ivory seashells which pave the southern crescent of the town.  A low hedge of fragrant k'dira bushes lines the street, the leaves releasing their pungent aroma in the warmth of the sun.</description>
     <description>Iridescent flecks of sparkling quartz crystals mingle with crushed ivory seashells which pave the southern crescent of the town.  A low hedge of fragrant k'dira bushes lines the street, the faint aroma of its leaves identifying the plant, even in the darkness.</description>
     <position x="70" y="680" z="0" />
     <arc exit="southeast" move="southeast" destination="217" />
@@ -1398,6 +1401,7 @@
     <arc exit="northwest" move="northwest" destination="218" />
   </node>
   <node id="220" name="Aesry Surlaenis'a, Chui'mysanda Jama">
+    <description>Local residents chat in their courtyards as gardeners work to shape the topiary which is scattered throughout the grass.  From the road, you can see a boxwood mermaid seated amidst lifesculpted birch tree waves.</description>
     <description>Light streams from the windows which border nearby courtyards, illuminating the topiary which is scattered throughout the grass.  From the road, you can see a boxwood mermaid seated amidst lifesculpted birch tree waves.</description>
     <position x="160" y="800" z="0" />
     <arc exit="east" move="east" destination="221" />
@@ -1411,6 +1415,7 @@
     <arc exit="go" move="go courtyard" destination="256" />
   </node>
   <node id="222" name="Aesry Surlaenis'a, Chui'mysanda Jama">
+    <description>Water sparkles in the light as it tumbles into the tiered crystal basins of a fountain.  Surmounting the structure is a statue of a young Elven woman with long hair and a patient expression listening to a youngster playing a golden flute.  Crystal phoenixes rise from each basin, filling the air with music as the water splashes against their upstretched wings.</description>
     <description>Water sparkles in the light from a nearby home as it tumbles into the tiered crystal basins of a fountain.  Surmounting the structure is a statue of a young Elven woman with long hair and a patient expression listening to a youngster playing a golden flute.  Crystal phoenixes rise from each basin, filling the night with music as the water splashes against their upstretched wings.</description>
     <position x="220" y="830" z="0" />
     <arc exit="east" move="east" destination="223" />
@@ -2751,7 +2756,7 @@
     <position x="290" y="350" z="0" />
     <arc exit="out" move="out" destination="430" />
   </node>
-  <node id="439" name="Aesry Forging Society, Entry and Maker's Mark Sales" color="#00FF00">
+  <node id="439" name="Aesry Forging Society, Entry and Maker's Mark Sales" note="Forging Society|Maker's Marks" color="#00FF00">
     <description>High windows are set within the sturdy stone walls just below the vaulted ceilings, each window equiped with louvered vents to help improve the airflow within the working areas.  The walls display some of the many metallic products produced within the workshops, while a few employees bustle about on errands for craftspeople.  The noises of the forges, smithies, and foundries drown out the sounds of the city, making it difficult for anyone to carry on a conversation.</description>
     <position x="250" y="-21" z="0" />
     <arc exit="north" move="north" destination="449" />
@@ -2794,23 +2799,23 @@
     <position x="260" y="-1" z="0" />
     <arc exit="go" move="go soot-stained doors" destination="440" />
   </node>
-  <node id="445" name="Aesry Forging Society, Supplies" color="#FF0000">
+  <node id="445" name="Aesry Forging Society, Supplies" note="Forging supplies|deeds|forging deeds" color="#FF0000">
     <description>Supplies for the craftspeople are sorted into bins and containers that line the walls, each labeled with a neatly-lettered notice detailing the properties of the various materials.  The sounds of the working areas drift into the room, muffled by the thick stone walls.</description>
     <position x="260" y="-11" z="0" />
     <arc exit="east" move="east" destination="446" />
     <arc exit="northwest" move="northwest" destination="439" />
   </node>
-  <node id="446" name="Aesry Forging Society, Bulk Materials" color="#FF0000">
+  <node id="446" name="Aesry Forging Society, Bulk Materials" note="446|bulk Forging supplies" color="#FF0000">
     <description>Offering a respite from the sweltering heat of the forges within, this thatch-covered area provides a service area for deliveries of goods and supplies used by the society's craftsmen.  Crates of tools, metals and more are stacked from floor to ceiling, often at precarious angles that leave the clerks below nervously glancing up from time to time.  Adjacent alleyways of the nearby Rinko neighborhood are within view.</description>
     <position x="270" y="-11" z="0" />
     <arc exit="west" move="west" destination="445" />
   </node>
-  <node id="447" name="Aesry Forging Society, Book Store" color="#FF0000">
+  <node id="447" name="Aesry Forging Society, Book Store" note="Forging books|Forging prestige" color="#FF0000">
     <description>Bound instructions and manuals are stacked on shelves, neatly arranged for purchase.  Employees dart in and out in the course of their duties, staying busy while they assist the craftspeople in their crafts.</description>
     <position x="260" y="-21" z="0" />
     <arc exit="west" move="west" destination="439" />
   </node>
-  <node id="448" name="Aesry Forging Society, Tool Store" color="#FF0000">
+  <node id="448" name="Aesry Forging Society, Tool Store" note="Forging tools|Forging clerk" color="#FF0000">
     <description>Bins and shelves display the tools available for purchase, all of them covered with the thin layer of soot and ash that seems to permeate the whole building.  The walls are thick stone and somewhat muffle the din of the workshops enclosed within the large edifice.</description>
     <position x="260" y="-31" z="0" />
     <arc exit="southwest" move="southwest" destination="439" />
@@ -2842,7 +2847,7 @@
     <arc exit="east" move="east" destination="451" />
     <arc exit="southeast" move="southeast" destination="449" />
   </node>
-  <node id="453" name="Aesry Enchanting Society, Supply Store" color="#FF0000">
+  <node id="453" name="Aesry Enchanting Society, Supply Store" note="Enchanting Society|Enchanting Supplies" color="#FF0000">
     <description>Plain plastered walls hold up the wooden shelves and racks that hold the supplies on offer to craftspeople.  A young S'Kra Mur attendant bustles about, moving between the surfaces as they attend to customers.</description>
     <position x="232" y="151" z="0" />
     <arc exit="east" move="east" destination="454" />
@@ -2850,12 +2855,12 @@
     <arc exit="west" move="west" destination="455" />
     <arc exit="go" move="go plain door" destination="51" />
   </node>
-  <node id="454" name="Aesry Enchanting Society, Tool Outlet" color="#FF0000">
+  <node id="454" name="Aesry Enchanting Society, Tool Outlet" note="Enchanting Tools" color="#FF0000">
     <description>A multitude of wooden crates and boxes fill the racks that hold all manner of supplies available to those visiting the society.  Clerks bustle back and forth filling orders and restocking items.</description>
     <position x="242" y="151" z="0" />
     <arc exit="west" move="west" destination="453" />
   </node>
-  <node id="455" name="Aesry Enchanting Society, Bookstore" color="#FF0000">
+  <node id="455" name="Aesry Enchanting Society, Bookstore" note="Enchanting Books" color="#FF0000">
     <description>Tall wooden bookshelves overflowing with a variety of old and new tomes and scrolls surround the room.  A short assistant pores over several of the selections, while a cloaked S'Kra Mur attendant tends to the needs of visiting artisans.</description>
     <position x="222" y="151" z="0" />
     <arc exit="east" move="east" destination="453" />
@@ -2881,7 +2886,7 @@
     <position x="242" y="181" z="0" />
     <arc exit="northwest" move="northwest" destination="456" />
   </node>
-  <node id="459" name="Aesry Enchanting Society, Society Master's Office">
+  <node id="459" name="Aesry Enchanting Society, Society Master's Office" note="Enchanting Prestige">
     <description>A solitary mat lies on the floor in front of a small table piled with papers and writing instruments.  The plain plastered walls and polished wood of the floor have an elegant simplicity that keeps distractions to a minimum.</description>
     <position x="232" y="181" z="0" />
     <arc exit="north" move="north" destination="456" />
@@ -2900,6 +2905,154 @@
     <description>Pieced together by a seemingly blind worker, the walls are covered with scraps of rugs, blankets, and carpets in a kaleidoscope of colors.  A burly, light pink feldspar table is stashed in a corner of the room, providing plenty of room to work.</description>
     <position x="242" y="161" z="0" />
     <arc exit="go" move="go shadowed alcove" destination="456" />
+  </node>
+  <node id="463" name="Aesry Outfitting Society, Reception" note="Outfitting Society|Outfitting prestige" color="White">
+    <description>Billowy sheer curtains have been tied back from the windows to allow a respectable view of the harbor and ocean beyond.  From time to time, rowboats can be seen traveling between the island and their goods-laden ships.  The society's entrance is a wide open, domed room with a singular counter tucked away to one side and branching hallways leading further within.</description>
+    <position x="14" y="680" z="0" />
+    <arc exit="south" move="south" destination="476" />
+    <arc exit="southwest" move="southwest" destination="472" />
+    <arc exit="west" move="west" destination="468" />
+    <arc exit="northwest" move="northwest" destination="464" />
+    <arc exit="out" move="out" destination="215" />
+    <arc exit="go" move="go white archway" destination="487" />
+  </node>
+  <node id="464" name="Aesry Outfitting Society, Northern Corridor" color="White">
+    <description>Crushed shells are set into colorful mosaics that form the floor.  Swatches of colorful fabrics are framed along the walls with cards describing their creation process, common uses, and other trivia.  Overhead, gaethzen orbs light the windowless hallway as it branches into working rooms.</description>
+    <position x="-6" y="660" z="0" />
+    <arc exit="north" move="north" destination="465" />
+    <arc exit="northeast" move="northeast" destination="467" />
+    <arc exit="southeast" move="southeast" destination="463" />
+    <arc exit="northwest" move="northwest" destination="466" />
+  </node>
+  <node id="465" name="Aesry Outfitting Society, Lime Spinner's Parlor" note="Spinning2|Lime Spinner" color="White">
+    <description>Plush lime-green carpet covers the floor and serves to soften the creaks and groans made by the nearby spinning wheels.  Gowns and accessories of all types in varying shades of green hang from the ceiling.  While some are basic and may serve as inspiration for beginners, others are quite gaudy and would challenge even the most skilled seamstresses.</description>
+    <position x="-6" y="647" z="0" />
+    <arc exit="south" move="south" destination="464" />
+  </node>
+  <node id="466" name="Aesry Outfitting Society, Apple Spinner's Parlor" note="Spinning1|Apple Spinner" color="White">
+    <description>A large spinning wheel sits atop a nearly room-sized painted bamboo mat.  The mat depicts the island with notable landmarks exaggerated in a stylized manner.  Deep red tapestries with golden embroidery hang from the walls to soften the sounds of the work taking place in other parts of the building.</description>
+    <position x="-19" y="647" z="0" />
+    <arc exit="southeast" move="southeast" destination="464" />
+  </node>
+  <node id="467" name="Aesry Outfitting Society, Plum Spinner's Parlor" note="Spinning3|Plum Spinner" color="White">
+    <description>Paneled walls of dark purple wood enclose the space but do little to soften the sounds of passersby on the streets outside.  Shadows flicker at all hours as people, carts and beasts alike move past the windows as they travel about town.  A large spinning wheel dominates the center of the room, and tailors and seamstresses alike take their turns with it.</description>
+    <position x="7" y="647" z="0" />
+    <arc exit="southwest" move="southwest" destination="464" />
+  </node>
+  <node id="468" name="Aesry Outfitting Society, Central Corridor" color="White">
+    <description>Smoothed stone forms the floors here, with a red-tinted grout filling in the spaces between each stone.  Lining either side of the hallway are portraits of renowned tailors, seamstresses, and merchants such as Gortik, Phinara, Keishalae, Loriale, Andriane, and others.  Periodically, a member of the staff will take down one portrait and put up another in its place.  Gaethzen lanterns light the hallway as it opens up into material, tool, and book shops.</description>
+    <position x="-6" y="680" z="0" />
+    <arc exit="east" move="east" destination="463" />
+    <arc exit="southwest" move="southwest" destination="471" />
+    <arc exit="west" move="west" destination="470" />
+    <arc exit="northwest" move="northwest" destination="469" />
+  </node>
+  <node id="469" name="Aesry Outfitting Society, Book Store" note="Outfitting books" color="#FF0000">
+    <description>From floor to ceiling, numerous bookcases are lined with all manner of instructional tomes, books, and scrolls.  Not a speck of dust is visible anywhere as the clerks hastily and frequently retrieve virtually every item on offer as patrons request them to use as references.  Periodically, novice craftsmen will cautiously enter and seek out the early apprenticing works as they embark on their own journies with the craft.</description>
+    <position x="-19" y="667" z="0" />
+    <arc exit="southeast" move="southeast" destination="468" />
+  </node>
+  <node id="470" name="Aesry Outfitting Society, Tool Shop" note="Outfitting tools|Repairman Narar|Outfitting clerk" color="#FF0000">
+    <description>An opening in the dome overhead funnels smoke from a small blacksmith's setup in the rear of the shop that focuses on repairing members' outfitting tools.  The rhythmic clangs and swooshes as things are hammered and quenched ring throughout the day and night -- progress and business never sleep.  The Society Master personally delivers tools and work orders intermittently and often pauses to speak with the clerks and apprentices as he does so.  A counter is cluttered with tools and tickets from patrons who have left their own for repairs.</description>
+    <position x="-19" y="680" z="0" />
+    <arc exit="east" move="east" destination="468" />
+  </node>
+  <node id="471" name="Aesry Outfitting Society, Supply Depot" note="Outfitting supplies" color="#FF0000">
+    <description>Bolts of fabrics, bundles of fibers, and other materials needed by the island's tailors and seamstresses are scattered about shelves and counters.  Boxes with last season's designs and materials peeking out are stacked neatly along the walls and are illuminated by a trio of tzgaa orbs.  The creaks and groans of overworked spinning wheels can be heard nearby as the sounds compete with the screeching gulls ever-present outside.</description>
+    <position x="-19" y="693" z="0" />
+    <arc exit="northeast" move="northeast" destination="468" />
+  </node>
+  <node id="472" name="Aesry Outfitting Society, Southern Corridor" color="White">
+    <description>Padded benches and small tables line either side of the hallway.  Visiting craftsmen and guests alike pause to catch up with one another and hear of news -- fashion and otherwise -- in the far reaches of the realms.  Colorful weaving rooms open up off the end of the hall.</description>
+    <position x="-6" y="700" z="0" />
+    <arc exit="northeast" move="northeast" destination="463" />
+    <arc exit="southeast" move="southeast" destination="475" />
+    <arc exit="south" move="south" destination="474" />
+    <arc exit="southwest" move="southwest" destination="473" />
+  </node>
+  <node id="473" name="Aesry Outfitting Society, Orange Weaver's Hall" note="Weaving1|Orange Weaver" color="White">
+    <description>Brightly painted orange walls are illuminated by flickering candlelight that casts dancing shadows across the loom and other furniture of the open space.  Columns of hooks hold countless spools of thread in subtly different shades of color.  A pair of chairs, one high-backed and the other not, sit to either side of a metal-topped worktable.</description>
+    <position x="-19" y="713" z="0" />
+    <arc exit="northeast" move="northeast" destination="472" />
+  </node>
+  <node id="474" name="Aesry Outfitting Society, Lemon Weaver's Hall" note="Weaving2|Lemon Weaver" color="White">
+    <description>Brightly painted yellow walls are illuminated by flickering candlelight that casts dancing shadows across the loom and other furniture of the open space.  Columns of hooks hold countless spools of thread in subtly different shades of color.  A pair of chairs, one high-backed and the other not, sit to either side of a metal-topped worktable.</description>
+    <position x="-6" y="713" z="0" />
+    <arc exit="north" move="north" destination="472" />
+  </node>
+  <node id="475" name="Aesry Outfitting Society, Strawberry Weaver's Hall" note="Weaving3|Strawberry Weaver" color="White">
+    <description>Brightly painted red walls are illuminated by flickering candlelight that casts dancing shadows across the loom and other furniture of the open space.  Columns of hooks hold countless spools of thread in subtly different shades of color.  A pair of chairs, one high-backed and the other not, sit to either side of a metal-topped worktable.</description>
+    <position x="7" y="713" z="0" />
+    <arc exit="northwest" move="northwest" destination="472" />
+  </node>
+  <node id="476" name="Aesry Outfitting Society, Office" note="Outfitting Office" color="White">
+    <description>Cupboards and shelves occupy most of the space here and are filled with all manners of tools of the trade -- pieces of mannequins, lengths of fabric, spools of threads and yarns, tins of buttons and needles, and much more.  Even from this distance, the sound of waves crashing on the shore below can be heard.</description>
+    <position x="14" y="693" z="0" />
+    <arc exit="north" move="north" destination="463" />
+  </node>
+  <node id="477" name="Aesry Engineering Society, Main Hall" note="Engineering Society|Engineering Prestige" color="White">
+    <description>Tall latticework screens encircle conversational nooks, allowing the crafters to relax when not working.  The double doors leading outside stand next to the various boards and banners displaying important information for the society members.  An ornate arch leads east to the office of the master, while a hallway leads north towards the workshops.</description>
+    <position x="90" y="219" z="0" />
+    <arc exit="north" move="north" destination="481" />
+    <arc exit="east" move="east" destination="478" />
+    <arc exit="west" move="west" destination="479" />
+    <arc exit="northwest" move="northwest" destination="480" />
+    <arc exit="go" move="go double doors" destination="55" />
+  </node>
+  <node id="478" name="Aesry Engineering Society, Office" note="Engineering Office" color="White">
+    <description>Tastefully decorated with pale birch panels along the walls, this airy space serves as the working space for the master of the society.  A paper-covered desk stands proudly in the center of the room while one corner has a leather-upholstered couch near a low table.</description>
+    <position x="100" y="219" z="0" />
+    <arc exit="west" move="west" destination="477" />
+  </node>
+  <node id="479" name="Aesry Engineering Society, Bookstore" note="Engineering clerk|Engineering Books" color="#FF0000">
+    <description>Standing forlornly in the middle of the room is a large table, stacked with neatly arranged piles of books and tomes.  Pale birch planks cover the walls, helping to give a warm, comfortable feeling to the area.</description>
+    <position x="80" y="219" z="0" />
+    <arc exit="east" move="east" destination="477" />
+  </node>
+  <node id="480" name="Aesry Engineering Society, Tool Shop" note="Engineering tools" color="#FF0000">
+    <description>Neatly arranged on the shelves lining the walls are a wide assortment of tools, each one carefully stored for easy access by the salesclerks.  A few craftspeople stand about, either conversing with others or perusing the wares on offer.</description>
+    <position x="80" y="209" z="0" />
+    <arc exit="southeast" move="southeast" destination="477" />
+  </node>
+  <node id="481" name="Aesry Engineering Society, Hallway" color="White">
+    <description>Tall and airy, this wide corridor connects the front part of the society to the working spaces deeper within the building.  A low arch to the east opens up to the depot.</description>
+    <position x="90" y="199" z="0" />
+    <arc exit="north" move="north" destination="483" />
+    <arc exit="northeast" move="northeast" destination="484" />
+    <arc exit="east" move="east" destination="485" />
+    <arc exit="south" move="south" destination="477" />
+    <arc exit="northwest" move="northwest" destination="482" />
+    <arc exit="go" move="go tall door" destination="486" />
+  </node>
+  <node id="482" name="Aesry Engineering Society, Blue Workshop" note="Engineering Blue Workshop|Engineering Workshop1" color="White">
+    <description>At one end of the room stands a work bench covered with tools.  Deep grooves and scratches cover the bench's oak surface.  Wood shavings and stone bits dot the rough granite floor below.</description>
+    <position x="80" y="189" z="0" />
+    <arc exit="southeast" move="southeast" destination="481" />
+  </node>
+  <node id="483" name="Aesry Engineering Society, Green Workshop" note="Engineering Green Workshop|Engineering Workshop2" color="White">
+    <description>At one end of the room stands a work bench covered with tools.  Deep grooves and scratches cover the bench's oak surface.  Wood shavings and stone bits dot the rough granite floor below.</description>
+    <position x="90" y="189" z="0" />
+    <arc exit="south" move="south" destination="481" />
+  </node>
+  <node id="484" name="Aesry Engineering Society, Yellow Workshop" note="Engineering Yellow Workshop|Engineering Workshop3" color="White">
+    <description>At one end of the room stands a work bench covered with tools.  Deep grooves and scratches cover the bench's oak surface.  Wood shavings and stone bits dot the rough granite floor below.</description>
+    <position x="100" y="189" z="0" />
+    <arc exit="southwest" move="southwest" destination="481" />
+  </node>
+  <node id="485" name="Aesry Engineering Society, Depot" note="Engineering Society|Engineering supplies" color="#FF0000">
+    <description>Wide and spacious, the large room is bustling with people moving and storing the myriad of supplies used by the craftspeople of the society.  The thick stone floor shows signs of heavy wear and the occasional dent from falling materials.</description>
+    <position x="100" y="199" z="0" />
+    <arc exit="west" move="west" destination="481" />
+  </node>
+  <node id="486" name="Aesry Engineering Society, A Private Engineering Room" note="486|Private Engineering" color="White">
+    <description>A fine layer of wood and stone shavings covers most of the well-worn granite floor.  The white walls have seen better days, and black and grey scuff marks adorn much of the open space.  A large workstation along one wall is unnaturally free of clutter and holds several organized tools and implements.  Grunts, curses, and labored breathing from other patrons echo throughout the large workroom.</description>
+    <position x="80" y="199" z="0" />
+    <arc exit="go" move="go tall door" destination="481" />
+  </node>
+  <node id="487" name="Aesry Outfitting Society, A Private Outfitting Room" note="487|Private Outfitting" color="White">
+    <description>A pure-white wainscoted hall is topped by lilac-hued paisley painted walls.  Occupying the back third of the room is a solid-looking loom, while a large spinning wheel sits near the entrance.  Resting atop a deep purple rug is a sturdy worktable and a comfortable, wicker chair.  Running parallel along opposing walls are several hooks and shelves, holding practically every conceivable tool, spool of thread, bobbin, thimble and scrap.</description>
+    <position x="14" y="667" z="0" />
+    <arc exit="go" move="go white archway" destination="463" />
   </node>
   <label text="Vaults">
     <position x="270" y="310" z="0" />
@@ -3092,5 +3245,14 @@
   </label>
   <label text="Society">
     <position x="211" y="191" z="0" />
+  </label>
+  <label text="Outfitting Society">
+    <position x="-44" y="719" z="0" />
+  </label>
+  <label text="Engineering">
+    <position x="40" y="169" z="0" />
+  </label>
+  <label text="Society">
+    <position x="37" y="179" z="0" />
   </label>
 </zone>
