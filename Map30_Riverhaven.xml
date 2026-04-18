@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <zone name="Riverhaven" id="30">
   <node id="1" name="Riverhaven, River Road West" color="#FFBF00">
     <description>The wooden palisade of the town wall runs down into the river, ending in the West Tower.  A narrow gate allows exit from the town into the countryside.  South of the road, a narrow strip of muddy ground surrounds numerous shanties where the local fishermen draw up their boats and work on their nets.  Small but well-kept houses line the northern side of the road where some of the more prosperous fisherfolk dwell.</description>
@@ -2353,7 +2353,8 @@
     <description>Plush lambswool carpeting in the foyer gives way to a polished oak plank floor supporting an array of building materials.  Although the best of the inventory has been used to furnish the shop's exterior, the selection on offer within is still attractive to the eye, and clearly of good quality.  The attendant, Junalar, is a meticulously-dressed man who seems to spend a good deal of his time polishing fingerprints off the merchandise.</description>
     <position x="640" y="680" z="0" />
     <arc exit="north" move="north" destination="359" />
-    <arc exit="out" move="out" hidden="True" destination="10" />
+    <arc exit="out" move="out" destination="10" />
+    <arc exit="east" move="east" destination="568" />
   </node>
   <node id="359" name="City Statements, Doors of Distinction" color="#FF0000">
     <description>The polished oak plank floor serves as a suitable display area for a selection of unpretentious doors which stand in tidy rows around the room.  A willowy Elothean saleswoman leans casually against the central counter, wincing occasionally as the sound of hammers pounds from a back room and rattles the shutters on the oak-framed window overlooking the street.</description>
@@ -2363,10 +2364,12 @@
   <node id="360" name="Riverhaven, Carousel Square">
     <description>A massive conical building rises from the square's center, its snowy alabaster surfaces gleaming brilliantly against the drab backdrop of the surrounding stone and wood.  A bejeweled mosaic set above an oval doorway reads "THE CAROUSEL."  </description>
     <description>A massive conical building rises from the square's center, its snowy alabaster surfaces gleaming brilliantly against the drab backdrop of the surrounding stone and wood.  Rows of torches encircle the structure's girth, their flames wavering lightly with the surrounding commotion and casting the building in sconces of shifting red tint.  A bejeweled mosaic set above an oval doorway reads THE CAROUSEL.</description>
+    <description>A massive conical building rises from the square's center, its snowy alabaster surfaces gleaming brilliantly against the drab backdrop of the surrounding stone and wood.  A bejeweled mosaic set above an oval doorway reads THE CAROUSEL.</description>
     <position x="590" y="750" z="0" />
     <arc exit="out" move="out" hidden="True" destination="10" />
     <arc exit="go" move="go oval doorway" destination="361" />
     <arc exit="northwest" move="northwest" destination="556" />
+    <arc exit="northeast" move="northeast" destination="565" />
   </node>
   <node id="361" name="Riverhaven, Carousel" note="Vaults|Carousel Square" color="#00FF00">
     <description>Paneled in a rich dark wood of exotic origin, the walls of this circular room support a vast framework of iron and timbers rising to the building's apex.  Countless gears, pulleys and weights within the structure form the strikingly complex and beautiful mechanism which drives the Carousel.</description>
@@ -3574,9 +3577,31 @@
   </node>
   <node id="564" name="Knight's Hall, Skyward Atrium" note="Skyward Atrium">
     <description>Whimsically designed, this wide-open space provides much of the natural lighting for the entire plaza with its open roof above and numerous windows set between the shopfronts.  A small fountain with crossed stone lightning bolts is perfectly positioned to catch any precipitation with funneling assistance from cleverly located, colorful canopies above.  The shop entries here are similarly themed with rainbows, glitter-covered raindrops, clouds of cotton and more.</description>
-  <description>Fancifully designed sconces brighten the nights with a mix of flickering flames and steady gaethzen globes.  A small fountain with crossed stone lightning bolts is perfectly positioned beneath the opened roof to catch any precipitation with funneling assistance from cleverly located, colorful canopies above.  The shop entries here are similarly themed with rainbows, glitter-covered raindrops, clouds of cotton and more.</description>
+    <description>Fancifully designed sconces brighten the nights with a mix of flickering flames and steady gaethzen globes.  A small fountain with crossed stone lightning bolts is perfectly positioned beneath the opened roof to catch any precipitation with funneling assistance from cleverly located, colorful canopies above.  The shop entries here are similarly themed with rainbows, glitter-covered raindrops, clouds of cotton and more.</description>
     <position x="380" y="550" z="0" />
     <arc exit="south" move="south" destination="563" />
+  </node>
+  <node id="565" name="Riverhaven, Housing Offices" color="White">
+    <description>Through the wooden threshold of the square, the modest-sized chamber exudes a comforting warmth.  The walls, made of sturdy timber beams and planks, are a stark contrast to the cold stone prevalent outside.  Torch sconces are affixed at intervals, though they currently stand empty, hinting at occasional use rather than constant occupation.</description>
+    <position x="607" y="733" z="0" />
+    <arc exit="north" move="north" destination="567" />
+    <arc exit="east" move="east" destination="566" />
+    <arc exit="southwest" move="southwest" destination="360" />
+  </node>
+  <node id="566" name="Riverhaven, Transfer Office" color="White">
+    <description>Shelves line the walls, filled with scrolls, books, and ledgers, their contents ranging from historical records to maps and financial statements.  In one corner, a small hearth provides warmth during colder months, its flickering flames casting dancing shadows on the wooden surfaces.</description>
+    <position x="620" y="733" z="0" />
+    <arc exit="west" move="west" destination="565" />
+  </node>
+  <node id="567" name="Riverhaven, Permit Office" color="White">
+    <description>The space is quite small, yet efficiently organized.  A large wooden desk dominates the center, strewn with maps, parchments, and logbooks.  Clearly, this room serves as a cartographer's den, a place where the intricate details of the surrounding lands are meticulously recorded and stored.</description>
+    <position x="607" y="720" z="0" />
+    <arc exit="south" move="south" destination="565" />
+  </node>
+  <node id="568" name="City Statements, Color Consultation" color="#FF0000">
+    <description>Centered in the little showroom, an ink-stained desk loaded with blueprints, color swatches, and construction contracts occupies most of the limited floorspace.  Metal canisters are stacked along the oak-paneled wall behind the desk, their sides coated in drips of colorful paint.</description>
+    <position x="652" y="680" z="0" />
+    <arc exit="west" move="west" destination="358" />
   </node>
   <label text="Underwharf">
     <position x="110" y="832" z="0" />
