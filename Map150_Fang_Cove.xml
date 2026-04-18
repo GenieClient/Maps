@@ -660,6 +660,7 @@
     <arc exit="go" move="objsearch creeper go cave" destination="95" />
     <arc exit="climb" move="climb trail" destination="102" />
     <arc exit="go" move="go cave" destination="95" />
+    <arc exit="climb" move="climb narrow crevice" destination="265" />
   </node>
   <node id="97" name="Fang's Shadow, Dense Undergrowth" color="#008000">
     <description>Roots protruding from the underbrush are clearly visible in some spots and hidden beneath the mulch in others, waiting to trip the unwary.  Multiple branches of the rampant vegetation block the path and require careful manipulation to avoid being whipped left and right.  A small clearing to the side of the cluttered path is guarded by dense foliage that dissuades the prudent from exploration.</description>
@@ -731,13 +732,13 @@
   </node>
   <node id="107" name="Abandoned Village, Trail">
     <description>Twisting between the towering trees, a dirt track wends its way towards a clearing in the jungle.  Lianas and other vines drape from the overhanging branches down onto the ground.  The smell of rotting vegetation wafts through the air, mingling with the musty odor of damp earth.</description>
-    <position x="480" y="340" z="0" />
+    <position x="480" y="367" z="0" />
     <arc exit="southeast" move="southeast" destination="108" />
     <arc exit="go" move="go trail" destination="97" />
   </node>
   <node id="108" name="Abandoned Village, Village Square">
     <description>Grudgingly giving way to open ground, the jungle has retreated from the trampled clay plaza surrounded by crude huts.  Brave shoots of grass spring up from the bare dirt, beginning nature's process of reclaiming the abandoned village.  Broken bits of pottery, smashed into tiny pieces, are strewn about the square and mingle with other rubbish and debris in the dust.</description>
-    <position x="500" y="360" z="0" />
+    <position x="500" y="387" z="0" />
     <arc exit="east" move="east" destination="111" />
     <arc exit="southeast" move="southeast" destination="110" />
     <arc exit="south" move="south" destination="109" />
@@ -746,7 +747,7 @@
   </node>
   <node id="109" name="Abandoned Village, Village Square">
     <description>A lone tree stands forlornly here, its once luxurient foliage now covered with creeping vines.  Underneath the shady boughs, rotten planks mark where a small bench once sat, its outline barely discernable still.</description>
-    <position x="500" y="380" z="0" />
+    <position x="500" y="407" z="0" />
     <arc exit="north" move="north" destination="108" />
     <arc exit="northeast" move="northeast" destination="111" />
     <arc exit="east" move="east" destination="110" />
@@ -754,7 +755,7 @@
   </node>
   <node id="110" name="Abandoned Village, Village Square">
     <description>Tumbled stones mark where a wall once stood sentinel around the village's well.  Now all that remains are the crudely cut rocks precariously perched around the lip of the shaft.  Off to one side, a wooden bucket lies silently in the dust, a frayed rope extending from its handle.</description>
-    <position x="520" y="380" z="0" />
+    <position x="520" y="407" z="0" />
     <arc exit="north" move="north" destination="111" />
     <arc exit="northeast" move="northeast" destination="113" />
     <arc exit="east" move="east" destination="112" />
@@ -764,7 +765,7 @@
   </node>
   <node id="111" name="Abandoned Village, Village Square">
     <description>Two huts have collapsed here, strewing debris into the abandoned plaza.  A blooming rose bush, long since gone wild, flourishes near what once was a door.  The scent of the abundant blooms fills the air, drowning out the normal rotting smells of the nearby jungle.</description>
-    <position x="520" y="360" z="0" />
+    <position x="520" y="387" z="0" />
     <arc exit="north" move="north" destination="114" />
     <arc exit="east" move="east" destination="113" />
     <arc exit="southeast" move="southeast" destination="112" />
@@ -774,36 +775,36 @@
   </node>
   <node id="112" name="Abandoned Village, Collapsed Hut">
     <description>Mud and wattle walls end abruptly barely two feet off the pounded clay floor, sheared off.  Nothing remains of the roof or upper walls, nor are there any signs of furnishings within the ruined walls.</description>
-    <position x="540" y="380" z="0" />
+    <position x="540" y="407" z="0" />
     <arc exit="north" move="north" destination="113" />
     <arc exit="west" move="west" destination="110" />
     <arc exit="northwest" move="northwest" destination="111" />
   </node>
   <node id="113" name="Abandoned Village, Collapsed Hut">
     <description>Nothing remains of the hut that once stood here but the bare earth of the foundation and a few posts sticking up from the ground.  Vine tendrils inch across the earth, forerunners of the encroaching jungle lurking just beyond the ruined hut.</description>
-    <position x="540" y="360" z="0" />
+    <position x="540" y="387" z="0" />
     <arc exit="south" move="south" destination="112" />
     <arc exit="southwest" move="southwest" destination="110" />
     <arc exit="west" move="west" destination="111" />
   </node>
   <node id="114" name="Abandoned Village, Collapsed Hut">
     <description>Timbers have buckled inward, creating a small cave-like structure.  Thatch from the roof covers the ground in heaps, obscuring and obliterating any interior furnishings that might have survived the collapse of the building.</description>
-    <position x="520" y="340" z="0" />
+    <position x="520" y="367" z="0" />
     <arc exit="south" move="south" destination="111" />
   </node>
   <node id="115" name="Abandoned Village, Down the Well">
     <description>Condensation causes the stone-lined walls to drip moisture continuously and making the climb up or down the crudely hacked out handholds treacherous.  A small ledge running around the wall provides a precarious stopping point just above the water's surface.  Set into the stone walls above the ledge, a niche holds a tiny carved statue.</description>
-    <position x="520" y="400" z="0" />
+    <position x="520" y="427" z="0" />
     <arc exit="up" move="up" destination="110" />
   </node>
   <node id="116" name="Abandoned Village, Hut">
     <description>Glimmers of light enter through the doorway, only partially blocked by the sagging door.  Crude shelves hang on the mud-covered walls, their surfaces covered with a thick layer of dust and grime.  Nothing else remains in the hut but a blackened hearth in the middle of the floor.</description>
-    <position x="500" y="400" z="0" />
+    <position x="500" y="427" z="0" />
     <arc exit="go" move="go sagging door" destination="109" />
   </node>
   <node id="117" name="Abandoned Village, Hut">
     <description>A simple stool sits on its side in the corner, surrounded by cobwebs and dust bunnies.  Mud flaking from the walls has exposed the wattle structure underneath and left piles of debris at the base of the walls.  A faint odor of decay lingers in the air, mingling with the humid stench of the jungle.</description>
-    <position x="500" y="340" z="0" />
+    <position x="500" y="367" z="0" />
     <arc exit="go" move="go small door" destination="108" />
   </node>
   <node id="118" name="Fang's Rise, Pool">
@@ -1059,7 +1060,7 @@
   </node>
   <node id="153" name="Wagon Interior, Jisi's Raffles" note="Jisi's Raffles|raffles" color="#00FF00">
     <description>The curving walls of the wagon are painted with an elaborate pattern of blue and green waves, swirling in bright hues that easily reflect the light of the hanging lanterns.  A wide granite counter sits upon this side of a pure white curtain dividing the cabin's interior space into two rooms, preventing the casual peruser from seeing the cache of prizes beyond.</description>
-    <position x="220" y="320" z="0" />
+    <position x="210" y="330" z="0" />
     <arc exit="go" move="go wood door" destination="88" />
   </node>
   <node id="154" name="Seasoned Dressings, Foyer" note="Seasoned Dressings">
@@ -1093,7 +1094,7 @@
   </node>
   <node id="159" name="Functional Furniture, Fang Cove Branch" note="Functional Furniture" color="#FF0000">
     <description>The small building serves as both a workshop and a sales floor.  Work benches and saw horses fill the space behind a small counter that holds items for sale.  Fresh sawdust covers every surface in the room, indicating that the benches and tools see a lot of work.  A large sign is hanging from the wall.</description>
-    <position x="180" y="320" z="0" />
+    <position x="183" y="320" z="0" />
     <arc exit="go" move="go wooden door" destination="88" />
   </node>
   <node id="160" name="Ocan's Bait and Tackle" note="Ocan's Bait and Tackle|Ocan Zendall" color="#FF0000">
@@ -1124,9 +1125,61 @@
     <arc exit="east" move="east" destination="162" />
   </node>
   <node id="165" name="Fang Cove, Obsidian Dome" note="Obsidian Dome|Vellano|Grazhir|Ways|Astral Plane" color="#FF00FF">
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the crisp winter starscape.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the pale winter sky.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals several cold, grey clouds lurking within the pale winter sky.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above is rendered completely opaque by a thick layer of snow.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the pale winter sky which is filled with cold, grey clouds.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above is thoroughly dusted with snow which allows only a glimpse of dim sunlight.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above is thoroughly dusted with snow.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the crisp winter starscape which is marred by a few dark clouds.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above sparkles in the soft autumn rain.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above shudders under the torrential downpour.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the autumn sky which is filled with cold, grey clouds.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the autumn starscape which is marred by a few dark clouds.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals several cold, grey clouds lurking within the autumn sky.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above shimmers in the sunlight as the rain sheets from it.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above looms forebodingly.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above runs with sheets of dark rain.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals a few lazy white clouds.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the sparkling summer starscape.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the clear summer starscape which is marred by a few fluffy clouds.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above allows a glimpse of the summer starscape between the fluffy clouds.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals a thick bank of white clouds which stretch from horizon to horizon.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above sparkles in the warm summer rain.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above allows a glimpse of the warm summer sky amidst the fluffy clouds.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above frames the hot summer sun which blazes from its perch in a cloudless sky.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals thousands of brilliant stars in the exceptionally clear sky.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the spring sky which is filled with cold, grey clouds.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above sparkles in the light spring rain.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the clear spring sky.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the clear summer sky.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the clear winter sky.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the clear autumn sky.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the bright, cheery autumn sky.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the bright, cheery spring sky.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the bright, cheery summer sky.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the bright, cheery winter sky.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above allows a glimpse of the spring starscape between the dark clouds.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above allows a glimpse of the summer starscape between the dark clouds.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above allows a glimpse of the winter starscape between the dark clouds.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above allows a glimpse of the autumn starscape between the dark clouds.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the clear spring starscape.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the clear summer starscape.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the clear winter starscape.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the clear autumn starscape.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above allows a glimpse of the warm summer sky amidst the fluffy clouds.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above allows a glimpse of the warm spring sky amidst the fluffy clouds.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above allows a glimpse of the warm winter sky amidst the fluffy clouds.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above allows a glimpse of the warm autumn sky amidst the fluffy clouds.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals several cold, grey clouds lurking within the spring sky</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals several cold, grey clouds lurking within the summer sky</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals several cold, grey clouds lurking within the winter sky</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals several cold, grey clouds lurking within the autumn sky</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above is rendered nearly opaque by the pouring rain.</description>
+    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals a thick bank of grey clouds which stretch from horizon to horizon.</description>
     <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above runs with rivulets of inky rain.</description>
     <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals a bright blue sky that is entirely free of clouds.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above allows a glimpse of the warm summer sky amidst the fluffy clouds.</description>
     <position x="300" y="160" z="0" />
     <arc exit="go" move="go arched exit" destination="3" />
   </node>
@@ -1189,17 +1242,17 @@
   </node>
   <node id="176" name="Cute Critters, Critter Corner" note="Cute Critters" color="#FF0000">
     <description>Unfinished oak makes up the walls and floor of this sturdy wagon interior.  Shelves line one wall, holding old trinkets and treasures.  A set of tall coat racks stand at attention to either side of the rounded doorway.  Oddly shaped tables take up most of the floor space, making the area seem smaller than it is.</description>
-    <position x="160" y="320" z="0" />
+    <position x="170" y="320" z="0" />
     <arc exit="out" move="out" destination="88" />
   </node>
   <node id="177" name="The Book Nook, Book Room" note="Book Nook|Book Room" color="#FF0000">
     <description>Rough wooden walls enclose the space, holding crooked racks and shelves of old oak.  Covering the floor from wall to wall is a dirty rug that is giving off the faint smell of mold and cheese.  Tables have been haphazardly set up to either side of the doorway.</description>
-    <position x="140" y="320" z="0" />
+    <position x="156" y="320" z="0" />
     <arc exit="go" move="go doorway" destination="88" />
   </node>
   <node id="178" name="Phior's Fashions, Showroom" note="Phior's Fashions" color="#FF0000">
     <description>Vibrant, sweeping silk panels trim the richly polished burlwood walls of the opulent caravan while thick forest green carpet lines the floor.  Shoppers browse the many shelves and armoires that surround the room, lit by the soft glow of gaethzen orbs that hang near each corner.</description>
-    <position x="200" y="320" z="0" />
+    <position x="196" y="320" z="0" />
     <arc exit="go" move="go burlwood door" destination="88" />
   </node>
   <node id="179" name="Advanced Anatomy, Atrium" note="Advanced Anatomy" color="#FF0000">
@@ -1713,8 +1766,67 @@
   </node>
   <node id="264" name="Colorful Cosmetics" note="colorful cosmetics" color="#FF0000">
     <description>The atmosphere is warm and inviting, seamlessly merging a sense of whimsy with stylish flair.  Majestic purpleheart wood beams stretch across the ceiling, supporting the roof with elegance, while the rich, wood-grained planks create a robust floor that enhances the character of the long wagon.  Sunlight streams through rows of charming windows that line the sides of the vibrant violet walls, casting playful shadows throughout the space.  Scattered throughout the room, intricately carved tables made of purpleheart wood come in a delightful array of shapes and sizes, adding both functionality and artistic charm to the enchanting setting.</description>
-    <position x="120" y="320" z="0" />
+    <position x="143" y="330" z="0" />
     <arc exit="go" move="go purpleheart door" destination="88" />
+  </node>
+  <node id="265" name="Fang Cove, Verdant Snarl" note="sovamedo" color="White">
+    <description>Dense undergrowth spreads across the area, a layered tangle of brush, shrubs, and low trees bound together by looping vines and trailing creepers.  Narrow, winding trails cut through the growth in branching paths, their packed surfaces weaving between roots and thickets.  Overhead, interlaced limbs form a broken canopy, partially sheltering the uneven ground.</description>
+    <position x="507" y="340" z="0" />
+    <arc exit="north" move="north" destination="266" />
+    <arc exit="northeast" move="northeast" destination="267" />
+    <arc exit="east" move="east" destination="268" />
+    <arc exit="climb" move="climb narrow crevice" destination="96" />
+  </node>
+  <node id="266" name="Fang Cove, Verdant Snarl" color="White">
+    <description>Clusters of shrubs and closely set trees form a continuous thicket, their growth interlaced with trailing vines and creeping stems.  Worn passages curve through the undergrowth, splitting and rejoining as they follow the contours of the land.</description>
+    <position x="507" y="320" z="0" />
+    <arc exit="east" move="east" destination="267" />
+    <arc exit="southeast" move="southeast" destination="268" />
+    <arc exit="south" move="south" destination="265" />
+  </node>
+  <node id="267" name="Fang Cove, Verdant Snarl" color="White">
+    <description>A dense sprawl of brush and low-reaching limbs blankets the area, bound tight with creeping growth.  Slender trails wind through the tangle in intersecting lines, their paths worn smooth where movement has pressed them into the earth.</description>
+    <position x="527" y="320" z="0" />
+    <arc exit="south" move="south" destination="268" />
+    <arc exit="southwest" move="southwest" destination="265" />
+    <arc exit="west" move="west" destination="266" />
+    <arc exit="climb" move="climb rocky incline" destination="269" />
+  </node>
+  <node id="268" name="Fang Cove, Verdant Snarl" color="White">
+    <description>Thick growth crowds the area, where tangled shrubs and young trees press close beneath a web of climbing vines.  A network of narrow tracks threads through the brush, bending around dense clusters and dipping between exposed roots.  The ground is uneven, layered with compressed debris.</description>
+    <position x="527" y="340" z="0" />
+    <arc exit="north" move="north" destination="267" />
+    <arc exit="west" move="west" destination="265" />
+    <arc exit="northwest" move="northwest" destination="266" />
+  </node>
+  <node id="269" name="Fang Cove, Verdant Outcrop" color="White">
+    <description>A broad cave mouth opens beneath a low ceiling of rough stone, the rocky overhang covered in a vibrant green tapestry of leafy vines.  The ground is rocky and uneven, scattered with gnawed bones and loose feathers.  Jagged stone presses down from above, narrowing the space beneath the overhang.</description>
+    <position x="547" y="320" z="0" />
+    <arc exit="north" move="north" destination="270" />
+    <arc exit="northeast" move="northeast" destination="271" />
+    <arc exit="east" move="east" destination="272" />
+    <arc exit="climb" move="climb rocky incline" destination="267" />
+  </node>
+  <node id="270" name="Fang Cove, Verdant Outcrop" color="White">
+    <description>The cave mouth narrows slightly, its low ceiling casting heavy shadows across the uneven floor visible from the entrance.  At the farthest point from the opening, small pairs of yellow eyes blink intermittently, appearing and vanishing within the recesses of the stone.</description>
+    <position x="547" y="300" z="0" />
+    <arc exit="east" move="east" destination="271" />
+    <arc exit="southeast" move="southeast" destination="269" />
+    <arc exit="south" move="south" destination="269" />
+  </node>
+  <node id="271" name="Fang Cove, Verdant Outcrop" color="White">
+    <description>Rough stone walls curve beneath a low, rocky overhang, forming a shallow chamber decorated with a wall of interwoven vines.  The ground bears many gouges, grouped in parallel slashes, and scattered bones dotted with golden feathers.  Small fragments of teeth and hide collect in shallow depressions along the edges of the chamber.</description>
+    <position x="567" y="300" z="0" />
+    <arc exit="south" move="south" destination="272" />
+    <arc exit="southwest" move="southwest" destination="269" />
+    <arc exit="west" move="west" destination="270" />
+  </node>
+  <node id="272" name="Fang Cove, Verdant Outcrop" color="White">
+    <description>The low-roofed cavern extends inward beyond your vantage point at the entrance, its ceiling dipping close above a floor worn smooth in places.  Barely visible against the deep gloom at the back of the natural room, the edge of a large nest cradles the cracked remains of a giant egg.</description>
+    <position x="567" y="320" z="0" />
+    <arc exit="north" move="north" destination="271" />
+    <arc exit="west" move="west" destination="269" />
+    <arc exit="northwest" move="northwest" destination="270" />
   </node>
   <label text="quartz">
     <position x="505" y="40" z="0" />
@@ -1738,7 +1850,7 @@
     <position x="510" y="200" z="0" />
   </label>
   <label text="yellow-bristled">
-    <position x="480" y="405" z="0" />
+    <position x="480" y="432" z="0" />
   </label>
   <label text="random">
     <position x="530" y="250" z="0" />
@@ -1852,12 +1964,15 @@
     <position x="530" y="260" z="0" />
   </label>
   <label text="gremlin">
-    <position x="500" y="415" z="0" />
+    <position x="500" y="442" z="0" />
   </label>
   <label text="gargoyle">
     <position x="505" y="50" z="0" />
   </label>
   <label text="bobcat">
     <position x="350" y="30" z="0" />
+  </label>
+  <label text="Sovamedo Cubs">
+    <position x="540" y="330" z="0" />
   </label>
 </zone>
