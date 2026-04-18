@@ -2353,8 +2353,8 @@
     <description>Plush lambswool carpeting in the foyer gives way to a polished oak plank floor supporting an array of building materials.  Although the best of the inventory has been used to furnish the shop's exterior, the selection on offer within is still attractive to the eye, and clearly of good quality.  The attendant, Junalar, is a meticulously-dressed man who seems to spend a good deal of his time polishing fingerprints off the merchandise.</description>
     <position x="640" y="680" z="0" />
     <arc exit="north" move="north" destination="359" />
-    <arc exit="out" move="out" hidden="True" destination="10" />
-    <arc exit="east" destination="568" />
+    <arc exit="out" move="out" destination="10" />
+    <arc exit="east" move="east" destination="568" />
   </node>
   <node id="359" name="City Statements, Doors of Distinction" color="#FF0000">
     <description>The polished oak plank floor serves as a suitable display area for a selection of unpretentious doors which stand in tidy rows around the room.  A willowy Elothean saleswoman leans casually against the central counter, wincing occasionally as the sound of hammers pounds from a back room and rattles the shutters on the oak-framed window overlooking the street.</description>
