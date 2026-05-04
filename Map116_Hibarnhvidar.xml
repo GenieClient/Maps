@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <zone name="Hibarnhvidar" id="116">
   <node id="1" name="Haalikshal Highway, The Sky Road">
     <description>The lights of a distant settlement dot the darkness to the southwest.  To the northeast, flickering torches flank a gate in a wall at the crest of the hill.  Behind the wall, a tower is dimly visible.</description>
@@ -723,6 +723,7 @@
     <arc exit="east" move="east" destination="100" />
     <arc exit="south" move="south" destination="97" />
     <arc exit="west" move="west" destination="76" />
+    <arc exit="go" move="go stone passage" destination="503" />
   </node>
   <node id="99" name="Inner Hibarnhvidar, The North Colonnade" note="North Colonnade" color="#FF00FF">
     <description>Stone steps whose centers have become shiny and indented from generations of traffic spiral around an enormous central pillar.  Posts carved in the likeness of different weapons support the railing on this circular staircase.  Behind the prominent staircase, carved ivy garlands form the arch that leads from beneath the balcony deeper into the mountain.</description>
@@ -3297,6 +3298,7 @@
     <arc exit="west" move="west" destination="132" />
     <arc exit="go" move="go charred archway" destination="494" />
     <arc exit="go" move="go side passage" destination="500" />
+    <arc exit="east" destination="504" />
   </node>
   <node id="494" name="Cavern of Flame, Entrance">
     <description>Cut from the walls of the twisting cavern, a blackened archway stands as testament to the efforts of explorers to delve deeper underneath the mountains.  Fault lines within the rock strata allowed the formation of this sinuous opening within the mountain.</description>
@@ -3355,6 +3357,82 @@
     <position x="260" y="50" z="2" />
     <arc exit="northeast" move="northeast" destination="501" />
     <arc exit="east" move="east" destination="500" />
+  </node>
+  <node id="503" name="The Weight of Memory, Salesroom" note="Weight of Memory|Thrumgrin|totems" color="#FF0000">
+    <description>A profound, velvety silence hangs within this chamber, muffled by heavy tapestries of charcoal-grey wool that drape the uneven stone walls.  The air is cool and still, carrying the parched scent of ancient dust and the faint, resinous tang of oil used to polish the denser ores.  Glowing crystals, shrouded in layers of translucent silk to soften their brilliance, cast a ghostly, amber-hued light across the merchandise, ensuring every shadow falls with purpose.  To one side, a heavy granite counter sits scarred by years of transactions, while the remainder of the space is occupied by totems and steles.  A small plaque hangs above the counter.</description>
+    <position x="12" y="98" z="0" />
+    <arc exit="go" move="go stone passage" destination="98" />
+  </node>
+  <node id="504" name="Cavern of Fire, Rough Tunnel" color="White">
+    <description>Roughly hacked out walls meet with the unevenly finished floor in this crudely crafted passageway.  A faint odor of smoke mingles with a musky, animal scent.</description>
+    <position x="300" y="100" z="2" />
+    <arc exit="east" move="east" destination="505" />
+    <arc exit="west" move="west" destination="493" />
+  </node>
+  <node id="505" name="Cavern of Fire, Rough Tunnel" color="White">
+    <description>Cut through the stone with a minimum of care and a maximum of haste, the passage burrows deeper into the ground.  On one wall, an opening into a natural cavern shows where the excavators intersected with a pre-existing grotto.</description>
+    <position x="320" y="100" z="2" />
+    <arc exit="west" move="west" destination="504" />
+    <arc exit="go" move="go cavern opening" destination="506" />
+  </node>
+  <node id="506" name="Cavern of Fire, Limestone Cave" color="White">
+    <description>Limestone walls enclose this naturally formed grotto deep underground.  Through the opening, a crudely hacked out tunnel can be glimpsed.</description>
+    <position x="340" y="100" z="2" />
+    <arc exit="southeast" move="southeast" destination="511" />
+    <arc exit="south" move="south" destination="507" />
+    <arc exit="southwest" move="southwest" destination="509" />
+    <arc exit="go" move="go cavern opening" destination="505" />
+  </node>
+  <node id="507" name="Cavern of Fire, Near a Pool" color="White">
+    <description>Occasionally disturbed by a drip from one of the stalactites overhead, the still waters of the pool are dark and deep.  Flowstone covers much of the floor, the product of many years of deposited sediments forming into wavy formations.</description>
+    <position x="340" y="120" z="2" />
+    <arc exit="north" move="north" destination="506" />
+    <arc exit="east" move="east" destination="511" />
+    <arc exit="south" move="south" destination="508" />
+    <arc exit="southwest" move="southwest" destination="510" />
+    <arc exit="west" move="west" destination="509" />
+  </node>
+  <node id="508" name="Cavern of Fire, Limestone Cave" color="White">
+    <description>Stalactites thrust up from the ground, some almost touching the stalagmites reaching down from the ceiling.  A faint musky scent hints of the animals that make this cavern their home.</description>
+    <position x="340" y="140" z="2" />
+    <arc exit="north" move="north" destination="507" />
+    <arc exit="northeast" move="northeast" destination="511" />
+    <arc exit="west" move="west" destination="510" />
+    <arc exit="northwest" move="northwest" destination="509" />
+  </node>
+  <node id="509" name="Cavern of Fire, Limestone Cave" color="White">
+    <description>Periodically, a gentle *drip*drip*drip* echoes through the area from somewhere else in the cavern.  Overhead, bats dart and zip about as they flit through the space.</description>
+    <position x="320" y="120" z="2" />
+    <arc exit="northeast" move="northeast" destination="506" />
+    <arc exit="east" move="east" destination="507" />
+    <arc exit="southeast" move="southeast" destination="508" />
+    <arc exit="south" move="south" destination="510" />
+  </node>
+  <node id="510" name="Cavern of Fire, Limestone Cave" color="White">
+    <description>Piles of bones lie in irregular stacks in the corners of the cavern.  Each mound is jumbled up with other debris and rotting bits of meat and other noxious matter.</description>
+    <position x="320" y="140" z="2" />
+    <arc exit="north" move="north" destination="509" />
+    <arc exit="northeast" move="northeast" destination="507" />
+    <arc exit="east" move="east" destination="508" />
+  </node>
+  <node id="511" name="Cavern of Fire, Limestone Cave" color="White">
+    <description>Water seeps from the walls, collecting into a tiny pool before snaking across the floor in a tiny rivlet and disappearing deeper in the cavern.</description>
+    <position x="360" y="120" z="2" />
+    <arc exit="southwest" move="southwest" destination="508" />
+    <arc exit="west" move="west" destination="507" />
+    <arc exit="northwest" move="northwest" destination="506" />
+    <arc exit="go" move="go cave opening" destination="512" />
+  </node>
+  <node id="512" name="Cavern of Fire, Secluded Alcove" color="White">
+    <description>Opening up from the narrow entrance, the stone walls enclose a small area devoid of any cavern features such as stalagtites or pools.  Smooth walls arch overhead to form a vaulted roof.</description>
+    <position x="380" y="140" z="2" />
+    <arc exit="northeast" move="northeast" destination="513" />
+    <arc exit="go" move="go cave opening" destination="511" />
+  </node>
+  <node id="513" name="Cavern of Fire, Hidden Alcove" color="White">
+    <description>Four large gashes mar one wall, each one parallel to the others and gouged deep into the limestone walls.  Broken bits of bone and rotting meat lie in small piles scattered across the floor, adding a pungent aroma to the room.</description>
+    <position x="400" y="120" z="2" />
+    <arc exit="southwest" move="southwest" destination="512" />
   </node>
   <label text="Inner Hibarnhvidar">
     <position x="40" y="210" z="0" />
@@ -3538,5 +3616,14 @@
   </label>
   <label text="Premium">
     <position x="212" y="24" z="2" />
+  </label>
+  <label text="Premium">
+    <position x="365" y="100" z="2" />
+  </label>
+  <label text="Cavern bear">
+    <position x="290" y="140" z="2" />
+  </label>
+  <label text="Totems">
+    <position x="-33" y="90" z="0" />
   </label>
 </zone>
