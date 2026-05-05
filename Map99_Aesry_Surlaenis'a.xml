@@ -234,6 +234,7 @@
     <position x="430" y="200" z="0" />
     <arc exit="north" move="north" destination="16" />
     <arc exit="climb" move="climb basalt steps" destination="38" />
+    <arc exit="go" move="go modest building" destination="488" />
   </node>
   <node id="38" name="Aesry Surlaenis'a, Staho Lanahh'Mus">
     <description>Bushes of Eluned's tears line the crushed shell street, their gentle blue and white blossoms filling the air with delicate perfume.  The screens of the nearby houses are painted with images of crashing waves.  A flight of basalt steps leads to the highest terrace of the city.</description>
@@ -933,30 +934,6 @@
     <position x="235" y="230" z="0" />
     <arc exit="none" move="jump road" destination="80" />
   </node>
-  <!--   <node id="145" name="Aesry Orders Office, Lobby" note="Orders Office">
-    <description>Bright rays of daylight flood through the beveled panes of a small oval window and light up this room, which acts as parlor to guests and as the lobby of the Aesry Regional Orders office.  Various documents on the smooth plaster wall overhang a pair of stools that stand on either side of the desk in the corner.  Narrow hallways run east and west of the wide staircase whose sweeping curve leads to the upper floors.</description>
-    <description>The flickering flames of myriad candles cast a golden reflection in the beveled panes of a small oval window.  The warm glow lights up the room that is both parlor to guests and the lobby of the Aesry Regional Orders office.  Framed documents on the smooth plaster wall overhang a pair of stools that stand on either side of the desk in the corner.  To the east and west run narrow hallways adjoining a wide staircase, its curve leading to the upper floors.</description>
-    <position x="220" y="290" z="0" />
-    <arc exit="east" move="east" destination="147" />
-    <arc exit="west" move="west" destination="146" />
-    <arc exit="go" move="go heavy door" destination="80" />
-  </node>
-  <node id="146" name="Aesry Orders Office, Recruitment Hall">
-    <description>Simplicity seems to be the decorating order of the day in this hallway.  The walls are soft grey-white and rather plain, bare of any decoration save a single painting hanging from a small, inscribed picture hook.  Notwithstanding the elementary decor, the dominant feature here is the set of ornate arches that each boasts a pair of heavy curtains and a small plaque indicating the Order within.</description>
-    <position x="210" y="290" z="0" />
-    <arc exit="east" move="east" destination="145" />
-    <arc exit="go" move="go ebonwood archway" destination="148" />
-  </node>
-  <node id="147" name="Aesry Orders Office, Recruitment Hall">
-    <description>Simplicity seems to be the decorating order of the day in this hallway.  The walls are soft grey-white and rather plain, bare of any decoration save a single mirror hanging from a small-inscribed picture hook.  Reflecting the world around, the etched circle only emphasizes the elementary decor.  Notwithstanding the artistry of the mirror, the dominant feature here is the set of ornate arches that each boasts a pair of heavy curtains and a small plaque indicating the Order within.</description>
-    <position x="230" y="290" z="0" />
-    <arc exit="west" move="west" destination="145" />
-  </node>
-  <node id="148" name="Aesry Orders Office, Iron Circle Recruitment Room" note="Iron Circle Recruitment Room">
-    <description>Placed above the archway is a massive gold and black shield etched with the vivid image of a mighty dragon and loosely draped with a banner of scarlet silk.  Atop a nearby table rests an elaborately feathered quill.  Against the far wall, a heavy wooden stand supports a wooden box, fastened with a polished silver lock.  Above it, a brass plaque hangs shimmering softly in the available light.</description>
-    <position x="210" y="300" z="0" />
-    <arc exit="go" move="go ebonwood archway" destination="146" />
-  </node> -->
   <node id="149" name="Aesry Surlaenis'a, Debt Office" note="Debt" color="#00FF00">
     <description>Several sections of the paper walls have been removed, creating windows to let the cool breeze enter.  Beyond the windows lie the multicolored rock gardens that surround the government buildings, as well as the crushed shell path ringing the lake.  A clerk sits behind a white birch counter, waiting for those who need to pay their debts to the Tribunal.</description>
     <position x="180" y="278" z="0" />
@@ -2775,20 +2752,20 @@
     <arc exit="southwest" move="southwest" destination="441" />
     <arc exit="go" move="go soot-stained doors" destination="444" />
   </node>
-  <node id="441" name="Aesry Forging Society, Southern Forge">
+  <node id="441" name="Aesry Forging Society, Southern Forge" note="Southern Forge">
     <description>Arched openings are set into the thick outer stone walls, with the majority of the furnaces set outside the building in an attempt to keep the temperature lower.  Bellows set near the openings allow for air to be forced into the fire as needed.  Bins hold supplies for the working craftspeople.</description>
     <position x="240" y="9" z="0" />
     <arc exit="northeast" move="northeast" destination="440" />
     <arc exit="east" move="east" destination="442" />
   </node>
-  <node id="442" name="Aesry Forging Society, Southern Foundry">
+  <node id="442" name="Aesry Forging Society, Southern Foundry" note="Southern Foundry">
     <description>Set into the floor in the center of the room is a brick-lined firepit in which a fire burns white-hot.  All the necessary tools are nearby, set within easy reach of the firepit for the convenience of the craftspeople who use this area.  The room is somewhat hazy from the everpresent ash and soot created from the metallurgical processes.</description>
     <position x="250" y="9" z="0" />
     <arc exit="north" move="north" destination="440" />
     <arc exit="east" move="east" destination="443" />
     <arc exit="west" move="west" destination="441" />
   </node>
-  <node id="443" name="Aesry Forging Society, Southern Smithy">
+  <node id="443" name="Aesry Forging Society, Southern Smithy" note="Southern Smithy">
     <description>Set against the outer wall, a small forge allows for the heating of unfinished projects before they are worked on the anvils or other equipment situated around the room.  Large windows set within the thick stone walls help to circulate the air, in a vain attempt to keep the temperature comfortable.</description>
     <position x="260" y="9" z="0" />
     <arc exit="west" move="west" destination="442" />
@@ -2828,20 +2805,20 @@
     <arc exit="south" move="south" destination="439" />
     <arc exit="northwest" move="northwest" destination="452" />
   </node>
-  <node id="450" name="Aesry Forging Society, Northern Smithy">
+  <node id="450" name="Aesry Forging Society, Northern Smithy" note="Northern Smithy">
     <description>Set against the outer wall, a small forge allows for the heating of unfinished projects before they are worked on the anvils or other equipment situated around the room.  Large windows set within the thick stone walls help to circulate the air, in a vain attempt to keep the temperature comfortable.</description>
     <position x="260" y="-41" z="0" />
     <arc exit="southwest" move="southwest" destination="449" />
     <arc exit="west" move="west" destination="451" />
   </node>
-  <node id="451" name="Aesry Forging Society, Northern Foundry">
+  <node id="451" name="Aesry Forging Society, Northern Foundry" note="Northern Foundry">
     <description>Set into the floor in the center of the room is a brick-lined firepit in which a fire burns white-hot.  All the necessary tools are nearby, set within easy reach of the firepit for the convenience of the craftspeople who use this area.  The room is somewhat hazy from the everpresent ash and soot created from the metallurgical processes.</description>
     <position x="250" y="-41" z="0" />
     <arc exit="east" move="east" destination="450" />
     <arc exit="south" move="south" destination="449" />
     <arc exit="west" move="west" destination="452" />
   </node>
-  <node id="452" name="Aesry Forging Society, Northern Forge">
+  <node id="452" name="Aesry Forging Society, Northern Forge" note="Northern Forge">
     <description>Arched openings are set into the thick outer stone walls, with the majority of the furnaces set outside the building in an attempt to keep the temperature lower.  Bellows set near the openings allow for air to be forced into the fire as needed.  Bins hold supplies for the working craftspeople.</description>
     <position x="240" y="-41" z="0" />
     <arc exit="east" move="east" destination="451" />
@@ -2876,12 +2853,12 @@
     <arc exit="west" move="west" destination="461" />
     <arc exit="go" move="go shadowed alcove" />
   </node>
-  <node id="457" name="Aesry Enchanting Society, Green Workroom">
+  <node id="457" name="Aesry Enchanting Society, Green Workroom" note="Enchanting Green Workroom|Enchanting Workroom3">
     <description>The deep green of the walls is offset by the pale hues of the baseboards, while overhead is a coffered ceiling painted a pure white.  Blown glass globes overhead enclose gaethzen spheres providing illumination for enchanters to work their craft.</description>
     <position x="242" y="171" z="0" />
     <arc exit="west" move="west" destination="456" />
   </node>
-  <node id="458" name="Aesry Enchanting Society, Yellow Workroom">
+  <node id="458" name="Aesry Enchanting Society, Yellow Workroom" note="Enchanting Yellow Workroom|Enchanting Workroom4">
     <description>The rich yellow of the walls is offset by the pale hues of the baseboards, while overhead is a coffered ceiling painted a pure white.  Blown glass globes overhead enclose gaethzen spheres providing illumination for enchanters to work their craft.</description>
     <position x="242" y="181" z="0" />
     <arc exit="northwest" move="northwest" destination="456" />
@@ -2891,12 +2868,12 @@
     <position x="232" y="181" z="0" />
     <arc exit="north" move="north" destination="456" />
   </node>
-  <node id="460" name="Aesry Enchanting Society, Red Workroom">
+  <node id="460" name="Aesry Enchanting Society, Red Workroom" note="Enchanting Red Workroom|Enchanting Workroom2">
     <description>The deep red of the walls is offset by the pale hues of the baseboards, while overhead is a coffered ceiling painted a pure white.  Blown glass globes overhead enclose gaethzen spheres providing illumination for enchanters to work their craft.</description>
     <position x="222" y="181" z="0" />
     <arc exit="northeast" move="northeast" destination="456" />
   </node>
-  <node id="461" name="Aesry Enchanting Society, Blue Workroom">
+  <node id="461" name="Aesry Enchanting Society, Blue Workroom" note="Enchanting Blue Workroom|Enchanting Workroom1">
     <description>The deep blue of the walls is offset by the pale hues of the baseboards, while overhead is a coffered ceiling painted a pure white.  Blown glass globes overhead enclose gaethzen spheres providing illumination for enchanters to work their craft.</description>
     <position x="222" y="171" z="0" />
     <arc exit="east" move="east" destination="456" />
@@ -3053,6 +3030,71 @@
     <description>A pure-white wainscoted hall is topped by lilac-hued paisley painted walls.  Occupying the back third of the room is a solid-looking loom, while a large spinning wheel sits near the entrance.  Resting atop a deep purple rug is a sturdy worktable and a comfortable, wicker chair.  Running parallel along opposing walls are several hooks and shelves, holding practically every conceivable tool, spool of thread, bobbin, thimble and scrap.</description>
     <position x="14" y="667" z="0" />
     <arc exit="go" move="go white archway" destination="463" />
+  </node>
+  <node id="488" name="Aesry Alchemy Society, Foyer" note="Alchemy Society|Alchemy prestige" color="White">
+    <description>Pale paneling of polished wood covers the walls of this spacious room.  Comfortable chairs grouped around low tables provide seating for craftspeople taking breaks from their labors.  Centered on the bamboo floor is an ornately figured rug dyed in pastel colors.</description>
+    <position x="470" y="199" z="0" />
+    <arc exit="south" move="south" destination="489" />
+    <arc exit="go" move="go simple door" destination="37" />
+  </node>
+  <node id="489" name="Aesry Alchemy Society, Hallway" color="White">
+    <description>Airy and well lit, the spacious hallway is a hub of bustling activity as craftspeople rush to complete orders.  Clerks thread through the confusion carrying bundles and supplies.</description>
+    <position x="470" y="219" z="0" />
+    <arc exit="north" move="north" destination="488" />
+    <arc exit="northeast" move="northeast" destination="491" />
+    <arc exit="east" move="east" destination="492" />
+    <arc exit="south" move="south" destination="494" />
+    <arc exit="west" move="west" destination="493" />
+    <arc exit="northwest" move="northwest" destination="490" />
+  </node>
+  <node id="490" name="Aesry Alchemy Society, Book Store" note="Alchemy books" color="#FF0000">
+    <description>Motes of dust dance in the air, drifting off the neatly organized bookshelves lining the walls.  Clerks move sedately between the shelves helping customers with their purchases.</description>
+    <position x="460" y="209" z="0" />
+    <arc exit="southeast" move="southeast" destination="489" />
+  </node>
+  <node id="491" name="Aesry Alchemy Society, Supply Shop" note="Alchemy Supplies" color="#FF0000">
+    <description>Scents of dried herbs mingle with the odors of stronger chemicals, giving this room a sharp, pungent smell.  Racks and shelves hold the myriad of ingredients required for alchemy while clerks hurry to provide those supplies to the waiting customers.</description>
+    <position x="480" y="209" z="0" />
+    <arc exit="southwest" move="southwest" destination="489" />
+  </node>
+  <node id="492" name="Aesry Alchemy Society, Office" note="Alchemy Office" color="White">
+    <description>Pale cream wallpaper covers the walls, a design of small pastel flowers scattered across the surface.  A tall desk stands in the center of the room, its surface covered with piles of papers haphazardly arranged.  A leather chair stands behind the desk, awaiting the Society Master's return to work.</description>
+    <position x="490" y="219" z="0" />
+    <arc exit="west" move="west" destination="489" />
+  </node>
+  <node id="493" name="Aesry Alchemy Society, Tool Depot" note="Alchemy Tools|Alchemy Clerk" color="#FF0000">
+    <description>Crates are stacked in the corners and on the shelves lining the walls.  A painted counter displays alchemical tools for sale while several clerks stand ready to help customers.</description>
+    <position x="450" y="219" z="0" />
+    <arc exit="east" move="east" destination="489" />
+  </node>
+  <node id="494" name="Aesry Alchemy Society, Hallway" color="White">
+    <description>Lanterns overhead provide lighting for this spacious passageway, allowing access to the Society's workrooms.  A long runner of plush wool runs down the bamboo flooring, adding a splash of color from its multicolored floral design.</description>
+    <position x="470" y="229" z="0" />
+    <arc exit="north" move="north" destination="489" />
+    <arc exit="southeast" move="southeast" destination="495" />
+    <arc exit="south" move="south" destination="496" />
+    <arc exit="southwest" move="southwest" destination="497" />
+    <arc exit="go" move="go wooden entryway" destination="498" />
+  </node>
+  <node id="495" name="Aesry Alchemy Society, Oak Workroom" note="Alchemy Oak Workroom|Alchemy Workroom3" color="White">
+    <description>A set of alchemical equipment is centered in this laboratory, which is paneled in oak planks.  The high ceilings are dotted with small holes that allow deadly gases to eventually escape the room.</description>
+    <position x="480" y="239" z="0" />
+    <arc exit="northwest" move="northwest" destination="494" />
+  </node>
+  <node id="496" name="Aesry Alchemy Society, Pine Workroom" note="Alchemy Pine Workroom|Alchemy Workroom2" color="White">
+    <description>A set of alchemical equipment is centered in this laboratory, which is paneled in pine planks.  The high ceilings are dotted with small holes that allow deadly gases to eventually escape the room.</description>
+    <position x="470" y="249" z="0" />
+    <arc exit="north" move="north" destination="494" />
+  </node>
+  <node id="497" name="Aesry Alchemy Society, Workroom" note="Alchemy Workroom|Alchemy Workroom1" color="White">
+    <description>A set of alchemical equipment is centered in this laboratory, which is paneled in maple planks.  The high ceilings are dotted with small holes that allow deadly gases to eventually escape the room.</description>
+    <position x="460" y="239" z="0" />
+    <arc exit="northeast" move="northeast" destination="494" />
+  </node>
+  <node id="498" name="Aesry Alchemy Society, A Private Alchemy Room" note="498|Private alchemy" color="White">
+    <description>A large workbench dominates one side of the room with numerous pieces of alchemical equipment scattered haphazardly upon its surface.  The high, vented windows provide relief from the common, yet unpleasant, smell that permeates the room.</description>
+    <position x="483" y="229" z="0" />
+    <arc exit="go" move="go wooden entryway" destination="494" />
   </node>
   <label text="Vaults">
     <position x="270" y="310" z="0" />
@@ -3254,5 +3296,8 @@
   </label>
   <label text="Society">
     <position x="37" y="179" z="0" />
+  </label>
+  <label text="Alchemy Society">
+    <position x="440" y="249" z="0" />
   </label>
 </zone>
