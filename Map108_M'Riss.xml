@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <zone name="M'Riss" id="108">
   <node id="1" name="Dunes of Despair, Sand Valley" note="Adult Armadillos" color="#FFFF00">
     <description>Loose sand occasionally avalanches down the steep incline on one side of the shallow valley, collecting treacherously at the bottom.  A gentle slope rises to the next dune's crest, the combination of shifting sand and desert wind keeping the slope smooth and curved.</description>
@@ -1919,6 +1919,9 @@
     <description>The path ends at a sheer face of rock with a small pool at its base.  Water from a chimney in the rock face has worn a shallow basin in the ledge, and it spills over the side, trickling down a mossy channel that drops to the ground far below.  The chimney looks like it leads to higher ground above, but might be a tough climb.</description>
     <position x="-120" y="180" z="0" />
     <arc exit="southwest" move="southwest" destination="270" />
+    <arc exit="climb" move="climb chimney rock" destination="422" />
+    <arc exit="climb" move="climb narrow chimney" destination="276" />
+    <arc exit="go" move="go slippery channel" destination="182" />
   </node>
   <node id="272" name="Galduta Isharon, The Outcropping">
     <description>A ledge hardly the width of a loaded camel ascends the west side of the rock outcropping.  The fall to the river is abrupt, down a steep cliff with exposed strata of red and brown rock.  On the other side of the ledge, the shoulder of the rock rises high overhead, hiding the view to the north, but to the south a marshy swamp lies in the mists.</description>
@@ -2016,7 +2019,7 @@
   </node>
   <node id="286" name="Lish'telga, Wooded Slopes">
     <description>Though straight and sturdy, the trees lean with the sharp downward pitch of the land, each limb on their northern sides farther from the ground than those on their southern sides.  From those heights, a shower of needles, leaves and limbs falls, set into a whirling plunge of motion with every buffet of wind.  The debris races down the hillside, lost from sight as its descent takes it beneath the interposing branches of the valley below.</description>
-    <position x="-100" y="180" z="0" />
+    <position x="-105" y="175" z="0" />
     <arc exit="northwest" move="northwest" destination="287" />
     <arc exit="climb" move="climb rocky trail" destination="285" />
   </node>
@@ -2552,10 +2555,6 @@
     <arc exit="go" move="go pool edge" destination="369" />
     <arc exit="go" move="go cracked rock" destination="181" />
   </node>
-  <node id="377" name="">
-    <description />
-    <position x="70" y="30" z="0" />
-  </node>
   <node id="378" name="Fang Cove, Fate's Fortune Lane" note="Map150_Fang_Cove.xml">
     <description>A towering marble archway opens a gap in the wall to the north and separates the ongoing construction and somewhat more refined completed structures of Fate's Fortune Lane from the crude structures and makeshift walkway along the beach.  The entrance to a squat, wide bungalow sits in opposition to the arch, and the sheltering cliffs of Fang's Peak rise up from behind it.  To either side of the arch, cobblestones of different shapes and sizes have been laid out to form the wide Fate's Fortune Lane.</description>
     <position x="80" y="380" z="0" />
@@ -2901,6 +2900,173 @@
     <position x="-220" y="140" z="0" />
     <arc exit="west" move="west" destination="420" />
   </node>
+  <node id="422" name="Galduta Isharon, Chimney Crown" note="petroglyphs" color="#00FF00">
+    <description>Enclosed by stone, a jagged aperture opens within the floor of a high plateau above the approach to Undogoz Mountain.  Weathered granite curves along the deep vertical fluting of the shaft walls, providing a narrow passage to the ground below.  Faded petroglyphs ring the inner rim of the crown, eroded by the persistent wind.  Above, dry grass clings to the scoured edges of the caprock where the mountain air remains thin and cold.</description>
+    <description>The mouth of the stony shaft remains immersed in shadow.  Cold air rushes upward through the vertical conduit, whistling against the jagged teeth of the caprock.  The night's dim light illuminates the faded petroglyphs at the rim of the pale granite.  Below the opening, the fluted stone walls feel damp and slick from the rising river mist.</description>
+    <position x="90" y="195" z="1" />
+    <arc exit="up" move="up" destination="423" />
+    <arc exit="climb" move="climb chimney rock" destination="271" />
+  </node>
+  <node id="423" name="Galduta Isharon, Plateau" color="White">
+    <description>The plateau extends toward the horizon as a vast expanse of weathered granite.  To the northeast, the wide caldera of Undogoz Mountain pierces the sky, the smell of sulfur carried on the wind.  A ruined city lies like a cluster of broken teeth in the far east, near where the sea meets the sky.  In the southeast, the floating structures of Mer'Kresh drift within the sparkling waters of Torbis Sanhalas Bay.  Four weathered cyclopean megaliths stand in a geometric ring at the center of the rise.</description>
+    <description>Cold wind sweeps across the plateau, the scent of salt drifting off of the sea.  To the northeast, the silhouette of Undogoz Mountain stands black against the night sky, looming over the dunes beyond.  The distant ruins to the east are lost in shadow, but the lights of Mer'Kresh glisten in the southeast bay.  Four towering megaliths cast long shadows.</description>
+    <position x="90" y="185" z="1" />
+    <arc exit="down" move="down" destination="422" />
+    <arc exit="climb" move="climb downward escarpment" destination="424" />
+  </node>
+  <node id="424" name="Galduta Isharon, Escarpment" color="White">
+    <description>The plateau gives way to a precipitous descent where the ground fractures into a series of jagged, descending tiers.  Loose shale and granite blocks spill down the slope, forming a natural series of steps that wind toward the foothills of Undogoz Mountain.  Sunlight hits the steep face and reveals deep fissures carved into the rock by ice and snow.  The air feels thin here, and carries the acrid scent of sulfur.</description>
+    <description>A tiered rockslide stretches from the plateau to the foothills of Undogoz Mountain, blocking the view of the peak.  Frost coats the granite, making the footing is hazardous in the dim light.  A wind whistles between crevices, carrying the scent of frozen earth.</description>
+    <position x="105" y="185" z="1" />
+    <arc exit="north" move="north" destination="425" />
+    <arc exit="climb" move="climb rock ledge" destination="423" />
+  </node>
+  <node id="425" name="Undogoz Mountain, Base Ascent" color="White">
+    <description>Deciduous trees wind along craggy rock faces in the foothills, and carefully-carved steps in the stone wind steeply upward to the cliffs of the volcanic rim that stands above to the northeast.  The air smells of damp pine needles and cold earth.</description>
+    <description>The tree canopy casts long, fractured shadows across carved stairs winding upward towards the mountain.  The air grows sharp and cold as it descends from the volcanic rim.  Deciduous branches sway, scraping against the stone with a dry, rhythmic sound.  The silhouette of the mountain looms above, its crags barely visible against the night sky.  The scent of pine lingers heavily in the stillness.</description>
+    <position x="105" y="170" z="1" />
+    <arc exit="south" move="south" destination="424" />
+    <arc exit="climb" move="climb upward steps" destination="426" />
+  </node>
+  <node id="426" name="Undogoz Mountain, Slope Ascent" color="White">
+    <description>The steps wind steeply upward, clinging to the side of a sheer rock wall.  Above, the volcanic rim looms, its sharp profile cutting against the sky.  A thin, icy trickle of water runs down the narrow stone stairs, making the surface slick.  There is a steep drop-off from the steps into the valley below.</description>
+    <description>Darkness swallows the valley below, leaving only black space.  Slivers of cold light cast across the steps, highlighting the slick ice that coats the stone.  Wind moans through the gaps in the crags above, a constant, low-pitched sound.  The volcanic rim creates a jagged silhouette against the night sky.  Shadow hides the edges of the stairs, turning every footfall into a hazard.</description>
+    <position x="120" y="170" z="1" />
+    <arc exit="climb" move="climb upward steps" destination="427" />
+    <arc exit="climb" move="climb downward steps" destination="425" />
+  </node>
+  <node id="427" name="Undogoz Mountain, Narrow Ridge" color="White">
+    <description>The staircase levels out onto a projection of granite that pivots at an angle.  Beyond the edge of the stone, the ground ceases, yielding to a drop that falls to the tree line below.  Wind sweeps along the cliff face and pushes the gravel scattered across the shelf.  The path turns against the mountain and continues upward toward the volcanic rim.</description>
+    <description>The landing hangs above a sharp drop into darkness that obscures the valley floor.  The edge of the cliff vanishes into the black, leaving only treacherous exposed rock visible along either edge of the path.  Howling wind moves in the turn of the path, stirring what little plant life that holds on to the rock face.  The jagged crags above loom, their silhouette visible against the night sky as the trail resumes the climb.</description>
+    <position x="120" y="160" z="1" />
+    <arc exit="climb" move="climb upward steps" destination="428" />
+    <arc exit="climb" move="climb downward steps" destination="426" />
+  </node>
+  <node id="428" name="Undogoz Mountain, Breakneck Ridge" color="White">
+    <description>The ridge narrows to a sliver of stone barely wide enough to give purchase.  To the west, the cliff drops to a deep chasm, while to the east, the mountain face presses close to the path.  Sharp, loose stones shift and clatter over the edge with every change in the howling wind as it whips across this exposed height.  Upward, the trail continues along the rock.</description>
+    <description>Darkness renders the horizon invisible, leaving only the immediate path illuminated by the pale light of the night.  The wind forces its way through the narrow passage with a sharp sound, sending stones tumbling into the abyss below.  The mountain looming to the north silhouettes the sky as a solid wall of shadow.  The edge of the ridge disappears into the absolute black, highlighting the treacherous path and the distance from the ground.</description>
+    <position x="120" y="150" z="1" />
+    <arc exit="climb" move="climb downward steps" destination="427" />
+    <arc exit="climb" move="climb upward steps" destination="429" />
+    <arc exit="climb" move="climb rickety trail" destination="437" />
+  </node>
+  <node id="429" name="Undogoz Mountain, Upper Ascent" color="White">
+    <description>The trail widens as it climbs into a grove of ancient, stunted conifers.  Their needles are dark and waxy, scenting the thin, freezing air with sharp resin.  Through gaps in the gnarled branches, the world below stretches out in a panoramic view.  The island of M'Riss lies surrounded by the waters of Belarritaco Bay, and the floating spires of Mer'Kresh drift upon the surface.  The ascent remains steep, yet the path feels less treacherous than the ridge below.</description>
+    <description>The thick canopy of trees at this height cast dense, dark shadows across the path.  The air is still and biting cold.  Below, the bay is a void, punctured by the scattered lights of Mer'Kresh.  The forests of M'Riss appears as a single dark mass surrounded by the shimmer of the Belarritaco Bay.  The opaque silhouette of the mountain's concave peak stretches across the horizon.  The forest is silent, save for the movement of branches in the night air.</description>
+    <position x="120" y="140" z="1" />
+    <arc exit="climb" move="climb downward steps" destination="428" />
+    <arc exit="climb" move="climb rickety trail" destination="430" />
+  </node>
+  <node id="430" name="Undogoz Mountain, Western Rim Gully" note="dengizen drake" color="White">
+    <description>The trail climbs clockwise along the lip of the great caldera, where the rock turns to brittle, soot-stained obsidian.  Massive nests woven from iron-hard branches and scavenged bones cling to the jagged crags overlooking the burning depths below.  Steam hisses from vents hidden in the stone, clouding the air with a faint sulfuric tang.  Sunlight glints off white eggshells discarded near the path, some broken and others hollow.  The steep drop below is obscured by rolling, grey mist.</description>
+    <description>The caldera rim radiates a faint heat that rises from the darkened pit, carrying the smell of earth.  The limited light strikes the nests, making the tangled sticks and bones appear as heaps of debris.  A cold, sulfurous wind tears through the crags.  Shadows move within the nests as the wind shifts, creating an illusion of movement.  The air tastes of metallic dust and dying fire.</description>
+    <position x="100" y="140" z="1" />
+    <arc exit="west" move="west" destination="431" />
+    <arc exit="northwest" move="northwest" destination="432" />
+    <arc exit="climb" move="climb rickety trail" destination="429" />
+  </node>
+  <node id="431" name="Undogoz Mountain, Western Rim Gully" color="White">
+    <description>The gully narrows into a steep V-shape where the rock walls rise like serrated teeth.  Deep gouges mar the basalt, each furrow wide enough to suggest the passage of a massive claw.  A thick, pungent musk hangs in the stagnant air, clinging to the damp crevices.  Sunlight barely reaches the floor of the passage, leaving the stone slick with condensation.  Small piles of shed, leathery fragments lie tucked against the base of the eastern wall.</description>
+    <description>Total darkness fills the gully, turning the jagged walls into looming silhouettes.  The air grows cold and sharp, biting at the skin.  Sounds of shifting rock echo from the depths, suggesting movement in the pitch black.  The light of the night sky fails to penetrate the narrow opening above, leaving the floor as an ink-black void.  The scent of ozone and wet reptile scales drifts on the breeze.</description>
+    <position x="80" y="140" z="1" />
+    <arc exit="north" move="north" destination="432" />
+    <arc exit="east" move="east" destination="430" />
+    <arc exit="northwest" move="northwest" destination="433" />
+    <arc exit="go" move="go gully hollow" destination="435" />
+  </node>
+  <node id="432" name="Undogoz Mountain, Western Rim Gully" color="White">
+    <description>A wide, flat shelf of granite provides a foundation for several sprawling nests of gnarled ironwood and the white, bleached skulls of mountain goats.  Thick layers of ash cover every surface, muffling the sound of movement like a heavy blanket.  Sunlight is filtered through a constant haze of floating dust, casting a pale and sickly light across the nesting grounds.  The air is stagnant and carries the faint, dry scent of ancient cinders.</description>
+    <description>Limited light filters through a veil of lingering dust.  The ash-covered shelf becomes a landscape of soft, grey mounds that hide the jagged edges of the stone beneath.  Shadows within the bone-strewn nests move as the wind shifts the fine powder.  A deep, palpable silence settles over the heights.  The cold air holds the taste of mineral grit and the musk of predators.</description>
+    <position x="80" y="120" z="1" />
+    <arc exit="southeast" move="southeast" destination="430" />
+    <arc exit="south" move="south" destination="431" />
+    <arc exit="west" move="west" destination="433" />
+    <arc exit="northwest" move="northwest" destination="434" />
+  </node>
+  <node id="433" name="Undogoz Mountain, Western Rim Gully" color="White">
+    <description>The trail narrows to a spine of dark granite that connects two high points on the caldera rim.  Thousands of parallel gouges mark the stone where large winged predators have made their home.  A single nest is tucked into a depression at the center of the ridge, surrounded by a ring of upright obsidian shards.  Sunlight creates a shimmering heat haze that rises from the dark rock.  To the northeast, the caldera depth is visible.</description>
+    <description>The granite ridge obscures much of the ambient lighting of the night, remaining a dark and treacherous path across the heights.  The obsidian shards catch slivers of light that do reach into this gully, standing like frozen black flames around the central nest.  A freezing draft pulls across the mountain spine, carrying the scent of snow and sulfur.  The gouges in the stone look like deep, dark scars in the silver light.</description>
+    <position x="60" y="120" z="1" />
+    <arc exit="north" move="north" destination="434" />
+    <arc exit="east" move="east" destination="432" />
+    <arc exit="southeast" move="southeast" destination="431" />
+    <arc exit="go" move="go gully hollow" destination="436" />
+  </node>
+  <node id="434" name="Undogoz Mountain, Western Rim Gully" color="White">
+    <description>The trail descends into a natural flume where the walls consist of raw, razor-edged obsidian.  Jagged glass protrusions jut from the stone, forming natural shelves for a series of small nests.  Sunlight strikes the black surfaces and creates a blinding glare that obscures the path ahead.  The ground is covered in a layer of fine, dark sand, and the air is stagnant and smells of dry minerals and scorched earth.</description>
+    <description>The obsidian walls of this gully obscure almost all the lingering light, leaving only a narrow strip of ambient light between the rock formations.  Only the sharpest edges of collected glass catch the silver glow, appearing as thin lines of light in the darkness.  Silent, dark hollows create natural nesting locations tucked into the stone.  A cold breeze pulls through the passage, rattling the loose obsidian flakes against the floor.</description>
+    <position x="60" y="100" z="1" />
+    <arc exit="southeast" move="southeast" destination="432" />
+    <arc exit="south" move="south" destination="433" />
+  </node>
+  <node id="435" name="Undogoz Mountain, Ascent Hollow" color="White">
+    <description>A vast, circular chamber opens into the heart of the ridge.  Massive nests made of woven timber and bleached bone dominate the space.  Through the high fissure in the western wall, the Reshal Sea glimmers.  The air is warm and stagnant, carrying the scent of dry rot.  Large, hollow fragments of eggshells sit among the debris, their surfaces marked by sharp, irregular cracks.  The ceiling rises to a dark, jagged peak.</description>
+    <description>The night's dim light enters through the high fissure, highlighting the tangled mess of the nests.  The skeletal remains of the structures stand out against the deep shadow of the cavern.  A low, rhythmic sound vibrates through the stone, echoing the distant surge of the sea.  The darkness feels heavy, pressing against the skin.</description>
+    <position x="60" y="140" z="1" />
+    <arc exit="northwest" move="northwest" destination="436" />
+    <arc exit="up" move="up" destination="431" />
+  </node>
+  <node id="436" name="Undogoz Mountain, Ascent Hollow" color="White">
+    <description>The gully constricts into a wide, jagged opening that leads into the mountain.  Sun spills across the threshold and illuminates the scattered ribs and skulls of mountain goats.  To the west, the expansive blue waters of the Reshal Sea stretch to the horizon, visible through the natural arch.  The stone floor is worn smooth by heavy movement.  A thick, dry musk hangs in the air, clinging to the porous basalt walls.</description>
+    <description>Light from the night sky above catches the jagged rim of the arch, casting long shadows into the interior.  The Reshal Sea appears as a black expanse below, devoid of light.  The smell of old dust and dried decay rises from the floor.  Each step scrapes against the uneven stone, echoing against the ceiling.  The darkness within the hollow swallows the faint starlight, leaving the path ahead an uncertain void.</description>
+    <position x="40" y="120" z="1" />
+    <arc exit="southeast" move="southeast" destination="435" />
+    <arc exit="out" move="out" destination="433" />
+  </node>
+  <node id="437" name="Undogoz Mountain, Eastern Ascent" note="haizen drake" color="White">
+    <description>Total darkness fills the gully, turning the jagged walls into looming silhouettes.  The air grows cold and sharp, biting at the skin.  Sounds of shifting rock echo from the depths.  The light from the night sky fails to penetrate the narrow opening, leaving the floor as a void.  The lights of the distant city and the bay reflect in the stillness of the night.</description>
+    <description>A deep gully cuts into the southeastern granite flank.  High walls of dark stone rise on either side, trapping the scent of heavy, reptilian musk.  Deep gouges mar the cliff face, each furrow wide enough to suggest the passage of a massive claw.  To the east, the ruins of the Old City break the horizon.  The floating spires of Mer'Kresh drift above the crystal-clear waters of Belarritaco Bay in the distance.</description>
+    <position x="140" y="150" z="1" />
+    <arc exit="northeast" move="northeast" destination="438" />
+    <arc exit="east" move="east" destination="439" />
+    <arc exit="climb" move="climb rickety trail" destination="428" />
+  </node>
+  <node id="438" name="Undogoz Mountain, Eastern Ascent" color="White">
+    <description>The night's sky casts light that turns the bone piles into indistinguishable white shapes.  Belarritaco Bay barely reflects the flickering torches lighting the harbor.  Mer'Kresh is a cluster of distant lights.  The air is cold and thin, and shadows move near the wall.</description>
+    <description>A flat shelf of granite overlooks the bay.  Piles of bones lie against the rock wall.  To the southeast, Mer'Kresh floats above the water, while the ruins of the Old City are visible to the east.  The bay waters are clear and calm, stretching toward the horizon.  A heavy scent of predator musk sits in the air, thick and persistent.</description>
+    <position x="160" y="130" z="1" />
+    <arc exit="northeast" move="northeast" destination="441" />
+    <arc exit="east" move="east" destination="440" />
+    <arc exit="southwest" move="southwest" destination="437" />
+  </node>
+  <node id="439" name="Undogoz Mountain, Eastern Ascent" color="White">
+    <description>Light cast by the night sky washes the ridge in silver.  The dunes disappear into the black north.  To the east, the city remains a silhouette against the horizon.  The lights of Mer'Kresh twinkle in the distance to the southeast.  The bone nests cast hard, jagged shadows across the path.  Cold wind whistles through the crevices of the gully.</description>
+    <description>The eastern gully cuts into the mountain ridge, opening onto a wide panorama.  Barely visible to the north, the Dunes of Despair glimmer.  To the east, the ruins of the city stand.  Further southeast, the structures of Mer'Kresh drift above the waters of the bay.  Scattered nests of bone clutter the rocky floor, their twisted structures anchored into the cliff face.  Scratches mar the stone walls.</description>
+    <position x="160" y="150" z="1" />
+    <arc exit="northeast" move="northeast" destination="440" />
+    <arc exit="west" move="west" destination="437" />
+    <arc exit="go" move="go gully hollow" destination="443" />
+  </node>
+  <node id="440" name="Undogoz Mountain, Eastern Ascent" color="White">
+    <description>Vapor rises from a hollow basin formed from a large recess in the rock floor.  The water of the bay in the distance is black, illuminated only by the reflection of the lights of Mer'Kresh.  Shadows crawl up the walls, revealing movement within the nests formed of fragmented bones.</description>
+    <description>Steam drifts from a hollow basin formed by a large recess in the rock floor.  Sunlight reveals the distant bay, where the floating rings of Mer'Kresh catch the light.  The stone walls rise steeply around the basin.  Nests built from fragmented bones cling to the crags above the floor.  The air smells of salt and dry bone.</description>
+    <position x="180" y="130" z="1" />
+    <arc exit="north" move="north" destination="441" />
+    <arc exit="southwest" move="southwest" destination="439" />
+    <arc exit="west" move="west" destination="438" />
+    <arc exit="go" move="go gully hollow" destination="442" />
+  </node>
+  <node id="441" name="Undogoz Mountain, Eastern Ascent" color="White">
+    <description>The granite reflects the night's sky.  The ruins to the eastern horizon are hidden in the darkness.  The lights of Mer'Kresh sparkle across the dark bay.  The wind whistles through the rocks.</description>
+    <description>Granite shards cover the ground.  The ruins of the Old City stand in the distance to the east.  The slope drops away toward the water.  The view encompasses the bay and the floating city.  Jagged rocks protrude from the path, creating narrow passages.</description>
+    <position x="180" y="110" z="1" />
+    <arc exit="south" move="south" destination="440" />
+    <arc exit="southwest" move="southwest" destination="438" />
+  </node>
+  <node id="442" name="Undogoz Mountain, Eastern Hollow" color="White">
+    <description>Ambient light seeps into the hollow and reveals the bone nests as pale, white mounds.  The horizon line blends into the dark water of the bay.  The floating city of Mer'Kresh provides a cluster of distant, flickering lights.  Shadows stretch from the debris and obscure the path.  A cool draft moves through the entrance and carries the faint sound of the sea.</description>
+    <description>Nests constructed from bleached bone and scavenged limbs sit against the curved walls.  Through the opening to the east, the crystal-clear waters of Belarritaco Bay span the horizon.  The floating, ringed city of Mer'Kresh drifts on the surface to the southeast.  The air smells of dry bone and sea salt.</description>
+    <position x="180" y="150" z="1" />
+    <arc exit="southwest" move="southwest" destination="443" />
+    <arc exit="out" move="out" destination="440" />
+  </node>
+  <node id="443" name="Undogoz Mountain, Eastern Hollow" color="White">
+    <description>Ambient light settles on fragments of bone that form nests for unhatched eggs.  Outside this eastern-facing hollow, the island of M'Riss rests in the dark, and the ancient ruins remain visible in the distance.  The Dunes of Despair stretch far to the north.  Wind whistles through the hollow, rattling the remains of wildlife stolen to guard young drakes.  The air smells of stone.</description>
+    <description>Through the opening of the hollow, the forests of M'Riss, punctuated by ancient ruins, can be seen.  Nests fashioned from scavenged bone sit on the basalt floor, anchored into the rock.  The golden Dunes of Despair contrast with the green trees to the north.  The air smells of bone and dust.  Light hits the remains of the nests and the stone walls.</description>
+    <position x="160" y="170" z="1" />
+    <arc exit="northeast" move="northeast" destination="442" />
+    <arc exit="out" move="out" destination="439" />
+  </node>
   <label text="Premium">
     <position x="90" y="-260" z="0" />
   </label>
@@ -3023,5 +3189,20 @@
   </label>
   <label text="Fever Point Pier">
     <position x="-370" y="420" z="1" />
+  </label>
+  <label text="Haizen Drake">
+    <position x="133" y="90" z="1" />
+  </label>
+  <label text="Dengizen Drake">
+    <position x="20" y="80" z="1" />
+  </label>
+  <label text="Premium">
+    <position x="170" y="160" z="1" />
+  </label>
+  <label text="Premium">
+    <position x="3" y="130" z="1" />
+  </label>
+  <label text="petroglyphs">
+    <position x="20" y="190" z="1" />
   </label>
 </zone>
