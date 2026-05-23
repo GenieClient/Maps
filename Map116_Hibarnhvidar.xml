@@ -3085,7 +3085,7 @@
     <arc exit="southeast" move="southeast" destination="459" />
     <arc exit="southwest" move="southwest" destination="460" />
   </node>
-  <node id="459" name="Hibarnhvidar Alchemy Society, Books" note="Alchemy Books" color="Red">
+  <node id="459" name="Hibarnhvidar Alchemy Society, Books" note="Alchemy Books" color="#FF0000">
     <description>Shelves display books available for purchase while a chart shows techniques.  A clerk notes work order completions on a board.</description>
     <position x="270" y="210" z="1" />
     <arc exit="south" move="south" destination="464" />
@@ -3093,7 +3093,7 @@
     <arc exit="west" move="west" destination="460" />
     <arc exit="northwest" move="northwest" destination="458" />
   </node>
-  <node id="460" name="Hibarnhvidar Alchemy Society, Supplies" note="Alchemy Supplies" color="Red">
+  <node id="460" name="Hibarnhvidar Alchemy Society, Supplies" note="Alchemy Supplies" color="#FF0000">
     <description>Shelves of spices, herbs, and other ingredients line the walls while clerks dart to and fro filling orders for customers.  A long counter allows for the inspection of the various supplies before final purchase.</description>
     <position x="250" y="210" z="1" />
     <arc exit="northeast" move="northeast" destination="458" />
@@ -3124,7 +3124,7 @@
     <arc exit="west" move="west" destination="462" />
     <arc exit="northwest" move="northwest" destination="461" />
   </node>
-  <node id="464" name="Hibarnhvidar Alchemy Society, Tools" note="Alchemy Tools" color="Red">
+  <node id="464" name="Hibarnhvidar Alchemy Society, Tools" note="Alchemy Tools" color="#FF0000">
     <description>Stacks of supply crates line the walls while the counter displays various alchemical tools for sale.  Frazzled-looking clerks help customers with their purchases.</description>
     <position x="270" y="230" z="1" />
     <arc exit="north" move="north" destination="459" />
@@ -3173,17 +3173,17 @@
     <position x="200" y="190" z="1" />
     <arc exit="south" move="south" destination="466" />
   </node>
-  <node id="471" name="Hibarnhvidar Outfitting Society, Supply Emporium" note="Outfitting Supplies" color="Red">
+  <node id="471" name="Hibarnhvidar Outfitting Society, Supply Emporium" note="Outfitting Supplies" color="#FF0000">
     <description>Cubbyholes chiseled from the rock walls display the vast array of fabrics, leathers and other supplies available to members for their projects.  Swatches of some of the textiles and threads are set out on the counter for inspection before purchase.</description>
     <position x="210" y="190" z="1" />
     <arc exit="southwest" move="southwest" destination="466" />
   </node>
-  <node id="472" name="Hibarnhvidar Outfitting Society, Book Emporium" note="Outfitting Books" color="Red">
+  <node id="472" name="Hibarnhvidar Outfitting Society, Book Emporium" note="Outfitting Books" color="#FF0000">
     <description>Racks hold the manuals and booklets available for purchase, allowing the patrons to peruse before taking their selections to the polished stone counter near the door.  A bearded Dwarf stands ready at the counter to assist shoppers with questions or to complete purchases.</description>
     <position x="210" y="200" z="1" />
     <arc exit="west" move="west" destination="466" />
   </node>
-  <node id="473" name="Hibarnhvidar Outfitting Society, Tool Emporium" note="Outfitting Tools" color="Red">
+  <node id="473" name="Hibarnhvidar Outfitting Society, Tool Emporium" note="Outfitting Tools" color="#FF0000">
     <description>Sturdy shelves behind the long wooden counter hold a variety of tools needed by the members of the society, all neatly stored away for easy access.  A burly looking Dwarf stands behind the counter, his beady eyes missing nothing that happens in the chamber.</description>
     <position x="210" y="210" z="1" />
     <arc exit="northwest" move="northwest" destination="466" />
@@ -3206,7 +3206,7 @@
     <position x="83" y="187" z="1" />
     <arc exit="west" move="west" destination="475" />
   </node>
-  <node id="477" name="Hibarnhvidar Engineering Society, Depot" note="Engineering Supplies" color="Red">
+  <node id="477" name="Hibarnhvidar Engineering Society, Depot" note="Engineering Supplies" color="#FF0000">
     <description>Standing in the center of the room is a large semi-circular counter, behind which busy clerks take and fulfill orders for the crafters.  A large crate stands at one end of the counter while a sign hangs on one wall.</description>
     <position x="70" y="200" z="1" />
     <arc exit="north" move="north" destination="475" />
@@ -3231,12 +3231,12 @@
     <position x="70" y="213" z="1" />
     <arc exit="north" move="north" destination="477" />
   </node>
-  <node id="481" name="Hibarnhvidar Engineering Society, Toolstore" note="Engineering Tools" color="Red">
+  <node id="481" name="Hibarnhvidar Engineering Society, Toolstore" note="Engineering Tools" color="#FF0000">
     <description>Tools hang from corkboard decorating this long, rectangular room.  A thick scent of oil clings to the air, and the scraping sound of stone sharpening metal drones on in the background.  Some nearby salespeople wait to help customers.</description>
     <position x="57" y="200" z="1" />
     <arc exit="east" move="east" destination="477" />
   </node>
-  <node id="482" name="Hibarnhvidar Engineering Society, Bookstore" note="Engineering Books" color="Red">
+  <node id="482" name="Hibarnhvidar Engineering Society, Bookstore" note="Engineering Books" color="#FF0000">
     <description>Most of the room is blocked off by a long counter behind which stand tall bookshelves in neat rows.  Busy clerks move between the counter and the shelves, filling orders for the engineers.  An overpowering scent of ink and leather fills the area.</description>
     <position x="57" y="187" z="1" />
     <arc exit="southeast" move="southeast" destination="477" />

@@ -730,7 +730,7 @@
     <arc exit="west" move="west" destination="115" />
     <arc exit="go" move="script oshumanor" destination="58" />
   </node>
-  <node id="114" name="Telpengi'hhs Sara'a, Embalming Chamber" color="Lime">
+  <node id="114" name="Telpengi'hhs Sara'a, Embalming Chamber" color="#00FF00">
     <description>With the passage of time comes the decay of those things material, and no exception is granted to the clay jars and pottery lining the shelves in this nook.  Dim lighting from a torch sconce gives birth to flickering shadows behind those jars, as if the containers' crumbling states released souls that, disbelieving their freedom, still linger near their ruined bodies.</description>
     <position x="460" y="140" z="0" />
     <arc exit="west" move="west" destination="113" />
