@@ -1964,7 +1964,7 @@
     <arc exit="east" move="east" destination="271" />
     <arc exit="west" move="west" destination="273" />
   </node>
-  <node id="273" name="Peltaph'staho" note="Disease Wall" color="#C0C0C0">
+  <node id="273" name="Peltaph'staho" note="Disease Wall">
     <description>The floor here is littered with pebbles and grit from what looks like a partial cave-in.  The walls are craggy and split, and moist with some kind of clear fluid.</description>
     <position x="400" y="-340" z="0" />
     <arc exit="east" move="east" destination="272" />
@@ -2141,7 +2141,7 @@
     <position x="280" y="-360" z="0" />
     <arc exit="west" move="west" destination="298" />
   </node>
-  <node id="300" name="Peltaph'staho" note="Disease Wall 2" color="#C0C0C0">
+  <node id="300" name="Peltaph'staho" note="Disease Wall 2">
     <description>The floor here is littered with pebbles and grit from what looks like a partial cave-in.  The walls are craggy and split, and moist with some kind of clear fluid.</description>
     <position x="280" y="-400" z="0" />
     <arc exit="northeast" move="northeast" destination="301" />
@@ -2149,7 +2149,7 @@
     <arc exit="southwest" move="southwest" destination="297" />
     <arc exit="northwest" move="northwest" destination="302" />
   </node>
-  <node id="301" name="Peltaph'staho" note="Disease Wall 3" color="#C0C0C0">
+  <node id="301" name="Peltaph'staho" note="Disease Wall 3">
     <description>The floor here is littered with pebbles and grit from what looks like a partial cave-in.  The walls are craggy and split, and moist with some kind of clear fluid.</description>
     <position x="300" y="-420" z="0" />
     <arc exit="north" move="north" destination="303" />

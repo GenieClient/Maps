@@ -1873,7 +1873,7 @@
     <arc exit="south" move="south" destination="261" />
     <arc exit="go" move="go river" destination="247" />
   </node>
-  <node id="264" name="The Island, A Hunter's Shelter" note="Shelter" color="#C0C0C0">
+  <node id="264" name="The Island, A Hunter's Shelter" note="Shelter">
     <description>Some thoughtful soul has dragged driftwood into a crude shelter and stuffed the larger holes with weeds.  How well it keeps out the rain is anyone's guess, but it offers more protection than anywhere else on the island.</description>
     <position x="-340" y="440" z="0" />
     <arc exit="out" move="out" destination="258" />
@@ -1942,7 +1942,7 @@
     <arc exit="east" move="east" destination="273" />
     <arc exit="up" move="up" destination="277" />
   </node>
-  <node id="275" name="Galduta Isharon, The Outcropping" note="Boulder" color="#C0C0C0">
+  <node id="275" name="Galduta Isharon, The Outcropping" note="Boulder">
     <description>Over the millennia, the outcropping has bowed to its only master, nature: the wind has filled cracks in the rock with bits of silt and mulch from the bogs.  The result is a mottled harmony of bare granite and scrub brush determined to seize life on the barren rocks.  The only flaw in this example of nature's irrestible will is a patch of rusty soil at the base of one boulder, as if over the ages the elements, angry at the affront, had ground something metal under vengeful feet.</description>
     <position x="-180" y="140" z="0" />
     <arc exit="northeast" move="northeast" destination="276" />
