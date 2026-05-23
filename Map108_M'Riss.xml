@@ -2658,7 +2658,7 @@
     <arc exit="southwest" move="southwest" destination="386" />
     <arc exit="go" move="go trail" destination="1" />
   </node>
-  <node id="391" name="Dunes of Despair, High Dunes" note="Elder Armadillos" color="#A020F0">
+  <node id="391" name="Dunes of Despair, High Dunes" note="Elder Armadillos">
     <description>An endless expanse of featureless waste stretches in all directions.  In the distance, the desert floor merges with the sky in a hazy, shimmering blur.  The steady breeze whips a spray of fine sand into the air, stinging open eyes.</description>
     <description>The dim illumination of the night reveals a sea of gentle dunes rippling into the distance.  Shadowed troughs and highlighted dune crests mingle teasingly across the desert bed, relieving its otherwise stark emptiness.</description>
     <position x="180" y="-130" z="0" />
@@ -2668,7 +2668,7 @@
     <arc exit="southwest" move="southwest" destination="392" />
     <arc exit="go" move="go path" destination="5" />
   </node>
-  <node id="392" name="Dunes of Despair, High Dunes" color="#A020F0">
+  <node id="392" name="Dunes of Despair, High Dunes">
     <description>An endless expanse of featureless waste stretches in all directions.  In the distance, the desert floor merges with the sky in a hazy, shimmering blur.  The steady breeze whips a spray of fine sand into the air, stinging open eyes.</description>
     <description>The dim illumination of the night reveals a sea of gentle dunes rippling into the distance.  Shadowed troughs and highlighted dune crests mingle teasingly across the desert bed, relieving its otherwise stark emptiness.</description>
     <position x="160" y="-110" z="0" />
@@ -2677,7 +2677,7 @@
     <arc exit="south" move="south" destination="393" />
     <arc exit="southwest" move="southwest" hidden="True" destination="391" />
   </node>
-  <node id="393" name="Dunes of Despair, High Dunes" color="#A020F0">
+  <node id="393" name="Dunes of Despair, High Dunes">
     <description>An endless expanse of featureless waste stretches in all directions.  In the distance, the desert floor merges with the sky in a hazy, shimmering blur.  The steady breeze whips a spray of fine sand into the air, stinging open eyes.</description>
     <description>The dim illumination of the night reveals a sea of gentle dunes rippling into the distance.  Shadowed troughs and highlighted dune crests mingle teasingly across the desert bed, relieving its otherwise stark emptiness.</description>
     <position x="160" y="-90" z="0" />
@@ -2686,7 +2686,7 @@
     <arc exit="south" move="south" hidden="True" destination="391" />
     <arc exit="southwest" move="southwest" destination="393" />
   </node>
-  <node id="394" name="Dunes of Despair, High Dunes" color="#A020F0">
+  <node id="394" name="Dunes of Despair, High Dunes">
     <description>An endless expanse of featureless waste stretches in all directions.  In the distance, the desert floor merges with the sky in a hazy, shimmering blur.  The steady breeze whips a spray of fine sand into the air, stinging open eyes.</description>
     <description>The dim illumination of the night reveals a sea of gentle dunes rippling into the distance.  Shadowed troughs and highlighted dune crests mingle teasingly across the desert bed, relieving its otherwise stark emptiness.</description>
     <position x="130" y="-60" z="0" />
@@ -2695,7 +2695,7 @@
     <arc exit="south" move="south" destination="395" />
     <arc exit="southwest" move="southwest" hidden="True" destination="392" />
   </node>
-  <node id="395" name="Dunes of Despair, High Dunes" color="#A020F0">
+  <node id="395" name="Dunes of Despair, High Dunes">
     <description>An endless expanse of featureless waste stretches in all directions.  In the distance, the desert floor merges with the sky in a hazy, shimmering blur.  The steady breeze whips a spray of fine sand into the air, stinging open eyes.</description>
     <description>The dim illumination of the night reveals a sea of gentle dunes rippling into the distance.  Shadowed troughs and highlighted dune crests mingle teasingly across the desert bed, relieving its otherwise stark emptiness.</description>
     <position x="130" y="-40" z="0" />
@@ -2704,7 +2704,7 @@
     <arc exit="south" move="south" hidden="True" destination="393" />
     <arc exit="southwest" move="southwest" hidden="True" destination="396" />
   </node>
-  <node id="396" name="Dunes of Despair, High Dunes" color="#A020F0">
+  <node id="396" name="Dunes of Despair, High Dunes">
     <description>An endless expanse of featureless waste stretches in all directions.  In the distance, the desert floor merges with the sky in a hazy, shimmering blur.  The steady breeze whips a spray of fine sand into the air, stinging open eyes.</description>
     <description>The dim illumination of the night reveals a sea of gentle dunes rippling into the distance.  Shadowed troughs and highlighted dune crests mingle teasingly across the desert bed, relieving its otherwise stark emptiness.</description>
     <position x="240" y="-140" z="0" />
@@ -2713,7 +2713,7 @@
     <arc exit="south" move="south" hidden="True" destination="397" />
     <arc exit="southwest" move="southwest" hidden="True" destination="401" />
   </node>
-  <node id="397" name="Dunes of Despair, High Dunes" color="#A020F0">
+  <node id="397" name="Dunes of Despair, High Dunes">
     <description>An endless expanse of featureless waste stretches in all directions.  In the distance, the desert floor merges with the sky in a hazy, shimmering blur.  The steady breeze whips a spray of fine sand into the air, stinging open eyes.</description>
     <description>The dim illumination of the night reveals a sea of gentle dunes rippling into the distance.  Shadowed troughs and highlighted dune crests mingle teasingly across the desert bed, relieving its otherwise stark emptiness.</description>
     <position x="240" y="-120" z="0" />
@@ -2722,7 +2722,7 @@
     <arc exit="south" move="south" hidden="True" destination="399" />
     <arc exit="southwest" move="southwest" destination="402" />
   </node>
-  <node id="398" name="Dunes of Despair, High Dunes" color="#A020F0">
+  <node id="398" name="Dunes of Despair, High Dunes">
     <description>An endless expanse of featureless waste stretches in all directions.  In the distance, the desert floor merges with the sky in a hazy, shimmering blur.  The steady breeze whips a spray of fine sand into the air, stinging open eyes.</description>
     <description>The dim illumination of the night reveals a sea of gentle dunes rippling into the distance.  Shadowed troughs and highlighted dune crests mingle teasingly across the desert bed, relieving its otherwise stark emptiness.</description>
     <position x="160" y="-10" z="0" />
@@ -2731,7 +2731,7 @@
     <arc exit="southwest" move="southwest" destination="397" />
     <arc exit="northwest" move="northwest" hidden="True" destination="401" />
   </node>
-  <node id="399" name="Dunes of Despair, High Dunes" color="#A020F0">
+  <node id="399" name="Dunes of Despair, High Dunes">
     <description>An endless expanse of featureless waste stretches in all directions.  In the distance, the desert floor merges with the sky in a hazy, shimmering blur.  The steady breeze whips a spray of fine sand into the air, stinging open eyes.</description>
     <description>The dim illumination of the night reveals a sea of gentle dunes rippling into the distance.  Shadowed troughs and highlighted dune crests mingle teasingly across the desert bed, relieving its otherwise stark emptiness.</description>
     <position x="160" y="-40" z="0" />
@@ -2740,7 +2740,7 @@
     <arc exit="southeast" move="southeast" destination="400" />
     <arc exit="north" move="north" hidden="True" destination="397" />
   </node>
-  <node id="400" name="Dunes of Despair, High Dunes" color="#A020F0">
+  <node id="400" name="Dunes of Despair, High Dunes">
     <description>An endless expanse of featureless waste stretches in all directions.  In the distance, the desert floor merges with the sky in a hazy, shimmering blur.  The steady breeze whips a spray of fine sand into the air, stinging open eyes.</description>
     <description>The dim illumination of the night reveals a sea of gentle dunes rippling into the distance.  Shadowed troughs and highlighted dune crests mingle teasingly across the desert bed, relieving its otherwise stark emptiness.</description>
     <position x="180" y="-60" z="0" />
@@ -2749,7 +2749,7 @@
     <arc exit="southwest" move="southwest" destination="399" />
     <arc exit="northwest" move="northwest" hidden="True" destination="398" />
   </node>
-  <node id="401" name="Dunes of Despair, High Dunes" color="#A020F0">
+  <node id="401" name="Dunes of Despair, High Dunes">
     <description>An endless expanse of featureless waste stretches in all directions.  In the distance, the desert floor merges with the sky in a hazy, shimmering blur.  The steady breeze whips a spray of fine sand into the air, stinging open eyes.</description>
     <description>The dim illumination of the night reveals a sea of gentle dunes rippling into the distance.  Shadowed troughs and highlighted dune crests mingle teasingly across the desert bed, relieving its otherwise stark emptiness.</description>
     <position x="200" y="-80" z="0" />
@@ -2758,7 +2758,7 @@
     <arc exit="southeast" move="southwest" hidden="True" destination="400" />
     <arc exit="southwest" move="southwest" destination="400" />
   </node>
-  <node id="402" name="Dunes of Despair, High Dunes" color="#A020F0">
+  <node id="402" name="Dunes of Despair, High Dunes">
     <description>An endless expanse of featureless waste stretches in all directions.  In the distance, the desert floor merges with the sky in a hazy, shimmering blur.  The steady breeze whips a spray of fine sand into the air, stinging open eyes.</description>
     <description>The dim illumination of the night reveals a sea of gentle dunes rippling into the distance.  Shadowed troughs and highlighted dune crests mingle teasingly across the desert bed, relieving its otherwise stark emptiness.</description>
     <position x="220" y="-100" z="0" />
@@ -2820,7 +2820,7 @@
     <arc exit="southwest" move="southwest" destination="405" />
     <arc exit="northwest" move="northwest" destination="403" />
   </node>
-  <node id="410" name="Tavayon, Water's Edge" note="Premium Elders" color="#A020F0">
+  <node id="410" name="Tavayon, Water's Edge" note="Premium Elders">
     <description>Numerous spires of obsidian jut around the rim of the crater and smaller fragments speckle the terrain, ranging from mere pebbles to colossal boulders taller than a Gor'Tog.  Meager plant life struggles to eke out an existence in this bleak landscape, growing marginally more abundant as it approaches a brackish oasis to the south.</description>
     <position x="160" y="-220" z="0" />
     <arc exit="southeast" move="southeast" destination="411" />
@@ -2828,14 +2828,14 @@
     <arc exit="southwest" move="southwest" destination="413" />
     <arc exit="go" move="go pass" destination="408" />
   </node>
-  <node id="411" name="Tavayon, Water's Edge" color="#A020F0">
+  <node id="411" name="Tavayon, Water's Edge">
     <description>Numerous spires of obsidian jut around the rim of the crater and smaller fragments speckle the terrain, ranging from mere pebbles to colossal boulders taller than a Gor'Tog.  Meager plant life struggles to eke out an existence in this bleak landscape, growing marginally more abundant as it approaches a brackish oasis to the west.</description>
     <position x="180" y="-200" z="0" />
     <arc exit="southwest" move="southwest" destination="414" />
     <arc exit="west" move="west" destination="412" />
     <arc exit="northwest" move="northwest" destination="410" />
   </node>
-  <node id="412" name="Tavayon, Oasis" color="#A020F0">
+  <node id="412" name="Tavayon, Oasis">
     <description>Shallow, brackish water offers life to the wretched plants that sprout around the shore.  Several salt-encrusted chunks of obsidian spike up through the surface of the water.</description>
     <position x="160" y="-200" z="0" />
     <arc exit="north" move="north" destination="410" />
@@ -2843,14 +2843,14 @@
     <arc exit="south" move="south" destination="414" />
     <arc exit="west" move="west" destination="413" />
   </node>
-  <node id="413" name="Tavayon, Tumulus" color="#A020F0">
+  <node id="413" name="Tavayon, Tumulus">
     <description>Numerous spires of obsidian jut around the rim of the crater and smaller fragments speckle the terrain, ranging from mere pebbles to colossal boulders taller than a Gor'Tog.  Meager plant life struggles to eke out an existence in this bleak landscape, growing marginally more abundant as it approaches a brackish oasis to the east.</description>
     <position x="140" y="-200" z="0" />
     <arc exit="northeast" move="northeast" destination="410" />
     <arc exit="east" move="east" destination="412" />
     <arc exit="southeast" move="southeast" destination="414" />
   </node>
-  <node id="414" name="Tavayon, Water's Edge" color="#A020F0">
+  <node id="414" name="Tavayon, Water's Edge">
     <description>Numerous spires of obsidian jut around the rim of the crater and smaller fragments speckle the terrain, ranging from mere pebbles to colossal boulders taller than a Gor'Tog.  Meager plant life struggles to eke out an existence in this bleak landscape, growing marginally more abundant as it approaches a brackish oasis to the north.</description>
     <position x="160" y="-180" z="0" />
     <arc exit="north" move="north" destination="412" />
