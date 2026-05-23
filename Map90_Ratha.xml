@@ -4014,7 +4014,7 @@
     <arc exit="east" move="east" destination="587" />
     <arc exit="west" move="west" destination="625" />
   </node>
-  <node id="627" name="Eluned's Temple, Pool" note="Pool" color="#0000A0">
+  <node id="627" name="Eluned's Temple, Pool" note="Pool" color="#000080">
     <description>A rock protrudes, but it does not appear to be the bottom of the pool.  The cold water swirls in a strong current here.</description>
     <position x="-372" y="-599" z="0" />
     <arc exit="up" move="swim up" destination="554" />
