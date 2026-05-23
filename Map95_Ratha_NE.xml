@@ -477,7 +477,7 @@
     <arc exit="east" move="east" destination="78" />
     <arc exit="west" move="west" destination="76" />
   </node>
-  <node id="78" name="Pokekehekepi olpo'staho" color="#008080">
+  <node id="78" name="Pokekehekepi olpo'staho">
     <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
     <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
     <position x="560" y="-210" z="0" />
@@ -2083,7 +2083,7 @@
     <arc exit="east" move="east" destination="288" />
     <arc exit="southwest" move="southwest" destination="291" />
   </node>
-  <node id="291" name="Peltahp'staho" color="#008080">
+  <node id="291" name="Peltahp'staho">
     <description>Pinched into this corner is a mound of earth shaped into a ramp angled up towards the dark shadows of the ceiling.  Bits of luminous mycelium hang in what appear to be intentionally cultivated curtains, giving off a soft glow.</description>
     <position x="220" y="-300" z="0" />
     <arc exit="north" move="north" destination="292" />
