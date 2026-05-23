@@ -59,7 +59,7 @@
     <arc name="west" hidden="False" destination="7" />
     <arc name="go doorway" hidden="False" destination="15" />
   </node>
-  <node id="9" name="Droughtman's Maze, Observation Deck" note="Heal Room" color="#80FFFF">
+  <node id="9" name="Droughtman's Maze, Observation Deck" note="Heal Room" color="#00BF80">
     <description>Light seems to follow you as you move about, allowing you to see what's in front of you but very little of what's beyond.  A slight odor of peaches is prevalent throughout the hallway.</description>
     <position x="180" y="140" z="0" />
     <arc name="northeast" hidden="False" destination="10" />
