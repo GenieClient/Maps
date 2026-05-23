@@ -1025,7 +1025,7 @@
     <position x="-302" y="-299" z="0" />
     <arc exit="south" move="south" destination="147" />
   </node>
-  <node id="152" name="Ratha, Zeh'ra Boulevard" color="#FF0080">
+  <node id="152" name="Ratha, Zeh'ra Boulevard">
     <description>A lissome S'kra Mur man stumbles up a short walkway leading to one of the townhouses built here.  Judging from his unsteady walk and the amount of trouble the latch causes, he's returning from more than a hard day's work.  No lights are visible in any of the windows facing the street and a cool wind blows in from the bay bringing with it the quiet susurration of the surf.</description>
     <description>The incessant noise of the Bazaar is somewhat muted next to the sheer cliff face rising up to the most prosperous section of the city.  Tasteful etchings adorn the lintels of cozy townhouses built back from the street.  A steady flow of commercial traffic forces pedestrians to keep to the edges of the thoroughfare in order to keep life and limb intact.</description>
     <position x="-202" y="-259" z="0" />
@@ -2926,7 +2926,7 @@
     <arc exit="west" move="west" destination="458" />
     <arc exit="go" move="go gate" destination="460" />
   </node>
-  <node id="458" name="Ratha, West Regents Circle" color="#FF0080">
+  <node id="458" name="Ratha, West Regents Circle">
     <description>Roaming vendors are often seen along the expansive drive.  Offerings such as rare teas and sugared pastries are among the delicacies enjoyed by all who stroll the luxurious circle.  Birds and other small creatures often dart among the passersby, eager to covet a treasured ort.</description>
     <description>The vendors have gone for the evening, the circle is now quiet.  In the morning, they'll be back offering warm drinks and luscious treats to the privileged citizens who travel this route.</description>
     <position x="-162" y="-339" z="0" />
