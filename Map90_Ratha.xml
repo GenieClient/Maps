@@ -1139,28 +1139,28 @@
     <arc exit="south" move="south" destination="168" />
     <arc exit="west" move="west" destination="134" />
   </node>
-  <node id="168" name="Ratha, Upper Cobra Road" color="#80FFFF">
+  <node id="168" name="Ratha, Upper Cobra Road" color="#00FFFF">
     <description>A few houses, set back from the road, seem to brood in silence.  They are shuttered and look unkempt, their gardens gone to seed and their paint is peeling.  The damp night air thickens into fog and swirls about the dim wooden shapes.  There is evidence of a fire not too recently, to judge from the rain-streaked soot around the windows and doors and the smoke-stained walls of one house.</description>
     <description>A few houses, set back from the road, seem to brood in silence.  They are shuttered and look unkempt, their gardens gone to seed and their paint is peeling.  Even the laughter and shouting of children playing nearby seems oddly muted and listless.  There is evidence of a fire not too recently, to judge from the smoke-stained walls of one house.</description>
     <position x="58" y="-179" z="0" />
     <arc exit="north" move="north" destination="167" />
     <arc exit="southwest" move="southwest" destination="169" />
   </node>
-  <node id="169" name="Ratha, Upper Cobra Road" color="#80FFFF">
+  <node id="169" name="Ratha, Upper Cobra Road" color="#00FFFF">
     <description>The road winds a bit between tidy cottages set between neat stone hedges.  One or two appear to be shuttered and empty, but most show signs of being occupied and maintained.  Each has a small brass or bronze night lantern set over the door.</description>
     <description>The road winds a bit between tidy cottages set between neat stone hedges.  One or two appear to be shuttered and empty, but most show signs of being occupied and maintained.  A large group of children of several races are engaged in some game for which the rules are seemingly random, but no doubt they make sense to the players.  Much of it seems to entail raucous shouting and laughter from all involved.</description>
     <position x="38" y="-159" z="0" />
     <arc exit="northeast" move="northeast" destination="168" />
     <arc exit="southwest" move="southwest" destination="170" />
   </node>
-  <node id="170" name="Ratha, Upper Cobra Road" color="#80FFFF">
+  <node id="170" name="Ratha, Upper Cobra Road" color="#00FFFF">
     <description>One and two-story houses press close along the avenue.  Through shuttered windows, one can hear people going about their night-time activities.  A small lantern hangs over each door, as required by local custom.  Somewhere, the heavy tread of a watchman on his rounds echoes in the night air.</description>
     <description>One and two-story houses press close along the busy avenue.  Through open windows, one can see people going about their everyday lives, untroubled by the passing parade of travelers.</description>
     <position x="18" y="-139" z="0" />
     <arc exit="northeast" move="northeast" destination="169" />
     <arc exit="southwest" move="southwest" destination="171" />
   </node>
-  <node id="171" name="Ratha, Upper Cobra Road" color="#80FFFF">
+  <node id="171" name="Ratha, Upper Cobra Road" color="#00FFFF">
     <description>Tall houses crowd together along both sides of the road, their half-timbered second stories leaning towards each other until they almost meet overhead.  The sky is nearly blocked, giving a gloomy feel to the passage between them that is offset by the cheery color schemes and sprays of greenery set in vases along the window ledges.  Somewhere, a sibilant voice is singing, accompanied by a less-than-skilled ocarina player.</description>
     <position x="-2" y="-119" z="0" />
     <arc exit="northeast" move="northeast" destination="170" />
@@ -1174,7 +1174,7 @@
     <arc exit="southeast" move="southeast" destination="223" />
     <arc exit="south" move="south" destination="173" />
   </node>
-  <node id="173" name="Ratha, Upper Cobra Road" color="#80FFFF">
+  <node id="173" name="Ratha, Upper Cobra Road" color="#00FFFF">
     <description>Several small gardens, each with a tidy stone border, line the road along the edge of a genteel residential area.  Several tall stakes control long strands of curling vines, laden with pea-pods.</description>
     <description>Several small gardens, each with a tidy stone border, line the road along the edge of a genteel residential area.  Several tall stakes control long strands of curling vines, laden with pea-pods.  A brace of geese wander about, pecking at half-buried seeds in the dirt.</description>
     <position x="-22" y="-79" z="0" />
@@ -1201,54 +1201,54 @@
     <arc exit="east" move="east" destination="200" />
     <arc exit="west" move="west" destination="177" />
   </node>
-  <node id="177" name="Ratha, Mastik Mews" color="#80FFFF">
+  <node id="177" name="Ratha, Mastik Mews" color="#00FFFF">
     <description>As the throng of citizens heads north from the lifts, this delightful little road heads west over the ridge toward some of the most beautiful scenery Ratha has to offer.  Weeping bloodwood trees form a graceful arch over the roadway, while neat white pickets surround a cluster of tidy homes.</description>
     <position x="-62" y="-19" z="0" />
     <arc exit="east" move="east" destination="176" />
     <arc exit="northwest" move="northwest" destination="178" />
   </node>
-  <node id="178" name="Ratha, Mastik Mews" color="#80FFFF">
+  <node id="178" name="Ratha, Mastik Mews" color="#00FFFF">
     <description>Sweet scents float through the calm night air.  Glowing embers from the cooking fires die slowly, the residents long taken to their beds, and slumbering peacefully.</description>
     <description>All around, the signs of a thriving community abound.  Young children, actively play in the streets and yards of the well kept homes, while women hang laundry out on lines to dry.  Conspicuously missing are the men, likely away at sea, the craft-halls or out hunting to stock the family larder.  On both sides of the lane, bright jadsem blossoms and freesia lend a pleasant sweet scent to the air.</description>
     <position x="-82" y="-39" z="0" />
     <arc exit="southeast" move="southeast" destination="177" />
     <arc exit="west" move="west" destination="179" />
   </node>
-  <node id="179" name="Ratha, Mastik Mews" note="Water Trough" color="#80FFFF">
+  <node id="179" name="Ratha, Mastik Mews" note="Water Trough" color="#00FFFF">
     <description>Spectres of the afternoon hustle and bustle are called forth by the soft whinny of a horse nearby.  The sparkling night view of the city below and the roiling ocean beyond is a joy to behold.</description>
     <description>Horse drawn carts amble past, laden with goods from the marketplace to the north.  A driver stops to water his horse at one of the many troughs along the tree-lined route.  Toward the southwest, a beautiful unobstructed view of the ocean awaits the passerby, eager for a break from their daily chores.</description>
     <position x="-122" y="-39" z="0" />
     <arc exit="east" move="east" destination="178" />
     <arc exit="northwest" move="northwest" destination="180" />
   </node>
-  <node id="180" name="Ratha, Mastik Mews" color="#80FFFF">
+  <node id="180" name="Ratha, Mastik Mews" color="#00FFFF">
     <description>The neighborhood garden is silent, resting after a busy day of cultivation and activity.  A bustling center of activity by day, the garden lends quiet comfort to this quaint community in the long evening hours.</description>
     <description>Bees buzz happily, finding a wealth of pollen in the neat rows of flowers and vegetables of a community garden.  Neighbors chat casually as they share in the toils of tending the plot.  Covered and protected against the elements, the more delicate of the fruits and flowers flourish under the added attention.</description>
     <position x="-142" y="-59" z="0" />
     <arc exit="southeast" move="southeast" destination="179" />
     <arc exit="west" move="west" destination="181" />
   </node>
-  <node id="181" name="Ratha, Mastik Mews" color="#80FFFF">
+  <node id="181" name="Ratha, Mastik Mews" color="#00FFFF">
     <description>Several people gather around a large brick firepit outside a neatly trimmed cottage.  Billowing smoke wraps around the stone chimney as a wild boar turns slowly over the coals, fat dripping into the flames.  On smaller spits, a number of plump birds roast slowly, and large pots of bubbling liquids add their steam and delicious smells to the atmosphere.</description>
     <position x="-162" y="-59" z="0" />
     <arc exit="east" move="east" destination="180" />
     <arc exit="west" move="west" destination="182" />
   </node>
-  <node id="182" name="Ratha, Odalva Reach" color="#80FFFF">
+  <node id="182" name="Ratha, Odalva Reach" color="#00FFFF">
     <description>The well worn stone wall nearly rings with the day's conversations.  Now quiet and peaceful, this delightful lane wends its way through the slumbering community.</description>
     <description>Delicious smells permeate the air, creating an atmosphere of comfort and home.  All who stroll down this delightful lane are pulled aside to visit or partake in a sip of grog or cold spring water.  A trio of old women, leaning across a stone wall, are enrapt in a story telling session, oblivious to the world around them.</description>
     <position x="-182" y="-59" z="0" />
     <arc exit="east" move="east" destination="181" />
     <arc exit="west" move="west" destination="183" />
   </node>
-  <node id="183" name="Ratha, Odalva Reach" color="#80FFFF">
+  <node id="183" name="Ratha, Odalva Reach" color="#00FFFF">
     <description>Fingers of starlight filter through the lush canopy of bloodwood and sana'ati trees as the avenue broadens.  Protected from the frequent wind and rain sweeping off the ocean, the drive takes on an almost dream-like quality.  On the north side of the reach, gentle rolling knolls are host to a variety of well kept homes with dramatic views of the sparkling sea beyond the cliffs.</description>
     <description>Fingers of light filter through the lush canopy of bloodwood and sana'ati trees as the avenue broadens.  Protected from the afternoon sun or the wind and rain sweeping off the ocean, the drive takes on an almost dream-like quality.  On the north side of the reach, gentle rolling knolls are host to a variety of well kept homes with dramatic views of the crystal sea beyond the cliffs.</description>
     <position x="-202" y="-59" z="0" />
     <arc exit="east" move="east" destination="182" />
     <arc exit="southwest" move="southwest" destination="184" />
   </node>
-  <node id="184" name="Ratha, Odalva Reach" color="#80FFFF">
+  <node id="184" name="Ratha, Odalva Reach" color="#00FFFF">
     <description>The denseness of the arboreal adit gives way briefly, allowing an unobstructed view of the shipyards far below, and the jetty beyond.  From this vantage point one can clearly observe the traffic in and out of the harbor.  It is said that the Odalva family purchased property on this bluff to keep track of the vast Redthorne fleet.</description>
     <position x="-222" y="-39" z="0" />
     <arc exit="northeast" move="northeast" destination="183" />
@@ -1277,19 +1277,19 @@
     <arc exit="climb" move="climb driftwood fence" destination="297" />
     <arc exit="go" move="go winding trail" destination="298" />
   </node>
-  <node id="188" name="Ratha, Odalva Reach" note="Garthic NEW" color="#80FFFF">
+  <node id="188" name="Ratha, Odalva Reach" note="Garthic NEW" color="#00FFFF">
     <description>Skirting along the meadow, the road ambles toward the cliff's edge and two large homes, perched precariously close to the precipice.  On the opposite side of the road, stables and gardens make best use of the grassy knoll and ample acreage.</description>
     <position x="-322" y="-39" z="0" />
     <arc exit="northeast" move="northeast" destination="187" />
     <arc exit="northwest" move="northwest" destination="189" />
   </node>
-  <node id="189" name="Ratha, Odalva Reach" note="Ssarkhl NEW" color="#80FFFF">
+  <node id="189" name="Ratha, Odalva Reach" note="Ssarkhl NEW" color="#00FFFF">
     <description>Subtle fragrances waft through the air, hibiscus, cherry blossom, something else not quite identifiable.  Carstens, the florist, has gardens nearby and often roams the neighborhood selling his delicate and fresh-picked wares to the eager locals.</description>
     <position x="-342" y="-59" z="0" />
     <arc exit="southeast" move="southeast" destination="188" />
     <arc exit="west" move="west" destination="190" />
   </node>
-  <node id="190" name="Ratha, Odalva Reach" color="#80FFFF">
+  <node id="190" name="Ratha, Odalva Reach" color="#00FFFF">
     <description>Breezes blow stronger here, as the road approaches the western overlook and the windward side of the bluff.  The thick stand of sana'ati gives way to smaller, sculpted pine trees.  Though still ornamental and pleasant to look upon, the plants and flowers here have adapted to the elements, taking on a distinctly squat and sturdy posture.</description>
     <position x="-362" y="-59" z="0" />
     <arc exit="east" move="east" destination="189" />
@@ -1307,27 +1307,27 @@
     <arc exit="northeast" move="northeast" destination="193" />
     <arc exit="south" move="south" destination="191" />
   </node>
-  <node id="193" name="Ratha, Selridge Road" color="#80FFFF">
+  <node id="193" name="Ratha, Selridge Road" color="#00FFFF">
     <description>Windblown grasses cling to sandy cracks in the walkways that bypass several tidy homes along the road.  Iron gates and covered porticos offer security and protection from the evening elements.  Tall and stately street lamps perform their nightly ritual, offering a ray or two of warm light to the evening stroller.</description>
     <description>Windblown grasses cling to sandy cracks in the walkways that bypass several tidy homes along the road.  Iron gates and shaded porticos offer privacy and shelter from the afternoon sun while tall and stately street lamps await a nightly ritual, offering a ray or two of warm light to the evening stroller.</description>
     <position x="-362" y="-79" z="0" />
     <arc exit="north" move="north" destination="194" />
     <arc exit="southwest" move="southwest" destination="192" />
   </node>
-  <node id="194" name="Ratha, Selridge Road" color="#80FFFF">
+  <node id="194" name="Ratha, Selridge Road" color="#00FFFF">
     <description>Tempests and whorls of salty air whip past, sending sand and dust flying inland.  Gnarled and deformed by the constant wind, a stand of dwarf pine hum as if goading the spirits of the wind into a battle of wits.</description>
     <position x="-362" y="-99" z="0" />
     <arc exit="northeast" move="northeast" destination="195" />
     <arc exit="south" move="south" destination="193" />
   </node>
-  <node id="195" name="Ratha, Selridge Road" color="#80FFFF">
+  <node id="195" name="Ratha, Selridge Road" color="#00FFFF">
     <description>Spicy and aromatic, the scents of a growing herb garden drift past.  Rich and loamy, the soil and climate here are perfect for growing everything from brilliant flowers to flavorful vegetables.  Just ahead the welcoming lights of the Carstens farmhouse can be seen towering over darkened gardens.</description>
     <description>Spicy and aromatic, the scents of a growing herb garden drift past.  Rich and loamy, the soil and climate here are perfect for growing everything from brilliant flowers to flavorful vegetables.  Just ahead the white gables of the Carstens farmhouse can be seen towering over neat rows of blooming finery.</description>
     <position x="-342" y="-119" z="0" />
     <arc exit="north" move="north" destination="196" />
     <arc exit="southwest" move="southwest" destination="194" />
   </node>
-  <node id="196" name="Ratha, Selridge Road" color="#80FFFF">
+  <node id="196" name="Ratha, Selridge Road" color="#00FFFF">
     <description>Wild grapevines along a rickety fence cast strange shadows from the lamplight in the dark.  Sweet smells from the gardens beyond lend to the intoxicating environment along the tree-lined road.</description>
     <description>Vibrant lavender and wild grape vines adorn a rickety fence along the western edge of the Carstens place.  Folks amble past, stopping to smell the sweet flowers and admire the upcoming crop of unusual floral varieties that Carstens is famous for.  Dwarf pine and an occasional silverwood tree line the inlaid walkways along the road, a rich mosaic nearly lost in the sand from the cliff.</description>
     <position x="-342" y="-139" z="0" />
@@ -1340,7 +1340,7 @@
     <arc exit="north" move="north" destination="198" />
     <arc exit="southwest" move="southwest" destination="196" />
   </node>
-  <node id="198" name="Ratha, Selridge Road" color="#80FFFF">
+  <node id="198" name="Ratha, Selridge Road" color="#00FFFF">
     <description>Continuing the inlaid stone motif, a high wall protects the street here from the whipping winds that frequent this side of the bluff.  In the distance, the tinkle of chimes plays an erratic melody in harmony with the constant drone of the city, and the crashing surf beyond the cliffs.</description>
     <position x="-322" y="-179" z="0" />
     <arc exit="south" move="south" destination="197" />
@@ -1372,14 +1372,14 @@
     <arc exit="east" move="east" destination="203" />
     <arc exit="west" move="west" destination="201" />
   </node>
-  <node id="203" name="Ratha, Kor'adu Avenue" color="#80FFFF">
+  <node id="203" name="Ratha, Kor'adu Avenue" color="#00FFFF">
     <description>A few steps off the road, atop a slight rise, a bevy of small cottages beckon the weary home for the evening.  Clean and well cared for, the homes in this area are neither shabby nor elegant.</description>
     <description>A few steps off the road, atop a slight rise, a bevy of small cottages are oriented toward the remarkable view of the ocean beyond.  Clean and well cared for, the homes in this area are neither shabby nor elegant.  Bescarved housewives are often seen traversing the walkways and crossing the street to chat with passing salesman.</description>
     <position x="78" y="-19" z="0" />
     <arc exit="southeast" move="southeast" destination="204" />
     <arc exit="west" move="west" destination="202" />
   </node>
-  <node id="204" name="Ratha, Kor'adu Avenue" color="#80FFFF">
+  <node id="204" name="Ratha, Kor'adu Avenue" color="#00FFFF">
     <description>The avenue sweeps toward the south and east and a lovely view of the city below.  The sparkling ocean, ever present from nearly every spot in Ratha is a constant reminder of the hard working way of life the town has to offer.</description>
     <position x="98" y="1" z="0" />
     <arc exit="east" move="east" destination="205" />
@@ -1409,45 +1409,45 @@
     <arc exit="northeast" move="northeast" destination="209" />
     <arc exit="southwest" move="southwest" destination="207" />
   </node>
-  <node id="209" name="Ratha, Tierskel Way" color="#80FFFF">
+  <node id="209" name="Ratha, Tierskel Way" color="#00FFFF">
     <description>A cluster of homes is set back away from the traffic of the avenue, taking advantage of the view from atop a slight rise.  A dirt lane serves as a drive connecting the homes to the road, forming what could be construed as a cul-de-sac.</description>
     <position x="198" y="-19" z="0" />
     <arc exit="north" move="north" destination="210" />
     <arc exit="southwest" move="southwest" destination="208" />
   </node>
-  <node id="210" name="Ratha, Tierskel Way" color="#80FFFF">
+  <node id="210" name="Ratha, Tierskel Way" color="#00FFFF">
     <description>Both spectacular and dangerous, the view at this point is nonetheless exhilarating.  The stone wall protects the average traveler from the perilous cliffs, but too eager a spectator could easily find themselves awash in the churning surf and the rocks below.</description>
     <position x="198" y="-39" z="0" />
     <arc exit="north" move="north" destination="211" />
     <arc exit="south" move="south" destination="209" />
   </node>
-  <node id="211" name="Ratha, Tierskel Way" color="#80FFFF">
+  <node id="211" name="Ratha, Tierskel Way" color="#00FFFF">
     <description>Fields and walkways are quiet and settled for another night's slumber.  Come morning, the eager voices of children at play will once again carry aloft on the gentle breezes.</description>
     <description>Gentle breezes blow on this side of the island.  Beyond the low fence of a large field children are often seen at play, hiding behind large boulders or stone walls, they frequently imitate hunters who range far beyond the limits of the city.</description>
     <position x="198" y="-59" z="0" />
     <arc exit="south" move="south" destination="210" />
     <arc exit="northwest" move="northwest" destination="212" />
   </node>
-  <node id="212" name="Ratha, Tierskel Way" color="#80FFFF">
+  <node id="212" name="Ratha, Tierskel Way" color="#00FFFF">
     <description>A wide brick walkway commands the eastern side of the bluff, as the drive takes a turn toward the most beautiful of scenic finery on Ratha.  Stretching as far as the eye can see, a sparkling crystal ocean lays like a blanket surrounding the island.</description>
     <position x="178" y="-79" z="0" />
     <arc exit="north" move="north" destination="213" />
     <arc exit="southeast" move="southeast" destination="211" />
   </node>
-  <node id="213" name="Ratha, Tierskel Way" color="#80FFFF">
+  <node id="213" name="Ratha, Tierskel Way" color="#00FFFF">
     <description>A quiet, tree-lined lane meanders off toward the west.  Unable to wander past the confines of a locked gate, the passerby is left to wonder what manner of mystery lays beyond the iron scrollwork.  Birdsong and laughter are carried aloft on a soft breeze, reminders of a carefree existence somewhere closeby.</description>
     <position x="178" y="-99" z="0" />
     <arc exit="south" move="south" destination="212" />
     <arc exit="northwest" move="northwest" destination="214" />
   </node>
-  <node id="214" name="Ratha, Tierskel Way" color="#80FFFF">
+  <node id="214" name="Ratha, Tierskel Way" color="#00FFFF">
     <description>Charming cottages and small homes sit close together, tiled walkways and neat gardens setting one apart from the other.  Residents can often be seen sitting on porches late into the night, puffing on pipes, drinking cider or just watching the stars play upon the ocean.</description>
     <description>Charming cottages and small homes sit close together, tiled walkways and neat gardens setting one apart from the other.  Women gather in the largest of several yards, discussing the events of the day.</description>
     <position x="158" y="-119" z="0" />
     <arc exit="north" move="north" destination="215" />
     <arc exit="southeast" move="southeast" destination="213" />
   </node>
-  <node id="215" name="Ratha, Tierskel Way" color="#80FFFF">
+  <node id="215" name="Ratha, Tierskel Way" color="#00FFFF">
     <description>The avenue is broad and decidedly residential.  The homes are not overly large or elegant, but well kept and nicely appointed.  The children who often play in the gardens and along the walkways, are tucked into their beds slumbering now as the stars come out to play.</description>
     <description>The avenue is broad and decidedly residential.  The homes are not overly large or elegant, but well kept and nicely appointed.  A group of children can often be seen playing in the gardens and along the walkways, shouting happily to one another.</description>
     <position x="158" y="-139" z="0" />
@@ -1468,20 +1468,20 @@
     <arc exit="southeast" move="southeast" destination="216" />
     <arc exit="northwest" move="northwest" destination="218" />
   </node>
-  <node id="218" name="Ratha, Tierskel Way" color="#80FFFF">
+  <node id="218" name="Ratha, Tierskel Way" color="#00FFFF">
     <description>A row of neatly trimmed buildings sits back off the road, warm lamplight radiating from the windows.  Most businesses, which are closed for the night, leave a lamp or candle burning to inform townsfolk that the owners are in residence and available for emergencies.</description>
     <description>Neat and well kept buildings are set back from the road here.  Townsfolk scurry by, engaged in animated conversation, on their way to perform one errand or another.</description>
     <position x="118" y="-199" z="0" />
     <arc exit="north" move="north" destination="219" />
     <arc exit="southeast" move="southeast" destination="217" />
   </node>
-  <node id="219" name="Ratha, Tierskel Way" color="#80FFFF">
+  <node id="219" name="Ratha, Tierskel Way" color="#00FFFF">
     <description>A young family makes their way along the stone walkway toward the south and the beautiful views of the ocean.  A sturdy stone wall abuts the walkway and provides a safe barrier from the treachery of the sheer cliff beyond.</description>
     <position x="118" y="-239" z="0" />
     <arc exit="south" move="south" destination="218" />
     <arc exit="west" move="west" destination="220" />
   </node>
-  <node id="220" name="Ratha, Tierskel Way" color="#80FFFF">
+  <node id="220" name="Ratha, Tierskel Way" color="#00FFFF">
     <description>Carriage traffic is very sporadic during the quiet hours of the evening and early morning.  On occasion a group of drunken sailors ambles through, lost from the main thoroughfare and creating a disturbance in the quiet neighborhood awaking angry residents from their slumber.</description>
     <description>Carriages trundle in both directions, barely enough time is had to avoid the hooves of the great equines as they prance at a feverish pace.</description>
     <position x="98" y="-239" z="0" />
@@ -1495,26 +1495,26 @@
     <arc exit="northwest" move="northwest" destination="222" />
     <arc exit="go" move="go forge" destination="305" />
   </node>
-  <node id="222" name="Ratha, Kor'adu Avenue" color="#80FFFF">
+  <node id="222" name="Ratha, Kor'adu Avenue" color="#00FFFF">
     <description>Several lovely homes find themselves ensconced amid neatly clipped shrubbery and tidy walkways.  Serviceable if not attractive fencing provides a bit of security to the urban neighborhood.</description>
     <position x="18" y="-59" z="0" />
     <arc exit="southeast" move="southeast" destination="221" />
     <arc exit="northwest" move="northwest" destination="223" />
     <arc exit="go" move="go forge" destination="221" />
   </node>
-  <node id="223" name="Ratha, Kor'adu Avenue" color="#80FFFF">
+  <node id="223" name="Ratha, Kor'adu Avenue" color="#00FFFF">
     <description>A tiny shed sits at quite a peculiar angle just off the avenue, adjoined to an equally peculiar little cottage.  Sumptuous smells often linger in the air here, making the cottage the frequent subject of local prattle.</description>
     <position x="-2" y="-79" z="0" />
     <arc exit="southeast" move="southeast" destination="222" />
     <arc exit="northwest" move="northwest" destination="172" />
   </node>
-  <node id="224" name="Ratha, Kor'adu Avenue" color="#80FFFF">
+  <node id="224" name="Ratha, Kor'adu Avenue" color="#00FFFF">
     <description>Bright awnings and colorful pennants adorn the facade of a neat mud and brick building.  A lovely portico dotted with delightful iron chairs and matching tables offer weary shoppers a place to stop and catch their breath.</description>
     <position x="-22" y="-119" z="0" />
     <arc exit="south" move="south" destination="172" />
     <arc exit="northwest" move="northwest" destination="225" />
   </node>
-  <node id="225" name="Ratha, Kor'adu Avenue" color="#80FFFF">
+  <node id="225" name="Ratha, Kor'adu Avenue" color="#00FFFF">
     <description>The darkened facade of a large building casts a shadow on the street below.  A wall of wooden crates blocks passage along the walkway, forcing pedestrians into the street and the path of trotting hoofbeats.</description>
     <position x="-42" y="-139" z="0" />
     <arc exit="southeast" move="southeast" destination="224" />
@@ -3718,34 +3718,34 @@
     <arc exit="northwest" move="northwest" destination="609" />
     <arc exit="go" move="go silver-trimmed lift" destination="633" />
   </node>
-  <node id="583" name="Shh'o'kumu Terrace, Promenade East" color="#80FFFF">
+  <node id="583" name="Shh'o'kumu Terrace, Promenade East" color="#00FFFF">
     <description>Large pots of flowers dot the perfect promenade.  Along the elegant balustrades, passersby stop to enjoy the view of the ocean far beyond and the bustling palace district below.</description>
     <description>Large pots of flowers that are vibrant by day, cast long elegant shadows on the perfect brickwork of the walkway by night.  Beyond the marble balustrades, the lights of the palace and gardens present a luminous spectacle beyond measure.</description>
     <position x="-22" y="-829" z="0" />
     <arc exit="east" move="east" destination="584" />
     <arc exit="west" move="west" destination="582" />
   </node>
-  <node id="584" name="Shh'o'kumu Terrace, Promenade East" color="#80FFFF">
+  <node id="584" name="Shh'o'kumu Terrace, Promenade East" color="#00FFFF">
     <description>Elegant willows drape comforting arms over the pristine walkway.  Lending a hand to stir a cooling breeze or protect from the biting sun, the ancient trees enhance the loveliness of the promenade.</description>
     <description>Elegant willows drape comforting arms over the pristine walkway.  Lending a hand to stir a cooling breeze or filter the sparkling moonlight, the ancient trees enhance the loveliness of the promenade.</description>
     <position x="-2" y="-829" z="0" />
     <arc exit="northeast" move="northeast" destination="585" />
     <arc exit="west" move="west" destination="583" />
   </node>
-  <node id="585" name="Shh'o'kumu Terrace, Promenade East" color="#80FFFF">
+  <node id="585" name="Shh'o'kumu Terrace, Promenade East" color="#00FFFF">
     <description>Beautiful topiaries adorn the expansive walkway, in striking contrast to the simple beauty of the sparkling sea.  Large wagons laden with provisions traverse the cobbled avenue, drivers anxious to make deliveries on time to any one of several large estates in the vicinity.</description>
     <description>Beautiful topiaries by day take on strange, almost monstrous shapes by night.  Far beyond the elaborate balustrades and the sheer cliffs, the velvet sea shimmers with tiny points of reflected light.</description>
     <position x="18" y="-849" z="0" />
     <arc exit="northeast" move="northeast" destination="586" />
     <arc exit="southwest" move="southwest" destination="584" />
   </node>
-  <node id="586" name="Shh'o'kumu Terrace, Promenade East" color="#80FFFF">
+  <node id="586" name="Shh'o'kumu Terrace, Promenade East" color="#00FFFF">
     <description>The rows of windswept willows and stately ironwood shade the walkways along the promenade.  Tantalizing smells wend their way toward appreciative bystanders and fade into the salt-sea air and the city beyond.</description>
     <position x="38" y="-869" z="0" />
     <arc exit="northeast" move="northeast" destination="587" />
     <arc exit="southwest" move="southwest" destination="585" />
   </node>
-  <node id="587" name="Shh'o'kumu Terrace, Promenade East" color="#80FFFF">
+  <node id="587" name="Shh'o'kumu Terrace, Promenade East" color="#00FFFF">
     <description>Several lovely homes are set back from the road, framed in a backdrop of rolling green acres and towering trees.  The views from this vantage point are breathtaking, whether it be the lovely terrace itself or the sparkling ocean beyond.</description>
     <position x="58" y="-889" z="0" />
     <arc exit="north" move="north" destination="588" />
@@ -3765,7 +3765,7 @@
     <arc exit="south" move="south" destination="588" />
     <arc exit="northwest" move="northwest" destination="590" />
   </node>
-  <node id="590" name="Shh'o'kumu Terrace, Por'oson Drive" color="#80FFFF">
+  <node id="590" name="Shh'o'kumu Terrace, Por'oson Drive" color="#00FFFF">
     <description>A low ivy covered wall brings the expansive greenery of the terrace into view as the drive skirts the northeast border of the lovely Deversham park.  Toward the southwest the beauty of the ocean catches the eye of all who traverse this section of town.</description>
     <position x="38" y="-939" z="0" />
     <arc exit="southeast" move="southeast" destination="589" />
@@ -3777,7 +3777,7 @@
     <arc exit="southeast" move="southeast" destination="590" />
     <arc exit="northwest" move="northwest" destination="592" />
   </node>
-  <node id="592" name="Shh'o'kumu Terrace, Por'oson Drive" color="#80FFFF">
+  <node id="592" name="Shh'o'kumu Terrace, Por'oson Drive" color="#00FFFF">
     <description>The pace of traffic is chaotic at times as the drive approaches the Por'oson Gate.  Travelers mill about asking directions to their destinations or seeking transportation to the distant locales beyond the city limits.</description>
     <position x="-2" y="-979" z="0" />
     <arc exit="southeast" move="southeast" destination="591" />
@@ -3823,26 +3823,26 @@
     <arc exit="east" move="east" destination="597" />
     <arc exit="southwest" move="southwest" destination="599" />
   </node>
-  <node id="599" name="Shh'o'kumu Terrace, Sur'oson Drive" color="#80FFFF">
+  <node id="599" name="Shh'o'kumu Terrace, Sur'oson Drive" color="#00FFFF">
     <description>The low half wall is replaced by a high, stone and timber wall which serves as a barrier to the great wilderness beyond the city limits.  To the east, views of regal drives and sumptuous acres greet the visitor or passerby.</description>
     <description>The low half wall is replaced by a high, stone and timber wall which serves as a barrier to the great wilderness beyond the city limits.  To the east, the regal drives are darkened, and soft lights dot the expansive acreage as the community slumbers.</description>
     <position x="-142" y="-959" z="0" />
     <arc exit="northeast" move="northeast" destination="598" />
     <arc exit="southwest" move="southwest" destination="600" />
   </node>
-  <node id="600" name="Shh'o'kumu Terrace, Sur'oson Drive" color="#80FFFF">
+  <node id="600" name="Shh'o'kumu Terrace, Sur'oson Drive" color="#00FFFF">
     <description>Shining tiled roofs, lush topiary gardens and manicured grounds present the onlooker with a beautiful view.  As gorgeous as the surrounding neighborhoods are, they all pale in comparison to the timeless beauty of the ocean to the west.</description>
     <position x="-162" y="-939" z="0" />
     <arc exit="northeast" move="northeast" destination="599" />
     <arc exit="southwest" move="southwest" destination="601" />
   </node>
-  <node id="601" name="Shh'o'kumu Terrace, Sur'oson Drive" color="#80FFFF">
+  <node id="601" name="Shh'o'kumu Terrace, Sur'oson Drive" color="#00FFFF">
     <description>A stiff breeze blows here constantly, on the windward side of the terrace.  A gentle slope rises from the road toward the east covered with softly waving grasses and wild flowers.  An old stone bench allows travelers a chance to sit and enjoy the view.</description>
     <position x="-182" y="-919" z="0" />
     <arc exit="northeast" move="northeast" destination="600" />
     <arc exit="south" move="south" destination="602" />
   </node>
-  <node id="602" name="Shh'o'kumu Terrace, Promenade West" color="#80FFFF">
+  <node id="602" name="Shh'o'kumu Terrace, Promenade West" color="#00FFFF">
     <description>Fine marble arches of the promenade loom to the south, their polished surfaces glinting with reflected light.  Families often stroll here, taking in the crisp air and the remarkable sights.  Several exquisite homes are nestled back from the road amid lush, manicured lawns.</description>
     <position x="-182" y="-904" z="0" />
     <arc exit="north" move="north" destination="601" />
@@ -3856,7 +3856,7 @@
     <arc exit="east" move="east" destination="621" />
     <arc exit="southeast" move="southeast" destination="604" />
   </node>
-  <node id="604" name="Shh'o'kumu Terrace, Promenade West" color="#80FFFF">
+  <node id="604" name="Shh'o'kumu Terrace, Promenade West" color="#00FFFF">
     <description>Swirling winds howl through the marble arches as the walkway turns toward the northeast.  Shielded from much of the wind, families stroll comfortably along the walk enjoying the dramatic views.</description>
     <description>Large marble arches shelter the walkway from the brisk evening breezes.  Crystal highlights glance off the ocean to the west lending an almost dreamlike quality to this section of the promenade.</description>
     <position x="-162" y="-869" z="0" />
@@ -3869,13 +3869,13 @@
     <arc exit="southeast" move="southeast" destination="606" />
     <arc exit="northwest" move="northwest" destination="604" />
   </node>
-  <node id="606" name="Shh'o'kumu Terrace, Promenade West" color="#80FFFF">
+  <node id="606" name="Shh'o'kumu Terrace, Promenade West" color="#00FFFF">
     <description>The marble of the balustrade is used to create a series of arches that offer a bit of protection from the constant breeze.  Elegant rose vines climb their marbled surfaces and paint a pretty picture against the azure of the sea beyond.</description>
     <position x="-122" y="-829" z="0" />
     <arc exit="east" move="east" destination="607" />
     <arc exit="northwest" move="northwest" destination="605" />
   </node>
-  <node id="607" name="Shh'o'kumu Terrace, Promenade West" color="#80FFFF">
+  <node id="607" name="Shh'o'kumu Terrace, Promenade West" color="#00FFFF">
     <description>Perfectly polished walkways and matching marble balustrades reflect just a portion of the incredible finery found on this tier.  Liveried carriages roll past conveying their occupants toward the sumptuous estates on the eastern side of the terrace.</description>
     <position x="-102" y="-829" z="0" />
     <arc exit="east" move="east" destination="608" />
@@ -3956,14 +3956,14 @@
     <arc exit="east" move="east" destination="616" />
     <arc exit="southwest" move="southwest" destination="618" />
   </node>
-  <node id="618" name="Shh'o'kumu Terrace, Zsikiel Lane" color="#80FFFF">
+  <node id="618" name="Shh'o'kumu Terrace, Zsikiel Lane" color="#00FFFF">
     <description>Delicious smells of roasting meats, spices and freshly baked bread waft past on a luscious breeze.  Somewhere closeby, the kitchen staff of a nearby estate prepares a sumptuous meal for the family and their guests.</description>
     <description>Lingering smells of the evenings repast waft through the air, the scent of cinnamon and coffee still strong.  Somewhere closeby, warming fires and relaxed conversation enfold the hard-working staff of any of the nearby estates, as they relax a bit and focus on their own families.</description>
     <position x="-112" y="-909" z="0" />
     <arc exit="northeast" move="northeast" destination="617" />
     <arc exit="southeast" move="southeast" destination="619" />
   </node>
-  <node id="619" name="Shh'o'kumu Terrace, Zsikiel Lane" color="#80FFFF">
+  <node id="619" name="Shh'o'kumu Terrace, Zsikiel Lane" color="#00FFFF">
     <description>The soft tinkle of chimes and the scent of roses mingles on a breeze.  Alongside the lane, a low white fence marks the sumptuous boundary of a formal garden.  A series of elaborate fountains punctuates the sculpted greenery as it spans east toward some incredibly beautiful homes.</description>
     <position x="-102" y="-899" z="0" />
     <arc exit="southwest" move="southwest" destination="620" />
