@@ -2525,7 +2525,7 @@
     <position x="318" y="-469" z="0" />
     <arc exit="south" move="south" destination="391" />
   </node>
-  <node id="395" name="Temple of Hodierna, Holy Sanctuary" note="Shrine4-02|Hodierna" color="#4080FF">
+  <node id="395" name="Temple of Hodierna, Holy Sanctuary" note="Shrine4-02|Hodierna" color="#A6A3D9">
     <description>The main part of the temple is dedicated to the goddess herself.  Entering through the arch, the first thing your eyes rest upon is the wall directly opposite the entrance.  An awe-inspiring mural of Hodierna, made out of thousands of tiny colored tiles, covers the entire length of the sanctuary.  Each tile is carefully placed, detailing the goddess' features, giving her an almost life-like appearance.  The altar is made of a pure white marble and polished to a lustrous shine.</description>
     <position x="318" y="-449" z="0" />
     <arc exit="go" move="go ivory arch" destination="391" />
@@ -2544,7 +2544,7 @@
     <arc exit="climb" move="climb stone steps" destination="396" />
     <arc exit="go" move="go domed building" destination="398" />
   </node>
-  <node id="398" name="Phelim's Temple, Planetarium" note="hrine4-03|Phelim|Planetarium" color="#4080FF">
+  <node id="398" name="Phelim's Temple, Planetarium" note="hrine4-03|Phelim|Planetarium" color="#A6A3D9">
     <description>The domed roof of the temple is closed and the constellations are projected on the ceiling and walls in a splendid display of the heavens.  The floor stones are black marble and glisten softly in the dim light, and the dark walls are cool and smooth to the touch.</description>
     <description>The domed roof of Phelim's temple is open to the night sky with a large telescope pointed towards the heavens.</description>
     <position x="338" y="-519" z="0" />
@@ -2877,7 +2877,7 @@
     <arc exit="northeast" move="northeast" destination="448" />
     <arc exit="south" move="south" destination="456" />
   </node>
-  <node id="450" name="A Pine Thicket" note="Shrine4-01|Dark Aspects|Pine Thicket" color="#4080FF">
+  <node id="450" name="A Pine Thicket" note="Shrine4-01|Dark Aspects|Pine Thicket" color="#A6A3D9">
     <description>The scent of pine resin and decaying wood permeates this dark stand of trees.  The sky is completely blocked from view by the overhanging boughs, and the air is still and suffocating.  There is a sense of being watched, by something.</description>
     <position x="198" y="-499" z="0" />
     <arc exit="northeast" move="northeast" destination="451" />
@@ -2901,7 +2901,7 @@
     <position x="238" y="-459" z="0" />
     <arc exit="northwest" move="northwest" destination="452" />
   </node>
-  <node id="454" name="Chadatru's Temple, Forecourt" note="Shrine4-09|Chadatru" color="#4080FF">
+  <node id="454" name="Chadatru's Temple, Forecourt" note="Shrine4-09|Chadatru" color="#A6A3D9">
     <description>A row of columns frames the tall, broad temple building that rises ahead.  This small courtyard consists of white pebbles, various aloe planted along the low walls, and a small altar placed against the western wall.  A fountain above the altar spills fresh water over its surface, keeping the altar glistening in the bright light.</description>
     <description>A row of columns frames the tall, broad temple building that rises ahead.  Hundreds of burning candles rest on the low courtyard walls, illuminating this small forecourt and brightening the white pebbles underfoot.  A fountain above the altar on the western wall spills fresh water over its surface, keeping the altar glistening softly in the candle light.</description>
     <position x="138" y="-419" z="0" />
@@ -3453,7 +3453,7 @@
     <arc exit="go" move="go round building" destination="539" />
     <arc exit="north" move="north" destination="530" />
   </node>
-  <node id="539" name="Faenella's Temple, Sanctum" note="Shrine4-05|Faenella" color="#4080FF">
+  <node id="539" name="Faenella's Temple, Sanctum" note="Shrine4-05|Faenella" color="#A6A3D9">
     <description>Smooth, dark wooden walls curve around this tall narrow room.  The only window is a skylight above a pale statue of Faenella, sculpted kneeling before a basin of water placed in the center of the space.  One half of the room is strung with golden wires that run from the floor to the ceiling, and sound in the chamber vibrates them to a pleasing tone.</description>
     <description>Smooth, dark wooden walls curve around this tall narrow room.  A skylight from above brightens the pale statue of Faenella kneeling before a basin of water placed in the center of the space.  One half of the room is strung with golden wires that run from the floor to ceiling, and sound in the chamber vibrates them to a pleasing tone.</description>
     <position x="-262" y="-579" z="0" />
@@ -3486,7 +3486,7 @@
     <arc exit="south" move="south" destination="542" />
     <arc exit="go" move="go door" destination="535" />
   </node>
-  <node id="544" name="Kertigen's Temple, Apse" note="Shrine4-10|Kertigen" color="#4080FF">
+  <node id="544" name="Kertigen's Temple, Apse" note="Shrine4-10|Kertigen" color="#A6A3D9">
     <description>Although there are no pews for worshippers to rest on, here at the front of the temple are several long wooden benches.  A curved railing shaped much like the bow of a ship encloses the altar, protecting and framing it splendidly.</description>
     <position x="-372" y="-479" z="0" />
     <arc exit="north" move="north" destination="542" />
@@ -3557,12 +3557,12 @@
     <arc exit="out" move="out" destination="522" />
     <arc exit="go" move="go cave" destination="556" />
   </node>
-  <node id="556" name="Everild's Temple, Inside the Cave" note="Shrine4-06|Everild" color="#4080FF">
+  <node id="556" name="Everild's Temple, Inside the Cave" note="Shrine4-06|Everild" color="#A6A3D9">
     <description>The small cave provides a rustic setting for the boar statue, which is made of cold bronze.  Although poised as if sleeping, its body is tense and a single open eye appears to watch every movement.</description>
     <position x="-312" y="-469" z="0" />
     <arc exit="out" move="out" destination="555" />
   </node>
-  <node id="557" name="Damaris' Temple, Altar Hall" note="Shrine4-07|Damaris" color="#4080FF">
+  <node id="557" name="Damaris' Temple, Altar Hall" note="Shrine4-07|Damaris" color="#A6A3D9">
     <description>A long narrow hall focuses attention on an altar at the western end.  The only ornament is the floor, an image of an elongated panther created from black marble floor tiles set against white shimmering stone.  The paws of the panther embrace the altar, and its tail curves around to the door leading outside the temple.</description>
     <position x="-162" y="-489" z="0" />
     <arc exit="north" move="north" destination="558" />
@@ -4270,7 +4270,7 @@
     <position x="318" y="-579" z="0" />
     <arc exit="east" move="east" destination="664" />
   </node>
-  <node id="666" name="Urrem'tier's Temple, Dark Alcove" note="Shrine4-04|Urrem'tier" color="#4080FF">
+  <node id="666" name="Urrem'tier's Temple, Dark Alcove" note="Shrine4-04|Urrem'tier" color="#A6A3D9">
     <description>Snickering noises echo in the alcove, or maybe it is the unknown breeze that chills the air even colder here than in the outer room.  Shadows dance on the walls yet there is no light source visible to cause them.  A larger than life onyx scorpion statue stands menacingly in the middle of the room.</description>
     <position x="358" y="-579" z="0" />
     <arc exit="out" move="out" destination="664" />
@@ -5235,7 +5235,7 @@
     <position x="202" y="541" z="0" />
     <arc exit="west" move="west" destination="805" />
   </node>
-  <node id="807" name="Glythtide's Shrine" note="Shrine4-08|Glythtide" color="#4080FF">
+  <node id="807" name="Glythtide's Shrine" note="Shrine4-08|Glythtide" color="#A6A3D9">
     <description>The shrine room is shaped like a burrow, all corners rounded and smooth.  Mown grasses and meadowsweet stems cover the floor in a fragrant strewing, but the main focus of the shrine remains the statue honoring the god Glythtide.</description>
     <position x="148" y="-509" z="0" />
     <arc exit="out" move="out" destination="444" />
