@@ -136,27 +136,27 @@
     <arc exit="northeast" move="northeast" destination="22" />
     <arc exit="southwest" move="southwest" destination="20" />
   </node>
-  <node id="22" name="Reshalia Trade Road, Farmland" color="#808040">
+  <node id="22" name="Reshalia Trade Road, Farmland">
     <description>The road takes a sharp turn here at the corner of a field.  The ground underfoot is soft and squishy, with frequent stretches that are downright slippery.  The smell of healthy, wet slime gives you a clue as to why this piece of road is so hazardous -- it's very muddy and oozy.</description>
     <description>The road takes a sharp turn here at the corner of a field.  The farmer who tends this land is a little overly enthusiastic about filling the drainage ditches, and water spills over onto the road somewhere to the northwest, making this stretch soggy.  A wide variety of slimes and mosses have taken over different ruts and corners, making all this mud most interesting for a dedicated natural philosopher, and a slippery nuisance for everyone else.</description>
     <position x="300" y="100" z="0" />
     <arc exit="southwest" move="southwest" destination="21" />
     <arc exit="northwest" move="northwest" destination="23" />
   </node>
-  <node id="23" name="Reshalia Trade Road, Farmland" color="#808040">
+  <node id="23" name="Reshalia Trade Road, Farmland">
     <description>A pedal mill stands astride the irrigation ditch to one side of the road.  The surface of the road here is wet and muddy -- it looks like water slops over out of the ditch on a regular basis.</description>
     <description>Two large Gor'Togs, a male and a female, work side by side on a pedal-mill.  Constructed of old lumber lashed together, the rickety contraption lifts water out of the flowing irrigation ditch and dumps it into the smaller ditch leading off into the kord field west of the road.  One of the small buckets on the male's side of the machine is cracked, causing it to spill water onto the road whenever it comes around.</description>
     <position x="280" y="80" z="0" />
     <arc exit="southeast" move="southeast" destination="22" />
     <arc exit="northwest" move="northwest" destination="24" />
   </node>
-  <node id="24" name="Reshalia Trade Road, Farmland" color="#808040">
+  <node id="24" name="Reshalia Trade Road, Farmland">
     <description>The occasional crunch underfoot is caused by gravel strewn in the road, apparently in an attempt to improve the footing in the muddy ruts.  It's a futile effort, however, since the gravel simply sinks into the mud and vanishes whenever it's walked on.  The road is wet and slippery, and the gravel only serves to bring to mind the likelihood of a few nasty cuts if one takes a spill, in addition to the inevitable mud on one's clothes.</description>
     <position x="260" y="60" z="0" />
     <arc exit="southeast" move="southeast" destination="23" />
     <arc exit="northwest" move="northwest" destination="25" />
   </node>
-  <node id="25" name="Reshalia Trade Road, Farmland" color="#808040">
+  <node id="25" name="Reshalia Trade Road, Farmland">
     <description>To the west, in a corner where two kord fields meet at an angle, is a small rocky spot where the farmers have built a wooden shrine.  A path planted on either side with daisies and ornamental grasses leads to the cozy structure.  Two stone cows lie on either side of the path, their necks garlanded with wilted daisy wreaths, their carved eyes flat and glazed looking.</description>
     <position x="240" y="40" z="0" />
     <arc exit="north" move="north" destination="26" />

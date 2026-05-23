@@ -7,7 +7,7 @@
     <arc exit="southeast" move="southeast" destination="39" />
     <arc exit="west" move="west" destination="2" />
   </node>
-  <node id="2" name="Eastern Tier, Outside Gate" color="#808040">
+  <node id="2" name="Eastern Tier, Outside Gate">
     <description>The eastern gate of the Crossing stands before you, an incomplete, but serviceable stone structure.  To the north are grey slate hills rising out of dense clumps of deobar trees and groves of tall almur poplars.  The land to the east is flat, and dips and rises almost imperceptibly into the distance.  A single, wide path winds through it, surrounded by ruins, debris and small huts.</description>
     <position x="140" y="26" z="0" />
     <arc exit="east" move="east" destination="1" />
