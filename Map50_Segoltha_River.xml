@@ -53,7 +53,7 @@
     <position x="280" y="100" z="0" />
     <arc exit="east" move="east" />
   </node>
-  <node id="9" name="Segoltha River, Midstream" color="#010165">
+  <node id="9" name="Segoltha River, Midstream" color="#000080">
     <description>Twisting currents of silt-laden water surge just below the river's surface.  A churning, heaving mass of dirty brown waves, the torrent of water stretches as far as the eye can see.</description>
     <position x="140" y="140" z="0" />
     <arc exit="north" move="swim north" destination="7" />
@@ -65,7 +65,7 @@
     <arc exit="west" move="swim west" destination="9" />
     <arc exit="northwest" move="swim northwest" destination="7" />
   </node>
-  <node id="10" name="Segoltha River, Midstream" color="#010165">
+  <node id="10" name="Segoltha River, Midstream" color="#000080">
     <description>Twisting currents of silt-laden water surge just below the river's surface.  A churning, heaving mass of dirty brown waves, the torrent of water stretches as far as the eye can see.</description>
     <position x="140" y="160" z="0" />
     <arc exit="south" move="swim south" destination="11" />
@@ -77,7 +77,7 @@
     <arc exit="southeast" move="swim southeast" destination="10" />
     <arc exit="southwest" move="swim southwest" destination="11" />
   </node>
-  <node id="11" name="Segoltha River, Midstream" color="#010165">
+  <node id="11" name="Segoltha River, Midstream" color="#000080">
     <description>Twisting currents of silt-laden water surge just below the river's surface.  A churning, heaving mass of dirty brown waves, the torrent of water stretches as far as the eye can see.</description>
     <position x="140" y="180" z="0" />
     <arc exit="northeast" move="swim northeast" destination="11" />
@@ -135,7 +135,7 @@
     <arc exit="west" move="swim west" destination="15" />
     <arc exit="northwest" move="swim northwest" destination="14" />
   </node>
-  <node id="16" name="Segoltha River, Midstream" color="#010165">
+  <node id="16" name="Segoltha River, Midstream" color="#000080">
     <description>Twisting currents of silt-laden water surge just below the river's surface.  A churning, heaving mass of dirty brown waves, the torrent of water stretches as far as the eye can see.</description>
     <position x="140" y="280" z="0" />
     <arc exit="north" move="swim north" destination="15" />
@@ -147,7 +147,7 @@
     <arc exit="west" move="swim west" destination="16" />
     <arc exit="northwest" move="swim northwest" destination="15" />
   </node>
-  <node id="17" name="Segoltha River, Midstream" color="#010165">
+  <node id="17" name="Segoltha River, Midstream" color="#000080">
     <description>Twisting currents of silt-laden water surge just below the river's surface.  A churning, heaving mass of dirty brown waves, the torrent of water stretches as far as the eye can see.</description>
     <position x="140" y="300" z="0" />
     <arc exit="north" move="swim north" destination="16" />
@@ -159,7 +159,7 @@
     <arc exit="west" move="swim west" destination="17" />
     <arc exit="northwest" move="swim northwest" destination="16" />
   </node>
-  <node id="18" name="Segoltha River, Midstream" color="#010165">
+  <node id="18" name="Segoltha River, Midstream" color="#000080">
     <description>Twisting currents of silt-laden water surge just below the river's surface.  A churning, heaving mass of dirty brown waves, the torrent of water stretches as far as the eye can see.</description>
     <position x="140" y="320" z="0" />
     <arc exit="north" move="swim north" destination="17" />
@@ -171,7 +171,7 @@
     <arc exit="west" move="swim west" destination="18" />
     <arc exit="northwest" move="swim northwest" destination="17" />
   </node>
-  <node id="19" name="Segoltha River, Midstream" color="#010165">
+  <node id="19" name="Segoltha River, Midstream" color="#000080">
     <description>Twisting currents of silt-laden water surge just below the river's surface.  A churning, heaving mass of dirty brown waves, the torrent of water stretches as far as the eye can see.</description>
     <position x="140" y="340" z="0" />
     <arc exit="north" move="swim north" destination="18" />
@@ -183,7 +183,7 @@
     <arc exit="west" move="swim west" destination="19" />
     <arc exit="northwest" move="swim northwest" destination="18" />
   </node>
-  <node id="20" name="Segoltha River, Midstream" color="#010165">
+  <node id="20" name="Segoltha River, Midstream" color="#000080">
     <description>Twisting currents of silt-laden water surge just below the river's surface.  A churning, heaving mass of dirty brown waves, the torrent of water stretches as far as the eye can see.</description>
     <position x="140" y="360" z="0" />
     <arc exit="north" move="swim north" destination="19" />
@@ -195,7 +195,7 @@
     <arc exit="west" move="swim west" destination="20" />
     <arc exit="northwest" move="swim northwest" destination="19" />
   </node>
-  <node id="21" name="Segoltha River, Midstream" color="#010165">
+  <node id="21" name="Segoltha River, Midstream" color="#000080">
     <description>Twisting currents of silt-laden water surge just below the river's surface.  A churning, heaving mass of dirty brown waves, the torrent of water stretches as far as the eye can see.</description>
     <position x="140" y="380" z="0" />
     <arc exit="north" move="swim north" destination="20" />
@@ -282,7 +282,7 @@
     <arc exit="west" move="swim west" destination="23" />
     <arc exit="northwest" move="swim northwest" destination="22" />
   </node>
-  <node id="32" name="Segoltha River, Midstream" color="#010165">
+  <node id="32" name="Segoltha River, Midstream" color="#000080">
     <description>Twisting currents of silt-laden water surge just below the river's surface.  A churning, heaving mass of dirty brown waves, the torrent of water stretches as far as the eye can see.</description>
     <position x="140" y="100" z="0" />
     <arc exit="north" move="swim north" destination="33" />
