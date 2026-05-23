@@ -266,7 +266,7 @@
     <arc exit="east" move="east" destination="43" />
     <arc exit="west" move="west" destination="45" />
   </node>
-  <node id="45" name="Platform's Edge, Seat of the Guildmaster" note="Moon Mage Guildleader Tiv" color="#80FF00">
+  <node id="45" name="Platform's Edge, Seat of the Guildmaster" note="Moon Mage Guildleader Tiv" color="#FF8000">
     <description>A large circular stone platform rests suspended in mid-air over the center of the volcano.  The precarious catwalk extends to its edge.</description>
     <position x="-500" y="-400" z="0" />
     <arc exit="east" move="east" destination="44" />
