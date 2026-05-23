@@ -1432,28 +1432,28 @@
     <arc exit="southwest" move="southwest" destination="208" />
     <arc exit="northwest" move="northwest" destination="206" />
   </node>
-  <node id="208" name="Fala Inisharon, The Bog Wallows" color="#808080">
+  <node id="208" name="Fala Inisharon, The Bog Wallows">
     <description>A gnarled cypress, bent into a wooden parody of a giant bowed under a heavy burden, stands in the muddy soil.  The tree even bears something that resembles a wound: a gash has been ripped into the bark along one side.  Beyond it to the west is a large pool of dirty brown water, home to who knows what kind of creatures.</description>
     <position x="-20" y="300" z="0" />
     <arc exit="northeast" move="northeast" destination="207" />
     <arc exit="west" move="west" destination="209" />
     <arc exit="climb" move="climb cypress" destination="217" />
   </node>
-  <node id="209" name="Fala Inisharon, The Bog Wallows" color="#808080">
+  <node id="209" name="Fala Inisharon, The Bog Wallows">
     <description>Scum-covered waters swirl around a moss-shrouded cypress standing in a murky brown pool.  Unknown and unseen inhabitants lurking below the surface stir the water, from which an everpresent fog slowly twists and dances despite the deathly still air.  Rumors say the fog holds the spirits of the fallen, forever trapped in the mist.</description>
     <position x="-60" y="300" z="0" />
     <arc exit="east" move="east" destination="208" />
     <arc exit="northwest" move="northwest" destination="210" />
     <arc exit="climb" move="climb cypress" destination="219" />
   </node>
-  <node id="210" name="Fala Inisharon, The Bog Wallows" color="#808080">
+  <node id="210" name="Fala Inisharon, The Bog Wallows">
     <description>The water deepens, making the footing even more uncertain in front of a large cypress tree slowly being strangled by greyish-green vines with big, plate-sized leaves.  The vines drape the tree like a shroud and will eventually pull it down, but for the creature that climbs the tree, they offer a secure handhold, almost as good as a ladder.</description>
     <position x="-80" y="280" z="0" />
     <arc exit="southeast" move="southeast" destination="209" />
     <arc exit="southwest" move="southwest" destination="211" />
     <arc exit="climb" move="climb vine" destination="223" />
   </node>
-  <node id="211" name="Fala Inisharon, The Bog Wallows" color="#808080">
+  <node id="211" name="Fala Inisharon, The Bog Wallows">
     <description>From the west comes the noise of rushing water -- no small stream, by the sound of it.  Here, in the midst of a thicket of alder and willow trees, the water is still and knee-deep in some places, but a path can be traced by stepping carefully across the roots of the trees.</description>
     <description>From the west comes the noise of rushing water -- no small stream, by the sound of it.  Here, in the midst of a thicket of alder and willow trees, the water is still and knee-deep in some places, but a path can be traced by stepping carefully across the roots of the trees.  A shaft of sunlight flashes a reflection from something at the base of a willow.</description>
     <position x="-100" y="300" z="0" />
@@ -1469,27 +1469,27 @@
     <arc exit="go" move="go log" destination="230" />
     <arc exit="go" move="go path" destination="265" />
   </node>
-  <node id="213" name="Fala Inisharon, The Bog Wallows" color="#808080">
+  <node id="213" name="Fala Inisharon, The Bog Wallows">
     <description>A rocky outcropping like a tilted tabletop stretches far to the north to a jagged peak jutting into the sky.  Through the ravelthorn bushes to the south and west comes the continuous roaring of the Altanen River.</description>
     <description>A rocky outcropping like a tilted tabletop stretches far to the north to a jagged peak jutting into the sky.  Through the ravelthorn bushes to the south and west comes the flash of sunbeams on the Altanen River.</description>
     <position x="-120" y="280" z="0" />
     <arc exit="northeast" move="northeast" destination="214" />
     <arc exit="southwest" move="southwest" destination="212" />
   </node>
-  <node id="214" name="Fala Inisharon, The Bog Wallows" color="#808080">
+  <node id="214" name="Fala Inisharon, The Bog Wallows">
     <description>On the crest of a slight rise a massive white oak towers into the sky, a stalwart sentinel.  The ground around the base of the tree is littered with empty acorn caps.  A few slender oak saplings find purchase here and stretch to the sky but are hard pressed to find sunlight in the shade of the behemoth above them.</description>
     <position x="-100" y="260" z="0" />
     <arc exit="east" move="east" destination="215" />
     <arc exit="southwest" move="southwest" destination="213" />
     <arc exit="climb" move="climb oak" destination="303" />
   </node>
-  <node id="215" name="Fala Inisharon, The Bog Wallows" color="#808080">
+  <node id="215" name="Fala Inisharon, The Bog Wallows">
     <description>The trail winds between the marsh and the rocky slopes of the Forlorn Hope -- the fabled mountain, Galduta Isharon, visible to the northwest through breaks in the tress.  The stench of decay hangs over the murky brown water lapping along the edge of the path.</description>
     <position x="-80" y="260" z="0" />
     <arc exit="northeast" move="northeast" destination="216" />
     <arc exit="west" move="west" destination="214" />
   </node>
-  <node id="216" name="Fala Inisharon, The Bog Wallows" color="#808080">
+  <node id="216" name="Fala Inisharon, The Bog Wallows">
     <description>The ground is soft underfoot, making a liquid sucking sound with every step.  A discarded boot, now a permanent resident, is lodged nearby, half submerged in the mire.  The surrounding woods are full of the buzz and chitter of insects, and every so often comes a rustling in the brush or something like a muffled footfall.</description>
     <description>The ground is soft underfoot, making a liquid sucking sound with every step.  A discarded boot, now a permanent resident, is lodged nearby, half submerged in the mire.  The surrounding woods are full of birdsong, and every so often comes a rustling in the brush or something like a muffled footfall.</description>
     <position x="-60" y="240" z="0" />

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <zone name="Crossing Thief" id="1a">
-  <node id="1" name="Underground Passageway" color="#808080">
+  <node id="1" name="Underground Passageway">
     <description>This lengthy passageway is clogged with knife-sized bits of sharp debris.  Overhead several massive boulders block out most of the light, and the din of town traffic is reduced to a surflike roar.  No one stops to glance down between the chinks of rubble, leaving your travels unnoticed and undisturbed.</description>
     <position x="20" y="-80" z="0" />
     <arc exit="northeast" move="northeast" destination="2" />
     <arc exit="go" move="go shadowed gap" destination="4" />
   </node>
-  <node id="2" name="Underground Passageway" color="#808080">
+  <node id="2" name="Underground Passageway">
     <description>Massive boulders from above press deeply into this rubble-strewn area.  Jagged corners of granite lurk everywhere, grinding harshly against each other, and against inhabitants' heads when they don't dodge swiftly enough.</description>
     <position x="40" y="-100" z="0" />
     <arc exit="southwest" move="southwest" destination="1" />
     <arc exit="north" move="north" destination="3" />
     <arc exit="east" move="east" destination="41" />
   </node>
-  <node id="3" name="Underground Passageway" color="#808080">
+  <node id="3" name="Underground Passageway">
     <description>Jagged piles of debris line the center of this passageway, chips and shards of large rocks lodged deep in the low ceiling above.  A fine grey dust blankets everything else, sifting into clouds at knee-level from the passage of thieves.</description>
     <position x="40" y="-120" z="0" />
     <arc exit="south" move="south" destination="2" />
@@ -35,14 +35,14 @@
     <arc exit="south" move="south" />
     <arc exit="west" move="west" />
   </node>
-  <node id="6" name="Riverbank Mudflats" note="Map1_Crossing.xml|Crossing" color="#808080">
+  <node id="6" name="Riverbank Mudflats" note="Map1_Crossing.xml|Crossing">
     <description>Against the rotting warehouse pylons, a makeshift dwelling has been built of broken boxes and stray boards.  A roof composed of dried vilt reeds woven tight and sealed with mud is a temporary but effective relief from the sun.  However, the structure's stopgap construction provides little shelter from the other elements.</description>
     <position x="140" y="-60" z="0" />
     <arc exit="south" move="south" />
     <arc exit="west" move="west" />
     <arc exit="go" move="go panel" destination="7" />
   </node>
-  <node id="7" name="Riverbank Mudflats, Rough Stairway" color="#808080">
+  <node id="7" name="Riverbank Mudflats, Rough Stairway">
     <description>Barely visible in the murky air of the room, broken boards have been set into the earth to form a crude set of steps that tilt precariously away from the base of the panel to drop into the darkness beyond.  Shredded oilcloth has been jammed into the cracks around the panel as if an attempt has been made to prevent light or sounds from betraying activity here to the world outside.</description>
     <position x="120" y="-80" z="0" />
     <arc exit="out" move="out" destination="6" />
@@ -146,31 +146,31 @@
     <arc exit="south" move="south" />
     <arc exit="go" move="go bould" destination="22" />
   </node>
-  <node id="24" name="A Dank Dark Passage" color="#808080">
+  <node id="24" name="A Dank Dark Passage">
     <description>An obstacle course formed of pillaged packing crates in all sizes, shapes and states of decomposition hinders your movement through the passage.  Straw filling, moldy and brown, lies scattered about, jagged edges of rusty metal implements occasionally jutting above the mess.  This is a good place to walk softly.</description>
     <position x="40" y="-40" z="0" />
     <arc exit="southwest" move="southwest" destination="25" />
     <arc exit="go" move="go narrow footholds" destination="29" />
   </node>
-  <node id="25" name="Cluttered, Dank Passage" color="#808080">
+  <node id="25" name="Cluttered, Dank Passage">
     <description>Boxes, sacks, baskets and crates lie upended, splintered, ripped apart and smashed into sawdust.  Numerous fat, bright-eyed rodents stare with unblinking eyes, their whiskers churning thoughtfully.</description>
     <position x="20" y="-20" z="0" />
     <arc exit="northeast" move="northeast" destination="24" />
     <arc exit="south" move="south" destination="26" />
   </node>
-  <node id="26" name="Dark Cluttered Passage" color="#808080">
+  <node id="26" name="Dark Cluttered Passage">
     <description>An obstacle course formed of pillaged packing crates in all sizes, shapes and states of decomposition hinders your movement through the passage.  Straw filling, moldy and brown, lies scattered about, jagged edges of rusty metal implements occasionally jutting above the mess.  This is a good place to walk softly.</description>
     <position x="20" y="0" z="0" />
     <arc exit="north" move="north" destination="25" />
     <arc exit="south" move="south" destination="27" />
   </node>
-  <node id="27" name="Cluttered, Dark Passage" color="#808080">
+  <node id="27" name="Cluttered, Dark Passage">
     <description>Discarded weapons and armor lie heaped about, their jagged edges covered with corrosive rust-colored algae.  Maneuvering past the ruined merchandise is made more difficult by endless rats, madly scurrying through this area in blind panic.</description>
     <position x="20" y="20" z="0" />
     <arc exit="north" move="north" destination="26" />
     <arc exit="southwest" move="southwest" destination="28" />
   </node>
-  <node id="28" name="A Dank, Cluttered Passage" color="#808080">
+  <node id="28" name="A Dank, Cluttered Passage">
     <description>An obstacle course formed of pillaged packing crates in all sizes, shapes and states of decomposition hinders your movement through the passage.  Straw filling, moldy and brown, lies scattered about, jagged edges of rusty metal implements occasionally jutting above the mess.  This is a good place to walk softly.</description>
     <position x="0" y="40" z="0" />
     <arc exit="northeast" move="northeast" destination="27" />
@@ -249,13 +249,13 @@
     <position x="140" y="-80" z="0" />
     <arc exit="out" move="out" destination="6" />
   </node>
-  <node id="41" name="Thieves' Highway" color="#808080">
+  <node id="41" name="Thieves' Highway">
     <description>Smooth stone walls wrap around the tunnel, giving it a circular shape that is just large enough for the tallest Gor'Tog to pass.  Cleared from rubble and trash, the walkway here is uninterrupted in either direction and dimly flickering lights within goat's horn sconces light the passage towards the southeast.  A dark, rubble-filled gloom flickers its shadows across the western path.</description>
     <position x="60" y="-100" z="0" />
     <arc exit="southeast" move="southeast" destination="42" />
     <arc exit="west" move="west" destination="2" />
   </node>
-  <node id="42" name="Thieves' Highway" color="#808080">
+  <node id="42" name="Thieves' Highway">
     <description>Flickering lights, cast from goat's horn sconces, reveal a circular tunnel with a cleared walkway.  Winding swiftly underneath the city overhead, the tunnel is punctuated at one end by a single, darkened doorway cast in shifting shadows.</description>
     <position x="80" y="-80" z="0" />
     <arc exit="northwest" move="northwest" destination="41" />
