@@ -3545,7 +3545,7 @@
     <arc exit="down" move="down" destination="554" />
     <arc exit="climb" move="climb edge" destination="552" />
   </node>
-  <node id="554" name="Eluned's Temple, Pool" color="#0080FF">
+  <node id="554" name="Eluned's Temple, Pool" color="#0000FF">
     <description>Some light filters down from above, but beneath the water looks dark and deep.  What may lurk there is anyone's guess.</description>
     <position x="-372" y="-609" z="0" />
     <arc exit="up" move="swim up" destination="553" />
