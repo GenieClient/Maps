@@ -62,7 +62,7 @@
     <arc exit="east" move="east" destination="10" />
     <arc exit="west" move="west" destination="8" />
   </node>
-  <node id="10" name="Shard, West Bridge" note="West Bridge|W Bridge|Kraelyst start point|travel start point" color="#808000">
+  <node id="10" name="Shard, West Bridge" note="West Bridge|W Bridge|Kraelyst start point|travel start point">
     <description>Eerie chanting echoes over the bridge, filling the air with an ominous reminder that the World Dragon is still an influential power.  Wyvern Mountain rises up blotting out the western sky.</description>
     <description>The walls of Shard gleam with an inner light rivaling the sun for magnificence, the carefully cut crystal reflecting and refracting light in amazing patterns.  Wyvern Mountain rises up in the west, a huge shadow against the daytime sky.</description>
     <position x="680" y="497" z="0" />
@@ -970,7 +970,7 @@
     <position x="-900" y="177" z="0" />
     <arc exit="west" move="west" destination="166" />
   </node>
-  <node id="168" name="Zaldi Taipa, Cedar Path" note="Kraelyst start point|travel start point" color="#808000">
+  <node id="168" name="Zaldi Taipa, Cedar Path" note="Kraelyst start point|travel start point">
     <description>Silhouetted against the moon-silvered sky, tents are arranged in an orderly grouping that takes maximum advantage of trees that will provide shade in the heat of the day and the partial shelter of a few low ridges.  A nearby clump of juniper lists slightly to one side, almost excavated by something that has dug underneath its low branches to create a hollow in the shadows.</description>
     <description>Silhouetted against the wide prairie sky, colorful tents are arranged in an orderly grouping that takes maximum advantage of shade trees and the partial shelter of a few low ridges.  A nearby clump of juniper lists slightly to one side, almost excavated by something that has dug underneath its low branches to create a hollow in the shadows.</description>
     <position x="-740" y="337" z="0" />

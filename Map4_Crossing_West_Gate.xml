@@ -2895,7 +2895,7 @@
     <arc exit="north" move="north" destination="449" />
     <arc exit="south" move="south" destination="447" />
   </node>
-  <node id="449" name="Knife Clan, Sentry" note="Knife Clan|Kraelyst start point|travel start point" color="#808000">
+  <node id="449" name="Knife Clan, Sentry" note="Knife Clan|Kraelyst start point|travel start point">
     <description>A lone Gor'Tog stands motionless, his dark leathers rendering him almost indistinguishable from the surrounding underbrush.  The sentry's eyes scan constantly for signs of danger, the slightest movement instantly drawing his attention.  A low wooden building can be glimpsed off to the west, while to the north the thinning forest gives way to hills.  A rope bridge spans a dry gully south of here.</description>
     <position x="-720" y="-560" z="0" />
     <arc exit="north" move="north" destination="452" />

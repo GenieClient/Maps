@@ -873,7 +873,7 @@
     <arc exit="southwest" move="southwest" destination="126" />
     <arc exit="northwest" move="northwest" destination="89" />
   </node>
-  <node id="126" name="Seord Kerwaith, North Gate" note="Kraelyst start point|travel start point" color="#808000">
+  <node id="126" name="Seord Kerwaith, North Gate" note="Kraelyst start point|travel start point">
     <description>Set within the impressive facade of sharpened logs that enclose the inhabitants of the outpost, the massive iron gate stands as the first defense against those who would wish to claim this land at their own.  High overhead, several guards clad in thick furs keep a careful eye on the landscape, searching for threats that dare challenge the battle savvy Dwarves of Hibarnhvidar.</description>
     <position x="320" y="680" z="0" />
     <arc exit="north" move="north" destination="128" />

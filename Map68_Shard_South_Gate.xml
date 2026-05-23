@@ -311,7 +311,7 @@
     <arc exit="south" move="swim south" destination="49" />
     <arc exit="northwest" move="swim northwest" destination="47" />
   </node>
-  <node id="49" name="Derelict Road, Marsh" color="#808000">
+  <node id="49" name="Derelict Road, Marsh">
     <description>The thick morass of the marsh seems to twist and move as small pockets of air slowly work their way to the surface, releasing a foul stench that fills the area.  The stones from the derelict road are completely gone, forcing travellers to wade through the gross slime.</description>
     <description>The thick morass of the marsh seems to twist and move as small pockets of air slowly work their way to the surface, releasing a foul stench that fills the area.  The stones from the derelict road are completely gone, forcing travelers to wade through the gross slime.</description>
     <position x="60" y="360" z="0" />
@@ -406,7 +406,7 @@
     <arc exit="south" move="rt south" destination="64" />
     <arc exit="northwest" move="rt northwest" destination="62" />
   </node>
-  <node id="64" name="Derelict Road, Darkling Wood" color="#808000">
+  <node id="64" name="Derelict Road, Darkling Wood">
     <description>Tall fingers of timeworn stone thrust up among the imprisoning raevelthorn, hovering like phantoms that watch life pass along the roadway with the cold and detached gaze of eternity.</description>
     <position x="0" y="660" z="0" />
     <arc exit="north" move="rt north" destination="63" />
@@ -418,13 +418,13 @@
     <arc exit="north" move="rt north" destination="64" />
     <arc exit="southwest" move="southwest" destination="66" />
   </node>
-  <node id="66" name="Derelict Road, Darkling Wood" color="#808000">
+  <node id="66" name="Derelict Road, Darkling Wood">
     <description>To the east, an overgrown clearing was once a welcome bit of open space in the thick wood.  Barely visible in the dim light, several rusted chains swing from a tree limb over the clearing, rattling quietly in the wind.</description>
     <position x="-20" y="700" z="0" />
     <arc exit="northeast" move="northeast" destination="65" />
     <arc exit="west" move="rt west" destination="67" />
   </node>
-  <node id="67" name="Derelict Road, Darkling Wood" color="#808000">
+  <node id="67" name="Derelict Road, Darkling Wood">
     <description>The land slopes sharply up to the south and down to the north, holding the mountain path on a narrow ledge cut into the stony earth.  Untouched by daylight, a deep gloom whispers seductively from the heart of the wood, calling travelers into its dark embrace.</description>
     <description>The land slopes sharply up to the south and down to the north, holding the mountain path on a narrow ledge cut into the stony earth.  Untouched by starlight, a deep gloom whispers seductively from the heart of the wood, calling travelers into its dark embrace.</description>
     <position x="-40" y="700" z="0" />

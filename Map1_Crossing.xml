@@ -310,7 +310,7 @@
     <arc exit="west" move="west" destination="40" />
     <arc exit="go" move="go town hall" destination="311" />
   </node>
-  <node id="42" name="The Crossing, Hodierna Way" note="Kraelyst start point|travel start point" color="#808000">
+  <node id="42" name="The Crossing, Hodierna Way" note="Kraelyst start point|travel start point">
     <description>The hustle of crowds making their way between the secular and religious centers of town that converge here carries you along with its momentum.  The granite and marble facade of the First Provincial Bank catches your eye, standing before you as solid as its name.  A Gor'Tog guard armed with pike and crossbow is posted at the door, while a few well-dressed merchants congregate outside.</description>
     <position x="210" y="20" z="0" />
     <arc exit="east" move="east" destination="160" />

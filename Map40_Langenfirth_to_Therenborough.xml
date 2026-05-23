@@ -1384,7 +1384,7 @@
     <arc exit="north" move="north" destination="209" />
     <arc exit="southeast" move="southeast" destination="207" />
   </node>
-  <node id="209" name="North Road, Barony Pass" note="gate to Therenborough|Kraelyst start point|travel start point" color="#808000">
+  <node id="209" name="North Road, Barony Pass" note="gate to Therenborough|Kraelyst start point|travel start point">
     <description>With one final sweep, the road straightens out from the hilly pastures in the south to stop at a walled village.  Looming above the stone boundary is the majestic Theren Keep, its battered towers still an imposing sight to behold.</description>
     <position x="200" y="-1316" z="0" />
     <arc exit="south" move="south" destination="208" />

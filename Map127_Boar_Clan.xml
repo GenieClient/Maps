@@ -106,7 +106,7 @@
     <arc exit="southwest" move="southwest" destination="16" />
     <arc exit="west" move="west" destination="18" />
   </node>
-  <node id="18" name="Boar Clan, Before the Gate" note="Boar Clan|Gate|Kraelyst start point|travel start point" color="#808000">
+  <node id="18" name="Boar Clan, Before the Gate" note="Boar Clan|Gate|Kraelyst start point|travel start point">
     <description>A massive palisade gate guards the entry to a small village nestled within the forest glade.  Though sharpened points top the upright logs of the palisade, they appear to be the trees of the glade itself embracing the clusters of longhouses within.  Gor'Tog rangers flanking the gate open and close it as needed with a chorus of grunting and the scraping sounds of the wooden gate dragging on the ground as it moves.</description>
     <description>Torches flicker beside a massive palisade gate guarding a small village nestled within the forest glade.  Though sharpened points top the upright logs of the palisade, they appear to be the trees of the glade itself embracing the clusters of longhouses within.  Gor'Tog rangers flanking the gate open and close it as needed with a chorus of grunting and the scraping sounds of the wooden gate dragging on the ground as it moves.</description>
     <position x="180" y="500" z="0" />
