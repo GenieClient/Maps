@@ -1748,7 +1748,7 @@
     <position x="315" y="320" z="0" />
     <arc exit="east" move="east" destination="222" />
   </node>
-  <node id="261" name="Fang's Rise, Secluded Island" color="White">
+  <node id="261" name="Fang's Rise, Secluded Island">
     <description>Low hanging trees, branches and dense vegetation make this little island seem to be like its own secluded world.  The sounds of the nearby waterfall are nearly drowned out by the abundant insects, birds and other creatures hiding within the profuse foliage.  A well-worn tree stump, smooth with age, sits before a large flat rock that appears to have been used as a table.</description>
     <position x="420" y="320" z="0" />
     <arc exit="climb" move="climb low-hanging branch" destination="119" />
@@ -1769,7 +1769,7 @@
     <position x="143" y="330" z="0" />
     <arc exit="go" move="go purpleheart door" destination="88" />
   </node>
-  <node id="265" name="Fang Cove, Verdant Snarl" note="sovamedo" color="White">
+  <node id="265" name="Fang Cove, Verdant Snarl" note="sovamedo">
     <description>Dense undergrowth spreads across the area, a layered tangle of brush, shrubs, and low trees bound together by looping vines and trailing creepers.  Narrow, winding trails cut through the growth in branching paths, their packed surfaces weaving between roots and thickets.  Overhead, interlaced limbs form a broken canopy, partially sheltering the uneven ground.</description>
     <position x="507" y="340" z="0" />
     <arc exit="north" move="north" destination="266" />
@@ -1777,14 +1777,14 @@
     <arc exit="east" move="east" destination="268" />
     <arc exit="climb" move="climb narrow crevice" destination="96" />
   </node>
-  <node id="266" name="Fang Cove, Verdant Snarl" color="White">
+  <node id="266" name="Fang Cove, Verdant Snarl">
     <description>Clusters of shrubs and closely set trees form a continuous thicket, their growth interlaced with trailing vines and creeping stems.  Worn passages curve through the undergrowth, splitting and rejoining as they follow the contours of the land.</description>
     <position x="507" y="320" z="0" />
     <arc exit="east" move="east" destination="267" />
     <arc exit="southeast" move="southeast" destination="268" />
     <arc exit="south" move="south" destination="265" />
   </node>
-  <node id="267" name="Fang Cove, Verdant Snarl" color="White">
+  <node id="267" name="Fang Cove, Verdant Snarl">
     <description>A dense sprawl of brush and low-reaching limbs blankets the area, bound tight with creeping growth.  Slender trails wind through the tangle in intersecting lines, their paths worn smooth where movement has pressed them into the earth.</description>
     <position x="527" y="320" z="0" />
     <arc exit="south" move="south" destination="268" />
@@ -1792,14 +1792,14 @@
     <arc exit="west" move="west" destination="266" />
     <arc exit="climb" move="climb rocky incline" destination="269" />
   </node>
-  <node id="268" name="Fang Cove, Verdant Snarl" color="White">
+  <node id="268" name="Fang Cove, Verdant Snarl">
     <description>Thick growth crowds the area, where tangled shrubs and young trees press close beneath a web of climbing vines.  A network of narrow tracks threads through the brush, bending around dense clusters and dipping between exposed roots.  The ground is uneven, layered with compressed debris.</description>
     <position x="527" y="340" z="0" />
     <arc exit="north" move="north" destination="267" />
     <arc exit="west" move="west" destination="265" />
     <arc exit="northwest" move="northwest" destination="266" />
   </node>
-  <node id="269" name="Fang Cove, Verdant Outcrop" color="White">
+  <node id="269" name="Fang Cove, Verdant Outcrop">
     <description>A broad cave mouth opens beneath a low ceiling of rough stone, the rocky overhang covered in a vibrant green tapestry of leafy vines.  The ground is rocky and uneven, scattered with gnawed bones and loose feathers.  Jagged stone presses down from above, narrowing the space beneath the overhang.</description>
     <position x="547" y="320" z="0" />
     <arc exit="north" move="north" destination="270" />
@@ -1807,21 +1807,21 @@
     <arc exit="east" move="east" destination="272" />
     <arc exit="climb" move="climb rocky incline" destination="267" />
   </node>
-  <node id="270" name="Fang Cove, Verdant Outcrop" color="White">
+  <node id="270" name="Fang Cove, Verdant Outcrop">
     <description>The cave mouth narrows slightly, its low ceiling casting heavy shadows across the uneven floor visible from the entrance.  At the farthest point from the opening, small pairs of yellow eyes blink intermittently, appearing and vanishing within the recesses of the stone.</description>
     <position x="547" y="300" z="0" />
     <arc exit="east" move="east" destination="271" />
     <arc exit="southeast" move="southeast" destination="269" />
     <arc exit="south" move="south" destination="269" />
   </node>
-  <node id="271" name="Fang Cove, Verdant Outcrop" color="White">
+  <node id="271" name="Fang Cove, Verdant Outcrop">
     <description>Rough stone walls curve beneath a low, rocky overhang, forming a shallow chamber decorated with a wall of interwoven vines.  The ground bears many gouges, grouped in parallel slashes, and scattered bones dotted with golden feathers.  Small fragments of teeth and hide collect in shallow depressions along the edges of the chamber.</description>
     <position x="567" y="300" z="0" />
     <arc exit="south" move="south" destination="272" />
     <arc exit="southwest" move="southwest" destination="269" />
     <arc exit="west" move="west" destination="270" />
   </node>
-  <node id="272" name="Fang Cove, Verdant Outcrop" color="White">
+  <node id="272" name="Fang Cove, Verdant Outcrop">
     <description>The low-roofed cavern extends inward beyond your vantage point at the entrance, its ceiling dipping close above a floor worn smooth in places.  Barely visible against the deep gloom at the back of the natural room, the edge of a large nest cradles the cracked remains of a giant egg.</description>
     <position x="567" y="320" z="0" />
     <arc exit="north" move="north" destination="271" />

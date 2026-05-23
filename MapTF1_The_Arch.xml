@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <zone name="The Arch" id="TF1">
-  <node id="1" name="Droughtman's Maze, Observation Deck" note="" color="White">
+  <node id="1" name="Droughtman's Maze, Observation Deck" note="">
     <description>Light seems to follow you as you move about, allowing you to see what's in front of you but very little of what's beyond.  A slight odor of peaches is prevalent throughout the hallway.</description>
     <position x="40" y="120" z="0" />
     <arc name="southeast" hidden="False" destination="3" />
     <arc name="northwest" hidden="False" destination="2" />
     <arc name="go doorway" hidden="False" destination="20" />
   </node>
-  <node id="2" name="Droughtman's Maze, Observation Deck" note="" color="White">
+  <node id="2" name="Droughtman's Maze, Observation Deck" note="">
     <description>Light seems to follow you as you move about, allowing you to see what's in front of you but very little of what's beyond.  A slight odor of peaches is prevalent throughout the hallway.</description>
     <position x="20" y="100" z="0" />
     <arc name="southeast" hidden="False" destination="1" />
     <arc name="go doorway" hidden="False" destination="21" />
   </node>
-  <node id="3" name="Droughtman's Maze, Observation Deck" note="" color="White">
+  <node id="3" name="Droughtman's Maze, Observation Deck" note="">
     <description>Light seems to follow you as you move about, allowing you to see what's in front of you but very little of what's beyond.  A slight odor of peaches is prevalent throughout the hallway.</description>
     <position x="60" y="140" z="0" />
     <arc name="east" hidden="False" destination="4" />
     <arc name="northwest" hidden="False" destination="1" />
     <arc name="go doorway" hidden="False" destination="17" />
   </node>
-  <node id="4" name="Droughtman's Maze, Observation Deck" note="" color="White">
+  <node id="4" name="Droughtman's Maze, Observation Deck" note="">
     <description>Light seems to follow you as you move about, allowing you to see what's in front of you but very little of what's beyond.  A slight odor of peaches is prevalent throughout the hallway.</description>
     <position x="80" y="140" z="0" />
     <arc name="east" hidden="False" destination="5" />
     <arc name="west" hidden="False" destination="3" />
     <arc name="go doorway" hidden="False" destination="18" />
   </node>
-  <node id="5" name="Droughtman's Maze, Observation Deck" note="" color="White">
+  <node id="5" name="Droughtman's Maze, Observation Deck" note="">
     <description>Light seems to follow you as you move about, allowing you to see what's in front of you but very little of what's beyond.  A slight odor of peaches is prevalent throughout the hallway.</description>
     <position x="100" y="140" z="0" />
     <arc name="east" hidden="False" destination="6" />
     <arc name="west" hidden="False" destination="4" />
     <arc name="go doorway" hidden="False" destination="19" />
   </node>
-  <node id="6" name="Droughtman's Maze, The Opal Lounge" note="" color="White">
+  <node id="6" name="Droughtman's Maze, The Opal Lounge" note="">
     <description>The lighting here is dim, but not enough to obscure the opalescent wallpaper.  Couches and upholstered chairs in every shade of the rainbow are scattered around the room in groups, surrounding tables set with food.  A bar occupies one wall, which is hung with a mirror that only magnifies the maelstrom of color in the room.  One has to wonder, is the decor an attempt at opulence, or is it intended to induce patrons to drink more, just to blunt their senses?</description>
     <position x="120" y="140" z="0" />
     <arc name="east" hidden="False" destination="7" />
@@ -45,14 +45,14 @@
     <arc name="go d-sha door" hidden="False" destination="25" />
     <arc name="go d-sh door" hidden="False" destination="26" />
   </node>
-  <node id="7" name="Droughtman's Maze, Observation Deck" note="" color="White">
+  <node id="7" name="Droughtman's Maze, Observation Deck" note="">
     <description>Light seems to follow you as you move about, allowing you to see what's in front of you but very little of what's beyond.  A slight odor of peaches is prevalent throughout the hallway.</description>
     <position x="140" y="140" z="0" />
     <arc name="east" hidden="False" destination="8" />
     <arc name="west" hidden="False" destination="6" />
     <arc name="go doorway" hidden="False" destination="16" />
   </node>
-  <node id="8" name="Droughtman's Maze, Observation Deck" note="" color="White">
+  <node id="8" name="Droughtman's Maze, Observation Deck" note="">
     <description>Light seems to follow you as you move about, allowing you to see what's in front of you but very little of what's beyond.  A slight odor of peaches is prevalent throughout the hallway.</description>
     <position x="160" y="140" z="0" />
     <arc name="east" hidden="False" destination="9" />
@@ -66,75 +66,75 @@
     <arc name="west" hidden="False" destination="8" />
     <arc name="go doorway" hidden="False" destination="14" />
   </node>
-  <node id="10" name="Droughtman's Maze, Observation Deck" note="" color="White">
+  <node id="10" name="Droughtman's Maze, Observation Deck" note="">
     <description>Light seems to follow you as you move about, allowing you to see what's in front of you but very little of what's beyond.  A slight odor of peaches is prevalent throughout the hallway.</description>
     <position x="200" y="120" z="0" />
     <arc name="northeast" hidden="False" destination="11" />
     <arc name="southwest" hidden="False" destination="9" />
     <arc name="go doorway" hidden="False" destination="13" />
   </node>
-  <node id="11" name="Droughtman's Maze, Observation Deck" note="" color="White">
+  <node id="11" name="Droughtman's Maze, Observation Deck" note="">
     <description>Light seems to follow you as you move about, allowing you to see what's in front of you but very little of what's beyond.  A slight odor of peaches is prevalent throughout the hallway.</description>
     <position x="220" y="100" z="0" />
     <arc name="southwest" hidden="False" destination="10" />
     <arc name="go doorway" hidden="False" destination="12" />
   </node>
-  <node id="12" name="Droughtman's Maze, The Amethyst Room" note="" color="White">
+  <node id="12" name="Droughtman's Maze, The Amethyst Room" note="">
     <description>Regally stiff, this room bears no knick-knacks or superfluous decoration.  Standing on each side of a large observation window are two pedestals on which two plain oil lamps glow brightly.  A large solitary purple couch stands at the center of the room between two pale purple marble tables.</description>
     <position x="220" y="120" z="0" />
     <arc name="out" hidden="False" destination="11" />
   </node>
-  <node id="13" name="Droughtman's Maze, The Sapphire Room" note="" color="White">
+  <node id="13" name="Droughtman's Maze, The Sapphire Room" note="">
     <description>A large replica of Xibar hangs from the ceiling and rotates slowly, refracting and reflecting the light from surrounding oil lamps so that the room is awash in various shades of blue.  Blue velvet chairs are arranged in various locations around the room, next to small ironwood tables set with small blue votive candleholders.</description>
     <position x="200" y="140" z="0" />
     <arc name="out" hidden="False" destination="10" />
   </node>
-  <node id="14" name="Droughtman's Maze, The Emerald Room" note="" color="White">
+  <node id="14" name="Droughtman's Maze, The Emerald Room" note="">
     <description>Twining around the room, iron ivy vines have been arranged with dark green candles resting precariously upon upturned leaves.  Small wooden trunks topped with emerald green cushions offer firm but comfortable seating.  Upon the wall is a wide window bordered with green-tinted stained glass panels and framed with a soft green moss, which fills the room with a pleasant, earthy aroma.</description>
     <position x="180" y="160" z="0" />
     <arc name="out" hidden="False" destination="9" />
   </node>
-  <node id="15" name="Droughtman's Maze, The Ruby Room" note="" color="White">
+  <node id="15" name="Droughtman's Maze, The Ruby Room" note="">
     <description>Stretching the length of one wall, a large heart-shaped window framed by sheer red curtains looks down on the maze.  Tiered redwood tables topped by a multitude of lit red candles are scattered throughout the room.  Large floor cushions lie around the room to give comfort to those spectators who might wish to relax.</description>
     <position x="160" y="160" z="0" />
     <arc name="out" hidden="False" destination="8" />
   </node>
-  <node id="16" name="Droughtman's Maze, The Diamond Room" note="" color="White">
+  <node id="16" name="Droughtman's Maze, The Diamond Room" note="">
     <description>White marble walls speckled with tiny diamonds enclose a formidable sitting room.  Hanging from the ceiling, a large crystal chandelier bears an array of lit candles, giving off a glorious light reflected through the crystals.  Nestled against the far wall is a plump white sofa, offering comfortable seating to view the ongoing show through the large window on the opposite wall.</description>
     <position x="140" y="160" z="0" />
     <arc name="out" hidden="False" destination="7" />
   </node>
-  <node id="17" name="Droughtman's Maze, The Citrine Room" note="" color="White">
+  <node id="17" name="Droughtman's Maze, The Citrine Room" note="">
     <description>Resting in each corner of this vibrant room are wicker tables laden with yellow and orange candles in various sizes.  Painted upon the wall opposite the observation window is a mural of a rising sun.  Scattered throughout the room are large wicker chairs, each topped with a plush orange or yellow cushion, which provide seating for spectators.</description>
     <position x="60" y="160" z="0" />
     <arc name="out" hidden="False" destination="3" />
   </node>
-  <node id="18" name="Droughtman's Maze, The Moonstone Room" note="" color="White">
+  <node id="18" name="Droughtman's Maze, The Moonstone Room" note="">
     <description>Iridescent walls surround a large circular table of milky quartz set in the center of the moonstone-tiled floor.  One entire wall has been replaced with a large window with opaque designs bordering the edges like frost on a winter-chilled pane.  Simple bentwood silver-birch chairs are turned at an angle to the window, to permit both conversation and a clear view.</description>
     <position x="80" y="160" z="0" />
     <arc name="out" hidden="False" destination="4" />
   </node>
-  <node id="19" name="Droughtman's Maze, The Black Pearl Room" note="" color="White">
+  <node id="19" name="Droughtman's Maze, The Black Pearl Room" note="">
     <description>Dangling from the low ceiling, a black crystal chandelier bearing carved candles illuminates the room.  Sheer curtains, tied neatly at each side with satin ribbons, frame a slightly tinted window.  Plush black silk pillows surround a black ebonwood table in the center of the room.</description>
     <position x="100" y="160" z="0" />
     <arc name="out" hidden="False" destination="5" />
   </node>
-  <node id="20" name="Droughtman's Maze, The Aquamarine Room" note="" color="White">
+  <node id="20" name="Droughtman's Maze, The Aquamarine Room" note="">
     <description>Light blue walls, expertly painted with softly blended swirls of white and blue, give the impression of a room immersed in a soft, cool mist.  Aquamarine-tinted cut-crystal lamps hang from the walls.  Plush sky-blue sofas are arranged in staggered rows and elevated on risers to provide each seated spectator with a clear view out of a large oval window.</description>
     <position x="40" y="140" z="0" />
     <arc name="out" hidden="False" destination="1" />
   </node>
-  <node id="21" name="Droughtman's Maze, The Peridot Room" note="" color="White">
+  <node id="21" name="Droughtman's Maze, The Peridot Room" note="">
     <description>Chairs with cushions in lemon- or lime-green are set about the room, each with its own yellow-and-green-striped glass table.  Splotches of brilliant yellow and splatters of light green paint decorate the walls in abstract patterns.  The light aroma of fresh vanilla drifts from incense holders placed evenly below the observation window.</description>
     <position x="20" y="120" z="0" />
     <arc name="out" hidden="False" destination="2" />
   </node>
-  <node id="22" name="Wharf End, Mer'Kresh" note="Map107_MerKresh.xml|mer'kresh|merkresh|kresh" color="White">
+  <node id="22" name="Wharf End, Mer'Kresh" note="Map107_MerKresh.xml|mer'kresh|merkresh|kresh">
     <description>Through the gaps in the heavy wood planks, one can easily see the waters of Torbis Sanhalas lapping noisily at the pilings.  Although most of the surface of the wharf is covered by a wide assortment of boxes, barrels and shipping goods, there is little that would stop a dropped coin or trinket from vanishing through the slats and sinking into a watery grave.</description>
     <position x="120" y="100" z="0" />
     <arc name="northwest" hidden="False" />
   </node>
-  <node id="23" name="The Crossing, Town Green Southwest" note="Map1_Crossing.xml|crossing" color="White">
+  <node id="23" name="The Crossing, Town Green Southwest" note="Map1_Crossing.xml|crossing">
     <description>The hedgerow to the west meets the row of tall lunat trees that separates the Town Green from the commercial traffic on Lunat Shade Road due south.  The growth is especially dense here, with no way to slip past either of the living fences.  The small thorns on the hedges, to keep out stray livestock in search of prime pasture, look daunting in any case.</description>
     <position x="120" y="100" z="0" />
     <arc name="north" hidden="False" />
@@ -142,14 +142,14 @@
     <arc name="east" hidden="False" />
     <arc name="northeast" hidden="False" />
   </node>
-  <node id="24" name="Riverhaven, Town Square" note="Map30_Riverhaven.xml|riverhaven|haven" color="White">
+  <node id="24" name="Riverhaven, Town Square" note="Map30_Riverhaven.xml|riverhaven|haven">
     <description>This square sits in the space between the Town Hall and the municipal pier.  It is a large park with the graceful gardens of the Temple set within well-tended lawns.  Here and there, benches for the public's use are set out under shady trees, and you can often find an old retired merchant or river captain taking his ease and watching the passing tide of people.</description>
     <position x="120" y="100" z="0" />
     <arc name="north" hidden="False" />
     <arc name="east" hidden="False" />
     <arc name="west" hidden="False" />
   </node>
-  <node id="25" name="North Road, Beech Grove" note="Map40_Langenfirth_to_Theren_Gate.xml|langenfirth|theren|el'bains|elbains" color="White">
+  <node id="25" name="North Road, Beech Grove" note="Map40_Langenfirth_to_Theren_Gate.xml|langenfirth|theren|el'bains|elbains">
     <description>The well-traveled road journeys through a grove of tall beech trees.  Their smooth grey boles converge high above creating a tunnel filled with dappled green sunlight.  Off to the north the grove opens up onto bright meadowlands.</description>
     <description>The well-traveled road journeys through a grove of tall beech trees.  Their smooth grey boles converge high above creating a tunnel of dark shadowy branches that seem to reach out to you.  Off to the north the grove opens up onto moonlit meadowlands.</description>
     <position x="120" y="100" z="0" />
@@ -158,7 +158,7 @@
     <arc name="west" hidden="False" />
     <arc name="southeast" hidden="False" />
   </node>
-  <node id="26" name="Belarritaco Bay, The Galley Dock" note="Map108_M'Riss.xml|mriss" color="White">
+  <node id="26" name="Belarritaco Bay, The Galley Dock" note="Map108_M'Riss.xml|mriss">
     <description>The wide, stout, wooden dock, protected on both sides by rope bumpers, is laden with passengers and goods waiting transport to Mer'Kresh.  Stevedores stand by the galley gangplank or move sacks, crates and barrels to and from the shore.</description>
     <position x="120" y="100" z="0" />
     <arc name="north" hidden="False" />

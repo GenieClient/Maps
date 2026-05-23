@@ -328,13 +328,13 @@
     <position x="440" y="-240" z="0" />
     <arc exit="out" move="out" destination="26" />
   </node>
-  <node id="52" name="Blue Fire Cove, Steep Trail" note="shadewing harpy" color="White">
+  <node id="52" name="Blue Fire Cove, Steep Trail" note="shadewing harpy">
     <description>A narrow, steep path winds down the cliffside, its surface uneven with jagged stone and loose gravel.  Sharp rocks jut from the sheer walls on either side, while beneath, the water lies far below, stretching along the base of the cliff.  Sparse tufts of hardy coastal vegetation cling to cracks in the rock.  The trail narrows in places, forcing careful footing as it descends toward the beach.</description>
     <position x="520" y="-340" z="0" />
     <arc exit="southeast" move="southeast" destination="53" />
     <arc exit="climb" move="climb steep trail" destination="31" />
   </node>
-  <node id="53" name="Blue Fire Cove, Sheltered Shore" color="White">
+  <node id="53" name="Blue Fire Cove, Sheltered Shore">
     <description>A narrow strip of sand curves beneath the stone overhang, its surface scattered with smooth pebbles and pale driftwood.  The rocky ceiling arches low in places, shaped by years of falling spray.  Channels carved into the sand suggest the steady pull of the tide, while dark pools gather near the cliff base, their edges ringed with mossy stone.</description>
     <position x="540" y="-320" z="0" />
     <arc exit="east" move="east" destination="55" />
@@ -342,19 +342,19 @@
     <arc exit="south" move="south" destination="54" />
     <arc exit="northwest" move="northwest" destination="52" />
   </node>
-  <node id="54" name="Blue Fire Cove, Overhang Hollow" color="White">
+  <node id="54" name="Blue Fire Cove, Overhang Hollow">
     <description>A recessed alcove rests beneath a sweeping curve of stone, its walls streaked with muted blue-grey mineral deposits that form natural patterns.  Loose sand gathers near the back where the rock bends inward, mingling with scattered feathers and faint claw marks that suggest frequent winged visitors.</description>
     <position x="540" y="-300" z="0" />
     <arc exit="north" move="north" destination="53" />
     <arc exit="east" move="east" destination="56" />
   </node>
-  <node id="55" name="Blue Fire Cove, Tide-Carved Ledge" color="White">
+  <node id="55" name="Blue Fire Cove, Tide-Carved Ledge">
     <description>A flat shelf of rock hugs the lagoon's inner rim, worn by centuries of water grinding against its edge.  Pitted surfaces reveal pockets of trapped shells, and shallow grooves run parallel to the shoreline.  The ledge rises only a few feet above the beach, yet offers a clear view of the cove's circular basin and its sheltered waters.</description>
     <position x="560" y="-320" z="0" />
     <arc exit="south" move="south" destination="56" />
     <arc exit="west" move="west" destination="53" />
   </node>
-  <node id="56" name="Blue Fire Cove, Lagoon's Heart" color="White">
+  <node id="56" name="Blue Fire Cove, Lagoon's Heart">
     <description>The lagoon forms a shallow pool bordered by rock and packed sand, its water sheltered by the protective cliff walls.  Large boulders break the surface near the center, creating natural stepping stones.  A narrow channel at the far edge connects to the open sea, its rocky mouth partially masked by tangled marine growth clinging to the stone.</description>
     <position x="560" y="-300" z="0" />
     <arc exit="north" move="north" destination="55" />

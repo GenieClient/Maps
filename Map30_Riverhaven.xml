@@ -3581,19 +3581,19 @@
     <position x="380" y="550" z="0" />
     <arc exit="south" move="south" destination="563" />
   </node>
-  <node id="565" name="Riverhaven, Housing Offices" color="White">
+  <node id="565" name="Riverhaven, Housing Offices">
     <description>Through the wooden threshold of the square, the modest-sized chamber exudes a comforting warmth.  The walls, made of sturdy timber beams and planks, are a stark contrast to the cold stone prevalent outside.  Torch sconces are affixed at intervals, though they currently stand empty, hinting at occasional use rather than constant occupation.</description>
     <position x="607" y="733" z="0" />
     <arc exit="north" move="north" destination="567" />
     <arc exit="east" move="east" destination="566" />
     <arc exit="southwest" move="southwest" destination="360" />
   </node>
-  <node id="566" name="Riverhaven, Transfer Office" color="White">
+  <node id="566" name="Riverhaven, Transfer Office">
     <description>Shelves line the walls, filled with scrolls, books, and ledgers, their contents ranging from historical records to maps and financial statements.  In one corner, a small hearth provides warmth during colder months, its flickering flames casting dancing shadows on the wooden surfaces.</description>
     <position x="620" y="733" z="0" />
     <arc exit="west" move="west" destination="565" />
   </node>
-  <node id="567" name="Riverhaven, Permit Office" color="White">
+  <node id="567" name="Riverhaven, Permit Office">
     <description>The space is quite small, yet efficiently organized.  A large wooden desk dominates the center, strewn with maps, parchments, and logbooks.  Clearly, this room serves as a cartographer's den, a place where the intricate details of the surrounding lands are meticulously recorded and stored.</description>
     <position x="607" y="720" z="0" />
     <arc exit="south" move="south" destination="565" />
