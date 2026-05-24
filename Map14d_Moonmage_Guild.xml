@@ -200,7 +200,7 @@
     <arc exit="east" move="east" destination="32" />
     <arc exit="climb" move="climb stair" destination="35" />
   </node>
-  <node id="34" name="Lava Forge, Lobby" color="Red">
+  <node id="34" name="Lava Forge, Lobby" color="#FF0000">
     <description>Dust drifts through the archway over the cooled lava floor and piles in the corners of the stone building.  A bored Human attendant relaxes on a stool near a leather curtain that closes off the rest of the forge.</description>
     <position x="-360" y="-220" z="0" />
     <arc exit="out" move="out" destination="23" />
