@@ -7,13 +7,13 @@
     <arc exit="go" move="go faint vortex" destination="10" />
     <arc exit="go" move="go colorful portal" destination="11" />
   </node>
-  <node id="2" name="Fenvol's Folly, Garden Walk" color="White">
+  <node id="2" name="Fenvol's Folly, Garden Walk">
     <description>A stretch of garden path opens beneath a broad-limbed tree, where a weathered bench swing hangs from the sturdy branches.  Nearby, a gently burbling fountain takes the shape of a sleeping shadowcat, its curled form supporting a shallow basin of water.  Clusters of vibrant hibiscuses in varied colors crowd the walkway, their rainbow of blooms layered thick among glossy leaves.</description>
     <position x="160" y="210" z="0" />
     <arc exit="east" move="east" destination="3" />
     <arc exit="west" move="west" destination="1" />
   </node>
-  <node id="3" name="Fenvol's Folly, Modest Entrance" color="White">
+  <node id="3" name="Fenvol's Folly, Modest Entrance">
     <description>A neatly kept approach leads to a small riverstone manor, its exterior showing signs of recent maintenance and freshly trimmed flower pots.  White shutters frame clean windows, their hinges and fittings bright and unblemished.  A broad stone landing rests before the door, its surface even and clean.  Ornate lanterns flank the entryway, their polished metalwork depicting neat stacks of tiny tomes.</description>
     <position x="180" y="210" z="0" />
     <arc exit="west" move="west" destination="2" />
@@ -33,7 +33,7 @@
     <position x="200" y="160" z="0" />
     <arc exit="west" move="west" destination="4" />
   </node>
-  <node id="6" name="Fenvol's Folly, The Master's Study" color="White">
+  <node id="6" name="Fenvol's Folly, The Master's Study">
     <description>Bookshelves line the walls, their contents arranged in tight, orderly rows.  A broad ribbon-stripe desk occupies the center of the floor, its surface perfectly polished and free of smudges.  Tall windows span one wall, with an array of hanging lanterns set at varying heights arranged at regular intervals.  Along the remaining space, shelves display a collection of intricate devices, their mechanical components carefully arranged.</description>
     <position x="180" y="140" z="0" />
     <arc exit="south" move="south" destination="4" />
