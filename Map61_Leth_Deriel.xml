@@ -236,6 +236,7 @@
     <position x="160" y="-40" z="0" />
     <arc exit="southeast" move="southeast" destination="31" />
     <arc exit="northwest" move="northwest" destination="26" />
+    <arc exit="go" move="go silverbirch boutique" destination="274" />
   </node>
   <node id="33" name="Leth Deriel, Cambium Circle">
     <description>A high pitched shriek pierces the calm of the canopied road, and you instinctively tense up in a defensive posture.  Looking around, you perceive no threat, no foe, no foul creature that might be the source of such a bloodcurdling cry.  Like a knife, the shrill call shatters the peace again, and you notice a magnificent male peacock, his fan open, strutting along one of the arboreal platforms.</description>
@@ -1735,6 +1736,11 @@
     <description>Long worktables line the whitewashed stone walls, one side of the open room arranged with weapon racks and armor stands, the other hosting a colorful array of partially completed craft projects.  A brick-lined opening in the far wall provides access to a forge, while the main body of the fire pit extends behind the building.  Tall open-beam ceilings rise overhead with vents near the peak, and expansive accordion windows admit ambient light and fresh air.</description>
     <position x="220" y="-260" z="0" />
     <arc exit="go" move="go ironwood doorway" destination="63" />
+  </node>
+  <node id="274" name="Wild Couture, Atelier" note="Wild Couture" color="#FF0000">
+    <description>The exclusive boutique is nestled inside an enormous silverbirch tree with pale bark walls and carpeted by a lush profusion of soft green moss.  Strewn with overlapping gaethzen leaves, a waxed satin canopy is draped across the tree's taller branches to protect a collection of delicate silver displays from inclement weather.</description>
+    <position x="170" y="-40" z="0" />
+    <arc exit="out" move="out" destination="32" />
   </node>
   <label text="to Shard">
     <position x="-90" y="160" z="0" />
