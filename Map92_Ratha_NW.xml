@@ -136,27 +136,27 @@
     <arc exit="northeast" move="northeast" destination="22" />
     <arc exit="southwest" move="southwest" destination="20" />
   </node>
-  <node id="22" name="Reshalia Trade Road, Farmland" color="#808040">
+  <node id="22" name="Reshalia Trade Road, Farmland">
     <description>The road takes a sharp turn here at the corner of a field.  The ground underfoot is soft and squishy, with frequent stretches that are downright slippery.  The smell of healthy, wet slime gives you a clue as to why this piece of road is so hazardous -- it's very muddy and oozy.</description>
     <description>The road takes a sharp turn here at the corner of a field.  The farmer who tends this land is a little overly enthusiastic about filling the drainage ditches, and water spills over onto the road somewhere to the northwest, making this stretch soggy.  A wide variety of slimes and mosses have taken over different ruts and corners, making all this mud most interesting for a dedicated natural philosopher, and a slippery nuisance for everyone else.</description>
     <position x="300" y="100" z="0" />
     <arc exit="southwest" move="southwest" destination="21" />
     <arc exit="northwest" move="northwest" destination="23" />
   </node>
-  <node id="23" name="Reshalia Trade Road, Farmland" color="#808040">
+  <node id="23" name="Reshalia Trade Road, Farmland">
     <description>A pedal mill stands astride the irrigation ditch to one side of the road.  The surface of the road here is wet and muddy -- it looks like water slops over out of the ditch on a regular basis.</description>
     <description>Two large Gor'Togs, a male and a female, work side by side on a pedal-mill.  Constructed of old lumber lashed together, the rickety contraption lifts water out of the flowing irrigation ditch and dumps it into the smaller ditch leading off into the kord field west of the road.  One of the small buckets on the male's side of the machine is cracked, causing it to spill water onto the road whenever it comes around.</description>
     <position x="280" y="80" z="0" />
     <arc exit="southeast" move="southeast" destination="22" />
     <arc exit="northwest" move="northwest" destination="24" />
   </node>
-  <node id="24" name="Reshalia Trade Road, Farmland" color="#808040">
+  <node id="24" name="Reshalia Trade Road, Farmland">
     <description>The occasional crunch underfoot is caused by gravel strewn in the road, apparently in an attempt to improve the footing in the muddy ruts.  It's a futile effort, however, since the gravel simply sinks into the mud and vanishes whenever it's walked on.  The road is wet and slippery, and the gravel only serves to bring to mind the likelihood of a few nasty cuts if one takes a spill, in addition to the inevitable mud on one's clothes.</description>
     <position x="260" y="60" z="0" />
     <arc exit="southeast" move="southeast" destination="23" />
     <arc exit="northwest" move="northwest" destination="25" />
   </node>
-  <node id="25" name="Reshalia Trade Road, Farmland" color="#808040">
+  <node id="25" name="Reshalia Trade Road, Farmland">
     <description>To the west, in a corner where two kord fields meet at an angle, is a small rocky spot where the farmers have built a wooden shrine.  A path planted on either side with daisies and ornamental grasses leads to the cozy structure.  Two stone cows lie on either side of the path, their necks garlanded with wilted daisy wreaths, their carved eyes flat and glazed looking.</description>
     <position x="240" y="40" z="0" />
     <arc exit="north" move="north" destination="26" />
@@ -421,27 +421,27 @@
     <arc exit="east" move="east" destination="67" />
     <arc exit="southwest" move="southwest" destination="65" />
   </node>
-  <node id="67" name="Reshalia, Abandoned Road" note="Silver Leucros" color="#C0C0C0">
+  <node id="67" name="Reshalia, Abandoned Road" note="Silver Leucros">
     <description>This branch of the road narrowly skirts a large gravel pit just to the north, but it shows no sign of through traffic by the gravel carts.  Tracks lead to the west, as if carts were sometimes stored here, but none continue down the road.  Instead, weeds and briars appear increasingly in the wheel ruts to the east.</description>
     <position x="520" y="-340" z="0" />
     <arc exit="east" move="east" destination="68" />
     <arc exit="west" move="west" destination="66" />
   </node>
-  <node id="68" name="Reshalia, Abandoned Road" color="#C0C0C0">
+  <node id="68" name="Reshalia, Abandoned Road">
     <description>A rutted road stretches east and west, but it is so overgrown with weeds that it must be a long while since it has seen many travelers.  To the north yawns a great space -- the gravel pit, filled with the shouts of laborers by day, but now dark and silent.  A dark forest, thickly grown, lies to the south of the road.</description>
     <description>A rutted road stretches east and west, but it is so overgrown with weeds that it must be a long while since it has seen many travelers.  To the north yawns a great open gravel pit, filled with the shouts of laborers and the clatter of their tools.  A dark forest, thickly grown, lies to the south of the road.</description>
     <position x="540" y="-340" z="0" />
     <arc exit="east" move="east" destination="69" />
     <arc exit="west" move="west" destination="67" />
   </node>
-  <node id="69" name="Reshalia, Abandoned Road" color="#C0C0C0">
+  <node id="69" name="Reshalia, Abandoned Road">
     <description>Low scrub covers the road and the broken wagon wheel that once traveled it.  The underbrush has returned, burying the traces of passage except to the west, where ruts can still be made out.  Gaps appear in the encircling trees to the north and northeast, although which of them was the road is hard to say.</description>
     <position x="560" y="-340" z="0" />
     <arc exit="north" move="north" destination="71" />
     <arc exit="northeast" move="northeast" destination="70" />
     <arc exit="west" move="west" destination="68" />
   </node>
-  <node id="70" name="Abandoned Road, The Briar Wood" color="#C0C0C0">
+  <node id="70" name="Abandoned Road, The Briar Wood">
     <description>From all around, both close by and deep in the woods, come strange sounds, sounds out of place in this wilderness.  One is caught in mid-step, even in mid-breath, by the very oddity of the noises -- clicks, a rasp of metal on stone, a half-liquid slither.</description>
     <description>Although trees and high underbrush line this crossing of what may be game trails, the ground looks more open to the southwest.  Shifting patches of light pierce the dense crown above, and a darker path heads east, deeper into the wood.</description>
     <position x="580" y="-360" z="0" />
@@ -450,7 +450,7 @@
     <arc exit="southwest" move="southwest" destination="69" />
     <arc exit="west" move="west" destination="71" />
   </node>
-  <node id="71" name="Abandoned Road, The Pit Edge" color="#C0C0C0">
+  <node id="71" name="Abandoned Road, The Pit Edge">
     <description>To the west is the unmistakable feel of a vast open space, threatening in its emptiness.  But if one yields to the pressure of the wilderness to the east and edges away from the hidden dangers of the wood, one false step could mean a stumble, a fall, and an unheard cry.</description>
     <description>The road, sunken from former traffic, stands well away from the edge of the massive pit to the west.  To the north, the road continues, obscured somewhat by dust rising from the gravel quarry.  A trail leads off through the foliage to the east.</description>
     <position x="560" y="-360" z="0" />
@@ -458,13 +458,13 @@
     <arc exit="east" move="east" destination="70" />
     <arc exit="south" move="south" destination="69" />
   </node>
-  <node id="72" name="Abandoned Road, The Briar Wood" color="#C0C0C0">
+  <node id="72" name="Abandoned Road, The Briar Wood">
     <description>The path opens into a clearing that looks oddly regular in the darkness.  A musty scent like damp ash fills the air.  The smell is faint but fresh, as if something has recently been burned or scorched then doused.</description>
     <description>In the midst of thorns and briars, ringed by a high wall of dark cedars, lies a perfectly circular clearing.  Although weeds fill the center, footprints all around the edge of the clearing show where countless feet have beaten the ground cover to the bare earth.</description>
     <position x="600" y="-360" z="0" />
     <arc exit="west" move="west" destination="70" />
   </node>
-  <node id="73" name="Abandoned Road, The Briar Wood" color="#C0C0C0">
+  <node id="73" name="Abandoned Road, The Briar Wood">
     <description>The air in this maze of paths is still and heavy with a sharp medicinal odor.  The silence is broken from time to time by a falling drop, although the interlocked needles overhead shelter the area from all but the fiercest storms.</description>
     <description>Overhead the sky is nearly blotted out by the crowns of trees fighting for sunlight.  Some of the thorn bushes beneath them bear droplets of a clear liquid, thick and oily, with a scent vaguely like camphor.</description>
     <position x="580" y="-380" z="0" />
@@ -474,7 +474,7 @@
     <arc exit="south" move="south" destination="70" />
     <arc exit="west" move="west" destination="74" />
   </node>
-  <node id="74" name="Abandoned Road, The Pit Edge" color="#C0C0C0">
+  <node id="74" name="Abandoned Road, The Pit Edge">
     <description>A vast, black emptiness stretches west and north.  With the yawning void on one side and the forest on the other, the sense of vulnerability is oppressive, as if the place offers no protection and no escape.</description>
     <description>The road curves to the northeast, avoiding a gap where the edge has collapsed.  From the pile of rock and rubble far below, the crumbling of the edge must have been spectacular.  Travelers on foot, perhaps giving the gap a wider berth, have beaten a shortcut through the dark briar wood to the east.</description>
     <position x="560" y="-380" z="0" />
@@ -482,7 +482,7 @@
     <arc exit="east" move="east" destination="73" />
     <arc exit="south" move="south" destination="71" />
   </node>
-  <node id="75" name="Abandoned Road, The Pit Edge" color="#C0C0C0">
+  <node id="75" name="Abandoned Road, The Pit Edge">
     <description>A misstep in the darkness at the edge of the pit would surely be fatal, and the traveler does well here to rely on the feel of the ground underfoot.  The wood to the east may offer more security -- or only danger of a different kind.</description>
     <description>More a path than a road, the way circles the gap where the pit edge has crumbled away.  The new face is almost vertical, eroded deeply and as yet untamed by plant or weather.  The gravel miners far down in the pit seem to avoid the area just below the gap, perhaps from bitter experience.</description>
     <position x="580" y="-400" z="0" />
@@ -491,13 +491,13 @@
     <arc exit="southwest" move="southwest" destination="74" />
     <arc exit="northwest" move="northwest" destination="79" />
   </node>
-  <node id="76" name="Abandoned Road, The Briar Wood" color="#C0C0C0">
+  <node id="76" name="Abandoned Road, The Briar Wood">
     <description>No description could be more appropriate for this small clearing than dead in dead end.  It's hard to say where the hint of death comes from, for the surrounding trees sound lively enough, shifting and rustling as if moved by a breeze.  Even when there is no breeze.</description>
     <description>A small clearing is encircled by a wall of dense undergrowth broken only by the path leading in.  Although the firm, dry area would make a fine campsite, there is no sign of visitors -- no empty bottles or wineskins, no discarded broken gear, not even the ashes of an old fire.</description>
     <position x="600" y="-380" z="0" />
     <arc exit="west" move="west" destination="73" />
   </node>
-  <node id="77" name="Abandoned Road, The Briar Wood" color="#C0C0C0">
+  <node id="77" name="Abandoned Road, The Briar Wood">
     <description>Briars snag the unwary wayfarer at each pace, and thick, dark-green cedars limit vision except to the west.  In that direction, the path around the pit lies in plain view, although the watcher is well hidden by brush.  It seems a place made for waiting in ambush.</description>
     <description>This part of the wood, not far from the path around the gravel pit, sees few hunters, to judge by the wild growth of the brush on every side except to the west.  And it all seems to have thorns: if anything besides briars, nettles, holly, and thornbush grows here, it must be out of season.</description>
     <position x="600" y="-400" z="0" />
@@ -505,7 +505,7 @@
     <arc exit="southwest" move="southwest" destination="73" />
     <arc exit="west" move="west" destination="75" />
   </node>
-  <node id="78" name="Abandoned Road, The Briar Wood" color="#C0C0C0">
+  <node id="78" name="Abandoned Road, The Briar Wood">
     <description>Even in the darkness, it's apparent this is an open area of some size.  From time to time spots of light appear, dim reddish dots.  They look to be about the height of a Halfling above the ground, showing up briefly, sometimes moving, then disappearing as quickly as they came.</description>
     <description>A secluded dell offers welcome relief from snagging thorns and tripping vines.  Thick grass cushions the ground and invites the weary to pause and rest.  The noise and dust of the gravel pit are only memories here, almost part of a different world.</description>
     <position x="620" y="-400" z="0" />

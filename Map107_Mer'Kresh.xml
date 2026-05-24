@@ -204,135 +204,135 @@
     <arc exit="west" move="west" destination="16" />
     <arc exit="go" move="go library steps" destination="244" />
   </node>
-  <node id="31" name="Mer'Kresh, Gull Circle" note="South Barricade" color="#C0C0C0">
+  <node id="31" name="Mer'Kresh, Gull Circle" note="South Barricade">
     <description>Except for a handful of simple tools such as shovels and hammers, there are few signs of a construction in progress.  The cobblestones are in place, and the edges of the street are lined with stone guardrails.  Only the lack of buildings betrays what work is needed, but meanwhile the empty spaces reveal an unobstructed view of the ocean.</description>
     <position x="220" y="460" z="0" />
     <arc exit="southwest" move="southwest" destination="32" />
     <arc exit="climb" move="climb construction barricade" destination="25" />
   </node>
-  <node id="32" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="32" name="Mer'Kresh, Gull Circle">
     <description>Soldiers of the construction world, wheelbarrows line the edge of the road in tight rows.  Most of them wear the grey and white scars that a load full of stones would leave behind, while others are marked by reddish flakes of rust from exposure to the salty sea air.  For now, the burden they've carried is gone, and rest they will until they are called upon again.</description>
     <position x="200" y="480" z="0" />
     <arc exit="northeast" move="northeast" destination="31" />
     <arc exit="southwest" move="southwest" destination="33" />
   </node>
-  <node id="33" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="33" name="Mer'Kresh, Gull Circle">
     <description>A covering of dirt and pebbles partly masks the cobblestones.  Aside from a good sweeping, this section of the construction area looks in complete readiness to be opened.  Westwards, the gaping maws of open pits and unfinished street surfaces tells a different story, while southwards only the eternal rising and falling of the ocean's waves awaits.</description>
     <position x="180" y="500" z="0" />
     <arc exit="northeast" move="northeast" destination="32" />
     <arc exit="southwest" move="southwest" destination="34" />
   </node>
-  <node id="34" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="34" name="Mer'Kresh, Gull Circle">
     <description>Planks and temporary fences become border guards as Gull Circle curves along its path.  Each of the guardians vigilantly watch over one of several open gaps in the street, protecting both the workers from a fall and the pits from unwelcome additions to their contents.  A clearly defined line cuts across the road where the cobblestones stop and the underlying ridge stones are revealed.</description>
     <position x="160" y="520" z="0" />
     <arc exit="northeast" move="northeast" destination="33" />
     <arc exit="west" move="west" destination="35" />
   </node>
-  <node id="35" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="35" name="Mer'Kresh, Gull Circle">
     <description>The sounds of waves crashing down upon the stones on either side of the road is as regular as a heartbeat, pounding out a steady and noisy rhythm that drowns even the sounds of the ever present sea winds.  Though they can not be heard clearly, the winds make their presence known by whipping at whatever loose objects they find.  Far to the south of this nearby combination of sky and surf, the hazy line of the horizon lay.</description>
     <position x="80" y="520" z="0" />
     <arc exit="east" move="east" destination="34" />
     <arc exit="west" move="west" destination="36" />
   </node>
-  <node id="36" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="36" name="Mer'Kresh, Gull Circle">
     <description>The backs of the buildings and homes of Pearl Circle look across the canal at the construction in progress along Gull Circle.  Many of the structures are reinforced with stone and wood, and few have low windows despite the fact that a thief would have to risk drowning to manage a break-in.  Odd marks along the walls appear to be some form of damage, but a closer examination -- difficult to do from here -- would be necessary to be sure.</description>
     <position x="20" y="520" z="0" />
     <arc exit="east" move="east" destination="35" />
     <arc exit="west" move="west" destination="37" />
   </node>
-  <node id="37" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="37" name="Mer'Kresh, Gull Circle">
     <description>A fair distance to the northwest, the arching form of Zirelga Bridge rises easily from behind the nearby stacks of brick and stone that litter the unfinished street.  One end of the bridge disappears behind the buildings across the canal while the other abruptly stops as it juts out over Gull Circle.  Duplicating the function of the bridge in a small scale, a thick wooden board stretches across one of the pits that are so common along this section of the road.</description>
     <position x="-40" y="520" z="0" />
     <arc exit="east" move="east" destination="36" />
     <arc exit="go" move="go wooden board" destination="38" />
   </node>
-  <node id="38" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="38" name="Mer'Kresh, Gull Circle">
     <description>Looking more like a letter in Gamgweth than a street, the road splits into two halves that straddle a rubble- and water-filled pit.  The walls of the pit reveal the layered construction of Mer'Kresh: the cobblestones rest on a bed of crushed stone that in turn overlays a mass of rubble and broken rock.</description>
     <position x="-220" y="520" z="0" />
     <arc exit="northwest" move="northwest" destination="39" />
     <arc exit="go" move="go wooden board" destination="37" />
   </node>
-  <node id="39" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="39" name="Mer'Kresh, Gull Circle">
     <description>The remains of a seagull lie dead-center in the road, torn to shreds by some predator.  Around the kill, the stones are jagged and cracked, as through something massive collided into them from above.  Wide and open, the sky is unobstructed by buildings or other structures, lending no credence to the concept that the murderer of the gull came from on high.</description>
     <position x="-240" y="500" z="0" />
     <arc exit="southeast" move="southeast" destination="38" />
     <arc exit="northwest" move="northwest" destination="153" />
   </node>
-  <node id="40" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="40" name="Mer'Kresh, Gull Circle">
     <description>The foul stench of uncovered garbage rises from a wide hole in the surface of the road, overwhelming the salty sea breeze.  A circle of gull feathers surrounds the refuse-filled pit, left behind when their previous owners swooped in for a quick meal.  Along one side, a wooden plank has been fastened down to keep the hole from swallowing runaway wheelbarrows.</description>
     <position x="-281" y="460" z="0" />
     <arc exit="southeast" move="southeast" destination="153" />
     <arc exit="northwest" move="northwest" destination="41" />
     <arc exit="climb" move="climb bridge support" />
   </node>
-  <node id="41" name="Mer'Kresh, Zirelga Bridge" color="#C0C0C0">
+  <node id="41" name="Mer'Kresh, Zirelga Bridge">
     <description>A dented wheelbarrow lies beneath the unfinished lip of Zirelga Bridge, its handles cracked and its contents long gone.  At this stage of construction, the bridge is little more than a glorified dumping ramp, used by workers to unload their hauls of garbage.  A stone block, halfway up the support of the bridge, channels the dumped rubbish to one side.  From there, the debris is carried off to fill in holes along the road.</description>
     <position x="-300" y="440" z="0" />
     <arc exit="southeast" move="southeast" destination="40" />
     <arc exit="northwest" move="northwest" destination="42" />
     <arc exit="climb" move="climb stone block" destination="184" />
   </node>
-  <node id="42" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="42" name="Mer'Kresh, Gull Circle">
     <description>The swirling and foaming waters of the ocean churn against the black basalt exposed from beneath the road as a sudden transition takes place.  The rock and wooden framework of a construction in progress yields to the intermittent placement of dark stones rising from the sea.  The rectangular walls are representatives of the first stages of ring-building, and are designed to be platforms to support both workers and the later layers of stones.</description>
     <position x="-320" y="420" z="0" />
     <arc exit="southeast" move="southeast" destination="41" />
     <arc exit="northwest" move="northwest" destination="43" />
   </node>
-  <node id="43" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="43" name="Mer'Kresh, Gull Circle">
     <description>Here, the road is nothing more than the top of several closely packed stone walls.  Shiny from the sea waters washing over them, the largest of the walls flank either side of where the finished road will be, and the spaces between will eventually be filled with rubble, rock and garbage.  The western most wall is severed from this section of the road by a water-filled channel, so any travel to the north must take place across the surface of the eastern one.</description>
     <position x="-340" y="400" z="0" />
     <arc exit="southeast" move="southeast" destination="42" />
     <arc exit="northwest" move="northwest" destination="44" />
   </node>
-  <node id="44" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="44" name="Mer'Kresh, Gull Circle">
     <description>A huge bulge curves out of the wall, filled with gently rocking sea water.  The dark pool of water gurgles with every thrust of the waves, but the walls of its confinement keep it mainly separate from the freedom of the wide ocean.  One large stone, reinforced with wooden supports, sits directly across from the bulge on the other side of the channel that guts the middle of the road.</description>
     <position x="-360" y="380" z="0" />
     <arc exit="southeast" move="southeast" destination="43" />
     <arc exit="northwest" move="northwest" destination="45" />
   </node>
-  <node id="45" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="45" name="Mer'Kresh, Gull Circle">
     <description>Beyond the mirrored twin of this road atop the walls, the ocean heaves, white-caps dancing atop its shifting surface.  Swept away by the tides, bits of driftwood bob in the currents, occasionally rapping against the sides of the stones in the walls before being pulled away and back into Eluned's caress.</description>
     <position x="-380" y="360" z="0" />
     <arc exit="north" move="north" destination="46" />
     <arc exit="southeast" move="southeast" destination="44" />
   </node>
-  <node id="46" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="46" name="Mer'Kresh, Gull Circle">
     <description>Jagged basalt clamors in the surf around the bases of the stone walls, wet and sharp.  Northwards, room to walk is virtually non-existent, replaced by the chaotic piles of the black stones.  Above the rocky clutter, a wooden walkway allows workers to continue with their tasks in relative safety.  Here and south, only the flat tops of the water barrier is available to stand upon.</description>
     <position x="-380" y="276" z="0" />
     <arc exit="south" move="south" destination="45" />
     <arc exit="climb" move="climb wooden steps" destination="47" />
   </node>
-  <node id="47" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="47" name="Mer'Kresh, Gull Circle">
     <description>A temporary pier of scaffolding mounts the walls and tapering dikes to provide workers with sure footing.  Hanging from one of the support beams, a bucket sways in the wind, its contents clattering as it moves.  Just beneath the planking of the makeshift walkway, the explosive sound of the ocean washing over the jumbled stones shakes the wood, and sends the bucket into yet another shifting motion.</description>
     <position x="-380" y="212" z="0" />
     <arc exit="north" move="north" destination="48" />
     <arc exit="climb" move="climb wooden steps" destination="46" />
   </node>
-  <node id="48" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="48" name="Mer'Kresh, Gull Circle">
     <description>Most of the pilings and posts that support the wooden walkway lean askew, pushed off kilter by the movement of the heavy and keen-edged boulders underneath.  The boards, glossy and green from the constant dampness, shudder under the slightest weight or the most gentle push of the wind.  Whenever a particularly potent wave slams into the barrier, some unseen part of the walkway growls angrily as it shakes and repositions itself.</description>
     <position x="-380" y="148" z="0" />
     <arc exit="north" move="north" destination="49" />
     <arc exit="south" move="south" destination="47" />
   </node>
-  <node id="49" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="49" name="Mer'Kresh, Gull Circle">
     <description>Abruptly stopping over a mound of pointed basalt, the walkway lacks any safety features such as guardrails or warning signs.  One heavy black stone in particular is a favorite spot for the waves to dash, if only because its great size presents such a good target.  Just poking from the surface of the waves, another series of black basalt curves in mimicry, shielding this one from the worst of the ocean's assault.</description>
     <position x="-380" y="104" z="0" />
     <arc exit="south" move="south" destination="48" />
     <arc exit="go" move="go black stone" destination="50" />
   </node>
-  <node id="50" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="50" name="Mer'Kresh, Gull Circle">
     <description>Only slightly more stable than its twin to the west, this heap of rock and rubble is at least saved from the most dramatic of swells flooding over both.  All manner of rough stonework is half-buried in the mounds, from cracked sculptures and friezes to the remnants of support columns and paving stones.  Some are glaringly apparent, the white of pitted marble contrasting sharply with the dark basalt.  Others are more subtle, like the mostly-covered face of the statue gazing from the shattered rocks.</description>
     <position x="-380" y="40" z="0" />
     <arc exit="northeast" move="northeast" destination="51" />
     <arc exit="go" move="go wooden walkway" destination="49" />
   </node>
-  <node id="51" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="51" name="Mer'Kresh, Gull Circle">
     <description>The wet, black stones underfoot shift menacingly in the tide, every so often uttering a muffled plop as one of their number slides into the sea.  Thick pilings struggle to keep the pile of stones from vanishing completely under the onslaught of the ocean's power, but their barnacle-encrusted forms betray the weakened state that their time in the water has brought.</description>
     <position x="-340" y="0" z="0" />
     <arc exit="northeast" move="northeast" destination="52" />
     <arc exit="southwest" move="southwest" destination="50" />
   </node>
-  <node id="52" name="Mer'Kresh, Southern Canal Gate" color="#C0C0C0">
+  <node id="52" name="Mer'Kresh, Southern Canal Gate">
     <description>Solidly mortared and built from heavy blocks of basalt, the base for the planned canal gate is closer to completion than the surrounding ring, and stands out from the surrounding pile of rough and loose rock.  Ebbing waves slicken the stones on top of the base with spray and foam.  Caught only by the most violent splashes, a brilliant red banner flutters from atop a wooden pole.</description>
     <position x="-300" y="-40" z="0" />
     <arc exit="southwest" move="southwest" destination="51" />
@@ -699,33 +699,33 @@
     <arc exit="northeast" move="northeast" destination="121" />
     <arc exit="west" move="west" destination="101" />
   </node>
-  <node id="103" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="103" name="Mer'Kresh, Gull Circle">
     <description>Flat and black, the basalt foundations for future shops and homes fill either side of the road, their edges lined with wood guiderails.  The dark grey streaks of ash and lime mortar between the stones creates the illusion that the surfaces are cracked deeply, when in fact the specially made mortar keeps a tight grip on the individual stones.</description>
     <position x="-40" y="-180" z="0" />
     <arc exit="west" move="west" destination="104" />
     <arc exit="climb" move="climb construction barricade" destination="92" />
   </node>
-  <node id="104" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="104" name="Mer'Kresh, Gull Circle">
     <description>Though the road is completed, no structures stand but for one run-down shack huddled quietly off to the side.  A constant sloshing from the canal behind the shack replaces the sounds of workers and townsfolk, and only the occasional cry of a hungry seagull breaks through the noisy water's gurgle.</description>
     <position x="-220" y="-180" z="0" />
     <arc exit="east" move="east" destination="103" />
     <arc exit="southwest" move="southwest" destination="105" />
     <arc exit="southeast" destination="307" />
   </node>
-  <node id="105" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="105" name="Mer'Kresh, Gull Circle">
     <description>Unobstructed by buildings or people, the coast of M'Riss lies serenely across the bay, Torbis Sanhalas.  Beyond the ash-colored sands of the beaches, Undogoz Mountain towers over the woodlands of the main island, a perpetual haze clouding details due to the distance.  Much closer, a series of broken and shattered fences run a circle around one of the finished basalt foundations along the street.</description>
     <position x="-240" y="-160" z="0" />
     <arc exit="northeast" move="northeast" destination="104" />
     <arc exit="southwest" move="southwest" destination="106" />
   </node>
-  <node id="106" name="Mer'Kresh, Gull Circle" note="Super Celpeze" color="#C0C0C0">
+  <node id="106" name="Mer'Kresh, Gull Circle" note="Super Celpeze">
     <description>Thin patches of ashen dirt cover some sections of the road's flagstones, lending the area an unkempt appearance.  The assortment of tools and construction supplies remaining after the workers were done doesn't add to the concept of tidiness.  A stack of leftover bricks sits to one side of the main causeway, no longer needed now that this section of Gull Circle is nearing completion.</description>
     <position x="-260" y="-140" z="0" />
     <arc exit="northeast" move="northeast" destination="105" />
     <arc exit="southwest" move="southwest" destination="107" />
     <arc exit="southeast" move="southeast" destination="311" />
   </node>
-  <node id="107" name="Mer'Kresh, Northern Canal Gate" color="#C0C0C0">
+  <node id="107" name="Mer'Kresh, Northern Canal Gate">
     <description>The most prominent feature of the end of the road is the massive bronze-wrapped tower that will, once finished, hold the northern half of the canal gate in place.  Practically a work of art, the tower stretches high overhead, holding several colorful banners aloft.  Taut ropes run from the midsection, the top, and a point inbetween, down to several metal loops along the ground.  A pile of jagged rocks, discarded from the construction of the road, lean against the ring from inside the canal.</description>
     <position x="-280" y="-120" z="0" />
     <arc exit="northeast" move="northeast" destination="106" />
@@ -1052,7 +1052,7 @@
     <arc exit="southeast" move="swim southeast" destination="133" />
     <arc exit="northwest" move="swim northwest" destination="151" />
   </node>
-  <node id="153" name="Mer'Kresh, Gull Circle" color="#C0C0C0">
+  <node id="153" name="Mer'Kresh, Gull Circle">
     <description>Unless hidden behind the miscellaneous construction tools or stacks of cobblestones, there are no laborers working on the ring.  The deep gouges scarring the edge of the road may have something to do with this, as they are obviously not the result of any shovel or hammer.</description>
     <position x="-260" y="480" z="0" />
     <arc exit="southeast" move="southeast" destination="39" />

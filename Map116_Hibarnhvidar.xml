@@ -523,7 +523,7 @@
     <arc exit="north" move="north" destination="69" />
     <arc exit="go" move="go stone building" destination="256" />
   </node>
-  <node id="75" name="Inner Hibarnhvidar, Entry" note="Entry|Kraelyst start point|travel start point" color="#808000">
+  <node id="75" name="Inner Hibarnhvidar, Entry" note="Entry|Kraelyst start point|travel start point">
     <description>Framed at each end by a massive five-sided arch, this long passage is brightly lit by flaming torches in paired iron cressets.  At one end are the stone gates to Outer Hibarnhvidar, lying flat against the smooth walls, ready to be closed should danger threaten.  At the other end, iron gates stand open allowing entrance to the Inner city.  A warm breeze from within the mountain sighs past, carrying the sounds of bustling commerce, and a faint odor of hammered metal.</description>
     <position x="-60" y="90" z="0" />
     <arc exit="go" move="go iron gate" destination="76" />

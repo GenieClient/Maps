@@ -475,7 +475,7 @@
     <arc exit="north" move="north" destination="68" />
     <arc exit="south" move="south" destination="70" />
   </node>
-  <node id="70" name="Shard, North Bridge" note="North Bridge|N Bridge|Kraelyst start point|travel start point" color="#808000">
+  <node id="70" name="Shard, North Bridge" note="North Bridge|N Bridge|Kraelyst start point|travel start point">
     <description>To the north of this opulent bridge, the Dragon Spine Mountains span the horizon and exhale a dense forest known simply as the Dragon's Breath.  The North city gates stand close by, guarded by sharp-eyed soldiers on the city wall.</description>
     <position x="-660" y="-200" z="0" />
     <arc exit="north" move="north" destination="69" />

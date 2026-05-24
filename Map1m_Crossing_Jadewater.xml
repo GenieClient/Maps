@@ -153,20 +153,20 @@
     <position x="240" y="160" z="0" />
     <arc exit="west" move="west" destination="21" />
   </node>
-  <node id="25" name="Jadewater Mansion, Dining Rotunda" note="Dining Rotunda" color="#C0C0C0">
+  <node id="25" name="Jadewater Mansion, Dining Rotunda" note="Dining Rotunda">
     <description>Under a crystal cupola that reflects the brightness of several lit candelabras lies a long, low table awash in white linen.  Atop it are elegant pewter salvers heaped with steaming viands, their perfumes a mingling of rich scents in the air.  Beverages, sweet or bitter, soft or potent, reside within a mirrored glass case.  Desserts for everyone from the binge-heavy to the diet-conscious await perusal on a majestic gold side cart.</description>
     <position x="100" y="60" z="0" />
     <arc exit="go" move="go graceful archway" destination="12" />
     <arc exit="go" move="go service entrance" destination="26" />
   </node>
-  <node id="26" name="Jadewater Mansion, Kitchen" note="Kitchen" color="#C0C0C0">
+  <node id="26" name="Jadewater Mansion, Kitchen" note="Kitchen">
     <description>Bearing more resemblance to a magical workshop than a place to prepare meals, the kitchen has many oddities filling it.  Herbs overflow from oak shelves while a cart and counter have food and drink waiting to be served.  A small bronze dragon with gaping jaws serves as garbage disposal.</description>
     <position x="120" y="60" z="0" />
     <arc exit="go" move="go service entrance" destination="25" />
     <arc exit="go" move="go trapdoor" destination="27" />
     <arc exit="go" move="go heavy door" destination="28" />
   </node>
-  <node id="27" name="Jadewater Mansion, Wine Cellar" note="Wine Cellar" color="#C0C0C0">
+  <node id="27" name="Jadewater Mansion, Wine Cellar" note="Wine Cellar">
     <description>A small window near the ceiling floods the small basement with a thin stream of light.  Three floor-to-ceiling cases hold hundreds of dusty wine bottles.  The floor is littered with shards of glass and a pile of bottles lies in one corner.</description>
     <position x="140" y="60" z="0" />
     <arc exit="go" move="go trapdoor" destination="26" />

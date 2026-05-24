@@ -310,7 +310,7 @@
     <arc exit="west" move="west" destination="40" />
     <arc exit="go" move="go town hall" destination="311" />
   </node>
-  <node id="42" name="The Crossing, Hodierna Way" note="Kraelyst start point|travel start point" color="#808000">
+  <node id="42" name="The Crossing, Hodierna Way" note="Kraelyst start point|travel start point">
     <description>The hustle of crowds making their way between the secular and religious centers of town that converge here carries you along with its momentum.  The granite and marble facade of the First Provincial Bank catches your eye, standing before you as solid as its name.  A Gor'Tog guard armed with pike and crossbow is posted at the door, while a few well-dressed merchants congregate outside.</description>
     <position x="210" y="20" z="0" />
     <arc exit="east" move="east" destination="160" />
@@ -4354,7 +4354,7 @@
     <position x="130" y="130" z="0" />
     <arc exit="out" move="out" destination="647" />
   </node>
-  <node id="650" name="Riverbank Mudflats, Rough Stairway" note="Map1a_Crossing_Thief.xml|5th Passage" color="#808080">
+  <node id="650" name="Riverbank Mudflats, Rough Stairway" note="Map1a_Crossing_Thief.xml|5th Passage">
     <description>Barely visible in the murky air of the room, broken boards have been set into the earth to form a crude set of steps that tilt precariously away from the base of the panel to drop into the darkness beyond.  Shredded oilcloth has been jammed into the cracks around the panel as if an attempt has been made to prevent light or sounds from betraying activity here to the world outside.</description>
     <position x="130" y="160" z="0" />
     <arc exit="out" move="out" destination="647" />

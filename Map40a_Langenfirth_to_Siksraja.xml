@@ -336,7 +336,7 @@
     <arc exit="northeast" move="northeast" destination="54" />
     <arc exit="west" move="west" destination="56" />
   </node>
-  <node id="56" name="Svesinek Cels, Quiet Forest" color="#C0C0C0">
+  <node id="56" name="Svesinek Cels, Quiet Forest">
     <description>A large boulder rests on the forest side of the path, diagonally across from what could only be described as a hole, dug in the roadway alongside the split-log fence.  Some vine tendrils that have climbed the fence encircle and sprawl along the wood barrier as far as the eye can see.</description>
     <position x="-1000" y="-100" z="0" />
     <arc exit="east" move="east" destination="55" />
@@ -399,7 +399,7 @@
     <arc exit="southeast" move="southeast" destination="64" />
     <arc exit="northwest" move="northwest" destination="66" />
   </node>
-  <node id="66" name="Svesinek Cels, Foothills" color="#C0C0C0">
+  <node id="66" name="Svesinek Cels, Foothills">
     <description>To the side of the path, an eroded basin in a large slab is home to some stringy weeds that have tenaciously rooted in a damp crevice.  The sickly green weeds relieve the dung-colored monotony of the roadway as it crosses the almost barren landscape.</description>
     <position x="-1200" y="-180" z="0" />
     <arc exit="north" move="north" destination="67" />
@@ -554,7 +554,7 @@
     <arc exit="southeast" move="southeast" destination="91" />
     <arc exit="west" move="west" destination="89" />
   </node>
-  <node id="91" name="Siksraja, Clearing" color="#C0C0C0">
+  <node id="91" name="Siksraja, Clearing">
     <description>The forest halts at a grove of neatly spaced and tended mulberry that covers the land up to the lake, eliminating the cleared expanse that has separated the village.  Two pillars mark the entrance to the village.  Affixed to one of the pillars is an L iron from which hangs a bell and rope.</description>
     <position x="-860" y="-20" z="0" />
     <arc exit="northwest" move="northwest" destination="90" />
@@ -610,7 +610,7 @@
     <arc exit="go" move="go grey tent" destination="195" />
     <arc exit="go" move="go shop" destination="212" />
   </node>
-  <node id="98" name="Siksraja, Cawrs Cels" color="#C0C0C0">
+  <node id="98" name="Siksraja, Cawrs Cels">
     <description>A wood bench, its back to the path, looks out across the clearing.  On one side of the steps leading up to the roofed porch over the General Store is a hitching post.  Affixed to the porch beam above the post is a bell.</description>
     <position x="-920" y="0" z="0" />
     <arc exit="east" move="east" destination="97" />
@@ -645,7 +645,7 @@
     <arc exit="north" move="north" destination="100" />
     <arc exit="climb" move="climb dock" destination="134" />
   </node>
-  <node id="103" name="Siksraja, Clearing" color="#C0C0C0">
+  <node id="103" name="Siksraja, Clearing">
     <description>Grasses of various types grow rampant at the bottom of posts supporting sturdy wood rails that encircle three sides of a ramshackle shed.  The hind side of the enclosure runs along the lake's edge where taller posts keep the fence height uniform though the ground dips towards the shore.  A bell and rope hang from an L iron above the doorway.</description>
     <position x="-1100" y="80" z="0" />
     <arc exit="northeast" move="northeast" destination="73" />
@@ -1091,13 +1091,13 @@
     <arc exit="northeast" move="northeast" destination="167" />
     <arc exit="south" move="south" destination="185" />
   </node>
-  <node id="169" name="Duvli Rinu" color="#C0C0C0">
+  <node id="169" name="Duvli Rinu">
     <description>Space is tight here, under the old oak tree.  Tangled roots and moldy leaves mix with the dirt floor of this narrow, sloping pathway that leads deep into the earth.  In one corner is an empty nest, most likely belonging to a mouse.</description>
     <position x="-1060" y="40" z="1" />
     <arc exit="south" move="south" destination="162" />
     <arc exit="climb" move="climb rope ladder" destination="82" />
   </node>
-  <node id="170" name="Duvli Rinu" color="#C0C0C0">
+  <node id="170" name="Duvli Rinu">
     <description>At first this hole appears to simply drop straight down a few feet, enough to allow one to stand.  As one becomes accustomed to the scant light it is obvious that it widens into a cavern that heads southwest.  The rough floor is dry and dusty and covered with dead leaves that will crunch when stepped upon, which would signal anyone in the tunnel of your arrival.</description>
     <position x="-1040" y="40" z="1" />
     <arc exit="southwest" move="southwest" destination="162" />
@@ -1110,7 +1110,7 @@
     <arc exit="northeast" move="northeast" destination="173" />
     <arc exit="west" move="west" destination="162" />
   </node>
-  <node id="172" name="Duvli Rinu" color="#C0C0C0">
+  <node id="172" name="Duvli Rinu">
     <description>This angled hole slopes sharply as it descends beneath the forest floor.  The air smells damp probably from the small puddles remaining from the last rainfall.  What appears to be a grey tail feather lies near some otherwise indistinguishable remains.</description>
     <position x="-1020" y="40" z="1" />
     <arc exit="south" move="south" destination="171" />
@@ -1128,7 +1128,7 @@
     <arc exit="northeast" move="northeast" destination="186" />
     <arc exit="west" move="west" destination="173" />
   </node>
-  <node id="175" name="Duvli Rinu" color="#C0C0C0">
+  <node id="175" name="Duvli Rinu">
     <description>Dank and dusty, this cramped cavity runs the opposite direction from the hole dug in the ground above.  While it may be the lack of sunlight, the walls here look to be a dark brown, seem crumbly in texture and emit the scent of hay and manure.</description>
     <position x="-960" y="-80" z="1" />
     <arc exit="south" move="south" destination="186" />
@@ -1154,7 +1154,7 @@
     <arc exit="southeast" move="southeast" destination="180" />
     <arc exit="northwest" move="northwest" destination="177" />
   </node>
-  <node id="179" name="Duvli Rinu" color="#C0C0C0">
+  <node id="179" name="Duvli Rinu">
     <description>Dark spots in the earthen walls trace the path of a few tree roots that have spread far from their trunks.  Bits of grass mingle with the dirt in the shored up walls and the bottom of one of the posts protrudes far enough from the ceiling that care must be taken to avoid banging into it.</description>
     <position x="-860" y="60" z="1" />
     <arc exit="west" move="west" destination="178" />
@@ -1185,13 +1185,13 @@
     <arc exit="east" move="east" destination="182" />
     <arc exit="southwest" move="southwest" destination="165" />
   </node>
-  <node id="184" name="Duvli Rinu" color="#C0C0C0">
+  <node id="184" name="Duvli Rinu">
     <description>Muffled voices from above serve as a reminder that silence is golden and any noise made here might well carry overhead.  A damp, cool breeze seems to flow from the southwest, just enough to wonder if the tunnel might be flooded considering its proximity to the lake.</description>
     <position x="-880" y="100" z="1" />
     <arc exit="southwest" move="southwest" destination="183" />
     <arc exit="climb" move="climb rope ladder" destination="98" />
   </node>
-  <node id="185" name="Duvli Rinu" color="#C0C0C0">
+  <node id="185" name="Duvli Rinu">
     <description>Overhead, slats form a latticework that supports the earthen ceiling and constrains dust caused by vibrations from the shed's floorboards.  An odor like fermenting fruit tickles the nose and mingles with the damp-dry scent of the dirt.</description>
     <position x="-1060" y="220" z="1" />
     <arc exit="north" move="north" destination="168" />

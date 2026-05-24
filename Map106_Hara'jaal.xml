@@ -170,7 +170,7 @@
     <arc exit="north" move="rt north" destination="20" />
     <arc exit="south" move="rt south" destination="29" />
   </node>
-  <node id="28" name="A Hidden Grotto" note="Shrine|Trothfang" color="#4080FF">
+  <node id="28" name="A Hidden Grotto" note="Shrine|Trothfang" color="#A6A3D9">
     <description>Thick brush surrounds this bowl-shaped depression, hiding the outside world from view.  Tall stones, pockmarked with age, encircle an obsidian altar.  The air seems eerily still and empty of noise from the surrounding forest.</description>
     <position x="-60" y="80" z="0" />
     <arc exit="climb" move="climb overgrown slope" destination="20" />

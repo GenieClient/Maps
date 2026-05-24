@@ -310,7 +310,7 @@
     <arc exit="north" move="north" destination="51" />
     <arc exit="southeast" move="southeast" destination="49" />
   </node>
-  <node id="51" name="Telpengi'hhs Sara'a, Catacombs" color="#804000">
+  <node id="51" name="Telpengi'hhs Sara'a, Catacombs">
     <description>Even as the scattered bones of those interred here testify, the dead may be free of the fear and pain that the living must endure, but their mortal remains are not spared from sacrilege.  Passing the barriers between life and death, as all mortals must, and fleeing this world for the next might only bear the soul higher -- but that which is left behind may yet be victim to an unguarded fate, as the yawning grave in the mud encrusted ceiling proves.</description>
     <position x="380" y="120" z="0" />
     <arc exit="south" move="south" destination="50" />
@@ -345,7 +345,7 @@
     <arc exit="south" move="south" destination="57" />
     <arc exit="northwest" move="northwest" destination="55" />
   </node>
-  <node id="57" name="Telpengi'hhs Sara'a, Catacombs" color="#804000">
+  <node id="57" name="Telpengi'hhs Sara'a, Catacombs">
     <description>A rectangle of empty space stares down from the dirt of the ceiling, the gap a result of a hollowing out of the grave above.  Littered along the ground are the remains of wood flats and moldy velvet, left behind as if that which emptied the grave could not wait to drag the coffin away, and preferred instead to crack into its contents here.  Of what the pinebox may have contained, there is no sign.</description>
     <position x="500" y="240" z="0" />
     <arc exit="north" move="north" destination="56" />
@@ -363,7 +363,7 @@
     <position x="440" y="200" z="0" />
     <arc exit="down" move="down" destination="47" />
   </node>
-  <node id="60" name="Telpengi'hhs Sara'a, Catacombs" color="#804000">
+  <node id="60" name="Telpengi'hhs Sara'a, Catacombs">
     <description>Cream-colored fabric, torn and soiled, lies half buried, the ripples of cloth flattened and pressed into the dirty floor.  Someone has defiled a grave from the bottom up, tearing out the coffin and the body within and subjecting them to some unknown fate.  Also empty, the burial niches along the walls gaze at the bottom of the grave as if filled with slack-jawed horror at such irreverence.</description>
     <position x="560" y="160" z="0" />
     <arc exit="south" move="south" destination="53" />
@@ -504,7 +504,7 @@
     <arc exit="north" move="north" destination="83" />
     <arc exit="south" move="south" destination="81" />
   </node>
-  <node id="83" name="Overgrown Manor Grounds, Side Yard by the Chapel" color="#804000">
+  <node id="83" name="Overgrown Manor Grounds, Side Yard by the Chapel">
     <description>Some distance above, the glassy remains of an artistically rendered window still display themselves jaggedly along the frame.  Nothing else is left of the artist's impassioned creation, his hours of toil and labor vanished in a shattering of colored fragments.  The wind whistles softly through the remnants, perhaps an echo of the glassworker's lingering spirit bemoaning cruel fate and the razor-like shards left, sharp as a heartache.</description>
     <position x="240" y="260" z="0" />
     <arc exit="south" move="south" destination="82" />
@@ -562,7 +562,7 @@
     <arc exit="southeast" move="southeast" destination="89" />
     <arc exit="northwest" move="northwest" destination="94" />
   </node>
-  <node id="91" name="Overgrown Manor Grounds, Front Lawns" color="#804000">
+  <node id="91" name="Overgrown Manor Grounds, Front Lawns">
     <description>Nearly lost within the clumps of overgrowth are several bits of bone, hiding beneath the twisty blades of grass like frightened refugees.  It is not a secret that they stay there in their place of unobtrusiveness, but more likely that they were discarded when the flesh upon them gave out as the toothy gnaws upon their surfaces indicates.  Though clearly disturbed, a sunken grave nearby doesn't appear to be exhumed enough to be the source of the abandoned bone scraps.</description>
     <position x="300" y="340" z="0" />
     <arc exit="north" move="north" destination="92" />
@@ -604,7 +604,7 @@
     <arc exit="northeast" move="northeast" destination="94" />
     <arc exit="go" move="go carriage door" destination="108" />
   </node>
-  <node id="96" name="Overgrown Manor Grounds, Alfar's Rest Gate" color="#804000">
+  <node id="96" name="Overgrown Manor Grounds, Alfar's Rest Gate">
     <description>But for one nearly barren spot where a sunken grave lies, the weeds cluster in such thick clumps underfoot that the ground seems unnaturally lumpy.  The growth offers little free space, and between the clinging plant life and rusted condition, an old metal gate nearby seems to have no real chance of ever opening again.  Beyond the gate, headstones peek up from a sea of yellowing grass and choking vines.</description>
     <position x="340" y="280" z="0" />
     <arc exit="southwest" move="southwest" destination="85" />

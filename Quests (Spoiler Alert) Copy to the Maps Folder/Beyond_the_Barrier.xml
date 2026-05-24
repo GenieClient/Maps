@@ -132,7 +132,7 @@
     <position x="920" y="300" z="0" />
     <arc exit="south" move="south" destination="21" />
   </node>
-  <node id="23" name="The Great Barrier, Rift" color="#800000">
+  <node id="23" name="The Great Barrier, Rift">
     <description>A visible tear in the Great Barrier churns with maddening chaos, the edges of it resembling an open wound.  Hints of a desolate forest are visible through the rift, although the break shifts and changes constantly.  Faint scraps of a dark purple cloth cling to the ground in ragged threads, as if the rift was traversed recently and with great difficulty.</description>
     <position x="880" y="180" z="0" />
     <arc exit="northeast" move="northeast" destination="24" />
@@ -150,7 +150,7 @@
     <position x="880" y="140" z="0" />
     <arc exit="southeast" move="southeast" destination="24" />
   </node>
-  <node id="26" name="Western Wastelands, Dead Forest" color="#800000">
+  <node id="26" name="Western Wastelands, Dead Forest">
     <description>Skeletal, finger-like branches of bare trees reach up toward the blighted heavens, cracked and crumbling.  Not a scrap of green remains, even the old leaves long crumbled away to a greyish dust.  Jagged rocks poke up through the withered roots, exposed solely due to the complete lack of undergrowth.</description>
     <position x="720" y="180" z="0" />
     <arc exit="west" move="west" destination="27" />

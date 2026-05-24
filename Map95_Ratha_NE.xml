@@ -477,7 +477,7 @@
     <arc exit="east" move="east" destination="78" />
     <arc exit="west" move="west" destination="76" />
   </node>
-  <node id="78" name="Pokekehekepi olpo'staho" color="#008080">
+  <node id="78" name="Pokekehekepi olpo'staho">
     <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
     <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
     <position x="560" y="-210" z="0" />
@@ -985,7 +985,7 @@
     <arc exit="east" move="east" destination="145" />
     <arc exit="southwest" move="southwest" destination="143" />
   </node>
-  <node id="145" name="Pokekehekepi olpo'staho" color="#800000">
+  <node id="145" name="Pokekehekepi olpo'staho">
     <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
     <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
     <position x="820" y="-470" z="0" />
@@ -1964,7 +1964,7 @@
     <arc exit="east" move="east" destination="271" />
     <arc exit="west" move="west" destination="273" />
   </node>
-  <node id="273" name="Peltaph'staho" note="Disease Wall" color="#C0C0C0">
+  <node id="273" name="Peltaph'staho" note="Disease Wall">
     <description>The floor here is littered with pebbles and grit from what looks like a partial cave-in.  The walls are craggy and split, and moist with some kind of clear fluid.</description>
     <position x="400" y="-340" z="0" />
     <arc exit="east" move="east" destination="272" />
@@ -2083,7 +2083,7 @@
     <arc exit="east" move="east" destination="288" />
     <arc exit="southwest" move="southwest" destination="291" />
   </node>
-  <node id="291" name="Peltahp'staho" color="#008080">
+  <node id="291" name="Peltahp'staho">
     <description>Pinched into this corner is a mound of earth shaped into a ramp angled up towards the dark shadows of the ceiling.  Bits of luminous mycelium hang in what appear to be intentionally cultivated curtains, giving off a soft glow.</description>
     <position x="220" y="-300" z="0" />
     <arc exit="north" move="north" destination="292" />
@@ -2141,7 +2141,7 @@
     <position x="280" y="-360" z="0" />
     <arc exit="west" move="west" destination="298" />
   </node>
-  <node id="300" name="Peltaph'staho" note="Disease Wall 2" color="#C0C0C0">
+  <node id="300" name="Peltaph'staho" note="Disease Wall 2">
     <description>The floor here is littered with pebbles and grit from what looks like a partial cave-in.  The walls are craggy and split, and moist with some kind of clear fluid.</description>
     <position x="280" y="-400" z="0" />
     <arc exit="northeast" move="northeast" destination="301" />
@@ -2149,7 +2149,7 @@
     <arc exit="southwest" move="southwest" destination="297" />
     <arc exit="northwest" move="northwest" destination="302" />
   </node>
-  <node id="301" name="Peltaph'staho" note="Disease Wall 3" color="#C0C0C0">
+  <node id="301" name="Peltaph'staho" note="Disease Wall 3">
     <description>The floor here is littered with pebbles and grit from what looks like a partial cave-in.  The walls are craggy and split, and moist with some kind of clear fluid.</description>
     <position x="300" y="-420" z="0" />
     <arc exit="north" move="north" destination="303" />
@@ -2284,7 +2284,7 @@
     <arc exit="east" move="east" destination="322" />
     <arc exit="southwest" move="southwest" destination="320" />
   </node>
-  <node id="322" name="Peltaph'staho" color="#800000">
+  <node id="322" name="Peltaph'staho">
     <description>Pinched into this corner is a mound of earth shaped into a ramp angled up towards the dark shadows of the ceiling.</description>
     <position x="500" y="-520" z="0" />
     <arc exit="southwest" move="southwest" destination="323" />
