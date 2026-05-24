@@ -6597,7 +6597,7 @@
     <position x="-30" y="26" z="0" />
     <arc exit="go" move="go wooden door" destination="874" />
   </node>
-  <node id="1029" name="Siryn's Courtyard, Intro Terrace" note="Siryn's Courtyard" color="Aqua">
+  <node id="1029" name="Siryn's Courtyard, Intro Terrace" note="Siryn's Courtyard" color="#00FFFF">
     <description>Named in tribute to famed Bard Siryn Mistbringer, this welcoming courtyard is an oasis of peace from the hustle and bustle of Clanthew Boulevard.  Sounds of music and laughter filter in from the Bard's Guild next door, drifting across the thick stone walls that enclose the neighborhood.  A flock of wrens perches under the protection of maple trees that provide shade and shelter with their widespread branches.</description>
     <position x="-26" y="-355" z="0" />
     <arc exit="east" move="east" destination="1032" />
@@ -6605,21 +6605,21 @@
     <arc exit="south" move="south" destination="1030" />
     <arc exit="go" move="go gate" destination="29" />
   </node>
-  <node id="1030" name="Siryn's Courtyard, Chorus Terrace" color="Aqua">
+  <node id="1030" name="Siryn's Courtyard, Chorus Terrace" color="#00FFFF">
     <description>Positioned underneath an enormous cedar tree, a well-stocked bar of polished mahogany is set out to entice visitors to sit and stay.  A collection of wrought-iron tables and chairs are thoughtfully placed around the terrace, perfect for those who wish to linger and enjoy a drink or two either alone or in the company of friends.</description>
     <position x="-26" y="-336" z="0" />
     <arc exit="north" move="north" destination="1029" />
     <arc exit="northeast" move="northeast" destination="1033" />
     <arc exit="east" move="east" destination="1031" />
   </node>
-  <node id="1031" name="Siryn's Courtyard, Outro Terrace" color="Aqua">
+  <node id="1031" name="Siryn's Courtyard, Outro Terrace" color="#00FFFF">
     <description>Tucked away in the southeast corner of the terrace, a lone nightingale perched upon the branch of a basswood tree whistles and trills a sweet song to those passing by.  Charmingly low wrought-iron fencing, crafted into a five-line staff with musical notes, separates each courtyard resident's yard from another.</description>
     <position x="-7" y="-336" z="0" />
     <arc exit="north" move="north" destination="1032" />
     <arc exit="west" move="west" destination="1030" />
     <arc exit="northwest" move="northwest" destination="1033" />
   </node>
-  <node id="1032" name="Siryn's Courtyard, Verse Terrace" color="Aqua">
+  <node id="1032" name="Siryn's Courtyard, Verse Terrace" color="#00FFFF">
     <description>Rosewood trees strung with creamy white seashells and silvery windchimes border the walkway that winds through the various residences in this spacious terrace.  In contrast to the simple austerity of the border, brightly colored tulips and buttercups are planted at each bend of the path, providing splashes of colors to please the eyes.</description>
     <position x="-7" y="-355" z="0" />
     <arc exit="south" move="south" destination="1031" />

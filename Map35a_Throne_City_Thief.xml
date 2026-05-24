@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <zone name="Throne City Thief" id="35a">
-  <node id="1" name="Drainage Channel" color="Blue">
+  <node id="1" name="Drainage Channel" color="#0000FF">
     <description>Bits of broken cobblestones and pieces of shattered statues redirect the route of a stream of rather dirty water, sending it spiraling in little eddies against the curving sides of the channel.  On the other side of the debris pile, the water resumes its steady course, gaining speed until it hurtles through an opening and into the outside world.</description>
     <position x="420" y="280" z="0" />
     <arc exit="west" move="west" destination="2" />
     <arc exit="go" move="go a gap" destination="8" />
   </node>
-  <node id="2" name="Drainage Channel" color="Blue">
+  <node id="2" name="Drainage Channel" color="#0000FF">
     <description>A dark mildew stain covers the lower half of the wall, indicating precisely where the levels of runoff water rise when forced through this passage by rains or floods.  Only a small river of murky liquid gurgles through currently, sloshing against the stones and joyously creating echoes in the otherwise drab and dreary channel.</description>
     <position x="380" y="280" z="0" />
     <arc exit="east" move="swim east" destination="1" />
     <arc exit="northwest" move="swim northwest" destination="3" />
   </node>
-  <node id="3" name="Drainage Channel" color="Blue">
+  <node id="3" name="Drainage Channel" color="#0000FF">
     <description>Six large pipes protrude from beneath a massive stone dais, each spilling their own gallons of water into the collection basin on the floor.  Somewhere behind, overflow from the Faldesu river must regularly fill ditches and channels, only to have its waters diverted here and away from the streets where a flood would be disastrous.</description>
     <position x="360" y="260" z="0" />
     <arc exit="southeast" move="swim southeast" destination="2" />

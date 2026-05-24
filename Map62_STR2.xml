@@ -1365,13 +1365,13 @@
     <arc exit="south" move="south" destination="218" />
     <arc exit="west" move="west" destination="215" />
   </node>
-  <node id="220" name="Workshop, Vestibule" color="White">
+  <node id="220" name="Workshop, Vestibule">
     <description>Round pegs stick out from one side wall, set into the weathered planks to provide a place to hang cloaks or aprons.  A cloak, dusty and almost rotted away from age, still hangs forlornly as if waiting for its owner.  Dust covers the floor and settles into the gaps between the floorboards.</description>
     <position x="500" y="60" z="0" />
     <arc exit="east" move="east" destination="221" />
     <arc exit="go" move="go wooden door" destination="186" />
   </node>
-  <node id="221" name="Workroom, Workspace" color="White">
+  <node id="221" name="Workroom, Workspace">
     <description>Open floorspace is ringed by dust-covered equipment, some of it decayed into piles of rotting or rusted parts that are utterly incapable of identification.  Dried leaves mix with the dirt and filth to form a thick layer of detrius on the floors.  A few holes in the roof show where the leaves gained entrance.</description>
     <position x="520" y="60" z="0" />
     <arc exit="north" move="north" destination="222" />
@@ -1381,35 +1381,35 @@
     <arc exit="south" move="south" destination="224" />
     <arc exit="west" move="west" destination="220" />
   </node>
-  <node id="222" name="Workroom, Workspace" color="White">
+  <node id="222" name="Workroom, Workspace">
     <description>Racks containing dusty tools stand against the walls.  A few worktables stand nearby with equipment haphazardly scattered atop them as if abandoned in mid-task.  High overhead, the exposed roof beams provide a staging area for the complex lattice of spiderwebs.</description>
     <position x="520" y="40" z="0" />
     <arc exit="east" move="east" destination="223" />
     <arc exit="southeast" move="southeast" destination="226" />
     <arc exit="south" move="south" destination="221" />
   </node>
-  <node id="223" name="Workroom, Storage" color="White">
+  <node id="223" name="Workroom, Storage">
     <description>Bins and barrels hold the rotting and decaying remains of materials once used in this working area.  A few burlap sacks lie in crumbling heaps against the walls, what they once contained long since decayed away.</description>
     <position x="540" y="40" z="0" />
     <arc exit="south" move="south" destination="226" />
     <arc exit="southwest" move="southwest" destination="221" />
     <arc exit="west" move="west" destination="222" />
   </node>
-  <node id="224" name="Workroom, Storage" color="White">
+  <node id="224" name="Workroom, Storage">
     <description>Once these shelves held parts and materials for use in the workshop, but now they are covered with corroded and crumbling lumps.  The shelving itself shows signs of disrepair, with some uprights leaning dangerously and others appearing ready to buckle at any moment.</description>
     <position x="520" y="80" z="0" />
     <arc exit="north" move="north" destination="221" />
     <arc exit="northeast" move="northeast" destination="226" />
     <arc exit="east" move="east" destination="225" />
   </node>
-  <node id="225" name="Workroom, Workspace" color="White">
+  <node id="225" name="Workroom, Workspace">
     <description>Two sawhorses are set up in the middle of the area, spaced far apart.  A rusting saw leans against one leg, its blade warped and bent from its long wait.  Two lanterns, long since guttered out, hang suspended on chains from the exposed beams overhead.</description>
     <position x="540" y="80" z="0" />
     <arc exit="north" move="north" destination="226" />
     <arc exit="west" move="west" destination="224" />
     <arc exit="northwest" move="northwest" destination="221" />
   </node>
-  <node id="226" name="Workroom, Workspace" color="White">
+  <node id="226" name="Workroom, Workspace">
     <description>Pegs on one wall hold the remains of tools, although a few have lost handles or other parts.  Dangling ropes hang from the roofbeams, their exact purpose long since lost to time.  Dust covers everything in a thick shroud of concealing grime and grit.</description>
     <position x="540" y="60" z="0" />
     <arc exit="north" move="north" destination="223" />

@@ -4098,44 +4098,44 @@
     <arc exit="southeast" move="southeast" destination="638" />
     <arc exit="west" move="west" destination="634" />
   </node>
-  <node id="640" name="Julge Dolen Zaldeni, Valley" color="White">
+  <node id="640" name="Julge Dolen Zaldeni, Valley">
     <description>Sinuous shapes occasionally flicker through the tall, thick grass as bright-eyed ferrets scour the area for food.  A half-cropped tuft of buffalo grass shades a hole in the ground that leads to the creatures' burrow.</description>
     <position x="-540" y="-23" z="0" />
     <arc exit="southeast" move="southeast" destination="641" />
     <arc exit="west" move="west" destination="642" />
     <arc exit="climb" move="climb sturdy fence" destination="113" />
   </node>
-  <node id="641" name="Julge Dolen Zaldeni, Valley" color="White">
+  <node id="641" name="Julge Dolen Zaldeni, Valley">
     <description>Overhead, the stars seem brighter than on the grasslands, the high valley walls bringing the expanse into focus.  A parliament of owls sometimes wings by, looking for richer lark-hunting on the plains above.</description>
     <position x="-520" y="-3" z="0" />
     <arc exit="northwest" move="northwest" destination="640" />
   </node>
-  <node id="642" name="Julge Dolen Zaldeni, Valley" color="White">
+  <node id="642" name="Julge Dolen Zaldeni, Valley">
     <description>The tough tops of the towering grass have been broken and chewed in places, but the resilient stems persist in growing.  The greenery sways with every breeze.</description>
     <position x="-580" y="-23" z="0" />
     <arc exit="north" move="north" destination="647" />
     <arc exit="east" move="east" destination="640" />
     <arc exit="northwest" move="northwest" destination="643" />
   </node>
-  <node id="643" name="Julge Dolen Zaldeni, Valley" color="White">
+  <node id="643" name="Julge Dolen Zaldeni, Valley">
     <description>The tall grasses are thicker to the east and west, but a faint path is worn northward where large animals have made for the stream.  The air is redolent of lush greenery, and one can almost hear the roots unfurling within the earth as the plants grow.</description>
     <position x="-600" y="-43" z="0" />
     <arc exit="southeast" move="southeast" destination="642" />
     <arc exit="northwest" move="northwest" destination="644" />
   </node>
-  <node id="644" name="Julge Dolen Zaldeni, Stream Bank" color="White">
+  <node id="644" name="Julge Dolen Zaldeni, Stream Bank">
     <description>Closer to the stream, the grass becomes even more lush and stands just a few hands high -- perfect for grazing.  A few vedda trees provide shade and, in times of desperation, food.</description>
     <position x="-620" y="-63" z="0" />
     <arc exit="northeast" move="northeast" destination="645" />
     <arc exit="southeast" move="southeast" destination="643" />
   </node>
-  <node id="645" name="Julge Dolen Zaldeni, Stream Bank" color="White">
+  <node id="645" name="Julge Dolen Zaldeni, Stream Bank">
     <description>Weeping willows stretch their boughs over the water at the stream's head, providing shelter for a small flock of ducks whose nests dot the bank.  A number of rodents also dwell by the trees, receiving shelter from the elements.</description>
     <position x="-580" y="-103" z="0" />
     <arc exit="east" move="east" destination="646" />
     <arc exit="southwest" move="southwest" destination="644" />
   </node>
-  <node id="646" name="Julge Dolen Zaldeni, Stream Bank" color="White">
+  <node id="646" name="Julge Dolen Zaldeni, Stream Bank">
     <description>Red cedar trees cling to the stream bank, surrounded by weeping willows that vie for the water.  The cedars' gnarled roots protrude into the rivulet, both stabilizing the bank and providing a convenient seat.</description>
     <position x="-540" y="-103" z="0" />
     <arc exit="southeast" move="southeast" destination="649" />
@@ -4143,20 +4143,20 @@
     <arc exit="west" move="west" destination="645" />
     <arc exit="climb" move="climb cedar root" destination="650" />
   </node>
-  <node id="647" name="Julge Dolen Zaldeni, Valley" color="White">
+  <node id="647" name="Julge Dolen Zaldeni, Valley">
     <description>A few cedars stretch north toward the water.  Short-bladed grass and some sedges vie for ground cover.  A meadowlark's nest is almost hidden within the grass, its woven roof a patch of brown among the green.</description>
     <position x="-580" y="-63" z="0" />
     <arc exit="northeast" move="northeast" destination="646" />
     <arc exit="east" move="east" destination="648" />
     <arc exit="south" move="south" destination="642" />
   </node>
-  <node id="648" name="Julge Dolen Zaldeni, Valley" color="White">
+  <node id="648" name="Julge Dolen Zaldeni, Valley">
     <description>Southwest, the shorter grass gives way to a taller variety as the valley rolls in a slow dip.  The grass is a thick, cropped carpet here, with divots turned up by the hooves of fast-moving horses.</description>
     <position x="-520" y="-63" z="0" />
     <arc exit="north" move="north" destination="649" />
     <arc exit="west" move="west" destination="647" />
   </node>
-  <node id="649" name="Julge Dolen Zaldeni, Valley" color="White">
+  <node id="649" name="Julge Dolen Zaldeni, Valley">
     <description>Saplings have taken root among the tenacious grass.  The young trees are not faring well -- tufts of hair are caught in the ragged bark where horses have used them as grooming aids.</description>
     <position x="-520" y="-83" z="0" />
     <arc exit="south" move="south" destination="648" />
@@ -4193,32 +4193,32 @@
     <arc exit="west" move="swim west" destination="653" />
     <arc exit="up" move="swim up" destination="652" />
   </node>
-  <node id="655" name="Wyvern Trail, Hidden Canyon" note="tree sloth" color="White">
+  <node id="655" name="Wyvern Trail, Hidden Canyon" note="tree sloth">
     <description>Buried by an enormous pile of rocks, one end of the twisting canyon now allows a somewhat precarious passage in and out.  Massive tree trunks crowd the rest of the gorge, their branches filling the space overhead.</description>
     <position x="680" y="577" z="0" />
     <arc exit="southwest" move="southwest" destination="656" />
     <arc exit="go" move="go jumbled rocks" destination="592" />
   </node>
-  <node id="656" name="Wyvern Trail, Hidden Canyon" color="White">
+  <node id="656" name="Wyvern Trail, Hidden Canyon">
     <description>Carved long ago, the steep sides of the canyon enclose a lush, almost tropical forest.  Trunks topped by verdant growth tower overhead while the sounds of birds and animals echo throughout.</description>
     <position x="660" y="597" z="0" />
     <arc exit="northeast" move="northeast" destination="655" />
     <arc exit="west" move="west" destination="659" />
     <arc exit="northwest" move="northwest" destination="657" />
   </node>
-  <node id="657" name="Wyvern Trail, Hidden Canyon" color="White">
+  <node id="657" name="Wyvern Trail, Hidden Canyon">
     <description>High overhead there is a break in the canopy as one of the forest's titans has fallen, its thick trunk splayed across the ground where it fell.  Saplings and other scrubby plants grow thickly around the giant's remains, each one striving to crowd out the others and reach the sky.</description>
     <position x="640" y="577" z="0" />
     <arc exit="southeast" move="southeast" destination="656" />
     <arc exit="west" move="west" destination="658" />
   </node>
-  <node id="658" name="Wyvern Trail, Hidden Canyon" color="White">
+  <node id="658" name="Wyvern Trail, Hidden Canyon">
     <description>Chirps and cheeps sound overhead as birds flit between the branches.  An occasional drip of moisture falls from above as the muggy air condenses into a liquid drop.</description>
     <position x="620" y="577" z="0" />
     <arc exit="east" move="east" destination="657" />
     <arc exit="south" move="south" destination="659" />
   </node>
-  <node id="659" name="Wyvern Trail, Hidden Canyon" color="White">
+  <node id="659" name="Wyvern Trail, Hidden Canyon">
     <description>Little grows on the forest floor as most sunlight is blocked by the towering canopy overhead.  A few scraggly bushes struggle for life amongst the leaf litter while the trunks of the colossal trunks host mosses and lichens that grow profusely in the damp climate.</description>
     <position x="620" y="597" z="0" />
     <arc exit="north" move="north" destination="658" />

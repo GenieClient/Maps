@@ -5017,7 +5017,7 @@
     <position x="-580" y="-940" z="0" />
     <arc exit="north" move="north" destination="733" />
   </node>
-  <node id="737" name="House of the Silk Strings, Lotus Pond" color="Blue">
+  <node id="737" name="House of the Silk Strings, Lotus Pond" color="#0000FF">
     <description>Snowy white lotus blossoms blanket the emerald water of this placid woodland pond.  A narrow path through the vegetation has been cleared along the shallows of the pool, and various Elothean workers are using the wading space to carefully harvest lotus leaves.</description>
     <description>Lotus blossoms, closed for the night, blanket the surface of the darkened pond.</description>
     <position x="-600" y="-800" z="0" />
@@ -5025,28 +5025,28 @@
     <arc exit="southeast" move="southeast" destination="741" />
     <arc exit="go" move="go shoreline" destination="708" />
   </node>
-  <node id="738" name="House of the Silk Strings, Lotus Pond" color="Blue">
+  <node id="738" name="House of the Silk Strings, Lotus Pond" color="#0000FF">
     <description>The thick layer of soft white lotus blossoms sways gently to the soporific rhythm of the pond's underwater currents.</description>
     <description>Lotus blossoms, closed for the night, blanket the surface of the darkened pond.</description>
     <position x="-580" y="-820" z="0" />
     <arc exit="southeast" move="southeast" destination="739" />
     <arc exit="southwest" move="southwest" destination="737" />
   </node>
-  <node id="739" name="House of the Silk Strings, Lotus Pond" color="Blue">
+  <node id="739" name="House of the Silk Strings, Lotus Pond" color="#0000FF">
     <description>The sea of botanic white that dominates the rest of the pond blends softly into a contrasting bed of lotus blossoms at this quiet end of the pool.  Distinctly colored blooms surround a mossy stone marker rising stoically from the jewel-toned water below.</description>
     <description>Lotus blossoms, closed for the night, blanket the surface of the darkened pond, while a mossy stone marker quietly stands watch in the still water.</description>
     <position x="-560" y="-800" z="0" />
     <arc exit="southwest" move="southwest" destination="741" />
     <arc exit="northwest" move="northwest" destination="738" />
   </node>
-  <node id="741" name="House of the Silk Strings, Lotus Pond" color="Blue">
+  <node id="741" name="House of the Silk Strings, Lotus Pond" color="#0000FF">
     <description>The rich greens of the pond and its aquatic foliage blend with the floral expanse of lotus-white to create a captivating dichromatic gardenscape, occasionally broken by the flash of a goldfish swimming amongst the underwater stalks.</description>
     <description>Lotus blossoms, closed for the night, blanket the surface of the darkened pond.</description>
     <position x="-580" y="-780" z="0" />
     <arc exit="northeast" move="northeast" destination="739" />
     <arc exit="northwest" move="northwest" destination="737" />
   </node>
-  <node id="742" name="" color="Blue">
+  <node id="742" name="" color="#0000FF">
     <description />
     <position x="0" y="0" z="0" />
   </node>

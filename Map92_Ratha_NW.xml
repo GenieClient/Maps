@@ -2174,64 +2174,64 @@
     <arc exit="southwest" move="southwest" destination="303" />
     <arc exit="go" move="go fumarole opening" destination="305" />
   </node>
-  <node id="305" name="Pivilho Volcano, Fumarole Passage" color="White">
+  <node id="305" name="Pivilho Volcano, Fumarole Passage">
     <description>Sulfur crystals encrust the walls, shattered and scraped bare in places by deep claw marks.  The passage extends into the volcano at a modest downward angle, illuminated by a red glow.</description>
     <position x="-20" y="-580" z="0" />
     <arc exit="northwest" move="northwest" destination="306" />
     <arc exit="go" move="go fumarole opening" destination="304" />
   </node>
-  <node id="306" name="Pivilho Volcano, Borehole Overlook" color="White">
+  <node id="306" name="Pivilho Volcano, Borehole Overlook">
     <description>Opening onto a glowing red abyss, a wide bell-like expansion stretches down into the depths.  Hot, dry, stinging air roars upward, a howling updraft that whistles along the walls and across the edge.  Riveted into the ground, a thick steelsilk rope allows for an easy descent to the chamber floor below.</description>
     <position x="-40" y="-600" z="0" />
     <arc exit="southeast" move="southeast" destination="305" />
     <arc exit="climb" move="climb steelsilk rope" destination="307" />
   </node>
-  <node id="307" name="Pivilho Volcano, Hav'roth's Bridge" color="White">
+  <node id="307" name="Pivilho Volcano, Hav'roth's Bridge">
     <description>The wide causeway extends as a large semi-circle across the magma, the rippled, black stone curving gently between the north and south chambers.  To the north, billowing clouds of choking gas swirl malevolently with ash and streaking embers, the ground cracked and glowing red as magma flows beneath barely cooled crust.  To the south, a mournful melody echoes along the walls, the chamber darker and cooler.</description>
     <position x="-60" y="-620" z="0" />
     <arc exit="north" move="north" destination="309" />
     <arc exit="south" move="south" destination="308" />
     <arc exit="climb" move="climb steelsilk rope" destination="306" />
   </node>
-  <node id="308" name="Pivilho Volcano, Peri'el's Calm" color="White">
+  <node id="308" name="Pivilho Volcano, Peri'el's Calm">
     <description>The air is merely warm here, the tortuous heat diffusing harmlessly.  Jingling bells tinkle in the distance, a melody muffling the chaos to the north.  The dark banded rocks of the ground twist and kink, metallic inclusions glimmering in the faint light.  The walls and ceiling waver slightly.</description>
     <position x="-60" y="-600" z="0" />
     <arc exit="north" move="north" destination="307" />
     <arc exit="southeast" move="southeast" destination="313" />
     <arc exit="southwest" move="southwest" destination="312" />
   </node>
-  <node id="309" name="Pivilho Volcano, Ushnish's Rage" color="White">
+  <node id="309" name="Pivilho Volcano, Ushnish's Rage">
     <description>Howling winds blast all around, and crevices burst with yellow hot liquid stone.  Cooling bubbles fade to black, illuminated softly from within with a dull red, occasionally blistering and pushing forward slightly, hissing in a sibilant rumble as the ground shifts in a precarious and mesmerizing flow.  Visibility is limited as hot embers and ash swirl chaotically.</description>
     <position x="-60" y="-640" z="0" />
     <arc exit="northeast" move="northeast" destination="311" />
     <arc exit="south" move="south" destination="307" />
     <arc exit="northwest" move="northwest" destination="310" />
   </node>
-  <node id="310" name="Pivilho Volcano, Ushnish's Rage" color="White">
+  <node id="310" name="Pivilho Volcano, Ushnish's Rage">
     <description>A large pit opens here, billowing lava welling upward, cooling as it hits the air to form a thin skin of stone that shifts with the undercurrent.  Crackling as it moves, the stone skin exposes lines of brighter red magma, jagged and constantly in motion.  Searingly hot air roars around chaotically, thick with noxious fumes.  The walls glisten with metal and gem formations.</description>
     <position x="-80" y="-660" z="0" />
     <arc exit="east" move="east" destination="311" />
     <arc exit="southeast" move="southeast" destination="309" />
   </node>
-  <node id="311" name="Pivilho Volcano, Ushnish's Rage" color="White">
+  <node id="311" name="Pivilho Volcano, Ushnish's Rage">
     <description>Several hollowed out boulders rise slightly from the ground, smoking and glowing with heat, but absent of the ever present magma.  Thick rock scales line the inside of the boulders, piled carefully around several egg-shaped black stones.  From deep within the swirling clouds and murky shadows echoes an angry hiss.</description>
     <position x="-40" y="-660" z="0" />
     <arc exit="southwest" move="southwest" destination="309" />
     <arc exit="west" move="west" destination="310" />
   </node>
-  <node id="312" name="Pivilho Volcano, Peri'el's Calm" color="White">
+  <node id="312" name="Pivilho Volcano, Peri'el's Calm">
     <description>The ground is littered with blackened seashells and the area resounds with an oceanic hissing, reminiscent of the surf.  As the volcano's cacophonous sounds vie for attention, something akin to soft vocals pierce the din, but its source remains elusive.  Glimmering deep within the vaguely transparent banded walls, gemstones flicker with luminescence.</description>
     <position x="-80" y="-580" z="0" />
     <arc exit="northeast" move="northeast" destination="308" />
     <arc exit="east" move="east" destination="313" />
   </node>
-  <node id="313" name="Pivilho Volcano, Peri'el's Calm" color="White">
+  <node id="313" name="Pivilho Volcano, Peri'el's Calm">
     <description>Striations of reds, yellows, lavenders, and blacks ripple along the floor, wall and ceiling, seeming to ebb and flow in the faint light.  Wafting through the area, a cool breeze gently carries a soft, soothing song.  A long, scorched gouge mars the wall, and a ragged chunk of stone is torn free.</description>
     <position x="-40" y="-580" z="0" />
     <arc exit="west" move="west" destination="312" />
     <arc exit="northwest" move="northwest" destination="308" />
   </node>
-  <node id="314" name="Pivilho Volcano, Ember Aerie Pathway" note="cindering harpy" color="White">
+  <node id="314" name="Pivilho Volcano, Ember Aerie Pathway" note="cindering harpy">
     <description>A narrow crevice winds through the volcanic cliffside, forming a steep, narrow path that descends to a rocky shelf.  Loose pebbles and ash coat the ground, while tufts of hardy grass cling to cracks in the weathered stone.  The distant rumble of waves crashing below mixes with the constant whistling of the coastal breeze.</description>
     <position x="-60" y="-475" z="0" />
     <arc exit="west" move="west" destination="315" />
@@ -2239,7 +2239,7 @@
     <arc exit="down" move="down" destination="317" />
     <arc exit="go" move="go narrow path" destination="299" />
   </node>
-  <node id="315" name="Pivilho Volcano, Ember Aerie Grotto" color="White">
+  <node id="315" name="Pivilho Volcano, Ember Aerie Grotto">
     <description>Partially obscured by a curtain of lichen drapery, this small grotto is protected from the wind by dark, porous walls of stone.  Faint, glowing embers are scattered along the floor, evidence of a recent cookfire.  Shallow alcoves carved into the stone on one side hold various tools and trinkets, while a roughly hewn table with cut logs for seats takes up the other.</description>
     <position x="-80" y="-475" z="0" />
     <arc exit="east" move="east" destination="314" />
@@ -2247,35 +2247,35 @@
     <arc exit="down" move="down" destination="318" />
     <arc exit="go" move="go stone steps" destination="320" />
   </node>
-  <node id="316" name="Pivilho Volcano, Ember Aerie Ledge" color="White">
+  <node id="316" name="Pivilho Volcano, Ember Aerie Ledge">
     <description>A wide, rocky shelf stretches out along the cliff, its surface uneven and pitted from erosion.  Sparse vegetation clings to the edges, offering small splashes of green and flax against the dark volcanic stone.  The sound of distant waves echoes from below, occasionally muffled by the wind.</description>
     <position x="-40" y="-460" z="0" />
     <arc exit="southwest" move="southwest" destination="318" />
     <arc exit="west" move="west" destination="319" />
     <arc exit="down" move="down" destination="314" />
   </node>
-  <node id="317" name="Pivilho Volcano, Ember Aerie Ledge" color="White">
+  <node id="317" name="Pivilho Volcano, Ember Aerie Ledge">
     <description>The narrow ledge is partially enclosed by jagged rock formations, offering some protection from the wind.  Ash and dust cover the ground, disturbed only by the occasional footprints.  The cliffs below drop steeply into the ocean, the waves crashing far below.</description>
     <position x="-40" y="-440" z="0" />
     <arc exit="west" move="west" destination="318" />
     <arc exit="northwest" move="northwest" destination="319" />
     <arc exit="up" move="up" destination="314" />
   </node>
-  <node id="318" name="Pivilho Volcano, Ember Aerie Rookery" color="White">
+  <node id="318" name="Pivilho Volcano, Ember Aerie Rookery">
     <description>A nearly vertical cliff stretches below this rocky ledge, the steep slope pockmarked where the ground fell below to the rock-strewn beach.  Small structures made of scavenged timber and sea-worn stone are tucked along the narrow path, nestled into sheltered nooks, with intricately carved doors elevated too high for wingless visitors to enter without assistance.</description>
     <position x="-60" y="-440" z="0" />
     <arc exit="northeast" move="northeast" destination="316" />
     <arc exit="east" move="east" destination="317" />
     <arc exit="up" move="up" destination="315" />
   </node>
-  <node id="319" name="Pivilho Volcano, Ember Aerie Ledge" color="White">
+  <node id="319" name="Pivilho Volcano, Ember Aerie Ledge">
     <description>The ground here is uneven and sloped, littered with broken pieces of volcanic rock in various sizes.  Dark streaks of ash mark the path, while occasional patches of brittle grass grow among the stones.  A few scattered feathers are caught in the cracks, gently shifting with the breeze, their dark tips streaked with hints of scarlet.</description>
     <position x="-60" y="-460" z="0" />
     <arc exit="east" move="east" destination="316" />
     <arc exit="southeast" move="southeast" destination="317" />
     <arc exit="down" move="down" destination="315" />
   </node>
-  <node id="320" name="Pivilho Volcano, Ember Aerie Cliffs" color="White">
+  <node id="320" name="Pivilho Volcano, Ember Aerie Cliffs">
     <description>The ledge slopes gently toward the sea, faraway waves visible through cracks in the rocky ground.  Clusters of driftwood and seashells are strewn about the area, some artfully placed as decoration.  Further downhill and leaning against the cliff face, a portion of a tall driftwood obelisk looms, weathered but standing firm against the coastal winds.</description>
     <position x="-95" y="-460" z="0" />
     <arc exit="southwest" move="southwest" destination="322" />
@@ -2283,21 +2283,21 @@
     <arc exit="down" move="down" destination="323" />
     <arc exit="go" move="go stone steps" destination="315" />
   </node>
-  <node id="321" name="Pivilho Volcano, Ember Aerie Cliffs" color="White">
+  <node id="321" name="Pivilho Volcano, Ember Aerie Cliffs">
     <description>The path widens into a small gathering space, with smoothed volcanic rock forming a natural floor underfoot.  Scattered around the area, small stone piles suggest past gatherings, their rough edges smoothed by years of wind and weather.  Flecks of dried seaweed cling to the edges, carried there by the gusting coastal breeze.</description>
     <position x="-115" y="-460" z="0" />
     <arc exit="east" move="east" destination="320" />
     <arc exit="southeast" move="southeast" destination="323" />
     <arc exit="down" move="down" destination="322" />
   </node>
-  <node id="322" name="Pivilho Volcano, Ember Aerie Cliffs" color="White">
+  <node id="322" name="Pivilho Volcano, Ember Aerie Cliffs">
     <description>This elevated corner of the ledge overlooks the sea below, unidentifiable specks dotting the distant horizon.  Fine cracks in the stone reveal veins of dark mineral deposits, their glossy surfaces reflecting in the light.  A driftwood obelisk stands to the east, its irregular form tucked against the cliff face.</description>
     <position x="-115" y="-440" z="0" />
     <arc exit="northeast" move="northeast" destination="320" />
     <arc exit="east" move="east" destination="323" />
     <arc exit="up" move="up" destination="321" />
   </node>
-  <node id="323" name="Pivilho Volcano, Ember Aerie Cliffs" color="White">
+  <node id="323" name="Pivilho Volcano, Ember Aerie Cliffs">
     <description>Nestled against a natural rock wall, a wide ledge offers reprieve from the constant wind.  Stacked stones form crude seats, their surfaces worn smooth by the elements.  A large driftwood obelisk is visible to the southwest, its sea-worn branches skillfully arranged to resemble an outstretched wing.</description>
     <position x="-95" y="-440" z="0" />
     <arc exit="west" move="west" destination="322" />

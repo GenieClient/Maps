@@ -189,21 +189,21 @@
     <arc exit="go" move="go ivory door" destination="54" />
     <arc exit="west" move="west" destination="161" />
   </node>
-  <node id="30" name="Middens, Urrem's Bane" color="Aqua">
+  <node id="30" name="Middens, Urrem's Bane" color="#00FFFF">
     <description>Mildewed tangles of rope and precarious footbridges constructed of rotting wood straddle wooden platforms crowded with rickety shacks.  Stunted trees draped with long tendrils of moss shade a small cluster of buildings surrounding a thick cedar that squats in the center of the muck.</description>
     <position x="438" y="66" z="0" />
     <arc exit="north" move="north" destination="21" />
     <arc exit="east" move="east" destination="34" />
     <arc exit="southwest" move="southwest" destination="31" />
   </node>
-  <node id="31" name="Middens, Urrem's Bane" color="Aqua">
+  <node id="31" name="Middens, Urrem's Bane" color="#00FFFF">
     <description>A stack of barrels half-sunk in the thick mud supports the center of a long plank leading from the edge of the deck to a ramshackle building nestled in the twisted branches of a stout cedar.  Taller trees hung with tattered shrouds of moss cast a dark pall over a huddle of tiny homes surrounding the cedar, which stands in the middle like the hub of a broken wagon wheel.</description>
     <position x="418" y="86" z="0" />
     <arc exit="northeast" move="northeast" destination="30" />
     <arc exit="southeast" move="southeast" destination="32" />
     <arc exit="go" move="go plank" destination="87" />
   </node>
-  <node id="32" name="Middens, Urrem's Bane" color="Aqua">
+  <node id="32" name="Middens, Urrem's Bane" color="#00FFFF">
     <description>An ash heap behind the platform diminishes with each breeze, creating sooty clouds that hang in the humid air and tarnish everything a dull grey.  Pale light filters down through the moss-draped canopy and dances over the stolid forms of the small community.</description>
     <position x="438" y="106" z="0" />
     <arc exit="east" move="east" destination="33" />
@@ -215,13 +215,13 @@
     <arc exit="west" move="west" destination="32" />
     <arc exit="go" move="go rope bridge" destination="35" />
   </node>
-  <node id="34" name="Middens, Urrem's Bane" color="Aqua">
+  <node id="34" name="Middens, Urrem's Bane" color="#00FFFF">
     <description>Tall wiregrass crackles in the occasional breeze and scratches the edges of the wooden footbridges, sounding like the scrabbling of thick-carapaced insects.  A trash pile nested in the high grass behind the rickety wooden platform fragrances the air with the sour smell of decay.</description>
     <position x="458" y="66" z="0" />
     <arc exit="southeast" move="southeast" destination="35" />
     <arc exit="west" move="west" destination="30" />
   </node>
-  <node id="35" name="Middens, Urrem's Bane" color="Aqua">
+  <node id="35" name="Middens, Urrem's Bane" color="#00FFFF">
     <description>Sinuous tendrils of dark shadow reach across the muck, pulling at the damp and splintered boards underfoot.  Sheets of hammered tin and uneven scraps of wood held together with rusting nails and frayed bits of rope huddle together in the limited space, looking like card houses ready to blow over at the slightest breeze.  A small rope bridge leads up to another ramshackle platform.</description>
     <position x="478" y="86" z="0" />
     <arc exit="northwest" move="northwest" destination="34" />
@@ -247,7 +247,7 @@
     <arc exit="go" move="go thick plank" destination="88" />
     <arc exit="go" move="go breached wall" destination="106" />
   </node>
-  <node id="39" name="Middens, Zehila" note="Zehila" color="Aqua">
+  <node id="39" name="Middens, Zehila" note="Zehila" color="#00FFFF">
     <description>This is the entrance to the most upscale of the squatters' quarters of the Middens, known as Zehila.  The inhabitants, all S'kra Mur, remain somewhat aloof from the other squatters' colonies, maintaining the pretense of social superiority.  When they do mix with the other downtrodden races of this area, at the Middens' only well, they pass through the junction here with purposeful haste.</description>
     <description>This is the entrance to the most upscale of the squatters' quarters of the Middens, known as Zehila.  The inhabitants, all S'Kra Mur, remain somewhat aloof from the other squatters' colonies, maintaining the pretense of social superiority.  When they do mix with the other downtrodden races of this area, at the Middens' only well, they pass through the junction here with purposeful haste.</description>
     <position x="220" y="46" z="0" />
@@ -261,12 +261,12 @@
     <arc exit="south" move="south" destination="41" />
     <arc exit="northwest" move="northwest" destination="39" />
   </node>
-  <node id="41" name="Middens, Zehila" color="Aqua">
+  <node id="41" name="Middens, Zehila" color="#00FFFF">
     <description>Several women are gathered around a large wooden tub in this dead-end street.  They are chatting in the hissing slang of the S'Kra Mur, their sibilant giggles punctuated by splashes of water as they wash their clothes at this communal laundry.  Long, white robes hang from ropes attempting to dry in the damp air, and a toddler stares at you shyly from behind one.</description>
     <position x="240" y="86" z="0" />
     <arc exit="north" move="north" destination="40" />
   </node>
-  <node id="42" name="Middens, Zehila" color="Aqua">
+  <node id="42" name="Middens, Zehila" color="#00FFFF">
     <description>A small clay statue stands in the corner of this tidy cul-de-sac.  Flowers and unfired clay vessels laden with fruit are set neatly before it.  An old S'Kra Mur, steadying himself with a tall staff, looks startled by your approach.</description>
     <position x="200" y="66" z="0" />
     <arc exit="northeast" move="northeast" destination="39" />

@@ -752,14 +752,14 @@
     <position x="220" y="440" z="0" />
     <arc exit="climb" move="climb wooden steps" destination="103" />
   </node>
-  <node id="107" name="Tiger Clan, Oak Tree Loop" note="Oak Tree Loop" color="Aqua">
+  <node id="107" name="Tiger Clan, Oak Tree Loop" note="Oak Tree Loop" color="#00FFFF">
     <description>Glad cries and laughter drift from the nearby yards, the sounds those of happy children engaged in active play.  The pathways between the houses are well-trodden dirt but well-maintained with no potholes or litter.</description>
     <position x="280" y="280" z="0" />
     <arc exit="south" move="south" destination="108" />
     <arc exit="west" move="west" destination="109" />
     <arc exit="go" move="go wooden gate" destination="7" />
   </node>
-  <node id="108" name="Tiger Clan, Oak Tree Loop" color="Aqua">
+  <node id="108" name="Tiger Clan, Oak Tree Loop" color="#00FFFF">
     <description>Standing tall in the center of the housing area is an enormous oak tree, its wide branches spreading over the simple streets that circle around it.  Set between two houses is a bench swing hanging from one of the tree's outspread limbs.  Bird calls echo from the sky as they swoop and turn in the air.</description>
     <position x="280" y="300" z="0" />
     <arc exit="north" move="north" destination="107" />
@@ -767,27 +767,27 @@
     <arc exit="southwest" move="southwest" destination="115" />
     <arc exit="northwest" move="northwest" destination="109" />
   </node>
-  <node id="109" name="Tiger Clan, Oak Tree Loop" color="Aqua">
+  <node id="109" name="Tiger Clan, Oak Tree Loop" color="#00FFFF">
     <description>Abandoned against a fence, a weathered togball waits for its owner to reclaim it.  Behind the fences, neatly manicured lawns sprinkled with shrubs stretch to the fronts of the neat and tidy houses and cottages of the neighborhood.  A few trees cast welcome shade over the yards.</description>
     <position x="260" y="280" z="0" />
     <arc exit="east" move="east" destination="107" />
     <arc exit="southeast" move="southeast" destination="108" />
     <arc exit="west" move="west" destination="110" />
   </node>
-  <node id="110" name="Tiger Clan, Oak Tree Loop" color="Aqua">
+  <node id="110" name="Tiger Clan, Oak Tree Loop" color="#00FFFF">
     <description>A wooden bridge crosses a small stream here, allowing the path to continue on without forcing passersby to get their feet wet.  Someone has trained a climbing rose along the railings of the bridge, its blooms filling the air with their scent in season.</description>
     <position x="240" y="280" z="0" />
     <arc exit="east" move="east" destination="109" />
     <arc exit="southwest" move="southwest" destination="112" />
     <arc exit="west" move="west" destination="111" />
   </node>
-  <node id="111" name="Tiger Clan, Oak Tree Loop" color="Aqua">
+  <node id="111" name="Tiger Clan, Oak Tree Loop" color="#00FFFF">
     <description>In contrast to most of the houses in the neighborhood, one here is surrounded by a privet hedge instead of a wooden fence.  Otherwise, it is remarkably similar to the rest of the homes here, well-tended with a well-kept yard.  Hanging from one tree is a board and rope swing that sways slightly with any breeze.</description>
     <position x="220" y="280" z="0" />
     <arc exit="east" move="east" destination="110" />
     <arc exit="south" move="south" destination="112" />
   </node>
-  <node id="112" name="Tiger Clan, Oak Tree Loop" color="Aqua">
+  <node id="112" name="Tiger Clan, Oak Tree Loop" color="#00FFFF">
     <description>The sound of barking dogs comes from a nearby back yard as something sets the neighborhood canines off.  Against one yard's fence stands a leaf rake, a pile of leaves next to it testimony to its usefulness.</description>
     <position x="220" y="300" z="0" />
     <arc exit="north" move="north" destination="111" />
@@ -795,27 +795,27 @@
     <arc exit="southeast" move="southeast" destination="114" />
     <arc exit="south" move="south" destination="113" />
   </node>
-  <node id="113" name="Tiger Clan, Oak Tree Loop" color="Aqua">
+  <node id="113" name="Tiger Clan, Oak Tree Loop" color="#00FFFF">
     <description>Set back from the pathway, this small cul-de-sac is an oasis of calm and quiet within the bustling neighborhood.  Few signs of children at play are exhibited and no toys lie scattered on the lawns of the well-maintained houses.  Bird feeders hang from the trees, providing a welcome repast for the flights of songbirds that chitter and flit from tree to tree.</description>
     <position x="220" y="320" z="0" />
     <arc exit="north" move="north" destination="112" />
     <arc exit="east" move="east" destination="114" />
   </node>
-  <node id="114" name="Tiger Clan, Oak Tree Loop" color="Aqua">
+  <node id="114" name="Tiger Clan, Oak Tree Loop" color="#00FFFF">
     <description>Roots from the central oak tree run under the dirt pathway, a few surfacing at spots to try and trip the unwary traveler.  A child's togball lies abandoned in one yard, while another has a weathered dog house set within a pile of weeds.  The picket fences are sturdy, but coated with fading whitewash that sheds flakes into the streets.</description>
     <position x="240" y="320" z="0" />
     <arc exit="east" move="east" destination="115" />
     <arc exit="west" move="west" destination="113" />
     <arc exit="northwest" move="northwest" destination="112" />
   </node>
-  <node id="115" name="Tiger Clan, Oak Tree Loop" color="Aqua">
+  <node id="115" name="Tiger Clan, Oak Tree Loop" color="#00FFFF">
     <description>Leaning against a tree in one yard is a wooden scythe with a steel blade, abandoned in the midst of cutting the lawn.  Other homes along the street stand within their own fenced-in yards, their well-constructed roofs and walls giving a snug and neat appearance to the entire neighborhood.</description>
     <position x="260" y="320" z="0" />
     <arc exit="northeast" move="northeast" destination="108" />
     <arc exit="east" move="east" destination="116" />
     <arc exit="west" move="west" destination="114" />
   </node>
-  <node id="116" name="Tiger Clan, Oak Tree Loop" color="Aqua">
+  <node id="116" name="Tiger Clan, Oak Tree Loop" color="#00FFFF">
     <description>Lush grass lawns run down to the pathways between the houses, many of the yards enclosed within picket fences.  Scattered toys and other children's belongings lie haphazardly on the grass, left behind as their owners move on to other amusements.</description>
     <position x="280" y="320" z="0" />
     <arc exit="north" move="north" destination="108" />

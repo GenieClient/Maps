@@ -1416,19 +1416,19 @@
     <arc exit="southwest" move="southwest" destination="214" />
     <arc exit="west" move="west" destination="215" />
   </node>
-  <node id="217" name="Noladet Ala, Submerged Pathway" color="White">
+  <node id="217" name="Noladet Ala, Submerged Pathway">
     <description>Set at regular intervals, a road of wide, flat stones lies barely submerged beneath the lake surface.  Stalactites reach from above, the ceiling fading into darkness.  The light of the shoreline can be seen weakly to the north, a gloomy, mist filled darkness filling the south.</description>
     <position x="-580" y="200" z="0" />
     <arc exit="north" move="north" destination="122" />
     <arc exit="south" move="south" destination="218" />
   </node>
-  <node id="218" name="Noladet Ala, Submerged Pathway" color="White">
+  <node id="218" name="Noladet Ala, Submerged Pathway">
     <description>Gentle waves, no more than ripples, play across the submerged stones.  In the midst of near utter silence, the strange acoustics of the surrounding gloom devour all noise.  Far above, glow worms cast pinpricks of slowly moving blue-green light, and to the south, a billowing wall of gloomy mist obscures the pathway, lit from within with faint flickers of swirled gaethzen light.</description>
     <position x="-580" y="220" z="0" />
     <arc exit="north" move="north" destination="217" />
     <arc exit="go" move="go swirling mist" destination="219" />
   </node>
-  <node id="219" name="Noladet Ala, Island" color="White">
+  <node id="219" name="Noladet Ala, Island">
     <description>A rocky platform emerges from the lake, smoothed by either careful handwork or aeons of steady erosion.  The waters lap silently against the little island, gently swaying almost imperceptibly up and down the gradual slope of the shoreline.  At the center of the island stands a dais, the epicenter of a perfect sphere of churning mists which enclose the space.</description>
     <position x="-580" y="240" z="0" />
     <arc exit="southeast" move="southeast" destination="220" />
@@ -1436,21 +1436,21 @@
     <arc exit="southwest" move="southwest" destination="222" />
     <arc exit="go" move="go submerged pathway" destination="218" />
   </node>
-  <node id="220" name="Noladet Ala, Island" color="White">
+  <node id="220" name="Noladet Ala, Island">
     <description>The smooth shoreline sways slightly more rigorously here, pushed by an easterly current that swirls around the the island.  A mounted gaethzen orb provides a dim illumination, casting a weak light over the island.</description>
     <position x="-560" y="280" z="0" />
     <arc exit="north" move="north" destination="219" />
     <arc exit="west" move="west" destination="222" />
     <arc exit="northwest" move="northwest" destination="221" />
   </node>
-  <node id="221" name="Noladet Ala, Dais" color="White">
+  <node id="221" name="Noladet Ala, Dais">
     <description>At the center of the dais rises a thick column of gypsum encrusted with smoothly polished fluorite and calcite crystals, atop which rests a small, carved, soapstone fox.  Perfectly marking the epicenter of the sphere of churning mists which enclose the space, the figurine surveys the near silent area.</description>
     <position x="-580" y="260" z="0" />
     <arc exit="north" move="north" destination="219" />
     <arc exit="southeast" move="southeast" destination="220" />
     <arc exit="southwest" move="southwest" destination="222" />
   </node>
-  <node id="222" name="Noladet Ala, Island" color="White">
+  <node id="222" name="Noladet Ala, Island">
     <description>A large crack spiders outward from the southwestern portion of the dais, shattered flecks of rock and crystal glistening in the weak light of a gaethzen orb.  At its thickest, the crack sloshes with water, having split the small island open.</description>
     <position x="-600" y="280" z="0" />
     <arc exit="north" move="north" destination="219" />
