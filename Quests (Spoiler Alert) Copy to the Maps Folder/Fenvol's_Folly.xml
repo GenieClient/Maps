@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Fenvol's Folly" id="522">
+  <node id="1" name="Fenvol's Folly, Portal Garden" note="entrance" color="#FF00FF">
+    <description>Slightly overgrown plants spill out of raised beds showing signs of recent repair, with climbing vines already beginning to wander again.  A line of smooth stepping stones winds through the greenery toward a modest doorway set into the house beyond.  Five freestanding arches rise along the path, each draped in trailing plants and faintly etched script, their frames fitted with hanging lanterns that sway gently overhead.</description>
+    <position x="140" y="210" z="0" />
+    <arc exit="east" move="east" destination="2" />
+    <arc exit="go" move="go faint vortex" destination="10" />
+    <arc exit="go" move="go colorful portal" destination="11" />
+  </node>
+  <node id="2" name="Fenvol's Folly, Garden Walk" color="White">
+    <description>A stretch of garden path opens beneath a broad-limbed tree, where a weathered bench swing hangs from the sturdy branches.  Nearby, a gently burbling fountain takes the shape of a sleeping shadowcat, its curled form supporting a shallow basin of water.  Clusters of vibrant hibiscuses in varied colors crowd the walkway, their rainbow of blooms layered thick among glossy leaves.</description>
+    <position x="160" y="210" z="0" />
+    <arc exit="east" move="east" destination="3" />
+    <arc exit="west" move="west" destination="1" />
+  </node>
+  <node id="3" name="Fenvol's Folly, Modest Entrance" color="White">
+    <description>A neatly kept approach leads to a small riverstone manor, its exterior showing signs of recent maintenance and freshly trimmed flower pots.  White shutters frame clean windows, their hinges and fittings bright and unblemished.  A broad stone landing rests before the door, its surface even and clean.  Ornate lanterns flank the entryway, their polished metalwork depicting neat stacks of tiny tomes.</description>
+    <position x="180" y="210" z="0" />
+    <arc exit="west" move="west" destination="2" />
+    <arc exit="go" move="go iron-banded door" destination="4" />
+  </node>
+  <node id="4" name="Fenvol's Folly, Tidy Foyer" note="passes|cards|tickets" color="#FF0000">
+    <description>The receiving hall features a floor laid in patterned stone, bordered by carved woodwork paneling.  A sweeping staircase rises along one side, with a ribbon stretched across the lower posts to restrict passage.  Gaethzen sconces are mounted on either side of the arched openings leading off in several directions, with a cozy parlor to the east, the master's study to the north, and a well-lit conservatory to the west, while a shadowed arch to the northwest opens to the library antechamber.</description>
+    <position x="180" y="160" z="0" />
+    <arc exit="north" move="north" destination="6" />
+    <arc exit="east" move="east" destination="5" />
+    <arc exit="west" move="west" destination="8" />
+    <arc exit="northwest" move="northwest" destination="7" />
+    <arc exit="go" move="go iron-banded door" destination="3" />
+  </node>
+  <node id="5" name="Fenvol's Folly, Conservatory" note="mayvarin|pet|whelpling" color="#00FF00">
+    <description>Reinforced glass roofing shelters colorful vegetation as it fills raised planters, interspersed with several den-like pet crates placed among the foliage.  A hollowed tree occupies one corner, its interior carved into a cozy nest.  Tall windows line the perimeter, framed in sturdy supports and evenly spaced structural ribs, enclosing the room in nearly continuous panes.</description>
+    <position x="200" y="160" z="0" />
+    <arc exit="west" move="west" destination="4" />
+  </node>
+  <node id="6" name="Fenvol's Folly, The Master's Study" color="White">
+    <description>Bookshelves line the walls, their contents arranged in tight, orderly rows.  A broad ribbon-stripe desk occupies the center of the floor, its surface perfectly polished and free of smudges.  Tall windows span one wall, with an array of hanging lanterns set at varying heights arranged at regular intervals.  Along the remaining space, shelves display a collection of intricate devices, their mechanical components carefully arranged.</description>
+    <position x="180" y="140" z="0" />
+    <arc exit="south" move="south" destination="4" />
+  </node>
+  <node id="7" name="Fenvol's Folly, Library Antechamber" note="butler|library|puzzle|quest" color="#00FF00">
+    <description>The elegant space is framed by woodwork traced in fine gold script, the carvings precise and continuous along the edges of the walls.  A masterfully painted portrait dominates one side, depicting a young woman with dark curls, bright silver eyes, and a warm, mischievous expression.</description>
+    <position x="160" y="140" z="0" />
+    <arc exit="southeast" move="southeast" destination="4" />
+    <arc exit="south" move="south" destination="8" />
+  </node>
+  <node id="8" name="Fenvol's Folly, Parlor" note="healer" color="#00BF80">
+    <description>The modestly appointed space is arranged in a tidy layout, with an ivory settee positioned against one wall and a distressed sage-colored sideboard on the other, supporting a neatly arranged tray of refreshments.  A large riverstone hearth occupies most of the third wall, its roughly hewn mantle arranged with several stacks of hardbound books.</description>
+    <position x="160" y="160" z="0" />
+    <arc exit="north" move="north" destination="7" />
+    <arc exit="east" move="east" destination="4" />
+    <arc exit="go" move="go door" destination="9" />
+  </node>
+  <node id="9" name="Fenvol's Folly, Hidden Stair" note="incidentals|trade" color="#00FF00">
+    <description>A short, narrow hallway leads to an equally cramped staircase that winds tightly upward.  The steps are worn smooth but clean, bordered by plain white walls set close on either side.  A single gaethzen lantern hangs in one corner, casting a contained glow that barely lights the space.</description>
+    <position x="140" y="160" z="0" />
+    <arc exit="go" move="go door" destination="8" />
+  </node>
+  <node id="10" name="The Strand, Sandy Path" note="Map1_Crossing.xml|Crossing|exit">
+    <description>Following the roadside along the Oxenwaithe's bank, you are struck by the quiet beauty of the place.  Taking pause to breathe in the crisp, clean air, you reflect on your surroundings.  Sand, sparkling as if mixed with diamond dust, pours into deep blue undulating waters.  A lush copse of trees spreads to the north, while to the southeast, a series of delightful small buildings is set back from the river's edge.</description>
+    <position x="120" y="230" z="0" />
+    <arc exit="southeast" move="southeast" />
+    <arc exit="northwest" move="northwest" />
+  </node>
+  <node id="11" name="Foyer" note="MT_Prize_Wings.xml|prizes|raffles|alterations">
+    <description>Subdued lighting illuminates the tasteful wooden paneling of the room while a bevy of overstuffed furniture provides comfortable seating for those contemplating weighty choices.  Thick plush carpets in a myriad of hues cover the floor, almost totally obscuring the pale wooden planks of the flooring.  Around the walls, a number of colored archways contain magical portals that, when open, allow access to the prize rooms beyond.  A large set of double doors allows access to rooms devoted to dispenser activities while a round opening leads to the area devoted to workshops for alterations.</description>
+    <description>Lighting illuminates the room which has carpets covering the floors.  A number of colored archways contain magic portals that, when open, allow access to the prize rooms beyond.  A set of double doors allows access to the dispensers while a round opening leads to the alteration area.</description>
+    <position x="160" y="230" z="0" />
+  </node>
+  <label text="Library (Quest Area)">
+    <position x="50" y="120" z="0" />
+  </label>
+  <label text="Mayvarin (Inkbound Whelplings)">
+    <position x="200" y="140" z="0" />
+  </label>
+  <label text="Incidental Trader">
+    <position x="40" y="160" z="0" />
+  </label>
+  <label text="Exit (Faint Vortex)">
+    <position x="20" y="240" z="0" />
+  </label>
+  <label text="Prizes (Colorful Portal)">
+    <position x="160" y="240" z="0" />
+  </label>
+  <label text="Event Tickets">
+    <position x="180" y="170" z="0" />
+  </label>
+  <label text="Healer">
+    <position x="140" y="170" z="0" />
+  </label>
+</zone>
