@@ -7,7 +7,7 @@
     <arc exit="go" move="go double doors" destination="2" />
     <arc exit="go" move="go round opening" destination="3" />
     <arc exit="go" move="go yellow portal" destination="10" />
-    <arc exit="go" move="go green portal" destination="28" />
+    <arc exit="go" move="go green archway" destination="28" />
     <arc exit="go" move="go blue-tiled entrance" destination="7" />
     <arc exit="go" move="go return portal" destination="999" />
     <arc exit="go" move="go purple archway" destination="49" />
@@ -198,7 +198,7 @@
     <description>Coats of olive paint cover the plaster walls of this well-lit room, giving a muted, calm feel to the area.  The hanging light fixtures allow for ample illumination of the prizes spread out for consideration.</description>
     <description>Olive-colored plastered walls surround the prizes spread out for consideration in this area.</description>
     <position x="140" y="160" z="0" />
-    <arc exit="go" move="go green portal" destination="1" />
+    <arc exit="go" move="go green archway" destination="1" />
     <arc exit="east" move="east" destination="29" />
   </node>
   <node id="29" name="Green Suite, Sea-Green Hall" note="sea-green hall|sea green hall" color="#FF0000">
@@ -229,6 +229,7 @@
     <description>Coats of bright lime-green paint cover the plaster walls of this well-lit room, giving an upbeat feel to the area.  The hanging light fixtures allow for ample illumination of the prizes spread out for consideration.</description>
     <description>Lime-colored plastered walls surround the prizes spread out for consideration in this area.</description>
     <position x="240" y="160" z="0" />
+    <arc exit="east" move="east" destination="70" />
     <arc exit="south" move="south" destination="42" />
     <arc exit="west" move="west" destination="31" />
   </node>
@@ -298,6 +299,7 @@
     <position x="240" y="180" z="0" />
     <arc exit="north" move="north" destination="32" />
     <arc exit="southwest" move="southwest" destination="43" />
+    <arc exit="southeast" move="southeast" destination="69" />
   </node>
   <node id="43" name="Green Suite, Verdigris Niche" note="verdigris niche" color="#FF0000">
     <description>Painted white trim accents the verdigris-colored plastered walls that form this secluded alcove.  Spread out under the overhead lights are all the prizes awaiting consideration.</description>
@@ -326,6 +328,7 @@
     <description>The spacious room has vibrant cyan-hued walls accented with a white wooden chair rail running across the plaster at waist-height.  The various prizes on offer are in the center of the room and are lit by a large gaethzen sphere suspended from the coffered ceiling.</description>
     <position x="-40" y="220" z="0" />
     <arc exit="east" move="east" destination="46" />
+    <arc exit="south" move="south" destination="73" />
   </node>
   <node id="48" name="Blue Suite, Hyacinth Hall" note="hyacinth hall" color="#FF0000">
     <description>Plain plastered walls have been painted a cheerful hyacinth hue and trimmed with narrow white baseboards.  Subtle indirect lighting of the displayed prizes is provided by gaezthen globes dangling from the coffered ceiling.</description>
@@ -460,6 +463,33 @@
     <position x="220" y="240" z="0" />
     <arc exit="south" move="south" destination="67" />
     <arc exit="southwest" move="southwest" destination="50" />
+  </node>
+  <node id="69" name="Green Suite, Seafoam Cubicle" note="seafoam cubicle" color="#FF0000">
+    <description>Except for the seafoam-colored walls, the room is bare of adornment.  Simple gaethzen globes hanging from the ceiling provide light.  The lack of ornamentation focuses attention on the prizes on display.</description>
+    <position x="260" y="200" z="0" />
+    <arc exit="northwest" move="northwest" destination="42" />
+  </node>
+  <node id="70" name="Green Suite, Celadon Chamber" note="celadon chamber" color="#FF0000">
+    <description>Gaethzen spheres suspended overhead cast a warm light across the pale celadon-hued plaster walls.  The abundance of light helps to spotlight the many prizes available for selection.</description>
+    <position x="280" y="160" z="0" />
+    <arc exit="southeast" move="southeast" destination="71" />
+    <arc exit="southwest" move="southwest" destination="72" />
+    <arc exit="west" move="west" destination="32" />
+  </node>
+  <node id="71" name="Green Suite, Mint Cubicle" note="mint cubicle" color="#FF0000">
+    <description>Except for the mint-colored walls, the room is bare of adornment.  Simple gaethzen globes hanging from the ceiling provide light.  The lack of ornamentation focuses attention on the prizes on display.</description>
+    <position x="300" y="180" z="0" />
+    <arc exit="northwest" move="northwest" destination="70" />
+  </node>
+  <node id="72" name="Green Suite, Dark Green Niche" note="dark green niche" color="#FF0000">
+    <description>Painted white trim accents the dark green plastered walls that form this secluded alcove.  Spread out under the overhead lights are all the prizes awaiting consideration.</description>
+    <position x="260" y="180" z="0" />
+    <arc exit="northeast" move="northeast" destination="70" />
+  </node>
+  <node id="73" name="Blue Suite, Powder-Blue Alcove" note="powder-blue alcove" color="#FF0000">
+    <description>A large gaethzen sphere hangs from the heavy timber beams of the ceiling, illuminating the prizes arrayed around the room.  The smooth plastered walls are painted a powder-blue color matching the color of a robin's egg.</description>
+    <position x="-40" y="240" z="0" />
+    <arc exit="north" move="north" destination="47" />
   </node>
   <node id="999" name="Droughtman's Maze, Grand Hall" note="Droughtman's_Maze.xml|exit">
     <description>Suspended between jewel-toned pennants overhead, ornate oil lanterns softly illuminate the grand entry hall of Droughtman's Maze.  Eager contestants crowd the mahogany registration desk at the center of the chamber, while a gold-carpeted staircase dominates the northern wall, providing access to the observation deck.</description>
