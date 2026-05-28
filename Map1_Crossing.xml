@@ -2752,7 +2752,7 @@
     <arc exit="west" move="west" />
     <arc exit="climb" move="climb town wall" destination="399" />
   </node>
-  <node id="404" name="Guard House, Office" note="Guard House">
+  <node id="404" name="Guard House, Office" note="Guard House" color="#00FF00">
     <description>Like most towns, this one spared every expense when decorating the office of the local guard.  An ancient desk, battered and scarred from years of neglect, is positioned a little too closely behind the counter that divides the room in half.  Scraps of yellowed parchment flutter from a massive cork board just inside the door, where one of the local militia is busily arranging and rearranging the jumble.</description>
     <position x="-170" y="80" z="0" />
     <arc exit="east" move="east" destination="405" />
@@ -3556,7 +3556,7 @@
     <arc exit="west" move="west" destination="526" />
     <arc exit="go" move="go wooden door" destination="72" />
   </node>
-  <node id="526" name="The Raven's Court, Membership Desk" note="Membership Desk">
+  <node id="526" name="The Raven's Court, Membership Desk" note="Membership Desk" color="#00FF00">
     <description>This small room off the main foyer is dominated by a single oaken desk with stacks of paper neatly arrayed atop it.  Across the middle of the desk, a screen separates the clerk from the patrons, with a small opening in the middle so that items can be exchanged from within and without.</description>
     <position x="-250" y="30" z="0" />
     <arc exit="east" move="east" destination="525" />
@@ -3576,7 +3576,7 @@
     <arc exit="northwest" move="northwest" destination="529" />
     <arc exit="go" move="go glass doors" destination="546" />
   </node>
-  <node id="529" name="The Raven's Court, Dining Room" note="Dining Room">
+  <node id="529" name="The Raven's Court, Dining Room" note="Dining Room" color="#FF0000">
     <description>Crafted crystal glassware, delicately gilded china and elegant silver adorn each of the dozens of polished ebony tables in the large dining room.  A detailed menu rests upon a carved goldenoak easel along the wall closest to the foyer, visible to patrons before they have been seated.  Ringing the walls of the room is a well-maintained water garden, with small fountains emitting the soothing sound of gently splashing water at each corner.</description>
     <description>Crafted crystal glassware, delicately painted china and elegant silver adorn each of the dozens of polished ebony tables in the large dining room.  A menu is posted discreetly along the wall closest to the foyer, visible to patrons before they have been seated.  Ringing the walls of the room is a well-maintained water garden, small fountains emitting the soothing sound of gently splashing water at each corner.</description>
     <position x="-240" y="10" z="0" />
@@ -3611,32 +3611,32 @@
     <arc exit="southwest" move="southwest" destination="535" />
     <arc exit="climb" move="climb marble staircase" destination="532" />
   </node>
-  <node id="534" name="The Raven's Court, Gallery">
+  <node id="534" name="The Raven's Court, Gallery" color="#00FF00">
     <description>Colored a rich forest green, the painted walls retain an elegant matte finish to contrast with the gleaming polish of the golden oak wainscoting.  Sculpted gaethzen orbs dangle strategically over each piece of artwork to provide ample lighting for the Court's treasures.  Plush black carpeting cushions every footfall and dulls noise to allow for quiet observation and contemplation.  An ornately gilded balustrade runs along the southern edge of the area, permitting patrons to survey the foyer below.</description>
     <position x="-290" y="0" z="0" />
     <arc exit="north" move="north" destination="533" />
     <arc exit="west" move="west" destination="535" />
   </node>
-  <node id="535" name="The Raven's Court, Gallery">
+  <node id="535" name="The Raven's Court, Gallery" color="#00FF00">
     <description>Colored a rich forest green, the painted walls retain an elegant matte finish to contrast with the gleaming polish of the golden oak wainscoting.  Sculpted gaethzen orbs dangle strategically over each piece of artwork to provide ample lighting for the Court's treasures.  Plush black carpeting cushions every footfall and dulls noise to allow for quiet observation and contemplation.  An ornately gilded balustrade runs along the southeastern edge of the area, permitting patrons to survey the foyer below.</description>
     <position x="-300" y="0" z="0" />
     <arc exit="northeast" move="northeast" destination="533" />
     <arc exit="east" move="east" destination="534" />
     <arc exit="south" move="south" destination="536" />
   </node>
-  <node id="536" name="The Raven's Court, Gallery">
+  <node id="536" name="The Raven's Court, Gallery" color="#00FF00">
     <description>Colored a rich forest green, the painted walls retain an elegant matte finish to contrast with the gleaming polish of the golden oak wainscoting.  Sculpted gaethzen orbs dangle strategically over each piece of artwork to provide ample lighting for the Court's treasures.  Plush black carpeting cushions every footfall and dulls noise to allow for quiet observation and contemplation.  An ornately gilded balustrade runs along the eastern edge of the area, permitting patrons to survey the foyer below.</description>
     <position x="-300" y="10" z="0" />
     <arc exit="north" move="north" destination="535" />
     <arc exit="south" move="south" destination="537" />
   </node>
-  <node id="537" name="The Raven's Court, Gallery">
+  <node id="537" name="The Raven's Court, Gallery" color="#00FF00">
     <description>Colored a rich forest green, the painted walls retain an elegant matte finish to contrast with the gleaming polish of the golden oak wainscoting.  Sculpted gaethzen orbs dangle strategically over each piece of artwork to provide ample lighting for the Court's treasures.  Plush black carpeting cushions every footfall and dulls noise to allow for quiet observation and contemplation.  An ornately gilded balustrade runs along the northeastern edge of the area, permitting patrons to survey the foyer below.</description>
     <position x="-300" y="20" z="0" />
     <arc exit="north" move="north" destination="536" />
     <arc exit="east" move="east" destination="538" />
   </node>
-  <node id="538" name="The Raven's Court, Gallery">
+  <node id="538" name="The Raven's Court, Gallery" color="#00FF00">
     <description>Colored a rich forest green, the painted walls retain an elegant matte finish to contrast with the gleaming polish of the golden oak wainscoting.  Sculpted gaethzen orbs dangle strategically over each piece of artwork to provide ample lighting for the Court's treasures.  Plush black carpeting cushions every footfall and dulls noise to allow for quiet observation and contemplation.  An ornately gilded balustrade runs along the northern edge of the area, permitting patrons to survey the foyer below.</description>
     <position x="-290" y="20" z="0" />
     <arc exit="west" move="west" destination="537" />
@@ -3725,7 +3725,7 @@
     <position x="-210" y="30" z="0" />
     <arc exit="northeast" move="northeast" destination="546" />
   </node>
-  <node id="552" name="The Raven's Court, VIP Suite" note="VIP Suite">
+  <node id="552" name="The Raven's Court, VIP Suite" note="VIP Suite" color="#FF0000">
     <description>A large bar, fully stocked with an array of strong and exotic liqueurs, dominates the back side of this member's suite.  While plush stools are available, there are also an elegant fireplace and large ebony table surrounded by high-backed chairs on each side.  Sharply dressed waiters attend to each patron's needs immediately, weaving their way around priceless vases and past ancient paintings, simply another example of the opulence afforded to the Raven's Court's members.</description>
     <position x="-220" y="-10" z="0" />
     <arc exit="north" move="north" destination="554" />
@@ -3747,13 +3747,13 @@
     <arc exit="west" move="west" destination="555" />
     <arc exit="go" move="go curtained archway" destination="561" />
   </node>
-  <node id="555" name="The Raven's Court, Entertainment Room" note="Entertainment Room">
+  <node id="555" name="The Raven's Court, Entertainment Room" note="Entertainment Room" color="#00FF00">
     <description>A babble of noise greets those who enter the spacious room, from the quiet thud of well-aimed darts, to the tinkle of glasses, to the low murmur of voices as players strategize.  Challengers and onlookers gather around an armwrestling table in the center, while others observe and converse in one of the many leather chairs positioned near the gaming apparatuses.  Long mirrors placed along the upper halves of the black marble walls trick the eye into thinking the area is larger than its actual size.</description>
     <position x="-230" y="-20" z="0" />
     <arc exit="east" move="east" destination="554" />
     <arc exit="south" move="south" destination="553" />
   </node>
-  <node id="556" name="The Raven's Court, Gamblers' Den" note="Gamblers' Den">
+  <node id="556" name="The Raven's Court, Gamblers' Den" note="Gamblers' Den" color="#00FF00">
     <description>Clinking sounds of metal on metal follow the exchange of coins between hands at the various tables set up for card and dice games.  Two deep-backed couches line the sides, set against the black marble walls as a means of surveying the action while enjoying a beverage or two.  The occasional cheer peppers the air from the direction of the gleaming silver-trimmed slot machine in the corner.</description>
     <position x="-220" y="-30" z="0" />
     <arc exit="north" move="north" destination="557" />
@@ -3779,12 +3779,12 @@
     <arc exit="east" move="east" destination="557" />
     <arc exit="north" move="north" destination="947" />
   </node>
-  <node id="560" name="The Raven's Court, Artist's Parlor" note="Artist's Parlor" color="#FF8000">
+  <node id="560" name="The Raven's Court, Artist's Parlor" note="Artist's Parlor" color="#00FF00">
     <description>Away from the busy sounds of the rest of the club, this small room offers solace for the creatively gifted.  Opposite a small stool, a long leather divan provides space for a muse to model various sitting or lying poses, as does the white bearskin rug upon the floor.  Filled with lush red roses, a golden vase decorates the adderwood desk adjacent to the door.</description>
     <position x="-210" y="-30" z="0" />
     <arc exit="go" move="go adderwood door" destination="556" />
   </node>
-  <node id="561" name="The Raven's Court, Library">
+  <node id="561" name="The Raven's Court, Library" color="#00FF00">
     <description>Maps cover the black marble walls, showing the major trade routes and local cities.  Brass lamps with green glass domes rest atop square tables to bequeath modest light for reading activities.  A trio of leather couches aids leisurely pursuits, while a broad smokewood desk and matching chair allow for more diligent studies.  Shadowed in one corner, a secluded alcove appeals to those who seek a more private atmosphere.</description>
     <position x="-210" y="-20" z="0" />
     <arc exit="go" move="go curtained archway" destination="554" />
@@ -4419,18 +4419,18 @@
     <arc exit="go" move="go dimly arch" destination="661" />
     <arc exit="go" move="go high doorway" destination="659" />
   </node>
-  <node id="661" name="Half Pint, Bards' Corner">
+  <node id="661" name="Half Pint, Bards' Corner" color="#00FF00">
     <description>In sharp contrast to the Main Saloon and more boisterous reaches of The Half Pint, this quiet chamber is softly lit and tastefully decorated with antique tapestries depicting famed minstrels and legendary troubadours from the annals of Elanthia.  The room itself has no tables and chairs, but rather a recessed wooden seating pit with overstuffed cushions scattered about the floor.  At the far end is a raised platform with a lectern, a low ottoman and a music stand.</description>
     <position x="70" y="0" z="0" />
     <arc exit="go" move="go dance floor" destination="662" />
     <arc exit="go" move="go dimly arch" destination="660" />
   </node>
-  <node id="662" name="Half Pint, Dance Floor" note="Dance Floor" color="#FF0000">
+  <node id="662" name="Half Pint, Dance Floor" note="Dance Floor" color="#00FF00">
     <description>A more recent addition to the Half Pint, the dance floor has a polished hardwood floor and a chandelier crafted from brushed silver and tiny blue crystals.  A strategic placement of mirrors makes the room seem bigger then it really is.  The musicians sit behind a decorated rail that keeps the dancers from accidentally falling into their beloved instruments.</description>
     <position x="80" y="0" z="0" />
     <arc exit="out" move="out" destination="661" />
   </node>
-  <node id="663" name="Half Pint, Gaming Room" note="Gaming Room|Dartboard">
+  <node id="663" name="Half Pint, Gaming Room" note="Gaming Room|Dartboard" color="#00FF00">
     <description>Here are gathered some of town's most serious gamblers, gamers and wagerers.  They cluster about a few round tables rolling dice, rattling bones and casting shells.  Several square tables bear cards, tokens, game pieces, and painted wooden boards with various runes and numbers on them.  You observe a curious fact: the round tables heaped high with gold are surrounded by tense faces, while the crowds around the square tables are laughing, joking, drinking and enjoying themselves immensely.</description>
     <position x="70" y="30" z="0" />
     <arc exit="go" move="go double doors" destination="659" />
@@ -4701,7 +4701,7 @@
     <position x="-200" y="-160" z="0" />
     <arc exit="up" move="up" destination="708" />
   </node>
-  <node id="710" name="Viper's Nest, The Pit" note="Viper's Nest">
+  <node id="710" name="Viper's Nest, The Pit" note="Viper's Nest" color="#FF0000">
     <description>The Viper's Nest is known throughout the land for catering to the dregs of society.  The premises are often frequented by spies, conspirators, thieves, smugglers, rogue adventurers and crooked traders.  Folks congregate around long, rough-hewn tables, hunched forward listening, gesturing or speaking in harsh, sibilant whispers.  The ale is warm, the viands are inedible, nonetheless the Pit is jammed.  You notice a large proportion of S'Kra Mur and Gor'Togs in the mix.</description>
     <position x="-210" y="-170" z="0" />
     <arc exit="go" move="go scarred door" destination="708" />
@@ -4725,7 +4725,7 @@
     <arc exit="out" move="out" destination="122" />
     <arc exit="climb" move="climb wooden staircase" destination="719" />
   </node>
-  <node id="714" name="Taelbert's Inn, Bar">
+  <node id="714" name="Taelbert's Inn, Bar" color="#FF0000">
     <description>Bursts of laughter and excited shouts ring out from a game of dice being played at a corner table.  Other tables and chairs are scattered haphazardly through the room, but most of the regulars perch on high stools near the bar.  Apparently, the view of the buxom barmaid is more enticing from that angle.</description>
     <position x="-20" y="-418" z="0" />
     <arc exit="east" move="east" destination="713" />
@@ -4748,7 +4748,7 @@
     <position x="0" y="-398" z="0" />
     <arc exit="out" move="out" destination="716" />
   </node>
-  <node id="718" name="Taelbert's Inn, Private Dining">
+  <node id="718" name="Taelbert's Inn, Private Dining" color="#00FF00">
     <description>Softly polished mahogany lines the walls in this small room, creating an intimate setting for private dining.  The high-backed chairs are upholstered in rich forest-green velvet and are gathered round an elegantly set table.  On the wall opposite the doorway, a rough stone fireplace offers striking counterpoint to the simple elegance of the furnishings.</description>
     <position x="-20" y="-398" z="0" />
     <arc exit="out" move="out" destination="715" />
@@ -4894,7 +4894,7 @@
     <arc exit="south" move="south" destination="738" />
     <arc exit="west" move="west" destination="739" />
   </node>
-  <node id="742" name="Gaethrend's Court, Dining Room">
+  <node id="742" name="Gaethrend's Court, Dining Room" color="#FF0000">
     <description>The quiet atmosphere and simple decor of the dining room soothes your nerves, making this the perfect spot for a relaxing meal with friends.  A regal-looking Eloth maitre d'hotel glides from table to table, keeping careful watch over his domain.</description>
     <position x="350" y="-478" z="0" />
     <arc exit="southeast" move="southeast" destination="740" />
@@ -4990,7 +4990,7 @@
     <arc exit="east" move="east" destination="164" />
     <arc exit="go" move="go low gate" destination="758" />
   </node>
-  <node id="758" name="Tamsine's Rest, Memorial Tea Garden" note="Memorial Tea Garden|water">
+  <node id="758" name="Tamsine's Rest, Memorial Tea Garden" note="Memorial Tea Garden|water" color="#FF0000">
     <description>Water burbles over rocks to fill a shallow stone basin, conveniently positioned for visitors wishing to wash their hands upon entering the garden.  Thick cushions of green moss soften the stones and carpet the ground underfoot.  Red azaleas, deep purple irises and white chrysanthemums add vibrant touches of color against the velvety moss.  At the center of the garden, ribbon-tied parchment scrolls flutter from a red maple tree, celebrating the memory of loved ones lost.</description>
     <position x="220" y="100" z="0" />
     <arc exit="go" move="go low gate" destination="757" />
@@ -5488,7 +5488,7 @@
     <arc exit="go" move="go flamewood archway" destination="845" />
     <arc exit="go" move="go ebonwood archway" destination="844" />
   </node>
-  <node id="838" name="Order Headquarters, The Library" note="Order library">
+  <node id="838" name="Order Headquarters, The Library" note="Order library" color="#00FF00">
     <description>Long heavy curtains drop from ceiling to floor and are flung wide to allow an abundance of light through the long-paned windows in the northern wall.  Tall shelves of cedar and oak line the east and west walls.  At each small reading desk sits a lantern ready to provide ample light for patrons who choose to read at night.  The hushed stillness is broken only by the soft murmur of conversation between librarians, who return the books left on the small mahogany returns desk.</description>
     <description>Heavy curtains that drop from ceiling to floor cover the windows in the northern wall.  At each small reading desk, a lit lantern provides ample light for patrons who may choose to avail themselves of the plump armchairs.  The hushed stillness is broken only by the soft murmur of conversation between the librarians who quietly go about their business.  As books are returned to the mahogany desk, they put them in their rightful places on the cedar and oak shelves on the east and west walls.</description>
     <position x="320" y="-31" z="0" />
@@ -6077,7 +6077,7 @@
     <arc exit="go" move="go south docks" />
     <arc exit="go" move="go north docks" destination="236" />
   </node>
-  <node id="937" name="Estate Holders' Headquarters, Foyer" note="Estate Holders' Headquarters">
+  <node id="937" name="Estate Holders' Headquarters, Foyer" note="Estate Holders' Headquarters" color="#FF0000">
     <description>This tasteful entry hall is paneled with a variety of exotic woods.  The parquet floor is patterned in alternately light and dark diamond shapes, surrounding the Estate Holder crest in the center of the room.  Lining the walls are several plush couches for the comfort of those awaiting appointments.</description>
     <position x="-241" y="80" z="0" />
     <arc exit="go" move="go mahogany door" destination="73" />
@@ -6284,7 +6284,7 @@
     <position x="129" y="56" z="0" />
     <arc exit="northwest" move="northwest" destination="968" />
   </node>
-  <node id="973" name="Crossing, Item Registration Office">
+  <node id="973" name="Crossing, Item Registration Office" color="#00FF00">
     <description>Red tile continues its way through the open doorway and stops abruptly at a long wood counter with polished brass bars positioned to form a cage around the clerks.  A soft glow comes from a single lantern placed atop a long row of filing cabinets.  Papers are strewn about the tops of the cabinets and have spilled over onto the floor.</description>
     <position x="130" y="-60" z="0" />
     <arc exit="out" move="out" destination="188" />
@@ -6323,27 +6323,27 @@
     <position x="270" y="-375" z="0" />
     <arc exit="go" move="go small archway" destination="975" />
   </node>
-  <node id="979" name="Red Meeting Room" note="Red Meeting Room">
+  <node id="979" name="Red Meeting Room" note="Red Meeting Room" color="#00FF00">
     <description>Dark red paint covers the low walls of the meeting room, and tasteful red roses grow in stone pots in one corner.  Several rows of high-backed benches are arranged in the center of the room, each finely carved from cedar.  A small table against one wall holds a few refreshments.</description>
     <position x="250" y="-375" z="0" />
     <arc exit="go" move="go red door" destination="975" />
   </node>
-  <node id="980" name="Violet Meeting Room" note="Violet Meeting Room">
+  <node id="980" name="Violet Meeting Room" note="Violet Meeting Room" color="#00FF00">
     <description>Light violet paint covers the low walls of the meeting room, and tasteful purple lilies grow in stone pots in one corner.  Several rows of high-backed benches are arranged in the center of the room, each finely carved from cedar.  A small table against one wall holds a few refreshments.</description>
     <position x="250" y="-385" z="0" />
     <arc exit="go" move="go violet door" destination="976" />
   </node>
-  <node id="981" name="Blue Meeting Room" note="Blue Meeting Room">
+  <node id="981" name="Blue Meeting Room" note="Blue Meeting Room" color="#00FF00">
     <description>Sky blue paint covers the low walls of the meeting room, and tasteful bluebells grow in stone pots in one corner.  Several rows of high-backed benches are arranged in the center of the room, each finely carved from cedar.  A small table against one wall holds a few refreshments.</description>
     <position x="270" y="-385" z="0" />
     <arc exit="go" move="go blue door" destination="976" />
   </node>
-  <node id="982" name="Yellow Meeting Room" note="Yellow Meeting Room">
+  <node id="982" name="Yellow Meeting Room" note="Yellow Meeting Room" color="#00FF00">
     <description>Sunny yellow paint covers the low walls of the meeting room, and tasteful marigolds grow in stone pots in one corner.  Several rows of high-backed benches are arranged in the center of the room, each finely carved from cedar.  A small table against one wall holds a few refreshments.</description>
     <position x="250" y="-395" z="0" />
     <arc exit="go" move="go yellow door" destination="977" />
   </node>
-  <node id="983" name="Green Meeting Room" note="Green Meeting Room">
+  <node id="983" name="Green Meeting Room" note="Green Meeting Room" color="#00FF00">
     <description>Forest green paint covers the low walls of the meeting room, and tasteful ferns grow in stone pots in one corner.  Several rows of high-backed benches are arranged in the center of the room, each finely carved from cedar.  A small table against one wall holds a few refreshments.</description>
     <position x="270" y="-395" z="0" />
     <arc exit="go" move="go green door" destination="977" />
