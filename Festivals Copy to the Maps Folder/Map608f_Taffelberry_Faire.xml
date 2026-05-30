@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Taffelberry Faire" id="608f">
+  <node id="1" name="Taffelberry Faire, Arched Pathway">
+    <description>Two rose-covered trellises meet overhead, forming a floral fantasy of an entrance.  The scent of the dozens of blooms drifts on the air, making the night breeze heady with their floral fragrance.  From beyond the archway, the sounds of laughter and festivity drift on the wind.</description>
+    <position x="140" y="140" z="0" />
+    <arc exit="north" move="north" destination="2" />
+    <arc exit="go" move="go farm road" destination="23" />
+  </node>
+  <node id="2" name="Taffelberry Faire, Greenway Path">
+    <description>Thick grass carpets the wide pathway, providing a lush lawn for the many merchants who have come to peddle their wares.  Garlanded fences keep the festival goers from spilling over into the harvested fields as well as showing the usual purpose of this field.</description>
+    <position x="140" y="120" z="0" />
+    <arc exit="east" move="east" destination="12" />
+    <arc exit="south" move="south" destination="1" />
+    <arc exit="west" move="west" destination="3" />
+    <arc exit="go" move="go applewood wagon" destination="13" />
+  </node>
+  <node id="3" name="Taffelberry Faire, Greenway Path">
+    <description>Gates are secured to the paddock fences, allowing the easy flow of festival goers throughout the meadows that are normally used for the nearby town's stock.  Flower garlands have been festooned along the wooden planks, helping to decorate the plain area.  From some neighboring pens that still contain farm animals, a few ponies eye the garlands longingly.</description>
+    <position x="40" y="120" z="0" />
+    <arc exit="north" move="north" destination="4" />
+    <arc exit="east" move="east" destination="2" />
+  </node>
+  <node id="4" name="Taffelberry Faire, Harvest Byway">
+    <description>Torches set on poles provide illumination that shows the merchants' caravans and pavilions spread out amongst the stubbled fields.  A menacing shadow in the corner turns out to be a scarecrow lurking in the dark.  Nightjars dart through the air, hunting for insects in the autumn night.</description>
+    <position x="40" y="100" z="0" />
+    <arc exit="north" move="north" destination="5" />
+    <arc exit="south" move="south" destination="3" />
+  </node>
+  <node id="5" name="Taffelberry Faire, Harvest Byway">
+    <description>Rising slightly above the surrounding fields, this patch of farmland has been harvested, only a few stems standing up from the ground showing what crops were formerly planted here.  The festival merchants have taken advantage of the spacious field and have spread themselves out with plenty of space between their various temporary structures.  The view further out shows many harvested fields with a few displaying crops that still need to be gathered in.</description>
+    <position x="40" y="60" z="0" />
+    <arc exit="north" move="north" destination="6" />
+    <arc exit="south" move="south" destination="4" />
+  </node>
+  <node id="6" name="Taffelberry Faire, Orchard Lane">
+    <description>Gnarled apple trees run in long rows through yellowing grass, their limbs twisted and covered with deep red fruit.  Traders have set up their booths in the aisles between the trees, with a few brave ones hanging some merchandise on the lower branches of nearby trees.</description>
+    <position x="40" y="40" z="0" />
+    <arc exit="east" move="east" destination="7" />
+    <arc exit="south" move="south" destination="5" />
+    <arc exit="go" move="go rickety stand" destination="14" />
+  </node>
+  <node id="7" name="Taffelberry Faire, Orchard Lane">
+    <description>Young saplings, carefully pruned and tended, stand in long rows in the middle of a grassy field.  Each trunk is carefully fenced off to protect it from the passing festival goers who stream in and out of the tents and wagons of the peddlers gathered for the local harvest fair.</description>
+    <position x="140" y="40" z="0" />
+    <arc exit="east" move="east" destination="8" />
+    <arc exit="west" move="west" destination="6" />
+    <arc exit="go" move="go white stand" destination="15" />
+  </node>
+  <node id="8" name="Taffelberry Faire, Orchard Lane">
+    <description>A few old trees still stand here, interspersed with the more numerous young trees that stand beside the trunks of their predecessors.  Carefully avoiding both types of trees, some of the festival merchants have set out their structures in the open spaces.  The brilliant colors of the walls and banners contrast with the dark browns of the tree trunks and the pale tan of the autumn-touched grasses.</description>
+    <position x="240" y="40" z="0" />
+    <arc exit="south" move="south" destination="9" />
+    <arc exit="west" move="west" destination="7" />
+    <arc exit="go" move="go wooden screens" destination="16" />
+  </node>
+  <node id="9" name="Taffelberry Faire, Market Place">
+    <description>Merchants' wagons and tents crowd up against the dirt road, filling the wide grass-covered verge with their colorful structures.  The sounds of shoppers haggling, bargaining, and bartering fills the air with the sounds of frenzied commerce.</description>
+    <position x="240" y="60" z="0" />
+    <arc exit="north" move="north" destination="8" />
+    <arc exit="east" move="east" destination="10" />
+    <arc exit="south" move="south" destination="11" />
+    <arc exit="go" move="go wooden stall" destination="17" />
+  </node>
+  <node id="10" name="Taffelberry Faire, Secluded Glade" note=" Secluded Glade">
+    <description>Nestled into a hollow in the ground is a small grove of trees, their dim shade hiding a small spring.  Carefully tended, the small pool of water is lined with rocks to keep it from eroding the surrounding ground.  Autumn leaves from the surrounding trees drift downwards, landing on the mere where they swirl and twirl as the spring's waters burble.</description>
+    <position x="260" y="60" z="0" />
+    <arc exit="west" move="west" destination="9" />
+  </node>
+  <node id="11" name="Taffelberry Faire, Market Place">
+    <description>A huge elm tree spreads its branches over the country lane here, sheltering the many temporary structures set up underneath it.  Banners and streamers float in the breeze above every transient shop while the occasional leaf drifts down to join others on the dusty ground.</description>
+    <position x="240" y="100" z="0" />
+    <arc exit="north" move="north" destination="9" />
+    <arc exit="south" move="south" destination="12" />
+    <arc exit="go" move="go blue tent" destination="18" />
+  </node>
+  <node id="12" name="Taffelberry Faire, Greenway Path" note="envelope" color="#00FF00">
+    <description>Tents and wagons spill over the manicured lawn, their colorful streamers and banners drawing the eye as they float on the breeze.  Shoppers crowd past, their arms laden with packages and parcels.  A few children dodge between the adults' legs, playing games while their parents shop.</description>
+    <position x="240" y="120" z="0" />
+    <arc exit="north" move="north" destination="11" />
+    <arc exit="west" move="west" destination="2" />
+    <arc exit="go" move="go wooden building" destination="19" />
+  </node>
+  <node id="13" name="Reshalian Siegery Suppliers, Inside the Wagon" note="Reshalian Siegery Suppliers|Siegery Suppliers" color="#FF0000">
+    <description>Inside this well-constructed applewood wagon, a Halfling clerk stands over a number of tiny figurines, idly polishing one in his hand.  A stormwood plaque hangs on the wall with brass lettering.  Above, a single gaethzen lamp swings idly from the ceiling, casting shadows across the room.</description>
+    <position x="140" y="100" z="0" />
+    <arc exit="go" move="go applewood door" destination="2" />
+  </node>
+  <node id="14" name="Minzy's Lemminayd Stand" note="Minzy's Lemminayd" color="#FF0000">
+    <description>Rough boards painted unevenly with a sunny yellow shade stack haphazardly to form a rickety stand.  Several shaky-looking cups and plates litter the counter, each offering a different refreshment for sale.  A small notecard propped against one cup reads, Thak yu for comming to by my lemminayd!  Nearly hidden behind the stand, an old hobbyhorse with one missing eye leans forlornly against the boards, apparently forgotten by its owner.</description>
+    <position x="40" y="20" z="0" />
+    <arc exit="go" move="go canvas flap" destination="6" />
+  </node>
+  <node id="15" name="Cherries Jubilee" note="Cherries Jubilee" color="#FF0000">
+    <description>Cherry red canvas awnings stretch over the wooden stall, each adjustable to maximize the sheltering of shoppers from the elements.  Bright white paint decorates the table, rack, and display case, giving the shop a cheerful, summery atmosphere.</description>
+    <position x="140" y="20" z="0" />
+    <arc exit="go" move="go canvas flap" destination="7" />
+  </node>
+  <node id="16" name="Wine Knot" note="Wine Knot" color="#FF0000">
+    <description>Nestled against the trunk of the towering tree, a rounded bar surrounded by several bar stools waits for thirsty patrons interested in a taste of the vineyards.  Temporary wooden screens erected to separate the bar from the rest of the park help muffle the noise from outside, creating an intimate environment for relaxing and learning about wine.</description>
+    <position x="260" y="40" z="0" />
+    <arc exit="go" move="go wooden screens" destination="8" />
+  </node>
+  <node id="17" name="The Apple Barrel" note="The Apple Barrel" color="#FF0000">
+    <description>Apple blossoms perfume the air, their heady fragrance rising from the delicately pink-tinged white flowers spread throughout the stall in shallow vases.  A crudely erected frame made from discarded wood and painted to resemble a very simple tree bears a shelf of merchandise over a bar hung with clothes. </description>
+    <position x="220" y="60" z="0" />
+    <arc exit="go" move="go flowered awning" destination="9" />
+  </node>
+  <node id="18" name="Blueberry Hill" note="Blueberry Hill" color="#FF0000">
+    <description>Soft blue curtains drape from the center tent pole to the walls, falling to the woven blue rug in gentle folds.  A polished wooden table stands against the pole, surrounded by plush cushions.  Along the back wall, a rack and small display case provide views of the wares for sale.</description>
+    <position x="220" y="100" z="0" />
+    <arc exit="go" move="go blue curtain" destination="11" />
+  </node>
+  <node id="19" name="Taffelberry Hall, Grand Entry">
+    <description>Papier-mache lanterns shaped like fluffy pastries hang from the ceiling, throwing a myriad of bright colors throughout the spacious hall.  The rainbow of lights provides a visual complement to the sweet smell of freshly baked goods saturating the air.  Fresh hay crunches underfoot, releasing an earthy scent of sunshine and grassy fields.  People bustle in and out of the doorways, moving quickly but never seeming harried.</description>
+    <position x="260" y="120" z="0" />
+    <arc exit="north" move="north" destination="20" />
+    <arc exit="east" move="east" destination="21" />
+    <arc exit="go" move="go painted door" destination="12" />
+  </node>
+  <node id="20" name="Taffelberry Hall, Gift Shop" note="Gift Shop" color="#FF0000">
+    <description>Stacked crates tipped upside down serve as counter tops for a smattering of simple souvenirs of the fair experience.  Glassware and other fragile items are set on a high shelf, away from little fingers, while a basket on the floor filled with soft and cuddly toys distracts young shoppers.</description>
+    <position x="260" y="100" z="0" />
+    <arc exit="south" move="south" destination="19" />
+  </node>
+  <node id="21" name="Taffelberry Hall, Eating Spot">
+    <description>Fragrant steam drifts from a table set along one wall, bathing the room in rich aromas.  The main floor area is covered in smaller tables ringed with chairs, each covered with cheery fabric and set with a basket of flowers.  Stacks of plates sit on the nearest table, ready to be carried away for washing.</description>
+    <position x="280" y="120" z="0" />
+    <arc exit="east" move="east" destination="22" />
+    <arc exit="west" move="west" destination="19" />
+  </node>
+  <node id="22" name="Taffelberry Hall, Tall Tells" note="Tall Tells" color="#FF0000">
+    <description>Chairs and benches ring the center of the room, assorted casually but arranged so that every seat offers a good view of the performance.  Lanterns are positioned at various points throughout the room to add or hide shadows as needed by each storyteller.</description>
+    <position x="300" y="120" z="0" />
+    <arc exit="west" move="west" destination="21" />
+  </node>
+  <node id="23" name="Arthe Dale, Greensward" note="Map7_NTR.xml">
+    <description>The park takes on a special magic at night when the tall spires of white delphinium and the beds of evening primrose luminously reflect the moonlight with a silvery glow, adding a delicate perfume to the night air.  A young Halfling couple passes you, strolling hand in hand and whispering softly to each other.  A carved garden bench provides a peaceful place to sit and enjoy the pleasant stillness of the night.</description>
+    <position x="120" y="160" z="0" />
+    <arc exit="east" />
+    <arc exit="south" />
+    <arc exit="west" />
+    <arc exit="north" />
+  </node>
+  <label text="Minzy's Lemminayd">
+    <position x="0" y="0" z="0" />
+  </label>
+  <label text="Cherries Jubilee">
+    <position x="130" y="0" z="0" />
+  </label>
+  <label text="Wine Knot">
+    <position x="270" y="30" z="0" />
+  </label>
+  <label text="The Apple Barrel">
+    <position x="130" y="50" z="0" />
+  </label>
+  <label text="Gift Shop">
+    <position x="270" y="90" z="0" />
+  </label>
+  <label text="Tall Tells">
+    <position x="310" y="110" z="0" />
+  </label>
+  <label text="Blueberry Hill">
+    <position x="160" y="80" z="0" />
+  </label>
+  <label text=" Secluded Glade">
+    <position x="260" y="50" z="0" />
+  </label>
+  <label text="Siegery Suppliers">
+    <position x="70" y="80" z="0" />
+  </label>
+  <label text="envelope ">
+    <position x="200" y="125" z="0" />
+  </label>
+</zone>

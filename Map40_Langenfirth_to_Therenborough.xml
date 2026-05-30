@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<zone name="Langenfirth and Surrounding Areas (to Therenborough)" id="40">
+<zone name="Langenfirth to Therenborough" id="40">
   <node id="1" name="Langenfirth, Blufe Path" note="Bin" color="#00FFFF">
     <description>The rustic town is nestled in the Danduwen Forest, on the shore of a sheltered cove on Gwenalion Lake.  The fir and pine trees grow very tall and in thick stands, with a few birch and oak finding room to spread under the lower limbs of the taller firs.  The streets, more like paths, wind and twist past the huge tree trunks, obviously an effort to avoid cutting down any tree.</description>
     <position x="-60" y="-36" z="0" />

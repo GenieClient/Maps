@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<zone name="Old Throne City" id="35">
+<zone name="Throne City" id="35">
   <node id="1" name="Colosseum Ruins, Upper Tier" note="Fade" color="#00FF00">
     <description>Wide openings in the walls of the colosseum were once passages and solid stone, through which spectators hurried to now vanished seating areas.  Now, these shattered windows reveal the grandest urban schemes and designs of the Seven Races lie in ruins to the south, having crumbled and fallen to the ravages of time.  Northward, the structures are by far more dignified and repaired.</description>
     <position x="20" y="340" z="0" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<zone name="The Arch" id="TF1">
+<zone name="The Arch (TF)" id="TF1">
   <node id="1" name="Droughtman's Maze, Observation Deck" note="">
     <description>Light seems to follow you as you move about, allowing you to see what's in front of you but very little of what's beyond.  A slight odor of peaches is prevalent throughout the hallway.</description>
     <position x="40" y="120" z="0" />

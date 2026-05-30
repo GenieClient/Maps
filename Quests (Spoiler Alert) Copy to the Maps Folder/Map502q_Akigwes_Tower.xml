@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Akigwe's Tower" id="502q">
+  <node id="1" name="Inner Hibarnhvidar, Guardhouse Receiving">
+    <description>Sconces cast a warm glow over the room, a cheery contrast to the utilitarian furnishings and the purpose of the room.  A sturdy table and a few chairs stand ready to serve those manning the guardhouse, the nicks and rounded edges showing the pieces' age.  A large mural on one wall depicts a vast tower overlaid with the image of an open tome beneath twin crossed battle axes, while another wall -- and door -- of iron bars separates this area from the adjoining holding cell.</description>
+    <position x="260" y="180" z="0" />
+    <arc exit="east" move="east" destination="2" />
+    <arc exit="go" move="go door" destination="3" />
+  </node>
+  <node id="2" name="Inner Hibarnhvidar, Guardhouse Office">
+    <description>Similar sturdy furniture as that of the receiving room serves here in the somewhat sparse, but functional, office.  A desk stands in one corner, the additional sconces on the walls around it providing a decent amount of light for any necessary record keeping.  In the opposite corner, a towering pillar of purple crystal is the space's sole decorative object, rising from a curved stone base to its peak just shy of the ceiling.</description>
+    <position x="280" y="180" z="0" />
+    <arc exit="west" move="west" destination="1" />
+  </node>
+  <node id="3" name="Inner Hibarnhvidar, Guardhouse Cell">
+    <description>A thick stone slab lines one wall as a makeshift bench, providing some very small comfort for anyone being held here while awaiting transport to a more secure location.  Iron bars form the wall between the cell and the receiving room, ensuring that the guardsman is aware of any activity in the cell at any time.</description>
+    <position x="260" y="200" z="0" />
+    <arc exit="go" move="go door" destination="1" />
+  </node>
+  <node id="4" name="Akigwe Tower, Reception Hall" note="Reception Hall" color="#00FF00">
+    <description>Restored to its original grandeur, the polished brick walls support the surrounding mahogany pillars that extend upward across the rib-vaulted ceiling.  A heavy, tasseled rug blankets the marble flooring, while displays of vibrant tapestries and crested shields decorate the room.  Majestic marble statues of robed wizards stand adjacent to the ornate stone archway that leads further into the tower, each holding a tall staff topped with a gaethzen orb that casts a soft glow over the entryway.</description>
+    <position x="260" y="160" z="0" />
+    <arc exit="north" move="north" destination="5" />
+  </node>
+  <node id="5" name="Akigwe Tower, Grand Foyer">
+    <description>Polished white sandstone surrounds the expansive room, with side walls imbedded with a series of creamy marbled columns that form blind arcades.  Several suits of armor and a variety of weapons are displayed within the dark, arched recesses.  Along the far wall, a grand fieldstone fireplace towers to the rafters, its wide mantel supported by spiraling, stone pillars that flank the open fire pit.  A large chandelier hangs from a central beam, casting a muted glow over the chamber's matching walnut framed settees and artful decor.</description>
+    <position x="260" y="140" z="0" />
+    <arc exit="east" move="east" destination="8" />
+    <arc exit="south" move="south" destination="4" />
+    <arc exit="west" move="west" destination="6" />
+  </node>
+  <node id="6" name="Akigwe Tower, West Corridor" note="Etegere">
+    <description>Ornate candleholders are mounted between the framed portraits that line the white sandstone walls of long the corridor.  An elaborate, rosewood etegere rests against the deep, walnut wainscoting while several potted plants dot the opposing wall.  Protecting the polished wood floors is a wide, tasseled runner, woven in an intricate floral pattern.</description>
+    <position x="220" y="140" z="0" />
+    <arc exit="north" move="north" destination="12" />
+    <arc exit="east" move="east" destination="5" />
+    <arc exit="west" move="west" destination="7" />
+    <arc exit="go" move="go etegere" destination="13" />
+  </node>
+  <node id="7" name="Akigwe Tower, Kitchen" note="Kitchen" color="#00FF00">
+    <description>Sandstone walls enclose the area, supporting the wide brick hearth set into the far wall and several nearby cabinets.  Several brass pots and utensils hang above a heavy wooden table, its surface cluttered with flour and herbs.</description>
+    <position x="200" y="140" z="0" />
+    <arc exit="east" move="east" destination="6" />
+  </node>
+  <node id="8" name="Akigwe Tower, Corridor">
+    <description>A wide runner covers the dusty floors of the long corridor in threadbare patterns of burgundy and gold.  A thin layer of ashen residue dusts portions of the sandstone walls, the dark hardwood trim and mounted sconces dangling long, wispy cobwebs.  Several drab tapestries line the hall, overlooking the armchairs and small table that are tucked against the rich, walnut wainscoting.</description>
+    <position x="280" y="140" z="0" />
+    <arc exit="north" move="north" destination="11" />
+    <arc exit="east" move="east" destination="9" />
+    <arc exit="south" move="south" destination="10" />
+    <arc exit="west" move="west" destination="5" />
+  </node>
+  <node id="9" name="Akigwe Tower, Great Hall" note="Great Hall" color="#00FF00">
+    <description>Several sets of broad antlers adorn the surrounding black walnut walls that continue upward towards the hammer-beamed ceiling.  A thin veil of dust lingers in the muted beams of light radiating from the towering stained-glass window along a far wall, bathing the elongated central table in multi-colored hues.  A stately standard hangs overhead while padded wood benches rest upon the rich burgundy carpet, adding a decorative accent throughout the room.</description>
+    <position x="300" y="140" z="0" />
+    <arc exit="west" move="west" destination="8" />
+  </node>
+  <node id="10" name="Akigwe Tower, Magistrate's Office" note="Magistrate's Office" color="#00FF00">
+    <description>A series of framed maps line the white sandstone walls that over look an elaborately carved desk, piled high with various documents.  To one side, a trio of tall bookcases store volumes of records while set within the opposing wall is a large marble fireplace.</description>
+    <position x="280" y="160" z="0" />
+    <arc exit="north" move="north" destination="8" />
+  </node>
+  <node id="11" name="Akigwe Tower, Library of History" note="Library of History" color="#00FF00">
+    <description>Towering shelves that line the enclosing walls store hundreds of colorful, various-sized volumes laden with dust, save for a what appears to be a few frequented areas.  Several tables and chairs line the central area, some of which bear stacks of books, while others reveal handprints and smudges found in the thin layer of ashen residue that covers them.  Dark beams traverse the room overhead, beneath the vaulted ceiling, each dangling an iron lantern that bathes the room in a soft light.</description>
+    <position x="280" y="120" z="0" />
+    <arc exit="south" move="south" destination="8" />
+  </node>
+  <node id="12" name="Akigwe Tower, Pantry" note="Pantry" color="#00FF00">
+    <description>The low-beamed ceiling of the small room dangles with clusters of various herbs and cured meats, the aromas melding into a mouth-watering essence that fills the area.  A collection of knives and utensils are mounted along the far wall above a marble-topped counter, designed for butchering and other preparations.</description>
+    <position x="220" y="120" z="0" />
+    <arc exit="south" move="south" destination="6" />
+  </node>
+  <node id="13" name="Akigwe Tower, Alchemy Lab" color="#00FF00">
+    <description>What appears to have been an active workshop at one time now lies in chaotic disaster.  Dark ashen burns stain the surrounding walls, with sections of flocked wallpaper peeled away and dangling their singed edges.  Broken flasks and jars are scattered amid the ashes across the large rug that lies partially burnt away along the floor.  A scorched sofa rests against the far wall, near a collapsed table.</description>
+    <position x="220" y="220" z="0" />
+    <arc exit="go" move="go etegere" destination="6" />
+    <arc exit="go" move="go ramp" destination="14" />
+    <arc exit="climb" move="climb damp stairway" destination="44" />
+  </node>
+  <node id="14" name="Akigwe Tower, Cloak Room" note="Cloak Room">
+    <description>Oak panels, almost blackened from age and the accumulated soot that drifted in from the Gathering Room next door, comprise this space's walls.  Knobby hooks are evenly spaced along a running board affixed to the wall high enough to allow a voluminous garment to avoid dragging the floor when hung.  An abandoned, moth-eaten cloak still hangs precariously from one peg.</description>
+    <position x="220" y="260" z="0" />
+    <arc exit="south" move="south" destination="15" />
+    <arc exit="go" move="go ramp" destination="13" />
+  </node>
+  <node id="15" name="Akigwe Tower, Gathering Room">
+    <description>Once this room was where residents repaired to relax after feasting.  Now, dust now covers the sofas and an upturned chair leans crookedly against the wall beneath a faded tapestry.  Industrious mice have chewed holes in the once vibrantly colored carpet that still emits the faint scent of smoke.</description>
+    <position x="220" y="280" z="0" />
+    <arc exit="north" move="north" destination="14" />
+    <arc exit="east" move="east" destination="17" />
+    <arc exit="southwest" move="southwest" destination="16" />
+  </node>
+  <node id="16" name="Akigwe Tower, Balcony" note="Balcony1" color="#00FF00">
+    <description>The doors to this balcony lie shattered against the balustrade, as if thrown open in haste.  Splinters cover the stone floor alongside a board covered with dark stains.  The muted sounds of Inner Hibarnhivar's daily life drift upward.</description>
+    <position x="200" y="300" z="0" />
+    <arc exit="northeast" move="northeast" destination="15" />
+  </node>
+  <node id="17" name="Akigwe Tower, Passageway">
+    <description>Narrow and dark, this hall connects the ladies' drawing room with the gentleman's gathering spot.  A rumpled runner appears pulled up as if grasped desperately and then suddenly released.  The wall and floor at that spot has dark stains in a splash pattern.</description>
+    <position x="260" y="280" z="0" />
+    <arc exit="north" move="north" destination="20" />
+    <arc exit="east" move="east" destination="18" />
+    <arc exit="south" move="south" destination="21" />
+    <arc exit="west" move="west" destination="15" />
+    <arc exit="go" move="go stairway" destination="29" />
+  </node>
+  <node id="18" name="Akigwe Tower, Drawing Room" note="Drawing Room">
+    <description>Settees and tea tables litter this room, once used by the ladies as the gentlemen repaired to the gathering room across the passageway.  Several paintings hang on the walls, some landscapes and some stuffy portraits.  A huge floral arrangement, now dried and flaking, droops from a vase atop a central round table covered in dust.</description>
+    <position x="280" y="280" z="0" />
+    <arc exit="southeast" move="southeast" destination="19" />
+    <arc exit="west" move="west" destination="17" />
+  </node>
+  <node id="19" name="Akigwe Tower, Balcony" note="Balcony2">
+    <description>Barely clinging to the smashed doorframe, tattered lace curtains flutter.  Below, neat rows of sand and rock separate a well-tended garden, oblivious to the destruction above.  The muted bubbling of the fountain lends an air of innocence to the destruction inside.</description>
+    <position x="300" y="300" z="0" />
+    <arc exit="northwest" move="northwest" destination="18" />
+    <arc exit="climb" move="climb ladder" destination="22" />
+    <arc exit="go" move="go damp stairway" destination="49" />
+  </node>
+  <node id="20" name="Akigwe Tower, Bar Room" note="Bar Room" color="#00FF00">
+    <description>Dust covers the splinters of glass and pottery that cover the shelves and floor, making it difficult to see in the semi-gloom of this room.  The faint scent of spirits permeates the air, wafting upward from the many stains on the floor.  An overturned table once used to prepare orders now leans precariously against one wall.</description>
+    <position x="260" y="260" z="0" />
+    <arc exit="south" move="south" destination="17" />
+  </node>
+  <node id="21" name="Akigwe Tower, Foyer" note="Foyer" color="#00FF00">
+    <description>This rather small space served as a transition area from the feasting room to the gathering, more social areas of this floor within the tower.  Dust stalactites attached to the flocking now obliterate wallpaper that was once velvet etched in a whimsical design.  A long narrow bench runs along one wall.</description>
+    <position x="260" y="300" z="0" />
+    <arc exit="north" move="north" destination="17" />
+  </node>
+  <node id="22" name="Akigwe Tower, Aerial Garden" note="Aerial Garden">
+    <description>Supported by stone gargoyle corbels, the outer balcony is surrounded by a tall parapet bearing ornate quatrefoil piercings that overlook the surrounding community.  A plethora of potted trees and plants encompasses the area, creating the garden-like atmosphere.  A pair of stone benches rests beside a weathered marble statue of a graceful maiden, her cupped hands revealing a bright flame.</description>
+    <position x="320" y="320" z="0" />
+    <arc exit="climb" move="climb ladder" destination="19" />
+    <arc exit="go" move="go door" destination="23" />
+  </node>
+  <node id="23" name="Akigwe Tower, Corridor">
+    <description>Blackened areas mar the sandstone walls of the long corridor, evidence of something gone horribly awry.  Charred debris and broken glass litter the ash-laden floors, the lingering footprints an obvious indication that others still roam the area.  A pile of splintered planks is pushed against one wall opposite the burnt remains of a large armchair.</description>
+    <position x="320" y="340" z="0" />
+    <arc exit="east" move="east" destination="42" />
+    <arc exit="south" move="south" destination="25" />
+    <arc exit="west" move="west" destination="24" />
+    <arc exit="go" move="go door" destination="22" />
+  </node>
+  <node id="24" name="Akigwe Tower, West Dormitory" note="West Dormitory" color="#00FF00">
+    <description>Simple cots line both sides of the pale blue room, each of the neatly-made beds covered with colorful quilts, with a wooden footlocker nearby.  Long curtains divide the areas, providing a modest amount of privacy for those taking up residence within the tower.  Next to a copperwood dry sink, an ornately carved cabinet stands against the far wall, providing storage for additional linens.</description>
+    <position x="300" y="340" z="0" />
+    <arc exit="east" move="east" destination="23" />
+  </node>
+  <node id="25" name="Akigwe Tower, Corridor">
+    <description>Blackened streaks travel up the sandstone walls from the charred baseboards that run the length of the long corridor.  Doors that once secured the surrounding rooms now lie scorched and fragmented amid broken glass and a thick layer of soot.  A blistered painting hangs precariously from its place upon the wall, while a suit of ash-covered armor slumps nearby, no longer the gleaming image it once was.</description>
+    <position x="320" y="360" z="0" />
+    <arc exit="north" move="north" destination="23" />
+    <arc exit="east" move="east" destination="28" />
+    <arc exit="south" move="south" destination="26" />
+    <arc exit="west" move="west" destination="27" />
+  </node>
+  <node id="26" name="Akigwe Tower, Chamber of Moons" note="Chamber of Moons" color="#00FF00">
+    <description>Richly grained wood of deep walnut supports the built-in bookcases that tower along the side walls, each set of the shelves framed in elaborately-carved flamewood trim and scrolling fretwork spandrels.  Beyond rows of wooden benches, an expansive mural at the far end of the hall displays a complex star chart which details the many constellations.  Ornate architecture overhead surrounds the recessed, domed ceiling which is painted a deep blue with tiny stars that emulate the night skies.</description>
+    <position x="320" y="380" z="0" />
+    <arc exit="north" move="north" destination="25" />
+  </node>
+  <node id="27" name="Akigwe Tower, Chamber of Elements" note="Chamber of Elements" color="#00FF00">
+    <description>Massive potted trees with overflowing roots line the spacious chamber, creating a vast network of twisting, gnarled branches with their heavy foliage nearly overgrowing the bas-reliefs upon the surrounding walls and the ceiling overhead.  An elaborate central fountain supports an immense, brass fire bowl that burns with a scintillating flame.</description>
+    <position x="300" y="360" z="0" />
+    <arc exit="east" move="east" destination="25" />
+  </node>
+  <node id="28" name="Akigwe Tower, East Dormitory" note="East Dormitory" color="#00FF00">
+    <description>Simple cots line both sides of the peach-colored room, each of the neatly-made beds covered with colorful quilts, with a small nightstand nearby.  Long curtains divide the areas, providing a modest amount of privacy for those taking up residence within the tower.  Next to a copperwood dry sink, an ornately carved cabinet stands against the far wall, providing storage for additional linens.</description>
+    <position x="340" y="360" z="0" />
+    <arc exit="west" move="west" destination="25" />
+  </node>
+  <node id="29" name="Akigwe Tower, Hallway">
+    <description>Spanning the entire length of the hallway, a thick woven runner goes along the center of the floor.  A dusty marble table stands to one side of the hall, tall candles resting on each end within silver holders.  Hanging directly above the table is a tall banner bearing the Akigwe crest.</description>
+    <position x="360" y="220" z="0" />
+    <arc exit="east" move="east" destination="33" />
+    <arc exit="go" move="go stairway" destination="17" />
+    <arc exit="go" move="go stone door" destination="30" />
+    <arc exit="go" move="go marble door" destination="31" />
+  </node>
+  <node id="30" name="Akigwe Tower, Visiting Room" note="Visiting Room" color="#00FF00">
+    <description>Heavy stone chairs set with thin blue seating pads rest before a rough-cut granite table.  Upon the table is a jug of ale next to a bowl of cool, but not cold, blood sausages -- a clear indication that someone has been here very recently.  Etched prominently into the wall above a fireplace is a vast tower overlaid with the image of an open tome beneath twin crossed battle axes.</description>
+    <position x="360" y="200" z="0" />
+    <arc exit="go" move="go stone door" destination="29" />
+  </node>
+  <node id="31" name="Akigwe Tower, Meeting Room" note="Meeting Room" color="#00FF00">
+    <description>Simple in style, the open room lacks gaudy decorations and purely serves its purpose.  Spanning the length of the chamber is a long table surrounded by straight-backed chairs.  Upon the table are empty pewter tankards, each elaborately decorated but covered in dust, still standing ready to be filled for quenching one's thirst during the long meetings that may never take place here again.</description>
+    <position x="360" y="240" z="0" />
+    <arc exit="go" move="go marble door" destination="29" />
+  </node>
+  <node id="33" name="Akigwe Tower, Hallway">
+    <description>Spanning the entire length of the hallway, a thick woven runner rests within the center of the floor.  Tarnished silver sconces hang from the walls and give off dim light, making traversing this portion of the hall tough but manageable.  Dominating the width of the corridor is a grid with rows upon rows of plants and other curious designs depicted upon painted tiles, each of which is glossy and reflects the dull glow of light available.  Two severed fingers rest alongside the grid, the tiles nearest them stained in red.</description>
+    <position x="380" y="220" z="0" />
+    <arc exit="north" move="north" destination="34" />
+    <arc exit="west" move="west" destination="29" />
+  </node>
+  <node id="34" name="Akigwe Tower, Hallway">
+    <description>Spanning the entire length of the hallway, a thick woven runner rests within the center of the floor.  Positioned to one side of an empty bookshelf is an unlit torch that appears to be somewhat out of place.  Across the hall is a sturdy oak door, leading into the holding room.</description>
+    <position x="380" y="200" z="0" />
+    <arc exit="north" move="north" destination="35" />
+    <arc exit="south" move="south" destination="33" />
+    <arc exit="go" move="go oak door" destination="43" />
+  </node>
+  <node id="35" name="Akigwe Tower, Hallway">
+    <description>Spanning the entire length of the hallway, a thick woven runner rests within the center of the floor.  Plaques hanging beside a pair of arches respectively identify the portals as the Healer's Station and The Loremaster's Canteen.  The rugs between each are worn and heavily stained to the point of being little more than tattered clumps of cloth.  Protruding from the walls at even intervals are gaethzen orbs that each shine with a steady, brilliant light.</description>
+    <position x="380" y="140" z="0" />
+    <arc exit="south" move="south" destination="34" />
+    <arc exit="go" move="go hatch" destination="36" />
+  </node>
+  <node id="36" name="Akigwe Tower, Rooftop">
+    <description>Surrounded by an ornate stone parapet, the cluttered rooftop provides a panoramic view of the surrounding lower terraces that line the cavern.  The passage of time and lack of consistent upkeep has warped the planking that barely clings to a rickety scaffold to form a ramp leading up and around the legs of a massive tripod.  Scattered about the rooftop are rotting crates, chests and barrels all bearing the crest of the tower.  Intense flashes of colorful light radiate through the gaps where the legs of the tripod penetrate the platform overhead.</description>
+    <position x="380" y="120" z="0" />
+    <arc exit="west" move="west" destination="37" />
+    <arc exit="go" move="go hatch" destination="35" />
+  </node>
+  <node id="37" name="Akigwe Tower, Rooftop Ramp">
+    <description>Spanning several steps, this stretch of the ramp is marked by broken and completely missing planks.  The resulting stress causes the remaining wooden framework to groan loudly under the slightest movements.  The rattle of chains clanking against something solid echoes down from overhead.  Splintering from disuse, the handrails are just as fragile as the footing below in many places.</description>
+    <position x="360" y="120" z="0" />
+    <arc exit="northeast" move="northeast" destination="38" />
+    <arc exit="east" move="east" destination="36" />
+  </node>
+  <node id="38" name="Akigwe Tower, Rooftop Ramp">
+    <description>Unlike the muted tones that typically illuminate the cavern, the harshness of the flashes originating from above are nearly blinding from this perspective.  No doubt the mirror-like panels centered around the beams of the tripod contribute to the light's intensity, though many of them have been knocked free of their frames and now lie in shattered shards.  Loose lengths of chain sway from the faint vibrations running throughout the scaffolding, though what they hang from isn't visible from here.  Massive iron bands ring each of the legs of the wooden tripod, and between each ring is a stout, reinforcing iron bar with pins on either end to secure it in place.</description>
+    <position x="420" y="60" z="0" />
+    <arc exit="southeast" move="southeast" destination="39" />
+    <arc exit="southwest" move="southwest" destination="37" />
+  </node>
+  <node id="39" name="Akigwe Tower, Rooftop Ramp">
+    <description>From here, the encircling ramp has reached sufficient height to allow a partial view of the platform and the brightly glowing crystal chained into place.  In spite of the appearance of the fragile scaffolding surrounding and supporting the structure, the platform itself is constructed of quality materials and is quite stable.  The constant clank of the chains hitting one another and the framework is occasionally accented by something shattering below.  The handrails are missing, though a skeleton lies impaled upon one of the broken poles that would have supported it.</description>
+    <position x="440" y="80" z="0" />
+    <arc exit="southwest" move="southwest" destination="40" />
+    <arc exit="northwest" move="northwest" destination="38" />
+  </node>
+  <node id="40" name="Akigwe Tower, Rooftop Platform">
+    <description>Rising up only a few hands through the floor are the tops of the poles from the supporting tripod that the platform rests atop.  A heavy chain is coiled about each and stretches up to a floating, powerfully glowing crystal -- itself draped in a network of smaller chains -- in an effort to secure it to the tower and prevent it from floating away entirely.  Three lecterns, all supporting a thick, closed tome, stand at equidistant points around the crystal.  A puddle of hair, jewelry, clothing and gore rests at the foot of each podium, although the bones of each respective bit of carnage are absent.</description>
+    <position x="420" y="100" z="0" />
+    <arc exit="northeast" move="northeast" destination="39" />
+    <arc exit="go" move="go rope" destination="41" />
+  </node>
+  <node id="41" name="Inner Hibarnhvidar, Guardhouse Cache" note="Guardhouse Cache|Boss" color="#00FF00">
+    <description>A multitude of tall shelves, weapon racks and crates line the baked-brick walls of the dimly-lit room, each holding scores of confiscated items that have accumulated over the years.  Dangling from a chain overhead, a large gaethzen orb illuminates a large wood table, heaped with an array of the many stores.</description>
+    <position x="400" y="120" z="0" />
+  </node>
+  <node id="42" name="Akigwe Tower, Chamber of Divinity" note="Chamber of Divinity" color="#00FF00">
+    <description>Marbled gaethzen orbs mounted along the polished sandstone walls cast a muted glow over the surrounding thirteen arched, blind arcades, each set with an intricately carved statue depicting one of the Immortals.  Ornately carved benches surround a central, black amber altar that pays tribute to Meraud, its facade meticulously detailed with a aspectual scene.  Swept into a corner is a pile of charred debris, a witchclaw broom leaning nearby.</description>
+    <position x="340" y="340" z="0" />
+    <arc exit="west" move="west" destination="23" />
+  </node>
+  <node id="43" name="Akigwe Tower, Holding Room" note="Holding Room" color="#00FF00">
+    <description>Shackles attached to the back wall serve as a device to ensure that those held here are not leaving without proper release.  Thin pads lie upon the floor, a place to rest for the waiting prisoner.  Atop a small table is a book of rules for Akigwe Tower -- no doubt a humorous attempt at making life a little easier for the jailed.</description>
+    <position x="400" y="200" z="0" />
+    <arc exit="go" move="go oak door" destination="34" />
+  </node>
+  <node id="44" name="Akigwe Tower, Basement">
+    <description>Rough stone floors are surrounded by decaying brick walls, the mortar crumbling and deteriorated with time.  What looks like it was once a great armory now lies in ruins, as evidenced by a nearby weapons rack that leans tiredly to one side as if ready to collapse like an aged corpse.  Marbled glowing orbs hung overhead are so laden with dust and cobwebs that their glow barely illuminates the dark corridors.</description>
+    <position x="140" y="260" z="0" />
+    <arc exit="south" move="south" destination="45" />
+  </node>
+  <node id="45" name="Akigwe Tower, Basement">
+    <description>Rough, cracked stone floors are surrounded by leaning brick walls.  Rotting armor mannequins, absent their protective finery, stand silent guard beside the decaying frames of wooden cots.  Above, only the faint light of a single gaethzen orb illuminates this graveyard of a barracks.</description>
+    <position x="140" y="300" z="0" />
+    <arc exit="north" move="north" destination="44" />
+    <arc exit="east" move="east" destination="46" />
+  </node>
+  <node id="46" name="Akigwe Tower, Basement Hallway">
+    <description>Rough, cracked stone floors are surrounded by leaning brick walls.  Centered along one of these walls is a rotting tapestry, its once brilliant hues faded and dust-covered.  Marbled gaethzen orbs hang overhead, though only a single, failing sphere casts its illumination through the dark corridor.</description>
+    <position x="160" y="300" z="0" />
+    <arc exit="north" move="north" destination="47" />
+    <arc exit="west" move="west" destination="45" />
+  </node>
+  <node id="47" name="Akigwe Tower, Basement Hallway">
+    <description>Rough, cracked stone floors are surrounded by leaning brick walls.  At the end of the hallway stands an iron-banded cell door streaked with rust and dusty cobwebs, a sleeping sentinel for the cramped space beyond.  Marbled gaethzen orbs hung overhead are so laden with dust and cobwebs that their glow barely illuminates the dark corridors.</description>
+    <position x="160" y="280" z="0" />
+    <arc exit="south" move="south" destination="46" />
+    <arc exit="go" move="go cell door" destination="48" />
+  </node>
+  <node id="48" name="Akigwe Tower, Basement Cell" note="Basement Cell" color="#00FF00">
+    <description>Wide stone blocks peek out from numerous cracks in a thick layer of mortar over the walls.  Multiple rusted sets of manacles, one high and one low, with thick lengths of chain protrude at even intervals around the small chamber.  The skeletal remains from an unfortunate captive, resembling those of a tall Elf or Kaldar, still hang from one such set.  The yellowed left arm ends in a chewed stump, its severed hand resting beside the bones of the right foot -- possibly having been both a last meal and a desperate, unsuccessful attempt at freedom.</description>
+    <position x="180" y="280" z="0" />
+    <arc exit="go" move="go cell door" destination="47" />
+  </node>
+  <node id="49" name="Akigwe Tower, Basement">
+    <description>Aged brick walls surround the area, the mortar crumbled and deteriorated.  Heavily laden with dust, several cobwebs dangle languidly at various corners of the ceiling and from the gaethzen orb that hangs overhead.</description>
+    <position x="320" y="260" z="0" />
+    <arc exit="east" move="east" destination="50" />
+    <arc exit="south" move="south" destination="52" />
+    <arc exit="go" move="go damp stairway" destination="19" />
+  </node>
+  <node id="50" name="Akigwe Tower, Basement">
+    <description>Secured by a vast network of cobwebs, a patinaed chandelier dangles at an awkward angle from a rafter overhead.  While a number of cracked globes remain attached, most have fallen and shattered on the floor below.  A long wooden table stands on its end and leans against the wall, partially concealing a recess that currently serves as the home for a rather large rat's nest.  A musty scent hangs in the air and comes from a stack of rotting clothing at the table's base.</description>
+    <position x="360" y="260" z="0" />
+    <arc exit="south" move="south" destination="51" />
+    <arc exit="west" move="west" destination="49" />
+  </node>
+  <node id="51" name="Akigwe Tower, Basement Shrine">
+    <description>Unlike the other bedraggled and ruinous conditions within view, this corner of the basement is remarkably well kept.  A long, cloth-covered table sits centered along one wall beneath a tapestry depicting Kerenhappuch's shrew looming before a smaller representation of Meraud's wolf.  An open tome rests upon the table, though its pages are blank, and a plaque sits beside it.  Padded benches, also in remarkably good condition, form rows before the makeshift altar-like setup.</description>
+    <position x="360" y="300" z="0" />
+    <arc exit="north" move="north" destination="50" />
+    <arc exit="west" move="west" destination="52" />
+  </node>
+  <node id="52" name="Akigwe Tower, Basement">
+    <description>Dust from years of abandonment competes for dominance with layers of cobwebs that hang thickly from the walls.  Battered and water-damaged chests are stacked in one corner, while a trickle of water seeps down the opposite wall into a reeking pool of stagnant water contained within a dip in the earthen floor.  Rolled carpets rise up out of large barrels, their tops lost in the webs above.</description>
+    <position x="320" y="300" z="0" />
+    <arc exit="north" move="north" destination="49" />
+    <arc exit="northeast" move="northeast" destination="53" />
+    <arc exit="east" move="east" destination="51" />
+  </node>
+  <node id="53" name="Akigwe Tower, Basement">
+    <description>Set within the crumbling brick walls that surround the area are dark recessed shelves, which hold dust-covered scrolls and various bottled potions.  Rows of ebonwood drawers cover two of the decayed facades, most with missing or broken hardware.  Casting a dusty haze over the room, a small lantern hangs overhead, revealing the ramp leading out of the area.</description>
+    <position x="340" y="280" z="0" />
+    <arc exit="southwest" move="southwest" destination="52" />
+  </node>
+  <label text="Boss">
+    <position x="410" y="110" z="0" />
+  </label>
+  <label text="Mosaic">
+    <position x="180" y="200" z="0" />
+  </label>
+  <label text="Start Area">
+    <position x="260" y="185" z="0" />
+  </label>
+  <label text="Tile Puzzle">
+    <position x="300" y="210" z="0" />
+  </label>
+  <label text="Item Search Area">
+    <position x="210" y="90" z="0" />
+  </label>
+  <label text="Etegere">
+    <position x="200" y="160" z="0" />
+  </label>
+  <label text="Assistants">
+    <position x="210" y="310" z="0" />
+  </label>
+  <label text="Basement">
+    <position x="360" y="270" z="0" />
+  </label>
+</zone>

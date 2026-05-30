@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<zone name="The Microcosm" id="999">
+<zone name="Microcosm" id="999">
   <node id="1" name="Astral Plane, Pillar of Nightmares" note="Rolagi|Tabelrem">
     <description>Countless streams of steel-grey light writhe and hiss like snakes mere hand spans below you.  Every few moments, one of the energy streams explodes outward from the mass with incredible speed and twists wildly through the air before dissipating.  A jagged purple and black pillar rises from the serpentine mass and climbs up into the distant, flickering sky.</description>
     <position x="20" y="100" z="0" />

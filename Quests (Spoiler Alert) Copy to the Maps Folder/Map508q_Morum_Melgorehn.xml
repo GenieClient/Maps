@@ -1,0 +1,1321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Morum Melgorehn" id="508q">
+  <node id="1" name="A Field">
+    <description>A long row of alder trees stands sentinel against the sky.  Once a windbreak meant to shelter precious crops, the trees now guard only the tangle of vines and sawgrass that has laid claim to abandoned fields.</description>
+    <position x="300" y="100" z="0" />
+    <arc exit="south" move="south" destination="2" />
+    <arc exit="go" move="go alder trees" destination="40" />
+  </node>
+  <node id="2" name="A Field">
+    <description>Some violent force has disrupted the symmetry of this windbreak.  The tops of many of the alders have been snapped off altogether, while others have had most of their uppermost branches ripped away.  A mass of fallen boughs covers the ground, nearly concealing a sturdy gate.</description>
+    <position x="300" y="120" z="0" />
+    <arc exit="north" move="north" destination="1" />
+    <arc exit="go" move="go gate" destination="3" />
+  </node>
+  <node id="3" name="A Field">
+    <description>Grasses and brush have been ripped up in long, ragged furrows, marking the passage of the great hulk lying at the far end of this meadow.  The unmoving thing gives no hint of its origins, yet somehow conveys the nature of both beast and machine.</description>
+    <position x="300" y="140" z="0" />
+    <arc exit="east" move="east" destination="4" />
+    <arc exit="go" move="go gate" destination="2" />
+  </node>
+  <node id="4" name="A Field">
+    <description>A faint, sharp scent that is reminiscent of lightning in summer storms hangs in the air and blends with the odor of scorched grass.  The mountainous shape before you resolves into the coil of a tail, a long and graceful neck, the gleaming curve of a claw, and leathery wings that now lie crumpled and still.  A dragon!  Or...is it?</description>
+    <position x="320" y="140" z="0" />
+    <arc exit="southeast" move="southeast" destination="5" />
+    <arc exit="west" move="west" destination="3" />
+  </node>
+  <node id="5" name="A Field">
+    <description>What seemed at first to be a once-living being is something else entirely.  Glistening scales reveal themselves as exquisitely machined metal plates, and the great eyes may sparkle with light, but only because it is reflected in their flat glass surfaces.  No life force exists behind them, and darkness veils whatever may be inside that massive metallic head.</description>
+    <position x="340" y="160" z="0" />
+    <arc exit="east" move="east" destination="6" />
+    <arc exit="northwest" move="northwest" destination="4" />
+    <arc exit="go" move="go mouth" destination="9" />
+  </node>
+  <node id="6" name="A Field, Dragon Left Side">
+    <description>Looming overhead is the great arched expanse that forms one side of the mechanized behemoth.  Close proximity does little to resolve the confusion of the sight before you -- this thing has the appearance of a creature of flesh and blood, yet there is no living substance here.  Reflected light glitters along the edges of row after row of metallic grey scales that gradually become smaller and more finely machined as they move downward to meet the huge, flattened plates that comprise the belly.</description>
+    <position x="380" y="160" z="0" />
+    <arc exit="northeast" move="northeast" destination="7" />
+    <arc exit="west" move="west" destination="5" />
+  </node>
+  <node id="7" name="A Field, Dragon's Tail">
+    <description>The dragon's tail stretches nearly the length of its body, tapering from a broad base standing as tall as a young tree and narrowing to a sharp and delicate tip.  Its overlapping, dark-grey scales are actually metal plates crafted in such precise detail that even touching their cold surface fails to entirely dispel the impression that they are part of a living thing.</description>
+    <position x="400" y="140" z="0" />
+    <arc exit="southeast" move="southeast" destination="8" />
+    <arc exit="southwest" move="southwest" destination="6" />
+  </node>
+  <node id="8" name="A Field, Dragon Right Side">
+    <description>Standing close to this monstrous beast-machine, the bitter, smoky odor hanging in the air becomes more noticeable.  A clear view of the sky overhead is blocked by the huge, sail-like plates of deep black metal running down the length of the back and dropping away towards the tail, which is hidden from view by the massive body.  A trickle of some dark substance ebbs sluggishly from somewhere within, flowing down the monster's curved side to drip onto the grasses beneath and form an oily pool.</description>
+    <position x="420" y="160" z="0" />
+    <arc exit="northwest" move="northwest" destination="7" />
+  </node>
+  <node id="9" name="Dragon, Inside Mouth">
+    <description>This entire room thrums with a heavy, mechanical vibration that travels up through the damp floor and jolts the spine with every step.  The air is dank with a stale, metallic smell of oxidation and some other unidentifiable odor rising from a passage that leads off to the west and fades back into obscurity.  Shafts of light highlight the sharp edges of the dragon's huge fangs, framing the only access to this place.</description>
+    <position x="300" y="200" z="0" />
+    <arc exit="west" move="west" destination="10" />
+    <arc exit="go" move="go mouth" destination="5" />
+  </node>
+  <node id="10" name="Dragon, Top of Throat">
+    <description>The floor here is slippery and coated with a fetid, rust-red ooze.  A caustic mixture of foul and acrid gasses fills the air, wafting from the dark passage to the west and making the simple act of breathing nearly impossible.  To the east, the choking odor dissipates slightly.</description>
+    <position x="280" y="200" z="0" />
+    <arc exit="east" move="east" destination="9" />
+    <arc exit="west" move="west" destination="11" />
+  </node>
+  <node id="11" name="Dragon, Inside Throat">
+    <description>The passage drops sharply here, an almost vertical dip.  Walls and floors converge to form a tubular shaft, the smooth surface making it difficult to resist being pulled downward by a strong draft that eddies along the passage and then subsides.  The breeze -- if it is a breeze -- rises at regular intervals, accompanied by a deep, rasping sound from somewhere in the distance.</description>
+    <position x="260" y="200" z="0" />
+    <arc exit="east" move="east" destination="10" />
+    <arc exit="climb" move="climb shaft" destination="12" />
+  </node>
+  <node id="12" name="Dragon, Deep Within">
+    <description>The smooth, tubular passageway finally ends here at the bottom of the long gullet deep in the dragon's interior, culminating in a metallic plate that juts out like some mechanical imitation of an esophageal valve.  The plate itself provides somewhat safer footing, allowing a glimpse over its edge.  A quick peek reveals a phosphorescent blue glow that rises from the murkiness below to permeate the entire structure.</description>
+    <position x="240" y="200" z="0" />
+    <arc exit="south" move="south" destination="22" />
+    <arc exit="west" move="west" destination="13" />
+    <arc exit="down" move="down" destination="25" />
+    <arc exit="climb" move="climb shaft" destination="11" />
+  </node>
+  <node id="13" name="Dragon, Stomach">
+    <description>The noxious air ripples with heat and putrid fumes here at the center of the hulking, mechanical beast.  Looming at the center of the room is a massive iron cauldron, glowing dull orange with the blaze of the fire beneath it.  Hanging over it is a vast brass hood that is positioned to trap most of the gas, siphoning it westward through massive pipes.</description>
+    <position x="160" y="200" z="0" />
+    <arc exit="north" move="north" destination="17" />
+    <arc exit="east" move="east" destination="12" />
+    <arc exit="west" move="west" destination="14" />
+  </node>
+  <node id="14" name="Dragon, Bladder">
+    <description>A maze of pipes, bent into impossible angles and coils, enters the room through the eastern wall.  Hissing and knocking sounds from inside the pipes, and beads of heavy condensation on the outside, hint that whatever is passing through them is very hot.  Wide ducts empty into a broad metal base over which is secured an immense, leathery bladder.</description>
+    <position x="80" y="200" z="0" />
+    <arc exit="east" move="east" destination="13" />
+    <arc exit="south" move="south" destination="15" />
+  </node>
+  <node id="15" name="Dragon, Starboard Hindquarter">
+    <description>Cams and rods and levers protrude from the smooth, curved metal walls here.  They consist of finely tooled plates formed in perfect arcs, joined seamlessly with cleverly hidden hinges.  The metalwork is so exquisitely done that some highly advanced and now lost technology must have had a hand in creating it.  Almost all of the elegant structure is rusted solid now -- sadly, nothing here could possibly operate anything.</description>
+    <position x="80" y="300" z="0" />
+    <arc exit="north" move="north" destination="14" />
+    <arc exit="southwest" move="southwest" destination="16" />
+  </node>
+  <node id="16" name="Dragon, Starboard Hindleg">
+    <description>The machinery filling this area is so strange that it is difficult to discern its purpose, though one contraption looks like some sort of condenser.  Perhaps this once helped to power the beast, but at present the various connecting pipes and tubes, only some of which appear to do anything at all, look adapted to operate the beast in some improvised way.</description>
+    <position x="60" y="320" z="0" />
+    <arc exit="northeast" move="northeast" destination="15" />
+  </node>
+  <node id="17" name="Dragon, Port Bowels">
+    <description>Overhead is a vast empty space, culminating in the great arched ceiling that forms the interior of the dragon's back.  Metallic struts climb gracefully along the walls to join at the apex high overhead.</description>
+    <position x="160" y="160" z="0" />
+    <arc exit="east" move="east" destination="20" />
+    <arc exit="south" move="south" destination="13" />
+    <arc exit="west" move="west" destination="18" />
+    <arc exit="climb" move="climb ladder" destination="27" />
+  </node>
+  <node id="18" name="Dragon, Port Hindquarter">
+    <description>The concave walls curve inward here, webbed with a series of elaborate joints and pulleys.  A massive bronze hook set in the ceiling serves as an anchor for a huge block and tackle device, which sways to and fro like some mechanized predator.</description>
+    <position x="80" y="160" z="0" />
+    <arc exit="east" move="east" destination="17" />
+    <arc exit="northwest" move="northwest" destination="19" />
+  </node>
+  <node id="19" name="Dragon, Port Hindleg">
+    <description>The walls and floor are coated with a thick, black residue of grime and grease from the continual operation of the mechanisms housed here.  This is a utility room of some sort, filled with devices that have some purpose which is unclear at the moment.  Dwarfing everything is a complex machine, connected with a series of overhead rods to a wheel on the wall.  A tarnished brass plate lies beneath the machine.</description>
+    <position x="60" y="140" z="0" />
+    <arc exit="southeast" move="southeast" destination="18" />
+  </node>
+  <node id="20" name="Dragon, Port Forequarter">
+    <description>The domed ceiling of this chamber emits the same eerie blue glow that bathes the entire interior of the great mechanized behemoth.  High overhead and along the north wall are twisted masses of pipes, lengths of wirewound cables, pulleys, and sawtoothed gears connected to one another in dizzyingly complex patterns.</description>
+    <position x="240" y="160" z="0" />
+    <arc exit="northeast" move="northeast" destination="21" />
+    <arc exit="west" move="west" destination="17" />
+  </node>
+  <node id="21" name="Dragon, Port Foreleg">
+    <description>Longer and narrower than rooms in the main body of the dragon, this tapered, cylindrical passage still affords enough room to stand upright.  The end of the room is very warm, thanks to the presence of an erratically shaped crystal that emits fluctuating heat.</description>
+    <position x="260" y="140" z="0" />
+    <arc exit="southwest" move="southwest" destination="20" />
+  </node>
+  <node id="22" name="Dragon, Starboard Forequarter">
+    <description>The rounded walls of this high vertical chamber pulsate and quiver as though straining under the effort to contain vast energies, while intermittent clangings, grumblings and bangings echo throughout.  From the west can be heard the tinny sound of liquid splashing against metal.</description>
+    <position x="240" y="280" z="0" />
+    <arc exit="north" move="north" destination="12" />
+    <arc exit="southeast" move="southeast" destination="23" />
+    <arc exit="west" move="west" destination="24" />
+  </node>
+  <node id="23" name="Dragon, Starboard Foreleg">
+    <description>The persistent and vague rumbling noises heard throughout the other areas are not so loud in this elongated room.  The vibrations, though, are more pronounced here, rolling so powerfully through the chamber that they give the air a sense of roiling motion.</description>
+    <position x="260" y="300" z="0" />
+    <arc exit="northwest" move="northwest" destination="22" />
+  </node>
+  <node id="24" name="Dragon, Starboard Bowels">
+    <description>A ladder here leads up to an overhanging metal platform.  Around its legs, pools of black muck swirl and slosh, and it is clear that anything but the most careful wading will splash the dark slime everywhere.</description>
+    <position x="160" y="280" z="0" />
+    <arc exit="east" move="east" destination="22" />
+    <arc exit="climb" move="climb ladder" destination="29" />
+  </node>
+  <node id="25" name="Dragon, Forebelly">
+    <description>Deep grooves etch a regular, crosshatched pattern along the metallic plates of the wall and floor.  The entire surface of the plates is pitted and corroded as though it had come in contact with some strong acid or noxious vapor.</description>
+    <position x="220" y="220" z="0" />
+    <arc exit="south" move="south" destination="26" />
+    <arc exit="up" move="up" destination="12" />
+    <arc exit="go" move="go door" destination="33" />
+  </node>
+  <node id="26" name="Dragon, Aftbelly">
+    <description>The greenish corrosion that pervades the rest of the dragon is strangely absent from the grooved walls here, and the floor is swept clean except for some grinding residue and bits of various metals near a die press.  Some of the scraps look like the remains from creating gears and other oddly shaped pieces of metal.  Perhaps this area functions as a workshop and repair room.</description>
+    <position x="220" y="240" z="0" />
+    <arc exit="north" move="north" destination="25" />
+  </node>
+  <node id="27" name="Dragon, Port Wing-Shoulder">
+    <description>The catwalk ends abruptly, no railing at its end.  Any careless step at the edge will lead to a plunge forward and down into the depths.  This high metallic perch wobbles above a large tank in the center of the room below, which emits a series of rumbles and clanks.  Attached to the catwalk is a mechanism connected to various pipes and coils.</description>
+    <position x="0" y="180" z="0" />
+    <arc exit="south" move="south" destination="28" />
+  </node>
+  <node id="28" name="Dragon, Spine">
+    <description>This is a narrow catwalk, open on the sides, leading north and south.  With no siderails in sight, there is nothing to prevent a long fall into the darkness below in the event of a misstep on the metal walkway.  Thick bunches of tubes, wires, and cables rise to a dizzying height above the catwalk, with the great tangle running between rooms to the east and west.</description>
+    <position x="0" y="220" z="0" />
+    <arc exit="north" move="north" destination="27" />
+    <arc exit="east" move="east" destination="30" />
+    <arc exit="south" move="south" destination="29" />
+    <arc exit="west" move="west" destination="31" />
+  </node>
+  <node id="29" name="Dragon, Starboard Wing-Shoulder">
+    <description>This is the south end of a long catwalk.  Arcane gauges and instruments are clamped to the railing at different points, but they yield no decipherable information.  High above, pistons, cylinders and solid iron rods intersect, some connecting a wing mechanism to the confusing network overhead.</description>
+    <position x="0" y="280" z="0" />
+    <arc exit="north" move="north" destination="28" />
+    <arc exit="climb" move="climb ladder" destination="24" />
+  </node>
+  <node id="30" name="Dragon, Forward Spine">
+    <description>Almost all of the space overhead is crammed with pipes, wires, tubes and contraptions that converge into a tangled maze of equipment.  The snakelike coils and cables leading into the eastern wall of the room give off a crackling bluish glow, and the air around them feels charged with energy.</description>
+    <position x="20" y="220" z="0" />
+    <arc exit="west" move="west" destination="28" />
+    <arc exit="go" move="go airlock" destination="32" />
+  </node>
+  <node id="31" name="Dragon, Aft Spine">
+    <description>The only passage is along the walls here, since most of the center of the floor is occupied by two large pipes.  They rise vertically up from the room beneath, and bend at a sharp angle, running along the ribbed roof through the eastern wall.  Gurgling, whooshing noises indicate some activity in the room below and within the conduits.</description>
+    <position x="-20" y="220" z="0" />
+    <arc exit="east" move="east" destination="28" />
+  </node>
+  <node id="32" name="Dragon, Head">
+    <description>From the placement of two great, round windows on opposite sides of the room, and the gradual taper towards the front, this can only be the head of the dragon.  A large, forward-facing seat sits between the eyes, and a quick glance through them provides a sweeping view.  A pair of sturdy pipes lead down through the floor, directly alongside a small hatch.</description>
+    <position x="40" y="220" z="0" />
+    <arc exit="go" move="go airlock" destination="30" />
+    <arc exit="go" move="go hatch" destination="39" />
+  </node>
+  <node id="33" name="Dragon, Dark Chamber">
+    <description>The combination of darkness, warm air, and closely surrounding walls conveys a claustrophobic sense to this little chamber.  A pair of isinglass doors on each end of the chamber keep in the warmth and permit a faint illumination to fall upon the middle of the concave floor.</description>
+    <position x="200" y="220" z="0" />
+    <arc exit="east" move="east" destination="25" />
+    <arc exit="west" move="west" destination="34" />
+  </node>
+  <node id="34" name="Dragon, Tail Access Hatch">
+    <description>Heavy, overlapping metal plates have been bolted together to form a narrow corridor, the metalwork so carefully crafted that the entire structure could probably withstand great fluctuations in temperature and pressure.  The floor arcs upward from east to west, so that the west side of the room is at a higher level than the top of an isinglass door in the eastern wall.</description>
+    <position x="180" y="220" z="0" />
+    <arc exit="go" move="go chute" destination="35" />
+    <arc exit="go" move="go door" destination="33" />
+  </node>
+  <node id="35" name="Dragon, Forward Tail Section">
+    <description>A lofty circular room opens here, narrowing and inclining upwards to the west.  It is difficult to keep footing on the rounded floor, although bracing against the cold metal walls makes walking somewhat steadier.</description>
+    <position x="160" y="220" z="0" />
+    <arc exit="west" move="west" destination="36" />
+    <arc exit="go" move="go chute" destination="34" />
+  </node>
+  <node id="36" name="Dragon, Mid Tail Section">
+    <description>In the dragon's narrowing tail section, the walls are almost perfectly cylindrical.  A round, metal hatch fills the west end of this section of the tail.</description>
+    <position x="140" y="220" z="0" />
+    <arc exit="east" move="east" destination="35" />
+    <arc exit="go" move="open panel;push button in panel;go opening" destination="37" />
+  </node>
+  <node id="37" name="Dragon, Aft Tail Section">
+    <description>This conical chamber is the hindmost portion of the dragon's tail.  The room is grey metal with nearly featureless walls and a bare floor.  A hatch makes up the east wall of the room.</description>
+    <position x="120" y="220" z="0" />
+    <arc exit="west" move="west" destination="38" />
+    <arc exit="go" move="open panel;push button in panel;go opening" destination="36" />
+  </node>
+  <node id="38" name="Dragon, Melgorehn's Bedchamber">
+    <description>A sweep of velvet drapes and lush fur rugs scattered across the floor present a luxurious contrast to the grim and functional machine you have traversed so far.  The heavy draperies hide the metal plates that make up the walls, and both fur and velvets serve to muffle the clanging vibrations that still reach here.  A high silver throne with a matching silver footstool occupies the far end of the chamber, opposite the large plush bed that dominates the room.</description>
+    <position x="100" y="220" z="0" />
+    <arc exit="east" move="east" destination="37" />
+  </node>
+  <node id="39" name="Dragon, Nose">
+    <description>This cramped area is the nose section of the Dragon, as evidenced by the two huge pipes running from the head to the base of the room that make up its nostrils.  There is a large valve mechanism attached to the bottom of the pipes, with a hefty chain dangling from the lever.</description>
+    <position x="60" y="220" z="0" />
+    <arc exit="go" move="go hatch" destination="32" />
+  </node>
+  <node id="40" name="Mycthengelde, Flatlands" note="Map4_Crossing_West_Gate.xml">
+    <description>Tall grasses sway gently in a soothing breeze.  Tiny field mice dart about an old log lying nearby, and the throaty call of an emerald pheasant reaches you from the distance.</description>
+    <position x="300" y="80" z="0" />
+    <arc exit="north" move="north" />
+    <arc exit="west" move="west" />
+    <arc exit="go" move="go alder trees" destination="1" />
+  </node>
+  <node id="41" name="Landing Pit">
+    <description>A tall wall rises just at the dragon's snout, smooth and steep without any handholds to use to climb it.  At the top of the wall, a few unrecognizable varieties of brush and vines peek over the edge with some movement obvious in the leaves occasionally.  The pit itself is no bigger than three times the dragon's breadth, and just slightly longer, making the actual landing of the massive mechanical wonder all the more incredible.</description>
+    <position x="640" y="320" z="0" />
+    <arc exit="go" move="go mouth" destination="9" />
+    <arc exit="west" move="west" destination="42" />
+  </node>
+  <node id="42" name="Landing Pit">
+    <description>Boulders lie scattered around, bumpy warts on the face of the smooth packed dirt found on the trail underfoot.  Some odd figures are chipped in the pit wall, depicting an ancient ritual.  The etching shows a creature resembling a dragon perched on an altar, with numerous folks of an unidentifiable race bowing down to it.  At the foot of the altar is a pile of sacrifices to the dragon, including flowers, gems and various other articles.</description>
+    <position x="620" y="320" z="0" />
+    <arc exit="east" move="east" destination="41" />
+    <arc exit="southeast" move="southeast" destination="44" />
+    <arc exit="west" move="west" destination="43" />
+  </node>
+  <node id="43" name="Landing Pit">
+    <description>Two large slabs crumble here in a sharp corner, crushed together by some strong force over a long period of time.  Gravel rests in a pile in the vertex, evidence of the grinding work that has taken place to construct such a narrow point.  A small plant grows out of a crevice in the corner of the pit walls, thriving stubbornly where others have failed.</description>
+    <position x="600" y="320" z="0" />
+    <arc exit="east" move="east" destination="42" />
+  </node>
+  <node id="44" name="Landing Pit">
+    <description>Lying next to the path is the large mechanical dragon.  The glossy eye peers down at the ground, looking as though it is watching all movement pass it.  The mighty head rests on a boulder, keeping it partially elevated from the ground.  Though covered in a layer of dust from flying, and coated with a dull patina, the dragon is quite beautiful and almost realistic.</description>
+    <position x="640" y="340" z="0" />
+    <arc exit="south" move="south" destination="45" />
+    <arc exit="west" move="west" destination="52" />
+    <arc exit="northwest" move="northwest" destination="42" />
+  </node>
+  <node id="45" name="Landing Pit, Beside The Obelisk">
+    <description>The front edge of the dragon's wing dips down over the area, brushing against the tall obelisk.  The east side of the monumental obsidian rock is etched with a small dragon, this one about the same size as the caretakers huddled around it.  In a box under the image are dozens of hash marks, some engraved deeply, others barely able to be seen at all.</description>
+    <position x="640" y="360" z="0" />
+    <arc exit="north" move="north" destination="44" />
+    <arc exit="south" move="south" destination="46" />
+  </node>
+  <node id="46" name="Landing Pit, Under The Dragon's Wing">
+    <description>Much larger on the outside than the tiny crawl space on the interior, the mighty metal wing from the dragon curves over this area, providing a small shelter.  Covered in a layer of tarnished scales, the wing is colored a soft brownish-green.  Judging by the size of the wing and the amount of metal used just for it, it's amazing that a vehicle of that mass could make it off the ground.</description>
+    <position x="640" y="380" z="0" />
+    <arc exit="north" move="north" destination="45" />
+    <arc exit="south" move="south" destination="47" />
+    <arc exit="west" move="west" destination="48" />
+  </node>
+  <node id="47" name="Landing Pit, Alongside The Cavern">
+    <description>Set between a mountain and a sharp drop-off, this path is narrow and treacherous.  A long metallic object blocks further passage east, acting as a barrier.  Jointed and covered in a coat of patina, the blockade looks to be the tail of the mechanical dragon.  It curls softly inward, directing the trail off to more open areas to the northeast.</description>
+    <position x="640" y="420" z="0" />
+    <arc exit="north" move="north" destination="46" />
+    <arc exit="northeast" move="northeast" destination="55" />
+    <arc exit="west" move="west" destination="56" />
+  </node>
+  <node id="48" name="Landing Pit, Alongside The Cavern">
+    <description>To the southwest, the path borders a deep pit that opens up into an immense cavern.  The drop to the ground is enough to make the bravest adventurer weak in the knees, as a fall from that height would mean certain death upon impact, if not before from total fear.  The sheer cliff down into the cavern is smooth, allowing for no grips to hold in order to climb down into the depths.  To the north of the path, a large obelisk rises out of the ground, black as night and covered in odd symbols.</description>
+    <position x="620" y="380" z="0" />
+    <arc exit="east" move="east" destination="46" />
+    <arc exit="west" move="west" destination="49" />
+  </node>
+  <node id="49" name="Landing Pit, Alongside The Cavern">
+    <description>A wide opening is gouged in the floor of the pit, leading down into a large cavern.  The area below is vast, spreading along a grey scale from darkness at one end to a sparkling glass wall at the other.  Patches of different hues of green dot the floor, adding an unexpected splash of color to a dreary place.  The large mass of an obelisk corners here, embellished with carvings of dragons curled around the base of each point, as though guarding the large mass.</description>
+    <position x="600" y="380" z="0" />
+    <arc exit="east" move="east" destination="48" />
+    <arc exit="west" move="west" destination="50" />
+  </node>
+  <node id="50" name="Landing Pit, Alongside The Cavern">
+    <description>The path turns away from the large crevice in the ground, yet is still close enough to hear rumblings coming from it.  Sticks and stones line the path, each arranged in a pattern and apparently of some significance.  Each pile shows signs that it is continually tended and cared for.</description>
+    <position x="580" y="380" z="0" />
+    <arc exit="east" move="east" destination="49" />
+    <arc exit="southwest" move="southwest" destination="51" />
+  </node>
+  <node id="51" name="Landing Pit" color="#00FF00">
+    <description>Moonlight highlights the smooth walls of the pit, marred by a massive stone slab with crooked words etched into its rough surface.  A thin curtain of moss kissed with bloodstains edges the slab, adding a foreboding touch to an already unsettling monolith.</description>
+    <position x="560" y="400" z="0" />
+    <arc exit="northeast" move="northeast" destination="50" />
+    <arc exit="east" move="east" destination="58" />
+    <arc exit="southeast" move="southeast" destination="57" />
+    <arc exit="go" move="go slab" destination="59" />
+  </node>
+  <node id="52" name="Landing Pit">
+    <description>Curling softly like a dragon's back, the path barely turns to fit the contours of the obelisk before it.  The north side of the large stone is covered with a shimmering layer of scales, changing color constantly as the light shifts over the surface.  An odd series of symbols rests in a small trough between the scales at eye level, hardly being able to be made out from the black rock around it.</description>
+    <position x="620" y="340" z="0" />
+    <arc exit="east" move="east" destination="44" />
+    <arc exit="west" move="west" destination="53" />
+  </node>
+  <node id="53" name="Landing Pit">
+    <description>Sounds of the forest pour over the edge above in every pitch imaginable.  Occasionally a lone call will stop so suddenly, it reminds one of the constant fight for survival shared by all species.  Built in the curve of the wall is a twig nest which now lies empty.  Its occupants either moved on to live their lives elsewhere, or lost the battle for survival to the residents above.</description>
+    <position x="600" y="340" z="0" />
+    <arc exit="east" move="east" destination="52" />
+    <arc exit="southwest" move="southwest" destination="54" />
+  </node>
+  <node id="54" name="Landing Pit">
+    <description>Though large and smooth, the west side of the obelisk holds only one image, that of a fallen dragon.  Beneath this image on the ground are scraps of clothing and bits of metal, apparently offerings.  In the dust on the ground is etched an odd symbol, like an oval with a jagged line down the center.</description>
+    <position x="580" y="360" z="0" />
+    <arc exit="northeast" move="northeast" destination="53" />
+  </node>
+  <node id="55" name="Landing Pit">
+    <description>A soft mist spills out over the ground, its source a tiny fissure on the south side of the trail.  The edge of the mighty dragon's wing arches over the walkway, the tip just barely saved from crashing against a boulder.  Though hardly noticeable, the small crack in the ground puts out a high temperature steam, scalding anyone who gets too close to it.</description>
+    <position x="660" y="400" z="0" />
+    <arc exit="southwest" move="southwest" destination="47" />
+  </node>
+  <node id="56" name="Landing Pit, Alongside The Cavern">
+    <description>Rising sharply to the south, the wall shoots up here.  A mountainous mass rests on the edge of the pit, towering over it and making it appear minuscule in the broad sense of things.  A far-away sound of a rock tumbling down the mountain causes a momentary discomfort at the prospect of it heading down into the pit, and possibly crushing all in its path.  Only a slender ledge makes up the path here, between the mountain and the hole in the basin of the landing area.</description>
+    <position x="620" y="420" z="0" />
+    <arc exit="east" move="east" destination="47" />
+    <arc exit="west" move="west" destination="57" />
+  </node>
+  <node id="57" name="Landing Pit, Alongside The Cavern">
+    <description>The walls of the pit curve softly, turning inward and taking the path along with it.  Around the curve of the wall are etchings chiseled shallowly in the rock.  Since the images were etched so thinly to begin with, they are hard to make out now, but a dragon blanketing a pile of something can just be made out.</description>
+    <position x="580" y="420" z="0" />
+    <arc exit="east" move="east" destination="56" />
+    <arc exit="northwest" move="northwest" destination="51" />
+  </node>
+  <node id="58" name="Landing Pit, Alongside The Cavern">
+    <description>Set on the brink of a deep pit, this ledge is slightly unstable at best.  Tied securely to a couple of rocks is a rope ladder leading only a fraction of the way down into the pit and partially rotted through from extended periods exposed to the elements.  Though badly frayed, the ladder appears to have enough strength to allow more climbers to pass along its length to yet another ledge below.</description>
+    <position x="580" y="400" z="0" />
+    <arc exit="west" move="west" destination="51" />
+    <arc exit="climb" move="climb ladder" destination="60" />
+  </node>
+  <node id="59" name="Tunnel Mouth">
+    <description>A dim shaft of light filters in through the cave mouth, casting odd shapes on the packed dirt floor.  Looming across the wall of the cave is a faded painting of a dragon, its mouth poised open and spouting flames toward the opening of the cave.</description>
+    <position x="360" y="480" z="0" />
+    <arc exit="north" move="north" destination="61" />
+  </node>
+  <node id="60" name="A Narrow Ledge">
+    <description>A narrow ledge with barely enough room to stand on stretches halfway around the interior of the pit.  Though a precarious perch, the view from this ledge offers a better glimpse of the cavern down below.  In one corner, a waterfall rushes out of an opening into a small sparkling pond, and in the other, a large crevice dominates the wall.  Every once in a while, it appears as though something moves just inside the crevice, but it is of a mass so large, surely it is a trick of the light.</description>
+    <position x="600" y="400" z="0" />
+    <arc exit="climb" move="climb ladder" destination="58" />
+  </node>
+  <node id="61" name="Long Tunnel">
+    <description>The available light fades sharply as the tunnels grow deeper.  Strangled from lack of light and water, the brown tendrils of some dead vines curl over the ground, blending in with the colors of the solid dirt floor that is beaten smooth by years of travel and marred only by a rock now and then.</description>
+    <position x="360" y="460" z="0" />
+    <arc exit="north" move="north" destination="62" />
+    <arc exit="south" move="south" destination="59" />
+  </node>
+  <node id="62" name="Long Tunnel">
+    <description>Craggy rock walls stretch and curve along the length of the tunnel, reaching into darkness both ways.  Long slender lines mark the ground, looking as though a snake slithered through, though by the look of it, the creature was much larger than normal snakes.</description>
+    <position x="360" y="440" z="0" />
+    <arc exit="northeast" move="northeast" destination="64" />
+    <arc exit="south" move="south" destination="61" />
+    <arc exit="west" move="west" destination="63" />
+  </node>
+  <node id="63" name="Long Tunnel">
+    <description>A twisted vine wall sconce holds a torch marking the intersection of tunnels.  A stalactite hangs down from above in the middle of the path, its lower mate broken off to clear the way for the trail.</description>
+    <position x="340" y="440" z="0" />
+    <arc exit="east" move="east" destination="62" />
+    <arc exit="southwest" move="southwest" destination="69" />
+    <arc exit="northwest" move="northwest" destination="70" />
+  </node>
+  <node id="64" name="Long Tunnel">
+    <description>Curving softly, the path turns at a small stalactite and stalagmite pair that strains to meet in the middle.  Their dream is fulfilled not by rock, but by vines that curl up the stone and braid themselves together, forming an almost artistic creation of nature.</description>
+    <position x="380" y="420" z="0" />
+    <arc exit="east" move="east" destination="65" />
+    <arc exit="southwest" move="southwest" destination="62" />
+  </node>
+  <node id="65" name="Long Tunnel">
+    <description>A low, resonant thrum can barely be heard coming from the east, creating a never-ending monotonous hum that sends vibrations through every solid object in range.  Squeezed into a crevice is a small tuft of moss, reveling in its tight yet undisturbed place to grow.</description>
+    <position x="400" y="420" z="0" />
+    <arc exit="east" move="east" destination="66" />
+    <arc exit="west" move="west" destination="64" />
+  </node>
+  <node id="66" name="Long Tunnel">
+    <description>The muffled sound of rushing water can be heard through the rock wall lining the path to the east.  Droplets cover the face of the rugged stone, making it look as though it is perspiring.  Occasionally, these drops will merge, causing a miniature stream to flow down the surface, continuing until it has sapped its source of all its water.</description>
+    <position x="420" y="420" z="0" />
+    <arc exit="west" move="west" destination="65" />
+    <arc exit="northwest" move="northwest" destination="67" />
+  </node>
+  <node id="67" name="Long Tunnel">
+    <description>Echoing through the tunnel is a low rumbling, its source coming from the east.  Occasionally, a louder rumble will shake the stones on the ground, giving an unsettling feel to the whole place.  A coil of rotting rope rests as a tribute to a lost adventurer wandering these caves.</description>
+    <position x="400" y="400" z="0" />
+    <arc exit="southeast" move="southeast" destination="66" />
+    <arc exit="northwest" move="northwest" destination="68" />
+  </node>
+  <node id="68" name="Long Tunnel">
+    <description>The rock walls look different here, their hues shifting from browns to reds and greens.  Upon closer inspection, a drastically faded cave painting is emblazoned across the surface.  Though difficult to make out, it appears as though the image is that of two groups, one near the ceiling, one near the floor, each separated by a dragon clasping a circular object in its talons.</description>
+    <position x="380" y="380" z="0" />
+    <arc exit="northeast" move="northeast" destination="76" />
+    <arc exit="southeast" move="southeast" destination="67" />
+    <arc exit="west" move="west" destination="73" />
+  </node>
+  <node id="69" name="Dead End">
+    <description>The wall curves around here in a dead end, leaving no choice but to turn around and return down the tunnels.</description>
+    <position x="320" y="460" z="0" />
+    <arc exit="northeast" move="northeast" destination="63" />
+  </node>
+  <node id="70" name="Long Tunnel">
+    <description>The tunnel narrows here, growing even darker as the path continues on to the north.  The dust on the ground does not appear to be disturbed, as though this way is not well traveled.</description>
+    <position x="320" y="420" z="0" />
+    <arc exit="north" move="north" destination="71" />
+    <arc exit="southeast" move="southeast" destination="63" />
+  </node>
+  <node id="71" name="Long Tunnel">
+    <description>Squeezing the path to its very thinnest, the walls continue to move inward here, giving a claustrophobic feel to the area.  The only life to be found is a small clump of lichen hanging on for dear life in a narrow crack on the wall.</description>
+    <position x="320" y="400" z="0" />
+    <arc exit="northeast" move="northeast" destination="72" />
+    <arc exit="south" move="south" destination="70" />
+  </node>
+  <node id="72" name="Long Tunnel">
+    <description>Light floods the area from a torch on the wall, though is soaked up by the darkness of the narrow southwestern path.  A deep shelf has been carved into the wall, covered in cobwebs and dust from the tunnels.</description>
+    <position x="340" y="380" z="0" />
+    <arc exit="northeast" move="northeast" destination="74" />
+    <arc exit="east" move="east" destination="73" />
+    <arc exit="southwest" move="southwest" destination="71" />
+  </node>
+  <node id="73" name="Connecting Tunnel">
+    <description>The arched tunnel here has a different feel than the rest of the tunnels.  The walls look basically smooth, and appear to have been somehow carved as a short cut beween the main tunnel and a side tunnel.</description>
+    <position x="360" y="380" z="0" />
+    <arc exit="east" move="east" destination="68" />
+    <arc exit="west" move="west" destination="72" />
+  </node>
+  <node id="74" name="Long Tunnel">
+    <description>Flat rocks chipped away to take on the form of two small tables line the path on either side, each covered in small metallic flecks showing they are not of the same stone as the rest of this area.  Soft rumbling sounds echo through the caves occasionally, causing the tables to wobble.</description>
+    <position x="360" y="360" z="0" />
+    <arc exit="northeast" move="northeast" destination="75" />
+    <arc exit="southwest" move="southwest" destination="72" />
+  </node>
+  <node id="75" name="Deep Tunnel">
+    <description>The rock itself seems to grow darker here, indicating that the tunnels grow ever deeper into the mountainous stone out of which they were forged.  An odd scratching sound can be heard coming from somewhere near, though between the echo of the area and the darkness, the source can not be found.</description>
+    <position x="380" y="340" z="0" />
+    <arc exit="north" move="north" destination="91" />
+    <arc exit="southwest" move="southwest" destination="74" />
+    <arc exit="northwest" move="northwest" destination="92" />
+  </node>
+  <node id="76" name="Deep Tunnel">
+    <description>The flickering of a torch is all that lights up a picture of a group of people kneeling before a massive black obelisk-shaped object.  On top of the obelisk is a large dragon, covered in shimmering scales that seem to shift color with the dancing flames of the torch.</description>
+    <position x="400" y="360" z="0" />
+    <arc exit="north" move="north" destination="78" />
+    <arc exit="east" move="east" destination="77" />
+    <arc exit="southwest" move="southwest" destination="68" />
+  </node>
+  <node id="77" name="A Small Alcove" color="#00FF00">
+    <description>Barely more than a small indentation off the side path, a realistic painting of a dragon is emblazoned across the wall of the tiny area.  Below the dragon is a rounded rock with a slight curvature to it, apparently for sacrifices.</description>
+    <position x="420" y="360" z="0" />
+    <arc exit="west" move="west" destination="76" />
+  </node>
+  <node id="78" name="Deep Tunnel">
+    <description>Painted on the walls is a damaged yet magnificent mural of a dragon bursting from the flames of a fiery-looking ball.  The dragon has its wings spread around a blue-green planet, watching over it protectively.  Two torches rest on either side of the depiction, shedding ample light to view it.</description>
+    <position x="400" y="340" z="0" />
+    <arc exit="northeast" move="northeast" destination="79" />
+    <arc exit="south" move="south" destination="76" />
+    <arc exit="northwest" move="northwest" destination="91" />
+  </node>
+  <node id="79" name="Deep Tunnel">
+    <description>The scene portrayed on the wall here seems to be somewhat newer, and is not faded as the others are.  A group of humanoid-like creatures huddle together on one side, their apparent leader depicted as much taller as the rest.  A small creature of the same race cowers before the leader, an eternal look of fear painted on the poor soul's face.</description>
+    <position x="420" y="320" z="0" />
+    <arc exit="east" move="east" destination="80" />
+    <arc exit="southwest" move="southwest" destination="78" />
+  </node>
+  <node id="80" name="Deep Tunnel">
+    <description>Thick dead vines have been curved into a makeshift wall sconce, embracing a torch that sends a warm glow over the area as well as providing evidence that this area is regularly traveled.  Slender markings mar the ground, as though something is dragged along behind the wanderers that frequent these tunnels.</description>
+    <position x="440" y="320" z="0" />
+    <arc exit="northeast" move="northeast" destination="84" />
+    <arc exit="east" move="east" destination="81" />
+    <arc exit="west" move="west" destination="79" />
+  </node>
+  <node id="81" name="Deep Tunnels">
+    <description>The path splits here, leading into two small alcoves.  The faintest hint at a picture has been scratched in a dirt -- an odd arrow that points to the southwest.  Other lines have been scratched in the dirt as well, in a cross-hatch pattern, though they seem to make no sense at all.</description>
+    <position x="460" y="320" z="0" />
+    <arc exit="southeast" move="southeast" destination="83" />
+    <arc exit="southwest" move="southwest" destination="82" />
+    <arc exit="west" move="west" destination="80" />
+  </node>
+  <node id="82" name="Glassy Pool" color="#00FF00">
+    <description>Ending in a small alcove, the path leads to a small pool of standing water edged in a greenish-brown lichen.  The walls are smooth, as though someone carved out this niche to serve a purpose.  Just above the pool is a sconce molded to look like a dragon clasping a torch in its talons.  The light from the torch reflects off the surface of the pool rather strangely, sending odd patterns of light over the walls.</description>
+    <position x="440" y="340" z="0" />
+    <arc exit="northeast" move="northeast" destination="81" />
+    <arc exit="go" move="go pool" destination="93" />
+  </node>
+  <node id="83" name="Dead End">
+    <description>Jagged rocks form a curved end to the tunnel, with no decor in sight except for a small hole out of reach in the ceiling.  The floor is packed dirt, and has odd outlines of footprints in it looking to have been made by a mix of a reptilian creature and one more humanoid.</description>
+    <position x="480" y="340" z="0" />
+    <arc exit="northwest" move="northwest" destination="81" />
+  </node>
+  <node id="84" name="Deep Tunnel">
+    <description>A dim light can be seen flickering from the east, bouncing off the walls in a prismatic rainbow of color.  A warmth emanates from that area, casting safety and comfort like a blanket.</description>
+    <position x="460" y="300" z="0" />
+    <arc exit="northeast" move="northeast" destination="87" />
+    <arc exit="east" move="east" destination="85" />
+    <arc exit="southwest" move="southwest" destination="80" />
+  </node>
+  <node id="85" name="Deep Tunnel">
+    <description>The rock of the tunnel is in a transition here, growing into a larger cavern to the east and a narrower tunnel to the west.  The light swells into a burst of color in the direction of the cavern, its source still not seen from this point.</description>
+    <position x="480" y="300" z="0" />
+    <arc exit="east" move="east" destination="86" />
+    <arc exit="west" move="west" destination="84" />
+  </node>
+  <node id="86" name="Cavern Of Lights">
+    <description>Embedded in the rock in the middle of the room is a large crystal, the source of the comforting warmth and light of the area.  Its smooth surface is marked by nothing -- not even a grain of sand mars its perfection.  Taller than a large Gor'Tog, the crystal has made its home in this rounded cavern, a beautiful treasure of the dark tunnels.</description>
+    <position x="500" y="300" z="0" />
+    <arc exit="west" move="west" destination="85" />
+  </node>
+  <node id="87" name="Deep Tunnel">
+    <description>The tunnel opens up at a sharp angle compared to the crevice to the west.  Smooth rock arches around here, creating a finished puzzle piece to the maze of tunnels already in place.  Though one might wonder why someone feels the need to add to the confusion of paths already winding around the area, the work is quite admirable and shows great expertise in crafting in stone.</description>
+    <position x="480" y="280" z="0" />
+    <arc exit="southwest" move="southwest" destination="84" />
+    <arc exit="west" move="west" destination="88" />
+  </node>
+  <node id="88" name="Narrow Crevice">
+    <description>With barely enough room for a Gor'Tog to squeeze through, this area is closed in at best for even the smallest of all explorers.  Light finds its way in from either side, torches set at the opening to help whoever is creating this tunnel see what they are doing.</description>
+    <position x="420" y="280" z="0" />
+    <arc exit="east" move="east" destination="87" />
+    <arc exit="west" move="west" destination="89" />
+  </node>
+  <node id="89" name="Deep Tunnel">
+    <description>The tunnel grows narrower here, shrinking to barely a crevice to the east.  Odd chips have been carved out around the crevice, as though it is a tunnel work in progress to create a short cut between two areas.</description>
+    <position x="380" y="280" z="0" />
+    <arc exit="east" move="east" destination="88" />
+    <arc exit="southwest" move="southwest" destination="90" />
+  </node>
+  <node id="90" name="Deep Tunnel">
+    <description>Several rocks line the path here, making it twist and turn to lace around them.  Each boulder is skirted around the bottom with a layer of soft, moist moss, a testament to the dampness of the area.</description>
+    <position x="360" y="300" z="0" />
+    <arc exit="northeast" move="northeast" destination="89" />
+    <arc exit="southeast" move="southeast" destination="91" />
+  </node>
+  <node id="91" name="Deep Tunnel">
+    <description>Dark and quiet, the branched-off tunnel has an eerie feel to it.  Cobwebs line the corners, though their occupants -- if they are occupied -- blend into the darkness, the perfect camouflage in which to await prey.</description>
+    <position x="380" y="320" z="0" />
+    <arc exit="southeast" move="southeast" destination="78" />
+    <arc exit="south" move="south" destination="75" />
+    <arc exit="northwest" move="northwest" destination="90" />
+  </node>
+  <node id="92" name="Dead End">
+    <description>The wall curves around here in a dead end with a bony white skeleton propped up against it, making this a truly deadly end for the misfortuned explorer the bones belonged to.</description>
+    <position x="360" y="320" z="0" />
+    <arc exit="southeast" move="southeast" destination="75" />
+  </node>
+  <node id="93" name="A Water Tunnel">
+    <description>A wide stream of water floods down from the passage above, washing quickly along a slick slide filled with slime and goo.</description>
+    <position x="440" y="460" z="0" />
+    <arc exit="none" move="none" destination="94" />
+  </node>
+  <node id="94" name="A Shallow Pond" color="#00FF00">
+    <description>Having left the small tunnels, this cavern seems twice as massive as it normally would.  Above in the ceiling, a hole opens up to sky, offering no clue of where it leads.  A layer of stones lines the bottom of the pond, most dull but some sparkling a golden color.  Though the water is somewhat deep, a good swimmer could probably dive down to get one.</description>
+    <position x="340" y="600" z="0" />
+    <arc exit="east" move="east" destination="96" />
+    <arc exit="south" move="south" destination="95" />
+  </node>
+  <node id="95" name="A Shallow Pond">
+    <description>Small ripples dance over the surface of the pond, lapping up to the shore and producing miniature waves.  Scattered on the bottom of the pond are dozens of tiny stones, the water causing them to sparkle brightly when the light hits them.</description>
+    <position x="340" y="620" z="0" />
+    <arc exit="north" move="north" destination="94" />
+    <arc exit="southeast" move="southeast" destination="98" />
+  </node>
+  <node id="96" name="A Shallow Pool">
+    <description>The pond grows shallower as it meets the shore, but scattered all the way to the edge are tiny stones in a thin layer over the bottom.  Ripples lap up to the sandy shore, dropping off tiny rocks as they roll in and taking others as they slide out.  Mist flows across the water's surface coming in from the waterfall to the west.</description>
+    <position x="360" y="600" z="0" />
+    <arc exit="southeast" move="southeast" destination="97" />
+    <arc exit="west" move="west" destination="94" />
+  </node>
+  <node id="97" name="Cavern Floor">
+    <description>The cavern floor spreads wide from wall to wall, with a vaulted ceiling higher than the grandest temple ever built.  Stalactites and stalagmites grow from above and below, some just meeting in the middle showing the great age of this huge hall.  Just above is a large opening in the ceiling, showing the sky in the outside world.</description>
+    <position x="380" y="620" z="0" />
+    <arc exit="east" move="east" destination="99" />
+    <arc exit="southwest" move="southwest" destination="98" />
+    <arc exit="northwest" move="northwest" destination="96" />
+  </node>
+  <node id="98" name="Cavern Floor">
+    <description>The edge of the pond laps up on the shore, a gentle sound barely heard over the rush of the waterfall in the corner.  The cavern opens up to the southeast, a contrast of green grass in the center below an opening in the ceiling, and the browns of the dead rock around it, where the elements never reach.</description>
+    <position x="360" y="640" z="0" />
+    <arc exit="northeast" move="northeast" destination="97" />
+    <arc exit="southeast" move="southeast" destination="105" />
+    <arc exit="south" move="south" destination="101" />
+    <arc exit="northwest" move="northwest" destination="95" />
+  </node>
+  <node id="99" name="Cavern Floor">
+    <description>Green blades of grass peek out of the ground here, growing in softer soil that has been tended by the rains and flying creatures that dropped seeds through the hole above.  Low bushes are scattered about the ground, paying no regard to the path trying to wind its way through the area.</description>
+    <position x="400" y="620" z="0" />
+    <arc exit="east" move="east" destination="100" />
+    <arc exit="west" move="west" destination="97" />
+  </node>
+  <node id="100" name="Cavern Floor">
+    <description>The perimeter of the grassy glen in the cavern wraps around here, curving southeastward across the trail, hugging the edge of the shadow cast by the edge of the hole.  Odd marks lie in the grass, as though something heavy has been dragged through recently along a rather random path.</description>
+    <position x="420" y="620" z="0" />
+    <arc exit="north" move="north" destination="114" />
+    <arc exit="northeast" move="northeast" destination="108" />
+    <arc exit="south" move="south" destination="106" />
+    <arc exit="west" move="west" destination="99" />
+  </node>
+  <node id="101" name="Cavern Floor">
+    <description>Vines wander across the path, heading over to the western wall and curling up it, striving upward toward the crevice above.  Interwoven between the vines are various webs, each housing a large black spider.  One web is disturbed when a beetle falls from the vine onto the web, causing the hairy resident to react quickly to get a meal.</description>
+    <position x="360" y="680" z="0" />
+    <arc exit="north" move="north" destination="98" />
+    <arc exit="northeast" move="northeast" destination="105" />
+    <arc exit="southeast" move="southeast" destination="102" />
+  </node>
+  <node id="102" name="Cavern Floor">
+    <description>Set at the foot of a large conical glass shape, the path curves either way to meet the glass wall that makes up one entire side of the cavern.  The stalagmite is fluted and polished, looking to be man-made.</description>
+    <position x="380" y="700" z="0" />
+    <arc exit="southeast" move="southeast" destination="103" />
+    <arc exit="southwest" move="southwest" destination="104" />
+    <arc exit="northwest" move="northwest" destination="101" />
+  </node>
+  <node id="103" name="Cavern Floor">
+    <description>Sharp shards of glass are scattered around the area, as if there were some sort of explosion.  A cracked and battered glass wall rises before you, marred only by the occasional metallic fleck suspended in the translucent material, now dulled and lifeless.</description>
+    <position x="420" y="740" z="0" />
+    <arc exit="north" move="north" destination="106" />
+    <arc exit="northeast" move="northeast" destination="107" />
+    <arc exit="northwest" move="northwest" destination="102" />
+  </node>
+  <node id="104" name="Cavern Floor">
+    <description>Wedged into a corner between the rough rock wall and the curving glass stalactite, the path ends here.  A nest has been built in the relative security of the area, but lies empty showing no trace of what happened to its occupants.</description>
+    <position x="360" y="720" z="0" />
+    <arc exit="northeast" move="northeast" destination="102" />
+  </node>
+  <node id="105" name="Cavern Floor">
+    <description>Here the grass is at its thickest and greenest, being directly under the wide gash above.  Flowers sprout up around the area, adding soft colors to the browns of the rock cavern.  A stalactite is wrapped in greenery, vines curling up its height like a large conical topiary.</description>
+    <position x="380" y="660" z="0" />
+    <arc exit="east" move="east" destination="106" />
+    <arc exit="southwest" move="southwest" destination="101" />
+    <arc exit="northwest" move="northwest" destination="98" />
+  </node>
+  <node id="106" name="Cavern Floor">
+    <description>Soft green spreads around in an oval just under the large hole in the ceiling.  A narrow trail has been beaten down in the grass, but on all sides of the trail the healthy ground covering springs back up after the slightest touch.  Small lilac fae slippers are dotted throughout the grass, adding a soft contrast of flowery color.</description>
+    <position x="420" y="660" z="0" />
+    <arc exit="north" move="north" destination="100" />
+    <arc exit="southeast" move="southeast" destination="107" />
+    <arc exit="south" move="south" destination="103" />
+    <arc exit="west" move="west" destination="105" />
+  </node>
+  <node id="107" name="Cavern Floor">
+    <description>Deep gouges are etched in a sharp diagonal across the face of the icy-looking glass.  Water trickles down the surface, coming from a large hole halfway up the wall, making eerie textures on the scratch marks in the glass.</description>
+    <position x="460" y="700" z="0" />
+    <arc exit="north" move="north" destination="108" />
+    <arc exit="northeast" move="northeast" destination="111" />
+    <arc exit="east" move="east" destination="113" />
+    <arc exit="southwest" move="southwest" destination="103" />
+    <arc exit="northwest" move="northwest" destination="106" />
+    <arc exit="climb" move="climb gouge" destination="120" />
+  </node>
+  <node id="108" name="Cavern Floor">
+    <description>Blood splotches are smeared over the wall, and soaked up in the sponge-like moss coating the ground.  Shards of bones lie in the tangled mess of lichen as several insects buzz around.  A thick smell of mold hangs heavily over the area, permeating the air as though a fungus stew is boiling in a cauldron, getting overdone.</description>
+    <position x="460" y="580" z="0" />
+    <arc exit="east" move="east" destination="109" />
+    <arc exit="south" move="south" destination="107" />
+    <arc exit="southwest" move="southwest" destination="100" />
+  </node>
+  <node id="109" name="Cavern Floor">
+    <description>Growing close to a corner, the path here seems more closed in than in the rest of the cavern.  The wall slants towards a tall crevice to the east, as though tempting adventurers further in that direction to explore it.  Gravel lies scattered around the ground vibrating softly at the sounds that come from the eastern wall.</description>
+    <position x="520" y="580" z="0" />
+    <arc exit="east" move="east" destination="110" />
+    <arc exit="west" move="west" destination="108" />
+  </node>
+  <node id="110" name="Cavern Corner, At The Crevice">
+    <description>Wedged into a corner is a crevice from which ominous sounds echo into the larger chamber.  The opening is very narrow, and a large Gor'Tog would have just enough room to squeeze through it sideways.  A small granite stone has been displaced at the foot of the crevice, making somewhat of a step up into the side room.</description>
+    <position x="580" y="580" z="0" />
+    <arc exit="southwest" move="southwest" destination="111" />
+    <arc exit="west" move="west" destination="109" />
+  </node>
+  <node id="111" name="Cavern Floor">
+    <description>Cloaked in shadows, the path turns here to lie just off the range of the elements that come in through the opening in the ceiling.  Stalactites lurk in the dimness, cutting off further progress eastward, and directing the trail in a v-shape to the northeast and southeast.</description>
+    <position x="520" y="640" z="0" />
+    <arc exit="northeast" move="northeast" destination="110" />
+    <arc exit="southeast" move="southeast" destination="112" />
+    <arc exit="southwest" move="southwest" destination="107" />
+  </node>
+  <node id="112" name="Cavern Floor">
+    <description>The glass wall corners here, meeting the strong eastern rock wall and curving away from the cavern as though great events over time have crushed the two materials together.  The wall itself is tall and smooth, and tunnels can be seen faintly through the translucent glass.</description>
+    <position x="540" y="660" z="0" />
+    <arc exit="northwest" move="northwest" destination="111" />
+  </node>
+  <node id="113" name="Cavern Floor">
+    <description>The glass dips slightly inward from its straight path, away from the cavern.  Vines sprawl along the ground, short tendrils trying to work their way up the slick wall, but can only making it a few feet before falling off and growing across the ground instead.</description>
+    <position x="480" y="700" z="0" />
+    <arc exit="west" move="west" destination="107" />
+  </node>
+  <node id="114" name="Cavern Floor">
+    <description>A low overhang looms over the area, casting a shadow on the ground beneath it.  Vines hang down from the ledge, offering an excellent climbing surface.  Tiny purple buds dot the long tendrils that reach in gentle curls to brush against the ground.</description>
+    <position x="420" y="600" z="0" />
+    <arc exit="south" move="south" destination="100" />
+    <arc exit="climb" move="climb vine" destination="115" />
+  </node>
+  <node id="115" name="A Small Ledge">
+    <description>The ledge is barely wide enough for a person to stand, but offers a good view of the cavern.  To the west is a pond with a waterfall in the corner and on the opposite wall is a crevice, with haunting sounds coming from it.  All the way to the south is a tall glass wall, sparkling with all the little light that hits it, illuminating the cavern.</description>
+    <position x="420" y="580" z="0" />
+    <arc exit="climb" move="climb vine" destination="114" />
+    <arc exit="go" move="go hole" destination="116" />
+  </node>
+  <node id="116" name="A Narrow Tunnel">
+    <description>The tunnel is perhaps fortuitously dim here, given the slimy feel to the floor and the occasional crunching sounds underfoot.</description>
+    <position x="420" y="560" z="0" />
+    <arc exit="northeast" move="northeast" destination="117" />
+    <arc exit="go" move="go hole" destination="115" />
+  </node>
+  <node id="117" name="A Narrow Tunnel">
+    <description>The tunnel is perhaps fortuitously dim here, given the slimy feel to the floor and the occasional crunching sounds underfoot.</description>
+    <position x="440" y="540" z="0" />
+    <arc exit="northeast" move="northeast" destination="118" />
+    <arc exit="southwest" move="southwest" destination="116" />
+  </node>
+  <node id="118" name="A Narrow Tunnel">
+    <description>The tunnel is perhaps fortuitously dim here, given the slimy feel to the floor and the occasional crunching sounds underfoot.</description>
+    <position x="460" y="520" z="0" />
+    <arc exit="northeast" move="northeast" destination="119" />
+    <arc exit="southwest" move="southwest" destination="117" />
+  </node>
+  <node id="119" name="A Narrow Tunnel" color="#00FF00">
+    <description>The tunnel is perhaps fortuitously dim here, given the slimy feel to the floor and the occasional crunching sounds underfoot.  A light filters in through a hole in the floor.</description>
+    <position x="480" y="500" z="0" />
+    <arc exit="southwest" move="southwest" destination="118" />
+    <arc exit="go" move="go crack" destination="83" />
+  </node>
+  <node id="120" name="Glass Maze">
+    <description>The walls are all smooth glass here -- the original sandstone turned to its present state by some long-forgotten geological event.  Tunnels wander throughout the smooth, translucent surfaces that look like something straight from the legendary ice caverns far to the north.  The floor is warped and cracked, as if some major damage was done to it.</description>
+    <position x="460" y="780" z="0" />
+    <arc exit="southeast" move="southeast" />
+    <arc exit="climb" move="climb gouge" destination="107" />
+  </node>
+  <node id="141" name="Dzil'Tseyi, Nazleen" color="#FF0000">
+    <description>Panels of dark volcanic glass polished to a mirror finish have been carefully set along the walls of this great chamber, capturing the reflections from countless torches burning with flames of violet, green, and scarlet.  The very air is ablaze with a glory of color, but it cannot dim the brilliance of the treasures carefully arranged on sculpted tables of rose crystal.</description>
+    <position x="-340" y="620" z="0" />
+    <arc exit="go" move="go gate" destination="142" />
+    <arc exit="go" move="go tunnel" destination="208" />
+  </node>
+  <node id="142" name="Dzil'Tseyi, Nazleen Entrance">
+    <description>A sunken avenue delimited by raised edges of gleaming igneous rock leads upwards towards a massive gate fashioned from chunks of obsidian.  Billows of scented smoke rising from gold vessels suspended from the stone walls veil whatever lies beyond.</description>
+    <position x="-360" y="620" z="0" />
+    <arc exit="go" move="go gate" destination="141" />
+    <arc exit="go" move="go bridge" destination="143" />
+  </node>
+  <node id="143" name="Dzil'Tseyi, Narrow Ledge" color="#00FF00">
+    <description>Frayed ropes and lengths of vine tied around a large rock stand as mute evidence of the attempts of previous adventurers to cross the treacherous flow.  At the bottom of the chasm is the river of fire, and across it is yet another distant ledge, possibly reachable by a good throw of a rope.</description>
+    <position x="-380" y="640" z="0" />
+    <arc exit="east" move="east" destination="144" />
+    <arc exit="go" move="go bridge" destination="142" />
+  </node>
+  <node id="144" name="Dzil'Tseyi, Narrow Ledge">
+    <description>Successfully negotiating this sliver of a walkway requires the grace of a cat -- and a lucky cat, at that.  Rock made brittle by relentless heat crumbles and flakes away with the slightest pressure, and the whole of this tenuous path seems destined to fall away, plunging any unlucky traveler down a steep slope and into the river of fire!</description>
+    <position x="-340" y="640" z="0" />
+    <arc exit="west" move="west" destination="143" />
+    <arc exit="go" move="go ledge" destination="145" />
+  </node>
+  <node id="145" name="Dzil'Tseyi, Dragon Way">
+    <description>Air that is already warm becomes scorchingly hot here, and eye-searing flashes prevent any clear view of whatever lies ahead.  Even squinting is painful in the glaring brilliance, though doing so finally reveals the source of the sensory overload.  Someone has suspended countless rounds of polished volcanic glass from the arch overhead, and the fragments are reflecting the incandescent glow of a river of flames immediately ahead!</description>
+    <position x="-380" y="560" z="0" />
+    <arc exit="southwest" move="southwest" destination="146" />
+    <arc exit="west" move="west" destination="148" />
+    <arc exit="go" move="go ledge" destination="144" />
+  </node>
+  <node id="146" name="Dzil'Tseyi, Dragon Walk">
+    <description>Very skilled (or perhaps foolhardy) builders have erected a bridge of granite spanning the leaping flames.  From here, there are occasional glimpses of the river's surface, coated with a thin film of some iridescent substance that has ignited and gone ablaze.  Whether by accident or by design, this fire-loving culture has created a formidable barrier.</description>
+    <position x="-400" y="580" z="0" />
+    <arc exit="northeast" move="northeast" destination="145" />
+    <arc exit="go" move="go bridge" destination="147" />
+  </node>
+  <node id="147" name="Dzil'Tseyi, Granite Bridge">
+    <description>Rising abruptly from the stone ramp, a single massive block of granite has been chiseled to form a walkway spanning the river of flames below.  A sentry paces warily back and forth between a steep slope that drops away behind the supporting pillars, the walkway itself, and the ramp.</description>
+    <position x="-420" y="600" z="0" />
+    <arc exit="go" move="go ramp" destination="146" />
+  </node>
+  <node id="148" name="Dzil'Tseyi, Dragon Way">
+    <description>Dark granite arches loom overhead, gleaming with macabre ornamentation.  Rows of skulls have been settled into niches in the stone, culminating at the apex of each arch with a skeletal grouping that is obviously humanoid.  Within each skull, little candles burn, illuminating hollow eyes and the characteristic grimace of those who have passed beyond the veil of life.</description>
+    <position x="-420" y="560" z="0" />
+    <arc exit="northeast" move="northeast" destination="149" />
+    <arc exit="east" move="east" destination="145" />
+  </node>
+  <node id="149" name="Dzil'Tseyi, Dragon Way">
+    <description>The path drops away sharply here, plunging into oppressive darkness.  Stacked on either side and filling the warming air with an oddly bitter odor are towering stacks of unidentifiable bones with one commonality -- all of them are charred and blackened, looking as though they have been immolated in some relentless flame.</description>
+    <position x="-400" y="540" z="0" />
+    <arc exit="north" move="north" destination="150" />
+    <arc exit="southwest" move="southwest" destination="148" />
+  </node>
+  <node id="150" name="Dzil'Tseyi, Pathway">
+    <description>On either side of this passage stand stalagmites, carved top to bottom with inscriptions and wrapped with strands of delicate amber bells on braided saffron thread.  Pale, sueded hides hung over a tall archway flap momentarily in a warm gust of wind, and incense wafts through the air carried on plumes of white smoke.</description>
+    <position x="-400" y="520" z="0" />
+    <arc exit="east" move="east" destination="151" />
+    <arc exit="south" move="south" destination="149" />
+  </node>
+  <node id="151" name="Dzil'Tseyi, Walkway">
+    <description>A large opening leads to the cave where ritual supplies and other necessities for the Kather shamans are stored, though the light coming from within is dim at best.  Apprentice shamans move quickly across the walkways, tending to the numerous torches and bonfires, ensuring that not a single flame dies out.</description>
+    <position x="-380" y="520" z="0" />
+    <arc exit="southeast" move="southeast" destination="152" />
+    <arc exit="west" move="west" destination="150" />
+  </node>
+  <node id="152" name="Dzil'Tseyi, Passage">
+    <description>Clusters of phantom crystals glitter along the walls of igneous rock, every inch cloaked with row upon row of pictographs and spindly writing.  A faint clinking and clattering reveals a row of prayer sticks suspended directly overhead bearing painted owl skulls decorated with gold beads.</description>
+    <position x="-360" y="540" z="0" />
+    <arc exit="northeast" move="northeast" destination="153" />
+    <arc exit="northwest" move="northwest" destination="151" />
+  </node>
+  <node id="153" name="Dzil'Tseyi, Narrow Passage">
+    <description>The walls here have been smoothed and polished, studded end to end with obsidian sconces holding torches that burn with violet flame.  The base of each torch is wrapped with leather thongs set with carved amethyst, gems and flames competing in brilliance.  A keyhole passage is bordered with pictographs interspersed with patterned scratches that look like some kind of writing.</description>
+    <position x="-340" y="520" z="0" />
+    <arc exit="east" move="east" destination="154" />
+    <arc exit="southwest" move="southwest" destination="152" />
+  </node>
+  <node id="154" name="Dzil'Tseyi, Narrow Passage">
+    <description>Eldritch violet light glows from the passageway ahead, barely reaching this narrow tunnel.  Its faint rays manage to illuminate the swirling patterns carved into the floor, revealing nested triangles, sunburst symbols, and circles of handprints from some being which has narrow, elongated fingers.</description>
+    <position x="-320" y="520" z="0" />
+    <arc exit="west" move="west" destination="153" />
+    <arc exit="go" move="go crevice" destination="155" />
+  </node>
+  <node id="155" name="Dzil'Tseyi, Pathway">
+    <description>A shadowed crevice leads straight into the cliff face, its jagged edges illuminated by the light of a pair of torches standing on either side.  Set above the crevice is a large prayer wheel, fluttering with soft grey feathers and worked with rows of bright yellow beads.  Turning at its center is a polished metallic disc engraved with a sunburst.</description>
+    <position x="-300" y="520" z="0" />
+    <arc exit="go" move="go crevice" destination="154" />
+    <arc exit="go" move="go gate" destination="156" />
+  </node>
+  <node id="156" name="Dzil'Tseyi, The Gate of Bones">
+    <description>A massive gate rises from the ground, rock and stone sinking into its framework as if directed by an adept Earth Mage.  Dark steel and bone intertwine to form the bars of the barrier, their surfaces etched with runes and symbols that are unfamilar.  Weapon stands, currently empty, line the walls, providing devoted with the means to challenge those who wish to pass beyond the gate.</description>
+    <position x="-280" y="520" z="0" />
+    <arc exit="south" move="south" destination="157" />
+    <arc exit="go" move="go gate" destination="155" />
+  </node>
+  <node id="157" name="Dzil'Tseyi, A Steep Trail">
+    <description>An arch of pale stone straddles the crests of both crevice walls as their union approaches to the north, closing above a narrow tunnel that flickers in and out of vision in time with the wavering torchlight.  The bridge above has been worked along its under-surface with the design of a serpentine creature, its blind eyes watching all who pass beneath its visage.</description>
+    <position x="-280" y="540" z="0" />
+    <arc exit="north" move="north" destination="156" />
+    <arc exit="southeast" move="southeast" destination="158" />
+  </node>
+  <node id="158" name="Dzil'Tseyi, A Steep Trail">
+    <description>Flickering light from above trickles into the crevice, skirting along the border of shadows that rises up from the broken ground.  The darkness here has life, hungry tendrils that measure and taste everything within their reach, forms that coalesce and fade away like breath in winter's air.</description>
+    <position x="-260" y="560" z="0" />
+    <arc exit="southeast" move="southeast" destination="159" />
+    <arc exit="northwest" move="northwest" destination="157" />
+  </node>
+  <node id="159" name="Dzil'Tseyi, A Steep Trail">
+    <description>Huge slabs of stone define the path that climbs to the northwest, their towering presence inspiring thoughts of hidden archers and weapons of ambush.  Above this foreign trail the air is still, its apathy permitting an eerie silence to settle upon the rocks like a thick heat.</description>
+    <position x="-240" y="580" z="0" />
+    <arc exit="east" move="east" destination="160" />
+    <arc exit="northwest" move="northwest" destination="158" />
+  </node>
+  <node id="160" name="Dzil'Tseyi, The Proving Circle">
+    <description>Four shallow trenches have been dug from the expansive area of this circle, each several paces long while only two hands deep.  A dark grey ash partially fills each track, small chips of an unconsumed mineral sparkling amidst the charred remains of a long-dead fire.</description>
+    <position x="-220" y="580" z="0" />
+    <arc exit="northeast" move="northeast" destination="161" />
+    <arc exit="southeast" move="southeast" destination="162" />
+    <arc exit="west" move="west" destination="159" />
+  </node>
+  <node id="161" name="Dzil'Tseyi, The Proving Circle">
+    <description>The wall of the pit dips slightly here, its upper lip appearing to have melted inward, as if dirt and stone were capable of such a transformation.  A bubbling well of molten lava rests slightly below ground level within the pit, its heat greater than the most powerful Dwarven forge.  Four thick loops of metal have been imbedded along the inner surface of the fire levy, unaffected by their surroundings.</description>
+    <position x="-200" y="560" z="0" />
+    <arc exit="southeast" move="southeast" destination="163" />
+    <arc exit="southwest" move="southwest" destination="160" />
+  </node>
+  <node id="162" name="Dzil'Tseyi, The Proving Circle">
+    <description>Prints that linger from countless sparring matches circle and weave upon the sterile dust, prowess and mastery lost among the steps of the newly initiated.  Inflicted by the honed edge of a heavy blade, several deep cuts scar the smooth surface of the training ground.</description>
+    <position x="-200" y="600" z="0" />
+    <arc exit="northeast" move="northeast" destination="163" />
+    <arc exit="northwest" move="northwest" destination="160" />
+  </node>
+  <node id="163" name="Dzil'Tseyi, The Proving Circle">
+    <description>Dead soil and powdered bone are packed into a huge open circle, its circumference extending outward from the narrow crevice to the east.  Radiating from a walled central pit, a ferocious heat holds reign here, its insistent presence consuming every last vestige of moisture from the rocks that surround this ring.</description>
+    <position x="-180" y="580" z="0" />
+    <arc exit="east" move="east" destination="164" />
+    <arc exit="southwest" move="southwest" destination="162" />
+    <arc exit="northwest" move="northwest" destination="161" />
+  </node>
+  <node id="164" name="Dzil'Tseyi, A Scorched Path">
+    <description>A narrow path has been carved into a jagged crevice, the gap barely wide enough to accept the breadth of a Gor'Tog's shoulders.  The rocks and soil that line the ground are scorched and hot to the touch, all semblance of life burned from them long ago.</description>
+    <position x="-160" y="580" z="0" />
+    <arc exit="west" move="west" destination="163" />
+    <arc exit="climb" move="climb ladder" destination="165" />
+  </node>
+  <node id="165" name="Dzil'Tseyi, Tail of the Dragon">
+    <description>Cliff and ledge converge again, funneling travelers towards a sheer slope that seems to leap from the ground, breaking the trail.  A stone ladder bolted into the rock face consists of sturdy rungs scaling the obstacle.</description>
+    <position x="-140" y="580" z="0" />
+    <arc exit="northeast" move="northeast" destination="166" />
+    <arc exit="east" move="east" destination="167" />
+    <arc exit="climb" move="climb ladder" destination="164" />
+  </node>
+  <node id="166" name="Dzil'Tseyi, A Sheer Cliff">
+    <description>Wrought-iron rings hold torches that burn with a wavering orange flame, their light bordering a vertical trail of handholds that ascends towards a slight overhang.  Scraps of food and empty waterskins are scattered around the area, several meal times spent staring back at the dark predator that watches from the south.</description>
+    <position x="-120" y="560" z="0" />
+    <arc exit="southeast" move="southeast" destination="168" />
+    <arc exit="south" move="south" destination="167" />
+    <arc exit="southwest" move="southwest" destination="165" />
+  </node>
+  <node id="167" name="Dzil'Tseyi, Tail of the Dragon">
+    <description>The reflective barrier rises to the height of a rock guardian here, shielding the lower cavern from view.  A tremendous dragon sculpture perches upon the crest of the wall, chiseled onyx talons biting deeply into the granite, bloodgem eyes staring over the clearing in silent vigil.  A small pile of offerings lies beneath its fearsome maw, stacked upon a boulder stained dark red.</description>
+    <position x="-120" y="580" z="0" />
+    <arc exit="north" move="north" destination="166" />
+    <arc exit="east" move="east" destination="168" />
+    <arc exit="west" move="west" destination="165" />
+  </node>
+  <node id="168" name="Dzil'Tseyi, Tail of the Dragon">
+    <description>A rocky clearing expands from the cliff, a continuous arc of torches charting its cautious growth.  A dark granite wall rises gently along the border of the ledge, its surface polished to a fervent shine, unbroken by joint or seam.  Laced together along the mass are several carefully drawn symbols, each larger than a tower shield.</description>
+    <position x="-100" y="580" z="0" />
+    <arc exit="northeast" move="northeast" destination="169" />
+    <arc exit="west" move="west" destination="167" />
+    <arc exit="northwest" move="northwest" destination="166" />
+  </node>
+  <node id="169" name="Dzil'Tseyi, Tail of the Dragon">
+    <description>A diminutive Kather, his features cloaked by a bone-white hood, sits staring up in rapture at a large brazier, its flame a brilliant purple.  Fully oblivious to the world around him, his fingers dip into a small pouch on the ground, pulling out a bit of dust that he throws into the brazier's hold.  The fire leaps and crackles, covering the low murmur of his incessant chanting.</description>
+    <position x="-80" y="560" z="0" />
+    <arc exit="northeast" move="northeast" destination="170" />
+    <arc exit="southwest" move="southwest" destination="168" />
+  </node>
+  <node id="170" name="Dzil'Tseyi, Tail of the Dragon">
+    <description>Most likely carved by both time and tools, numerous caves dig into the sheer face of rock running along the northern edge of the path.  A thin trail has been cut into the side of the cliff, rising at a steep angle to disappear into a tunnel above.</description>
+    <position x="-60" y="540" z="0" />
+    <arc exit="southeast" move="southeast" destination="171" />
+    <arc exit="southwest" move="southwest" destination="169" />
+  </node>
+  <node id="171" name="Dzil'Tseyi, Tail of the Dragon">
+    <description>Often flirting with the cliff's edge, this path provides an expansive view of the cavern, the dots of torchlight dim compared to a thick line of fire that slithers far below.  A warm updraft carries a cloud of soot and dust over the trail, coating rock and traveller without prejudice.</description>
+    <position x="-40" y="560" z="0" />
+    <arc exit="east" move="east" destination="172" />
+    <arc exit="northwest" move="northwest" destination="170" />
+  </node>
+  <node id="172" name="Dzil'Tseyi, Tail of the Dragon">
+    <description>The track cuts between two levels of an enormous cliff that spans beyond vision, dense shadows hiding its union with the jagged ceiling.  At least one more partition is visible above, the discontinuous formation conjuring images of a giant staircase ascending into the darkness of a night sky.</description>
+    <position x="-20" y="560" z="0" />
+    <arc exit="southeast" move="southeast" destination="173" />
+    <arc exit="west" move="west" destination="171" />
+  </node>
+  <node id="173" name="Dzil'Tseyi, Tail of the Dragon">
+    <description>Crafted of soot and stone, this broken path pushes further up the slope, smudged prints marking the most used course among the rocks.  Innumerable torch stands line the trail, carrying flames that dance from pale yellow to deep red, their shadows thrown and lost like leaves in the autumn wind.</description>
+    <position x="0" y="580" z="0" />
+    <arc exit="northwest" move="northwest" destination="172" />
+    <arc exit="climb" move="climb trail" destination="174" />
+  </node>
+  <node id="174" name="Dzil'Tseyi, Talon Trail">
+    <description>A heavily-worn path leads in and out of the wide doorway of the largest common bunkhouse on the trail.  The wide door allows ample space for entering and exiting the building.  A rocky trail has been cut into the slope of the cliff wall, rising sharply to the northeast.</description>
+    <position x="40" y="580" z="0" />
+    <arc exit="east" move="east" destination="175" />
+    <arc exit="climb" move="climb trail" destination="173" />
+  </node>
+  <node id="175" name="Dzil'Tseyi, Talon Trail">
+    <description>A chair rests next to the opening to this home.  Looking to be hand carved, its back is in the shape of a dragon's back, curved with each scale picked out in bas-relief.  The door is covered with a curtain of various multi-hued patches, a welcome burst of color to the browns and tans of the rock caves that surround it.</description>
+    <position x="60" y="580" z="0" />
+    <arc exit="east" move="east" destination="176" />
+    <arc exit="west" move="west" destination="174" />
+    <arc exit="go" move="go door" destination="186" />
+    <arc exit="go" move="go doorway" destination="186" />
+  </node>
+  <node id="176" name="Dzil'Tseyi, Talon Trail">
+    <description>The trail here is cluttered, covered in wood chips and cloth shreds.  Lines stretch across the path, surrounding the area in a rainbow of materials that billow in the soft breeze that echos through the cave.  A broad archway opens to the north, from which a trail of various scraps is tracked.</description>
+    <position x="80" y="580" z="0" />
+    <arc exit="east" move="east" destination="177" />
+    <arc exit="west" move="west" destination="175" />
+    <arc exit="go" move="go archway" destination="187" />
+  </node>
+  <node id="177" name="Dzil'Tseyi, Talon Trail">
+    <description>A lifelike dragon's head is painted around the opening here, its gaping mouth forming a doorway.  Two torches reside on either side of the entrance, secured to the wall in sconces carved to look like dragon claws grasping the tightly tied reed torch.  The torchlight sends an eerie glow over the dragon mural, making its eyes look almost alive.</description>
+    <position x="100" y="580" z="0" />
+    <arc exit="east" move="east" destination="178" />
+    <arc exit="west" move="west" destination="176" />
+    <arc exit="go" move="go doorway" destination="188" />
+  </node>
+  <node id="178" name="Dzil'Tseyi, Talon Trail">
+    <description>The thick scent things cooking drift through the wide door to the building here, begging all that pass to enter.  Under each window is a box -- one containing a strange black soil with thick, leafy plants, the other containing the same soil from which sprouts dozens of tiny mushrooms -- all looking well tended.  The path continues to skirt the cliff to the east and the west, packed down hard by years of travel by foot.</description>
+    <position x="120" y="580" z="0" />
+    <arc exit="east" move="east" destination="179" />
+    <arc exit="west" move="west" destination="177" />
+    <arc exit="go" move="go door" destination="190" />
+  </node>
+  <node id="179" name="Dzil'Tseyi, Talon Trail">
+    <description>The path along the ledge is clear and free of rubble, as though it is tended to every day.  Boxes are attached under the window of the nearby home filled with a unusual-looking soft black soil, and spilling over with leafy plants in a living cascade of deep greens.  Good smells drift in on the breeze from the west, tempting all walking to head in that direction.</description>
+    <position x="140" y="580" z="0" />
+    <arc exit="east" move="east" destination="180" />
+    <arc exit="west" move="west" destination="178" />
+    <arc exit="go" move="go doorway" destination="193" />
+  </node>
+  <node id="180" name="Dzil'Tseyi, Talon Trail">
+    <description>A narrow lichen-lined trail curves ever so slightly between a sharp dropoff and a cliff face.  Within the cliff are hollow areas, openings carved out of the stone allowing passage into and out of the homes to those who wish it.  Tiny mushrooms poke their caps up from the surrounding moss, resting undisturbed along the path.</description>
+    <position x="200" y="580" z="0" />
+    <arc exit="east" move="east" destination="181" />
+    <arc exit="west" move="west" destination="179" />
+    <arc exit="go" move="go door" destination="194" />
+  </node>
+  <node id="181" name="Dzil'Tseyi, Talon Trail">
+    <description>The ground finally begins to level out, the narrow trail flowing into a broader pathway.  Tucked into a little alcove hollowed into the cliff side is what appears to be an altar.  Resting on its carved surface is a clay pot in an exquisite triple coil design, filled with mushrooms on a bed of mosses and multicolored lichen.</description>
+    <position x="220" y="580" z="0" />
+    <arc exit="west" move="west" destination="180" />
+    <arc exit="northwest" move="northwest" destination="182" />
+  </node>
+  <node id="182" name="Dzil'Tseyi, Switchback Trail">
+    <description>The trail narrows and inclines steeply downward again, hugging the face of the sheer cliff.  The darkness beyond is alive with the lights of innumerable flames glittering like stars across the night sky.</description>
+    <position x="200" y="560" z="0" />
+    <arc exit="southeast" move="southeast" destination="181" />
+    <arc exit="northwest" move="northwest" destination="183" />
+  </node>
+  <node id="183" name="Dzil'Tseyi, Switchback Trail">
+    <description>A slight depression has been scooped out alongside the trail, and a tiny fire burns brightly there.  Its flames dance with rich shades of crimson and scarlet, perhaps derived from some reaction with the chunks of cinnabar neatly banked around it.</description>
+    <position x="160" y="520" z="0" />
+    <arc exit="north" move="north" destination="184" />
+    <arc exit="southeast" move="southeast" destination="182" />
+  </node>
+  <node id="184" name="Dzil'Tseyi, Switchback Trail">
+    <description>Another of the stately hide-and-pole dwellings perches on this ledge, standing sentinel at the passage from the level above to whatever lies ahead.  Gleaming rows of carefully painted eyes cover the edges of the entry flap, and the flexible poles are wrapped with leather thongs suspending polished bird skulls decorated with rows of azure beads.</description>
+    <position x="160" y="500" z="0" />
+    <arc exit="south" move="south" destination="183" />
+    <arc exit="northwest" move="northwest" destination="185" />
+  </node>
+  <node id="185" name="Dzil'Tseyi, Switchback">
+    <description>Just past the arch is a tiny ledge that quickly falls away into a nearly vertical switchback.  Only partially illuminated by dim light from the room above, the trail's edges are marked with little stacks of precisely arranged polished stones of violet and deep green.</description>
+    <position x="140" y="480" z="0" />
+    <arc exit="southeast" move="southeast" destination="184" />
+    <arc exit="go" move="go arch" destination="195" />
+  </node>
+  <node id="186" name="Dzil'Tseyi, Artisans' Home">
+    <description>Occupants of this house have the privilege of living in the finest abode on this level.  The floor is covered with a woven cotton rug of a rainbow shades and hues forming an intricate pattern.  A thick quilt lies on the wide bed pushed up against one wall while a soft bunk is stationed against the opposite wall.  On the rug in the center of the floor is a table, the legs carved out to look like smooth spheres stacked up on top of one another.</description>
+    <position x="60" y="600" z="0" />
+    <arc exit="go" move="go doorway" destination="175" />
+    <arc exit="go" move="go door" destination="175" />
+  </node>
+  <node id="187" name="Dzil'Tseyi, Trading Corner" color="#FF0000">
+    <description>Shelves circle the area, all looking as if they were carved directly from the rock walls.  On each shelf is nestled various goods ranging from clothing to soap -- everything that is needed to be comfortable.  Sitting on a round table in the middle of the room is a chipped jar, its faded label covered in a mix of numbers and odd symbols.  Leading out of the shop is a broad archway carved to look like tiny dragons curled around the top.</description>
+    <position x="80" y="560" z="0" />
+    <arc exit="go" move="go archway" destination="176" />
+    <arc exit="go" move="go rounded doorway" destination="221" />
+  </node>
+  <node id="188" name="Dzil'Tseyi, Dark Hall">
+    <description>Unlike every other area, this hall is cloaked in black, the only light coming from some source to the north.</description>
+    <position x="100" y="560" z="0" />
+    <arc exit="north" move="north" destination="189" />
+    <arc exit="go" move="go doorway" destination="177" />
+  </node>
+  <node id="189" name="Dzil'Tseyi, Round Room">
+    <description>Perfectly round, this room is a true achievement of architecture.  Around the circumference are small shelves, each with a different dragon icon perched on it.  The dragons' eyes are all fixed on one thing -- the blazing bonfire in the center of the room.  The fire is circled with small prayer mats, threadbare from the hours spent kneeling in worship.</description>
+    <position x="100" y="540" z="0" />
+    <arc exit="south" move="south" destination="188" />
+  </node>
+  <node id="190" name="Dzil'Tseyi, Dining Cave">
+    <description>Long tables criss-cross the room, stretching almost from corner to corner.  The smooth northeast wall bows in, as though something was pushing out from the other side in an ever constant pressure.  Kept to the most simplistic decor, the only noticeable fixture other than tables is a wide door, leading back to the path outside.</description>
+    <position x="120" y="560" z="0" />
+    <arc exit="go" move="go door" destination="178" />
+    <arc exit="go" move="go arch" destination="191" />
+  </node>
+  <node id="191" name="Dzil'Tseyi, Kitchen">
+    <description>Various stone and steel cooking implements lay scattered around the room, dented and bent from frequent use.  Conveniently placed in the center of the space is a bulky chopping block, a large butcher's knife embedded into the wood.  A soot-blackened stove is pushed up against one rock wall below a dark cupboard.  The smell of drying herbs and various foods cooking wafts through the room, making a rather distinct combination of scents.</description>
+    <position x="140" y="560" z="0" />
+    <arc exit="north" move="north" destination="192" />
+    <arc exit="go" move="go arch" destination="190" />
+  </node>
+  <node id="192" name="Dzil'Tseyi, Mushroom Garden">
+    <description>Brown caps of many shades and sizes pop up through the soft black soil around the area, with low wooden fences marking off different types of mushrooms.  Rounded buckets line the perimeter poised to catch drops of water as they cascade slowly down the rock face to keep the moisture of the soil at optimum levels.  Small baskets clutter the ground, waiting to be filled with a newly-picked crop.</description>
+    <position x="140" y="540" z="0" />
+    <arc exit="south" move="south" destination="191" />
+  </node>
+  <node id="193" name="Dzil'Tseyi, Farmers' Home">
+    <description>The room is arranged in a relatively simple layout.  A small cot rests against one wall and a wide sawdust-stuffed bed is pushed up against the other.  Between the two sits a table, a soft white cloth spread across it.  Covering the floor just under the doorway is a wide mat made out of dead woven foliage.</description>
+    <position x="140" y="600" z="0" />
+    <arc exit="go" move="go doorway" destination="179" />
+    <arc exit="go" move="go door" destination="179" />
+  </node>
+  <node id="194" name="Dzil'Tseyi, Common House">
+    <description>Hide curtains divide the modest sized room into several areas, each apparently for a separate family.  The curtains are all opened currently, revealing that all the residents are absent at the moment.  Chests and trunks lay around in each area, for holding the family treasures.</description>
+    <position x="200" y="600" z="0" />
+    <arc exit="go" move="go door" destination="180" />
+  </node>
+  <node id="195" name="Dzil'Tseyi, Chasm's Edge">
+    <description>The floor of this large alcove at the chasm's edge is covered end to end with a coiled spiral shaped from inlaid obsidian.  A trio of torches flickers at the spiral's center point, one burning with a scarlet flame, one with blue, and one with incandescent white.  Towering above the spiral is an arch of white granite, its apex set with a copper and turquoise winged serpent wearing a blazing headdress in the form of a crystal.</description>
+    <position x="120" y="460" z="0" />
+    <arc exit="south" move="south" destination="196" />
+    <arc exit="go" move="go arch" destination="185" />
+  </node>
+  <node id="196" name="Dzil'Tseyi, Chasm's Edge">
+    <description>At the edge of this huge cavern, stability and safety seem distant illusions when challenged by the reality of the precipitous drop only inches away.  Far below, traceries of glowing crimson thread their way against velvety blackness, marking the passage of a river somehow created not of water, but of fire.  Little flames dot the cliff sides, illuminating a labyrinthine honeycomb of buildings that seem to have been carved into the rock itself.</description>
+    <position x="120" y="480" z="0" />
+    <arc exit="north" move="north" destination="195" />
+    <arc exit="northwest" move="northwest" destination="197" />
+  </node>
+  <node id="197" name="Dzil'Tseyi, Chasm's Edge">
+    <description>Eerie shrieks and piercing whistles suddenly come from everywhere and nowhere, and a startled adventurer could easily lose balance here, plunging over the edge and into the darkness to find death.  The source of the unnerving racket is a series of hollowed bones carved into flutes and cleverly secured at the chasm's edge so as to catch the gusts of air rising from below.</description>
+    <position x="100" y="460" z="0" />
+    <arc exit="southeast" move="southeast" destination="196" />
+    <arc exit="south" move="south" destination="198" />
+  </node>
+  <node id="198" name="Dzil'Tseyi, Chasm Edge">
+    <description>Three bonfires blaze at the points of a great triangle delineated by neat rows of blue and white stones.  The air is filled with muted clinks and rattles as gusts of wind set countless tiny skeletons to dancing, each suspended from the ceiling by lengths of scarlet thread.  From their birdlike delicacy and predatory teeth, these must be bats -- denizens of the caves who have some special significance to whatever beings have preserved their remains.</description>
+    <position x="100" y="480" z="0" />
+    <arc exit="north" move="north" destination="197" />
+    <arc exit="northwest" move="northwest" destination="199" />
+  </node>
+  <node id="199" name="Dzil'Tseyi, Passage">
+    <description>The passage curves slightly to reveal a massive cavern, its walls arching upward into murky darkness far beyond the reach of the light cast by the single torch in the middle of the room.  From somewhere far below, icy gusts of wind whip upwards, whistling past a pair of superb calcite columns that stand directly underneath a ceiling frieze depicting a blazing scarlet eye surrounded by flames.</description>
+    <position x="40" y="420" z="0" />
+    <arc exit="east" move="east" destination="200" />
+    <arc exit="southeast" move="southeast" destination="198" />
+  </node>
+  <node id="200" name="Dzil'Tseyi, Passage">
+    <description>The hides of some large animal have been stretched over tall wooden poles to form what appears to be a shelter, though the lack of soot on the walls or disturbance in the silt floor of the passage hints that it has not been here long.  Heavy, wickedly-curved claws decorated with red beads are hung from the tops of the poles.  Painted in the center of each of the supple hides is a large, green-gold eye with an elliptical pupil.</description>
+    <position x="60" y="420" z="0" />
+    <arc exit="northeast" move="northeast" destination="201" />
+    <arc exit="west" move="west" destination="199" />
+  </node>
+  <node id="201" name="Dzil'Tseyi, Flames of Warding">
+    <description>Torches set in gleaming obsidian bases are arranged against the far wall in a half-circle.  They burn with deep blue flames, illuminating images of ocher, yellow, scarlet, and black that flow along the cavern walls, flickering with the illusion of motion conveyed by the firelight.  All of the images repeat the same theme, depicting writhing, serpent-like beings with wings, horns, and the teeth of carnivores.</description>
+    <position x="80" y="400" z="0" />
+    <arc exit="southwest" move="southwest" destination="200" />
+    <arc exit="west" move="west" destination="202" />
+  </node>
+  <node id="202" name="Dzil'Tseyi, Chamber">
+    <description>The passage opens abruptly into a large stone chamber, dominated by a great curtain of some translucent mineral that hangs in a wavy sheet behind a tiny turquoise pool.  Resting self-contained within its rocky border, the little pool holds oddly milky water covered by a thin layer of mist.  A faint shimmer hints at something lying beneath the surface.</description>
+    <position x="60" y="400" z="0" />
+    <arc exit="east" move="east" destination="201" />
+    <arc exit="southeast" move="southeast" destination="203" />
+  </node>
+  <node id="203" name="Dzil'Tseyi, Passage">
+    <description>Quartz deposits glitter within the pores of granite the color of stormclouds, and clusters of purple fan-shaped lichen glow with a faint bluish phosphorescence when struck by flickers of light from the rooms beyond.  Images of humanoid figures clutching bows and centered within larger spiral designs are delicately etched along the base of the granite walls.</description>
+    <position x="100" y="440" z="0" />
+    <arc exit="west" move="west" destination="204" />
+    <arc exit="northwest" move="northwest" destination="202" />
+  </node>
+  <node id="204" name="Dzil'Tseyi, Grotto">
+    <description>The shaft opens into a vaulted grotto lit by a pair of torches burning high overhead.  Their flames cast eerie shadows on a tower of ornately painted bear skulls that glimmers at the center of the room.  At the base of the tower, four massive skulls ornamented in blue and scarlet face in each of the cardinal directions, their hollow eye sockets carefully set with lustrous black obsidian.</description>
+    <position x="80" y="440" z="0" />
+    <arc exit="northeast" move="northeast" destination="205" />
+    <arc exit="east" move="east" destination="203" />
+    <arc exit="climb" move="climb crevice" destination="206" />
+  </node>
+  <node id="205" name="Dzil'Tseyi, Breakdown">
+    <description>This appears to be a blind tunnel - any exit that once existed is hopelessly blocked by a massive breakdown of rock and debris that fell from the roof in some past upheaval.  Occasional flickers of light from the adjacent room dance along a series of precisely-carved niches along the wall, each one painted crimson, and each holding a little clay figurine.</description>
+    <position x="100" y="420" z="0" />
+    <arc exit="southwest" move="southwest" destination="204" />
+  </node>
+  <node id="206" name="Dzil'Tseyi, Passage">
+    <description>The passageway widens slightly, lit by a small torch with a carved quartzite base that has been tucked into a niche.  Hissing flame casts yellowish shadows on the walls, throwing dark folds of rock into high relief.  Incised along one wall are a series of concentric circles and elaborately swirled patterns, extending into the shadows of a narrow crevice.</description>
+    <position x="60" y="460" z="0" />
+    <arc exit="climb" move="climb crevice" destination="204" />
+    <arc exit="climb" move="climb ledge" destination="207" />
+  </node>
+  <node id="207" name="Dzil'Tseyi, Passage" color="#00FF00">
+    <description>The ground underfoot is composed of a layer of fine silt that shifts with every step.  The darkness here would be all-enveloping save for the flickering, pale light that diffuses into this space from passages beyond, softly illuminating the petals of a cave flower - a gracefully curving cluster of mineral deposits that adorns one wall.</description>
+    <position x="40" y="480" z="0" />
+    <arc exit="climb" move="climb ledge" destination="206" />
+    <arc exit="climb" move="clilmb opening" destination="220" />
+  </node>
+  <node id="208" name="Western Sheer, A Ledge">
+    <description>After emerging from the maze of dark passages within the heart of the mountain, the vista from this rocky perch high above a lush valley is a rich canvas of colors and textures.  A breeze whispers past, heavy with the deep green scent of forests.  At its furthest end, the valley opens into a sweep of jagged peaks surrounding golden plains that sparkle with silvery points of reflected light.  The tantalyzing view grows misty with distance, then fades.</description>
+    <position x="-340" y="600" z="0" />
+    <arc exit="go" move="go crevice" destination="141" />
+    <arc exit="none" move="jump;jump" hidden="True" destination="9" />
+  </node>
+  <node id="209" name="Air Shaft's Bottom" color="#00FF00">
+    <description>A large narrow shaft rises overhead, smooth all around and marred only by a couple ledges protruding from the walls.  Piles of bones lie scattered around a small fissure in the center of the room, looking almost like someone uses this as their dump.  The fissure, though small, puts out an incredible amount of pressure through the air stream, maybe even enough to carry a person up the shaft.  On one wall are two knobs, one tarnished and one rust-eaten, both lightly engraved with symbols.</description>
+    <position x="40" y="700" z="0" />
+    <arc exit="east" move="east" destination="211" />
+    <arc exit="go" move="go stream" destination="210" />
+  </node>
+  <node id="210" name="Air Shaft">
+    <description>The slender shaft raises up and down, stretching up the entire length of the glass wall.  The walls are a mix of opaque glass and obsidian, providing a sharp contrast to each other.</description>
+    <position x="20" y="700" z="0" />
+    <arc exit="go" move="ump ground" destination="209" />
+    <arc exit="go" move="go ledge" destination="215" />
+  </node>
+  <node id="211" name="Glass Tunnel">
+    <description>The floor here is marred by ashes, leftovers from past fires and attempts at fires.  Mixed in with the ashes are pieces of bone, apparently tried when other fuels for fires could not be found.  On the wall above are various drawings, all done in ash.  The main drawing is a massive dragon that looms over a small reptilian creature.</description>
+    <position x="60" y="700" z="0" />
+    <arc exit="east" move="east" destination="212" />
+    <arc exit="west" move="west" destination="209" />
+  </node>
+  <node id="212" name="Glass Tunnel, Outside The Hermit's Tent">
+    <description>The glass wall of the maze raises higher here, towering over all in the tall tunnel.  In the center of the path rests a tattered cloth, worn so thin that it is actually translucent.  Although it is propped up between two poles like a tent, the result doesn't look very sturdy.  Scattered around the ground outside the tent is a collection of various mosses, each looking to be very different from the last.</description>
+    <position x="80" y="700" z="0" />
+    <arc exit="east" move="east" destination="213" />
+    <arc exit="west" move="west" destination="211" />
+  </node>
+  <node id="213" name="Glass Tunnel">
+    <description>Half an opaque glass and half a black obsidian, this tunnel stretches east and west, hugging the length of the glass wall.  A string has been laid clumsily across the bottom of the glass arch leading back into the maze, apparently a failed attempt at a trap to stop intruders.  To one side, a slotted box rests against one wall, held closed with a makeshift lock.</description>
+    <position x="100" y="700" z="0" />
+    <arc exit="east" move="east" destination="214" />
+    <arc exit="west" move="west" destination="212" />
+  </node>
+  <node id="214" name="Glass Tunnel, Hermit's Home">
+    <description>The low ceiling in this area causes all but the smallest of races to hunch over to fit.  The room gradually slopes downward, getting narrower and shorter until the floor meets the ceiling in a narrow pointed angle, leaving no room for any but tiny insects to explore every corner of the room.  Sprawled on the ground is a tattered old moth-eaten blanket, shoved back to the farthest crevice.</description>
+    <position x="120" y="700" z="0" />
+    <arc exit="west" move="west" destination="213" />
+  </node>
+  <node id="215" name="On The Ledge">
+    <description>Set on the brink of a dark tunnel, this ledge is the largest protrusion in the shaft.  High above in the shaft, another ledge can be seen, but what is on it is a mystery from this angle.  The mouth of the tunnel opens wide, covering the width of the ledge as though asking all who stand on the ledge to enter it.</description>
+    <position x="0" y="700" z="0" />
+    <arc exit="go" move="go tunnel" destination="216" />
+  </node>
+  <node id="216" name="A Dark Tunnel">
+    <description>Even with the dim light reflecting off the walls, this tunnel is still hopelessly dark, and the only choice is to head in the direction where the light doesn't immediately reveal a wall.  The ceiling is so low that the taller races have to bend slightly, in order to keep from hitting their heads.</description>
+    <position x="-20" y="700" z="0" />
+    <arc exit="southeast" move="southeast" destination="217" />
+    <arc exit="go" move="go mouth" destination="215" />
+  </node>
+  <node id="217" name="A Dark Tunnel">
+    <description>Even with the dim light reflecting off the walls, this tunnel is still hopelessly dark, and the only choice is to head in the direction where the light doesn't immediately reveal a wall.  The ceiling is so low that the taller races have to bend slightly, in order to keep from hitting their heads.</description>
+    <position x="0" y="720" z="0" />
+    <arc exit="south" move="south" destination="218" />
+    <arc exit="northwest" move="northwest" destination="216" />
+  </node>
+  <node id="218" name="A Dark Tunnel">
+    <description>Even with the dim light reflecting off the walls, this tunnel is still hopelessly dark, and the only choice is to head in the direction where the light doesn't immediately reveal a wall.  The ceiling is so low that the taller races have to bend slightly, in order to keep from hitting their heads.</description>
+    <position x="0" y="740" z="0" />
+    <arc exit="north" move="north" destination="217" />
+    <arc exit="southwest" move="southwest" destination="219" />
+  </node>
+  <node id="219" name="A Dark Tunnel">
+    <description>Even with the dim light reflecting off the walls, this tunnel is still hopelessly dark, and the only choice is to head in the direction where the light doesn't immediately reveal a wall.  The ceiling is so low that the taller races have to bend slightly, in order to keep from hitting their heads.</description>
+    <position x="-20" y="760" z="0" />
+    <arc exit="north" move="north" destination="220" />
+    <arc exit="northeast" move="northeast" destination="218" />
+  </node>
+  <node id="220" name="Dzil'Tseyi, Passage" color="#00FF00">
+    <description>The little room glows with light from a torch set within a perfect circle of eggshell-thin calcite that protrudes from the rock wall to form a natural lantern.  Deep silence abides here, broken only by the quiet hiss of flames and a whisper of chill air moving along the edges of a narrow opening ahead.</description>
+    <position x="-20" y="740" z="0" />
+    <arc exit="south" move="south" destination="219" />
+    <arc exit="climb" move="climb opening" destination="207" />
+  </node>
+  <node id="221" name="Dzil'Tseyi, Work Room">
+    <description>Pile upon pile of clothing cover the ground, making it nearly impossible to move about the area without finding some sort of fabric, pant leg or sleeve underfoot.  A makeshift loom rests in the center of the room with a piece of unfinished cloth abandoned mid-thread.  Nailed upon a wooden frame, a tanned bear-skin is painstakingly painted with strange pictograms.</description>
+    <position x="80" y="540" z="0" />
+    <arc exit="north" move="north" destination="222" />
+    <arc exit="go" move="go rounded doorway" destination="187" />
+  </node>
+  <node id="222" name="Dzil'Tseyi, Material Farm">
+    <description>Husky Kor'athi plants line the walls, rooting into the rock.  These dry leafy plants glow with a faint phosphorescence and have cotton-like bulbs on their stems.  Some thin hair-like tendrils hang down from just above where the plant is settled in the wall, gathering what little precious moisture it can from the air around them.</description>
+    <position x="80" y="520" z="0" />
+    <arc exit="south" move="south" destination="221" />
+  </node>
+  <label text="Dragon">
+    <position x="100" y="80" z="0" />
+  </label>
+  <label text="Port Wing">
+    <position x="-60" y="170" z="0" />
+  </label>
+  <label text="Starboard Wing">
+    <position x="-90" y="270" z="0" />
+  </label>
+  <label text="Press and Dies">
+    <position x="160" y="250" z="0" />
+  </label>
+  <label text="Construct">
+    <position x="210" y="180" z="0" />
+  </label>
+  <label text="Slab">
+    <position x="540" y="380" z="0" />
+  </label>
+  <label text="Loot">
+    <position x="-330" y="610" z="0" />
+  </label>
+  <label text="Port Hindleg">
+    <position x="20" y="110" z="0" />
+  </label>
+  <label text="Starboard Hindleg">
+    <position x="20" y="330" z="0" />
+  </label>
+  <label text="Dragon, Head">
+    <position x="10" y="230" z="0" />
+  </label>
+  <label text="Bedchamber">
+    <position x="90" y="230" z="0" />
+  </label>
+  <label text="Glass Tunnel">
+    <position x="20" y="670" z="0" />
+  </label>
+  <label text="Chasm's Edge">
+    <position x="110" y="440" z="0" />
+  </label>
+  <label text="Talon Trail">
+    <position x="0" y="550" z="0" />
+  </label>
+  <label text="Tail of the Dragon">
+    <position x="-140" y="590" z="0" />
+  </label>
+  <label text="Narrow Passage">
+    <position x="-350" y="500" z="0" />
+  </label>
+  <label text="Dragon Way">
+    <position x="-420" y="500" z="0" />
+  </label>
+  <label text="Long Tunnel">
+    <position x="370" y="440" z="0" />
+  </label>
+  <label text="Deep Tunnel">
+    <position x="380" y="290" z="0" />
+  </label>
+  <label text="Landing Pit">
+    <position x="610" y="280" z="0" />
+  </label>
+  <label text="Cavern Floor">
+    <position x="410" y="630" z="0" />
+  </label>
+  <label text="Crystal Maze">
+    <position x="320" y="760" z="0" />
+  </label>
+  <label text="^Air Shaft">
+    <position x="40" y="710" z="0" />
+  </label>
+  <label text="Stone Dragon">
+    <position x="410" y="370" z="0" />
+  </label>
+  <label text="Shop">
+    <position x="70" y="610" z="0" />
+  </label>
+  <label text="Bridge">
+    <position x="-380" y="660" z="0" />
+  </label>
+</zone>

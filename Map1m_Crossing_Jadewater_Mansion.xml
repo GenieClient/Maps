@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Crossing Jadewater Mansion" id="1m">
+  <node id="1" name="The Crossing, Eylhaar Bane Road" note="Map1_Crossing.xml|Crossing">
+    <description>Looking north, scanning from east to west, you can see the profiles of the Paladins' and Clerics' Guilds rising above the shops and homes that dot the neighborhood like patches of a crazy quilt.  To the south, you can barely discern the top story of Academy Asemath, with its white marble friezes in high relief.  A row of prickly privet hedges, their intertwining branches creating a formidable fence, line both sides of the way.</description>
+    <position x="100" y="200" z="0" />
+    <arc exit="east" move="east" />
+    <arc exit="south" move="south" />
+    <arc exit="west" move="west" />
+    <arc exit="go" move="go lattice-work gate" destination="2" />
+  </node>
+  <node id="2" name="Jadewater Mansion, Cobbled Path" note="door bell">
+    <description>Brown cobbles set in herringbone rows lead from the gate to the door of an elegant mansion resting against the town wall.  Borders of waxy green boxwood interspersed with pale yellow roses hem in either side of the path.  Close-cropped grass stretches away from the borders towards the stone fencing that separates the building and the rest of The Crossing.</description>
+    <position x="100" y="160" z="0" />
+    <arc exit="east" move="east" destination="3" />
+    <arc exit="west" move="west" destination="6" />
+    <arc exit="go" move="go lattice-work gate" destination="1" />
+    <arc exit="go" move="go silverwood door" destination="7" />
+  </node>
+  <node id="3" name="Jadewater Mansion, East Lawn" note="East Lawn|old man">
+    <description>The area here is larger than the west lawn, stretching east to the perimeter wall, and north along the side of the mansion.  Fragrant stems of gladiola and flamestalk, mixed with delicate milady's lace, frame a crescent-shaped group of stones with a large curved rock set at its tips.  A walkway winding around the garden leads northward to a gazebo and a heavy steel door almost completely covered in vines separating the mansion and the gazebo.</description>
+    <position x="140" y="160" z="0" />
+    <arc exit="north" move="north" destination="4" />
+    <arc exit="northeast" move="northeast" destination="5" />
+    <arc exit="west" move="west" destination="2" />
+    <arc exit="go" move="go quaint inn" destination="21" />
+    <arc exit="climb" move="climb moonstone trellis" destination="20" />
+  </node>
+  <node id="4" name="Jadewater Mansion, Gazebo" note="Gazebo">
+    <description>Several scarlet robins vie with a magpie for preening space atop a birdbath which resembles a gazebo.  A small path through the bellflowers around the little building leads carefully up chiseled steps to the interior.  The main walkway continues northward among clusters of columbine and foxglove, toward a honeysuckle-covered pergola.</description>
+    <description>A tiny, gazebo-shaped birdbath accentuates this lovely little path trimmed with bellflowers.  Chiseled steps lead carefully to the interior, while the main walkway continues northward, among columbine and foxgloves, toward a honeysuckle-covered pergola.</description>
+    <position x="140" y="140" z="0" />
+    <arc exit="south" move="south" destination="3" />
+    <arc exit="go" move="go pergola" destination="19" />
+  </node>
+  <node id="5" name="Jadewater Mansion, Redwood Ring" note="Redwood Ring">
+    <description>The short path leads to a small clearing surrounded by a ring of redwood trees.  A large fire pit is located in the center of ring, surrounded by some fallen logs.  Behind the ring is a stone building with smoke drifting from chimneys and steam emerging from vents.</description>
+    <description>The short path leads to a small clearing surrounded by a ring of redwood trees.  A large fire pit is located in the center of ring, surrounded by some fallen logs.  Behind the ring is a brightly lit stone building.</description>
+    <position x="160" y="140" z="0" />
+    <arc exit="southwest" move="southwest" destination="3" />
+  </node>
+  <node id="6" name="Jadewater Mansion, West Lawn" note="West Lawn">
+    <description>Stepping westward from the cobbled path, the mansion's high stone outer wall encloses a small lawn dominated by an ancient mimosa tree.  A high-backed wrought iron chair sits sheltered beneath the delicate branches.  A semi-circle worn into the lush green grass around the chair bears witness to generations of students who have gathered here to learn.  Violet azaleas hug the building, clustering in the corner where house joins wall, then continue towards the gate.</description>
+    <position x="80" y="160" z="0" />
+    <arc exit="east" move="east" destination="2" />
+    <arc exit="go" move="go winding path" destination="30" />
+  </node>
+  <node id="7" name="Jadewater Mansion, Vestibule" note="donations chute" color="#00FF00">
+    <description>An elegant concierge station punctuates this highly ornate vestibule decorated with expensive wares from every part of Elanthia.  Among the impressive appointments are splendid tapestries, delicate porcelain vases, a carved marble mantel, and gleaming rosewood paneling.</description>
+    <position x="100" y="140" z="0" />
+    <arc exit="east" move="east" destination="9" />
+    <arc exit="west" move="west" destination="8" />
+    <arc exit="go" move="go ironwood doors" destination="10" />
+    <arc exit="go" move="go silverwood door" destination="2" />
+  </node>
+  <node id="8" name="Jadewater Mansion, Library" note="Library">
+    <description>The vaulted travertine ceiling of the library dwarfs even the tallest Elothean.  The names of ancient mages, scholars and bards, chiseled into the stonework, form a neat border between the shelf-lined walls and the curvature of the ceiling.  Tall, leaded glass windows flood the room with brilliant light, making the oil lamps that hang from the groined support arches unnecessary.  A large oaken table, scarred from years of use, stands in the center of the room.</description>
+    <description>The vaulted travertine ceiling of the library dwarfs even the tallest Elothean.  The names of ancient mages, scholars and bards, chiseled into the stonework, form a neat border between the shelf-lined walls and the curvature of the ceiling.  Tall, leaded glass windows provide a spectacular view of the night sky, while pewter oil lamps glow brightly from their hanging points upon the groined arches overhead.  A large oaken table, scarred from years of use, stands in the center of the room.</description>
+    <position x="80" y="140" z="0" />
+    <arc exit="east" move="east" destination="7" />
+  </node>
+  <node id="9" name="Jadewater Mansion, Sitting Room" note="Sitting Room">
+    <description>Daylight streams in through tall arched windows swathed in plum-shaded damask drapes.  Elegant alabaster end tables flank each of the velvet sofas arranged in the center of the room, forming a cozy conversation area.  Beyond a rosewood harpsichord, the northern wall is covered with a large tapestry.  A blue-crested finch sings from its willow birdcage hung in the corner, teasing the small cat that watches it from below.</description>
+    <description>Firelight licks softly at an arched stone hearth, casting a shifting glow upon this comfortable room.  Elegant alabaster end tables flank each of the velvet sofas arranged cozily in the center of the floor.  Beyond a rosewood harpsichord, the northern wall is covered with a large tapestry.  A blue-crested finch sings from its willow birdcage hung in the corner, teasing the small cat that watches it from below.</description>
+    <position x="120" y="140" z="0" />
+    <arc exit="west" move="west" destination="7" />
+  </node>
+  <node id="10" name="Jadewater Mansion, Grand Hall South">
+    <description>The Grand Hall soars up the entire height of two stories, impressively topped by a stained glass ceiling.  Poised on the wall, a large portrait of a distinguished gentleman watches over the comings and goings of the mansion.  An amber-inlaid door to the east and an ivory-trimmed door to the west lead to adjacent classrooms.</description>
+    <position x="100" y="120" z="0" />
+    <arc exit="north" move="north" destination="11" />
+    <arc exit="go" move="go ironwood doors" destination="7" />
+    <arc exit="go" move="go amber door" destination="13" />
+    <arc exit="go" move="go ivory-trimmed door" destination="14" />
+  </node>
+  <node id="11" name="Jadewater Mansion, Grand Hall Central">
+    <description>The stained glass ceiling rises in a dome over the center of the Grand Hall in a glorious display of a larger-than-life glaysker flower on a multi-colored, geometrical background.  A much subtler mosaic of the same blossom is inlaid in the center of the marble floor.  A jade-inlaid door to the east and a gilded door to the west lead to lecture rooms.  People quietly walk along the balcony that wraps around the hall of the second floor.</description>
+    <position x="100" y="100" z="0" />
+    <arc exit="north" move="north" destination="12" />
+    <arc exit="south" move="south" destination="10" />
+    <arc exit="go" move="go jade door" destination="15" />
+    <arc exit="go" move="go gilded door" destination="16" />
+  </node>
+  <node id="12" name="Jadewater Mansion, Grand Hall North">
+    <description>The wide Grand Staircase sweeps up the north end of the hall, dominating the area.  In a stroke of artful genius, the marble mosaic pattern continues up each of the steps, creating a feeling of spaciousness as the staircase opens onto the second floor landing.  A large table and several chairs are visible through a graceful archway to one side of the staircase.</description>
+    <position x="100" y="80" z="0" />
+    <arc exit="south" move="south" destination="11" />
+    <arc exit="go" move="go ebony door" destination="18" />
+    <arc exit="go" move="go marble door" destination="17" />
+    <arc exit="go" move="go graceful archway" destination="25" />
+  </node>
+  <node id="13" name="Jadewater Mansion, The Amber Room" note="Amber Room|fireplace">
+    <description>A brilliant gold chandelier set with amber dominates the room.  Candlelight plays off its surface to give everything an amber hue and a feeling of warmth.  A large oaken table stretches across the wooden floor in front of a massive stone fireplace.  Above the mantel is an aged, woven tapestry depicting scenes from long ago.  The molded ochre walls of the room are set with panels of pure amber interposed by small candle sconces.  Umber curtains hang from a cornice above a bay window.</description>
+    <position x="120" y="120" z="0" />
+    <arc exit="go" move="go amber-inlaid door" destination="10" />
+  </node>
+  <node id="14" name="Jadewater Mansion, The Ivory Room" note="Ivory Room">
+    <description>Six large ivory pillars of veined marble rise from the white marble floor to support the alabaster ceiling in what was once a grand ballroom.  A crystal chandelier causes light to dance about the highly polished floor in myriad colors.  Tiered seats of red velvet over limed oak line the north wall -- seating for a small lecture area.  Otherwise bare of furniture, a small desk sits in front of a tall bay window covered in flimsy pearl-white curtains.</description>
+    <position x="80" y="120" z="0" />
+    <arc exit="go" move="go ivory-trimmed door" destination="10" />
+  </node>
+  <node id="15" name="Jadewater Mansion, The Jade Room">
+    <description>The gentle murmur of water and the smell of incense greet all who enter.  Once an indoor garden, the room still contains many exotic plants, and one wall is made of crystal-clear glass to capture sunlight.  A carved jade fountain serves as a focal point, its flowing waters in constant motion.  A dwarf copperwood tree spreads its branches across much of the room, rustled occasionally by a gentle draft.  The tinkling leaves and burbling fountain fill the air like an ethereal chorus.</description>
+    <position x="120" y="100" z="0" />
+    <arc exit="go" move="go jade-inlaid door" destination="11" />
+  </node>
+  <node id="16" name="Jadewater Mansion, The Gilded Room">
+    <description>Polished silverwillow floors, vaulted mirrored ceilings and a gold-veined, white marble fireplace all speak of beauty and elegance.  Once the trophy room of the Jadewater family, all that remain are battle standards, a few weapons and shields upon the walls, and a suit of gilded full plate armor standing forever at attention opposite the lectern.  Across from the fireplace hangs a magnificent tapestry worked in fine Elothean silks.</description>
+    <position x="80" y="100" z="0" />
+    <arc exit="go" move="go gilded door" destination="11" />
+  </node>
+  <node id="17" name="Jadewater Mansion, The Marble Room" note="Marble Room">
+    <description>Mirrors line one wall opposite a small stage that holds a couple of chairs and a table just large enough for two cups.  A vanity in one corner holds an assortment of theatrical make-up, and a pile of cushions leans against one of its legs.  A makeshift desk near the prop closet spills over with unrolled scrolls, half-empty cups of coffee, and someone's forgotten script.</description>
+    <position x="80" y="80" z="0" />
+    <arc exit="go" move="go marble door" destination="12" />
+  </node>
+  <node id="18" name="Jadewater Mansion, The Ebony Room" note="Ebony Room">
+    <description>Perfectly round and domed, this room seems to whisper of mysteries and powerful magic.  Faint carving is barely visible on the floor and the curving walls seem oddly textured.  The dome bears five enormous glowing rubies embedded at each of the cardinal point and at the exact center, providing the only illumination.</description>
+    <position x="120" y="80" z="0" />
+    <arc exit="go" move="go ebony door" destination="12" />
+  </node>
+  <node id="19" name="Jadewater Mansion, Rose Garden" note="Rose Garden">
+    <description>The mansion's high stone fence joins the rough rock of the town wall to form a dead-end enclosure overrun with floral hues of interlocking color.  A stone fountain resembling a lion's head nestles among creeping roses at the junction of the fence and town wall.  Provocative perfumes dance among the blooms, which are neatly confined to hedge-lined flower beds.</description>
+    <position x="140" y="120" z="0" />
+    <arc exit="go" move="go vine-covered pergola" destination="4" />
+  </node>
+  <node id="20" name="Jadewater Mansion, Yavash's Garden" note="Yavash's Garden">
+    <description>High above the bustling streets of Crossing, the peaceful quiet of this magnificent garden is broken only by sweet birdsongs and the murmur of scholarly discussions.  The lofty elevation, coupled with the absence of walls or ceiling, creates an atmosphere of walking through a garden in the clouds.  The flowering plants and vines are in perpetual bloom, as if sustained by something more than the sunlight which dances freely through the area.</description>
+    <description>Far above the lights and distractions of Crossing, only the chirping of crickets and the murmur of scholarly discussions break the peaceful quiet of this magnificent garden.  The lofty elevation, coupled with the absence of walls or ceiling, creates an atmosphere of walking through a garden in the clouds.  The flowering plants and vines seem to reach towards the moonlight in an attempt to absorb its magical energies.</description>
+    <position x="140" y="180" z="0" />
+    <arc exit="climb" move="climb moonstone trellis" destination="3" />
+  </node>
+  <node id="21" name="Tenderfoot Inn, Lobby" note="Tenderfoot Inn|mentor newsletter">
+    <description>A worn fringed rug covers the clean plank floor of the lobby, stopping just at the base of the check-in desk.  The walls are bare, save one picture nailed to the west wall.  Faint noises of a bustling city drift through an open door.</description>
+    <position x="220" y="160" z="0" />
+    <arc exit="east" move="east" destination="24" />
+    <arc exit="south" move="south" destination="22" />
+    <arc exit="out" move="out" destination="3" />
+  </node>
+  <node id="22" name="Tenderfoot Inn, Dining Room" color="#FF0000">
+    <description>Waiters bustle tiredly around long trestle tables, removing the piles of used plates and bowls accumulated as travelers eat.  Playful music fills the air, exploding in upbeat rhythms from the fiddle of a minstrel in the corner to mask the chattering murmur of the patrons.</description>
+    <position x="220" y="180" z="0" />
+    <arc exit="north" move="north" destination="21" />
+    <arc exit="east" move="east" destination="23" />
+    <arc exit="go" move="go swinging doors" destination="29" />
+  </node>
+  <node id="23" name="Tenderfoot Inn, Taproom">
+    <description>Shadows flicker along the dark walls of the taproom, telling ghost stories with light and air.  High stools belly up to a scarred wooden counter, which displays samples of the kitchen's wares.</description>
+    <position x="240" y="180" z="0" />
+    <arc exit="west" move="west" destination="22" />
+  </node>
+  <node id="24" name="Tenderfoot Inn, Longroom" note="Longroom">
+    <description>Rows of oilcloth cots provide cheap rest for the weary stranger.  Cotton screens between the bunks offer some privacy, but can't filter the musky scent of travelers' trail dust from every corner of Elanthia.</description>
+    <position x="240" y="160" z="0" />
+    <arc exit="west" move="west" destination="21" />
+  </node>
+  <node id="25" name="Jadewater Mansion, Dining Rotunda" note="Dining Rotunda">
+    <description>Under a crystal cupola that reflects the brightness of several lit candelabras lies a long, low table awash in white linen.  Atop it are elegant pewter salvers heaped with steaming viands, their perfumes a mingling of rich scents in the air.  Beverages, sweet or bitter, soft or potent, reside within a mirrored glass case.  Desserts for everyone from the binge-heavy to the diet-conscious await perusal on a majestic gold side cart.</description>
+    <position x="100" y="60" z="0" />
+    <arc exit="go" move="go graceful archway" destination="12" />
+    <arc exit="go" move="go service entrance" destination="26" />
+  </node>
+  <node id="26" name="Jadewater Mansion, Kitchen" note="Kitchen">
+    <description>Bearing more resemblance to a magical workshop than a place to prepare meals, the kitchen has many oddities filling it.  Herbs overflow from oak shelves while a cart and counter have food and drink waiting to be served.  A small bronze dragon with gaping jaws serves as garbage disposal.</description>
+    <position x="120" y="60" z="0" />
+    <arc exit="go" move="go service entrance" destination="25" />
+    <arc exit="go" move="go trapdoor" destination="27" />
+    <arc exit="go" move="go heavy door" destination="28" />
+  </node>
+  <node id="27" name="Jadewater Mansion, Wine Cellar" note="Wine Cellar">
+    <description>A small window near the ceiling floods the small basement with a thin stream of light.  Three floor-to-ceiling cases hold hundreds of dusty wine bottles.  The floor is littered with shards of glass and a pile of bottles lies in one corner.</description>
+    <position x="140" y="60" z="0" />
+    <arc exit="go" move="go trapdoor" destination="26" />
+  </node>
+  <node id="28" name="Jadewater Mansion, Rear Entrance" note="Map7_NTR.xml|NTR">
+    <description>A single heavy iron door breaks the monotony of the massive town wall.  The triangular and flat rooftops of the north side of The Crossing rise above it, crowning the mansion directly beyond the wall in a dramatic cityscape.  A narrow trail winds its way through patches of weeds and grasses into the northern wilds.  There is a small window near the bottom of the wall, but the glass is covered in dirt.</description>
+    <position x="120" y="40" z="0" />
+    <arc exit="go" move="go iron door" destination="26" />
+  </node>
+  <node id="29" name="Tenderfoot Inn, Kitchen" note="old Halfling cook|Halfling cook|cook">
+    <description>The dusty wooden floor of this tiny kitchen has been worn smooth by the constant tread of waiters' feet in and out of the dining room.  A row of cluttered wooden cabinets and shelves display a wide array of well-used common culinary equipment, and the spacious countertops are covered in flour, breadcrumbs, and other bits of tempting dishes in the making.</description>
+    <position x="200" y="180" z="0" />
+    <arc exit="out" move="out" destination="22" />
+  </node>
+  <node id="30" name="Jadewater Mansion, Shady Path">
+    <description>A carefully tended, cobbled path wraps around the exterior of the mansion.  Sheltering branches of large trees along the path dapple the cobblestones with light in warm weather, and with dry patches of stone during rain.  A simple bench is placed slightly to the side of the path next to a stone birdbath.</description>
+    <position x="60" y="160" z="0" />
+    <arc exit="go" move="go winding path" destination="6" />
+    <arc exit="go" move="go iron gate" destination="31" />
+  </node>
+  <node id="31" name="Jadewater Mansion, Sloping Lawn">
+    <description>Plush and manicured, the sloping green lawn gracefully descends to a low stone wall, beyond which can be seen the seats and the stage of the Performance Center itself.  Colorful blankets are placed here and there on the lawn to provide comfortable seating for those who choose to observe at a distance.</description>
+    <position x="40" y="160" z="0" />
+    <arc exit="go" move="go iron gate" destination="30" />
+    <arc exit="go" move="go golden arch" destination="32" />
+  </node>
+  <node id="32" name="Jadewater Mansion, Gallery" note="Performance Center">
+    <description>With the exception of the low wall at the rear of the Performance Center, this area is entirely enclosed.  Wooden seats with green velvet cushions form rows that wrap around the viewing area in a near perfect circle.  Curtains of green and gold hang from the ceiling, hiding the back of the stage from the audience, while walls on either side contain tapestries that depict favorite performances of years past.</description>
+    <position x="20" y="160" z="0" />
+    <arc exit="go" move="go golden arch" destination="31" />
+  </node>
+  <label text="The Crossing">
+    <position x="63" y="207" z="0" />
+  </label>
+  <label text="Tenderfoot Inn">
+    <position x="185" y="186" z="0" />
+  </label>
+  <label text="Rear Entrance to NTR">
+    <position x="66" y="18" z="0" />
+  </label>
+</zone>
