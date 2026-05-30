@@ -1,10 +1,15 @@
 # automapper.cmd
-var autoversion 8.2025-08-08
+var autoversion 8.2026-02-25
 
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
+
+#2026-02-25
+# Hanryu
+#   added match for releasing blend
+#   fixed a few hard coded color callouts
 
 #2025-08-08
 # Maje
@@ -2290,8 +2295,8 @@ NO_DARKVISION:
   gosub ECHO NO DARK VISION SKILL / ITEM FOUND! STUCK IN THE DARK! Escape Manually!
   gosub ECHO GET YOURSELF A TORCH AND FLINT AT THE LEAST!
   gosub ECHO OR A STARGLASS/GAEZTHEN/LANTERN
-  put #echo >Log Red ** NO DARKVISION/TORCH/LIGHTER/GAEZTHEN FOUND!
-  put #echo >Log Red ** CONSIDER ~NOT~ HUNTING IN DARK AREAS
+  put #echo >Log %color ** NO DARKVISION/TORCH/LIGHTER/GAEZTHEN FOUND!
+  put #echo >Log %color ** CONSIDER ~NOT~ HUNTING IN DARK AREAS
   var darkroom 1
   gosub STOWING
   action (mapper) on
@@ -2410,6 +2415,7 @@ PUT:
   matchre RETURN ^Hold hands with whom\?
   matchre RETURN ^Something in the area interferes
   matchre RETURN ^With a .+ to your voice,
+  matchre RETURN ^You fade into view for all to see\.
   matchre RETURN ^Turning your focus solemnly inward
   matchre RETURN ^Slow, rich tones form a somber introduction
   matchre RETURN ^Images of streaking stars falling from the heavens
@@ -2443,8 +2449,8 @@ PUT:
   matchre RETURN ^You take up a handful of dirt in your palm to prepare the .* spell\.  As you whisper arcane words, you gently blow the dust away and watch as it becomes swirling motes of glittering light that veil your hands in a pale aura\.
   send %putaction
   matchwait 20
-  put #echo >Log Crimson *** MISSING MATCH IN PUT! (%scriptname.cmd) ***
-  put #echo >Log Crimson Command = %putaction
+  put #echo >Log %color *** MISSING MATCH IN PUT! (%scriptname.cmd) ***
+  put #echo >Log %color Command = %putaction
   put #log $datetime MISSING MATCH IN PUT! Command = %putaction (%scriptname.cmd)
   return
 
