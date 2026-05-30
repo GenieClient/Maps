@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <zone name="Under the Gondola" id="65">
-  <node id="1" name="Dragon's Spine, Astrar's Sorrow" note="Map66_STR3.xml|STR|Shard">
+  <node id="1" name="Dragon's Spine, Astrar's Sorrow" note="Map66_Shard_to_Gondola_Area.xml|STR|Shard">
     <description>The canyon terminates in frosty splendor, though the trail continues on, steeply switch-backing its way up the slick mountainside beside a stunning waterfall.  Hanging from a valley far above, Astrar's Sorrow descends as a glittering cascade of frozen water forming a pleated veil of icy tears that fall perpetually without movement to the solid river of ice below.</description>
     <position x="120" y="260" z="0" />
     <arc exit="east" move="east" />
@@ -268,7 +268,7 @@
     <arc exit="climb" move="climb narrow ledge" destination="42" />
     <arc exit="climb" move="climb stone wall" destination="26" />
   </node>
-  <node id="44" name="Obsidian Pass, Mountain Trail" note="Map62_STR2.xml|Crossing|Leth Deriel">
+  <node id="44" name="Obsidian Pass, Mountain Trail" note="Map62_Southern_Trade_Route_Part_2.xml|Crossing|Leth Deriel">
     <description>Cracks in the sides of the pass ooze a darkness flatter than the glassy black of the smoothed walls.  The silence here is disturbing.</description>
     <position x="260" y="100" z="0" />
     <arc exit="northeast" move="northeast" />
@@ -292,7 +292,7 @@
     <description>Silence settles its thickened fingers over the ever-darkening shadows of a large cluster of rowan trees.  Not even the lone cricket dares to venture forth a single chirp lest it awaken a larger and much more sinister being.</description>
     <position x="240" y="0" z="0" />
   </node>
-  <node id="48" name="Southern Trade Route, Alongside the Forest" note="Map62_STR2.xml">
+  <node id="48" name="Southern Trade Route, Alongside the Forest" note="Map62_Southern_Trade_Route_Part_2.xml">
     <description>The hollows and dips in the path are filled with rocks and muddy water.  Wagon-ruts leave indelible tracks in the dirt, insects and various unidentifiable things make their dark homes in the shallow pools that form.</description>
     <position x="240" y="-40" z="0" />
     <arc exit="north" move="north" />

@@ -779,7 +779,7 @@
     <arc exit="southeast" move="southeast" destination="11" />
     <arc exit="go" move="go bower gate" destination="113" />
   </node>
-  <node id="115" name="Southern Trade Route, Bosque Deriel" note="Map60_STR1.xml|STR1|Crossing">
+  <node id="115" name="Southern Trade Route, Bosque Deriel" note="Map60_Southern_Trade_Route_Part_1.xml|STR1|Crossing">
     <description>While pondering the fantastic variety of flora here, you listen to the wildlife encircling you.  Familiar bird songs, insect chirpings, and the rooting of forest-floor foragers all comfort you.  And yet, there is an undercurrent, a foreign and disquieting subtext of sounds and voices that lie just outside your conscious range of hearing.</description>
     <position x="-100" y="-340" z="0" />
     <arc exit="southeast" move="southeast" destination="110" />
@@ -846,7 +846,7 @@
     <arc exit="north" move="north" destination="124" />
     <arc exit="southeast" move="southeast" destination="127" />
   </node>
-  <node id="126" name="Old Crank's Road, Forest" note="Map112_Ilaya_Taipa.xml|Ilaya Taipa">
+  <node id="126" name="Old Crank's Road, Forest" note="Map112_Ilaya_Taipa_River_Clan.xml|Ilaya Taipa">
     <description>Tufts of dragon lilies edge the rutted path, adding a vibrant wash of red and orange to the muted greens of the forest's trees, moss and weeds.  A nearby gurgle of water soaks the ear with sound, and the cool tang of damp earth tingles the nose.  Relatively straight through this section of the forest, the path becomes slightly wider as it flows southwesterly.</description>
     <position x="-220" y="60" z="0" />
     <arc exit="northeast" move="northeast" destination="124" />
@@ -872,7 +872,7 @@
     <arc exit="south" move="south" destination="130" />
     <arc exit="northwest" move="northwest" destination="128" />
   </node>
-  <node id="130" name="Southern Trade Route, Esouvar Deriel" note="Map62_STR2.xml|STR2|Gondola|Shard">
+  <node id="130" name="Southern Trade Route, Esouvar Deriel" note="Map62_Southern_Trade_Route_Part_2.xml|STR2|Gondola|Shard">
     <description>The road twists and winds southward, the density of trees becoming sparse and thin as the frequency of travel picks up.  The Deobar Bower Gate to the north peeks quietly over the dark ironwood trees clustering around Leth Deriel.</description>
     <position x="-80" y="140" z="0" />
     <arc exit="north" move="north" destination="129" />

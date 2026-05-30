@@ -2459,7 +2459,7 @@
     <arc exit="west" move="west" />
     <arc exit="go" move="go exit portal" destination="33" />
   </node>
-  <node id="376" name="Ker'Leor, Deep Forest Path" note="Map41_Marauders.xml|Vines|Creepers|Marauders">
+  <node id="376" name="Ker'Leor, Deep Forest Path" note="Map41_Ker'Leor_Fornsted_and_Hraval.xml|Vines|Creepers|Marauders">
     <description>An endless assortment of towering trees and vividly-colored underbrush crowd the base of Ker'Leor.  So dense is the forest that steam rises from its floor, hanging as a still mist which threatens to obscure the faint path.  Eerie wails, moans and hisses echo forth from the deep shadows, bending the imagination toward the hideous and threatening.</description>
     <position x="140" y="-1316" z="0" />
     <arc exit="east" move="east" destination="212" />

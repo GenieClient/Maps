@@ -1279,7 +1279,7 @@
     <position x="-130" y="90" z="1" />
     <arc exit="go" move="go decrepit door" destination="224" />
   </node>
-  <node id="224" name="Jeihrem's Barrow, Entrance" note="Map90f_Basalt_Isle.xml|Jeihrem's Barrow">
+  <node id="224" name="Jeihrem's Barrow, Entrance" note="Map90e_Basalt_Isle_and_Jeihrem's_Barrow.xml|Jeihrem's Barrow">
     <description>The still of night blankets the quiet fishing village, and the fishy scent of smoke from burning oil lanterns drifts through the air.  Most of the wooden buildings stand completely dark and abandoned, although a few are lit from the interior with the muted sound of conversation coming from within.  Racks of half-preserved fish stand drying on hooks, the cloying odor mingling with the smell from the lanterns.</description>
     <position x="-130" y="110" z="1" />
     <arc exit="go" move="go decrepit hut" destination="223" />

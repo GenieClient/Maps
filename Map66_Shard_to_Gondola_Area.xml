@@ -4217,7 +4217,7 @@
     <arc exit="up" move="up" destination="612" />
     <arc exit="down" move="down" destination="611" />
   </node>
-  <node id="617" name="Shard, Smuggler's Bridge" note="Map67a_Shard_Thief.xml|Thief">
+  <node id="617" name="Shard, Smuggler's Bridge" note="Map67a_Shard_Thief_Passages.xml|Thief">
     <description>Tall drooping trees form a protective circle around this tiny riverbank cove.  Although it is deserted now, scorched pits in the sand mark old campfires screened by the trees from the walls of Shard.  Looking at the river, the reason for the campsite becomes obvious--a row of abandoned stone pilings stretches out into the river, providing a way across besides the heavily guarded North Gate.</description>
     <position x="-680" y="-280" z="1" />
     <arc exit="east" move="east" destination="66" />

@@ -853,7 +853,7 @@
     <arc exit="northwest" move="rt northwest" hidden="True" destination="90" />
     <arc exit="climb" move="climb frayed rope" destination="92" />
   </node>
-  <node id="92" name="Hvaral, Dry Dock" note="Map41_Marauders.xml|Dry Dock">
+  <node id="92" name="Hvaral, Dry Dock" note="Map41_Ker'Leor_Fornsted_and_Hraval.xml|Dry Dock">
     <description>A dock extends from the stone roadway here, hanging out over a low-lying mountain road.  No water here, and certainly no ships, Hvaral's Dry Dock is serviced by barges pulled by somewhat strange looking beasts.  Outside the protection of the wall, arid mountain winds sting the faces of those who would dare to tarry in the open.  Officials in Therengia's blue and gold livery thoroughly inspect rows of crates and barrels that litter the dock, awaiting either import or export.  </description>
     <description>A dock extends from the stone roadway here, hanging out over a low-lying mountain road.  No water here, and certainly no ships, Hvaral's Dry Dock is serviced by barges pulled by somewhat strange looking beasts.  Outside the protection of the wall, arid mountain winds sting the faces of those who would dare to tarry in the open.  Officials in Therengia's blue and gold livery thoroughly inspect rows of crates and barrels that litter the dock, awaiting either import or export.</description>
     <position x="660" y="180" z="0" />

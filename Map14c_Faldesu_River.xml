@@ -231,7 +231,7 @@
     <arc exit="southwest" move="swim southwest" />
     <arc exit="climb" move="climb stone bridge" destination="22" />
   </node>
-  <node id="21" name="The Marsh, Stone Road" note="Map7_NTR.xml|NTR|Crossing">
+  <node id="21" name="The Marsh, Stone Road" note="Map7_Northern_Trade_Road.xml|NTR|Crossing">
     <description>A large stone bridge that once spanned the expanse of the river here, now lays in ruin.  The town of Riverhaven, the bridge's orginal destination, sits on the other side.  Gazing at the town, the orange glow of the town's street torches forms an eerie dome in the night sky.  To the southeast, a wall of reeds creeps down from a group of trees into the river and attempts to survive the currents of the river.</description>
     <description>A large stone bridge that once spanned the expanse of the river here, now lays in ruin.  The town of Riverhaven, the bridge's original destination, sits on the other side.  Gazing at the town, you notice a haze of brown lingers in the air, no doubt the result of the forges and smoke houses at work.  To the southeast, a wall of reeds creeps down from a group of trees into the river and attempts to survive its currents.</description>
     <description>A large stone bridge that once spanned the river here now lies in ruins.  The town of Riverhaven, the bridge's original destination, sits on the other side.  Gazing at the town, you notice that a brown haze lingers in the air, no doubt the result of the forges and smokehouses at work.  To the southeast, a wall of reeds creeps down from a group of trees into the river and attempts to survive its currents.</description>

@@ -372,7 +372,7 @@
     <position x="140" y="-80" z="0" />
     <arc exit="climb" move="climb bronzed ladder" destination="60" />
   </node>
-  <node id="62" name="Temple Grounds, North Tower" note="Map2a_Temple.xml|Temple Grounds">
+  <node id="62" name="Temple Grounds, North Tower" note="Map2a_Crossing_Temple.xml|Temple Grounds">
     <description>The rocky path of black volcanic gravel draws to a close, a somber carpet before the Northern sentinel tower.  The thick black ironwood outer walls curve sharply behind the structure to seal off the temple grounds, banded with steel for extra reinforcement to ward off a possible siege.</description>
     <position x="160" y="0" z="0" />
     <arc exit="southeast" move="southeast" />

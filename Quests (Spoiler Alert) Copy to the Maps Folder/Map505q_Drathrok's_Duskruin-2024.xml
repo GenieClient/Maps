@@ -152,7 +152,7 @@
     <position x="330" y="130" z="0" />
     <arc exit="go" move="go granite archway" destination="22" />
   </node>
-  <node id="24" name="The Strand, Sandy Path" note="Map7_NTR.xml|entrance|exit|Northern Trade Road|NTR">
+  <node id="24" name="The Strand, Sandy Path" note="Map7_Northern_Trade_Road.xml|entrance|exit|Northern Trade Road|NTR">
     <description>You can hear the Oxenwaithe lapping gently at its bank, creating a soothing sound not unlike a lullaby.  The light reflected from the moons provide shimmery paths along the sandy embankments at water's edge.</description>
     <position x="190" y="290" z="0" />
     <arc exit="southeast" move="up" />
@@ -218,7 +218,7 @@
     <description>Formed from a myriad of faceted and cabochon gemstones, a variety of foodstuffs appear set into the walls.  Gigantic renditions of berries and tarts overlook creaky hay-strewn floorboards set with scratched steel gratings.  The sound of something large moving beneath the arena stirs the stale air.</description>
     <position x="210" y="170" z="0" />
   </node>
-  <node id="38" name="Foyer" note="MT_Prize_Wings.xml|prizes|raffles|alterations">
+  <node id="38" name="Foyer" note="Map599q_MT_Prize_Wings_(2024).xml|prizes|raffles|alterations">
     <description>Subdued lighting illuminates the tasteful wooden paneling of the room while a bevy of overstuffed furniture provides comfortable seating for those contemplating weighty choices.  Thick plush carpets in a myriad of hues cover the floor, almost totally obscuring the pale wooden planks of the flooring.  Around the walls, a number of colored archways contain magical portals that, when open, allow access to the prize rooms beyond.  A large set of double doors allows access to rooms devoted to dispenser activities while a round opening leads to the area devoted to workshops for alterations.</description>
     <description>Lighting illuminates the room which has carpets covering the floors.  A number of colored archways contain magic portals that, when open, allow access to the prize rooms beyond.  A set of double doors allows access to the dispensers while a round opening leads to the alteration area.</description>
     <position x="300" y="280" z="0" />

@@ -801,7 +801,7 @@
     <position x="360" y="-20" z="0" />
     <arc exit="west" move="west" destination="114" />
   </node>
-  <node id="116" name="Foothills, Stony Incline" note="Map7_NTR.xml|Northern Trade Road|NTR">
+  <node id="116" name="Foothills, Stony Incline" note="Map7_Northern_Trade_Road.xml|Northern Trade Road|NTR">
     <description>Taking the opportunity to examine the distant countryside, large green forests in the southwest, flatlands to the south and the large ocean expanse to the southeast all catch the eye.  All seem more attractive than the forbidding set of cliffs up ahead.</description>
     <position x="260" y="140" z="0" />
     <arc exit="up" move="up" destination="1" />

@@ -156,7 +156,7 @@
     <arc exit="east" move="east" destination="23" />
     <arc exit="south" move="south" destination="21" />
   </node>
-  <node id="23" name="South Trade Route, Journey's Rest" note="Map66_STR3.xml|STR">
+  <node id="23" name="South Trade Route, Journey's Rest" note="Map66_Shard_to_Gondola_Area.xml|STR">
     <description>The Southern Trade Route meets Shard's North Bridge here at the Journey's Rest.  Travelers often use this convenient stopping point to recheck their gear before moving on.</description>
     <position x="80" y="40" z="0" />
     <arc exit="north" move="north" />

@@ -98,7 +98,7 @@
     <position x="-120" y="0" z="0" />
     <arc exit="east" move="east" destination="13" />
   </node>
-  <node id="15" name="Prairie" note="Map66_STR3.xml|E Gate|egate">
+  <node id="15" name="Prairie" note="Map66_Shard_to_Gondola_Area.xml|E Gate|egate">
     <description>The taller grasses and flowers give way here to shorter buffalo grass and primroses.  A small flock of prairie-chickens scratch in the dirt and grass for food.  Though they move away from visitors to the area, there is not sufficient danger to send them squawking for shelter.</description>
     <description>The taller grasses and flowers give way here to shorter buffalo grass and primroses.  The pale primroses are in full bloom, casting their sweet scent across the prairie.</description>
     <position x="110" y="40" z="0" />
@@ -1340,7 +1340,7 @@
     <position x="-90" y="780" z="0" />
     <arc exit="out" move="out" destination="72" />
   </node>
-  <node id="207" name="Corik's Wall, Graev's Gate" note="Map68b_Lost_Ground.xml|Corik's Wall|Graev's Gate|Lost Ground">
+  <node id="207" name="Corik's Wall, Graev's Gate" note="Map68b_Blackthorn_Canyon_Lost_Ground.xml|Corik's Wall|Graev's Gate|Lost Ground">
     <description>There is barely a wagon's length of space between the massive ironwood plank door and the heavy iron grating of the portcullis covering the entrance.  Suspended from chains and worked by winches, the portcullis can be slid down vertical grooves in the stone to allow passage through the gate.  On the underside of the arched gateway is a mosaic made of broken shards of colored bottle glass.  It is an odd bit of beauty in an otherwise grim and desperate place.</description>
     <position x="-120" y="940" z="0" />
     <arc exit="go" move="go door" destination="114" />
@@ -1391,7 +1391,7 @@
     <position x="-260" y="-140" z="0" />
     <arc exit="south" move="south" destination="213" />
   </node>
-  <node id="215" name="Abandoned Road" note="Map66_STR3.xml|STR|Abandoned Road">
+  <node id="215" name="Abandoned Road" note="Map66_Shard_to_Gondola_Area.xml|STR|Abandoned Road">
     <description>Several long-abandoned crates sit on the side of the road.  Some have cracked open, spilling their contents -- rusted unmarked tins, long-decayed pelts, sacks of putrid half-sprouted grains and seeds. The wind must have picked up some of the grains before they sprouted because a wide band of wheat, barley and oats grows in a widening arc from the crates.</description>
     <position x="120" y="60" z="0" />
     <arc exit="southeast" move="southeast" />

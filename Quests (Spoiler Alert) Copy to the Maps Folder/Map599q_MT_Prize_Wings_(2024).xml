@@ -491,7 +491,7 @@
     <position x="-40" y="240" z="0" />
     <arc exit="north" move="north" destination="47" />
   </node>
-  <node id="999" name="Droughtman's Maze, Grand Hall" note="Droughtman's_Maze.xml|exit">
+  <node id="999" name="Droughtman's Maze, Grand Hall" note="Map520q_Droughtman's_Challenge.xml|exit">
     <description>Suspended between jewel-toned pennants overhead, ornate oil lanterns softly illuminate the grand entry hall of Droughtman's Maze.  Eager contestants crowd the mahogany registration desk at the center of the chamber, while a gold-carpeted staircase dominates the northern wall, providing access to the observation deck.</description>
     <position x="40" y="180" z="0" />
   </node>

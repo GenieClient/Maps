@@ -88,7 +88,7 @@
     <position x="85" y="364" z="0" />
     <arc exit="south" move="south" destination="12" />
   </node>
-  <node id="15" name="Northern Trade Road, Farmlands" note="NTR|Crossing|Map7_NTR.xml">
+  <node id="15" name="Northern Trade Road, Farmlands" note="NTR|Crossing|Map7_Northern_Trade_Road.xml">
     <description>Neatly planted rows of grain mingle with tidy plots of vegetables covering the rich earth of well-tended farms along the wide road as it wanders across the land.  A farmer waves at you as he toils along behind a yoke of sturdy oxen that pull a heavy iron plow through the fertile soil.</description>
     <description>Empty fields lie sleeping beneath the blanket of night.  The scent of plowed earth mingles with the fragrance of fresh growing things.</description>
     <position x="125" y="464" z="0" />
@@ -419,7 +419,7 @@
     <arc exit="go" move="go trail" destination="65" />
     <arc exit="go" move="go tavern" destination="63" />
   </node>
-  <node id="65" name="Northern Trade Road, Grasslands" note="Map7_NTR.xml">
+  <node id="65" name="Northern Trade Road, Grasslands" note="Map7_Northern_Trade_Road.xml">
     <description>Open grassland mingles with a thinning forest from the north.  Here and there among the trees cattle wander.  They casually dine on the lush grass and occasionally reach up to consume the delicate leaves on the lower branches of the trees.  To the north, low hills rise up gently from the plains.  Southward, a heavy haze or smoke can be made out.</description>
     <description>Open fields to either side can be dimly seen.  Faintly, there comes a trace of woodsmoke, perhaps from the campfires of local herdsmen warming themselves against the night chill.  Nearby, a rounded shape proves to be that of a sleeping cow.</description>
     <position x="205" y="117" z="0" />

@@ -708,7 +708,7 @@
     <position x="120" y="-720" z="0" />
     <arc exit="go" move="go dock" destination="42" />
   </node>
-  <node id="107" name="Southern Trade Route, Endrus Forest" note="Map1a_Crossing_Thief.xml|5th Passage">
+  <node id="107" name="Southern Trade Route, Endrus Forest" note="Map1a_Crossing_Thief_Passages.xml|5th Passage">
     <description>Coppery leaves casting dappled shadows against their pale bark, a few ragged shrubs grow among a tumbled collection of boulders left behind by floodwaters.  Between a dense growth of briars, a narrow gap leads back toward the trade route.</description>
     <position x="160" y="-640" z="1" />
   </node>

@@ -7,7 +7,7 @@
     <arc exit="go" move="search go faint path" destination="2" />
     <arc exit="go" move="search go animal trail" destination="3" />
   </node>
-  <node id="2" name="Northern Trade Road, Wooded Valley" note="Map7_NTR.xml|NTR">
+  <node id="2" name="Northern Trade Road, Wooded Valley" note="Map7_Northern_Trade_Road.xml|NTR">
     <description>You come upon a small clearing in the heavy woods that allows a view of the sky.  A faint path can be made out that wanders into the trees, but it fades off before you can wonder about where it might lead.  There is an unnerving quiet here, even the wind seems to have died.  You feel a stranger in this wild place, perhaps an unwelcome stranger.</description>
     <position x="380" y="0" z="0" />
     <arc exit="northeast" move="northeast" />

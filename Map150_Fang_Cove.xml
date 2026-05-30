@@ -998,7 +998,7 @@
     <arc exit="go" move="go open burl" />
     <arc exit="go" move="go meeting portal" hidden="True" destination="85" />
   </node>
-  <node id="145" name="Shard, East Bridge" note="Map66_STR3.xml">
+  <node id="145" name="Shard, East Bridge" note="Map66_Shard_to_Gondola_Area.xml">
     <description>The extravagance of the eastern quarter of Shard is evident here milk-white marble railings gleam on the cloudiest days.  The marble and the life-sculpted deobar supports show that no expense was spared in olden times, and the new paving stones that cover the roadway blend unobtrusively with the old construction.</description>
     <position x="100" y="120" z="1" />
     <arc exit="east" move="east" />

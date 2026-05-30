@@ -335,7 +335,7 @@
     <arc exit="south" move="south" destination="51" />
     <arc exit="climb" move="climb wall" destination="126" />
   </node>
-  <node id="53" name="Northeast Wilds, Outside Northeast Gate" note="Map7_NTR.xml|Northern Trade Road|NTR|NE Gate">
+  <node id="53" name="Northeast Wilds, Outside Northeast Gate" note="Map7_Northern_Trade_Road.xml|Northern Trade Road|NTR|NE Gate">
     <description>You are before the Northeast Gate of the Crossing, surrounded by wayfarers and adventurers also in mid-journey.  Above, guardsmen stare down from the thick stone wall that encloses the city, wary for hostile visitors.  Whether they travel to destinations in town or farther west, or to the north and east, they all appear to be seeking something beyond themselves.</description>
     <position x="160" y="-154" z="0" />
     <arc exit="north" move="north" />

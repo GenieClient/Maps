@@ -133,7 +133,7 @@
     <position x="300" y="120" z="0" />
     <arc exit="west" move="west" destination="21" />
   </node>
-  <node id="23" name="Arthe Dale, Greensward" note="Map7_NTR.xml">
+  <node id="23" name="Arthe Dale, Greensward" note="Map7_Northern_Trade_Road.xml">
     <description>The park takes on a special magic at night when the tall spires of white delphinium and the beds of evening primrose luminously reflect the moonlight with a silvery glow, adding a delicate perfume to the night air.  A young Halfling couple passes you, strolling hand in hand and whispering softly to each other.  A carved garden bench provides a peaceful place to sit and enjoy the pleasant stillness of the night.</description>
     <position x="120" y="160" z="0" />
     <arc exit="east" />

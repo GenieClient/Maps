@@ -139,7 +139,7 @@
     <arc exit="go" move="go root" destination="21" />
     <arc exit="go" move="go gap" destination="23" />
   </node>
-  <node id="23" name="Southern Trade Route, Endrus Forest" note="Map60_STR1.xml|STR">
+  <node id="23" name="Southern Trade Route, Endrus Forest" note="Map60_Southern_Trade_Route_Part_1.xml|STR">
     <description>The grassy, weed-choked flood plain of the Segoltha River to the north transitions into the forest of Endrus.  The fringe of the woods here, growing ever denser as you gaze southward, consists mainly of oak and beech, interlaced with whitethorn, tangled briars and low-growing shrubs.</description>
     <position x="-100" y="120" z="0" />
     <arc exit="north" move="north" />

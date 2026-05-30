@@ -1237,7 +1237,7 @@
     <arc exit="go" move="go stunted bushes" destination="170" />
     <arc exit="climb" move="climb wall" destination="395" />
   </node>
-  <node id="171" name="Northeast Wilds, Outside Northeast Gate" note="Map7_NTR.xml|NE Gate|NTR|NEGATE">
+  <node id="171" name="Northeast Wilds, Outside Northeast Gate" note="Map7_Northern_Trade_Road.xml|NE Gate|NTR|NEGATE">
     <description>You are before the Northeast Gate of the Crossing, surrounded by wayfarers and adventurers also in mid-journey.  Above, guardsmen stare down from the thick stone wall that encloses the city, wary for hostile visitors.  Whether they travel to destinations in town or farther west, or to the north and east, they all appear to be seeking something beyond themselves.</description>
     <position x="480" y="-488" z="0" />
     <arc exit="north" move="north" />
@@ -2049,7 +2049,7 @@
     <arc exit="southwest" move="southwest" destination="292" />
     <arc exit="northwest" move="northwest" destination="289" />
   </node>
-  <node id="294" name="Jadewater Mansion, Cobbled Path" note="Map1m_Crossing_Jadewater.xml|Jadewater Mansion|Mentors|Tenderfoot">
+  <node id="294" name="Jadewater Mansion, Cobbled Path" note="Map1m_Crossing_Jadewater_Mansion.xml|Jadewater Mansion|Mentors|Tenderfoot">
     <description>Brown cobbles set in herringbone rows lead from the gate to the door of an elegant mansion resting against the town wall.  Borders of waxy green boxwood interspersed with pale yellow roses hem in either side of the path.  Close-cropped grass stretches away from the borders towards the stone fencing that separates the building and the rest of The Crossing.</description>
     <position x="149" y="-557" z="0" />
     <arc exit="east" move="east" />
@@ -2986,7 +2986,7 @@
     <arc exit="west" move="west" destination="572" />
     <arc exit="go" move="go splintered door" destination="102" />
   </node>
-  <node id="440" name="Temple Grounds, Entry Gates" note="Map2a_Temple.xml|Temple">
+  <node id="440" name="Temple Grounds, Entry Gates" note="Map2a_Crossing_Temple.xml|Temple">
     <description>The immense outer walls of the temple meet here, a thick lacquered mahogany gate acting as their mediator.  The hardwood entrance has been banded with sturdy bars of steel to ensure its stamina in the most dire of times.  A cobblestone path leads to the north, winding off into the various parts of the temple grounds.</description>
     <position x="200" y="90" z="0" />
     <arc exit="north" move="north" />
@@ -4354,7 +4354,7 @@
     <position x="130" y="130" z="0" />
     <arc exit="out" move="out" destination="647" />
   </node>
-  <node id="650" name="Riverbank Mudflats, Rough Stairway" note="Map1a_Crossing_Thief.xml|5th Passage">
+  <node id="650" name="Riverbank Mudflats, Rough Stairway" note="Map1a_Crossing_Thief_Passages.xml|5th Passage">
     <description>Barely visible in the murky air of the room, broken boards have been set into the earth to form a crude set of steps that tilt precariously away from the base of the panel to drop into the darkness beyond.  Shredded oilcloth has been jammed into the cracks around the panel as if an attempt has been made to prevent light or sounds from betraying activity here to the world outside.</description>
     <position x="130" y="160" z="0" />
     <arc exit="out" move="out" destination="647" />
@@ -5552,7 +5552,7 @@
     <position x="180" y="-66" z="0" />
     <arc exit="go" move="go simple curtain" destination="848" />
   </node>
-  <node id="850" name="Market Plaza, Foyer" note="Map1j_Market_Plaza.xml|Market Plaza|Plaza">
+  <node id="850" name="Market Plaza, Foyer" note="Map1j_Crossing_Market_Plaza.xml|Market Plaza|Plaza">
     <description>The high ceiling and sand rose painted walls make this entry feel open and expansive.  A large round ironwood table is centered on a thickly-piled rug that covers the middle of the polished marble floor.  Large copper urns filled with preserved peacock feathers and fronds have been placed at each corner of a large listings board.  Rich brown leather couches line the opposite wall.</description>
     <position x="309" y="-219" z="0" />
     <arc exit="north" move="north" />
@@ -5572,23 +5572,23 @@
     <position x="320" y="-180" z="0" />
     <arc exit="go" move="go walkway ramp" destination="384" />
   </node>
-  <node id="853" name="Underground Passageway" note="Map1a_Crossing_Thief.xml">
+  <node id="853" name="Underground Passageway" note="Map1a_Crossing_Thief_Passages.xml">
     <description>This lengthy passageway is clogged with knife-sized bits of sharp debris.  Overhead several massive boulders block out most of the light, and the din of town traffic is reduced to a surflike roar.  No one stops to glance down between the chinks of rubble, leaving your travels unnoticed and undisturbed.</description>
     <position x="230" y="-200" z="1" />
     <arc exit="northeast" move="northeast" />
   </node>
-  <node id="854" name="Underground Passageway" note="Map1a_Crossing_Thief.xml">
+  <node id="854" name="Underground Passageway" note="Map1a_Crossing_Thief_Passages.xml">
     <description>Jagged piles of debris line the center of this passageway, chips and shards of large rocks lodged deep in the low ceiling above.  A fine grey dust blankets everything else, sifting into clouds at knee-level from the passage of thieves.</description>
     <position x="419" y="-334" z="1" />
     <arc exit="south" move="south" />
   </node>
-  <node id="855" name="A Dank Dark Passage" note="Map1a_Crossing_Thief.xml">
+  <node id="855" name="A Dank Dark Passage" note="Map1a_Crossing_Thief_Passages.xml">
     <description>An obstacle course formed of pillaged packing crates in all sizes, shapes and states of decomposition hinders your movement through the passage.  Straw filling, moldy and brown, lies scattered about, jagged edges of rusty metal implements occasionally jutting above the mess.  This is a good place to walk softly.</description>
     <position x="-80" y="-140" z="0" />
     <arc exit="southwest" move="southwest" />
     <arc exit="go" move="go narrow footholds" destination="32" />
   </node>
-  <node id="856" name="A Dank, Cluttered Passage" note="Map1a_Crossing_Thief.xml">
+  <node id="856" name="A Dank, Cluttered Passage" note="Map1a_Crossing_Thief_Passages.xml">
     <description>An obstacle course formed of pillaged packing crates in all sizes, shapes and states of decomposition hinders your movement through the passage.  Straw filling, moldy and brown, lies scattered about, jagged edges of rusty metal implements occasionally jutting above the mess.  This is a good place to walk softly.</description>
     <position x="215" y="290" z="0" />
     <arc exit="northeast" move="northeast" />
@@ -5607,19 +5607,19 @@
     <arc exit="go" move="go main bar" destination="699" />
     <arc exit="climb" move="climb ladder" destination="857" />
   </node>
-  <node id="859" name="The Raven's Court, Secret Passage" note="Map1a_Crossing_Thief.xml">
+  <node id="859" name="The Raven's Court, Secret Passage" note="Map1a_Crossing_Thief_Passages.xml">
     <description>Though the cool stone walls are bare, a long maroon runner with pale golden fringe spreads across the length of the floor.  The tunnel's interior is visible only by the overflow of light from the basement beyond.  Despite being underground, a fresh breeze fills the space from an opening overhead cleverly concealed with leafy hedges above.</description>
     <position x="-241" y="6" z="1" />
     <arc exit="southwest" move="southwest" />
     <arc exit="go" move="go hole" destination="550" />
   </node>
-  <node id="860" name="Behind the Half Pint Inn" note="Map1a_Crossing_Thief.xml">
+  <node id="860" name="Behind the Half Pint Inn" note="Map1a_Crossing_Thief_Passages.xml">
     <description>Heavy wooden ale kegs line the small back alley on all sides to form high barriers, save for the area to the southwest that slopes into a dark underground tunnel.  Dimpled glass windows along the building wall prevent the tavern's patrons from noticing any suspicious activity in the cramped lot.  A tangle of blue violet wolfsbane spills over the edges of a faded red flower box toward the cobble below as if attempting a daring escape from its wooden prison.</description>
     <position x="79" y="26" z="1" />
     <arc exit="southwest" move="southwest" />
     <arc exit="go" move="go path" destination="45" />
   </node>
-  <node id="861" name="The Raven's Court, Basement" note="Map1a_Crossing_Thief.xml">
+  <node id="861" name="The Raven's Court, Basement" note="Map1a_Crossing_Thief_Passages.xml">
     <description>Crowding every inch of wall space, several shelves store everything from empty wine barrels to shiny gardening tools.  Piled into one corner, a collection of overturned boxes are arranged into layered seating like rows in an amphitheatre.  A long vegetable crate has been propped on its side for use as a podium in this makeshift meeting room.</description>
     <position x="-280" y="50" z="1" />
     <arc exit="northeast" move="northeast" />
@@ -6471,17 +6471,17 @@
     <position x="-220" y="30" z="0" />
     <arc exit="climb" move="climb small steps" destination="527" />
   </node>
-  <node id="1005" name="Crossing Escape Tunnels, Kuniyo's Egress" note="1005|Map2d_Escape_Tunnels.xml">
+  <node id="1005" name="Crossing Escape Tunnels, Kuniyo's Egress" note="1005|Map2d_Crossing_Escape_Tunnels.xml">
     <description>Rough-hewn blocks of sandstone form a tall arch with a stylized metallic eye gleaming at its apex.  The structure curves over a hard-packed path of earth mixed with clay and pine needles that slopes abruptly down and into darkness.  Stray beams of light reveal that this is no dead-end, barely outlining a narrow passage at the foot of the incline.</description>
     <position x="-90" y="-468" z="0" />
     <arc exit="east" move="east" />
   </node>
-  <node id="1006" name="Crossing Escape Tunnels, Truffenyi's Way" note="1006|Map2d_Escape_Tunnels.xml">
+  <node id="1006" name="Crossing Escape Tunnels, Truffenyi's Way" note="1006|Map2d_Crossing_Escape_Tunnels.xml">
     <description>A stylized eye of some metallic substance is set at the apex of a granite arch that guards the entrance to this room.  Against one wall, a plank between two stacks of clay bricks forms a makeshift shelf, supporting a row of tallow candles in brass holders.  Their flickering illumination, combined with pervasive dampness, imbues the atmosphere with a topaz-hued glow.</description>
     <position x="-20" y="-548" z="0" />
     <arc exit="south" move="south" />
   </node>
-  <node id="1007" name="Crossing Escape Tunnels, Hodierna's Path" note="1007|Map2d_Escape_Tunnels.xml">
+  <node id="1007" name="Crossing Escape Tunnels, Hodierna's Path" note="1007|Map2d_Crossing_Escape_Tunnels.xml">
     <description>Dense walls hacked out of earth and stone curve around a massive arch centered with a stylized metal eye that shadows a series of unevenly-chiseled steps wending their way down into darkness.  Gloom obscures the area beyond, but a chilly draft from below hints at an opening of some kind.</description>
     <position x="280" y="-448" z="0" />
     <arc exit="south" move="south" />
@@ -6537,7 +6537,7 @@
     <position x="-77" y="-240" z="0" />
     <arc exit="go" move="go lunat door" destination="433" />
   </node>
-  <node id="1017" name="The Seacaves of Peri'el, Tidal Cave" note="1017|Map502_The_Seacaves_of_Peri'el.xml|seacaves">
+  <node id="1017" name="The Seacaves of Peri'el, Tidal Cave" note="1017|Map1n_The_Seacaves_of_Peri'el.xml|seacaves">
     <description>Water bubbles up from a small spring before it tumbles over the edge of the hill, plunging down a smooth rock chute.  Far below, the water splashes into a crystal blue grotto which sparkles in the sunlight.</description>
     <position x="265" y="160" z="0" />
     <arc exit="out" />

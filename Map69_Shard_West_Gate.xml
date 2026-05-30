@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <zone name="Shard West Gate" id="69">
-  <node id="1" name="Southern Trade Route, Road to Shard" note="Map66_STR3.xml|North Gate|N Gate|NorthGate|ngate">
+  <node id="1" name="Southern Trade Route, Road to Shard" note="Map66_Shard_to_Gondola_Area.xml|North Gate|N Gate|NorthGate|ngate">
     <description>Wyvern Mountain towers far into the sky to the southwest, a monument to time and myth.  East of it reclines Shard, a shimmer of light against the omnipresent darkness of the glowering peak.</description>
     <position x="680" y="437" z="0" />
     <arc exit="northeast" move="northeast" />

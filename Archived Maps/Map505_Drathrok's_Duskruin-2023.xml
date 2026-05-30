@@ -152,7 +152,7 @@
     <position x="310" y="130" z="0" />
     <arc exit="go" move="go granite archway" destination="22" />
   </node>
-  <node id="24" name="The Strand, Sandy Path" note="Map7_NTR.xml|entrance|exit|Northern Trade Road|NTR">
+  <node id="24" name="The Strand, Sandy Path" note="Map7_Northern_Trade_Road.xml|entrance|exit|Northern Trade Road|NTR">
     <description>You can hear the Oxenwaithe lapping gently at its bank, creating a soothing sound not unlike a lullaby.  The light reflected from the moons provide shimmery paths along the sandy embankments at water's edge.</description>
     <position x="170" y="290" z="0" />
     <arc exit="southeast" move="up" />

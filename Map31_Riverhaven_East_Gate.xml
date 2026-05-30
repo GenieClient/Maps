@@ -519,7 +519,7 @@
     <position x="20" y="-160" z="0" />
     <arc exit="go" move="go arch" destination="77" />
   </node>
-  <node id="79" name="Faldesu River, North Bank" note="Map14c_Faldesu.xml|Faldesu River">
+  <node id="79" name="Faldesu River, North Bank" note="Map14c_Faldesu_River.xml|Faldesu River">
     <description>The Riverhaven town wall stretches out into the waters a short distance upriver from a crumbling stone bridge.  An orange glow rises above the dark wall from the torches and lamps of the town along with the low buzz of voices muffled by the night.  Several small fishing boats bob in the sheltered part of the river near the town wall, silently awaiting their masters.</description>
     <description>The Riverhaven town wall stretches out into the waters a short distance upriver from a crumbling stone bridge.  The sounds of pleading beggars and creaking merchant wagons grate against the peaceful sounds of the rolling river.  Small fishing boats bob in the sheltered cove formed by the town wall, their weather-wary owners busy on the bank mending nets and patching sail.</description>
     <position x="80" y="-60" z="0" />

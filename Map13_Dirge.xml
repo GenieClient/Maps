@@ -464,7 +464,7 @@
     <arc exit="east" move="east" destination="1" />
     <arc exit="go" move="go faint roadway" destination="71" />
   </node>
-  <node id="71" name="North Roads Caravansary" note="Map7_NTR.xml|NTR">
+  <node id="71" name="North Roads Caravansary" note="Map7_Northern_Trade_Road.xml|NTR">
     <description>The road runs northwest past a cluster of stone buildings and stables to one side.  A narrow path branches off to the east following a rough line of hills while another section continues southeast.  You hear the lowing of sheep and the bleating of goats from nearby and an errant breeze brings the smell of something roasting over a fire.  Elsewhere, you might wonder just what was being cooked that smells so strongly, but here and now you find you are both famished and in dire need of drink.</description>
     <position x="40" y="20" z="0" />
     <arc exit="north" move="north" />

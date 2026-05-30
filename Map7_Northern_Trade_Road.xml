@@ -1594,7 +1594,7 @@
     <arc exit="up" move="up" destination="195" />
     <arc exit="climb" move="climb steep embankment" destination="179" />
   </node>
-  <node id="197" name="Faldesu River, South Bank" note="Map14c_Faldesu.xml|Faldesu">
+  <node id="197" name="Faldesu River, South Bank" note="Map14c_Faldesu_River.xml|Faldesu">
     <description>A high, rocky bank supports the remains of a large stone bridge which once spanned the river.  From across the wide river the sounds of Riverhaven carry.  Further to the east, the swift waters slow near the tall reeds of an encroaching marsh.</description>
     <position x="280" y="30" z="0" />
     <arc exit="north" />
@@ -2878,7 +2878,7 @@
     <position x="516" y="1730" z="0" />
     <arc exit="out" move="out" destination="392" />
   </node>
-  <node id="394" name="Wilderness, Overgrown Path" note="Map11_Vipers_Rock_Guardians.xml|Thicket Vipers|Vipers|Black Leucros|Leucros|Rock Guardians|Guardians">
+  <node id="394" name="Wilderness, Overgrown Path" note="Map11_Leucros_Vipers_and_Rock_Guardians.xml|Thicket Vipers|Vipers|Black Leucros|Leucros|Rock Guardians|Guardians">
     <description>A faint trail fades to nothing more than a thin break in the undergrowth, but seems to faintly curve east to southwest.  The heavy brush scratches and whips any exposed skin with each step forward.  An occasional rustle from areas unseen is a soft reminder that the solitude of the area is only an illusion.</description>
     <description>Though deep, the darkness isn't complete and the chirring sounds of insects fills the air.  Pressing in all around, a thicket of scrub and brush make passage difficult.  What little light there is comes from the east.  All other directions stare back with an opaque blackness as thick as tar.</description>
     <position x="500" y="1550" z="0" />
@@ -2891,7 +2891,7 @@
     <arc exit="climb" move="climb stony trail" destination="359" />
     <arc exit="go" move="search go overgrown path" destination="397" />
   </node>
-  <node id="396" name="Lairocott Brach, Entrance" note="Map10_Abandoned_Mine_Lairocott.xml|Abandoned Mine|Stone Clan">
+  <node id="396" name="Lairocott Brach, Entrance" note="Map10_Abandoned_Mine_and_Lairocott_Brach.xml|Abandoned Mine|Stone Clan">
     <description>Placed in the wall of the sheer cliff that stands before you is a large stone door, currently blasted open.  Two large lifelike sentinels, one on either side of the door, have been scorched black.</description>
     <description>Placed in the wall of the sheer cliff is a huge stone door with an arched top.  Two large lifelike sentinels, one on either side of the door, stand at attention in silence.</description>
     <position x="560" y="1720" z="0" />

@@ -50,7 +50,7 @@
     <arc exit="northeast" move="northeast" destination="1" />
     <arc exit="west" move="west" destination="9" />
   </node>
-  <node id="9" name="Foothills, Stony Incline" note="Map7_NTR.xml|NTR">
+  <node id="9" name="Foothills, Stony Incline" note="Map7_Northern_Trade_Road.xml|NTR">
     <description>Taking the opportunity to examine the distant countryside, large green forests in the southwest, flatlands to the south and the large ocean expanse to the southeast all catch the eye.  All seem more attractive than the forbidding set of cliffs up ahead.</description>
     <position x="80" y="60" z="0" />
     <arc exit="up" move="up" />

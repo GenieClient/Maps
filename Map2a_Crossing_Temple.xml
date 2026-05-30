@@ -1217,7 +1217,7 @@
     <position x="160" y="440" z="0" />
     <arc exit="climb" move="climb brass ladder" destination="185" />
   </node>
-  <node id="188" name="Temple, North Tower" note="Map2d_Escape_Tunnels.xml|Escape Tunnels|Tunnels">
+  <node id="188" name="Temple, North Tower" note="Map2d_Crossing_Escape_Tunnels.xml|Escape Tunnels|Tunnels">
     <description>Diffuse golden light falls from somewhere above, its honeyed beams drifting down the length of the tower.  Matched flagstones of deep grey slate create a broad landing that punctuates the staircase as it continues its gradual climb.</description>
     <position x="320" y="-20" z="0" />
     <arc exit="down" move="down" />
