@@ -1367,7 +1367,7 @@
     <position x="300" y="420" z="1" />
     <arc exit="east" move="rt east" destination="215" />
   </node>
-  <node id="217" name="Sicle Grove, Low Mound" note="Map7_NTR.xml|NTR">
+  <node id="217" name="Sicle Grove, Low Mound" note="Map7_Northern_Trade_Road.xml|NTR">
     <description>Smoke drifts in on hot gusts of air smelling of sulphur and burnt wood.  Steadily-falling ash blankets the area in a constant attempt to bury the landscape and a small shack in its grey embrace.  A faint footpath leads upwards.</description>
     <position x="320" y="440" z="0" />
     <arc exit="west" move="rt west" />

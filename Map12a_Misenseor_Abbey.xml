@@ -389,7 +389,7 @@
     <arc exit="east" move="east" destination="62" />
     <arc exit="go" move="go trail" destination="60" />
   </node>
-  <node id="60" name="Northern Trade Road, Deep Forest" note="Map7_NTR.xml|NTR">
+  <node id="60" name="Northern Trade Road, Deep Forest" note="Map7_Northern_Trade_Road.xml|NTR">
     <description>The trees rise about you like looming tombstones in a graveyard, each one draped in shawls of sickly gray lichen.  The air is thick with a pressing sense of gloom, and you get the distinct impression that you are being watched.</description>
     <position x="-360" y="0" z="0" />
     <arc exit="go" move="go copse" destination="59" />

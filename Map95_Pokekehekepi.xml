@@ -1,0 +1,2376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Pokekehekepi" id="95">
+  <node id="1" name="Shh'o'kumu Terrace, Por'oson Gate" note="Map90_Ratha.xml|Ratha">
+    <description>The great wall culminates here with the large and stately Por'oson Gate.  Day and night, streams of travelers find paths through the gate to the agricultural lands and great forests to the northeast, or find access to the ports of the city below.  A pair of wary guards watches the comings and goings here, constantly alert to potential trouble.</description>
+    <position x="20" y="-20" z="0" />
+    <arc exit="east" move="east" />
+    <arc exit="west" move="west" />
+    <arc exit="go" move="go por'oson gate" destination="2" />
+  </node>
+  <node id="2" name="Reshalia, Coastal Road">
+    <description>The heavy wooden Por'oson Gate stands open even at night, but the guards keep a close eye on anyone passing through, occasionally stopping a suspicious-looking traveler to ask his business.  Torches flaring in heavy iron sconces provide bright illumination, although the shadows that remain seem even blacker by contrast.</description>
+    <description>The heavy wooden Por'oson Gate stands open day and night, and the guards keep an eye on everyone passing through, occasionally stopping a suspicious-looking traveler to ask his business.  Most of those going in and out are local farmers bringing in loads of grain or other crops in huge, heaped wooden farm wagons, and the guards' most careful scrutiny is reserved for the few strangers who pass by.</description>
+    <position x="20" y="-40" z="0" />
+    <arc exit="north" move="north" destination="3" />
+    <arc exit="go" move="go por'oson gate" destination="1" />
+  </node>
+  <node id="3" name="Reshalia, Coastal Road">
+    <description>Heavy gravel covers the roadway, allowing the constant wagon traffic to pass over it without creating a muddy morass in wet weather.  Deep ditches to either side provide for drainage but also create a hazard for any wagon wheel that slips into them.  Stagnant water and cattails fill the low spots.</description>
+    <position x="20" y="-60" z="0" />
+    <arc exit="northeast" move="northeast" destination="4" />
+    <arc exit="south" move="south" destination="2" />
+  </node>
+  <node id="4" name="Reshalia, Coastal Road">
+    <description>Well-tended fields stretch out over the flat ground as far as can be seen, and the night breeze passing over them creates a gentle hissing sound in the still darkness.  Off to the northwest, the tall cone of Reshalia's volcano lies slumbering on the horizon, visible only as a darker mass against the sky.</description>
+    <description>Well-tended fields stretch out over the flat ground as far as can be seen.  Black dots that might be far-off workers move slowly across them.  Off to the northwest, the tall cone of Reshalia's volcano lies slumbering on the horizon.</description>
+    <position x="40" y="-80" z="0" />
+    <arc exit="northeast" move="northeast" destination="5" />
+    <arc exit="southwest" move="southwest" destination="3" />
+  </node>
+  <node id="5" name="Reshalia, Coastal Road">
+    <description>A cluster of old buildings lies just a short bit off the road, slowly falling into ruin.  The wood from which they were originally built has weathered down to a uniform dark grey, and any paint has long since disappeared.  A few tendrils of wild kord slither around the exposed ribs of the rafters.</description>
+    <position x="60" y="-100" z="0" />
+    <arc exit="northeast" move="northeast" destination="6" />
+    <arc exit="southwest" move="southwest" destination="4" />
+  </node>
+  <node id="6" name="Reshalia, Coastal Road">
+    <description>A small farm pond has been created by damming a tiny stream running along the fields.  Thick cattails and marsh grass choke most of it, and they are inhabited by loud swarms of frogs vocalizing their love calls into the night.  A few cattle slumber nearby, visible only as small mounds in the darkness.</description>
+    <description>A small farm pond has been created by damming a tiny stream running along the fields.  A few cattle graze nearby.  Muddy ground gouged by deep hoof prints marks the favored watering spot, and thick cattails and marsh grass choke most of the rest of the pond.</description>
+    <position x="80" y="-120" z="0" />
+    <arc exit="east" move="east" destination="7" />
+    <arc exit="southwest" move="southwest" destination="5" />
+  </node>
+  <node id="7" name="Reshalia, Coastal Road">
+    <description>A line of haystacks along the side of the road creates the only hills visible for leagues in all directions.  A few small cottages are scattered here and there among the grain fields, surrounded by mounds of trees.</description>
+    <position x="100" y="-120" z="0" />
+    <arc exit="east" move="east" destination="8" />
+    <arc exit="west" move="west" destination="6" />
+  </node>
+  <node id="8" name="Reshalia, Coastal Road">
+    <description>Carefully plowed fields march off to either side in neat geometry, each one squared up against its neighbors.  Near the road, an abandoned farm cottage droops, doors missing, so that passersby see straight through the front door and out the back to the fields beyond.</description>
+    <position x="120" y="-120" z="0" />
+    <arc exit="east" move="east" destination="9" />
+    <arc exit="west" move="west" destination="7" />
+  </node>
+  <node id="9" name="Reshalia, Coastal Road">
+    <description>At just the right spot, it's possible to look down the neat rows plowed perpendicular to the road almost as far as the horizon.  A tumble of black stones has been piled up next to the road.  Near it, someone has made an amateur start on a stacked stone wall, but it crumbles after only a few lengths.</description>
+    <position x="140" y="-120" z="0" />
+    <arc exit="northeast" move="northeast" destination="10" />
+    <arc exit="west" move="west" destination="8" />
+  </node>
+  <node id="10" name="Reshalia, Coastal Road">
+    <description>Ruts in the road mark where the wheels of the farmers' wagons travel back and forth to town.  In whole sections, the gravel has been washed away and the surface is only dirt.</description>
+    <position x="160" y="-140" z="0" />
+    <arc exit="northeast" move="northeast" destination="11" />
+    <arc exit="southwest" move="southwest" destination="9" />
+  </node>
+  <node id="11" name="Reshalia, Coastal Road">
+    <description>The ocean stretches out at the eastward horizon, a flat black expanse visible between the gently rolling hills.  It blends into the darkness of the sky, making their line of separation hard to pick out.</description>
+    <description>The ocean stretches out at the eastward horizon, a flat blue-grey expanse visible between the gently rolling green hills.  The color of the sky blends into the water, making their line of separation hard to pick out.</description>
+    <position x="180" y="-160" z="0" />
+    <arc exit="north" move="north" destination="12" />
+    <arc exit="southwest" move="southwest" destination="10" />
+  </node>
+  <node id="12" name="Reshalia, Coastal Road">
+    <description>Fields of cultivated kord lie to either side of the road, carefully tended and weeded by the farmer who owns this land.  The fibrous plants grow tall and stalky, with only a few leaves scattered along the stem.</description>
+    <position x="180" y="-180" z="0" />
+    <arc exit="northeast" move="northeast" destination="13" />
+    <arc exit="south" move="south" destination="11" />
+  </node>
+  <node id="13" name="Reshalia, Coastal Road">
+    <description>Fields of grain stretch to the west, looking something like a child's nubby blanket that has been carelessly tossed on the ground.  Occasionally a rough track, just wide enough for a wagon, branches off the main road and heads into the fields.  To the east, the drop-off down to the ocean is not far, and if the wind is right, the sound of waves crashing at its base can faintly be heard.</description>
+    <position x="200" y="-200" z="0" />
+    <arc exit="northeast" move="northeast" destination="14" />
+    <arc exit="southwest" move="southwest" destination="12" />
+  </node>
+  <node id="14" name="Reshalia, Coastal Road">
+    <description>A point of black rock juts into the ocean like an arrowhead.  The road curves with it, just at the edge of the fall down to the water, hugging a large bay cut into the coast.  A narrow strip of sand lies at the base of the rocks.</description>
+    <position x="220" y="-220" z="0" />
+    <arc exit="southwest" move="southwest" destination="13" />
+    <arc exit="northwest" move="northwest" destination="15" />
+  </node>
+  <node id="15" name="Reshalia, Coastal Road">
+    <description>Streaks of reflected light gleam and waver across the black water below, glowing almost luminously on the white froth of the waves breaking along the shore.  The constant rhythmic roar provides a background to the other quiet noises of the night.</description>
+    <description>Sea birds wheel and cry overhead, searching for food among the pools at the water's edge below.  Their constant cries blend into a raucous harmony as they caw and cackle to each other, occasionally gliding down to rest on the rocks or a piece of bleached driftwood.</description>
+    <position x="200" y="-240" z="0" />
+    <arc exit="southeast" move="southeast" destination="14" />
+    <arc exit="west" move="west" destination="16" />
+  </node>
+  <node id="16" name="Reshalia, Coastal Road">
+    <description>The road winds around huge rocks, curving along the steep hill falling toward the ocean.  Boulders stud the sandy beach below, the black basalt twisted into odd shapes by the force of the waves and its volcanic origin.</description>
+    <position x="180" y="-240" z="0" />
+    <arc exit="east" move="east" destination="15" />
+    <arc exit="northwest" move="northwest" destination="17" />
+  </node>
+  <node id="17" name="Reshalia, Coastal Road">
+    <description>A narrow band of sand lies at the base of the steep rocks on which the road runs, washed by the ceaseless rhythm of the waves rolling in.  A huge pile of driftwood has collected just above high tide level, forming nooks and crannies that are inhabited by several kinds of creatures, judging from the tracks left in the sand.</description>
+    <position x="160" y="-260" z="0" />
+    <arc exit="north" move="north" destination="18" />
+    <arc exit="southeast" move="southeast" destination="16" />
+  </node>
+  <node id="18" name="Reshalia, Coastal Road">
+    <description>A thin stream tumbles down the cliff face, scattering on rocks in its way, and passing under the road's narrow wooden bridge to throw itself in a filmy veil off the cliff and into the ocean below.</description>
+    <position x="160" y="-280" z="0" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="19" />
+    <arc exit="south" move="south" destination="17" />
+  </node>
+  <node id="19" name="Reshalia, Coastal Road">
+    <description>The road winds around tumbled black basalt rocks that fall steeply down into the bay.  The water swirls at their base as the waves roll in, in places white with foam, in others a deep green that hints at its depth.</description>
+    <position x="100" y="-60" z="0" />
+    <arc exit="east" move="east" destination="20" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="18" />
+  </node>
+  <node id="20" name="Reshalia, Coastal Road">
+    <description>Just offshore, huge boulders and slices of rock break the waves.  Some are almost small islands, while others barely show above the surface of the water, suggesting that there may be more hidden and dangerous rocks lurking unseen below.</description>
+    <position x="120" y="-60" z="0" />
+    <arc exit="east" move="east" destination="21" />
+    <arc exit="west" move="west" destination="19" />
+  </node>
+  <node id="21" name="Reshalia, Coastal Road">
+    <description>A bit of the cliffside has split off and created a small island just about the same height as the roadway.  A lone dwarf pine tree is growing on the very top of the massive rock, bent by the constant ocean breeze so that its leaves look like windswept smoke trailing out behind the trunk.</description>
+    <position x="140" y="-60" z="0" />
+    <arc exit="east" move="east" destination="22" />
+    <arc exit="west" move="west" destination="20" />
+  </node>
+  <node id="22" name="Reshalia, Coastal Road">
+    <description>Hugging the cliffside, the road has been well maintained, although a scar here and there shows where a bit of it slid down into the water below.  Jagged boulders just offshore create a hazard to any boater attempting to navigate into the bay, as the spray flung up by the force of the waves attests.</description>
+    <position x="160" y="-60" z="0" />
+    <arc exit="east" move="east" destination="23" />
+    <arc exit="west" move="west" destination="21" />
+  </node>
+  <node id="23" name="Reshalia, Coastal Road">
+    <description>A good-sized bay cuts into the coast, and the road curves around the cliffs lining it.  Across the stretch of water to the south, a pale line cutting across the hillside marks its path as it heads toward the city gates of Ratha.</description>
+    <position x="180" y="-60" z="0" />
+    <arc exit="northeast" move="northeast" destination="24" />
+    <arc exit="west" move="west" destination="22" />
+  </node>
+  <node id="24" name="Reshalia, Coastal Road">
+    <description>The road has been cut into the hillside, with a spectacular drop down to the ocean on one side and black tumbled rock on the other.  Waves rolling in send spray flying as they crash on the rough boulders below.</description>
+    <position x="200" y="-80" z="0" />
+    <arc exit="north" move="north" destination="25" />
+    <arc exit="southwest" move="southwest" destination="23" />
+  </node>
+  <node id="25" name="Reshalia, Coastal Road">
+    <description>Steep hills rise to either side, black rock showing jaggedly through scars in the thin brown grass where the slope is too steep for any soil to remain.  Here and there, a hardy juniper has taken hold and creates a spreading green mound.</description>
+    <position x="200" y="-100" z="0" />
+    <arc exit="north" move="north" destination="26" />
+    <arc exit="south" move="south" destination="24" />
+  </node>
+  <node id="26" name="Reshalia, Coastal Road">
+    <description>From a distance, the hillsides look as if someone has flung a green velvet cape over them.  Thickets of shrubs grow head-high, blocking the view entirely for long stretches.</description>
+    <position x="200" y="-120" z="0" />
+    <arc exit="northeast" move="northeast" destination="27" />
+    <arc exit="south" move="south" destination="25" />
+  </node>
+  <node id="27" name="Reshalia, Coastal Road">
+    <description>There's only a small field here between the roadway and a sheer drop-off down to the ocean stretching away to the east.  Occasional distant dots of lantern light streaking the black water mark ships passing between Ratha's harbor and the eastward islands.</description>
+    <description>There's only a small field here between the roadway and a sheer drop-off down to the ocean stretching away to the east.  Occasional dark dots on the blue water mark ships passing between Ratha's harbor and the eastward islands.</description>
+    <position x="220" y="-140" z="0" />
+    <arc exit="north" move="north" destination="28" />
+    <arc exit="southwest" move="southwest" destination="26" />
+  </node>
+  <node id="28" name="Reshalia, Coastal Road">
+    <description>Lush green fields of grass, spotted with occasional shade trees, stretch off to the north and west.  Just a short distance from the road is a small pond choked with water lilies.  The songs of the frogs that make their homes there thrum through the air in harmony that is sometimes perfect counterpoint, and sometimes clashes in discord.</description>
+    <position x="220" y="-160" z="0" />
+    <arc exit="northeast" move="northeast" destination="29" />
+    <arc exit="south" move="south" destination="27" />
+  </node>
+  <node id="29" name="Reshalia, Coastal Road">
+    <description>A white-painted fence runs along the northern edge of the road as far as the eye can see, and occasionally divides off into square fields holding small groups of grazing horses.  The amount of work required to keep the fence in its pristine condition is staggering, and suggests that its owner has enough money to hire the scores of painters and carpenters required.</description>
+    <position x="240" y="-180" z="0" />
+    <arc exit="east" move="east" destination="30" />
+    <arc exit="southwest" move="southwest" destination="28" />
+  </node>
+  <node id="30" name="Reshalia, Coastal Road">
+    <description>A flat blue line at the horizon to the east marks the presence of the ocean across a long, rolling field of low bushes.  Dirty white sheep wander across the meadow in clumps.</description>
+    <position x="260" y="-180" z="0" />
+    <arc exit="northeast" move="northeast" destination="31" />
+    <arc exit="west" move="west" destination="29" />
+  </node>
+  <node id="31" name="Reshalia, Coastal Road">
+    <description>The road winds around rolling hillocks covered in grass and low brush.  Occasional skittering noises drift through the darkness from the fields, suggesting that while some creatures will eat well tonight, others are not so lucky.</description>
+    <description>The road winds around rolling hillocks covered in grass and low brush.  Far off to the west is a looming shadow on the horizon that might be either a cloud or the presence of a mountain.</description>
+    <position x="280" y="-200" z="0" />
+    <arc exit="northeast" move="northeast" destination="32" />
+    <arc exit="southwest" move="southwest" destination="30" />
+  </node>
+  <node id="32" name="Reshalia, Coastal Road">
+    <description>Large, obviously healthy sheep graze contentedly on the grasses growing between rocky outcroppings in their pasture.  Their feeding cuts the plants very short and their sharp hooves cut into the soil, creating swathes of raw dirt in the areas they've grazed most recently.</description>
+    <position x="300" y="-220" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="33" />
+    <arc exit="southwest" move="southwest" destination="31" />
+  </node>
+  <node id="33" name="Reshalia, Coastal Road">
+    <description>A small stream meanders across the fields, twisting and turning around the low hummocks and hills.  Bright green grass marks its path as it wanders off toward the sea to the east.</description>
+    <position x="280" y="-40" z="0" />
+    <arc exit="northeast" move="northeast" destination="34" />
+    <arc exit="south" move="south" hidden="True" destination="32" />
+  </node>
+  <node id="34" name="Reshalia, Coastal Road">
+    <description>Tall trees run in a row between grassy fields, creating a clear boundary line between them.  Alongside the road, a drainage ditch is filled with a tangle of wildflowers and weeds.</description>
+    <position x="300" y="-60" z="0" />
+    <arc exit="north" move="north" destination="35" />
+    <arc exit="southwest" move="southwest" destination="33" />
+  </node>
+  <node id="35" name="Reshalia, Coastal Road">
+    <description>Grazing sheep visible as white spots in the distance have cropped the pastureland to either side of the road down to only finger high.  Patches of black basalt poke through in places where rainwater has eroded away the thin layer of dirt.</description>
+    <position x="300" y="-80" z="0" />
+    <arc exit="north" move="north" destination="36" />
+    <arc exit="south" move="south" destination="34" />
+  </node>
+  <node id="36" name="Reshalia, Coastal Road">
+    <description>A rough fence lines the road, built of saplings stretched between cairns of rocks acting as fenceposts.  Shaggy sheep graze behind the barrier, the sticks and grass caught in their wool giving them a speckled and spotted look.</description>
+    <position x="300" y="-100" z="0" />
+    <arc exit="north" move="north" destination="37" />
+    <arc exit="south" move="south" destination="35" />
+  </node>
+  <node id="37" name="Reshalia, Coastal Road">
+    <description>Gravel mixes with dirt on the surface of the road, as if some helpful soul had attempted to lessen its churning by heavy wagon wheels in bad weather.  Thickets of young bushes cover the low hills in all directions.</description>
+    <position x="300" y="-120" z="0" />
+    <arc exit="north" move="north" destination="38" />
+    <arc exit="south" move="south" destination="36" />
+  </node>
+  <node id="38" name="Reshalia, Coastal Road">
+    <description>Virtually all of the larger trees have been cut down, leaving only tangled bushes, weeds, and an occasional sapling too young or too twisted to produce decent lumber.  Occasionally, the faint smell of smoke wafts by on the breeze, suggesting that the workers who felled this field are not far off.</description>
+    <position x="300" y="-140" z="0" />
+    <arc exit="northeast" move="northeast" destination="39" />
+    <arc exit="south" move="south" destination="37" />
+  </node>
+  <node id="39" name="Reshalia, Coastal Road">
+    <description>Here and there, a larger tree has been logged, leaving flat stumps surrounded by fringes of small crowded shoots.  The dirt of the road has been worn down by wagon wheels dragging the lumber away, creating uncertain footing for both four-footed and two-footed travelers.</description>
+    <position x="320" y="-160" z="0" />
+    <arc exit="north" move="north" destination="40" />
+    <arc exit="southwest" move="southwest" destination="38" />
+  </node>
+  <node id="40" name="Reshalia, Coastal Road">
+    <description>Thick ruts scar the surface of the road where water flows in wet seasons, and the trees crowd close on either side, narrowing the roadway so much that it would be impossible to take a wagon any further.</description>
+    <position x="320" y="-180" z="0" />
+    <arc exit="north" move="north" destination="41" />
+    <arc exit="south" move="south" destination="39" />
+  </node>
+  <node id="41" name="Reshalia, Coastal Trail">
+    <description>The trail skirts around a small grove of gnarled, bent trees that are clearly far older than the rest of the forest.  Moonlight glints off twisted roots and leaves, partially illuminating but never fully revealing the depths of the looming shadows cast by the misshapen trunks.  Sounds and speech seem to flatten beneath the pressure of the still air.</description>
+    <description>The trail skirts around a small grove of gnarled, bent trees that are clearly far older than the rest of the forest.  Birds flit from one branch to another, and fill the air with their bright song.</description>
+    <position x="320" y="-200" z="0" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="42" />
+    <arc exit="south" move="south" destination="40" />
+  </node>
+  <node id="42" name="Reshalia, Coastal Trail">
+    <description>The trees thin out slightly, and a thick tangle of blackberry brambles covers both sides of the trail.  Their sprawling, thorny branches snag at clothing, skin, and scales as travelers pass by.</description>
+    <position x="360" y="-60" z="0" />
+    <arc exit="northeast" move="northeast" destination="43" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="41" />
+  </node>
+  <node id="43" name="Reshalia, Coastal Trail">
+    <description>Soaring ironwood trunks grow straight and tall like mighty pillars in a huge hall, while their dense branches create a canopy high overhead.  One fallen giant lies still pristine on the forest floor, resisting rot and decay even after death.</description>
+    <position x="380" y="-80" z="0" />
+    <arc exit="northeast" move="northeast" destination="44" />
+    <arc exit="southwest" move="southwest" destination="42" />
+  </node>
+  <node id="44" name="Reshalia, Coastal Trail">
+    <description>The trail slopes sharply down to the southwest, and erosion has washed away much of the soil, leaving rocky shelves and gravel in which only a few scrubby dwarf pines can find enough soil to grow.  Tall oaks and ironwood trees dominate the top of the slope, while an evergreen forest spills along its base.</description>
+    <position x="400" y="-100" z="0" />
+    <arc exit="northeast" move="northeast" destination="45" />
+    <arc exit="southwest" move="southwest" destination="43" />
+  </node>
+  <node id="45" name="Reshalia, Coastal Trail">
+    <description>Tossing in the ever-present sea breeze off the nearby ocean, the pine boughs give off a spicy scent that tickles your senses.  Only a few lacy-fronded ferns grow on the forest floor amid the brown covering of dropped pine needles.</description>
+    <position x="420" y="-120" z="0" />
+    <arc exit="east" move="east" destination="46" />
+    <arc exit="southwest" move="southwest" destination="44" />
+  </node>
+  <node id="46" name="Reshalia, Coastal Trail">
+    <description>Dense pines crowd the trail, creating yielding layers of pine needles underfoot.  The wind blowing through the full green boughs creates a soft rushing roar, muffling sounds and light from outside the grove.</description>
+    <position x="440" y="-120" z="0" />
+    <arc exit="east" move="east" destination="47" />
+    <arc exit="west" move="west" destination="45" />
+  </node>
+  <node id="47" name="Reshalia, Coastal Trail">
+    <description>A few pines intermix with the deciduous trees, creating a dark green background to the forest.  A tumble of rocks traces a path eastward, looking almost as if at some time in the far-distant past there was a stone wall here.</description>
+    <position x="460" y="-120" z="0" />
+    <arc exit="northeast" move="northeast" destination="48" />
+    <arc exit="west" move="west" destination="46" />
+  </node>
+  <node id="48" name="Reshalia, Coastal Trail">
+    <description>Close to the path, one giant tree has been hollowed by insects or disease, creating a dark hole in the base of its trunk.  Easily large enough for a Gnome to enter, nothing is visible from the outside but blackness.</description>
+    <position x="480" y="-140" z="0" />
+    <arc exit="northeast" move="northeast" destination="49" />
+    <arc exit="southwest" move="southwest" destination="47" />
+  </node>
+  <node id="49" name="Reshalia, Coastal Trail">
+    <description>A huge walnut tree spreads its massive branches over the trail, its bark black, thick, and deeply furrowed.  Rustlings from above suggest that the tree's population remains active even at night.</description>
+    <description>A huge walnut tree spreads its massive branches over the trail, its bark black, thick, and deeply furrowed.  Rustlings from above suggest that the tree boasts a large squirrel population.</description>
+    <position x="500" y="-160" z="0" />
+    <arc exit="northeast" move="northeast" destination="50" />
+    <arc exit="southwest" move="southwest" destination="48" />
+  </node>
+  <node id="50" name="Reshalia, Coastal Trail">
+    <description>An ancient tree has toppled over quite near the trail, its roots standing straight up and creating a small wall above the pit where they once lay covered.  Ear-shaped orange and tan fungus covers the trunk like rows of ruffles on a ball gown.  Seizing the opportunity of increased light, a tumble of wild cloudberry bushes grows head-high.</description>
+    <position x="520" y="-180" z="0" />
+    <arc exit="east" move="east" hidden="True" destination="51" />
+    <arc exit="southwest" move="southwest" destination="49" />
+  </node>
+  <node id="51" name="Reshalia, Coastal Trail">
+    <description>Years of erosion and passing feet have rutted and carved the trail, and the occasional tree roots winding across it create tripping hazards for the unwary.  The path curves slightly as it climbs a steep ridge to the northeast at an angle.</description>
+    <position x="460" y="20" z="0" />
+    <arc exit="northeast" move="northeast" destination="52" />
+    <arc exit="west" move="west" hidden="True" destination="50" />
+  </node>
+  <node id="52" name="Reshalia, Coastal Trail">
+    <description>At the summit of the ridge, the land slopes away sharply to either side.  The trees are enormous, and have shaded out most of the underbrush.  Here and there a thin, almost branchless sapling reaches vainly for sunlight, in the hopes that lightning or some other calamity will clear a space for its growth.</description>
+    <position x="480" y="0" z="0" />
+    <arc exit="east" move="east" destination="53" />
+    <arc exit="southwest" move="southwest" destination="51" />
+  </node>
+  <node id="53" name="Reshalia, Coastal Trail">
+    <description>The trail runs alongside a narrow creek flowing swiftly eastward, too small for fish but boasting a large and audible population of toads trilling and harmonizing.  Gentle hills rise to either side, covered in tall trees whose branches are lost in the darkness far overhead.</description>
+    <description>The trail runs alongside a small creek flowing swiftly eastward, too small for fish but boasting a large population of water bugs and crayfish.  Gentle hills rise to either side, covered in tall trees whose branches form an interlaced cathedral-like ceiling far overhead.</description>
+    <position x="500" y="0" z="0" />
+    <arc exit="east" move="east" destination="54" />
+    <arc exit="west" move="west" destination="52" />
+  </node>
+  <node id="54" name="Reshalia, Coastal Trail">
+    <description>A small creek joins the larger stream here, running down a narrow cut in the rock from the west and throwing itself off the cliff edge in a spray of water that becomes lost in the churning rapids of the larger stream.  The rock walls of the ravine have squeezed the water into a deep, surging torrent, and the ceaseless roar drowns out attempts at speech.</description>
+    <position x="520" y="0" z="0" />
+    <arc exit="west" move="west" destination="53" />
+    <arc exit="go" move="go wooden bridge" destination="55" />
+  </node>
+  <node id="55" name="Reshalia, Coastal Trail">
+    <description>A deep stream rushes through the narrow bottom of the gorge, the compressed water churning and roaring around huge boulders of black basalt that have fallen from the sides into the water's path.  A narrow bridge built from slightly planed branches crosses the torrent between two of the larger boulders, its handrails a welcome feature to provide some aid in navigating the moisture-slicked passage.</description>
+    <position x="520" y="-20" z="0" />
+    <arc exit="go" move="go wooden bridge" destination="54" />
+    <arc exit="climb" move="climb steep trail" destination="56" />
+  </node>
+  <node id="56" name="Reshalia, Coastal Trail">
+    <description>The path inches along the side of the ravine, a shallow cut in the hillside providing at least a slightly more level surface.  To one side, the hill rises so steeply that an outstretched arm can touch it, while to the other, it drops down into a rock-strewn gorge.  The rush of water sounds from its bottom.</description>
+    <position x="520" y="-40" z="0" />
+    <arc exit="north" move="north" destination="57" />
+    <arc exit="climb" move="climb rock-strewn gorge" destination="55" />
+  </node>
+  <node id="57" name="Reshalia, Coastal Trail">
+    <description>To the northeast, the trail slopes gently upward to crest a low ridge crowned by tall trees.  Southward, it drops sharply into a steep ravine, curving slightly to edge down the rocky incline in a long cut into the side of the hill.</description>
+    <position x="520" y="-60" z="0" />
+    <arc exit="northeast" move="northeast" destination="58" />
+    <arc exit="south" move="south" destination="56" />
+  </node>
+  <node id="58" name="Reshalia, Coastal Trail">
+    <description>Huge beech trees, their pale trunks easily larger around than two Kaldar could encircle with their arms, soar upward at widely spaced intervals.  Here and there travelers have carved their initials into the thin bark, leaving a memory of their passing that often lasts for years.</description>
+    <position x="540" y="-80" z="0" />
+    <arc exit="northeast" move="northeast" destination="59" />
+    <arc exit="southwest" move="southwest" destination="57" />
+  </node>
+  <node id="59" name="Reshalia, Coastal Trail">
+    <description>The trees thin out slightly, allowing glimpses of the night sky through the gaps.  Unlike the more open dense forest, bushes grow close to the pathway, seen only as looming mounds in the darkness that scratch at clothing and unprotected skin with whip-like branches and occasional thorns.</description>
+    <description>The forest thins slightly, allowing glimpses of sky through the trees.  Taking advantage of the increased sunlight, a profusion of plants and low bushes covers the forest floor.</description>
+    <position x="560" y="-100" z="0" />
+    <arc exit="northeast" move="northeast" destination="60" />
+    <arc exit="southwest" move="southwest" destination="58" />
+  </node>
+  <node id="60" name="Reshalia, Coastal Trail">
+    <description>A huge boulder lies half-buried in the ground, apparently flung here by some unimaginable force, causing the trail to veer slightly around it.  To the north, the trees give way to low shrubs and rolling hills.</description>
+    <position x="580" y="-120" z="0" />
+    <arc exit="north" move="north" destination="61" />
+    <arc exit="southwest" move="southwest" destination="59" />
+  </node>
+  <node id="61" name="Reshalia, Coastal Path">
+    <description>Edged on one side by solid rock, and on the other by a stand of thorn bushes, the trail narrows and is barely passable for larger travelers.  The sandy dirt of the pathway has been washed out by storms, creating rutted and treacherous footing that becomes a small stream in wet weather.</description>
+    <position x="580" y="-140" z="0" />
+    <arc exit="north" move="north" destination="62" />
+    <arc exit="south" move="south" destination="60" />
+  </node>
+  <node id="62" name="Reshalia, Coastal Path">
+    <description>The hillside falls away to the east as the path curves sharply around the huge chunk of rock.  Low dwarf pines stud the hillside, their roots exposed as erosion washes away the dirt, leaving small rocks and gravel.</description>
+    <position x="580" y="-160" z="0" />
+    <arc exit="east" move="east" destination="63" />
+    <arc exit="south" move="south" destination="61" />
+  </node>
+  <node id="63" name="Reshalia, Coastal Path" note="Altar|Phelim " color="#A6A3D9">
+    <description>The irregular shape of the immense boulder forms a small protected alcove, sheltering the area from the worst of the elements.  A large chunk of driftwood stands upright in the back of the hollow, with clusters of narrow-leaved chamomile planted at its base in a carefully tended plot.</description>
+    <position x="600" y="-160" z="0" />
+    <arc exit="southeast" move="southeast" hidden="True" destination="64" />
+    <arc exit="west" move="west" destination="62" />
+  </node>
+  <node id="64" name="Reshalia, Coastal Path">
+    <description>The path veers around an immense boulder half-buried in the sandy soil to the southwest.  Only a few creepers and tough-stemmed vines have sent exploring tendrils fingering up its sides, suggesting that it is a relatively recent addition to the landscape.</description>
+    <position x="580" y="-20" z="0" />
+    <arc exit="northeast" move="northeast" destination="65" />
+    <arc exit="northwest" move="northwest" hidden="True" destination="63" />
+    <arc exit="climb" move="climb immense boulder" destination="329" />
+  </node>
+  <node id="65" name="Reshalia, Coastal Path">
+    <description>Dense small-leaved evergreen shrubs create a lumpy blanket of dark green covering the rough terrain.  Between two hillocks far off to the east, there is a flat smudge of blue, suggesting that the sea lies not far off.</description>
+    <position x="600" y="-40" z="0" />
+    <arc exit="northeast" move="northeast" destination="66" />
+    <arc exit="southwest" move="southwest" destination="64" />
+  </node>
+  <node id="66" name="Reshalia, Coastal Path">
+    <description>Only a faint trace through the thick shrubs marks the line of the trail, winding around small hills and occasional rocks as though whoever or whatever made it was simply seeking the easiest path through to its goal.</description>
+    <position x="620" y="-60" z="0" />
+    <arc exit="northeast" move="northeast" destination="67" />
+    <arc exit="southwest" move="southwest" destination="65" />
+  </node>
+  <node id="67" name="Reshalia, Coastal Path">
+    <description>The ground slopes away sharply to the south and east, providing a panoramic view of rolling hills covered in low shrubs stretching into the distance.  Sea birds wheeling overhead hint that the ocean is not far off, although from here, it is out of sight.</description>
+    <position x="640" y="-80" z="0" />
+    <arc exit="east" move="east" destination="68" />
+    <arc exit="southwest" move="southwest" destination="66" />
+  </node>
+  <node id="68" name="Reshalia, Coastal Path">
+    <description>The slope of the sandy ground makes the path treacherous in spots, with feet having a tendency to slide downhill.  Wild k'dira bushes crowding the path release a spicy scent each time they are brushed, filling the air with nose-tickling pungency.</description>
+    <position x="660" y="-80" z="0" />
+    <arc exit="east" move="east" destination="69" />
+    <arc exit="west" move="west" destination="67" />
+  </node>
+  <node id="69" name="Reshalia, Coastal Path">
+    <description>The tall shrubs give way at the base of the hill to a band of trees that follows the path of a narrow brook flowing eastward toward the sea.  The water is shallow but clear, and small black beetles skim over its surface like ice skaters putting on a show.</description>
+    <position x="680" y="-80" z="0" />
+    <arc exit="west" move="west" destination="68" />
+    <arc exit="go" move="go log bridge" destination="70" />
+  </node>
+  <node id="70" name="Reshalia, Coastal Path">
+    <description>Tall trees grow thickly along a small stream, following its meandering path as far as the eye can see in either direction as it winds its way down toward the nearby ocean.  Some thoughtful soul has lashed together five or six smaller tree trunks so that they form a narrow bridge over the water.</description>
+    <position x="680" y="-100" z="0" />
+    <arc exit="east" move="east" destination="71" />
+    <arc exit="go" move="go log bridge" destination="69" />
+  </node>
+  <node id="71" name="Reshalia, Coastal Path">
+    <description>The path winds among low rolling hills covered in thorny shrubs that range in size from knee-high to a Gnome, to twice the height of a Gor'Tog.  Occasional rustling and scurrying noises betray the presence of a colony of some burrow-dwelling creature, but they keep well out of sight if not out of hearing.</description>
+    <position x="700" y="-100" z="0" />
+    <arc exit="northeast" move="northeast" destination="72" />
+    <arc exit="west" move="west" destination="70" />
+  </node>
+  <node id="72" name="Reshalia, Coastal Path">
+    <description>Huge shallow flat pans are laid out in a square, filled with a mixture of cloudy water and wet salt crystals.  A large canvas tarpaulin held up by a tall post at each corner covers the pans for the evening.  A large iron cauldron burbles in the darkness, dimly illuminated by the orange glow of a fire in a small stove that appears to have been improvised from scraps of old armor.</description>
+    <description>Huge shallow flat pans are laid out in a square, filled with a mixture of cloudy water and wet salt crystals.  Tall posts at each corner of the square support a wooden framework that allows a canvas tarpaulin to be drawn over it in wet weather, and in sunny weather can be left open to bake under the hot sun.  A large iron cauldron burbles on a small stove that appears to have been improvised from scraps of old armor.</description>
+    <position x="720" y="-120" z="0" />
+    <arc exit="northeast" move="northeast" destination="73" />
+    <arc exit="southwest" move="southwest" destination="71" />
+  </node>
+  <node id="73" name="Reshalia, Coastal Path">
+    <description>To the east stretches a line of tall dunes looming darkly against the paler night sky, sheltering this relatively flat area from the worst of the storms and spray off the ocean.  A line of small, shallow ponds separated by dikes into squares stretches alongside the pathway, in various stages of evaporation.  In the very shallowest pool, salt crystals coat the edges and sparkle in the dim light like powdered diamonds.</description>
+    <description>To the east stretches a line of tall dunes, sheltering this relatively flat area from the worst of the storms and spray off the ocean.  A line of small, shallow ponds separated by dikes into squares stretches alongside the pathway, in various stages of evaporation.  In the very shallowest pool, salt crystals coat the edges and sparkle in the daylight like powdered diamonds.</description>
+    <position x="740" y="-140" z="0" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="74" />
+    <arc exit="southwest" move="southwest" destination="72" />
+  </node>
+  <node id="74" name="Reshalia, Coastal Path">
+    <description>Low thorny shrubs grow in patches in the pale sandy soil.  The constant strong breeze from the east has bared their roots on the windward side, and created small hummocks to leeward.</description>
+    <position x="480" y="-210" z="0" />
+    <arc exit="east" move="east" destination="75" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="73" />
+  </node>
+  <node id="75" name="Reshalia, Sand Dunes">
+    <description>Golden sand rises in tall dunes, pocked and swirled with scrubby sea grasses on their leeward sides.  A huge grey log, weathered by long years of wind and sand-scouring, lies tossed by some forgotten storm far from any forest.</description>
+    <position x="500" y="-210" z="0" />
+    <arc exit="east" move="east" destination="76" />
+    <arc exit="west" move="west" destination="74" />
+  </node>
+  <node id="76" name="Reshalia, Sand Dunes">
+    <description>Sea grasses to the west give way to pure sand to the east, humped and hillocked as the never-ending ocean wind constantly pushes it into new patterns.  The trail winds through the valleys between the dunes, changing its pathway as the dunes shift their locations.</description>
+    <position x="520" y="-210" z="0" />
+    <arc exit="east" move="east" destination="77" />
+    <arc exit="west" move="west" destination="75" />
+  </node>
+  <node id="77" name="Reshalia, Sand Dunes">
+    <description>The ocean must be almost within sight here -- the smell of salt and dead fish is carried on the breeze.  Low dunes only slightly taller than a Gor'Tog's head block the view in all directions, leaving only the sea birds wheeling in slow circles overhead with a clear perspective on the geography.</description>
+    <position x="540" y="-210" z="0" />
+    <arc exit="east" move="east" destination="78" />
+    <arc exit="west" move="west" destination="76" />
+  </node>
+  <node id="78" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="560" y="-210" z="0" />
+    <arc exit="southeast" move="southeast" destination="79" />
+    <arc exit="west" move="west" destination="77" />
+  </node>
+  <node id="79" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.  The southern horizon is dominated by the glistening expanse of an ocean.</description>
+    <position x="580" y="-190" z="0" />
+    <arc exit="northeast" move="northeast" destination="80" />
+    <arc exit="northwest" move="northwest" destination="78" />
+  </node>
+  <node id="80" name="Pokekehekepi olpo'staho" color="#00FF00">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="600" y="-210" z="0" />
+    <arc exit="southeast" move="southeast" destination="81" />
+    <arc exit="southwest" move="southwest" destination="79" />
+  </node>
+  <node id="81" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.  The southern horizon is dominated by the glistening expanse of an ocean.</description>
+    <position x="620" y="-190" z="0" />
+    <arc exit="northeast" move="northeast" destination="82" />
+    <arc exit="northwest" move="northwest" destination="80" />
+  </node>
+  <node id="82" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="640" y="-210" z="0" />
+    <arc exit="north" move="north" destination="83" />
+    <arc exit="southwest" move="southwest" destination="81" />
+  </node>
+  <node id="83" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="640" y="-230" z="0" />
+    <arc exit="northeast" move="northeast" destination="84" />
+    <arc exit="south" move="south" destination="82" />
+  </node>
+  <node id="84" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="660" y="-250" z="0" />
+    <arc exit="east" move="east" destination="85" />
+    <arc exit="southwest" move="southwest" destination="83" />
+  </node>
+  <node id="85" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="680" y="-250" z="0" />
+    <arc exit="northeast" move="northeast" destination="96" />
+    <arc exit="east" move="east" destination="86" />
+    <arc exit="west" move="west" destination="84" />
+    <arc exit="northwest" move="northwest" destination="97" />
+  </node>
+  <node id="86" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="700" y="-250" z="0" />
+    <arc exit="north" move="north" destination="96" />
+    <arc exit="southeast" move="southeast" destination="87" />
+    <arc exit="west" move="west" destination="85" />
+  </node>
+  <node id="87" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="720" y="-230" z="0" />
+    <arc exit="east" move="east" destination="89" />
+    <arc exit="southeast" move="southeast" destination="90" />
+    <arc exit="west" move="west" destination="88" />
+    <arc exit="northwest" move="northwest" destination="86" />
+  </node>
+  <node id="88" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="700" y="-230" z="0" />
+    <arc exit="east" move="east" destination="87" />
+  </node>
+  <node id="89" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="740" y="-230" z="0" />
+    <arc exit="west" move="west" destination="87" />
+  </node>
+  <node id="90" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.  The southern horizon is dominated by the glistening expanse of an ocean.</description>
+    <position x="740" y="-210" z="0" />
+    <arc exit="northeast" move="northeast" destination="92" />
+    <arc exit="east" move="east" destination="91" />
+    <arc exit="northwest" move="northwest" destination="87" />
+  </node>
+  <node id="91" name="Pokekehekepi olpo'staho" color="#FF8000">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.  The southern horizon is dominated by the glistening expanse of an ocean.</description>
+    <position x="760" y="-210" z="0" />
+    <arc exit="southeast" move="southeast" destination="93" />
+    <arc exit="west" move="west" destination="90" />
+  </node>
+  <node id="92" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="760" y="-230" z="0" />
+    <arc exit="east" move="east" destination="94" />
+    <arc exit="southwest" move="southwest" destination="90" />
+  </node>
+  <node id="93" name="Pokekehekepi, Beachhead" note="Halasa Selhin|Beach" color="#0000FF">
+    <description>Glittering like flowing gold, the beach runs into the ocean and disappears under the luminous waves.</description>
+    <position x="780" y="-190" z="0" />
+    <arc exit="northwest" move="northwest" destination="91" />
+    <arc exit="go" move="go halasa selhin" destination="245" />
+  </node>
+  <node id="94" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="780" y="-230" z="0" />
+    <arc exit="northeast" move="northeast" destination="95" />
+    <arc exit="west" move="west" destination="92" />
+  </node>
+  <node id="95" name="Pokekehekepi olpo'staho" color="#00FF00">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="800" y="-250" z="0" />
+    <arc exit="southwest" move="southwest" destination="94" />
+  </node>
+  <node id="96" name="Pokekehekepi ghedo" color="#00FF00">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="700" y="-270" z="0" />
+    <arc exit="south" move="south" destination="86" />
+    <arc exit="southwest" move="southwest" destination="85" />
+  </node>
+  <node id="97" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="660" y="-270" z="0" />
+    <arc exit="north" move="north" destination="99" />
+    <arc exit="southeast" move="southeast" destination="85" />
+    <arc exit="west" move="west" destination="98" />
+  </node>
+  <node id="98" name="Pokekehekepi ghedo" color="#00FF00">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="640" y="-270" z="0" />
+    <arc exit="north" move="north" destination="102" />
+    <arc exit="northeast" move="northeast" destination="99" />
+    <arc exit="east" move="east" destination="97" />
+  </node>
+  <node id="99" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="660" y="-290" z="0" />
+    <arc exit="east" move="east" destination="124" />
+    <arc exit="south" move="south" destination="97" />
+    <arc exit="southwest" move="southwest" destination="98" />
+  </node>
+  <node id="100" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="700" y="-310" z="0" />
+    <arc exit="northeast" move="northeast" destination="121" />
+    <arc exit="southwest" move="southwest" destination="124" />
+    <arc exit="west" move="west" destination="101" />
+  </node>
+  <node id="101" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.  Looming up around this little dune valley are the great korgi, casting shadows over the smaller dunes.</description>
+    <position x="680" y="-310" z="0" />
+    <arc exit="east" move="east" destination="100" />
+    <arc exit="south" move="south" destination="124" />
+    <arc exit="west" move="west" destination="123" />
+    <arc exit="northwest" move="northwest" destination="108" />
+  </node>
+  <node id="102" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="640" y="-350" z="0" />
+    <arc exit="east" move="east" destination="109" />
+    <arc exit="south" move="south" destination="98" />
+    <arc exit="southwest" move="southwest" destination="103" />
+  </node>
+  <node id="103" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="620" y="-330" z="0" />
+    <arc exit="northeast" move="northeast" destination="102" />
+    <arc exit="west" move="west" destination="104" />
+  </node>
+  <node id="104" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="600" y="-330" z="0" />
+    <arc exit="east" move="east" destination="103" />
+    <arc exit="southeast" move="southeast" destination="105" />
+    <arc exit="west" move="west" destination="106" />
+    <arc exit="northwest" move="northwest" destination="127" />
+  </node>
+  <node id="105" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="620" y="-310" z="0" />
+    <arc exit="south" move="south" destination="107" />
+    <arc exit="northwest" move="northwest" destination="104" />
+  </node>
+  <node id="106" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="580" y="-330" z="0" />
+    <arc exit="north" move="north" destination="127" />
+    <arc exit="east" move="east" destination="104" />
+    <arc exit="southwest" move="southwest" destination="167" />
+    <arc exit="west" move="west" destination="166" />
+    <arc exit="northwest" move="northwest" destination="165" />
+  </node>
+  <node id="107" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="620" y="-290" z="0" />
+    <arc exit="north" move="north" destination="105" />
+    <arc exit="northeast" move="northeast" destination="108" />
+    <arc exit="northwest" move="northwest" destination="168" />
+  </node>
+  <node id="108" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.  Looming up around this little dune valley are the great korgi, casting shadows over the smaller dunes.</description>
+    <position x="660" y="-330" z="0" />
+    <arc exit="southeast" move="southeast" destination="101" />
+    <arc exit="southwest" move="southwest" destination="107" />
+  </node>
+  <node id="109" name="Pokekehekepi ghedo" color="#00FF00">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="660" y="-350" z="0" />
+    <arc exit="east" move="east" destination="110" />
+    <arc exit="west" move="west" destination="102" />
+  </node>
+  <node id="110" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="680" y="-350" z="0" />
+    <arc exit="east" move="east" destination="111" />
+    <arc exit="west" move="west" destination="109" />
+  </node>
+  <node id="111" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="700" y="-350" z="0" />
+    <arc exit="east" move="east" destination="112" />
+    <arc exit="west" move="west" destination="110" />
+  </node>
+  <node id="112" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="720" y="-350" z="0" />
+    <arc exit="east" move="east" destination="113" />
+    <arc exit="south" move="south" destination="121" />
+    <arc exit="west" move="west" destination="111" />
+    <arc exit="northwest" move="northwest" destination="125" />
+  </node>
+  <node id="113" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="740" y="-350" z="0" />
+    <arc exit="east" move="east" destination="114" />
+    <arc exit="southwest" move="southwest" destination="121" />
+    <arc exit="west" move="west" destination="112" />
+  </node>
+  <node id="114" name="Pokekehekepi ghedo" color="#00FF00">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="760" y="-350" z="0" />
+    <arc exit="east" move="east" destination="115" />
+    <arc exit="west" move="west" destination="113" />
+  </node>
+  <node id="115" name="Pokekehekepi ghedo" color="#00FF00">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="780" y="-350" z="0" />
+    <arc exit="northeast" move="northeast" destination="117" />
+    <arc exit="southeast" move="southeast" destination="116" />
+    <arc exit="west" move="west" destination="114" />
+  </node>
+  <node id="116" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="800" y="-330" z="0" />
+    <arc exit="northwest" move="northwest" destination="115" />
+  </node>
+  <node id="117" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="800" y="-370" z="0" />
+    <arc exit="southwest" move="southwest" destination="115" />
+    <arc exit="northwest" move="northwest" destination="118" />
+  </node>
+  <node id="118" name="Pokekehekepi olpo'staho" color="#00FF00">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="780" y="-390" z="0" />
+    <arc exit="east" move="east" destination="119" />
+    <arc exit="southeast" move="southeast" destination="117" />
+  </node>
+  <node id="119" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="800" y="-390" z="0" />
+    <arc exit="northeast" move="northeast" destination="120" />
+    <arc exit="west" move="west" destination="118" />
+  </node>
+  <node id="120" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="820" y="-410" z="0" />
+    <arc exit="southwest" move="southwest" destination="119" />
+    <arc exit="go" move="go shrine" destination="244" />
+  </node>
+  <node id="121" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="720" y="-330" z="0" />
+    <arc exit="north" move="north" destination="112" />
+    <arc exit="northeast" move="northeast" destination="113" />
+    <arc exit="southwest" move="southwest" destination="100" />
+    <arc exit="west" move="west" destination="122" />
+  </node>
+  <node id="122" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.  Looming up around this little dune valley are the great korgi, casting shadows over the smaller dunes.</description>
+    <position x="680" y="-330" z="0" />
+    <arc exit="east" move="east" destination="121" />
+    <arc exit="southwest" move="southwest" destination="123" />
+  </node>
+  <node id="123" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.  Looming up around this little dune valley are the great korgi, casting shadows over the smaller dunes.</description>
+    <position x="660" y="-310" z="0" />
+    <arc exit="northeast" move="northeast" destination="122" />
+    <arc exit="east" move="east" destination="101" />
+  </node>
+  <node id="124" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="680" y="-290" z="0" />
+    <arc exit="north" move="north" destination="101" />
+    <arc exit="northeast" move="northeast" destination="100" />
+    <arc exit="west" move="west" destination="99" />
+  </node>
+  <node id="125" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="700" y="-370" z="0" />
+    <arc exit="north" move="north" destination="126" />
+    <arc exit="southeast" move="southeast" destination="112" />
+  </node>
+  <node id="126" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="700" y="-390" z="0" />
+    <arc exit="south" move="south" destination="125" />
+    <arc exit="west" move="west" destination="127" />
+    <arc exit="northwest" move="northwest" destination="128" />
+  </node>
+  <node id="127" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="580" y="-350" z="0" />
+    <arc exit="east" move="east" destination="126" />
+    <arc exit="southeast" move="southeast" destination="104" />
+    <arc exit="south" move="south" destination="106" />
+  </node>
+  <node id="128" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="680" y="-410" z="0" />
+    <arc exit="north" move="north" destination="131" />
+    <arc exit="northeast" move="northeast" destination="129" />
+    <arc exit="southeast" move="southeast" destination="126" />
+    <arc exit="northwest" move="northwest" destination="132" />
+  </node>
+  <node id="129" name="Pokekehekepi olpo'staho" color="#00FF00">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="700" y="-430" z="0" />
+    <arc exit="east" move="east" destination="130" />
+    <arc exit="southwest" move="southwest" destination="128" />
+  </node>
+  <node id="130" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="730" y="-430" z="0" />
+    <arc exit="northeast" move="northeast" destination="141" />
+    <arc exit="west" move="west" destination="129" />
+    <arc exit="northwest" move="northwest" destination="137" />
+  </node>
+  <node id="131" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="680" y="-450" z="0" />
+    <arc exit="north" move="north" destination="138" />
+    <arc exit="northeast" move="northeast" destination="137" />
+    <arc exit="south" move="south" destination="128" />
+    <arc exit="west" move="west" destination="135" />
+  </node>
+  <node id="132" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="660" y="-430" z="0" />
+    <arc exit="north" move="north" destination="135" />
+    <arc exit="southeast" move="southeast" destination="128" />
+    <arc exit="northwest" move="northwest" destination="133" />
+  </node>
+  <node id="133" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="640" y="-450" z="0" />
+    <arc exit="north" move="north" destination="136" />
+    <arc exit="southeast" move="southeast" destination="132" />
+    <arc exit="west" move="west" destination="134" />
+  </node>
+  <node id="134" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="620" y="-450" z="0" />
+    <arc exit="northeast" move="northeast" destination="136" />
+    <arc exit="east" move="east" destination="133" />
+    <arc exit="west" move="west" destination="153" />
+    <arc exit="northwest" move="northwest" destination="154" />
+  </node>
+  <node id="135" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="660" y="-450" z="0" />
+    <arc exit="east" move="east" destination="131" />
+    <arc exit="south" move="south" destination="132" />
+    <arc exit="northwest" move="northwest" destination="136" />
+  </node>
+  <node id="136" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="640" y="-470" z="0" />
+    <arc exit="north" move="north" destination="152" />
+    <arc exit="southeast" move="southeast" destination="135" />
+    <arc exit="south" move="south" destination="133" />
+    <arc exit="southwest" move="southwest" destination="134" />
+  </node>
+  <node id="137" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="700" y="-470" z="0" />
+    <arc exit="east" move="east" destination="139" />
+    <arc exit="southeast" move="southeast" destination="130" />
+    <arc exit="southwest" move="southwest" destination="131" />
+  </node>
+  <node id="138" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="680" y="-470" z="0" />
+    <arc exit="south" move="south" destination="131" />
+  </node>
+  <node id="139" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="720" y="-470" z="0" />
+    <arc exit="east" move="east" destination="140" />
+    <arc exit="west" move="west" destination="137" />
+  </node>
+  <node id="140" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="740" y="-470" z="0" />
+    <arc exit="east" move="east" destination="141" />
+    <arc exit="west" move="west" destination="139" />
+  </node>
+  <node id="141" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="760" y="-470" z="0" />
+    <arc exit="east" move="east" destination="142" />
+    <arc exit="southeast" move="southeast" destination="143" />
+    <arc exit="southwest" move="southwest" destination="130" />
+    <arc exit="west" move="west" destination="140" />
+  </node>
+  <node id="142" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="780" y="-470" z="0" />
+    <arc exit="south" move="south" destination="143" />
+    <arc exit="west" move="west" destination="141" />
+  </node>
+  <node id="143" name="Pokekehekepi olpo'staho" color="#00FF00">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="780" y="-450" z="0" />
+    <arc exit="north" move="north" destination="142" />
+    <arc exit="northeast" move="northeast" destination="144" />
+    <arc exit="northwest" move="northwest" destination="141" />
+  </node>
+  <node id="144" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="800" y="-470" z="0" />
+    <arc exit="north" move="north" destination="146" />
+    <arc exit="east" move="east" destination="145" />
+    <arc exit="southwest" move="southwest" destination="143" />
+  </node>
+  <node id="145" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="820" y="-470" z="0" />
+    <arc exit="northeast" move="northeast" destination="147" />
+    <arc exit="east" move="east" destination="150" />
+    <arc exit="south" move="south" destination="148" />
+    <arc exit="west" move="west" destination="144" />
+  </node>
+  <node id="146" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="800" y="-490" z="0" />
+    <arc exit="south" move="south" destination="144" />
+  </node>
+  <node id="147" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="840" y="-490" z="0" />
+    <arc exit="north" move="north" destination="151" />
+    <arc exit="south" move="south" destination="150" />
+    <arc exit="southwest" move="southwest" destination="145" />
+  </node>
+  <node id="148" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="820" y="-450" z="0" />
+    <arc exit="north" move="north" destination="145" />
+    <arc exit="northeast" move="northeast" destination="150" />
+    <arc exit="south" move="south" destination="149" />
+  </node>
+  <node id="149" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="820" y="-430" z="0" />
+    <arc exit="north" move="north" destination="148" />
+  </node>
+  <node id="150" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="840" y="-470" z="0" />
+    <arc exit="north" move="north" destination="147" />
+    <arc exit="southwest" move="southwest" destination="148" />
+    <arc exit="west" move="west" destination="145" />
+  </node>
+  <node id="151" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.  In the far distant northeast, a wavering shimmer suggests the vast ocean lies that way.</description>
+    <position x="840" y="-510" z="0" />
+    <arc exit="south" move="south" destination="147" />
+  </node>
+  <node id="152" name="Pokekehekepi olpo'staho" color="#FFFF00">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.  The northern horizon has a dark tint to it, suggesting the presence of a large body of water.</description>
+    <position x="640" y="-490" z="0" />
+    <arc exit="south" move="south" destination="136" />
+  </node>
+  <node id="153" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="600" y="-450" z="0" />
+    <arc exit="north" move="north" destination="154" />
+    <arc exit="east" move="east" destination="134" />
+    <arc exit="west" move="west" destination="155" />
+  </node>
+  <node id="154" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="600" y="-470" z="0" />
+    <arc exit="north" move="north" destination="156" />
+    <arc exit="southeast" move="southeast" destination="134" />
+    <arc exit="south" move="south" destination="153" />
+    <arc exit="southwest" move="southwest" destination="155" />
+    <arc exit="west" move="west" destination="157" />
+  </node>
+  <node id="155" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="580" y="-450" z="0" />
+    <arc exit="northeast" move="northeast" destination="154" />
+    <arc exit="east" move="east" destination="153" />
+    <arc exit="southwest" move="southwest" destination="160" />
+  </node>
+  <node id="156" name="Pokekehekepi olpo'staho" color="#800080">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.  The northern horizon has a dark tint to it, suggesting the presence of a large body of water.</description>
+    <position x="600" y="-490" z="0" />
+    <arc exit="south" move="south" destination="154" />
+  </node>
+  <node id="157" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="560" y="-470" z="0" />
+    <arc exit="east" move="east" destination="154" />
+    <arc exit="south" move="south" destination="158" />
+    <arc exit="southwest" move="southwest" destination="159" />
+  </node>
+  <node id="158" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="560" y="-450" z="0" />
+    <arc exit="north" move="north" destination="157" />
+    <arc exit="south" move="south" destination="160" />
+    <arc exit="southwest" move="southwest" destination="161" />
+  </node>
+  <node id="159" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="540" y="-450" z="0" />
+    <arc exit="northeast" move="northeast" destination="157" />
+    <arc exit="southwest" move="southwest" destination="163" />
+  </node>
+  <node id="160" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="560" y="-430" z="0" />
+    <arc exit="north" move="north" destination="158" />
+    <arc exit="northeast" move="northeast" destination="155" />
+    <arc exit="southwest" move="southwest" destination="162" />
+    <arc exit="west" move="west" destination="161" />
+  </node>
+  <node id="161" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="540" y="-430" z="0" />
+    <arc exit="northeast" move="northeast" destination="158" />
+    <arc exit="east" move="east" destination="160" />
+    <arc exit="west" move="west" destination="163" />
+  </node>
+  <node id="162" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="540" y="-410" z="0" />
+    <arc exit="northeast" move="northeast" destination="160" />
+    <arc exit="south" move="south" destination="164" />
+    <arc exit="northwest" move="northwest" destination="163" />
+  </node>
+  <node id="163" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="520" y="-430" z="0" />
+    <arc exit="northeast" move="northeast" destination="159" />
+    <arc exit="east" move="east" destination="161" />
+    <arc exit="southeast" move="southeast" destination="162" />
+  </node>
+  <node id="164" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="540" y="-390" z="0" />
+    <arc exit="north" move="north" destination="162" />
+    <arc exit="east" move="east" destination="174" />
+    <arc exit="southwest" move="southwest" destination="173" />
+  </node>
+  <node id="165" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="560" y="-350" z="0" />
+    <arc exit="southeast" move="southeast" destination="106" />
+  </node>
+  <node id="166" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="560" y="-330" z="0" />
+    <arc exit="east" move="east" destination="106" />
+    <arc exit="west" move="west" destination="169" />
+    <arc exit="northwest" move="northwest" destination="170" />
+  </node>
+  <node id="167" name="Pokekehekepi ghedo" color="#00FF00">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="560" y="-310" z="0" />
+    <arc exit="northeast" move="northeast" destination="106" />
+    <arc exit="east" move="east" destination="168" />
+  </node>
+  <node id="168" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="600" y="-310" z="0" />
+    <arc exit="southeast" move="southeast" destination="107" />
+    <arc exit="west" move="west" destination="167" />
+  </node>
+  <node id="169" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="540" y="-330" z="0" />
+    <arc exit="north" move="north" destination="170" />
+    <arc exit="east" move="east" destination="166" />
+    <arc exit="southwest" move="southwest" destination="171" />
+  </node>
+  <node id="170" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="540" y="-350" z="0" />
+    <arc exit="southeast" move="southeast" destination="166" />
+    <arc exit="south" move="south" destination="169" />
+    <arc exit="west" move="west" destination="172" />
+  </node>
+  <node id="171" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="520" y="-310" z="0" />
+    <arc exit="northeast" move="northeast" destination="169" />
+  </node>
+  <node id="172" name="Pokekehekepi ghedo" color="#00FF00">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="520" y="-350" z="0" />
+    <arc exit="north" move="north" destination="173" />
+    <arc exit="east" move="east" destination="170" />
+  </node>
+  <node id="173" name="Pokekehekepi olpo'staho">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="520" y="-370" z="0" />
+    <arc exit="northeast" move="northeast" destination="164" />
+    <arc exit="south" move="south" destination="172" />
+  </node>
+  <node id="174" name="Pokekehekepi ghedo">
+    <description>Glistening with a silver sheen, the sands stretch out into the darkness beyond the range of vision.</description>
+    <description>Gleaming golden sand stretches out, seemingly endless under the glaring light of the daytime sun.</description>
+    <position x="560" y="-390" z="0" />
+    <arc exit="west" move="west" destination="164" />
+  </node>
+  <node id="175" name="Pokekehekepi korgi" color="#00FF00">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="320" y="-580" z="0" />
+    <arc exit="east" move="east" destination="176" />
+  </node>
+  <node id="176" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="340" y="-580" z="0" />
+    <arc exit="northeast" move="northeast" destination="179" />
+    <arc exit="southeast" move="southeast" destination="177" />
+    <arc exit="west" move="west" destination="175" />
+    <arc exit="northwest" move="northwest" destination="183" />
+  </node>
+  <node id="177" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="360" y="-560" z="0" />
+    <arc exit="northeast" move="northeast" destination="178" />
+    <arc exit="northwest" move="northwest" destination="176" />
+  </node>
+  <node id="178" name="Pokekehekepi korgi" color="#00FF00">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="380" y="-580" z="0" />
+    <arc exit="northeast" move="northeast" destination="184" />
+    <arc exit="southwest" move="southwest" destination="177" />
+    <arc exit="northwest" move="northwest" destination="179" />
+  </node>
+  <node id="179" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="360" y="-600" z="0" />
+    <arc exit="northeast" move="northeast" destination="185" />
+    <arc exit="east" move="east" destination="181" />
+    <arc exit="southeast" move="southeast" destination="178" />
+    <arc exit="south" move="south" destination="180" />
+    <arc exit="southwest" move="southwest" destination="176" />
+    <arc exit="west" move="west" destination="182" />
+    <arc exit="northwest" move="northwest" destination="186" />
+  </node>
+  <node id="180" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="360" y="-580" z="0" />
+    <arc exit="north" move="north" destination="179" />
+    <arc exit="northeast" move="northeast" destination="181" />
+    <arc exit="northwest" move="northwest" destination="182" />
+  </node>
+  <node id="181" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="380" y="-600" z="0" />
+    <arc exit="east" move="east" destination="184" />
+    <arc exit="southwest" move="southwest" destination="180" />
+    <arc exit="west" move="west" destination="179" />
+    <arc exit="northwest" move="northwest" destination="187" />
+  </node>
+  <node id="182" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="340" y="-600" z="0" />
+    <arc exit="northeast" move="northeast" destination="187" />
+    <arc exit="east" move="east" destination="179" />
+    <arc exit="southeast" move="southeast" destination="180" />
+    <arc exit="west" move="west" destination="183" />
+  </node>
+  <node id="183" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="320" y="-600" z="0" />
+    <arc exit="northeast" move="northeast" destination="186" />
+    <arc exit="east" move="east" destination="182" />
+    <arc exit="southeast" move="southeast" destination="176" />
+  </node>
+  <node id="184" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="400" y="-600" z="0" />
+    <arc exit="southwest" move="southwest" destination="178" />
+    <arc exit="west" move="west" destination="181" />
+    <arc exit="northwest" move="northwest" destination="185" />
+  </node>
+  <node id="185" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="380" y="-620" z="0" />
+    <arc exit="southeast" move="southeast" destination="184" />
+    <arc exit="southwest" move="southwest" destination="179" />
+    <arc exit="northwest" move="northwest" destination="188" />
+  </node>
+  <node id="186" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="340" y="-620" z="0" />
+    <arc exit="northeast" move="northeast" destination="188" />
+    <arc exit="southeast" move="southeast" destination="179" />
+    <arc exit="southwest" move="southwest" destination="183" />
+  </node>
+  <node id="187" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="360" y="-620" z="0" />
+    <arc exit="southeast" move="southeast" destination="181" />
+    <arc exit="southwest" move="southwest" destination="182" />
+  </node>
+  <node id="188" name="Pokekehekepi korgi" color="#00FF00">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="360" y="-640" z="0" />
+    <arc exit="southeast" move="southeast" destination="185" />
+    <arc exit="southwest" move="southwest" destination="186" />
+  </node>
+  <node id="189" name="Pokekehekepi korgi" color="#00FF00">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="540" y="-600" z="0" />
+    <arc exit="west" move="west" destination="190" />
+  </node>
+  <node id="190" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="520" y="-600" z="0" />
+    <arc exit="east" move="east" destination="189" />
+    <arc exit="west" move="west" destination="191" />
+    <arc exit="northwest" move="northwest" destination="192" />
+  </node>
+  <node id="191" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="500" y="-600" z="0" />
+    <arc exit="north" move="north" destination="192" />
+    <arc exit="east" move="east" destination="190" />
+    <arc exit="south" move="south" destination="195" />
+    <arc exit="southwest" move="southwest" destination="197" />
+    <arc exit="west" move="west" destination="194" />
+  </node>
+  <node id="192" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="500" y="-620" z="0" />
+    <arc exit="southeast" move="southeast" destination="190" />
+    <arc exit="south" move="south" destination="191" />
+    <arc exit="southwest" move="southwest" destination="194" />
+    <arc exit="west" move="west" destination="193" />
+  </node>
+  <node id="193" name="Pokekehekepi korgi" color="#00FF00">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="480" y="-620" z="0" />
+    <arc exit="east" move="east" destination="192" />
+    <arc exit="southwest" move="southwest" destination="207" />
+    <arc exit="west" move="west" destination="208" />
+  </node>
+  <node id="194" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="480" y="-600" z="0" />
+    <arc exit="northeast" move="northeast" destination="192" />
+    <arc exit="east" move="east" destination="191" />
+    <arc exit="south" move="south" destination="197" />
+    <arc exit="southwest" move="southwest" destination="201" />
+    <arc exit="west" move="west" destination="207" />
+  </node>
+  <node id="195" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="500" y="-560" z="0" />
+    <arc exit="north" move="north" destination="191" />
+    <arc exit="west" move="west" destination="196" />
+  </node>
+  <node id="196" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="480" y="-560" z="0" />
+    <arc exit="north" move="north" destination="197" />
+    <arc exit="east" move="east" destination="195" />
+    <arc exit="west" move="west" destination="200" />
+    <arc exit="northwest" move="northwest" destination="201" />
+  </node>
+  <node id="197" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="480" y="-580" z="0" />
+    <arc exit="north" move="north" destination="194" />
+    <arc exit="northeast" move="northeast" destination="191" />
+    <arc exit="east" move="east" destination="198" />
+    <arc exit="south" move="south" destination="196" />
+    <arc exit="southwest" move="southwest" destination="200" />
+    <arc exit="west" move="west" destination="201" />
+    <arc exit="northwest" move="northwest" destination="207" />
+  </node>
+  <node id="198" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="520" y="-580" z="0" />
+    <arc exit="southeast" move="southeast" destination="199" />
+    <arc exit="west" move="west" destination="197" />
+  </node>
+  <node id="199" name="Pokekehekepi korgi" color="#00FF00">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="540" y="-560" z="0" />
+    <arc exit="northwest" move="northwest" destination="198" />
+  </node>
+  <node id="200" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="460" y="-560" z="0" />
+    <arc exit="northeast" move="northeast" destination="197" />
+    <arc exit="east" move="east" destination="196" />
+    <arc exit="west" move="west" destination="202" />
+    <arc exit="northwest" move="northwest" destination="203" />
+  </node>
+  <node id="201" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="460" y="-580" z="0" />
+    <arc exit="north" move="north" destination="207" />
+    <arc exit="northeast" move="northeast" destination="194" />
+    <arc exit="east" move="east" destination="197" />
+    <arc exit="southeast" move="southeast" destination="196" />
+    <arc exit="southwest" move="southwest" destination="202" />
+    <arc exit="west" move="west" destination="203" />
+  </node>
+  <node id="202" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="440" y="-560" z="0" />
+    <arc exit="northeast" move="northeast" destination="201" />
+    <arc exit="east" move="east" destination="200" />
+    <arc exit="northwest" move="northwest" destination="204" />
+  </node>
+  <node id="203" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="440" y="-580" z="0" />
+    <arc exit="north" move="north" destination="206" />
+    <arc exit="northeast" move="northeast" destination="207" />
+    <arc exit="east" move="east" destination="201" />
+    <arc exit="southeast" move="southeast" destination="200" />
+    <arc exit="west" move="west" destination="204" />
+  </node>
+  <node id="204" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="420" y="-580" z="0" />
+    <arc exit="north" move="north" destination="205" />
+    <arc exit="east" move="east" destination="203" />
+    <arc exit="southeast" move="southeast" destination="202" />
+  </node>
+  <node id="205" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="420" y="-600" z="0" />
+    <arc exit="east" move="east" destination="206" />
+    <arc exit="south" move="south" destination="204" />
+  </node>
+  <node id="206" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="440" y="-600" z="0" />
+    <arc exit="north" move="north" destination="208" />
+    <arc exit="east" move="east" destination="207" />
+    <arc exit="south" move="south" destination="203" />
+    <arc exit="west" move="west" destination="205" />
+  </node>
+  <node id="207" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <position x="460" y="-600" z="0" />
+    <arc exit="northeast" move="northeast" destination="193" />
+    <arc exit="east" move="east" destination="194" />
+    <arc exit="southeast" move="southeast" destination="197" />
+    <arc exit="south" move="south" destination="201" />
+    <arc exit="southwest" move="southwest" destination="203" />
+    <arc exit="west" move="west" destination="206" />
+  </node>
+  <node id="208" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="440" y="-620" z="0" />
+    <arc exit="east" move="east" destination="193" />
+    <arc exit="south" move="south" destination="206" />
+  </node>
+  <node id="209" name="Pokekehekepi korgi" color="#00FF00">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="820" y="-600" z="0" />
+    <arc exit="northwest" move="northwest" destination="212" />
+    <arc exit="west" move="west" destination="210" />
+    <arc exit="north" move="north" destination="211" />
+  </node>
+  <node id="210" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="800" y="-600" z="0" />
+    <arc exit="north" move="north" destination="212" />
+    <arc exit="northeast" move="northeast" destination="211" />
+    <arc exit="east" move="east" destination="209" />
+    <arc exit="southwest" move="southwest" destination="216" />
+    <arc exit="west" move="west" destination="215" />
+    <arc exit="northwest" move="northwest" destination="214" />
+  </node>
+  <node id="211" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="820" y="-620" z="0" />
+    <arc exit="north" move="north" destination="213" />
+    <arc exit="south" move="south" destination="209" />
+    <arc exit="southwest" move="southwest" destination="210" />
+    <arc exit="west" move="west" destination="212" />
+  </node>
+  <node id="212" name="Pokekehekepi korgi" color="#00FF00">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="800" y="-620" z="0" />
+    <arc exit="northeast" move="northeast" destination="213" />
+    <arc exit="east" move="east" destination="211" />
+    <arc exit="southeast" move="southeast" destination="209" />
+    <arc exit="south" move="south" destination="210" />
+    <arc exit="southwest" move="southwest" destination="215" />
+    <arc exit="west" move="west" destination="214" />
+  </node>
+  <node id="213" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="820" y="-640" z="0" />
+    <arc exit="south" move="south" destination="211" />
+    <arc exit="southwest" move="southwest" destination="212" />
+  </node>
+  <node id="214" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="780" y="-620" z="0" />
+    <arc exit="east" move="east" destination="212" />
+    <arc exit="southeast" move="southeast" destination="210" />
+    <arc exit="south" move="south" destination="215" />
+    <arc exit="southwest" move="southwest" destination="221" />
+    <arc exit="west" move="west" destination="223" />
+  </node>
+  <node id="215" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="780" y="-600" z="0" />
+    <arc exit="north" move="north" destination="214" />
+    <arc exit="northeast" move="northeast" destination="212" />
+    <arc exit="east" move="east" destination="210" />
+    <arc exit="south" move="south" destination="216" />
+    <arc exit="southwest" move="southwest" destination="219" />
+    <arc exit="west" move="west" destination="221" />
+    <arc exit="northwest" move="northwest" destination="223" />
+  </node>
+  <node id="216" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="780" y="-580" z="0" />
+    <arc exit="north" move="north" destination="215" />
+    <arc exit="northeast" move="northeast" destination="210" />
+    <arc exit="southwest" move="southwest" destination="217" />
+    <arc exit="west" move="west" destination="219" />
+    <arc exit="northwest" move="northwest" destination="221" />
+  </node>
+  <node id="217" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="760" y="-560" z="0" />
+    <arc exit="north" move="north" destination="219" />
+    <arc exit="northeast" move="northeast" destination="216" />
+    <arc exit="east" move="east" destination="218" />
+    <arc exit="northwest" move="northwest" destination="220" />
+  </node>
+  <node id="218" name="Pokekehekepi korgi" color="#00FF00">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="780" y="-560" z="0" />
+    <arc exit="west" move="west" destination="217" />
+  </node>
+  <node id="219" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="760" y="-580" z="0" />
+    <arc exit="north" move="north" destination="221" />
+    <arc exit="northeast" move="northeast" destination="215" />
+    <arc exit="east" move="east" destination="216" />
+    <arc exit="south" move="south" destination="217" />
+    <arc exit="west" move="west" destination="220" />
+    <arc exit="northwest" move="northwest" destination="222" />
+  </node>
+  <node id="220" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="740" y="-580" z="0" />
+    <arc exit="northeast" move="northeast" destination="221" />
+    <arc exit="east" move="east" destination="219" />
+    <arc exit="southeast" move="southeast" destination="217" />
+  </node>
+  <node id="221" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="760" y="-600" z="0" />
+    <arc exit="north" move="north" destination="223" />
+    <arc exit="northeast" move="northeast" destination="214" />
+    <arc exit="east" move="east" destination="215" />
+    <arc exit="southeast" move="southeast" destination="216" />
+    <arc exit="south" move="south" destination="219" />
+    <arc exit="southwest" move="southwest" destination="220" />
+    <arc exit="west" move="west" destination="222" />
+  </node>
+  <node id="222" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <position x="740" y="-600" z="0" />
+    <arc exit="northeast" move="northeast" destination="223" />
+    <arc exit="east" move="east" destination="221" />
+    <arc exit="southeast" move="southeast" destination="219" />
+  </node>
+  <node id="223" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="760" y="-620" z="0" />
+    <arc exit="northeast" move="northeast" destination="224" />
+    <arc exit="east" move="east" destination="214" />
+    <arc exit="southeast" move="southeast" destination="215" />
+    <arc exit="south" move="south" destination="221" />
+    <arc exit="southwest" move="southwest" destination="222" />
+    <arc exit="west" move="west" destination="225" />
+  </node>
+  <node id="224" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="780" y="-640" z="0" />
+    <arc exit="southwest" move="southwest" destination="223" />
+  </node>
+  <node id="225" name="Pokekehekepi korgi" color="#00FF00">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <position x="740" y="-620" z="0" />
+    <arc exit="east" move="east" destination="223" />
+  </node>
+  <node id="226" name="Pokekehekepi korgi" color="#00FF00">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="580" y="-560" z="0" />
+    <arc exit="northeast" move="northeast" destination="227" />
+  </node>
+  <node id="227" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="600" y="-580" z="0" />
+    <arc exit="north" move="north" destination="229" />
+    <arc exit="east" move="east" destination="228" />
+    <arc exit="southeast" move="southeast" destination="236" />
+    <arc exit="southwest" move="southwest" destination="226" />
+  </node>
+  <node id="228" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="620" y="-580" z="0" />
+    <arc exit="southeast" move="southeast" destination="238" />
+    <arc exit="south" move="south" destination="236" />
+    <arc exit="west" move="west" destination="227" />
+  </node>
+  <node id="229" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="600" y="-600" z="0" />
+    <arc exit="east" move="east" destination="230" />
+    <arc exit="south" move="south" destination="227" />
+  </node>
+  <node id="230" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="620" y="-600" z="0" />
+    <arc exit="north" move="north" destination="231" />
+    <arc exit="southeast" move="southeast" destination="233" />
+    <arc exit="west" move="west" destination="229" />
+  </node>
+  <node id="231" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="620" y="-620" z="0" />
+    <arc exit="east" move="east" destination="232" />
+    <arc exit="south" move="south" destination="230" />
+  </node>
+  <node id="232" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="640" y="-620" z="0" />
+    <arc exit="west" move="west" destination="231" />
+  </node>
+  <node id="233" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="640" y="-580" z="0" />
+    <arc exit="north" move="north" destination="234" />
+    <arc exit="northeast" move="northeast" destination="243" />
+    <arc exit="south" move="south" destination="238" />
+    <arc exit="northwest" move="northwest" destination="230" />
+  </node>
+  <node id="234" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="640" y="-600" z="0" />
+    <arc exit="northeast" move="northeast" destination="235" />
+    <arc exit="south" move="south" destination="233" />
+  </node>
+  <node id="235" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="660" y="-620" z="0" />
+    <arc exit="east" move="east" hidden="True" destination="152" />
+    <arc exit="southwest" move="southwest" destination="234" />
+  </node>
+  <node id="236" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.  The ghedo is visible along the south slope of this korgi.</description>
+    <position x="620" y="-560" z="0" />
+    <arc exit="north" move="north" destination="228" />
+    <arc exit="southeast" move="southeast" destination="237" />
+    <arc exit="northwest" move="northwest" destination="227" />
+  </node>
+  <node id="237" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="640" y="-540" z="0" />
+    <arc exit="northeast" move="northeast" destination="239" />
+    <arc exit="northwest" move="northwest" destination="236" />
+  </node>
+  <node id="238" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="640" y="-560" z="0" />
+    <arc exit="north" move="north" destination="233" />
+    <arc exit="east" move="east" destination="239" />
+    <arc exit="northwest" move="northwest" destination="228" />
+  </node>
+  <node id="239" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="660" y="-560" z="0" />
+    <arc exit="north" move="north" destination="240" />
+    <arc exit="southwest" move="southwest" destination="237" />
+    <arc exit="west" move="west" destination="238" />
+  </node>
+  <node id="240" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="660" y="-580" z="0" />
+    <arc exit="southeast" move="southeast" destination="241" />
+    <arc exit="south" move="south" destination="239" />
+  </node>
+  <node id="241" name="Pokekehekepi korgi" color="#00FF00">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="680" y="-560" z="0" />
+    <arc exit="north" move="north" destination="242" />
+    <arc exit="northwest" move="northwest" destination="240" />
+  </node>
+  <node id="242" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="680" y="-580" z="0" />
+    <arc exit="north" move="north" destination="247" />
+    <arc exit="east" move="east" destination="246" />
+    <arc exit="south" move="south" destination="241" />
+  </node>
+  <node id="243" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="660" y="-600" z="0" />
+    <arc exit="east" move="east" destination="247" />
+    <arc exit="southwest" move="southwest" destination="233" />
+  </node>
+  <node id="244" name="Shell Shrine" note="Shell Shrine|Drogor" color="#A6A3D9">
+    <description>Long, curving protrusions jut out from between the shells that make up the walls here, wickedly sharp and waiting for someone careless enough to stumble over the simple altar nestled in the sand floor.  Dark husks of now dead malchata stand a quiet vigil in the recesses opposite the shrine entrance, their bodies somehow preserved from reverting back into sand.</description>
+    <position x="840" y="-410" z="0" />
+    <arc exit="out" move="out" destination="120" />
+  </node>
+  <node id="245" name="The Halasa Selhin, Main Deck" note="Map998_Transports.xml">
+    <description>After years of varnishing, the main deck of the Halasa Selhin glistens like a becalmed sea.  Holding the crisp yards of her mainsail, the mainmast rises skyward to a dizzying height with the sweeping length of the boom spreading her canvas skirt to the wind.  Brightly colored pennants flutter from the halyards.</description>
+    <position x="780" y="-150" z="0" />
+    <arc exit="go" move="go pokekehekepi" destination="93" />
+  </node>
+  <node id="246" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="720" y="-580" z="0" />
+    <arc exit="north" move="north" destination="248" />
+    <arc exit="west" move="west" destination="242" />
+  </node>
+  <node id="247" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="680" y="-600" z="0" />
+    <arc exit="south" move="south" destination="242" />
+    <arc exit="west" move="west" destination="243" />
+  </node>
+  <node id="248" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="720" y="-600" z="0" />
+    <arc exit="south" move="south" destination="246" />
+    <arc exit="northwest" move="northwest" destination="249" />
+  </node>
+  <node id="249" name="Pokekehekepi korgi">
+    <description>Dark shadows hide the peaks and valleys within the sands, making the korgi appear as an almost regal mountain, except for the occasional grumbling shift of its surface.</description>
+    <description>Great mounds of fine golden sand make up the huge swells of the korgi.  Constantly changing, as if a living organism, the dune lords shift periodically, and their surfaces slide uncontrollably as new hills and valleys appear.</description>
+    <position x="700" y="-620" z="0" />
+    <arc exit="southeast" move="southeast" destination="248" />
+    <arc exit="west" move="west" hidden="True" destination="152" />
+  </node>
+  <node id="250" name="Poho-dapi'botuk" note="Green Substance 5">
+    <description>Crevices in the walls reveal a pale green substance abundant within the central coil.  It almost appears fleshy, and it gives off a faint odor of rot.</description>
+    <position x="380" y="-400" z="0" />
+    <arc exit="northeast" move="northeast" destination="252" />
+    <arc exit="southeast" move="southeast" destination="254" />
+    <arc exit="west" move="west" destination="251" />
+  </node>
+  <node id="251" name="Peltaph'staho">
+    <description>The walls to the east gradually become more broken, and a faint stench wafts in from that direction.  Visible just a short distance south are several glossy white objects.</description>
+    <position x="320" y="-400" z="0" />
+    <arc exit="east" move="east" destination="250" />
+    <arc exit="south" move="south" destination="289" />
+    <arc exit="west" move="west" destination="300" />
+  </node>
+  <node id="252" name="Poho-dapi'botuk" note="Green Substance 6">
+    <description>Crevices in the walls reveal a pale green substance abundant within the central coil.  It almost appears fleshy, and it gives off a faint odor of rot.</description>
+    <position x="400" y="-420" z="0" />
+    <arc exit="northeast" move="northeast" destination="253" />
+    <arc exit="southwest" move="southwest" destination="250" />
+  </node>
+  <node id="253" name="Poho-dapi'botuk">
+    <description>Patches of blue lichen dot the smooth walls of this narrow corridor, their soft glow creating harsh shadows throughout the emptiness of open air and along the ground.</description>
+    <position x="420" y="-440" z="0" />
+    <arc exit="north" move="north" destination="314" />
+    <arc exit="southwest" move="southwest" destination="252" />
+  </node>
+  <node id="254" name="Poho-dapi'botuk" note="Green Substance 4">
+    <description>Crevices in the walls reveal a pale green substance abundant within the central coil.  It almost appears fleshy, and it gives off a faint odor of rot.</description>
+    <position x="400" y="-380" z="0" />
+    <arc exit="east" move="east" destination="255" />
+    <arc exit="northwest" move="northwest" destination="250" />
+  </node>
+  <node id="255" name="Poho-dapi'botuk" note="Green Substance 3">
+    <description>Crevices in the walls reveal a pale green substance abundant within the central coil.  It almost appears fleshy, and it gives off a faint odor of rot.</description>
+    <position x="420" y="-380" z="0" />
+    <arc exit="northeast" move="northeast" destination="256" />
+    <arc exit="west" move="west" destination="254" />
+  </node>
+  <node id="256" name="Poho-dapi'botuk" note="Green Substance">
+    <description>Crevices in the walls reveal a pale green substance abundant within the central coil.  It almost appears fleshy, and it gives off a faint odor of rot.</description>
+    <position x="440" y="-400" z="0" />
+    <arc exit="northeast" move="northeast" destination="257" />
+    <arc exit="southwest" move="southwest" destination="255" />
+    <arc exit="northwest" move="northwest" destination="259" />
+  </node>
+  <node id="257" name="Peltaph'staho" note="Dried Fungus">
+    <description>Several round pockets appear at various heights along the sloped and curving walls, each filled with a different type of fungus.  Most appear to be partially or completely dried, as if for storage.</description>
+    <position x="460" y="-420" z="0" />
+    <arc exit="east" move="east" destination="258" />
+    <arc exit="southwest" move="southwest" destination="256" />
+  </node>
+  <node id="258" name="Peltaph'staho">
+    <description>The outer ring winds off to the north and south, while another branch turns towards the heart of the caverns.</description>
+    <position x="480" y="-420" z="0" />
+    <arc exit="north" move="north" destination="328" />
+    <arc exit="south" move="south" destination="262" />
+    <arc exit="west" move="west" destination="257" />
+  </node>
+  <node id="259" name="Poho-dapi'botuk" note="Green Substance 2">
+    <description>Crevices in the walls reveal a pale green substance abundant within the central coil.  It almost appears fleshy, and it gives off a faint odor of rot.</description>
+    <position x="420" y="-420" z="0" />
+    <arc exit="southeast" move="southeast" destination="256" />
+    <arc exit="southwest" move="southwest" destination="260" />
+  </node>
+  <node id="260" name="Poho-dapi'botuk">
+    <description>Spiraling outward from a central point in the floor, various colors and shapes of fungus grow in family clusters.  Whether it is food or put to some other peculiar purpose is difficult to determine, but various species of the strange beetle population wander through the garden.</description>
+    <position x="400" y="-400" z="0" />
+    <arc exit="northeast" move="northeast" destination="259" />
+    <arc exit="east" move="east" destination="261" />
+  </node>
+  <node id="261" name="Poho-dapi'botuk">
+    <description>Cold blue light emanates from the strange fungus cultivated within the corridors, almost like the light of Xibar.  Short, wide-bodied worker insects constantly scoot to and fro, cleaning up the sand that spills in from above.</description>
+    <position x="420" y="-400" z="0" />
+    <arc exit="west" move="west" destination="260" />
+  </node>
+  <node id="262" name="Peltaph'staho">
+    <description>Great bulbs of parti-colored fungus rise up along the corridor walls, some dwarfing their neighbors by an armspan or more, and disappearing into the shadows overhead.  Milling on and between them is a great assortment of shelled creatures, some simple and round, others with elegantly curving horns and long, whip-like antennae.  Watching over them all is one of the armored warklin, safely tucked into a wall recess.</description>
+    <position x="480" y="-400" z="0" />
+    <arc exit="north" move="north" destination="258" />
+    <arc exit="south" move="south" destination="267" />
+    <arc exit="west" move="west" destination="263" />
+  </node>
+  <node id="263" name="Peltaph'staho">
+    <description>Curiously clean, these paths lead through various chambers of this insect nest.  Sand from the dune sea is meticulously returned to the surface by the indefatigable beetle colony.</description>
+    <position x="460" y="-400" z="0" />
+    <arc exit="east" move="east" destination="262" />
+    <arc exit="southwest" move="southwest" destination="264" />
+  </node>
+  <node id="264" name="Peltaph'staho" note="Scarab Outline">
+    <description>Carved into the floor by an unknown artist is a rough outline of a scarab, complete with serrations and antennae.  What purpose it serves here is a mystery.</description>
+    <position x="440" y="-380" z="0" />
+    <arc exit="northeast" move="northeast" destination="263" />
+    <arc exit="south" move="south" destination="265" />
+  </node>
+  <node id="265" name="Peltaph'staho">
+    <description>The pervasive bluish glow found throughout the caverns takes on a greenish cast here.  Visible in the packed earth of the walls and floor is a vein of copper-colored metal, surrounded by abundant fungal growth.</description>
+    <position x="440" y="-360" z="0" />
+    <arc exit="north" move="north" destination="264" />
+    <arc exit="east" move="east" destination="266" />
+    <arc exit="southeast" move="southeast" destination="268" />
+  </node>
+  <node id="266" name="Peltaph'staho">
+    <description>Clouds of water vapor drift a few feet above the cavern floor, partially obscuring the ground, where a few sharply pointed stalagmites reach up through the haze like bony fingers.</description>
+    <position x="460" y="-360" z="0" />
+    <arc exit="northeast" move="northeast" destination="267" />
+    <arc exit="west" move="west" destination="265" />
+  </node>
+  <node id="267" name="Peltaph'staho">
+    <description>Periodically one of the large beetles clambers across the floor carrying anything from pieces of fungus, to what look like eggs.</description>
+    <position x="480" y="-380" z="0" />
+    <arc exit="north" move="north" destination="262" />
+    <arc exit="southwest" move="southwest" destination="266" />
+  </node>
+  <node id="268" name="Peltaph'staho">
+    <description>Several corridors branch out of this junction and wind through the world below the dune sea.  As with any colony, the workers scurry along tirelessly, watched over by larger, able-bodied guardians.</description>
+    <position x="460" y="-340" z="0" />
+    <arc exit="south" move="south" destination="269" />
+    <arc exit="southwest" move="southwest" destination="270" />
+    <arc exit="northwest" move="northwest" destination="265" />
+  </node>
+  <node id="269" name="Peltaph'staho">
+    <description>Strange curvature marks the walls along this passage, both smooth and jagged in various places.  Some of the cuts almost look as though they were made intentionally in striation.</description>
+    <position x="460" y="-320" z="0" />
+    <arc exit="north" move="north" destination="268" />
+    <arc exit="southwest" move="southwest" destination="275" />
+  </node>
+  <node id="270" name="Peltaph'staho">
+    <description>The ground here has been tilled and cultivated, creating rows of turf for the all-important fungus to thrive on.  Pieces of carrion, old mushrooms, and clothing have been tucked into the furrows of dirt, creating a bit of a stink.</description>
+    <position x="440" y="-320" z="0" />
+    <arc exit="north" move="north" destination="271" />
+    <arc exit="northeast" move="northeast" destination="268" />
+    <arc exit="south" move="south" destination="275" />
+    <arc exit="west" move="west" destination="274" />
+  </node>
+  <node id="271" name="Peltaph'staho">
+    <description>The ground here has been tilled and cultivated, creating rows of turf for the all-important fungus to thrive on.  Pieces of carrion, old mushrooms, and clothing have been tucked into the furrows of dirt, creating a bit of a stink.</description>
+    <position x="440" y="-340" z="0" />
+    <arc exit="south" move="south" destination="270" />
+    <arc exit="west" move="west" destination="272" />
+  </node>
+  <node id="272" name="Peltaph'staho">
+    <description>The ground here has been tilled and cultivated, creating rows of turf for the all-important fungus to thrive on.  Pieces of carrion, old mushrooms, and clothing have been tucked into the furrows of dirt, creating a bit of a stink.</description>
+    <position x="420" y="-340" z="0" />
+    <arc exit="east" move="east" destination="271" />
+    <arc exit="west" move="west" destination="273" />
+  </node>
+  <node id="273" name="Peltaph'staho" note="Disease Wall">
+    <description>The floor here is littered with pebbles and grit from what looks like a partial cave-in.  The walls are craggy and split, and moist with some kind of clear fluid.</description>
+    <position x="400" y="-340" z="0" />
+    <arc exit="east" move="east" destination="272" />
+    <arc exit="southeast" move="southeast" destination="274" />
+    <arc exit="southwest" move="southwest" destination="276" />
+  </node>
+  <node id="274" name="Peltaph'staho" note="Mushrooms">
+    <description>Growing on a dark patch of soft earth sits a cluster of tightly bunched mushrooms.  Their caps are almost perfect domes, supported by graceful, arm-length stalks.  Even in the colored light of the cavern, the mushrooms appear ghostly white, and seem to breathe with calm rhythm.</description>
+    <position x="420" y="-320" z="0" />
+    <arc exit="east" move="east" destination="270" />
+    <arc exit="southeast" move="southeast" destination="275" />
+    <arc exit="northwest" move="northwest" destination="273" />
+  </node>
+  <node id="275" name="Peltaph'staho" color="#FF8000">
+    <description>Intersecting passages form a small nexus here where colored striations are visible in the walls.  Layers of minerals have solidified in trickle-down streams creating an intricate interlace pattern across the walls and floor.</description>
+    <position x="440" y="-300" z="0" />
+    <arc exit="north" move="north" destination="270" />
+    <arc exit="northeast" move="northeast" destination="269" />
+    <arc exit="northwest" move="northwest" destination="274" />
+  </node>
+  <node id="276" name="Peltaph'staho" note="Web">
+    <description>Pale, hair-like strands of mycelium form a delicate web covering the walls along the corridor.  Between the ghostly white fibers and the dark crevices, shiny iridescent shells glisten as their respective owners navigate the tiny maze.</description>
+    <position x="380" y="-320" z="0" />
+    <arc exit="northeast" move="northeast" destination="273" />
+    <arc exit="southwest" move="southwest" destination="277" />
+  </node>
+  <node id="277" name="Peltaph'staho">
+    <description>Great bulbs of parti-colored fungus rise up along the corridor walls, some dwarfing their neighbors by an armspan or more, and disappearing into the shadows overhead.  Milling on and between them is a great assortment of shelled creatures, some simple and round, others with elegantly curving horns and long, whip-like antennae.  Watching over them all is one of the armored warklin, safely tucked into a wall recess.</description>
+    <position x="360" y="-300" z="0" />
+    <arc exit="northeast" move="northeast" destination="276" />
+    <arc exit="west" move="west" destination="278" />
+  </node>
+  <node id="278" name="Peltaph'staho">
+    <description>Winding aimlessly, this long corridor stretches into the glowing blue light visible to the north, and into darkness to the east.</description>
+    <position x="340" y="-300" z="0" />
+    <arc exit="north" move="north" destination="279" />
+    <arc exit="east" move="east" destination="277" />
+  </node>
+  <node id="279" name="Peltaph'staho">
+    <description>This cavern passage is polluted with deadfall from the surface world.  Constantly working to redistribute mess are a variety of beetles, ranging in size from a handbreadth, to certain varieties of surface cattle.  As always, the ever-watchful eyes of the warklin peer down from the shadowed alcoves high overhead</description>
+    <position x="340" y="-320" z="0" />
+    <arc exit="north" move="north" destination="282" />
+    <arc exit="northeast" move="northeast" destination="281" />
+    <arc exit="south" move="south" destination="278" />
+    <arc exit="west" move="west" destination="280" />
+  </node>
+  <node id="280" name="Peltaph'staho">
+    <description>Damp, musty air circulates slowly through the hallway, whistling quietly through the crevices in the walls all around.</description>
+    <position x="320" y="-320" z="0" />
+    <arc exit="north" move="north" destination="284" />
+    <arc exit="east" move="east" destination="279" />
+    <arc exit="northwest" move="northwest" destination="285" />
+  </node>
+  <node id="281" name="Peltaph'staho">
+    <description>The cavern floor here gives way to a bed of soft loam and decaying peat, where many colorful strains of subterranean fungus thrive, giving off an unusual blend of colored light and humid warmth.  Squirming on the ground like so many blind maggots are the infant young of the warklin species, mixed together without concern for their given subspecies within the family group.</description>
+    <position x="360" y="-340" z="0" />
+    <arc exit="southwest" move="southwest" destination="279" />
+    <arc exit="west" move="west" destination="282" />
+  </node>
+  <node id="282" name="Peltaph'staho">
+    <description>The cavern floor here gives way to a bed of soft loam and decaying peat, where many colorful strains of subterranean fungus thrive, giving off an unusual blend of colored light and humid warmth.  Squirming on the ground like so many blind maggots are the infant young of the warklin species, mixed together without concern for their given subspecies within the family group.</description>
+    <position x="340" y="-340" z="0" />
+    <arc exit="northeast" move="northeast" destination="283" />
+    <arc exit="east" move="east" destination="281" />
+    <arc exit="south" move="south" destination="279" />
+    <arc exit="west" move="west" destination="284" />
+  </node>
+  <node id="283" name="Peltaph'staho">
+    <description>The central part of the floor here has collapsed out long enough ago that the edges have softened with erosion.  Accumulated around the southwestern rim of the pit is a pile of assorted waste material, ranging from unused mushroom caps, to broken shell armor, and even a few select parts of people who've been unfortunate enough to die here.</description>
+    <position x="360" y="-360" z="0" />
+    <arc exit="southwest" move="southwest" destination="282" />
+  </node>
+  <node id="284" name="Peltaph'staho">
+    <description>The cavern floor here gives way to a bed of soft loam and decaying peat, where many colorful strains of subterranean fungus thrive, giving off an unusual blend of colored light and humid warmth.  Squirming on the ground like so many blind maggots are the infant young of the warklin species, mixed together without concern for their given subspecies within the family group.</description>
+    <position x="320" y="-340" z="0" />
+    <arc exit="north" move="north" destination="286" />
+    <arc exit="east" move="east" destination="282" />
+    <arc exit="south" move="south" destination="280" />
+  </node>
+  <node id="285" name="Peltaph'staho">
+    <description>Wormholes of varying sizes allow these caverns to ventilate somewhat, as well as allowing the multitudes of small-bodied creatures access to virtually everything.</description>
+    <position x="300" y="-340" z="0" />
+    <arc exit="northeast" move="northeast" destination="286" />
+    <arc exit="southeast" move="southeast" destination="280" />
+    <arc exit="west" move="west" destination="287" />
+  </node>
+  <node id="286" name="Peltaph'staho">
+    <description>The cavern floor here gives way to a bed of soft loam and decaying peat, where many colorful strains of subterranean fungus thrive, giving off an unusual blend of colored light and humid warmth.  Squirming on the ground like so many blind maggots are the infant young of the warklin species, mixed together without concern for their given subspecies within the family group.</description>
+    <position x="320" y="-360" z="0" />
+    <arc exit="north" move="north" destination="289" />
+    <arc exit="south" move="south" destination="284" />
+    <arc exit="southwest" move="southwest" destination="285" />
+  </node>
+  <node id="287" name="Peltaph'staho">
+    <description>Curiously clean, these paths lead through various chambers of this insect nest.  Sand from the dune sea is meticulously returned to the surface by the indefatigable beetle colony.</description>
+    <position x="280" y="-340" z="0" />
+    <arc exit="east" move="east" destination="285" />
+    <arc exit="southwest" move="southwest" destination="288" />
+  </node>
+  <node id="288" name="Peltaph'staho">
+    <description>Several varieties of beetle mill about along the walls and floor, causing a faint, chaotic clicking noise as their shells rattle against one another.</description>
+    <position x="260" y="-320" z="0" />
+    <arc exit="northeast" move="northeast" destination="287" />
+    <arc exit="west" move="west" destination="290" />
+  </node>
+  <node id="289" name="Peltaph'staho">
+    <description>The cavern floor here gives way to a bed of soft loam and decaying peat, where many colorful strains of subterranean fungus thrive, giving off an unusual blend of colored light and humid warmth.  Squirming on the ground like so many blind maggots are the infant young of the warklin species, mixed together without concern for their given subspecies within the family group.</description>
+    <position x="320" y="-380" z="0" />
+    <arc exit="north" move="north" destination="251" />
+    <arc exit="south" move="south" destination="286" />
+  </node>
+  <node id="290" name="Peltaph'staho">
+    <description>Long strands of the wispy mycelium drape the cavern walls, dotted with small buttons of newly spawned mushrooms.</description>
+    <position x="240" y="-320" z="0" />
+    <arc exit="north" move="north" destination="294" />
+    <arc exit="east" move="east" destination="288" />
+    <arc exit="southwest" move="southwest" destination="291" />
+  </node>
+  <node id="291" name="Peltahp'staho">
+    <description>Pinched into this corner is a mound of earth shaped into a ramp angled up towards the dark shadows of the ceiling.  Bits of luminous mycelium hang in what appear to be intentionally cultivated curtains, giving off a soft glow.</description>
+    <position x="220" y="-300" z="0" />
+    <arc exit="north" move="north" destination="292" />
+    <arc exit="northeast" move="northeast" destination="290" />
+    <arc exit="go" move="go ramp" hidden="True" destination="78" />
+  </node>
+  <node id="292" name="Peltaph'staho">
+    <description>The westernmost ring of these caverns spans into the darkness north, and south into a narrow chamber.</description>
+    <position x="220" y="-320" z="0" />
+    <arc exit="north" move="north" destination="293" />
+    <arc exit="south" move="south" destination="291" />
+  </node>
+  <node id="293" name="Peltaph'staho">
+    <description>Small pockets honeycomb the walls here, each with a carefully placed honey-colored egg nested within.  Water vapor seeps up through the floor, keeping the chamber cool and moist for the young warklin.  Iridescent shelled warklin drones constantly renew the supply of fungus, carrying old decaying bulbs out and returning with fresh ones while a few larvae soak in moisture that's accumulated in shallow pools on the floor as well.</description>
+    <position x="220" y="-340" z="0" />
+    <arc exit="north" move="north" destination="295" />
+    <arc exit="east" move="east" destination="294" />
+    <arc exit="south" move="south" destination="292" />
+  </node>
+  <node id="294" name="Peltaph'staho">
+    <description>Small pockets honeycomb the walls here, each with a carefully placed crimson egg nested within.  Water vapor seeps up through the floor, keeping the chamber cool and moist for the young warklin.  Iridescent shelled warklin drones constantly renew the supply of fungus, carrying old decaying bulbs out and returning with fresh ones while a few larvae soak in moisture that's accumulated in shallow pools on the floor as well.</description>
+    <position x="240" y="-340" z="0" />
+    <arc exit="northeast" move="northeast" destination="298" />
+    <arc exit="south" move="south" destination="290" />
+    <arc exit="west" move="west" destination="293" />
+  </node>
+  <node id="295" name="Peltaph'staho">
+    <description>Small pockets honeycomb the walls here, each with a carefully placed ebony-colored egg nested within.  Water vapor seeps up through the floor, keeping the chamber cool and moist for the young warklin.  Iridescent shelled warklin drones constantly renew the supply of fungus, carrying old decaying bulbs out and returning with fresh ones while a few larvae soak in moisture that's accumulated in shallow pools on the floor as well.</description>
+    <position x="220" y="-360" z="0" />
+    <arc exit="northeast" move="northeast" destination="296" />
+    <arc exit="south" move="south" destination="293" />
+  </node>
+  <node id="296" name="Peltaph'staho">
+    <description>Small pockets honeycomb the walls here, each with a carefully placed dun-colored egg nested within.  Water vapor seeps up through the floor, keeping the chamber cool and moist for the young warklin.  Iridescent shelled warklin drones constantly renew the supply of fungus, carrying old decaying bulbs out and returning with fresh ones while a few larvae soak in moisture that's accumulated in shallow pools on the floor as well.</description>
+    <position x="240" y="-380" z="0" />
+    <arc exit="east" move="east" destination="297" />
+    <arc exit="southwest" move="southwest" destination="295" />
+  </node>
+  <node id="297" name="Peltaph'staho">
+    <description>Small pockets honeycomb the walls here, each with a carefully placed jade-colored egg nested within.  Water vapor seeps up through the floor, keeping the chamber cool and moist for the young warklin.  Iridescent shelled warklin drones constantly renew the supply of fungus, carrying old decaying bulbs out and returning with fresh ones while a few larvae soak in moisture that's accumulated in shallow pools on the floor as well.</description>
+    <position x="260" y="-380" z="0" />
+    <arc exit="northeast" move="northeast" destination="300" />
+    <arc exit="south" move="south" destination="298" />
+    <arc exit="west" move="west" destination="296" />
+  </node>
+  <node id="298" name="Peltaph'staho">
+    <description>Small pockets honeycomb the walls here, each with a carefully placed speckled egg nested within.  Water vapor seeps up through the floor, keeping the chamber cool and moist for the young warklin.  Iridescent shelled warklin drones constantly renew the supply of fungus, carrying old decaying bulbs out and returning with fresh ones while a few larvae soak in moisture that's accumulated in shallow pools on the floor as well.</description>
+    <position x="260" y="-360" z="0" />
+    <arc exit="north" move="north" destination="297" />
+    <arc exit="east" move="east" destination="299" />
+    <arc exit="southwest" move="southwest" destination="294" />
+  </node>
+  <node id="299" name="Peltaph'staho">
+    <description>The central part of the floor here has collapsed out long enough ago that the edges have softened with erosion.  Accumulated around the western rim of the pit is a pile of assorted waste material, ranging from unused mushroom caps, to broken shell armor, and even a few select parts of people who've been unfortunate enough to die here.</description>
+    <position x="280" y="-360" z="0" />
+    <arc exit="west" move="west" destination="298" />
+  </node>
+  <node id="300" name="Peltaph'staho" note="Disease Wall 2">
+    <description>The floor here is littered with pebbles and grit from what looks like a partial cave-in.  The walls are craggy and split, and moist with some kind of clear fluid.</description>
+    <position x="280" y="-400" z="0" />
+    <arc exit="northeast" move="northeast" destination="301" />
+    <arc exit="east" move="east" destination="251" />
+    <arc exit="southwest" move="southwest" destination="297" />
+    <arc exit="northwest" move="northwest" destination="302" />
+  </node>
+  <node id="301" name="Peltaph'staho" note="Disease Wall 3">
+    <description>The floor here is littered with pebbles and grit from what looks like a partial cave-in.  The walls are craggy and split, and moist with some kind of clear fluid.</description>
+    <position x="300" y="-420" z="0" />
+    <arc exit="north" move="north" destination="303" />
+    <arc exit="southwest" move="southwest" destination="300" />
+  </node>
+  <node id="302" name="Peltaph'staho">
+    <description>Periodically one of the large beetles clambers across the floor carrying anything from pieces of fungus, to what look like eggs.</description>
+    <position x="260" y="-420" z="0" />
+    <arc exit="north" move="north" destination="306" />
+    <arc exit="southeast" move="southeast" destination="300" />
+  </node>
+  <node id="303" name="Peltaph'staho" note="Colums 2">
+    <description>Several columns of earth stretch up to the shadowy depths overhead, their surfaces covered with tiny globes of phosphorescent fungus.</description>
+    <position x="300" y="-440" z="0" />
+    <arc exit="north" move="north" destination="304" />
+    <arc exit="south" move="south" destination="301" />
+  </node>
+  <node id="304" name="Peltaph'staho">
+    <description>Intersecting passages form a small nexus here where colored striations are visible in the walls.  Layers of minerals have solidified on the walls in trickle-down streams creating a brilliant pattern.</description>
+    <position x="300" y="-460" z="0" />
+    <arc exit="north" move="north" destination="309" />
+    <arc exit="northeast" move="northeast" destination="310" />
+    <arc exit="south" move="south" destination="303" />
+    <arc exit="west" move="west" destination="305" />
+  </node>
+  <node id="305" name="Peltaph'staho" note="Columns">
+    <description>Several columns of earth stretch up to the shadowy depths overhead, their surfaces covered with tiny globes of phosphorescent fungus.</description>
+    <position x="280" y="-460" z="0" />
+    <arc exit="north" move="north" destination="307" />
+    <arc exit="east" move="east" destination="304" />
+    <arc exit="southwest" move="southwest" destination="306" />
+  </node>
+  <node id="306" name="Peltaph'staho">
+    <description>Long strands of the wispy mycelium drape the cavern walls, dotted with small buttons of newly spawned mushrooms.</description>
+    <position x="260" y="-440" z="0" />
+    <arc exit="northeast" move="northeast" destination="305" />
+    <arc exit="south" move="south" destination="302" />
+  </node>
+  <node id="307" name="Peltaph'staho">
+    <description>The westernmost ring of these caverns spans into the darkness south, and north into a narrow chamber.</description>
+    <position x="280" y="-480" z="0" />
+    <arc exit="north" move="north" destination="308" />
+    <arc exit="south" move="south" destination="305" />
+  </node>
+  <node id="308" name="Peltaph'staho" color="#800080">
+    <description>Pinched into this corner is a mound of earth shaped into a ramp angled up towards the dark shadows of the ceiling.</description>
+    <position x="280" y="-500" z="0" />
+    <arc exit="southeast" move="southeast" destination="309" />
+    <arc exit="south" move="south" destination="307" />
+    <arc exit="go" move="go ramp" hidden="True" destination="156" />
+  </node>
+  <node id="309" name="Peltaph'staho">
+    <description>The pervasive bluish glow found throughout the caverns takes on a greenish cast here.  Visible in the packed earth of the walls and floor is a vein of copper-colored metal, surrounded by abundant fungal growth.</description>
+    <position x="300" y="-480" z="0" />
+    <arc exit="east" move="east" destination="310" />
+    <arc exit="south" move="south" destination="304" />
+    <arc exit="northwest" move="northwest" destination="308" />
+  </node>
+  <node id="310" name="Peltaph'staho">
+    <description>Several varieties of beetle mill about along the walls and floor, causing a faint, chaotic clicking noise as their shells rattle against one another.</description>
+    <position x="320" y="-480" z="0" />
+    <arc exit="southeast" move="southeast" destination="311" />
+    <arc exit="southwest" move="southwest" destination="304" />
+    <arc exit="west" move="west" destination="309" />
+  </node>
+  <node id="311" name="Peltaph'staho">
+    <description>Shadows hang like curtains over the walls of these chilly corridors, shrouding everything in a gloomy mantle.  The calm is occasionally interrupted by the lumbering form of dark-shelled insects.</description>
+    <position x="340" y="-460" z="0" />
+    <arc exit="northeast" move="northeast" destination="312" />
+    <arc exit="northwest" move="northwest" destination="310" />
+  </node>
+  <node id="312" name="Peltaph'staho" note="Web 2">
+    <description>Pale, hair-like strands of mycelium form a delicate web covering the walls along the corridor.  Between the ghostly white fibers and the dark crevices, shiny iridescent shells glisten as their respective owners navigate the tiny maze.</description>
+    <position x="360" y="-480" z="0" />
+    <arc exit="northeast" move="northeast" destination="315" />
+    <arc exit="east" move="east" destination="313" />
+    <arc exit="southwest" move="southwest" destination="311" />
+  </node>
+  <node id="313" name="Poho-dapi'botuk">
+    <description>The cavern here takes on slightly different feel, as though something was paying particular attention to the goings-on here.  Conspicuous by their absence are the smaller beetles common in the outer tunnels.</description>
+    <position x="420" y="-480" z="0" />
+    <arc exit="south" move="south" destination="314" />
+    <arc exit="west" move="west" destination="312" />
+  </node>
+  <node id="314" name="Poho-dapi'botuk">
+    <description>Patches of blue lichen dot the smooth walls of this narrow corridor, their soft glow creating harsh shadows throughout the emptiness of open air and along the ground.</description>
+    <position x="420" y="-460" z="0" />
+    <arc exit="north" move="north" destination="313" />
+    <arc exit="south" move="south" destination="253" />
+  </node>
+  <node id="315" name="Peltaph'staho">
+    <description>Curiously clean, these paths lead through various chambers of this insect nest.  Sand from the dune sea is meticulously returned to the surface by the indefatigable beetle colony.</description>
+    <position x="380" y="-500" z="0" />
+    <arc exit="east" move="east" destination="316" />
+    <arc exit="southwest" move="southwest" destination="312" />
+  </node>
+  <node id="316" name="Peltaph'staho">
+    <description>Wormholes of varying sizes allow these caverns to ventilate somewhat, as well as allowing the multitudes of small-bodied creatures access to virtually everything.</description>
+    <position x="400" y="-500" z="0" />
+    <arc exit="east" move="east" destination="317" />
+    <arc exit="west" move="west" destination="315" />
+  </node>
+  <node id="317" name="Peltaph'staho">
+    <description>Damp, musty air circulates slowly through the hallway, whistling quietly through the crevices in the walls all around.</description>
+    <position x="420" y="-500" z="0" />
+    <arc exit="east" move="east" destination="318" />
+    <arc exit="west" move="west" destination="316" />
+  </node>
+  <node id="318" name="Peltaph'staho">
+    <description>Strange curvature marks the walls along this passage, both smooth and jagged in various places.  Some of the cuts almost look as though they were made intentionally in striation.</description>
+    <position x="440" y="-500" z="0" />
+    <arc exit="east" move="east" destination="320" />
+    <arc exit="south" move="south" destination="319" />
+    <arc exit="west" move="west" destination="317" />
+  </node>
+  <node id="319" name="Peltaph'staho" note="Columns 3">
+    <description>Several columns of earth stretch up to the shadowy depths overhead, their surfaces covered with tiny globes of phosphorescent fungus.</description>
+    <position x="440" y="-480" z="0" />
+    <arc exit="north" move="north" destination="318" />
+    <arc exit="east" move="east" destination="324" />
+    <arc exit="southeast" move="southeast" destination="326" />
+  </node>
+  <node id="320" name="Peltaph'staho">
+    <description>Winding aimlessly, this long corridor stretches into the glowing blue light visible to the northeast, and into darkness to the west.</description>
+    <position x="460" y="-500" z="0" />
+    <arc exit="northeast" move="northeast" destination="321" />
+    <arc exit="west" move="west" destination="318" />
+  </node>
+  <node id="321" name="Peltaph'staho">
+    <description>The phosphorescent glow of fungus lends a chilly air to these winding corridors.  Occasionally a rumble echoes through the walls, sending the smaller insects scurrying to maintain the singular cleanliness of this strange habitat.</description>
+    <position x="480" y="-520" z="0" />
+    <arc exit="east" move="east" destination="322" />
+    <arc exit="southwest" move="southwest" destination="320" />
+  </node>
+  <node id="322" name="Peltaph'staho">
+    <description>Pinched into this corner is a mound of earth shaped into a ramp angled up towards the dark shadows of the ceiling.</description>
+    <position x="500" y="-520" z="0" />
+    <arc exit="southwest" move="southwest" destination="323" />
+    <arc exit="west" move="west" destination="321" />
+    <arc exit="go" move="go ramp" hidden="True" destination="145" />
+  </node>
+  <node id="323" name="Peltaph'staho">
+    <description>Several corridors branch out of this junction and wind through the world below the dune sea.  As with any colony, the workers scurry along tirelessly, watched over by larger, able-bodied guardians.</description>
+    <position x="480" y="-500" z="0" />
+    <arc exit="northeast" move="northeast" destination="322" />
+    <arc exit="south" move="south" destination="325" />
+    <arc exit="southwest" move="southwest" destination="324" />
+  </node>
+  <node id="324" name="Peltaph'staho">
+    <description>Growing on a dark patch of soft earth sits a cluster of tightly bunched mushrooms.  Their caps are almost perfect domes, supported by graceful, arm-length stalks.  Even in the colored light of the cavern, the mushrooms appear ghostly white, and seem to breathe with calm rhythm.</description>
+    <position x="460" y="-480" z="0" />
+    <arc exit="northeast" move="northeast" destination="323" />
+    <arc exit="west" move="west" destination="319" />
+  </node>
+  <node id="325" name="Peltaph'staho">
+    <description>The outer ring winds off to the north and south, while another branch turns towards the heart of the caverns.</description>
+    <position x="480" y="-480" z="0" />
+    <arc exit="north" move="north" destination="323" />
+    <arc exit="southeast" move="southeast" destination="327" />
+    <arc exit="southwest" move="southwest" destination="326" />
+  </node>
+  <node id="326" name="Peltaph'staho">
+    <description>Various sharp protrusions angle out awkwardly from the floor, making the path somewhat difficult to follow.</description>
+    <position x="460" y="-460" z="0" />
+    <arc exit="northeast" move="northeast" destination="325" />
+    <arc exit="northwest" move="northwest" destination="319" />
+  </node>
+  <node id="327" name="Peltaph'staho" note="Mushrooms">
+    <description>Long strands of the wispy mycelium drape the cavern walls, dotted with small buttons of newly spawned mushrooms.</description>
+    <position x="500" y="-460" z="0" />
+    <arc exit="southwest" move="southwest" destination="328" />
+    <arc exit="northwest" move="northwest" destination="325" />
+  </node>
+  <node id="328" name="Peltaph'staho">
+    <description>Periodically one of the large beetles clambers across the floor carrying anything from pieces of fungus, to what look like eggs.</description>
+    <position x="480" y="-440" z="0" />
+    <arc exit="northeast" move="northeast" destination="327" />
+    <arc exit="south" move="south" destination="258" />
+  </node>
+  <node id="329" name="Reshalia, Boulder">
+    <description>The dark grey boulder is bare of any dirt or vegetation, and the sharp edges on the pits and pockmarks covering it discourage more movement than absolutely necessary.</description>
+    <position x="600" y="-20" z="0" />
+    <arc exit="climb" move="climb boulder" destination="64" />
+  </node>
+  <label text="Warklin Hatchery">
+    <position x="230" y="-310" z="0" />
+  </label>
+  <label text="Retan Dolomars">
+    <position x="530" y="-620" z="0" />
+  </label>
+  <label text="S'sugi Malchatas">
+    <position x="520" y="-630" z="0" />
+  </label>
+  <label text="Retan Dolomars">
+    <position x="550" y="-380" z="0" />
+  </label>
+  <label text="Peltaph'staho">
+    <position x="320" y="-440" z="0" />
+  </label>
+  <label text="Armored Warklins">
+    <position x="170" y="-480" z="0" />
+  </label>
+  <label text="Warklin Maulers">
+    <position x="170" y="-460" z="0" />
+  </label>
+  <label text="Pokekehekepi">
+    <position x="570" y="-420" z="0" />
+  </label>
+  <label text="&lt;-- Quicksand drops you to Peltaph'staho">
+    <position x="540" y="-510" z="0" />
+  </label>
+  <label text="Green rooms connect randomly between tiers">
+    <position x="90" y="-630" z="0" />
+  </label>
+  <label text="Ratha 4th Tier">
+    <position x="0" y="0" z="0" />
+  </label>
+  <label text="Coastal Road">
+    <position x="360" y="-160" z="0" />
+  </label>
+  <label text="Pokekehekepi korgi">
+    <position x="410" y="-640" z="0" />
+  </label>
+</zone>

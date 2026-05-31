@@ -948,7 +948,7 @@
     <arc exit="south" move="south" destination="130" />
     <arc exit="climb" move="climb embrasure" destination="132" />
   </node>
-  <node id="132" name="Shard, East Bridge" note="Map66_STR3.xml|E Gate|East Gate|EastGate|Premium Portal|Portal">
+  <node id="132" name="Shard, East Bridge" note="Map66_Shard_to_Gondola_Area.xml|E Gate|East Gate|EastGate|Premium Portal|Portal">
     <description>The extravagance of the eastern quarter of Shard is evident here milk-white marble railings gleam on the cloudiest days.  The marble and the life-sculpted deobar supports show that no expense was spared in olden times, and the new paving stones that cover the roadway blend unobtrusively with the old construction.</description>
     <position x="860" y="460" z="0" />
     <arc exit="east" move="east" />
@@ -966,13 +966,13 @@
     <arc exit="east" move="east" destination="133" />
     <arc exit="climb" move="climb embrasure" destination="135" />
   </node>
-  <node id="135" name="Shard, North Bridge" note="Map66_STR3.xml|N Gate|North Gate|NorthGate">
+  <node id="135" name="Shard, North Bridge" note="Map66_Shard_to_Gondola_Area.xml|N Gate|North Gate|NorthGate">
     <description>To the north of this opulent bridge, the Dragon Spine Mountains span the horizon and exhale a dense forest known simply as the Dragon's Breath.  The North city gates stand close by, guarded by sharp-eyed soldiers on the city wall.</description>
     <position x="420" y="-20" z="0" />
     <arc exit="north" move="north" />
     <arc exit="go" move="go city gate" destination="1" />
   </node>
-  <node id="136" name="Shard, Tunnels" note="Map67a_Shard_Thief.xml">
+  <node id="136" name="Shard, Tunnels" note="Map67a_Shard_Thief_Passages.xml">
     <description>A sturdy wooden ladder dead ends just overhead at the loosely boarded over opening of an abandoned well, and continues downward into a smooth round shaft deep into the earth.  Muffled echoing footsteps and hoofbeats reveal the close proximity of the surface.  A tunnel in the western wall slopes sharply down out of sight, while another tunnel leads north, continuing just under the surface.</description>
     <position x="740" y="420" z="0" />
     <arc exit="north" move="north" />
@@ -1045,7 +1045,7 @@
     <position x="200" y="420" z="0" />
     <arc exit="out" move="out" destination="146" />
   </node>
-  <node id="149" name="Shard Tunnels" note="Map67a_Shard_Thief.xml">
+  <node id="149" name="Shard Tunnels" note="Map67a_Shard_Thief_Passages.xml">
     <description>Broad oaken beams support the flagstone foundation of the street overhead, where a barred sewer grate in one corner provides easy entrance and exit to the surface.  A rancid reek rises from piles of discarded produce dumped here by the bazaar vendors above, which discourages any curious surface dwellers from paying this area too close attention.  The sewer tunnel slopes steeply downwards to the southeast beyond your vision.</description>
     <position x="360" y="320" z="0" />
     <arc exit="southeast" move="southeast" />
@@ -1127,14 +1127,14 @@
     <arc exit="out" move="out" destination="24" />
     <arc exit="go" move="go doorway" destination="162" />
   </node>
-  <node id="162" name="Shard Tunnels" note="Map67a_Shard_Thief.xml">
+  <node id="162" name="Shard Tunnels" note="Map67a_Shard_Thief_Passages.xml">
     <description>A steady stream of putrid refuse flows through a rough channel cut into the floor.  The sickening stench is almost more than you can stand, reeking of sewage, decay, and other things unmentionable.  A rough hewn shaft in the ceiling rises towards the surface, spotted with slippery but useable carved stone handholds.  The tunnel continues into the distance to the northwest and slopes upwards slightly to the south.</description>
     <position x="500" y="820" z="0" />
     <arc exit="south" move="south" />
     <arc exit="northwest" move="northwest" />
     <arc exit="up" move="up" />
   </node>
-  <node id="163" name="Shard, Abandoned Building" note="Map67a_Shard_Thief.xml">
+  <node id="163" name="Shard, Abandoned Building" note="Map67a_Shard_Thief_Passages.xml">
     <description>From inside, you can see that this abandoned carriage barn is not so abandoned as other buildings in the neighborhood.  Although badly in need of painting, the walls are shorn up with fresh wooden planking, invisible from the outside, and the flagstone floor is swept clean.  A ladder pokes above the surface of a deep shaft into the earth.</description>
     <position x="540" y="660" z="0" />
     <arc exit="out" move="out" destination="63" />
@@ -2680,7 +2680,7 @@
     <arc exit="north" move="north" destination="289" />
     <arc exit="go" move="room knock door;'$shard.pw;go door" destination="549" />
   </node>
-  <node id="380" name="Undershard, Tunnels" note="Map67a_Shard_Thief.xml">
+  <node id="380" name="Undershard, Tunnels" note="Map67a_Shard_Thief_Passages.xml">
     <description>A small bubble in the rock has been smoothed over and shaped to provide just enough room to stand in.  The flickering light of a fire just outside the entrance provides scant light by which to navigate, but you can just barely make out a long cramped corridor cut through the rock to the northeast.  The incessant cries of the grey market merchants are reduced to merely a whisper, which echoes strangely off the smooth round walls.</description>
     <position x="1320" y="340" z="0" />
     <arc exit="northeast" move="northeast" />
@@ -3812,7 +3812,7 @@
     <position x="120" y="30" z="0" />
     <arc exit="climb" move="climb mist-woven stairs" destination="563" />
   </node>
-  <node id="566" name="Shard, Smuggler's Bridge" note="Map67a_Shard_Thief.xml|Smuggler's Bridge">
+  <node id="566" name="Shard, Smuggler's Bridge" note="Map67a_Shard_Thief_Passages.xml|Smuggler's Bridge">
     <description>Calls from the guards above echo down to you on this narrow strip of sand beneath the soaring stone walls of Shard.  The river laps quietly at the beach, which is marked heavily by footprints leading right into the water.  The prints lead towards a sandbank rising barely above the current about fifty feet out into the river.</description>
     <position x="340" y="-20" z="0" />
     <arc exit="go" move="go door" destination="48" />
@@ -3981,13 +3981,13 @@
     <position x="330" y="710" z="0" />
     <arc exit="go" move="go heavy doorway" destination="118" />
   </node>
-  <node id="595" name="Shard, Basement" note="Map67a_Shard_Thief.xml">
+  <node id="595" name="Shard, Basement" note="Map67a_Shard_Thief_Passages.xml">
     <description>This large storm cellar looks like some sort of storage area.  Stacks of crates, some bearing the trader's guild logo, are arranged in neat piles against the walls, along with wrapped canvas bundles and barrels of liquor.  A dark doorway in the southern wall leads into a narrow tunnel.</description>
     <position x="580" y="60" z="0" />
     <arc exit="south" move="south" />
     <arc exit="go" move="go cellar doors" destination="28" />
   </node>
-  <node id="596" name="Undershard, Tunnels" note="Map67a_Shard_Thief.xml">
+  <node id="596" name="Undershard, Tunnels" note="Map67a_Shard_Thief_Passages.xml">
     <description>The natural fissure widens inside, into a narrow passage which is just barely passable.  The passage has obviously been worked, but not by skilled hands.  The walls are rough and badly chipped, and the floor is covered with fragments of stone which make the footing treacherous.</description>
     <position x="1320" y="300" z="0" />
     <arc exit="east" move="east" />

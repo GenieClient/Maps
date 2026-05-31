@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Abandoned Mine and Lairocott Brach" id="10">
+  <node id="1" name="Lairocott Brach, Entrance">
+    <description>Placed in the wall of the sheer cliff that stands before you is a large stone door, currently blasted open.  Two large lifelike sentinels, one on either side of the door, have been scorched black.</description>
+    <description>Placed in the wall of the sheer cliff is a huge stone door with an arched top.  Two large lifelike sentinels, one on either side of the door, stand at attention in silence.</description>
+    <position x="260" y="100" z="0" />
+    <arc exit="west" move="west" destination="2" />
+    <arc exit="down" move="down" destination="116" />
+    <arc exit="none" move="'grek;go door" destination="3" />
+  </node>
+  <node id="2" name="Mountainous Route">
+    <description>Loose rocks from recent landslides cover the trail making progress slightly more precarious and slower.  A strong creeper seems to have won a battle with the steep cliff face and secured holds in the rock as far up as you can see.</description>
+    <position x="220" y="100" z="0" />
+    <arc exit="east" move="east" destination="1" />
+    <arc exit="up" move="up" destination="19" />
+    <arc exit="climb" move="climb creeper" destination="29" />
+  </node>
+  <node id="3" name="Lairocott Brach, Saverack">
+    <description>A large dripstone saw-blade is visible on the ceiling.  Caught in the dim glow of the lights recessed in the wall, it resembles two jaws waiting to clamp down on the next unfortunate soul that chooses to pass under them.  The walls glisten with moisture and are cool to the touch.  A slight breeze wafting across your face carries air both cool and fresh.</description>
+    <position x="320" y="160" z="0" />
+    <arc exit="north" move="north" destination="4" />
+    <arc exit="out" move="out" destination="1" />
+  </node>
+  <node id="4" name="Lairocott Brach, Frotoft">
+    <description>Flickering lanterns cast enormous wavering shadows on the pocketed walls.  Despite the frequently placed sconces, the tunnel recedes into nightlike blackness in both directions.  Unknown sounds whispered from all directions cause you to frequently stop and determine their location.</description>
+    <position x="320" y="120" z="0" />
+    <arc exit="northeast" move="northeast" destination="5" />
+    <arc exit="south" move="south" destination="3" />
+    <arc exit="northwest" move="northwest" destination="16" />
+  </node>
+  <node id="5" name="Lairocott Brach, Frotoft">
+    <description>Drawn to this location by contagious laughter and hearty singing, you happen upon Forkbeard's Brodger.  Pausing briefly and sniffing the air, smells of home made food and strong ale tempt you to enter.  The possibility of exchanging information and hearing some new rumors also acts as a lure.</description>
+    <position x="340" y="100" z="0" />
+    <arc exit="north" move="north" destination="18" />
+    <arc exit="northeast" move="northeast" destination="6" />
+    <arc exit="southwest" move="southwest" destination="4" />
+    <arc exit="west" move="west" destination="16" />
+    <arc exit="northwest" move="northwest" destination="17" />
+    <arc exit="go" move="go brodger" destination="111" />
+  </node>
+  <node id="6" name="Lairocott Brach, Frotoft">
+    <description>Along the east wall, a multitude of glistening milky-white stalagmites rise up in their delicate beauty like rows of candles waiting to be lit.  The whole area possesses a fairy tale quality, providing a multitude of hiding places.  Occasionally you catch a glimpse of a young dwarven face peeking out from between the stalagmites.</description>
+    <position x="380" y="60" z="0" />
+    <arc exit="north" move="north" destination="7" />
+    <arc exit="southwest" move="southwest" destination="5" />
+    <arc exit="west" move="west" destination="18" />
+    <arc exit="northwest" move="northwest" destination="9" />
+  </node>
+  <node id="7" name="Lairocott Brach, Frotoft">
+    <description>Looking closely at the wall, hairline fissures in the rock are noticeable.  It is unclear whether these are recent or several centuries old.  You resolve to ask someone as quickly as possible.  Hewn into the wall of the cavern are several benches inviting the weary person to take the weight off their feet.</description>
+    <position x="380" y="20" z="0" />
+    <arc exit="south" move="south" destination="6" />
+    <arc exit="southwest" move="southwest" destination="18" />
+    <arc exit="west" move="west" destination="9" />
+    <arc exit="go" move="go pierowall" destination="8" />
+  </node>
+  <node id="8" name="Lairocott Brach, Goi's Pierowall">
+    <description>An unknown odor makes you sniff as you enter the workshop and it is unclear whether it is originating from the bottles of reagents and solutions on the shelves or the fine dust resembling charcoal that covers the floor.  Colorful crystalline bull's-eyes, crystals and other polished gems have been placed on Goi's display case.  A huge grinding wheel stands off to one corner, surrounded by various other tools used for polishing, sanding and cleaning.  Close to the wheel is a large trough.</description>
+    <position x="380" y="0" z="0" />
+    <arc exit="go" move="go heavy door" destination="7" />
+  </node>
+  <node id="9" name="Lairocott Brach, Harrgy">
+    <description>Large boulders litter this portion of the cavern, yet it is easy to skirt around most of them.  Off to one side, several boulders have been chiseled, fashioned into seats and placed in a semi-circle.  A larger stone is shaped like a podium, suggesting that this is either a teaching or meeting place.</description>
+    <position x="340" y="20" z="0" />
+    <arc exit="east" move="east" destination="7" />
+    <arc exit="southeast" move="southeast" destination="6" />
+    <arc exit="south" move="south" destination="18" />
+    <arc exit="southwest" move="southwest" destination="17" />
+    <arc exit="west" move="west" destination="14" />
+    <arc exit="northwest" move="northwest" destination="10" />
+  </node>
+  <node id="10" name="Lairocott Brach, Frotoft">
+    <description>On either side of the tunnel to your north are two especially bright lanterns.  The tunnel, regular and smooth, bears all of the hallmarks of traditional dwarven mining.</description>
+    <position x="320" y="0" z="0" />
+    <arc exit="north" move="north" destination="11" />
+    <arc exit="southeast" move="southeast" destination="9" />
+    <arc exit="southwest" move="southwest" destination="14" />
+  </node>
+  <node id="11" name="Lairocott Brach, Saverack">
+    <description>Flickering lanterns cast enormous wavering shadows on the pocketed walls, their light slipping off the surface of a smooth boulder that fills one of the many indentations.  Despite the frequently placed sconces, the tunnel recedes into nightlike blackness in both directions.  Unknown sounds whispered from all directions cause you to frequently stop and determine their location.</description>
+    <position x="320" y="-20" z="0" />
+    <arc exit="north" move="north" destination="12" />
+    <arc exit="south" move="south" destination="10" />
+    <arc exit="go" move="go dark crevice" destination="114" />
+  </node>
+  <node id="12" name="Lairocott Brach, Saverack">
+    <description>Heavy encrustation of magnificent flowstone is located in the recesses of the walls along this tunnel.  At every step, strange and beautiful objects sweep into view.  Reddish wormlike growths coated with quartz and glistening crystals of white gypsum dot the ceilings, walls and floor.  Lanterns have been placed in small alcoves at regular distances.</description>
+    <position x="320" y="-40" z="0" />
+    <arc exit="north" move="north" destination="13" />
+    <arc exit="south" move="south" destination="11" />
+  </node>
+  <node id="13" name="Lairocott Brach, Dunnett">
+    <description>A small, well lit chamber suddenly comes into view, compelling both humility and silence.  Four vertical monoliths, each owning a corner, buttress the roof.  In the center of the chamber a set of smaller grey stones has been placed in a circle.  The chamber is completely silent, all sounds from the cavern have died away.</description>
+    <position x="360" y="400" z="1" />
+    <arc exit="south" move="south" hidden="True" destination="12" />
+    <arc exit="go" move="go stones" destination="62" />
+  </node>
+  <node id="14" name="Lairocott Brach, Howan">
+    <description>Unlike the rest of the cavern, the floor here has been made purposefully smooth in places.  Pikes, shields, lances and other types of weapons have been placed against the large rocks off to one side.  Several dwarves, suited up in armor are stretched out on the floor off to one side.</description>
+    <position x="300" y="20" z="0" />
+    <arc exit="northeast" move="northeast" destination="10" />
+    <arc exit="east" move="east" destination="9" />
+    <arc exit="southeast" move="southeast" destination="18" />
+    <arc exit="south" move="south" destination="17" />
+    <arc exit="southwest" move="southwest" destination="15" />
+  </node>
+  <node id="15" name="Lairocott Brach, Frotoft">
+    <description>The damp and the cold of the cavern that you had previously relegated from your thoughts suddenly becomes more noticeable as a violent shiver takes hold of your body.</description>
+    <position x="260" y="60" z="0" />
+    <arc exit="northeast" move="northeast" destination="14" />
+    <arc exit="east" move="east" destination="17" />
+    <arc exit="southeast" move="southeast" destination="16" />
+    <arc exit="go" move="go hoy" destination="112" />
+  </node>
+  <node id="16" name="Lairocott Brach, Frotoft">
+    <description>Several small structures all possessing a similar design are dotted around this area and appear specifically built for dwarves.  Passing by, the architecture appears spartan but functional.</description>
+    <position x="300" y="100" z="0" />
+    <arc exit="north" move="north" destination="17" />
+    <arc exit="northeast" move="northeast" destination="18" />
+    <arc exit="east" move="east" destination="5" />
+    <arc exit="southeast" move="southeast" destination="4" />
+    <arc exit="northwest" move="northwest" destination="15" />
+    <arc exit="go" move="go arched doorway" destination="113" />
+  </node>
+  <node id="17" name="Lairocott Brach, Yarso" note="Stalagmite">
+    <description>A huge stalagmite rises up towards the cavern ceiling, its top disappearing into the darkness.  Dangling loosely from its sides are several thick ropes inviting the would be climber to explore the darkness.  Pitons hammered into the side offer a more challenging climb.</description>
+    <position x="300" y="60" z="0" />
+    <arc exit="north" move="north" destination="14" />
+    <arc exit="northeast" move="northeast" destination="9" />
+    <arc exit="east" move="east" destination="18" />
+    <arc exit="southeast" move="southeast" destination="5" />
+    <arc exit="south" move="south" destination="16" />
+    <arc exit="west" move="west" destination="15" />
+  </node>
+  <node id="18" name="Lairocott Brach, Vinquoy">
+    <description>More houses are located in this area and with one exception, they share the same spartan functionality that is reflected throughout the entire dwarven community.  A larger home, known locally as Vinquoy Brach, is the dwelling of the chieftain and his wife and is the focus of a great deal of attention.  Two armed dwarven guards, one on either side of the door of the chieftain's home, scrutinize everyone entering and leaving.</description>
+    <position x="340" y="60" z="0" />
+    <arc exit="north" move="north" destination="9" />
+    <arc exit="northeast" move="northeast" destination="7" />
+    <arc exit="east" move="east" destination="6" />
+    <arc exit="south" move="south" destination="5" />
+    <arc exit="southwest" move="southwest" destination="16" />
+    <arc exit="west" move="west" destination="17" />
+    <arc exit="northwest" move="northwest" destination="14" />
+  </node>
+  <node id="19" name="Mountainous Route">
+    <description>Sparse scrub dots the landscape and the few bushes that manage to survive bear fruit that looks sickly.  A well worn path leads further up and back down the mountainside.  Though the path affords easy passage, the sheer cliff and the steep drop serve as reminders of the lack of escape routes.</description>
+    <position x="220" y="200" z="0" />
+    <arc exit="up" move="up" destination="20" />
+    <arc exit="down" move="down" destination="2" />
+  </node>
+  <node id="20" name="Abandoned Mine, Entrance">
+    <description>A large entrance looms in the cliffs ahead.  Round in shape, it seems to have been fashioned for easy passage.  Peering into the darkness yields little information about what may lie further in, since the rock walls quickly disappear into a faint blue glow.</description>
+    <position x="220" y="300" z="0" />
+    <arc exit="down" move="down" destination="19" />
+    <arc exit="go" move="go entrance" destination="21" />
+  </node>
+  <node id="21" name="Abandoned Mine, Shaft">
+    <description>This is a mine shaft drilled horizontally into the mountainside.  Particularly noticeable is a blue moss that coats most of the ceiling and wall.  The strong smell of a recently deceased animal forces an involuntary wrinkle of your nose.  At one end of the shaft is a narrow crevice.</description>
+    <position x="220" y="400" z="0" />
+    <arc exit="out" move="out" destination="20" />
+    <arc exit="go" move="go crevice" destination="22" />
+  </node>
+  <node id="22" name="Abandoned Mine, Crevice">
+    <description>Rubble and loam cover the ground and all that remains visible in the sparse light filtering through the crevice is a decrepit old ladder with rusted rungs.</description>
+    <position x="220" y="500" z="0" />
+    <arc exit="go" move="go crevice" destination="21" />
+    <arc exit="climb" move="climb ladder" destination="23" />
+  </node>
+  <node id="23" name="Abandoned Mine, Tunnel">
+    <description>The strange blue moss throws out an eerie light making it possible to see the surroundings.  Water has corroded the ceiling and the walls, but not enough to erode what looks like a set of mysterious markings.  From this point in the tunnel, there is only one possible direction.</description>
+    <position x="120" y="500" z="0" />
+    <arc exit="north" move="north" destination="24" />
+    <arc exit="climb" move="climb ladder" destination="22" />
+  </node>
+  <node id="24" name="Abandoned Mine, Tunnel">
+    <description>Stalagmites and stalactites reach out trustingly to touch one another.  Helictites high above amaze you with their beauty.  Glowing in the dim light and resting on the floor of the tunnel are sinister formations.  Other than being in awe of the wealth of natural treasures, the predominant sensation is one of cold as the dampness and chill air start to pervade your body.</description>
+    <position x="120" y="480" z="0" />
+    <arc exit="northeast" move="northeast" destination="25" />
+    <arc exit="south" move="south" destination="23" />
+  </node>
+  <node id="25" name="Abandoned Mine, Streamlet">
+    <description>Curving walls and dim piles of rock continually hint at hidden alcoves and endless corridors.  Your muscles complain as you endlessly sidestep piles of rocks in the bed of an old streamlet.  Any attempts to speed through this place are prevented by numerous depressions.</description>
+    <position x="140" y="460" z="0" />
+    <arc exit="north" move="north" destination="26" />
+    <arc exit="southwest" move="southwest" destination="24" />
+  </node>
+  <node id="26" name="Abandoned Mine, Gallery">
+    <description>This is a gallery with a basin-shaped floor, where channels have been cut into the roof by swirling waters.  In the center stand several broad cone-shaped stalagmites, most of which are supplied by several smaller stalactites.  A huge unnatural pile of rubble stands off to one side.</description>
+    <position x="140" y="440" z="0" />
+    <arc exit="north" move="north" destination="27" />
+    <arc exit="south" move="south" destination="25" />
+    <arc exit="climb" move="climb pile" destination="28" />
+  </node>
+  <node id="27" name="Abandoned Mine, Tunnel" color="#FFBF00">
+    <description>Weaving in and out of large blocks of stone, you stumble across an old fire site.  On most of the walls, the dripstone has formed beautiful cascades, resembling either petrified waterfalls or curtains.  To the north are three identical-looking tunnels.</description>
+    <position x="140" y="420" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="48" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="49" />
+    <arc exit="south" move="south" destination="26" />
+    <arc exit="northwest" move="northwest" destination="50" />
+  </node>
+  <node id="28" name="Abandoned Mine, Rubble Pile">
+    <description>Atop this pile are an odd collection of bones and crude tools.</description>
+    <position x="160" y="440" z="0" />
+    <arc exit="down" move="down" destination="26" />
+  </node>
+  <node id="29" name="Abandoned Mine, Entrance">
+    <description>Gigantic boulders are strewn all over, steep rock faces surround this area and a large hole lies in the ground.  Firmly secured to several of the boulders is a rope ladder.  Other than the sinkhole, there do not appear to be any obvious exits.</description>
+    <position x="180" y="100" z="0" />
+    <arc exit="climb" move="climb ladder" destination="30" />
+    <arc exit="climb" move="climb creeper" destination="2" />
+  </node>
+  <node id="30" name="Abandoned Mine, Ledge">
+    <description>More shining deposits glitter before your eyes.  Making a mental note of the exact location, you consider returning with the correct tools to mine these rich deposits.  High above shines a faint light, possibly the exit from the mine.  A rope ladder dangles above you. </description>
+    <position x="100" y="100" z="0" />
+    <arc exit="climb" move="climb rope" destination="31" />
+    <arc exit="climb" move="climb ladder" destination="29" />
+  </node>
+  <node id="31" name="Abandoned Mine, Tunnel" color="#FFFF00">
+    <description>More rich veins of ore and crystals in the rock face attract the eye and emphasize the wealth of unmined deposits in this tunnel.  Hanging from the ledge is a rope.</description>
+    <position x="100" y="60" z="0" />
+    <arc exit="east" move="east" destination="32" />
+    <arc exit="west" move="west" destination="34" />
+    <arc exit="climb" move="climb rope" destination="30" />
+  </node>
+  <node id="32" name="Abandoned Mine, Tunnel" color="#FFFF00">
+    <description>Thin translucent sheets of calcite punctuated by brown streaks hang down from the ceiling.  Unlike most of the mine, there are no timbers that have been used to shore up the roof or walls here.  An eerie, dark silence pervades the gloom.  To the east lies a narrow passageway.</description>
+    <position x="130" y="60" z="0" />
+    <arc exit="east" move="east" destination="33" />
+    <arc exit="west" move="west" destination="31" />
+  </node>
+  <node id="33" name="Abandoned Mine, Lair of the Beisswurm" note="Bitter" color="#FFFF00">
+    <description>Walking quietly through the dark slippery passageways is claustrophobic.  Turning a tight corner, you almost bump into a large solid slab of ice which stretches across the entire tunnel and prevents further passage.  Encased in the ice is a huge seemingly perfectly preserved creature.</description>
+    <position x="150" y="60" z="0" />
+    <arc exit="west" move="west" destination="32" />
+  </node>
+  <node id="34" name="Abandoned Mine, Tunnel" color="#FFFF00">
+    <description>A large pile of boulders stacked in the passageway and an overturned wheelbarrow force you to edge by the wall and skirt around these obstacles. </description>
+    <position x="80" y="60" z="0" />
+    <arc exit="east" move="east" destination="31" />
+    <arc exit="southwest" move="southwest" destination="36" />
+    <arc exit="west" move="west" destination="35" />
+  </node>
+  <node id="35" name="Abandoned Mine, Tunnel" note="Beisswurms" color="#FFFF00">
+    <description>Sturdy timbers at this juncture are in stark contrast to the disrepair that you have witnessed elsewhere.  Similarly the boulders, rocks and pebbles in this room are different.  Although weathering and constant erosion have taken their toll throughout the mine, for some reason this area has been spared.</description>
+    <position x="60" y="60" z="0" />
+    <arc exit="east" move="east" destination="34" />
+    <arc exit="south" move="south" destination="36" />
+  </node>
+  <node id="36" name="Abandoned Mine, Tunnel" color="#FFFF00">
+    <description>A ghastly sight confronts you entering this portion of the mine.  Poised to attack, battle axe in one hand, shield in the other, stands a dwarf frozen in all of his glory.  What he was about to fight or defend himself from or what left him in this sorry state, can only be the subject of conjecture.</description>
+    <description>A ghastly sight confronts you entering this portion of the mine.  Poised to attack, battle axe in one hand, shield in the other, stands a Dwarf frozen in all of his glory.  What he was about to fight or defend himself from, or what left him in this sorry state, can only be the subject of conjecture.</description>
+    <position x="60" y="80" z="0" />
+    <arc exit="north" move="north" destination="35" />
+    <arc exit="northeast" move="northeast" destination="34" />
+    <arc exit="south" move="south" destination="37" />
+  </node>
+  <node id="37" name="Abandoned Mine, Tunnel" color="#FFFF00">
+    <description>A strong smell of rotting flesh fills the air.  The source appears to be a rodent that met its demise here, its corpse still partially preserved by the cold temperature.  Mounds of crushed rock that do not appear to be the result of mining litter the floor.  A huge natural bridge stands to the south.</description>
+    <position x="60" y="100" z="0" />
+    <arc exit="north" move="north" destination="36" />
+    <arc exit="go" move="go bridge" destination="38" />
+  </node>
+  <node id="38" name="Abandoned Mine, Bridge" note="Bridge">
+    <description>Standing on the long stone bridge, you take a moment to peer over the sides only to see a deep dark chasm that appears to have no end.  Fighting a brief moment of vertigo, you struggle to steady yourself and catch your breath.</description>
+    <position x="60" y="120" z="0" />
+    <arc exit="north" move="north" destination="37" />
+    <arc exit="south" move="south" destination="39" />
+  </node>
+  <node id="39" name="Abandoned Mine, Tunnel" color="#FF8000">
+    <description>The light thrown off by the ever present moss is reflected by a myriad of small crystal fragments embedded in the walls of the tunnel and is reminiscent of the nighttime sky.  A huge natural bridge stands to the north.</description>
+    <position x="60" y="160" z="0" />
+    <arc exit="south" move="south" destination="40" />
+    <arc exit="go" move="go bridge" destination="38" />
+  </node>
+  <node id="40" name="Abandoned Mine, Tunnel" color="#FF8000">
+    <description>The beams that shore up the tunnel have been eaten away in places.  Icicles line the wall and trails of a slimy substance line the tunnel floor.  In the faint glow, the exhalation of your breath momentarily forms a fast dissipating cloud.</description>
+    <position x="60" y="180" z="0" />
+    <arc exit="north" move="north" destination="39" />
+    <arc exit="east" move="east" destination="41" />
+  </node>
+  <node id="41" name="Abandoned Mine, Tunnel" color="#FF8000">
+    <description>The passageway levels off here allowing you to slow down and catch your breath.  The guiding light is even scarcer causing the occasional stumble, stubbed toe and silent curse.</description>
+    <position x="80" y="180" z="0" />
+    <arc exit="west" move="west" destination="40" />
+    <arc exit="up" move="up" destination="42" />
+  </node>
+  <node id="42" name="Abandoned Mine, Tunnel" color="#FF8000">
+    <description>Stepping over piles of rock, debris and abandoned tools, the entrance to a wider passageway starts to open up.  The loud reverberating echoes of the crunching sounds made by your footsteps announce your presence.</description>
+    <position x="100" y="180" z="0" />
+    <arc exit="north" move="north" destination="43" />
+    <arc exit="south" move="south" destination="44" />
+    <arc exit="up" move="up" destination="45" />
+    <arc exit="down" move="down" destination="41" />
+  </node>
+  <node id="43" name="Abandoned Mine, Tunnel" color="#FF8000">
+    <description>Carts still filled with ore, rich veins in the rock face, pick axes and shovels all provide further evidence of a hasty departure by the miners that plied their trade here.</description>
+    <position x="100" y="160" z="0" />
+    <arc exit="south" move="south" destination="42" />
+  </node>
+  <node id="44" name="Abandoned Mine, Tunnel" color="#FF8000">
+    <description>Small creatures scuttle away at your approach.  Large rocks placed in a semi-circle and remnants of litter suggest that this was an ad hoc eating area.  Overturned metal containers litter the floor.</description>
+    <position x="100" y="200" z="0" />
+    <arc exit="north" move="north" destination="42" />
+  </node>
+  <node id="45" name="Abandoned Mine, Tunnel" color="#FF8000">
+    <description>A chill in the air forces a shiver and the realization that the temperature has dropped.  The bluish moss on the ceilings and walls is less abundant which makes it harder to see and forces you to concentrate on your surroundings by using your other senses.</description>
+    <position x="120" y="180" z="0" />
+    <arc exit="east" move="east" destination="46" />
+    <arc exit="down" move="down" destination="42" />
+  </node>
+  <node id="46" name="Abandoned Mine, Tunnel" color="#FF8000">
+    <description>This long corridor appears to be an old abandoned mining tunnel that runs east to west.  The timbers shoring up the low ceiling are all reminiscent of traditional dwarven mining.  The south wall has a very smooth surface.</description>
+    <position x="140" y="180" z="0" />
+    <arc exit="east" move="east" destination="47" />
+    <arc exit="west" move="west" destination="45" />
+  </node>
+  <node id="47" name="Abandoned Mine, Rock Fall" color="#FF8000">
+    <description>The corridor comes to an abrupt end here.  A rock fall has sealed the route, preventing further progress.  The pattern of the rocks suggest that the rock fall was caused purposefully to prevent something from getting out rather than preventing something entering.</description>
+    <position x="160" y="180" z="0" />
+    <arc exit="west" move="west" destination="46" />
+    <arc exit="go" move="go some rocks" destination="117" />
+  </node>
+  <node id="48" name="Abandoned Mine, Stony Labyrinth" color="#FFBF00">
+    <description>It is difficult to keep a sense of direction in this stony labyrinth.  Chambers and tunnels open up in every conceivable direction.  The eerie silence is broken only by the crunch of rocks and crystals underfoot.</description>
+    <position x="140" y="380" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="49" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="49" />
+    <arc exit="east" move="east" hidden="True" destination="49" />
+    <arc exit="southeast" move="southeast" hidden="True" destination="49" />
+    <arc exit="south" move="south" hidden="True" destination="49" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="49" />
+    <arc exit="west" move="west" hidden="True" destination="49" />
+    <arc exit="northwest" move="northwest" hidden="True" destination="49" />
+  </node>
+  <node id="49" name="Abandoned Mine, Stony Labyrinth" color="#FFBF00">
+    <description>It is difficult to keep a sense of direction in this stony labyrinth.  Chambers and tunnels open up in every conceivable direction.  The eerie silence is broken only by the crunch of rocks and crystals underfoot.  You also see some scattered bones.</description>
+    <position x="180" y="380" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="50" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="50" />
+    <arc exit="east" move="east" hidden="True" destination="50" />
+    <arc exit="southeast" move="southeast" hidden="True" destination="50" />
+    <arc exit="south" move="south" hidden="True" destination="50" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="50" />
+    <arc exit="west" move="west" hidden="True" destination="50" />
+    <arc exit="northwest" move="northwest" hidden="True" destination="50" />
+  </node>
+  <node id="50" name="Abandoned Mine, Stony Labyrinth" color="#FFBF00">
+    <description>It is difficult to keep a sense of direction in this stony labyrinth.  Chambers and tunnels open up in every conceivable direction.  The eerie silence is broken only by the crunch of rocks and crystals underfoot.</description>
+    <position x="100" y="380" z="0" />
+    <arc exit="southeast" move="southeast" destination="27" />
+    <arc exit="northeast" move="northeast" destination="51" />
+    <arc exit="north" move="north" hidden="True" destination="48" />
+    <arc exit="east" move="east" hidden="True" destination="48" />
+    <arc exit="south" move="south" hidden="True" destination="48" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="48" />
+    <arc exit="west" move="west" hidden="True" destination="48" />
+    <arc exit="northwest" move="northwest" hidden="True" destination="48" />
+  </node>
+  <node id="51" name="Abandoned Mine, Stony Labyrinth" color="#FFBF00">
+    <description>It is difficult to keep a sense of direction in this stony labyrinth.  Chambers and tunnels open up in every conceivable direction.  The eerie silence is broken only by the crunch of rocks and crystals underfoot.</description>
+    <position x="140" y="340" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="52" />
+    <arc exit="northeast" move="northeast" destination="54" />
+    <arc exit="east" move="east" hidden="True" destination="52" />
+    <arc exit="southeast" move="southeast" hidden="True" destination="52" />
+    <arc exit="south" move="south" hidden="True" destination="52" />
+    <arc exit="southwest" move="southwest" destination="50" />
+    <arc exit="west" move="west" hidden="True" destination="52" />
+    <arc exit="northwest" move="northwest" hidden="True" destination="52" />
+  </node>
+  <node id="52" name="Abandoned Mine, Stony Labyrinth" color="#FFBF00">
+    <description>It is difficult to keep a sense of direction in this stony labyrinth.  Chambers and tunnels open up in every conceivable direction.  The eerie silence in this area is broken only by the crunch of rocks and crystals underfoot.  Some markings on a nearby wall catch your eye.</description>
+    <position x="180" y="340" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="53" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="53" />
+    <arc exit="east" move="east" hidden="True" destination="53" />
+    <arc exit="southeast" move="southeast" hidden="True" destination="53" />
+    <arc exit="south" move="south" hidden="True" destination="53" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="53" />
+    <arc exit="west" move="west" hidden="True" destination="53" />
+    <arc exit="northwest" move="northwest" hidden="True" destination="53" />
+  </node>
+  <node id="53" name="Abandoned Mine, Stony Labyrinth" color="#FFBF00">
+    <description>It is difficult to keep a sense of direction in this stony labyrinth.  Chambers and tunnels open up in every conceivable direction.  The eerie silence is broken only by the crunch of rocks and crystals underfoot.</description>
+    <position x="100" y="340" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="51" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="51" />
+    <arc exit="southeast" move="southeast" hidden="True" destination="51" />
+    <arc exit="east" move="east" hidden="True" destination="51" />
+    <arc exit="south" move="south" hidden="True" destination="51" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="51" />
+    <arc exit="west" move="west" hidden="True" destination="51" />
+    <arc exit="northwest" move="northwest" hidden="True" destination="51" />
+  </node>
+  <node id="54" name="Abandoned Mine, Stony Labyrinth" color="#FFBF00">
+    <description>It is difficult to keep a sense of direction in this stony labyrinth.  Chambers and tunnels open up in every conceivable direction.  The eerie silence is broken only by the crunch of rocks and crystals underfoot.</description>
+    <position x="180" y="300" z="0" />
+    <arc exit="north" move="north" destination="57" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="55" />
+    <arc exit="southeast" move="southeast" hidden="True" destination="55" />
+    <arc exit="east" move="east" hidden="True" destination="55" />
+    <arc exit="south" move="south" hidden="True" destination="55" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="55" />
+    <arc exit="west" move="west" hidden="True" destination="55" />
+    <arc exit="northwest" move="northwest" hidden="True" destination="55" />
+  </node>
+  <node id="55" name="Abandoned Mine, Stony Labyrinth" color="#FFBF00">
+    <description>It is difficult to keep a sense of direction in this stony labyrinth.  Chambers and tunnels open up in every conceivable direction.  The eerie silence is broken only by the crunch of rocks and crystals underfoot.</description>
+    <position x="100" y="300" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="56" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="56" />
+    <arc exit="southeast" move="southeast" hidden="True" destination="56" />
+    <arc exit="east" move="east" hidden="True" destination="56" />
+    <arc exit="south" move="south" hidden="True" destination="56" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="56" />
+    <arc exit="west" move="west" hidden="True" destination="56" />
+    <arc exit="northwest" move="northwest" hidden="True" destination="56" />
+  </node>
+  <node id="56" name="Abandoned Mine, Stony Labyrinth" color="#FFBF00">
+    <description>It is difficult to keep a sense of direction in this stony labyrinth.  Chambers and tunnels open up in every conceivable direction.  The eerie silence is broken only by the crunch of rocks and crystals underfoot.</description>
+    <position x="140" y="300" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="54" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="54" />
+    <arc exit="southeast" move="southeast" hidden="True" destination="54" />
+    <arc exit="east" move="east" hidden="True" destination="54" />
+    <arc exit="south" move="south" hidden="True" destination="54" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="54" />
+    <arc exit="west" move="west" hidden="True" destination="54" />
+    <arc exit="northwest" move="northwest" hidden="True" destination="54" />
+  </node>
+  <node id="57" name="Abandoned Mine, Stony Labyrinth" color="#FFBF00">
+    <description>It is difficult to keep a sense of direction in this stony labyrinth.  Chambers and tunnels open up in every conceivable direction.  The eerie silence is broken only by the crunch of rocks and crystals underfoot.</description>
+    <position x="180" y="260" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="58" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="58" />
+    <arc exit="southeast" move="southeast" hidden="True" destination="58" />
+    <arc exit="east" move="east" hidden="True" destination="58" />
+    <arc exit="south" move="south" destination="54" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="58" />
+    <arc exit="west" move="west" hidden="True" destination="58" />
+    <arc exit="northwest" move="northwest" destination="60" />
+  </node>
+  <node id="58" name="Abandoned Mine, Stony Labyrinth" color="#FFBF00">
+    <description>It is difficult to keep a sense of direction in this stony labyrinth.  Chambers and tunnels open up in every conceivable direction.  The eerie silence is broken only by the crunch of rocks and crystals underfoot.</description>
+    <position x="100" y="260" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="59" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="59" />
+    <arc exit="southeast" move="southeast" hidden="True" destination="59" />
+    <arc exit="east" move="east" hidden="True" destination="59" />
+    <arc exit="south" move="south" hidden="True" destination="59" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="59" />
+    <arc exit="west" move="west" hidden="True" destination="59" />
+    <arc exit="northwest" move="northwest" hidden="True" destination="59" />
+  </node>
+  <node id="59" name="Abandoned Mine, Stony Labyrinth" color="#FFBF00">
+    <description>It is difficult to keep a sense of direction in this stony labyrinth.  Chambers and tunnels open up in every conceivable direction.  The eerie silence is broken only by the crunch of rocks and crystals underfoot.</description>
+    <position x="140" y="260" z="0" />
+    <arc exit="north" move="north" hidden="True" destination="57" />
+    <arc exit="northeast" move="northeast" hidden="True" destination="57" />
+    <arc exit="southeast" move="southeast" hidden="True" destination="57" />
+    <arc exit="east" move="east" hidden="True" destination="57" />
+    <arc exit="south" move="south" hidden="True" destination="57" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="57" />
+    <arc exit="west" move="west" hidden="True" destination="57" />
+    <arc exit="northwest" move="northwest" hidden="True" destination="57" />
+  </node>
+  <node id="60" name="Abandoned Mine, Bone Room" color="#FFBF00">
+    <description>Debris and bones are strewn all over the floor.  Some appear to be more recent additions to the collection, while others are covered in an hardened layer of calcite.  A distinct dampness has filled the air, the walls glisten and the way underfoot has become slightly treacherous.  To the south are three identical-looking tunnels.</description>
+    <position x="140" y="220" z="0" />
+    <arc exit="south" move="south" hidden="True" destination="59" />
+    <arc exit="southeast" move="southeast" destination="57" />
+    <arc exit="southwest" move="southwest" hidden="True" destination="58" />
+    <arc exit="go" move="go crawlway" destination="61" />
+  </node>
+  <node id="61" name="Abandoned Mine, Crawlway">
+    <description>You manage to squeeze through a crawlway, following the course of trickling water.  Beautiful dripstones suddenly appear, the younger ones a glistening white color, the older and larger ones colored yellow and brown.  Neatly arranged in a row, several stalactites hang from the ceiling in single file.  The far wall has an unnatural quality to it.</description>
+    <position x="140" y="200" z="0" />
+    <arc exit="go" move="go far wall" destination="46" />
+    <arc exit="go" move="go crawlway" destination="60" />
+  </node>
+  <node id="62" name="Lairocott Brach, Lairorung">
+    <description>Carefully chiseled into the floor within the circle of stones is the hallowed image of Kertigen.  Unlike other areas of the dwarven settlement, where some of the floors have become worn and smooth with age, the surface here appears unchanged from its original state.</description>
+    <position x="260" y="400" z="1" />
+    <arc exit="out" move="out" destination="13" />
+    <arc exit="go" move="go deep oeblichar" destination="63" />
+  </node>
+  <node id="63" name="Lairocott Brach, Oeblichar">
+    <description>This large, round chamber is dimly lit by four sets of torches that have been spaced in cardinal locations around the room.  Oddly, while the flames of the torches do flicker, they do not burn down.  Whether this is due to some strange and unknown temporal magic or the power of something far greater than mortal ken is hard to ascertain.  Gypsum and minerals glitter from within their prisons in the smooth stone, and the floor is carved with a complex circular knotwork pattern.</description>
+    <position x="300" y="340" z="1" />
+    <arc exit="east" move="east" destination="80" />
+    <arc exit="south" move="south" destination="96" />
+    <arc exit="west" move="west" destination="81" />
+    <arc exit="north" move="north" destination="64" />
+  </node>
+  <node id="64" name="Lairocott Brach, Hrachnar">
+    <description>The blank, dark gray walls are smooth and seamless, the doorways flowing out of the stone like natural structures.  Four torches line the walls, each set at the cardinal points of northeast, west, east, and south.  The floor is a glossy black amber, reflecting the light and throwing it back in your eyes, dancing with a dizzying and unnatural shine.</description>
+    <position x="300" y="300" z="1" />
+    <arc exit="northeast" move="northeast" destination="65" />
+    <arc exit="east" move="east" destination="82" />
+    <arc exit="south" move="south" destination="63" />
+    <arc exit="west" move="west" destination="83" />
+  </node>
+  <node id="65" name="Lairocott Brach, Hrachnar">
+    <description>The blank, dark gray walls are smooth and seamless, the doorways flowing out of the stone like natural structures.  Light filters in from the passages, fitfully illuminating the knotwork pattern in the floor.  Somewhere, the dripping of water echoes through the twisting tunnels of the cavern.</description>
+    <position x="340" y="260" z="1" />
+    <arc exit="north" move="north" destination="85" />
+    <arc exit="east" move="east" destination="84" />
+    <arc exit="southwest" move="southwest" destination="64" />
+    <arc exit="west" move="west" destination="66" />
+  </node>
+  <node id="66" name="Lairocott Brach, Hrachnar">
+    <description>The blank, dark gray walls are smooth and seamless, the doorways flowing out of the stone like natural structures.  Four torches line the walls, each set at the cardinal points of northwest, southwest, east, and south.  The floor is a glossy black amber, reflecting the light and throwing it back in your eyes, dancing with a dizzying and unnatural shine.</description>
+    <position x="300" y="260" z="1" />
+    <arc exit="east" move="east" destination="65" />
+    <arc exit="south" move="south" destination="87" />
+    <arc exit="southwest" move="southwest" destination="86" />
+    <arc exit="northwest" move="northwest" destination="67" />
+  </node>
+  <node id="67" name="Lairocott Brach, Hrachnar">
+    <description>The blank, dark gray walls are smooth and seamless, the doorways flowing out of the stone like natural structures.  Light filters in from the passages, fitfully illuminating the knotwork pattern in the floor.  Somewhere, the dripping of water echoes through the twisting tunnels of the cavern.</description>
+    <position x="260" y="220" z="1" />
+    <arc exit="northeast" move="northeast" destination="89" />
+    <arc exit="southeast" move="southeast" destination="66" />
+    <arc exit="southwest" move="southwest" destination="88" />
+    <arc exit="northwest" move="northwest" destination="68" />
+  </node>
+  <node id="68" name="Lairocott Brach, Hrachnar">
+    <description>The blank, dark gray walls are smooth and seamless, the doorways flowing out of the stone like natural structures.  Four torches line the walls, each set at the cardinal points of southeast, west, east, and south.  The floor is a glossy black amber, reflecting the light and throwing it back in your eyes, dancing with a dizzying and unnatural shine.</description>
+    <position x="200" y="160" z="1" />
+    <arc exit="east" move="east" destination="69" />
+    <arc exit="southeast" move="southeast" destination="67" />
+    <arc exit="south" move="south" destination="90" />
+    <arc exit="west" move="west" destination="91" />
+  </node>
+  <node id="69" name="Lairocott Brach, Hrachnar">
+    <description>The blank, dark gray walls are smooth and seamless, the doorways flowing out of the stone like natural structures.  Light filters in from the passages, fitfully illuminating the knotwork pattern in the floor.  Somewhere, the dripping of water echoes through the twisting tunnels of the cavern.</description>
+    <position x="260" y="160" z="1" />
+    <arc exit="north" move="north" destination="92" />
+    <arc exit="southeast" move="southeast" destination="70" />
+    <arc exit="south" move="south" destination="93" />
+    <arc exit="west" move="west" destination="68" />
+  </node>
+  <node id="70" name="Lairocott Brach, Hrachnar">
+    <description>The blank, dark gray walls are smooth and seamless, the doorways flowing out of the stone like natural structures.  Four torches line the walls, each set at the cardinal points of northwest, west, east, and south.  The floor is a glossy black amber, reflecting the light and throwing it back in your eyes, dancing with a dizzying and unnatural shine.</description>
+    <position x="320" y="220" z="1" />
+    <arc exit="east" move="east" destination="71" />
+    <arc exit="south" move="south" destination="94" />
+    <arc exit="west" move="west" destination="95" />
+    <arc exit="northwest" move="northwest" destination="69" />
+  </node>
+  <node id="71" name="Lairocott Brach, Hrachnar">
+    <description>The blank, dark gray walls are smooth and seamless, the doorways flowing out of the stone like natural structures.  Light filters in from the passages, fitfully illuminating the knotwork pattern in the floor.  Somewhere, the dripping of water echoes through the twisting tunnels of the cavern.</description>
+    <position x="360" y="220" z="1" />
+    <arc exit="northeast" move="northeast" destination="98" />
+    <arc exit="east" move="east" destination="72" />
+    <arc exit="west" move="west" destination="70" />
+    <arc exit="northwest" move="northwest" destination="97" />
+  </node>
+  <node id="72" name="Lairocott Brach, Hrachnar">
+    <description>The blank, dark gray walls are smooth and seamless, the doorways flowing out of the stone like natural structures.  Four torches line the walls, each set at the cardinal points of west, north, south, and east.  The floor is a glossy black amber, reflecting the light and throwing it back in your eyes, dancing with a dizzying and unnatural shine.</description>
+    <position x="400" y="220" z="1" />
+    <arc exit="north" move="north" destination="73" />
+    <arc exit="east" move="east" destination="99" />
+    <arc exit="south" move="south" destination="100" />
+    <arc exit="west" move="west" destination="71" />
+  </node>
+  <node id="73" name="Lairocott Brach, Hrachnar">
+    <description>The blank, dark gray walls are smooth and seamless, the doorways flowing out of the stone like natural structures.  Light filters in from the passages, fitfully illuminating the knotwork pattern in the floor.  Somewhere, the dripping of water echoes through the twisting tunnels of the cavern.</description>
+    <position x="400" y="180" z="1" />
+    <arc exit="northeast" move="northeast" destination="74" />
+    <arc exit="east" move="east" destination="73" />
+    <arc exit="south" move="south" destination="72" />
+    <arc exit="west" move="west" destination="73" />
+  </node>
+  <node id="74" name="Lairocott Brach, Hrachnar">
+    <description>The blank, dark gray walls are smooth and seamless, the doorways flowing out of the stone like natural structures.  Four torches line the walls, each set at the cardinal points of northwest, southwest, west, and east.  The floor is a glossy black amber, reflecting the light and throwing it back in your eyes, dancing with a dizzying and unnatural shine.</description>
+    <position x="420" y="160" z="1" />
+    <arc exit="east" move="east" destination="101" />
+    <arc exit="southwest" move="southwest" destination="73" />
+    <arc exit="west" move="west" destination="102" />
+    <arc exit="northwest" move="northwest" destination="75" />
+  </node>
+  <node id="75" name="Lairocott Brach, Hrachnar">
+    <description>The blank, dark gray walls are smooth and seamless, the doorways flowing out of the stone like natural structures.  Light filters in from the passages, fitfully illuminating the knotwork pattern in the floor.  Somewhere, the dripping of water echoes through the twisting tunnels of the cavern.</description>
+    <position x="380" y="120" z="1" />
+    <arc exit="southeast" move="southeast" destination="74" />
+    <arc exit="southwest" move="southwest" destination="104" />
+    <arc exit="west" move="west" destination="76" />
+    <arc exit="northwest" move="northwest" destination="103" />
+  </node>
+  <node id="76" name="Lairocott Brach, Hrachnar">
+    <description>The blank, dark gray walls are smooth and seamless, the doorways flowing out of the stone like natural structures.  Four torches line the walls, each set at the cardinal points of northwest, south, southwest, and east.  The floor is a glossy black amber, reflecting the light and throwing it back in your eyes, dancing with a dizzying and unnatural shine.</description>
+    <position x="340" y="120" z="1" />
+    <arc exit="east" move="east" destination="75" />
+    <arc exit="south" move="south" destination="105" />
+    <arc exit="southwest" move="southwest" destination="106" />
+    <arc exit="northwest" move="northwest" destination="77" />
+  </node>
+  <node id="77" name="Lairocott Brach, Hrachnar">
+    <description>The blank, dark gray walls are smooth and seamless, the doorways flowing out of the stone like natural structures.  Light filters in from the passages, fitfully illuminating the knotwork pattern in the floor.  Somewhere, the dripping of water echoes through the twisting tunnels of the cavern.</description>
+    <position x="320" y="100" z="1" />
+    <arc exit="northeast" move="northeast" destination="107" />
+    <arc exit="southeast" move="southeast" destination="76" />
+    <arc exit="southwest" move="southwest" destination="108" />
+    <arc exit="west" move="west" destination="78" />
+  </node>
+  <node id="78" name="Lairocott Brach, Hrachnar">
+    <description>The blank, dark gray walls are smooth and seamless, the doorways flowing out of the stone like natural structures.  Four torches line the walls, each set at the cardinal points of southwest, northeast, northwest, and east.  The floor is a glossy black amber, reflecting the light and throwing it back in your eyes, dancing with a dizzying and unnatural shine.</description>
+    <position x="200" y="100" z="1" />
+    <arc exit="northeast" move="northeast" destination="109" />
+    <arc exit="east" move="east" destination="77" />
+    <arc exit="southwest" move="southwest" destination="79" />
+    <arc exit="northwest" move="northwest" destination="110" />
+  </node>
+  <node id="79" name="Lairocott Brach, Lairorung Solsteen" note="Shrine|Lairorung Solsteen" color="#A6A3D9">
+    <description>The blank, dark gray walls are smooth and seamless, with one single doorway flowing out of the northeast wall.  The light is dim, and the strong, warm presence of something otherworldly fills the chamber.  A small altar rests against the west wall, looking as if it were shaped from the living stone.</description>
+    <position x="80" y="220" z="1" />
+    <arc exit="northeast" move="northeast" destination="78" />
+    <arc exit="none" move="pray" destination="62" />
+  </node>
+  <node id="80" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="320" y="340" z="1" />
+    <arc exit="west" move="west" destination="63" />
+  </node>
+  <node id="81" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="280" y="340" z="1" />
+    <arc exit="east" move="east" destination="63" />
+  </node>
+  <node id="82" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="320" y="300" z="1" />
+    <arc exit="west" move="west" destination="64" />
+  </node>
+  <node id="83" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="280" y="300" z="1" />
+    <arc exit="east" move="east" destination="64" />
+  </node>
+  <node id="84" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="360" y="260" z="1" />
+    <arc exit="west" move="west" destination="65" />
+  </node>
+  <node id="85" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="340" y="240" z="1" />
+    <arc exit="south" move="south" destination="65" />
+  </node>
+  <node id="86" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="280" y="280" z="1" />
+    <arc exit="northeast" move="northeast" destination="66" />
+  </node>
+  <node id="87" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="300" y="280" z="1" />
+    <arc exit="north" move="north" destination="66" />
+  </node>
+  <node id="88" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="240" y="240" z="1" />
+    <arc exit="northeast" move="northeast" destination="67" />
+  </node>
+  <node id="89" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="280" y="200" z="1" />
+    <arc exit="southwest" move="southwest" destination="67" />
+  </node>
+  <node id="90" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="200" y="180" z="1" />
+    <arc exit="north" move="north" destination="68" />
+  </node>
+  <node id="91" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="180" y="160" z="1" />
+    <arc exit="east" move="east" destination="68" />
+  </node>
+  <node id="92" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="260" y="140" z="1" />
+    <arc exit="south" move="south" destination="69" />
+  </node>
+  <node id="93" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="260" y="180" z="1" />
+    <arc exit="north" move="north" destination="69" />
+  </node>
+  <node id="94" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="320" y="240" z="1" />
+    <arc exit="north" move="north" destination="70" />
+  </node>
+  <node id="95" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="300" y="220" z="1" />
+    <arc exit="east" move="east" destination="70" />
+  </node>
+  <node id="96" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="300" y="360" z="1" />
+    <arc exit="north" move="north" destination="63" />
+  </node>
+  <node id="97" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="340" y="200" z="1" />
+    <arc exit="southeast" move="southeast" destination="71" />
+  </node>
+  <node id="98" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="380" y="200" z="1" />
+    <arc exit="southwest" move="southwest" destination="71" />
+  </node>
+  <node id="99" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="420" y="220" z="1" />
+    <arc exit="west" move="west" destination="72" />
+  </node>
+  <node id="100" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="400" y="240" z="1" />
+    <arc exit="north" move="north" destination="72" />
+  </node>
+  <node id="101" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="440" y="160" z="1" />
+    <arc exit="west" move="west" destination="74" />
+  </node>
+  <node id="102" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="400" y="160" z="1" />
+    <arc exit="east" move="east" destination="74" />
+  </node>
+  <node id="103" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="360" y="100" z="1" />
+    <arc exit="southeast" move="southeast" destination="75" />
+  </node>
+  <node id="104" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="360" y="140" z="1" />
+    <arc exit="northeast" move="northeast" destination="75" />
+  </node>
+  <node id="105" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="340" y="140" z="1" />
+    <arc exit="north" move="north" destination="76" />
+  </node>
+  <node id="106" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="320" y="140" z="1" />
+    <arc exit="northeast" move="northeast" destination="76" />
+  </node>
+  <node id="107" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="340" y="80" z="1" />
+    <arc exit="southwest" move="southwest" destination="77" />
+  </node>
+  <node id="108" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="300" y="120" z="1" />
+    <arc exit="northeast" move="northeast" destination="77" />
+  </node>
+  <node id="109" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="220" y="80" z="1" />
+    <arc exit="southwest" move="southwest" destination="78" />
+  </node>
+  <node id="110" name="Lairocott Brach, Eklan">
+    <description>This recessed alcove is shaped like a half-square, its stark wall halting all further progress through the twisting caverns.</description>
+    <position x="180" y="80" z="1" />
+    <arc exit="southeast" move="southeast" destination="78" />
+  </node>
+  <node id="111" name="Lairocott Brach, Forkbeard's Brodger" note="Forkbeard's Brodger|food|drink" color="#FF0000">
+    <description>This hall is distinguished by a large table and two stone benches that run the length of the tavern.  At the far end of the hall is a large roaring fire, the smoke slowly curling up towards the hole in the ceiling.  Along the walls are hung various furs, skins and mining implements.  Hakon Forkbeard is standing behind the imposing marble-topped bar, working and whispering intently to several of his customers.</description>
+    <position x="340" y="120" z="0" />
+    <arc exit="go" move="go tavern doors" destination="5" />
+  </node>
+  <node id="112" name="Lairocott Brach, Muckele's Hoy" note="Muckele's Hoy|Armor|Weapons" color="#FF0000">
+    <description>Heat, noise and the smell of sweat assail your senses as you enter this busy workshop.  Hung on one of the walls is an ornate suit of armor, several pick axes, sturdy helmets and other mining accessories.  Muckele Rognvald stands at the forge, fashioning yet another suit of armor.</description>
+    <position x="240" y="60" z="0" />
+    <arc exit="go" move="go thick door" destination="15" />
+  </node>
+  <node id="113" name="Lairocott Brach, Freel Brach">
+    <description>A thick layer of dust lies on the floor.  This hut awaits a new occupant.</description>
+    <position x="300" y="120" z="0" />
+    <arc exit="go" move="go arched doorway" destination="16" />
+  </node>
+  <node id="114" name="Felen Ulak, The Gate" note="Felen Ulak">
+    <description>Hastily worked walls surround this impromptu foyer, jagged stones and thin veins of metal casting an odd mesh of light and shadow.  A blackened steel gate spans the width of the chamber, blocking all attempts to progress deeper into the cave.</description>
+    <position x="340" y="-20" z="0" />
+    <arc exit="east" move="east" destination="115" />
+    <arc exit="go" move="go dark crevice" destination="11" />
+  </node>
+  <node id="115" name="Felen Ulak, A Jagged Room">
+    <description>Jagged walls draw uncomfortably close in this diminutive space, rivulets of dense shadow coursing through their cracked surfaces.  A discarded anvil sits slightly askew on the uneven floor, the glossy black of its surface muted by several dark red stains.</description>
+    <position x="360" y="-20" z="0" />
+    <arc exit="west" move="west" destination="114" />
+  </node>
+  <node id="116" name="Foothills, Stony Incline" note="Map7_Northern_Trade_Road.xml|Northern Trade Road|NTR">
+    <description>Taking the opportunity to examine the distant countryside, large green forests in the southwest, flatlands to the south and the large ocean expanse to the southeast all catch the eye.  All seem more attractive than the forbidding set of cliffs up ahead.</description>
+    <position x="260" y="140" z="0" />
+    <arc exit="up" move="up" destination="1" />
+  </node>
+  <node id="117" name="Abandoned Mine, Collapsed Tunnel" color="#FF8000">
+    <description>The narrow passage is cramped in places where rotted beams that once supported the mine have collapsed.  A perpetual cloud of dust hangs in the air, making it difficult to see more than a few paces away in any direction.  A small opening to the west allows passage back to the main tunnel.</description>
+    <position x="180" y="180" z="0" />
+    <arc exit="northeast" move="northeast" destination="118" />
+    <arc exit="east" move="east" destination="121" />
+    <arc exit="west" move="west" destination="47" />
+  </node>
+  <node id="118" name="Abandoned Mine, Pit" color="#FF8000">
+    <description>A noxious, sulphurous odor clings to the air, threatening to overwhelm the senses.  Yellow-green pockets of the gas linger near the pit, though exactly what they are or where they come from is unclear.  Falling away into the abyss is a length of rope with rusty red discolorations marring the frayed knots that secure it topside.</description>
+    <position x="195" y="165" z="0" />
+    <arc exit="east" move="east" destination="119" />
+    <arc exit="southeast" move="southeast" destination="121" />
+    <arc exit="southwest" move="southwest" destination="117" />
+  </node>
+  <node id="119" name="Abandoned Mine, Pit" color="#FF8000">
+    <description>Discarded piles of tools litter the area.  The rusted heads of mining picks are lodged into the stone walls where their workers last struck, and no sign of their handles remain.  Wheelbarrows are upturned, their glittering prizes strewn about as if a child flung sand.</description>
+    <position x="225" y="165" z="0" />
+    <arc exit="southeast" move="southeast" destination="120" />
+    <arc exit="southwest" move="southwest" destination="121" />
+    <arc exit="west" move="west" destination="118" />
+  </node>
+  <node id="120" name="Abandoned Mine, Pit" color="#FF8000">
+    <description>Three rocky mounds reside near the cavern's fall wall.  Atop each rests a mining pick and the rotted remains of cloth or leather gloves.  A message is scratched crudely into the floor in a circle surrounding the graves.</description>
+    <position x="240" y="180" z="0" />
+    <arc exit="west" move="west" destination="121" />
+    <arc exit="northwest" move="northwest" destination="119" />
+  </node>
+  <node id="121" name="Abandoned Mine, Pit" color="#FF8000">
+    <description>A vast hole plunges into a dark abyss.  Grooves the size of a horse are slashed into the rocky ground ringing the pit, and toppled stanchions still clinging to broken lengths of chain are scattered about.  Rhythmic dripping can be heard somewhere nearby, though its source is concealed.</description>
+    <position x="210" y="180" z="0" />
+    <arc exit="northeast" move="northeast" destination="119" />
+    <arc exit="east" move="east" destination="120" />
+    <arc exit="west" move="west" destination="117" />
+    <arc exit="northwest" move="northwest" destination="118" />
+  </node>
+  <label text="Cave Bear Maze">
+    <position x="93" y="272" z="0" />
+  </label>
+  <label text="Warklin Mauler">
+    <position x="110" y="149" z="0" />
+  </label>
+  <label text="Beisswurm">
+    <position x="77" y="38" z="0" />
+  </label>
+  <label text="-&gt;">
+    <position x="193" y="332" z="0" />
+  </label>
+  <label text="-&gt;">
+    <position x="152" y="331" z="0" />
+  </label>
+  <label text="-&gt;">
+    <position x="193" y="373" z="0" />
+  </label>
+  <label text="-&gt;">
+    <position x="113" y="333" z="0" />
+  </label>
+  <label text="-&gt;">
+    <position x="153" y="372" z="0" />
+  </label>
+  <label text="-&gt;">
+    <position x="112" y="372" z="0" />
+  </label>
+  <label text="-&gt;">
+    <position x="113" y="291" z="0" />
+  </label>
+  <label text="-&gt;">
+    <position x="153" y="292" z="0" />
+  </label>
+  <label text="-&gt;">
+    <position x="192" y="292" z="0" />
+  </label>
+  <label text="-&gt;">
+    <position x="113" y="252" z="0" />
+  </label>
+  <label text="-&gt;">
+    <position x="153" y="252" z="0" />
+  </label>
+  <label text="-&gt;">
+    <position x="193" y="252" z="0" />
+  </label>
+  <label text="Armored Warklin">
+    <position x="110" y="159" z="0" />
+  </label>
+  <label text="Lairocott Brach">
+    <position x="353" y="86" z="0" />
+  </label>
+  <label text="Oeblichar Maze">
+    <position x="100" y="-60" z="1" />
+  </label>
+  <label text="8th circle Cleric quest area">
+    <position x="80" y="-40" z="1" />
+  </label>
+  <label text="Pray in green room to exit">
+    <position x="80" y="-10" z="1" />
+  </label>
+  <label text="To Oeblichar Maze">
+    <position x="340" y="-50" z="0" />
+  </label>
+  <label text="Abandoned Mine">
+    <position x="43" y="-29" z="0" />
+  </label>
+  <label text="(loops around)">
+    <position x="84" y="313" z="0" />
+  </label>
+  <label text="To the NTR">
+    <position x="230" y="144" z="0" />
+  </label>
+  <label text="Bridge">
+    <position x="60" y="120" z="0" />
+  </label>
+</zone>

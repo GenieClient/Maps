@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <zone name="DiSilveron" id="7c">
-  <node id="1" name="Northern Trade Road, Farmlands" note="Map7_NTR.xml|NTR|Crossing">
+  <node id="1" name="Northern Trade Road, Farmlands" note="Map7_Northern_Trade_Road.xml|NTR|Crossing">
     <description>The scent of freshly-tilled earth rises from the farms on both sides of the road.  Heavily-loaded wagons and carts brimming with produce wend their way southward towards the walls of a city set near a glimmering river.  You note an amazing variety of races and types that are driving their goods into the town.</description>
     <position x="60" y="160" z="0" />
     <arc exit="north" move="north" />

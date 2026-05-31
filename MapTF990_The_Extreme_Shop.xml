@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="The Extreme Shop (TF)" id="TF990">
+  <node id="1" name="The Extreme Shop, By the Staircase">
+    <description>Suspended high above the foyer the stairs give way to a narrow circular platform that hugs the pristine walls.  In turn the staircase railing continues up and around the balcony, preventing falls that would spoil the spotless marble below.  Liviered servants stand between six pilasters that jut from the wall where cleverly refracted light highlights their contents.  A spotlight casts a pure light on a pair of pedestals and a pair of sculptures of lustrous marble.</description>
+    <position x="320" y="200" z="0" />
+    <arc exit="northwest" move="northwest" destination="5" />
+    <arc exit="climb" move="climb staircase" destination="2" />
+  </node>
+  <node id="2" name="The Extreme Shop, Foyer">
+    <description>Punctuating the vaulted ceiling of pristine white is a single lead crystal chandelier that hangs from a massive golden chain.  One hundred candles spiral between the depending strands of crystal that form a long coil, radiating a pure pool of light reflected in the glossy alabaster floor.  A florid exit sign curves over a modest archway.  At the very end of the room huge twisted travertine columns stand sentry over a pair of towering arched doors, each augmented with gilt and solid brass handles.</description>
+    <position x="320" y="240" z="0" />
+    <arc exit="go" move="go door" destination="3" />
+    <arc exit="climb" move="climb staircase" destination="1" />
+    <arc exit="go" move="go arch" destination="9" />
+  </node>
+  <node id="3" name="The Extreme Shop, Teller Window" note="teller">
+    <description>Towering arched doors lead from the foyer and open into this room with its lustrous marble and creamy travertine veined with strands of darkness and lavishly applied gilt.  Fierce guards, their grim visages difficult to make out behind some sort of art around the eyes and cheeks, are muscular with well-oiled long limbs safely ensconced in supple leather armor, their bristling presence almost anathema to the sumptuousness.</description>
+    <position x="300" y="240" z="0" />
+    <arc exit="west" move="west" destination="4" />
+    <arc exit="go" move="go door" destination="2" />
+  </node>
+  <node id="4" name="The Extreme Shop, Foreign Exchange" note="exchange">
+    <description>A halo of light from an alabaster chandelier illuminates the only other person in this room.  Sitting behind a broad silverwood table is an erudite-looking clerk here to facilitate the exchange of coins.  Small piles of different currency and denominations sit neatly on the glossy wooden surface along with small pouches of all kinds of material.  The Extreme shop obviously prides itself in doing its utmost in separating the prized client from their coins.</description>
+    <position x="280" y="240" z="0" />
+    <arc exit="east" move="east" destination="3" />
+  </node>
+  <node id="5" name="The Extreme Shop, Fancy Farragos">
+    <description>High above the foyer, the narrow platform hugs the walls as the banister continues around, preventing falls to the unforgiving marble below.  The room has a reverent air and clever lighting highlights lustrous tables, a set of glass shelves and a polished counter.  Liveried servants stand with backs to the wall staring at nothing, silent as unwound automatons.  Powdered wigs, painted faces and satin breeches complete the rather bizarre uniform of the attendants serving in this exclusive shop.</description>
+    <position x="300" y="180" z="0" />
+    <arc exit="southeast" move="southeast" destination="1" />
+    <arc exit="west" move="west" destination="6" />
+  </node>
+  <node id="6" name="The Extreme Shop, The Pursuit of Adventure">
+    <description>The narrow platform and curved banister continue around the wall in an elegant curve culminating in a rounded dais which houses pedestals, velvet covered footstools and glass cabinets generously spaced to allow the patron plenty of room to browse.  Liveried servants stand with their backs to the wall staring at nothing, silent as unwound automatons.  Their elaborately painted faces with tiny vanity patches are somehow in keeping with the decor of this exclusive shop.</description>
+    <position x="280" y="180" z="0" />
+    <arc exit="north" move="north" destination="7" />
+    <arc exit="east" move="east" destination="5" />
+    <arc exit="west" move="west" destination="8" />
+  </node>
+  <node id="7" name="The Extreme Shop, The Pursuit of Adventure">
+    <description>The narrow platform and curved banister continue in their elegant curve around the wall where generously spaced crystal pedestals allow the patron plenty of room to browse.  Liveried servants stand with their backs to the four pilasters, staring at nothing, silent as unwound automatons.  Their elaborately painted faces with tiny vanity patches are somehow in keeping with the decor of this exclusive shop.</description>
+    <position x="280" y="160" z="0" />
+    <arc exit="south" move="south" destination="6" />
+  </node>
+  <node id="8" name="The Extreme Shop, Mazes and Molluscs">
+    <description>Hidden away in this smooth-walled niche is an accumulated stockpile of eclectic treasures.  Every glass shelf, pilaster and tray bears a sample of what must have been either purchased or purloined from faraway places and peoples.  A brass plaque next to the exit bears a simple inscription.</description>
+    <position x="260" y="180" z="0" />
+    <arc exit="east" move="east" destination="6" />
+  </node>
+  <node id="9" name="Andreshlew, Dock Walk">
+    <description>Crowds of eager visitors to the island file off the sandstone docks, which are decorated with shell and gold.  Some mill about in indecisiveness or awe, while others rush to see the fabled Andreshlew.  Kelp-covered pillars of limestone rise above the docks, thick ropes tied to them mooring visiting ships.  The road cuts a swath through the buildings of coral, leading to the heart of the city.</description>
+    <position x="340" y="240" z="0" />
+    <arc exit="south" move="south" />
+    <arc exit="northwest" move="northwest" />
+  </node>
+</zone>

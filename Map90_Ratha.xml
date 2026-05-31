@@ -1532,7 +1532,7 @@
     <arc exit="north" move="north" destination="200" />
     <arc exit="go" move="go wooden lift" destination="381" />
   </node>
-  <node id="228" name="Ratha, Rocky Shore" note="Map90a_Sand_Sprites_Ochre_La'heke.xml|Sprites|Seerah">
+  <node id="228" name="Ratha, Rocky Shore" note="Map90a_Sand_Sprites_and_Ochre_La'heke.xml|Sprites|Seerah">
     <description>Below the shadow of the rickety buildings and warehouses of the city, a steep, rugged shore leads down into the shallows.  Rocks jut out along the coastline, while ocean waves rush past with frothy white peaks to crash along the cliffs.  Off in the distance, caught on the sharp crags is an abandoned ship, lying partially on its side.  The shallows themselves seem traversable between the rocks and the bluffs, the obstacles helping to keep the undertow in check.</description>
     <position x="-382" y="601" z="0" />
     <arc exit="southwest" move="southwest" />
@@ -4244,14 +4244,14 @@
     <position x="188" y="-699" z="0" />
     <arc exit="go" move="go door" destination="654" />
   </node>
-  <node id="662" name="Reshalia, Coastal Road" note="Map95_Ratha_NE.xml|NE Gate|Por'oson Gate">
+  <node id="662" name="Reshalia, Coastal Road" note="Map95_Pokekehekepi.xml|NE Gate|Por'oson Gate">
     <description>The heavy wooden Por'oson Gate stands open even at night, but the guards keep a close eye on anyone passing through, occasionally stopping a suspicious-looking traveler to ask his business.  Torches flaring in heavy iron sconces provide bright illumination, although the shadows that remain seem even blacker by contrast.</description>
     <description>The heavy wooden Por'oson Gate stands open day and night, and the guards keep an eye on everyone passing through, occasionally stopping a suspicious-looking traveler to ask his business.  Most of those going in and out are local farmers bringing in loads of grain or other crops in huge, heaped wooden farm wagons, and the guards' most careful scrutiny is reserved for the few strangers who pass by.</description>
     <position x="-22" y="-999" z="0" />
     <arc exit="north" move="north" />
     <arc exit="go" move="go por'oson gate" destination="593" />
   </node>
-  <node id="663" name="Ratha, Outside Sur'oson Gate" note="Map92_Ratha_NW.xml|NW Gate|Sur'oson Gate">
+  <node id="663" name="Ratha, Outside Sur'oson Gate" note="Map92_Reshalia_Trade_Road.xml|NW Gate|Sur'oson Gate">
     <description>Cloaked travelers slip in and out of the gate, wrapped up against the chill of the night and carrying torches and lanterns to light their way.  Although there are relatively few folk passing through at this hour, the gate guards seem particularly alert as they assess each person, keeping one eye on the shadows.</description>
     <description>All manner of travelers mill about the gate, either waiting their turn to enter or pushing through the crowds in the opposite direction if they're leaving.  Farmers pass through with wagonloads of produce and grain, fishermen with their catches, and rangers with bundles of hides.  The gate guards look on, watching everyone.</description>
     <position x="-102" y="-999" z="0" />

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="The Seacaves of Peri'el" id="1n">
+  <node id="1" name="The Seacaves of Peri'el, Sandy Beach">
+    <description>The beach narrows and finally straggles to a stop at the jagged rocks marking the edge of the cliff.  A strutting gaggle of sandpipers weaves between the rocks, picking at the tiny morsels washed up on the sand.  A small path leads northwest toward a raised ledge that is just high enough for a small stage.</description>
+    <position x="100" y="100" z="0" />
+    <arc exit="east" move="east" destination="2" />
+    <arc exit="go" move="go cave mouth" destination="23" />
+    <arc exit="go" move="go small path" destination="25" />
+  </node>
+  <node id="2" name="The Seacaves of Peri'el, Sandy Beach">
+    <description>Strands of seaweed and broken seashells litter the soft sand.  A few hardy tufts of sawgrass snuggle among the rocks near the cliff and cling to the hard ridge of sand marking high tide.  The waves splash against the beach, sending an invitation to play in the surf.</description>
+    <position x="120" y="100" z="0" />
+    <arc exit="east" move="east" destination="3" />
+    <arc exit="west" move="west" destination="1" />
+    <arc exit="go" move="go water" destination="26" />
+  </node>
+  <node id="3" name="The Seacaves of Peri'el, Sandy Beach">
+    <description>Water laps against the beach, the golden sand shimmering in the light.  High sandstone cliffs surround the tiny cove, enclosing it protectively.  At high tide, the area is probably underwater -- years of wind and water have eroded caves in the cliff face.</description>
+    <position x="140" y="100" z="0" />
+    <arc exit="east" move="east" destination="4" />
+    <arc exit="west" move="west" destination="2" />
+    <arc exit="go" move="go water" destination="27" />
+  </node>
+  <node id="4" name="The Seacaves of Peri'el, Sandy Beach">
+    <description>The towering sandstone walls close one end of the beach and tumble into the ocean.  Mounds of seaweed and driftwood deposited by the tide are heaped among the scattered rocks at the foot of the cliff.  High in the cliffs, an osprey's aerie sits upon a ledge of rock overlooking the sea and cove.</description>
+    <position x="160" y="100" z="0" />
+    <arc exit="east" move="east" destination="5" />
+    <arc exit="west" move="west" destination="3" />
+    <arc exit="go" move="go water" destination="28" />
+  </node>
+  <node id="5" name="The Seacaves of Peri'el, Cliff Path">
+    <description>A perched albatross sits calmly upon a worn wooden post that stands along the rough path, and the cliff tops loom dark against the sky.  Lining the side of the path, two huge images are carved into the rock itself, their gaze intent upon the sea.  Seashells crackle in the sand underfoot, and the salty tang of the sea is strong.</description>
+    <description>A worn wooden post stands beside the rough path, and the cliff tops loom dark against the moonlit sky.  High on the cliff face are two carved images.  Seashells crackle in the sand underfoot, and the salty tang of the sea is strong.</description>
+    <position x="180" y="100" z="0" />
+    <arc exit="east" move="east" destination="6" />
+    <arc exit="west" move="west" destination="4" />
+    <arc exit="go" move="go red tent" destination="7" />
+  </node>
+  <node id="6" name="The Seacaves of Peri'el, Cliff Path">
+    <description>The path narrows sharply, forcing travelers to watch their step.  Finely ground seashells crunch underfoot, preventing the path from becoming too slick during stormy weather.  The cliff face rises smooth and steep on one side, the soil glittering with a sandy pattern.  The face at this point is unblemished but for one small niche.</description>
+    <position x="200" y="100" z="0" />
+    <arc exit="west" move="west" destination="5" />
+    <arc exit="climb" move="climb steep incline" destination="8" />
+  </node>
+  <node id="7" name="A Simple Red Tent, Inside" note="tokens" color="#FF0000">
+    <description>A hint of spice upon the air drifts from burning candles placed on a huge iron candelabrum.  Every time someone enters through the tent flap swirls of sand dance across the braided rugs that line the ground.  A rustling of paper can be heard from a clerk straightening up errant scrolls.</description>
+    <position x="180" y="120" z="0" />
+    <arc exit="go" move="go tent flap" destination="5" />
+  </node>
+  <node id="8" name="The Seacaves of Peri'el, Cliff Path">
+    <description>Nothing of what lies ahead can be seen from this vantage point, though tiny figures of other travelers can be discerned far below.  The faint crashing of waves becomes louder with each step taken, as a slight chill fills the air.</description>
+    <position x="200" y="80" z="0" />
+    <arc exit="northwest" move="northwest" destination="9" />
+    <arc exit="down" move="down" destination="6" />
+  </node>
+  <node id="9" name="The Seacaves of Peri'el, Cliff Path">
+    <description>The breakers crash and thunder against the rocks, sending salty spray high into the air as the wind buffets.  The whitecap-speckled ocean stretches out until it blends with the sky and in the distance can be seen the white triangles of a fishing fleet battling the elements for a living.  The cliff face offers a meager foothold for a stunted pine that seems to sprout from bare rock.</description>
+    <description>The breakers crash and thunder against the rocks, sending salty spray high into the air.  Moonlight dances over the ebon ocean like a myriad of glittering stars echoing the night sky.  The shadowy form of a stunted pine growing precariously from the cliff face looms over the path as footsteps send loose debris skittering over the precipice.</description>
+    <position x="180" y="60" z="0" />
+    <arc exit="southeast" move="southeast" destination="8" />
+    <arc exit="west" move="west" destination="10" />
+  </node>
+  <node id="10" name="The Seacaves of Peri'el, Cliff Path">
+    <description>The rocky cliff path diminishes drastically, becoming a narrow shelf.  Nothing but jagged rock can be seen descending in the distance before disappearing into the pounding surf.  Every step is crucial while clinging to the bare rock, with bits of the path crumbling with each step.</description>
+    <position x="160" y="60" z="0" />
+    <arc exit="east" move="east" destination="9" />
+    <arc exit="climb" move="climb bas-relief" destination="11" />
+  </node>
+  <node id="11" name="The Seacaves of Peri'el, Cliff Path">
+    <description>The path gives way from rock to hard dirt here as the trail winds its way closer to the summit.  Lined by bits of debris dropped by birds nesting in the cliff tops nearby, this path emits a slight pungent smell of fertilized earth.</description>
+    <position x="160" y="40" z="0" />
+    <arc exit="west" move="west" destination="12" />
+    <arc exit="down" move="down" destination="10" />
+  </node>
+  <node id="12" name="The Seacaves of Peri'el, Cliff Path">
+    <description>Though the fauna along this section of the pathway is minimal, a lone banyan tree dominates the left side of the path.  One of its sturdier roots, worn by weather and man alike, sprouts out to the side serving as a guide and a rest on the weary traveler's ascent.  A faint mist creates a romantic silhouette against the dark branches of the tree.</description>
+    <position x="140" y="40" z="0" />
+    <arc exit="east" move="east" destination="11" />
+    <arc exit="up" move="up" destination="13" />
+  </node>
+  <node id="13" name="The Seacaves of Peri'el, Cliff Top">
+    <description>A misty spray, borne upon a brisk wind, plays across the jutting cliff's edge.  The roar of the ocean fills the air while the sun beams down mercilessly on the sparkling sea.  A flat rock has been cut out by the wind's rough hand and is surrounded by lichen and the sprawl of sea-star flowers.</description>
+    <description>A misty spray, borne upon a brisk wind, plays across the jutting cliff's edge.  The roar of the ocean fills the air while the stars shine down caressing the sparkling sea with their beauty.  A flat rock has been cut out by the wind's rough hand and is surrounded by lichen and the sprawl of sea-star flowers.</description>
+    <position x="140" y="0" z="0" />
+    <arc exit="west" move="west" destination="14" />
+    <arc exit="down" move="down" destination="12" />
+  </node>
+  <node id="14" name="The Seacaves of Peri'el, Cliff Top">
+    <description>Strong gusts of wind blow through the area, making it difficult to maintain steady footing.  Down below, the wonder of Eluned's grace -- the sea -- crashes hard against the shore.  On the edge of the cliff lie the remains of a ruined structure, nothing now but crumbling stones and fragments.</description>
+    <position x="120" y="0" z="0" />
+    <arc exit="north" move="north" destination="17" />
+    <arc exit="east" move="east" destination="13" />
+    <arc exit="west" move="west" destination="15" />
+    <arc exit="go" move="go structure" destination="21" />
+    <arc exit="go" move="go ruined structure" destination="21" />
+  </node>
+  <node id="15" name="The Seacaves of Peri'el, Cliff Top">
+    <description>The cracked ground of this rough, barren tract lists toward its only feature: a lone tree, bent from years of buffeting by the highland winds.  The branches, all growing from the leeward side, give the tree the appearance of a swooning maid eternally captured in mid-fall.</description>
+    <position x="100" y="0" z="0" />
+    <arc exit="east" move="east" destination="14" />
+    <arc exit="southeast" move="southeast" destination="16" />
+  </node>
+  <node id="16" name="The Seacaves of Peri'el, Cliff Top">
+    <description>A painter stands near the edge of the cliff, her easel carefully positioned before her as she delicately touches brush to canvas.  Her eyes move rapidly between it and the ocean that seems to stretch outward to infinity.  Below, the waves continue their endless motion, the booming sound of water meeting earth fading with distance yet clearly heard.  As the sun slowly changes position overhead its light seems to dance upon the multi-hued surface of the water, creating sparkling images upon the waves.</description>
+    <description>A lone easel stands upon this cliff's top, paintbrushes and palette carefully stowed underneath it.  Below, waves continue their endless motion, the booming sound of water meeting earth fading with distance yet clearly heard.  As the moons slowly change positions overhead their light dances upon the multi-hued surface of the water, creating sparkling images upon the waves.</description>
+    <position x="120" y="20" z="0" />
+    <arc exit="northwest" move="northwest" destination="15" />
+  </node>
+  <node id="17" name="The Seacaves of Peri'el, Cliff Top">
+    <description>An overgrown pathway follows a meandering course towards an oddly shaped building in the distance.  Sparse vegetation gives way to green grasses and blooming wild bushes which exude sweet fragrances and tickle the senses.</description>
+    <position x="120" y="-20" z="0" />
+    <arc exit="north" move="north" destination="18" />
+    <arc exit="south" move="south" destination="14" />
+  </node>
+  <node id="18" name="The Seacaves of Peri'el, Cliff Top">
+    <description>Stalks of lavender and heads of sunflowers bob in the constant breeze coming from the ocean nearby.  The heady scents of flowers and ripened fruits and vegetables mingle pleasantly with the salty sea air.</description>
+    <position x="120" y="-40" z="0" />
+    <arc exit="south" move="south" destination="17" />
+    <arc exit="go" move="go stone path" destination="19" />
+  </node>
+  <node id="19" name="The Seacaves of Peri'el, Garden Sanctuary">
+    <description>Surrounded by a profusion of flowers and meandering vines stands a small round building made up of white marble pillars.  An oddly painted design covers the domed roof of this building, taking on different hues as the sun hits it.</description>
+    <description>Surrounded by a profusion of flowers and meandering vines, a small round building bathes in the beauty of the moons.  Moonlight caresses the domed building, causing it to sparkle as if embedded with stars.  A few daring fireflies dance amongst the shadows of various flowers and bushes surrounding it.</description>
+    <position x="100" y="-40" z="0" />
+    <arc exit="go" move="go stone path" destination="18" />
+    <arc exit="go" move="go round building" destination="20" />
+  </node>
+  <node id="20" name="The Seacaves of Peri'el, Garden Sanctuary">
+    <description>Birds chatter incessantly within this flower-filled sanctuary.  A flourishing garden, filled with a profusion of flora, surrounds a beautifully crafted fountain.  Carved stone benches are neatly placed on all sides, allowing a suitable place for visitors to sit and enjoy the tranquility.</description>
+    <position x="80" y="-40" z="0" />
+    <arc exit="out" move="out" destination="19" />
+  </node>
+  <node id="21" name="Ruined Structure, Front Room">
+    <description>Rough wooden beams make up the sparse ceiling providing some protection from the elements.  The floor is dug deep into the earth and the walls are made of flat rocks stacked upon one another.  A small iron stove sits in the far corner by shelves made of broken boards.</description>
+    <position x="140" y="-20" z="0" />
+    <arc exit="out" move="out" destination="14" />
+    <arc exit="go" move="go wooden doorway" destination="22" />
+  </node>
+  <node id="22" name="Ruined Structure, Back Room" note="altar" color="#A6A3D9">
+    <description>The howling of the wind is but slightly muted upon entering this room.  A quick glance around shows a small hole-riddled boat serving as a bed and rugs of braided cloth covering the dirt floor.  Groups of tallow candles are placed around this cozy, if dank, room.</description>
+    <position x="160" y="-20" z="0" />
+    <arc exit="go" move="go wooden doorway" destination="21" />
+  </node>
+  <node id="23" name="The Seacaves of Peri'el, Tidal Cave">
+    <description>Water bubbles up from a small spring before it tumbles over the edge of the hill, plunging down a smooth rock chute.  Far below, the water splashes into a crystal blue grotto which sparkles in the sunlight.</description>
+    <position x="80" y="100" z="0" />
+    <arc exit="out" move="out" destination="24" />
+    <arc exit="go" move="go cave mouth" destination="1" />
+  </node>
+  <node id="24" name="The Crossing, Landfall Jetty" note="Map1_Crossing.xml|crossing">
+    <description>Swarms of seafarers crowd the jetty here, some waiting to embark.  Others, looking a bit befuddled, have just disembarked.  On Landfall Dock just to the south, cargo from far ports is being off loaded at the same time that the varied commodities of the Crossing's crafty traders is being hoisted off carts and handtrucks.</description>
+    <position x="60" y="100" z="0" />
+  </node>
+  <node id="25" name="The Seacaves of Peri'el, Sandy Beach">
+    <description>A slab of sandstone, split from the cliff's face and toppled on its side, serves as a small stage.  Large branches of driftwood have been dragged near for people who wish to sit.</description>
+    <position x="100" y="80" z="0" />
+    <arc exit="out" move="out" destination="1" />
+    <arc exit="go" move="go small path" destination="1" />
+  </node>
+  <node id="26" name="The Seacaves of Peri'el, Water" color="#0000FF">
+    <description>The roar of wave against rock echos against the cliffs enclosing the west side of the cove.  Gulls skimming above the water dodge the spray flying off the cracked slabs of sandstone jumbled above the waterline.  The swells push winds of water through the fields of sea grass growing beneath the waves, setting it aflutter.</description>
+    <position x="120" y="120" z="0" />
+    <arc exit="east" move="swim east" destination="27" />
+    <arc exit="go" move="go beach" destination="2" />
+  </node>
+  <node id="27" name="The Seacaves of Peri'el, Water" color="#0000FF">
+    <description>The waves sweep gently towards the beach, carrying with them bits of driftwood and sea grass.  Small fish, no more than a swift flash of color in the clear water, turn and dive beneath the waves with the same joyous abandon as the birds above.  The water is cool enough to be refreshing, yet warm enough to caress.</description>
+    <position x="140" y="120" z="0" />
+    <arc exit="east" move="swim east" destination="28" />
+    <arc exit="west" move="swim west" destination="26" />
+    <arc exit="go" move="go beach" destination="3" />
+  </node>
+  <node id="28" name="The Seacaves of Peri'el, Water" color="#0000FF">
+    <description>White foam tips the swirling blue-green water as the waves strike the rocks edging the cove.  Further out, masses of seaweed floating on the swells serve as a traveling feast for the small fish nibbling at the vegetation.</description>
+    <position x="160" y="120" z="0" />
+    <arc exit="west" move="swim west" destination="27" />
+    <arc exit="go" move="go beach" destination="4" />
+  </node>
+  <label text="Tokens">
+    <position x="160" y="130" z="0" />
+  </label>
+  <label text="Altar">
+    <position x="150" y="-40" z="0" />
+  </label>
+  <label text="Crossing">
+    <position x="20" y="80" z="0" />
+  </label>
+</zone>

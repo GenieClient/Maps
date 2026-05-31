@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Crossing Escape Tunnels" id="2d">
+  <node id="1" name="Crossing Escape Tunnels, Hodierna's Path">
+    <description>Dense walls hacked out of earth and stone curve around a massive arch centered with a stylized metal eye that shadows a series of unevenly-chiseled steps wending their way down into darkness.  Gloom obscures the area beyond, but a chilly draft from below hints at an opening of some kind.</description>
+    <position x="220" y="60" z="0" />
+    <arc exit="south" move="south" destination="2" />
+    <arc exit="go" move="go massive arch" destination="4" />
+  </node>
+  <node id="2" name="Crossing Escape Tunnels, Hodierna's Path">
+    <description>Plump beeswax candles set in brass sconces throw warm yellow light against walls pitted with marks from the tools used to force a way through unyielding rock and soil.  Coursing through the room and the tunnel beyond is a narrow path of smooth white pebbles, edged with a strip of blackened ironwood.</description>
+    <position x="220" y="70" z="0" />
+    <arc exit="north" move="north" destination="1" />
+    <arc exit="southwest" move="southwest" destination="3" />
+  </node>
+  <node id="3" name="Crossing Escape Tunnels, Hodierna's Path">
+    <description>The only sounds are the faint hiss of flame from a lantern tucked into a niche, and the soft crunch of the white pebbles underfoot.  Though the great city of River Crossing is somewhere overhead, its bustle and noise cannot penetrate the earthen canopy of this underground walkway.</description>
+    <position x="210" y="80" z="0" />
+    <arc exit="northeast" move="northeast" destination="2" />
+    <arc exit="south" move="south" destination="5" />
+  </node>
+  <node id="4" name="The Healerie, Entrance Hall" note="Map1_Crossing.xml|Empath Guild">
+    <description>Moss and lichen thickly blanket the walls and floor of the damp underground hall.  At one end, long spiraling oaken stairs hug the side of the shaft that leads up to the main room of the distant Empath Guild.  At the other end, two swinging doors lead into the Healerie proper.  Near the middle, a walnut ramp goes up towards the Hospital Triage while an arch leads into other areas.  Shielded lanterns light the area.</description>
+    <position x="220" y="50" z="0" />
+  </node>
+  <node id="5" name="Crossing Escape Tunnels, Hodierna's Path">
+    <description>Crumbling clay walls have been reinforced with heavy netting filled with coarse gravel and staked up on either side of the white pathway.  A pair of candles alongside the path flings light through the netting to cast odd, webbed shadows against walls and floor.  High in one corner, a silvery glint reveals a true web, though the tiny master weaver is nowhere in sight.</description>
+    <position x="210" y="90" z="0" />
+    <arc exit="north" move="north" destination="3" />
+    <arc exit="southwest" move="southwest" destination="6" />
+  </node>
+  <node id="6" name="Crossing Escape Tunnels, Hodierna's Path" color="#00FF00">
+    <description>Illumination from the passage beyond washes the little pathway in a pearlescent gleam and glints along the edge of a polished slab of dove-grey marble that has been settled into the dirt floor.  Centered on it is a wreath of herbs interwoven with jadice flowers, the soft green of the leaves and the creamy white blossoms making a vibrant contrast in this tunnel that is so far removed from sunlight and sky.</description>
+    <position x="200" y="100" z="0" />
+    <arc exit="northeast" move="northeast" destination="5" />
+    <arc exit="west" move="west" destination="7" />
+  </node>
+  <node id="7" name="Crossing Escape Tunnels, Hodierna's Path">
+    <description>Ruddy clay walls, bisected with veins of some chalky material, begin to press in more closely as the westerly end of the passage angles slightly upwards.  A sooty lantern dangling from a wooden spike thrust into the ceiling sends arcs of pale light into the surrounding gloom, throwing sets of handprints left in the clay into shadowed relief.</description>
+    <position x="190" y="100" z="0" />
+    <arc exit="east" move="east" destination="6" />
+    <arc exit="west" move="west" destination="8" />
+  </node>
+  <node id="8" name="Crossing Escape Tunnels, Hodierna's Path">
+    <description>The white pathway climbs ever upward, following the rising angle of the tunnel floor.  A straw broom rests against one wall, mute evidence that someone strives to keep the little path clear and safe for those who may need to traverse it in great haste.</description>
+    <position x="180" y="100" z="0" />
+    <arc exit="east" move="east" destination="7" />
+    <arc exit="northwest" move="northwest" destination="9" />
+  </node>
+  <node id="9" name="Crossing Escape Tunnels, Hodierna's Path">
+    <description>Smooth white pebbles give way to neatly-chiseled granite steps angling steeply upward, flanked by an ash pole wrapped in strips of leather that has been staked into the loamy walls to provide a crude handrail.  The barest hint of incense moves through the air, though the darkness above yields no hint of the delicate scent's origin.</description>
+    <position x="170" y="90" z="0" />
+    <arc exit="southeast" move="southeast" destination="8" />
+    <arc exit="climb" move="climb granite steps" destination="10" />
+  </node>
+  <node id="10" name="Crossing Temple, Tower Tunnels">
+    <description>The hands of time have been hard at work in this section of the tunnel several of the large stones lining the walls have become loose and tumbled to the floor.  Small rodents can be heard scurrying in the darkness, perhaps the only creatures capable of thriving in this underground habitat.  The fallen blocks of riverstone and crumbling mortar serve as a reminder that even the strongest of constructions is no match for the march of time.</description>
+    <position x="160" y="100" z="0" />
+    <arc exit="southeast" move="southeast" destination="49" />
+    <arc exit="northwest" move="northwest" destination="11" />
+    <arc exit="climb" move="climb granite steps" destination="9" />
+  </node>
+  <node id="11" name="Crossing Temple, Tower Tunnels">
+    <description>The tunnel, clearly constructed by master masons, has withstood the passage of time.  Gigantic slabs of riverstone, laid across the walls, form the ceiling of this corridor.  The sheer size of the individual stones lends a claustrophobic effect to the passage, a sense of impenetrable confinement and closeness.  Small bronze oil lamps, fastened to the walls, dispel the darkness with warmth and light.</description>
+    <position x="150" y="90" z="0" />
+    <arc exit="southeast" move="southeast" destination="10" />
+    <arc exit="go" move="go mahogany door" destination="12" />
+  </node>
+  <node id="12" name="Temple, North Tower">
+    <description>Cool air sweeps into this space, as though drawn down the flight of neat granite stairs that pierce the shadows above.  Austere white plaster walls circle the stairway, dropping to meet the panels of blue-grey slate that rise along the base of the floor.  A wide band of hammered gold borders the slate, gleaming like the edge of dawn between mountains and sky.</description>
+    <position x="140" y="80" z="0" />
+    <arc exit="go" move="go mahogany door" destination="11" />
+    <arc exit="go" move="go yew door" destination="13" />
+    <arc exit="go" move="go granite stairs" destination="14" />
+  </node>
+  <node id="13" name="Crossing Temple, Tower Tunnels">
+    <description>This section of the tunnel has received the careful attention of several skilled workers in the recent past.  Cracks and gouges in the stone walls have been repaired, and loose, broken masonry has been replaced.  The new stone, clean and polished, contrasts dramatically with the older stonework of the walls.  Torch sconces, recently corroding pieces of metal, have been restored to their original brilliance.</description>
+    <position x="130" y="90" z="0" />
+    <arc exit="west" move="west" destination="15" />
+    <arc exit="go" move="go yew door" destination="12" />
+  </node>
+  <node id="14" name="Temple, North Tower">
+    <description>Diffuse golden light falls from somewhere above, its honeyed beams drifting down the length of the tower.  Matched flagstones of deep grey slate create a broad landing that punctuates the staircase as it continues its gradual climb.</description>
+    <position x="140" y="0" z="0" />
+    <arc exit="down" move="rt down" destination="12" />
+    <arc exit="climb" move="climb granite staircase" destination="57" />
+    <arc exit="go" move="go ironwood door" destination="62" />
+  </node>
+  <node id="15" name="Crossing Temple, Tower Tunnels">
+    <description>A penetrating chill shrouds this part of the tunnels in a dreary gloom.  Bronze sconces line the corridor walls, and sputtering torches generate a feeble yellowish glow that does little to dispel the cold.  Cobwebs, covered with dust, drape the passage walls and hang listlessly from the ceiling.</description>
+    <position x="120" y="90" z="0" />
+    <arc exit="east" move="east" destination="13" />
+    <arc exit="southwest" move="southwest" destination="16" />
+    <arc exit="go" move="go sloping passage" destination="17" />
+  </node>
+  <node id="16" name="Crossing Temple, Tower Tunnels">
+    <description>Deep grooves have permanently marred the floor of the tunnel, evidence of the passage of a great weight.  The once brightly polished walls now bear the scars and gouges of a battle with an unknown assailant.  The sturdy riverstone was no match for that which has passed.  An ornate tapestry once covering the western wall now lies in a tumbled heap, torn and shredded, home to countless rodents and vermin.</description>
+    <position x="110" y="100" z="0" />
+    <arc exit="northeast" move="northeast" destination="15" />
+    <arc exit="south" move="south" destination="25" />
+  </node>
+  <node id="17" name="Crossing Escape Tunnels, Truffenyi's Way">
+    <description>Fragrant rushes crackle softly underfoot, the verdant carpet filling the air with a sharp green scent.  Shadows shift from black to grey, yielding to the stronger light that flows into this passageway as it begins to slope upward, and a little breeze carries the faint, melodious sound of a bell chiming in the far distance.</description>
+    <position x="110" y="80" z="0" />
+    <arc exit="north" move="north" destination="18" />
+    <arc exit="go" move="go sloping passageway" destination="15" />
+  </node>
+  <node id="18" name="Crossing Escape Tunnels, Truffenyi's Way">
+    <description>A crude alcove has been hacked out of the surrounding stone, creating just enough space to shelter a little shaal wood altar.  Sage leaves and a few sticks of incense fill an engraved copper bowl placed at its center.  A single pure white taper casts diffuse light over the modest offering, the flame's soft illumination throwing the ridged granite walls into sharp relief.</description>
+    <position x="110" y="70" z="0" />
+    <arc exit="north" move="north" destination="19" />
+    <arc exit="south" move="south" destination="17" />
+  </node>
+  <node id="19" name="Crossing Escape Tunnels, Truffenyi's Way">
+    <description>Shadows hold sway here, blocking any effort to discern detail.  Only the faintest illumination from somewhere ahead limns the edges of the next passageway and highlights a narrow strip of blackened ironwood running along the length of the tunnel.  Occasional soft fluttering from the gloomy recesses of the ceiling indicates that at least some beings welcome the darkness.</description>
+    <position x="110" y="60" z="0" />
+    <arc exit="south" move="south" destination="18" />
+    <arc exit="northwest" move="northwest" destination="20" />
+  </node>
+  <node id="20" name="Crossing Escape Tunnels, Truffenyi's Way">
+    <description>Neat coils of rope lie amid stacks of rubble and the splintered remains of a pickaxe destroyed in the pressure of creating these passages.  Brass rings tinged blue-green with verdigris are set in each wall, each holding torches that fill the room with smoky light.</description>
+    <position x="100" y="50" z="0" />
+    <arc exit="southeast" move="southeast" destination="19" />
+    <arc exit="northwest" move="northwest" destination="21" />
+  </node>
+  <node id="21" name="Crossing Escape Tunnels, Truffenyi's Way">
+    <description>White mortar worked into cracks stands starkly against the darker stone, but nature has provided mortar of her own -- the walls are honeycombed with countless mud-daub nests constructed by cave swallows.  Though the nests stand empty at the moment, little drifts of feathers swirling around your feet are evidence that these tunnels represent a sanctuary for even Elanthia's smallest citizens.</description>
+    <position x="90" y="40" z="0" />
+    <arc exit="southeast" move="southeast" destination="20" />
+    <arc exit="west" move="west" destination="22" />
+  </node>
+  <node id="22" name="Crossing Escape Tunnels, Truffenyi's Way">
+    <description>The sharp-sweet scent of lavender and juniper rises all around you -- someone has laid a pathway of rushes over the earthen floor to muffle hurried footsteps and relieve the heaviness of the dank underground air.  Long cracks run down the stone walls, yielding silent evidence of the relentless pressure of the surrounding earth.</description>
+    <position x="80" y="40" z="0" />
+    <arc exit="north" move="north" destination="23" />
+    <arc exit="east" move="east" destination="21" />
+  </node>
+  <node id="23" name="Crossing Escape Tunnels, Truffenyi's Way">
+    <description>A stylized eye of some metallic substance is set at the apex of a granite arch that guards the entrance to this room.  Against one wall, a plank between two stacks of clay bricks forms a makeshift shelf, supporting a row of tallow candles in brass holders.  Their flickering illumination, combined with pervasive dampness, imbues the atmosphere with a topaz-hued glow.</description>
+    <position x="80" y="30" z="0" />
+    <arc exit="south" move="south" destination="22" />
+    <arc exit="go" move="go granite arch" destination="24" />
+  </node>
+  <node id="24" name="Clerics' Guild, Wine Cellar" note="Map1_Crossing.xml|Cleric Guild">
+    <description>As your eyes adjust to the sudden darkness, you see several bookshelves that have been converted into criss-crossed wine racks with a corked bottle in each cubby hole.  The air is cool and dry, making this the perfect storage area for the aging liquid.</description>
+    <position x="80" y="20" z="0" />
+  </node>
+  <node id="25" name="Crossing Temple, Tower Tunnels">
+    <description>The dark and cold are so pervasive, one might doubt that light had ever fallen on this chill stone, or warmth filled this icy air.  Hundreds of spiders have woven a tangle of cobwebs over the years, and now dust-laden threads cling tenaciously to all they touch.  A thick layer of dust covers the tunnel floor and almost obliterates a mosaic that, once a glory of color, is now barely discernible through the grime.</description>
+    <position x="110" y="110" z="0" />
+    <arc exit="north" move="north" destination="16" />
+    <arc exit="southwest" move="southwest" destination="26" />
+  </node>
+  <node id="26" name="Crossing Temple, Tower Tunnels">
+    <description>A section of the tunnel wall has collapsed, causing large pieces of riverstone and mortar to scatter about the floor.  A lone torch sconce stands in silent watch over this area, its partner lying crushed beneath the broken tunnel wall.  The desiccated remains of a small animal lie near the tumbled stone, its wizened form clad in a shroud of thick, grey dust.</description>
+    <position x="100" y="120" z="0" />
+    <arc exit="northeast" move="northeast" destination="25" />
+    <arc exit="southwest" move="southwest" destination="27" />
+    <arc exit="go" move="go dark crevice" destination="31" />
+  </node>
+  <node id="27" name="Crossing Temple, Tower Tunnels">
+    <description>The walls of this passage are constructed from large blocks of riverstone.  Spider webs hang like fishermen's nets from the walls and ceiling, ready to catch unwary prey.  Torch sconces, covered with corrosion and clinging precariously to the walls, once gave warmth and light to the tunnel now they rest in cold silence.  The chill stone of the passage exudes a dull dreariness, creating a sense of loneliness and abandonment.</description>
+    <position x="90" y="130" z="0" />
+    <arc exit="northeast" move="northeast" destination="26" />
+    <arc exit="go" move="go copper-banded door" destination="28" />
+  </node>
+  <node id="28" name="Temple, Southwest Tower">
+    <description>Darkness steals into the room from the tunnels on either side, creating pools of shadows in the corners.  Ultimately, though, the gloom is held at bay by oil lamps suspended from the banister of an ironwood staircase wending its way upward.  Warm glints along the walls reveal a fine band of hammered copper that borders a heavy door and continues to edge the granite panels that shield the tower's base from the pressure of the surrounding earth.</description>
+    <position x="80" y="140" z="0" />
+    <arc exit="climb" move="climb ironwood staircase" destination="29" />
+    <arc exit="go" move="go oak door" destination="30" />
+    <arc exit="go" move="go copper-banded door" destination="27" />
+  </node>
+  <node id="29" name="Temple, Southwest Tower">
+    <description>Faint sounds from somewhere outdoors undo the silence and tease through the air, though they cannot be fully discerned from within these thickly reinforced walls.  Polished granite floors subtly shaded from grey to dark ivory are swept clean, surrounding the stairway that lofts towards the next level of the tower.</description>
+    <position x="60" y="140" z="0" />
+    <arc exit="down" move="rt down" destination="28" />
+    <arc exit="climb" move="climb ironwood staircase" destination="63" />
+  </node>
+  <node id="30" name="Crossing Temple, Tower Tunnels">
+    <description>Evidence of new construction -- fragments of chiseled stone and splinters of new wood -- lie scattered about the tunnel floor.  The stone walls have been cleaned and appear to be in the process of being polished.  Perhaps as a jest, some of the stoneworkers have discreetly imprinted their initials in the new mortar.  A worker has left behind a small cloth apron, its hem firmly trapped in the tight joint between two wall slabs.</description>
+    <position x="90" y="140" z="0" />
+    <arc exit="east" move="east" destination="40" />
+    <arc exit="go" move="go oak door" destination="28" />
+  </node>
+  <node id="31" name="Crossing Escape Tunnels, Kuniyo's Egress">
+    <description>The passageway angles upwards, and a faint breeze whispering through carries lighter scents than the dense odors of wet clay and oily smoke found deeper in the tunnel.  The enveloping shadows here begin to shift almost imperceptibly from black to grey, hinting that there is light somewhere above.</description>
+    <position x="90" y="110" z="0" />
+    <arc exit="northwest" move="northwest" destination="32" />
+    <arc exit="go" move="go dark crevice" destination="26" />
+  </node>
+  <node id="32" name="Crossing Escape Tunnels, Kuniyo's Egress">
+    <description>A massive boulder of pale grey granite - probably too difficult for the tunnelers to remove - has been left in the center of the passageway, with just enough space on either side to slip past.  Chopped into the surface of the rock, in bold and hurried strokes, is the stylized image of a wolverine silhouetted against a full moon.</description>
+    <position x="80" y="100" z="0" />
+    <arc exit="southeast" move="southeast" destination="31" />
+    <arc exit="south" move="south" destination="33" />
+  </node>
+  <node id="33" name="Crossing Escape Tunnels, Kuniyo's Egress">
+    <description>Rubble piled along the base of one wall gives mute testimony to the constant, eroding forces of time and damp.  A haphazard arrangement of rocks and planks has been used to reinforce the weak area, and judging from the little tangle of rags and twigs under the planks, some creature of the tunnels has made a home here.</description>
+    <position x="80" y="110" z="0" />
+    <arc exit="north" move="north" destination="32" />
+    <arc exit="southwest" move="southwest" destination="34" />
+  </node>
+  <node id="34" name="Crossing Escape Tunnels, Kuniyo's Egress">
+    <description>An abandoned bucket, blackened with the tarry remnants of the building process and overturned against one wall, threatens to ambush the hasty passer-by stumbling along the dimly illuminated corridor.  Underfoot, loose rubble and wooden debris uncleared after the tunnel's creation renders passage perilous and sometimes painful.</description>
+    <position x="70" y="120" z="0" />
+    <arc exit="northeast" move="northeast" destination="33" />
+    <arc exit="west" move="west" destination="35" />
+  </node>
+  <node id="35" name="Crossing Escape Tunnels, Kuniyo's Egress">
+    <description>The air is thick with oily smoke that drifts from a lantern hanging from a beam thrust across the ceiling.  Its wavering light outlines a strip of blackened ironwood placed along one edge of the floor and stretching from passage to passage, appearing as though it may run along the entire way through.</description>
+    <position x="60" y="120" z="0" />
+    <arc exit="east" move="east" destination="34" />
+    <arc exit="northwest" move="northwest" destination="36" />
+  </node>
+  <node id="36" name="Crossing Escape Tunnels, Kuniyo's Egress">
+    <description>Timbers of alder, slathered with tar against the underground moisture, reinforce the crumbling walls.  Light from the passages on either side sparkles against amber resin that gleams like gold beads against the blackened wood, but does little to lift the surrounding darkness.</description>
+    <position x="50" y="110" z="0" />
+    <arc exit="southeast" move="southeast" destination="35" />
+    <arc exit="northwest" move="northwest" destination="37" />
+  </node>
+  <node id="37" name="Crossing Escape Tunnels, Kuniyo's Egress">
+    <description>The floor levels out and flows into a wide tunnel that would be filled with darkness if not for a guttering torch jammed between rocks lining the walls.  A faint haze of smoke eddies through the air, propelled by a cool breeze from somewhere beyond.</description>
+    <position x="40" y="100" z="0" />
+    <arc exit="southeast" move="southeast" destination="36" />
+    <arc exit="west" move="west" destination="38" />
+  </node>
+  <node id="38" name="Crossing Escape Tunnels, Kuniyo's Egress">
+    <description>Rough-hewn blocks of sandstone form a tall arch with a stylized metallic eye gleaming at its apex.  The structure curves over a hard-packed path of earth mixed with clay and pine needles that slopes abruptly down and into darkness.  Stray beams of light reveal that this is no dead-end, barely outlining a narrow passage at the foot of the incline.</description>
+    <position x="30" y="100" z="0" />
+    <arc exit="east" move="east" destination="37" />
+    <arc exit="go" move="go tall arch" destination="39" />
+  </node>
+  <node id="39" name="Wilds, Pine Needle Path" note="Map1_Crossing.xml|Ranger Guild">
+    <description>Birds dart in and out of the dense shrubbery here, calling to one another in cadences that are almost comprehendible.  Responses seem to emanate from the wooden structure ahead, a timber building with ornately carved double doors, and seemingly without a roof.</description>
+    <position x="30" y="90" z="0" />
+    <arc exit="south" move="south" />
+  </node>
+  <node id="40" name="Crossing Temple, Tower Tunnels">
+    <description>Perhaps, in some time past, the tunnel was breached by nature's wrath, or by foe unknown this section has seen recent reconstruction.  New mortar stands out in stark contrast to the dull grey of the older stonework, giving a sense of hope and life to this otherwise dreary passageway.  Torches burning brightly in brass sconces bring some semblance of warmth to the chill atmosphere of the tunnel.</description>
+    <position x="100" y="140" z="0" />
+    <arc exit="east" move="east" destination="41" />
+    <arc exit="west" move="west" destination="30" />
+  </node>
+  <node id="41" name="Crossing Temple, Tower Tunnels">
+    <description>Empty torch sconces cling forlornly to the soot-streaked riverstone slabs of the tunnel walls, the light and warmth that once bedecked this dreary hall long since extinguished.  Cast by the merest glimmer of illumination from elsewhere in the corridor, long shadows flick and shudder across the drab stonework like the silent flight of bats at twilight.</description>
+    <position x="120" y="140" z="0" />
+    <arc exit="east" move="east" destination="42" />
+    <arc exit="west" move="west" destination="40" />
+  </node>
+  <node id="42" name="Crossing Temple, Tower Tunnels">
+    <description>This section of the tunnel has remained unvisited by maintenance workers for many years.  Bronze oil lamps, green with verdigris, are fastened to the walls, their small beacons of light long since extinguished.  In tattered shreds, the remains of an elegant tapestry hang from the wall.  The once-luxurious fabric is fragile and rotted now, useful only as nesting material for vermin.</description>
+    <position x="150" y="140" z="0" />
+    <arc exit="east" move="east" destination="43" />
+    <arc exit="west" move="west" destination="41" />
+  </node>
+  <node id="43" name="Crossing Temple, Tower Tunnels">
+    <description>The passage here is cool and dry a strange, musty scent emanates from the surrounding semi-darkness and fills the still air.  The remains of an intricate mosaic, its tiles broken and scored from the dragging of a heavy object, can be seen on the floor.  A large cobweb holds the dried husk of a small rodent, a reminder that life is still forfeit even on the temple grounds.</description>
+    <position x="170" y="140" z="0" />
+    <arc exit="east" move="east" destination="44" />
+    <arc exit="west" move="west" destination="42" />
+  </node>
+  <node id="44" name="Crossing Temple, Tower Tunnels">
+    <description>The tunnel, while oft traveled by foot traffic between the Temple Towers, stubbornly clings to the hallmarks of under-use.  Cobwebs drape from the ceiling like funerary shrouds, and a thin layer of dust settles and resettles across the floor.  Torch sconces reach out from the tunnel walls, as if beseeching any passerby to stop and live for a moment in this lifeless place.</description>
+    <position x="180" y="140" z="0" />
+    <arc exit="west" move="west" destination="43" />
+    <arc exit="go" move="go walnut door" destination="45" />
+  </node>
+  <node id="45" name="Temple, Southeast Tower">
+    <description>Blocks of precisely fitted granite compose the floor, matched by heavy beveled reinforcing slabs that rise halfway up the walls to frame a polished mahogany door.  A wide strip of hammered silver gleams at the intersection where the subdued greys of granite abut the expanse of whitewashed plaster, the whole surrounding an ironwood staircase that rises into shadows above.</description>
+    <position x="190" y="140" z="0" />
+    <arc exit="go" move="go walnut door" destination="44" />
+    <arc exit="go" move="go mahogany door" destination="46" />
+    <arc exit="climb" move="climb ironwood staircase" destination="47" />
+  </node>
+  <node id="46" name="Crossing Temple, Tower Tunnels">
+    <description>This section of the tunnel has seen some recent renovation.  The walls have been scrubbed, and much of the dust and debris collected over the ages has been swept off the floor.  Bright, new mortar gives a hint of recent repairs to the cracked and crumbling mortar of the older stonework.  New sconces have been fastened to the walls, and brightly burning torches bring light and warmth to the cold stone of the passage.</description>
+    <position x="180" y="130" z="0" />
+    <arc exit="north" move="north" destination="48" />
+    <arc exit="go" move="go mahogany door" destination="45" />
+  </node>
+  <node id="47" name="Temple, Southeast Tower">
+    <description>Air carrying the light freshness of the outdoors eddies in little zephyrs about the room, making random figures in the dust that has been tracked across the stone floor.  Curving slightly to meet the wall, the staircase smoothly rounds the tower, dappled in angular patterns from the shadows cast by its cast iron railing.</description>
+    <position x="235" y="140" z="0" />
+    <arc exit="down" move="rt down" destination="45" />
+    <arc exit="climb" move="climb ironwood staircase" destination="68" />
+  </node>
+  <node id="48" name="Crossing Temple, Tower Tunnels">
+    <description>Vast slabs of riverstone interlock with barely visible seams along the tunnel's walls.  The stones' imposing size lends this passage a silent, brooding air, a sense of majesty requiring reverence.  Some skilled craftsman has laid an intricate mosaic on the tunnel floor, though its image and the story it conveys are now obscured beneath a layer of dust and soot.</description>
+    <position x="180" y="120" z="0" />
+    <arc exit="south" move="south" destination="46" />
+    <arc exit="northwest" move="northwest" destination="49" />
+    <arc exit="go" move="go narrow passageway" destination="50" />
+  </node>
+  <node id="49" name="Crossing Temple, Tower Tunnels">
+    <description>The stone walls and floor have been blackened by fire in this area.  Scattered about the floor are the charred remains of what might have been a wagon, and several flame-scarred barrels, recruited as nesting places for vermin, have rolled up against the walls of the tunnel.  Hanging between two small oil lamps, a once-elegant tapestry is now a scorched and tattered rag, the story it told greedily consumed by the fire.</description>
+    <position x="170" y="110" z="0" />
+    <arc exit="southeast" move="southeast" destination="48" />
+    <arc exit="northwest" move="northwest" destination="10" />
+  </node>
+  <node id="50" name="Crossing Escape Tunnels, Chadatru's Vigil">
+    <description>Soot from a little torch propped in an iron rack has feathered the sandstone walls with streaks of black, echoing the shadows that veil the far reaches of the room.  The passageway narrows and lifts here, bringing the beam-reinforced ceiling closer -- so much so that this space would become almost suffocating if not for the fact that a slight breeze from somewhere ahead cools the air.</description>
+    <position x="210" y="120" z="0" />
+    <arc exit="northeast" move="northeast" destination="51" />
+    <arc exit="go" move="go narrow passageway" destination="48" />
+  </node>
+  <node id="51" name="Crossing Escape Tunnels, Chadatru's Vigil">
+    <description>Sudden flashes of light come from all directions, brilliant and momentarily blinding.  Finally, though, one can see that these walls are hung with countless shields -- some near-perfect, others almost destroyed.  Brass and gold, silver and copper are all set ablaze with the reflections cast by torches burning at each end of the room.  On one wall, a small space is left almost clear, occupied only by a simple wooden plaque.</description>
+    <position x="220" y="110" z="0" />
+    <arc exit="northeast" move="northeast" destination="52" />
+    <arc exit="southwest" move="southwest" destination="50" />
+  </node>
+  <node id="52" name="Crossing Escape Tunnels, Chadatru's Vigil">
+    <description>Half-collapsed scaffolding tilts precariously, left behind by tunnelers more intent on finishing their task than on cleanup.  Yellowish sandstone walls scarred with pick and shovel marks arch overhead, the dark shadows pooled at their apex out of reach of the tentative beams cast from an oil lamp set on a wooden shelf.</description>
+    <position x="230" y="100" z="0" />
+    <arc exit="northeast" move="northeast" destination="53" />
+    <arc exit="southwest" move="southwest" destination="51" />
+  </node>
+  <node id="53" name="Crossing Escape Tunnels, Chadatru's Vigil">
+    <description>The gentle sound of trickling water fills the room, its source a little runnel that has slipped through a crack to flow down the sandstone wall, leaving crystallized streaks in its wake.  At its origin is a tiny clinging garden of mosses, their velvety, vivid green almost glowing against the paler stone.</description>
+    <position x="240" y="90" z="0" />
+    <arc exit="north" move="north" destination="54" />
+    <arc exit="southwest" move="southwest" destination="52" />
+  </node>
+  <node id="54" name="Crossing Escape Tunnels, Chadatru's Vigil">
+    <description>The ceiling of this passageway is ridged with rough half-timbers placed to withstand the pressure of the earth above.  Frayed carpets of azure and burgundy line the floors, their edges curled from the dampness of the earth.  From somewhere just beyond, the sound of running water echoes faintly through the air.</description>
+    <position x="240" y="80" z="0" />
+    <arc exit="northeast" move="northeast" destination="55" />
+    <arc exit="south" move="south" destination="53" />
+  </node>
+  <node id="55" name="Crossing Escape Tunnels, Chadatru's Vigil">
+    <description>Pale sandstone dances with the shadows thrown by smoke that drifts from torches set in iron rings bolted into the walls.  A flash of rich color underfoot strikes an unexpected contrast in these stark chambers -- someone has thrown worn rugs along the floor, perhaps to quiet the sound of armored footsteps.</description>
+    <position x="250" y="70" z="0" />
+    <arc exit="north" move="north" destination="56" />
+    <arc exit="southwest" move="southwest" destination="54" />
+  </node>
+  <node id="56" name="Crossing Escape Tunnels, Chadatru's Vigil">
+    <description>Dark granite forms a graceful archway crested by a stylized cast metal eye, flanked by blazing torches in iron sconces.  Layered sandstone walls, rubble and timbers heaped at their base, mantle over a narrow pathway inclining downward and leading into darkness.</description>
+    <position x="250" y="60" z="0" />
+    <arc exit="south" move="south" destination="55" />
+    <arc exit="go" move="graceful arch" />
+  </node>
+  <node id="57" name="Temple, North Tower">
+    <description>Flowing into a wide landing of polished granite flagstone, the stairway curves to meet an iron-banded acanth doorway before moving onward again.  Flanked by torches in tall gold cobra sconces, the portal falls directly under the gaze of its elegant guardians.  Hoods flared wide and metallic scales gleaming, the golden serpents stand silent vigil, eternally poised to strike.</description>
+    <position x="140" y="-20" z="0" />
+    <arc exit="down" move="rt down" destination="14" />
+    <arc exit="climb" move="climb granite stairway" destination="58" />
+    <arc exit="go" move="go acanth door" destination="96" />
+  </node>
+  <node id="58" name="Temple, North Tower">
+    <description>The stairway's journey is interrupted by a narrow landing that grants access to a polished acanth door and a graceful ebonwood arch that stands adjacent to it.  Opposite the portals, the tower walls fall away, fading into velvety darkness below and rising into a haze of amber-tinted light above.  Latticed shadows flicker against granite and plaster, cast by the ornate iron railings edging the flight.</description>
+    <position x="140" y="-40" z="0" />
+    <arc exit="down" move="rt down" destination="57" />
+    <arc exit="climb" move="climb granite stairway" destination="59" />
+    <arc exit="go" move="go acanth door" destination="84" />
+    <arc exit="go" move="go ebonwood arch" destination="85" />
+  </node>
+  <node id="59" name="Temple, North Tower">
+    <description>Little breezes eddy up and down the stairway as it continues, its structure angling slightly with the tower walls.  Touches of scrollwork and gilt rendering it ornate, a hammered iron railing clings to the edge of the flight, the whole atmosphere so suddenly aerial that it is almost dizzying.</description>
+    <position x="140" y="-50" z="0" />
+    <arc exit="down" move="rt down" destination="58" />
+    <arc exit="climb" move="climb granite stairway" destination="60" />
+  </node>
+  <node id="60" name="Temple, North Tower">
+    <description>A circular platform marks the terminus of the stairway, the tower itself soaring upward to culminate in a deeply vaulted ceiling.  Lanterns faced with heavy amber glass are set along the walls, imbuing the very atmosphere with a golden tint.  Blazing overhead are swirls of gold leaf hammered into the plaster to form the image of a sun in full glory circled by countless stars.</description>
+    <position x="140" y="-60" z="0" />
+    <arc exit="down" move="rt down" destination="59" />
+    <arc exit="climb" move="climb bronzed ladder" destination="61" />
+    <arc exit="go" move="go ebonwood arch" destination="73" />
+  </node>
+  <node id="61" name="Temple, North Watchtower">
+    <description>Climbing from the grandiose chamber of sun and stars, a bronzed ladder peeks out onto the summit of the Temple's north tower, the vast expanse of Elanthia stretching out to meet the sky in every direction.  A roaring fire dances within the hold of a giant steel brazier, its appetite fed with devoted regularity by those who stand watch in defense of the temple, and the Crossing as a whole.</description>
+    <position x="140" y="-80" z="0" />
+    <arc exit="climb" move="climb bronzed ladder" destination="60" />
+  </node>
+  <node id="62" name="Temple Grounds, North Tower" note="Map2a_Crossing_Temple.xml|Temple Grounds">
+    <description>The rocky path of black volcanic gravel draws to a close, a somber carpet before the Northern sentinel tower.  The thick black ironwood outer walls curve sharply behind the structure to seal off the temple grounds, banded with steel for extra reinforcement to ward off a possible siege.</description>
+    <position x="160" y="0" z="0" />
+    <arc exit="southeast" move="southeast" />
+    <arc exit="go" move="go ironwood doorway" destination="14" />
+  </node>
+  <node id="63" name="Temple, Southwest Tower">
+    <description>An interweave of light and shadow plays across the plastered walls and along the stairs, touching surfaces with random patterns that shift with the torchlight filtering through the air.  A mud honeycomb of swallows' nests is tucked high in one corner, though the feathered denizens are currently nowhere in sight.  </description>
+    <position x="40" y="140" z="0" />
+    <arc exit="down" move="rt down" destination="29" />
+    <arc exit="climb" move="climb ironwood staircase" destination="64" />
+  </node>
+  <node id="64" name="Temple, Southwest Tower">
+    <description>Its dark iron railings gleaming with copper fretwork, the stairway bends to adjoin a heavy acanth door and a polished ebonwood arch.  Fluted brass poles that flank both openings bear ornately sculpted scorpions grasping blazing torches in their claws.  Tails arced gracefully over their backs to display their distinctive curved sting, the metalwork creatures steadfastly face the portals that lead away from this place.</description>
+    <position x="20" y="140" z="0" />
+    <arc exit="down" move="rt down" destination="63" />
+    <arc exit="climb" move="climb ironwood staircase" destination="65" />
+    <arc exit="go" move="go acanth door" destination="88" />
+    <arc exit="go" move="go ebonwood arch" destination="89" />
+  </node>
+  <node id="65" name="Temple, Southwest Tower">
+    <description>Warmer air rises here, suffused with streams of pale emerald light from above that bathes polished granite flagstones in verdant illumination.  Laid end-to-end, the stonework comprises a narrow landing that runs between an iron-banded acanth door and a carved ebonwood arch.  Clinging to the opposite wall, the staircase climbs onward, angling with the superstructure of the tower itself.</description>
+    <position x="0" y="140" z="0" />
+    <arc exit="down" move="rt down" destination="64" />
+    <arc exit="climb" move="climb ironwood staircase" destination="66" />
+    <arc exit="go" move="go acanth door" destination="76" />
+    <arc exit="go" move="go ebonwood arch" destination="77" />
+  </node>
+  <node id="66" name="Temple, Southwest Tower">
+    <description>The stairway ends at a rounded platform surrounded by copper lanterns set with vivid emerald glass.  Surging upward past the platform, the tower arches into a massive canopy of mosaic greenery that mantles protectively overhead like the veiled boughs of a forest glade.  Beams of light and the gemstones of the mosaic combine in a lush overlay of textures and hues ranging from dusky jade to the dazzling green of early spring.</description>
+    <position x="-20" y="140" z="0" />
+    <arc exit="down" move="rt down" destination="65" />
+    <arc exit="climb" move="climb brass ladder" destination="67" />
+  </node>
+  <node id="67" name="Temple, Southwest Watchtower">
+    <description>Bright points of fire leap from the northern and southeastern towers, their proud light joining the blaze that roars within the brazier here, fitting the Temple with a triangular crown of flame.  Centered atop the temple orb that rests cradled between these three ironwood talons, a spire of dark metal rises into the sky with an almost liquid grace, its smooth surface brushed in the gentle illumination of night.</description>
+    <position x="-40" y="140" z="0" />
+    <arc exit="climb" move="climb brass ladder" destination="66" />
+  </node>
+  <node id="68" name="Temple, Southeast Tower">
+    <description>Faint sparkles mark tiny crystalline inclusions within granite flagstones set along a landing that is just wide enough to allow free passage in and out of a reinforced acanth door and a polished ebonwood arch.  Between them, a pair of silver lion sconces bearing blazing torches sends thin wisps of smoke up the stairway.  Polished to a high sheen, the great cats grip their burden with deeply curved claws, their steady gaze encompassing both the door and the arch.</description>
+    <position x="280" y="140" z="0" />
+    <arc exit="down" move="rt down" destination="47" />
+    <arc exit="climb" move="climb ironwood staircase" destination="69" />
+    <arc exit="go" move="go acanth door" destination="92" />
+    <arc exit="go" move="go ebonwood arch" destination="93" />
+  </node>
+  <node id="69" name="Temple, Southeast Tower">
+    <description>The stairway ascends into a pool of shadows above, slight depressions in the heavy wood marking the passage of others who have traveled this way.  A tracery of silver flows up the railing, the simple adornment brilliant against the deep black of the ironwork.</description>
+    <position x="290" y="140" z="0" />
+    <arc exit="down" move="rt down" destination="68" />
+    <arc exit="climb" move="climb ironwood staircase" destination="70" />
+  </node>
+  <node id="70" name="Temple, Southeast Tower">
+    <description>A fall of azure-tinted light bathes this space, shafting downward from some loftier origin and causing patches of verdigris on the iron railing to shade from green to deep blue.  The stairway pauses and broadens toward a polished acanth door and a reinforced ebonwood arch, then climbs to meet the light, angling steadily upward between the encircling walls of the tower.</description>
+    <position x="300" y="140" z="0" />
+    <arc exit="down" move="rt down" destination="69" />
+    <arc exit="climb" move="climb ironwood staircase" destination="71" />
+    <arc exit="go" move="go acanth door" destination="80" />
+    <arc exit="go" move="go ebonwood arch" destination="81" />
+  </node>
+  <node id="71" name="Temple, Southeast Tower">
+    <description>Rows of silver lanterns set with blue glass fill this room with a wash of sapphire and send cyan beams down the expanse of the tower.  In their final upward sweep, the curving walls have been cloaked in a celestial mural.  Great wheeling spirals of silver-gilt stars whirl high overhead against a midnight-blue background, as though the vault of heaven itself made its abode here.</description>
+    <position x="320" y="140" z="0" />
+    <arc exit="down" move="rt down" destination="70" />
+    <arc exit="climb" move="climb blued ladder" destination="72" />
+  </node>
+  <node id="72" name="Temple, Southeast Watchtower">
+    <description>The din of daily life fades to a distant memory atop this curved tower of ironwood the shifting breeze tugging at anything that breaks the platform's smooth surface, the roar of a brazier-held flame filling the air with its constant hunger.  Turning slowly, one can devour every vista Zoluren has to offer, the view broken only by leaping fires atop each of the other two towers.</description>
+    <position x="340" y="140" z="0" />
+    <arc exit="climb" move="climb blued ladder" destination="71" />
+  </node>
+  <node id="73" name="Tower Bridges, Upper Northwestern Face">
+    <description>Dark metal joins fine-grained wood as the bridge flows up to meet the threshold of the North tower's archway.  Overhead, the tower's expanse looms to shadow the bridge, inclining towards the temple and conveying a sense of protectiveness that seems somehow fitting in this place.  To the northeast, barely visible behind the curved side of the tower, a blue-white sparkle reveals the crystal skylight of the Paladins' Guild.</description>
+    <position x="80" y="-60" z="0" />
+    <arc exit="southwest" move="southwest" destination="74" />
+    <arc exit="go" move="go ebonwood arch" destination="60" />
+  </node>
+  <node id="74" name="Tower Bridges, Upper Northwestern Face">
+    <description>Finely-articulated metalwork and neatly placed bolts convey strength and stability - a harmony to the more ethereal sensibility that comes as the inevitable result of hanging suspended in midair.  Little breezes whip up in random directions, then fade as quickly as they appear, carrying momentary hints in scent and sound of the life of the city that sprawls below.</description>
+    <position x="50" y="-30" z="0" />
+    <arc exit="northeast" move="northeast" destination="73" />
+    <arc exit="southwest" move="southwest" destination="75" />
+  </node>
+  <node id="75" name="Tower Bridges, Upper Northwestern Face">
+    <description>Dark as velvet against the far horizon, the edge of the Forest of Night slips up to tease at the outskirts of the settlements and ferry landings scattered along the banks of the Segoltha.  Below, the streets and avenues of Crossing meander in an orderly crosshatch, bounded by the shops, taverns, and guildhalls of this busy thoroughfare.</description>
+    <position x="30" y="-10" z="0" />
+    <arc exit="northeast" move="northeast" destination="74" />
+    <arc exit="southwest" move="southwest" destination="76" />
+  </node>
+  <node id="76" name="Tower Bridges, Upper Northwestern Face">
+    <description>Lifting gracefully to meet the sky, the Southwest tower curves over the domed bulk of the temple itself.  A heavy acanth door that guards access to the tower's interior at this point adjoins the web of wood and metal that forms a narrow walkway stretching upward and to the north.</description>
+    <position x="0" y="20" z="0" />
+    <arc exit="northeast" move="northeast" destination="75" />
+    <arc exit="go" move="go acanth door" destination="65" />
+  </node>
+  <node id="77" name="Tower Bridges, Upper Southern Face">
+    <description>Brought to life by the dense grain of ironwood, a graceful pattern of dark lines courses over the surface of this tower, flowing naturally around a carved ebonwood arch like water around a midstream boulder.  A narrow landing grants access to the spindly bridge descending eastward, a soft jade light from within the arch beckoning in the opposite direction.</description>
+    <position x="40" y="180" z="0" />
+    <arc exit="east" move="east" destination="78" />
+    <arc exit="go" move="go ebonwood arch" destination="65" />
+  </node>
+  <node id="78" name="Tower Bridges, Upper Southern Face">
+    <description>Poised high above the magnificent approach to the temple's entrance, this narrow walkway looks out upon a glorious panorama of the southern horizon, the canopy of Leth Deriel barely visible in the distance.  On all but the most still of days, a crisp breeze whips over the handrail, insistently tugging at loose clothing and hair with a playful vigor.</description>
+    <position x="100" y="180" z="0" />
+    <arc exit="east" move="east" destination="79" />
+    <arc exit="west" move="west" destination="77" />
+  </node>
+  <node id="79" name="Tower Bridges, Upper Southern Face">
+    <description>From this lofty vantage point the Forest of Night stretches across the southern horizon like a malevolent shadow, its dark influence held back only by the moving waters of the Segoltha.  The confident strength of the temple is an almost tangible presence behind this spinneret bridge, its massive structure serving as a mighty shield against all who would oppose the Thirteen.</description>
+    <position x="200" y="180" z="0" />
+    <arc exit="east" move="east" destination="80" />
+    <arc exit="west" move="west" destination="78" />
+  </node>
+  <node id="80" name="Tower Bridges, Upper Southern Face">
+    <description>Stretching across the sky like a strand of nightstalker webbing, a narrow bridge climbs the distance between the curving ironwood monolith just to the east and its counterpoint far to the west, wound cable and metal bolts taking on a soft sheen beneath the stars.  A polished acanth door breaks the smooth surface of the proud tower, irregular shadows thrown across the landing by a wavering blue-green light that seeps from within.</description>
+    <position x="260" y="180" z="0" />
+    <arc exit="west" move="west" destination="79" />
+    <arc exit="go" move="go acanth door" destination="70" />
+  </node>
+  <node id="81" name="Tower Bridges, Upper Northeastern Face">
+    <description>Rising out of earth that is still scarred from the old temple's destruction, the Southeast tower rises victoriously upward, its very existence a rebuke to defeat.  A reinforced ebonwood arch offers entry to its inner recesses, while from its threshold and coursing to the north leaps a bridge of metal and wood that appears almost delicate in comparison to the heavy portal.</description>
+    <position x="300" y="20" z="0" />
+    <arc exit="northwest" move="northwest" destination="82" />
+    <arc exit="go" move="go ebonwood arch" destination="70" />
+  </node>
+  <node id="82" name="Tower Bridges, Upper Northeastern Face">
+    <description>No other construct vies for position here.  The only concrete presence is the bridge itself -- dark ironwood against darker metal, the sweep of cable and subtle glint of bolts -- the whole framed by a great arc of sky.  Standing silent and vigilant at its distant endpoints are the towers marking the southeastern and northern aspects of the temple.</description>
+    <position x="280" y="0" z="0" />
+    <arc exit="southeast" move="southeast" destination="81" />
+    <arc exit="northwest" move="northwest" destination="83" />
+  </node>
+  <node id="83" name="Tower Bridges, Upper Northeastern Face">
+    <description>Staring out over a sweeping cable handrail, the distant east wall of Crossing follows a meandering path along the edge of the city below, its earthen spine struggling to rein in the varied buildings that span a giant arc from the base of the temple.  The dark peaks of the Lesser and Greater Fists spear the horizon far to the north, the ruined tower of Arhat to the northeast a testament to the threat that once called those spires home.</description>
+    <position x="260" y="-20" z="0" />
+    <arc exit="southeast" move="southeast" destination="82" />
+    <arc exit="northwest" move="northwest" destination="84" />
+  </node>
+  <node id="84" name="Tower Bridges, Upper Northeastern Face">
+    <description>Curving slightly to embrace the massive globe of the temple, an ironwood tower rises from the ground like a dark scimitar, its profile marking the northern vertex of this proud structure.  A composite bridge of metal and wood leads away from the tower's polished acanth door, climbing steadily toward the distant southeastern support.</description>
+    <position x="240" y="-40" z="0" />
+    <arc exit="southeast" move="southeast" destination="83" />
+    <arc exit="go" move="go acanth door" destination="58" />
+  </node>
+  <node id="85" name="Tower Bridges, Lower Northwestern Face">
+    <description>The dark surface of the North tower looms ahead, the bridge itself inclining towards a graceful ebonwood arch set within the tower walls.  Off to the west lie Crossing's shadowed alleyways and the imposing city gate that marks the beginning of the trade road leading to Wolf Clan and beyond.</description>
+    <position x="80" y="-40" z="0" />
+    <arc exit="southwest" move="southwest" destination="86" />
+    <arc exit="go" move="go ebonwood arch" destination="58" />
+  </node>
+  <node id="86" name="Tower Bridges, Lower Northwestern Face">
+    <description>The giddy combination of empty space and faraway vistas on one side of the bridge is counterpointed by the great curve of the temple rising nearby on the other.  Occasionally, snippets of sound from the streets of Crossing are carried up by zephyrs of wind, the bustle and noise of Elanthia's largest city continuing throughout day and night.</description>
+    <position x="60" y="-20" z="0" />
+    <arc exit="northeast" move="northeast" destination="85" />
+    <arc exit="southwest" move="southwest" destination="87" />
+  </node>
+  <node id="87" name="Tower Bridges, Lower Northwestern Face">
+    <description>The bridge reverberates with a series of metallic, creaking sounds as it reacts to buffeting gusts of wind and its varying load.  Off to the southwest the elegant tiled gables of the Traders' Guildhall are traced against the sky, while beyond them rise the stern grey walls of Drelstead Prison.</description>
+    <position x="40" y="0" z="0" />
+    <arc exit="northeast" move="northeast" destination="86" />
+    <arc exit="southwest" move="southwest" destination="88" />
+  </node>
+  <node id="88" name="Tower Bridges, Lower Northwestern Face">
+    <description>The imposing exterior walls of the Southwest tower are framed by an expanse of sky and space, interrupted only by the bridge upon which you stand.  Angling slightly upward, the narrow walkway courses towards the north, the tower it seeks nearly dwarfed by the massive dome of the temple.</description>
+    <position x="20" y="20" z="0" />
+    <arc exit="northeast" move="northeast" destination="87" />
+    <arc exit="go" move="go acanth door" destination="64" />
+  </node>
+  <node id="89" name="Tower Bridges, Lower Southern Face">
+    <description>A faint scratching of metal on metal sounds with every strong gust of wind, the narrow bridge that descends to the east shifting to test its tower-bound supports.  A polished ebonwood arch waits at this dark landing, its graceful curve complementing the sleek lines of the ironwood spire to which it grants access.</description>
+    <position x="40" y="160" z="0" />
+    <arc exit="east" move="east" destination="90" />
+    <arc exit="go" move="go ebonwood arch" destination="64" />
+  </node>
+  <node id="90" name="Tower Bridges, Lower Southern Face">
+    <description>Swaying gently in time with the breezes that rise from the Segoltha and the Oxenwaithe, this spindly bridge proves more sturdy than one might expect, confidently climbing to meet the Temple's southwestern tower.  Tumultuous activity along the waterways seems serene from this distance, ships and workers moving in unison like dancers upon a great stage of sea and wood.</description>
+    <position x="100" y="160" z="0" />
+    <arc exit="east" move="east" destination="91" />
+    <arc exit="west" move="west" destination="89" />
+  </node>
+  <node id="91" name="Tower Bridges, Lower Southern Face">
+    <description>The composite bridge rises steadily to the west, wound cable and sanded planks spanning the distance between the towers that stand to the east and west.  Several stories below, a majestic walkway climbs its way toward the Temple entrance, charting a proud path from the massive walls that surround this holy ground.</description>
+    <position x="200" y="160" z="0" />
+    <arc exit="east" move="east" destination="92" />
+    <arc exit="west" move="west" destination="90" />
+  </node>
+  <node id="92" name="Tower Bridges, Lower Southern Face">
+    <description>Broken only by a reinforced acanth door that leads within, the thick ironwood of the southeast tower flows in graceful curve to embrace the tremendous swell of the Temple.  A bridge woven of metal and wood traverses the space between this landing and the tower to the west, angling upwards to meet a distant opening in the southwestern spire.</description>
+    <position x="260" y="160" z="0" />
+    <arc exit="west" move="west" destination="91" />
+    <arc exit="go" move="go acanth door" destination="68" />
+  </node>
+  <node id="93" name="Tower Bridges, Lower Northeastern Face">
+    <description>The Southeast tower ascends steadily upward to frame a narrow traverse of metal and wood that parallels the curved wall of the temple to extend northerly.  A polished ebonwood arch stands silent watch at the juncture between tower and bridge, its dark frame echoing the sweeping curves of the greater structure.</description>
+    <position x="280" y="40" z="0" />
+    <arc exit="northwest" move="northwest" destination="94" />
+    <arc exit="go" move="go ebonwood arch" destination="68" />
+  </node>
+  <node id="94" name="Tower Bridges, Lower Northeastern Face">
+    <description>The bridge shifts under your feet, shuddering and swaying like some massive creature made restive by the breezes that feather along its railings.  Far to the northeast glisten the waters of the Selgotha Bay -- a premonition of the great ocean that lies beyond them.</description>
+    <position x="260" y="20" z="0" />
+    <arc exit="southeast" move="southeast" destination="93" />
+    <arc exit="northwest" move="northwest" destination="95" />
+  </node>
+  <node id="95" name="Tower Bridges, Lower Northeastern Face">
+    <description>The framework of this expanse is composed of precisely-fitted metal plates.  Overlapping like some odd sort of scale, they telescope and expand with the slightest pressure.  Gentle breezes arise to buffet the structure, slipping round the sides of the temple and creating tiny cascades of metallic sounds as the walkway responds.</description>
+    <position x="240" y="0" z="0" />
+    <arc exit="southeast" move="southeast" destination="94" />
+    <arc exit="northwest" move="northwest" destination="96" />
+  </node>
+  <node id="96" name="Tower Bridges, Lower Northeastern Face">
+    <description>Suspended high over the temple grounds, a weave of wood and metal stretches between towers constructed of dark ironwood and situated at the great dome's southeast and northerly aspects.  Before terminating at an iron-banded acanth doorway that leads within the tower itself, the bridge affords a sweeping view of the city below and the grasslands and light forests beyond the city gate.</description>
+    <position x="220" y="-20" z="0" />
+    <arc exit="southeast" move="southeast" destination="95" />
+    <arc exit="go" move="go acanth door" destination="57" />
+  </node>
+  <label text="Cleric's Guild">
+    <position x="50" y="0" z="0" />
+  </label>
+  <label text="Ranger's">
+    <position x="34" y="70" z="0" />
+  </label>
+  <label text="Empath's">
+    <position x="170" y="30" z="0" />
+  </label>
+  <label text="Paladin's">
+    <position x="230" y="30" z="0" />
+  </label>
+  <label text="Guild">
+    <position x="233" y="40" z="0" />
+  </label>
+  <label text="Guild">
+    <position x="180" y="40" z="0" />
+  </label>
+  <label text="Guild">
+    <position x="40" y="80" z="0" />
+  </label>
+</zone>

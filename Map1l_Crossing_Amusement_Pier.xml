@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<zone name="Crossing Amuesment Pier" id="1l">
+<zone name="Crossing Amusement Pier" id="1l">
   <node id="1" name="The Crossing, Esplanade Eluned" note="Map1_Crossing.xml|Crossing">
     <description>An apparent contradiction, the toney esplanade here is right in the midst of a group of warehouses to the north and the customs and storage house of Riverfront Portage to the west.  The strollers and workers mingle, with most of the leisure traffic centering around the noisy amusement pier to the south.</description>
     <position x="120" y="0" z="0" />

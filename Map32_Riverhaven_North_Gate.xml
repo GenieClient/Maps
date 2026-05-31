@@ -501,7 +501,7 @@
     <position x="60" y="20" z="0" />
     <arc exit="climb" move="climb steps" destination="78" />
   </node>
-  <node id="81" name="Riverhaven, Smugglers' Passage" note="Map30b_Riverhaven_Thief.xml">
+  <node id="81" name="Riverhaven, Smugglers' Passage" note="Map30b_Riverhaven_Thief_Passages.xml">
     <description>The air grows lighter, scented with the freshness of woodlands and the outdoors.  Brick, dark earth, and stone give way to clay and timbers as the passage angles to meet a trapdoor secured between what appears to be some large blocks of dark-veined marble.</description>
     <position x="60" y="-40" z="1" />
     <arc exit="south" move="south" />

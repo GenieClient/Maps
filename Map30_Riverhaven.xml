@@ -2577,12 +2577,12 @@
     <position x="740" y="680" z="0" />
     <arc exit="go" move="go open door" destination="394" />
   </node>
-  <node id="396" name="Riverhaven, Smugglers' Passage" note="Map30b_Riverhaven_Thief.xml">
+  <node id="396" name="Riverhaven, Smugglers' Passage" note="Map30b_Riverhaven_Thief_Passages.xml">
     <description>Winding beneath the businesses of Riverhaven, this dank tunnel must be home to all manner of vermin, as evidenced by scattered droppings and shredded piles of rags.  Walls shored up with brick are covered by a thick layer of moss and algae, a result of the constant seepage of briny water.</description>
     <position x="160" y="660" z="0" />
     <arc exit="northwest" move="northwest" />
   </node>
-  <node id="397" name="Riverhaven, Smugglers' Passage" note="Map30b_Riverhaven_Thief.xml">
+  <node id="397" name="Riverhaven, Smugglers' Passage" note="Map30b_Riverhaven_Thief_Passages.xml">
     <description>Winding and twisting beneath the foundations of Riverhaven's finer establishments, the tunnel is neatly bricked and mortared, and a tall ladder has been carefully bolted into the wall.  Water seeping from the surface above has begun to erode the stonework, as evidenced by the mineralized deposits that are collecting on the ceiling.</description>
     <position x="120" y="640" z="0" />
     <arc exit="northeast" move="northeast" />

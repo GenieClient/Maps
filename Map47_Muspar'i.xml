@@ -2394,7 +2394,7 @@
     <position x="560" y="380" z="0" />
     <arc exit="out" move="out" destination="41" />
   </node>
-  <node id="367" name="Muspar'i, Behind the Justice Office" note="Map47a_Muspar'i_Thief.xml">
+  <node id="367" name="Muspar'i, Behind the Justice Office" note="Map47a_Muspar'i_Thief_Passages.xml">
     <description>Overflow from the dump floods the shadowy crescent of space between a tall wall and the back of the building.  Dimly lit by the city's nighttime haze, simplistic texturing upon the stone reveals several imperfect attempts at defying the judicial authorities inside.</description>
     <description>Overflow from the dump floods the crescent of space between a tall wall and the back of the building.  In apparent defiance of the judicial authorities inside, graffiti litters the stone, etched with several imperfect hands.</description>
     <position x="240" y="320" z="0" />
@@ -2402,7 +2402,7 @@
     <arc exit="climb" move="climb hemp net" />
     <arc exit="climb" move="climb tall wall" />
   </node>
-  <node id="368" name="Muspar'i, Rear Lot" note="Map47a_Muspar'i_Thief.xml">
+  <node id="368" name="Muspar'i, Rear Lot" note="Map47a_Muspar'i_Thief_Passages.xml">
     <description>Sturdy wooden posts frame the small box of land, the fencing intended to provide as much asylum as possible, keeping the area's activity away from the prying eyes of local authorities.  A low canvas spreads across one corner to create a section completely overtaken by shadows.  Improvised seating in the form of discarded crates delivers a modicum of utilitarian hospitality.</description>
     <description>Sturdy wooden posts frame the small box of land, the fencing intended to provide as much privacy as possible, keeping the area's activity away from the prying eyes of the public.  A low canvas spreads across one corner to create a section of shaded ground, an unpretentious respite from the scorching heat.  Improvised seating in the form of discarded fruit crates delivers a modicum of utilitarian hospitality.</description>
     <position x="500" y="520" z="0" />
@@ -2410,7 +2410,7 @@
     <arc exit="climb" move="climb palm tree" />
     <arc exit="go" move="go discreet curtain" destination="38" />
   </node>
-  <node id="369" name="Muspar'i, Shadow of the Great Gate" note="Map47a_Muspar'i_Thief.xml">
+  <node id="369" name="Muspar'i, Shadow of the Great Gate" note="Map47a_Muspar'i_Thief_Passages.xml">
     <description>This chunk of land hides in the overwhelming darkness, both from the structural behemoth and the presence of night.  Though it is hard to tell precisely due to limited visibility, the lot appears free of unnecessary objects and even the coating of sand upon the ground.  Everything about the area exudes separation and discretion.</description>
     <description>This chunk of land hides in the absence of light produced by the structural behemoth.  No unnecessary objects mar the lot, which appears to receive regular cleaning in an effort to avoid any unwanted attention from the city maintenance workers.  Even the ground feels recently swept of its coating of sand, likely to eliminate the crunching of grit from hastened and frequent footsteps.</description>
     <position x="740" y="780" z="0" />

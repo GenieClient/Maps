@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Crossing Thief Passages" id="1a">
+  <node id="1" name="Underground Passageway">
+    <description>This lengthy passageway is clogged with knife-sized bits of sharp debris.  Overhead several massive boulders block out most of the light, and the din of town traffic is reduced to a surflike roar.  No one stops to glance down between the chinks of rubble, leaving your travels unnoticed and undisturbed.</description>
+    <position x="20" y="-80" z="0" />
+    <arc exit="northeast" move="northeast" destination="2" />
+    <arc exit="go" move="go shadowed gap" destination="4" />
+  </node>
+  <node id="2" name="Underground Passageway">
+    <description>Massive boulders from above press deeply into this rubble-strewn area.  Jagged corners of granite lurk everywhere, grinding harshly against each other, and against inhabitants' heads when they don't dodge swiftly enough.</description>
+    <position x="40" y="-100" z="0" />
+    <arc exit="southwest" move="southwest" destination="1" />
+    <arc exit="north" move="north" destination="3" />
+    <arc exit="east" move="east" destination="41" />
+  </node>
+  <node id="3" name="Underground Passageway">
+    <description>Jagged piles of debris line the center of this passageway, chips and shards of large rocks lodged deep in the low ceiling above.  A fine grey dust blankets everything else, sifting into clouds at knee-level from the passage of thieves.</description>
+    <position x="40" y="-120" z="0" />
+    <arc exit="south" move="south" destination="2" />
+    <arc exit="go" move="go sewer grating " destination="5" />
+  </node>
+  <node id="4" name="The Crossing, Town Green Northeast" note="Map1_Crossing.xml">
+    <description>The cool, welcome expanse of the Town Green is a pleasant place to gather and exchange news, gossip and adventuring pointers with all the folk and races of Elanthia who are drawn to town.  A soft, spongy carpet of well-manicured grass underfoot affords a comfortable cushion for sitting or sprawling out to enjoy a rare moment of rest in the warm sun.  An ancient oak tree provides shelter for those so inclined.</description>
+    <description>The cool, welcome expanse of the Town Green is a pleasant place to gather and exchange news, gossip and adventuring pointers with all the folk and races of Elanthia who are drawn to town.  A soft, spongy carpet of well-manicured grass underfoot affords a comfortable cushion for sitting or sprawling beneath the star-studded night sky.  An ancient oak tree provides shelter for those so inclined.</description>
+    <position x="0" y="-80" z="0" />
+    <arc exit="south" move="south" />
+    <arc exit="southwest" move="southwest" />
+    <arc exit="west" move="west" />
+    <arc exit="go" move="go gap" />
+  </node>
+  <node id="5" name="The Crossing, Oralana Ramble" note="Map1_Crossing.xml">
+    <description>The road continues north and south, and merges on the west with Trothfang Street.  In that direction, you see the turquoise- and crimson-tiled dome of the Champions' Arena.  Your proximity to the town wall blocks out any view of the Eastern Tier which lies beyond it.  Lowering your gaze to the path beneath your feet, you notice a spotted beetle wriggle into a chink in the wall and disappear.</description>
+    <position x="20" y="-120" z="0" />
+    <arc exit="north" move="north" />
+    <arc exit="south" move="south" />
+    <arc exit="west" move="west" />
+  </node>
+  <node id="6" name="Riverbank Mudflats" note="Map1_Crossing.xml|Crossing">
+    <description>Against the rotting warehouse pylons, a makeshift dwelling has been built of broken boxes and stray boards.  A roof composed of dried vilt reeds woven tight and sealed with mud is a temporary but effective relief from the sun.  However, the structure's stopgap construction provides little shelter from the other elements.</description>
+    <position x="140" y="-60" z="0" />
+    <arc exit="south" move="south" />
+    <arc exit="west" move="west" />
+    <arc exit="go" move="go panel" destination="7" />
+  </node>
+  <node id="7" name="Riverbank Mudflats, Rough Stairway">
+    <description>Barely visible in the murky air of the room, broken boards have been set into the earth to form a crude set of steps that tilt precariously away from the base of the panel to drop into the darkness beyond.  Shredded oilcloth has been jammed into the cracks around the panel as if an attempt has been made to prevent light or sounds from betraying activity here to the world outside.</description>
+    <position x="120" y="-80" z="0" />
+    <arc exit="out" move="out" destination="6" />
+    <arc exit="climb" move="climb crude steps" destination="8" />
+    <arc exit="go" move="go splintered panel" destination="40" />
+  </node>
+  <node id="8" name="Riverbank Mudflats, Tunnel" color="#0000FF">
+    <description>Damp wood and the tar that has been slathered along half-timbers lining the wall combine in a dense scent that fails to mask the underlying odor of mildew rising from the stagnant flow of water on the floor.  Greyish mosses cling to a row of heavy beams thrust into the low ceiling to hold back the pressure of the earth above.  From somewhere deeper within the tunnel, the murmur of more water can be heard.</description>
+    <position x="100" y="-80" z="0" />
+    <arc exit="south" move="swim south" destination="9" />
+    <arc exit="climb" move="climb crude steps" destination="7" />
+  </node>
+  <node id="9" name="Riverbank Mudflats, Tunnel" color="#0000FF">
+    <description>Eddies of turbid water stir up dark clouds of muck from the slurry of mud and pebbles that grudgingly offers up what little insecure footing can be found along the passage.  A mud-smeared glowstone jammed high in a corner emits tenuous light, and the chill air is thick with the smell of damp earth and stone.</description>
+    <position x="100" y="-60" z="0" />
+    <arc exit="north" move="swim north" destination="8" />
+    <arc exit="south" move="swim south" destination="10" />
+  </node>
+  <node id="10" name="Riverbank Mudflats, Tunnel" color="#0000FF">
+    <description>Twisted masses of tree roots cloaked with velvety green moss snake along the walls, holding back the quietly relentless earth.  Rough timbers, ridged and buckled with age, shore up the ceiling.  Pallid light from somewhere beyond lends a hazy glow to the traces of cold mist that rise from the water coursing ever faster and higher through the tunnel.</description>
+    <position x="100" y="-40" z="0" />
+    <arc exit="north" move="swim north" destination="9" />
+    <arc exit="southwest" move="swim southwest" destination="11" />
+  </node>
+  <node id="11" name="Riverbank Mudflats, Tunnel" color="#0000FF">
+    <description>One side of the tunnel has nearly collapsed, though reinforcing stones have been piled to the ceiling and held in place with heavy netting staked into rough log pillars.  Judging from the murky water lapping high against the walls, the nearby Segoltha is determined to reclaim this space.</description>
+    <position x="80" y="-20" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="10" />
+    <arc exit="southwest" move="swim southwest" destination="12" />
+  </node>
+  <node id="12" name="Riverbank Tunnel, Under the Segoltha" color="#0000FF">
+    <description>Cloudy with mud, the water swirls higher.  The ceiling seems to press nearer, though whether the passage is actually narrowing or the sensation has just come from a moment of claustrophobia induced by the encroaching river is difficult to discern.  The slick mud floor angles sharply downward, hinting that any hope of finding footholds may soon be gone.</description>
+    <position x="60" y="0" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="11" />
+    <arc exit="down" move="swim down" destination="13" />
+  </node>
+  <node id="13" name="Riverbank Tunnel, Under the Segoltha" color="#0000FF">
+    <description>River water, dense with silt and debris, finally conquers both earth and air as it completely floods the passage.  Currents tumble through, propelled by the Segoltha as though the river's very heartbeat extends into the tunnel.</description>
+    <position x="60" y="20" z="0" />
+    <arc exit="south" move="swim south" destination="14" />
+    <arc exit="up" move="swim up" destination="12" />
+  </node>
+  <node id="14" name="Riverbank Tunnel, Under the Segoltha" color="#0000FF">
+    <description>Choked with sediment, the water offers no real visibility, and the currents eddying back and forth between the narrow walls make achieving any orientation even more difficult.  The only way out must be through, and one can only hope that the passage emerges into lifegiving air before too very long.</description>
+    <position x="60" y="40" z="0" />
+    <arc exit="north" move="swim north" destination="13" />
+    <arc exit="southwest" move="swim southwest" destination="15" />
+  </node>
+  <node id="15" name="Riverbank Tunnel, Under the Segoltha" color="#0000FF">
+    <description>Though it is dank with mold and stagnant from being trapped in such a small space, the pocket of air that prevents this section of the tunnel from surrendering entirely to the river is a welcome alternative to complete immersion in the dark water.</description>
+    <position x="40" y="60" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="14" />
+    <arc exit="southwest" move="swim southwest" destination="16" />
+  </node>
+  <node id="16" name="Riverbank Tunnel, Under the Segoltha" color="#0000FF">
+    <description>Surging currents engulf this narrow chamber, tumbling bits of refuse scoured from the mudflats of Crossing and trapping barely breathable air in the hollows of the ceiling.  The only sound is the rush of the churning water as it thunders between the eroded walls.</description>
+    <position x="20" y="80" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="15" />
+    <arc exit="south" move="swim south" destination="17" />
+  </node>
+  <node id="17" name="Riverbank Tunnel, Under the Segoltha" color="#0000FF">
+    <description>Steep and abrupt, the passage emerges from a rippling sea of muddy water as though yearning toward the hint of fresher air swirling from above.  Clay walls reinforced with layers of river stones are lined with the pale tracery of mortar used to hold the rock in place.</description>
+    <position x="20" y="100" z="0" />
+    <arc exit="north" move="swim north" destination="16" />
+    <arc exit="up" move="swim up" destination="18" />
+  </node>
+  <node id="18" name="Segoltha Tunnel, Passage">
+    <description>The sloping tunnel floor is rescued from becoming a morass of mud by the river stones that have been used to create a rough pathway.  Chill mists swirl along the ceiling, driven by breezes from somewhere aboveground.</description>
+    <position x="0" y="80" z="0" />
+    <arc exit="southwest" move="swim southwest" destination="19" />
+    <arc exit="down" move="swim down" destination="17" />
+  </node>
+  <node id="19" name="Segoltha Tunnel, Passage">
+    <description>Thick layers of rushes have been spread over the ground, bringing the green scent of the outdoors to combat the damp air of the tunnel and muffling the sounds of those moving through.</description>
+    <position x="-20" y="100" z="0" />
+    <arc exit="northeast" move="northeast" destination="18" />
+    <arc exit="west" move="west" destination="20" />
+  </node>
+  <node id="20" name="Segoltha Tunnel, Passage">
+    <description>Great tree roots snake along the walls as though protecting the tunnel from the rich earth that presses forward on all sides.  Mosses fling unexpected ribbons of color against the gloom, their emerald filaments glittering with moisture.</description>
+    <position x="-40" y="100" z="0" />
+    <arc exit="east" move="east" destination="19" />
+    <arc exit="southwest" move="southwest" destination="21" />
+  </node>
+  <node id="21" name="Segoltha Tunnel, Passage" note="Altar">
+    <description>Earth and clay arch overhead to form a low ceiling, and half-timbers line the walls of this dark alcove.  Near a shadowed corner that holds a simple obsidian altar, a narrow ladder climbs to meet a lichen-covered trap door.</description>
+    <position x="-60" y="120" z="0" />
+    <arc exit="northeast" move="northeast" destination="20" />
+    <arc exit="climb" move="climb ladder" destination="22" />
+  </node>
+  <node id="22" name="Southern Trade Route, Endrus Forest">
+    <description>Coppery leaves casting dappled shadows against their pale bark, a few ragged shrubs grow among a tumbled collection of boulders left behind by floodwaters.  Between a dense growth of briars, a narrow gap leads back toward the trade route.</description>
+    <position x="-80" y="120" z="0" />
+    <arc exit="go" move="go root" destination="21" />
+    <arc exit="go" move="go gap" destination="23" />
+  </node>
+  <node id="23" name="Southern Trade Route, Endrus Forest" note="Map60_Southern_Trade_Route_Part_1.xml|STR">
+    <description>The grassy, weed-choked flood plain of the Segoltha River to the north transitions into the forest of Endrus.  The fringe of the woods here, growing ever denser as you gaze southward, consists mainly of oak and beech, interlaced with whitethorn, tangled briars and low-growing shrubs.</description>
+    <position x="-100" y="120" z="0" />
+    <arc exit="north" move="north" />
+    <arc exit="south" move="south" />
+    <arc exit="go" move="go bould" destination="22" />
+  </node>
+  <node id="24" name="A Dank Dark Passage">
+    <description>An obstacle course formed of pillaged packing crates in all sizes, shapes and states of decomposition hinders your movement through the passage.  Straw filling, moldy and brown, lies scattered about, jagged edges of rusty metal implements occasionally jutting above the mess.  This is a good place to walk softly.</description>
+    <position x="40" y="-40" z="0" />
+    <arc exit="southwest" move="southwest" destination="25" />
+    <arc exit="go" move="go narrow footholds" destination="29" />
+  </node>
+  <node id="25" name="Cluttered, Dank Passage">
+    <description>Boxes, sacks, baskets and crates lie upended, splintered, ripped apart and smashed into sawdust.  Numerous fat, bright-eyed rodents stare with unblinking eyes, their whiskers churning thoughtfully.</description>
+    <position x="20" y="-20" z="0" />
+    <arc exit="northeast" move="northeast" destination="24" />
+    <arc exit="south" move="south" destination="26" />
+  </node>
+  <node id="26" name="Dark Cluttered Passage">
+    <description>An obstacle course formed of pillaged packing crates in all sizes, shapes and states of decomposition hinders your movement through the passage.  Straw filling, moldy and brown, lies scattered about, jagged edges of rusty metal implements occasionally jutting above the mess.  This is a good place to walk softly.</description>
+    <position x="20" y="0" z="0" />
+    <arc exit="north" move="north" destination="25" />
+    <arc exit="south" move="south" destination="27" />
+  </node>
+  <node id="27" name="Cluttered, Dark Passage">
+    <description>Discarded weapons and armor lie heaped about, their jagged edges covered with corrosive rust-colored algae.  Maneuvering past the ruined merchandise is made more difficult by endless rats, madly scurrying through this area in blind panic.</description>
+    <position x="20" y="20" z="0" />
+    <arc exit="north" move="north" destination="26" />
+    <arc exit="southwest" move="southwest" destination="28" />
+  </node>
+  <node id="28" name="A Dank, Cluttered Passage">
+    <description>An obstacle course formed of pillaged packing crates in all sizes, shapes and states of decomposition hinders your movement through the passage.  Straw filling, moldy and brown, lies scattered about, jagged edges of rusty metal implements occasionally jutting above the mess.  This is a good place to walk softly.</description>
+    <position x="0" y="40" z="0" />
+    <arc exit="northeast" move="northeast" destination="27" />
+    <arc exit="go" move="go loose grill" destination="30" />
+  </node>
+  <node id="29" name="The Crossing, Trollferry Quay" note="Map1_Crossing.xml">
+    <description>A dilapidated wooden pier juts out into the steel-grey waters of the Oxenwaithe River here.  Several battered dinghies bounce up and down in time to the currents.  In olden days this was a major ferry crossing, presided over by a loathsome and capricious troll.  Now it is naught but a rotting ruin, as is no doubt the corpse of its former owner.</description>
+    <position x="20" y="-40" z="0" />
+    <arc exit="east" move="east" />
+    <arc exit="south" move="south" />
+  </node>
+  <node id="30" name="The Strand, Crystalline Beach" note="Map1_Crossing.xml">
+    <description>Sand continues to stretch from east to west.  Children of all races can often be found at the water's edge, playing games or building ephemeral castles.  To one side, a grove of spreading Wyndwood trees provides the perfect spot for quiet meditation, while further off, several braziers set on piles of rock indicate that this is a favorite picnic location.</description>
+    <description>The gently rushing waters of the Segoltha fill the air with a pleasant drone.  Traveling along the riverbank, you chance upon a large picnic area dotted with iron braziers set neatly on low rock pillars.</description>
+    <position x="-20" y="40" z="0" />
+    <arc exit="east" move="east" />
+    <arc exit="west" move="west" />
+  </node>
+  <node id="31" name="The Raven's Court, Secret Passage">
+    <description>Though the cool stone walls are bare, a long maroon runner with pale golden fringe spreads across the length of the floor.  The tunnel's interior is visible only by the overflow of light from the basement beyond.  Despite being underground, a fresh breeze fills the space from an opening overhead cleverly concealed with leafy hedges above.</description>
+    <position x="-60" y="-120" z="0" />
+    <arc exit="southwest" move="southwest" destination="32" />
+    <arc exit="go" move="go hole" destination="33" />
+  </node>
+  <node id="32" name="The Raven's Court, Basement">
+    <description>Crowding every inch of wall space, several shelves store everything from empty wine barrels to shiny gardening tools.  Piled into one corner, a collection of overturned boxes are arranged into layered seating like rows in an amphitheatre.  A long vegetable crate has been propped on its side for use as a podium in this makeshift meeting room.</description>
+    <position x="-80" y="-100" z="0" />
+    <arc exit="northeast" move="northeast" destination="31" />
+    <arc exit="go" move="go steep ramp" destination="34" />
+    <arc exit="go" move="go trapdoor" destination="35" />
+  </node>
+  <node id="33" name="The Raven's Court, Garden of Midnight" note="Map1_Crossing.xml">
+    <description>Tall boxwood hedges enclose the area, shading the flora from the garish light of day.  A striking black jade statue stands in the very middle, the silvery flagstone path unfurling outward in a large spiral from the center.  Slender beds of midnight glories fill the coil's twisting gaps, matched by a curious arrangement of dark withered buds encircling the shadowy sculpture.</description>
+    <position x="-40" y="-140" z="0" />
+    <arc exit="east" move="east" />
+    <arc exit="go" move="go hole" destination="31" />
+  </node>
+  <node id="34" name="Tunnel of Roses">
+    <description>Shuffling noises from the basement occasionally echo through the dark underground passage, lit by a few small glowstones inlaid in the ceiling.  No scent of dankness or mold lingers here, making the air refreshingly clean albeit a bit humid.  A painted mural of blossoming roses decorates the curved walls, and glimpses further east reveal the extent of the artist's work.</description>
+    <position x="-100" y="-80" z="0" />
+    <arc exit="east" move="east" destination="36" />
+    <arc exit="go" move="go metal ramp" destination="32" />
+  </node>
+  <node id="35" name="The Raven's Court, Scullery" note="Map1_Crossing.xml">
+    <description>Massive stone sinks are stationed along the wall for use by the service staff, designed to accommodate large loads of dishes used in the kitchen and dining room of the Court.  The room is quiet at the moment, the basins scrubbed clean and the tableware stored in cabinets until the next meal.</description>
+    <position x="-60" y="-100" z="0" />
+    <arc exit="go" move="go trapdoor" destination="32" />
+  </node>
+  <node id="36" name="Tunnel of Roses">
+    <description>The sound of rushing water from above fills this curve of the passage, mostly dark save for the dim light from few small glowstones in the ceiling.  Soft and quiet as a whisper, a gentle breeze flows through the tunnel and cleanses the humid air, leaving no unpleasant scent of dankness or mold.  An extensive mural of multicolored roses curves along the length of the walls and into the shadows in both directions.</description>
+    <position x="-80" y="-80" z="0" />
+    <arc exit="east" move="east" destination="37" />
+    <arc exit="west" move="west" destination="34" />
+  </node>
+  <node id="37" name="Tunnel of Roses">
+    <description>The muffled sounds of city life echo through this turn of the underground passage, originating from past the sloping ground where the tunnel approaches an opening.  Though the humid air is devoid of dank aromas, the tinge of soured ale occasionally drifts by on a soft breeze.  Daylight seeping in from the northeast illuminates the painted mural stretching along the curved walls, the subtle pinks and reds blending into the shadows toward the west.</description>
+    <position x="-60" y="-80" z="0" />
+    <arc exit="northeast" move="northeast" destination="38" />
+    <arc exit="west" move="west" destination="36" />
+  </node>
+  <node id="38" name="Behind the Half Pint Inn">
+    <description>Heavy wooden ale kegs line the small back alley on all sides to form high barriers, save for the area to the southwest that slopes into a dark underground tunnel.  Dimpled glass windows along the building wall prevent the tavern's patrons from noticing any suspicious activity in the cramped lot.  A tangle of blue violet wolfsbane spills over the edges of a faded red flower box toward the cobble below as if attempting a daring escape from its wooden prison.</description>
+    <position x="-40" y="-100" z="0" />
+    <arc exit="southwest" move="southwest" destination="37" />
+    <arc exit="go" move="go path" destination="39" />
+  </node>
+  <node id="39" name="The Crossing, Werfnen's Strole" note="Map1_Crossing.xml">
+    <description>Werfnen's Strole, the Path of Dreamers, leads from the glories of the High Temple to the renowned hospitality of Skalliweg Barrelthumper's Half Pint Inn.  The jocular Halfling is known throughout all Elanthia as the consummate innkeeper.  Mouthwatering aromas and heart-gladdening songs waft out of the inn, while the soothing gurgling of the tributary to the south creates a poignant counterpoint to the uproar within.</description>
+    <description>Werfnen's Strole, the Path of Dreamers, leads from the glories of the High Temple to the renowned hospitality of Skalliweg Barrelthumper's Half Pint Inn, brightly lit to welcome any late traveler.  The jocular Halfling is known throughout all Elanthia as the consummate innkeeper.  Mouthwatering aromas and heart-gladdening songs waft out of the inn, while the soothing gurgling of the tributary to the south creates a poignant counterpoint to the uproar within.</description>
+    <position x="-20" y="-120" z="0" />
+    <arc exit="east" move="east" />
+    <arc exit="go" move="go alley" destination="38" />
+  </node>
+  <node id="40" name="Riverbank Mudflats, Crates">
+    <description>Mildewed and nearly destroyed, old shipping crates and other discards have been stacked high and left to rot among the thin weeds.  In the scant shelter of ruined lumber, shreds of rancid cloth and strips of paper lie in tangled mats, evidence that at least the rodents of Crossing may find some appeal here.</description>
+    <position x="140" y="-80" z="0" />
+    <arc exit="out" move="out" destination="6" />
+  </node>
+  <node id="41" name="Thieves' Highway">
+    <description>Smooth stone walls wrap around the tunnel, giving it a circular shape that is just large enough for the tallest Gor'Tog to pass.  Cleared from rubble and trash, the walkway here is uninterrupted in either direction and dimly flickering lights within goat's horn sconces light the passage towards the southeast.  A dark, rubble-filled gloom flickers its shadows across the western path.</description>
+    <position x="60" y="-100" z="0" />
+    <arc exit="southeast" move="southeast" destination="42" />
+    <arc exit="west" move="west" destination="2" />
+  </node>
+  <node id="42" name="Thieves' Highway">
+    <description>Flickering lights, cast from goat's horn sconces, reveal a circular tunnel with a cleared walkway.  Winding swiftly underneath the city overhead, the tunnel is punctuated at one end by a single, darkened doorway cast in shifting shadows.</description>
+    <position x="80" y="-80" z="0" />
+    <arc exit="northwest" move="northwest" destination="41" />
+    <arc exit="go" move="go door" destination="43" />
+  </node>
+  <node id="43" name="Thieves' Guild, Master's Den" note="Map1_Crossing.xml">
+    <description>Sumptuous curtains of heavy Musparan silk drape from the walls, obscuring them in the hues of eventide.  Crushed velvet divans, dyed a deep plum hue, boast cloth-of-gold pillows.  Underfoot, the granite floors glitter with flecks of precious metals.  A low goldbark table sits in the center of the room.</description>
+    <position x="80" y="-60" z="0" />
+    <arc exit="go" move="go curtain" />
+  </node>
+</zone>

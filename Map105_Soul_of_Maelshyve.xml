@@ -1379,7 +1379,7 @@
     <arc exit="southwest" move="southwest" />
     <arc exit="go" move="go silver liquid" destination="1" />
   </node>
-  <node id="53" name="Abyssal Nether, Maelshyve's Remnant" note="Map66_STR3.xml|Abyss|Ilithi|Southern Trade Route|STR">
+  <node id="53" name="Abyssal Nether, Maelshyve's Remnant" note="Map66_Shard_to_Gondola_Area.xml|Abyss|Ilithi|Southern Trade Route|STR">
     <description>The coiling helix of fused bone ends here, dropping off into the abyss.  Cradled in the clawlike comfort of the path's edge is a great black shell, cracked open like an egg.  From within, an endless river of midnight-blue sludge pours out, streaming into the endless darkness below.</description>
     <description>Cradled in the clawlike comfort of the path's edge is a great black shell, cracked open like an egg.  From within, an endless river of midnight-blue sludge pours out, streaming into the endless darkness below.</description>
     <position x="260" y="100" z="0" />

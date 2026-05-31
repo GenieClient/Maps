@@ -2470,7 +2470,7 @@
     <arc exit="east" move="east" destination="91" />
     <arc exit="west" move="west" destination="390" />
   </node>
-  <node id="390" name="Aesry Surlaenis'a, Eluned Prayer Gate" note="Map98_Road_to_Aesry.xml|West">
+  <node id="390" name="Aesry Surlaenis'a, Eluned Prayer Gate" note="Map98_Road_to_Aesry_Frostweavers_Snow_Gobs.xml|West">
     <description>Gentle terraces of tilled earth rise to the west, leading towards the Selhin Dava.  A large prayer gate, watched over by two guards, stands as the only demarcation between the inner slope and the city.  Dedicated to Eluned of the Waters, the prayer gate bears an anloral sculpture of a leaping dolphin at its peak.</description>
     <position x="0" y="440" z="0" />
     <arc exit="west" move="west" />

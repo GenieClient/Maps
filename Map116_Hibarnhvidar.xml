@@ -1549,7 +1549,7 @@
     <position x="160" y="220" z="1" />
     <arc exit="out" move="out" destination="123" />
   </node>
-  <node id="216" name="Cavern of Fire, Stalagmite Maze" note="Map118e_Firecats.xml">
+  <node id="216" name="Cavern of Fire, Stalagmite Maze" note="Map118e_Cavern_of_Fire.xml">
     <description>The air feels thick and heavy with humidity as the heat bakes away what moisture seeps from the cavern's rocky walls.  Stalagmites jut up from the floor, forcing travelers to make their way through a confusing maze of passages that twist and turn, some rising, some falling, some doubling back upon themselves.  The haze of smoke, lit by a faint glow emanating from hairline cracks in the walls, makes the cavern even more disorienting.</description>
     <position x="50" y="40" z="1" />
     <arc exit="north" move="north" />

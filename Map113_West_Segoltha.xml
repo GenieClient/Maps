@@ -29,7 +29,7 @@
     <arc exit="go" move="go skiff" destination="2" />
     <arc exit="go" move="go skiff" destination="3" />
   </node>
-  <node id="5" name="Ilaya Taipa, Northeast Harbor Wall" note="Map112_Ilaya_Taipa.xml|Ilaya Tapia">
+  <node id="5" name="Ilaya Taipa, Northeast Harbor Wall" note="Map112_Ilaya_Taipa_River_Clan.xml|Ilaya Tapia">
     <description>Stone walls run almost the entire length of the harbor, save for a gap about thirty paces wide through which ships may enter their home port.  A log boom stretches between two towers to bar that gap, allowing only those whose identity has been verified by the guards to make their way into the village itself.  Heavy oak doors in the wall provide access to the outer docks where foreign traders may unload their wares.</description>
     <position x="540" y="140" z="0" />
     <arc exit="northeast" move="northeast" />

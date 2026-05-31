@@ -715,7 +715,7 @@
     <arc exit="east" move="east" destination="112" />
     <arc exit="west" move="west" destination="78" />
   </node>
-  <node id="112" name="Southern Trade Route, Esouvar Deriel" note="Map62_STR2.xml|Southern Trade Route|STR|Shard|Leth Deriel">
+  <node id="112" name="Southern Trade Route, Esouvar Deriel" note="Map62_Southern_Trade_Route_Part_2.xml|Southern Trade Route|STR|Shard|Leth Deriel">
     <description>A haunting shadow, perhaps the spirit of some child lost long ago to the forest, lingers in the area.  Leaves rustle, their bleak hues perhaps a shade lighter than they should be.  The dark skins of the ironwoods glimmer sullenly with the sheen of a thousand dew drops.</description>
     <position x="720" y="260" z="0" />
     <arc exit="northeast" move="northeast" />

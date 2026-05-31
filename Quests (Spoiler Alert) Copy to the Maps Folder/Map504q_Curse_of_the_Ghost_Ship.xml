@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<zone name="Curse of the Ghost Ship" id="504q">
+  <node id="1" name="Viper Dock">
+    <description>The smell of ocean air hangs heavily around the dock, a mixture of salt and old fish.  Ropes and nets litter the dock between crates and other cargo waiting to be loaded, leaving only a small path through the mess to the end of the dock.  A large storage vault is built next to the main building, two guards watching over its entrance.</description>
+    <position x="120" y="480" z="0" />
+    <arc exit="go" move="go crest rider" destination="2" />
+  </node>
+  <node id="2" name="The Crest Rider, Main Deck">
+    <description>Two rowboats hang upside down from supports on either side of the deck.  Their hulls are so clean and freshly painted that they appear to never have been set afloat, and they sway gently as they mimic the motion of the sea.  A flight of steps leads up to the quarterdeck and a vibrant red hatch in the dark blue wall provides passage to the deck below.  Against the aft wall, a cabinet holds equipment and fishing poles used to supplement the ship's stores when at sea.</description>
+    <position x="100" y="460" z="0" />
+    <arc exit="none" move="forward" destination="3" />
+    <arc exit="climb" move="climb hatch" destination="7" />
+    <arc exit="climb" move="climb steps" destination="99" />
+  </node>
+  <node id="3" name="The Crest Rider, Main Deck">
+    <description>The small space where the top rail meets the bulwark has been fitted on the port side to store the forged levers used to turn the mid-deck capstan.  On the starboard side, the oars for the rowboats hang lashed in place.  Assorted barrels emit a variety of scents, most of which don't improve on the salty fish fragrance of the deck.  Aft, the windows on the pilothouse glint in the light, overlooking the area from the lofty heights of the quarterdeck.</description>
+    <position x="100" y="440" z="0" />
+    <arc exit="none" move="aft" destination="2" />
+    <arc exit="none" move="forward" destination="4" />
+  </node>
+  <node id="4" name="The Crest Rider, Main Mast">
+    <description>The railing around the main mast has received the same careful coat of varnish as the wide planking, all of which contrast with the darker mast and its many brass hooks and fittings.  Several overhead yardarms carry the various sails and a few tightly rolled studdingsails await the Captain's order to unfurl them.  A cool draft emanates from a wood grating that provides ventilation to the lower deck.</description>
+    <position x="100" y="420" z="0" />
+    <arc exit="none" move="aft" destination="3" />
+    <arc exit="none" move="forward" destination="5" />
+    <arc exit="climb" move="climb ratlines" destination="102" />
+  </node>
+  <node id="5" name="The Crest Rider, Under The Canopy">
+    <description>Bolted to the deck in the center of the ship are two back-to-back benches that enjoy protection from the elements under an overhead canopy constructed of sturdy canvas.  A small table to the side of each bench allows for placement of personal articles or food and drink, creating the perfect setting for a picnic at sea.  A few neat coils of rope hang ready from hooks on the railings under the canopy.</description>
+    <position x="100" y="400" z="0" />
+    <arc exit="none" move="aft" destination="4" />
+    <arc exit="none" move="forward" destination="6" />
+  </node>
+  <node id="6" name="The Crest Rider, Main Deck and Foremast">
+    <description>Neatly fitted and sealed around the foremast with black tar, the wide oak planking stretches aft past a large grating.  The bolts and rings on the sails above clunk against the mast and the myriad lines that form a pyramid as they soar upwards.  A painted black railing topped by a pristine white ledge runs from the forecastle aft on both sides of the ship.</description>
+    <position x="100" y="380" z="0" />
+    <arc exit="none" move="aft" destination="5" />
+    <arc exit="go" move="go metal hatch" destination="10" />
+    <arc exit="climb" move="climb narrow stairs" destination="11" />
+    <arc exit="climb" move="climb large grating" destination="12" />
+  </node>
+  <node id="7" name="The Crest Rider, Passageway">
+    <description>This narrow passageway has been painted light cream with a marine blue stripe halfway up that runs its length.  Wall sconces support sturdy lit candles that create a warm, close atmosphere in contrast to the openness and winds above.  The spotless deck planks have been painted to match the band on the walls, and the only deviation from the color scheme is the doors along the passageway.</description>
+    <position x="80" y="460" z="0" />
+    <arc exit="go" move="go green door" destination="8" />
+    <arc exit="climb" move="climb ladder" destination="9" />
+    <arc exit="climb" move="climb stairs" destination="2" />
+    <arc exit="none" move="forward" destination="13" />
+    <arc exit="climb" move="climb narrow ladder" destination="9" />
+  </node>
+  <node id="8" name="The Crest Rider, Salon">
+    <description>Diagonally laid warm oak paneling is elegantly accompanied by green velvet cushions on benches along the bulkhead.  The tooling on the ornate gold frame over the longest bench is continued in the pattern of the needlepoint on a throw pillow.  A softly glowing oil lamp is suspended over a narrow oak table bolted to the deck, and a sideboard and cabinet are attached to the port bulkhead.</description>
+    <position x="60" y="480" z="0" />
+    <arc exit="go" move="go green door" destination="7" />
+  </node>
+  <node id="9" name="The Crest Rider, Cargo Hold">
+    <description>Under an overhead grate that provides easy access from above, this area, the largest on this level, stores whatever cargo the Captain has contracted to ship.  The ship's supplies are stored in the far corner behind a door in a latticework wall.</description>
+    <position x="40" y="460" z="0" />
+    <arc exit="climb" move="climb ladder" destination="7" />
+    <arc exit="climb" move="climb narrow ladder" destination="7" />
+    <arc exit="go" move="go door" destination="101" />
+    <arc exit="climb" move="climb ladd" destination="7" />
+  </node>
+  <node id="10" name="The Crest Rider, Forecastle">
+    <description>Creating the appearance of wide shelves with a right-angled board at the edge that keeps the contents in place, the sides of the forecastle have been divided into rows of bunks three high.  Padded with ticking filled with straw, each bunk has just enough overhead space to allow its occupant to climb out with speed when called.  A tiny metal brazier in the center of the room casts doubt as to the amount of warmth available to the crew on a winter night.</description>
+    <position x="120" y="380" z="0" />
+    <arc exit="go" move="go metal hatch" destination="6" />
+  </node>
+  <node id="11" name="The Crest Rider, Bow">
+    <description>An exaggerated swoop in the curve of the bulwark lends a dashing air to this schooner, an air that is continued in her name and figurehead.  Ornate brass plaques bearing the ship's name have been securely fastened back-to-back through the port frame.  Overhead, the bowsprit and its sails soar forward, leaving little space for movement here, and blocking much of the view to starboard.</description>
+    <position x="120" y="360" z="0" />
+    <arc exit="climb" move="climb narrow stairs" destination="6" />
+  </node>
+  <node id="12" name="The Crest Rider, Passageway">
+    <description>By assigning a sailor to continuously circle through the sloop, the Captain ensures that his decks are shipshape.  The marine blue floor planks glisten as if the paint is wet but the lingering scent of pine suggests that a sailor has just finished a routine swabbing.</description>
+    <position x="40" y="380" z="0" />
+    <arc exit="climb" move="climb floor grating" destination="9" />
+    <arc exit="go" move="go black door" destination="17" />
+    <arc exit="go" move="go brown door" destination="18" />
+  </node>
+  <node id="13" name="The Crest Rider, Passageway">
+    <description>By assigning a sailor to continuously circle through the sloop, the Captain ensures that his decks are shipshape.  The marine blue floor planks glisten as if the paint is wet but the lingering scent of wood ash suggests that a sailor has just finished a routine swabbing.</description>
+    <position x="80" y="440" z="0" />
+    <arc exit="none" move="aft" destination="7" />
+    <arc exit="go" move="go red door" destination="96" />
+    <arc exit="none" move="forward" destination="14" />
+  </node>
+  <node id="14" name="The Crest Rider, Passageway">
+    <description>By assigning a sailor to continuously circle through the sloop, the Captain ensures that his decks are shipshape.  The marine blue floor planks glisten as if the paint is wet but the lingering scent of wood ash suggests that a sailor has just finished a routine swabbing.</description>
+    <position x="80" y="420" z="0" />
+    <arc exit="none" move="aft" destination="13" />
+    <arc exit="none" move="forward" destination="15" />
+    <arc exit="go" move="go blue door" destination="97" />
+  </node>
+  <node id="15" name="The Crest Rider, Passageway">
+    <description>By assigning a sailor to continuously circle through the sloop, the Captain ensures that his decks are shipshape.  The marine blue floor planks glisten as if the paint is wet but the lingering scent of wood ash suggests that a sailor has just finished a routine swabbing.</description>
+    <position x="80" y="400" z="0" />
+    <arc exit="none" move="aft" destination="14" />
+    <arc exit="go" move="go yellow door" destination="98" />
+    <arc exit="none" move="forward" destination="12" />
+  </node>
+  <node id="16" name="Starboard Main Deck">
+    <description>A round ventilation pipe, surrounded by wood blocks, has lost its protective cover and water damage is evident in the swelling and cracking of the planks encircling its passage below deck.  One of the balusters has absorbed more moisture than it could hold and appears to have exploded, littering the deck with bits and pieces, some recognizable, some not.  An empty tar barrel lies on its side, rolling with the movement of the ship.</description>
+    <position x="260" y="240" z="0" />
+    <arc exit="none" move="port" destination="19" />
+    <arc exit="none" move="forward" destination="36" />
+    <arc exit="go" move="go door" destination="94" />
+  </node>
+  <node id="17" name="The Crest Rider, Storage Closet">
+    <description>Spare buckets and mops for deck swabbing are stacked alongside brooms and painting equipment.  A small cabinet in the corner holds the wax, needles and thread used to repair the sails.</description>
+    <position x="20" y="380" z="0" />
+    <arc exit="go" move="go black door" destination="12" />
+  </node>
+  <node id="18" name="The Crest Rider, Galley">
+    <description>A blackened iron stove throws a steady heat that dominates the galley with its sultry presence.  Hanging over the glowing coals, a large black cauldron wafts vapors into the air with the definite scent of fish.  A crate sits atop a battered table pushed against the window ledge of the pass through to the dining hall, while bowls and dishes are stacked on the shelf above the window.</description>
+    <position x="20" y="360" z="0" />
+    <arc exit="go" move="go brown door" destination="12" />
+  </node>
+  <node id="19" name="Main Deck">
+    <description>The quarterdeck looms above, half covered by the port canopy, its only access a ramshackle wood ladder secured to its face wall.  A splintered door slams open and shut with each lurch of the ship but its latch is obviously broken because it never catches.  Stacked against the wall on their sides are several weathered barrels resting in a rack that looks like it will soon collapse from exposure and release them to roll across the deck.</description>
+    <position x="220" y="240" z="0" />
+    <arc exit="none" move="port" destination="20" />
+    <arc exit="none" move="starboard" destination="16" />
+    <arc exit="none" move="forward" destination="21" />
+    <arc exit="climb" move="climb ladder" destination="37" />
+    <arc exit="go" move="go splintered door" destination="38" />
+  </node>
+  <node id="20" name="Port Main Deck">
+    <description>Dark tar splotches cover a portion of the deck planks that have not been bleached white between the moisture, the sun and the briny air.  Rising to port and running aft is an enclosure whose walls and roof effectively block winds from that direction.  Sea birds flying south seem to have rested onboard for a bit and the deck has been peppered with cream and green splotches that form small inverted cones, even on top of the tar stains.</description>
+    <position x="180" y="240" z="0" />
+    <arc exit="none" move="starboard" destination="19" />
+    <arc exit="none" move="forward" destination="27" />
+  </node>
+  <node id="21" name="Main Deck">
+    <description>The mizzenmast overhead sags to starboard as a few ear rings have come off the yard.  Coils of line lie tangled on the deck, obfuscating loose planks and a hole clear through the deck beam.  A rather large piece of sail has laid in a heap at the base of the mast long enough for the rainwater collected in its folds to have gone green.</description>
+    <position x="220" y="220" z="0" />
+    <arc exit="none" move="aft" destination="19" />
+    <arc exit="none" move="forward" destination="22" />
+    <arc exit="climb" move="climb ratlines" />
+    <arc exit="climb" move="climb ratline" destination="83" />
+    <arc exit="none" move="starboard" destination="36" />
+    <arc exit="none" move="pprt" destination="27" />
+  </node>
+  <node id="22" name="Main Deck">
+    <description>Decoratively carved coaming frames a rather large hatch next to a wood-roofed storage shack.  Badly in need of repair, the roofing material has cracked and peeled and small pieces litter the deck.  Hung on a hook set into the shack are several spare buoys on knotted ropes.</description>
+    <position x="220" y="180" z="0" />
+    <arc exit="none" move="aft" destination="21" />
+    <arc exit="none" move="forward" destination="23" />
+    <arc exit="none" move="port" destination="28" />
+    <arc exit="none" move="starboard" destination="35" />
+  </node>
+  <node id="23" name="Main Deck">
+    <description>Chains and rusted iron weights fill a wooden box permanently affixed to the deck with L irons and bolts.  The view of the sky is blocked as a ragged sail on the main course dances and flutters in the wind.  A missing plank reveals a spot where knee and stanchion meet the stringer above.</description>
+    <position x="220" y="150" z="0" />
+    <arc exit="none" move="aft" destination="22" />
+    <arc exit="none" move="forward" destination="24" />
+    <arc exit="none" move="port" destination="29" />
+    <arc exit="none" move="starboard" destination="34" />
+    <arc exit="climb" move="climb ratline" destination="107" />
+  </node>
+  <node id="24" name="Main Deck">
+    <description>Shadowed by the foremast, this section of the ship contains a chill not felt on the starboard side of the vessel.  Drifting from a large grate in the floor is the definite scent of mold and wet wood, yet the surrounding deck is dry.  A wood bench that was once a carpenter's work of art now sits empty and the telltale white curlicues on the seat reveal the sea is exacting its due.</description>
+    <position x="220" y="90" z="0" />
+    <arc exit="none" move="aft" destination="23" />
+    <arc exit="none" move="forward" destination="25" />
+    <arc exit="none" move="forward to starboard" destination="32" />
+    <arc exit="none" move="forward to port" destination="31" />
+  </node>
+  <node id="25" name="Main Deck">
+    <description>A rusted grappling iron, a length of robin caught in one of its flukes, has been end-for-ended and sits useless on the planking.  An outrigger for the studding sails runs forward from the foremast above, its halyards a good deal slacker than they should be.  The thick oak foremast, over thirty hands around, is braced by a stay running towards the bowsprit.</description>
+    <position x="220" y="40" z="0" />
+    <arc exit="none" move="aft" destination="24" />
+    <arc exit="none" move="forward" destination="26" />
+    <arc exit="climb" move="climb shroud" destination="85" />
+  </node>
+  <node id="26" name="Bow" color="#00FF00">
+    <description>The creaking bowsprit swings uneasily.  Aloft, the threadbare sails drape from their lines, only half responsive to the passing breezes.  A large plank affixed to the ship's frame that hangs vertically from its only remaining trunnel appears to have secured the now missing plaque that would have named this ship.</description>
+    <position x="220" y="0" z="0" />
+    <arc exit="none" move="aft" destination="25" />
+    <arc exit="none" move="aft to port" destination="31" />
+    <arc exit="none" move="aft to starboard" destination="32" />
+  </node>
+  <node id="27" name="Port Main Deck">
+    <description>Latched to the aft balustrade is a small gate that allows for formal passage from ship to ship or shore via plank.  Surfaces once painted a bright blue have cracked, dulled and worn away from the waves' constant assault, though a small area shaded by the tarnished silver gate latch on the forward balustrade retains a hint of former glory.</description>
+    <position x="180" y="220" z="0" />
+    <arc exit="none" move="aft" destination="20" />
+    <arc exit="none" move="forward" destination="28" />
+  </node>
+  <node id="28" name="Port Main Deck">
+    <description>Patterns of white salt lines flow across the deck in elongated circles marking the sea's victory at impregnating the wood.  Cracks disfigure the waist-high balustrades that stretch from bow to stern both port and starboard on this ship.  Ready to be pulled into service, a large plank rests on its side.</description>
+    <position x="180" y="180" z="0" />
+    <arc exit="none" move="aft" destination="27" />
+    <arc exit="none" move="forward" destination="29" />
+  </node>
+  <node id="29" name="Port Main Deck">
+    <description>Each swell the ship takes broadside causes an untidy coil of rope with one end lashed to the balustrade to snake across the deck.  Overhead, tightly twisted in a bit of rigging, a portion of torn sail hangs captured, stopped from taking a swim in the ever-hungry sea.</description>
+    <position x="180" y="90" z="0" />
+    <arc exit="none" move="aft" destination="28" />
+    <arc exit="none" move="forward" destination="30" />
+  </node>
+  <node id="30" name="Port Main Deck">
+    <description>Shreds of rope and pieces of sail skitter about the deck, blown into and out of a vortex as if forming a miniature tornado.  Suspended from frayed ropes, a single damaged oar left in the grummets clatters against the port rail.  The backstays pass overhead, stretched taut and secured to a bolt set in the stanchion beneath the deck beam.</description>
+    <position x="180" y="40" z="0" />
+    <arc exit="none" move="aft" destination="29" />
+    <arc exit="none" move="forward to starboard" destination="31" />
+  </node>
+  <node id="31" name="Port Bow">
+    <description>The soft curve of the stem meets the bowsprit up ahead.  The head sails barely cling to their lines, having been spoiled and ripped by the winds.  A large mangonel rests just to port of the bowsprit, ready to bombard any errant pirates.  Rocks are piled nearby and a few coils of chain lie against a toppled barrel.</description>
+    <position x="200" y="20" z="0" />
+    <arc exit="none" move="aft to port" destination="30" />
+    <arc exit="none" move="forward to starboard" destination="26" />
+    <arc exit="none" move="aft to starboard" destination="24" />
+  </node>
+  <node id="32" name="Starboard Bow">
+    <description>A clanking sound overhead warns of a loose jib swinging to and fro as the ship steadily bucks the wind and sea swells.  Part of the ship's siding has been cut away to allow the mangonel to extend its range by being released closer to the ship's edge.</description>
+    <position x="240" y="20" z="0" />
+    <arc exit="none" move="aft to starboard" destination="33" />
+    <arc exit="none" move="forward to port" destination="26" />
+    <arc exit="none" move="aft to port" destination="24" />
+  </node>
+  <node id="33" name="Starboard Main Deck">
+    <description>Beneath the balustrade a row of grummets lie empty, their limp forms awaiting the oak oars stacked on the rack to starboard.  Missing its business end, a length of splintered pole hangs useless from one grummet, the paddle portion lost to the churning sea.  Three small grates in the planking make each footstep echo in this section of deck.</description>
+    <position x="260" y="40" z="0" />
+    <arc exit="climb" move="climb grate" destination="42" />
+    <arc exit="none" move="forward to port" destination="32" />
+    <arc exit="none" move="aft" destination="34" />
+  </node>
+  <node id="34" name="Starboard Main Deck">
+    <description>Two large barrels, the ropes holding their slats together frayed and shredded by exposure to the elements, stand lashed to a balustrade by a chain.  One barrel's warped lid rests against a cracked deck plank.</description>
+    <position x="260" y="90" z="0" />
+    <arc exit="none" move="aft" destination="35" />
+    <arc exit="none" move="forward" destination="33" />
+  </node>
+  <node id="35" name="Starboard Main Deck" color="#00FF00">
+    <description>Thick rope coils, that should be neatly hung from hooks on the starboard wall, have spilled all over the deck, soaking up whatever the elements deliver while they knot and slide across the decking when the ship rolls.  A few feathers flutter on the deck, captured in some long-dried substance that stains the planking.</description>
+    <position x="260" y="180" z="0" />
+    <arc exit="none" move="aft" destination="36" />
+    <arc exit="none" move="forward" destination="34" />
+  </node>
+  <node id="36" name="Starboard Main Deck">
+    <description>Splintered and cracked along the edge, a damaged plank reveals that the now exposed deck beam has fallen victim to the elements and has darkened and begun to crack.  Fanciful balustrades are protected from the sea by solid planking on the outside that provides a more protected passage to the bow.  This slight lessening of exposure has allowed more of the original beauty of the balustrades to remain.</description>
+    <position x="260" y="220" z="0" />
+    <arc exit="none" move="aft" destination="16" />
+    <arc exit="none" move="forward" destination="35" />
+  </node>
+  <node id="37" name="Quarterdeck">
+    <description>Situated to protect the ship from surprise rear attacks, a broken mangonel butts the stern but no ammunition is in sight.  Bits of sail and frayed lines lay amidst assorted pieces of wood that once formed the missing balustrade to port of the mangonel.  An awning meant to provide protection from the elements flaps loosely as its neglected ropes heave with effort at each gust of wind.</description>
+    <position x="240" y="260" z="0" />
+    <arc exit="climb" move="climb ladder" destination="19" />
+    <arc exit="none" move="port" destination="39" />
+    <arc exit="none" move="starboard" destination="40" />
+  </node>
+  <node id="38" name="Under the Quarterdeck">
+    <description>Snuggly fitted around this small platform are built-in oak chests whose natural luster provides a stark contrast to the dull metal ladder that leads into the gloom below.  Each swell causes the unlatched door to slam open or closed, which dissipates the stale odor that drifts upwards from the darkness below with the salty scent of the sea.</description>
+    <position x="200" y="260" z="0" />
+    <arc exit="go" move="go splintered door" destination="19" />
+  </node>
+  <node id="39" name="Port Quarterdeck">
+    <description>Erected to provide some relief from the elements, the now threadbare awning has sufficiently shielded this section of the polished deck to provide a glimpse of the ship's past grandeur.  Dark spots above, deposits made in passing by sea gulls circling for a meal, give this area a dappled look, especially when the wind blows and the awning strains against it.  Fastened with ropes to tall poles, like sewing needles with large eyes, the entire construction creaks and moans as if ready to collapse.</description>
+    <position x="230" y="260" z="0" />
+    <arc exit="none" move="starboard" destination="37" />
+  </node>
+  <node id="40" name="Starboard Quarterdeck">
+    <description>After-bitts nailed to the deck hold more than a few fraying lines as the running rigging beneath the gaff shows the toll of neglect.  Although bleached from constant exposure to the elements, the quality of the planking here remains a cut above the rest of the main deck and has not begun to warp.  Several steps lead to a semi-enclosed perch high enough to view anything not concealed by the sails.</description>
+    <position x="250" y="260" z="0" />
+    <arc exit="climb" move="climb some steps" destination="41" />
+    <arc exit="none" move="port" destination="37" />
+  </node>
+  <node id="41" name="Quarterdeck Helm">
+    <description>Tilted against the plates that shield the sides of this perch, a pipe disappears into the bowels of the ship.  Hardly visible under deposits left by the seagulls that commandeered this high spot for their home, the brass rail cap is badly scratched and discolored.  This helm faces forward and while once a place of honor it now presents a sorry vista of tattered sails and limp lines.</description>
+    <position x="250" y="270" z="0" />
+    <arc exit="climb" move="climb some steps" destination="40" />
+  </node>
+  <node id="42" name="Middle Deck Passageway">
+    <description>An overhead grate to starboard allows light to stream down from above into this area, which is somewhat larger than the rest of the passageway yet almost filled by the foremast as it passes through the decking.  Spider-web patterns formed by slowly dripping saltwater stains the walls and crusty, white puddle-shaped stains overlap on the deck planking.  A small forward compartment stores cleaning supplies.</description>
+    <position x="300" y="40" z="0" />
+    <arc exit="none" move="aft" destination="44" />
+    <arc exit="none" move="forward" destination="43" />
+    <arc exit="go" move="go door" destination="50" />
+    <arc exit="climb" move="climb ladder" destination="33" />
+  </node>
+  <node id="43" name="Middle Deck Compartment">
+    <description>Low and narrow, it is a tight squeeze to get in here.  Once inside, there is not much space to move about as the room is filled with brooms, buckets, and mops.  A large barrel has been shoved into the point of the bow and a coiled chain is stuffed next to it.</description>
+    <position x="300" y="20" z="0" />
+    <arc exit="none" move="aft" destination="42" />
+  </node>
+  <node id="44" name="Middle Deck Passageway">
+    <description>Quickly following on the heels of a glimmer of light from forward, enough fresh air sweeps through this area to provide a bracing reminder of the power of the winds at sea.  Both to port and starboard, strong stanchions frame narrow doorways as the ship's shape angles toward the bow.  The distant sound of sloshing water seems directly related to how great a list the last wind gust exacted.</description>
+    <position x="300" y="80" z="0" />
+    <arc exit="none" move="aft" destination="45" />
+    <arc exit="none" move="forward" destination="42" />
+    <arc exit="go" move="go narrow door" destination="55" />
+    <arc exit="go" move="go painted door" />
+    <arc exit="go" move="go door" destination="55" />
+    <arc exit="go" move="go other door" destination="112" />
+  </node>
+  <node id="45" name="Middle Deck Passageway">
+    <description>No light from above reaches this portion of the passageway, and the elaborate gilding near the overhead is almost lost in the gloom.  The lively red walls are the brownish cast of dried blood, while the flame-shaped halo of scorch marks at the top of a ruined torch in a wall loop offers no illumination.  A skittering sound hints that not all of the rats have deserted this ship, a thought perhaps better addressed above in the light.</description>
+    <position x="300" y="120" z="0" />
+    <arc exit="none" move="aft" destination="46" />
+    <arc exit="none" move="forward" destination="44" />
+    <arc exit="go" move="go sturdy door" destination="113" />
+    <arc exit="go" move="go fragile door" destination="114" />
+    <arc exit="go" move="go door" destination="113" />
+  </node>
+  <node id="46" name="Middle Deck Passageway">
+    <description>With each roll of the ship, the open door to starboard swings on its hinges.  Bits of wood spill from that door, littering the passageway up to where the mainmast goes below.  To port is a carved oak door embellished with a gold leaf sign.</description>
+    <position x="300" y="140" z="0" />
+    <arc exit="none" move="aft" destination="47" />
+    <arc exit="none" move="forward" destination="45" />
+    <arc exit="go" move="go oak door" destination="119" />
+  </node>
+  <node id="47" name="Middle Deck Passageway">
+    <description>A narrow door to port is partially open, swollen from water damage and unable to fit within its frame.  The fine oak planking underfoot is water-stained and beginning to buckle.  The definite scent of mold is strong here, despite the purifying nature of the sea salt that permeates everything.</description>
+    <position x="300" y="180" z="0" />
+    <arc exit="none" move="aft" destination="48" />
+    <arc exit="none" move="forward" destination="46" />
+    <arc exit="go" move="go narrow door" destination="117" />
+  </node>
+  <node id="48" name="Middle Deck Passageway">
+    <description>The mizzenmast fills so much of this space that passage around it involves a good squeeze to port or starboard.  Overhead, the signs of water damage are evident on the planks where they butt the mast.  What little light drifts through that space gets lost before it reaches the deck.  On the port side of the passage, next to a ladder, stands a barred door with a small square peephole.</description>
+    <position x="300" y="200" z="0" />
+    <arc exit="none" move="aft" destination="49" />
+    <arc exit="none" move="forward" destination="47" />
+    <arc exit="climb" move="climb ladder" destination="62" />
+    <arc exit="go" move="go polished door" destination="58" />
+    <arc exit="go" move="go shattered door" destination="118" />
+  </node>
+  <node id="49" name="Middle Deck Passageway">
+    <description>The forward view of the long passageway is shadowy and blocked by a thick mast as it descends to the bowels of the ship.  Aft is a long wall with a painted mural that shows the beginning signs of water damage.  Still hanging in its holder, a depleted torch adds the hint of burnt tar to the passageway's decidedly musty air.</description>
+    <position x="300" y="240" z="0" />
+    <arc exit="none" move="forward" destination="48" />
+    <arc exit="climb" move="climb ladder" destination="94" />
+  </node>
+  <node id="50" name="First Mate's Quarters">
+    <description>This room is sparsely furnished and well ventilated by open scrollwork designs near the ceiling.</description>
+    <position x="310" y="40" z="0" />
+    <arc exit="go" move="go door" destination="42" />
+  </node>
+  <node id="55" name="Guest Quarters">
+    <description>Simple furnishings rest on a few small rugs that provide scant cover for the polished floor.  A double bed almost fills the room, close to the bureau on the bulkhead beneath the scrollwork vents.  Fastened to the wall closest to the door is a wooden bar, probably meant for hanging garments.</description>
+    <position x="280" y="80" z="0" />
+    <arc exit="go" move="go narrow door" destination="44" />
+    <arc exit="go" move="go door" destination="44" />
+  </node>
+  <node id="58" name="Ship's Office">
+    <description>A highly polished desk faces a wall cabinet full of drawers and cubbyholes.  The black paint on the deck is so shiny it appears wet, even where the chair is pushed back from the desk.  A simple oak door in the aft wall has been touched up near the latch with brown paint, giving it a mottled appearance.</description>
+    <position x="320" y="200" z="0" />
+    <arc exit="go" move="go polished door" destination="48" />
+    <arc exit="go" move="go oak door" destination="120" />
+  </node>
+  <node id="59" name="Lower Deck Passageway">
+    <description>An archway behind the foremast marks the end of the passageway.  From the archway to the split double door to aft, deep grooves have been worn into the planking around the mast.  </description>
+    <position x="360" y="60" z="0" />
+    <arc exit="none" move="aft" destination="60" />
+    <arc exit="go" move="go arch" destination="64" />
+  </node>
+  <node id="60" name="Lower Deck Passageway">
+    <description>A crooked opening is all that is left of a split door, hanging on ruined hinges in opposite directions.</description>
+    <position x="360" y="100" z="0" />
+    <arc exit="none" move="aft" destination="61" />
+    <arc exit="none" move="forward" destination="59" />
+    <arc exit="go" move="go door" destination="65" />
+  </node>
+  <node id="61" name="Lower Deck Passageway">
+    <description>To starboard, creaking and spewing splinters with each resounding thud, a small door swings on rusted hinges.</description>
+    <position x="360" y="140" z="0" />
+    <arc exit="climb" move="climb ladder" destination="71" />
+    <arc exit="none" move="aft" destination="62" />
+    <arc exit="none" move="forward" destination="60" />
+  </node>
+  <node id="62" name="Lower Deck Passageway">
+    <description>The mizzenmast fills this narrow passage, leaving space for a ladder between the mast and the wall to starboard.  Darkness fills a squared arch, blending it into the grey walls.</description>
+    <position x="360" y="180" z="0" />
+    <arc exit="none" move="aft" destination="63" />
+    <arc exit="none" move="forward" destination="61" />
+    <arc exit="go" move="go arch" destination="66" />
+    <arc exit="go" move="go door" destination="67" />
+    <arc exit="climb" move="climb ladder" destination="48" />
+  </node>
+  <node id="63" name="Lower Deck Passageway">
+    <description>Gloomy grey paint has been splashed on the walls and candle brackets on the starboard wall hold two stubs.  Aft is a wide hatch. </description>
+    <position x="360" y="220" z="0" />
+    <arc exit="none" move="forward" destination="62" />
+  </node>
+  <node id="64" name="Galley Storage">
+    <description>Neatly stacked crates, barrels and trunks line aisles as deck-to-beam shelving holds a variety of items.</description>
+    <position x="370" y="60" z="0" />
+    <arc exit="go" move="go arch" destination="59" />
+  </node>
+  <node id="65" name="Crew's Quarters">
+    <description>A narrow path straddles two rows, three bunks high, affixed to the walls.  The spaces beneath the lowest bunks are filled with labeled trunks.</description>
+    <position x="370" y="100" z="0" />
+    <arc exit="go" move="go door" destination="60" />
+  </node>
+  <node id="66" name="">
+    <description />
+    <position x="370" y="180" z="0" />
+    <arc exit="go" move="go arch" destination="62" />
+  </node>
+  <node id="67" name="">
+    <description />
+    <position x="350" y="180" z="0" />
+    <arc exit="go" move="go door" destination="62" />
+  </node>
+  <node id="68" name="">
+    <description />
+    <position x="370" y="220" z="0" />
+  </node>
+  <node id="69" name="The Hold">
+    <description>This area is spacious considering the foremast continues its plunge through the decks as if in a rush to meet the keel below.  The deck under the large overhead grating to starboard is gouged and grooved from long years of cargo being dropped just a tad sooner than it should have been.  The rest of the planking here is not in much better shape, the direct result of the cargo often being shoved aft to its proper storage location.</description>
+    <position x="420" y="120" z="0" />
+    <arc exit="go" move="go hatch" destination="78" />
+    <arc exit="none" move="aft" destination="71" />
+  </node>
+  <node id="71" name="The Hold">
+    <description>Affixed to the walls at regular intervals, brackets hold partially burnt candles that provide a dubious light.  The connection between this hold and the world above grows thinner as the massive mainmast blocks the meager light from the grating.  A wide arch, its molding chewed and missing chunks, opens like a gaping maw into a black hole whose size can be sensed from the change in temperature near the entrance.</description>
+    <position x="420" y="140" z="0" />
+    <arc exit="climb" move="climb ladder" destination="61" />
+    <arc exit="none" move="aft" destination="95" />
+    <arc exit="go" move="go arch" destination="73" />
+    <arc exit="none" move="forward" destination="69" />
+  </node>
+  <node id="72" name="The Brig">
+    <description>Dark shadows inhabited by a scent reminiscent of dank misery are trapped here in this small anteroom to the three cages that serve as the ship's brig.  A rack on the forward wall holds remnants of lengths of line used to hang up the keys but the keys are no longer there.  A discarded tray lies upside-down on the deck near the gate, its former contents long dried to the floor.</description>
+    <position x="420" y="190" z="0" />
+    <arc exit="go" move="go opening" destination="74" />
+    <arc exit="go" move="go gate" destination="95" />
+    <arc exit="go" move="go barred door" destination="76" />
+    <arc exit="go" move="go narrow door" destination="75" />
+    <arc exit="go" move="go low door" destination="77" />
+  </node>
+  <node id="73" name="">
+    <description />
+    <position x="430" y="140" z="0" />
+    <arc exit="go" move="go arch" destination="71" />
+  </node>
+  <node id="74" name="The Brig, Storage" color="#00FF00">
+    <description>Rusting manacles hang from wickedly barbed hooks embedded in the dark wooden wall planks.  Various painful-looking tools line the crooked shelves near the ceiling.  A large ruddy stain covers most of the floor like a macabre throw rug.</description>
+    <position x="431" y="200" z="0" />
+    <arc exit="go" move="go opening" destination="72" />
+  </node>
+  <node id="75" name="A Cell">
+    <description>Industrious spiders have made a home in this tiny cell, their cobwebs decorating most everything from the ceiling down.  A bare cot rests against the port bulkhead while the rest of the deck is filled with a bucket and a dirty basin.</description>
+    <position x="407" y="200" z="0" />
+    <arc exit="go" move="go narrow door" destination="72" />
+  </node>
+  <node id="76" name="A Cell">
+    <description>The moth-eaten blanket atop the cot barely covers a skeleton whose knees are drawn up in the fetal position.  Tossed near the entrance, a basin and bucket are badly dented while the door bears matching indentations and desperate scratch marks.</description>
+    <position x="407" y="180" z="0" />
+    <arc exit="go" move="go barred door" destination="72" />
+  </node>
+  <node id="77" name="A Cell">
+    <description>This cell's bare cot is immaculate, as is the basin and bucket.  A brush, its bristles worn flat to its grip, lies next to the cot as if deliberately placed.  The deck planking in this cell has been scrubbed white, save for a Tog-sized ruddy spray that decorates the aft bulkhead.</description>
+    <position x="431" y="180" z="0" />
+    <arc exit="go" move="go low door" destination="72" />
+  </node>
+  <node id="78" name="A Small Ledge">
+    <description>This cramped space is really nothing more than a platform that juts over the hole that leads to the bilges.  Black and green mold covers the ladder, mixed with the detritus from years of use by hands dirty from checking the bilges.</description>
+    <position x="450" y="120" z="0" />
+    <arc exit="go" move="go hatch" destination="69" />
+    <arc exit="climb" move="climb ladder" destination="79" />
+  </node>
+  <node id="79" name="The Bilge">
+    <description>The fetid air down here reeks of mold and other rank things while the cloying touch of dampness resembles an unwanted kiss.  Each step aft requires careful balancing so as not to slip on the glowing fungus spread down the walls and on the deck.</description>
+    <position x="450" y="140" z="0" />
+    <arc exit="none" move="aft" destination="80" />
+  </node>
+  <node id="80" name="The Bilge">
+    <description>The deck slants aft, alternately appearing and disappearing beneath the deceptively gentle lapping of brackish water.</description>
+    <position x="450" y="160" z="0" />
+    <arc exit="none" move="forward" destination="79" />
+  </node>
+  <node id="83" name="Mizzenmast Crossjack">
+    <description>Suspended athwart-ship from the yard, the crossjack billows from lines that long ago lost their crisp tautness.  Left alone, the wind and time have caused the rigging from above to become entwined with the lifts and sheets to create a thick maze of rope and sail.  Shadows flicker overhead as the top royal yardarm, creaking in protest, actually twists forward or aft with each good gust of wind.</description>
+    <position x="207" y="212" z="0" />
+    <arc exit="climb" move="climb shroud" destination="21" />
+    <arc exit="climb" move="climb ratline" destination="105" />
+  </node>
+  <node id="85" name="">
+    <description />
+    <position x="160" y="60" z="0" />
+    <arc exit="climb" move="climb shroud" destination="25" />
+  </node>
+  <node id="86" name="">
+    <description />
+    <position x="140" y="60" z="0" />
+  </node>
+  <node id="87" name="">
+    <description />
+    <position x="120" y="60" z="0" />
+  </node>
+  <node id="94" name="Under the Quarterdeck">
+    <description>Snuggly fitted around this small platform are built-in oak chests whose natural luster provides a stark contrast to the dull metal ladder that leads into the gloom below.  Each swell causes the unlatched door to slam open or closed, which dissipates the stale odor that drifts upwards from the darkness below with the salty scent of the sea. </description>
+    <position x="280" y="240" z="0" />
+    <arc exit="go" move="go door" destination="16" />
+    <arc exit="climb" move="climb ladder" destination="49" />
+  </node>
+  <node id="95" name="The Hold">
+    <description>The passageway narrows as the mizzenmast consumes most of the space aft of a dark opening and forward of the gated brig.  A ring of candles encircling the mast casts dancing shadows on the deck but does little to brighten the gloom.  A flattened tuft of matted grey with a stringy tail lies in the portside aft corner.</description>
+    <position x="420" y="160" z="0" />
+    <arc exit="go" move="go gate" destination="72" />
+    <arc exit="none" move="forward" destination="71" />
+  </node>
+  <node id="96" name="The Crest Rider, Passenger Quarters">
+    <description>Rag rugs in myriad colors come alive under an oil lamp that sways gently from its overhead chain, creating arcs of light and shadow on the dark deck planks.  A deep shelf extends from the wall on both sides of the bed, creating storage space for the matching trunks beneath.  A large bed has been firmly anchored to the floor and ceiling by its four corner posts.  The handle on a night bucket peeks out from under the foot of the bed.</description>
+    <position x="60" y="440" z="0" />
+  </node>
+  <node id="97" name="The Crest Rider, Captain's Quarters">
+    <description>Small but efficiently furnished, this combination office and living area has many built-in cabinets, and the wide settee against the port bulkhead is a neatly disguised comfortable bunk.  A leather chair sits before a hinged desktop, now lowered against the inner bulkhead.</description>
+    <position x="60" y="420" z="0" />
+  </node>
+  <node id="98" name="The Crest Rider, Dining Hall">
+    <description>A long table runs across the port bulkhead flanked by benches with chairs at either end labeled Captain and First Mate.  A small square table and four chairs used to accommodate any guests dining aboard the sloop is stored against the starboard bulkhead.  Cut into the forward bulkhead is a wide-ledged window used by the cook in the galley to pass hot meals into the dining hall.</description>
+    <position x="60" y="400" z="0" />
+  </node>
+  <node id="99" name="The Crest Rider, Quarterdeck">
+    <description>Carved into shapes reminiscent of the crests in a swelling sea and painted marine blue, the uprights meet a rounded white top rail that encircles the entire quarterdeck and forms the handrail on the stairs leading to the main deck.  The flag of Zoluren flutters off the stern from a flagpole just to starboard of the rudder.  A miniature brass replica of the ship's figurehead forms the handle on the entrance to a small pilothouse.</description>
+    <position x="100" y="480" z="0" />
+    <arc exit="climb" move="climb stairs" destination="2" />
+  </node>
+  <node id="100" name="The Crest Rider, Passageway">
+    <description>By assigning a sailor to continuously circle through the sloop, the Captain ensures that his decks are shipshape.  The marine blue floor planks glisten as if the paint is wet but the lingering scent of wood ash suggests that a sailor has just finished a routine swabbing.</description>
+    <position x="80" y="360" z="0" />
+    <arc exit="none" move="art" destination="15" />
+  </node>
+  <node id="101" name="The Crest Rider, Ship's Storage">
+    <description>An open bin contains wood to fuel the ship's braziers and the galley hearth.  Crates have been piled on top of each other in an orderly fashion, with the largest on the bottom.  Assorted barrels -- large, small, open, nailed shut, half-covered, closed, even a few chained kegs -- crowd the area and absorb any noises from above.</description>
+    <position x="20" y="460" z="0" />
+    <arc exit="go" move="go door" destination="9" />
+  </node>
+  <node id="102" name="The Crest Rider, Main Mast">
+    <description>A maze of bowlines, buntlines, ratlines, halyards and shrouds frame the main mast in a supportive web around the main course.  The intersection of the cap has been secured with a polished brass cuff just beneath the main topsail.  The sound of the sails snapping in the wind keeps harmony with the cha-chink of the grommets and clew rings as everything moves, keeping time with the motion of the sea.</description>
+    <position x="120" y="420" z="0" />
+    <arc exit="climb" move="climb shrouds" destination="4" />
+    <arc exit="climb" move="climb ratlines" destination="103" />
+  </node>
+  <node id="103" name="The Crest Rider, Main Mast">
+    <description>Confined in a world of billowing sail and line, the main upper topsail billows evenly, providing a glimpse of the foremast topsail each time it angles to port.  A neatly turned coil of line hangs from a hook on the main mast just beneath the topgallant.</description>
+    <position x="140" y="420" z="0" />
+    <arc exit="climb" move="climb shrouds" destination="102" />
+    <arc exit="climb" move="climb ratlines" destination="104" />
+  </node>
+  <node id="104" name="The Crest Rider, Main Mast">
+    <description>It is like being in another world up here.  Viewed from above, movement on the deck below is distorted, causing arms and legs to appear disconnected and gangly though they are merely moving naturally.  The royal overhead billows gently as the swing caused by each ocean swell is magnified the higher one climbs.</description>
+    <position x="160" y="420" z="0" />
+    <arc exit="climb" move="climb shrouds" destination="103" />
+  </node>
+  <node id="105" name="Mizzenmast Topsail">
+    <description>When the wind blows the spankers a bit to starboard, this height gives a good overview of the quarterdeck, gaff and helm.  The view forward is blocked by the main and fore mast sails and looking directly below as well as aft, the crossjack almost hides the port canopy.  The starboard edge of this yardarm is well splintered and appears to be precariously held in place by a tangle of rigging and halyards.</description>
+    <position x="207" y="202" z="0" />
+    <arc exit="climb" move="climb shroud" destination="83" />
+    <arc exit="climb" move="climb ratline" destination="106" />
+  </node>
+  <node id="106" name="Mizzenmast Royal">
+    <description>The royal has come free of its yardarm and twisted around the backstay lines, rendering them foul.  Despite the push of the wind to port on the spanker boom, the gaff tilts forward towards the mizzenmast.  Several ropes of various lengths and in disparate condition hang from the yardarm above, swaying with the ship's movement.</description>
+    <position x="207" y="192" z="0" />
+    <arc exit="climb" move="climb shroud" destination="105" />
+  </node>
+  <node id="107" name="Mizzenmast Maincourse">
+    <description>The bowline bridles near the middle of the leech are fast to the cringles, but the bowline itself flails free as if the sailor coiling it was interrupted and forgot to return.  The scent of rot wafts off the main course from the dark spots that have spread like puddles till they cover most of the sail.  Shrouds lead up towards the topsail and beyond, though the rope has seen better days and is fraying more than one would like for safety's sake.</description>
+    <position x="207" y="147" z="0" />
+    <arc exit="climb" move="climb shroud" destination="23" />
+    <arc exit="climb" move="climb ratline" destination="108" />
+  </node>
+  <node id="108" name="Mainmast Topsail">
+    <description>The topgallant yardarm has slipped its lines and tilts halfway down over the topsail.  Rigging and shrouds form a tangle to port but the starboard side seems to have fared better.  Taking advantage of the wonderful view, an enterprising bird has constructed a nest where the topsail yardarm meets the mast.</description>
+    <position x="197" y="147" z="0" />
+    <arc exit="climb" move="climb shroud" destination="107" />
+    <arc exit="climb" move="climb ratline" destination="109" />
+  </node>
+  <node id="109" name="Mainmast Topgallant">
+    <description>The royal downhaul swings with the movement of the sea as it hangs through the lubber's hole.  Clew lines run through the corners of the sails then fasten to the yardarm before plummeting to the deck below.  Creaking wood supports a world of worn sails and fouled lines that becomes more precarious with every substantial wind or sea swell.</description>
+    <position x="187" y="147" z="0" />
+    <arc exit="climb" move="climb shroud" destination="108" />
+    <arc exit="climb" move="climb ratline" destination="110" />
+  </node>
+  <node id="110" name="Mainmast Royal">
+    <description>Sporting a mean rip across its lower edge, the main royal has twisted and is all in the wind.  The crow's nest above creaks as the mast shivers in different directions depending on which way the wind moves the unattended sails.  The stoutest sailor would pause at the cracked cap but the fid appears solid and the bottom of the nest does not grant a view of the sky.</description>
+    <position x="177" y="147" z="0" />
+    <arc exit="climb" move="climb shroud" destination="109" />
+    <arc exit="climb" move="climb ratline" destination="111" />
+  </node>
+  <node id="111" name="Crows Nest">
+    <description>Once up here, the height is dizzying.  At each move, the nest creaks and moans as if trying to speak.  A sailor's cap lies on the floor, and though quite worn from exposure to the elements, a dark splotch on one side bears a marked resemblance to dried blood.  Choppy water surrounds the ship in every direction providing a blue vista that blends into the sky at the horizon.</description>
+    <position x="167" y="147" z="0" />
+    <arc exit="climb" move="climb shroud" destination="110" />
+  </node>
+  <node id="112" name="Salon">
+    <description>A patterned carpet in faded blues and dirty cream covers the decking and adds a touch of formality to the once-regal furnishings.  A sagging sofa faces two large leather chairs with additional bench seating built along the walls.  Two wood chairs have been pushed away from a gaming table topped by a chessboard.</description>
+    <position x="320" y="80" z="0" />
+    <arc exit="go" move="go painted door" destination="44" />
+    <arc exit="go" move="go door" destination="44" />
+  </node>
+  <node id="113" name="Guest Quarters">
+    <description>Two small bunks are separated by a large chest whose rounded top and ornate brass latch matches its brass edge clamps and corner protectors.  A rag rug covers the deck between the bunks, and an oil lamp hangs over a small table holding a pitcher and basin.  A bucket is almost hidden under the cloth skirt around the table.</description>
+    <position x="280" y="120" z="0" />
+    <arc exit="go" move="go sturdy door" destination="45" />
+    <arc exit="go" move="go door" destination="45" />
+  </node>
+  <node id="114" name="Guest Dining Hall">
+    <description>Four small tables and chairs have been pushed together in the center of the room to form a single long table.  An oak sideboard holds dusty plates, cups and cutlery while several serving trays rest on a narrow table under the ventilation scrollwork.  On the aft wall, a frame encloses a large oil painting of a Merelew maiden sunning herself atop a rock.</description>
+    <position x="320" y="120" z="0" />
+    <arc exit="go" move="go fragile door" destination="45" />
+  </node>
+  <node id="117" name="Library" color="#00FF00">
+    <description>Oak shelves cover most of the walls to just beneath the open scrollwork ventilating the room.  In the center of the floor sits a battered table buried beneath parchments, scrolls, and books.  Moisture is a frequent visitor judging by the black mold covering the decaying contents, marring the deteriorated surface of a large starchart adorning the only open spot on the wall.</description>
+    <position x="320" y="180" z="0" />
+    <arc exit="go" move="go narrow door" destination="47" />
+  </node>
+  <node id="118" name="Crew's Lounge">
+    <description>Different-sized tables, well marred from their service to crews over the life of this ship, are spread about the room.  Fastened to the wall are long benches whose worn cushions exhibit the shape of bodies in their lumps and sags.  One of the dark gashes in the aft wall around a split and chipped painted board glistens in the available light.</description>
+    <position x="280" y="200" z="0" />
+    <arc exit="go" move="go shattered door" destination="48" />
+  </node>
+  <node id="119" name="Officer's Dining Hall" color="#00FF00">
+    <description>A cool breeze from ornate vents overhead enlivens the air and three cloth-covered tables present a refined appearance except that several of the chairs have been overturned.</description>
+    <position x="320" y="140" z="0" />
+    <arc exit="go" move="go oak door" destination="46" />
+  </node>
+  <node id="120" name="Captain's Quarters" color="#FF0000">
+    <description>Paneled mahogany walls loom over a navy blue rug heavily spotted from cotton batting that oozes from slashes in the mattress atop a high oak frame.  Under a swinging brass lamp with a broken globe, a large gentleman's dresser stands catty-corner to the bedding alongside a maroon velvet armchair and hassock that complete the once fine furnishings.</description>
+    <position x="320" y="220" z="0" />
+    <arc exit="go" move="go oak door" destination="58" />
+  </node>
+  <node id="121" name="Inside the Vault">
+    <description>Shelves line the walls, all holding treasures of various shapes and sizes.  Bright lanterns hang from the ceiling overhead, swaying gently from the ocean waves crashing against the dock's pilings below.  Old navigational charts hang between the shelves, showing the paths of shipping lanes across the Reshal Sea.</description>
+    <position x="220" y="340" z="0" />
+    <arc exit="go" move="go portal" destination="122" />
+  </node>
+  <node id="122" name="Temporal Pocket, Docks" note="Temporal_Pocket.xml">
+    <description>Fractured slivers of translucent crystal are frozen in place, creating the outlines of long docks reaching out into a complete void.  Ropes and nets litter the docks between crates and other cargo waiting to be loaded, blocking access to the piers waiting for ships.  An obvious path through the mess leads to a cobbled road.</description>
+    <position x="240" y="340" z="0" />
+  </node>
+</zone>

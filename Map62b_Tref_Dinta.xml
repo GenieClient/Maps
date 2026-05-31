@@ -119,7 +119,7 @@
     <arc exit="east" move="east" destination="17" />
     <arc exit="south" move="south" destination="18" />
   </node>
-  <node id="20" name="Southern Trade Route, Alongside the Forest" note="Map62_STR2.xml|Southern Trade Route|STR|Shard|Leth Deriel">
+  <node id="20" name="Southern Trade Route, Alongside the Forest" note="Map62_Southern_Trade_Route_Part_2.xml|Southern Trade Route|STR|Shard|Leth Deriel">
     <description>A soft cooing echoes unbounded through the forest.  The road cuts a thick swatch through the brush, a pale shadow compared to the almost malignant ones surrounding it.</description>
     <position x="80" y="40" z="0" />
     <arc exit="northeast" />

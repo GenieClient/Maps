@@ -650,7 +650,7 @@
     <arc exit="climb" move="climb craggy wall" destination="47" />
     <arc exit="go" move="go low tunnel" destination="104" />
   </node>
-  <node id="97" name="Aesry Surlaenis'a, Cliff Path" note="Map98_Road_to_Aesry.xml">
+  <node id="97" name="Aesry Surlaenis'a, Cliff Path" note="Map98_Road_to_Aesry_Frostweavers_Snow_Gobs.xml">
     <description>Running jaggedly from northeast to southwest, a massive fissure has cleaved the face of the rock like an old battle scar.  A warm damp breeze wheezes forth from the darkness, and faintly, the steady drip, drip of falling water can be heard from deep inside the stone.</description>
     <position x="0" y="60" z="0" />
     <arc exit="south" move="south" />
@@ -723,7 +723,7 @@
     <arc exit="northwest" move="swim northwest" destination="110" />
     <arc exit="southeast" move="swim southeast" destination="107" />
   </node>
-  <node id="109" name="Ocean, Near the Cove" note="Map98_Road_to_Aesry.xml">
+  <node id="109" name="Ocean, Near the Cove" note="Map98_Road_to_Aesry_Frostweavers_Snow_Gobs.xml">
     <description>Among sheer towering cliffs is nestled a small sandy cove, a picture of bliss next to the fury of waves breaking on the massive wall of stone.  The water, here at the mouth of the cove, bobs gently with the incoming waves, lifting swimmers on its rolling crest.  The wide, sweet sea spreads out to the north and west, its swells rising and falling with its own secret rhythms.</description>
     <position x="480" y="100" z="0" />
     <arc exit="east" move="east" />

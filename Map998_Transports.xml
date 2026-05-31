@@ -88,7 +88,7 @@
     <position x="200" y="40" z="0" />
     <arc exit="go" move="aft" destination="12" />
   </node>
-  <node id="15" name="Pokekehekepi, Beachhead" note="Map95_Ratha_NE.xml|Pokekehekepi">
+  <node id="15" name="Pokekehekepi, Beachhead" note="Map95_Pokekehekepi.xml|Pokekehekepi">
     <description>Glittering like flowing gold, the beach runs into the ocean and disappears under the luminous waves.</description>
     <position x="180" y="100" z="0" />
     <arc exit="northwest" />
@@ -166,7 +166,7 @@
     <arc exit="out" move="out" destination="27" />
     <arc exit="none" move="north" hidden="True" destination="38" />
   </node>
-  <node id="27" name="Obsidian Pass, Platform" note="Map66_STR3.xml|Shard|South">
+  <node id="27" name="Obsidian Pass, Platform" note="Map66_Shard_to_Gondola_Area.xml|Shard|South">
     <description>The greying wooden boards of the platform have been replaced by paving stones.  Two massive granite pillars offer support for a set of thick rope cables that allow the gondola served by this platform to cross the chasm.  Stacks of building stones and mortar lie off to one side, ready to add to the structure being raised around the landing.</description>
     <position x="60" y="380" z="0" />
   </node>
@@ -213,7 +213,7 @@
     <arc exit="go" move="go north docks" destination="35" />
     <arc exit="go" move="go riverhaven docks" destination="36" />
   </node>
-  <node id="35" name="North Road, Ferry" note="Map7_NTR.xml|NTR|Crossing|Dirge|South">
+  <node id="35" name="North Road, Ferry" note="Map7_Northern_Trade_Road.xml|NTR|Crossing|Dirge|South">
     <description>A slab of downed cedars, lashed together, rides upon the Faldesu River forming the landing for the ferry's patrons.  The nearby splash of a toad and the squawk of distant waterfowl own this place, until the new day brings the drumming of civilization.</description>
     <position x="340" y="260" z="0" />
     <arc exit="south" />
@@ -228,7 +228,7 @@
     <arc exit="go" move="go ferry" destination="34" />
     <arc exit="go" move="go ferry" destination="59" />
   </node>
-  <node id="37" name="Obsidian Pass, Platform" note="Map62_STR2.xml|North|Leth">
+  <node id="37" name="Obsidian Pass, Platform" note="Map62_Southern_Trade_Route_Part_2.xml|North|Leth">
     <description>Like an aerie forgotten in the wilderness, the platform remains despite being abandoned by its creators.  While rickety and creaking uneasily, it appears to have held up well.  Two side-by-side granite beams rise up from the edge of the ridge, around which have been wound the lengths of rope used by the gondola that provides transport over the great chasm.</description>
     <position x="60" y="320" z="0" />
   </node>
@@ -275,7 +275,7 @@
     <arc exit="go" move="go south docks" destination="44" />
     <arc exit="go" move="go north docks" destination="45" />
   </node>
-  <node id="44" name="Southern Trade Route, Segoltha South Bank" note="Map60_STR1.xml|STR|Leth|South">
+  <node id="44" name="Southern Trade Route, Segoltha South Bank" note="Map60_Southern_Trade_Route_Part_1.xml|STR|Leth|South">
     <description>The southern bank of the Segoltha River presents a wide, flat flood plain far to the east and west.  The alluvial soil here is deep brown and fertile, nourished by the unpredictable rains that cause the river to rise rapidly and without warning.  Off in the distance to the south, you can spy the crests of trees.  This marks the boundary of the Endrus Forest, which surrounds the fabled Elven stronghold of Leth Deriel.</description>
     <position x="440" y="260" z="0" />
     <arc exit="south" move="south" />
@@ -315,7 +315,7 @@
     <position x="200" y="270" z="0" />
     <arc exit="none" move="up" destination="46" />
   </node>
-  <node id="50" name="Hvaral, Dry Dock" note="Map41_Marauders.xml">
+  <node id="50" name="Hvaral, Dry Dock" note="Map41_Ker'Leor_Fornsted_and_Hraval.xml">
     <description>A dock extends from the stone roadway here, hanging out over a low-lying mountain road.  No water here, and certainly no ships, Hvaral's Dry Dock is serviced by barges pulled by somewhat strange looking beasts.  Outside the protection of the wall, arid mountain winds sting the faces of those who would dare to tarry in the open.  Officials in Therengia's blue and gold livery thoroughly inspect rows of crates and barrels that litter the dock, awaiting either import or export.</description>
     <position x="120" y="240" z="0" />
     <arc exit="east" />

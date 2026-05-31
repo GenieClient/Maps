@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<zone name="Tiger Clan Home" id="4a">
+<zone name="Tiger Clan" id="4a">
   <node id="1" name="Tiger Clan Home, Dirt Pathway">
     <description>The clang of a blacksmith's hammer comes from the doorway of a stone building fronted with a large shoeing yard.  A Gor'Tog farmer works at shoeing an ox suspended in a leather sling.  The uncomfortable ox rolls its eye to look at you and lets out a protesting bellow.</description>
     <position x="220" y="80" z="0" />
