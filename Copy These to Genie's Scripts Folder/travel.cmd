@@ -7,8 +7,8 @@
 # Inspired by the OG Wizard Travel Script - But made 1000x better w/ the power of GENIE
 # Originally written by Achilles - Revitalized and robustified by Shroom
 #
-# Updated: 5/30/26
-var version 5.3.8
+# Updated: 5/31/26
+var version 5.3.9
 #
 # MAIN FEATURES:
 # - Start script from anywhere in game to any major location 
@@ -151,9 +151,10 @@ if ("$charactername") == ("$char10") then var shardcitizen no
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
 ###########################################
-# CHANGELOG - Latest Update: 5/30/26
+# CHANGELOG - Latest Update: 5/31/26
 #
-# - Fixed bug traveling through Mistwood Forest mini-maze from Haven West Gate causing script to crash/get lost
+# - Now does #mapper reset at startup in case current automapper map is not the map we are actually on 
+# - Fixed bug traveling through Mistwood Forest mini-maze from Haven WGate into Rossman causing script crash
 # - Fixed bug traveling on the long dusty road west of Theren into Ker'leor
 #
 # - Robustified Ferry / Mammoth travel logic
@@ -388,6 +389,8 @@ echo * Start: $zonename (%starting)
 echo * Destination: %destination
 echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 echo
+put #mapper reset
+pause 0.2
 if !def(Athletics.Ranks) then
      {
           echo
@@ -1088,6 +1091,10 @@ if ("$zoneid" == "41") then
           gosub AUTOMOVE 53
           pause 0.5
           send east
+		echo
+		echo *** Traveling the long dusty road to Theren
+		echo *** Don't type anything - takes 30+ seconds... 
+		echo
           waitforre ^Just when it seems
           pause
 		send go wall
@@ -1570,6 +1577,10 @@ if ("$zoneid" == "41") then
          gosub AUTOMOVE 2
          pause 0.5
          send east
+	    echo
+	    echo *** Traveling the long dusty road to Theren
+	    echo *** Don't type anything - takes 30+ seconds... 
+	    echo
          waitforre ^Just when it seems
          pause 0.5
 	    send go wall
@@ -2540,47 +2551,60 @@ if ("$zoneid" == "47") then
           }
 if (("$zoneid" == "41") && matchre("%detour", "(muspari|fornsted|oasis|hvaral)")) then
           {
-              if matchre("%detour", "(fornsted|hvaral)") then
-                  {
-                      gosub AUTOMOVE 91
-                      goto ARRIVED
-                  }
-              gosub PASSPORT_CHECK
-              if (%passport == 0) then
-               {
-                   gosub AUTOMOVE 53
-                   pause 0.5
-                   send east
-                   waitforre ^Just when it seems
-                   pause 0.5
-			    send go wall
-			    pause 0.5
-                   pause 0.1
-                   put #mapper reset
-                   pause 0.3
-                   gosub MOVE east
-                   pause 0.4
-                   gosub GET_PASSPORT
-                   gosub AUTOMOVE 376
-                   pause 0.5
-                   pause 0.1
-                   send west
-                   waitforre ^Just when it seems
-                   pause
-                   put #mapper reset
-               }
-              if matchre("%detour", "(muspari|oasis)") then
-                  {
-                    echo
-                    echo ** Athletics too low for Muspari Shortcut - Taking Long Route
-                    echo
-                    gosub AUTOMOVE 91
-                    gosub PASSPORT
-                    gosub AUTOMOVE 160
-                    if ($Athletics.Ranks >= %muspari.shortcut) then goto HAIZEN_SHORTCUT
-                    gosub FERRYLOGIC
-                    gosub STOWING
-                  }
+		     if matchre("%destination", "(?i)kerle?o?r?") then
+				{
+				     gosub AUTOMOVE 80
+				     goto ARRIVED
+				}
+               if matchre("%detour", "fornsted") then
+				{
+				     gosub AUTOMOVE 91
+				     goto ARRIVED
+				}
+               gosub PASSPORT_CHECK
+               if (%passport == 0) then
+				{
+				     echo
+				     echo *** MISSING A PASSPORT!!!
+				     echo *** RETURNING TO THEREN TO GET ONE
+				     echo
+				     pause
+				     gosub AUTOMOVE 53
+				     pause 0.5
+				     send east
+				     waitforre ^Just when it seems
+				     pause 0.5
+				     send go wall
+				     pause 0.5
+				     pause 0.1
+				     put #mapper reset
+				     pause 0.3
+				     pause 0.4
+				     gosub GET_PASSPORT
+				     gosub AUTOMOVE 376
+				     pause 0.5
+				     pause 0.1
+				     send west
+				     echo
+				     echo *** Traveling the long dusty road to Ker'leor
+				     echo *** Don't type anything - takes 30+ seconds... 
+				     echo
+				     waitforre ^Just when it seems
+				     pause
+				     put #mapper reset
+				}
+               if matchre("%detour", "(muspari|oasis)") then
+                    {
+					echo
+					echo ** Athletics too low for Muspari Shortcut - Taking Long Route
+					echo
+					gosub AUTOMOVE 91
+					gosub PASSPORT
+					gosub AUTOMOVE 160
+					if ($Athletics.Ranks >= %muspari.shortcut) then goto HAIZEN_SHORTCUT
+					gosub FERRYLOGIC
+					gosub STOWING
+                    }
           }
 if (("$zoneid" == "48") && matchre("%detour", "oasis")) then
      {
@@ -2592,6 +2616,10 @@ if (("$zoneid" == "41") && !matchre("%detour", "(muspari|fornsted|oasis|hvaral)"
               gosub AUTOMOVE 2
               pause 0.5
               send east
+		    echo
+		    echo *** Traveling the long dusty road to Theren
+		    echo *** Don't type anything - takes 30+ seconds... 
+		    echo
               waitforre ^Just when it seems
               pause 0.5
 		    send go wall
@@ -2799,9 +2827,18 @@ if (("$zoneid" == "40") && matchre("%detour", "(muspari|oasis|fornsted|hvaral)")
               gosub AUTOMOVE 376
               pause 0.5
               send west
+		    echo
+		    echo *** Traveling the long dusty road to Ker'leor
+		    echo *** Don't type anything - takes 30+ seconds... 
+		    echo
               waitforre ^Just when it seems
               pause
               put #mapper reset
+          }
+if (("$zoneid" == "41") && matchre("%destination", "(?i)kerle?o?r?")) then
+          {
+              gosub AUTOMOVE 80
+              goto ARRIVED
           }
 if (("$zoneid" == "41") && matchre("%detour", "fornsted")) then
           {
@@ -3348,6 +3385,10 @@ if ("$zoneid" == "41") then
               gosub AUTOMOVE 53
               pause 0.5
               send east
+		    echo
+		    echo *** Traveling the long dusty road to Theren
+		    echo *** Don't type anything - takes 30+ seconds... 
+		    echo
               waitforre ^Just when it seems
               pause
 		    send go wall
