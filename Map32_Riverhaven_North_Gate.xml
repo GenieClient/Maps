@@ -186,6 +186,7 @@
     <position x="60" y="-300" z="0" />
     <arc exit="north" move="north" destination="30" />
     <arc exit="south" move="south" destination="28" />
+    <arc exit="go" move="go dirt path" destination="139" />
   </node>
   <node id="30" name="Wildlands, Forest Path" color="#00FF00">
     <description>You make your way past the massive bole of an ancient tree that must have once ruled this forest.  Roots as long and thick as many a full-grown oak rise above your head to form a deep and shadowy bower beneath the broken tree-lord.  Dozens of upstart saplings have moved in on all sides, eager to gain the sunlight and free air afforded by the demise of their sire.</description>
@@ -986,11 +987,72 @@
     <arc exit="west" move="west" destination="136" />
     <arc exit="northwest" move="northwest" destination="137" />
   </node>
+  <node id="139" name="Wildspire Hollow, Front Walk">
+    <description>A cobblestone path winds toward the entrance of a cozy whitewashed cottage, its irregular stones worn smooth and shiny.  On both sides, colorful flower beds spill a riot of blossoms over the scalloped border, nearly obscuring the walkway.  A carved garden gnome, a flower pot balanced on its head sprouting lemongrass, sits between a small lizard statue with onyx eyes and a playful granite fox balancing a tangle of vines on its nose.</description>
+    <position x="100" y="-320" z="0" />
+    <arc exit="west" move="west" destination="140" />
+    <arc exit="go" move="go cobblestone path" destination="29" />
+    <arc exit="go" move="go ivy-covered cottage" destination="142" />
+  </node>
+  <node id="140" name="Wildspire Hollow, Butterfly Garden">
+    <description>A lush tangle of flowering plants fills the garden, their blossoms and leaves crowding together in layered abundance.  A tall wall of woven vines rises along the edges, enclosing the outer edge of the garden in a verdant green barrier.  Nestled among the growth, several shallow dishes hold water scattered with flat pebble perches.  Beneath the shade of a broad tree, a wooden bench swing, with a profusion of colorful cushions, hangs suspended from sturdy chains.</description>
+    <position x="80" y="-320" z="0" />
+    <arc exit="north" move="north" destination="141" />
+    <arc exit="east" move="east" destination="139" />
+  </node>
+  <node id="141" name="Wildspire Hollow, Backyard">
+    <description>A flourishing garden spreads away from the back of the cottage, the rear door not visible from this vantage, with flower beds and creeping vines filling every spare space.  An enormous greenhouse dominates one side, its heavily frosted windows hiding the interior entirely.  Across the back, an unusually tall wall of dense, impenetrable greenery rises, blocking sight and passage.</description>
+    <position x="80" y="-340" z="0" />
+    <arc exit="south" move="south" destination="140" />
+  </node>
+  <node id="142" name="Wildspire Hollow, Cottage" note="Wildspire Hollow Cottage|cottage" color="#FF0000">
+    <description>Numerous windows line this spacious main room, where pale wood floors and white walls meet a knotty-beam ceiling overhead.  Potted plants fill much of the space, all carefully arranged with the shop's merchandise stacked haphazardly among the planters.  Small traces of potting soil are scattered across the floor, and more than one half-empty cup of tea is visible.</description>
+    <position x="100" y="-340" z="0" />
+    <arc exit="north" move="north" destination="143" />
+    <arc exit="go" move="go ivy-etched door" destination="139" />
+  </node>
+  <node id="143" name="Wildspire Hollow, Cottage Workroom">
+    <description>Tall windows allow natural light into the cluttered space with pale wood floors and white walls.  Potted plants in various stages of growth cover tables and shelves, with gardening tools scattered throughout.  On the largest worktable, a neat row of surgical implements lies in one corner, contrasting with the surrounding greenery and soil-streaked surfaces.  A heavy ironwood door at the far end of the room is secured by both a stout lock and a sturdy bar laid across steel hooks.</description>
+    <position x="100" y="-360" z="0" />
+    <arc exit="south" move="south" destination="142" />
+    <arc exit="go" move="ask Ivysol about door" destination="144" />
+  </node>
+  <node id="144" name="Wildspire Hollow, Behind the Cottage">
+    <description>A tidy stone path winds through an overflowing garden thick with tangled blossoms, sprawling vines, and carefully arranged beds of unusual growth.  One side of the space is dominated by an enormous greenhouse fitted with heavily frosted windows and a door secured beneath a thick iron bar.  Purple pollen is splattered heavily across the rear entrance of the cottage.  Opposite the greenhouse, an unusually tall wall of impenetrable greenery rises in a dense mass of interwoven foliage and thorned stems.</description>
+    <position x="100" y="-380" z="0" />
+    <arc exit="go" move="go hidden gate" destination="141" />
+    <arc exit="go" move="go ivy archway" destination="145" />
+  </node>
+  <node id="145" name="Wildspire Hollow, Noxious Snarl" note="Dryanoxie">
+    <description>Dense walls of tangled greenery rise around a large passage worn through the undergrowth.  Thick vines drape between clusters of pale blossoms, partially concealing the remnants of an abandoned picnic.  A torn blanket lies tangled beneath the foliage beside an overturned basket missing its handle, while several broken ceramic plates are scattered nearby among crushed stems and leaves.</description>
+    <position x="100" y="-400" z="0" />
+    <arc exit="north" move="north" destination="146" />
+    <arc exit="west" move="west" destination="148" />
+    <arc exit="go" move="go ivy archway" destination="144" />
+  </node>
+  <node id="146" name="Wildspire Hollow, Noxious Snarl">
+    <description>A winding tunnel cuts between towering masses of interwoven brush and flowering vines, the passage wide and tall enough to fit a caravan.  Near one edge of the trail stands a crude figure assembled from crooked sticks and bound lengths of root, its head formed from a heavily rusted helmet tilted at an unnatural angle above the surrounding flowers.</description>
+    <position x="100" y="-420" z="0" />
+    <arc exit="west" move="west" destination="147" />
+    <arc exit="south" move="south" destination="145" />
+  </node>
+  <node id="147" name="Wildspire Hollow, Noxious Snarl">
+    <description>Heavy curtains of ivy and sprawling vines press close around the path, their growth threaded with clusters of vivid blossoms and broad waxy leaves.  Thick roots twist across the ground in uneven ridges, disappearing beneath mats of moss and scattered petals.  Here and there, plump purple pods hang from dangling stems, their fragile husks dark against the surrounding greenery. </description>
+    <position x="80" y="-420" z="0" />
+    <arc exit="east" move="east" destination="146" />
+    <arc exit="south" move="south" destination="148" />
+  </node>
+  <node id="148" name="Wildspire Hollow, Noxious Snarl">
+    <description>The passage broadens slightly where dense flowering growth has been bent back into an arched corridor through the wilderness.  Layers of trailing vines hang overhead beside tangled sprays of tiny blossoms in pale pink and deep violet.  Along the edges of the trail, weathered garden markers lean at crooked angles beneath blankets of creeping vegetation.</description>
+    <position x="80" y="-400" z="0" />
+    <arc exit="north" move="north" destination="147" />
+    <arc exit="east" move="east" destination="145" />
+  </node>
   <label text="Riverhaven North Gate">
     <position x="-70" y="30" z="0" />
   </label>
   <label text="Goblin Zombies">
-    <position x="50" y="-350" z="0" />
+    <position x="-60" y="-370" z="0" />
   </label>
   <label text="Goblins">
     <position x="70" y="-190" z="0" />
@@ -1009,5 +1071,8 @@
   </label>
   <label text="Boggles">
     <position x="80" y="-145" z="0" />
+  </label>
+  <label text="Dryanoxie">
+    <position x="110" y="-420" z="0" />
   </label>
 </zone>
