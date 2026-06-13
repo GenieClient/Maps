@@ -38,6 +38,38 @@ var version 5.3.9
 # YOU MUST KNOW THE "DESTINATION" MAP THEN CHOOSE AN EXACT ROOM NUMBER / LABEL IN THAT MAP
 # OR SIMPLY CHOOSE A FINAL CITY / DESTINATION AND SCRIPT WILL TAKE YOU THERE
 #
+# ============================================================================
+# KNOWN ISSUES / TODO (added 2026-06)
+# ============================================================================
+#
+# Sub-maps with no .travel routing — users have reported .travel from inside
+# these maps does nothing because the AutoMapper's #goto only searches the
+# current zone (see Mapper/AutoMapper.cs line ~1226 in Genie4 source).
+# Cross-zone routing has to be handled here in travel.cmd.
+#
+#   Zone 90a (Sand Sprites and Ochre La'heke, off Ratha) — reported by Teavira
+#     Suggested handler (drop where other zone-90-adjacent routing lives):
+#     if ("$zoneid" == "90a") then gosub AUTOMOVE 1
+#     # node 1 is Ratha, Port Walk — the boundary; "northeast" exits back to Map90.
+#
+#   Zone 8a (Lost Crossing / Observatory, off Crossing East Gate) — reported by Miskton
+#     Suggested handler:
+#     if ("$zoneid" == "8a") then gosub AUTOMOVE 14
+#     # node 14 is Observatory, Foyer — the actual landing/boundary room.
+#     # (Note: cross-map note currently sits on node 15 "Observatory, First Level"
+#     # instead of node 14 — see Map8a_Lost_Crossing.xml. May need both nodes
+#     # to point at the parent map, or move the note to node 14.)
+#
+# Dead-code zone references — these zone IDs do not exist in any current map
+# file. Lines marked inline below with "# Dead code: zone X..." comments:
+#   Zone 120 (line ~1325)
+#   Zone 4b  (line ~1352)
+#   Zone 66a (line ~2076)
+#   Zone 124 (line ~5009)
+# Safe to remove these branches in a future cleanup pass.
+#
+# ============================================================================
+#
 #############################################################################
 # VALID FINAL DESTINATIONS YOU CAN CHOOSE:
 #
@@ -1321,6 +1353,7 @@ if (("$zoneid" == "60") && ("$guild" == "Thief")) then
               if ($Athletics.Ranks >= %undersegoltha) then
                   {
                       gosub AUTOMOVE 107
+                      # Dead code: zone 120 is not present in any map file (audited 2026-06). This branch never executes.
                       if ("$zoneid" == "120") then gosub AUTOMOVE 107
                       pause 0.3
                       gosub AUTOMOVE cross
@@ -1348,6 +1381,7 @@ if (("$zoneid" == "60") && ($Athletics.Ranks < %segoltha)) then
           }
 if "$zoneid" == "6"  then gosub AUTOMOVE cross
 if ("$zoneid" == "4a") then gosub AUTOMOVE 15
+# Dead code: zone 4b is not present in any map file (audited 2026-06). This branch never executes.
 if ("$zoneid" == "4b") then gosub AUTOMOVE 1
 if (("$zoneid" == "4") && (("%detour" == "dokt"))) then
           {
@@ -2072,6 +2106,7 @@ if (("$zoneid" == "66") && ("$guild" == "Thief")) then
                pause 0.2
                gosub AUTOMOVE shard
           }
+# Dead code: zone 66a is not present in any map file (audited 2026-06). This branch never executes.
 if ("$zoneid" == "66a") then gosub AUTOMOVE shard
 if (matchre("%shardcitizen", "(?i)yes") && ("$zoneid" == 66) && ($roomid > 54)) then gosub AUTOMOVE 215
 if ("$zoneid" == "66") then gosub AUTOMOVE 216
@@ -5005,6 +5040,7 @@ TO_SEACAVE:
 TO_SEACAVES:
      if ("$zoneid" == "67") then gosub AUTOMOVE east
      if ("$zoneid" == "127") then gosub AUTOMOVE south
+     # Dead code: zone 124 is not present in any map file (audited 2026-06). This branch never executes.
      if ("$zoneid" == "124") then gosub AUTOMOVE hib
      if ("$zoneid" == "112") then gosub AUTOMOVE leth
      if ("$zoneid" == "4") then gosub AUTOMOVE cross
