@@ -358,6 +358,7 @@
     <arc exit="north" move="north" destination="48" />
     <arc exit="south" move="south" destination="46" />
     <arc exit="west" move="west" destination="79" />
+    <arc exit="go" move="go side street" destination="1049" />
   </node>
   <node id="48" name="The Crossing, 3 Retainers' Crescent">
     <description>There seems to be great confusion along this narrow stretch of road, as folk of all races and professions pass by and overflow the curbs.  They spill into the street to better make their way, crisscrossing at no particular corner, and running in front of lumbering wagons, darting handcarts or mounted travelers.</description>
@@ -6235,14 +6236,15 @@
   </node>
   <node id="964" name="Fenwyrthie's, Collectibles" note="Fenwyrthie Collectibles" color="#FF0000">
     <description>Memorabilia from Fenwyrthie's years of travels and collecting are crammed into every available space.  Items are so tightly wedged on the shelves, racks and stands that pulling one threatens to trigger an avalanche of bags, sacks, bits of junk and dust.  A winding maze of tiny trails wends through the tables, trunks and carpets jammed into the small floorspace.</description>
-    <position x="222" y="360" z="0" />
+    <position x="227" y="360" z="0" />
     <arc exit="east" move="east" destination="504" />
     <arc exit="west" move="west" destination="965" />
   </node>
   <node id="965" name="Fenwyrthie's, Keepsakes" note="Fenwyrthie Keepsakes" color="#FF0000">
     <description>Trinkets, toys, bags, and tools of all sorts appear strewn onto every available space.  The visual assault of colorful containers along racks, counters, bins, and shelves does nothing to improve the dusty and cob-web ridden state of the shop.  Nearly every inch of the floor space is taken up by sale surfaces, leaving walking room at a minimum.</description>
-    <position x="205" y="360" z="0" />
+    <position x="217" y="360" z="0" />
     <arc exit="east" move="east" destination="964" />
+    <arc exit="west" move="west" destination="1048" />
   </node>
   <node id="966" name="Empaths' Guild, Sitting Room" note="Sitting Room|Constanze">
     <description>Soft robin's egg blue paper covers the walls of this large room, patterned with delicate arabesques in an even lighter shade of powder blue.  Several gaily-colored painted landscapes complement the rich hue of the paper, their heavy gilt frames resembling windows into perfect summer days.  The vibrant golden oak of the floor is muffled by a sumptuous woolen ivory rug with a deep, luxurious pile.  Several cheerful golden sconces provide bright -- but not harsh -- light, the oil they burn perfuming the air with a fresh citrus scent.</description>
@@ -6719,6 +6721,67 @@
     <description>The meticulous cleaning standards of the boarding house's other levels do not seem to apply to its uppermost floor.  Cobwebs dangle from the rafters and bits of rubbish are accumulated in each dim corner of this stuffy attic, though the entryways to the modest valet apartments allotted here are relatively clear and tidy.  Motes of dust drift languidly through sunbeams cast by a small stained glass window serving as the only light source for the dingy room.</description>
     <position x="229" y="180" z="0" />
     <arc exit="climb" move="climb stairs" destination="1042" />
+  </node>
+  <node id="1048" name="Fenwyrthie's, Knickknacks" note="Fenwyrthie Knickknacks" color="#FF0000">
+    <description>An eclectic assortment of tiny treasures crowds every available space.  Polished stones, carved figures, curious tools, and countless unidentifiable objects are wedged onto shelves, stacked upon counters, and scattered among baskets and bins.  Oddments and baubles from distant places mingle with common trinkets, forming a patchwork display that stretches from floor to rafters.  Only a few narrow paths remain between the cluttered arrangements.</description>
+    <position x="207" y="360" z="0" />
+    <arc exit="east" move="east" destination="965" />
+  </node>
+  <node id="1049" name="The Crossing, Tatting Street" note="Tatting Street" color="#00FFFF">
+    <description>Barely more than a crooked alley, this narrow cobblestone street diverges from 3 Retainers' Crescent and descends to the southeast beneath a zigzagging tangle of overhead clothesline.  The foundations of the modest homes that crowd the darkened byway are carefully laid at an angle to meet the sloping pavement.</description>
+    <description>Barely more than a crooked alley, this narrow cobblestone street diverges from 3 Retainers' Crescent and descends to the southeast beneath a zigzagging tangle of overhead clothesline.  The foundations of the modest homes that crowd the shady byway are carefully laid at an angle to meet the sloping pavement.</description>
+    <position x="110" y="100" z="1" />
+    <arc exit="west" move="west" destination="47" />
+    <arc exit="southeast" move="southeast" destination="1050" />
+  </node>
+  <node id="1050" name="The Crossing, Tatting Street" color="#00FFFF">
+    <description>Cramped but cozy, the cobbled lane slopes down toward the riverside, flanked on either side by close-knit homes with whitewashed shutters and colorfully arrayed window boxes.  A violin nocturne emanates from an upper story window of one of the residences, each note echoing hauntingly as it drifts along the nearly deserted street.</description>
+    <description>Cramped but cozy, the cobbled lane slopes down toward the riverside, flanked on either side by close-knit homes with whitewashed shutters and colorfully arrayed window boxes.  Lively fiddle music emanates from an upper story window of one of the residences, occasionally interspersed with bouts of carefree laughter.</description>
+    <position x="120" y="110" z="1" />
+    <arc exit="northwest" move="northwest" destination="1049" />
+    <arc exit="southeast" move="southeast" destination="1051" />
+  </node>
+  <node id="1051" name="The Crossing, Tatting Street" color="#00FFFF">
+    <description>A twist in the sloping side street affords a glimpse of the Oxenwaithe River just a block further east.  Permeating the air with a fishy smell, strings of bluegill and cod hang to dry from the eaves of an apparent fishmonger's residence.</description>
+    <position x="130" y="120" z="1" />
+    <arc exit="east" move="east" destination="1052" />
+    <arc exit="northwest" move="northwest" destination="1050" />
+  </node>
+  <node id="1052" name="The Crossing, Riverlace Lane" note="Riverlace Lane" color="#00FFFF">
+    <description>A row of chic manors dominates this valuable stretch of riverside real estate, each built tall and narrow for spatial efficiency.  Well-kept docks front several of the estates, while others boast thriving gardens and elegant verandas.  To the west, a sloping side street ascends towards the city's bustling commercial district.</description>
+    <position x="140" y="120" z="1" />
+    <arc exit="north" move="north" destination="1053" />
+    <arc exit="south" move="south" destination="1057" />
+    <arc exit="west" move="west" destination="1051" />
+  </node>
+  <node id="1053" name="The Crossing, Riverlace Lane" color="#00FFFF">
+    <description>More close-spaced but elegant estates jut against this section of breezy riverside promenade.  Alongside the windswept street, a little whitewashed dock with a wrought rencate gate extends stoically into the Oxenwaithe.</description>
+    <position x="140" y="110" z="1" />
+    <arc exit="south" move="south" destination="1052" />
+    <arc exit="northwest" move="northwest" destination="1054" />
+  </node>
+  <node id="1054" name="The Crossing, Riverlace Lane" color="#00FFFF">
+    <description>Like slender sentinels guarding the street, lampposts stand at even intervals along the waterfront.  Between two of the bronze posts, a white ironwood bench carved with gladioluses provides scenic respite for those without access to the opulent balconies and terraces of the homes that face the avenue.</description>
+    <position x="130" y="100" z="1" />
+    <arc exit="north" move="north" destination="1055" />
+    <arc exit="southeast" move="southeast" destination="1053" />
+    <arc exit="west" move="west" destination="1056" />
+  </node>
+  <node id="1055" name="The Crossing, Riverlace Lane" color="#00FFFF">
+    <description>The riverside avenue comes to a gentle end at the foot of a steep, grassy slope separating the upscale neighborhood from the busy commercial district above.  Behind the row of posh estates, tall honey locust trees make an effort to obscure the view of unsightly warehouses sitting further up on the embankment.</description>
+    <position x="130" y="90" z="1" />
+    <arc exit="south" move="south" destination="1054" />
+  </node>
+  <node id="1056" name="The Crossing, Riverlace Lane" color="#00FFFF">
+    <description>Nestled just above the main stretch of Riverlace Lane, this quiet cul-de-sac features a semicircle of grand manors enjoying a private overlook of the Oxenwaithe River as it cuts through town to the east.  Despite the dense urban surroundings, several residences feature courtyard gazebos or fountained lawns behind their stately front gates.</description>
+    <position x="120" y="100" z="1" />
+    <arc exit="east" move="east" destination="1054" />
+  </node>
+  <node id="1057" name="The Crossing, Riverlace Lane" color="#00FFFF">
+    <description>Ornate bronze lampposts softly illuminate the opulent manors stacked along the avenue, but their meager light falls short of the Oxenwaithe River rushing by to the east.  An occasional fishing boat slips by on the darkened waters, its piloting lanterns bobbing like specters in the night as the flames of the High Temple flicker dimly in the background.</description>
+    <description>Ornate bronze lampposts stand opposite the opulent manors stacked along the avenue, dormant for the day.  Across the river to the east, the High Temple can be seen rising majestically over Longbow Bridge, its brightly burning beacon flames visible even against the daytime sky.</description>
+    <position x="140" y="130" z="1" />
+    <arc exit="north" move="north" destination="1052" />
   </node>
   <label text="Shipyard">
     <position x="-20" y="314" z="0" />
