@@ -44,7 +44,7 @@
     <arc exit="go" move="go lybadel" destination="1" />
     <arc exit="go" move="go kree'la" destination="28" />
   </node>
-  <node id="8" name="Aesry Surlaenis'a, Shadaer" note="Map98_Road_To_Aesry.xml|Aesry">
+  <node id="8" name="Aesry Surlaenis'a, Shadaer" note="Map98_Road_to_Aesry_Frostweavers_Snow_Gobs.xml|Aesry">
     <description>Weathered by the sun and the salty sea air, the wooden pier stretches to the south.  Ships of all types anchor for the night, though some small boats fish near the dangerous shoals at the harbor mouth.</description>
     <description>Weathered by the sun and the salty sea air, the wooden pier stretches to the south.  Ships of all types anchor near the pier, or sail away with sails billowing in the wind.  Several dolphins frolic in the water, leaping over the wakes of passing ships.</description>
     <position x="80" y="60" z="0" />
@@ -60,7 +60,7 @@
     <arc exit="go" move="go pokekehekepi" destination="15" />
     <arc exit="go" move="go uaro dock" destination="24" />
   </node>
-  <node id="10" name="Harbor Docks, Aesry Surlaenis'a" note="Map98_Road_To_Aesry.xml|Aesry">
+  <node id="10" name="Harbor Docks, Aesry Surlaenis'a" note="Map98_Road_to_Aesry_Frostweavers_Snow_Gobs.xml|Aesry">
     <description>Sturdy oak planks stretch eastward towards the lights of the harbor and the shouting sailors in Denison's Pub.  Two beams of light pierce the darkness, emanating from a point high on the island's slope.</description>
     <position x="240" y="80" z="0" />
     <arc exit="east" />
