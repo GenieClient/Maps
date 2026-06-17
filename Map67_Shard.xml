@@ -2685,7 +2685,7 @@
     <arc exit="northeast" move="northeast" />
     <arc exit="out" move="out" destination="290" />
   </node>
-  <node id="381" name="Sewer" note="Map68_shard_south_gate.xml">
+  <node id="381" name="Sewer" note="Map68_Shard_South_Gate.xml">
     <description>The overwhelming stench of raw sewage and rotting vegetable matter creates a miasma that causes the air to shimmer and waver.  Water rushes by thickly to the south, vanishing into pitch darkness.</description>
     <position x="1220" y="600" z="0" />
     <arc exit="southwest" move="southwest" />

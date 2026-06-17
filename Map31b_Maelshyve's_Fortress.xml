@@ -808,7 +808,7 @@
     <arc exit="east" move="east" />
     <arc exit="go" move="go amorphous spirits" destination="50" />
   </node>
-  <node id="123" name="Soul of Maelshyve, The Involution" note="Map501_Soul_of_Maelshyve.xml|Soul of Maelshyve|Involution">
+  <node id="123" name="Soul of Maelshyve, The Involution" note="Map105_Soul_of_Maelshyve.xml|Soul of Maelshyve|Involution">
     <description>The path stretches to the northeast, hanging in space, extending from a wall of silver liquid.  Though the path is wide and solid, it flows like melted wax, and the sides end abruptly, with strange forms shifting in the endless distance.  A flickering image of Maelshyve's Fortress stretches and contracts in the sky, where the heights billow with the jagged drip-drip-drip of screaming sunbursts, accosting your senses with the incomprehensible.  The air seems to be made of murky smoke, stirred by a weak breeze and rhythmically congealing into vaguely familiar shapes.</description>
     <description>The path stretches to the northeast, hanging in space, extending from a wall of silver liquid.  Flowing like melted wax, the sides of the path end abruptly, and strange forms shift in the endless distance.  High above, a flickering image of Maelshyve's Fortress hangs in the sky, where screaming sunbursts accost your senses.  The air is thick and murky, gently stirred by the breeze.</description>
     <position x="640" y="80" z="0" />

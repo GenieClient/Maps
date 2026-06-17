@@ -129,7 +129,7 @@
     <position x="20" y="120" z="0" />
     <arc name="out" hidden="False" destination="2" />
   </node>
-  <node id="22" name="Wharf End, Mer'Kresh" note="Map107_MerKresh.xml|mer'kresh|merkresh|kresh">
+  <node id="22" name="Wharf End, Mer'Kresh" note="Map107_Mer'Kresh.xml|mer'kresh|merkresh|kresh">
     <description>Through the gaps in the heavy wood planks, one can easily see the waters of Torbis Sanhalas lapping noisily at the pilings.  Although most of the surface of the wharf is covered by a wide assortment of boxes, barrels and shipping goods, there is little that would stop a dropped coin or trinket from vanishing through the slats and sinking into a watery grave.</description>
     <position x="120" y="100" z="0" />
     <arc name="northwest" hidden="False" />
@@ -149,7 +149,7 @@
     <arc name="east" hidden="False" />
     <arc name="west" hidden="False" />
   </node>
-  <node id="25" name="North Road, Beech Grove" note="Map40_Langenfirth_to_Theren_Gate.xml|langenfirth|theren|el'bains|elbains">
+  <node id="25" name="North Road, Beech Grove" note="Map40_Langenfirth_to_Therenborough.xml|langenfirth|theren|el'bains|elbains">
     <description>The well-traveled road journeys through a grove of tall beech trees.  Their smooth grey boles converge high above creating a tunnel filled with dappled green sunlight.  Off to the north the grove opens up onto bright meadowlands.</description>
     <description>The well-traveled road journeys through a grove of tall beech trees.  Their smooth grey boles converge high above creating a tunnel of dark shadowy branches that seem to reach out to you.  Off to the north the grove opens up onto moonlit meadowlands.</description>
     <position x="120" y="100" z="0" />
