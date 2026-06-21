@@ -2250,11 +2250,12 @@
     <arc exit="northwest" move="northwest" destination="357" />
   </node>
   <node id="357" name="Aesry Surlaenis'a, Necropolis Final Resting Place">
-    <description>Across the necropolis, sunlight glints off the surface of the pond, visible between the trees which shade the white brick path.  Low headstones cluster closely amidst the overgrown grass, covered with a thin layer of moss and worn by time and weather.</description>
-    <description>Across the necropolis, moonlight glints off the surface of the pond, visible between the trees which shade the white brick path.  Low headstones cluster closely amidst the overgrown grass, covered with a thin layer of moss and worn by time and weather.</description>
+    <description>Scattered across the white brick path are the remains of a few old, toppled trees and broken headstones.  While the silence of the small pond endures, sound muted by a thin layer of lily pads, the broken stones and shattered trees speak of recent tumult.  Barely visible through the trees to the north stands an old church.</description>
+    <description>Scattered across the white brick path are the remains of a few old, toppled trees and broken headstones.  While the silence of the small pond endures, sound muted by a thin layer of lily pads, the broken stones and shattered trees speak of recent tumult.  Barely visible through the trees to the north looms an old church.</description>
     <position x="730" y="480" z="0" />
     <arc exit="southeast" move="southeast" destination="356" />
     <arc exit="south" move="south" destination="358" />
+	<arc exit="go" move="go old church" destination="499" />
   </node>
   <node id="358" name="Aesry Surlaenis'a, Necropolis Final Resting Place">
     <description>A soft breeze rustles the leaves of the trees, breaking the stillness.  One lone headstone stands underneath a willow tree, crudely chiseled into a half-circle, its surface smoothed over by years of exposure to the elements.</description>
@@ -3119,6 +3120,53 @@
     <description>A large workbench dominates one side of the room with numerous pieces of alchemical equipment scattered haphazardly upon its surface.  The high, vented windows provide relief from the common, yet unpleasant, smell that permeates the room.</description>
     <position x="483" y="229" z="0" />
     <arc exit="go" move="go wooden entryway" destination="494" />
+  </node>
+  <node id="499" name="Church, Entrance" note="church">
+    <description>Brilliant shafts of light lance down from gaps in the ancient ceiling, motes of dust perpetually highlighted as they drift.  Thick wooden beams criss-cross overhead, echoing with the sound of nesting birds cooing or flapping their wings.  The acoustics of the church rebound strangely, an eerie, albeit non-threatening, delayed echo.  To the north, the rows of curved pews encircle a stone dais bearing a strange and complex statue.</description>
+    <position x="730" y="460" z="1" />
+	  <arc exit="north" move="north" destination="500" />
+    <arc exit="go" move="go doors" destination="357" />
+  </node>
+  <node id="500" name="Church, Apse">
+    <description>Ringed by curved pews, the dais stands in the center of the church.  The massive steeple of spiraled wood extends far above, and rotting ropes hang from the rafters.  Dust coats the statue and everything around it, though none of its intrigue or majesty appear diminished for being in a state of neglect.  Whispers echo around the pews, and the area is blanketed in a palpable sense of scrutiny.</description>
+    <position x="730" y="450" z="1" />
+	  <arc exit="north" move="north" destination="501" />
+    <arc exit="east" move="east" destination="503" />
+    <arc exit="south" move="south" destination="499" />
+    <arc exit="west" move="west" destination="505" />
+  </node>
+  <node id="501" name="Church, Path of Balance">
+    <description>Broad stone pews curve around the dais to the south, carved with simple icons and symbols -- trees, birds, hearths, anvils, open books, rainbows, crescent moons and broken swords all flow in a seemingly random hodgepodge.  Offering baskets are scattered around the area, filled with cured fish and hard, dry bread.  The dusty scent of ground stone wafts gently along the cool air, while an altar dominates the church's northern wall.</description>
+    <position x="730" y="440" z="1" />
+	  <arc exit="north" move="north" destination="502" />
+    <arc exit="south" move="south" destination="500" />
+  </node>
+  <node id="502" name="Church, Terminal of Balance">
+    <description>The path ends here with a large stone altar, the complex relief worn down by the weight of time.  A few stacks of cut stone blocks are piled against the far wall and are covered in a layer of dust.  A gentle whisper faintly echoes around the area.</description>
+    <position x="730" y="430" z="1" />
+    <arc exit="south" move="south" destination="501" />
+  </node>
+  <node id="503" name="Church, Path of Darkness">
+    <description>Solid steel pews curve around the dais to the west, covered in flaking rust, brutally angled and unwelcoming.  The rough stone walls absorb the light, and a dripping can be heard echoing in the distance.  Occasional dark streaks are smeared across the ground staining the floor, the area filled with the scent of copper and burnt meat.  To the east there is nothing but dark gloom.</description>
+    <position x="740" y="450" z="1" />
+	  <arc exit="east" move="east" destination="504" />
+    <arc exit="west" move="west" destination="500" />
+  </node>
+  <node id="504" name="Church, Terminal of Darkness">
+    <description>The branch ends here with a massive steel slab made of harsh angles and framed by four sharp hooks.  What light trickles in from the west feels muted, absorbed by the rough stone walls and almost repulsed by the slab.  An angry whispering faintly echoes harshly around the area.</description>
+    <position x="750" y="450" z="1" />
+    <arc exit="west" move="west" destination="503" />
+  </node>
+   <node id="505" name="Church, Path of Light">
+    <description>Richly carved and polished wooden pews curve around the dais to the east, covered in thick but fading cushions with elegantly embroidered scenes of the divine.  The north and south walls are almost entirely composed of brilliantly illuminated stained glass windows which bathe the area in a mosaic of colors -- blood-reds, emerald greens, and midnight purples.  Slowly shifting under the day's moving sun, the riot of light is both inviting and disorienting.</description>
+    <position x="720" y="450" z="1" />
+	  <arc exit="east" move="east" destination="500" />
+    <arc exit="west" move="west" destination="506" />
+  </node>
+  <node id="506" name="Church, Terminal of Light">
+    <description>The branch ends here, the curved wall bare save empty sconces and broken tiles.  Winding ivy has worked its way through cracks in the floor and wall and blanketed the stone, creating an alcove of green within the sheltered space.  A small stone firepit bears a thick layer of caked ash, and the faint smell of burnt wood permeates the area.  A comforting whisper echoes warmly around the area.</description>
+    <position x="710" y="450" z="1" />
+    <arc exit="east" move="east" destination="505" />
   </node>
   <label text="Vaults">
     <position x="270" y="310" z="0" />
