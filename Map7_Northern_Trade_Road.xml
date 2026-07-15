@@ -2443,43 +2443,43 @@
     <arc exit="south" move="south" destination="324" />
     <arc exit="northwest" move="northwest" destination="326" />
   </node>
-  <node id="326" name="Northern Trade Road, Marshy Meadows" color="#008000">
+  <node id="326" name="Northern Trade Road, Marshy Meadows">
     <description>The ground underfoot squishes with each movement, and moisture oozes into the traces left.  Low rocks set in ragged rows appear to mark a path along the swampy ground.  Gnats and midges clog your nostrils and fly into your eyes and ears in an endless cloud.  The air is thick with rotting vegetable matter and less identifiable odors.</description>
     <position x="260" y="2110" z="0" />
     <arc exit="southeast" move="southeast" destination="325" />
     <arc exit="northwest" move="northwest" destination="327" />
   </node>
-  <node id="327" name="Northern Trade Road, Marshy Meadows" color="#008000">
+  <node id="327" name="Northern Trade Road, Marshy Meadows">
     <description>You travel in the midst of a boggy meadow.  The air is thick with a chill mist that blurs the outlines of anything not close by.  Pale rocks set along the path show the safest way to go among the almost trackless wastes.</description>
     <position x="240" y="2090" z="0" />
     <arc exit="north" move="north" destination="328" />
     <arc exit="southeast" move="southeast" destination="326" />
   </node>
-  <node id="328" name="Northern Trade Road, Marshy Meadows" color="#008000">
+  <node id="328" name="Northern Trade Road, Marshy Meadows">
     <description>The ground beneath you is boggy and soft.  Swarms of flies close about you, and some land to drill into your flesh for a morsel of blood and to leave a stinging welt as a souvenir of your visit to their lands.  Northwards, the ground rises from the bog into open lands, while southward a mist obscures the view.</description>
     <position x="240" y="2070" z="0" />
     <arc exit="north" move="north" destination="329" />
     <arc exit="south" move="south" destination="327" />
   </node>
-  <node id="329" name="Northern Trade Road, Open Grasslands" color="#008000">
+  <node id="329" name="Northern Trade Road, Open Grasslands">
     <description>Southward, the road dips into a boggy lowland, while to the north, open grasslands stretch.  No sign of habitation breaks the rippling waves of grass that grow shoulder-high to a tall Elf.  The air is alternately fresh with the smell of growing things and thick with the stench of the bog, as the wind veers aimlessly across the open land.</description>
     <position x="240" y="2050" z="0" />
     <arc exit="north" move="north" destination="330" />
     <arc exit="south" move="south" destination="328" />
   </node>
-  <node id="330" name="Northern Trade Road, Open Grasslands" color="#008000">
+  <node id="330" name="Northern Trade Road, Open Grasslands">
     <description>Thick grass grows up to the edge of the road.  Despite the isolation and empty land, the road itself is in surprisingly good shape.  Large paving stones rest on a level bed, each one tightly fitted to its neighbor so that nary a weed or seedling can force a way between them.  Perhaps some vanished town lay near here that knew the value of good roads.</description>
     <position x="240" y="2030" z="0" />
     <arc exit="northeast" move="northeast" destination="331" />
     <arc exit="south" move="south" destination="329" />
   </node>
-  <node id="331" name="Northern Trade Road, Open Grasslands" color="#008000">
+  <node id="331" name="Northern Trade Road, Open Grasslands">
     <description>The road runs straight as an arrow through the endless sea of tall grasses.  An occasional ripple among the stalks moving counter the wind shows there is life hidden beneath the green and gold surface.  The desperate flight of a covey of birds, as they break cover and scatter, shows that peace here is a shallow illusion.  For always the hunter awaits the careless and the weak.</description>
     <position x="260" y="2010" z="0" />
     <arc exit="northeast" move="northeast" destination="332" />
     <arc exit="southwest" move="southwest" destination="330" />
   </node>
-  <node id="332" name="Northern Trade Road, Open Grasslands" color="#008000">
+  <node id="332" name="Northern Trade Road, Open Grasslands">
     <description>A ruined building sits alongside the tidy stone road.  The remains perhaps of an ancient tollhouse or inn, it lies at the edge of a forest that rises up from a wide swathe of grassland.</description>
     <position x="280" y="1990" z="0" />
     <arc exit="northeast" move="northeast" destination="333" />
@@ -2518,7 +2518,7 @@
     <arc exit="north" move="north" destination="338" />
     <arc exit="south" move="south" destination="336" />
   </node>
-  <node id="338" name="Northern Trade Road, Meadowlands" note="RTZ07|RT-K-HF" color="#008000">
+  <node id="338" name="Northern Trade Road, Meadowlands" note="RTZ07|RT-K-HF">
     <description>The forest to the south is thick and dark, a stark comparison to the open meadow around you.  Short, springy grass grows in soft mounds over hillocks and hollows.  Tiny white wildflowers peek out amongst the greenery, their petals open to accept the sunlight.</description>
     <description>The forest to the south is thick and dark, a stark comparison to the open meadow around you.  Short, springy grass grows in soft mounds over hillocks and hollows.  Pale jes-roses dot the greenery, their sweet, nightblooming fragrance creating a heady perfume.</description>
     <position x="360" y="1930" z="0" />
@@ -2682,13 +2682,13 @@
     <arc exit="north" move="north" destination="363" />
     <arc exit="southwest" move="southwest" destination="361" />
   </node>
-  <node id="363" name="Northern Trade Road, Mountain Trail" color="#008000">
+  <node id="363" name="Northern Trade Road, Mountain Trail">
     <description>A huge boulder blocks much of the road, but room remains to squeeze by between it and the mountain wall.  One broken and shattered bone shows you that someone or something was far less fortunate in times past.  You look nervously up at the rock-strewn slopes above you and mutter a short prayer that the boulders rest easily these days.</description>
     <position x="480" y="1610" z="0" />
     <arc exit="east" move="east" destination="364" />
     <arc exit="south" move="south" destination="362" />
   </node>
-  <node id="364" name="Northern Trade Road, Mountain Trail" color="#008000">
+  <node id="364" name="Northern Trade Road, Mountain Trail">
     <description>The road rises sharply to the west as it wends among the steep mountains.  Eastward, it falls away into a narrow, heavily-wooded valley.  Evidence of frequent landslides shows in the piles of rock and small boulders that make passage here uneven and slightly risky.</description>
     <position x="500" y="1610" z="0" />
     <arc exit="east" move="east" destination="365" />
@@ -2766,19 +2766,19 @@
     <arc exit="northwest" move="northwest" destination="374" />
     <arc exit="go" move="go silvery pool" destination="398" />
   </node>
-  <node id="376" name="Northern Trade Road, On the Bridge" color="#008000">
+  <node id="376" name="Northern Trade Road, On the Bridge">
     <description>The deafening roar of the Journalai River below you drowns out all other sound as you make your way across the bridge.  Droplets of water hit your face, and every now and then the flash of silver scales in the water catches your eye.</description>
     <position x="540" y="1410" z="0" />
     <arc exit="north" move="north" destination="377" />
     <arc exit="south" move="south" destination="373" />
   </node>
-  <node id="377" name="Northern Trade Road, Meadowlands" color="#008000">
+  <node id="377" name="Northern Trade Road, Meadowlands">
     <description>The grass is a thick, dark green carpet that spreads over the land in rolling abundance.  A few holes, large enough to admit a small animal, mar the landscape, creating openings that lead down into the dark home of burrowing creatures.  A river runs to the south, over which spans a sturdy wood and stone bridge.</description>
     <position x="540" y="1390" z="0" />
     <arc exit="north" move="north" destination="378" />
     <arc exit="go" move="go wood bridge" destination="376" />
   </node>
-  <node id="378" name="Northern Trade Road, Meadowlands" color="#008000">
+  <node id="378" name="Northern Trade Road, Meadowlands">
     <description>The tips and edges of the grass are slightly yellowed, and you get the vague feeling that there should be more flowers here.  To the south the meadows gradually shift into the lush emerald they should be, and to the north you see the beginning of a treeline.</description>
     <position x="540" y="1370" z="0" />
     <arc exit="northeast" move="northeast" destination="379" />
@@ -3387,10 +3387,11 @@
     <arc exit="west" move="west" destination="475" />
   </node>
   <node id="475" name="Limestone Valley, Marble Gate" note="Marble Gate">
-    <description>A tall arch is carved into the wall and set with a solid marble gate.  Although there's no apparent locking mechanism, the gate is solidly closed.  Fresh air drifts through the narrow crack around the slab carrying a hint of pine.</description>
+    <description>A tall arch is carved into the wall and set with a solid marble gate.  A door with a troll-shaped knocker is inset into the gate, allowing access through the barrier.  Fresh air drifts through the narrow crack around the slab carrying a hint of pine.</description>
     <position x="40" y="1730" z="0" />
     <arc exit="east" move="east" destination="474" />
     <arc exit="west" move="west" destination="476" />
+	<arc exit="go" move="go marble door" destination="861" />
   </node>
   <node id="476" name="Limestone Valley, Northern Wall">
     <description>The skeleton of a mid-size feline lies here in disarray and several large chunks of limestone are shattered beneath the remains.  It appears the edge of the cliff gave way while the luckless animal investigated the valley from above.  A far quicker death than the slowly suffocating fumes of the pit.</description>
@@ -5716,6 +5717,51 @@
     <arc exit="north" move="north" destination="859" />
     <arc exit="northwest" move="northwest" destination="799" />
   </node>
+  <node id="861" name="Beyond the Marble Gate, Trail" note="claw trolls|emerald claw trolls">
+    <description>Stretching between the walls of the ravine is a large marble gate with a matching door set inside it.  The trail winds through the ravine and heads deeper into the hills.</description>
+    <position x="40" y="1710" z="0" />
+    <arc exit="north" move="north" destination="862" />
+    <arc exit="go" move="go marble door" destination="475" />
+  </node>
+  <node id="862" name="Beyond the Marble Gate, Trail">
+    <description>Along one side of the trail, the branches of a flowering shrub have captured matted strands of brightly colored hair.  Even with a strong breeze, the wispy lengths hardly flutter and at times appear more akin to gremlin bristles.  To the other side of the dirt pathway lies the remains of a giant marble slab.  Large portions of the stone have been crudely hacked away, and broken fragments lie strewn in a rough line leading down the ravine.</description>
+    <position x="40" y="1690" z="0" />
+    <arc exit="south" move="south" destination="861" />
+    <arc exit="northwest" move="northwest" destination="863" />
+  </node>
+  <node id="863" name="Journalai Hills, Pine Forest">
+    <description>Tall pine trees tower to either side of the path, their silhouettes standing straight and unyielding, sentinels of the surrounding forest.  Tiny purple wood violets grow at the roots of one particularly large pine, scattered across the loamy earth.</description>
+    <position x="20" y="1670" z="0" />
+    <arc exit="north" move="north" destination="864" />
+    <arc exit="southwest" move="southwest" destination="867" />
+	 <arc exit="southeast" move="southeast" destination="862" />
+  </node>
+  <node id="864" name="Journalai Hills, Pine Forest">
+    <description>The night's soft light catches the jagged edges of grey stone outcroppings, throwing long, skeletal shadows across the muffled forest floor.  The daytime birds have fallen silent, replaced by the eerie, rhythmic sighing of the wind as it brushes through the dark, towering crowns overhead.  A chill dampness settles over the twisting slopes, making the exposed roots slick and the path ahead dangerously obscure to the unwary traveler.</description>
+	<description>Mottled beams of gold pierce the dense canopy, illuminating columns of dancing dust motes above the needle-strewn ground.  The crisp mountain air carries the chatter of unseen canopy birds and the sharp, hot scent of baking pine sap from the older trees.  Shadows stretch and pool between the rolling knolls, masking the true depth of the treacherous, root-choked paths that wind through the hills.</description>
+    <position x="20" y="1650" z="0" />
+    <arc exit="south" move="south" destination="863" />
+    <arc exit="west" move="west" destination="865" />
+  </node>
+  <node id="865" name="Journalai Hills, Pine Forest">
+    <description>A gently worn path winds beneath towering pines, where a blanket of needles and scattered cones muffles each footstep.  The distant sounds of woodland creatures drift through the otherwise tranquil forest.</description>
+    <position x="0" y="1650" z="0" />
+    <arc exit="east" move="east" destination="864" />
+    <arc exit="southwest" move="southwest" destination="866" />
+  </node>
+  <node id="866" name="Journalai Hills, Meadow">
+    <description>A break in the trees opens into a large, grassy glade.  Wildflowers dot the periphery, bowing in the breeze.  A small hole in the hilly landscape that appears to have once been the entrance to a burrow lies filled with moss-covered rocks and debris, abandoned to the elements.</description>
+    <position x="-20" y="1670" z="0" />
+    <arc exit="northeast" move="northeast" destination="865" />
+    <arc exit="southeast" move="southeast" destination="867" />
+  </node>
+  <node id="867" name="Journalai Hills, Forest Pond">
+    <description>At the edge of the meadow, a small pond glitters in the night's flickering light that filters through the leafy canopy of the surrounding trees.  Every so often, ripples form in the otherwise placid water, as tiny silvery fish break the surface.</description>
+	<description>At the edge of the meadow, a small pond glitters in the wan sunlight that filters through the leafy canopy of the surrounding trees.  Every so often, ripples form in the otherwise placid water, as tiny silvery fish break the surface.</description>
+    <position x="0" y="1690" z="0" />
+    <arc exit="northeast" move="northeast" destination="863" />
+    <arc exit="northwest" move="northwest" destination="866" />
+  </node>
   <label text="Warrior Mage">
     <position x="460" y="2440" z="0" />
   </label>
@@ -5910,5 +5956,8 @@
   </label>
   <label text="Abbey">
     <position x="550" y="1250" z="0" />
+  </label>
+  <label text="Emerald Claw Trolls">
+    <position x="0" y="1620" z="0" />
   </label>
 </zone>
