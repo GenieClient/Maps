@@ -1,345 +1,1527 @@
-<?xml version="1.0" encoding="utf-8"?>
-<zone name="Ice Caves" id="68a">
-  <node id="1" name="Ice Caves, Stone Forest" color="#993300">
-    <description>Among the great teeth of stone a narrow stream weaves its way down out the darkness.  Revealed by its path is an archway that opens to the west, offering a sloping passage beneath faded markings that have become illegible over time.</description>
-    <description>Among the great teeth of stone a narrow stream weaves its way down out of the darkness.  Revealed by its path is an archway that opens to the west, offering a sloping passage beneath faded markings that have become illegible over time.</description>
-    <position x="280" y="260" z="0" />
-    <arc exit="east" move="east" destination="2" />
-    <arc exit="go" move="go arch" destination="3" />
+<?xml version="1.0" encoding="utf-16"?>
+<zone name="Shard South Gate" id="68">
+  <node id="1" name="Shard, The New South Bridge" note="Map67_Shard.xml|Shard|S Gate|sgate">
+    <description>To the south rises New Gate, the city's stout bulwark against the wilds across the water.  Stone towers rise on each side of the wall that houses the main gate, with its heavy and well-oiled iron portcullis.  From here, one can glimpse the dark forests beyond.</description>
+    <position x="20" y="-40" z="0" />
+    <arc exit="north" move="north" />
+    <arc exit="east" move="east" />
+    <arc exit="west" move="west" />
+    <arc exit="none" move="go city gate" destination="2" />
   </node>
-  <node id="2" name="Ice Caves, Cave Mouth" color="#993300">
-    <description>Like the maw of some great beast, the stalagmite and stalactite-filled cave's stone teeth are as sharp as time and nature can make them.  Beyond the cavern's gaping entrance, a forest of stone rises.  Yet, the pillars are coated in black ice, reminders of the spell that once kept this area frozen -- the area and its inhabitants, feared even by their creators.</description>
-    <position x="300" y="260" z="0" />
-    <arc exit="west" move="west" destination="1" />
-    <arc exit="out" move="out" destination="29" />
+  <node id="2" name="Old Ilithi Trade Route, Journey's Rest">
+    <description>Like a bulwark against chaos, the gatehouse wall of Shard rises to the north.  Its granite blocks enclose the New South Gate that guards the bridge leading to the city.  The Old Ilithi Trade Route wends southward, a road haunted by the nightmare memory of the Dark Hand.</description>
+    <position x="20" y="20" z="0" />
+    <arc exit="south" move="south" destination="3" />
+    <arc exit="none" move="climb steep path" destination="8" />
+    <arc exit="none" move="go gate" destination="1" />
+    <arc exit="none" move="climb gatehouse wall" destination="225" />
   </node>
-  <node id="3" name="Ice Caves, Sloping Passageway" color="#993300">
-    <description>Following the steep incline of the passage, the stream flows downhill seeking escape from the dark chill of the caverns.  Scratches mar the rocks that make up the tunnel's walls, showing signs of frantic digging by some sort of clawed beasts.</description>
-    <position x="260" y="260" z="0" />
-    <arc exit="east" move="east" destination="1" />
-    <arc exit="west" move="west" destination="4" />
+  <node id="3" name="Derelict Road, Whistling Wood" color="#008000">
+    <description>The stone road, once the pinnacle of craftsmanship, is cracked and worn.  Framed on both sides by the Whistling Wood, it winds its way southward to the Dark Hand.  The crumbling remains of the old South Bridge of Shard can be seen to the north, set against the crystalline purity of the city's walls.</description>
+    <position x="20" y="40" z="0" />
+    <arc exit="north" move="north" destination="2" />
+    <arc exit="south" move="south" destination="4" />
+    <arc exit="none" move="go winding path" destination="15" />
   </node>
-  <node id="4" name="Ice Caves, Frozen Pool" color="#993300">
-    <description>Stalagmites, straining to reach the ceiling, surround a pool of water that rests in the center of the chamber.  The stream cuts through the pool, vanishing under its ice-coated surface, before re-emerging from the pool's far side.</description>
-    <position x="240" y="260" z="0" />
-    <arc exit="east" move="east" destination="3" />
-    <arc exit="southwest" move="southwest" destination="5" />
+  <node id="4" name="Derelict Road, Whistling Wood" color="#008000">
+    <description>The trees of the whistling wood press close against the crumbling stones of the road.  The hole-riddled branches seem intent on grasping ahold of unwary travellers and dragging them into the nightmarish depths of the forest.  The road continues its southward journey to the Dark Hand.</description>
+    <description>The trees of the whistling wood press close to the road.  Their hole-riddled branches seem intent on grasping hold of unwary travelers and dragging them into the nightmarish depths of the forest.  The road continues its southward journey to the Dark Hand.</description>
+    <position x="20" y="60" z="0" />
+    <arc exit="north" move="north" destination="3" />
+    <arc exit="south" move="south" destination="5" />
+    <arc exit="none" move="go twisting trail" destination="16" />
   </node>
-  <node id="5" name="Ice Caves, Narrow Tunnel" color="#993300">
-    <description>Floodwater escaping from the shallow stream cutting through the tunnel floor fills the area with mud and grime.  What little ground there is to walk on is a mire that is both slow and treacherous.</description>
-    <position x="220" y="280" z="0" />
-    <arc exit="northeast" move="northeast" destination="4" />
-    <arc exit="west" move="west" destination="6" />
+  <node id="5" name="Derelict Road, Whistling Wood" color="#008000">
+    <description>The road winds around a large pile of stones shaped like a cairn.  Several trees have fallen against the side, partially obstructing the entrance.  Only a small piece of the door, near the top of the cairn, remains open.</description>
+    <position x="20" y="80" z="0" />
+    <arc exit="north" move="north" destination="4" />
+    <arc exit="southeast" move="southeast" destination="6" />
+    <arc exit="none" move="go narrow path" destination="28" />
   </node>
-  <node id="6" name="Ice Caves, Underground Lake" color="#993300">
-    <description>Years of erosion have cut a shallow stream into the hard rock floor of the tunnel as the lake's waters seek a faster means of escape from the dark confines of the massive cavern.  A bridge of stone rises out from the passageway and offers the only means of crossing the freezing waters.</description>
-    <position x="180" y="280" z="0" />
-    <arc exit="east" move="east" destination="5" />
-    <arc exit="go" move="go bridge" destination="7" />
+  <node id="6" name="Derelict Road, Whistling Wood" color="#008000">
+    <description>The densely packed trees of the whistling wood begin to thin out to the south, no longer pressing against the crumbling stone of the road.  A large pile of stone to the north, barely visible through the wood, looks dark and foreboding in what little light can filter through the interlaced branches of the trees.</description>
+    <position x="40" y="100" z="0" />
+    <arc exit="southwest" move="southwest" destination="7" />
+    <arc exit="northwest" move="northwest" destination="5" />
   </node>
-  <node id="7" name="Ice Caves, Underground Lake" color="#993300">
-    <description>Descending out of the darkness, the bridge comes to rest on a narrow ledge that juts from the cavern walls.  Once there was nothing but a void within this hollow mountain, but now melting ice has formed a great lake that spreads out beyond the light's reach.</description>
-    <position x="180" y="240" z="0" />
-    <arc exit="northwest" move="northwest" destination="8" />
-    <arc exit="go" move="go bridge" destination="6" />
+  <node id="7" name="Derelict Road, Whistling Wood" color="#008000">
+    <description>The derelict stone road seems sturdier as the whistling wood begins to thin out to the south, its path no longer hemmed in by the trees.  A large meadow can be seen through the gaps between tree trunks.</description>
+    <position x="20" y="120" z="0" />
+    <arc exit="northeast" move="northeast" destination="6" />
+    <arc exit="south" move="south" destination="35" />
   </node>
-  <node id="8" name="Ice Caves, Frozen Cavern" color="#993300">
-    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
-    <position x="160" y="220" z="0" />
-    <arc exit="north" move="north" destination="26" />
-    <arc exit="northeast" move="northeast" destination="9" />
-    <arc exit="southeast" move="southeast" destination="7" />
-    <arc exit="northwest" move="northwest" destination="15" />
+  <node id="8" name="Shard, Shoreline">
+    <description>Rich brown silt lies like a blanket of silk over the shoreline, with the proper consistency and water to sand ratio that makes it perfect for wriggling one's toes in.  The water laps gently against the shoreline, a crystal blue color.</description>
+    <description>The shoreline is dark with the coming of night, painted a shade of coffee brown and chilly to the touch.  Darker water hisses against the shoreline, trying to erode the sand away.</description>
+    <position x="0" y="20" z="0" />
+    <arc exit="west" move="west" destination="9" />
+    <arc exit="none" move="climb steep slope" destination="2" />
   </node>
-  <node id="9" name="Ice Caves, Frozen Cavern" color="#993300">
-    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.  Several skulls have been piled in a corner, an eerie trophy of some sort.</description>
-    <position x="180" y="200" z="0" />
-    <arc exit="north" move="north" destination="28" />
-    <arc exit="northeast" move="northeast" destination="10" />
-    <arc exit="southwest" move="southwest" destination="8" />
-    <arc exit="west" move="west" destination="26" />
-    <arc exit="northwest" move="northwest" destination="16" />
+  <node id="9" name="Shard, Shoreline Under the Bridge">
+    <description>The south bridge spans above, casting a shadow over the shoreline and rendering to grey the otherwise crystal clear water.  The faint scent of offal rises through the air from the north.  The uneasy creak of the loose boards of the bridge does nothing to ease the nerves.</description>
+    <description>The south bridge spans above, casting a deeper shadow over the shoreline and rendering to dismal black the night-greyed.  The faint scent of offal rises through the air from the north.  The haunted creak of the loose boards of the bridge does nothing to ease the nerves.</description>
+    <position x="-20" y="20" z="0" />
+    <arc exit="east" move="east" destination="8" />
+    <arc exit="west" move="west" destination="10" />
+    <arc exit="none" move="go deep current" destination="177" />
   </node>
-  <node id="10" name="Ice Caves, Frozen Cavern" color="#993300">
-    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
-    <position x="200" y="180" z="0" />
-    <arc exit="southwest" move="southwest" destination="9" />
-    <arc exit="west" move="west" destination="28" />
-    <arc exit="northwest" move="northwest" destination="11" />
-    <arc exit="go" move="go gap" destination="48" />
+  <node id="10" name="Shard, Shoreline">
+    <description>To the west, the shore of the Lake of Tears curves in a warm golden-brown half-circle, marked here and there by water weeds that have washed to shore.  The south bridge arches to the east, the scent of corruption traveling with it.  A small entourage of ducks floats happily over the water, ducking down under the surface for a moment before resurfacing and shaking their feathers.</description>
+    <description>To the west, the shore of the Lake of Tears curves into shadows, marked here and there by water weeds that have washed to shore to die a cold death on unfamiliar terrain.  The south bridge arches to the east, the scent of corruption traveling with it.  The muttering of water sucking at the sand ripples through the air.</description>
+    <position x="-40" y="20" z="0" />
+    <arc exit="east" move="east" destination="9" />
+    <arc exit="west" move="west" destination="11" />
   </node>
-  <node id="11" name="Ice Caves, Frozen Cavern" color="#993300">
-    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
-    <position x="180" y="160" z="0" />
-    <arc exit="north" move="north" destination="22" />
-    <arc exit="southeast" move="southeast" destination="10" />
-    <arc exit="south" move="south" destination="28" />
-    <arc exit="southwest" move="southwest" destination="16" />
-    <arc exit="west" move="west" destination="27" />
+  <node id="11" name="Shard, Shoreline">
+    <description>Footprints -- both humanoid and animal -- pad side-by-side along the sand, their presence gradually eroded away by the water.  The profound lesson of the water on the sand is a centuries-old one.  The shoreline, while giving the appearance of eternally being the same, is in fact eternally changing.</description>
+    <position x="-60" y="20" z="0" />
+    <arc exit="east" move="east" destination="10" />
     <arc exit="northwest" move="northwest" destination="12" />
   </node>
-  <node id="12" name="Ice Caves, Frozen Cavern" color="#993300">
-    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
-    <position x="160" y="140" z="0" />
+  <node id="12" name="Shard, Shoreline">
+    <description>Long blades of water weed lie stranded on the shoreline, the sunlight gradually sucking out their life just as surely as the sand is sucked away by the greedy water.  The walls of Shard -- glittering and bright -- rise up to the northeast, and the faint sounds of the city wash over the lake from its teeming streets.</description>
+    <description>Decaying blades of water weed lie in squiggly shapes on the shoreline, chilled by the touch of night.  The walls of Shard to the northeast glow softly despite the curtain of darkness, perhaps the reason a Bard from long ago named it the "Evershine City".</description>
+    <position x="-80" y="0" z="0" />
     <arc exit="southeast" move="southeast" destination="11" />
-    <arc exit="south" move="south" destination="27" />
-    <arc exit="southwest" move="southwest" destination="13" />
-  </node>
-  <node id="13" name="Ice Caves, Frozen Cavern" color="#993300">
-    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
-    <position x="140" y="160" z="0" />
-    <arc exit="northeast" move="northeast" destination="12" />
-    <arc exit="east" move="east" destination="27" />
-    <arc exit="southeast" move="southeast" destination="16" />
-    <arc exit="south" move="south" destination="25" />
-    <arc exit="southwest" move="southwest" destination="14" />
-  </node>
-  <node id="14" name="Ice Caves, Frozen Cavern" color="#993300">
-    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
-    <position x="120" y="180" z="0" />
-    <arc exit="northeast" move="northeast" destination="13" />
-    <arc exit="east" move="east" destination="25" />
-    <arc exit="southeast" move="southeast" destination="15" />
-    <arc exit="northwest" move="northwest" destination="17" />
-  </node>
-  <node id="15" name="Ice Caves, Frozen Cavern" color="#993300">
-    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
-    <position x="140" y="200" z="0" />
-    <arc exit="north" move="north" destination="25" />
-    <arc exit="northeast" move="northeast" destination="16" />
-    <arc exit="east" move="east" destination="26" />
-    <arc exit="southeast" move="southeast" destination="8" />
-    <arc exit="southwest" move="southwest" destination="20" />
-    <arc exit="northwest" move="northwest" destination="14" />
-  </node>
-  <node id="16" name="Ice Caves, Cavern's Heart" color="#993300">
-    <description>Torches are set up in a circle around a gaping chasm that opens in the hard frozen stone of the cavern's floor.  At the north edge of the void, an iron altar stained with dried blood stands flanked by two large silver braziers.  Light from the fires fill the surrounding cavern and flicker in a light breeze that constantly rises from the chasm.</description>
-    <position x="160" y="180" z="0" />
-    <arc exit="north" move="north" destination="27" />
-    <arc exit="northeast" move="northeast" destination="11" />
-    <arc exit="east" move="east" destination="28" />
-    <arc exit="southeast" move="southeast" destination="9" />
-    <arc exit="south" move="south" destination="26" />
-    <arc exit="southwest" move="southwest" destination="15" />
-    <arc exit="west" move="west" destination="25" />
-    <arc exit="northwest" move="northwest" destination="13" />
-    <arc exit="climb" move="climb gaping chasm" destination="47" />
-  </node>
-  <node id="17" name="Ice Caves, Dim Tunnel" color="#993300">
-    <description>Light from the main cavern only barely challenges the darkness that shrouds the tunnel as it turns to dig deeper into the ice coated walls.  Underneath the bloodstained ice that covers the ground, deep scratches mar the dark stone leading further into the black passageway.</description>
-    <position x="100" y="160" z="0" />
-    <arc exit="southeast" move="southeast" destination="14" />
-    <arc exit="west" move="west" destination="18" />
-  </node>
-  <node id="18" name="Ice Caves, Dim Tunnel" color="#993300">
-    <description>Set into the frozen walls is a large iron door covered in scrollwork that blocks further passage into the tunnel.  Odd symbols are crafted into the framework supporting the door, but aside from vague dragon-like shapes, their meanings are lost.</description>
-    <position x="80" y="160" z="0" />
-    <arc exit="east" move="east" destination="17" />
-    <arc exit="go" move="go door" destination="19" />
-  </node>
-  <node id="19" name="Ice Caves, Larder" color="#993300">
-    <description>Cold air circulates about this small chamber creating a frosty environment that chills the blood.  In times past the tunnel obviously continued further into the dark stone walls, but because of a cave-in, that option is no longer available.  It has since been transformed into a larder for the Adan'f and bodies are stacked haphazardly about the area, kept fresh by the cold air coming from behind the cave-in.</description>
-    <position x="80" y="140" z="0" />
-    <arc exit="go" move="go door" destination="18" />
-  </node>
-  <node id="20" name="Ice Caves, Dim Tunnel" color="#993300">
-    <description>Dark stone coated with black ice reflects the light from the main cavern, absorbing it and hiding it away.  The result is a dim passageway that leads further into the frozen caves.</description>
-    <position x="120" y="220" z="0" />
-    <arc exit="northeast" move="northeast" destination="15" />
-    <arc exit="south" move="south" destination="21" />
-  </node>
-  <node id="21" name="Ice Caves, Recessed Alcove" color="#993300">
-    <description>Light rarely finds its way back to this cold dark corner.  Long ago the passage continued further into the black walls, but due to a cave-in in the past the way is completely blocked off.  Gouges in the walls around the cave-in show evidence of digging, but none actually make it through the hard stone.</description>
-    <position x="120" y="240" z="0" />
-    <arc exit="north" move="north" destination="20" />
-  </node>
-  <node id="22" name="Ice Caves, Dim Tunnel" color="#993300">
-    <description>Darkness shrouds this tunnel as it burrows away into the ice coated stone.  From time to time firelight from the main cavern reflects off veins of rock crystal that have been revealed by past digging, their soft glimmering accounting for what little light there is.</description>
-    <position x="180" y="140" z="0" />
-    <arc exit="northeast" move="northeast" destination="23" />
-    <arc exit="south" move="south" destination="11" />
-  </node>
-  <node id="23" name="Ice Caves, Crevice" color="#993300">
-    <description>Narrowing abruptly, the walls close in tight making passage through the crevice slow going.  The veins of rock crystal in the dark stone grow more evident and seem to be increasing in size as the tunnel gets further from the main chambers.</description>
-    <position x="200" y="120" z="0" />
-    <arc exit="north" move="north" destination="24" />
-    <arc exit="southwest" move="southwest" destination="22" />
-  </node>
-  <node id="24" name="Ice Caves, Crystal Cavern" color="#993300">
-    <description>Cut from the very heart of a massive vein of crystal, the passage ends here in a pocket of precious stone.  Smooth sheets of crystal make up the walls, their multicolored hues of blues and reds and greens sending off bursts of color as light from the main cavern bounces back through the dark stone tunnels to reach this small confine.</description>
-    <position x="200" y="100" z="0" />
-    <arc exit="south" move="south" destination="23" />
-  </node>
-  <node id="25" name="Ice Caves, Frozen Cavern" color="#993300">
-    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
-    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
-    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
-    <position x="140" y="180" z="0" />
-    <arc exit="north" move="north" destination="13" />
-    <arc exit="east" move="east" destination="16" />
-    <arc exit="south" move="south" destination="15" />
-    <arc exit="west" move="west" destination="14" />
-  </node>
-  <node id="26" name="Ice Caves, Frozen Cavern" color="#993300">
-    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
-    <position x="160" y="200" z="0" />
-    <arc exit="north" move="north" destination="16" />
-    <arc exit="east" move="east" destination="9" />
-    <arc exit="south" move="south" destination="8" />
-    <arc exit="west" move="west" destination="15" />
-  </node>
-  <node id="27" name="Ice Caves, Frozen Cavern" color="#993300">
-    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
-    <position x="160" y="160" z="0" />
-    <arc exit="north" move="north" destination="12" />
-    <arc exit="east" move="east" destination="11" />
-    <arc exit="south" move="south" destination="16" />
     <arc exit="west" move="west" destination="13" />
   </node>
-  <node id="28" name="Ice Caves, Frozen Cavern" color="#993300">
-    <description>Walls coated in black ice surround the massive cavern, closing it off from the rest of the caves.  Faint glimmers of light illuminate the area as torches in the cavern's heart reflect the glow off the ice.</description>
-    <position x="180" y="180" z="0" />
-    <arc exit="north" move="north" destination="11" />
-    <arc exit="east" move="east" destination="10" />
-    <arc exit="south" move="south" destination="9" />
+  <node id="13" name="Shard, Shoreline">
+    <description>Bits of black rock stick out from underneath the rich brown silt of the shoreline, deposited here by the lapping waves of the lake.  Thick black boulders can be seen to the west, signaling an end to the accessible section of the strand.</description>
+    <position x="-100" y="0" z="0" />
+    <arc exit="east" move="east" destination="12" />
+    <arc exit="west" move="west" destination="14" />
+  </node>
+  <node id="14" name="Shard, Shoreline">
+    <description>Huge black boulders block off the rest of the shoreline, their placement too suspiciously perfect to have been nature-made.  The loud splash of the water throwing itself at the rocks ripples over the shoreline, a lesson in futility.</description>
+    <position x="-120" y="0" z="0" />
+    <arc exit="east" move="east" destination="13" />
+  </node>
+  <node id="15" name="Prairie" note="Map66_Shard_to_Gondola_Area.xml|E Gate|egate">
+    <description>The taller grasses and flowers give way here to shorter buffalo grass and primroses.  A small flock of prairie-chickens scratch in the dirt and grass for food.  Though they move away from visitors to the area, there is not sufficient danger to send them squawking for shelter.</description>
+    <position x="100" y="40" z="0" />
+    <arc exit="north" move="north" />
+    <arc exit="west" move="west" />
+    <arc exit="none" move="go path" destination="3" />
+  </node>
+  <node id="16" name="Twisting Trail, Whistling Wood">
+    <description>Dry branches cross the path, slowing progress through the thick woods.  Though the forest blots out most of the light, the old Derelict Road is visible through a cage of thorns rising up around the trail.</description>
+    <position x="40" y="60" z="0" />
+    <arc exit="east" move="east" destination="17" />
+    <arc exit="none" move="go derelict road" destination="4" />
+  </node>
+  <node id="17" name="Twisting Trail, Whistling Wood">
+    <description>Branches along each side of the trail are broken, as if something large had passed this way. The trail continues to twist and turn, well out of sight of the Derelict Road.</description>
+    <position x="60" y="60" z="0" />
+    <arc exit="southeast" move="southeast" destination="18" />
     <arc exit="west" move="west" destination="16" />
   </node>
-  <node id="29" name="Whistling Wood, Clearing" note="Map68_Shard_South_Gate.xml|Shard South">
+  <node id="18" name="Gorbesh Fortress, Outside Gate">
+    <description>The terrain breaks slightly to reveal a wooden fort tied with netting to blend in with its surroundings.  A guard tower camouflaged with branches rises above the fortress gate, providing an eagle-eye view of any who approach.</description>
+    <position x="80" y="80" z="0" />
+    <arc exit="northwest" move="northwest" destination="17" />
+    <arc exit="none" move="go wooden gate" destination="19" />
+  </node>
+  <node id="19" name="Gorbesh Fortress, Practice Yard">
+    <description>The ground in this open square is trampled flat, though a few dead tree trunks are still standing.  Ragged target dummies with crude faces drawn on are tied in nooses from a wooden beam.</description>
+    <position x="100" y="100" z="0" />
+    <arc exit="east" move="east" destination="21" />
+    <arc exit="southeast" move="southeast" destination="22" />
+    <arc exit="south" move="south" destination="23" />
+    <arc exit="southwest" move="southwest" destination="24" />
+    <arc exit="none" move="climb ladder" destination="20" />
+    <arc exit="none" move="go gate" destination="18" />
+  </node>
+  <node id="20" name="Gorbesh Fortress, Guard Tower">
+    <description>The tower walls are notched and charred, apparently damaged in a pitched battle.  Deep gouges along the outside timbers of the guard tower tell the tale of a brutal assault -- one the archers who stood here could not withstand.</description>
+    <position x="100" y="80" z="0" />
+    <arc exit="none" move="climb ladder" destination="19" />
+  </node>
+  <node id="21" name="Gorbesh Fortress, Stable">
+    <description>Facing out onto the practice yard, these few covered stalls once provided temporary shelter for the mounts of the officers.  A few bits of straw are caught in the slats of a hayrack.</description>
+    <position x="120" y="100" z="0" />
+    <arc exit="west" move="west" destination="19" />
+    <arc exit="none" move="go clogged crevice" destination="215" />
+  </node>
+  <node id="22" name="Gorbesh Fortress, Storage">
+    <description>Empty hooped barrels are wedged into the corners of the room, nailed to the walls with metal spikes.  The ceiling is lined with dozens of hooks.  A sign in an unknown language is carved into the wall.</description>
+    <position x="120" y="120" z="0" />
+    <arc exit="west" move="west" destination="23" />
+    <arc exit="northwest" move="northwest" destination="19" />
+  </node>
+  <node id="23" name="Gorbesh Fortress, Firepit">
+    <description>Two iron rods ending in hooks are planted in the ground next to a sooty bowl-shaped depression.  Judging from the trail of colorful splats and splotches on the ground leading west to the mess hall, this is where the Gorbesh prepared their food.</description>
+    <position x="100" y="120" z="0" />
+    <arc exit="north" move="north" destination="19" />
+    <arc exit="east" move="east" destination="22" />
+    <arc exit="southeast" move="southeast" destination="27" />
+    <arc exit="south" move="south" destination="25" />
+    <arc exit="west" move="west" destination="24" />
+  </node>
+  <node id="24" name="Gorbesh Fortress, Mess Hall">
+    <description>Low benches are pulled up to long wooden tables.  Some sort of blackish crust stains the tables in spots.</description>
+    <position x="80" y="120" z="0" />
+    <arc exit="northeast" move="northeast" destination="19" />
+    <arc exit="east" move="east" destination="23" />
+  </node>
+  <node id="25" name="Gorbesh Fortress, Meeting Room">
+    <description>High-backed chairs sit around a scarred table.  Blobs of candlewax discolor the table and floor, telling the story of long hours spent in planning, lasting deep into the night.  Several tall stools, somewhat newer than the chairs, are pulled up to the table.</description>
+    <position x="100" y="140" z="0" />
+    <arc exit="north" move="north" destination="23" />
+    <arc exit="west" move="west" destination="26" />
+  </node>
+  <node id="26" name="Gorbesh Fortress, Officers' Quarters">
+    <description>Rank may have its privileges, but you wouldn't know it to look at this room.  A half-dozen cots are lined up neatly, with one table and washbasin to serve all the inhabitants.</description>
+    <position x="80" y="140" z="0" />
+    <arc exit="east" move="east" destination="25" />
+  </node>
+  <node id="27" name="Gorbesh Fortress, Barracks">
+    <description>The bunks filling the barracks are huge, a testament to the sheer size of the Gorbesh warriors.  There is room for little else here, and the occupants must have had to crawl over each other to reach the door.</description>
+    <position x="120" y="140" z="0" />
+    <arc exit="northwest" move="northwest" destination="23" />
+  </node>
+  <node id="28" name="Whistling Wood, Path" color="#008000">
+    <description>The narrow trail curves to the west towards a long row of earthen mounds.  Interlaced in a web of worm-eaten wood, the bare branches of the whistling wood hang low over the beaten path.  Curiously devoid of the sounds of animal life present in most woods, the silence beneath the trees weighs heavily on the air.</description>
+    <position x="0" y="120" z="0" />
+    <arc exit="west" move="west" destination="29" />
+    <arc exit="none" move="go narrow path" destination="5" />
+  </node>
+  <node id="29" name="Whistling Wood, Path" note="Hollow" color="#008000">
+    <description>Like the footprint of a giant bird, the trail branches in three directions.  One branch curves toward the northwest, where a large hill of dirt and rock rises from the earth.  Another leads deeper into the dead silence of the wood, its end lost in the dark shadows beneath the trees.  The third branch leads east towards the derelict road.</description>
+    <position x="-20" y="120" z="0" />
+    <arc exit="east" move="east" destination="28" />
+    <arc exit="southwest" move="southwest" destination="30" />
+    <arc exit="northwest" move="northwest" destination="138" />
+  </node>
+  <node id="30" name="Whistling Wood, Darkened Path" color="#008000">
+    <description>Shadows hungrily swallow the light, cloaking the path in their darkness.  A faint rustle of sound can be heard thrumming through the trees.  It is impossible to tell whether the sound is caused by something moving in the shadows, or the whisper of wind through the gnarled branches.</description>
+    <position x="-40" y="140" z="0" />
+    <arc exit="northeast" move="northeast" destination="29" />
+    <arc exit="southwest" move="southwest" destination="31" />
+  </node>
+  <node id="31" name="Whistling Wood, Darkened Path" color="#008000">
+    <description>A trace of frost laces the air as the tunnel of darkness curves to the west.  The trunks of the trees now press so closely it would be impossible to see into the depths of the forest, even if there were light to do so.</description>
+    <position x="-60" y="160" z="0" />
+    <arc exit="northeast" move="northeast" destination="30" />
+    <arc exit="west" move="west" destination="32" />
+  </node>
+  <node id="32" name="Whistling Wood, Darkened Path" color="#008000">
+    <description>The mass of shadows weighs heavily upon the ground, muffling all sound and movement.  Standing like stern sentinels, the riddled trees line a trail so twisted and choked it is impossible to take two steps without having to turn.  A sibilant hissing echoes from the branches above.</description>
+    <position x="-80" y="160" z="0" />
+    <arc exit="east" move="east" destination="31" />
+    <arc exit="southwest" move="southwest" destination="33" />
+  </node>
+  <node id="33" name="Whistling Wood, Darkened Path" color="#008000">
+    <description>Faint patches of light can be seen to the south, scattering the shadows enough that the dim forms of trees stand out in stark relief beside the path.  The bark and branches of the trees are rimed in bluish-grey frost.</description>
+    <position x="-100" y="180" z="0" />
+    <arc exit="northeast" move="northeast" destination="32" />
+    <arc exit="south" move="south" destination="34" />
+  </node>
+  <node id="34" name="Whistling Wood, Clearing" color="#008000">
     <description>The worm-riddled ranks of the whispering woods open onto a great clearing filled with light from the sky above.  A streambed cuts through the ground, running from the mouth of a large cave and towards the east.</description>
-    <position x="300" y="200" z="0" />
-    <arc exit="north" move="north" />
+    <position x="-100" y="200" z="0" />
+    <arc exit="north" move="north" destination="33" />
+    <arc exit="none" move="go cave mouth" destination="208" />
   </node>
-  <node id="30" name="Whistling Wood, Narrow Path" note="Map68_Shard_South_Gate.xml|Shard North">
-    <description>A dark canopy of leaves hangs over this narrow path through the Whistling Wood.  To the south, a large boulder forces the path to detour around it.  Raw stumps and piles of stones show that the bypass has been recently constructed.</description>
-    <position x="300" y="60" z="0" />
-    <arc exit="north" move="north" destination="31" />
-    <arc exit="southwest" move="southwest" />
-    <arc exit="climb" move="climb boulder" />
+  <node id="35" name="Derelict Road, Meadow">
+    <description>The road runs south through a large meadow, the grass long dead but the weeds thriving.  The whistling of the wind through the trees to the north can still be heard, the eerie sound made worse by the distance from the wood.</description>
+    <position x="20" y="140" z="0" />
+    <arc exit="north" move="north" destination="7" />
+    <arc exit="south" move="south" destination="36" />
   </node>
-  <node id="31" name="Whistling Wood, Fissure">
-    <description>Among the worm-riddled trees that crowd this forest clearing, a great fissure has rent the ground opening up a passageway into the dark depths.  Heading off to the south, a weed-choked path offers the only way out of the clearing.</description>
-    <description>Among the worm-riddled trees that crowd this forest clearing, a great fissure has rent the ground, opening a passageway into the depths.  To the south, a weed-choked path offers the only way out of the clearing.</description>
-    <position x="300" y="40" z="0" />
-    <arc exit="south" move="south" destination="30" />
-    <arc exit="climb" move="climb deep fissure" destination="32" />
+  <node id="36" name="Derelict Road, Meadow">
+    <description>The paving stones of the road are nearly gone, broken up by the weeds growing through the cracks.  The body of a large animal, picked clean until only a pile of bones remain, lies in the meadow.</description>
+    <position x="20" y="160" z="0" />
+    <arc exit="north" move="north" destination="35" />
+    <arc exit="south" move="south" destination="37" />
   </node>
-  <node id="32" name="Ice Caves, Fissure" color="#993300">
-    <description>Disturbed graves poke from the walls of the fissure as the steep stone tilts to meet the surface.  A partially uncovered coffin juts out of the walls providing a place to rest between climbs, its surface pitted and scarred from whatever ripped it from the ground.</description>
-    <position x="300" y="20" z="0" />
-    <arc exit="climb" move="climb deep gouges" destination="33" />
-    <arc exit="climb" move="climb fissure walls" destination="31" />
+  <node id="37" name="Derelict Road, Meadow">
+    <description>The road, its paving stones completely disintegrated, continues its run southward to the Dark Hand.  A dirt path leads east into the meadow.</description>
+    <position x="20" y="180" z="0" />
+    <arc exit="north" move="north" destination="36" />
+    <arc exit="south" move="south" destination="38" />
+    <arc exit="none" move="go dirt path" destination="40" />
   </node>
-  <node id="33" name="Ice Caves, Fissure" color="#993300">
-    <description>A narrow niche in the wall, once the home of a large boulder, allows adventurers to rest between climbs through the steep fissure.  Walls of grey granite rise high all around, crumbling in places as cracks weaken the entire area.</description>
-    <position x="300" y="0" z="0" />
-    <arc exit="climb" move="climb narrow niche" destination="34" />
-    <arc exit="climb" move="climb granite walls" destination="32" />
+  <node id="38" name="Derelict Road, Meadow">
+    <description>A small oak tree stands beside the stone road, a silent companion as it travels south.  Curiously, the oak is thriving in a place where nothing seems to grow.</description>
+    <position x="20" y="200" z="0" />
+    <arc exit="north" move="north" destination="37" />
+    <arc exit="south" move="south" destination="39" />
   </node>
-  <node id="34" name="Ice Caves, Fissure" color="#993300">
-    <description>Boulders litter the ground of the chamber, having been knocked from the walls by whatever caused the fissure to open.  Decaying remains of various Adan'f cover the floor, their bones crushed in places by falling rocks.</description>
-    <position x="280" y="0" z="0" />
-    <arc exit="west" move="west" destination="35" />
-    <arc exit="climb" move="climb fissure walls" destination="33" />
+  <node id="39" name="Derelict Road, Meadow">
+    <description>A dry streambed cuts across the road, briefly interrupting its journey.  Once the source of life for the entire meadow, the stream is now dry and empty, its bed cracked and dry as though it were burned in a great fire.</description>
+    <position x="20" y="220" z="0" />
+    <arc exit="north" move="north" destination="38" />
+    <arc exit="southeast" move="southeast" destination="43" />
   </node>
-  <node id="35" name="Ice Caves, Crumbling Passageway" color="#993300">
-    <description>Walls of loose black soil surround the passage as it leads through the cold earth.  Towards the east a fissure through the very bedrock has opened up a path to the surface, offering a way to escape from the dark confines of the caves.</description>
-    <position x="260" y="0" z="0" />
-    <arc exit="east" move="east" destination="34" />
-    <arc exit="southwest" move="southwest" destination="36" />
+  <node id="40" name="Meadow, Dirt Path">
+    <description>The dead grass of the meadow presses close about the dirt path, creating a small aisle barely wide enough to walk through.  To the east, in the deepest part of the meadow, lies the ruins of an old temple.</description>
+    <position x="40" y="180" z="0" />
+    <arc exit="east" move="east" destination="41" />
+    <arc exit="none" move="go derelict road" destination="37" />
   </node>
-  <node id="36" name="Ice Caves, Crumbling Passageway" color="#0000FF">
-    <description>Water from the west has weakened the walls, allowing the loose soil to slip free to clog the ground.  Moss covering the ceiling acts as a net to keep the earth above from joining the mess of mud that slows travel through the passage.</description>
-    <position x="240" y="20" z="0" />
-    <arc exit="northeast" move="swim northeast" destination="35" />
-    <arc exit="west" move="swim west" destination="37" />
-  </node>
-  <node id="37" name="Ice Caves, Flooded Tunnel" color="#0000FF">
-    <description>Swirling whirlpools sweep through the area sending sediment throughout the water, choking off all visibility.  A break in one of the crumbling walls is the cause of the flooded chamber, the current pushing southwest.</description>
-    <description>Lazy whirlpools float through the area toward the southwest, spreading clouds of sediment in the water that completely obstruct visibility.  A break in one of the crumbling walls is the source of the flood.</description>
-    <position x="220" y="20" z="0" />
-    <arc exit="east" move="swim east" destination="36" />
-    <arc exit="southwest" move="swim southwest" destination="38" />
-  </node>
-  <node id="38" name="Ice Caves, Flooded Tunnel" color="#0000FF">
-    <description>Water rushes through the room as currents pull it this way and that through the dark confine.  Near the floor a pitch black hole is barely visible against the lesser grey of the surrounding water, and it is this opening that is causing the currents as it sucks the water down.</description>
-    <description>A slight current moves the water this way and that, but always toward a dark hole, barely visible near the floor.  The water is draining through the hole, creating the slow surge.</description>
-    <position x="200" y="40" z="0" />
-    <arc exit="north" move="swim north" destination="39" />
-    <arc exit="northeast" move="swim northeast" destination="37" />
-  </node>
-  <node id="39" name="Ice Caves, Flooded Tunnel" color="#0000FF">
-    <description>Freezing water, clouded with sediment from the loose soil that comprises the walls, fills the tunnel from top to bottom.  Currents within the water make movement difficult as they try to pull you south.</description>
-    <description>Freezing water clouded with soil from the walls fills the tunnel from floor to ceiling.  A sluggish current does little to hinder movement.</description>
-    <position x="200" y="20" z="0" />
-    <arc exit="south" move="swim south" destination="38" />
-    <arc exit="west" move="swim west" destination="40" />
-  </node>
-  <node id="40" name="Ice Caves, Crumbling Passageway" color="#0000FF">
-    <description>The ground slopes down to the east where it meets and disappears beneath the freezing cold water that has risen to flood the tunnel.  What is left of the remaining dry ground is concentrated in the moldy ceiling, clinging tenaciously above the water as if afraid to drown.</description>
-    <description>The passageway slopes down to the east and disappears beneath the bone-chilling water that floods the tunnel.</description>
-    <position x="180" y="20" z="0" />
-    <arc exit="east" move="swim east" destination="39" />
-    <arc exit="southwest" move="swim southwest" destination="41" />
-  </node>
-  <node id="41" name="Ice Caves, Crumbling Passageway" color="#993300">
-    <description>Water seeps through the ground here, making the ground wet and soggy, clinging to anything that touches it.  Puddles gather in old footprints making miniature lakes leading through the passageway.</description>
-    <description>Water seeps from the ground here, making it wet and soggy, clinging to anything it touches.  Along the passageway, puddles gather in old footprints like miniature lakes.</description>
-    <position x="160" y="40" z="0" />
-    <arc exit="northeast" move="northeast" destination="40" />
-    <arc exit="southwest" move="southwest" destination="42" />
-  </node>
-  <node id="42" name="Ice Caves, Crumbling Passageway" color="#993300">
-    <description>Chunks of rocks jut forth from the loose soil that makes up the walls of the passage.  Here and there ice-coated stones have fallen from the ceiling, making movement through the area difficult at best.</description>
-    <position x="140" y="60" z="0" />
-    <arc exit="northeast" move="northeast" destination="41" />
-    <arc exit="west" move="west" destination="43" />
-  </node>
-  <node id="43" name="Ice Caves, Crumbling Passageway" color="#993300">
-    <description>Walls of crumbling black dirt packed loosely together make up the sides of this passage.  To the west, a small hole offers the only way to get through a wall of granite that blocks the rest of the tunnel, while to the east the passageway continues further into the darkness.</description>
-    <position x="120" y="60" z="0" />
+  <node id="41" name="Meadow, Ruins">
+    <description>The fallen stone walls of the ruined Dragon Priests' temple are heavily scarred with the marks of arcane battle.  The tapestries, paintings and golden dragons which once opulently adorned this temple are now reduced to dust and melted slag.  To the east lies the heart of the temple, where sacrifices to appease the World Dragon were performed.</description>
+    <position x="60" y="180" z="0" />
     <arc exit="east" move="east" destination="42" />
-    <arc exit="west" move="west" destination="44" />
+    <arc exit="west" move="west" destination="40" />
   </node>
-  <node id="44" name="Ice Caves, Dead End" color="#993300">
-    <description>Body parts from all the races litter the bottom of this chasm.  For most of them it appears that this was where they died after a long fall and a terrible meeting with the hard stone floor.  Old blood stains the ground, and the sickening stench of decaying flesh fills the air, challenging even the strongest stomach.  The only way out is through a crumbling passage leading off to the east, or by climbing the towering chasm walls.</description>
-    <position x="80" y="60" z="0" />
-    <arc exit="east" move="east" destination="43" />
-    <arc exit="climb" move="climb chasm walls" destination="45" />
+  <node id="42" name="Ruins, Altar of the Dragon" note="Altar of the Dragon">
+    <description>The sacrificial chamber was thoroughly razed in whatever battle destroyed this temple.  The walls and statues were all torn down and melted, the ritual symbols scorched out of existence.  All that remains is the fire-blackened altar set in the center of the room.</description>
+    <position x="80" y="180" z="0" />
+    <arc exit="west" move="west" destination="41" />
   </node>
-  <node id="45" name="Ice Caves, Chasm" color="#993300">
-    <description>Black ice coats the walls of the chasm making climbing in either direction a perilous adventure.</description>
-    <description>Black ice coats the walls and floor of the chasm, making climbing in either direction a perilous adventure.</description>
-    <position x="80" y="40" z="0" />
-    <arc exit="climb" move="climb wide ledge" destination="44" />
-    <arc exit="climb" move="climb chasm wall" destination="46" />
+  <node id="43" name="Derelict Road, Meadow">
+    <description>The remains of the dead meadow grass rustle in the occasional breeze.  The derelict road, a few of its stones remaining, continues toward the Dark Hand.</description>
+    <position x="40" y="240" z="0" />
+    <arc exit="south" move="south" destination="44" />
+    <arc exit="northwest" move="northwest" destination="39" />
   </node>
-  <node id="46" name="Ice Caves, Chasm" color="#993300">
-    <description>Darkness fills this empty void as it sinks down into the frozen stone of the surrounding caves.  The chasm walls rise upwards around the small ledge that offers a brief respite from the harsh climb above and below.</description>
-    <position x="80" y="20" z="0" />
-    <arc exit="climb" move="climb chasm wall" destination="47" />
-    <arc exit="climb" move="climb small ledge" destination="45" />
+  <node id="44" name="Derelict Road, Meadow">
+    <description>A large pillar of stone partially blocks the road's southward journey, its grey surface curiously smooth.  The road is once again paved with stones, the grasses of this part of the meadow not strong enough to disintegrate them.</description>
+    <position x="40" y="260" z="0" />
+    <arc exit="north" move="north" destination="43" />
+    <arc exit="south" move="south" destination="45" />
   </node>
-  <node id="47" name="Ice Caves, Chasm" color="#993300">
-    <description>A ring of firelight breaks the darkness as the steep frozen walls open up above into a large cavern filled with torches.</description>
-    <position x="80" y="0" z="0" />
-    <arc exit="climb" move="climb crumbling ledge" destination="46" />
-    <arc exit="climb" move="climb chasm wall" destination="16" />
+  <node id="45" name="Derelict Road, Meadow">
+    <description>A few trees, scorched and burned in some great fire, are scattered throughout the meadow.  The root of one of the trees breaks through the stones of the road, creating a hazard for an unwary traveler.</description>
+    <position x="40" y="280" z="0" />
+    <arc exit="north" move="north" destination="44" />
+    <arc exit="south" move="south" destination="46" />
   </node>
-  <node id="48" name="Ice Caves, Narrow Bridge">
-    <description>Water surges directly below a narrow stretch of stone that connects the cavern walls with a slender pillar of rock that rises up out of the glacial lake.  Although the bridge is made of the same dark stone that makes up the walls, none of the reassuring strength is apparent, and each step across it is a test of willpower.</description>
-    <position x="220" y="180" z="0" />
-    <arc exit="east" move="east" destination="49" />
-    <arc exit="go" move="go gap" destination="10" />
+  <node id="46" name="Derelict Road, Meadow">
+    <description>The meadow comes to an abrupt halt here at a thick line of trees.  The road continues south through a small gap between their dark forms.</description>
+    <position x="40" y="300" z="0" />
+    <arc exit="north" move="north" destination="45" />
+    <arc exit="south" move="south" destination="47" />
   </node>
-  <node id="49" name="Ice Caves, Rock Pillar">
-    <description>Rising from the depths of the lake, this pillar overlooks much of the hollow mountain.  Waves slap against the slender base and spray from their crests makes the chill even more apparent.  A massive glacier is barely visible to the northeast as it slowly slips beneath the water's surface, and to the southwest, the vague outline of a bridge rises into the darkness.</description>
-    <position x="240" y="180" z="0" />
-    <arc exit="west" move="west" destination="48" />
+  <node id="47" name="Derelict Road, Dead Forest">
+    <description>The forest, its trees dead and turned to stone by some malevolent power, indicates that the Dark Hand is near.  More secure than any man-made wall, the trees line the road, preventing any detour from the paving stones.</description>
+    <position x="40" y="320" z="0" />
+    <arc exit="north" move="north" destination="46" />
+    <arc exit="southeast" move="southeast" destination="48" />
   </node>
-  <label text="Adan'f Spirit Dancers">
-    <position x="220" y="130" z="0" />
-  </label>
+  <node id="48" name="Derelict Road, Marsh" note="Plovik Leaves" color="#0000FF">
+    <description>The stream from the meadow has been diverted here to turn the once-rich soil into a thick morass of mud and rotting vegetation.  A portion of the road remains, providing precarious stepping stones through the marsh.</description>
+    <position x="60" y="340" z="0" />
+    <arc exit="south" move="swim south" destination="49" />
+    <arc exit="northwest" move="swim northwest" destination="47" />
+  </node>
+  <node id="49" name="Derelict Road, Marsh">
+    <description>The thick morass of the marsh seems to twist and move as small pockets of air slowly work their way to the surface, releasing a foul stench that fills the area.  The stones from the derelict road are completely gone, forcing travellers to wade through the gross slime.</description>
+    <description>The thick morass of the marsh seems to twist and move as small pockets of air slowly work their way to the surface, releasing a foul stench that fills the area.  The stones from the derelict road are completely gone, forcing travelers to wade through the gross slime.</description>
+    <position x="60" y="360" z="0" />
+    <arc exit="north" move="rt north" destination="48" />
+    <arc exit="south" move="rt south" destination="50" />
+  </node>
+  <node id="50" name="Derelict Road, Marsh">
+    <description>The marsh abruptly ends at a small bank of sturdy earth.  The road again leads south towards the Dark Hand.</description>
+    <position x="60" y="380" z="0" />
+    <arc exit="north" move="north" destination="49" />
+    <arc exit="southeast" move="southeast" destination="51" />
+  </node>
+  <node id="51" name="Derelict Road, Edge of the Wood">
+    <description>The stones of the road abruptly stop at a large tangle of brush, as though ripped out of existence by the power that fuels the Dark Hand.  A small skeleton lies against the brush, one hand resting upon a spear planted in the ground, as though the poor clansman died the instant the warning marker was set.</description>
+    <position x="80" y="400" z="0" />
+    <arc exit="northwest" move="northwest" destination="50" />
+    <arc exit="none" move="go rocky path" destination="52" />
+  </node>
+  <node id="52" name="Derelict Road, Darkling Wood" note="Steeds|Eidolon Steeds" color="#008000">
+    <description>The crystal spires of Shard appear as pale specters on the northern horizon.  To the south, the dense shadows of the Darkling Wood swallow the crumbling remains of the Old Ilithi Trade Route.</description>
+    <position x="100" y="420" z="0" />
+    <arc exit="southwest" move="southwest" destination="53" />
+    <arc exit="none" move="go rocky path" destination="51" />
+  </node>
+  <node id="53" name="Derelict Road, Darkling Wood" color="#008000">
+    <description>Stretches of grey-green moss creep from wide gaps in the stones, the vanguard of nature's march to reclaim the ancient thoroughfare.  Tangles of thorny brush leave barely a wagon's width passage through the forest.</description>
+    <position x="80" y="440" z="0" />
+    <arc exit="northeast" move="northeast" destination="52" />
+    <arc exit="south" move="south" destination="54" />
+  </node>
+  <node id="54" name="Derelict Road, Darkling Wood" color="#008000">
+    <description>Towering ironwoods spread their canopies over the lower growing pines and cedars, creating a dusky tapestry that cloaks the wood in deepening layers of darkness.  A stand of hollies splashes blood red berries along the road's eastern flank.</description>
+    <description>Towering ironwoods spread their canopies over the lower growing pines and cedars, creating a dusky tapestry that cloaks the wood in deepening layers of darkness.</description>
+    <position x="80" y="460" z="0" />
+    <arc exit="north" move="north" destination="53" />
+    <arc exit="south" move="south" destination="55" />
+  </node>
+  <node id="55" name="Derelict Road, Darkling Wood" color="#008000">
+    <description>Hopelessly seeking light and open space, claw-like branches reach out from the choking sea of black wood to grope across the narrow route.  Tattered bits of fabric flutter from their twisted grasp, marking the passage of earlier travelers.</description>
+    <description>Claw-like branches grope through the darkness to tug at travelers' cloak hems, as though wishing to pull all who pass into their choking embrace.</description>
+    <position x="80" y="480" z="0" />
+    <arc exit="north" move="north" destination="54" />
+    <arc exit="southwest" move="southwest" destination="56" />
+  </node>
+  <node id="56" name="Derelict Road, Darkling Wood" color="#008000">
+    <description>In the hollow of a rotted yew, a cluster of slender mushrooms glows sickly pale in the thin strands of sunlight falling through the thatch of leaves and branches above.</description>
+    <description>In the hollow of a rotted yew, a cluster of slender mushrooms glows sickly pale in the wispy strands of celestial light falling through the thatch of leaves and branches above.</description>
+    <position x="60" y="500" z="0" />
+    <arc exit="northeast" move="northeast" destination="55" />
+    <arc exit="southwest" move="southwest" destination="57" />
+  </node>
+  <node id="57" name="Derelict Road, Darkling Wood" color="#008000">
+    <description>The stones of the broken roadway cling to the black earth as it rises sharply to the south.  A heap of stones washed free by the rains diverts the traveler's route.</description>
+    <position x="40" y="520" z="0" />
+    <arc exit="northeast" move="northeast" destination="56" />
+    <arc exit="south" move="south" destination="58" />
+  </node>
+  <node id="58" name="Derelict Road, Darkling Wood" color="#008000">
+    <description>The twining boughs far overhead weave veils of perpetual shadow that drape the blackened and stunted undergrowth.  The taut skins of the ironwoods gleam sullenly from the darkness.</description>
+    <position x="40" y="540" z="0" />
+    <arc exit="north" move="north" destination="57" />
+    <arc exit="south" move="south" destination="59" />
+  </node>
+  <node id="59" name="Derelict Road, Darkling Wood" color="#008000">
+    <description>The roadway turns and buckles over the rough terrain of the rocky slope, twisting through the strangling pall of shadows like a pale, eyeless serpent.</description>
+    <position x="40" y="560" z="0" />
+    <arc exit="north" move="north" destination="58" />
+    <arc exit="southwest" move="southwest" destination="60" />
+  </node>
+  <node id="60" name="Derelict Road, Darkling Wood" color="#008000">
+    <description>As travelers pass along the road, pine needles and scree skitter down the incline with the soft sound of rain until they find purchase in a clump of moss or fall away through a crevice.  Ebon-leaved raevelthorn smothers the slope.</description>
+    <position x="20" y="580" z="0" />
+    <arc exit="northeast" move="northeast" destination="59" />
+    <arc exit="southwest" move="southwest" destination="61" />
+  </node>
+  <node id="61" name="Derelict Road, Darkling Wood" color="#008000">
+    <description>Rising from the embrangled raevelthorn, the muscular forms of the massive ironwoods arch and twine above the roadway as if holding back the eyes of the world from what secrets lurk below.</description>
+    <position x="0" y="600" z="0" />
+    <arc exit="northeast" move="northeast" destination="60" />
+    <arc exit="southwest" move="southwest" destination="62" />
+  </node>
+  <node id="62" name="Derelict Road, Darkling Wood" color="#008000">
+    <description>A gnarled ironwood tree has grown through the roadway, pushing the earth and stone away in deep waves.  The tree's thickness is witness to the mortal lifetimes that have passed since this route was a vital thoroughfare that brought glittering gems and ore from the mines of the Silver Bowl to build the city of Shard.</description>
+    <position x="-20" y="620" z="0" />
+    <arc exit="northeast" move="rt northeast" destination="61" />
+    <arc exit="southeast" move="southeast" destination="63" />
+    <arc exit="none" move="climb gnarled ironwood" destination="205" />
+  </node>
+  <node id="63" name="Derelict Road, Darkling Wood" color="#008000">
+    <description>The steep and uneven slope demands as much attention as it does energy.  Devoid of bird songs or animal calls, the wood is cloaked in silence as deep as its shadows, fostering every primal instinct to fear the dark.</description>
+    <position x="0" y="640" z="0" />
+    <arc exit="south" move="rt south" destination="64" />
+    <arc exit="northwest" move="rt northwest" destination="62" />
+  </node>
+  <node id="64" name="Derelict Road, Darkling Wood">
+    <description>Tall fingers of timeworn stone thrust up among the imprisoning raevelthorn, hovering like phantoms that watch life pass along the roadway with the cold and detached gaze of eternity.</description>
+    <position x="0" y="660" z="0" />
+    <arc exit="north" move="rt north" destination="63" />
+    <arc exit="south" move="rt south" destination="65" />
+  </node>
+  <node id="65" name="Derelict Road, Darkling Wood" color="#008000">
+    <description>The route bends at what appears to have once been a clearing to the southeast.  Amid the twisted underbrush, felled logs form concentric rings around a patch of earth blackened with fire.</description>
+    <position x="0" y="680" z="0" />
+    <arc exit="north" move="rt north" destination="64" />
+    <arc exit="southwest" move="southwest" destination="66" />
+  </node>
+  <node id="66" name="Derelict Road, Darkling Wood">
+    <description>To the east, an overgrown clearing was once a welcome bit of open space in the thick wood.  Barely visible in the dim light, several rusted chains swing from a tree limb over the clearing, rattling quietly in the wind.</description>
+    <position x="-20" y="700" z="0" />
+    <arc exit="northeast" move="northeast" destination="65" />
+    <arc exit="west" move="rt west" destination="67" />
+  </node>
+  <node id="67" name="Derelict Road, Darkling Wood">
+    <description>The land slopes sharply up to the south and down to the north, holding the mountain path on a narrow ledge cut into the stony earth.  Untouched by daylight, a deep gloom whispers seductively from the heart of the wood, calling travelers into its dark embrace.</description>
+    <description>The land slopes sharply up to the south and down to the north, holding the mountain path on a narrow ledge cut into the stony earth.  Untouched by starlight, a deep gloom whispers seductively from the heart of the wood, calling travelers into its dark embrace.</description>
+    <position x="-40" y="700" z="0" />
+    <arc exit="east" move="rt east" destination="66" />
+    <arc exit="west" move="rt west" destination="68" />
+  </node>
+  <node id="68" name="Derelict Road, Darkling Wood" color="#008000">
+    <description>The thick trunk of a white pine tree sugared with sticky sap twists upward from the slope below the road through the forest canopy, hungrily seeking the light of the sun.</description>
+    <description>The thick trunk of a white pine tree sugared with sticky sap twists upward from the slope below the road through the forest canopy, eagerly seeking the open sky.</description>
+    <position x="-60" y="700" z="0" />
+    <arc exit="east" move="rt east" destination="67" />
+    <arc exit="southwest" move="southwest" destination="69" />
+    <arc exit="none" move="climb white pine" destination="74" />
+  </node>
+  <node id="69" name="Derelict Road, Darkling Wood" color="#008000">
+    <description>The stony soil forces the tree roots to crawl across the slope like thick-bodied snakes, seeking moisture and purchase in the cracks of the stone.  To the south, the forest thins as the soil yields further to the stone of the mountains that lurk just beyond.</description>
+    <position x="-80" y="720" z="0" />
+    <arc exit="northeast" move="northeast" destination="68" />
+    <arc exit="southwest" move="southwest" destination="70" />
+  </node>
+  <node id="70" name="Derelict Road, Darkling Wood" color="#008000">
+    <description>The plum-purple fruit of black mountain hollies would normally make an attractive meal for birds, but the berries hang undisturbed, ripe and rotting.  The sickish-sweet aroma of rot is spiked with the strong scent of pine that travels through the wood on each breath of wind.</description>
+    <position x="-100" y="740" z="0" />
+    <arc exit="northeast" move="northeast" destination="69" />
+    <arc exit="south" move="south" destination="71" />
+  </node>
+  <node id="71" name="Derelict Road, Darkling Wood" color="#008000">
+    <description>Patches of sky peek through the forest canopy, occasionally throwing spears of warm sunlight down across the roadway to chase the shadows into the underbrush.</description>
+    <description>Patches of sky peek through the forest canopy, allowing gossamer veils of starlight to fall down across the roadway to chase the darkest shadows into the underbrush.</description>
+    <position x="-100" y="760" z="0" />
+    <arc exit="north" move="north" destination="70" />
+    <arc exit="south" move="south" destination="72" />
+  </node>
+  <node id="72" name="Derelict Road, Darkling Wood" color="#008000">
+    <description>A thatched stone building huddles in the shadow of a longleaf fir that stands sentinel along the stony ridge.  The smell of oil and leather tangs the cool air, and sounds of pack animals rustle from a half-timbered stable built off the side.</description>
+    <position x="-100" y="780" z="0" />
+    <arc exit="north" move="north" destination="71" />
+    <arc exit="southwest" move="southwest" destination="73" />
+    <arc exit="none" move="go stone building" destination="206" />
+  </node>
+  <node id="73" name="Derelict Road, Edge of The Wood" color="#008000">
+    <description>The road descends into the thick Darkling Wood as it wends northward.  To the south, the dark maw of Blackthorn Canyon greedily swallows the twisting route.</description>
+    <description>The broken road descends into the thick of the Darkling Wood to the north and wends southward into the blackness that stretches out beneath the vast net of stars.</description>
+    <position x="-120" y="800" z="0" />
+    <arc exit="northeast" move="northeast" destination="72" />
+    <arc exit="none" move="go canyon entrance" destination="75" />
+  </node>
+  <node id="74" name="Darkling Wood, Pine Tree" color="#008000">
+    <description>Thin shafts of light filter through the blue-green needles, dancing along the tree's scaly trunk and making thick drips of sugary sap glisten softly like frosted jewels.  An ironwood's branches reach across the darkness and twine with the pine's reach.</description>
+    <position x="-60" y="660" z="0" />
+    <arc exit="none" move="climb white pine" destination="68" />
+    <arc exit="none" move="climb ironwood branches" destination="205" />
+  </node>
+  <node id="75" name="Blackthorn Canyon, Entrance" note="Blackthorn Canyon|Canyon|RTI07|RT-CW-HC" color="#C2B280">
+    <description>Broad arms of stone rise to either side, drawing the ancient road into the cool embrace of a dark canyon that wears a grey-green mantle of forested slopes and lacy snowcapped peaks.</description>
+    <description>Broad arms of stone rise to either side, drawing the ancient route into the cool embrace of a canyon darker than the shadows of night.</description>
+    <position x="-140" y="820" z="0" />
+    <arc exit="northeast" move="northeast" destination="73" />
+    <arc exit="south" move="south" destination="76" />
+  </node>
+  <node id="76" name="Blackthorn Canyon, Entrance" note="Last">
+    <description>Timeworn stone walls channel the slender roadway through the canyon like a phantom river.</description>
+    <position x="-140" y="840" z="0" />
+    <arc exit="north" move="north" destination="75" />
+    <arc exit="southeast" move="southeast" destination="77" />
+  </node>
+  <node id="77" name="Blackthorn Canyon, Entrance">
+    <description>The sheer escarpments pull away from the narrow route, opening into a stony landscape dotted with clusters of thin trees and weathered tents.  Gruff voices ride howling gusts of wind that echo from all directions as they reverberate in the stone basin.</description>
+    <description>The sheer escarpments pull away from the narrow route, opening into a stony landscape dotted with torches and cook fires.</description>
+    <position x="-120" y="860" z="0" />
+    <arc exit="southeast" move="southeast" destination="111" />
+    <arc exit="south" move="south" destination="109" />
+    <arc exit="southwest" move="southwest" destination="110" />
+    <arc exit="northwest" move="northwest" destination="76" />
+    <arc exit="none" move="climb stony talus" destination="78" />
+  </node>
+  <node id="78" name="Stormfells, Talus Trail">
+    <description>A thin trail weaves back and forth across the sloping mass of rock and debris at the base of the sheer canyon wall.  Great masses of broken boulders mark the head of an informal route up the talus, blazed only by faint scuffmarks and the absence of lichen or moss.</description>
+    <position x="-20" y="860" z="0" />
+    <arc exit="down" move="down" destination="77" />
+    <arc exit="none" move="climb upslope trail" destination="79" />
+  </node>
+  <node id="79" name="Stormfells, Talus Trail">
+    <description>Small rocks and stones have settled in between the larger slabs and boulders, making the talus a treacherous climb.  Underfoot, loose rocks slide free and often mask voids in the pile that can easily swallow and crush a limb.</description>
+    <position x="-20" y="840" z="0" />
+    <arc exit="none" move="climb upslope trail" destination="80" />
+    <arc exit="none" move="climb downslope trail" destination="78" />
+  </node>
+  <node id="80" name="Stormfells, Talus Trail">
+    <description>Flecks of mica in the granite catch the sunlight and glisten like gold amid the monochrome landscape of greys and blacks.  In this stark terrain, beauty exists with quiet pride and ignores those who rush past like the chill wind.</description>
+    <position x="-20" y="820" z="0" />
+    <arc exit="none" move="climb upslope trail" destination="81" />
+    <arc exit="none" move="climb downslope trail" destination="79" />
+  </node>
+  <node id="81" name="Stormfells, Talus Trail">
+    <description>Rockslides continue to reshape the shifting talus.  A recent shift has redirected the tenuous route to the west around a large cracked boulder, the newness of the break apparent from the lighter color and sharp edges not yet weathered smooth with age.</description>
+    <position x="-20" y="800" z="0" />
+    <arc exit="west" move="west" destination="82" />
+    <arc exit="none" move="climb downslope trail" destination="80" />
+  </node>
+  <node id="82" name="Stormfells, Talus Trail">
+    <description>Ancient patches of dark variegated lichen grow on the unforgiving rock face, a solitary climber traveling with no provisions or shelter from the elements.  Along the trail, the lichen hugs the safety of cracks and crevices but where the terrain is too treacherous for foot traffic, it brazenly sprawls atop the stones.</description>
+    <position x="-40" y="800" z="0" />
+    <arc exit="east" move="east" destination="81" />
+    <arc exit="none" move="climb upslope trail" destination="83" />
+  </node>
+  <node id="83" name="Stormfells, Talus Trail">
+    <description>The wind buffets the sheer slope, pulling loose bits of debris into flight and threatening to take you as well.  A dry tuft of grass anchored in a slim crevice whips and crackles in the stiff breeze.</description>
+    <position x="-40" y="780" z="0" />
+    <arc exit="east" move="east" destination="84" />
+    <arc exit="none" move="climb downslope trail" destination="82" />
+  </node>
+  <node id="84" name="Stormfells, Talus Trail">
+    <description>A broad view of the canyon floor spreads far below, while the stony peaks soaring above the Stormfells seem to pierce the sky.</description>
+    <position x="-20" y="780" z="0" />
+    <arc exit="west" move="west" destination="83" />
+    <arc exit="none" move="climb upslope trail" destination="85" />
+  </node>
+  <node id="85" name="Stormfells, Talus Trail">
+    <description>The narrow route littered with scree and broken rock threads its way between boulders and great slabs of stone.  Howling like hounds in winter, the wind calls across the canyon and is answered by mournful echoes.</description>
+    <position x="-20" y="760" z="0" />
+    <arc exit="none" move="climb upslope trail" destination="86" />
+    <arc exit="none" move="climb downslope trail" destination="84" />
+  </node>
+  <node id="86" name="Stormfells, Talus Trail">
+    <description>The sloping heap of broken rock yields here to a grey sandy loam, which supports tufts of weather-bleached grass and short woody shrubs that grow between the widely spaced stones.  Above, the rock face flattens out into a series of broad mantles and ledges before continuing its sheer ascent to the clouds.</description>
+    <description>The sloping heap of broken rock yields here to a grey sandy loam, which supports tufts of weather-bleached grass and short woody shrubs that grow between the widely spaced stones.  Above, the rock face flattens out into a series of broad mantles and ledges before continuing its sheer ascent to the stars.</description>
+    <position x="-20" y="740" z="0" />
+    <arc exit="northeast" move="northeast" destination="87" />
+    <arc exit="none" move="climb downslope trail" destination="85" />
+  </node>
+  <node id="87" name="Stormfells, Stonewend">
+    <description>The uneven surface of the stone rises and falls in choppy, broken steps like the waves of a troubled sea.  Tempestuous winds whip across the footpath carefully picked between the uncertain rock and a sure demise on the broken talus below.</description>
+    <position x="0" y="720" z="0" />
+    <arc exit="east" move="east" destination="89" />
+    <arc exit="southwest" move="southwest" destination="86" />
+    <arc exit="west" move="west" destination="88" />
+  </node>
+  <node id="88" name="Stormfells, Stonewend">
+    <description>Soil clings to the stone only where it can hide from the pursuing wind.  A deep crease in the ledge harbors a sliver of mica-flecked dirt that glimmers like frost.  Some stunted white statice have found purchase here, growing only as tall as their roots can dig deep.  Their tufts of pale flowers and dusty green leaves frame the lower edge of a broad vista across the canyon.</description>
+    <position x="-20" y="720" z="0" />
+    <arc exit="east" move="east" destination="87" />
+  </node>
+  <node id="89" name="Stormfells, Stonewend">
+    <description>The grey-blue granite mountains rise into the sky.  Jagged peaks and conical spires thrust upward, juxtaposed with sheer cliff faces and level terraces, often at impossible angles but reaching endlessly into the clouds.  A precipice above provides a step to a wide plateau further up the slope.</description>
+    <position x="20" y="720" z="0" />
+    <arc exit="west" move="west" destination="87" />
+    <arc exit="none" move="climb stony precipice" destination="90" />
+  </node>
+  <node id="90" name="Stormfells, Stonewend">
+    <description>The precipice juts from the rock face and bridges the space between wide terraces above and below.  The fells for which the mountains are named reveal themselves as broad, grass-patched shelves that rise one above the other, stepping up the slopes between sheer spires of stone.</description>
+    <position x="20" y="700" z="0" />
+    <arc exit="east" move="east" destination="91" />
+    <arc exit="none" move="climb ledge" destination="89" />
+  </node>
+  <node id="91" name="Stormfells, Stonewend">
+    <description>When the heavens allow it, sunlight paints the craggy rock, touching highlights in coppers and pinks while casting the shadows in deep shades of purple.  As the sun moves through the sky, the artwork changes until its warm palette is dimmed by the inky stain of nightfall.</description>
+    <description>When the heavens allow it, moonlight paints the craggy rock, touching highlights in cool blues and purples while casting the shadows in inky shades of night.  The dusky palette changes as the artists move through the sky, but it ultimately yields to dawn's golden hue.</description>
+    <position x="40" y="700" z="0" />
+    <arc exit="west" move="west" destination="90" />
+    <arc exit="none" move="climb wide shelf" destination="92" />
+  </node>
+  <node id="92" name="Stormfells, Stonewend">
+    <description>A rock shelf supports a leafless forest of standing stones that jut upward from the sod like teeth from the lower jaw of some great beast.  Dogbane hides in the bluestem grass lining the narrow path and ambushes passers-by with prickly burrs.</description>
+    <position x="40" y="680" z="0" />
+    <arc exit="east" move="east" destination="93" />
+    <arc exit="none" move="climb stony precipice" destination="91" />
+  </node>
+  <node id="93" name="Stormfells, Stonewend">
+    <description>Slabs of granite ranging in size from a man to a biscuit form a rough step mortared with green pillows of flower-dotted moss.  Resting atop the step is a broad plateau of uneven ground mantled with mist-filled hollows and heather-patched slopes.</description>
+    <position x="60" y="680" z="0" />
+    <arc exit="east" move="east" destination="94" />
+    <arc exit="west" move="west" destination="92" />
+    <arc exit="none" move="climb stone step" destination="95" />
+  </node>
+  <node id="94" name="Stormfells, Stonewend" note="Ranger Cache|Cache|RTICache|RT-SR-SRCR" color="#C2B280">
+    <description>Diminutive white starflowers adorn a skewed triangular patch of sod covering the exposed rock like a gypsy shawl cast aside in haste.  Far down the rambling precipice, Blackthorn Canyon looms like a dark bowl of sorrow.</description>
+    <position x="80" y="680" z="0" />
+    <arc exit="west" move="west" destination="93" />
+  </node>
+  <node id="95" name="Stormfells, Shadow's Reach">
+    <description>Spreading outward to all sides is a grassy plateau mottled with dusky blue-violet heaths and low-growing white blooms.  Soft soughs of wind arrive with a mosaic of sounds that swirl with echoes of laughing children, running water and barking dogs.  A rough stone step leads to a lower precipice.</description>
+    <description>A broad plateau opens to all sides and seems strangely silent but for the occasional braying of a hound, which is easily mistaken for the wind.  The clean scent of grass and cool water fill the night air.  A rough stone step leads to a lower precipice.</description>
+    <position x="60" y="660" z="0" />
+    <arc exit="northeast" move="northeast" destination="98" />
+    <arc exit="east" move="east" destination="99" />
+    <arc exit="west" move="west" destination="96" />
+    <arc exit="none" move="climb step" destination="93" />
+  </node>
+  <node id="96" name="Stormfells, Shadow's Reach">
+    <description>As gusts of air bend the grasses and heaths in supplication, rigid stones are revealed by their defiance.  A low structure of stacked granite is finished on one side with hinged wooden doors.  Birds alight on the roof to find what seeds may remain in the thatching, but are quickly frightened off by the barking dogs within.</description>
+    <description>As gusts of air bend the grasses and heaths in supplication, rigid stones are revealed by their defiance.  A low structure of stacked granite is finished on one side with hinged wooden doors.</description>
+    <position x="40" y="660" z="0" />
+    <arc exit="north" move="north" destination="97" />
+    <arc exit="east" move="east" destination="95" />
+  </node>
+  <node id="97" name="Stormfells, Shadow's Reach">
+    <description>Nearly two stories up the sheer granite crags edging the meadow is the dark circle of a cave opening.  Thin streams of smoke curl from a small vent a few hands above it and a wooden bucket of short swords sits on the ledge outside.</description>
+    <description>Nearly two stories up the dark granite crags edging the meadow is a cave opening glowing with firelight.  Thin streams of smoke curl from a small vent a few hands above it and a wooden bucket of short swords sits on the ledge outside.</description>
+    <position x="40" y="640" z="0" />
+    <arc exit="east" move="east" destination="98" />
+    <arc exit="south" move="south" destination="96" />
+    <arc exit="none" move="climb cord-bound ladder" destination="193" />
+  </node>
+  <node id="98" name="Stormfells, Shadow's Reach">
+    <description>The open meadow in the center of the plateau is sprinkled evenly with clusters of white starflowers and patches of snow.  The frost of winter and spring's warmth exist in balance here and neither life nor death holds greater influence.</description>
+    <position x="80" y="640" z="0" />
+    <arc exit="north" move="north" destination="100" />
+    <arc exit="east" move="east" destination="101" />
+    <arc exit="south" move="south" destination="99" />
+    <arc exit="southwest" move="southwest" destination="95" />
+    <arc exit="west" move="west" destination="97" />
+    <arc exit="none" move="go settlement" destination="224" />
+  </node>
+  <node id="99" name="Stormfells, Shadow's Reach">
+    <description>Across the canyon's divide, the spires of the Stormfells' western ridge appear through the mists like the sails of great ships at sea.  The delighted burbling of a mountain spring calls from the bottom of a steep footpath etched through the thin soil.</description>
+    <description>Across the canyon, the spires of the Stormfells' western ridge silhouetted against the night sky look like the sails of ships at sea.  The delighted burbling of a mountain spring calls from the bottom of a steep footpath etched through the thin soil.</description>
+    <position x="80" y="660" z="0" />
+    <arc exit="north" move="north" destination="98" />
+    <arc exit="west" move="west" destination="95" />
+    <arc exit="none" move="climb steep footpath" destination="108" />
+  </node>
+  <node id="100" name="Stormfells, Shadow's Reach">
+    <description>Fragrant sage and dwarf pine are scattered through the quilt of grasses and heaths that cover the rocky ground.  A stone cottage with a half-timbered second story rises from a feathery purple line of heather.</description>
+    <position x="80" y="620" z="0" />
+    <arc exit="south" move="south" destination="98" />
+    <arc exit="none" move="go stone cottage" destination="191" />
+  </node>
+  <node id="101" name="Stormfells, Shadow's Reach">
+    <description>The neat pathway travels along the plateau's rim as it narrows and falls away into a series of sedge-covered shelves before dropping vertically into the dark canyon.  Yellow buttercups march alongside, bobbing in time to the wind's cadence.</description>
+    <position x="100" y="640" z="0" />
+    <arc exit="northeast" move="northeast" destination="102" />
+    <arc exit="west" move="west" destination="98" />
+  </node>
+  <node id="102" name="Stormfells, Shadow's Reach">
+    <description>Two upright stones stand like sentinels guarding the path down to a small shrub garden below.  The slope becomes lusher as it tumbles down to the glen, accumulating deep green tendrils of ivy and bluish juniper bushes along the way.</description>
+    <position x="120" y="620" z="0" />
+    <arc exit="southwest" move="southwest" destination="101" />
+    <arc exit="down" move="down" destination="103" />
+  </node>
+  <node id="103" name="Shadow's Reach, Pyre Garden">
+    <description>Evergreen shrubs and alpine wildflowers enclose the stony plateau within a low wall of color.  Broad slate paths lead to the four sides of a dark granite plinth in the center, but smaller pathways paved with hewn stones in geometric shapes snake in and around the formal quadrants.  Birds sing within blueberry bushes that stand at the end of this path leading to the north side of the plinth.  On the ground is a small stone bowl.</description>
+    <position x="120" y="640" z="0" />
+    <arc exit="southeast" move="southeast" destination="106" />
+    <arc exit="southwest" move="southwest" destination="104" />
+    <arc exit="up" move="up" destination="102" />
+    <arc exit="none" move="go granite plinth" destination="107" />
+  </node>
+  <node id="104" name="Shadow's Reach, Pyre Garden">
+    <description>Twining and looping pathways of hewn stone surround low-growing wild rhododendrons.  A mountain spring burbles through an aperture in the rock and pools in a shallow impression before running over the edge of the wall.  When in bloom, the breezes shake pink buds from the rhododendron that fall into the thread of water and begin a journey down to a stone basin.</description>
+    <position x="100" y="660" z="0" />
+    <arc exit="northeast" move="northeast" destination="103" />
+    <arc exit="southeast" move="southeast" destination="105" />
+    <arc exit="none" move="go granite plinth" destination="107" />
+    <arc exit="none" move="dive stone basin" destination="108" />
+  </node>
+  <node id="105" name="Shadow's Reach, Pyre Garden">
+    <description>The glen opens on this end of the garden into an outcrop overhanging the canyon.  Bright-winged butterflies frolic in the swirling updrafts, attracted by tall flower-sprinkled grasses growing from the ash-laden soil.  A flat rock provides a focal point to sit and feel the converging winds.</description>
+    <description>The glen opens on this end of the garden into an outcrop overhanging the canyon.  Updrafts rush steadily over the precipice, bending tall grasses growing from the ash-laden soil.  A flat rock provides a focal point to sit and feel the converging winds.</description>
+    <position x="120" y="680" z="0" />
+    <arc exit="northeast" move="northeast" destination="106" />
+    <arc exit="northwest" move="northwest" destination="104" />
+    <arc exit="none" move="go granite plinth" destination="107" />
+  </node>
+  <node id="106" name="Shadow's Reach, Pyre Garden">
+    <description>Banked curves of paving stones and soil define discreet circular spaces screened with flame-red heath and stunted cedar.  Unable to receive the dead, the thin and stony soil supports barely enough vegetation to burn with the fallen.  A shallow pit incised into the ground contains wood and bundles of dried grass tied with string.</description>
+    <position x="140" y="660" z="0" />
+    <arc exit="southwest" move="southwest" destination="105" />
+    <arc exit="northwest" move="northwest" destination="103" />
+    <arc exit="none" move="go granite plinth" destination="107" />
+  </node>
+  <node id="107" name="Shadow's Reach, Plinth" note="Plinth|shrine" color="#A6A3D9">
+    <description>This hewn plinth of black granite is a perfectly symmetrical ashlar symbolizing the rectitude of a pure soul.  The top is charred and blackened with fire, but kept free of ashes by the swift winds.</description>
+    <position x="120" y="660" z="0" />
+    <arc exit="north" move="north" destination="103" />
+    <arc exit="east" move="east" destination="106" />
+    <arc exit="south" move="south" destination="105" />
+    <arc exit="west" move="west" destination="104" />
+  </node>
+  <node id="108" name="Shadow's Reach, Stone Basin">
+    <description>The silver thread of a mountain spring slicks the face of a rock wall as it flows from its source high above.  The spring splashes rhythmically from the end of the vertical rock to the clear surface of the pool, where it chases waves of ripples to the outside edge.</description>
+    <position x="100" y="680" z="0" />
+    <arc exit="none" move="climb steep footpath" destination="99" />
+  </node>
+  <node id="109" name="Blackthorn Canyon, Entrance" note="RTI15|RT-CW-GPS" color="#C2B280">
+    <description>Clusters of hardy scrub oak and pine struggle to grow through the uninterrupted shadows thrown across the thin soil of the canyon floor by the surrounding mountains.  Each day life on the basin bottom fights to regain ground lost to the ravages of mining operations ages ago.</description>
+    <position x="-120" y="880" z="0" />
+    <arc exit="north" move="north" destination="77" />
+    <arc exit="east" move="east" destination="111" />
+    <arc exit="south" move="south" destination="112" />
+    <arc exit="west" move="west" destination="110" />
+  </node>
+  <node id="110" name="Blackthorn Canyon, Entrance">
+    <description>The wide swath of sky stretches overhead like a canopy rippling with clouds and waves of bird flight.  Every sigh of wind stirs a hollow clattering sound from some strange wind chimes hung from a weathered wagon.</description>
+    <position x="-140" y="880" z="0" />
+    <arc exit="northeast" move="northeast" destination="77" />
+    <arc exit="east" move="east" destination="109" />
+    <arc exit="none" move="go weathered wagon" destination="216" />
+  </node>
+  <node id="111" name="Blackthorn Canyon, Entrance">
+    <description>Caves and shadowed ridges high up on the slopes give the stony face of the mountains eyes that watch for interlopers.  A battered oilcloth tent sits beneath a stony ledge that slices across the sheer slope of the eastern wall.</description>
+    <description>A battered oilcloth tent huddles beneath a stony ledge slicing across the sheer slope of the eastern wall.  Warm flickers of light play in the shadows just above the ledge.</description>
+    <position x="-100" y="880" z="0" />
+    <arc exit="southwest" move="southwest" destination="112" />
+    <arc exit="west" move="west" destination="109" />
+    <arc exit="northwest" move="northwest" destination="77" />
+    <arc exit="none" move="climb stony ledge" destination="117" />
+    <arc exit="none" move="go oilcloth tent" destination="218" />
+  </node>
+  <node id="112" name="Blackthorn Canyon, Entrance">
+    <description>To the south, an aging battlement spans the canyon entrance.  The wall soars up from the canyon floor, its sinuous and organic lines seeming to have grown from the bedrock.  In the center is a massive ironwood gate, and stairways on either end climb up to the crenellated parapets.</description>
+    <position x="-120" y="900" z="0" />
+    <arc exit="north" move="north" destination="109" />
+    <arc exit="northeast" move="northeast" destination="111" />
+    <arc exit="south" move="south" destination="114" />
+    <arc exit="southwest" move="southwest" destination="113" />
+  </node>
+  <node id="113" name="Blackthorn Canyon, Before the Wall">
+    <description>The wall is as scarred as the people and the landscape, becoming over the ages a tapestry of fear, sacrifice, pain and the power of sentient will to overcome.  Every stone seems to resonate with epic stories of the past and those that are written with each new battle.</description>
+    <position x="-140" y="920" z="0" />
+    <arc exit="northeast" move="northeast" destination="112" />
+    <arc exit="east" move="east" destination="114" />
+    <arc exit="southwest" move="southwest" destination="116" />
+  </node>
+  <node id="114" name="Blackthorn Canyon, Before the Wall">
+    <description>With scarcely a welcoming tree or morsel of grass on the canyon floor, birds flying over it seem to carry their provisions with them.  A few alight on the wall's parapets, but quickly fly off when the bustle of constant activity moves too close.</description>
+    <description>Flickering torches outline the wall's crenellated battlements against the night sky.  Along the top of the wall, shadowy figures flash in and out of view as they pass each merlon and crenel.</description>
+    <position x="-120" y="920" z="0" />
+    <arc exit="north" move="north" destination="112" />
+    <arc exit="east" move="east" destination="115" />
+    <arc exit="west" move="west" destination="113" />
+    <arc exit="none" move="go graev's gate" destination="207" />
+  </node>
+  <node id="115" name="Blackthorn Canyon, Before the Wall">
+    <description>The wind tickles a green and white parti-colored banner hanging from a stone stairway that snakes up the wall's eastern leg to the battlements.  From somewhere close, you hear the muffled grunts and metallic ringing of battle.</description>
+    <position x="-100" y="920" z="0" />
+    <arc exit="west" move="west" destination="114" />
+    <arc exit="none" move="climb stairway" destination="129" />
+    <arc exit="none" move="go muslin tent" destination="190" />
+  </node>
+  <node id="116" name="Blackthorn Canyon, Before the Wall">
+    <description>The wind tickles a green and white parti-colored banner hanging from a stone stairway that snakes up wall's western leg to the battlements.  Smoke curls from the stone chimney of a cooking hearth sheltered beneath a simple timber lean-to.</description>
+    <position x="-160" y="940" z="0" />
+    <arc exit="northeast" move="northeast" destination="113" />
+    <arc exit="none" move="go barracks" destination="119" />
+    <arc exit="none" move="climb stairway" destination="120" />
+  </node>
+  <node id="117" name="Blackthorn Canyon, Ledge">
+    <description>The wind shears across the stony ledge, threatening to cast you down into the canyon like the bits of debris picked up by each gust.  Splintered posts are all that remains of an old mine entrance that peers from beneath a veil of ivy growing from the slope above.</description>
+    <position x="-80" y="880" z="0" />
+    <arc exit="none" move="go old mine" destination="118" />
+    <arc exit="none" move="climb stony ledge" destination="111" />
+  </node>
+  <node id="118" name="Blackthorn Canyon, Old Mine" note="Ale" color="#FF0000">
+    <description>Lamplight dances across the rough cut stone walls of the former mine.  Simple chairs and scattered pelts provide comfortable seating for a small assemblage of soldiers and scouts who speak as much in nods and gestures as words.  Near the rear of the cave sits Brent, a particularly stout ranger working an ale keg.</description>
+    <position x="-60" y="880" z="0" />
+    <arc exit="out" move="out" destination="117" />
+  </node>
+  <node id="119" name="Corik's Wall, Barracks">
+    <description>The long wooden structure is a single open room with bunks lining the walls and shuttered windows spaced every six paces.  The beds are not much more than planks covered with thin straw mattresses and a green wool blanket, but the barracks are dry and airy.  Colorful silk pennants hang from the rafters above, each marking a victorious battle in tarnished gilt thread and vibrant hues.</description>
+    <position x="-160" y="920" z="0" />
+    <arc exit="out" move="out" destination="116" />
+  </node>
+  <node id="120" name="Corik's Wall, Western Stair Landing">
+    <description>The stairway pauses more than midway up the wall at a small landing before continuing up to the battlements.  Each step has a smooth valley worn from ages of boot traffic and since there is no railing that accompanies the stairway, the valleys are positioned closer to the safety of the wall.  Smoke twists from the chimney of a small lean-to below.</description>
+    <position x="-180" y="1060" z="0" />
+    <arc exit="down" move="down" destination="116" />
+    <arc exit="none" move="climb stairway" destination="121" />
+    <arc exit="none" move="go ironwood door" destination="133" />
+  </node>
+  <node id="121" name="Corik's Wall, Forward Battlements">
+    <description>Each merlon and crenel of the parapet is the width of two men, offering ample protection to archers.  The crenellations cast alternating pools of light and shadow over the wall walk as the sun travels across the sky.  Standing along the allure it is possible to see the gentle curvature of the wall, designed to allow archers to defend against foe that might scale it.</description>
+    <position x="-160" y="1060" z="0" />
+    <arc exit="northeast" move="northeast" destination="128" />
+    <arc exit="east" move="east" destination="122" />
+    <arc exit="down" move="down" destination="120" />
+  </node>
+  <node id="122" name="Corik's Wall, Forward Battlements">
+    <description>A large section of the parapet has been rebuilt with coarse uncut fieldstone and pebbly mortar.  Though a much more recent addition to the wall, the materials used in the repair have weathered worse than the original granite beneath it and patches of moss have found purchase in the disintegrating fill.</description>
+    <position x="-120" y="1060" z="0" />
+    <arc exit="north" move="north" destination="128" />
+    <arc exit="east" move="east" destination="123" />
+    <arc exit="west" move="west" destination="121" />
+  </node>
+  <node id="123" name="Corik's Wall, Forward Battlements" note="Grimnur">
+    <description>The battlements have resisted the ages, their defiance against crumbling to the elements as strong as the will of men to defend them against the foe.  Barely visible across the lost ground before the wall are the ruins of the outer curtain wall that once stood as confidently as this one.</description>
+    <position x="-100" y="1060" z="0" />
+    <arc exit="east" move="east" destination="124" />
+    <arc exit="west" move="west" destination="122" />
+    <arc exit="none" move="climb ladder" destination="189" />
+  </node>
+  <node id="124" name="Corik's Wall, Forward Battlements">
+    <description>The porous stone is worn by the ages, yet dark brown stains mar the parapets and wall walk.  They stubbornly defy the weather and remain as silent monuments to the fallen who refuse to be forgotten.</description>
+    <position x="-80" y="1060" z="0" />
+    <arc exit="north" move="north" destination="126" />
+    <arc exit="east" move="east" destination="125" />
+    <arc exit="west" move="west" destination="123" />
+  </node>
+  <node id="125" name="Corik's Wall, Forward Battlements">
+    <description>Stretching the length of the great wall, the battlements allow many men to stand along the top to keep the watch and defend when needed.  Here, the granite wall meets the sheer rock face of the canyon wall with cuts so precise there is neither need for mortar nor room enough for a scrap of paper to be slid in the seam.</description>
+    <position x="-40" y="1060" z="0" />
+    <arc exit="west" move="west" destination="124" />
+    <arc exit="northwest" move="northwest" destination="126" />
+    <arc exit="down" move="down" destination="129" />
+  </node>
+  <node id="126" name="Corik's Wall, Rear Battlements" note="Fenhalut">
+    <description>Viewed from the wall's great height, the landscape seems to fall away, affording a sweeping view of the canyon entrance.  Through the curving mouth of the canyon, a slim slice of the Darkling Wood contrasts sharply with the pale stone of the surrounding precipice.</description>
+    <position x="-80" y="1020" z="0" />
+    <arc exit="southeast" move="southeast" destination="125" />
+    <arc exit="south" move="south" destination="124" />
+    <arc exit="west" move="west" destination="127" />
+  </node>
+  <node id="127" name="Corik's Wall, Rear Battlements">
+    <description>The wind funnels through the twisting canyon and saws across the teeth of the wall's parapets.  Sounds carried in on the wind are distorted by echoes and it's impossible to tell from where they originated.  Sometimes, they sound like laughter, other times, like death cries, but in the reality of life under siege it could be either.</description>
+    <position x="-100" y="1020" z="0" />
+    <arc exit="east" move="east" destination="126" />
+    <arc exit="west" move="west" destination="128" />
+    <arc exit="none" move="climb ladder" destination="189" />
+  </node>
+  <node id="128" name="Corik's Wall, Rear Battlements">
+    <description>Overlooking the canyon entrance, the battlements seem so high up until one's eyes follow the sheer canyon walls from the ground to the peaks of the Stormfells.  When their icy summits catch the sunlight, they rival Shard's own crystal spires.</description>
+    <position x="-120" y="1020" z="0" />
+    <arc exit="east" move="east" destination="127" />
+    <arc exit="south" move="south" destination="122" />
+    <arc exit="southwest" move="southwest" destination="121" />
+  </node>
+  <node id="129" name="Corik's Wall, Eastern Stair Landing">
+    <description>The stairway pauses more than midway up the wall at a small landing before continuing up to the battlements.  Each step has a smooth valley worn into the top from ages of boot traffic.  Since there is no railing that accompanies the stairway, the valleys are positioned closer to the safety of the wall.  At the foot of the stair is a pale muslin tent.</description>
+    <position x="-40" y="1000" z="0" />
+    <arc exit="down" move="down" destination="115" />
+    <arc exit="none" move="go ironwood door" destination="130" />
+    <arc exit="none" move="climb stairway" destination="125" />
+  </node>
+  <node id="130" name="Corik's Wall, Eastern Corridor">
+    <description>This passageway is barely wide enough for two men to walk side by side.  In the thin lamplight, the series of concentric arches down the length of the corridor look like the ribs of a great worm seen from its belly.  A tightly winding newel stair leads down to the lower level.</description>
+    <position x="-80" y="1000" z="0" />
+    <arc exit="west" move="west" destination="131" />
+    <arc exit="none" move="climb newel stair" destination="134" />
+    <arc exit="none" move="go ironwood door" destination="129" />
+  </node>
+  <node id="131" name="Corik's Wall, Eastern Corridor">
+    <description>Dank and musty from ages of dampness, the limestone of the wall's interior makes the air seem closer.  Hollows in the great wall were carefully positioned so it could offer safe haven in times of siege without weakening its defensive strength.  An archway to the north leads to a small chantry washed in lamplight.</description>
+    <position x="-100" y="1000" z="0" />
+    <arc exit="east" move="east" destination="130" />
+    <arc exit="west" move="west" destination="132" />
+    <arc exit="none" move="go archway" destination="137" />
+  </node>
+  <node id="132" name="Corik's Wall, Western Corridor">
+    <description>A range of arches composes the hall, each arch gracefully supported by fluted columns rising to stylized diadem capitals.  The grime of the ages has settled into the recesses in the stone, giving the carved images greater contrast in the dim light.  Opposite a carved door is a colorful tapestry edged in tarnished metallic threads.</description>
+    <position x="-120" y="1000" z="0" />
+    <arc exit="east" move="east" destination="131" />
+    <arc exit="west" move="west" destination="133" />
+  </node>
+  <node id="133" name="Corik's Wall, Western Corridor">
+    <description>The narrow interior of the wall bears none of the battle scars that the exterior does.  Though occupied for years by the Emerald Knights, the wall's inner corridor still displays the graceful architecture of its Elothean builders.  A tightly winding newel stair leads down to the lower level.</description>
+    <position x="-140" y="1000" z="0" />
+    <arc exit="east" move="east" destination="132" />
+    <arc exit="none" move="climb newel stair" destination="136" />
+    <arc exit="none" move="go ironwood door" destination="120" />
+  </node>
+  <node id="134" name="Corik's Wall, Upper Hold">
+    <description>Neat and efficiently ordered, narrow paths between stacks of crates full of supplies are the only open spaces available in the storage hold.  Navigation is made more difficult by the muddy amber patches of light given off by a small oil lamp hanging in the center of the low ceiling.  From behind the dark stacks of supplies occasionally come scratching sounds that could either be infiltrating rats or the cats employed to defend against them.</description>
+    <position x="-80" y="960" z="0" />
+    <arc exit="none" move="climb ladder" destination="135" />
+    <arc exit="none" move="go tunnel" destination="136" />
+    <arc exit="none" move="climb newel stair" destination="130" />
+  </node>
+  <node id="135" name="Corik's Wall, Lower Hold">
+    <description>The darkly patched stone of this tiny hold is stained with ages of mold and seems to radiate dampness.  Whatever had been kept here is gone, either chased or rotted away by the pervasive moisture.</description>
+    <position x="-100" y="940" z="0" />
+    <arc exit="none" move="climb ladder" destination="134" />
+  </node>
+  <node id="136" name="Corik's Wall, Armory" note="Eothim|Armory">
+    <description>Weapons hang from the stone walls, arranged in fans and rows that create patterns of darkly glistening steel.  The thick scent of oil and sawdust hangs in the air making the small space feel closer still.  Wooden weapon racks line up back to back through the center of the room and unopened crates line the perimeter.</description>
+    <position x="-140" y="960" z="0" />
+    <arc exit="none" move="climb newel stair" destination="133" />
+    <arc exit="none" move="go tunnel" destination="134" />
+  </node>
+  <node id="137" name="Corik's Wall, Chantry" note="Chantry|Chadatru|Kuniyo|Altar|shrine" color="#A6A3D9">
+    <description>Tall brass candlesticks flank two altars draped in emerald silk that occupy a deep alcove.  One is carved of deep crimson bloodwood and the other of fine-grained ironwood.  Though no sunlight enters the windowless chantry, a bowl of oil burning behind a stained glass panel sends bright colors chasing shadows into the far corners.  Before the altars are worn velvet-clad kneelers embroidered with a laurel encircling a lion's claw.</description>
+    <position x="-100" y="980" z="0" />
+    <arc exit="out" move="out" destination="131" />
+  </node>
+  <node id="138" name="Whistling Wood, Barrows" color="#008000">
+    <description>A mound of earth looks curiously out of place beneath the twisted and warped branches of the dead trees.  Barren of all but the hardiest of grasses, the mound has several small holes in its side.</description>
+    <position x="-40" y="100" z="0" />
+    <arc exit="southeast" move="southeast" destination="29" />
+    <arc exit="northwest" move="northwest" destination="139" />
+    <arc exit="none" move="go narrow trail" destination="176" />
+  </node>
+  <node id="139" name="Whistling Wood, Barrows" color="#008000">
+    <description>Haphazardly spread throughout the surrounding forest, several dark mounds rise from ground thick and treacherous with twisted tree roots.  A small trail wanders by each of them, its length as tangled as the skeins of Huldah's plotting.</description>
+    <position x="-200" y="-60" z="0" />
+    <arc exit="north" move="north" destination="140" />
+    <arc exit="southeast" move="southeast" destination="138" />
+  </node>
+  <node id="140" name="Whistling Wood, Barrows" color="#008000">
+    <description>The light of the sun filters weakly through the heavily interlaced branches of the wood.  Barren of all plant life, the earth is dappled with shadows that avoid death at the sun's touch.  Wounded long ago, the trunk of one old tree bears a rusted iron arrowhead.</description>
+    <description>The light of the moons and stars barely pierces the heavily interlaced branches of the wood.  Cloaked by silent shadow, the path is treacherous to the unwary adventurer.  A rusted iron arrowhead seems to shine from where it is sheathed in the bark of an old tree.</description>
+    <position x="-200" y="-80" z="0" />
+    <arc exit="south" move="south" destination="139" />
+    <arc exit="northwest" move="northwest" destination="141" />
+  </node>
+  <node id="141" name="Whistling Wood, Barrows" color="#008000">
+    <description>Rising abruptly from the sheltering shadows of the forest, a mound of earth is riddled with holes and evidence of recent digging.  The scent of rotting bodies mixing with the earth wafts upon the wind from the burial site.</description>
+    <position x="-220" y="-100" z="0" />
+    <arc exit="southeast" move="southeast" destination="140" />
+    <arc exit="southwest" move="southwest" destination="142" />
+  </node>
+  <node id="142" name="Whistling Wood, Barrows" color="#008000">
+    <description>Gleaming white bones line the pathway, long since picked clean by scavengers.  The eyeless sockets of a jackal's skull stare reproachfully at the lattice-work branches above.</description>
+    <position x="-240" y="-80" z="0" />
+    <arc exit="northeast" move="northeast" destination="141" />
+    <arc exit="southeast" move="southeast" destination="143" />
+  </node>
+  <node id="143" name="Whistling Wood, Barrows" color="#008000">
+    <description>Pale white trees press close about the jagged pathway, their forms riddled with hundreds of tiny holes.  A large cocoon hangs from one branch, dried and withered with the passing of the centuries.  Whatever creature might have emerged from that haven is long since dead.</description>
+    <position x="-220" y="-60" z="0" />
+    <arc exit="west" move="west" destination="144" />
+    <arc exit="northwest" move="northwest" destination="142" />
+  </node>
+  <node id="144" name="Whistling Wood, Barrows" color="#008000">
+    <description>Gnarled roots break the surface of the path as it curves to the northwest.  A hardy strain of moss grows on the dead wood, slowly eating away the tree's foundation.  Several fallen trunks provide visible proof of the moss's efficiency.</description>
+    <position x="-240" y="-60" z="0" />
+    <arc exit="east" move="east" destination="143" />
+    <arc exit="northwest" move="northwest" destination="210" />
+  </node>
+  <node id="145" name="Whistling Wood, Barrows" color="#008000">
+    <description>Deep furrows cut sharply across the trail, as though something heavy had been dragged through here recently.  Curiously, the furrows begin and end at the edges of the path.</description>
+    <position x="-340" y="-100" z="0" />
+    <arc exit="southeast" move="southeast" destination="209" />
+    <arc exit="southwest" move="southwest" destination="146" />
+  </node>
+  <node id="146" name="Whistling Wood, Barrows" color="#008000">
+    <description>A small stone spire has fallen across the path, its once gleaming surface marred by weather and burn marks from wild spells.  Several skeins of rope lie beneath the spire, evidence that someone once tried to move it.</description>
+    <position x="-360" y="-80" z="0" />
+    <arc exit="northeast" move="northeast" destination="145" />
+    <arc exit="northwest" move="northwest" destination="147" />
+  </node>
+  <node id="147" name="Whistling Wood, Barrows" color="#008000">
+    <description>The branches of the trees fall away, allowing an unobstructed view of the heavens above.  Light from the burning sun chases away the dappled shadows that line the rest of the pathway.</description>
+    <description>The branches of the trees fall away, allowing an unobstructed view of the heavens above.  Light from the stars and moons chase away the dappled shadows that line the rest of the pathway.</description>
+    <position x="-380" y="-100" z="0" />
+    <arc exit="southeast" move="southeast" destination="146" />
+    <arc exit="west" move="west" destination="148" />
+  </node>
+  <node id="148" name="Whistling Wood, Barrows" color="#008000">
+    <description>A small pool of stagnant water lies sheltered by the rotting roots of a large tree.  Small tracks lead from the pool to a pile of bones deeper in the woods.  The air smells faintly rotten.</description>
+    <position x="-400" y="-100" z="0" />
+    <arc exit="east" move="east" destination="147" />
+    <arc exit="northwest" move="northwest" destination="149" />
+  </node>
+  <node id="149" name="Whistling Wood, Barrows" color="#008000">
+    <description>The narrow pathway curves sharply to the south for a few paces, leading through territory uncluttered by stray tree roots or rocks.  Sagging branches hang low over the trail creating a nasty trap for the unwary traveller.</description>
+    <description>The narrow pathway curves sharply to the south for a few paces, leading through territory uncluttered by stray tree roots or rocks.  Sagging branches hang low over the trail, creating a nasty trap for the unwary traveler.</description>
+    <position x="-420" y="-120" z="0" />
+    <arc exit="southeast" move="southeast" destination="148" />
+    <arc exit="south" move="south" destination="150" />
+  </node>
+  <node id="150" name="Whistling Wood, Barrows" color="#008000">
+    <description>The trail slants sharply downward to the south, its flattened surface marred by jagged stones and ancient roots.  Deep gouges in the earth show that not all travellers made it to the bottom of the hill unscathed.</description>
+    <description>The trail slants sharply downward to the south, its flattened surface marred by jagged stones and ancient roots.  Deep gouges in the earth show that not all travelers made it to the bottom of the hill unscathed.</description>
+    <position x="-420" y="-100" z="0" />
+    <arc exit="north" move="north" destination="149" />
+    <arc exit="none" move="go slanted trail" destination="151" />
+  </node>
+  <node id="151" name="Whistling Wood, Barrows" color="#008000">
+    <description>The trail rises abruptly to the north, rent by deep gouges and jagged outcroppings of rock.  A mound of earth has fallen in upon itself, the points of rusted swords piercing the dirt and gleaming dully in the light.</description>
+    <position x="-420" y="-80" z="0" />
+    <arc exit="southeast" move="southeast" destination="152" />
+    <arc exit="none" move="go slanted trail" destination="150" />
+  </node>
+  <node id="152" name="Whistling Wood, Barrows" color="#008000">
+    <description>The branches above are linked by a great spider's web, beautiful in its deadly symmetry.  Beneath the web, the trail is covered with the remains of countless dried cocoons.</description>
+    <position x="-400" y="-60" z="0" />
+    <arc exit="southwest" move="southwest" destination="153" />
+    <arc exit="northwest" move="northwest" destination="151" />
+  </node>
+  <node id="153" name="Whistling Wood, Barrows" color="#008000">
+    <description>The narrow trail lies dappled with light and shadow in constant struggle for dominance.  A patch of earth beside the trail has been recently dug up, as though someone were searching for something beneath the ground.</description>
+    <position x="-420" y="-40" z="0" />
+    <arc exit="northeast" move="northeast" destination="152" />
+    <arc exit="south" move="south" destination="154" />
+  </node>
+  <node id="154" name="Whistling Wood, Barrows" color="#008000">
+    <description>A large grey tree is split cleanly in two, its center burned a dark black by a lightning strike.  Chips of bark lie scattered about the ground beneath the tree, shattered from the tree by their brief contact with the powerful manifestation of nature's force.</description>
+    <position x="-420" y="-20" z="0" />
+    <arc exit="north" move="north" destination="153" />
+    <arc exit="southeast" move="southeast" destination="155" />
+  </node>
+  <node id="155" name="Whistling Wood, Barrows" color="#008000">
+    <description>Several large holes have been dug in the side of a large earthen mound that lies beside the trail.  The spacing of the holes appears deliberate, as though it were more than the work of curious animals.</description>
+    <position x="-400" y="0" z="0" />
+    <arc exit="southwest" move="southwest" destination="156" />
+    <arc exit="northwest" move="northwest" destination="154" />
+  </node>
+  <node id="156" name="Whistling Wood, Barrows" color="#008000">
+    <description>The barren path continues its frantic twisting through the woods.  Dark markings line the trunk of one dead tree, either burn marks from a long-past war or a guidepost of some kind.</description>
+    <position x="-420" y="20" z="0" />
+    <arc exit="northeast" move="northeast" destination="155" />
+    <arc exit="south" move="south" destination="157" />
+  </node>
+  <node id="157" name="Whistling Wood, Barrows" color="#008000">
+    <description>The ancient trees line the pathway like soldiers, their close-knit ranks preventing anyone from leaving the trail.  A tattered bird's nest rests in the forked branch of one tree.</description>
+    <position x="-420" y="40" z="0" />
+    <arc exit="north" move="north" destination="156" />
+    <arc exit="southeast" move="southeast" destination="158" />
+  </node>
+  <node id="158" name="Whistling Wood, Barrows" color="#008000">
+    <description>An aged tree has collapsed over a packed mound of earth.  The hole where the tree's roots once buried into the earth now reeks of decay.  Several openings have been dug in the side of the mound, some large enough to squeeze through.</description>
+    <position x="-400" y="60" z="0" />
+    <arc exit="southeast" move="southeast" destination="159" />
+    <arc exit="northwest" move="northwest" destination="157" />
+  </node>
+  <node id="159" name="Whistling Wood, Barrows" color="#008000">
+    <description>The narrow path twists out of sight beneath the looming forms of the great trees.  Writhing tendrils of shadow vie with patches of light for room beneath the interlaced branches of the trees.</description>
+    <position x="-380" y="80" z="0" />
+    <arc exit="east" move="east" destination="160" />
+    <arc exit="northwest" move="northwest" destination="158" />
+  </node>
+  <node id="160" name="Whistling Wood, Barrows" color="#008000">
+    <description>Strong gusts of wind have knocked several trees over, leaving their dead forms strewn about the path.  The rotten corpse of an animal lies on the trail, impaled by a branch.</description>
+    <position x="-360" y="80" z="0" />
+    <arc exit="northeast" move="northeast" destination="161" />
+    <arc exit="west" move="west" destination="159" />
+  </node>
+  <node id="161" name="Whistling Wood, Barrows" color="#008000">
+    <description>The ground here is softer than in other parts of the trail.  Several footprints have set into the earth, both those of animals and of Elanthia's many races.  Puddles of water lie in the depths of the prints.</description>
+    <position x="-340" y="60" z="0" />
+    <arc exit="southeast" move="southeast" destination="162" />
+    <arc exit="southwest" move="southwest" destination="160" />
+  </node>
+  <node id="162" name="Whistling Wood, Barrows" color="#008000">
+    <description>The beaten pathway wanders sinuously beneath the trees, dappled with patterns of shadow and light.  A large branch partially blocks the trail, its surface riddled with small holes.</description>
+    <position x="-320" y="80" z="0" />
+    <arc exit="south" move="south" destination="163" />
+    <arc exit="northwest" move="northwest" destination="161" />
+  </node>
+  <node id="163" name="Whistling Wood, Barrows" color="#008000">
+    <description>Gleaming darkly in the subdued light, a large pool of water lies nestled beneath the roots of a dead tree.  The bark of the tree glimmers with light reflected from the pool.</description>
+    <position x="-320" y="100" z="0" />
+    <arc exit="north" move="north" destination="162" />
+    <arc exit="east" move="east" destination="164" />
+  </node>
+  <node id="164" name="Whistling Wood, Barrows" color="#008000">
+    <description>A dark mound of earth rises beside the trail, its surface covered in recently-dug holes.  Faint sounds can be heard coming from them, though they are too dark to see what lies within.</description>
+    <description>A dark mound of earth rises beside the trail, its surface covered in recently dug holes.  Faint sounds can be heard coming from them, though they are too dark to see what lies within.</description>
+    <position x="-260" y="100" z="0" />
+    <arc exit="east" move="east" destination="165" />
+    <arc exit="west" move="west" destination="163" />
+  </node>
+  <node id="165" name="Whistling Wood, Barrows" color="#008000">
+    <description>The trail curves sharply around a tightly-packed group of trees.  Very faint light filters through the woven branches above, providing just enough illumination to avoid the rocks and roots littering the path.</description>
+    <description>The trail curves sharply around a tightly packed group of trees.  Their tangled branches allow a very faint light to filter though, just enough for travelers to avoid the rocks and roots littering the path.</description>
+    <position x="-240" y="100" z="0" />
+    <arc exit="southeast" move="southeast" destination="166" />
+    <arc exit="west" move="west" destination="164" />
+  </node>
+  <node id="166" name="Whistling Wood, Barrows" color="#008000">
+    <description>Fire-blackened trees line the dark pathway, their forms twisted and shattered by intense heat.  A few rusted arrowheads lie scattered beneath the trees, evidence of intense combat sometime in the past.</description>
+    <position x="-220" y="120" z="0" />
+    <arc exit="southwest" move="southwest" destination="167" />
+    <arc exit="northwest" move="northwest" destination="165" />
+  </node>
+  <node id="167" name="Whistling Wood, Barrows" color="#008000">
+    <description>Faint shadings of frost line the bark of the trees in this area.  Dark lumps hang from the branches of the trees, looking like miniature cocoons.</description>
+    <position x="-240" y="140" z="0" />
+    <arc exit="northeast" move="northeast" destination="166" />
+    <arc exit="east" move="east" destination="168" />
+  </node>
+  <node id="168" name="Whistling Wood, Barrows" color="#008000">
+    <description>The ghostly forms of the rotting trees fall away from the trail, allowing faint patches of the sky above to be seen.  Recently-dug graves line the sides of the trail, their crudely-constructed gravemarkers rising from the earth like clawed hands reaching for the light.</description>
+    <description>The ghostly forms of the rotting trees fall away from the trail, allowing faint patches of the sky to be seen.  Recently dug graves line the sides of the trail, their crudely constructed grave markers rising from the earth like the stalks left after a strange harvest.</description>
+    <position x="-220" y="140" z="0" />
+    <arc exit="northeast" move="northeast" destination="169" />
+    <arc exit="west" move="west" destination="167" />
+  </node>
+  <node id="169" name="Whistling Wood, Barrows" color="#008000">
+    <description>Faint pockets of light gleam from beneath the trees, piercing the gloomy shadows.  The trail continues its winding course through the trees.</description>
+    <position x="-200" y="120" z="0" />
+    <arc exit="east" move="east" destination="170" />
+    <arc exit="southwest" move="southwest" destination="168" />
+  </node>
+  <node id="170" name="Whistling Wood, Barrows" color="#008000">
+    <description>The packed earth of the trail is covered in a mass of blood and shreds of bone.  A rotting leather coat lies pinned beneath a sapling, its young wood out of place in the ancient forest.</description>
+    <position x="-180" y="120" z="0" />
+    <arc exit="southeast" move="southeast" destination="171" />
+    <arc exit="west" move="west" destination="169" />
+  </node>
+  <node id="171" name="Whistling Wood, Barrows" color="#008000">
+    <description>A waiting silence fills the shadows beneath the ancient trees.  Faint patches of sky can be seen through the branches above, covering the earth with patterns of light.</description>
+    <position x="-160" y="140" z="0" />
+    <arc exit="southeast" move="southeast" destination="172" />
+    <arc exit="northwest" move="northwest" destination="170" />
+  </node>
+  <node id="172" name="Whistling Wood, Barrows" color="#008000">
+    <description>Several stumps line the pathway, evidence that many trees have been cut down.  Who would want the rotting wood found here is a great mystery.  Faint gouges mark the trail, leading away from the stumps.</description>
+    <position x="-140" y="160" z="0" />
+    <arc exit="east" move="east" destination="173" />
+    <arc exit="northwest" move="northwest" destination="171" />
+  </node>
+  <node id="173" name="Whistling Wood, Barrows" color="#008000">
+    <description>A dark mound of earth rises beside the trail.  Faint patches of moss grow around several holes dug into the sides.  The stench of rot and decay fills the air.</description>
+    <position x="-120" y="160" z="0" />
+    <arc exit="northeast" move="northeast" destination="174" />
+    <arc exit="west" move="west" destination="172" />
+  </node>
+  <node id="174" name="Whistling Wood, Barrows" color="#008000">
+    <description>Dark lichen and moss covers the ground beneath the barren trees.  Riddled with holes from some age-old catastrophe, several trees have collapsed from their own weight.  A few small plants have begun sprouting away from the trail, in the small patches of light that can squeeze through the heavily-interlaced branches.</description>
+    <description>Dark lichen and moss cover the ground beneath the barren trees.  Riddled with holes from some age-old catastrophe, several trees have collapsed from their own weight.  Away from the trail, a few small plants have begun sprouting in the small patches of light that penetrate the closely interlaced branches.</description>
+    <position x="-100" y="140" z="0" />
+    <arc exit="east" move="east" destination="175" />
+    <arc exit="southwest" move="southwest" destination="173" />
+  </node>
+  <node id="175" name="Whistling Wood, Barrows" color="#008000">
+    <description>One large tree has collapsed, partially blocking the pathway.  The bark of the tree is riddled with hundreds of tiny holes that must have weakened it and caused its fall.  A skull, yellowed with age, hangs by a frayed rope from one of the tree's branches.</description>
+    <position x="-80" y="140" z="0" />
+    <arc exit="northeast" move="northeast" destination="176" />
+    <arc exit="west" move="west" destination="174" />
+  </node>
+  <node id="176" name="Whistling Wood, Barrows" color="#008000">
+    <description>Jagged rocks and twisted roots turn the narrow trail into a challenge for the unwary, or clumsy, adventurer.  The intertwined branches of the trees allow little light to shine into the area.  Faint cuts mar the sides of some trees, as though some foolish townsman had once tried to cut down trees older than the city of Shard itself.</description>
+    <position x="-60" y="120" z="0" />
+    <arc exit="none" move="go narrow trail" destination="138" />
+    <arc exit="southwest" move="southwest" destination="175" />
+  </node>
+  <node id="177" name="Lake of Tears, Water" note="Lake of Tears" color="#0000FF">
+    <description>Despite being a freshwater lake, there is still the tang of salt to the water, perhaps lending credence to the origin of its name.  Chilly in all seasons and deadly in some, the current pulls like a small child at you, seeking to drag you along.</description>
+    <position x="-40" y="0" z="0" />
+    <arc exit="north" move="swim north" destination="178" />
+    <arc exit="northeast" move="swim northeast" destination="181" />
+    <arc exit="northwest" move="swim northwest" destination="180" />
+    <arc exit="none" move="go shoreline" destination="9" />
+  </node>
+  <node id="178" name="Lake of Tears, Deep Current" color="#0000FF">
+    <description>The current tugs like a force of Fate, drawing flotsam and jetsam into its chilly embrace.  Planks of wood and bits of garbage float on the surface, aimlessly twisting about in the small, choppy waves of the lake.</description>
+    <position x="-40" y="-20" z="0" />
+    <arc exit="none" move="go branches" destination="179" />
+    <arc exit="east" move="swim east" destination="181" />
+    <arc exit="south" move="swim south" destination="177" />
+    <arc exit="west" move="swim west" destination="180" />
+  </node>
+  <node id="179" name="Lake of Tears, Sewage" color="#0000FF">
+    <description>The raw sewage released from the nearby city turns the water a disgusting shade of green.  Despite the rank stench, this does appear to be the perfect place for such a dump since there appears to be an unseen current sucking down the fouled water, sending it to the gods only know where.</description>
+    <position x="-40" y="-40" z="0" />
+    <arc exit="north" move="swim north" destination="184" />
+    <arc exit="none" move="go branches" destination="178" />
+  </node>
+  <node id="180" name="Lake of Tears, Water" color="#0000FF">
+    <description>Neck-deep to a Human, the water in this part of the Lake of Tears is icy cold in the winter and fall and littered with sewage that grows rank in the sunlight during spring and summer.  The movement of the water gives the illusion that the walls of Shard are bobbing up and down.</description>
+    <position x="-60" y="-20" z="0" />
+    <arc exit="east" move="swim east" destination="178" />
+    <arc exit="southeast" move="swim southeast" destination="177" />
+  </node>
+  <node id="181" name="Lake of Tears, Water" color="#0000FF">
+    <description>Green weeds wave in the water, wrapping loosely about ankles and wrists.  The smell of offal and rotting remains rises thickly off the water, a miasmic stench that makes it hard to breathe, much less struggle through the neck-deep lake.</description>
+    <position x="0" y="-20" z="0" />
+    <arc exit="southwest" move="swim southwest" destination="177" />
+    <arc exit="west" move="swim west" destination="178" />
+    <arc exit="none" move="go moss" destination="182" />
+  </node>
+  <node id="182" name="Lake of Tears, Deep Current" color="#0000FF">
+    <description>Ripples break the surface of the water, creating circles within circles.  The rocky surface of the foundations that uphold the city of Shard looms to the north, impossibly tall from this angle.</description>
+    <position x="-20" y="-40" z="0" />
+    <arc exit="north" move="swim north" destination="183" />
+    <arc exit="none" move="go moss" destination="181" />
+  </node>
+  <node id="183" name="Lake of Tears, Sewage" color="#0000FF">
+    <description>The stench of refuse is strongest to the northwest, where the sewer at Ruby Street releases the unwanted quantities of the city into the Lake of Tears.  Also in that direction lies the rocky foundations of Shard, sticking up out of the water in a jumbled thirty foot rise of bedrock that looks too slick and dangerous to climb.  The cold and the reek are almost overpowering.</description>
+    <position x="-20" y="-60" z="0" />
+    <arc exit="south" move="swim south" destination="182" />
+    <arc exit="northwest" move="swim northwest" destination="184" />
+  </node>
+  <node id="184" name="Lake of Tears, Broken Grate" color="#0000FF">
+    <description>Flush against the rock foundations of Shard is an iron grate through which travels the refuse of the city.  One bar of the grate has been sawed through, revealing a gap just big enough to fit an agile -- and iron-stomached -- humanoid.  You shudder to think of the consequences of swimming directly into the flow of the sewage outlet of Ilithi's capital.</description>
+    <position x="-40" y="-80" z="0" />
+    <arc exit="southeast" move="swim southeast" destination="183" />
+    <arc exit="south" move="swim south" destination="179" />
+    <arc exit="none" move="go gap" destination="185" />
+  </node>
+  <node id="185" name="Sewer" color="#0000FF">
+    <description>Eddies of brown-red currents swirl over the surface of the water, muddling it to a dingy color reminiscent to dried blood.  Specks of foam and other unnameable substances dot the surface, disturbed by dripping condensation and the frantic flailings of adventurers foolish enough to dare the murky waters.</description>
+    <position x="-40" y="-120" z="0" />
+    <arc exit="north" move="swim north" destination="186" />
+    <arc exit="none" move="go grate" destination="184" />
+  </node>
+  <node id="186" name="Sewer" color="#0000FF">
+    <description>The water rushes by to the south, carrying with it the stench and substance of Shard's refuse.</description>
+    <position x="-40" y="-140" z="0" />
+    <arc exit="northeast" move="swim northeast" destination="187" />
+    <arc exit="south" move="swim south" destination="185" />
+  </node>
+  <node id="187" name="Sewer" color="#0000FF">
+    <description>The overwhelming stench of raw sewage and rotting vegetable matter creates a miasma that causes the air to shimmer and waver.  Water rushes by thickly to the south, vanishing into pitch darkness.</description>
+    <position x="-20" y="-160" z="0" />
+    <arc exit="southwest" move="swim southwest" destination="186" />
+    <arc exit="none" move="climb bank" destination="188" />
+  </node>
+  <node id="188" name="Undershard, Sewage Tunnel" note="Map67_Shard.xml|Undershard|Sewage Tunnel">
+    <description>Raw sewage clogs this claustrophobic tunnel, the air choked with nauseating fumes.  Tiny creatures wriggle through the muck, their wormlike bodies writhing just beneath the surface.  The tunnel slopes downward to the north, into utter darkness.</description>
+    <position x="0" y="-180" z="0" />
+    <arc exit="north" move="north" />
+    <arc exit="none" move="go sewage" destination="187" />
+  </node>
+  <node id="189" name="Corik's Wall, Watchtower">
+    <description>The small wooden platform is sheltered by a thatched roof and stands nearly a story and a half above the battlements, offering an unequaled view of the canyon to either side.  On one side, a pale river of stone wends north to the dusky fringes of the Darkling Wood.  To the south, mist and shadow recreate the forsaken landscape leading up to the soullessly black edge of the Dark Hand.</description>
+    <position x="-100" y="1040" z="0" />
+    <arc exit="none" move="climb forward ladder" destination="123" />
+    <arc exit="none" move="climb rear ladder" destination="127" />
+  </node>
+  <node id="190" name="Blackthorn Canyon, Field Medic's Tent" note="Field Medic's Tent">
+    <description>The scents of drying herbs mingle with the sharp tinge of camphor and the heavy, coppery smell of gore that underlies it all.  Three labeled willow baskets sit at the base of the tent's center pole, within easy reach of several smooth ironwood pallets.  The wooden floor is still damp in places from its most recent scrubbing.</description>
+    <position x="-80" y="920" z="0" />
+    <arc exit="out" move="out" destination="115" />
+  </node>
+  <node id="191" name="Nardel's Dwelling" note="Nardel's Dwelling|Herbs|Doritee" color="#FF0000">
+    <description>Firelight washes the room with warm, shifting light.  Woven grass baskets stacked along the eastern wall contain sheaves of drying herbs, while those on the shelves of a cupboard hold crudely made toys or spools of thread and mending projects.  Others hang ready for service from slouching floor joists above.  A fragrant pot of fenberry tea cools on a bench-lined table before the hearth.</description>
+    <position x="80" y="600" z="0" />
+    <arc exit="out" move="out" destination="100" />
+    <arc exit="none" move="climb wooden stair" destination="192" />
+  </node>
+  <node id="192" name="Nardel's Dwelling">
+    <description>The low-ceilinged loft is lined with beds ranging in size from small bassinets and cribs near the fireplace to tall bunks near the stair, each gently rounded on top with a sleeping child.  Mosaics of colorful drawings that narrate scenes from fables and folk tales adorn the plaster walls.</description>
+    <position x="60" y="600" z="0" />
+    <arc exit="none" move="climb wooden stair" destination="191" />
+  </node>
+  <node id="193" name="Stormfells, Shadow's Reach">
+    <description>Flickering lamplight and waves of warm air come from a cave opening.  The lamplight pauses on the stony ledge, while cool breezes quickly dissipate the heat.  From inside the mountain echoes the metallic ringing of weapons being born from fire and force.</description>
+    <position x="40" y="580" z="0" />
+    <arc exit="none" move="go cave" destination="194" />
+    <arc exit="none" move="climb cord-bound ladder" destination="97" />
+  </node>
+  <node id="194" name="Reach Forge, Forecavern" note="Reach Forge|Forging Society|Forging books" color="#FF0000">
+    <description>A pewter oil lamp hangs on a rusty chain from the shadows above, casting a hazy amber glow on a cluttered countertop and the one-armed attendant behind it.  The man's booted foot rests atop a sloppy stack of books on the counter.  Occasionally he glances at three hourglasses perched on a rock and grudgingly shuffles through a leather curtain when one runs down.</description>
+    <position x="80" y="580" z="0" />
+    <arc exit="out" move="out" destination="193" />
+    <arc exit="none" move="go leather curtain" destination="195" />
+  </node>
+  <node id="195" name="Reach Forge, Tunnel" note="Forging supplies" color="#FF0000">
+    <description>The jagged stone walls are blackened with accumulated soot and coal ash.  Light spills in from three arches leading to the west, north and east, barely illuminating the hot, stuffy tunnel and several large buckets.  Wisps of cooler air seep in from beneath a leather curtain leading back out to the forecavern.</description>
+    <position x="100" y="540" z="0" />
+    <arc exit="none" move="go west arch" destination="196" />
+    <arc exit="none" move="go north arch" destination="199" />
+    <arc exit="none" move="go east arch" destination="202" />
+    <arc exit="none" move="go curtain" destination="194" />
+    <arc exit="southeast" move="southeast" destination="226" />
+    <arc exit="south" move="south" destination="197" />
+  </node>
+  <node id="196" name="Reach Forge, Western Smithy" note="forge1|west forge">
+    <description>The forge's builders took advantage of natural ledges in the cavern, hewing the unforgiving stone only to create the necessary chimneys.  A side-vented forge set on a natural shelf glows along the northern perimeter, throwing red-orange light across the massive steel anvil that dominates the center of the room.</description>
+    <position x="80" y="540" z="0" />
+    <arc exit="west" move="west" destination="198" />
+    <arc exit="none" move="go arch" destination="195" />
+  </node>
+  <node id="197" name="Reach Forge, Bulk Materials" note="Bulk Forging Supplies|Bulk Forging Materials" color="#FF0000">
+    <description>The sweltering heat from the nearby forges is a constant -- the walls absorb and radiate the heat at all hours of the day and night, never cooling as smiths keep the flames stoked.  Most of the stone walls are still rough and the ceiling high, but a counter with a bored clerk behind it takes up space along a tapestry-draped wall tucked away in the back corner.  The pathway along the floor from the north leading to the desk has been worn smooth from the traffic.</description>
+    <position x="100" y="540" z="0" />
+    <arc exit="north" move="north" destination="195" />
+  </node>
+  <node id="198" name="Reach Forge, Western Foundry" note="foundry1|crucible1|west foundry">
+    <description>Searing heat floods the cavern from the foundry fires, quickly warming whatever cool air enters from several airshafts drilled into the soot-blackened stone walls.  Raging flames dance below a large stone crucible hanging from a wooden beam so it can be moved on or off the fire.  At the far end of the room, a large pile of fuel waits to feed the flames.</description>
+    <position x="60" y="540" z="0" />
+    <arc exit="east" move="east" destination="196" />
+  </node>
+  <node id="199" name="Reach Forge, Northern Smithy" note="forge2|north forge">
+    <description>A blackened iron anvil is bolted to a rise in the stone floor and dominates the cavern.  Red-orange firelight glows from the forge built into a natural shelf and recreates the anvil's shape in heroic size on the opposite wall.</description>
+    <position x="100" y="520" z="0" />
+    <arc exit="west" move="west" destination="200" />
+    <arc exit="none" move="go arch" destination="195" />
+  </node>
+  <node id="200" name="Reach Forge, Northern Foundry" note="foundry2|crucible2|north foundry">
+    <description>Showers of angry red sparks fly from the fires raging beneath a large black-veined crucible that hangs from a hinged wooden beam so it can be swung on or off the flames as needed.  Nearby, a bone-handled leather bellows hangs over a pile of glossy black coal slumped against the cavern wall.</description>
+    <position x="80" y="520" z="0" />
+    <arc exit="east" move="east" destination="199" />
+  </node>
+  <node id="202" name="Reach Forge, Eastern Smithy" note="forge3|east forge">
+    <description>Brilliant red-orange light glows from a side-vented forge crafted from a natural shelf on the northern wall.  Above it, an assortment of fire-blackened tools hangs just out of arm's reach and a few steps away the large, iron anvil waits patiently to help shape metal into the form of men's dreams.</description>
+    <position x="100" y="540" z="0" />
+    <arc exit="east" move="east" destination="203" />
+    <arc exit="none" move="go arch" destination="195" />
+  </node>
+  <node id="203" name="Reach Forge, Eastern Foundry" note="foundry3|crucible3|east foundry">
+    <description>Waves of intense heat pour from the white-hot flames that flicker madly beneath the massive polished granite crucible that hangs from a wooden swing-arm above.  As if overcome by the superheated air, a crackled leather bellows and a heap of glossy black coal lean tiredly against the soot-darkened stone walls.</description>
+    <position x="120" y="540" z="0" />
+    <arc exit="west" move="west" destination="202" />
+  </node>
+  <node id="205" name="Darkling Wood, Ironwood Tree" color="#008000">
+    <description>Soaring above the ground, the massive ironwood tree oversees the Darkling Wood.  The ancient sentinel stretches its arms through the forest canopy, muscles pulled taut beneath its sleek black skin.  A pine tree's branches reach across the darkness and twine with the ironwood's reach.</description>
+    <position x="-40" y="640" z="0" />
+    <arc exit="none" move="climb gnarled ironwood" destination="62" />
+    <arc exit="none" move="climb pine branches" destination="74" />
+  </node>
+  <node id="206" name="Darkling Wood, Trader Outpost" note="Trader Outpost|commerce minister|shipment clerk" color="#00FF00">
+    <description>Pewter oil lamps hang from the thick oaken beams below the thatching, casting a warm glow on the cool efficiency of the outpost.  The slim Elven commerce minister strides from table to table with quill and ledger, handling each transaction with a quick nod.  Leaning against the center beam with arms crossed, a Human knight watches the room carefully.  An iron-strapped oak door leads out to the stable.</description>
+    <position x="-80" y="780" z="0" />
+    <arc exit="out" move="out" destination="72" />
+  </node>
+  <node id="207" name="Corik's Wall, Graev's Gate" note="Map68b_Blackthorn_Canyon_Lost_Ground.xml|Corik's Wall|Graev's Gate|Lost Ground">
+    <description>There is barely a wagon's length of space between the massive ironwood plank door and the heavy iron grating of the portcullis covering the entrance.  Suspended from chains and worked by winches, the portcullis can be slid down vertical grooves in the stone to allow passage through the gate.  On the underside of the arched gateway is a mosaic made of broken shards of colored bottle glass.  It is an odd bit of beauty in an otherwise grim and desperate place.</description>
+    <position x="-120" y="940" z="0" />
+    <arc exit="none" move="go door" destination="114" />
+    <arc exit="none" move="go portcullis" />
+  </node>
+  <node id="208" name="Ice Caves, Cave Mouth" note="Map68a_Ice_Caves.xml|Ice Caves">
+    <description>Like the maw of some great beast, the stalagmite and stalactite-filled cave's stone teeth are as sharp as time and nature can make them.  Beyond the cavern's gaping entrance, a forest of stone rises.  Yet, the pillars are coated in black ice, reminders of the spell that once kept this area frozen -- the area and its inhabitants, feared even by their creators.</description>
+    <position x="-100" y="220" z="0" />
+    <arc exit="west" move="west" />
+    <arc exit="out" move="out" destination="34" />
+  </node>
+  <node id="209" name="Whistling Wood, Barrows" color="#008000">
+    <description>Barren branches hang low over the path, brushing the top of an earthen mound.  A few stones lie scattered about the ground, breaking the monotony of dead earth.  The stench of death and decay fills the air, coming from several holes in the earthen mound.</description>
+    <position x="-320" y="-80" z="0" />
+    <arc exit="east" move="east" destination="210" />
+    <arc exit="northwest" move="northwest" destination="145" />
+  </node>
+  <node id="210" name="Whistling Wood, Barrows" color="#008000">
+    <description>The speckled form of a large grey boulder juts from the ground, forcing the path to turn sharply around it.  A pile of bones, gnawed clean by scavengers, lies at its base.</description>
+    <position x="-260" y="-80" z="0" />
+    <arc exit="southeast" move="southeast" destination="144" />
+    <arc exit="west" move="west" destination="209" />
+    <arc exit="northwest" move="northwest" destination="212" />
+    <arc exit="none" move="climb boulder" destination="211" />
+  </node>
+  <node id="211" name="Whistling Wood, Boulder">
+    <description>From the top of this boulder a great stretch of the Whistling Wood is revealed.  Trees of all sizes expand across the horizon, but even at a distance the decay is obvious as darkness clings to the forest.  To the north, a path leads off into the trees, while to the south a path winds its way through the barrows.</description>
+    <position x="-260" y="-100" z="0" />
+    <arc exit="none" move="south" destination="210" />
+    <arc exit="none" move="north" destination="213" />
+  </node>
+  <node id="212" name="Whistling Wood, Narrow Path">
+    <description>The path skirts a gigantic grey boulder that looms off to the east.  From this distance, the side of the boulder looks as smooth as if it had been planed.</description>
+    <position x="-280" y="-100" z="0" />
+    <arc exit="northeast" move="northeast" destination="213" />
+    <arc exit="southeast" move="southeast" destination="210" />
+  </node>
+  <node id="213" name="Whistling Wood, Narrow Path">
+    <description>A dark canopy of leaves hangs over this narrow path through the Whistling Wood.  To the south, a large boulder forces the path to detour around it.  Raw stumps and piles of stones show that the bypass has been recently constructed.</description>
+    <position x="-260" y="-120" z="0" />
+    <arc exit="north" move="north" destination="214" />
+    <arc exit="southwest" move="southwest" destination="212" />
+    <arc exit="none" move="climb boulder" destination="211" />
+  </node>
+  <node id="214" name="Whistling Wood, Fissure" note="Map68a_Ice_Caves.xml|Ice Caves">
+    <description>Among the worm-riddled trees that crowd this forest clearing, a great fissure has rent the ground opening up a passageway into the dark depths.  Heading off to the south, a weed-choked path offers the only way out of the clearing.</description>
+    <position x="-260" y="-140" z="0" />
+    <arc exit="south" move="south" destination="213" />
+  </node>
+  <node id="215" name="Abandoned Road" note="Map66_Shard_to_Gondola_Area.xml|STR|Abandoned Road">
+    <description>Several long-abandoned crates sit on the side of the road.  Some have cracked open, spilling their contents -- rusted unmarked tins, long-decayed pelts, sacks of putrid half-sprouted grains and seeds. The wind must have picked up some of the grains before they sprouted because a wide band of wheat, barley and oats grows in a widening arc from the crates.</description>
+    <position x="120" y="60" z="0" />
+    <arc exit="southeast" move="southeast" />
+    <arc exit="west" move="west" />
+  </node>
+  <node id="216" name="Blackthorn Canyon, Sutler's Wagon" note="Sutler's Wagon" color="#FF0000">
+    <description>A riot of color and pattern assaults the eyes and disorients the senses.  Every conceivable surface in the small wagon is cluttered with wares.  Items on the shelves and racks lining the windowless interior are neatly arrayed while scattered crates and boxes gather a wide assortment of goods.</description>
+    <position x="-140" y="880" z="0" />
+    <arc exit="west" move="west" destination="217" />
+    <arc exit="none" move="go shuttered door" destination="110" />
+  </node>
+  <node id="217" name="Blackthorn Canyon, Sutler's Wagon" color="#FF0000">
+    <description>Brindle Roundtoe perches atop a small stool behind a low counter in the rear of the wagon.  The corners of the sutler's bright eyes crinkle with interest as they furtively assess the goods on the shelves and cases around the interior.  On the wall next to him, a mail vest and dented cookpot helm hang close at hand.</description>
+    <position x="-160" y="880" z="0" />
+    <arc exit="east" move="east" destination="216" />
+  </node>
+  <node id="218" name="Blackthorn Canyon, Dwarf's Tent" note="Mhar|Gems|Gem Seller">
+    <description>Cool darkness and a thick musty scent fill the dank and confining space inside the tent.  A bright circle of light hovers just above a polished stone table arrayed with little heaps of gems on swaths of velvet.</description>
+    <position x="-100" y="880" z="0" />
+    <arc exit="out" move="out" destination="111" />
+  </node>
+  <node id="219" name="Shadow's Reach, Settlement" color="#00FFFF">
+    <description>Certain patches rise from the depths of the shadowy ground beyond the road.  Whether simply untrimmed blades or the natural rises and falls of the land is anyone's guess in the darkness.  Spots of light from homes in the distance settle on tufts of wildflowers amid the grass.</description>
+    <position x="100" y="580" z="0" />
+    <arc exit="southeast" move="southeast" destination="224" />
+    <arc exit="north" move="north" destination="220" />
+  </node>
+  <node id="220" name="Shadow's Reach, Settlement" color="#00FFFF">
+    <description>Black as pitch even against the night, the surrounding mountains loom upon the horizon and make everything in the clearing appear insignificant by comparison.  The gravel path continues around the neighborhood and encircles a broad field in the middle.  Residents hold the occasional midnight bonfire or wedding reception in the communal space should the weather prove favorable.</description>
+    <position x="100" y="560" z="0" />
+    <arc exit="east" move="east" destination="221" />
+    <arc exit="south" move="south" destination="219" />
+  </node>
+  <node id="221" name="Shadow's Reach, Settlement" color="#00FFFF">
+    <description>Cool night winds swim through the dark grass and tickle the weeds that find purchase along the gravel road.  A jagged pile sits adjacent to the field, likely an abandoned daytime project.  Should the cloud cover be sparse, the stars sing their night songs to the clearing in a myriad of bright twinkles.</description>
+    <position x="120" y="560" z="0" />
+    <arc exit="southeast" move="southeast" destination="222" />
+    <arc exit="west" move="west" destination="220" />
+  </node>
+  <node id="222" name="Shadow's Reach, Settlement" color="#00FFFF">
+    <description>Nocturnal insects and rodents mosey through the shrubbery in a nearby garden.  The mountain peaks, visible from all sides, encircle the neighborhood as if standing watch through the night.  Set a distance away from the gravel road, the houses blend comfortably into the darkness.</description>
+    <position x="140" y="580" z="0" />
+    <arc exit="south" move="south" destination="223" />
+    <arc exit="northwest" move="northwest" destination="221" />
+  </node>
+  <node id="223" name="Shadow's Reach, Settlement" color="#00FFFF">
+    <description>Spindly weeds with slender leaves bob to and fro in the chilly breeze as if waving goodnight to passersby.  Hooting owls patrol the darkened sky, appearing as sporadic flashes of feathers up above the central field.  Atop the plateau, the vantage point is unparalleled, and one can stargaze with ease on a clear night.</description>
+    <position x="140" y="600" z="0" />
+    <arc exit="north" move="north" destination="222" />
+    <arc exit="west" move="west" destination="224" />
+  </node>
+  <node id="224" name="Shadow's Reach, Settlement" note="Settlement" color="#00FFFF">
+    <description>A modest black gravel road weaves around the clearing, cutting through the stunted grass as if the earth itself was scorched.  The small rock shards bleed into the softer borders, threatening to catch barefooted travelers unawares.  Standing out against the night sky, a wooden pole supports a weathered sign.</description>
+    <position x="120" y="600" z="0" />
+    <arc exit="east" move="east" destination="223" />
+    <arc exit="northwest" move="northwest" destination="219" />
+    <arc exit="none" move="go meadow" destination="98" />
+  </node>
+  <node id="225" name="The New Bridge, East Tower" note="Map67_Shard.xml|E Tower|New Bridge">
+    <description>High above the South Gate, embrasures pierce the stone battlements between the merlons that give cover to the defenders of the walls.  The perch commands the main entrance to the city with a field of fire that covers the approaches to the New South Bridge.</description>
+    <position x="60" y="-20" z="0" />
+    <arc exit="west" move="west" />
+    <arc exit="none" move="climb embrasure" destination="2" />
+  </node>
+  <node id="226" name="Reach Forge, Supplies Shop" note="Forging tools|Forging clerk|deeds|forging deeds" color="#FF0000">
+    <description>Though slightly cooler than the rest of the tunnel, the air in this cramped alcove is thick and dank.  Narrow airshafts drilled through the granite skin of the mountain provide entry for thin tendrils of light to illuminate a low counter along with a crate stuffed into a corner.</description>
+    <position x="100" y="540" z="0" />
+    <arc exit="northwest" move="northwest" destination="195" />
+  </node>
   <label text="Adan'f Shadow Mages">
-    <position x="220" y="150" z="0" />
+    <position x="-360" y="-50" z="0" />
+  </label>
+  <label text="Adan'f Blood Warriors">
+    <position x="-360" y="-70" z="0" />
+  </label>
+  <label text="Adan'f Blademasters">
+    <position x="-220" y="95" z="0" />
+  </label>
+  <label text="Adan'f Sorcerers">
+    <position x="-400" y="15" z="0" />
+  </label>
+  <label text="Super Rock Trolls">
+    <position x="-100" y="30" z="0" />
+  </label>
+  <label text="Rock Trolls">
+    <position x="-70" y="270" z="0" />
+  </label>
+  <label text="Jackals">
+    <position x="-60" y="290" z="0" />
+  </label>
+  <label text="Dragon Priest Fanatics">
+    <position x="30" y="190" z="0" />
+  </label>
+  <label text="Shard South Gate">
+    <position x="-10" y="-65" z="0" />
+  </label>
+  <label text="Eidolon Steeds">
+    <position x="-30" y="460" z="0" />
+  </label>
+  <label text="Eidolon Steeds">
+    <position x="-160" y="700" z="0" />
+  </label>
+  <label text="To DMZ">
+    <position x="-150" y="1070" z="0" />
+  </label>
+  <label text="Undershard">
+    <position x="-67" y="-184" z="0" />
+  </label>
+  <label text="Ice Caves">
+    <position x="-290" y="-160" z="0" />
+  </label>
+  <label text="Ice Caves">
+    <position x="-170" y="210" z="0" />
+  </label>
+  <label text="Shard East/North">
+    <position x="50" y="0" z="0" />
+  </label>
+  <label text="Gate Area (STR3)">
+    <position x="50" y="12" z="0" />
+  </label>
+  <label text="Reach Forge">
+    <position x="68" y="500" z="0" />
+  </label>
+  <label text="Herbs">
+    <position x="62" y="592" z="0" />
+  </label>
+  <label text="Blackthorn Canyon">
+    <position x="-230" y="850" z="0" />
+  </label>
+  <label text="Stormfells">
+    <position x="0" y="740" z="0" />
+  </label>
+  <label text="Shadow's Reach">
+    <position x="80" y="685" z="0" />
+  </label>
+  <label text="Corik's Wall">
+    <position x="-60" y="960" z="0" />
+  </label>
+  <label text="Marsh">
+    <position x="65" y="343" z="0" />
+  </label>
+  <label text="Darkling Wood">
+    <position x="-100" y="590" z="0" />
+  </label>
+  <label text="Shard Walls">
+    <position x="65" y="-30" z="0" />
+  </label>
+  <label text="Long swim time">
+    <position x="-82" y="-108" z="0" />
+  </label>
+  <label text="blue-belly crocodile">
+    <position x="-30" y="-150" z="0" />
+  </label>
+  <label text="sinuous elsralael">
+    <position x="-135" y="-40" z="0" />
   </label>
 </zone>
