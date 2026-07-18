@@ -1,10 +1,14 @@
 # automapper.cmd
-var autoversion 8.2026-02-25
+var autoversion 8.2026-07-09
 
 # use '.automapper help' from the command line for variables and more
 # debug 5 is for outlander; genie debuglevel 10
 # debuglevel 10
 # debug 5
+
+#2026-07-09
+# Hanryu
+#   found another "can't move while invis" message
 
 #2026-02-25
 # Hanryu
@@ -578,7 +582,7 @@ ABSOLUTE.TOP:
   var move_STOW ^You need to empty your hands|^You should empty your hands first\!|^You can't possibly manage to cross|^You'll need to free up your hands|^Not while carrying something in your hands|^You must first free up your hands\.|^The going gets quite difficult and highlights the need to free up your hands|^You must have your hands free
   var move_FATIGUE ^You're too tired to try climbing|^You need to rest
   var move_BOAT ^The galley has just left|^You look around in vain for the galley
-  var move_INVIS ^The .* can't see you\!|^But no one can see you\!|^How can you .* can't even see you\?|^You can't move in that direction while unseen\.
+  var move_INVIS ^There's no way you can .*? while remaining invisible\.|^The .* can't see you\!|^But no one can see you\!|^How can you .* can't even see you\?|^You can't move in that direction while unseen\.
   var climb_mount_FAIL climb what?
 ACTIONS:
   action (move) action (move) off;goto DRAGGED when ^The current drags you
