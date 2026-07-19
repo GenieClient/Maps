@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <zone name="Fang Cove" id="150">
   <node id="1" name="Aboard the Mammoth, Platform" note="Sea Mammoth|Ratha">
     <description>Thick, barnacle-encrusted ropes secure the platform to the mammoth's back.  The wooden planks follow the curve of the beast's neck, allowing the driver an elevated vantage point as he does his best to lead the sea creature to and fro across the vast ocean.  Birds' nests can be seen all around the platform and are woven intricately into the fur.</description>
-    <position x="295" y="120" z="0" />
+    <position x="280" y="120" z="0" />
     <arc exit="none" move="none" destination="53" />
     <arc exit="down" move="down" destination="2" />
   </node>
@@ -11,7 +11,7 @@
     <position x="280" y="160" z="0" />
     <arc exit="south" move="south" destination="3" />
     <arc exit="none" move="join sea mammoth" destination="1" />
-    <arc exit="climb" move="climb ladder" destination="12" />
+    <arc exit="none" move="climb ladder" destination="12" />
     <arc exit="none" move="join tall mammoth" destination="230" />
   </node>
   <node id="3" name="Fang Cove, Dock">
@@ -19,29 +19,27 @@
     <description>A hard stone walkway winds along the edge of the crystal waters that make up Fang Cove.  Standing in stark contrast to the crude structures within view, many colorful flowers liven up the otherwise drab community.  Here and there, bits of chipping paint can be seen on some of the huts.</description>
     <position x="280" y="180" z="0" />
     <arc exit="north" move="north" destination="2" />
-    <arc exit="go" move="go monolithic dome" destination="165" />
-    <arc exit="go" move="go two building" destination="4" />
+    <arc exit="none" move="go monolithic dome" destination="165" />
+    <arc exit="none" move="go two building" destination="4" />
   </node>
   <node id="4" name="The Shanty, Common Room" note="Shanty" color="#FF0000">
     <description>Airy and open with a hint of fried fish in the air, this place offers customers a place to relax, eat and chat in leisure.  Roughly woven nets decorated with seashells line the walls while large wooden picnic tables are set with tropical-themed placemats and colorful napkins.  Sweet scented candles grace the tables, brightly shining against the waiting darkness.</description>
-    <description>Airy and open with a hint of fried fish in the air, this place offers customers a place to relax, eat and chat in leisure.  Roughly woven nets decorated with seashells line the walls while large wooden picnic tables are set with tropical-themed placemats and colorful napkins.  Sweet scented candles grace the tables, ready to be lit when darkness falls.</description>
-    <description>Airy and open with a hint of fried fish in the air, this place offers customers a place to relax, eat and chat in leisure.  Roughly woven nets decorated with seashells line the walls while large wooden picnic tables are set with tropical-themed placemats and colorful napkins.  Sweet scented candles grace the tables, brightly shining against the waiting darkness.  A driftwood menu board hangs on a nearby wall, next to a large window with a blue valance that overlooks a portion of the darkened community beyond.</description>
     <position x="260" y="180" z="0" />
     <arc exit="out" move="out" destination="3" />
-    <arc exit="go" move="go back exit" destination="7" />
-    <arc exit="go" move="go swinging door" destination="5" />
+    <arc exit="none" move="go back exit" destination="7" />
+    <arc exit="none" move="go swinging door" destination="5" />
   </node>
   <node id="5" name="The Shanty, Kitchen">
     <description>The kitchen, though clean, is crammed full of food in various stages of preparation.  Onions, garlic, peppers and bananas hang from brass hooks along one wall, while a large table is lined with bowls and mixing implements.  The kitchen's chef roams the area and keeps an eye on one and all, making sure everything is running smoothly in her domain.</description>
     <position x="260" y="160" z="0" />
-    <arc exit="go" move="go small alcove" destination="6" />
-    <arc exit="go" move="go swinging door" destination="4" />
+    <arc exit="none" move="go small alcove" destination="6" />
+    <arc exit="none" move="go swinging door" destination="4" />
   </node>
   <node id="6" name="The Shanty, Alcove">
     <description>This area is bereft of much, other than stairs leading to the top floor and a small painting of fruit.  The pale oak walls echo with the sounds coming from the kitchen and lend little respite for those seeking refuge from the noise.</description>
     <position x="240" y="160" z="0" />
-    <arc exit="go" move="go kitchen" destination="5" />
-    <arc exit="climb" move="climb stairs" destination="138" />
+    <arc exit="none" move="go kitchen" destination="5" />
+    <arc exit="none" move="climb stairs" destination="138" />
   </node>
   <node id="7" name="Fang Cove, Walkway">
     <description>Sweet aromas drift from the two-story building that dominates the area near the cove's pier.  A decorative pole holds a dragon-shaped lantern, its bright flame diligently flickering into the night.  Groups of inhabitants gather around white wicker chairs and tables beneath the illumination to talk of the day's happenings in the small community while others go inside for more comfortable arrangements.</description>
@@ -49,25 +47,25 @@
     <position x="260" y="200" z="0" />
     <arc exit="east" move="east" destination="8" />
     <arc exit="west" move="west" destination="10" />
-    <arc exit="go" move="go marble archway" destination="85" />
-    <arc exit="go" move="go bamboo hut" destination="55" />
-    <arc exit="go" move="go building" destination="4" />
-    <arc exit="go" move="go storage cellar" destination="162" />
+    <arc exit="none" move="go marble archway" destination="85" />
+    <arc exit="none" move="go bamboo hut" destination="55" />
+    <arc exit="none" move="go building" destination="4" />
+    <arc exit="none" move="go storage cellar" destination="162" />
   </node>
   <node id="8" name="Fang Cove, Walkway" note="Bacon Man" color="#FF0000">
     <description>A simple wooden fence, crafted from the splintered remains of a ship's framework and barbed wire, lines the walkway to keep stray beasts and children from tumbling down the rocky outcrop below.  A long strip of pale sandy beach can be seen beyond a gate to the east.  A hearty dolphin vine weaves itself through the bars of the fence post, its fragrant blooms scenting the surrounding air.</description>
     <position x="280" y="200" z="0" />
     <arc exit="east" move="east" destination="9" />
     <arc exit="west" move="west" destination="7" />
-    <arc exit="go" move="go crude hut" destination="54" />
+    <arc exit="none" move="go crude hut" destination="54" />
   </node>
   <node id="9" name="Fang Cove, Walkway">
     <description>A fairy wind-chime plays sweet tunes while passing travelers stroll by a tiny shop.  Pale ribbons stream from above its doors.  A wooden bench painted snow white sits beside the shop and opposite an iron-wrought gate that leads to the beach below.</description>
     <position x="300" y="200" z="0" />
     <arc exit="west" move="west" destination="8" />
-    <arc exit="go" move="go bamboo hut" destination="17" />
-    <arc exit="go" move="go iron-wrought gate" destination="56" />
-    <arc exit="go" move="go shop" destination="137" />
+    <arc exit="none" move="go bamboo hut" destination="17" />
+    <arc exit="none" move="go iron-wrought gate" destination="56" />
+    <arc exit="none" move="go shop" destination="137" />
   </node>
   <node id="10" name="Fang Cove, Walkway">
     <description>A spiked-iron fence lines the walkway, keeping stray beasts and children from tumbling down the rocky outcrop below.  Someone has braided pink ribbon through a couple of the fence posts, leaving the ends to flutter in the breeze.  The sea's ever-rolling waves break softly upon the nearby shore and keep at bay most of the yips and howls of the night's prowling creatures.</description>
@@ -75,22 +73,22 @@
     <position x="220" y="200" z="0" />
     <arc exit="east" move="east" destination="7" />
     <arc exit="west" move="west" destination="11" />
-    <arc exit="go" move="go bamboo dome" destination="76" />
+    <arc exit="none" move="go bamboo dome" destination="76" />
   </node>
   <node id="11" name="Fang Cove, Walkway">
     <description>A decorative clay pot resting beside a sturdy iron gate holds a fragrant blue butterfly bush, though its buds are closed for the night.  The gate itself is adorned with carvings of seahorses, shells and a single octopus and opens to some narrow steps.  A chicken-shaped lantern hung from a tall pole shines light upon the beach below.</description>
     <description>A decorative clay pot resting beside a sturdy iron gate holds a fragrant blue butterfly bush.  The gate itself is adorned with carvings of seahorses, shells and a single octopus and opens to some narrow steps.  Below, children chase one another calling out names and causing general mayhem among the adults present.</description>
     <position x="200" y="200" z="0" />
     <arc exit="east" move="east" destination="10" />
-    <arc exit="go" move="go palm hut" destination="127" />
-    <arc exit="go" move="go iron gate" destination="18" />
+    <arc exit="none" move="go palm hut" destination="127" />
+    <arc exit="none" move="go iron gate" destination="18" />
   </node>
   <node id="12" name="Fang Cove, Under the Dock" color="#0000FF">
     <description>A protected area free from most of the effects of the surf exists under the dock.  Massive pilings made from the trunks of huge trees hold everything firmly in place.  A seaweed-covered ladder leads upwards.</description>
     <position x="320" y="140" z="0" />
     <arc exit="northeast" move="swim northeast" destination="13" />
     <arc exit="south" move="swim south" destination="16" />
-    <arc exit="climb" move="climb seaweed-covered ladder" destination="2" />
+    <arc exit="none" move="climb seaweed-covered ladder" destination="2" />
   </node>
   <node id="13" name="Fang Cove, Under the Dock" color="#0000FF">
     <description>At the head of the dock, the pull of the tide becomes more apparent.  Between two large supports, the open ocean fades away rather quickly into the night's enveloping darkness.  Seabirds occasionally screech in the distance -- no doubt the result of some predator disturbing their rest.</description>
@@ -126,8 +124,8 @@
   <node id="18" name="Fang Cove, Beach">
     <description>A strip of pale sand plays home to children, pets and other wayward creatures that make their way up from the lapping waves nearby.  A stone-ringed firepit and a picnic table are surrounded by crushed seashells that make soft crunching sounds when stepped upon.</description>
     <position x="180" y="200" z="0" />
-    <arc exit="climb" move="climb stone steps" destination="19" />
-    <arc exit="go" move="go iron gate" destination="11" />
+    <arc exit="none" move="climb stone steps" destination="19" />
+    <arc exit="none" move="go iron gate" destination="11" />
   </node>
   <node id="19" name="Fang Cove, Shoreline" color="#0000FF">
     <description>The coarse sand of the beach gradually gives way to granite boulders and smaller stones.  As the rock formation rises from the ocean floor, it creates a protective bowl that contains a large coral reef to the north.  Barnacles encrust the stone, promising nasty scratches for the unwary.</description>
@@ -135,7 +133,7 @@
     <arc exit="northeast" move="swim northeast" destination="20" />
     <arc exit="west" move="swim west" destination="27" />
     <arc exit="northwest" move="swim northwest" destination="28" />
-    <arc exit="climb" move="climb stone steps" destination="18" />
+    <arc exit="none" move="climb stone steps" destination="18" />
   </node>
   <node id="20" name="Fang Cove, Coral Reef" color="#0000FF">
     <description>A coral reef hugs the leeward side of a granite outcropping.  Surrounded by schools of colorful fish, pink and white coral grow in bunches, some making skeletal fingers straining toward the surface.  To the east, the coral has grown overhead making a small cave.</description>
@@ -195,7 +193,7 @@
     <arc exit="east" move="swim east" destination="19" />
     <arc exit="west" move="swim west" destination="26" />
     <arc exit="northwest" move="swim northwest" destination="29" />
-    <arc exit="go" move="go secluded beach" destination="42" />
+    <arc exit="none" move="go secluded beach" destination="42" />
   </node>
   <node id="28" name="Fang Cove, Coral Reef" color="#0000FF">
     <description>A coral reef hugs the leeward side of a granite outcropping.  Surrounded by schools of colorful fish, pink and white coral grow in bunches, some making skeletal fingers straining toward the surface.  In a small hole, young moray eels peek out from time to time, their eyes flickering warily.</description>
@@ -228,7 +226,7 @@
     <arc exit="east" move="east" destination="32" />
     <arc exit="northwest" move="northwest" destination="37" />
     <arc exit="up" move="up" destination="24" />
-    <arc exit="go" move="go broken shipwreck" destination="39" />
+    <arc exit="none" move="go broken shipwreck" destination="39" />
   </node>
   <node id="32" name="Fang Cove, Deep Water" color="#000080">
     <description>Rising from the seafloor, the barnacle-covered stern of a ship breaks through the thick kelp beds.  Tilted at an angle, the stern windows have been smashed in.  Brightly colored fish dart in and out of the openings where once the ship's crew looked out.</description>
@@ -247,7 +245,7 @@
     <position x="120" y="40" z="0" />
     <arc exit="south" move="south" destination="33" />
     <arc exit="west" move="west" destination="35" />
-    <arc exit="go" move="go dark hole" destination="40" />
+    <arc exit="none" move="go dark hole" destination="40" />
   </node>
   <node id="35" name="Fang Cove, Deep Water" color="#000080">
     <description>Broken masts, decks and tangled rigging from two wrecked ships litter the area, leaving only a narrow tunnel that allows passage between the two rotting hulks.  Limpets and mussels cling to the wooden surfaces, attracted by the water current flowing through the tapered channel.</description>
@@ -267,7 +265,7 @@
     <position x="60" y="60" z="0" />
     <arc exit="northeast" move="northeast" destination="36" />
     <arc exit="southeast" move="southeast" destination="31" />
-    <arc exit="go" move="go wrecked ship" destination="41" />
+    <arc exit="none" move="go wrecked ship" destination="41" />
   </node>
   <node id="38" name="Fang Cove, Deep Water" color="#000080">
     <description>Thick kelp beds block further transit, ringing the area with brown walls of swaying foliage.  The vegetation meets overhead, blotting out the water's surface from view.  Dark shapes lurk in the shadows, hiding from view.</description>
@@ -277,17 +275,17 @@
   <node id="39" name="A Sunken Ship, Cargo Hold" color="#000080">
     <description>Jagged timbers line the hole torn in the hull of the ship, although the cause of the breach is unknown.  Sand has drifted in through the opening and fills the hatchway leading to the lower decks.  A few forlorn barrels lie jumbled in the corner with the remnants of many more that once filled the cargo hold.</description>
     <position x="60" y="80" z="0" />
-    <arc exit="go" move="go jagged hole" destination="31" />
+    <arc exit="none" move="go jagged hole" destination="31" />
   </node>
   <node id="40" name="A Sunken Ship, Cargo Hold" color="#000080">
     <description>A narrow opening allows escape from the confined spaces of the cargo hold.  Thick bolts of decaying fabrics fill the room, and rotting fibers hang in the still waters.  A solid door is set in one bulkhead, its hardware covered with a thin coating of rust.</description>
     <position x="120" y="20" z="0" />
-    <arc exit="go" move="go narrow opening" destination="34" />
+    <arc exit="none" move="go narrow opening" destination="34" />
   </node>
   <node id="41" name="A Sunken Ship, Cabin" color="#000080">
     <description>Thick gloom covers the cramped cabin, the only illumination coming from the open porthole leading out.  Debris blocks the passageway that once led to the deck.  Silt covers most of the furnishings, making their original purpose hard to discern.</description>
     <position x="60" y="40" z="0" />
-    <arc exit="go" move="go open porthole" destination="37" />
+    <arc exit="none" move="go open porthole" destination="37" />
   </node>
   <node id="42" name="The Enclave at Fang Cove" note="Enclave">
     <description>On a ridge just off the beach in a murky pool of water, blades of marsh grass wave in a complex ballet, keeping time with the sea breezes.  They serve as an effective divider between the actual beach and this stretch reaching inland.  Powdery white sand, dotted with shells and low-growing creeper grass, provides an idyllic retreat, complete with the whispering voice of the sea as it responds to the tides.</description>
@@ -329,7 +327,6 @@
   </node>
   <node id="48" name="The Enclave at Fang Cove" color="#00FFFF">
     <description>Several running vines mix with sparse scrub grass in a race for fresh water.  Overhead, the canopy of palms diffuses all but the brightest of the night's light and casts long shadows that dance eerily in the slightest of breezes.  Reminiscent of a dancer in a grass skirt, a large queen palm spreads its regal fan head above its dried, dying fronds.</description>
-    <description>Several running vines mix with sparse scrub grass in a race for fresh water and sunlight.  Overhead, the canopy of palms provides dappled shade to the other plant life.  Reminiscent of a dancer in a grass skirt, a large queen palm sports its regal fan head above its dried, dying fronds.</description>
     <position x="80" y="240" z="0" />
     <arc exit="northeast" move="northeast" destination="43" />
     <arc exit="southeast" move="southeast" destination="49" />
@@ -337,14 +334,12 @@
   </node>
   <node id="49" name="The Enclave at Fang Cove" color="#00FFFF">
     <description>This quiet locale is a blend of soil, sand, shell and wood debris as the inland jungle meets and mingles with the beach.  A long dead frond rests its dried tip on the ground as it dangles from a tall full-headed fan palm.  From time to time, one of the night's avian predators alights in the treetop and silently surveys the sandy beach for its prey.</description>
-    <description>This quiet locale is a blend of soil, sand, shell and wood debris as the inland jungle meets and mingles with the beach.  A long dead frond rests its dried tip on the ground as it dangles from a tall full-headed fan palm.  The shade cast from the tree offers relief from the relentless sunlight.</description>
     <position x="100" y="260" z="0" />
     <arc exit="west" move="west" destination="50" />
     <arc exit="northwest" move="northwest" destination="48" />
   </node>
   <node id="50" name="The Enclave at Fang Cove" color="#00FFFF">
     <description>Heavy foliage encloses this tropical clearing complete with sand and shell fragments.  The gentle swaying of the palms in the breeze reveals dark ocean water to the north.  To the south, the jungle attempts to exert its dominance, but so far has not managed to encroach too far.</description>
-    <description>Heavy foliage encloses this tropical clearing complete with sand and shell fragments.  Glimpses of deep blue water to the north are revealed as palms sway gently in the breeze, presenting an ever changing view.  To the south, the jungle attempts to exert its dominance, but so far has not managed to encroach too far.</description>
     <position x="60" y="260" z="0" />
     <arc exit="northeast" move="northeast" destination="48" />
     <arc exit="east" move="east" destination="49" />
@@ -357,16 +352,16 @@
     <position x="20" y="260" z="0" />
     <arc exit="northeast" move="northeast" destination="46" />
     <arc exit="east" move="east" destination="50" />
-    <arc exit="climb" move="climb palm tree" destination="52" />
+    <arc exit="none" move="climb palm tree" destination="52" />
   </node>
   <node id="52" name="Amidst the Fronds">
     <description>The sturdy base of a large frond provides a spot to rest and take a moment to enjoy the shade provided.  The scenery up here is a tangle of tropical foliage and a good view of the distant water.</description>
     <position x="0" y="280" z="0" />
-    <arc exit="climb" move="climb trunk" destination="51" />
+    <arc exit="none" move="climb trunk" destination="51" />
   </node>
   <node id="53" name="Shore Walk, Rocky Path" note="Map90_Ratha.xml">
     <description>Giant boulders are scattered haphazardly about the ocean near the beach.  Curiously, smaller stones have been collected to form a rocky path atop the water -- wide enough for a pair of horses and long enough for at least ten.  The ocean's floor drops away to invisible depths at the pathway's midpoint, leaving little doubt that the end is quite deep indeed.  Tufts of soggy, seaweed-matted fur cling to the stones.</description>
-    <position x="295" y="100" z="0" />
+    <position x="280" y="100" z="0" />
     <arc exit="none" move="none" destination="1" />
   </node>
   <node id="54" name="Osmandikar's Crafts and Repair, Showroom" note="Repair Metal|Weapons|Osmandikar" color="#FF0000">
@@ -383,7 +378,7 @@
     <description>This long stretch of beach curves out toward the rocky cliff commonly referred to as Fang's Peak.  Children are not often seen along its dark sandy surface as crabs and various other creatures reside beneath the sand waiting for their chance to sting, poke or bite.  Tiny mounds of rock dot the area, with sprigs of dried grasses caught within them.</description>
     <position x="320" y="200" z="0" />
     <arc exit="east" move="east" destination="57" />
-    <arc exit="go" move="go iron-wrought gate" destination="9" />
+    <arc exit="none" move="go iron-wrought gate" destination="9" />
   </node>
   <node id="57" name="Fang Cove, Beach">
     <description>Grains of sticky wet sand attach themselves to everything they come in contact with, including those unlucky souls who happen by.  Gentle sounds of lapping waves lend a pleasant rhythm to the night sounds, with only an occasional screech coming from the nearby cliffs to mar its tune.</description>
@@ -405,14 +400,14 @@
     <position x="400" y="200" z="0" />
     <arc exit="west" move="west" destination="58" />
     <arc exit="northwest" move="northwest" destination="60" />
-    <arc exit="go" move="go crack" destination="91" />
+    <arc exit="none" move="go crack" destination="91" />
   </node>
   <node id="60" name="Fang Cove, Beach">
     <description>The long stretch of beach ends here, with the jutting rock of Fang's Peak lurking above.  A rough stairway leads up the peak but appears to stop midway, as if something interrupted the construction.  The result is the same -- overland access via the steps to areas beyond is impossible.  A large mound of sea grass lies near the steps, with bits of hair and twine woven in.</description>
     <position x="380" y="180" z="0" />
     <arc exit="southeast" move="southeast" destination="59" />
     <arc exit="west" move="west" destination="61" />
-    <arc exit="climb" move="climb rough stairway" destination="62" />
+    <arc exit="none" move="climb rough stairway" destination="62" />
   </node>
   <node id="61" name="Fang Cove, Beach">
     <description>Swirls of water gather in the footprints left by those passing by, while tiny crabs dart between mounds of rocks and grass.  The sparse remains of a fish lay embedded in the sand along with other debris that has washed ashore.</description>
@@ -424,23 +419,23 @@
   <node id="62" name="Fang Cove, Cliffside">
     <description>The stairway ends here at a carved and raised area midway to the peak.  The area is just large enough to accommodate a worn log and a firepit.  Bits of old twine and bones are woven through a tree root that thrusts its way out of the cliff.  Faint whistling sounds come from the hallowed recesses of the partially gnawed bones.  Though some may call this a perfect camping spot, others might be intimidated by the howls and screeches from the beach below.</description>
     <position x="380" y="160" z="0" />
-    <arc exit="go" move="go dark cave" destination="63" />
-    <arc exit="climb" move="climb rough stairway" destination="60" />
+    <arc exit="none" move="go dark cave" destination="63" />
+    <arc exit="none" move="climb rough stairway" destination="60" />
   </node>
   <node id="63" name="Talas Sagamat, Cave">
     <description>Tall enough for a Human to stand upright, yet low enough for a Gor'Tog to need to hunch over, the ceiling is covered in cobwebs and the nests of countless insects.  Numerous clawed footprints mar the cave floor, and the piles of fish bones and remains from other unlucky sea creatures suggest the occupants visit often.</description>
     <position x="400" y="160" z="0" />
     <arc exit="out" move="out" destination="62" />
-    <arc exit="go" move="objsearch back.wall go narrow gap" destination="64" />
-    <arc exit="go" move="go narrow gap" destination="64" />
+    <arc exit="none" move="objsearch back.wall go narrow gap" destination="64" />
+    <arc exit="none" move="go narrow gap" destination="64" />
   </node>
   <node id="64" name="Talas Sagamat, Alcove" note="Talas Sagamat|mine" color="#993300">
     <description>The secluded alcove opens up into a much larger complex of cavernous areas.  Four main pathways branch outwards, each forming an ovoid tunnel that vanishes into the murky darkness, though a mass of roots and a pile of bones obscure two of the passages.  A salty breeze from the southern exit occasionally pierces the stifling stillness of the cavern.</description>
     <position x="440" y="140" z="0" />
     <arc exit="northeast" move="northeast" destination="65" />
-    <arc exit="go" move="go narrow gap" destination="63" />
-    <arc exit="go" move="go roots" destination="79" />
-    <arc exit="go" move="go shattered bones" destination="75" />
+    <arc exit="none" move="go narrow gap" destination="63" />
+    <arc exit="none" move="go roots" destination="79" />
+    <arc exit="none" move="go shattered bones" destination="75" />
   </node>
   <node id="65" name="Talas Sagamat, Northeastern Tunnel" color="#993300">
     <description>A salty sea breeze moans loudly through a series of porous holes in sections of the tunnel's walls.  Somewhere further within the earthen tomb come the scuttling echoes of movement, though discerning any details about what the source may be is impossible through the moaning sea air.  Four sets of four deep scratches mar an area of sandstone on one wall, as if some creature had pounced off of it in a hasty pursuit or retreat.</description>
@@ -470,13 +465,13 @@
     <description>The ground's incline is much more pronounced, though it doesn't seem to bother the slug-like creatures clinging to the cave's wall in the least.  A thick layer of slime blankets the remains of some type of barrier that once consisted of iron bars, rocks and wooden planks.  The debris is scatted towards the cave's exterior, as if something attempted -- and succeeded -- in breaking free of the damp-aired prison.</description>
     <position x="480" y="40" z="0" />
     <arc exit="southeast" move="southeast" destination="68" />
-    <arc exit="go" move="go metal door" destination="70" />
+    <arc exit="none" move="go metal door" destination="70" />
   </node>
   <node id="70" name="Talas Sagamat, Underground Swamp" color="#993300">
     <description>A large cavern opens up before you, almost perfectly divided between stagnant water and a wet, muddy mixture of sand and clay.  Both exits of the cavern rise steeply upwards, creating somewhat of a natural spillway to hold the water within.  Humanoid footprints cross with the markings of other creatures, some snake-like and others with prints similar to those of a dog, though considerably larger.  The water is marred by constant ripples and bubbles that emanate from the center.</description>
     <position x="460" y="20" z="0" />
     <arc exit="northwest" move="northwest" destination="71" />
-    <arc exit="go" move="go metal door" destination="69" />
+    <arc exit="none" move="go metal door" destination="69" />
   </node>
   <node id="71" name="Talas Sagamat, Northern Tunnel" color="#993300">
     <description>The cave makes a sharp curve, almost turning back on itself entirely as it makes a considerable downward slope into the depths of the cliffs.  The walls are coated in a thick slime, and a fetid dampness lingers in the air.  What little outside air may stir through the tunnels near the entrance is entirely lacking in this portion of the cliffs' interior.  Inching along the lower levels of the walls are elongated, slug-like creatures that feast on the mucous substance.</description>
@@ -506,15 +501,15 @@
     <description>A strong breeze sweeps down the tunnel, carrying with it the strong smells of the ocean and smoldering fires from the beaches.  The light from outside pierces the darkness just enough to provide a dim, grey illumination to the relatively smooth sandstone walls.  A small scene has been carved into one section of the wall, meticulously depicting a battle between humanoids and a many-armed creature.  The final image, presumably the outcome, remains unfinished.</description>
     <position x="440" y="100" z="0" />
     <arc exit="north" move="north" destination="74" />
-    <arc exit="go" move="go shattered bones" destination="64" />
+    <arc exit="none" move="go shattered bones" destination="64" />
   </node>
   <node id="76" name="First Council Banking, Vestibule" note="First Council Banking|Bank">
     <description>Adobe clings to the latticework of woven bamboo that forms the domed structure overhead.  A set of shallow steps on one side of the room leads downward at an angle that makes it clear that the area at its other end is outside the walls of this abode.  A hatch-covered ladder resides on the other side of the room and leads straight down.</description>
     <position x="220" y="220" z="0" />
     <arc exit="west" move="west" destination="77" />
     <arc exit="out" move="out" destination="10" />
-    <arc exit="go" move="go shallow steps" destination="90" />
-    <arc exit="climb" move="climb hatch-covered ladder" destination="78" />
+    <arc exit="none" move="go shallow steps" destination="90" />
+    <arc exit="none" move="climb hatch-covered ladder" destination="78" />
   </node>
   <node id="77" name="First Council Banking, Foreign Exchange" note="Premium Exchange" color="#00FF00">
     <description>The frazzled Halfling attendant can barely be seen amid the paperwork stacked dangerously high atop her desk.  She seldom looks up as patrons come and go, even those seeking her attention.  Hand signals to the mage beside her keep the flow at a steady pace.</description>
@@ -530,7 +525,7 @@
     <description>Hardly perceptible, the floor slopes downwards as one travels further into the darkened tunnel.  The rock walls are discolored, showing signs of water damage as well as a struggle for various fungi competing for dominance on the roughened surface.  Running down the center of the ground is a tiny rivulet, only slightly damp.</description>
     <position x="400" y="100" z="0" />
     <arc exit="northwest" move="northwest" destination="80" />
-    <arc exit="go" move="go roots" destination="64" />
+    <arc exit="none" move="go roots" destination="64" />
   </node>
   <node id="80" name="Talas Sagamat, Western Tunnel" color="#993300">
     <description>The tunnel constricts on all sides as it leads further into the deepening darkness.  Five lines of scratch marks follow along either side of the rivulet that runs down the center of the ground, though there are no other signs of who -- or what -- may have made them.  A stalactite dangling from the ceiling almost completely blocks further passage.</description>
@@ -568,10 +563,10 @@
     <arc exit="north" move="north" destination="7" />
     <arc exit="east" move="east" destination="86" />
     <arc exit="west" move="west" destination="88" />
-    <arc exit="go" move="go palm cabana" destination="136" />
-    <arc exit="go" move="go squat bungalow" destination="129" />
-    <arc exit="go" move="go sky tent" destination="128" />
-    <arc exit="go" move="go exit portal" destination="139" />
+    <arc exit="none" move="go palm cabana" destination="136" />
+    <arc exit="none" move="go squat bungalow" destination="129" />
+    <arc exit="none" move="go sky tent" destination="128" />
+    <arc exit="none" move="go exit portal" destination="139" />
   </node>
   <node id="86" name="Fang Cove, Fate's Fortune Lane">
     <description>The lane diverges into two paths that lead around a wooden frame in the center of the cobblestone pavement.  When completed, the structure would be a rough cube approximately one dozen hands high with the same width and length -- too small to be a place of business, though its purpose is unclear.  An unfinished bench lies half assembled along one side.  Curious onlookers pause from time to time to examine the slow progress being made and to speculate at what it will eventually be.</description>
@@ -579,43 +574,43 @@
     <position x="280" y="340" z="0" />
     <arc exit="east" move="east" destination="87" />
     <arc exit="west" move="west" destination="85" />
-    <arc exit="go" move="go canvas tent" destination="179" />
-    <arc exit="go" move="go community gazebo" destination="229" />
-    <arc exit="go" move="go tent" destination="250" />
+    <arc exit="none" move="go canvas tent" destination="179" />
+    <arc exit="none" move="go community gazebo" destination="229" />
+    <arc exit="none" move="go tent" destination="250" />
   </node>
   <node id="87" name="Fang Cove, Fate's Fortune Lane">
     <description>The cobblestone-covered lane stops abruptly, as if those constructing it were reassigned to more pressing projects.  Other than the limestone wall, the area's sand, sparse grasses and palm trees command the as yet unworked earth from the path's unfinished end.  Pallets of planters are stacked in an effort to discourage exploration into the wilds between the small community and the towering Fang's Peak that shelters it.</description>
     <description>Ending abruptly just beyond the Fang Cove Crafting Society's door, the cobblestone lane separates that gleaming edifice from a wide cave mouth excavated from the cliffs beyond its southern edge.  Pallets of lumber and planters are stacked along the end of the path to discourage exploration into the wilds between the growing community and the towering Fang's Peak that shelters it.</description>
     <position x="300" y="340" z="0" />
     <arc exit="west" move="west" destination="86" />
-    <arc exit="go" move="go wooden door" destination="181" />
-    <arc exit="go" move="go cave mouth" destination="222" />
-    <arc exit="go" move="go sturdy gate" destination="259" />
+    <arc exit="none" move="go wooden door" destination="181" />
+    <arc exit="none" move="go cave mouth" destination="222" />
+    <arc exit="none" move="go sturdy gate" destination="259" />
   </node>
   <node id="88" name="Fang Cove, Fate's Fortune Lane">
     <description>The bank's dome rises up above the limestone wall, and even from this distance the occasional tinkling of coins being rattled from their jars can be heard as clearly as the chimes hanging from the tall palm tree alongside the lane.  Smells from The Shanty's kitchens, though faint, are ever present.  From time to time, a group of workers approaches the countless pallets of building supplies that are stacked one atop another in search of a specific wood, cut of stone or barrel of paint.  More often than not, the sought treasure is buried at the bottom of such a stack.</description>
     <position x="180" y="340" z="0" />
     <arc exit="east" move="east" destination="85" />
     <arc exit="west" move="west" destination="89" />
-    <arc exit="go" move="go black-painted wagon" destination="166" />
-    <arc exit="go" move="go burlwood caravan" destination="178" />
-    <arc exit="go" move="go dark tent" destination="169" />
-    <arc exit="go" move="go gethwood caravan" destination="154" />
-    <arc exit="go" move="go large tent" destination="172" />
-    <arc exit="go" move="go rickety wagon" destination="177" />
-    <arc exit="go" move="go small building" destination="159" />
-    <arc exit="go" move="go sturdy wagon" destination="176" />
-    <arc exit="go" move="go wooden wagon" destination="153" />
-    <arc exit="go" move="go brown wagon" destination="247" />
-    <arc exit="go" move="go maple caravan" destination="262" />
-    <arc exit="go" move="go purpleheart wagon" destination="264" />
+    <arc exit="none" move="go black-painted wagon" destination="166" />
+    <arc exit="none" move="go burlwood caravan" destination="178" />
+    <arc exit="none" move="go dark tent" destination="169" />
+    <arc exit="none" move="go gethwood caravan" destination="154" />
+    <arc exit="none" move="go large tent" destination="172" />
+    <arc exit="none" move="go rickety wagon" destination="177" />
+    <arc exit="none" move="go small building" destination="159" />
+    <arc exit="none" move="go sturdy wagon" destination="176" />
+    <arc exit="none" move="go wooden wagon" destination="153" />
+    <arc exit="none" move="go brown wagon" destination="247" />
+    <arc exit="none" move="go maple caravan" destination="262" />
+    <arc exit="none" move="go purpleheart wagon" destination="264" />
   </node>
   <node id="89" name="Fang Cove, Fate's Fortune Lane">
     <description>The swirling ocean breeze stirs the sand that finds its way onto everything, creating intricate patterns across the surfaces of the cobblestones that form the lane.  Long and low wooden planter boxes are centered in the gap between the lane and the wall on the northern side, an effort to fill the space in the absence of the growing structures across the way.  Some of the gardens are covered to create makeshift tables to serve the workers meals at different times of the day.</description>
     <position x="100" y="340" z="0" />
     <arc exit="east" move="east" destination="88" />
-    <arc exit="go" move="go fishmonger's hut" destination="160" />
-    <arc exit="go" move="go oak hut" destination="161" />
+    <arc exit="none" move="go fishmonger's hut" destination="160" />
+    <arc exit="none" move="go oak hut" destination="161" />
   </node>
   <node id="90" name="First Council Banking, Vault" note="Teller" color="#00FF00">
     <description>Little more than a deep hole, the below-ground sod structure is reinforced with vine-lashed lengths of weathered wood.  Jar-covered shelves line every bit of space available while a lone set of steps provide the only entrance to and exit from the community's small bank -- a liberal description of the surroundings.  No windows or tellers are present, only guards that stand with their backs to the wall on either side of the steps so they can keep an eye on everything that happens.</description>
@@ -626,7 +621,7 @@
     <description>Rocks and boulders big and small lie strewn across the floor of the tunnel.  The clatter of falling rock from nearby resounds sharply in the tight passage.  Cracks in the walls and ceiling creak ominously, releasing small puffs of dust and pebbles.</description>
     <position x="480" y="200" z="0" />
     <arc exit="southeast" move="southeast" destination="92" />
-    <arc exit="go" move="go crack" destination="59" />
+    <arc exit="none" move="go crack" destination="59" />
   </node>
   <node id="92" name="Fang Cove, Beneath Fang's Peak">
     <description>Large roots from above have grown through the ceiling, cracking the surrounding rock.  They trail along the surface before disappearing into one wall that has collapsed below them.  The constant groan of stone grating against stone fills the air.</description>
@@ -642,13 +637,13 @@
   </node>
   <node id="94" name="Fang Cove, Beneath Fang's Peak">
     <description>Water has eroded a section of wall and drips into a stagnant mineral pool below.  Pale moss grows on the wet surfaces.  Smelling faintly of iron and sulfur, the air is damp and cloying.  The creaking of unstable rock can be heard faintly from above.</description>
-    <position x="527" y="267" z="0" />
+    <position x="520" y="260" z="0" />
     <arc exit="south" move="south" destination="95" />
     <arc exit="northwest" move="northwest" destination="93" />
   </node>
   <node id="95" name="Fang Cove, Beneath Fang's Peak">
     <description>An old collapse fills most of the tunnel, and the rubble turns the passage into an obstacle course.  An occasional rumble of shifting rock warns that the tunnel is far from safe.  The sound of dripping water comes from somewhere nearby.</description>
-    <position x="527" y="300" z="0" />
+    <position x="520" y="300" z="0" />
     <arc exit="north" move="north" destination="94" />
     <arc exit="out" move="out" destination="96" />
   </node>
@@ -657,10 +652,10 @@
     <description>Grasping creepers climb, drape and clasp everything in their path, hiding who knows what beneath their leafy carpet.  They hinder every step through the jungle and strive with each other for possession of light and space.  Nearby, thick green shoots weave around a pale, thin tree trunk, and the vine is far healthier than its host.</description>
     <position x="480" y="320" z="0" />
     <arc exit="southwest" move="southwest" destination="97" />
-    <arc exit="go" move="objsearch creeper go cave" destination="95" />
-    <arc exit="climb" move="climb trail" destination="102" />
-    <arc exit="go" move="go cave" destination="95" />
-    <arc exit="climb" move="climb narrow crevice" destination="265" />
+    <arc exit="none" move="objsearch creeper go cave" destination="95" />
+    <arc exit="none" move="climb trail" destination="102" />
+    <arc exit="none" move="go cave" destination="95" />
+    <arc exit="none" move="climb narrow crevice" destination="265" />
   </node>
   <node id="97" name="Fang's Shadow, Dense Undergrowth" color="#008000">
     <description>Roots protruding from the underbrush are clearly visible in some spots and hidden beneath the mulch in others, waiting to trip the unwary.  Multiple branches of the rampant vegetation block the path and require careful manipulation to avoid being whipped left and right.  A small clearing to the side of the cluttered path is guarded by dense foliage that dissuades the prudent from exploration.</description>
@@ -668,7 +663,7 @@
     <arc exit="northeast" move="northeast" destination="96" />
     <arc exit="south" move="south" destination="99" />
     <arc exit="southwest" move="southwest" destination="98" />
-    <arc exit="go" move="go trail" destination="107" />
+    <arc exit="none" move="go trail" destination="107" />
   </node>
   <node id="98" name="Fang's Shadow, Dense Undergrowth" color="#008000">
     <description>Industrious ants have created a huge mound smack in the middle of the pathway.  The bare soil is marked with minute trails that disappear into the ground cover.  It is difficult to avoid the sensation of having disturbed the creatures' habitat and to avoid scratching oneself against the brush.</description>
@@ -703,59 +698,59 @@
     <arc exit="northeast" move="northeast" destination="103" />
     <arc exit="south" move="south" destination="100" />
     <arc exit="northwest" move="northwest" destination="104" />
-    <arc exit="climb" move="climb trail" destination="96" />
-    <arc exit="go" move="go shadowed footpath" destination="242" />
+    <arc exit="none" move="climb trail" destination="96" />
+    <arc exit="none" move="go shadowed footpath" destination="242" />
   </node>
   <node id="103" name="Fang's Rise, Eastern Embankment">
     <description>Rocks, dirt and broken branches from the surrounding trees cover this side of the embankment.  A few large boulders, positioned near the edge of a pool, make perfect seats for a weary traveler.  One can rest while dipping their feet into the cool, clear water and taking in the scenery.</description>
     <position x="440" y="320" z="0" />
     <arc exit="southwest" move="southwest" destination="102" />
-    <arc exit="go" move="go pool" destination="118" />
-    <arc exit="climb" move="climb low-hanging tree" destination="261" />
+    <arc exit="none" move="go pool" destination="118" />
+    <arc exit="none" move="climb low-hanging tree" destination="261" />
   </node>
   <node id="104" name="Fang's Rise, Western Embankment">
     <description>Though steeper than the opposing embankment to the east, the climb is made easier by some jutting pieces of rock that provide steps leading from the deep, blue water below.  Mosses of various hues of green cover the ground and some of the nearby rocks.</description>
     <position x="400" y="320" z="0" />
     <arc exit="southeast" move="southeast" destination="102" />
-    <arc exit="go" move="go pool" destination="121" />
-    <arc exit="climb" move="climb rocks" destination="124" />
+    <arc exit="none" move="go pool" destination="121" />
+    <arc exit="none" move="climb rocks" destination="124" />
   </node>
   <node id="105" name="Fang's Shadow, Dense Undergrowth" color="#008000">
     <description>The jungle closes in, laying claim to the land, air and water beyond the mud and rock wall.  Impenetrable thickets as far as the eye can see camouflage what lies behind and beneath them.</description>
-    <position x="413" y="393" z="0" />
+    <position x="400" y="380" z="0" />
     <arc exit="northwest" move="northwest" destination="101" />
   </node>
   <node id="106" name="Fang's Shadow, Dense Undergrowth" color="#008000">
     <description>A tangle of growth climbs upward, its roots wormed into muddy spaces between the stones of a high, long wall.  The rampant vegetation conceals a good bit of the structure, which in turn blocks the view of anything behind it.  To the southeast is a small clearing from which the scent of burnt wood drifts on the wind.</description>
-    <position x="387" y="367" z="0" />
+    <position x="380" y="360" z="0" />
     <arc exit="southeast" move="southeast" destination="101" />
   </node>
   <node id="107" name="Abandoned Village, Trail">
     <description>Twisting between the towering trees, a dirt track wends its way towards a clearing in the jungle.  Lianas and other vines drape from the overhanging branches down onto the ground.  The smell of rotting vegetation wafts through the air, mingling with the musty odor of damp earth.</description>
-    <position x="480" y="367" z="0" />
+    <position x="480" y="360" z="0" />
     <arc exit="southeast" move="southeast" destination="108" />
-    <arc exit="go" move="go trail" destination="97" />
+    <arc exit="none" move="go trail" destination="97" />
   </node>
   <node id="108" name="Abandoned Village, Village Square">
     <description>Grudgingly giving way to open ground, the jungle has retreated from the trampled clay plaza surrounded by crude huts.  Brave shoots of grass spring up from the bare dirt, beginning nature's process of reclaiming the abandoned village.  Broken bits of pottery, smashed into tiny pieces, are strewn about the square and mingle with other rubbish and debris in the dust.</description>
-    <position x="500" y="387" z="0" />
+    <position x="500" y="380" z="0" />
     <arc exit="east" move="east" destination="111" />
     <arc exit="southeast" move="southeast" destination="110" />
     <arc exit="south" move="south" destination="109" />
     <arc exit="northwest" move="northwest" destination="107" />
-    <arc exit="go" move="go tiny hut" destination="117" />
+    <arc exit="none" move="go tiny hut" destination="117" />
   </node>
   <node id="109" name="Abandoned Village, Village Square">
     <description>A lone tree stands forlornly here, its once luxurient foliage now covered with creeping vines.  Underneath the shady boughs, rotten planks mark where a small bench once sat, its outline barely discernable still.</description>
-    <position x="500" y="407" z="0" />
+    <position x="500" y="400" z="0" />
     <arc exit="north" move="north" destination="108" />
     <arc exit="northeast" move="northeast" destination="111" />
     <arc exit="east" move="east" destination="110" />
-    <arc exit="go" move="go small hut" destination="116" />
+    <arc exit="none" move="go small hut" destination="116" />
   </node>
   <node id="110" name="Abandoned Village, Village Square">
     <description>Tumbled stones mark where a wall once stood sentinel around the village's well.  Now all that remains are the crudely cut rocks precariously perched around the lip of the shaft.  Off to one side, a wooden bucket lies silently in the dust, a frayed rope extending from its handle.</description>
-    <position x="520" y="407" z="0" />
+    <position x="520" y="400" z="0" />
     <arc exit="north" move="north" destination="111" />
     <arc exit="northeast" move="northeast" destination="113" />
     <arc exit="east" move="east" destination="112" />
@@ -765,7 +760,7 @@
   </node>
   <node id="111" name="Abandoned Village, Village Square">
     <description>Two huts have collapsed here, strewing debris into the abandoned plaza.  A blooming rose bush, long since gone wild, flourishes near what once was a door.  The scent of the abundant blooms fills the air, drowning out the normal rotting smells of the nearby jungle.</description>
-    <position x="520" y="387" z="0" />
+    <position x="520" y="380" z="0" />
     <arc exit="north" move="north" destination="114" />
     <arc exit="east" move="east" destination="113" />
     <arc exit="southeast" move="southeast" destination="112" />
@@ -775,82 +770,82 @@
   </node>
   <node id="112" name="Abandoned Village, Collapsed Hut">
     <description>Mud and wattle walls end abruptly barely two feet off the pounded clay floor, sheared off.  Nothing remains of the roof or upper walls, nor are there any signs of furnishings within the ruined walls.</description>
-    <position x="540" y="407" z="0" />
+    <position x="540" y="400" z="0" />
     <arc exit="north" move="north" destination="113" />
     <arc exit="west" move="west" destination="110" />
     <arc exit="northwest" move="northwest" destination="111" />
   </node>
   <node id="113" name="Abandoned Village, Collapsed Hut">
     <description>Nothing remains of the hut that once stood here but the bare earth of the foundation and a few posts sticking up from the ground.  Vine tendrils inch across the earth, forerunners of the encroaching jungle lurking just beyond the ruined hut.</description>
-    <position x="540" y="387" z="0" />
+    <position x="540" y="380" z="0" />
     <arc exit="south" move="south" destination="112" />
     <arc exit="southwest" move="southwest" destination="110" />
     <arc exit="west" move="west" destination="111" />
   </node>
   <node id="114" name="Abandoned Village, Collapsed Hut">
     <description>Timbers have buckled inward, creating a small cave-like structure.  Thatch from the roof covers the ground in heaps, obscuring and obliterating any interior furnishings that might have survived the collapse of the building.</description>
-    <position x="520" y="367" z="0" />
+    <position x="520" y="360" z="0" />
     <arc exit="south" move="south" destination="111" />
   </node>
   <node id="115" name="Abandoned Village, Down the Well">
     <description>Condensation causes the stone-lined walls to drip moisture continuously and making the climb up or down the crudely hacked out handholds treacherous.  A small ledge running around the wall provides a precarious stopping point just above the water's surface.  Set into the stone walls above the ledge, a niche holds a tiny carved statue.</description>
-    <position x="520" y="427" z="0" />
+    <position x="520" y="420" z="0" />
     <arc exit="up" move="up" destination="110" />
   </node>
   <node id="116" name="Abandoned Village, Hut">
     <description>Glimmers of light enter through the doorway, only partially blocked by the sagging door.  Crude shelves hang on the mud-covered walls, their surfaces covered with a thick layer of dust and grime.  Nothing else remains in the hut but a blackened hearth in the middle of the floor.</description>
-    <position x="500" y="427" z="0" />
-    <arc exit="go" move="go sagging door" destination="109" />
+    <position x="500" y="420" z="0" />
+    <arc exit="none" move="go sagging door" destination="109" />
   </node>
   <node id="117" name="Abandoned Village, Hut">
     <description>A simple stool sits on its side in the corner, surrounded by cobwebs and dust bunnies.  Mud flaking from the walls has exposed the wattle structure underneath and left piles of debris at the base of the walls.  A faint odor of decay lingers in the air, mingling with the humid stench of the jungle.</description>
-    <position x="500" y="367" z="0" />
-    <arc exit="go" move="go small door" destination="108" />
+    <position x="500" y="360" z="0" />
+    <arc exit="none" move="go small door" destination="108" />
   </node>
   <node id="118" name="Fang's Rise, Pool">
     <description>The loud, thunder-like roar of the waterfall blocks out virtually all other noise, exerting its dominance over Fang's Peak.  Waves of white water erupt from the percussion point, rippling across the pool.  A light mist rises from the surface partly concealing a steep embankment.</description>
     <position x="440" y="280" z="0" />
     <arc exit="southwest" move="southwest" destination="119" />
     <arc exit="northwest" move="northwest" destination="120" />
-    <arc exit="climb" move="climb embankment" destination="103" />
+    <arc exit="none" move="climb embankment" destination="103" />
   </node>
   <node id="119" name="Fang's Rise, Pool">
     <description>The current causes the deep, blue water to swirl gently in lazy, irregular circles, almost concealing the pebbles and rocks beneath its surface.  The air is filled with a heady scent from the nearby trees that shelter sections of the pool with their large, overhanging branches.</description>
     <position x="420" y="300" z="0" />
     <arc exit="northeast" move="northeast" destination="118" />
     <arc exit="northwest" move="northwest" destination="121" />
-    <arc exit="climb" move="climb low-hanging branch" destination="261" />
+    <arc exit="none" move="climb low-hanging branch" destination="261" />
   </node>
   <node id="120" name="Fang's Rise, Pool">
     <description>Clear blue water hurtles down from the waterfall, freefalling into the deeper blue of the pool to create a liquid turmoil.  Mist rises from where the two meet, and beneath the surface, a deep fissure is visible.  An opening can just be made out behind the tall wall of water.</description>
     <position x="420" y="260" z="0" />
     <arc exit="southeast" move="southeast" destination="118" />
     <arc exit="southwest" move="southwest" destination="121" />
-    <arc exit="go" move="go opening" destination="122" />
+    <arc exit="none" move="go opening" destination="122" />
   </node>
   <node id="121" name="Fang's Rise, Pool">
     <description>Away from the turmoil of the nearby waterfall, the pool takes on a calmer, almost serene appearance.  Tall branches covered in large leaves hang protectively over the water like a parasol against the elements.  A nearby embankment offers passage to dry land.</description>
     <position x="400" y="280" z="0" />
     <arc exit="northeast" move="northeast" destination="120" />
     <arc exit="southeast" move="southeast" destination="119" />
-    <arc exit="climb" move="climb embankment" destination="104" />
+    <arc exit="none" move="climb embankment" destination="104" />
   </node>
   <node id="122" name="Fang's Rise, Behind the Waterfall">
     <description>Water drips through narrow cracks in the rock, wetting the floor which slopes towards the opening covered by the waterfall.  A short passage leads away from the loud roar of the tumbling water and rises up toward a large open cavern.</description>
-    <position x="420" y="245" z="0" />
+    <position x="420" y="240" z="0" />
     <arc exit="north" move="north" destination="123" />
     <arc exit="out" move="out" destination="120" />
   </node>
   <node id="123" name="Fang's Rise, Hidden Cave" note="Depart|Eluned|Lemicus|Drogor|shrine" color="#400040">
     <description>This cave's concave stone walls are heavily carved with sea scenes that run the gamut from the tiniest minnow to several sea monsters.  Some large, rough rocks surround an unusual assortment of boulders.  The air hangs heavily, almost as if pressing downward.</description>
-    <position x="420" y="230" z="0" />
+    <position x="420" y="220" z="0" />
     <arc exit="south" move="south" destination="122" />
   </node>
   <node id="124" name="Fang's Rise, Peak's Base">
     <description>Large, moss-covered boulders provide step-like footholds to traverse the cliff, while protruding rocks also offer some assistance.  They stretch up for about forty feet on either side of the waterfall, the grey stone slick from water hitting parts of the bulging rock face.</description>
     <position x="380" y="300" z="0" />
     <arc exit="up" move="up" destination="125" />
-    <arc exit="climb" move="climb rock" destination="104" />
+    <arc exit="none" move="climb rock" destination="104" />
   </node>
   <node id="125" name="Fang's Rise, Peak's Ledge">
     <description>Sparse shrubs spring from small patches of dirt adding greenery to the rock face and difficulty to navigating this section of the cliff.  The only respite is a small ledge at the halfway mark that is barely large enough for a large Gor'Tog to sit on.</description>
@@ -862,18 +857,17 @@
     <description>Dense foliage lines either side of the clear blue river as though it were guiding the rushing water to the cliff's edge.  The rest of the river disappears into a treacherously rocky ravine that trails into the jungle's wilds to the southwest, preventing any further travel by land.  The rushing water creates a powerful waterfall as it cascades over the ledge into a pool below.</description>
     <position x="380" y="260" z="0" />
     <arc exit="down" move="down" destination="125" />
-    <arc exit="climb" move="climb tree" destination="152" />
+    <arc exit="none" move="climb tree" destination="152" />
   </node>
   <node id="127" name="The Gemmery" note="Gems|Wickett" color="#00FF00">
     <description>Thin strips of leather knotted with glass fragments and cheap gems hang in bunches at various lengths around the room, reflecting the light in a spray of vibrant colors.  Most give a gentle tinkle as they knock together in a breeze while others are hopelessly tangled together, swaying in clusters.  A driftwood counter, of the same material and condition as the distressed walls, serves as storage for transactions as well as an odd collection of treasured trinkets.</description>
-    <description>Knotted strips of leather hang around the room in dark clusters, swaying in a breeze and giving an occasional gentle tinkle of noise.  A driftwood counter, of the same material and condition as the distressed walls, serves as storage for transactions as well as an odd collection of treasured trinkets.</description>
     <position x="180" y="220" z="0" />
     <arc exit="out" move="out" destination="11" />
   </node>
   <node id="128" name="Inside Tent" note="gift|Token raffle" color="#00FF00">
     <description>The room is almost bare except for a table resting atop a red rug in the center of the tent.  Salt deposits have streaked the lower quarter of the tent walls white, and the tide has left a scattering of seaweed and driftwood twigs on the sandy floor.</description>
     <position x="260" y="360" z="0" />
-    <arc exit="go" move="go exit flap" destination="85" />
+    <arc exit="none" move="go exit flap" destination="85" />
   </node>
   <node id="129" name="A Squat Bungalow, Entry" note="Squat Bungalow|Bungalow" color="#FF0000">
     <description>Massive palm fronds have been tightly woven together to form the thatched roof.  Bundled groupings of tall bamboo climb from the wooden floor up to the ceiling to provide sturdy supports.  Numerous framed arches open up and split off from the entryway, each leading to a different area of the bungalow.  A wicker chest and a glass display table occupy opposite corners of the spacious room.</description>
@@ -885,7 +879,7 @@
   </node>
   <node id="130" name="A Squat Bungalow, Crafter Thazzuc" note="Crafter Thazzuc|Thazzuc" color="#00FF00">
     <description>This section of the bungalow features a potted palm tree adorned with beads in various colors.  A scroll-covered oaken counter provides a cramped workspace for the crafter to perform his duties.  Two cushions near the workspace are the only other furnishings.  A corridor opens up to the east.</description>
-    <position x="230" y="290" z="0" />
+    <position x="220" y="280" z="0" />
     <arc exit="east" move="east" destination="134" />
     <arc exit="southwest" move="southwest" destination="129" />
     <arc exit="west" move="west" destination="131" />
@@ -893,7 +887,7 @@
   </node>
   <node id="131" name="A Squat Bungalow, Fountain" note="Fountain">
     <description>Majestic and massive, a multi-tiered marble fountain towers up to the raised thatch roof above.  Small motes of light gleam and flit around the fountain's pool a sense of powerful magics lingers in the air.  The soothing sounds of the many streams of flowing water mesh harmoniously with the music of the bards who find their inspiration here.  Stone benches are set on the outer areas of the greenery that encircles the fountain.</description>
-    <position x="220" y="290" z="0" />
+    <position x="220" y="280" z="0" />
     <arc exit="north" move="north" destination="135" />
     <arc exit="east" move="east" destination="130" />
     <arc exit="south" move="south" destination="129" />
@@ -901,7 +895,7 @@
   </node>
   <node id="132" name="A Squat Bungalow, Gift Floor" color="#FF0000">
     <description>An opening in the wall allows a gentle sea breeze to circulate a current of fresh air throughout the bungalow.  Nestled closely to the walls are elegant bamboo tables and counters that proudly display both common and not-so-common treasures from across the realms.  The faint splashing of water can be heard nearby.</description>
-    <position x="210" y="290" z="0" />
+    <position x="200" y="280" z="0" />
     <arc exit="northeast" move="northeast" destination="135" />
     <arc exit="east" move="east" destination="131" />
     <arc exit="southeast" move="southeast" destination="129" />
@@ -909,12 +903,12 @@
   </node>
   <node id="133" name="A Squat Bungalow, Western Wing" color="#00FF00">
     <description>Tall but otherwise nondescript mannequins stand isolated in three of the room's four corners.  Only a few items adorn each -- a note affixed to the chest area of all three and items for taking.  Hanging from the ceiling in the remaining corner is an ornate golden birdcage.</description>
-    <position x="200" y="290" z="0" />
+    <position x="200" y="280" z="0" />
     <arc exit="east" move="east" destination="132" />
   </node>
   <node id="134" name="A Squat Bungalow, Eastern Wing" color="#FF0000">
     <description>Wicker trunks and counters line the northern and southern walls of this protrusion.  A series of short shelves encircles the massive window that dominates the eastern wall.  Humming in the sea breeze, a multitude of exotic wind chimes dangles from the bamboo rafters above the opening.</description>
-    <position x="240" y="290" z="0" />
+    <position x="240" y="280" z="0" />
     <arc exit="west" move="west" destination="130" />
   </node>
   <node id="135" name="A Squat Bungalow, Gift Floor" color="#FF0000">
@@ -926,27 +920,25 @@
   </node>
   <node id="136" name="Cabana, Waiting Room" note="Cabana|alteration list" color="#00FF00">
     <description>Reed mats line the floor of this small cabana, and wooden lounge chairs are placed around the room.  Pots of exotic flowers line the palm leaf walls, while a small table in the corner holds refreshments for those waiting on a visiting merchant.  A wooden plaque hangs by the beaded curtain that leads further into the cabana.</description>
-    <position x="250" y="320" z="0" />
+    <position x="240" y="320" z="0" />
     <arc exit="out" move="out" destination="85" />
   </node>
   <node id="137" name="Gorund's Furs" note="Tanner|Furs|Bundles" color="#FF0000">
     <description>The driftwood walls sag inward with the weight of pelts drawing them down.  Flies buzz around the fresher skins while preserved ones wait in bundles by the exit, lashed tightly for easy transport.  An occasional breeze wafts through a window cut into a wall, chasing the normally stifling air.</description>
-    <description>Moonlight streams through the joints of the driftwood walls, calling attention to the state of disrepair the building is in.  Insects buzz around a small hurricane lantern on the rickety counter and the faint sounds of more linger in the darkness.  An occasional breeze wafts through a window cut into a wall, chasing the normally stifling air.</description>
     <position x="300" y="180" z="0" />
     <arc exit="out" move="out" destination="9" />
   </node>
   <node id="138" name="The Shanty, Living Area" note="Meeting">
     <description>Though somewhat muffled, the indistinct sounds of patrons coming and going and the work being done in the kitchen are still prevalent in the small living space used by the facility's maintainers.  The room is decorated in soft shades of yellow and blue, and a couch of matching striped fabric sits before a carved oval window that looks out to the sea beyond the dock.</description>
     <position x="240" y="140" z="0" />
-    <arc exit="climb" move="climb stairs" destination="6" />
+    <arc exit="none" move="climb stairs" destination="6" />
   </node>
   <node id="139" name="The Strand, Sandy Path" note="Map1_Crossing.xml">
     <description>Following the roadside along the Oxenwaithe's bank, you are struck by the quiet beauty of the place.  Taking pause to breathe in the crisp, clean air, you reflect on your surroundings.  Sand, sparkling as if mixed with diamond dust, pours into deep blue undulating waters.  A lush copse of trees spreads to the north, while to the southeast, a series of delightful small buildings is set back from the river's edge.</description>
-    <description>You can hear the Oxenwaithe lapping gently at its bank, creating a soothing sound not unlike a lullaby.  The light reflected from the moons provide shimmery paths along the sandy embankments at water's edge.</description>
     <position x="100" y="0" z="1" />
     <arc exit="southeast" move="southeast" />
     <arc exit="northwest" move="northwest" />
-    <arc exit="go" move="go meeting portal" hidden="True" destination="85" />
+    <arc exit="none" move="go meeting portal" destination="85" />
   </node>
   <node id="140" name="Riverhaven, Town Square" note="Map30_Riverhaven.xml">
     <description>This square sits in the space between the Town Hall and the municipal pier.  It is a large park with the graceful gardens of the Temple set within well-tended lawns.  Here and there, benches for the public's use are set out under shady trees, and you can often find an old retired merchant or river captain taking his ease and watching the passing tide of people.</description>
@@ -954,35 +946,35 @@
     <arc exit="north" move="north" />
     <arc exit="east" move="east" />
     <arc exit="west" move="west" />
-    <arc exit="go" move="go temple" />
-    <arc exit="go" move="go town hall" />
-    <arc exit="go" move="go meeting portal" hidden="True" destination="85" />
+    <arc exit="none" move="go temple" />
+    <arc exit="none" move="go town hall" />
+    <arc exit="none" move="go meeting portal" destination="85" />
   </node>
   <node id="141" name="Langenfirth, Jalgelvjegu" note="Map40_Langenfirth_to_Therenborough.xml">
     <description>Wheels and hooves clatter on the wood as they move on and off the platform of the landing.  Heavy foot traffic joins the carts and wagons to add to the general turmoil of arriving goods and departing trades.  Through the general commotion can be heard chimes from a nearby temple and the occasional call of a lake bird frightened from its perch.</description>
     <position x="100" y="40" z="1" />
     <arc exit="west" move="west" />
     <arc exit="northwest" move="northwest" />
-    <arc exit="go" move="go waldroth landing" />
-    <arc exit="go" move="go meeting portal" hidden="True" destination="85" />
+    <arc exit="none" move="go waldroth landing" />
+    <arc exit="none" move="go meeting portal" destination="85" />
   </node>
   <node id="142" name="North Road, Barony Pass" note="Map40_Langenfirth_to_Therenborough.xml">
     <description>With one final sweep, the road straightens out from the hilly pastures in the south to stop at a walled village.  Looming above the stone boundary is the majestic Theren Keep, its battered towers still an imposing sight to behold.</description>
     <position x="100" y="60" z="1" />
     <arc exit="south" move="south" />
-    <arc exit="go" move="go dusty trail" />
-    <arc exit="go" move="go town gate" />
-    <arc exit="go" move="go stone wall" />
-    <arc exit="go" move="go meeting portal" hidden="True" destination="85" />
+    <arc exit="none" move="go dusty trail" />
+    <arc exit="none" move="go town gate" />
+    <arc exit="none" move="go stone wall" />
+    <arc exit="none" move="go meeting portal" destination="85" />
   </node>
   <node id="143" name="Muspar'i, Great Gate Square" note="Map47_Muspar'i.xml">
     <description>The draconic hulk known as the Great Gate of Muspar'i dominates the square named after it, towering over the mosaic path underfoot.  Serving as the near-singular point of travel between the merchant city and the Velaka Desert, the gate is at once both intimidating and awe-inspiring.</description>
     <position x="100" y="80" z="1" />
     <arc exit="southwest" move="southwest" />
     <arc exit="northwest" move="northwest" />
-    <arc exit="go" move="go great gate" />
-    <arc exit="go" move="go footpath" />
-    <arc exit="go" move="go meeting portal" hidden="True" destination="85" />
+    <arc exit="none" move="go great gate" />
+    <arc exit="none" move="go footpath" />
+    <arc exit="none" move="go meeting portal" destination="85" />
   </node>
   <node id="144" name="Leth Deriel, Sana'ati Dyaus Drui'tas" note="Map61_Leth_Deriel.xml">
     <description>In the midst of this clearing is the mighty tree known throughout Elanthia as Sana'ati Dyaus.  Its limbs glow with a phosphorescent light and you can trace the very course of its roots by their faint glimmer.  Every vein on every leaf is a streak of pale fire, and the diverse crowd here in the main gathering place is subtly illuminated.  The tree houses all the town's official services, and people come and go through a large, open burl in the trunk.</description>
@@ -995,15 +987,15 @@
     <arc exit="southwest" move="southwest" />
     <arc exit="west" move="west" />
     <arc exit="northwest" move="northwest" />
-    <arc exit="go" move="go open burl" />
-    <arc exit="go" move="go meeting portal" hidden="True" destination="85" />
+    <arc exit="none" move="go open burl" />
+    <arc exit="none" move="go meeting portal" destination="85" />
   </node>
   <node id="145" name="Shard, East Bridge" note="Map66_Shard_to_Gondola_Area.xml">
     <description>The extravagance of the eastern quarter of Shard is evident here milk-white marble railings gleam on the cloudiest days.  The marble and the life-sculpted deobar supports show that no expense was spared in olden times, and the new paving stones that cover the roadway blend unobtrusively with the old construction.</description>
     <position x="100" y="120" z="1" />
     <arc exit="east" move="east" />
-    <arc exit="go" move="go city gate" />
-    <arc exit="go" move="go meeting portal" hidden="True" destination="85" />
+    <arc exit="none" move="go city gate" />
+    <arc exit="none" move="go meeting portal" destination="85" />
   </node>
   <node id="146" name="Inner Hibarnhvidar, Main Cavern" note="Map116_Hibarnhvidar.xml">
     <description>All things flow to this, the center of life in Hibarnhvidar.  Even the drafts carry scents peculiar to this underground city -- smoke and roasting meat, stone dust and heated steel, the sour sweat of Dwarven craftsmen, and the incense used to sweeten the trapped air.  A marble sculpture of Taratochs occupies the center of the hall.</description>
@@ -1012,90 +1004,89 @@
     <arc exit="east" move="east" />
     <arc exit="south" move="south" />
     <arc exit="west" move="west" />
-    <arc exit="go" move="go meeting portal" hidden="True" destination="85" />
+    <arc exit="none" move="go meeting portal" destination="85" />
   </node>
   <node id="147" name="Ain Ghazal Chateau, Foyer" note="Map114_Ain_Ghazal.xml">
     <description>As visitors enter the chateau through this enormous circular foyer, their first view is of sweeping dual stairways that lead upward in elegant curves to a gold marble balcony.  Through a dreamstone-inlaid arch to the west, between and beyond the stairways, is a lofty Great Hall lined with fluted marble columns.  Reddish light from a score of oil lamps creates a glow that warms the sky blue marble floor.</description>
     <position x="100" y="160" z="1" />
     <arc exit="south" move="south" />
-    <arc exit="go" move="go marble arch" />
-    <arc exit="go" move="go glaes doors" />
-    <arc exit="go" move="go sweeping stairway" />
-    <arc exit="go" move="go meeting portal" hidden="True" destination="85" />
+    <arc exit="none" move="go marble arch" />
+    <arc exit="none" move="go glaes doors" />
+    <arc exit="none" move="go sweeping stairway" />
+    <arc exit="none" move="go meeting portal" destination="85" />
   </node>
   <node id="148" name="Ratha, Port Walk" note="Map90_Ratha.xml">
     <description>A sharp breeze whips a stinging fan of icy spray through the air over this short promontory that rises above the sea.  The smell of rotting vegetation clings close and heavy.  A few mold-covered, surf-worn benches lay alongside the path in shadows.</description>
     <position x="100" y="180" z="1" />
     <arc exit="east" move="east" />
     <arc exit="west" move="west" />
-    <arc exit="go" move="go meeting portal" hidden="True" destination="85" />
+    <arc exit="none" move="go meeting portal" destination="85" />
   </node>
   <node id="149" name="Aesry Surlaenis'a, Staho Lanahh'Mus" note="Map99_Aesry_Surlaenis'a.xml">
     <description>Music chimes through the air as the light glints off of the prayer gate dedicated to Faenella.  Part of the crushed shell pathway branches out to run beneath the gate, the pink and white shells blending into the shadows beneath the arch.  Many of the homes nearby the gate have musical instruments painted on their paper screen walls.</description>
     <position x="100" y="200" z="1" />
     <arc exit="north" move="north" />
     <arc exit="south" move="south" />
-    <arc exit="go" move="go prayer gate" />
-    <arc exit="go" move="go meeting portal" hidden="True" destination="85" />
+    <arc exit="none" move="go prayer gate" />
+    <arc exit="none" move="go meeting portal" destination="85" />
   </node>
   <node id="150" name="Carillon, Garden" note="Map107_Mer'Kresh.xml">
     <description>A barrier of hostas and ferns set between the flagstones and a fountain is wide enough to block visitors tempted to leave the path but narrow enough that with a favorable breeze someone could toss a few crackers into the water.  Speckled carp swim lazily in the fountain, some weave among the lily pad stems and some nudge against the curved bowl as if looking for a crumb of bread.  A thicket of forsythia grows between the path and the carillon.</description>
     <position x="100" y="220" z="1" />
     <arc exit="north" move="north" />
     <arc exit="west" move="west" />
-    <arc exit="go" move="go meeting portal" hidden="True" destination="85" />
+    <arc exit="none" move="go meeting portal" destination="85" />
   </node>
   <node id="151" name="Island Ring Road, Belarritaco Bay" note="Map108_M'Riss.xml">
     <description>Nocturnal calm contrasts with the daytime bustle on the road past the pumping station and its shed to the dock.  A small night-watch stands vigil on both the station and the dock, a few of its number turning to eye a Gor'tog with a pike who eyes them back.</description>
-    <description>The densest traffic on M'Riss presses along the road as farmers, traders and pilgrims hurry past the pumping station and its shed toward the dock for the galley to Mer'Kresh.  A Gor'tog with a pike stands by the side of the road watching over the crowds.  Whether he's a brigand or a self-appointed guard is hard to tell.</description>
     <position x="100" y="240" z="1" />
     <arc exit="north" move="north" />
     <arc exit="south" move="south" />
-    <arc exit="go" move="go meeting portal" hidden="True" destination="85" />
+    <arc exit="none" move="go meeting portal" destination="85" />
   </node>
   <node id="152" name="Fang's Peak, Tree Top">
     <description>This natural tree-top stage is created by a multitude of branches and vines which have artlessly intertwined together in such a way as to create a mostly-stable plateau that only sways precariously when hit by a light breeze.  The view, however, is fantastic and well worth the slight shifting and potential instability.</description>
     <position x="380" y="240" z="0" />
-    <arc exit="climb" move="climb tree" destination="126" />
+    <arc exit="none" move="climb tree" destination="126" />
   </node>
   <node id="153" name="Wagon Interior, Jisi's Raffles" note="Jisi's Raffles|raffles" color="#00FF00">
     <description>The curving walls of the wagon are painted with an elaborate pattern of blue and green waves, swirling in bright hues that easily reflect the light of the hanging lanterns.  A wide granite counter sits upon this side of a pure white curtain dividing the cabin's interior space into two rooms, preventing the casual peruser from seeing the cache of prizes beyond.</description>
-    <position x="210" y="330" z="0" />
-    <arc exit="go" move="go wood door" destination="88" />
+    <position x="200" y="320" z="0" />
+    <arc exit="none" move="go wood door" destination="88" />
   </node>
   <node id="154" name="Seasoned Dressings, Foyer" note="Seasoned Dressings">
     <description>Piles of tasseled cushions sewn of sumptuous brocades are gathered around a low ebony table, creating an atmosphere of informal elegance in this waiting room.  A silverwillow arch leads to the back of the caravan.  An ebony screen separates this room from the sewing room nearby.</description>
     <position x="140" y="380" z="0" />
-    <arc exit="go" move="go caravan door" destination="88" />
-    <arc exit="go" move="go silverwillow arch" destination="155" />
+    <arc exit="none" move="go caravan door" destination="88" />
+    <arc exit="none" move="go silverwillow arch" destination="155" />
   </node>
   <node id="155" name="Seasoned Dressings, Winter Chamber" note="Winter Chamber" color="#FF0000">
     <description>Creamy woolen curtains woven with silvery threads enclose this small chamber.  A tall fir cloak stand and a sturdy chest crafted of cedar and pine cones rest on a plush snowbeast fur rug.</description>
-    <position x="130" y="380" z="0" />
+    <position x="120" y="380" z="0" />
     <arc exit="north" move="north" destination="156" />
-    <arc exit="go" move="go silverwillow arch" destination="154" />
+    <arc exit="none" move="go silverwillow arch" destination="154" />
   </node>
   <node id="156" name="Seasoned Dressings, Spring Chamber" note="Spring Chamber" color="#FF0000">
     <description>Layered gossamers of myriad pastel hues are hung in delicate swags, softly shimmering with subtle iridescence.  A mirrored satinwood chiffonier stands near an alabaster pedestal holding a profusion of lilacs in a ceramic vase.</description>
-    <position x="130" y="370" z="0" />
+    <position x="120" y="360" z="0" />
     <arc exit="north" move="north" destination="157" />
     <arc exit="south" move="south" destination="155" />
   </node>
   <node id="157" name="Seasoned Dressings, Summer Chamber" note="Summer Chamber" color="#FF0000">
     <description>Rich midnight blue silks are lavishly draped on the walls, and the floor is strewn with fragrant flame rose petals.  Gaethzen fireflies glow softly from bronze lanterns hung near a linden wardrobe.</description>
-    <position x="130" y="360" z="0" />
+    <position x="120" y="360" z="0" />
     <arc exit="north" move="north" destination="158" />
     <arc exit="south" move="south" destination="156" />
   </node>
   <node id="158" name="Seasoned Dressings, Autumn Chamber" note="Autumn Chamber" color="#FF0000">
     <description>Fringed cuttings of russet and golden linen tumble over the walls like falling leaves.  A dark oak table, gilded and carved with tiny acorns, stands in the center of the room next to a slender wicker mannequin.</description>
-    <position x="130" y="350" z="0" />
+    <position x="120" y="340" z="0" />
     <arc exit="south" move="south" destination="157" />
   </node>
   <node id="159" name="Functional Furniture, Fang Cove Branch" note="Functional Furniture" color="#FF0000">
     <description>The small building serves as both a workshop and a sales floor.  Work benches and saw horses fill the space behind a small counter that holds items for sale.  Fresh sawdust covers every surface in the room, indicating that the benches and tools see a lot of work.  A large sign is hanging from the wall.</description>
-    <position x="183" y="320" z="0" />
-    <arc exit="go" move="go wooden door" destination="88" />
+    <position x="180" y="320" z="0" />
+    <arc exit="none" move="go wooden door" destination="88" />
   </node>
   <node id="160" name="Ocan's Bait and Tackle" note="Ocan's Bait and Tackle|Ocan Zendall" color="#FF0000">
     <description>Large fishing nets of varying meshes drape the walls and ceiling of the small hut, each entangled with dried starfish, sea shells and an array of underwater finds.  Crates, barrels, and racks line the perimeter while a bamboo counter displays additional items.  At the back of the room, several buckets of iced fish rest beside a beaded curtain that leads to a private area of the shop, while Master Fisherman Ocan Zendall oversees the staff and daily operations.</description>
@@ -1105,14 +1096,14 @@
   <node id="161" name="An Oak Hut, Interior" note="Oak Hut" color="#00FF00">
     <description>Below the smoke-discolored tapestries adorning the uneven walls, a worn hand-hooked rug partially conceals the warped floorboards.  Surrounded by four chairs that list awkwardly to the side, a rough oak table dominates the room.</description>
     <position x="80" y="340" z="0" />
-    <arc exit="go" move="go door" destination="89" />
+    <arc exit="none" move="go door" destination="89" />
   </node>
   <node id="162" name="The Shanty, Storage Cellar" note="Storage Cellar">
     <description>Rust-colored clay beneath the sandy shoreline overhead forms the perimeter of the cellar.  Only a handful of square beams provide reinforcement to the dense earth.  The southern wall is stacked with large oak barrels recovered from the shipwreck, while wooden steps leading upward are bolted onto the northern wall.</description>
     <position x="220" y="180" z="0" />
     <arc exit="east" move="east" destination="163" />
     <arc exit="west" move="west" destination="164" />
-    <arc exit="go" move="go wooden steps" destination="7" />
+    <arc exit="none" move="go wooden steps" destination="7" />
   </node>
   <node id="163" name="The Shanty, Storage Cellar">
     <description>A disturbed pile of dust sits in the corner of section of the cellar next to a stumpy broom, while lanterns, candles, torches and casks of oil are kept on shelves higher than most children could reach.</description>
@@ -1126,72 +1117,18 @@
   </node>
   <node id="165" name="Fang Cove, Obsidian Dome" note="Obsidian Dome|Vellano|Grazhir|Ways|Astral Plane" color="#FF00FF">
     <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the crisp winter starscape.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the pale winter sky.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals several cold, grey clouds lurking within the pale winter sky.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above is rendered completely opaque by a thick layer of snow.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the pale winter sky which is filled with cold, grey clouds.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above is thoroughly dusted with snow which allows only a glimpse of dim sunlight.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above is thoroughly dusted with snow.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the crisp winter starscape which is marred by a few dark clouds.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above sparkles in the soft autumn rain.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above shudders under the torrential downpour.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the autumn sky which is filled with cold, grey clouds.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the autumn starscape which is marred by a few dark clouds.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals several cold, grey clouds lurking within the autumn sky.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above shimmers in the sunlight as the rain sheets from it.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above looms forebodingly.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above runs with sheets of dark rain.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals a few lazy white clouds.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the sparkling summer starscape.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the clear summer starscape which is marred by a few fluffy clouds.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above allows a glimpse of the summer starscape between the fluffy clouds.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals a thick bank of white clouds which stretch from horizon to horizon.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above sparkles in the warm summer rain.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above allows a glimpse of the warm summer sky amidst the fluffy clouds.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above frames the hot summer sun which blazes from its perch in a cloudless sky.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals thousands of brilliant stars in the exceptionally clear sky.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the spring sky which is filled with cold, grey clouds.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above sparkles in the light spring rain.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the clear spring sky.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the clear summer sky.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the clear winter sky.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the clear autumn sky.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the bright, cheery autumn sky.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the bright, cheery spring sky.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the bright, cheery summer sky.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the bright, cheery winter sky.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above allows a glimpse of the spring starscape between the dark clouds.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above allows a glimpse of the summer starscape between the dark clouds.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above allows a glimpse of the winter starscape between the dark clouds.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above allows a glimpse of the autumn starscape between the dark clouds.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the clear spring starscape.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the clear summer starscape.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the clear winter starscape.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals the clear autumn starscape.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above allows a glimpse of the warm summer sky amidst the fluffy clouds.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above allows a glimpse of the warm spring sky amidst the fluffy clouds.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above allows a glimpse of the warm winter sky amidst the fluffy clouds.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above allows a glimpse of the warm autumn sky amidst the fluffy clouds.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals several cold, grey clouds lurking within the spring sky</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals several cold, grey clouds lurking within the summer sky</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals several cold, grey clouds lurking within the winter sky</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals several cold, grey clouds lurking within the autumn sky</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above is rendered nearly opaque by the pouring rain.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals a thick bank of grey clouds which stretch from horizon to horizon.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above runs with rivulets of inky rain.</description>
-    <description>The austere building is crafted from geometrically exact blocks of red striated obsidian that form a perfectly cylindrical chamber broken only by an arched exit.  The crystalline dome above reveals a bright blue sky that is entirely free of clouds.</description>
     <position x="300" y="160" z="0" />
-    <arc exit="go" move="go arched exit" destination="3" />
+    <arc exit="none" move="go arched exit" destination="3" />
   </node>
   <node id="166" name="Frother's Beasts" note="Frother's Beasts" color="#FF0000">
     <description>Strong scents of wet fur and animal musk fill the large wagon.  The floor is thickly covered with straw and boxes are stacked up along the walls.  A covered walkway opens the back of the wagon to a large canvas tent.</description>
-    <position x="190" y="360" z="0" />
+    <position x="180" y="360" z="0" />
     <arc exit="south" move="south" destination="167" />
     <arc exit="out" move="out" destination="88" />
   </node>
   <node id="167" name="Frother's Beasts" color="#FF0000">
     <description>The canvas walls and ceiling are a dingy white with many water stains and holes.  There is a large wooden pen in one corner of the tent and the other has a stack of cages.  Mostly clean hay covers the ground here.  The air is quite stifling from lack of ventilation that makes the strong animal scents almost too hard to endure.</description>
-    <position x="190" y="370" z="0" />
+    <position x="180" y="360" z="0" />
     <arc exit="north" move="north" destination="166" />
     <arc exit="southeast" move="southeast" destination="168" />
   </node>
@@ -1202,26 +1139,26 @@
   </node>
   <node id="169" name="The Black Orchid, Front Room" note="Black Orchid" color="#FF0000">
     <description>Tall nightsilk screens line the walls of this spacious tent.  Dark crystals dangle from ornate iron candelabras, providing what minimal light is allowed.  A cloth-covered counter and an ironwood wardrobe offer merchandise for those daring enough to enter.</description>
-    <position x="170" y="380" z="0" />
+    <position x="160" y="380" z="0" />
     <arc exit="north" move="north" destination="170" />
-    <arc exit="go" move="go flap" destination="88" />
+    <arc exit="none" move="go flap" destination="88" />
   </node>
   <node id="170" name="The Black Orchid, Back Room" color="#FF0000">
     <description>Randomly placed crystal sconces guard candles that flicker against dark nightsilk walls.  This room features furniture for sale, from silk-covered beds to ironwood desks.  An aromatic scent of vanilla and musk drift from bowls of simmering incense.</description>
-    <position x="170" y="370" z="0" />
+    <position x="160" y="360" z="0" />
     <arc exit="south" move="south" destination="169" />
-    <arc exit="go" move="go nightsilk screen" destination="171" />
+    <arc exit="none" move="go nightsilk screen" destination="171" />
   </node>
   <node id="171" name="The Black Orchid, Bethany's Boudoiur" color="#FF0000">
     <description>A dark red velvet couch dominates this softly lit room.  A web of gleaming black nightsilk along one of the suede walls displays the owner's treasures.  A low table bears a pewter bowl simmering with fragrant incense, its scent reminiscent of long ago memory.</description>
-    <position x="160" y="370" z="0" />
-    <arc exit="go" move="go nightsilk screen" destination="170" />
+    <position x="160" y="360" z="0" />
+    <arc exit="none" move="go nightsilk screen" destination="170" />
   </node>
   <node id="172" name="The Knob, Beds Galore" note="Knob" color="#FF0000">
     <description>Tapestries in vivid colors enclose this room, which is filled with beds of varying sizes.  Plants accent the different bed groupings, some trailing leaves against their soft bedding while others are dwarfed by massive carved bedposts.</description>
-    <position x="220" y="370" z="0" />
+    <position x="220" y="360" z="0" />
     <arc exit="north" move="north" destination="173" />
-    <arc exit="go" move="go tent flap" destination="88" />
+    <arc exit="none" move="go tent flap" destination="88" />
   </node>
   <node id="173" name="The Knob, Couches and Chairs" color="#FF0000">
     <description>Plump couches and elegant chairs are arrayed against a backdrop of colorful tapestries.  Plants placed around the room accent the furniture groupings and provide contrast to the bright tapestry walls.</description>
@@ -1232,45 +1169,45 @@
   </node>
   <node id="174" name="The Knob, Desks and Tables" color="#FF0000">
     <description>Desks in various shapes and sizes are scattered across this cozy room.  Some are accented with flowering plants while others are draped in dark green ivy.  A helpful clerk smiles gaily at all who enter, ready to lend a hand on purchasing the exquisite pieces.</description>
-    <position x="230" y="360" z="0" />
+    <position x="220" y="360" z="0" />
     <arc exit="west" move="west" destination="173" />
   </node>
   <node id="175" name="The Knob, Wall Accents" color="#FF0000">
     <description>Artful designs decorate the walls of this small room, its interior lit with bright crystal sconces.  Plants in various sizes accent dark ironwood tables that hold different wall items for sale.</description>
-    <position x="210" y="360" z="0" />
+    <position x="200" y="360" z="0" />
     <arc exit="east" move="east" destination="173" />
   </node>
   <node id="176" name="Cute Critters, Critter Corner" note="Cute Critters" color="#FF0000">
     <description>Unfinished oak makes up the walls and floor of this sturdy wagon interior.  Shelves line one wall, holding old trinkets and treasures.  A set of tall coat racks stand at attention to either side of the rounded doorway.  Oddly shaped tables take up most of the floor space, making the area seem smaller than it is.</description>
-    <position x="170" y="320" z="0" />
+    <position x="160" y="320" z="0" />
     <arc exit="out" move="out" destination="88" />
   </node>
   <node id="177" name="The Book Nook, Book Room" note="Book Nook|Book Room" color="#FF0000">
     <description>Rough wooden walls enclose the space, holding crooked racks and shelves of old oak.  Covering the floor from wall to wall is a dirty rug that is giving off the faint smell of mold and cheese.  Tables have been haphazardly set up to either side of the doorway.</description>
-    <position x="156" y="320" z="0" />
-    <arc exit="go" move="go doorway" destination="88" />
+    <position x="140" y="320" z="0" />
+    <arc exit="none" move="go doorway" destination="88" />
   </node>
   <node id="178" name="Phior's Fashions, Showroom" note="Phior's Fashions" color="#FF0000">
     <description>Vibrant, sweeping silk panels trim the richly polished burlwood walls of the opulent caravan while thick forest green carpet lines the floor.  Shoppers browse the many shelves and armoires that surround the room, lit by the soft glow of gaethzen orbs that hang near each corner.</description>
-    <position x="196" y="320" z="0" />
-    <arc exit="go" move="go burlwood door" destination="88" />
+    <position x="180" y="320" z="0" />
+    <arc exit="none" move="go burlwood door" destination="88" />
   </node>
   <node id="179" name="Advanced Anatomy, Atrium" note="Advanced Anatomy" color="#FF0000">
     <description>Sparsely decoated, the area seems to be surrounded by stacks of jars with questionable contents and numerous papers and broken quills.  The wafting smell of something rancid left out too long stirs through the air.</description>
     <position x="280" y="360" z="0" />
     <arc exit="east" move="east" destination="180" />
-    <arc exit="go" move="go exit flap" destination="86" />
+    <arc exit="none" move="go exit flap" destination="86" />
   </node>
   <node id="180" name="Advanced Anatomy, Addendum" color="#FF0000">
     <description>Sparse furniture dots the area, providing threadbare seating those those that wish to sit in the dusty room.  Fanciful renditions of hybrid creatures are painted everywhere.</description>
-    <position x="290" y="360" z="0" />
+    <position x="280" y="360" z="0" />
     <arc exit="west" move="west" destination="179" />
   </node>
   <node id="181" name="Fang Cove Crafting Society Hall, Main Entry" note="Crafting Society Hall">
     <description>A large oak arch emblazoned with elaborate script leads to several different wings of the hall.  A circular chandelier hangs from the ceiling causing a bright glow to reflect from the white marble table and chairs positioned in the center of a woven white rug.</description>
     <position x="300" y="360" z="0" />
-    <arc exit="go" move="go wooden door" destination="87" />
-    <arc exit="go" move="go oak arch" destination="182" />
+    <arc exit="none" move="go wooden door" destination="87" />
+    <arc exit="none" move="go oak arch" destination="182" />
   </node>
   <node id="182" name="Fang Cove Crafting Society Hall, Entry">
     <description>The white marble floors are inset with large pieces of black granite, forming an impressively large directional rose that takes up the entirety of the floor.  Multiple hallways branch off in every direction, stretching further into the Society Hall.  The vaulted dome ceiling is held up by giant hand carved wooden beams that span from the floor to the peak.  Painted upon the wall is the image of a bloodied sword resting upon a battered shield.  Carved oak benches line the walls, giving the patrons a place to rest their over-worked bodies.</description>
@@ -1280,7 +1217,7 @@
     <arc exit="east" move="east" destination="196" />
     <arc exit="southwest" move="southwest" destination="205" />
     <arc exit="west" move="west" destination="206" />
-    <arc exit="go" move="go oak arch" destination="181" />
+    <arc exit="none" move="go oak arch" destination="181" />
     <arc exit="southeast" move="southeast" destination="232" />
   </node>
   <node id="183" name="Fang Cove Outfitting Society, Hallway" note="Outfitting Society|Tailoring Society|Outfitting prestige">
@@ -1288,15 +1225,15 @@
     <position x="260" y="460" z="0" />
     <arc exit="north" move="north" destination="184" />
     <arc exit="south" move="south" destination="182" />
-    <arc exit="go" move="go green door" destination="211" />
-    <arc exit="go" move="go vaulted archway" destination="255" />
+    <arc exit="none" move="go green door" destination="211" />
+    <arc exit="none" move="go vaulted archway" destination="255" />
   </node>
   <node id="184" name="Fang Cove Outfitting Society, Hallway">
     <description>Polished wooden floors continue through this wing of the Society hall.  Deep brown and green painted walls accented with tan bamboo stalks portray an artist's representation of a quiet swamp.  A door set into the wall leads into a quiet workroom.</description>
-    <position x="260" y="450" z="0" />
+    <position x="260" y="440" z="0" />
     <arc exit="north" move="north" destination="185" />
     <arc exit="south" move="south" destination="183" />
-    <arc exit="go" move="go beige door" destination="212" />
+    <arc exit="none" move="go beige door" destination="212" />
   </node>
   <node id="185" name="Fang Cove Outfitting Society, Book Store" note="Outfitting books" color="#FF0000">
     <description>Shelves of books line the dark brown walls of the shop.  Set off to the side of the room is a long oak counter topped with a velvet green table runner where customers wait to purchase their wares.</description>
@@ -1306,7 +1243,7 @@
   </node>
   <node id="186" name="Fang Cove Outfitting Society, Tool Store" note="Outfitting tools" color="#FF0000">
     <description>Silk flowers in muted colors are pressed onto the dark painted walls.  Shelving baring various tools, thread spools, waxes and lotions line the walls.  Various attendants banter with potential customers about the best product to suit their needs.</description>
-    <position x="260" y="430" z="0" />
+    <position x="260" y="420" z="0" />
     <arc exit="north" move="north" destination="187" />
     <arc exit="south" move="south" destination="185" />
   </node>
@@ -1318,15 +1255,15 @@
   </node>
   <node id="188" name="Fang Cove Outfitting Society, Hallway">
     <description>A couple of sconces provide a dull glow, lighting the way through this narrow hallway.  Set into the darkly painted walls are two doors, one green and the other burnt orange, leading into separate work rooms.</description>
-    <position x="260" y="410" z="0" />
+    <position x="260" y="400" z="0" />
     <arc exit="northeast" move="northeast" destination="189" />
     <arc exit="south" move="south" destination="187" />
-    <arc exit="go" move="go green door" destination="213" />
-    <arc exit="go" move="go orange door" destination="214" />
+    <arc exit="none" move="go green door" destination="213" />
+    <arc exit="none" move="go orange door" destination="214" />
   </node>
   <node id="189" name="Fang Cove Outfitting Society, Office" note="Outfitting Office">
     <description>Much like the rest of the Society Hall, the office is less pomp and circumstance and more simple and work oriented.  Painted in a checkboard fashion of dark browns, reds and greens, the walls bear little more than a few sketches situated above a velvet sofa.  Near the back of the office is an oak table and chair, which serves as a makeshift desk.</description>
-    <position x="270" y="400" z="0" />
+    <position x="260" y="400" z="0" />
     <arc exit="southwest" move="southwest" destination="188" />
   </node>
   <node id="190" name="Fang Cove Alchemy Society, Hallway" note="Alchemy Society|Alchemy prestige|Alchemy Workroom1">
@@ -1337,7 +1274,7 @@
   </node>
   <node id="191" name="Fang Cove Alchemy Society, Hallway" note="Alchemy Workroom2">
     <description>Surrounding a small work area, potted plants reach half way up the wall, providing a pleasant aroma.  Several small bugs sweep up and down the hallway, thoroughly annoying the hard working alchemists who wildly swat at them.</description>
-    <position x="290" y="450" z="0" />
+    <position x="280" y="440" z="0" />
     <arc exit="northeast" move="northeast" destination="192" />
     <arc exit="southwest" move="southwest" destination="190" />
   </node>
@@ -1349,7 +1286,7 @@
   </node>
   <node id="193" name="Fang Cove Alchemy Society, Tool Store" note="Alchemy tools" color="#FF0000">
     <description>Bright lanterns hang from the ceiling, illuminating the sale stock.  Uniform rows of pegs on the wall hold a multitude of brand new alchemy tools ready for customers.  A few clerks rush in and out, refilling empty slots, keeping the inventory full.</description>
-    <position x="300" y="430" z="0" />
+    <position x="300" y="420" z="0" />
     <arc exit="north" move="north" destination="194" />
     <arc exit="south" move="south" destination="192" />
   </node>
@@ -1358,70 +1295,70 @@
     <position x="300" y="420" z="0" />
     <arc exit="northeast" move="northeast" destination="195" />
     <arc exit="south" move="south" destination="193" />
-    <arc exit="go" move="go soot-covered entryway" destination="257" />
+    <arc exit="none" move="go soot-covered entryway" destination="257" />
   </node>
   <node id="195" name="Fang Cove Alchemy Society, Office" note="Alchemy Office">
     <description>A cathedral like ceiling opens up above unlike the cramped hall on the way in.  A few torches implanted into the wall reflect light off the glass paned roof.  The otherwise small office has ample floor space due to everything being pushed up against the wall.  Several large plants reach half way up the extended wall, reaching for the dark night sky.</description>
-    <position x="310" y="410" z="0" />
+    <position x="300" y="400" z="0" />
     <arc exit="southwest" move="southwest" destination="194" />
   </node>
   <node id="196" name="Fang Cove Forging Society, Hallway" note="Forging Society|Forging prestige">
     <description>The white marble of the entry gives way to well-worn thatched flooring.  Curls of discarded metal line the cracks in the floor, a possible safety hazard for the foolish who tread the hall with no protection upon their feet.  Men and women hurry past as they rush from one location to the next, each carrying metal contraptions in varied stages of progress.</description>
-    <position x="325" y="480" z="0" />
+    <position x="320" y="480" z="0" />
     <arc exit="east" move="east" destination="197" />
     <arc exit="west" move="west" destination="182" />
-    <arc exit="go" move="go beaded curtain" destination="215" />
-    <arc exit="go" move="go metal doors" destination="256" />
+    <arc exit="none" move="go beaded curtain" destination="215" />
+    <arc exit="none" move="go metal doors" destination="256" />
   </node>
   <node id="197" name="Fang Cove Forging Society, Hallway">
     <description>The white marble of the entry gives way to worn thatched flooring.  Curls of discarded metal line the cracks in the floor, a possible safety hazard for the foolish who tread the hall with no protection upon their feet.  Men and women hurry past as they rush from one location to the next, each carrying metal contraptions in varied stages of progress.</description>
-    <position x="335" y="480" z="0" />
+    <position x="320" y="480" z="0" />
     <arc exit="east" move="east" destination="198" />
     <arc exit="west" move="west" destination="196" />
-    <arc exit="go" move="go curtained doorframe" destination="248" />
+    <arc exit="none" move="go curtained doorframe" destination="248" />
   </node>
   <node id="198" name="Fang Cove Forging Society, Hallway">
     <description>Echoing clangs of a hammer rings out through the hall from the forge beyond a painted black door.  Small slivers of metal litter the floor, occasionally lodging themselves into the soles of an unfortunate passerby's footwear.</description>
-    <position x="345" y="480" z="0" />
+    <position x="340" y="480" z="0" />
     <arc exit="southeast" move="southeast" destination="199" />
     <arc exit="west" move="west" destination="197" />
-    <arc exit="go" move="go black door" destination="216" />
+    <arc exit="none" move="go black door" destination="216" />
   </node>
   <node id="199" name="Fang Cove Forging Society, Hallway">
     <description>Discarded bottles litter the floor next to a sandy brown door at the end of the hallway.  Though the creator of the mess is nowhere to be found, their lack of concern for others is felt by those who stoop to do their part in cleaning up a few.</description>
-    <position x="355" y="490" z="0" />
+    <position x="340" y="480" z="0" />
     <arc exit="southeast" move="southeast" destination="200" />
     <arc exit="northwest" move="northwest" destination="198" />
-    <arc exit="go" move="go brown door" destination="218" />
+    <arc exit="none" move="go brown door" destination="218" />
   </node>
   <node id="200" name="Fang Cove Forging Society, Supply Shop" note="Forging supplies" color="#FF0000">
     <description>Large crates of varied ingots and nuggets rest against the wall in ordered arrangement.  An overly rotund Dwarf checks over his inventory carefully, marking upon a parchment with a well used quill.</description>
-    <position x="365" y="500" z="0" />
+    <position x="360" y="500" z="0" />
     <arc exit="east" move="east" destination="201" />
     <arc exit="northwest" move="northwest" destination="199" />
     <arc exit="north" move="north" destination="252" />
   </node>
   <node id="201" name="Fang Cove Forging Society, Maker's Mark Shop" note="Maker's Marks" color="#FF0000">
     <description>Pomp and valour reign supreme in this shop as men and women show off their goods, stamped with their own creative and unique marking.  In attempt to avoid the ego of those gathered here, several more humble patrons push their way past to continue further through the hall.</description>
-    <position x="375" y="500" z="0" />
+    <position x="360" y="500" z="0" />
     <arc exit="east" move="east" destination="202" />
     <arc exit="west" move="west" destination="200" />
   </node>
   <node id="202" name="Fang Cove Forging Society, Book Shop" note="Forging books" color="#FF0000">
     <description>A large book case fits snug against the back wall where clerks lazily move back and forth, grabbing new stock for patrons, and refilling shelves from boxes on the ground.  Soft murmurs between customers within the book shop are dimmed to a muted hum underneath the roars of laughter and occasional disagreements from patrons in nearby shops.  The shop keeper glances with disapproving gaze at passerby's who shuffle through too noisily.</description>
-    <position x="385" y="500" z="0" />
+    <position x="380" y="500" z="0" />
     <arc exit="northeast" move="northeast" destination="203" />
     <arc exit="west" move="west" destination="201" />
   </node>
   <node id="203" name="Fang Cove Forging Society, Supply Depot" note="deeds" color="#FF0000">
     <description>Where the hallway takes a slight turn, a makeshift shop has been set up with an overly hairy attendant standing behind an expansive counter bearing deeds for sale.  The pungent scent of stale tobacco lingers in the air, barely masked by occasional whiff of a sweaty patron in the room.</description>
-    <position x="395" y="490" z="0" />
+    <position x="380" y="480" z="0" />
     <arc exit="east" move="east" destination="204" />
     <arc exit="southwest" move="southwest" destination="202" />
   </node>
   <node id="204" name="Fang Cove Forging Society, Office" note="Forging Office">
     <description>Deeply scarred walls bear little in the way of decor in this sparse office.  Pushed against a wall is a large oak desk with a matching chair.  Next to the desk stands a weapon rack which is home to basic forms of a variety of weapons.</description>
-    <position x="405" y="490" z="0" />
+    <position x="400" y="480" z="0" />
     <arc exit="west" move="west" destination="203" />
   </node>
   <node id="205" name="Fang Cove Crafting Society Hall, Storage" note="Crafting clerk|Alchemy clerk|Engineering clerk|Forging clerk|Outfitting clerk|Repair Clerk" color="#00FF00">
@@ -1431,21 +1368,21 @@
   </node>
   <node id="206" name="Fang Cove Engineering Society, Hallway" note="Engineering Society|Engineering prestige">
     <description>The entrance to the engineering wing is much wider than the other halls due to the needs of larger materials.  Shuffling by, tired workers lug sacks of goods to various areas of the Society hall.  Deep notches mar the wood paneling of the wall, dirty handprints add to its disorderly appearance.</description>
-    <position x="230" y="480" z="0" />
+    <position x="220" y="480" z="0" />
     <arc exit="east" move="east" destination="182" />
     <arc exit="northwest" move="northwest" destination="207" />
-    <arc exit="go" move="go oak door" destination="220" />
+    <arc exit="none" move="go oak door" destination="220" />
   </node>
   <node id="207" name="Fang Cove Engineering Society, Bookstore" note="Engineering Books">
     <description>Workers drag large stone blocks down the hallway to various work rooms nearby leaving deep grooved paths in the dirt floor.  Other society employees hurry around with various tools trying to keep the ground as flat as possible before the next block comes by.  Hushed voices from passing patrons discuss the various techniques and protocols of their craft.</description>
-    <position x="220" y="470" z="0" />
+    <position x="220" y="460" z="0" />
     <arc exit="southeast" move="southeast" destination="206" />
     <arc exit="southwest" move="southwest" destination="208" />
-    <arc exit="go" move="go painted door" destination="221" />
+    <arc exit="none" move="go painted door" destination="221" />
   </node>
   <node id="208" name="Fang Cove Engineering Society, Supply Depot" note="Engineering supplies" color="#FF0000">
     <description>Hard packed dirt floors cause an everlasting cloud of dust which clings to the brick walls.  A large double door guarded by two Gor'Togs allows workers to travel between the store and the outside of the building where they bring in new shipments or prepare to be transferred to one of the workshops.  Blocks of superfluous stone sit on raised platforms, ready for customers to create various wares.</description>
-    <position x="210" y="480" z="0" />
+    <position x="200" y="480" z="0" />
     <arc exit="northeast" move="northeast" destination="207" />
     <arc exit="west" move="west" destination="209" />
   </node>
@@ -1454,112 +1391,112 @@
     <position x="200" y="480" z="0" />
     <arc exit="east" move="east" destination="208" />
     <arc exit="west" move="west" destination="210" />
-    <arc exit="go" move="go dented door" destination="254" />
+    <arc exit="none" move="go dented door" destination="254" />
   </node>
   <node id="210" name="Fang Cove Engineering Society, Office" note="Engineering office">
     <description>Situated against the back wall of the tiny office is an oak desk with matching chair.  A large blank spot on the wall is repurposed as a place to scribble notes, and small diagrams.  Attendants shuffle through occasionally, sweeping up debris left upon the floor, or to dust the furniture.</description>
-    <position x="190" y="480" z="0" />
+    <position x="180" y="480" z="0" />
     <arc exit="east" move="east" destination="209" />
   </node>
   <node id="211" name="Fang Cove Outfitting Society, Weaving Room" note="Weaving1">
     <description>Set in the back of the large workroom is a hefty loom.  Hooks and shelves line the painted green walls, holding various tools and spools of thread that are currently not in use.  To the rear of the room is a large work table and bench.</description>
-    <position x="250" y="460" z="0" />
-    <arc exit="go" move="go green door" destination="183" />
+    <position x="240" y="460" z="0" />
+    <arc exit="none" move="go green door" destination="183" />
   </node>
   <node id="212" name="Fang Cove Outfitting Society, Weaving Room" note="Weaving2">
     <description>Set in the back of the large workroom is a hefty loom.  Hooks and shelves line the painted tan walls, holding various tools and spools of thread that are currently not in use.  To the rear of the room is a large work table and bench.</description>
-    <position x="250" y="450" z="0" />
-    <arc exit="go" move="go beige door" destination="184" />
+    <position x="240" y="440" z="0" />
+    <arc exit="none" move="go beige door" destination="184" />
   </node>
   <node id="213" name="Fang Cove Outfitting Society, Spinning Room" note="Spinning1">
     <description>Simple in decor, the painted leaf green room serves more as a serious work zone than a relaxing one.  Next to a large spinning wheel is a long table and chair, which are pressed against the back wall.</description>
-    <position x="250" y="400" z="0" />
-    <arc exit="go" move="go green door" destination="188" />
+    <position x="240" y="400" z="0" />
+    <arc exit="none" move="go green door" destination="188" />
   </node>
   <node id="214" name="Fang Cove Outfitting Society, Spinning Room" note="Spinning2">
     <description>Simple in decor, the painted orange room serves more as a serious work zone than a relaxing one.  Next to a large spinning wheel is a long table and chair, which are pressed against the back wall.</description>
-    <position x="250" y="410" z="0" />
-    <arc exit="go" move="go orange door" destination="188" />
+    <position x="240" y="400" z="0" />
+    <arc exit="none" move="go orange door" destination="188" />
   </node>
   <node id="215" name="Fang Cove Forging Society, Tool Shop" note="Forging tools" color="#FF0000">
     <description>Boxes and crates of goods stacked high behind the storefront counter are packed with goods for sale.  Attendants scurry about the hustle and bustle of the small shop, attempting in vain to assist customers and tend to deliveries at the same time.  A beaded curtain leads back to the hallway.</description>
-    <position x="325" y="490" z="0" />
-    <arc exit="go" move="go beaded curtain" destination="196" />
+    <position x="320" y="480" z="0" />
+    <arc exit="none" move="go beaded curtain" destination="196" />
   </node>
   <node id="216" name="Fang Cove Forging Society, Black Crucible" note="Black Crucible|foundry1|smelting1|crucible1">
     <description>Crinkled patches of metal stain the dolomite floor.  The splattering becomes more numerous and expands to form concentric circles near the room's center, where a large granite crucible hangs over a large fire.</description>
-    <position x="345" y="500" z="0" />
+    <position x="340" y="500" z="0" />
     <arc exit="south" move="south" destination="217" />
-    <arc exit="go" move="go black door" destination="198" />
+    <arc exit="none" move="go black door" destination="198" />
   </node>
   <node id="217" name="Fang Cove Forging Society, Black Forge" note="Black Forge|forge1">
     <description>An octagonal forge situated in the room's center emits a ruddy glow illuminating the basalt blocks framing it.  In the corner, a large grindstone casts a gigantic shadow upon the wall, and wisps of steam rise up from the recently used slack tub and anvil.</description>
-    <position x="345" y="510" z="0" />
+    <position x="340" y="500" z="0" />
     <arc exit="north" move="north" destination="216" />
   </node>
   <node id="218" name="Fang Cove Forging Society, Brown Crucible" note="Brown Crucible|foundry2|smelting2|crucible2">
     <description>Crinkled patches of metal stain the dolomite floor.  The splattering becomes more numerous and expands to form concentric circles near the room's center, where a large granite crucible hangs over a large fire.</description>
-    <position x="355" y="510" z="0" />
+    <position x="340" y="500" z="0" />
     <arc exit="south" move="south" destination="219" />
-    <arc exit="go" move="go brown door" destination="199" />
+    <arc exit="none" move="go brown door" destination="199" />
   </node>
   <node id="219" name="Fang Cove Forging Society, Brown Forge" note="Brown Forge|forge2">
     <description>An octagonal forge situated in the room's center emits a ruddy glow illuminating the basalt blocks framing it.  In the corner, a large grindstone casts a gigantic shadow upon the wall, and wisps of steam rise up from the recently used slack tub and anvil.</description>
-    <position x="355" y="520" z="0" />
+    <position x="340" y="520" z="0" />
     <arc exit="north" move="north" destination="218" />
   </node>
   <node id="220" name="Fang Cove Engineering Society, Workshop" note="Engineering Workshop1">
     <description>Wood panel walls and matching buffed floors span the room.  Several tables have been strategically set up as workstations to accomodate the needs of a crafter.  The occasional conversation muffles through the door as people pass by through the hall outside.</description>
-    <position x="230" y="470" z="0" />
-    <arc exit="go" move="go painted door" destination="206" />
+    <position x="220" y="460" z="0" />
+    <arc exit="none" move="go painted door" destination="206" />
   </node>
   <node id="221" name="Fang Cove Engineering Society, Damaged Workroom" note="Engineering Workshop2">
     <description>Half the walls of this workspace are covered by an uneven coat of white paint while the remaining walls look as if they've barely survived an explosion of some sort.  Stone fragments are lodged deeply in places and the wood is charred in other places.  Mercifully, the equipment seems to be either repaired or replaced and not affected by whatever disaster affected the rest of the room.  Tables and workstations provide the space craftsmen need to complete their creations.</description>
     <position x="220" y="460" z="0" />
-    <arc exit="go" move="go wood door" destination="207" />
+    <arc exit="none" move="go wood door" destination="207" />
   </node>
   <node id="222" name="Fang Cove, Carousel" note="Carousel|Vault">
     <description>Aside from several torches, the hewn stone wall ringing the Carousel's core is smooth and unadorned.  A circular ceiling supports a vast framework of iron and timbers rising to the cavern's apex, and countless gears, pulleys and weights within the structure form the strikingly complex and beautiful mechanism which drives the Carousel.</description>
-    <position x="325" y="320" z="0" />
+    <position x="320" y="320" z="0" />
     <arc exit="out" move="out" destination="87" />
-    <arc exit="go" move="go registration desk" destination="223" />
-    <arc exit="go" move="go basalt arch" destination="226" />
-    <arc exit="go" move="go granite arch" destination="227" />
-    <arc exit="go" move="go limestone arch" destination="228" />
+    <arc exit="none" move="go registration desk" destination="223" />
+    <arc exit="none" move="go basalt arch" destination="226" />
+    <arc exit="none" move="go granite arch" destination="227" />
+    <arc exit="none" move="go limestone arch" destination="228" />
     <arc exit="south" move="south" destination="251" />
     <arc exit="west" move="west" destination="260" />
   </node>
   <node id="223" name="Fang Cove, Carousel Desk" note="Lost and Found" color="#00FF00">
     <description>A long wooden desk spans the width of the western wall.  Brass lanterns hang from the ceiling, and the floor behind the desk is covered in spotless red tile.</description>
-    <position x="335" y="330" z="0" />
+    <position x="320" y="320" z="0" />
     <arc exit="out" move="out" destination="222" />
-    <arc exit="go" move="go registrar office" destination="224" />
+    <arc exit="none" move="go registrar office" destination="224" />
   </node>
   <node id="224" name="Fang Cove, Item Registration Office" note="register">
     <description>Red tile continues its way through the open doorway and stops abruptly at a long wood counter with polished brass bars positioned to form a cage around the clerks.  A soft glow comes from a single lantern placed atop a long row of filing cabinets.  Papers are strewn about the tops of the cabinets and have spilled over onto the floor.</description>
-    <position x="335" y="340" z="0" />
+    <position x="320" y="340" z="0" />
     <arc exit="out" move="out" destination="223" />
-    <arc exit="go" move="go simple curtain" destination="225" />
+    <arc exit="none" move="go simple curtain" destination="225" />
   </node>
   <node id="225" name="Fang Cove, Registrar's Office" color="#00FF00">
     <description>Not actually a separate room, but sectioned off via a tall row of cabinets is a cramped area, just big enough to fit a table.  The red tile is not so spotless here, but rather has a deep wear pattern that leads from the curtain to a chair in front of the Registrar's desk.</description>
-    <position x="335" y="350" z="0" />
-    <arc exit="go" move="go simple curtain" destination="224" />
+    <position x="320" y="340" z="0" />
+    <arc exit="none" move="go simple curtain" destination="224" />
   </node>
   <node id="226" name="Fang Cove, Carousel Booth">
     <description>A polished steel lever protrudes from the eastern side of the small stone-walled room, flanking a steel door to the south.</description>
-    <position x="335" y="310" z="0" />
-    <arc exit="go" move="go basalt arch" destination="222" />
-    <arc exit="go" move="go granite arch" destination="222" />
-    <arc exit="go" move="go limestone arch" destination="222" />
+    <position x="320" y="300" z="0" />
+    <arc exit="none" move="go basalt arch" destination="222" />
+    <arc exit="none" move="go granite arch" destination="222" />
+    <arc exit="none" move="go limestone arch" destination="222" />
   </node>
   <node id="227" name="Fang Cove, Carousel Booth">
     <description>A polished steel lever protrudes from the eastern side of the small stone-walled room, flanking a steel door to the south.</description>
-    <position x="335" y="320" z="0" />
+    <position x="320" y="320" z="0" />
   </node>
   <node id="228" name="Fang Cove, Carousel Booth">
     <description>A polished steel lever protrudes from the eastern side of the small stone-walled room, flanking a steel door to the south.</description>
-    <position x="325" y="310" z="0" />
+    <position x="320" y="300" z="0" />
   </node>
   <node id="229" name="Fang Cove, Community Gazebo" note="gazebo">
     <description>Several tethered bamboo tables surrounded by cane chairs are scattered about the large area, softly lit by elongated brass lanterns that hang overhead.  A makeshift speaker's podium stands at one end, while at the opposing end, a stacked riverstone fireplace crackles with the warmth of an inviting fire.  Groups of local residents mill about the area, each quietly discussing the day's events and enjoying a refreshing drink at a small provisional bar nearby.</description>
@@ -1569,7 +1506,7 @@
   <node id="230" name="Aboard the Mammoth, Platform]" note="Tall Mammoth|Leth Deriel">
     <description>Thick, barnacle-encrusted ropes secure the platform to the mammoth's back.  The wooden planks follow the curve of the beast's neck, allowing the driver an elevated vantage point as he does his best to lead the sea creature to and fro across the vast ocean.  Birds' nests can be seen all around the platform and are woven intricately into the fur.</description>
     <position x="260" y="120" z="0" />
-    <arc exit="climb" move="climb rope ladder" destination="2" />
+    <arc exit="none" move="climb rope ladder" destination="2" />
     <arc exit="none" move="none" destination="231" />
   </node>
   <node id="231" name="Acenamacra Pier" note="Map58_Acenamacra_Village.xml">
@@ -1579,20 +1516,20 @@
   </node>
   <node id="232" name="Fang Cove Enchanting Society, Hallway" note="Enchanting Society|Enchanting prestige">
     <description>The marble flooring of the lobby transitions suddenly into plush carpeting of the same ivory white shade.  Similar plush fabric covers the walls, creating an oddly muffled effect that dampens ambient noise.  A ruby-inlaid door and a sapphire-inlaid door are the only notes of color to the pale corridor.</description>
-    <position x="292" y="512" z="0" />
+    <position x="280" y="500" z="0" />
     <arc exit="southeast" move="southeast" destination="233" />
     <arc exit="northwest" move="northwest" destination="182" />
-    <arc exit="go" move="go ruby-inlaid door" destination="240" />
-    <arc exit="go" move="go sapphire-inlaid door" destination="241" />
+    <arc exit="none" move="go ruby-inlaid door" destination="240" />
+    <arc exit="none" move="go sapphire-inlaid door" destination="241" />
   </node>
   <node id="233" name="Fang Cove Enchanting Society, Hallway">
     <description>Plush carpeting continues down the hallway in a straight ivory white path.  Similar plush fabric covers the walls, continuing the sound muffling effect by dampening ambient noise.  A diamond-inlaid door and an emerald-inlaid door are the only notes of color to the pale corridor.</description>
-    <position x="307" y="527" z="0" />
+    <position x="300" y="520" z="0" />
     <arc exit="southeast" move="southeast" destination="234" />
     <arc exit="northwest" move="northwest" destination="232" />
-    <arc exit="go" move="go diamond-inlaid door" destination="238" />
-    <arc exit="go" move="go emerald-inlaid door" destination="239" />
-    <arc exit="go" move="go recessed alcove" destination="258" />
+    <arc exit="none" move="go diamond-inlaid door" destination="238" />
+    <arc exit="none" move="go emerald-inlaid door" destination="239" />
+    <arc exit="none" move="go recessed alcove" destination="258" />
   </node>
   <node id="234" name="Fang Cove Enchanting Society, Bookstore" note="Enchanting books" color="#FF0000">
     <description>Pale birch bookshelves are lined up in straight rows at the back of the room.  A cheerful attendant waits behind a simple white counter, ready to answer questions and fetch book orders.</description>
@@ -1602,7 +1539,7 @@
   </node>
   <node id="235" name="Fang Cove Enchanting Society, Tool Store" note="Enchanting tools" color="#FF0000">
     <description>Various tools for enchanting are neatly stored in the many labeled crates that fill the open birch shelving along the back wall.  A cluster of attendants wait behind a long white counter, ready to answer questions and complete orders.</description>
-    <position x="330" y="540" z="0" />
+    <position x="320" y="540" z="0" />
     <arc exit="east" move="east" destination="236" />
     <arc exit="west" move="west" destination="234" />
   </node>
@@ -1614,216 +1551,211 @@
   </node>
   <node id="237" name="Fang Cove Enchanting Society, Society Master's Office" note="Enchanting Office">
     <description>Pale blue walls encircle the plush ivory carpet upon which sits a rich mahogany wood desk.  Expansive and covered with odd scorch marks, the desk rests in the center of the room with only one chair behind it.  A large matching hutch rests to the side of the room, packed full of scrolls, various tools, and crumpled letters.</description>
-    <position x="350" y="540" z="0" />
+    <position x="340" y="540" z="0" />
     <arc exit="west" move="west" destination="236" />
   </node>
   <node id="238" name="Fang Cove Enchanting Society, Diamond Workroom" note="Diamond workroom|Enchanting workroom 3">
     <description>Sparkling white velvet walls and plush ivory carpet prevent outside sounds from disturbing the peaceful sanctity of the workroom.  A large marble table with curved legs provides ample working space.</description>
-    <position x="297" y="527" z="0" />
-    <arc exit="go" move="go diamond-inlaid door" destination="233" />
+    <position x="280" y="520" z="0" />
+    <arc exit="none" move="go diamond-inlaid door" destination="233" />
   </node>
   <node id="239" name="Fang Cove Enchanting Society, Emerald Workroom" note="Emerald workroom|Enchanting workroom 4">
     <description>Emerald velvet walls and plush ivory carpet prevent outside sounds from disturbing the peaceful sanctity of the workroom.  A large marble table with curved legs provides ample working space.</description>
-    <position x="317" y="527" z="0" />
-    <arc exit="go" move="go emerald-inlaid door" destination="233" />
+    <position x="300" y="520" z="0" />
+    <arc exit="none" move="go emerald-inlaid door" destination="233" />
   </node>
   <node id="240" name="Fang Cove Enchanting Society, Ruby Workroom" note="Ruby workroom|Enchanting workroom 2">
     <description>Ruby velvet walls and plush ivory carpet prevent outside sounds from disturbing the peaceful sanctity of the workroom.  A large marble table with curved legs provides ample working space.</description>
-    <position x="302" y="512" z="0" />
-    <arc exit="go" move="go ruby-inlaid door" destination="232" />
+    <position x="300" y="500" z="0" />
+    <arc exit="none" move="go ruby-inlaid door" destination="232" />
   </node>
   <node id="241" name="Fang Cove Enchanting Society, Sapphire Workroom" note="Sapphire workroom|Enchanting workroom 1">
     <description>Sapphire velvet walls and plush ivory carpet prevent outside sounds from disturbing the peaceful sanctity of the workroom.  A large marble table with curved legs provides ample working space.</description>
-    <position x="282" y="512" z="0" />
-    <arc exit="go" move="go sapphire-inlaid door" destination="232" />
+    <position x="280" y="500" z="0" />
+    <arc exit="none" move="go sapphire-inlaid door" destination="232" />
   </node>
-  <node id="242" name="Jungle Outpost, Encampment" note=" Encampment" color="#00FFFF">
+  <node id="242" name="Jungle Outpost, Encampment" note="Encampment" color="#00FFFF">
     <description>Efforts have been taken to provide comforts for those who maintain a protective watch over the area's water source and nearby shrine amid the dark encampment.  Imposing shadows are cast over the area by the towering durian trees, broken only by the occasional candlelight from a distant window.  Hulking masses lurk in the darkness of the underbrush that crowds the narrow footpath, leading further east.</description>
-    <description>Efforts have been taken to provide comforts for those who maintain a protective watch over the area's water source and nearby shrine amid the small encampment.  Towering durian trees overrun with clinging strangler figs form the soaring emergent layer of the tropical area, while lianas vines drape the many palms that afford a pleasant covering over crudely carved benches.  Bamboo, ferns and a vast array of herbs mingle with the many indigenous plants that crowd the narrow footpath that heads further east.</description>
-    <position x="487" y="287" z="0" />
+    <position x="480" y="280" z="0" />
     <arc exit="southwest" move="southwest" destination="245" />
     <arc exit="west" move="west" destination="246" />
     <arc exit="northwest" move="northwest" destination="243" />
-    <arc exit="go" move="go shadowed footpath" destination="102" />
+    <arc exit="none" move="go shadowed footpath" destination="102" />
   </node>
   <node id="243" name="Jungle Outpost, Encampment" color="#00FFFF">
     <description>Scents of wild orchids waft through the encampment from blooms that hide amid the dark underbrush and grasp at the shadowed trunks that rise into the overhead canopy.  Native, nocturnal creatures flit and scramble about in the murky perimeter, their incessant buzz filling the evening air.  From a nearby branch, a brilliant scarlet macaw observes the area with curiosity, startled by the sudden activity.</description>
-    <description>Scents of wild orchids waft through the area from the many vibrant blooms that vine through the underbrush and along the trunks of the surrounding trees.  Colorful birds flit overhead in the upper jungle canopy, their melodious song filling the air.  Making its home on a nearby branch, a brilliant scarlet macaw observes the area with curiosity, often appearing to heckle those that pass amid the many homes.</description>
-    <position x="477" y="277" z="0" />
+    <position x="460" y="260" z="0" />
     <arc exit="southeast" move="southeast" destination="242" />
     <arc exit="southwest" move="southwest" destination="244" />
   </node>
   <node id="244" name="Jungle Outpost, Encampment" color="#00FFFF">
     <description>Subtle breezes dance amid the gently swaying palms that overhang the many homes, their curtained windows aglow with some soft, indeterminable light within.  A group of weathered chairs is gathered in the darkness among the trunks of several shadowed fruit trees, while crude, bamboo wind chimes clatter faintly from their branches, a modest deterrent to the local wildlife that scurries about the draping, woody network during nightfall.</description>
-    <description>Subtle breezes dance amid the gently swaying palms that overhang the many homes, where children giggle and dart about, engaged in a game of tag.  A group of weathered chairs is gathered among the trunks of several surrounding fruit trees, while crude, bamboo wind chimes clatter softly from their branches, a modest deterrent to the local wildlife.</description>
-    <position x="467" y="287" z="0" />
+    <position x="460" y="280" z="0" />
     <arc exit="northeast" move="northeast" destination="243" />
     <arc exit="east" move="east" destination="246" />
     <arc exit="southeast" move="southeast" destination="245" />
   </node>
   <node id="245" name="Jungle Outpost, Encampment" color="#00FFFF">
     <description>Dark forms hasten along the vast woody network and purple passion vines that drape throughout the area, one particular vine hanging loosely against a hulking, shadowed tree like a snake slithering down from its lofty vantage point to feed.  Several of the surrounding trees hold a variety of ripened fruit, when in season, their sweet aroma mingling with the nocturnal sounds of the enclosing jungle.  Some ship's netting, strung between two trunks and forming a hammock, makes for a comfortable rest in the evening air.</description>
-    <description>A multitude of creatures travel the vast network of lianas vines and climbing purple passion flowers that drape through the area, one particular vine hangs loosely against a wide tree that towers amid the homes.  Several of the surrounding trees hold a variety of ripened fruit, when in season, making them a familiar visit for many.  Some ship's netting is strung between two of the larger trunks, making for a comfortable hammock in the overlying shade.</description>
-    <position x="477" y="297" z="0" />
+    <position x="460" y="280" z="0" />
     <arc exit="northeast" move="northeast" destination="242" />
     <arc exit="northwest" move="northwest" destination="244" />
   </node>
   <node id="246" name="Jungle Outpost, Encampment">
     <description>Make-shift benches surround a large bamboo table, where several residents occasionally gather to share a meal roasted over the stone firepit and tell tales of their day's adventure.  Amid the surrounding darkness, a looming banyan tree is strung with heavy braided vines and a driftwood swing that sways gently in the evening breeze.</description>
-    <description>Make-shift benches surround a large bamboo table, where several residents occasionally gather to share a meal roasted over the stone firepit and tell tales of their day's adventure.  Amid the many palms and durians that shade the area, a nearby banyan tree is strung with heavy braided vines that hold a driftwood swing.</description>
-    <position x="477" y="287" z="0" />
+    <position x="460" y="280" z="0" />
     <arc exit="east" move="east" destination="242" />
     <arc exit="west" move="west" destination="244" />
   </node>
   <node id="247" name="The Art of Attack, Salesfloor" note="The Art of Attack" color="#FF0000">
     <description>The interior walls are covered with paneling made from tropical hardwoods set into a herringbone pattern.  A plushly carpeted floor allows access to the surfaces displaying the wares on offer.  Blades are arranged on an albarco counter while a kapok table carries blunt weapons.  In the corner a ramin stand holds long staves and pikes while a flamethorn rack exhibits bows.</description>
-    <position x="207" y="347" z="0" />
-    <arc exit="go" move="go brown door" destination="88" />
+    <position x="200" y="340" z="0" />
+    <arc exit="none" move="go brown door" destination="88" />
   </node>
   <node id="248" name="Fang Cove Forging Society, Crucible" note="foundry3|smelting3|crucible3">
     <description>Crinkled patches of metal stain the dolomite floor.  The splattering becomes more numerous and expands to form concentric circles near the room's center, where a large granite crucible hangs over a large fire.</description>
-    <position x="335" y="500" z="0" />
+    <position x="320" y="500" z="0" />
     <arc exit="south" move="south" destination="249" />
-    <arc exit="go" move="go curtained doorframe" destination="197" />
+    <arc exit="none" move="go curtained doorframe" destination="197" />
   </node>
   <node id="249" name="Fang Cove Forging Society, Forge" note="forge3|anvil3">
     <description>An octagonal forge situated in the room's center emits a ruddy glow illuminating the basalt blocks framing it.  In the corner, a large grindstone casts a gigantic shadow upon the wall, and wisps of steam rise up from the recently used slack tub and anvil.</description>
-    <position x="335" y="510" z="0" />
+    <position x="320" y="500" z="0" />
     <arc exit="north" move="north" destination="248" />
   </node>
   <node id="250" name="Castaways' Tattoo Parlor" note="Castaways' Tattoo Parlor|tattoo" color="#FF0000">
     <description>Thick canvas is stretched tautly over a frame of tropical wood, its bright blue hue a stark contrast to the golden sand below.  Fresh air flows in from the open tent flap, filling the room with the briny scent of the sea.</description>
-    <position x="270" y="320" z="0" />
+    <position x="260" y="320" z="0" />
     <arc exit="out" move="out" destination="86" />
   </node>
   <node id="251" name="Fang Cove, Carousel Family Services" note="family vault">
     <description>A series of guarded arches line the southern wall.  The complicated framework of iron and timbers spans across the ceiling.  Countless gears, pulleys and weights form the strikingly complex mechanism which drives the Carousel.</description>
-    <position x="325" y="340" z="0" />
+    <position x="320" y="340" z="0" />
     <arc exit="north" move="north" destination="222" />
-    <arc exit="go" move="metal arch" destination="253" />
-    <arc exit="go" move="stone arch" destination="253" />
+    <arc exit="none" move="metal arch" destination="253" />
+    <arc exit="none" move="stone arch" destination="253" />
   </node>
   <node id="252" name="Fang Cove Forging Society, Bulk Materials" note="bulk Forging supplies">
     <description>A salty breeze swirls through the open space.  A freshly applied thatched roof hangs overhead and protects the countless pallets of heavy ingots, ores, and other supplies that are neatly stacked in rows by type.  From time to time, a line of wagons hauls more wares from the nearby docks as ships come and go from the small, growing community.</description>
-    <position x="365" y="490" z="0" />
+    <position x="360" y="480" z="0" />
     <arc exit="south" move="south" destination="200" />
   </node>
   <node id="253" name="Fang Cove, Family Vault">
     <description>A Dwarven attendant stands near the entry, doing his best to ignore you but seeming anxious.  A wooden platform sits in the middle of the room, and a complicated series of gears, rope and other mechanisms are focused around it.</description>
-    <position x="325" y="350" z="0" />
-    <arc exit="go" move="go arch" destination="251" />
+    <position x="320" y="340" z="0" />
+    <arc exit="none" move="go arch" destination="251" />
   </node>
   <node id="254" name="Fang Cove Engineering Society, A Private Engineering Room" note="Private Engineering">
     <description>A fine layer of wood and stone shavings covers most of the well-worn granite floor.  The white walls have seen better days, and black and grey scuff marks adorn much of the open space.  A large workstation along one wall is unnaturally free of clutter and holds several organized tools and implements.  Grunts, curses, and labored breathing from other patrons echo throughout the large workroom.</description>
-    <position x="200" y="470" z="0" />
-    <arc exit="go" move="go dented door" destination="209" />
+    <position x="200" y="460" z="0" />
+    <arc exit="none" move="go dented door" destination="209" />
   </node>
   <node id="255" name="Fang Cove Outfitting Society, A Private Outfitting Room" note="Private Outfitting">
     <description>A pure-white wainscoted hall is topped by lilac-hued paisley painted walls.  Occupying the back third of the room is a solid-looking loom, while a large spinning wheel sits near the entrance.  Resting atop a deep purple rug is a sturdy worktable and a comfortable, wicker chair.  Running parallel along opposing walls are several hooks and shelves, holding practically every conceivable tool, spool of thread, bobbin, thimble and scrap.</description>
-    <position x="250" y="470" z="0" />
-    <arc exit="go" move="go vaulted archway" destination="183" />
+    <position x="240" y="460" z="0" />
+    <arc exit="none" move="go vaulted archway" destination="183" />
   </node>
   <node id="256" name="Fang Cove Forging Society, A Private Forge" note="Private Forging">
     <description>Thick walls struggle to contain the blistering heat of the workshop where the fires blaze endlessly night and day.  The flickering flames give a reddish glow to the racks and shelves of tools and equipment, all neatly placed and ready for use.  Workers enter in their protective gear from time to time, checking the equipment and reporting back to a sentry at the entry.</description>
-    <position x="325" y="470" z="0" />
-    <arc exit="go" move="go metal doors" destination="196" />
+    <position x="320" y="460" z="0" />
+    <arc exit="none" move="go metal doors" destination="196" />
   </node>
   <node id="257" name="Fang Cove Alchemy Society, A Private Alchemy Room" note="Private Alchemy">
     <description>A large workbench dominates one side of the room with numerous pieces of alchemical equipment scattered haphazardly upon its surface.  The high, vented windows provide relief from the common, yet unpleasant, smell that permeates the room.</description>
-    <position x="310" y="420" z="0" />
-    <arc exit="go" move="go soot-covered entryway" destination="194" />
+    <position x="300" y="420" z="0" />
+    <arc exit="none" move="go soot-covered entryway" destination="194" />
   </node>
   <node id="258" name="Fang Cove Enchanting Society, A Private Enchanting Room" note="Private Enchanting">
     <description>Pieced together by a seemingly blind worker, the walls are covered with scraps of rugs, blankets, and carpets in a kaleidoscope of colors.  A burly, light pink feldspar table is stashed in a corner of the room, providing plenty of room to work.</description>
-    <position x="317" y="512" z="0" />
-    <arc exit="go" move="go recessed alcove" destination="233" />
+    <position x="300" y="500" z="0" />
+    <arc exit="none" move="go recessed alcove" destination="233" />
   </node>
   <node id="259" name="MAMAS Company, Fang Cove Branch" color="#00FF00">
     <description>One long, polished snowflake obsidian counter dominates the large cottage, conveniently placed for easy access to customers and workers alike.  Occasional noises, some quite unpleasant, come from a back room in the northwest corner.  Above the magnificent mikkhalbamar double doors is a large map of the regional area.  An impressive sign above the counter contains the room's only splash of color.  A black armchair and a white table reside in the corner, furthest away from all the noise.</description>
     <position x="300" y="320" z="0" />
-    <arc exit="go" move="go double doors" destination="87" />
+    <arc exit="none" move="go double doors" destination="87" />
   </node>
   <node id="260" name="Fang Cove, Rundmolen Post Office" note="Post Office|mail" color="#00FF00">
     <description>Tucked up against the stone wall is an expansive stone counter decorated with low relief carvings.  Screens of bamboo surround the counter, partitioning it off from the bustle of the carousel traffic.  Vast, countless rows of differently sized shelves are behind the counter, and complex Dwarven mechanisms can be heard as they rearrange the package-covered storage.  Clerks shuffle endlessly back and forth between the counters and shelving as they assist patrons with their packaging and mailing needs.</description>
-    <position x="315" y="320" z="0" />
+    <position x="300" y="320" z="0" />
     <arc exit="east" move="east" destination="222" />
   </node>
   <node id="261" name="Fang's Rise, Secluded Island">
     <description>Low hanging trees, branches and dense vegetation make this little island seem to be like its own secluded world.  The sounds of the nearby waterfall are nearly drowned out by the abundant insects, birds and other creatures hiding within the profuse foliage.  A well-worn tree stump, smooth with age, sits before a large flat rock that appears to have been used as a table.</description>
     <position x="420" y="320" z="0" />
-    <arc exit="climb" move="climb low-hanging branch" destination="119" />
+    <arc exit="none" move="climb low-hanging branch" destination="119" />
   </node>
   <node id="262" name="Stone and Thread, Showroom" note="stone and thread" color="#FF0000">
     <description>Light plastered walls complement wide warm grey plank floors, while a pair of thick oak beams run horizontally across the pale green-painted ceiling.  Domed copper lanterns are mounted high on the walls, casting a soft glow over the merchandise.</description>
-    <position x="160" y="353" z="0" />
+    <position x="160" y="340" z="0" />
     <arc exit="west" move="west" destination="263" />
-    <arc exit="go" move="go maple door" destination="88" />
+    <arc exit="none" move="go maple door" destination="88" />
   </node>
   <node id="263" name="Stone and Thread, Alcove" color="#FF0000">
     <description>Pale canvas panels extend outward from the main pavilion to form a wide alcove, their edges sharply folded against light timber framing.  Evenly spaced ceiling beams cross above smooth stone slabs, where pale oat-colored runners stretch end to end.</description>
-    <position x="147" y="353" z="0" />
+    <position x="140" y="340" z="0" />
     <arc exit="east" move="east" destination="262" />
   </node>
   <node id="264" name="Colorful Cosmetics" note="colorful cosmetics" color="#FF0000">
     <description>The atmosphere is warm and inviting, seamlessly merging a sense of whimsy with stylish flair.  Majestic purpleheart wood beams stretch across the ceiling, supporting the roof with elegance, while the rich, wood-grained planks create a robust floor that enhances the character of the long wagon.  Sunlight streams through rows of charming windows that line the sides of the vibrant violet walls, casting playful shadows throughout the space.  Scattered throughout the room, intricately carved tables made of purpleheart wood come in a delightful array of shapes and sizes, adding both functionality and artistic charm to the enchanting setting.</description>
-    <position x="143" y="330" z="0" />
-    <arc exit="go" move="go purpleheart door" destination="88" />
+    <position x="140" y="320" z="0" />
+    <arc exit="none" move="go purpleheart door" destination="88" />
   </node>
   <node id="265" name="Fang Cove, Verdant Snarl" note="sovamedo">
     <description>Dense undergrowth spreads across the area, a layered tangle of brush, shrubs, and low trees bound together by looping vines and trailing creepers.  Narrow, winding trails cut through the growth in branching paths, their packed surfaces weaving between roots and thickets.  Overhead, interlaced limbs form a broken canopy, partially sheltering the uneven ground.</description>
-    <position x="507" y="340" z="0" />
+    <position x="500" y="340" z="0" />
     <arc exit="north" move="north" destination="266" />
     <arc exit="northeast" move="northeast" destination="267" />
     <arc exit="east" move="east" destination="268" />
-    <arc exit="climb" move="climb narrow crevice" destination="96" />
+    <arc exit="none" move="climb narrow crevice" destination="96" />
   </node>
   <node id="266" name="Fang Cove, Verdant Snarl">
     <description>Clusters of shrubs and closely set trees form a continuous thicket, their growth interlaced with trailing vines and creeping stems.  Worn passages curve through the undergrowth, splitting and rejoining as they follow the contours of the land.</description>
-    <position x="507" y="320" z="0" />
+    <position x="500" y="320" z="0" />
     <arc exit="east" move="east" destination="267" />
     <arc exit="southeast" move="southeast" destination="268" />
     <arc exit="south" move="south" destination="265" />
   </node>
   <node id="267" name="Fang Cove, Verdant Snarl">
     <description>A dense sprawl of brush and low-reaching limbs blankets the area, bound tight with creeping growth.  Slender trails wind through the tangle in intersecting lines, their paths worn smooth where movement has pressed them into the earth.</description>
-    <position x="527" y="320" z="0" />
+    <position x="520" y="320" z="0" />
     <arc exit="south" move="south" destination="268" />
     <arc exit="southwest" move="southwest" destination="265" />
     <arc exit="west" move="west" destination="266" />
-    <arc exit="climb" move="climb rocky incline" destination="269" />
+    <arc exit="none" move="climb rocky incline" destination="269" />
   </node>
   <node id="268" name="Fang Cove, Verdant Snarl">
     <description>Thick growth crowds the area, where tangled shrubs and young trees press close beneath a web of climbing vines.  A network of narrow tracks threads through the brush, bending around dense clusters and dipping between exposed roots.  The ground is uneven, layered with compressed debris.</description>
-    <position x="527" y="340" z="0" />
+    <position x="520" y="340" z="0" />
     <arc exit="north" move="north" destination="267" />
     <arc exit="west" move="west" destination="265" />
     <arc exit="northwest" move="northwest" destination="266" />
   </node>
   <node id="269" name="Fang Cove, Verdant Outcrop">
     <description>A broad cave mouth opens beneath a low ceiling of rough stone, the rocky overhang covered in a vibrant green tapestry of leafy vines.  The ground is rocky and uneven, scattered with gnawed bones and loose feathers.  Jagged stone presses down from above, narrowing the space beneath the overhang.</description>
-    <position x="547" y="320" z="0" />
+    <position x="540" y="320" z="0" />
     <arc exit="north" move="north" destination="270" />
     <arc exit="northeast" move="northeast" destination="271" />
     <arc exit="east" move="east" destination="272" />
-    <arc exit="climb" move="climb rocky incline" destination="267" />
+    <arc exit="none" move="climb rocky incline" destination="267" />
   </node>
   <node id="270" name="Fang Cove, Verdant Outcrop">
     <description>The cave mouth narrows slightly, its low ceiling casting heavy shadows across the uneven floor visible from the entrance.  At the farthest point from the opening, small pairs of yellow eyes blink intermittently, appearing and vanishing within the recesses of the stone.</description>
-    <position x="547" y="300" z="0" />
+    <position x="540" y="300" z="0" />
     <arc exit="east" move="east" destination="271" />
     <arc exit="southeast" move="southeast" destination="269" />
     <arc exit="south" move="south" destination="269" />
   </node>
   <node id="271" name="Fang Cove, Verdant Outcrop">
     <description>Rough stone walls curve beneath a low, rocky overhang, forming a shallow chamber decorated with a wall of interwoven vines.  The ground bears many gouges, grouped in parallel slashes, and scattered bones dotted with golden feathers.  Small fragments of teeth and hide collect in shallow depressions along the edges of the chamber.</description>
-    <position x="567" y="300" z="0" />
+    <position x="560" y="300" z="0" />
     <arc exit="south" move="south" destination="272" />
     <arc exit="southwest" move="southwest" destination="269" />
     <arc exit="west" move="west" destination="270" />
   </node>
   <node id="272" name="Fang Cove, Verdant Outcrop">
     <description>The low-roofed cavern extends inward beyond your vantage point at the entrance, its ceiling dipping close above a floor worn smooth in places.  Barely visible against the deep gloom at the back of the natural room, the edge of a large nest cradles the cracked remains of a giant egg.</description>
-    <position x="567" y="320" z="0" />
+    <position x="560" y="320" z="0" />
     <arc exit="north" move="north" destination="271" />
     <arc exit="west" move="west" destination="269" />
     <arc exit="northwest" move="northwest" destination="270" />
@@ -1911,9 +1843,6 @@
   </label>
   <label text="The Enclave">
     <position x="26" y="269" z="0" />
-  </label>
-  <label text="">
-    <position x="210" y="530" z="0" />
   </label>
   <label text="Alchemy">
     <position x="304" y="423" z="0" />
