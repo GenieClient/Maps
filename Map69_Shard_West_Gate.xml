@@ -3804,7 +3804,9 @@
     <description>Grassland stretches out from the edges of the plateau, a mass of undulating greenery that effectively hides the rocky soil beneath.  Songbirds dart amongst the stems, their melodious voices rising above the susurration of the swaying leaves.</description>
     <description>Grassland stretches out from the edges of the plateau, hiding the rocky soil beneath.</description>
     <position x="440" y="537" z="0" />
-    <arc exit="east" move="east" destination="600" />
+    <arc exit="north" move="north" destination="660" />
+	<arc exit="northeast" move="northeast" destination="661" />
+	<arc exit="east" move="east" destination="600" />
     <arc exit="southeast" move="southeast" destination="598" />
     <arc exit="south" move="south" destination="597" />
   </node>
@@ -3813,11 +3815,14 @@
     <description>Grassland stretches out from the edges of the plateau, a few shrubs breaking above the swaying grasses.</description>
     <description>Grassland stretches out from the edges of the plateau, with only a few shrubs to break the monotony of the whispering grasses swaying in the wind.  Bats swirl in the night, darting out from their cliffside cave homes in search of insects and other prey.</description>
     <position x="460" y="537" z="0" />
-    <arc exit="east" move="east" destination="602" />
+    <arc exit="north" move="north" destination="661" />
+    <arc exit="northeast" move="northeast" destination="662" />
+	<arc exit="east" move="east" destination="602" />
     <arc exit="southeast" move="southeast" destination="601" />
     <arc exit="south" move="south" destination="598" />
     <arc exit="southwest" move="southwest" destination="597" />
     <arc exit="west" move="west" destination="599" />
+	<arc exit="northwest" move="northwest" destination="660" />
   </node>
   <node id="601" name="Wyvern Plateau, Grassland">
     <description>Grassland stretches out from the plateau's edge, running right up to the edge of the vertical cliffs.  The crumbling edge is festooned with teetering rocks and boulders, poised to crash to the forest below.</description>
@@ -3831,30 +3836,35 @@
     <description>Grassland stretches out from the edges of the plateau, the thick growth almost hiding a winding trail that snakes towards a small vale cupped within the rocky outcrop.</description>
     <description>Grassland stretches out from the edges of the plateau, almost hiding a winding trail snaking towards a small vale.</description>
     <position x="480" y="537" z="0" />
-    <arc exit="south" move="south" destination="601" />
+    <arc exit="north" move="north" destination="662" />
+	<arc exit="south" move="south" destination="601" />
     <arc exit="southwest" move="southwest" destination="598" />
     <arc exit="west" move="west" destination="600" />
+	<arc exit="northwest" move="northwest" destination="661" />
     <arc exit="go" move="go winding trail" destination="603" />
   </node>
   <node id="603" name="Wyvern Plateau, Grassy Vale">
-    <description>Cupped within the surrounding grassland, a small vale enclosed by low rocky walls stetches around a small spring.  Tendrils of water flow out from the spring, feeding two meager rivulets winding amongst the savannah.</description>
+    <description>Cupped within the surrounding grassland, a small vale enclosed by low rocky walls stretches around a small spring.  Tendrils of water flow out from the spring, feeding two meager rivulets winding amongst the savannah.</description>
     <description>Cupped within the surrounding grassland, a small vale enclosed by rocky walls stretches around a small spring.</description>
-    <position x="500" y="517" z="0" />
+    <position x="500" y="497" z="0" />
     <arc exit="north" move="north" destination="604" />
     <arc exit="west" move="west" destination="605" />
+	<arc exit="northwest" move="northwest" destination="663" />
     <arc exit="go" move="go winding trail" destination="602" />
   </node>
   <node id="604" name="Wyvern Plateau, Grassy Vale">
     <description>The meandering streamlet eventually peters out into nothingness, its moisture dispersing amongst the thirsty grasses.  A few stray boulders mark the edge of the plateau, providing some warning of the plunge into the surrounding forest lurking below.</description>
     <description>The streamlet peters out into nothingness amongst the thirsty grasses.</description>
-    <position x="500" y="497" z="0" />
+    <position x="500" y="477" z="0" />
     <arc exit="south" move="south" destination="603" />
     <arc exit="southwest" move="southwest" destination="605" />
+	<arc exit="west" move="west" destination="663" />
   </node>
   <node id="605" name="Wyvern Plateau, Grassy Vale">
     <description>Ending rather abruptly, the tiny stream drains away into a crevice, disappearing completely into the rocks of the plateau without a trace.  Not far from the crevice, the plateau itself ends in a sheer drop off to the forest far, far below.</description>
-    <position x="480" y="517" z="0" />
-    <arc exit="northeast" move="northeast" destination="604" />
+    <position x="480" y="497" z="0" />
+    <arc exit="north" move="north" destination="663" />
+	<arc exit="northeast" move="northeast" destination="604" />
     <arc exit="east" move="east" destination="603" />
   </node>
   <node id="606" name="Wyvern Plateau, Opening">
@@ -4224,6 +4234,36 @@
     <arc exit="north" move="north" destination="658" />
     <arc exit="east" move="east" destination="656" />
   </node>
+  <node id="660" name="Wyvern Plateau, Grassland">
+    <description>Grassland stretches out from the edges of the plateau, stems waving in the ever-present wind.  Thick mats of dead vegetation pad the ground, decaying reminders of the savannah's past.</description>
+    <position x="440" y="517" z="0" />
+    <arc exit="east" move="east" destination="661" />
+    <arc exit="southeast" move="southeast" destination="600" />
+    <arc exit="south" move="south" destination="599" />
+  </node>
+  <node id="661" name="Wyvern Plateau, Grassland">
+    <description>Grassland stretches endlessly out from the plateau's edge, the wind blowing through the stalks creating a low rustling sound that blends into the background.  An occasional animal wallow testifies to the sheer size of the prairie's inhabitants.</description>
+    <position x="460" y="517" z="0" />
+    <arc exit="east" move="east" destination="662" />
+    <arc exit="southeast" move="southeast" destination="602" />
+    <arc exit="south" move="south" destination="600" />
+	<arc exit="southwest" move="southwest" destination="599" />
+    <arc exit="west" move="west" destination="660" />
+  </node>
+  <node id="662" name="Wyvern Plateau, Grassland">
+    <description>Grassland stretches out from the edges of the plateau, stems and leaves undulating in the constant wind.  A few boulders rise above the tops of the grasses, each one serving as a waypoint in the otherwise featureless savannah.</description>
+    <position x="480" y="517" z="0" />
+    <arc exit="south" move="south" destination="602" />
+    <arc exit="southwest" move="southwest" destination="600" />
+    <arc exit="west" move="west" destination="661" />
+  </node>
+  <node id="663" name="Wyvern Plateau, Grassy Vale">
+    <description>Grasses choke the ground, completely covering the floor of the tiny dell.  Sheer rock faces climb skyward, forming the escarpments that enclose the valley.</description>
+    <position x="480" y="477" z="0" />
+    <arc exit="east" move="east" destination="604" />
+    <arc exit="southeast" move="southeast" destination="603" />
+    <arc exit="south" move="south" destination="605" />
+  </node>
   <label text="Horse Clan">
     <position x="-770" y="487" z="0" />
   </label>
@@ -4393,7 +4433,7 @@
     <position x="390" y="577" z="0" />
   </label>
   <label text="Premium Storm Bulls">
-    <position x="390" y="497" z="0" />
+    <position x="420" y="457" z="0" />
   </label>
   <label text="Cloud Rats">
     <position x="540" y="567" z="0" />
