@@ -12,6 +12,7 @@
     <arc exit="go" move="go return portal" destination="999" />
     <arc exit="go" move="go purple archway" destination="49" />
     <arc exit="go" move="go red archway" destination="1000" />
+	<arc exit="go" move="go iron gate" destination="6000" />
   </node>
   <node id="2" name="Dispenser Hall" note="Dispenser Hall|raffles" color="#00FF00">
     <description>Centered in the middle of the floor, a luxurious carpet covers the polished wooden floor underneath a cut-crystal chandelier.  Oak paneling covers the walls while pale ecru plaster coats the spaces between the coffered ceiling.  A few leather armchairs provide seating for those needing time to contemplate their choices.</description>
@@ -50,7 +51,8 @@
     <description>Plain plastered walls have been painted a deep royal-blue hue and trimmed with narrow white baseboards.  Subtle indirect lighting of the displayed prizes is provided by gaezthen globes dangling from the coffered ceiling.</description>
     <description>Royal-blue walls trimmed with white baseboards surround the displayed prizes in the room.</description>
     <position x="-80" y="160" z="0" />
-    <arc exit="southeast" move="southeast" destination="8" />
+    <arc exit="east" move="east" destination="74" />
+	<arc exit="southeast" move="southeast" destination="8" />
     <arc exit="go" move="go blue-tiled entrance" destination="1" />
   </node>
   <node id="8" name="Blue Suite, Ocean-Blue Hall" note="ocean-blue hall" color="#FF0000">
@@ -333,7 +335,9 @@
   <node id="48" name="Blue Suite, Hyacinth Hall" note="hyacinth hall" color="#FF0000">
     <description>Plain plastered walls have been painted a cheerful hyacinth hue and trimmed with narrow white baseboards.  Subtle indirect lighting of the displayed prizes is provided by gaezthen globes dangling from the coffered ceiling.</description>
     <position x="0" y="240" z="0" />
-    <arc exit="northwest" move="northwest" destination="46" />
+    <arc exit="east" move="east" destination="75" />
+	<arc exit="southeast" move="southeast" destination="76" />
+	<arc exit="northwest" move="northwest" destination="46" />
   </node>
   <node id="49" name="Purple Suite, Wisteria Hall" note="purple suite|wisteria hall" color="#FF0000">
     <description>Enclosed by wisteria-hued plaster walls, the airy spaciousness of the room allows for easy inspection of the prizes displayed.  All the items are well lit by gaethzen globes hung from the coffered ceiling.</description>
@@ -491,6 +495,27 @@
     <position x="-40" y="240" z="0" />
     <arc exit="north" move="north" destination="47" />
   </node>
+   <node id="74" name="Blue Suite, Aqua Boutique" note="aqua boutique" color="#FF0000">
+    <description>Soft aqua walls rise beneath a crisp white ceiling, their smooth plaster broken only by narrow panels of pale molding that frame lengths of richly textured sapphire silk.  Delicate silver filigree traces the borders of each panel, while layered ribbons of satin and velvet in shades of cerulean, cobalt, and deep indigo.</description>
+    <position x="-60" y="160" z="0" />
+    <arc exit="west" move="west" destination="7" />
+  </node>
+  <node id="75" name="Blue Suite, Gentian Chamber" note="gentian chamber" color="#FF0000">
+    <description>The spacious room has pastel gentian-hued walls accented with a white wooden chair rail running across the plaster at waist-height.  The various prizes on offer are in the center of the room and are lit by a large gaethzen sphere suspended from the coffered ceiling.</description>
+    <position x="20" y="240" z="0" />
+    <arc exit="west" move="west" destination="48" />
+  </node>
+  <node id="76" name="Blue Suite, Blue-Green Hall" note="blue-green hall" color="#FF0000">
+    <description>Plain plastered walls have been painted a soothing blue-green hue and trimmed with narrow white baseboards.  Subtle indirect lighting of the displayed prizes is provided by gaezthen globes dangling from the coffered ceiling.</description>
+    <position x="20" y="260" z="0" />
+    <arc exit="west" move="west" destination="77" />
+	<arc exit="northwest" move="northwest" destination="48" />
+  </node>
+  <node id="77" name="Blue Suite, Lapis Chamber" note="lapis chamber" color="#FF0000">
+    <description>The spacious room has brilliant lapis-hued walls accented with a white wooden chair rail running across the plaster at waist-height.  The various prizes on offer are in the center of the room and are lit by a large gaethzen sphere suspended from the coffered ceiling.</description>
+    <position x="0" y="260" z="0" />
+    <arc exit="east" move="east" destination="76" />
+  </node>
   <node id="999" name="Droughtman's Maze, Grand Hall" note="Map520q_Droughtman's_Challenge.xml|exit">
     <description>Suspended between jewel-toned pennants overhead, ornate oil lanterns softly illuminate the grand entry hall of Droughtman's Maze.  Eager contestants crowd the mahogany registration desk at the center of the chamber, while a gold-carpeted staircase dominates the northern wall, providing access to the observation deck.</description>
     <position x="40" y="180" z="0" />
@@ -500,6 +525,7 @@
     <position x="120" y="40" z="0" />
     <arc exit="north" move="north" destination="1001" />
     <arc exit="east" move="east" destination="1002" />
+	<arc exit="south" move="south" destination="1018" />
     <arc exit="go" move="go red archway" destination="1" />
   </node>
   <node id="1001" name="Red Suite, Blood-red Vault" note="red suite">
@@ -575,7 +601,8 @@
   <node id="1012" name="Red Suite, Merlot Hall" note="merlot hall" color="#FF0000">
     <description>Smooth merlot-hued plaster walls delineate the spacious room devoted to exhibiting prizes.  Overhead, glass globes suspended from the ceiling provide plenty of light for inspection of the items.</description>
     <position x="240" y="40" z="0" />
-    <arc exit="west" move="west" destination="1010" />
+    <arc exit="south" move="south" destination="1019" />
+	<arc exit="west" move="west" destination="1010" />
   </node>
   <node id="1013" name="Red Suite, Poppy-red Cell" note="poppy-red cell|poppy red cell" color="#FF0000">
     <description>This cozy enclave is enclosed by poppy-red walls.  Mounted on sconces, several glass globes emit soft illumination, spotlighting the prizes arranged throughout the room for inspection.</description>
@@ -602,6 +629,85 @@
     <position x="140" y="60" z="0" />
     <arc exit="north" move="north" destination="1002" />
   </node>
+  <node id="1018" name="Red Suite, Barn-red Cell" note="barn-red cell" color="#FF0000">
+    <description>This cozy enclave is enclosed by barn-red walls.  Mounted on sconces, several glass globes emit soft illumination, spotlighting the prizes arranged throughout the room for inspection.</description>
+    <position x="120" y="60" z="0" />
+    <arc exit="north" move="north" destination="1000" />
+  </node>
+  <node id="1019" name="Red Suite, Fuchsia Cell" note="fuchsia cell" color="#FF0000">
+    <description>This cozy enclave is enclosed by fuchsia walls.  Mounted on sconces, several glass globes emit soft illumination, spotlighting the prizes arranged throughout the room for inspection.</description>
+    <position x="240" y="60" z="0" />
+    <arc exit="north" move="north" destination="1012" />
+  </node>
+  <node id="6000" name="Walled Memory Garden, Entrance" note="memory garden|animal shrine|critter|capture game" color="#00FF00">
+    <description>Smooth cobblestones pave a modest courtyard enclosed by a tall stone wall that stretches in either direction, surrounding the entire manicured space.  Near the entrance, a decorative trebuchet fashioned entirely from tightly braided plants stands upon a low circular bed, while trimmed shrubs and carefully maintained borders frame the open space.</description>
+    <position x="-20" y="40" z="0" />
+    <arc exit="north" move="north" destination="6001" />
+	<arc exit="northeast" move="northeast" destination="6002" />
+	<arc exit="east" move="east" destination="6003" />
+	<arc exit="southeast" move="southeast" destination="6004" />
+	<arc exit="south" move="south" destination="6005" />
+	<arc exit="southwest" move="southwest" destination="6006" />
+	<arc exit="west" move="west" destination="6007" />
+	<arc exit="northwest" move="northwest" destination="6008" />
+	<arc exit="go" move="go iron gate" destination="1" />
+  </node>
+  <node id="6001" name="Walled Memory Garden, Spire Walk" note="spire walk">
+    <description>A broad path of white pebbles defines a generous walkway through a meticulously maintained landscape of burgundy foliage, silver-green shrubs, and scarlet flowers.  Poised beneath a tall black iron spire, an intricate statue of the World Dragon rests upon a raised stone table.</description>
+    <position x="-20" y="0" z="0" />
+	<arc exit="southeast" move="southeast" destination="6002" />
+	<arc exit="south" move="south" destination="6000" />
+	<arc exit="southwest" move="southwest" destination="6008" />
+  </node>
+  <node id="6002" name="Walled Memory Garden, Starry Path" note="starry path">
+    <description>White pebbles line a gently curved pathway that crosses an elegant garden where clipped hedges, sculpted shrubs, and flowering borders surround an immense bed of blood-red roses.  Carefully planted to create a flawless seven-pointed star, the vibrant display is enclosed by a narrow ring of pale stone and neatly maintained greenery.</description>
+    <position x="0" y="20" z="0" />
+	<arc exit="south" move="south" destination="6003" />
+	<arc exit="southwest" move="southwest" destination="6000" />
+	<arc exit="northwest" move="northwest" destination="6001" />
+  </node>
+  <node id="6003" name="Walled Memory Garden, Fountain of Tears" note="fountain of tears">
+    <description>Curving beds of blooming Elven tears blossoms surround a circular fountain enclosed by neatly maintained greenery and pale stone edging.  Rising from its center, an ethereal Elven woman, crowned with a delicate diadem, wraps her arms around a human man with a sheathed short sword resting against his hip.</description>
+    <position x="0" y="40" z="0" />
+	<arc exit="north" move="north" destination="6002" />
+	<arc exit="south" move="south" destination="6004" />
+	<arc exit="west" move="west" destination="6000" />
+  </node>
+  <node id="6004" name="Walled Memory Garden, Screamer's Demise" note="screamer's demise">
+    <description>A miniature mountain of weathered boulders of varying sizes rises from carefully raked beds of pale gravel interspersed with hardy shrubs and sparse alpine greenery.  A lifelike glass statue of a cornered S'lai screamer is surrounded by a band of warriors forming a veritable wall of weapons that closes in on the grounded creature from every side.</description>
+    <position x="0" y="60" z="0" />
+	<arc exit="north" move="north" destination="6003" />
+	<arc exit="southwest" move="southwest" destination="6005" />
+	<arc exit="northwest" move="northwestwest" destination="6000" />
+  </node>
+  <node id="6005" name="Walled Memory Garden, Arrow's Fall" note="arrow's fall">
+    <description>A broad lawn is bordered by neatly trimmed hedges and carefully maintained flowering beds, their orderly appearance interrupted by countless claw-tipped arrows embedded throughout the surrounding greenery and stonework.  To one side, an elaborate hedge forms the Northeast Gate of Crossing.  An innocent-looking gidii topiary stands within the open gateway, while an azurelle longbow carved with rearing dragons lies discarded.</description>
+    <position x="-20" y="80" z="0" />
+	<arc exit="north" move="north" destination="6000" />
+	<arc exit="northeast" move="northeast" destination="6004" />
+	<arc exit="northwest" move="northwest" destination="6006" />
+  </node>
+  <node id="6006" name="Walled Memory Garden, Beyond the Trellis" note="beyond the trellis">
+    <description>A towering wall of interwoven golden flowers rises from an intricately crafted trellis, dividing the garden into two distinct landscapes.  One side is planted with dense dark foliage punctuated by incarnadine blossoms, while the other flourishes with sweeping drifts of vibrant wildflowers in countless shapes and colors.</description>
+    <position x="-40" y="60" z="0" />
+	<arc exit="north" move="north" destination="6007" />
+	<arc exit="northeast" move="northeast" destination="6000" />
+	<arc exit="southeast" move="southeast" destination="6005" />
+  </node>
+  <node id="6007" name="Walled Memory Garden, Knots of Philosophy" note="knots of philosophy">
+    <description>Dominating the space is a sculpture of concentric bands formed from woven vines and flowering plants.  The outer ring spirals with alternating clusters of vivid orange and pristine white blossoms, interrupted at regular intervals by broad facets planted with rich red-gold blooms.  Within, a second ring of dark foliage and smooth stone supports a series of slender spokes converging upon a perfectly rounded sphere of densely tangled reddish-brown tendrils. </description>
+    <position x="-40" y="40" z="0" />
+	<arc exit="north" move="north" destination="6008" />
+	<arc exit="east" move="east" destination="6000" />
+	<arc exit="south" move="south" destination="6006" />
+  </node>
+  <node id="6008" name="Walled Memory Garden, Island Siege" note="island siege">
+    <description>A large slab of dark basalt rises from a bed of neatly maintained oshu'mary plants, their trailing greenery dotted with countless tiny white blossoms.  Its polished face bears an expansive mural depicting a sailing warship approaching a rugged island, an ogre grappling an undead kraken, and a gnome fleeing on the wings of an intricate ornithopter.</description>
+    <position x="-40" y="20" z="0" />
+	<arc exit="northeast" move="northeast" destination="6001" />
+	<arc exit="southeast" move="southeast" destination="6000" />
+	<arc exit="south" move="south" destination="6007" />
+  </node>
   <label text="alterations">
     <position x="22" y="78" z="0" />
   </label>
@@ -625,5 +731,8 @@
   </label>
   <label text="Exit">
     <position x="25" y="180" z="0" />
+  </label>
+  <label text="capture game">
+    <position x="8" y="30" z="0" />
   </label>
 </zone>
