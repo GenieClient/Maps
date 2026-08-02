@@ -204,6 +204,7 @@
     <arc exit="east" move="east" destination="36" />
     <arc exit="west" move="west" destination="3" />
     <arc exit="go" move="go hall" destination="351" />
+    <arc exit="go" move="go garden gate" destination="361" />
   </node>
   <node id="33" name="Therenborough, Quadrangle" note="Quadrangle">
     <description>The vast quadrangle is paved with blocks of silver-speckled granite and bordered by rows of marble columns interspersed with matching benches.  Throngs of people congregate in this popular gathering spot.  Every so often an animated speaker addresses the crowds from the public orator's stand.</description>
@@ -2222,6 +2223,37 @@
     <position x="112" y="820" z="0" />
     <arc exit="east" move="east" destination="26" />
   </node>
+  <node id="361" name="Therenborough Gardens, Entry" note="garden">
+    <description>Crafted from large, irregularly shaped blocks, the tall walls provide protection for the exquisite garden beds and ornamental trees.  Nearby beds feature rose bushes, snapdragons, dragon primroses, and carnations while star jasmine vines climb the walls.  Brick pathways wind between the planters and plantings, offering access deeper into the garden.</description>
+    <position x="179" y="700" z="0" />
+    <arc exit="north" move="north" destination="362" />
+    <arc exit="go" move="go garden gate" destination="32" />
+  </node>
+  <node id="362" name="Therenborough Gardens, Garden Path">
+    <description>Brick pathways split three ways here, offering access deeper into the garden.  Nearby beds feature forsythia, phlox, boneflower, and desert scorpion blossom while firefall vines climb the walls.  Crafted from large, irregularly shaped blocks, the tall walls provide protection for the exquisite garden beds and ornamental trees.</description>
+    <position x="179" y="680" z="0" />
+    <arc exit="northeast" move="northeast" destination="365" />
+    <arc exit="south" move="south" destination="361" />
+    <arc exit="northwest" move="northwest" destination="363" />
+  </node>
+  <node id="363" name="Therenborough Gardens, Garden Path">
+    <description>Seemingly aimless, the brick walkways wind amongst the flower plantings and ornamental foliage.  Nearby beds feature lilac bushes, nightflowers, fox blossoms, and oxeye daisies while wisteria vines climb the walls.  Crafted from large, irregularly shaped blocks, the tall walls protect the exquisite garden beds and ornamental trees.</description>
+    <position x="159" y="660" z="0" />
+    <arc exit="northeast" move="northeast" destination="364" />
+    <arc exit="southeast" move="southeast" destination="363" />
+  </node>
+  <node id="364" name="Therenborough Gardens, Garden Path">
+    <description>Circling around the ornamental beds, wide brick pathways allow easy walking while still allowing admiration of the exquisite plantings.  Crafted from large, irregularly shaped blocks, the tall walls protect the exquisite garden beds and ornamental trees.  Nearby beds feature gardenia bushes, verbena, mournblooms, and hollyhocks while trumpet flower vines climb the walls.</description>
+    <position x="179" y="640" z="0" />
+    <arc exit="southeast" move="southeast" destination="365" />
+    <arc exit="southwest" move="southwest" destination="363" />
+  </node>
+  <node id="365" name="Therenborough Gardens, Garden Path">
+    <description>Brick pathways wind around the flower beds, each brick carefully laid into sand to provide safe footing.  Nearby beds feature dahlia bushes, bellflowers, shield flowers, and hellebore while dolphin vines climb the walls.  Crafted from large, irregularly shaped blocks, the tall walls provide protection for the exquisite garden beds and ornamental trees.</description>
+    <position x="199" y="660" z="0" />
+    <arc exit="southwest" move="southwest" destination="362" />
+    <arc exit="northwest" move="northwest" destination="364" />
+  </node>
   <label text="Bank">
     <position x="1510" y="-1310" z="1" />
   </label>
@@ -2383,5 +2415,8 @@
   </label>
   <label text="Third Floor">
     <position x="384" y="260" z="0" />
+  </label>
+  <label text="Garden">
+    <position x="159" y="610" z="0" />
   </label>
 </zone>
