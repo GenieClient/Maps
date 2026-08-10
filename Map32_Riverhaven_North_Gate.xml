@@ -1037,16 +1037,42 @@
     <arc exit="south" move="south" destination="145" />
   </node>
   <node id="147" name="Wildspire Hollow, Noxious Snarl">
-    <description>Heavy curtains of ivy and sprawling vines press close around the path, their growth threaded with clusters of vivid blossoms and broad waxy leaves.  Thick roots twist across the ground in uneven ridges, disappearing beneath mats of moss and scattered petals.  Here and there, plump purple pods hang from dangling stems, their fragile husks dark against the surrounding greenery. </description>
+    <description>Heavy curtains of ivy and sprawling vines press close around the path, their growth threaded with clusters of vivid blossoms and broad waxy leaves.  Thick roots twist across the ground in uneven ridges, disappearing beneath mats of moss and scattered petals.  Here and there, plump purple pods hang from dangling stems, their fragile husks dark against the surrounding greenery.</description>
     <position x="80" y="-420" z="0" />
     <arc exit="east" move="east" destination="146" />
     <arc exit="south" move="south" destination="148" />
+	<arc exit="go" move="go narrow gap" destination="149" />
   </node>
   <node id="148" name="Wildspire Hollow, Noxious Snarl">
     <description>The passage broadens slightly where dense flowering growth has been bent back into an arched corridor through the wilderness.  Layers of trailing vines hang overhead beside tangled sprays of tiny blossoms in pale pink and deep violet.  Along the edges of the trail, weathered garden markers lean at crooked angles beneath blankets of creeping vegetation.</description>
     <position x="80" y="-400" z="0" />
     <arc exit="north" move="north" destination="147" />
     <arc exit="east" move="east" destination="145" />
+  </node>
+  <node id="149" name="Wildspire Hollow, Needlethorn Warren">
+    <description>An open stretch of woodland is overtaken by sprawling vegetation trained into looping arches and low tunnels of living greenery.  Thick mats of moss soften the ground beneath them, while dozens of slender vine tendrils descend from above, each adorned with scattered pink blossoms and delicate curling shoots.</description>
+    <position x="80" y="-440" z="0" />
+    <arc exit="northeast" move="northeast" destination="150" />
+    <arc exit="northwest" move="northwest" destination="152" />
+	<arc exit="go" move="go narrow gap" destination="147" />
+  </node>
+  <node id="150" name="Wildspire Hollow, Needlethorn Warren">
+    <description>The undergrowth parts around a narrow stream no wider than a single stride, crossed by a simple bridge formed from intertwined roots and flexible saplings.  Broad-leafed plants crowd the banks, their stems tangled with flowering creepers that trail low over the gently moving water.</description>
+    <position x="100" y="-460" z="0" />
+    <arc exit="southwest" move="southwest" destination="149" />
+    <arc exit="northwest" move="northwest" destination="151" />
+  </node>
+  <node id="151" name="Wildspire Hollow, Needlethorn Warren">
+    <description>A winding trail narrows between towering shrubs woven together by thick flowering vines, their tangled growth arching overhead.  One side of the path opens onto a broad den fashioned entirely from curiously braided branches and living stems, its interior lined with deep cushions of springy moss scattered with a few pale petals.</description>
+    <position x="80" y="-480" z="0" />
+    <arc exit="southeast" move="southeast" destination="150" />
+    <arc exit="southwest" move="southwest" destination="152" />
+  </node>
+  <node id="152" name="Wildspire Hollow, Needlethorn Warren">
+    <description>Dense vegetation crowds close around the trail, interrupted only by a shallow clearing where countless smooth stones have been gathered into untidy spirals and winding patterns.  Creeping vines thread between the carefully arranged shapes, while clusters of tiny blossoms spill across their edges.</description>
+    <position x="60" y="-460" z="0" />
+    <arc exit="northeast" move="northeast" destination="151" />
+    <arc exit="southeast" move="southeast" destination="149" />
   </node>
   <label text="Riverhaven North Gate">
     <position x="-70" y="30" z="0" />
@@ -1074,5 +1100,8 @@
   </label>
   <label text="Dryanoxie">
     <position x="110" y="-420" z="0" />
+  </label>
+  <label text="Snarlvine Foxes">
+    <position x="110" y="-470" z="0" />
   </label>
 </zone>
