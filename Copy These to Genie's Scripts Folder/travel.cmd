@@ -7,8 +7,8 @@
 # Inspired by the OG Wizard Travel Script - But made 1000x better w/ the power of GENIE
 # Originally written by Achilles - Revitalized and robustified by Shroom
 #
-# Updated: 7/3/26
-var version 5.5
+# Updated: 8/8/26
+var version 5.6
 #
 # MAIN FEATURES:
 # - START SCRIPT FROM ANYWHERE IN GAME - TRAVEL TO ANY MAJOR LOCATION
@@ -161,7 +161,14 @@ if ("$charactername") == ("$char10") then var shardcitizen no
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
 ###########################################
-# CHANGELOG - Latest Update: 7/3/26
+# CHANGELOG - Latest Update: 8/8/26
+#
+# - Fixed bugs in Traveling Segoltha River NORTH and SOUTH, in case mapper glitches out showing wrong roomid
+# - Fixed multiple bugs with Ferry Logic 
+# - Fixed bug with Destination var being reset by AUTOMOVE function causing script errors
+# - Fixed some formatting for Genie 5
+# - Fixed Stowing Logic when "stow right" is used and main bag is full, 
+# - will convert 'right' to $righthandnoun so no issue with "put 'right' in my bag"
 #
 # - Fixed bug with script sometimes thinking you were already on a ferry when just waiting at the dock
 #
@@ -379,6 +386,7 @@ action var burden 10 when ^\s*Encumbrance\s*\:\s*Are you even able to move\?
 action var burden 11 when ^\s*Encumbrance\s*\:\s*It's amazing you aren't squashed\!
 
 var destination %1
+var OffTransport dock
 var burden 0
 var passport 0
 var premium 0
@@ -1261,7 +1269,7 @@ FALDESU_FERRY:
           gosub FERRYLOGIC
      }
 CROSSING_1:
-if (("$zoneid" == "30") && ($Athletics.Ranks >= %faldesu)) then
+if (("$zoneid" = "30") && ($Athletics.Ranks >= %faldesu)) then
      {
           echo ** Athletics high enough for Faldesu - Taking River!
           gosub AUTOMOVE 203
@@ -3984,18 +3992,21 @@ SEGOLTHA_NORTH:
      echo
      echo *** Swimming the Segoltha - Heading NORTH
      echo
-     if matchre("$roomid", "\b(7|6|5)\b") then
+    if (($roomid == 0) && ($north)) then
           {
-               gosub MOVE east
+               gosub MOVE north
+               pause 0.1
                goto SEGOLTHA_NORTH
           }
+    if ($north) then gosub MOVE north
+    pause 0.1
     if matchre("$roomid", "\b(35|34|33|32)\b") then
           {
                pause 0.1
                gosub AUTOMOVE 3
                return
           }
-    if matchre("$roomid", "\b(5|4|3|2|1)\b") then
+    if matchre("$roomid", "\b(6|5|4|3|2|1)\b") then
           {
                gosub AUTOMOVE crossing
                return
@@ -4003,6 +4014,12 @@ SEGOLTHA_NORTH:
      if matchre("$roomid", "\b(7|6|5)\b") then
           {
                gosub MOVE east
+               goto SEGOLTHA_NORTH
+          }
+    if (($roomid == 0) && ($north)) then
+          {
+               gosub MOVE north
+               pause 0.1
                goto SEGOLTHA_NORTH
           }
     if ($north) then gosub MOVE north
@@ -4179,9 +4196,9 @@ NOFERRY:
   return
 ####################################################################################################
 ### BEGINNING FERRY CHECK LOGIC - CHECK WHICH LOCATION WE ARE IN (AND/OR WHICH DIRECTION WE ARE GOING) TO TAKE CORRECT FERRY
+### THIS IS ONLY USED AS A STANDALONE CHECK WHEN STARTING THE SCRIPT ON A FERRY / GONDOLA
 FERRYLOGIC:
   gosub INFO_CHECK
-  if matchre("$zoneid", "\b(1|7|30|35|60|40|41|47|48|90|113|106|107|108|150)\b") then goto FERRY
   if matchre("$roomname", "Aboard the Mammoth") then goto FERRY
   if matchre("$roomname", "Gondola") then
      {
@@ -4203,6 +4220,7 @@ FERRYLOGIC:
           }
         if matchre("%destination", "\bgondola?\b") then goto ARRIVED
      }
+  if matchre("$zoneid", "\b(1|7|30|35|60|40|41|47|48|90|113|106|107|108|150|998)\b") then goto FERRY
   if ("$zoneid" == "66") then
         {
             var direction north
@@ -4464,6 +4482,7 @@ ONFERRY:
   if !matchre("$roomname", "(Her Opulence|Hodierna's Grace|Kertigen's Honor|His Daring Exploit|The Kree'la, Main Deck|The Skirr'lolasu, Main Deck|Northern Pride, Main Deck|Theren's Star, Deck|The Evening Star|The Damaris' Kiss|A Birch Skiff|A Highly Polished Skiff|The Desert Wind|The Suncatcher|The Riverhawk|Imperial Glory|Hodierna's Grace|Her Opulence|The Galley Cercorim|The Jolas, Fore Deck|Aboard the Warship, Gondola|The Halasa Selhin, Main Deck|Aboard the Mammoth, Platform)" then goto FERRY
   if (%OffRide == 1) then goto OFFTHERIDE
   var OffRide 0
+  var Oasis 0
   var OffTransport dock
   action var OffTransport platform when a barge platform
   action var OffTransport pier when the Riverhaven pier
@@ -4501,6 +4520,7 @@ ONFERRY:
   action var OffRide 1 when ^The barge pulls into dock|The crew ties it off and runs out the gangplank\.
   action var OffRide 1 when ^The captain barks the order to tie off the .+ to the docks\.
   action var OffRide 1 when ^The warship lands with a creaky lurch|^The captain barks the order to tie off .+ to the docks\.|returning to Fang Cove|returning to Ratha
+  action var Oasis 1 when ^The sand barge pulls up to a desert oasis and stops\.
   matchre OASIS_CHECK ^The sand barge pulls up to a desert oasis and stops\.
   matchre OFFTHERIDE dock and its crew ties the (ferry|barge) off\.|^You come to a very soft stop|^The skiff lightly taps|^The sand barge pulls into dock
   matchre OFFTHERIDE ^The barge pulls into dock|The crew ties it off and runs out the gangplank\.
@@ -4508,8 +4528,10 @@ ONFERRY:
   matchre OFFTHERIDE ^The warship lands with a creaky lurch|^The captain barks the order to tie off .+ to the docks\.|returning to Fang Cove|returning to Ratha
 ONFERRY_1:
   if (%OffRide == 1) then goto OFFTHERIDE
+  if (%Oasis == 1) then goto OASIS_CHECK
   pause 0.5
   if (%OffRide == 1) then goto OFFTHERIDE
+  if (%Oasis == 1) then goto OASIS_CHECK
   echo
   echo #####################
   echo # Riding on Public Transport!
@@ -4530,6 +4552,7 @@ ONFERRY_1:
      }
   pause
   if (%OffRide == 1) then goto OFFTHERIDE
+  if (%Oasis == 1) then goto OASIS_CHECK
   if matchre("$roomobjs", "the beach") && matchre("%destination", "\bratha?") then goto OFFTHERIDE
   if matchre("$roomobjs", "a ladder") && !matchre("%destination", "\bratha?") then goto OFFTHERIDE
   if ("$guild" == "Necromancer") then
@@ -4537,7 +4560,23 @@ ONFERRY_1:
           if (($spellROC == 0) || ($spellEOTB == 0)) then gosub NECRO_PREP
      }
   if (%OffRide == 1) then goto OFFTHERIDE
-  matchwait 60
+  if (%Oasis == 1) then goto OASIS_CHECK
+  pause 3
+  if (%OffRide == 1) then goto OFFTHERIDE
+  if (%Oasis == 1) then goto OASIS_CHECK
+  pause 3
+  if (%OffRide == 1) then goto OFFTHERIDE
+  if (%Oasis == 1) then goto OASIS_CHECK
+  pause 3
+  if (%OffRide == 1) then goto OFFTHERIDE
+  if (%Oasis == 1) then goto OASIS_CHECK
+  pause 3
+  if (%OffRide == 1) then goto OFFTHERIDE
+  if (%Oasis == 1) then goto OASIS_CHECK
+  pause 3
+  if (%Oasis == 1) then goto OASIS_CHECK
+  if (%OffRide == 1) then goto OFFTHERIDE
+  matchwait 3
   goto ONFERRY_1
   
 ## HALFWAY CHECK FOR THE MUSPARI/OASIS TRANSPORT
@@ -5319,8 +5358,8 @@ BAG_RETURN:
      return
 PREMIUM_CHECK:
      echo *** Checking Premium..
-     matchre PREMIUM_NO ^You are not currently a Premium
-     matchre PREMIUM_YES ^Your premium service has been continuous
+     matchre PREMIUM_NO You are not currently a Premium
+     matchre PREMIUM_YES Your premium service has been continuous
      matchre PREMIUM_NO ^You need to concentrate
      put ltb info
      matchwait 5
@@ -5747,12 +5786,14 @@ STOW1:
      matchre LOCATION.unload ^You need to unload the
      put stow %todo
      matchwait 7
-     put #echo >$Log Crimson $datetime *** MISSING MATCH IN STOW! ***
-     put #echo >$Log Crimson $datetime Stow == %todo
+     put #echo >Log Crimson $datetime *** MISSING MATCH IN STOW! ***
+     put #echo >Log Crimson $datetime Stow == %todo
      put #log $datetime MISSING MATCH IN STOW (travel.cmd)
 STOW2:
      delay 0.0001
      var LOCATION STOW2
+     if matchre("%todo", "(?i)right") then var todo $righthandnoun
+     if matchre("%todo","(?i)left") then var todo $lefthandnoun
      matchre RETURN ^Wear what\?|^Stow what\?
      matchre RETURN ^You put
      matchre RETURN ^But that is already in your inventory\.
@@ -5761,8 +5802,8 @@ STOW2:
      matchre LOCATION.unload ^You need to unload the
      put put %todo in my %MAIN.BAG
      matchwait 7
-     put #echo >$Log Crimson $datetime *** MISSING MATCH IN STOW2! ***
-     put #echo >$Log Crimson $datetime Stow == %todo
+     put #echo >Log Crimson $datetime *** MISSING MATCH IN STOW2! ***
+     put #echo >Log Crimson $datetime Stow == %todo
      put #log $datetime MISSING MATCH IN STOW2 (travel.cmd)
 STOW3:
      delay 0.0001
@@ -5776,8 +5817,8 @@ STOW3:
      matchre LOCATION.unload ^You need to unload the
      put put %todo in my %BACKUP.BAG
      matchwait 7
-     put #echo >$Log Crimson $datetime *** MISSING MATCH IN STOW3! ***
-     put #echo >$Log Crimson $datetime Stow == %todo
+     put #echo >Log Crimson $datetime *** MISSING MATCH IN STOW3! ***
+     put #echo >Log Crimson $datetime Stow == %todo
      put #log $datetime MISSING MATCH IN STOW3 (travel.cmd)
 STOW4:
      delay 0.0001
@@ -5791,8 +5832,8 @@ STOW4:
      matchre LOCATION.unload ^You need to unload the
      put put %todo in my %THIRD.BAG
      matchwait 7
-     put #echo >$Log Crimson $datetime *** MISSING MATCH IN STOW4! (travel.cmd) ***
-     put #echo >$Log Crimson $datetime Stow == %todo
+     put #echo >Log Crimson $datetime *** MISSING MATCH IN STOW4! (travel.cmd) ***
+     put #echo >Log Crimson $datetime Stow == %todo
      put #log $datetime MISSING MATCH IN STOW4 (travel.cmd)
 OPEN.THING:
      put open back
@@ -7101,7 +7142,7 @@ AUTOMOVE:
      action (moving) on
      var Moving 0
      var randomloop 0
-     var Destination $0
+     var AutomoveLoc $0
      var automovefailCounter 0
      if ($hidden == 1) then gosub UNHIDE
      if ($standing == 0) then gosub AUTOMOVE_STAND
@@ -7114,7 +7155,7 @@ AUTOMOVE_GO:
      matchre AUTOMOVE_RETURN ^SHOP CLOSED(?:\!)?
      matchre AUTOMOVE_FAIL_BAIL ^DESTINATION NOT FOUND
      matchre AUTOMOVE_FAILED ^You don't seem
-     put #goto %Destination
+     put #goto %AutomoveLoc
      matchwait 3
      if (%Moving == 0) then goto AUTOMOVE_FAILED
      matchre AUTOMOVE_FAILED ^(?:AUTOMAPPER )?MOVE(?:MENT)? FAILED
@@ -7149,9 +7190,9 @@ AUTOMOVE_FAIL_BAIL:
      action (moving) off
      put #echo
      put #echo >Log Crimson *** AUTOMOVE FAILED. ***
-     put #echo >Log Destination: %Destination
+     put #echo >Log Destination: %AutomoveLoc
      put #echo Crimson *** AUTOMOVE FAILED.  ***
-     put #echo Crimson Destination: %Destination
+     put #echo Crimson Destination: %AutomoveLoc
      put #echo
 AUTOMOVE_RETURN:
      pause 0.00001
@@ -7286,7 +7327,7 @@ MOVE_FAILED:
      goto MOVE_RESUME
 MOVE_FAIL_BAIL:
      put #echo
-     # put #echo >$Log Crimson *** MOVE FAILED. ***
+     # put #echo >Log Crimson *** MOVE FAILED. ***
      put #echo Crimson *** MOVE FAILED.  ***
      put #echo
      return
