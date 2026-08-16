@@ -12,6 +12,8 @@
     <arc exit="west" move="west" destination="8" />
     <arc exit="northwest" move="northwest" destination="9" />
     <arc exit="go" move="go circular wall" destination="10" />
+	<arc exit="go" move="rt go silver portal" destination="11" />
+	<arc exit="go" move="go gold vortex" destination="12" />
   </node>
   <node id="2" name="Temporal Pocket, Akigwe's Tower" note="Akigwe's Legacy|tower">
     <description>A layer of dust covers everything here.  High above, a crystal sits atop the tower before you and slowly flickers from one color to another, endlessly casting odd shadows throughout the cavern.</description>
@@ -58,6 +60,38 @@
     <position x="155" y="130" z="0" />
     <arc exit="go" move="go circular wall" destination="1" />
   </node>
+  <node id="11" name="Old Warehouse" note="Map1_Crossing.xml|crossing|exit">
+    <description>The reek of dead fish permeates your nostrils making you feel ill.  Besides the stench, you notice piles and piles of old crates almost entirely filling this rotting deobar-paneled warehouse.  One of the crates in the corner has been smashed open, straw and broken glass spilling across the floor from it.</description>
+    <position x="140" y="180" z="0" />
+    <arc exit="out" move="out" />
+    <arc exit="go" move="go crate" />
+	<arc exit="go" move="go silver portal" destination="1" />
+  </node>
+  <node id="12" name="Temporal Prizes, Lormandu" color="#FF0000" note="end loot|loot|prizes|lormandu">
+    <description>Shifting colors pulse overhead, oscillating in a swirling floral pattern amidst the shattered shards of a dark fathomless sky.  Fragrant wildflowers are heaped together and form a floor of blossoms that drifts aimlessly above a bottomless void.</description>
+    <position x="200" y="260" z="0" />
+    <arc exit="southeast" move="southeast" destination="13" />
+	<arc exit="southwest" move="southwest" destination="15" />
+	<arc exit="go" move="go gold vortex" destination="1" />
+  </node>
+  <node id="13" name="Temporal Prizes, Anlandu" color="#FF0000" note="anlandu">
+    <description>Shifting colors pulse overhead, oscillating in a dynamic sunburst pattern amidst the shattered shards of a dark fathomless sky.  Sheaves of grain are stacked together and form a harvest floor that drifts aimlessly above a bottomless void.</description>
+    <position x="220" y="280" z="0" />
+    <arc exit="northwest" move="northwest" destination="12" />
+	<arc exit="southwest" move="southwest" destination="14" />
+  </node>
+  <node id="14" name="Temporal Prizes, Blufandu" color="#FF0000" note="blufandu">
+    <description>Shifting colors pulse overhead, oscillating in a falling leaf pattern amidst the shattered shards of a dark fathomless sky.  Red and gold leaves are piled together and form a floor of foliage that drifts aimlessly above a bottomless void.</description>
+    <position x="200" y="300" z="0" />
+    <arc exit="northeast" move="northeast" destination="13" />
+	<arc exit="northwest" move="northwest" destination="15" />
+  </node>
+  <node id="15" name="Temporal Prizes, Jeolandu" color="#FF0000" note="jeolandu">
+    <description>Shifting colors pulse overhead, oscillating in an intricate snowflake pattern amidst the shattered shards of a dark fathomless sky.  Jagged sheets of ice form a frosty floor that drifts aimlessly above a bottomless void.</description>
+    <position x="180" y="280" z="0" />
+    <arc exit="northeast" move="northeast" destination="12" />
+	<arc exit="southeast" move="southeast" destination="14" />
+  </node>
   <label text="Akigwe's Legacy">
     <position x="120" y="80" z="0" />
   </label>
@@ -74,12 +108,15 @@
     <position x="120" y="190" z="0" />
   </label>
   <label text="Quelling the Riot">
-    <position x="50" y="155" z="0" />
+    <position x="40" y="155" z="0" />
   </label>
   <label text="Morun Melgorehn">
-    <position x="25" y="130" z="0" />
+    <position x="15" y="130" z="0" />
   </label>
   <label text="Ghost Ship">
-    <position x="75" y="110" z="0" />
+    <position x="70" y="110" z="0" />
+  </label>
+  <label text="End Loot">
+    <position x="110" y="270" z="0" />
   </label>
 </zone>
