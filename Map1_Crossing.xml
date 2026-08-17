@@ -3164,6 +3164,7 @@
     <arc exit="east" move="east" destination="469" />
     <arc exit="out" move="out" hidden="True" destination="29" />
     <arc exit="go" move="go mirrorlike portal" destination="470" />
+	<arc exit="go" move="go gold-gilded archway" destination="1058" />
   </node>
   <node id="469" name="Bards' Guild, Repair Room">
     <description>Shelves upon shelves of half-built mandolins, violins, lutes, flutes, and a slew of other unidentifiable parts cover the walls.  The scent of rosin and glue wafts in the air.  In the corner, a long sturdy workbench holds a plethora of specialized tools to aid in the crafting of the finest musical instruments.</description>
@@ -4493,6 +4494,7 @@
     <position x="-202" y="142" z="0" />
     <arc exit="out" move="out" destination="59" />
     <arc exit="go" move="go crate" destination="674" />
+	<arc exit="go" move="go silver portal" destination="1060" />
   </node>
   <node id="674" name="Aesthene's Close, Chamber">
     <description>You find yourself on a slimy cobblestone floor in a dark, dank and smelly chamber.  Noxious trickles of effluent seep through tiny cracks in the tortured walls, which appear to be on the verge of collapse.  The hole in the rotted timber high above is hardly convenient for escape, and you realize with a chill that you must find another way out.</description>
@@ -6782,6 +6784,32 @@
     <description>Ornate bronze lampposts stand opposite the opulent manors stacked along the avenue, dormant for the day.  Across the river to the east, the High Temple can be seen rising majestically over Longbow Bridge, its brightly burning beacon flames visible even against the daytime sky.</description>
     <position x="140" y="130" z="1" />
     <arc exit="north" move="north" destination="1052" />
+  </node>
+  <node id="1058" name="Bard's Guild, The Quill and Quaver" note="quill|quill and quaver" color="#FF0000">
+    <description>Ruby-red banners hang from the upper walls, edged with thin gold trim, while brass windchimes shaped like tiny harps and lute silhouettes are suspended from overhead beams.  The floor is composed of dark hardwood planks, and one wall bears a series of mounted, polished metal strings stretched across small frames, their tension creating straight, taut lines strung with glass music notes.</description>
+    <position x="-64" y="-336" z="0" />
+    <arc exit="east" move="east" destination="1059" />
+	<arc exit="go" move="go gold-gilded archway" destination="468" />
+  </node>
+  <node id="1059" name="Bard's Guild, The Quill and Quaver" color="#FF0000">
+    <description>Dark hardwood covers the floor in wide, uniform boards, intersected by a narrow strip of lighter inlay along the perimeter.  The walls are painted deep ruby and punctuated with small golden sconces, each shaped like giant zills.  Hanging from iron brackets are metal wind bells shaped like tiny flutes, their surfaces polished to a reflective shine.  Sections of the wall feature vertical panels of ruby-colored fabric with fine gold embroidery in repeating stave and clef motifs.</description>
+    <position x="-54" y="-336" z="0" />
+    <arc exit="west" move="west" destination="1058" />
+  </node>
+  <node id="1060" name="Temporal Pocket, Nexus" note="Map516q_Temporal_Pocket.xml|temporal pocket">
+     <description>Shifting colors pulse across the sky, oscillating in a fluctuating random pattern admidst the shattered shards of the sky.  More shards jumbled together comprise a floor drifting above the bottomless void.</description>
+    <position x="-202" y="162" z="0" />
+    <arc exit="north" move="north" />
+    <arc exit="northeast" move="northeast" />
+    <arc exit="east" move="east" />
+    <arc exit="southeast" move="southeast" />
+    <arc exit="south" move="south" />
+    <arc exit="southwest" move="southwest" />
+    <arc exit="west" move="west" />
+    <arc exit="northwest" move="northwest" />
+    <arc exit="go" move="go circular wall" />
+	<arc exit="go" move="go silver portal" destination="673" />
+	<arc exit="go" move="go gold vortex" />
   </node>
   <label text="Shipyard">
     <position x="-20" y="314" z="0" />
