@@ -492,6 +492,7 @@
     <arc exit="southwest" move="southwest" destination="78" />
     <arc exit="northwest" move="northwest" destination="105" />
     <arc exit="go" move="go ramshackle building" destination="104" />
+	<arc exit="go" move="go iron gate" destination="141" />
   </node>
   <node id="80" name="Promado Village, South Circle">
     <description>South of the village monument, this part of the boulevard passes by the burnt-out shells of sad, empty houses.  A smaller road stretches off to the south.</description>
@@ -884,6 +885,30 @@
     <position x="400" y="-80" z="0" />
     <arc exit="go" move="go leather hide" destination="134" />
   </node>
+  <node id="141" name="Praxium, Foyer" note="Praxium">
+    <description>The grand entrance to the Praxium is adorned with a massive banner that proclaims Unity and Excellence in Combat.  Smooth, polished stone floors echo with footsteps, their faint sound amplified by the vaulted ceiling above.  On one wall, a masterfully carved relief depicts a detailed series of figures standing together in triumph, each marked by a guild crest: a Human Cleric, an Elven Barbarian, a S'Kra Mur Bard, a Human Paladin, and an Elothean Thief.  Directly opposite, another relief showcases an Elven Bardess, a Prydaen Thief, a Human Warrior Mage, a Rakash Paladin, and a Halfling Thief, each rendered in exquisite detail as if caught mid-action.  A single, wide archway beckons visitors deeper into the Praxium.</description>
+    <position x="-40" y="-100" z="0" />
+    <arc exit="go" move="go iron gate" destination="79" />
+	<arc exit="go" move="go wide archway" destination="142" />
+  </node>
+  <node id="142" name="Praxium, Gathering Hall">
+    <description>The heart of camaraderie within the Praxium, this expansive hall invites students and mentors to share meals, stories, and insights.  A massive stone table commands the center of the room and is surrounded by an assortment of finely crafted wooden chairs.  Above, a pair of wrought-iron chandeliers casts warm light that illuminates the space.  Centered upon each of the four walls is a banner bearing the academy's emblem.  Their colors, vibrant yet dignified, add a touch of refinement to the space.  Heavy stone doors set on opposite walls from one another lead further in.  The archway to the foyer remains ever open, providing a clear path back to the academy's welcoming entrance.</description>
+    <position x="-40" y="-120" z="0" />
+	<arc exit="go" move="go wide archway" destination="141" />
+	<arc exit="go" move="go west door" destination="143" />
+	<arc exit="go" move="go east door" destination="144" />
+  </node>
+  <node id="143" name="Praxium, Sparring Courtyard">
+    <description>The open-air courtyard of the Praxium hums with the energy of countless bouts fought in the pursuit of mastery and discipline.  At its center stands a raised sparring platform, its surface reinforced to endure even the most intense clashes.  High stone walls encircling the courtyard ensure privacy and focus, their surfaces adorned with banners bearing the academy's crest.  Tall, weathered arches cut into the walls offer glimpses of the surrounding landscape while the sky above remains fully open, embracing the sparring ground in light and shadow.  Above the stone doorway leading back to the Gathering Hall hangs another large banner, its vibrant fabric emblazoned with embossed lettering that captures the eye.  Around the perimeter, weapon racks and training dummies stand ready, ever at the service of determined combatants.</description>
+	<description>In the open-air courtyard of the Praxium, the raised sparring platform remains a commanding presence at the center, its surface dimly illuminated by lanterns mounted along the high stone walls.  The banners bearing the academy's crest hang still, their vibrant gold and navy hues muted by the shadows.  The tall arches framing the courtyard become stark outlines against the darker sky above, hinting at the world beyond.  Above the stone doorway leading back to the Gathering Hall, another large banner sways faintly, its embossed lettering catching the occasional flicker of light.  The weapon racks and training dummies around the perimeter are cast in deep shadow, their forms resolute and waiting for the next clash of combat.</description>
+    <position x="-60" y="-120" z="0" />
+	<arc exit="go" move="go stone door" destination="142" />
+  </node>
+  <node id="144" name="Praxium, Observation Chamber">
+    <description>This room is built for spectators to immerse themselves in the action of the sparring courtyard.  Theater-style seating rises from the middle of the room, each row slightly elevated to provide an unobstructed view of the central enchanted mirror.  The mirror stands motionless, presenting a clear, detailed image of the goings on within the nearby courtyard.  The walls are padded with thick, durable fabric to muffle the potential cheers and exclamations of enthusiastic onlookers, ensuring the chamber remains comfortable for all.  A sturdy stone door to the Gathering Hall provides the only entrance and exit to this hub of excitement and engagement.</description>
+    <position x="-20" y="-120" z="0" />
+	<arc exit="go" move="go stone door" destination="142" />
+  </node>
   <label text="Rock Trolls">
     <position x="230" y="-470" z="0" />
   </label>
@@ -934,5 +959,8 @@
   </label>
   <label text="copperhead vipers">
     <position x="386" y="-55" z="0" />
+  </label>
+  <label text="Praxium">
+    <position x="-30" y="-110" z="0" />
   </label>
 </zone>
