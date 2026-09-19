@@ -1016,6 +1016,7 @@
     <position x="100" y="-360" z="0" />
     <arc exit="south" move="south" destination="142" />
     <arc exit="go" move="ask Ivysol about door" destination="144" />
+    <arc exit="go" move="go living curtain" destination="153" />
   </node>
   <node id="144" name="Wildspire Hollow, Behind the Cottage">
     <description>A tidy stone path winds through an overflowing garden thick with tangled blossoms, sprawling vines, and carefully arranged beds of unusual growth.  One side of the space is dominated by an enormous greenhouse fitted with heavily frosted windows and a door secured beneath a thick iron bar.  Purple pollen is splattered heavily across the rear entrance of the cottage.  Opposite the greenhouse, an unusually tall wall of impenetrable greenery rises in a dense mass of interwoven foliage and thorned stems.</description>
@@ -1073,6 +1074,11 @@
     <position x="60" y="-460" z="0" />
     <arc exit="northeast" move="northeast" destination="151" />
     <arc exit="southeast" move="southeast" destination="149" />
+  </node>
+  <node id="153" name="Wildspire Hollow, Cottage Laboratory">
+    <description>The room is enclosed by walls painted pale sage green with ivory damask patterns, interrupted only by faint smudges of soil.  One wall is lined with shelves crowded by young sprouts sheltered beneath small glass covers, each labeled in a flowing, slanting script.  A broad worktable with a ribbon-stripe counter dominates the center, its surface arranged with sorted clippings and shallow dishes of dark earth.</description>
+    <position x="120" y="-360" z="0" />
+    <arc exit="go" move="go living curtain" destination="143" />
   </node>
   <label text="Riverhaven North Gate">
     <position x="-70" y="30" z="0" />
