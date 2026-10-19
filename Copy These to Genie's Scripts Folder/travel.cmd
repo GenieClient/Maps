@@ -7,8 +7,8 @@
 # Inspired by the OG Wizard Travel Script - But made 1000x better w/ the power of GENIE
 # Originally written by Achilles - Revitalized and robustified by Shroom
 #
-# Updated: 8/20/26
-var version 5.6.2
+# Updated: 10/10/26
+var version 5.6.3
 #
 # MAIN FEATURES:
 # - START SCRIPT FROM ANYWHERE IN GAME - TRAVEL TO ANY MAJOR LOCATION
@@ -128,32 +128,41 @@ if ("$charactername") == ("$char10") then var shardcitizen no
 ############################################
 ##  RANKS TO SWIM THE SEGOLTHA RIVER     ##
 ##  TIGER CLAN TO STR OR VICA VERSA      ##
-##  THIS IS A VERY TOUGH SWIM! CAREFUL!  ##
-##  DO NOT SET TOO LOW - CAN GET STUCK   ##
+##  THIS IS VERY TOUGH SWIM! CAREFUL!    ##
+##  DO NOT SET TOO LOW - CAN GET STUCK!  ##
 ##  SAFE= 560+ | BUFFED & STRONG= ~540   ##
-    var segoltha 565
+    var segoltha 570
 ##########################################
 ## RANKS TO CLIMB UNDERGONDOLA SHORTCUT ##
 ## POSSIBLE AT ~480+ W/ BUFFS & ROPE    ##
 ## ~510 - 530 IS GENERALLY 'SAFE'       ##
-## AUTO CHECKS FOR A ROPE UNDER 620     ##
+## IF ENOUGH STRENGTH / LOW BURDEN      ##
+## AUTO-CHECKS TO USE A ROPE UNDER ~620 ##
     var undergondola 515
 ##########################################
 ##########################################
-## RANKS TO USE UNDER-SEGOLTHA (THIEF)  ##
-## 35 MIN w/ 0 BURDEN - 50+ is SAFEST   ##
+## RANKS TO USE UNDER-SEGOLTHA TUNNEL   ##
+## THIEF ONLY TUNNEL FROM XING TO STR   ##
+## 35 MIN w/ 0 BURDEN - 50+ is SAFE     ##
     var undersegoltha 50
 ##########################################
 ##########################################################
 ## RANKS FOR VELAKA DESERT SHORTCUT TO MUSPARI          ##
-## THIS IS THE HARDEST SHORTCUT IN THE GAME!!!!         ##
+## THIS IS THE HARDEST SHORTCUT IN THE GAME BY FAR!!    ##
+## IT HAS BEEN TESTED AND WORKS BUT NOT ALL THE TIME!   ##
 ## YOU ~WILL~ DIE IN THE DESERT IF YOU GET LOST!        ##
-## 780 ATHLETICS ~BARE MIN~ for this! 850+ IS 'SAFER'   ##
+## 780+ ATHLETICS ~BARE MININUM~ NEEDED FOR THIS!!      ##
+## 900+ ATHLETICS IS "SAFER" - 1000+ SAFEST             ##
+## EVEN WITH CAPPED ATHLETICS THIS IS STILL DANGEROUS!! ##
 ## EXTREMELY HIGH RISK! CHANCE AUTOMAPPER MAY GET LOST  ##
-## WIND CAN BLOW YOU AROUND - AUTOMAPPER GETS LOST      ##
-## SCRIPT ATTEMPTS TO AUTO RECOVER BUT NOT FOOLPROOF!   ##
+## MAZE-LIKE AREA, DESERT WIND CAN BLOW YOU AROUND      ##
+## AUTOMAPPER CAN POTENTIALLY GET LOST                  ##
+## WHILE YOU DIE FROM HEAT STROKE                       ##
+## SCRIPT ATTEMPTS TO AUTO-RECOVER BUT NOT FOOLPROOF!   ##
 ## SET TO 2000+ TO SKIP DESERT SHORTCUT AND USE FERRIES ##
-## USE THIS AT YOUR OWN RISK! VERY DANGEROUS            ##
+## USE THIS AT YOUR OWN RISK! VERY DANGEROUS!!!!        ##
+## USER HAS BEEN WARNED!! WATCH CLOSELY USING DESERT    ##
+## SET TO 2000+ TO SKIP USING THIS SHORTCUT COMPLETELY  ##
     var muspari.shortcut 2500
     
 ###########################################
@@ -161,8 +170,9 @@ if ("$charactername") == ("$char10") then var shardcitizen no
 #### DONT TOUCH ANYTHING BELOW THIS LINE
 ###########################################
 ###########################################
-# CHANGELOG - Latest Update: 8/20/26
+# CHANGELOG - Latest Update: 10/10/26
 #
+# - Fixed bug in checking Plat / Premium time 
 # - Fixed bug in Plat Portal travel (case sensitivity)
 #
 # - Fixed bugs in Traveling Segoltha River NORTH and SOUTH, in case mapper glitches out showing wrong roomid
@@ -4006,16 +4016,18 @@ SEGOLTHA_NORTH:
           {
                pause 0.1
                gosub AUTOMOVE 3
-               return
+			pause 0.8
           }
     if matchre("$roomid", "\b(6|5|4|3|2|1)\b") then
           {
                gosub AUTOMOVE crossing
+			pause 0.8
                return
           }
      if matchre("$roomid", "\b(7|6|5)\b") then
           {
                gosub MOVE east
+			pause 0.8
                goto SEGOLTHA_NORTH
           }
     if (($roomid == 0) && ($north)) then
@@ -5376,14 +5388,15 @@ PREMIUM_YES:
      if !matchre("$game", "DRX") then return
 PREMIUM_TIME:
      var premtime 0
-     matchre PREMIUM_SET ^You have a cumulative Premium time of (\d+) months\.
-     matchre PREMIUM_SET ^You have a cumulative Platinum time of (\d+) months\.
+     matchre PREMIUM_SET You have a cumulative Premium time of (\d+) months\.
+     matchre PREMIUM_SET You have a cumulative Platinum time of (\d+) months\.
      put prem 10
      matchwait 5
      return
 PREMIUM_SET:
      var premtime $1
      delay 0.0001
+	echo * Premium Time: %premtime months
      if (%premtime >= 6) then
           {
                var portal 1
