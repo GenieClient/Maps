@@ -1700,6 +1700,7 @@
     <description>This small room is dominated by a walnut table, around which stand two clerks, heavy in their own discussion.  Upon the table is a small model of the city, with marks for future expansion, and special attention given to residential areas.  A large pile of documents rests beside the model, the scrolls within containing information on citizens and home occupants.</description>
     <position x="292" y="350" z="0" />
     <arc exit="southeast" move="southeast" destination="268" />
+    <arc exit="northwest" move="northwest" destination="369" />
   </node>
   <node id="270" name="Ibec Hall, Passport Office" note="Passport Office" color="#00FF00">
     <description>A finely crafted desk serves as the work space for a bedraggled licenser.  On one side of the desk wobbles a stack of documents, each bearing the wax seal of the Baron, granting travel rights throughout the province.  A mural of Lake Gwenalion decorates one wall of the room.</description>
@@ -2274,6 +2275,11 @@
     <arc exit="southwest" move="southwest" destination="366" />
     <arc exit="west" move="west" destination="367" />
   </node>
+  <node id="369" name="Ibec Hall, Homes Transferring Office" color="Lime">
+    <description>At the center of the room sits a sturdy wooden desk, its surface polished to a sheen by years of use.  A large ledger book rests upon it, alongside quills and inkwells, ready to record the transactions for the Baron.  Flanking the desk are tall wooden cabinets, their doors adorned with iron hinges and locks to safeguard their contents.  A faint scent of aged parchment and leather hangs in the air, mingling with the aroma of herbs and spices placed strategically around the room.  Amidst the paperwork and administrative clutter, small clay pots are scattered about, each containing a verdant splash of greenery.  The atmosphere is one of quiet industry and purposeful activity, as scribes and clerks bustle about, providing a steady backdrop to the proceedings.</description>
+    <position x="282" y="340" z="0" />
+    <arc exit="southeast" move="southeast" destination="269" />
+  </node>
   <label text="Bank">
     <position x="1510" y="-1310" z="1" />
   </label>
@@ -2305,7 +2311,7 @@
     <position x="244" y="244" z="0" />
   </label>
   <label text="Gov't Offices">
-    <position x="276" y="331" z="0" />
+    <position x="289" y="330" z="0" />
   </label>
   <label text="Racks and Stands">
     <position x="441" y="323" z="0" />
