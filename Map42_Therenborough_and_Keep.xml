@@ -2275,7 +2275,7 @@
     <arc exit="southwest" move="southwest" destination="366" />
     <arc exit="west" move="west" destination="367" />
   </node>
-  <node id="369" name="Ibec Hall, Homes Transferring Office" color="Lime">
+  <node id="369" name="Ibec Hall, Homes Transferring Office" color="#00FF00">
     <description>At the center of the room sits a sturdy wooden desk, its surface polished to a sheen by years of use.  A large ledger book rests upon it, alongside quills and inkwells, ready to record the transactions for the Baron.  Flanking the desk are tall wooden cabinets, their doors adorned with iron hinges and locks to safeguard their contents.  A faint scent of aged parchment and leather hangs in the air, mingling with the aroma of herbs and spices placed strategically around the room.  Amidst the paperwork and administrative clutter, small clay pots are scattered about, each containing a verdant splash of greenery.  The atmosphere is one of quiet industry and purposeful activity, as scribes and clerks bustle about, providing a steady backdrop to the proceedings.</description>
     <position x="282" y="340" z="0" />
     <arc exit="southeast" move="southeast" destination="269" />
